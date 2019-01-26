@@ -115,29 +115,25 @@ public partial class DataValidations : OpenXmlCompositeElement
     /// <para> disablePrompts.</para>
     /// <para>Represents the following attribute in the schema: disablePrompts </para>
     /// </summary>
-    [SchemaAttr(0, "disablePrompts")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "disablePrompts", 0)]
     public BooleanValue DisablePrompts { get; set; }
     /// <summary>
     /// <para> xWindow.</para>
     /// <para>Represents the following attribute in the schema: xWindow </para>
     /// </summary>
-    [SchemaAttr(0, "xWindow")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "xWindow", 1)]
     public UInt32Value XWindow { get; set; }
     /// <summary>
     /// <para> yWindow.</para>
     /// <para>Represents the following attribute in the schema: yWindow </para>
     /// </summary>
-    [SchemaAttr(0, "yWindow")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "yWindow", 2)]
     public UInt32Value YWindow { get; set; }
     /// <summary>
     /// <para> count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "count", 3)]
     public UInt32Value Count { get; set; }
 
     /// <summary>
@@ -741,22 +737,19 @@ public partial class WorkbookProperties : OpenXmlLeafElement
     /// <para> defaultImageDpi.</para>
     /// <para>Represents the following attribute in the schema: defaultImageDpi </para>
     /// </summary>
-    [SchemaAttr(0, "defaultImageDpi")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "defaultImageDpi", 0)]
     public UInt32Value DefaultImageDpi { get; set; }
     /// <summary>
     /// <para> discardImageEditData.</para>
     /// <para>Represents the following attribute in the schema: discardImageEditData </para>
     /// </summary>
-    [SchemaAttr(0, "discardImageEditData")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "discardImageEditData", 1)]
     public BooleanValue DiscardImageEditData { get; set; }
     /// <summary>
     /// <para> accuracyVersion.</para>
     /// <para>Represents the following attribute in the schema: accuracyVersion </para>
     /// </summary>
-    [SchemaAttr(0, "accuracyVersion")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "accuracyVersion", 2)]
     public UInt32Value AccuracyVersion { get; set; }
 
     /// <summary>
@@ -803,36 +796,31 @@ public partial class CalculatedMember : OpenXmlCompositeElement
     /// <para> displayFolder.</para>
     /// <para>Represents the following attribute in the schema: displayFolder </para>
     /// </summary>
-    [SchemaAttr(0, "displayFolder")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "displayFolder", 0)]
     public StringValue DisplayFolder { get; set; }
     /// <summary>
     /// <para> flattenHierarchies.</para>
     /// <para>Represents the following attribute in the schema: flattenHierarchies </para>
     /// </summary>
-    [SchemaAttr(0, "flattenHierarchies")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "flattenHierarchies", 1)]
     public BooleanValue FlattenHierarchies { get; set; }
     /// <summary>
     /// <para> dynamicSet.</para>
     /// <para>Represents the following attribute in the schema: dynamicSet </para>
     /// </summary>
-    [SchemaAttr(0, "dynamicSet")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "dynamicSet", 2)]
     public BooleanValue DynamicSet { get; set; }
     /// <summary>
     /// <para> hierarchizeDistinct.</para>
     /// <para>Represents the following attribute in the schema: hierarchizeDistinct </para>
     /// </summary>
-    [SchemaAttr(0, "hierarchizeDistinct")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "hierarchizeDistinct", 3)]
     public BooleanValue HierarchizeDistinct { get; set; }
     /// <summary>
     /// <para> mdxLong.</para>
     /// <para>Represents the following attribute in the schema: mdxLong </para>
     /// </summary>
-    [SchemaAttr(0, "mdxLong")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "mdxLong", 4)]
     public StringValue MdxLong { get; set; }
 
     /// <summary>
@@ -934,29 +922,25 @@ public partial class CacheHierarchy : OpenXmlCompositeElement
     /// <para> flattenHierarchies.</para>
     /// <para>Represents the following attribute in the schema: flattenHierarchies </para>
     /// </summary>
-    [SchemaAttr(0, "flattenHierarchies")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "flattenHierarchies", 0)]
     public BooleanValue FlattenHierarchies { get; set; }
     /// <summary>
     /// <para> measuresSet.</para>
     /// <para>Represents the following attribute in the schema: measuresSet </para>
     /// </summary>
-    [SchemaAttr(0, "measuresSet")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "measuresSet", 1)]
     public BooleanValue MeasuresSet { get; set; }
     /// <summary>
     /// <para> hierarchizeDistinct.</para>
     /// <para>Represents the following attribute in the schema: hierarchizeDistinct </para>
     /// </summary>
-    [SchemaAttr(0, "hierarchizeDistinct")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "hierarchizeDistinct", 2)]
     public BooleanValue HierarchizeDistinct { get; set; }
     /// <summary>
     /// <para> ignore.</para>
     /// <para>Represents the following attribute in the schema: ignore </para>
     /// </summary>
-    [SchemaAttr(0, "ignore")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "ignore", 3)]
     public BooleanValue Ignore { get; set; }
 
     /// <summary>
@@ -1051,22 +1035,19 @@ public partial class DataField : OpenXmlLeafElement
     /// <para> pivotShowAs.</para>
     /// <para>Represents the following attribute in the schema: pivotShowAs </para>
     /// </summary>
-    [SchemaAttr(0, "pivotShowAs")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "pivotShowAs", 0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotShowAsValues> PivotShowAs { get; set; }
     /// <summary>
     /// <para> sourceField.</para>
     /// <para>Represents the following attribute in the schema: sourceField </para>
     /// </summary>
-    [SchemaAttr(0, "sourceField")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "sourceField", 1)]
     public UInt32Value SourceField { get; set; }
     /// <summary>
     /// <para> uniqueName.</para>
     /// <para>Represents the following attribute in the schema: uniqueName </para>
     /// </summary>
-    [SchemaAttr(0, "uniqueName")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "uniqueName", 2)]
     public StringValue UniqueName { get; set; }
 
     /// <summary>
@@ -1106,15 +1087,13 @@ public partial class PivotField : OpenXmlLeafElement
     /// <para> fillDownLabels.</para>
     /// <para>Represents the following attribute in the schema: fillDownLabels </para>
     /// </summary>
-    [SchemaAttr(0, "fillDownLabels")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "fillDownLabels", 0)]
     public BooleanValue FillDownLabels { get; set; }
     /// <summary>
     /// <para> ignore.</para>
     /// <para>Represents the following attribute in the schema: ignore </para>
     /// </summary>
-    [SchemaAttr(0, "ignore")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "ignore", 1)]
     public BooleanValue Ignore { get; set; }
 
     /// <summary>
@@ -1165,71 +1144,61 @@ public partial class PivotTableDefinition : OpenXmlCompositeElement
     /// <para> fillDownLabelsDefault.</para>
     /// <para>Represents the following attribute in the schema: fillDownLabelsDefault </para>
     /// </summary>
-    [SchemaAttr(0, "fillDownLabelsDefault")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "fillDownLabelsDefault", 0)]
     public BooleanValue FillDownLabelsDefault { get; set; }
     /// <summary>
     /// <para> visualTotalsForSets.</para>
     /// <para>Represents the following attribute in the schema: visualTotalsForSets </para>
     /// </summary>
-    [SchemaAttr(0, "visualTotalsForSets")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "visualTotalsForSets", 1)]
     public BooleanValue VisualTotalsForSets { get; set; }
     /// <summary>
     /// <para> calculatedMembersInFilters.</para>
     /// <para>Represents the following attribute in the schema: calculatedMembersInFilters </para>
     /// </summary>
-    [SchemaAttr(0, "calculatedMembersInFilters")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "calculatedMembersInFilters", 2)]
     public BooleanValue CalculatedMembersInFilters { get; set; }
     /// <summary>
     /// <para> altText.</para>
     /// <para>Represents the following attribute in the schema: altText </para>
     /// </summary>
-    [SchemaAttr(0, "altText")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "altText", 3)]
     public StringValue AltText { get; set; }
     /// <summary>
     /// <para> altTextSummary.</para>
     /// <para>Represents the following attribute in the schema: altTextSummary </para>
     /// </summary>
-    [SchemaAttr(0, "altTextSummary")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "altTextSummary", 4)]
     public StringValue AltTextSummary { get; set; }
     /// <summary>
     /// <para> enableEdit.</para>
     /// <para>Represents the following attribute in the schema: enableEdit </para>
     /// </summary>
-    [SchemaAttr(0, "enableEdit")]
-    [SchemaIndex(5)]
+    [SchemaAttr(0, "enableEdit", 5)]
     public BooleanValue EnableEdit { get; set; }
     /// <summary>
     /// <para> autoApply.</para>
     /// <para>Represents the following attribute in the schema: autoApply </para>
     /// </summary>
-    [SchemaAttr(0, "autoApply")]
-    [SchemaIndex(6)]
+    [SchemaAttr(0, "autoApply", 6)]
     public BooleanValue AutoApply { get; set; }
     /// <summary>
     /// <para> allocationMethod.</para>
     /// <para>Represents the following attribute in the schema: allocationMethod </para>
     /// </summary>
-    [SchemaAttr(0, "allocationMethod")]
-    [SchemaIndex(7)]
+    [SchemaAttr(0, "allocationMethod", 7)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues> AllocationMethod { get; set; }
     /// <summary>
     /// <para> weightExpression.</para>
     /// <para>Represents the following attribute in the schema: weightExpression </para>
     /// </summary>
-    [SchemaAttr(0, "weightExpression")]
-    [SchemaIndex(8)]
+    [SchemaAttr(0, "weightExpression", 8)]
     public StringValue WeightExpression { get; set; }
     /// <summary>
     /// <para> hideValuesRow.</para>
     /// <para>Represents the following attribute in the schema: hideValuesRow </para>
     /// </summary>
-    [SchemaAttr(0, "hideValuesRow")]
-    [SchemaIndex(9)]
+    [SchemaAttr(0, "hideValuesRow", 9)]
     public BooleanValue HideValuesRow { get; set; }
 
     /// <summary>
@@ -1354,36 +1323,31 @@ public partial class PivotCacheDefinition : OpenXmlLeafElement
     /// <para> slicerData.</para>
     /// <para>Represents the following attribute in the schema: slicerData </para>
     /// </summary>
-    [SchemaAttr(0, "slicerData")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "slicerData", 0)]
     public BooleanValue SlicerData { get; set; }
     /// <summary>
     /// <para> pivotCacheId.</para>
     /// <para>Represents the following attribute in the schema: pivotCacheId </para>
     /// </summary>
-    [SchemaAttr(0, "pivotCacheId")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "pivotCacheId", 1)]
     public UInt32Value PivotCacheId { get; set; }
     /// <summary>
     /// <para> supportSubqueryNonVisual.</para>
     /// <para>Represents the following attribute in the schema: supportSubqueryNonVisual </para>
     /// </summary>
-    [SchemaAttr(0, "supportSubqueryNonVisual")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "supportSubqueryNonVisual", 2)]
     public BooleanValue SupportSubqueryNonVisual { get; set; }
     /// <summary>
     /// <para> supportSubqueryCalcMem.</para>
     /// <para>Represents the following attribute in the schema: supportSubqueryCalcMem </para>
     /// </summary>
-    [SchemaAttr(0, "supportSubqueryCalcMem")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "supportSubqueryCalcMem", 3)]
     public BooleanValue SupportSubqueryCalcMem { get; set; }
     /// <summary>
     /// <para> supportAddCalcMems.</para>
     /// <para>Represents the following attribute in the schema: supportAddCalcMems </para>
     /// </summary>
-    [SchemaAttr(0, "supportAddCalcMems")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "supportAddCalcMems", 4)]
     public BooleanValue SupportAddCalcMems { get; set; }
 
     /// <summary>
@@ -1430,15 +1394,13 @@ public partial class Connection : OpenXmlCompositeElement
     /// <para> culture.</para>
     /// <para>Represents the following attribute in the schema: culture </para>
     /// </summary>
-    [SchemaAttr(0, "culture")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "culture", 0)]
     public StringValue Culture { get; set; }
     /// <summary>
     /// <para> embeddedDataId.</para>
     /// <para>Represents the following attribute in the schema: embeddedDataId </para>
     /// </summary>
-    [SchemaAttr(0, "embeddedDataId")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "embeddedDataId", 1)]
     public StringValue EmbeddedDataId { get; set; }
 
     /// <summary>
@@ -1533,15 +1495,13 @@ public partial class Table : OpenXmlLeafElement
     /// <para> altText.</para>
     /// <para>Represents the following attribute in the schema: altText </para>
     /// </summary>
-    [SchemaAttr(0, "altText")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "altText", 0)]
     public StringValue AltText { get; set; }
     /// <summary>
     /// <para> altTextSummary.</para>
     /// <para>Represents the following attribute in the schema: altTextSummary </para>
     /// </summary>
-    [SchemaAttr(0, "altTextSummary")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "altTextSummary", 1)]
     public StringValue AltTextSummary { get; set; }
 
     /// <summary>
@@ -1588,8 +1548,7 @@ public partial class SlicerStyles : OpenXmlCompositeElement
     /// <para> defaultSlicerStyle.</para>
     /// <para>Represents the following attribute in the schema: defaultSlicerStyle </para>
     /// </summary>
-    [SchemaAttr(0, "defaultSlicerStyle")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "defaultSlicerStyle", 0)]
     public StringValue DefaultSlicerStyle { get; set; }
 
     /// <summary>
@@ -1670,8 +1629,7 @@ public partial class DifferentialFormats : OpenXmlCompositeElement
     /// <para> Format Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "count", 0)]
     public UInt32Value Count { get; set; }
 
     /// <summary>
@@ -1752,29 +1710,25 @@ public partial class OleItem : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "name", 0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> icon.</para>
     /// <para>Represents the following attribute in the schema: icon </para>
     /// </summary>
-    [SchemaAttr(0, "icon")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "icon", 1)]
     public BooleanValue Icon { get; set; }
     /// <summary>
     /// <para> advise.</para>
     /// <para>Represents the following attribute in the schema: advise </para>
     /// </summary>
-    [SchemaAttr(0, "advise")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "advise", 2)]
     public BooleanValue Advise { get; set; }
     /// <summary>
     /// <para> preferPic.</para>
     /// <para>Represents the following attribute in the schema: preferPic </para>
     /// </summary>
-    [SchemaAttr(0, "preferPic")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "preferPic", 3)]
     public BooleanValue PreferPicture { get; set; }
 
     /// <summary>
@@ -1869,8 +1823,7 @@ public partial class PivotHierarchy : OpenXmlLeafElement
     /// <para> ignore.</para>
     /// <para>Represents the following attribute in the schema: ignore </para>
     /// </summary>
-    [SchemaAttr(0, "ignore")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "ignore", 0)]
     public BooleanValue Ignore { get; set; }
 
     /// <summary>
@@ -1910,8 +1863,7 @@ public partial class CacheField : OpenXmlLeafElement
     /// <para> ignore.</para>
     /// <para>Represents the following attribute in the schema: ignore </para>
     /// </summary>
-    [SchemaAttr(0, "ignore")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "ignore", 0)]
     public BooleanValue Ignore { get; set; }
 
     /// <summary>
@@ -1998,15 +1950,13 @@ public partial class IconFilter : OpenXmlLeafElement
     /// <para> iconSet.</para>
     /// <para>Represents the following attribute in the schema: iconSet </para>
     /// </summary>
-    [SchemaAttr(0, "iconSet")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "iconSet", 0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues> IconSet { get; set; }
     /// <summary>
     /// <para> iconId.</para>
     /// <para>Represents the following attribute in the schema: iconId </para>
     /// </summary>
-    [SchemaAttr(0, "iconId")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "iconId", 1)]
     public UInt32Value IconId { get; set; }
 
     /// <summary>
@@ -2046,8 +1996,7 @@ public partial class Filter : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "val", 0)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -2094,8 +2043,7 @@ public partial class CustomFilters : OpenXmlCompositeElement
     /// <para> and.</para>
     /// <para>Represents the following attribute in the schema: and </para>
     /// </summary>
-    [SchemaAttr(0, "and")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "and", 0)]
     public BooleanValue And { get; set; }
 
     /// <summary>
@@ -2169,50 +2117,43 @@ public partial class SortCondition : OpenXmlLeafElement
     /// <para> descending.</para>
     /// <para>Represents the following attribute in the schema: descending </para>
     /// </summary>
-    [SchemaAttr(0, "descending")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "descending", 0)]
     public BooleanValue Descending { get; set; }
     /// <summary>
     /// <para> sortBy.</para>
     /// <para>Represents the following attribute in the schema: sortBy </para>
     /// </summary>
-    [SchemaAttr(0, "sortBy")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "sortBy", 1)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues> SortBy { get; set; }
     /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
-    [SchemaAttr(0, "ref")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "ref", 2)]
     public StringValue Reference { get; set; }
     /// <summary>
     /// <para> customList.</para>
     /// <para>Represents the following attribute in the schema: customList </para>
     /// </summary>
-    [SchemaAttr(0, "customList")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "customList", 3)]
     public StringValue CustomList { get; set; }
     /// <summary>
     /// <para> dxfId.</para>
     /// <para>Represents the following attribute in the schema: dxfId </para>
     /// </summary>
-    [SchemaAttr(0, "dxfId")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "dxfId", 4)]
     public UInt32Value FormatId { get; set; }
     /// <summary>
     /// <para> iconSet.</para>
     /// <para>Represents the following attribute in the schema: iconSet </para>
     /// </summary>
-    [SchemaAttr(0, "iconSet")]
-    [SchemaIndex(5)]
+    [SchemaAttr(0, "iconSet", 5)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues> IconSet { get; set; }
     /// <summary>
     /// <para> iconId.</para>
     /// <para>Represents the following attribute in the schema: iconId </para>
     /// </summary>
-    [SchemaAttr(0, "iconId")]
-    [SchemaIndex(6)]
+    [SchemaAttr(0, "iconId", 6)]
     public UInt32Value IconId { get; set; }
 
     /// <summary>
@@ -2252,8 +2193,7 @@ public partial class SourceConnection : OpenXmlLeafElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "name", 0)]
     public StringValue Name { get; set; }
 
     /// <summary>
@@ -2299,8 +2239,7 @@ public partial class DatastoreItem : OpenXmlPartRootElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "id", 0)]
     public StringValue Id { get; set; }
 
     
@@ -2432,218 +2371,187 @@ public partial class FormControlProperties : OpenXmlPartRootElement
     /// <para> objectType.</para>
     /// <para>Represents the following attribute in the schema: objectType </para>
     /// </summary>
-    [SchemaAttr(0, "objectType")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "objectType", 0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ObjectTypeValues> ObjectType { get; set; }
     /// <summary>
     /// <para> checked.</para>
     /// <para>Represents the following attribute in the schema: checked </para>
     /// </summary>
-    [SchemaAttr(0, "checked")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "checked", 1)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.CheckedValues> Checked { get; set; }
     /// <summary>
     /// <para> colored.</para>
     /// <para>Represents the following attribute in the schema: colored </para>
     /// </summary>
-    [SchemaAttr(0, "colored")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "colored", 2)]
     public BooleanValue Colored { get; set; }
     /// <summary>
     /// <para> dropLines.</para>
     /// <para>Represents the following attribute in the schema: dropLines </para>
     /// </summary>
-    [SchemaAttr(0, "dropLines")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "dropLines", 3)]
     public UInt32Value DropLines { get; set; }
     /// <summary>
     /// <para> dropStyle.</para>
     /// <para>Represents the following attribute in the schema: dropStyle </para>
     /// </summary>
-    [SchemaAttr(0, "dropStyle")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "dropStyle", 4)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DropStyleValues> DropStyle { get; set; }
     /// <summary>
     /// <para> dx.</para>
     /// <para>Represents the following attribute in the schema: dx </para>
     /// </summary>
-    [SchemaAttr(0, "dx")]
-    [SchemaIndex(5)]
+    [SchemaAttr(0, "dx", 5)]
     public UInt32Value ScrollBarWidth { get; set; }
     /// <summary>
     /// <para> firstButton.</para>
     /// <para>Represents the following attribute in the schema: firstButton </para>
     /// </summary>
-    [SchemaAttr(0, "firstButton")]
-    [SchemaIndex(6)]
+    [SchemaAttr(0, "firstButton", 6)]
     public BooleanValue FirstButton { get; set; }
     /// <summary>
     /// <para> fmlaGroup.</para>
     /// <para>Represents the following attribute in the schema: fmlaGroup </para>
     /// </summary>
-    [SchemaAttr(0, "fmlaGroup")]
-    [SchemaIndex(7)]
+    [SchemaAttr(0, "fmlaGroup", 7)]
     public StringValue FmlaGroup { get; set; }
     /// <summary>
     /// <para> fmlaLink.</para>
     /// <para>Represents the following attribute in the schema: fmlaLink </para>
     /// </summary>
-    [SchemaAttr(0, "fmlaLink")]
-    [SchemaIndex(8)]
+    [SchemaAttr(0, "fmlaLink", 8)]
     public StringValue FmlaLink { get; set; }
     /// <summary>
     /// <para> fmlaRange.</para>
     /// <para>Represents the following attribute in the schema: fmlaRange </para>
     /// </summary>
-    [SchemaAttr(0, "fmlaRange")]
-    [SchemaIndex(9)]
+    [SchemaAttr(0, "fmlaRange", 9)]
     public StringValue FmlaRange { get; set; }
     /// <summary>
     /// <para> fmlaTxbx.</para>
     /// <para>Represents the following attribute in the schema: fmlaTxbx </para>
     /// </summary>
-    [SchemaAttr(0, "fmlaTxbx")]
-    [SchemaIndex(10)]
+    [SchemaAttr(0, "fmlaTxbx", 10)]
     public StringValue FmlaTextbox { get; set; }
     /// <summary>
     /// <para> horiz.</para>
     /// <para>Represents the following attribute in the schema: horiz </para>
     /// </summary>
-    [SchemaAttr(0, "horiz")]
-    [SchemaIndex(11)]
+    [SchemaAttr(0, "horiz", 11)]
     public BooleanValue Horizontal { get; set; }
     /// <summary>
     /// <para> inc.</para>
     /// <para>Represents the following attribute in the schema: inc </para>
     /// </summary>
-    [SchemaAttr(0, "inc")]
-    [SchemaIndex(12)]
+    [SchemaAttr(0, "inc", 12)]
     public UInt32Value Incremental { get; set; }
     /// <summary>
     /// <para> justLastX.</para>
     /// <para>Represents the following attribute in the schema: justLastX </para>
     /// </summary>
-    [SchemaAttr(0, "justLastX")]
-    [SchemaIndex(13)]
+    [SchemaAttr(0, "justLastX", 13)]
     public BooleanValue JustLastX { get; set; }
     /// <summary>
     /// <para> lockText.</para>
     /// <para>Represents the following attribute in the schema: lockText </para>
     /// </summary>
-    [SchemaAttr(0, "lockText")]
-    [SchemaIndex(14)]
+    [SchemaAttr(0, "lockText", 14)]
     public BooleanValue LockText { get; set; }
     /// <summary>
     /// <para> max.</para>
     /// <para>Represents the following attribute in the schema: max </para>
     /// </summary>
-    [SchemaAttr(0, "max")]
-    [SchemaIndex(15)]
+    [SchemaAttr(0, "max", 15)]
     public UInt32Value Max { get; set; }
     /// <summary>
     /// <para> min.</para>
     /// <para>Represents the following attribute in the schema: min </para>
     /// </summary>
-    [SchemaAttr(0, "min")]
-    [SchemaIndex(16)]
+    [SchemaAttr(0, "min", 16)]
     public UInt32Value Min { get; set; }
     /// <summary>
     /// <para> multiSel.</para>
     /// <para>Represents the following attribute in the schema: multiSel </para>
     /// </summary>
-    [SchemaAttr(0, "multiSel")]
-    [SchemaIndex(17)]
+    [SchemaAttr(0, "multiSel", 17)]
     public StringValue MultipleSelection { get; set; }
     /// <summary>
     /// <para> noThreeD.</para>
     /// <para>Represents the following attribute in the schema: noThreeD </para>
     /// </summary>
-    [SchemaAttr(0, "noThreeD")]
-    [SchemaIndex(18)]
+    [SchemaAttr(0, "noThreeD", 18)]
     public BooleanValue NoThreeD { get; set; }
     /// <summary>
     /// <para> noThreeD2.</para>
     /// <para>Represents the following attribute in the schema: noThreeD2 </para>
     /// </summary>
-    [SchemaAttr(0, "noThreeD2")]
-    [SchemaIndex(19)]
+    [SchemaAttr(0, "noThreeD2", 19)]
     public BooleanValue NoThreeD2 { get; set; }
     /// <summary>
     /// <para> page.</para>
     /// <para>Represents the following attribute in the schema: page </para>
     /// </summary>
-    [SchemaAttr(0, "page")]
-    [SchemaIndex(20)]
+    [SchemaAttr(0, "page", 20)]
     public UInt32Value Page { get; set; }
     /// <summary>
     /// <para> sel.</para>
     /// <para>Represents the following attribute in the schema: sel </para>
     /// </summary>
-    [SchemaAttr(0, "sel")]
-    [SchemaIndex(21)]
+    [SchemaAttr(0, "sel", 21)]
     public UInt32Value Selected { get; set; }
     /// <summary>
     /// <para> seltype.</para>
     /// <para>Represents the following attribute in the schema: seltype </para>
     /// </summary>
-    [SchemaAttr(0, "seltype")]
-    [SchemaIndex(22)]
+    [SchemaAttr(0, "seltype", 22)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SelectionTypeValues> SelectionType { get; set; }
     /// <summary>
     /// <para> textHAlign.</para>
     /// <para>Represents the following attribute in the schema: textHAlign </para>
     /// </summary>
-    [SchemaAttr(0, "textHAlign")]
-    [SchemaIndex(23)]
+    [SchemaAttr(0, "textHAlign", 23)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextHorizontalAlignmentValues> TextHorizontalAlign { get; set; }
     /// <summary>
     /// <para> textVAlign.</para>
     /// <para>Represents the following attribute in the schema: textVAlign </para>
     /// </summary>
-    [SchemaAttr(0, "textVAlign")]
-    [SchemaIndex(24)]
+    [SchemaAttr(0, "textVAlign", 24)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TextVerticalAlignmentValues> TextVerticalAlign { get; set; }
     /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val")]
-    [SchemaIndex(25)]
+    [SchemaAttr(0, "val", 25)]
     public UInt32Value Val { get; set; }
     /// <summary>
     /// <para> widthMin.</para>
     /// <para>Represents the following attribute in the schema: widthMin </para>
     /// </summary>
-    [SchemaAttr(0, "widthMin")]
-    [SchemaIndex(26)]
+    [SchemaAttr(0, "widthMin", 26)]
     public UInt32Value MinimumWidth { get; set; }
     /// <summary>
     /// <para> editVal.</para>
     /// <para>Represents the following attribute in the schema: editVal </para>
     /// </summary>
-    [SchemaAttr(0, "editVal")]
-    [SchemaIndex(27)]
+    [SchemaAttr(0, "editVal", 27)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.EditValidationValues> EditVal { get; set; }
     /// <summary>
     /// <para> multiLine.</para>
     /// <para>Represents the following attribute in the schema: multiLine </para>
     /// </summary>
-    [SchemaAttr(0, "multiLine")]
-    [SchemaIndex(28)]
+    [SchemaAttr(0, "multiLine", 28)]
     public BooleanValue MultipleLines { get; set; }
     /// <summary>
     /// <para> verticalBar.</para>
     /// <para>Represents the following attribute in the schema: verticalBar </para>
     /// </summary>
-    [SchemaAttr(0, "verticalBar")]
-    [SchemaIndex(29)]
+    [SchemaAttr(0, "verticalBar", 29)]
     public BooleanValue VerticalBar { get; set; }
     /// <summary>
     /// <para> passwordEdit.</para>
     /// <para>Represents the following attribute in the schema: passwordEdit </para>
     /// </summary>
-    [SchemaAttr(0, "passwordEdit")]
-    [SchemaIndex(30)]
+    [SchemaAttr(0, "passwordEdit", 30)]
     public BooleanValue PasswordEdit { get; set; }
 
     
@@ -2895,15 +2803,13 @@ public partial class SlicerCacheDefinition : OpenXmlPartRootElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "name", 0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> sourceName.</para>
     /// <para>Represents the following attribute in the schema: sourceName </para>
     /// </summary>
-    [SchemaAttr(0, "sourceName")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "sourceName", 1)]
     public StringValue SourceName { get; set; }
 
     
@@ -3068,8 +2974,7 @@ public partial class ConditionalFormatting : OpenXmlCompositeElement
     /// <para> pivot.</para>
     /// <para>Represents the following attribute in the schema: pivot </para>
     /// </summary>
-    [SchemaAttr(0, "pivot")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "pivot", 0)]
     public BooleanValue Pivot { get; set; }
 
     /// <summary>
@@ -3166,99 +3071,85 @@ public partial class ConditionalFormattingRule : OpenXmlCompositeElement
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "type", 0)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues> Type { get; set; }
     /// <summary>
     /// <para> priority.</para>
     /// <para>Represents the following attribute in the schema: priority </para>
     /// </summary>
-    [SchemaAttr(0, "priority")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "priority", 1)]
     public Int32Value Priority { get; set; }
     /// <summary>
     /// <para> stopIfTrue.</para>
     /// <para>Represents the following attribute in the schema: stopIfTrue </para>
     /// </summary>
-    [SchemaAttr(0, "stopIfTrue")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "stopIfTrue", 2)]
     public BooleanValue StopIfTrue { get; set; }
     /// <summary>
     /// <para> aboveAverage.</para>
     /// <para>Represents the following attribute in the schema: aboveAverage </para>
     /// </summary>
-    [SchemaAttr(0, "aboveAverage")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "aboveAverage", 3)]
     public BooleanValue AboveAverage { get; set; }
     /// <summary>
     /// <para> percent.</para>
     /// <para>Represents the following attribute in the schema: percent </para>
     /// </summary>
-    [SchemaAttr(0, "percent")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "percent", 4)]
     public BooleanValue Percent { get; set; }
     /// <summary>
     /// <para> bottom.</para>
     /// <para>Represents the following attribute in the schema: bottom </para>
     /// </summary>
-    [SchemaAttr(0, "bottom")]
-    [SchemaIndex(5)]
+    [SchemaAttr(0, "bottom", 5)]
     public BooleanValue Bottom { get; set; }
     /// <summary>
     /// <para> operator.</para>
     /// <para>Represents the following attribute in the schema: operator </para>
     /// </summary>
-    [SchemaAttr(0, "operator")]
-    [SchemaIndex(6)]
+    [SchemaAttr(0, "operator", 6)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues> Operator { get; set; }
     /// <summary>
     /// <para> text.</para>
     /// <para>Represents the following attribute in the schema: text </para>
     /// </summary>
-    [SchemaAttr(0, "text")]
-    [SchemaIndex(7)]
+    [SchemaAttr(0, "text", 7)]
     public StringValue Text { get; set; }
     /// <summary>
     /// <para> timePeriod.</para>
     /// <para>Represents the following attribute in the schema: timePeriod </para>
     /// </summary>
-    [SchemaAttr(0, "timePeriod")]
-    [SchemaIndex(8)]
+    [SchemaAttr(0, "timePeriod", 8)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues> TimePeriod { get; set; }
     /// <summary>
     /// <para> rank.</para>
     /// <para>Represents the following attribute in the schema: rank </para>
     /// </summary>
-    [SchemaAttr(0, "rank")]
-    [SchemaIndex(9)]
+    [SchemaAttr(0, "rank", 9)]
     public UInt32Value Rank { get; set; }
     /// <summary>
     /// <para> stdDev.</para>
     /// <para>Represents the following attribute in the schema: stdDev </para>
     /// </summary>
-    [SchemaAttr(0, "stdDev")]
-    [SchemaIndex(10)]
+    [SchemaAttr(0, "stdDev", 10)]
     public Int32Value StandardDeviation { get; set; }
     /// <summary>
     /// <para> equalAverage.</para>
     /// <para>Represents the following attribute in the schema: equalAverage </para>
     /// </summary>
-    [SchemaAttr(0, "equalAverage")]
-    [SchemaIndex(11)]
+    [SchemaAttr(0, "equalAverage", 11)]
     public BooleanValue EqualAverage { get; set; }
     /// <summary>
     /// <para> activePresent.</para>
     /// <para>Represents the following attribute in the schema: activePresent </para>
     /// </summary>
-    [SchemaAttr(0, "activePresent")]
-    [SchemaIndex(12)]
+    [SchemaAttr(0, "activePresent", 12)]
     public BooleanValue ActivePresent { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
-    [SchemaIndex(13)]
+    [SchemaAttr(0, "id", 13)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -3433,85 +3324,73 @@ public partial class DataValidation : OpenXmlCompositeElement
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "type", 0)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues> Type { get; set; }
     /// <summary>
     /// <para> errorStyle.</para>
     /// <para>Represents the following attribute in the schema: errorStyle </para>
     /// </summary>
-    [SchemaAttr(0, "errorStyle")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "errorStyle", 1)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues> ErrorStyle { get; set; }
     /// <summary>
     /// <para> imeMode.</para>
     /// <para>Represents the following attribute in the schema: imeMode </para>
     /// </summary>
-    [SchemaAttr(0, "imeMode")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "imeMode", 2)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues> ImeMode { get; set; }
     /// <summary>
     /// <para> operator.</para>
     /// <para>Represents the following attribute in the schema: operator </para>
     /// </summary>
-    [SchemaAttr(0, "operator")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "operator", 3)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues> Operator { get; set; }
     /// <summary>
     /// <para> allowBlank.</para>
     /// <para>Represents the following attribute in the schema: allowBlank </para>
     /// </summary>
-    [SchemaAttr(0, "allowBlank")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "allowBlank", 4)]
     public BooleanValue AllowBlank { get; set; }
     /// <summary>
     /// <para> showDropDown.</para>
     /// <para>Represents the following attribute in the schema: showDropDown </para>
     /// </summary>
-    [SchemaAttr(0, "showDropDown")]
-    [SchemaIndex(5)]
+    [SchemaAttr(0, "showDropDown", 5)]
     public BooleanValue ShowDropDown { get; set; }
     /// <summary>
     /// <para> showInputMessage.</para>
     /// <para>Represents the following attribute in the schema: showInputMessage </para>
     /// </summary>
-    [SchemaAttr(0, "showInputMessage")]
-    [SchemaIndex(6)]
+    [SchemaAttr(0, "showInputMessage", 6)]
     public BooleanValue ShowInputMessage { get; set; }
     /// <summary>
     /// <para> showErrorMessage.</para>
     /// <para>Represents the following attribute in the schema: showErrorMessage </para>
     /// </summary>
-    [SchemaAttr(0, "showErrorMessage")]
-    [SchemaIndex(7)]
+    [SchemaAttr(0, "showErrorMessage", 7)]
     public BooleanValue ShowErrorMessage { get; set; }
     /// <summary>
     /// <para> errorTitle.</para>
     /// <para>Represents the following attribute in the schema: errorTitle </para>
     /// </summary>
-    [SchemaAttr(0, "errorTitle")]
-    [SchemaIndex(8)]
+    [SchemaAttr(0, "errorTitle", 8)]
     public StringValue ErrorTitle { get; set; }
     /// <summary>
     /// <para> error.</para>
     /// <para>Represents the following attribute in the schema: error </para>
     /// </summary>
-    [SchemaAttr(0, "error")]
-    [SchemaIndex(9)]
+    [SchemaAttr(0, "error", 9)]
     public StringValue Error { get; set; }
     /// <summary>
     /// <para> promptTitle.</para>
     /// <para>Represents the following attribute in the schema: promptTitle </para>
     /// </summary>
-    [SchemaAttr(0, "promptTitle")]
-    [SchemaIndex(10)]
+    [SchemaAttr(0, "promptTitle", 10)]
     public StringValue PromptTitle { get; set; }
     /// <summary>
     /// <para> prompt.</para>
     /// <para>Represents the following attribute in the schema: prompt </para>
     /// </summary>
-    [SchemaAttr(0, "prompt")]
-    [SchemaIndex(11)]
+    [SchemaAttr(0, "prompt", 11)]
     public StringValue Prompt { get; set; }
 
     /// <summary>
@@ -3859,120 +3738,103 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     /// <para> manualMax.</para>
     /// <para>Represents the following attribute in the schema: manualMax </para>
     /// </summary>
-    [SchemaAttr(0, "manualMax")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "manualMax", 0)]
     public DoubleValue ManualMax { get; set; }
     /// <summary>
     /// <para> manualMin.</para>
     /// <para>Represents the following attribute in the schema: manualMin </para>
     /// </summary>
-    [SchemaAttr(0, "manualMin")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "manualMin", 1)]
     public DoubleValue ManualMin { get; set; }
     /// <summary>
     /// <para> lineWeight.</para>
     /// <para>Represents the following attribute in the schema: lineWeight </para>
     /// </summary>
-    [SchemaAttr(0, "lineWeight")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "lineWeight", 2)]
     public DoubleValue LineWeight { get; set; }
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "type", 3)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues> Type { get; set; }
     /// <summary>
     /// <para> dateAxis.</para>
     /// <para>Represents the following attribute in the schema: dateAxis </para>
     /// </summary>
-    [SchemaAttr(0, "dateAxis")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "dateAxis", 4)]
     public BooleanValue DateAxis { get; set; }
     /// <summary>
     /// <para> displayEmptyCellsAs.</para>
     /// <para>Represents the following attribute in the schema: displayEmptyCellsAs </para>
     /// </summary>
-    [SchemaAttr(0, "displayEmptyCellsAs")]
-    [SchemaIndex(5)]
+    [SchemaAttr(0, "displayEmptyCellsAs", 5)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues> DisplayEmptyCellsAs { get; set; }
     /// <summary>
     /// <para> markers.</para>
     /// <para>Represents the following attribute in the schema: markers </para>
     /// </summary>
-    [SchemaAttr(0, "markers")]
-    [SchemaIndex(6)]
+    [SchemaAttr(0, "markers", 6)]
     public BooleanValue Markers { get; set; }
     /// <summary>
     /// <para> high.</para>
     /// <para>Represents the following attribute in the schema: high </para>
     /// </summary>
-    [SchemaAttr(0, "high")]
-    [SchemaIndex(7)]
+    [SchemaAttr(0, "high", 7)]
     public BooleanValue High { get; set; }
     /// <summary>
     /// <para> low.</para>
     /// <para>Represents the following attribute in the schema: low </para>
     /// </summary>
-    [SchemaAttr(0, "low")]
-    [SchemaIndex(8)]
+    [SchemaAttr(0, "low", 8)]
     public BooleanValue Low { get; set; }
     /// <summary>
     /// <para> first.</para>
     /// <para>Represents the following attribute in the schema: first </para>
     /// </summary>
-    [SchemaAttr(0, "first")]
-    [SchemaIndex(9)]
+    [SchemaAttr(0, "first", 9)]
     public BooleanValue First { get; set; }
     /// <summary>
     /// <para> last.</para>
     /// <para>Represents the following attribute in the schema: last </para>
     /// </summary>
-    [SchemaAttr(0, "last")]
-    [SchemaIndex(10)]
+    [SchemaAttr(0, "last", 10)]
     public BooleanValue Last { get; set; }
     /// <summary>
     /// <para> negative.</para>
     /// <para>Represents the following attribute in the schema: negative </para>
     /// </summary>
-    [SchemaAttr(0, "negative")]
-    [SchemaIndex(11)]
+    [SchemaAttr(0, "negative", 11)]
     public BooleanValue Negative { get; set; }
     /// <summary>
     /// <para> displayXAxis.</para>
     /// <para>Represents the following attribute in the schema: displayXAxis </para>
     /// </summary>
-    [SchemaAttr(0, "displayXAxis")]
-    [SchemaIndex(12)]
+    [SchemaAttr(0, "displayXAxis", 12)]
     public BooleanValue DisplayXAxis { get; set; }
     /// <summary>
     /// <para> displayHidden.</para>
     /// <para>Represents the following attribute in the schema: displayHidden </para>
     /// </summary>
-    [SchemaAttr(0, "displayHidden")]
-    [SchemaIndex(13)]
+    [SchemaAttr(0, "displayHidden", 13)]
     public BooleanValue DisplayHidden { get; set; }
     /// <summary>
     /// <para> minAxisType.</para>
     /// <para>Represents the following attribute in the schema: minAxisType </para>
     /// </summary>
-    [SchemaAttr(0, "minAxisType")]
-    [SchemaIndex(14)]
+    [SchemaAttr(0, "minAxisType", 14)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MinAxisType { get; set; }
     /// <summary>
     /// <para> maxAxisType.</para>
     /// <para>Represents the following attribute in the schema: maxAxisType </para>
     /// </summary>
-    [SchemaAttr(0, "maxAxisType")]
-    [SchemaIndex(15)]
+    [SchemaAttr(0, "maxAxisType", 15)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MaxAxisType { get; set; }
     /// <summary>
     /// <para> rightToLeft.</para>
     /// <para>Represents the following attribute in the schema: rightToLeft </para>
     /// </summary>
-    [SchemaAttr(0, "rightToLeft")]
-    [SchemaIndex(16)]
+    [SchemaAttr(0, "rightToLeft", 16)]
     public BooleanValue RightToLeft { get; set; }
 
     /// <summary>
@@ -4569,36 +4431,31 @@ public abstract partial class ColorType : OpenXmlLeafElement
     /// <para> Automatic.</para>
     /// <para>Represents the following attribute in the schema: auto </para>
     /// </summary>
-    [SchemaAttr(0, "auto")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "auto", 0)]
     public BooleanValue Auto { get; set; }
     /// <summary>
     /// <para> Index.</para>
     /// <para>Represents the following attribute in the schema: indexed </para>
     /// </summary>
-    [SchemaAttr(0, "indexed")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "indexed", 1)]
     public UInt32Value Indexed { get; set; }
     /// <summary>
     /// <para> Alpha Red Green Blue Color Value.</para>
     /// <para>Represents the following attribute in the schema: rgb </para>
     /// </summary>
-    [SchemaAttr(0, "rgb")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "rgb", 2)]
     public HexBinaryValue Rgb { get; set; }
     /// <summary>
     /// <para> Theme Color.</para>
     /// <para>Represents the following attribute in the schema: theme </para>
     /// </summary>
-    [SchemaAttr(0, "theme")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "theme", 3)]
     public UInt32Value Theme { get; set; }
     /// <summary>
     /// <para> Tint.</para>
     /// <para>Represents the following attribute in the schema: tint </para>
     /// </summary>
-    [SchemaAttr(0, "tint")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "tint", 4)]
     public DoubleValue Tint { get; set; }
 
     
@@ -4825,8 +4682,7 @@ public partial class SlicerRef : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id")]
-    [SchemaIndex(0)]
+    [SchemaAttr(19, "id", 0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -4868,8 +4724,7 @@ public partial class SlicerCache : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id")]
-    [SchemaIndex(0)]
+    [SchemaAttr(19, "id", 0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -4916,8 +4771,7 @@ public partial class DefinedName : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "name", 0)]
     public StringValue Name { get; set; }
 
     /// <summary>
@@ -5019,8 +4873,7 @@ public partial class ArgumentDescriptions : OpenXmlCompositeElement
     /// <para> count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "count", 0)]
     public UInt32Value Count { get; set; }
 
     /// <summary>
@@ -5094,8 +4947,7 @@ public partial class ArgumentDescription : OpenXmlLeafTextElement
     /// <para> index.</para>
     /// <para>Represents the following attribute in the schema: index </para>
     /// </summary>
-    [SchemaAttr(0, "index")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "index", 0)]
     public UInt32Value Index { get; set; }
 
     /// <summary>
@@ -5157,15 +5009,13 @@ public partial class TupleSet : OpenXmlCompositeElement
     /// <para> rowCount.</para>
     /// <para>Represents the following attribute in the schema: rowCount </para>
     /// </summary>
-    [SchemaAttr(0, "rowCount")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "rowCount", 0)]
     public UInt32Value RowCount { get; set; }
     /// <summary>
     /// <para> columnCount.</para>
     /// <para>Represents the following attribute in the schema: columnCount </para>
     /// </summary>
-    [SchemaAttr(0, "columnCount")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "columnCount", 1)]
     public UInt32Value ColumnCount { get; set; }
 
     /// <summary>
@@ -5425,15 +5275,13 @@ public partial class TupleSetHeader : OpenXmlLeafElement
     /// <para> uniqueName.</para>
     /// <para>Represents the following attribute in the schema: uniqueName </para>
     /// </summary>
-    [SchemaAttr(0, "uniqueName")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "uniqueName", 0)]
     public StringValue UniqueName { get; set; }
     /// <summary>
     /// <para> hierarchyName.</para>
     /// <para>Represents the following attribute in the schema: hierarchyName </para>
     /// </summary>
-    [SchemaAttr(0, "hierarchyName")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "hierarchyName", 1)]
     public StringValue HierarchyName { get; set; }
 
     /// <summary>
@@ -5548,15 +5396,13 @@ public partial class TupleSetRowItem : OpenXmlLeafElement
     /// <para> u.</para>
     /// <para>Represents the following attribute in the schema: u </para>
     /// </summary>
-    [SchemaAttr(0, "u")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "u", 0)]
     public StringValue UniqueName { get; set; }
     /// <summary>
     /// <para> d.</para>
     /// <para>Represents the following attribute in the schema: d </para>
     /// </summary>
-    [SchemaAttr(0, "d")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "d", 1)]
     public StringValue DisplayName { get; set; }
 
     /// <summary>
@@ -5596,8 +5442,7 @@ public partial class SetLevel : OpenXmlLeafElement
     /// <para> hierarchy.</para>
     /// <para>Represents the following attribute in the schema: hierarchy </para>
     /// </summary>
-    [SchemaAttr(0, "hierarchy")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "hierarchy", 0)]
     public Int32Value Hierarchy { get; set; }
 
     /// <summary>
@@ -5644,8 +5489,7 @@ public partial class SetLevels : OpenXmlCompositeElement
     /// <para> count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "count", 0)]
     public UInt32Value Count { get; set; }
 
     /// <summary>
@@ -5816,64 +5660,55 @@ public partial class DataBar : OpenXmlCompositeElement
     /// <para> minLength.</para>
     /// <para>Represents the following attribute in the schema: minLength </para>
     /// </summary>
-    [SchemaAttr(0, "minLength")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "minLength", 0)]
     public UInt32Value MinLength { get; set; }
     /// <summary>
     /// <para> maxLength.</para>
     /// <para>Represents the following attribute in the schema: maxLength </para>
     /// </summary>
-    [SchemaAttr(0, "maxLength")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "maxLength", 1)]
     public UInt32Value MaxLength { get; set; }
     /// <summary>
     /// <para> showValue.</para>
     /// <para>Represents the following attribute in the schema: showValue </para>
     /// </summary>
-    [SchemaAttr(0, "showValue")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "showValue", 2)]
     public BooleanValue ShowValue { get; set; }
     /// <summary>
     /// <para> border.</para>
     /// <para>Represents the following attribute in the schema: border </para>
     /// </summary>
-    [SchemaAttr(0, "border")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "border", 3)]
     public BooleanValue Border { get; set; }
     /// <summary>
     /// <para> gradient.</para>
     /// <para>Represents the following attribute in the schema: gradient </para>
     /// </summary>
-    [SchemaAttr(0, "gradient")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "gradient", 4)]
     public BooleanValue Gradient { get; set; }
     /// <summary>
     /// <para> direction.</para>
     /// <para>Represents the following attribute in the schema: direction </para>
     /// </summary>
-    [SchemaAttr(0, "direction")]
-    [SchemaIndex(5)]
+    [SchemaAttr(0, "direction", 5)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarDirectionValues> Direction { get; set; }
     /// <summary>
     /// <para> negativeBarColorSameAsPositive.</para>
     /// <para>Represents the following attribute in the schema: negativeBarColorSameAsPositive </para>
     /// </summary>
-    [SchemaAttr(0, "negativeBarColorSameAsPositive")]
-    [SchemaIndex(6)]
+    [SchemaAttr(0, "negativeBarColorSameAsPositive", 6)]
     public BooleanValue NegativeBarColorSameAsPositive { get; set; }
     /// <summary>
     /// <para> negativeBarBorderColorSameAsPositive.</para>
     /// <para>Represents the following attribute in the schema: negativeBarBorderColorSameAsPositive </para>
     /// </summary>
-    [SchemaAttr(0, "negativeBarBorderColorSameAsPositive")]
-    [SchemaIndex(7)]
+    [SchemaAttr(0, "negativeBarBorderColorSameAsPositive", 7)]
     public BooleanValue NegativeBarBorderColorSameAsPositive { get; set; }
     /// <summary>
     /// <para> axisPosition.</para>
     /// <para>Represents the following attribute in the schema: axisPosition </para>
     /// </summary>
-    [SchemaAttr(0, "axisPosition")]
-    [SchemaIndex(8)]
+    [SchemaAttr(0, "axisPosition", 8)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarAxisPositionValues> AxisPosition { get; set; }
 
     /// <summary>
@@ -5971,36 +5806,31 @@ public partial class IconSet : OpenXmlCompositeElement
     /// <para> iconSet.</para>
     /// <para>Represents the following attribute in the schema: iconSet </para>
     /// </summary>
-    [SchemaAttr(0, "iconSet")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "iconSet", 0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues> IconSetTypes { get; set; }
     /// <summary>
     /// <para> showValue.</para>
     /// <para>Represents the following attribute in the schema: showValue </para>
     /// </summary>
-    [SchemaAttr(0, "showValue")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "showValue", 1)]
     public BooleanValue ShowValue { get; set; }
     /// <summary>
     /// <para> percent.</para>
     /// <para>Represents the following attribute in the schema: percent </para>
     /// </summary>
-    [SchemaAttr(0, "percent")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "percent", 2)]
     public BooleanValue Percent { get; set; }
     /// <summary>
     /// <para> reverse.</para>
     /// <para>Represents the following attribute in the schema: reverse </para>
     /// </summary>
-    [SchemaAttr(0, "reverse")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "reverse", 3)]
     public BooleanValue Reverse { get; set; }
     /// <summary>
     /// <para> custom.</para>
     /// <para>Represents the following attribute in the schema: custom </para>
     /// </summary>
-    [SchemaAttr(0, "custom")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "custom", 4)]
     public BooleanValue Custom { get; set; }
 
     /// <summary>
@@ -6284,15 +6114,13 @@ public partial class ConditionalFormattingValueObject : OpenXmlCompositeElement
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "type", 0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObjectTypeValues> Type { get; set; }
     /// <summary>
     /// <para> gte.</para>
     /// <para>Represents the following attribute in the schema: gte </para>
     /// </summary>
-    [SchemaAttr(0, "gte")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "gte", 1)]
     public BooleanValue GreaterThanOrEqual { get; set; }
 
     /// <summary>
@@ -6402,15 +6230,13 @@ public partial class ConditionalFormattingIcon : OpenXmlLeafElement
     /// <para> iconSet.</para>
     /// <para>Represents the following attribute in the schema: iconSet </para>
     /// </summary>
-    [SchemaAttr(0, "iconSet")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "iconSet", 0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues> IconSet { get; set; }
     /// <summary>
     /// <para> iconId.</para>
     /// <para>Represents the following attribute in the schema: iconId </para>
     /// </summary>
-    [SchemaAttr(0, "iconId")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "iconId", 1)]
     public UInt32Value IconId { get; set; }
 
     /// <summary>
@@ -6607,8 +6433,7 @@ public partial class ConditionalFormats : OpenXmlCompositeElement
     /// <para> count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "count", 0)]
     public UInt32Value Count { get; set; }
 
     /// <summary>
@@ -6689,8 +6514,7 @@ public partial class CalculatedMembers : OpenXmlCompositeElement
     /// <para> Calculated Members Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "count", 0)]
     public UInt32Value Count { get; set; }
 
     /// <summary>
@@ -7108,85 +6932,73 @@ public partial class PivotArea : OpenXmlCompositeElement
     /// <para> Field Index.</para>
     /// <para>Represents the following attribute in the schema: field </para>
     /// </summary>
-    [SchemaAttr(0, "field")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "field", 0)]
     public Int32Value Field { get; set; }
     /// <summary>
     /// <para> Rule Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "type", 1)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues> Type { get; set; }
     /// <summary>
     /// <para> Data Only.</para>
     /// <para>Represents the following attribute in the schema: dataOnly </para>
     /// </summary>
-    [SchemaAttr(0, "dataOnly")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "dataOnly", 2)]
     public BooleanValue DataOnly { get; set; }
     /// <summary>
     /// <para> Labels Only.</para>
     /// <para>Represents the following attribute in the schema: labelOnly </para>
     /// </summary>
-    [SchemaAttr(0, "labelOnly")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "labelOnly", 3)]
     public BooleanValue LabelOnly { get; set; }
     /// <summary>
     /// <para> Include Row Grand Total.</para>
     /// <para>Represents the following attribute in the schema: grandRow </para>
     /// </summary>
-    [SchemaAttr(0, "grandRow")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "grandRow", 4)]
     public BooleanValue GrandRow { get; set; }
     /// <summary>
     /// <para> Include Column Grand Total.</para>
     /// <para>Represents the following attribute in the schema: grandCol </para>
     /// </summary>
-    [SchemaAttr(0, "grandCol")]
-    [SchemaIndex(5)]
+    [SchemaAttr(0, "grandCol", 5)]
     public BooleanValue GrandColumn { get; set; }
     /// <summary>
     /// <para> Cache Index.</para>
     /// <para>Represents the following attribute in the schema: cacheIndex </para>
     /// </summary>
-    [SchemaAttr(0, "cacheIndex")]
-    [SchemaIndex(6)]
+    [SchemaAttr(0, "cacheIndex", 6)]
     public BooleanValue CacheIndex { get; set; }
     /// <summary>
     /// <para> Outline.</para>
     /// <para>Represents the following attribute in the schema: outline </para>
     /// </summary>
-    [SchemaAttr(0, "outline")]
-    [SchemaIndex(7)]
+    [SchemaAttr(0, "outline", 7)]
     public BooleanValue Outline { get; set; }
     /// <summary>
     /// <para> Offset Reference.</para>
     /// <para>Represents the following attribute in the schema: offset </para>
     /// </summary>
-    [SchemaAttr(0, "offset")]
-    [SchemaIndex(8)]
+    [SchemaAttr(0, "offset", 8)]
     public StringValue Offset { get; set; }
     /// <summary>
     /// <para> Collapsed Levels Are Subtotals.</para>
     /// <para>Represents the following attribute in the schema: collapsedLevelsAreSubtotals </para>
     /// </summary>
-    [SchemaAttr(0, "collapsedLevelsAreSubtotals")]
-    [SchemaIndex(9)]
+    [SchemaAttr(0, "collapsedLevelsAreSubtotals", 9)]
     public BooleanValue CollapsedLevelsAreSubtotals { get; set; }
     /// <summary>
     /// <para> Axis.</para>
     /// <para>Represents the following attribute in the schema: axis </para>
     /// </summary>
-    [SchemaAttr(0, "axis")]
-    [SchemaIndex(10)]
+    [SchemaAttr(0, "axis", 10)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues> Axis { get; set; }
     /// <summary>
     /// <para> Field Position.</para>
     /// <para>Represents the following attribute in the schema: fieldPosition </para>
     /// </summary>
-    [SchemaAttr(0, "fieldPosition")]
-    [SchemaIndex(11)]
+    [SchemaAttr(0, "fieldPosition", 11)]
     public UInt32Value FieldPosition { get; set; }
 
     /// <summary>
@@ -7307,15 +7119,13 @@ public partial class PivotChange : OpenXmlCompositeElement
     /// <para> allocationMethod.</para>
     /// <para>Represents the following attribute in the schema: allocationMethod </para>
     /// </summary>
-    [SchemaAttr(0, "allocationMethod")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "allocationMethod", 0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues> AllocationMethod { get; set; }
     /// <summary>
     /// <para> weightExpression.</para>
     /// <para>Represents the following attribute in the schema: weightExpression </para>
     /// </summary>
-    [SchemaAttr(0, "weightExpression")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "weightExpression", 1)]
     public StringValue WeightExpression { get; set; }
 
     /// <summary>
@@ -7440,8 +7250,7 @@ public partial class PivotEditValue : OpenXmlLeafTextElement
     /// <para> valueType.</para>
     /// <para>Represents the following attribute in the schema: valueType </para>
     /// </summary>
-    [SchemaAttr(0, "valueType")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "valueType", 0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValueTypeValues> ValueType { get; set; }
 
     /// <summary>
@@ -7623,15 +7432,13 @@ public partial class DdeValues : OpenXmlCompositeElement
     /// <para> Rows.</para>
     /// <para>Represents the following attribute in the schema: rows </para>
     /// </summary>
-    [SchemaAttr(0, "rows")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "rows", 0)]
     public UInt32Value Rows { get; set; }
     /// <summary>
     /// <para> Columns.</para>
     /// <para>Represents the following attribute in the schema: cols </para>
     /// </summary>
-    [SchemaAttr(0, "cols")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "cols", 1)]
     public UInt32Value Columns { get; set; }
 
     /// <summary>
@@ -7714,29 +7521,25 @@ public partial class ConditionalFormat : OpenXmlCompositeElement
     /// <para> scope.</para>
     /// <para>Represents the following attribute in the schema: scope </para>
     /// </summary>
-    [SchemaAttr(0, "scope")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "scope", 0)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues> Scope { get; set; }
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "type", 1)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues> Type { get; set; }
     /// <summary>
     /// <para> priority.</para>
     /// <para>Represents the following attribute in the schema: priority </para>
     /// </summary>
-    [SchemaAttr(0, "priority")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "priority", 2)]
     public UInt32Value Priority { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "id", 3)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -7853,8 +7656,7 @@ public partial class PivotAreas : OpenXmlCompositeElement
     /// <para> Pivot Area Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "count", 0)]
     public UInt32Value Count { get; set; }
 
     /// <summary>
@@ -7935,8 +7737,7 @@ public partial class SlicerStyle : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "name", 0)]
     public StringValue Name { get; set; }
 
     /// <summary>
@@ -8031,15 +7832,13 @@ public partial class SlicerStyleElement : OpenXmlLeafElement
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "type", 0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleTypeValues> Type { get; set; }
     /// <summary>
     /// <para> dxfId.</para>
     /// <para>Represents the following attribute in the schema: dxfId </para>
     /// </summary>
-    [SchemaAttr(0, "dxfId")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "dxfId", 1)]
     public UInt32Value FormatId { get; set; }
 
     /// <summary>
@@ -8086,64 +7885,55 @@ public partial class IgnoredError : OpenXmlCompositeElement
     /// <para> evalError.</para>
     /// <para>Represents the following attribute in the schema: evalError </para>
     /// </summary>
-    [SchemaAttr(0, "evalError")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "evalError", 0)]
     public BooleanValue EvalError { get; set; }
     /// <summary>
     /// <para> twoDigitTextYear.</para>
     /// <para>Represents the following attribute in the schema: twoDigitTextYear </para>
     /// </summary>
-    [SchemaAttr(0, "twoDigitTextYear")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "twoDigitTextYear", 1)]
     public BooleanValue TwoDigitTextYear { get; set; }
     /// <summary>
     /// <para> numberStoredAsText.</para>
     /// <para>Represents the following attribute in the schema: numberStoredAsText </para>
     /// </summary>
-    [SchemaAttr(0, "numberStoredAsText")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "numberStoredAsText", 2)]
     public BooleanValue NumberStoredAsText { get; set; }
     /// <summary>
     /// <para> formula.</para>
     /// <para>Represents the following attribute in the schema: formula </para>
     /// </summary>
-    [SchemaAttr(0, "formula")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "formula", 3)]
     public BooleanValue Formula { get; set; }
     /// <summary>
     /// <para> formulaRange.</para>
     /// <para>Represents the following attribute in the schema: formulaRange </para>
     /// </summary>
-    [SchemaAttr(0, "formulaRange")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "formulaRange", 4)]
     public BooleanValue FormulaRange { get; set; }
     /// <summary>
     /// <para> unlockedFormula.</para>
     /// <para>Represents the following attribute in the schema: unlockedFormula </para>
     /// </summary>
-    [SchemaAttr(0, "unlockedFormula")]
-    [SchemaIndex(5)]
+    [SchemaAttr(0, "unlockedFormula", 5)]
     public BooleanValue UnlockedFormula { get; set; }
     /// <summary>
     /// <para> emptyCellReference.</para>
     /// <para>Represents the following attribute in the schema: emptyCellReference </para>
     /// </summary>
-    [SchemaAttr(0, "emptyCellReference")]
-    [SchemaIndex(6)]
+    [SchemaAttr(0, "emptyCellReference", 6)]
     public BooleanValue EmptyCellReference { get; set; }
     /// <summary>
     /// <para> listDataValidation.</para>
     /// <para>Represents the following attribute in the schema: listDataValidation </para>
     /// </summary>
-    [SchemaAttr(0, "listDataValidation")]
-    [SchemaIndex(7)]
+    [SchemaAttr(0, "listDataValidation", 7)]
     public BooleanValue ListDataValidation { get; set; }
     /// <summary>
     /// <para> calculatedColumn.</para>
     /// <para>Represents the following attribute in the schema: calculatedColumn </para>
     /// </summary>
-    [SchemaAttr(0, "calculatedColumn")]
-    [SchemaIndex(8)]
+    [SchemaAttr(0, "calculatedColumn", 8)]
     public BooleanValue CalculatedColumn { get; set; }
 
     /// <summary>
@@ -8245,50 +8035,43 @@ public partial class ProtectedRange : OpenXmlCompositeElement
     /// <para> password.</para>
     /// <para>Represents the following attribute in the schema: password </para>
     /// </summary>
-    [SchemaAttr(0, "password")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "password", 0)]
     public HexBinaryValue Password { get; set; }
     /// <summary>
     /// <para> algorithmName.</para>
     /// <para>Represents the following attribute in the schema: algorithmName </para>
     /// </summary>
-    [SchemaAttr(0, "algorithmName")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "algorithmName", 1)]
     public StringValue AlgorithmName { get; set; }
     /// <summary>
     /// <para> hashValue.</para>
     /// <para>Represents the following attribute in the schema: hashValue </para>
     /// </summary>
-    [SchemaAttr(0, "hashValue")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "hashValue", 2)]
     public Base64BinaryValue HashValue { get; set; }
     /// <summary>
     /// <para> saltValue.</para>
     /// <para>Represents the following attribute in the schema: saltValue </para>
     /// </summary>
-    [SchemaAttr(0, "saltValue")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "saltValue", 3)]
     public Base64BinaryValue SaltValue { get; set; }
     /// <summary>
     /// <para> spinCount.</para>
     /// <para>Represents the following attribute in the schema: spinCount </para>
     /// </summary>
-    [SchemaAttr(0, "spinCount")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "spinCount", 4)]
     public UInt32Value SpinCount { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
-    [SchemaIndex(5)]
+    [SchemaAttr(0, "name", 5)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> securityDescriptor.</para>
     /// <para>Represents the following attribute in the schema: securityDescriptor </para>
     /// </summary>
-    [SchemaAttr(0, "securityDescriptor")]
-    [SchemaIndex(6)]
+    [SchemaAttr(0, "securityDescriptor", 6)]
     public StringValue SecurityDescriptor { get; set; }
 
     /// <summary>
@@ -8383,15 +8166,13 @@ public partial class CustomFilter : OpenXmlLeafElement
     /// <para> operator.</para>
     /// <para>Represents the following attribute in the schema: operator </para>
     /// </summary>
-    [SchemaAttr(0, "operator")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "operator", 0)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues> Operator { get; set; }
     /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "val", 1)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -8431,8 +8212,7 @@ public partial class ListItem : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "val", 0)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -8559,71 +8339,61 @@ public partial class Slicer : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "name", 0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> cache.</para>
     /// <para>Represents the following attribute in the schema: cache </para>
     /// </summary>
-    [SchemaAttr(0, "cache")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "cache", 1)]
     public StringValue Cache { get; set; }
     /// <summary>
     /// <para> caption.</para>
     /// <para>Represents the following attribute in the schema: caption </para>
     /// </summary>
-    [SchemaAttr(0, "caption")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "caption", 2)]
     public StringValue Caption { get; set; }
     /// <summary>
     /// <para> startItem.</para>
     /// <para>Represents the following attribute in the schema: startItem </para>
     /// </summary>
-    [SchemaAttr(0, "startItem")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "startItem", 3)]
     public UInt32Value StartItem { get; set; }
     /// <summary>
     /// <para> columnCount.</para>
     /// <para>Represents the following attribute in the schema: columnCount </para>
     /// </summary>
-    [SchemaAttr(0, "columnCount")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "columnCount", 4)]
     public UInt32Value ColumnCount { get; set; }
     /// <summary>
     /// <para> showCaption.</para>
     /// <para>Represents the following attribute in the schema: showCaption </para>
     /// </summary>
-    [SchemaAttr(0, "showCaption")]
-    [SchemaIndex(5)]
+    [SchemaAttr(0, "showCaption", 5)]
     public BooleanValue ShowCaption { get; set; }
     /// <summary>
     /// <para> level.</para>
     /// <para>Represents the following attribute in the schema: level </para>
     /// </summary>
-    [SchemaAttr(0, "level")]
-    [SchemaIndex(6)]
+    [SchemaAttr(0, "level", 6)]
     public UInt32Value Level { get; set; }
     /// <summary>
     /// <para> style.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style")]
-    [SchemaIndex(7)]
+    [SchemaAttr(0, "style", 7)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> lockedPosition.</para>
     /// <para>Represents the following attribute in the schema: lockedPosition </para>
     /// </summary>
-    [SchemaAttr(0, "lockedPosition")]
-    [SchemaIndex(8)]
+    [SchemaAttr(0, "lockedPosition", 8)]
     public BooleanValue LockedPosition { get; set; }
     /// <summary>
     /// <para> rowHeight.</para>
     /// <para>Represents the following attribute in the schema: rowHeight </para>
     /// </summary>
-    [SchemaAttr(0, "rowHeight")]
-    [SchemaIndex(9)]
+    [SchemaAttr(0, "rowHeight", 9)]
     public UInt32Value RowHeight { get; set; }
 
     /// <summary>
@@ -8729,8 +8499,7 @@ public partial class OlapSlicerCache : OpenXmlCompositeElement
     /// <para> pivotCacheId.</para>
     /// <para>Represents the following attribute in the schema: pivotCacheId </para>
     /// </summary>
-    [SchemaAttr(0, "pivotCacheId")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "pivotCacheId", 0)]
     public UInt32Value PivotCacheId { get; set; }
 
     /// <summary>
@@ -8864,36 +8633,31 @@ public partial class TabularSlicerCache : OpenXmlCompositeElement
     /// <para> pivotCacheId.</para>
     /// <para>Represents the following attribute in the schema: pivotCacheId </para>
     /// </summary>
-    [SchemaAttr(0, "pivotCacheId")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "pivotCacheId", 0)]
     public UInt32Value PivotCacheId { get; set; }
     /// <summary>
     /// <para> sortOrder.</para>
     /// <para>Represents the following attribute in the schema: sortOrder </para>
     /// </summary>
-    [SchemaAttr(0, "sortOrder")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "sortOrder", 1)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheSortOrderValues> SortOrder { get; set; }
     /// <summary>
     /// <para> customListSort.</para>
     /// <para>Represents the following attribute in the schema: customListSort </para>
     /// </summary>
-    [SchemaAttr(0, "customListSort")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "customListSort", 2)]
     public BooleanValue CustomListSort { get; set; }
     /// <summary>
     /// <para> showMissing.</para>
     /// <para>Represents the following attribute in the schema: showMissing </para>
     /// </summary>
-    [SchemaAttr(0, "showMissing")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "showMissing", 3)]
     public BooleanValue ShowMissing { get; set; }
     /// <summary>
     /// <para> crossFilter.</para>
     /// <para>Represents the following attribute in the schema: crossFilter </para>
     /// </summary>
-    [SchemaAttr(0, "crossFilter")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "crossFilter", 4)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues> CrossFilter { get; set; }
 
     /// <summary>
@@ -9003,15 +8767,13 @@ public partial class SlicerCachePivotTable : OpenXmlLeafElement
     /// <para> tabId.</para>
     /// <para>Represents the following attribute in the schema: tabId </para>
     /// </summary>
-    [SchemaAttr(0, "tabId")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "tabId", 0)]
     public UInt32Value TabId { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "name", 1)]
     public StringValue Name { get; set; }
 
     /// <summary>
@@ -9051,8 +8813,7 @@ public partial class OlapSlicerCacheItemParent : OpenXmlLeafElement
     /// <para> n.</para>
     /// <para>Represents the following attribute in the schema: n </para>
     /// </summary>
-    [SchemaAttr(0, "n")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "n", 0)]
     public StringValue Name { get; set; }
 
     /// <summary>
@@ -9099,22 +8860,19 @@ public partial class OlapSlicerCacheItem : OpenXmlCompositeElement
     /// <para> n.</para>
     /// <para>Represents the following attribute in the schema: n </para>
     /// </summary>
-    [SchemaAttr(0, "n")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "n", 0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> c.</para>
     /// <para>Represents the following attribute in the schema: c </para>
     /// </summary>
-    [SchemaAttr(0, "c")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "c", 1)]
     public StringValue DisplayName { get; set; }
     /// <summary>
     /// <para> nd.</para>
     /// <para>Represents the following attribute in the schema: nd </para>
     /// </summary>
-    [SchemaAttr(0, "nd")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "nd", 2)]
     public BooleanValue NonDisplay { get; set; }
 
     /// <summary>
@@ -9195,8 +8953,7 @@ public partial class OlapSlicerCacheRange : OpenXmlCompositeElement
     /// <para> startItem.</para>
     /// <para>Represents the following attribute in the schema: startItem </para>
     /// </summary>
-    [SchemaAttr(0, "startItem")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "startItem", 0)]
     public UInt32Value StartItem { get; set; }
 
     /// <summary>
@@ -9352,36 +9109,31 @@ public partial class OlapSlicerCacheLevelData : OpenXmlCompositeElement
     /// <para> uniqueName.</para>
     /// <para>Represents the following attribute in the schema: uniqueName </para>
     /// </summary>
-    [SchemaAttr(0, "uniqueName")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "uniqueName", 0)]
     public StringValue UniqueName { get; set; }
     /// <summary>
     /// <para> sourceCaption.</para>
     /// <para>Represents the following attribute in the schema: sourceCaption </para>
     /// </summary>
-    [SchemaAttr(0, "sourceCaption")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "sourceCaption", 1)]
     public StringValue SourceCaption { get; set; }
     /// <summary>
     /// <para> count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "count", 2)]
     public UInt32Value Count { get; set; }
     /// <summary>
     /// <para> sortOrder.</para>
     /// <para>Represents the following attribute in the schema: sortOrder </para>
     /// </summary>
-    [SchemaAttr(0, "sortOrder")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "sortOrder", 3)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSortOrderValues> SortOrder { get; set; }
     /// <summary>
     /// <para> crossFilter.</para>
     /// <para>Represents the following attribute in the schema: crossFilter </para>
     /// </summary>
-    [SchemaAttr(0, "crossFilter")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "crossFilter", 4)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues> CrossFilter { get; set; }
 
     /// <summary>
@@ -9483,8 +9235,7 @@ public partial class OlapSlicerCacheLevelsData : OpenXmlCompositeElement
     /// <para> count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "count", 0)]
     public UInt32Value Count { get; set; }
 
     /// <summary>
@@ -9565,8 +9316,7 @@ public partial class OlapSlicerCacheSelections : OpenXmlCompositeElement
     /// <para> count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "count", 0)]
     public UInt32Value Count { get; set; }
 
     /// <summary>
@@ -9647,8 +9397,7 @@ public partial class OlapSlicerCacheSelection : OpenXmlCompositeElement
     /// <para> n.</para>
     /// <para>Represents the following attribute in the schema: n </para>
     /// </summary>
-    [SchemaAttr(0, "n")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "n", 0)]
     public StringValue Name { get; set; }
 
     /// <summary>
@@ -9729,8 +9478,7 @@ public partial class TabularSlicerCacheItems : OpenXmlCompositeElement
     /// <para> count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "count", 0)]
     public UInt32Value Count { get; set; }
 
     /// <summary>
@@ -9804,22 +9552,19 @@ public partial class TabularSlicerCacheItem : OpenXmlLeafElement
     /// <para> x.</para>
     /// <para>Represents the following attribute in the schema: x </para>
     /// </summary>
-    [SchemaAttr(0, "x")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "x", 0)]
     public UInt32Value Atom { get; set; }
     /// <summary>
     /// <para> s.</para>
     /// <para>Represents the following attribute in the schema: s </para>
     /// </summary>
-    [SchemaAttr(0, "s")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "s", 1)]
     public BooleanValue IsSelected { get; set; }
     /// <summary>
     /// <para> nd.</para>
     /// <para>Represents the following attribute in the schema: nd </para>
     /// </summary>
-    [SchemaAttr(0, "nd")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "nd", 2)]
     public BooleanValue NonDisplay { get; set; }
 
     /// <summary>

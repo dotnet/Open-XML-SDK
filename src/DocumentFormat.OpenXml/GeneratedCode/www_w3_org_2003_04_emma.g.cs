@@ -32,15 +32,13 @@ public partial class DerivedFrom : OpenXmlLeafElement
     /// <para> resource.</para>
     /// <para>Represents the following attribute in the schema: resource </para>
     /// </summary>
-    [SchemaAttr(0, "resource")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "resource", 0)]
     public StringValue Resource { get; set; }
     /// <summary>
     /// <para> composite.</para>
     /// <para>Represents the following attribute in the schema: composite </para>
     /// </summary>
-    [SchemaAttr(0, "composite")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "composite", 1)]
     public BooleanValue Composite { get; set; }
 
     /// <summary>
@@ -85,8 +83,7 @@ public partial class Info : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "id", 0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -166,15 +163,13 @@ public partial class Lattice : OpenXmlCompositeElement
     /// <para> initial.</para>
     /// <para>Represents the following attribute in the schema: initial </para>
     /// </summary>
-    [SchemaAttr(0, "initial")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "initial", 0)]
     public IntegerValue Initial { get; set; }
     /// <summary>
     /// <para> final.</para>
     /// <para>Represents the following attribute in the schema: final </para>
     /// </summary>
-    [SchemaAttr(0, "final")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "final", 1)]
     public ListValue<DecimalValue> Final { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
@@ -182,8 +177,7 @@ public partial class Lattice : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "time-ref-uri")]
-    [SchemaIndex(2)]
+    [SchemaAttr(44, "time-ref-uri", 2)]
     public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
@@ -191,8 +185,7 @@ public partial class Lattice : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "time-ref-anchor-point")]
-    [SchemaIndex(3)]
+    [SchemaAttr(44, "time-ref-anchor-point", 3)]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
 
     /// <summary>
@@ -331,8 +324,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "id", 0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> tokens.</para>
@@ -340,8 +332,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "tokens")]
-    [SchemaIndex(1)]
+    [SchemaAttr(44, "tokens", 1)]
     public StringValue Tokens { get; set; }
     /// <summary>
     /// <para> process.</para>
@@ -349,8 +340,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "process")]
-    [SchemaIndex(2)]
+    [SchemaAttr(44, "process", 2)]
     public StringValue Process { get; set; }
     /// <summary>
     /// <para> lang.</para>
@@ -358,8 +348,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "lang")]
-    [SchemaIndex(3)]
+    [SchemaAttr(44, "lang", 3)]
     public StringValue Language { get; set; }
     /// <summary>
     /// <para> signal.</para>
@@ -367,8 +356,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "signal")]
-    [SchemaIndex(4)]
+    [SchemaAttr(44, "signal", 4)]
     public StringValue Signal { get; set; }
     /// <summary>
     /// <para> signal-size.</para>
@@ -376,8 +364,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "signal-size")]
-    [SchemaIndex(5)]
+    [SchemaAttr(44, "signal-size", 5)]
     public IntegerValue SignalSize { get; set; }
     /// <summary>
     /// <para> media-type.</para>
@@ -385,8 +372,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "media-type")]
-    [SchemaIndex(6)]
+    [SchemaAttr(44, "media-type", 6)]
     public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> confidence.</para>
@@ -394,8 +380,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "confidence")]
-    [SchemaIndex(7)]
+    [SchemaAttr(44, "confidence", 7)]
     public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> source.</para>
@@ -403,8 +388,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "source")]
-    [SchemaIndex(8)]
+    [SchemaAttr(44, "source", 8)]
     public StringValue Source { get; set; }
     /// <summary>
     /// <para> start.</para>
@@ -412,8 +396,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "start")]
-    [SchemaIndex(9)]
+    [SchemaAttr(44, "start", 9)]
     public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
@@ -421,8 +404,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "end")]
-    [SchemaIndex(10)]
+    [SchemaAttr(44, "end", 10)]
     public UInt64Value End { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
@@ -430,8 +412,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "time-ref-uri")]
-    [SchemaIndex(11)]
+    [SchemaAttr(44, "time-ref-uri", 11)]
     public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
@@ -439,8 +420,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "time-ref-anchor-point")]
-    [SchemaIndex(12)]
+    [SchemaAttr(44, "time-ref-anchor-point", 12)]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
@@ -448,8 +428,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "offset-to-start")]
-    [SchemaIndex(13)]
+    [SchemaAttr(44, "offset-to-start", 13)]
     public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
@@ -457,8 +436,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "duration")]
-    [SchemaIndex(14)]
+    [SchemaAttr(44, "duration", 14)]
     public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> medium.</para>
@@ -466,8 +444,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "medium")]
-    [SchemaIndex(15)]
+    [SchemaAttr(44, "medium", 15)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
@@ -475,8 +452,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "mode")]
-    [SchemaIndex(16)]
+    [SchemaAttr(44, "mode", 16)]
     public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> function.</para>
@@ -484,8 +460,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "function")]
-    [SchemaIndex(17)]
+    [SchemaAttr(44, "function", 17)]
     public StringValue Function { get; set; }
     /// <summary>
     /// <para> verbal.</para>
@@ -493,8 +468,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "verbal")]
-    [SchemaIndex(18)]
+    [SchemaAttr(44, "verbal", 18)]
     public BooleanValue Verbal { get; set; }
     /// <summary>
     /// <para> cost.</para>
@@ -502,8 +476,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "cost")]
-    [SchemaIndex(19)]
+    [SchemaAttr(44, "cost", 19)]
     public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> grammar-ref.</para>
@@ -511,8 +484,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "grammar-ref")]
-    [SchemaIndex(20)]
+    [SchemaAttr(44, "grammar-ref", 20)]
     public StringValue GrammarRef { get; set; }
     /// <summary>
     /// <para> endpoint-info-ref.</para>
@@ -520,8 +492,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "endpoint-info-ref")]
-    [SchemaIndex(21)]
+    [SchemaAttr(44, "endpoint-info-ref", 21)]
     public StringValue EndpointInfoRef { get; set; }
     /// <summary>
     /// <para> model-ref.</para>
@@ -529,8 +500,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "model-ref")]
-    [SchemaIndex(22)]
+    [SchemaAttr(44, "model-ref", 22)]
     public StringValue ModelRef { get; set; }
     /// <summary>
     /// <para> dialog-turn.</para>
@@ -538,8 +508,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "dialog-turn")]
-    [SchemaIndex(23)]
+    [SchemaAttr(44, "dialog-turn", 23)]
     public StringValue DialogTurn { get; set; }
     /// <summary>
     /// <para> no-input.</para>
@@ -547,8 +516,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "no-input")]
-    [SchemaIndex(24)]
+    [SchemaAttr(44, "no-input", 24)]
     public BooleanValue NoInput { get; set; }
     /// <summary>
     /// <para> uninterpreted.</para>
@@ -556,8 +524,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "uninterpreted")]
-    [SchemaIndex(25)]
+    [SchemaAttr(44, "uninterpreted", 25)]
     public BooleanValue Uninterpreted { get; set; }
 
     /// <summary>
@@ -660,15 +627,13 @@ public partial class OneOf : OpenXmlCompositeElement
     /// <para> disjunction-type.</para>
     /// <para>Represents the following attribute in the schema: disjunction-type </para>
     /// </summary>
-    [SchemaAttr(0, "disjunction-type")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "disjunction-type", 0)]
     public EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues> DisjunctionType { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "id", 1)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> tokens.</para>
@@ -676,8 +641,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "tokens")]
-    [SchemaIndex(2)]
+    [SchemaAttr(44, "tokens", 2)]
     public StringValue Tokens { get; set; }
     /// <summary>
     /// <para> process.</para>
@@ -685,8 +649,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "process")]
-    [SchemaIndex(3)]
+    [SchemaAttr(44, "process", 3)]
     public StringValue Process { get; set; }
     /// <summary>
     /// <para> lang.</para>
@@ -694,8 +657,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "lang")]
-    [SchemaIndex(4)]
+    [SchemaAttr(44, "lang", 4)]
     public StringValue Language { get; set; }
     /// <summary>
     /// <para> signal.</para>
@@ -703,8 +665,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "signal")]
-    [SchemaIndex(5)]
+    [SchemaAttr(44, "signal", 5)]
     public StringValue Signal { get; set; }
     /// <summary>
     /// <para> signal-size.</para>
@@ -712,8 +673,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "signal-size")]
-    [SchemaIndex(6)]
+    [SchemaAttr(44, "signal-size", 6)]
     public IntegerValue SignalSize { get; set; }
     /// <summary>
     /// <para> media-type.</para>
@@ -721,8 +681,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "media-type")]
-    [SchemaIndex(7)]
+    [SchemaAttr(44, "media-type", 7)]
     public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> confidence.</para>
@@ -730,8 +689,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "confidence")]
-    [SchemaIndex(8)]
+    [SchemaAttr(44, "confidence", 8)]
     public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> source.</para>
@@ -739,8 +697,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "source")]
-    [SchemaIndex(9)]
+    [SchemaAttr(44, "source", 9)]
     public StringValue Source { get; set; }
     /// <summary>
     /// <para> start.</para>
@@ -748,8 +705,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "start")]
-    [SchemaIndex(10)]
+    [SchemaAttr(44, "start", 10)]
     public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
@@ -757,8 +713,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "end")]
-    [SchemaIndex(11)]
+    [SchemaAttr(44, "end", 11)]
     public UInt64Value End { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
@@ -766,8 +721,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "time-ref-uri")]
-    [SchemaIndex(12)]
+    [SchemaAttr(44, "time-ref-uri", 12)]
     public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
@@ -775,8 +729,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "time-ref-anchor-point")]
-    [SchemaIndex(13)]
+    [SchemaAttr(44, "time-ref-anchor-point", 13)]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
@@ -784,8 +737,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "offset-to-start")]
-    [SchemaIndex(14)]
+    [SchemaAttr(44, "offset-to-start", 14)]
     public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
@@ -793,8 +745,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "duration")]
-    [SchemaIndex(15)]
+    [SchemaAttr(44, "duration", 15)]
     public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> medium.</para>
@@ -802,8 +753,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "medium")]
-    [SchemaIndex(16)]
+    [SchemaAttr(44, "medium", 16)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
@@ -811,8 +761,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "mode")]
-    [SchemaIndex(17)]
+    [SchemaAttr(44, "mode", 17)]
     public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> function.</para>
@@ -820,8 +769,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "function")]
-    [SchemaIndex(18)]
+    [SchemaAttr(44, "function", 18)]
     public StringValue Function { get; set; }
     /// <summary>
     /// <para> verbal.</para>
@@ -829,8 +777,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "verbal")]
-    [SchemaIndex(19)]
+    [SchemaAttr(44, "verbal", 19)]
     public BooleanValue Verbal { get; set; }
     /// <summary>
     /// <para> cost.</para>
@@ -838,8 +785,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "cost")]
-    [SchemaIndex(20)]
+    [SchemaAttr(44, "cost", 20)]
     public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> grammar-ref.</para>
@@ -847,8 +793,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "grammar-ref")]
-    [SchemaIndex(21)]
+    [SchemaAttr(44, "grammar-ref", 21)]
     public StringValue GrammarRef { get; set; }
     /// <summary>
     /// <para> endpoint-info-ref.</para>
@@ -856,8 +801,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "endpoint-info-ref")]
-    [SchemaIndex(22)]
+    [SchemaAttr(44, "endpoint-info-ref", 22)]
     public StringValue EndpointInfoRef { get; set; }
     /// <summary>
     /// <para> model-ref.</para>
@@ -865,8 +809,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "model-ref")]
-    [SchemaIndex(23)]
+    [SchemaAttr(44, "model-ref", 23)]
     public StringValue ModelRef { get; set; }
     /// <summary>
     /// <para> dialog-turn.</para>
@@ -874,8 +817,7 @@ public partial class OneOf : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "dialog-turn")]
-    [SchemaIndex(24)]
+    [SchemaAttr(44, "dialog-turn", 24)]
     public StringValue DialogTurn { get; set; }
 
     /// <summary>
@@ -983,8 +925,7 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "id", 0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> tokens.</para>
@@ -992,8 +933,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "tokens")]
-    [SchemaIndex(1)]
+    [SchemaAttr(44, "tokens", 1)]
     public StringValue Tokens { get; set; }
     /// <summary>
     /// <para> process.</para>
@@ -1001,8 +941,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "process")]
-    [SchemaIndex(2)]
+    [SchemaAttr(44, "process", 2)]
     public StringValue Process { get; set; }
     /// <summary>
     /// <para> lang.</para>
@@ -1010,8 +949,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "lang")]
-    [SchemaIndex(3)]
+    [SchemaAttr(44, "lang", 3)]
     public StringValue Language { get; set; }
     /// <summary>
     /// <para> signal.</para>
@@ -1019,8 +957,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "signal")]
-    [SchemaIndex(4)]
+    [SchemaAttr(44, "signal", 4)]
     public StringValue Signal { get; set; }
     /// <summary>
     /// <para> signal-size.</para>
@@ -1028,8 +965,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "signal-size")]
-    [SchemaIndex(5)]
+    [SchemaAttr(44, "signal-size", 5)]
     public IntegerValue SignalSize { get; set; }
     /// <summary>
     /// <para> media-type.</para>
@@ -1037,8 +973,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "media-type")]
-    [SchemaIndex(6)]
+    [SchemaAttr(44, "media-type", 6)]
     public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> confidence.</para>
@@ -1046,8 +981,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "confidence")]
-    [SchemaIndex(7)]
+    [SchemaAttr(44, "confidence", 7)]
     public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> source.</para>
@@ -1055,8 +989,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "source")]
-    [SchemaIndex(8)]
+    [SchemaAttr(44, "source", 8)]
     public StringValue Source { get; set; }
     /// <summary>
     /// <para> start.</para>
@@ -1064,8 +997,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "start")]
-    [SchemaIndex(9)]
+    [SchemaAttr(44, "start", 9)]
     public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
@@ -1073,8 +1005,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "end")]
-    [SchemaIndex(10)]
+    [SchemaAttr(44, "end", 10)]
     public UInt64Value End { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
@@ -1082,8 +1013,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "time-ref-uri")]
-    [SchemaIndex(11)]
+    [SchemaAttr(44, "time-ref-uri", 11)]
     public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
@@ -1091,8 +1021,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "time-ref-anchor-point")]
-    [SchemaIndex(12)]
+    [SchemaAttr(44, "time-ref-anchor-point", 12)]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
@@ -1100,8 +1029,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "offset-to-start")]
-    [SchemaIndex(13)]
+    [SchemaAttr(44, "offset-to-start", 13)]
     public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
@@ -1109,8 +1037,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "duration")]
-    [SchemaIndex(14)]
+    [SchemaAttr(44, "duration", 14)]
     public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> medium.</para>
@@ -1118,8 +1045,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "medium")]
-    [SchemaIndex(15)]
+    [SchemaAttr(44, "medium", 15)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
@@ -1127,8 +1053,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "mode")]
-    [SchemaIndex(16)]
+    [SchemaAttr(44, "mode", 16)]
     public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> function.</para>
@@ -1136,8 +1061,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "function")]
-    [SchemaIndex(17)]
+    [SchemaAttr(44, "function", 17)]
     public StringValue Function { get; set; }
     /// <summary>
     /// <para> verbal.</para>
@@ -1145,8 +1069,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "verbal")]
-    [SchemaIndex(18)]
+    [SchemaAttr(44, "verbal", 18)]
     public BooleanValue Verbal { get; set; }
     /// <summary>
     /// <para> cost.</para>
@@ -1154,8 +1077,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "cost")]
-    [SchemaIndex(19)]
+    [SchemaAttr(44, "cost", 19)]
     public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> grammar-ref.</para>
@@ -1163,8 +1085,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "grammar-ref")]
-    [SchemaIndex(20)]
+    [SchemaAttr(44, "grammar-ref", 20)]
     public StringValue GrammarRef { get; set; }
     /// <summary>
     /// <para> endpoint-info-ref.</para>
@@ -1172,8 +1093,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "endpoint-info-ref")]
-    [SchemaIndex(21)]
+    [SchemaAttr(44, "endpoint-info-ref", 21)]
     public StringValue EndpointInfoRef { get; set; }
     /// <summary>
     /// <para> model-ref.</para>
@@ -1181,8 +1101,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "model-ref")]
-    [SchemaIndex(22)]
+    [SchemaAttr(44, "model-ref", 22)]
     public StringValue ModelRef { get; set; }
     /// <summary>
     /// <para> dialog-turn.</para>
@@ -1190,8 +1109,7 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "dialog-turn")]
-    [SchemaIndex(23)]
+    [SchemaAttr(44, "dialog-turn", 23)]
     public StringValue DialogTurn { get; set; }
 
     /// <summary>
@@ -1300,8 +1218,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "id", 0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> tokens.</para>
@@ -1309,8 +1226,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "tokens")]
-    [SchemaIndex(1)]
+    [SchemaAttr(44, "tokens", 1)]
     public StringValue Tokens { get; set; }
     /// <summary>
     /// <para> process.</para>
@@ -1318,8 +1234,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "process")]
-    [SchemaIndex(2)]
+    [SchemaAttr(44, "process", 2)]
     public StringValue Process { get; set; }
     /// <summary>
     /// <para> lang.</para>
@@ -1327,8 +1242,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "lang")]
-    [SchemaIndex(3)]
+    [SchemaAttr(44, "lang", 3)]
     public StringValue Language { get; set; }
     /// <summary>
     /// <para> signal.</para>
@@ -1336,8 +1250,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "signal")]
-    [SchemaIndex(4)]
+    [SchemaAttr(44, "signal", 4)]
     public StringValue Signal { get; set; }
     /// <summary>
     /// <para> signal-size.</para>
@@ -1345,8 +1258,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "signal-size")]
-    [SchemaIndex(5)]
+    [SchemaAttr(44, "signal-size", 5)]
     public IntegerValue SignalSize { get; set; }
     /// <summary>
     /// <para> media-type.</para>
@@ -1354,8 +1266,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "media-type")]
-    [SchemaIndex(6)]
+    [SchemaAttr(44, "media-type", 6)]
     public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> confidence.</para>
@@ -1363,8 +1274,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "confidence")]
-    [SchemaIndex(7)]
+    [SchemaAttr(44, "confidence", 7)]
     public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> source.</para>
@@ -1372,8 +1282,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "source")]
-    [SchemaIndex(8)]
+    [SchemaAttr(44, "source", 8)]
     public StringValue Source { get; set; }
     /// <summary>
     /// <para> start.</para>
@@ -1381,8 +1290,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "start")]
-    [SchemaIndex(9)]
+    [SchemaAttr(44, "start", 9)]
     public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
@@ -1390,8 +1298,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "end")]
-    [SchemaIndex(10)]
+    [SchemaAttr(44, "end", 10)]
     public UInt64Value End { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
@@ -1399,8 +1306,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "time-ref-uri")]
-    [SchemaIndex(11)]
+    [SchemaAttr(44, "time-ref-uri", 11)]
     public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
@@ -1408,8 +1314,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "time-ref-anchor-point")]
-    [SchemaIndex(12)]
+    [SchemaAttr(44, "time-ref-anchor-point", 12)]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
@@ -1417,8 +1322,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "offset-to-start")]
-    [SchemaIndex(13)]
+    [SchemaAttr(44, "offset-to-start", 13)]
     public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
@@ -1426,8 +1330,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "duration")]
-    [SchemaIndex(14)]
+    [SchemaAttr(44, "duration", 14)]
     public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> medium.</para>
@@ -1435,8 +1338,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "medium")]
-    [SchemaIndex(15)]
+    [SchemaAttr(44, "medium", 15)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
@@ -1444,8 +1346,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "mode")]
-    [SchemaIndex(16)]
+    [SchemaAttr(44, "mode", 16)]
     public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> function.</para>
@@ -1453,8 +1354,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "function")]
-    [SchemaIndex(17)]
+    [SchemaAttr(44, "function", 17)]
     public StringValue Function { get; set; }
     /// <summary>
     /// <para> verbal.</para>
@@ -1462,8 +1362,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "verbal")]
-    [SchemaIndex(18)]
+    [SchemaAttr(44, "verbal", 18)]
     public BooleanValue Verbal { get; set; }
     /// <summary>
     /// <para> cost.</para>
@@ -1471,8 +1370,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "cost")]
-    [SchemaIndex(19)]
+    [SchemaAttr(44, "cost", 19)]
     public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> grammar-ref.</para>
@@ -1480,8 +1378,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "grammar-ref")]
-    [SchemaIndex(20)]
+    [SchemaAttr(44, "grammar-ref", 20)]
     public StringValue GrammarRef { get; set; }
     /// <summary>
     /// <para> endpoint-info-ref.</para>
@@ -1489,8 +1386,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "endpoint-info-ref")]
-    [SchemaIndex(21)]
+    [SchemaAttr(44, "endpoint-info-ref", 21)]
     public StringValue EndpointInfoRef { get; set; }
     /// <summary>
     /// <para> model-ref.</para>
@@ -1498,8 +1394,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "model-ref")]
-    [SchemaIndex(22)]
+    [SchemaAttr(44, "model-ref", 22)]
     public StringValue ModelRef { get; set; }
     /// <summary>
     /// <para> dialog-turn.</para>
@@ -1507,8 +1402,7 @@ public partial class Sequence : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "dialog-turn")]
-    [SchemaIndex(23)]
+    [SchemaAttr(44, "dialog-turn", 23)]
     public StringValue DialogTurn { get; set; }
 
     /// <summary>
@@ -1602,8 +1496,7 @@ public partial class GroupInfo : OpenXmlCompositeElement
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
-    [SchemaAttr(0, "ref")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "ref", 0)]
     public StringValue Reference { get; set; }
 
     /// <summary>
@@ -1764,15 +1657,13 @@ public partial class Grammar : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "id", 0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
-    [SchemaAttr(0, "ref")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "ref", 1)]
     public StringValue Reference { get; set; }
 
     /// <summary>
@@ -1817,15 +1708,13 @@ public partial class Model : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "id", 0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
-    [SchemaAttr(0, "ref")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "ref", 1)]
     public StringValue Reference { get; set; }
 
     /// <summary>
@@ -1903,8 +1792,7 @@ public partial class EndPointInfo : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "id", 0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -1983,8 +1871,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "id", 0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> endpoint-role.</para>
@@ -1992,8 +1879,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "endpoint-role")]
-    [SchemaIndex(1)]
+    [SchemaAttr(44, "endpoint-role", 1)]
     public EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues> EndpointRole { get; set; }
     /// <summary>
     /// <para> endpoint-address.</para>
@@ -2001,8 +1887,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "endpoint-address")]
-    [SchemaIndex(2)]
+    [SchemaAttr(44, "endpoint-address", 2)]
     public StringValue EndPointAddress { get; set; }
     /// <summary>
     /// <para> message-id.</para>
@@ -2010,8 +1895,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "message-id")]
-    [SchemaIndex(3)]
+    [SchemaAttr(44, "message-id", 3)]
     public StringValue MessageId { get; set; }
     /// <summary>
     /// <para> port-num.</para>
@@ -2019,8 +1903,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "port-num")]
-    [SchemaIndex(4)]
+    [SchemaAttr(44, "port-num", 4)]
     public IntegerValue PortNumber { get; set; }
     /// <summary>
     /// <para> port-type.</para>
@@ -2028,8 +1911,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "port-type")]
-    [SchemaIndex(5)]
+    [SchemaAttr(44, "port-type", 5)]
     public StringValue PortType { get; set; }
     /// <summary>
     /// <para> endpoint-pair-ref.</para>
@@ -2037,8 +1919,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "endpoint-pair-ref")]
-    [SchemaIndex(6)]
+    [SchemaAttr(44, "endpoint-pair-ref", 6)]
     public StringValue EndpointPairRef { get; set; }
     /// <summary>
     /// <para> service-name.</para>
@@ -2046,8 +1927,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "service-name")]
-    [SchemaIndex(7)]
+    [SchemaAttr(44, "service-name", 7)]
     public StringValue ServiceName { get; set; }
     /// <summary>
     /// <para> media-type.</para>
@@ -2055,8 +1935,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "media-type")]
-    [SchemaIndex(8)]
+    [SchemaAttr(44, "media-type", 8)]
     public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> medium.</para>
@@ -2064,8 +1943,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "medium")]
-    [SchemaIndex(9)]
+    [SchemaAttr(44, "medium", 9)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
@@ -2073,8 +1951,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "mode")]
-    [SchemaIndex(10)]
+    [SchemaAttr(44, "mode", 10)]
     public ListValue<StringValue> Mode { get; set; }
 
     /// <summary>
@@ -2152,8 +2029,7 @@ public partial class Node : OpenXmlCompositeElement
     /// <para> node-number.</para>
     /// <para>Represents the following attribute in the schema: node-number </para>
     /// </summary>
-    [SchemaAttr(0, "node-number")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "node-number", 0)]
     public IntegerValue NodeNumber { get; set; }
     /// <summary>
     /// <para> confidence.</para>
@@ -2161,8 +2037,7 @@ public partial class Node : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "confidence")]
-    [SchemaIndex(1)]
+    [SchemaAttr(44, "confidence", 1)]
     public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> cost.</para>
@@ -2170,8 +2045,7 @@ public partial class Node : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "cost")]
-    [SchemaIndex(2)]
+    [SchemaAttr(44, "cost", 2)]
     public DecimalValue Cost { get; set; }
 
     /// <summary>
@@ -2252,15 +2126,13 @@ public partial class Arc : OpenXmlCompositeElement
     /// <para> from.</para>
     /// <para>Represents the following attribute in the schema: from </para>
     /// </summary>
-    [SchemaAttr(0, "from")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "from", 0)]
     public IntegerValue From { get; set; }
     /// <summary>
     /// <para> to.</para>
     /// <para>Represents the following attribute in the schema: to </para>
     /// </summary>
-    [SchemaAttr(0, "to")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "to", 1)]
     public IntegerValue To { get; set; }
     /// <summary>
     /// <para> start.</para>
@@ -2268,8 +2140,7 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "start")]
-    [SchemaIndex(2)]
+    [SchemaAttr(44, "start", 2)]
     public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
@@ -2277,8 +2148,7 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "end")]
-    [SchemaIndex(3)]
+    [SchemaAttr(44, "end", 3)]
     public UInt64Value End { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
@@ -2286,8 +2156,7 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "offset-to-start")]
-    [SchemaIndex(4)]
+    [SchemaAttr(44, "offset-to-start", 4)]
     public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
@@ -2295,8 +2164,7 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "duration")]
-    [SchemaIndex(5)]
+    [SchemaAttr(44, "duration", 5)]
     public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> confidence.</para>
@@ -2304,8 +2172,7 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "confidence")]
-    [SchemaIndex(6)]
+    [SchemaAttr(44, "confidence", 6)]
     public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> cost.</para>
@@ -2313,8 +2180,7 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "cost")]
-    [SchemaIndex(7)]
+    [SchemaAttr(44, "cost", 7)]
     public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> lang.</para>
@@ -2322,8 +2188,7 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "lang")]
-    [SchemaIndex(8)]
+    [SchemaAttr(44, "lang", 8)]
     public StringValue Language { get; set; }
     /// <summary>
     /// <para> medium.</para>
@@ -2331,8 +2196,7 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "medium")]
-    [SchemaIndex(9)]
+    [SchemaAttr(44, "medium", 9)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
@@ -2340,8 +2204,7 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "mode")]
-    [SchemaIndex(10)]
+    [SchemaAttr(44, "mode", 10)]
     public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> source.</para>
@@ -2349,8 +2212,7 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    [SchemaAttr(44, "source")]
-    [SchemaIndex(11)]
+    [SchemaAttr(44, "source", 11)]
     public StringValue Source { get; set; }
 
     /// <summary>
@@ -2447,8 +2309,7 @@ public partial class Emma : OpenXmlCompositeElement
     /// <para> version.</para>
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
-    [SchemaAttr(0, "version")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "version", 0)]
     public StringValue Version { get; set; }
 
     /// <summary>

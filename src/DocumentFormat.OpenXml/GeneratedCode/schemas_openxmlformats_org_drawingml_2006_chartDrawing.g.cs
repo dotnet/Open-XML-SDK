@@ -332,29 +332,25 @@ public partial class Shape : OpenXmlCompositeElement
     /// <para> Reference to Custom Function.</para>
     /// <para>Represents the following attribute in the schema: macro </para>
     /// </summary>
-    [SchemaAttr(0, "macro")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "macro", 0)]
     public StringValue Macro { get; set; }
     /// <summary>
     /// <para> Text Link.</para>
     /// <para>Represents the following attribute in the schema: textlink </para>
     /// </summary>
-    [SchemaAttr(0, "textlink")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "textlink", 1)]
     public StringValue TextLink { get; set; }
     /// <summary>
     /// <para> Lock Text.</para>
     /// <para>Represents the following attribute in the schema: fLocksText </para>
     /// </summary>
-    [SchemaAttr(0, "fLocksText")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "fLocksText", 2)]
     public BooleanValue LockText { get; set; }
     /// <summary>
     /// <para> Publish to Server.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
     /// </summary>
-    [SchemaAttr(0, "fPublished")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "fPublished", 3)]
     public BooleanValue Published { get; set; }
 
     /// <summary>
@@ -648,15 +644,13 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <para> Reference to Custom Function.</para>
     /// <para>Represents the following attribute in the schema: macro </para>
     /// </summary>
-    [SchemaAttr(0, "macro")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "macro", 0)]
     public StringValue Macro { get; set; }
     /// <summary>
     /// <para> Publish To Server.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
     /// </summary>
-    [SchemaAttr(0, "fPublished")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "fPublished", 1)]
     public BooleanValue Published { get; set; }
 
     /// <summary>
@@ -792,15 +786,13 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <para> Reference to Custom Function.</para>
     /// <para>Represents the following attribute in the schema: macro </para>
     /// </summary>
-    [SchemaAttr(0, "macro")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "macro", 0)]
     public StringValue Macro { get; set; }
     /// <summary>
     /// <para> Publish to Server.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
     /// </summary>
-    [SchemaAttr(0, "fPublished")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "fPublished", 1)]
     public BooleanValue Published { get; set; }
 
     /// <summary>
@@ -938,15 +930,13 @@ public partial class Picture : OpenXmlCompositeElement
     /// <para> Reference to Custom Function.</para>
     /// <para>Represents the following attribute in the schema: macro </para>
     /// </summary>
-    [SchemaAttr(0, "macro")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "macro", 0)]
     public StringValue Macro { get; set; }
     /// <summary>
     /// <para> Publish to Server.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
     /// </summary>
-    [SchemaAttr(0, "fPublished")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "fPublished", 1)]
     public BooleanValue Published { get; set; }
 
     /// <summary>
@@ -1097,36 +1087,31 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "id", 0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "name", 1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
-    [SchemaAttr(0, "descr")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "descr", 2)]
     public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    [SchemaAttr(0, "hidden")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "hidden", 3)]
     public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title")]
-    [SchemaIndex(4)]
+    [SchemaAttr(0, "title", 4)]
     public StringValue Title { get; set; }
 
     /// <summary>
@@ -1260,8 +1245,7 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     /// <para> Text Box.</para>
     /// <para>Represents the following attribute in the schema: txBox </para>
     /// </summary>
-    [SchemaAttr(0, "txBox")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "txBox", 0)]
     public BooleanValue TextBox { get; set; }
 
     /// <summary>
@@ -1519,8 +1503,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "bwMode", 0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -2191,8 +2174,7 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     /// <para> preferRelativeResize.</para>
     /// <para>Represents the following attribute in the schema: preferRelativeResize </para>
     /// </summary>
-    [SchemaAttr(0, "preferRelativeResize")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "preferRelativeResize", 0)]
     public BooleanValue PreferRelativeResize { get; set; }
 
     /// <summary>
@@ -2428,15 +2410,13 @@ public partial class BlipFill : OpenXmlCompositeElement
     /// <para> DPI Setting.</para>
     /// <para>Represents the following attribute in the schema: dpi </para>
     /// </summary>
-    [SchemaAttr(0, "dpi")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "dpi", 0)]
     public UInt32Value Dpi { get; set; }
     /// <summary>
     /// <para> Rotate With Shape.</para>
     /// <para>Represents the following attribute in the schema: rotWithShape </para>
     /// </summary>
-    [SchemaAttr(0, "rotWithShape")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "rotWithShape", 1)]
     public BooleanValue RotateWithShape { get; set; }
 
     /// <summary>
@@ -2787,22 +2767,19 @@ public partial class Transform : OpenXmlCompositeElement
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
-    [SchemaAttr(0, "rot")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "rot", 0)]
     public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
-    [SchemaAttr(0, "flipH")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "flipH", 1)]
     public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
-    [SchemaAttr(0, "flipV")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "flipV", 2)]
     public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>
@@ -3322,15 +3299,13 @@ public partial class Extent : OpenXmlLeafElement
     /// <para> Extent Length.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
-    [SchemaAttr(0, "cx")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "cx", 0)]
     public Int64Value Cx { get; set; }
     /// <summary>
     /// <para> Extent Width.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
-    [SchemaAttr(0, "cy")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "cy", 1)]
     public Int64Value Cy { get; set; }
 
     /// <summary>
@@ -3510,8 +3485,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "bwMode", 0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>

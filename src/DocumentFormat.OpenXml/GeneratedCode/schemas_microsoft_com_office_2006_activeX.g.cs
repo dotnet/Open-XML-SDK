@@ -40,8 +40,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
-    [SchemaAttr(35, "classid")]
-    [SchemaIndex(0)]
+    [SchemaAttr(35, "classid", 0)]
     public StringValue ActiveXControlClassId { get; set; }
     /// <summary>
     /// <para> license.</para>
@@ -49,8 +48,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
-    [SchemaAttr(35, "license")]
-    [SchemaIndex(1)]
+    [SchemaAttr(35, "license", 1)]
     public StringValue License { get; set; }
     /// <summary>
     /// <para> id.</para>
@@ -58,8 +56,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id")]
-    [SchemaIndex(2)]
+    [SchemaAttr(19, "id", 2)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> persistence.</para>
@@ -67,8 +64,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
-    [SchemaAttr(35, "persistence")]
-    [SchemaIndex(3)]
+    [SchemaAttr(35, "persistence", 3)]
     public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence { get; set; }
 
     /// <summary>
@@ -153,8 +149,7 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
-    [SchemaAttr(35, "name")]
-    [SchemaIndex(0)]
+    [SchemaAttr(35, "name", 0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> value.</para>
@@ -162,8 +157,7 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
-    [SchemaAttr(35, "value")]
-    [SchemaIndex(1)]
+    [SchemaAttr(35, "value", 1)]
     public StringValue Value { get; set; }
 
     /// <summary>
@@ -282,8 +276,7 @@ public partial class SharedComFont : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
-    [SchemaAttr(35, "persistence")]
-    [SchemaIndex(0)]
+    [SchemaAttr(35, "persistence", 0)]
     public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence { get; set; }
     /// <summary>
     /// <para> id.</para>
@@ -291,8 +284,7 @@ public partial class SharedComFont : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id")]
-    [SchemaIndex(1)]
+    [SchemaAttr(19, "id", 1)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -368,8 +360,7 @@ public partial class SharedComPicture : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id")]
-    [SchemaIndex(0)]
+    [SchemaAttr(19, "id", 0)]
     public StringValue Id { get; set; }
 
     /// <summary>
