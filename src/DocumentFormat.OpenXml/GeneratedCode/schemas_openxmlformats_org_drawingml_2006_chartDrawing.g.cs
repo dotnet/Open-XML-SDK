@@ -83,13 +83,7 @@ public partial class RelativeAnchorSize : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "from","to","sp","grpSp","graphicFrame","cxnSp","pic","contentPart" };
-    private static readonly byte[] eleNamespaceIds = { 12,12,12,12,12,12,12,47 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Starting Anchor Point.</para>
@@ -98,11 +92,8 @@ public partial class RelativeAnchorSize : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public FromAnchor FromAnchor
-    {
-        get => GetElement<FromAnchor>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(12, "from", 0)]
+    public FromAnchor FromAnchor { get; set; }
     
     /// <summary>
     /// <para> Ending Anchor Point.</para>
@@ -111,11 +102,8 @@ public partial class RelativeAnchorSize : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public ToAnchor ToAnchor
-    {
-        get => GetElement<ToAnchor>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(12, "to", 1)]
+    public ToAnchor ToAnchor { get; set; }
     
 
 
@@ -196,13 +184,7 @@ public partial class AbsoluteAnchorSize : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "from","ext","sp","grpSp","graphicFrame","cxnSp","pic","contentPart" };
-    private static readonly byte[] eleNamespaceIds = { 12,12,12,12,12,12,12,47 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> FromAnchor.</para>
@@ -211,11 +193,8 @@ public partial class AbsoluteAnchorSize : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public FromAnchor FromAnchor
-    {
-        get => GetElement<FromAnchor>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(12, "from", 0)]
+    public FromAnchor FromAnchor { get; set; }
     
     /// <summary>
     /// <para> Shape Extent.</para>
@@ -224,11 +203,8 @@ public partial class AbsoluteAnchorSize : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public Extent Extent
-    {
-        get => GetElement<Extent>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(12, "ext", 1)]
+    public Extent Extent { get; set; }
     
 
 
@@ -325,13 +301,7 @@ public partial class Shape : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nvSpPr","spPr","style","txBody" };
-    private static readonly byte[] eleNamespaceIds = { 12,12,12,12 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Shape Properties.</para>
@@ -340,11 +310,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualShapeProperties NonVisualShapeProperties
-    {
-        get => GetElement<NonVisualShapeProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(12, "nvSpPr", 0)]
+    public NonVisualShapeProperties NonVisualShapeProperties { get; set; }
     
     /// <summary>
     /// <para> Shape Properties.</para>
@@ -353,11 +320,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public ShapeProperties ShapeProperties
-    {
-        get => GetElement<ShapeProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(12, "spPr", 1)]
+    public ShapeProperties ShapeProperties { get; set; }
     
     /// <summary>
     /// <para> Shape Style.</para>
@@ -366,11 +330,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public Style Style
-    {
-        get => GetElement<Style>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(12, "style", 2)]
+    public Style Style { get; set; }
     
     /// <summary>
     /// <para> Shape Text Body.</para>
@@ -379,11 +340,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public TextBody TextBody
-    {
-        get => GetElement<TextBody>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(12, "txBody", 3)]
+    public TextBody TextBody { get; set; }
     
 
 
@@ -464,13 +422,7 @@ public partial class GroupShape : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nvGrpSpPr","grpSpPr","sp","grpSp","graphicFrame","cxnSp","pic","contentPart" };
-    private static readonly byte[] eleNamespaceIds = { 12,12,12,12,12,12,12,47 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Group Shape Properties.</para>
@@ -479,11 +431,8 @@ public partial class GroupShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualGroupShapeProperties NonVisualGroupShapeProperties
-    {
-        get => GetElement<NonVisualGroupShapeProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(12, "nvGrpSpPr", 0)]
+    public NonVisualGroupShapeProperties NonVisualGroupShapeProperties { get; set; }
     
     /// <summary>
     /// <para> Group Shape Properties.</para>
@@ -492,11 +441,8 @@ public partial class GroupShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public GroupShapeProperties GroupShapeProperties
-    {
-        get => GetElement<GroupShapeProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(12, "grpSpPr", 1)]
+    public GroupShapeProperties GroupShapeProperties { get; set; }
     
 
 
@@ -579,13 +525,7 @@ public partial class GraphicFrame : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nvGraphicFramePr","xfrm","graphic" };
-    private static readonly byte[] eleNamespaceIds = { 12,12,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Graphic Frame Properties.</para>
@@ -594,11 +534,8 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties
-    {
-        get => GetElement<NonVisualGraphicFrameProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(12, "nvGraphicFramePr", 0)]
+    public NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties { get; set; }
     
     /// <summary>
     /// <para> Graphic Frame Transform.</para>
@@ -607,11 +544,8 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public Transform Transform
-    {
-        get => GetElement<Transform>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(12, "xfrm", 1)]
+    public Transform Transform { get; set; }
     
     /// <summary>
     /// <para> Graphical Object.</para>
@@ -620,11 +554,8 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Graphic Graphic
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "graphic", 2)]
+    public DocumentFormat.OpenXml.Drawing.Graphic Graphic { get; set; }
     
 
 
@@ -707,13 +638,7 @@ public partial class ConnectionShape : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nvCxnSpPr","spPr","style" };
-    private static readonly byte[] eleNamespaceIds = { 12,12,12 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Connector Non Visual Properties.</para>
@@ -722,11 +647,8 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualConnectorShapeDrawingProperties NonVisualConnectorShapeDrawingProperties
-    {
-        get => GetElement<NonVisualConnectorShapeDrawingProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(12, "nvCxnSpPr", 0)]
+    public NonVisualConnectorShapeDrawingProperties NonVisualConnectorShapeDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> Shape Properties.</para>
@@ -735,11 +657,8 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public ShapeProperties ShapeProperties
-    {
-        get => GetElement<ShapeProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(12, "spPr", 1)]
+    public ShapeProperties ShapeProperties { get; set; }
     
     /// <summary>
     /// <para> Connection Shape Style.</para>
@@ -748,11 +667,8 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public Style Style
-    {
-        get => GetElement<Style>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(12, "style", 2)]
+    public Style Style { get; set; }
     
 
 
@@ -837,13 +753,7 @@ public partial class Picture : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nvPicPr","blipFill","spPr","style" };
-    private static readonly byte[] eleNamespaceIds = { 12,12,12,12 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Picture Properties.</para>
@@ -852,11 +762,8 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualPictureProperties NonVisualPictureProperties
-    {
-        get => GetElement<NonVisualPictureProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(12, "nvPicPr", 0)]
+    public NonVisualPictureProperties NonVisualPictureProperties { get; set; }
     
     /// <summary>
     /// <para> Picture Fill.</para>
@@ -865,11 +772,8 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public BlipFill BlipFill
-    {
-        get => GetElement<BlipFill>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(12, "blipFill", 1)]
+    public BlipFill BlipFill { get; set; }
     
     /// <summary>
     /// <para> ShapeProperties.</para>
@@ -878,11 +782,8 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public ShapeProperties ShapeProperties
-    {
-        get => GetElement<ShapeProperties>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(12, "spPr", 2)]
+    public ShapeProperties ShapeProperties { get; set; }
     
     /// <summary>
     /// <para> Style.</para>
@@ -891,11 +792,8 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public Style Style
-    {
-        get => GetElement<Style>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(12, "style", 3)]
+    public Style Style { get; set; }
     
 
 
@@ -996,13 +894,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
@@ -1011,11 +903,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "hlinkClick", 0)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick { get; set; }
     
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -1024,11 +913,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "hlinkHover", 1)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover { get; set; }
     
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -1037,11 +923,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "extLst", 2)]
+    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList { get; set; }
     
 
 
@@ -1116,13 +999,7 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "spLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Shape Locks.</para>
@@ -1131,11 +1008,8 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ShapeLocks ShapeLocks
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "spLocks", 0)]
+    public DocumentFormat.OpenXml.Drawing.ShapeLocks ShapeLocks { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -1144,11 +1018,8 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "extLst", 1)]
+    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList { get; set; }
     
 
 
@@ -1217,13 +1088,7 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvSpPr" };
-    private static readonly byte[] eleNamespaceIds = { 12,12 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Chart Non Visual Properties.</para>
@@ -1232,11 +1097,8 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(12, "cNvPr", 0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> Non-Visual Shape Drawing Properties.</para>
@@ -1245,11 +1107,8 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualShapeDrawingProperties NonVisualShapeDrawingProperties
-    {
-        get => GetElement<NonVisualShapeDrawingProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(12, "cNvSpPr", 1)]
+    public NonVisualShapeDrawingProperties NonVisualShapeDrawingProperties { get; set; }
     
 
 
@@ -1350,13 +1209,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "xfrm","custGeom","prstGeom","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","ln","effectLst","effectDag","scene3d","sp3d","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
@@ -1365,11 +1218,8 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "xfrm", 0)]
+    public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D { get; set; }
     
 
 
@@ -1442,13 +1292,7 @@ public partial class Style : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "lnRef","fillRef","effectRef","fontRef" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> LineReference.</para>
@@ -1457,11 +1301,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.LineReference LineReference
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "lnRef", 0)]
+    public DocumentFormat.OpenXml.Drawing.LineReference LineReference { get; set; }
     
     /// <summary>
     /// <para> FillReference.</para>
@@ -1470,11 +1311,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.FillReference FillReference
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "fillRef", 1)]
+    public DocumentFormat.OpenXml.Drawing.FillReference FillReference { get; set; }
     
     /// <summary>
     /// <para> EffectReference.</para>
@@ -1483,11 +1321,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "effectRef", 2)]
+    public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference { get; set; }
     
     /// <summary>
     /// <para> Font Reference.</para>
@@ -1496,11 +1331,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.FontReference FontReference
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "fontRef", 3)]
+    public DocumentFormat.OpenXml.Drawing.FontReference FontReference { get; set; }
     
 
 
@@ -1571,13 +1403,7 @@ public partial class TextBody : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "bodyPr","lstStyle","p" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Body Properties.</para>
@@ -1586,11 +1412,8 @@ public partial class TextBody : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.BodyProperties BodyProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "bodyPr", 0)]
+    public DocumentFormat.OpenXml.Drawing.BodyProperties BodyProperties { get; set; }
     
     /// <summary>
     /// <para> Text List Styles.</para>
@@ -1599,11 +1422,8 @@ public partial class TextBody : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ListStyle ListStyle
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "lstStyle", 1)]
+    public DocumentFormat.OpenXml.Drawing.ListStyle ListStyle { get; set; }
     
 
 
@@ -1676,13 +1496,7 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
      
     
     
-        private static readonly string[] eleTagNames = { "cxnSpLocks","stCxn","endCxn","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Connection Shape Locks.</para>
@@ -1691,11 +1505,8 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks ConnectionShapeLocks
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "cxnSpLocks", 0)]
+    public DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks ConnectionShapeLocks { get; set; }
     
     /// <summary>
     /// <para> Connection Start.</para>
@@ -1704,11 +1515,8 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.StartConnection StartConnection
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.StartConnection>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "stCxn", 1)]
+    public DocumentFormat.OpenXml.Drawing.StartConnection StartConnection { get; set; }
     
     /// <summary>
     /// <para> Connection End.</para>
@@ -1717,11 +1525,8 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.EndConnection EndConnection
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.EndConnection>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "endCxn", 2)]
+    public DocumentFormat.OpenXml.Drawing.EndConnection EndConnection { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -1730,11 +1535,8 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "extLst", 3)]
+    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList { get; set; }
     
 
 
@@ -1803,13 +1605,7 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvCxnSpPr" };
-    private static readonly byte[] eleNamespaceIds = { 12,12 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Chart Non Visual Properties.</para>
@@ -1818,11 +1614,8 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(12, "cNvPr", 0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> Non-Visual Connection Shape Drawing Properties.</para>
@@ -1831,11 +1624,8 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualConnectionShapeProperties NonVisualConnectionShapeProperties
-    {
-        get => GetElement<NonVisualConnectionShapeProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(12, "cNvCxnSpPr", 1)]
+    public NonVisualConnectionShapeProperties NonVisualConnectionShapeProperties { get; set; }
     
 
 
@@ -1910,13 +1700,7 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "picLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PictureLocks.</para>
@@ -1925,11 +1709,8 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.PictureLocks PictureLocks
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "picLocks", 0)]
+    public DocumentFormat.OpenXml.Drawing.PictureLocks PictureLocks { get; set; }
     
     /// <summary>
     /// <para> NonVisualPicturePropertiesExtensionList.</para>
@@ -1938,11 +1719,8 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList NonVisualPicturePropertiesExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "extLst", 1)]
+    public DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList NonVisualPicturePropertiesExtensionList { get; set; }
     
 
 
@@ -2011,13 +1789,7 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvPicPr" };
-    private static readonly byte[] eleNamespaceIds = { 12,12 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -2026,11 +1798,8 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(12, "cNvPr", 0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> Non-Visual Picture Drawing Properties.</para>
@@ -2039,11 +1808,8 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualPictureDrawingProperties NonVisualPictureDrawingProperties
-    {
-        get => GetElement<NonVisualPictureDrawingProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(12, "cNvPicPr", 1)]
+    public NonVisualPictureDrawingProperties NonVisualPictureDrawingProperties { get; set; }
     
 
 
@@ -2128,13 +1894,7 @@ public partial class BlipFill : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "blip","srcRect","tile","stretch" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Blip.</para>
@@ -2143,11 +1903,8 @@ public partial class BlipFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Blip Blip
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "blip", 0)]
+    public DocumentFormat.OpenXml.Drawing.Blip Blip { get; set; }
     
     /// <summary>
     /// <para> Source Rectangle.</para>
@@ -2156,11 +1913,8 @@ public partial class BlipFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.SourceRectangle SourceRectangle
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srcRect", 1)]
+    public DocumentFormat.OpenXml.Drawing.SourceRectangle SourceRectangle { get; set; }
     
 
 
@@ -2229,13 +1983,7 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
      
     
     
-        private static readonly string[] eleTagNames = { "graphicFrameLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Graphic Frame Locks.</para>
@@ -2244,11 +1992,8 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks GraphicFrameLocks
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "graphicFrameLocks", 0)]
+    public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks GraphicFrameLocks { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -2257,11 +2002,8 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "extLst", 1)]
+    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList { get; set; }
     
 
 
@@ -2330,13 +2072,7 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvGraphicFramePr" };
-    private static readonly byte[] eleNamespaceIds = { 12,12 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Drawing Properties.</para>
@@ -2345,11 +2081,8 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(12, "cNvPr", 0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> Non-Visual Graphic Frame Drawing Properties.</para>
@@ -2358,11 +2091,8 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualGraphicFrameDrawingProperties NonVisualGraphicFrameDrawingProperties
-    {
-        get => GetElement<NonVisualGraphicFrameDrawingProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(12, "cNvGraphicFramePr", 1)]
+    public NonVisualGraphicFrameDrawingProperties NonVisualGraphicFrameDrawingProperties { get; set; }
     
 
 
@@ -2449,13 +2179,7 @@ public partial class Transform : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "off","ext" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Offset.</para>
@@ -2464,11 +2188,8 @@ public partial class Transform : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Offset Offset
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "off", 0)]
+    public DocumentFormat.OpenXml.Drawing.Offset Offset { get; set; }
     
     /// <summary>
     /// <para> Extents.</para>
@@ -2477,11 +2198,8 @@ public partial class Transform : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Extents Extents
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "ext", 1)]
+    public DocumentFormat.OpenXml.Drawing.Extents Extents { get; set; }
     
 
 
@@ -2550,13 +2268,7 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
      
     
     
-        private static readonly string[] eleTagNames = { "grpSpLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> GroupShapeLocks.</para>
@@ -2565,11 +2277,8 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.GroupShapeLocks GroupShapeLocks
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "grpSpLocks", 0)]
+    public DocumentFormat.OpenXml.Drawing.GroupShapeLocks GroupShapeLocks { get; set; }
     
     /// <summary>
     /// <para> NonVisualGroupDrawingShapePropsExtensionList.</para>
@@ -2578,11 +2287,8 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList NonVisualGroupDrawingShapePropsExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "extLst", 1)]
+    public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList NonVisualGroupDrawingShapePropsExtensionList { get; set; }
     
 
 
@@ -2797,13 +2503,7 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "x","y" };
-    private static readonly byte[] eleNamespaceIds = { 12,12 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Relative X Coordinate.</para>
@@ -2812,11 +2512,8 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public XPosition XPosition
-    {
-        get => GetElement<XPosition>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(12, "x", 0)]
+    public XPosition XPosition { get; set; }
     
     /// <summary>
     /// <para> Relative Y Coordinate.</para>
@@ -2825,11 +2522,8 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public YPosition YPosition
-    {
-        get => GetElement<YPosition>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(12, "y", 1)]
+    public YPosition YPosition { get; set; }
     
 
 
@@ -2972,13 +2666,7 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvGrpSpPr" };
-    private static readonly byte[] eleNamespaceIds = { 12,12 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Chart Non Visual Properties.</para>
@@ -2987,11 +2675,8 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(12, "cNvPr", 0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> Non-Visual Group Shape Drawing Properties.</para>
@@ -3000,11 +2685,8 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
     /// </remark>
-    public NonVisualGroupShapeDrawingProperties NonVisualGroupShapeDrawingProperties
-    {
-        get => GetElement<NonVisualGroupShapeDrawingProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(12, "cNvGrpSpPr", 1)]
+    public NonVisualGroupShapeDrawingProperties NonVisualGroupShapeDrawingProperties { get; set; }
     
 
 
@@ -3097,13 +2779,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "xfrm","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","effectLst","effectDag","scene3d","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Grouped Objects.</para>
@@ -3112,11 +2788,8 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.TransformGroup TransformGroup
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "xfrm", 0)]
+    public DocumentFormat.OpenXml.Drawing.TransformGroup TransformGroup { get; set; }
     
 
 

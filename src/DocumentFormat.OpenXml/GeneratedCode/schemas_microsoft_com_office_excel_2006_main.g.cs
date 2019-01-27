@@ -148,13 +148,7 @@ public partial class Macrosheet : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "sheetPr","dimension","sheetViews","sheetFormatPr","cols","sheetData","sheetProtection","autoFilter","sortState","dataConsolidate","customSheetViews","phoneticPr","conditionalFormatting","printOptions","pageMargins","pageSetup","headerFooter","rowBreaks","colBreaks","customProperties","drawing","legacyDrawing","legacyDrawingHF","picture","oleObjects","drawingHF","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Sheet Properties.</para>
@@ -163,11 +157,8 @@ public partial class Macrosheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Spreadsheet.SheetProperties SheetProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "sheetPr", 0)]
+    public DocumentFormat.OpenXml.Spreadsheet.SheetProperties SheetProperties { get; set; }
     
     /// <summary>
     /// <para> Macro Sheet Dimensions.</para>
@@ -176,11 +167,8 @@ public partial class Macrosheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Spreadsheet.SheetDimension SheetDimension
-    {
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "dimension", 1)]
+    public DocumentFormat.OpenXml.Spreadsheet.SheetDimension SheetDimension { get; set; }
     
     /// <summary>
     /// <para> Macro Sheet Views.</para>
@@ -189,11 +177,8 @@ public partial class Macrosheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Spreadsheet.SheetViews SheetViews
-    {
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "sheetViews", 2)]
+    public DocumentFormat.OpenXml.Spreadsheet.SheetViews SheetViews { get; set; }
     
     /// <summary>
     /// <para> Sheet Format Properties.</para>
@@ -202,11 +187,8 @@ public partial class Macrosheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties SheetFormatProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "sheetFormatPr", 3)]
+    public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties SheetFormatProperties { get; set; }
     
 
 
@@ -303,13 +285,7 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "rowSortMap","colSortMap" };
-    private static readonly byte[] eleNamespaceIds = { 32,32 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Row Sort Map.</para>
@@ -318,11 +294,8 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
     /// </remark>
-    public RowSortMap RowSortMap
-    {
-        get => GetElement<RowSortMap>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(32, "rowSortMap", 0)]
+    public RowSortMap RowSortMap { get; set; }
     
     /// <summary>
     /// <para> Column Sort Map.</para>
@@ -331,11 +304,8 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
     /// </remark>
-    public ColumnSortMap ColumnSortMap
-    {
-        get => GetElement<ColumnSortMap>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(32, "colSortMap", 1)]
+    public ColumnSortMap ColumnSortMap { get; set; }
     
 
 

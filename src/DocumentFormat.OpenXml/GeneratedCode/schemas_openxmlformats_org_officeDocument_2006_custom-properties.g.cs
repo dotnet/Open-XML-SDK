@@ -250,13 +250,7 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "vector","array","blob","oblob","empty","null","i1","i2","i4","i8","int","ui1","ui2","ui4","ui8","uint","r4","r8","decimal","lpstr","lpwstr","bstr","date","filetime","bool","cy","error","stream","ostream","storage","ostorage","vstream","clsid","cf" };
-    private static readonly byte[] eleNamespaceIds = { 5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Vector.</para>
@@ -265,11 +259,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(5, "vector", 0)]
+    public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector { get; set; }
     
     /// <summary>
     /// <para> Array.</para>
@@ -278,11 +269,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTArray VTArray
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTArray>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(5, "array", 1)]
+    public DocumentFormat.OpenXml.VariantTypes.VTArray VTArray { get; set; }
     
     /// <summary>
     /// <para> Binary Blob.</para>
@@ -291,11 +279,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTBlob VTBlob
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(5, "blob", 2)]
+    public DocumentFormat.OpenXml.VariantTypes.VTBlob VTBlob { get; set; }
     
     /// <summary>
     /// <para> Binary Blob Object.</para>
@@ -304,11 +289,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTOBlob VTOBlob
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOBlob>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(5, "oblob", 3)]
+    public DocumentFormat.OpenXml.VariantTypes.VTOBlob VTOBlob { get; set; }
     
     /// <summary>
     /// <para> Empty.</para>
@@ -317,11 +299,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTEmpty VTEmpty
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTEmpty>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(5, "empty", 4)]
+    public DocumentFormat.OpenXml.VariantTypes.VTEmpty VTEmpty { get; set; }
     
     /// <summary>
     /// <para> Null.</para>
@@ -330,11 +309,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTNull VTNull
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTNull>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(5, "null", 5)]
+    public DocumentFormat.OpenXml.VariantTypes.VTNull VTNull { get; set; }
     
     /// <summary>
     /// <para> 1-Byte Signed Integer.</para>
@@ -343,11 +319,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTByte VTByte
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTByte>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(5, "i1", 6)]
+    public DocumentFormat.OpenXml.VariantTypes.VTByte VTByte { get; set; }
     
     /// <summary>
     /// <para> 2-Byte Signed Integer.</para>
@@ -356,11 +329,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTShort VTShort
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTShort>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(5, "i2", 7)]
+    public DocumentFormat.OpenXml.VariantTypes.VTShort VTShort { get; set; }
     
     /// <summary>
     /// <para> 4-Byte Signed Integer.</para>
@@ -369,11 +339,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTInt32 VTInt32
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt32>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(5, "i4", 8)]
+    public DocumentFormat.OpenXml.VariantTypes.VTInt32 VTInt32 { get; set; }
     
     /// <summary>
     /// <para> 8-Byte Signed Integer.</para>
@@ -382,11 +349,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTInt64 VTInt64
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt64>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(5, "i8", 9)]
+    public DocumentFormat.OpenXml.VariantTypes.VTInt64 VTInt64 { get; set; }
     
     /// <summary>
     /// <para> Integer.</para>
@@ -395,11 +359,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTInteger VTInteger
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInteger>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(5, "int", 10)]
+    public DocumentFormat.OpenXml.VariantTypes.VTInteger VTInteger { get; set; }
     
     /// <summary>
     /// <para> 1-Byte Unsigned Integer.</para>
@@ -408,11 +369,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte VTUnsignedByte
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(5, "ui1", 11)]
+    public DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte VTUnsignedByte { get; set; }
     
     /// <summary>
     /// <para> 2-Byte Unsigned Integer.</para>
@@ -421,11 +379,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort VTUnsignedShort
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(5, "ui2", 12)]
+    public DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort VTUnsignedShort { get; set; }
     
     /// <summary>
     /// <para> 4-Byte Unsigned Integer.</para>
@@ -434,11 +389,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32 VTUnsignedInt32
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(5, "ui4", 13)]
+    public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32 VTUnsignedInt32 { get; set; }
     
     /// <summary>
     /// <para> 8-Byte Unsigned Integer.</para>
@@ -447,11 +399,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64 VTUnsignedInt64
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(5, "ui8", 14)]
+    public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64 VTUnsignedInt64 { get; set; }
     
     /// <summary>
     /// <para> Unsigned Integer.</para>
@@ -460,11 +409,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger VTUnsignedInteger
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(5, "uint", 15)]
+    public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger VTUnsignedInteger { get; set; }
     
     /// <summary>
     /// <para> 4-Byte Real Number.</para>
@@ -473,11 +419,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTFloat VTFloat
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFloat>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(5, "r4", 16)]
+    public DocumentFormat.OpenXml.VariantTypes.VTFloat VTFloat { get; set; }
     
     /// <summary>
     /// <para> 8-Byte Real Number.</para>
@@ -486,11 +429,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTDouble VTDouble
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDouble>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(5, "r8", 17)]
+    public DocumentFormat.OpenXml.VariantTypes.VTDouble VTDouble { get; set; }
     
     /// <summary>
     /// <para> Decimal.</para>
@@ -499,11 +439,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTDecimal VTDecimal
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDecimal>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(5, "decimal", 18)]
+    public DocumentFormat.OpenXml.VariantTypes.VTDecimal VTDecimal { get; set; }
     
     /// <summary>
     /// <para> LPSTR.</para>
@@ -512,11 +449,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTLPSTR VTLPSTR
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(5, "lpstr", 19)]
+    public DocumentFormat.OpenXml.VariantTypes.VTLPSTR VTLPSTR { get; set; }
     
     /// <summary>
     /// <para> LPWSTR.</para>
@@ -525,11 +459,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTLPWSTR VTLPWSTR
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(5, "lpwstr", 20)]
+    public DocumentFormat.OpenXml.VariantTypes.VTLPWSTR VTLPWSTR { get; set; }
     
     /// <summary>
     /// <para> Basic String.</para>
@@ -538,11 +469,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTBString VTBString
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBString>(21);
-        set => SetElement(21, value);
-    }
+	[SchemaAttr(5, "bstr", 21)]
+    public DocumentFormat.OpenXml.VariantTypes.VTBString VTBString { get; set; }
     
     /// <summary>
     /// <para> Date and Time.</para>
@@ -551,11 +479,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTDate VTDate
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDate>(22);
-        set => SetElement(22, value);
-    }
+	[SchemaAttr(5, "date", 22)]
+    public DocumentFormat.OpenXml.VariantTypes.VTDate VTDate { get; set; }
     
     /// <summary>
     /// <para> File Time.</para>
@@ -564,11 +489,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTFileTime VTFileTime
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFileTime>(23);
-        set => SetElement(23, value);
-    }
+	[SchemaAttr(5, "filetime", 23)]
+    public DocumentFormat.OpenXml.VariantTypes.VTFileTime VTFileTime { get; set; }
     
     /// <summary>
     /// <para> Boolean.</para>
@@ -577,11 +499,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTBool VTBool
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBool>(24);
-        set => SetElement(24, value);
-    }
+	[SchemaAttr(5, "bool", 24)]
+    public DocumentFormat.OpenXml.VariantTypes.VTBool VTBool { get; set; }
     
     /// <summary>
     /// <para> Currency.</para>
@@ -590,11 +509,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTCurrency VTCurrency
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTCurrency>(25);
-        set => SetElement(25, value);
-    }
+	[SchemaAttr(5, "cy", 25)]
+    public DocumentFormat.OpenXml.VariantTypes.VTCurrency VTCurrency { get; set; }
     
     /// <summary>
     /// <para> Error Status Code.</para>
@@ -603,11 +519,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTError VTError
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTError>(26);
-        set => SetElement(26, value);
-    }
+	[SchemaAttr(5, "error", 26)]
+    public DocumentFormat.OpenXml.VariantTypes.VTError VTError { get; set; }
     
     /// <summary>
     /// <para> Binary Stream.</para>
@@ -616,11 +529,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTStreamData VTStreamData
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStreamData>(27);
-        set => SetElement(27, value);
-    }
+	[SchemaAttr(5, "stream", 27)]
+    public DocumentFormat.OpenXml.VariantTypes.VTStreamData VTStreamData { get; set; }
     
     /// <summary>
     /// <para> Binary Stream Object.</para>
@@ -629,11 +539,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTOStreamData VTOStreamData
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStreamData>(28);
-        set => SetElement(28, value);
-    }
+	[SchemaAttr(5, "ostream", 28)]
+    public DocumentFormat.OpenXml.VariantTypes.VTOStreamData VTOStreamData { get; set; }
     
     /// <summary>
     /// <para> Binary Storage.</para>
@@ -642,11 +549,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTStorage VTStorage
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStorage>(29);
-        set => SetElement(29, value);
-    }
+	[SchemaAttr(5, "storage", 29)]
+    public DocumentFormat.OpenXml.VariantTypes.VTStorage VTStorage { get; set; }
     
     /// <summary>
     /// <para> Binary Storage Object.</para>
@@ -655,11 +559,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTOStorage VTOStorage
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStorage>(30);
-        set => SetElement(30, value);
-    }
+	[SchemaAttr(5, "ostorage", 30)]
+    public DocumentFormat.OpenXml.VariantTypes.VTOStorage VTOStorage { get; set; }
     
     /// <summary>
     /// <para> Binary Versioned Stream.</para>
@@ -668,11 +569,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTVStreamData VTVStreamData
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVStreamData>(31);
-        set => SetElement(31, value);
-    }
+	[SchemaAttr(5, "vstream", 31)]
+    public DocumentFormat.OpenXml.VariantTypes.VTVStreamData VTVStreamData { get; set; }
     
     /// <summary>
     /// <para> Class ID.</para>
@@ -681,11 +579,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTClassId VTClassId
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClassId>(32);
-        set => SetElement(32, value);
-    }
+	[SchemaAttr(5, "clsid", 32)]
+    public DocumentFormat.OpenXml.VariantTypes.VTClassId VTClassId { get; set; }
     
     /// <summary>
     /// <para> Clipboard Data.</para>
@@ -694,11 +589,8 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTClipboardData VTClipboardData
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>(33);
-        set => SetElement(33, value);
-    }
+	[SchemaAttr(5, "cf", 33)]
+    public DocumentFormat.OpenXml.VariantTypes.VTClipboardData VTClipboardData { get; set; }
     
 
 

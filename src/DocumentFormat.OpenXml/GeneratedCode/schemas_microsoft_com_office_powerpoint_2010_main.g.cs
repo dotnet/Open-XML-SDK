@@ -74,13 +74,7 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvContentPartPr","nvPr" };
-    private static readonly byte[] eleNamespaceIds = { 49,49,49 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -89,11 +83,8 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(49, "cNvPr", 0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> NonVisualInkContentPartProperties.</para>
@@ -102,11 +93,8 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public NonVisualInkContentPartProperties NonVisualInkContentPartProperties
-    {
-        get => GetElement<NonVisualInkContentPartProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(49, "cNvContentPartPr", 1)]
+    public NonVisualInkContentPartProperties NonVisualInkContentPartProperties { get; set; }
     
     /// <summary>
     /// <para> ApplicationNonVisualDrawingProperties.</para>
@@ -115,11 +103,8 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties
-    {
-        get => GetElement<ApplicationNonVisualDrawingProperties>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(49, "nvPr", 2)]
+    public ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties { get; set; }
     
 
 
@@ -206,13 +191,7 @@ public partial class Transform2D : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "off","ext" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Offset.</para>
@@ -221,11 +200,8 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Offset Offset
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "off", 0)]
+    public DocumentFormat.OpenXml.Drawing.Offset Offset { get; set; }
     
     /// <summary>
     /// <para> Extents.</para>
@@ -234,11 +210,8 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Extents Extents
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "ext", 1)]
+    public DocumentFormat.OpenXml.Drawing.Extents Extents { get; set; }
     
 
 
@@ -397,13 +370,7 @@ public partial class Media : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "trim","fade","bmkLst","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 49,49,49,49 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> MediaTrim.</para>
@@ -412,11 +379,8 @@ public partial class Media : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public MediaTrim MediaTrim
-    {
-        get => GetElement<MediaTrim>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(49, "trim", 0)]
+    public MediaTrim MediaTrim { get; set; }
     
     /// <summary>
     /// <para> MediaFade.</para>
@@ -425,11 +389,8 @@ public partial class Media : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public MediaFade MediaFade
-    {
-        get => GetElement<MediaFade>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(49, "fade", 1)]
+    public MediaFade MediaFade { get; set; }
     
     /// <summary>
     /// <para> MediaBookmarkList.</para>
@@ -438,11 +399,8 @@ public partial class Media : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public MediaBookmarkList MediaBookmarkList
-    {
-        get => GetElement<MediaBookmarkList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(49, "bmkLst", 2)]
+    public MediaBookmarkList MediaBookmarkList { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -451,11 +409,8 @@ public partial class Media : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(49, "extLst", 3)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -1434,13 +1389,7 @@ public partial class LaserColor : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -1449,11 +1398,8 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -1462,11 +1408,8 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -1475,11 +1418,8 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.HslColor HslColor
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public DocumentFormat.OpenXml.Drawing.HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -1488,11 +1428,8 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -1501,11 +1438,8 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "schemeClr", 4)]
+    public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -1514,11 +1448,8 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstClr", 5)]
+    public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor { get; set; }
     
 
 
@@ -1846,13 +1777,7 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "triggerEvt","playEvt","stopEvt","pauseEvt","resumeEvt","seekEvt","nullEvt" };
-    private static readonly byte[] eleNamespaceIds = { 49,49,49,49,49,49,49 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
     
         /// <summary>
     /// <para> TriggerEventRecord.</para>
@@ -1861,11 +1786,8 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public TriggerEventRecord TriggerEventRecord
-    {
-        get => GetElement<TriggerEventRecord>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(49, "triggerEvt", 0)]
+    public TriggerEventRecord TriggerEventRecord { get; set; }
     
     /// <summary>
     /// <para> PlayEventRecord.</para>
@@ -1874,11 +1796,8 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public PlayEventRecord PlayEventRecord
-    {
-        get => GetElement<PlayEventRecord>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(49, "playEvt", 1)]
+    public PlayEventRecord PlayEventRecord { get; set; }
     
     /// <summary>
     /// <para> StopEventRecord.</para>
@@ -1887,11 +1806,8 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public StopEventRecord StopEventRecord
-    {
-        get => GetElement<StopEventRecord>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(49, "stopEvt", 2)]
+    public StopEventRecord StopEventRecord { get; set; }
     
     /// <summary>
     /// <para> PauseEventRecord.</para>
@@ -1900,11 +1816,8 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public PauseEventRecord PauseEventRecord
-    {
-        get => GetElement<PauseEventRecord>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(49, "pauseEvt", 3)]
+    public PauseEventRecord PauseEventRecord { get; set; }
     
     /// <summary>
     /// <para> ResumeEventRecord.</para>
@@ -1913,11 +1826,8 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public ResumeEventRecord ResumeEventRecord
-    {
-        get => GetElement<ResumeEventRecord>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(49, "resumeEvt", 4)]
+    public ResumeEventRecord ResumeEventRecord { get; set; }
     
     /// <summary>
     /// <para> SeekEventRecord.</para>
@@ -1926,11 +1836,8 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public SeekEventRecord SeekEventRecord
-    {
-        get => GetElement<SeekEventRecord>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(49, "seekEvt", 5)]
+    public SeekEventRecord SeekEventRecord { get; set; }
     
     /// <summary>
     /// <para> NullEventRecord.</para>
@@ -1939,11 +1846,8 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public NullEventRecord NullEventRecord
-    {
-        get => GetElement<NullEventRecord>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(49, "nullEvt", 6)]
+    public NullEventRecord NullEventRecord { get; set; }
     
 
 
@@ -2044,13 +1948,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
@@ -2059,11 +1957,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "hlinkClick", 0)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick { get; set; }
     
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -2072,11 +1967,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "hlinkHover", 1)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover { get; set; }
     
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -2085,11 +1977,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "extLst", 2)]
+    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList { get; set; }
     
 
 
@@ -2164,13 +2053,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cpLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 48,48 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ContentPartLocks.</para>
@@ -2179,11 +2062,8 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks ContentPartLocks
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(48, "cpLocks", 0)]
+    public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks ContentPartLocks { get; set; }
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -2192,11 +2072,8 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList OfficeArtExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(48, "extLst", 1)]
+    public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList OfficeArtExtensionList { get; set; }
     
 
 
@@ -2289,13 +2166,7 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
      
     
     
-        private static readonly string[] eleTagNames = { "ph","audioCd","wavAudioFile","audioFile","videoFile","quickTimeFile","custDataLst","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 24,10,10,10,10,10,24,24 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Placeholder Shape.</para>
@@ -2304,11 +2175,8 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
     /// <remark>
     /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Presentation.PlaceholderShape PlaceholderShape
-    {
-        get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(24, "ph", 0)]
+    public DocumentFormat.OpenXml.Presentation.PlaceholderShape PlaceholderShape { get; set; }
     
 
 
@@ -2650,13 +2518,7 @@ public partial class SectionOld : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 49 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -2665,11 +2527,8 @@ public partial class SectionOld : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(49, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -2851,13 +2710,7 @@ public partial class Section : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sldIdLst","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 49,49 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SectionSlideIdList.</para>
@@ -2866,11 +2719,8 @@ public partial class Section : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public SectionSlideIdList SectionSlideIdList
-    {
-        get => GetElement<SectionSlideIdList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(49, "sldIdLst", 0)]
+    public SectionSlideIdList SectionSlideIdList { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -2879,11 +2729,8 @@ public partial class Section : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(49, "extLst", 1)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 

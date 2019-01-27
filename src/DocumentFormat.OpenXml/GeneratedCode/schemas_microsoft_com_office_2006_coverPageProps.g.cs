@@ -77,13 +77,7 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "PublishDate","Abstract","CompanyAddress","CompanyPhone","CompanyFax","CompanyEmail" };
-    private static readonly byte[] eleNamespaceIds = { 36,36,36,36,36,36 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PublishDate.</para>
@@ -92,11 +86,8 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-    public PublishDate PublishDate
-    {
-        get => GetElement<PublishDate>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(36, "PublishDate", 0)]
+    public PublishDate PublishDate { get; set; }
     
     /// <summary>
     /// <para> DocumentAbstract.</para>
@@ -105,11 +96,8 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-    public DocumentAbstract DocumentAbstract
-    {
-        get => GetElement<DocumentAbstract>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(36, "Abstract", 1)]
+    public DocumentAbstract DocumentAbstract { get; set; }
     
     /// <summary>
     /// <para> CompanyAddress.</para>
@@ -118,11 +106,8 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-    public CompanyAddress CompanyAddress
-    {
-        get => GetElement<CompanyAddress>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(36, "CompanyAddress", 2)]
+    public CompanyAddress CompanyAddress { get; set; }
     
     /// <summary>
     /// <para> CompanyPhoneNumber.</para>
@@ -131,11 +116,8 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-    public CompanyPhoneNumber CompanyPhoneNumber
-    {
-        get => GetElement<CompanyPhoneNumber>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(36, "CompanyPhone", 3)]
+    public CompanyPhoneNumber CompanyPhoneNumber { get; set; }
     
     /// <summary>
     /// <para> CompanyFaxNumber.</para>
@@ -144,11 +126,8 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-    public CompanyFaxNumber CompanyFaxNumber
-    {
-        get => GetElement<CompanyFaxNumber>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(36, "CompanyFax", 4)]
+    public CompanyFaxNumber CompanyFaxNumber { get; set; }
     
     /// <summary>
     /// <para> CompanyEmailAddress.</para>
@@ -157,11 +136,8 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-    public CompanyEmailAddress CompanyEmailAddress
-    {
-        get => GetElement<CompanyEmailAddress>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(36, "CompanyEmail", 5)]
+    public CompanyEmailAddress CompanyEmailAddress { get; set; }
     
 
 

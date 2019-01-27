@@ -411,13 +411,7 @@ public partial class SdtRepeatedSection : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sectionTitle","doNotAllowInsertDeleteSection" };
-    private static readonly byte[] eleNamespaceIds = { 69,69 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SectionTitle.</para>
@@ -426,11 +420,8 @@ public partial class SdtRepeatedSection : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
     /// </remark>
-    public SectionTitle SectionTitle
-    {
-        get => GetElement<SectionTitle>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(69, "sectionTitle", 0)]
+    public SectionTitle SectionTitle { get; set; }
     
     /// <summary>
     /// <para> DoNotAllowInsertDeleteSection.</para>
@@ -439,11 +430,8 @@ public partial class SdtRepeatedSection : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
     /// </remark>
-    public DoNotAllowInsertDeleteSection DoNotAllowInsertDeleteSection
-    {
-        get => GetElement<DoNotAllowInsertDeleteSection>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(69, "doNotAllowInsertDeleteSection", 1)]
+    public DoNotAllowInsertDeleteSection DoNotAllowInsertDeleteSection { get; set; }
     
 
 
@@ -838,13 +826,7 @@ public partial class Person : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "presenceInfo" };
-    private static readonly byte[] eleNamespaceIds = { 69 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PresenceInfo.</para>
@@ -853,11 +835,8 @@ public partial class Person : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
     /// </remark>
-    public PresenceInfo PresenceInfo
-    {
-        get => GetElement<PresenceInfo>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(69, "presenceInfo", 0)]
+    public PresenceInfo PresenceInfo { get; set; }
     
 
 

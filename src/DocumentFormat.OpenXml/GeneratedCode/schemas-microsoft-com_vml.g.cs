@@ -497,13 +497,7 @@ public partial class Fill : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fill" };
-    private static readonly byte[] eleNamespaceIds = { 27 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> FillExtendedProperties.</para>
@@ -512,11 +506,8 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties FillExtendedProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(27, "fill", 0)]
+    public DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties FillExtendedProperties { get; set; }
     
 
 
@@ -769,13 +760,7 @@ public partial class Stroke : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "left","top","right","bottom","column" };
-    private static readonly byte[] eleNamespaceIds = { 27,27,27,27,27 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> LeftStroke.</para>
@@ -784,11 +769,8 @@ public partial class Stroke : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public DocumentFormat.OpenXml.Vml.Office.LeftStroke LeftStroke
-    {
-        get => GetElement<DocumentFormat.OpenXml.Vml.Office.LeftStroke>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(27, "left", 0)]
+    public DocumentFormat.OpenXml.Vml.Office.LeftStroke LeftStroke { get; set; }
     
     /// <summary>
     /// <para> TopStroke.</para>
@@ -797,11 +779,8 @@ public partial class Stroke : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public DocumentFormat.OpenXml.Vml.Office.TopStroke TopStroke
-    {
-        get => GetElement<DocumentFormat.OpenXml.Vml.Office.TopStroke>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(27, "top", 1)]
+    public DocumentFormat.OpenXml.Vml.Office.TopStroke TopStroke { get; set; }
     
     /// <summary>
     /// <para> RightStroke.</para>
@@ -810,11 +789,8 @@ public partial class Stroke : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public DocumentFormat.OpenXml.Vml.Office.RightStroke RightStroke
-    {
-        get => GetElement<DocumentFormat.OpenXml.Vml.Office.RightStroke>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(27, "right", 2)]
+    public DocumentFormat.OpenXml.Vml.Office.RightStroke RightStroke { get; set; }
     
     /// <summary>
     /// <para> BottomStroke.</para>
@@ -823,11 +799,8 @@ public partial class Stroke : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public DocumentFormat.OpenXml.Vml.Office.BottomStroke BottomStroke
-    {
-        get => GetElement<DocumentFormat.OpenXml.Vml.Office.BottomStroke>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(27, "bottom", 3)]
+    public DocumentFormat.OpenXml.Vml.Office.BottomStroke BottomStroke { get; set; }
     
     /// <summary>
     /// <para> ColumnStroke.</para>
@@ -836,11 +809,8 @@ public partial class Stroke : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public DocumentFormat.OpenXml.Vml.Office.ColumnStroke ColumnStroke
-    {
-        get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(27, "column", 4)]
+    public DocumentFormat.OpenXml.Vml.Office.ColumnStroke ColumnStroke { get; set; }
     
 
 
@@ -2738,13 +2708,7 @@ public partial class Background : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fill" };
-    private static readonly byte[] eleNamespaceIds = { 26 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Fill.</para>
@@ -2753,11 +2717,8 @@ public partial class Background : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
-    public Fill Fill
-    {
-        get => GetElement<Fill>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(26, "fill", 0)]
+    public Fill Fill { get; set; }
     
 
 

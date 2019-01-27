@@ -77,13 +77,7 @@ public partial class AudioFromCD : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "st","end","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Audio Start Time.</para>
@@ -92,11 +86,8 @@ public partial class AudioFromCD : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public StartTime StartTime
-    {
-        get => GetElement<StartTime>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "st", 0)]
+    public StartTime StartTime { get; set; }
     
     /// <summary>
     /// <para> Audio End Time.</para>
@@ -105,11 +96,8 @@ public partial class AudioFromCD : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public EndTime EndTime
-    {
-        get => GetElement<EndTime>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "end", 1)]
+    public EndTime EndTime { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -118,11 +106,8 @@ public partial class AudioFromCD : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "extLst", 2)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -285,13 +270,7 @@ public partial class AudioFromFile : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -300,11 +279,8 @@ public partial class AudioFromFile : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -379,13 +355,7 @@ public partial class VideoFromFile : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -394,11 +364,8 @@ public partial class VideoFromFile : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -473,13 +440,7 @@ public partial class QuickTimeFromFile : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -488,11 +449,8 @@ public partial class QuickTimeFromFile : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -2265,13 +2223,7 @@ public partial class Shape3DType : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "bevelT","bevelB","extrusionClr","contourClr","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Top Bevel.</para>
@@ -2280,11 +2232,8 @@ public partial class Shape3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public BevelTop BevelTop
-    {
-        get => GetElement<BevelTop>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "bevelT", 0)]
+    public BevelTop BevelTop { get; set; }
     
     /// <summary>
     /// <para> Bottom Bevel.</para>
@@ -2293,11 +2242,8 @@ public partial class Shape3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public BevelBottom BevelBottom
-    {
-        get => GetElement<BevelBottom>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "bevelB", 1)]
+    public BevelBottom BevelBottom { get; set; }
     
     /// <summary>
     /// <para> Extrusion Color.</para>
@@ -2306,11 +2252,8 @@ public partial class Shape3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtrusionColor ExtrusionColor
-    {
-        get => GetElement<ExtrusionColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "extrusionClr", 2)]
+    public ExtrusionColor ExtrusionColor { get; set; }
     
     /// <summary>
     /// <para> Contour Color.</para>
@@ -2319,11 +2262,8 @@ public partial class Shape3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ContourColor ContourColor
-    {
-        get => GetElement<ContourColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "contourClr", 3)]
+    public ContourColor ContourColor { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -2332,11 +2272,8 @@ public partial class Shape3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "extLst", 4)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -2489,13 +2426,7 @@ public partial class PathGradientFill : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fillToRect" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Fill To Rectangle.</para>
@@ -2504,11 +2435,8 @@ public partial class PathGradientFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public FillToRectangle FillToRectangle
-    {
-        get => GetElement<FillToRectangle>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "fillToRect", 0)]
+    public FillToRectangle FillToRectangle { get; set; }
     
 
 
@@ -2642,13 +2570,7 @@ public partial class Stretch : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fillRect" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Fill Rectangle.</para>
@@ -2657,11 +2579,8 @@ public partial class Stretch : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public FillRectangle FillRectangle
-    {
-        get => GetElement<FillRectangle>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "fillRect", 0)]
+    public FillRectangle FillRectangle { get; set; }
     
 
 
@@ -2769,13 +2688,7 @@ public partial class SolidFill : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -2784,11 +2697,8 @@ public partial class SolidFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -2797,11 +2707,8 @@ public partial class SolidFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -2810,11 +2717,8 @@ public partial class SolidFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HslColor HslColor
-    {
-        get => GetElement<HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -2823,11 +2727,8 @@ public partial class SolidFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SystemColor SystemColor
-    {
-        get => GetElement<SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -2836,11 +2737,8 @@ public partial class SolidFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SchemeColor SchemeColor
-    {
-        get => GetElement<SchemeColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "schemeClr", 4)]
+    public SchemeColor SchemeColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -2849,11 +2747,8 @@ public partial class SolidFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetColor PresetColor
-    {
-        get => GetElement<PresetColor>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstClr", 5)]
+    public PresetColor PresetColor { get; set; }
     
 
 
@@ -2938,13 +2833,7 @@ public partial class GradientFill : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "gsLst","lin","path","tileRect" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Gradient Stop List.</para>
@@ -2953,11 +2842,8 @@ public partial class GradientFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public GradientStopList GradientStopList
-    {
-        get => GetElement<GradientStopList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "gsLst", 0)]
+    public GradientStopList GradientStopList { get; set; }
     
 
 
@@ -3042,13 +2928,7 @@ public partial class BlipFill : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "blip","srcRect","tile","stretch" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Blip.</para>
@@ -3057,11 +2937,8 @@ public partial class BlipFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Blip Blip
-    {
-        get => GetElement<Blip>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "blip", 0)]
+    public Blip Blip { get; set; }
     
     /// <summary>
     /// <para> Source Rectangle.</para>
@@ -3070,11 +2947,8 @@ public partial class BlipFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SourceRectangle SourceRectangle
-    {
-        get => GetElement<SourceRectangle>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srcRect", 1)]
+    public SourceRectangle SourceRectangle { get; set; }
     
 
 
@@ -3149,13 +3023,7 @@ public partial class PatternFill : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fgClr","bgClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Foreground color.</para>
@@ -3164,11 +3032,8 @@ public partial class PatternFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ForegroundColor ForegroundColor
-    {
-        get => GetElement<ForegroundColor>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "fgClr", 0)]
+    public ForegroundColor ForegroundColor { get; set; }
     
     /// <summary>
     /// <para> Background color.</para>
@@ -3177,11 +3042,8 @@ public partial class PatternFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public BackgroundColor BackgroundColor
-    {
-        get => GetElement<BackgroundColor>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "bgClr", 1)]
+    public BackgroundColor BackgroundColor { get; set; }
     
 
 
@@ -3718,13 +3580,7 @@ public partial class AlphaInverse : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -3733,11 +3589,8 @@ public partial class AlphaInverse : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -3746,11 +3599,8 @@ public partial class AlphaInverse : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -3759,11 +3609,8 @@ public partial class AlphaInverse : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HslColor HslColor
-    {
-        get => GetElement<HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -3772,11 +3619,8 @@ public partial class AlphaInverse : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SystemColor SystemColor
-    {
-        get => GetElement<SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -3785,11 +3629,8 @@ public partial class AlphaInverse : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SchemeColor SchemeColor
-    {
-        get => GetElement<SchemeColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "schemeClr", 4)]
+    public SchemeColor SchemeColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -3798,11 +3639,8 @@ public partial class AlphaInverse : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetColor PresetColor
-    {
-        get => GetElement<PresetColor>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstClr", 5)]
+    public PresetColor PresetColor { get; set; }
     
 
 
@@ -3869,13 +3707,7 @@ public partial class AlphaModulationEffect : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cont" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> EffectContainer.</para>
@@ -3884,11 +3716,8 @@ public partial class AlphaModulationEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public EffectContainer EffectContainer
-    {
-        get => GetElement<EffectContainer>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "cont", 0)]
+    public EffectContainer EffectContainer { get; set; }
     
 
 
@@ -4109,13 +3938,7 @@ public partial class Blend : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cont" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Effect to blend.</para>
@@ -4124,11 +3947,8 @@ public partial class Blend : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public EffectContainer EffectContainer
-    {
-        get => GetElement<EffectContainer>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "cont", 0)]
+    public EffectContainer EffectContainer { get; set; }
     
 
 
@@ -4246,13 +4066,7 @@ public partial class ColorChange : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "clrFrom","clrTo" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Change Color From.</para>
@@ -4261,11 +4075,8 @@ public partial class ColorChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ColorFrom ColorFrom
-    {
-        get => GetElement<ColorFrom>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "clrFrom", 0)]
+    public ColorFrom ColorFrom { get; set; }
     
     /// <summary>
     /// <para> Change Color To.</para>
@@ -4274,11 +4085,8 @@ public partial class ColorChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ColorTo ColorTo
-    {
-        get => GetElement<ColorTo>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "clrTo", 1)]
+    public ColorTo ColorTo { get; set; }
     
 
 
@@ -4355,13 +4163,7 @@ public partial class ColorReplacement : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -4370,11 +4172,8 @@ public partial class ColorReplacement : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -4383,11 +4182,8 @@ public partial class ColorReplacement : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -4396,11 +4192,8 @@ public partial class ColorReplacement : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HslColor HslColor
-    {
-        get => GetElement<HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -4409,11 +4202,8 @@ public partial class ColorReplacement : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SystemColor SystemColor
-    {
-        get => GetElement<SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -4422,11 +4212,8 @@ public partial class ColorReplacement : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SchemeColor SchemeColor
-    {
-        get => GetElement<SchemeColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "schemeClr", 4)]
+    public SchemeColor SchemeColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -4435,11 +4222,8 @@ public partial class ColorReplacement : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetColor PresetColor
-    {
-        get => GetElement<PresetColor>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstClr", 5)]
+    public PresetColor PresetColor { get; set; }
     
 
 
@@ -4590,13 +4374,7 @@ public partial class Fill : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "noFill","solidFill","gradFill","blipFill","pattFill","grpFill" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> NoFill.</para>
@@ -4605,11 +4383,8 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NoFill NoFill
-    {
-        get => GetElement<NoFill>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "noFill", 0)]
+    public NoFill NoFill { get; set; }
     
     /// <summary>
     /// <para> SolidFill.</para>
@@ -4618,11 +4393,8 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SolidFill SolidFill
-    {
-        get => GetElement<SolidFill>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "solidFill", 1)]
+    public SolidFill SolidFill { get; set; }
     
     /// <summary>
     /// <para> GradientFill.</para>
@@ -4631,11 +4403,8 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public GradientFill GradientFill
-    {
-        get => GetElement<GradientFill>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "gradFill", 2)]
+    public GradientFill GradientFill { get; set; }
     
     /// <summary>
     /// <para> BlipFill.</para>
@@ -4644,11 +4413,8 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public BlipFill BlipFill
-    {
-        get => GetElement<BlipFill>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "blipFill", 3)]
+    public BlipFill BlipFill { get; set; }
     
     /// <summary>
     /// <para> Pattern Fill.</para>
@@ -4657,11 +4423,8 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PatternFill PatternFill
-    {
-        get => GetElement<PatternFill>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "pattFill", 4)]
+    public PatternFill PatternFill { get; set; }
     
     /// <summary>
     /// <para> Group Fill.</para>
@@ -4670,11 +4433,8 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public GroupFill GroupFill
-    {
-        get => GetElement<GroupFill>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "grpFill", 5)]
+    public GroupFill GroupFill { get; set; }
     
 
 
@@ -4757,13 +4517,7 @@ public partial class FillOverlay : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "noFill","solidFill","gradFill","blipFill","pattFill","grpFill" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> NoFill.</para>
@@ -4772,11 +4526,8 @@ public partial class FillOverlay : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NoFill NoFill
-    {
-        get => GetElement<NoFill>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "noFill", 0)]
+    public NoFill NoFill { get; set; }
     
     /// <summary>
     /// <para> SolidFill.</para>
@@ -4785,11 +4536,8 @@ public partial class FillOverlay : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SolidFill SolidFill
-    {
-        get => GetElement<SolidFill>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "solidFill", 1)]
+    public SolidFill SolidFill { get; set; }
     
     /// <summary>
     /// <para> GradientFill.</para>
@@ -4798,11 +4546,8 @@ public partial class FillOverlay : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public GradientFill GradientFill
-    {
-        get => GetElement<GradientFill>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "gradFill", 2)]
+    public GradientFill GradientFill { get; set; }
     
     /// <summary>
     /// <para> BlipFill.</para>
@@ -4811,11 +4556,8 @@ public partial class FillOverlay : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public BlipFill BlipFill
-    {
-        get => GetElement<BlipFill>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "blipFill", 3)]
+    public BlipFill BlipFill { get; set; }
     
     /// <summary>
     /// <para> Pattern Fill.</para>
@@ -4824,11 +4566,8 @@ public partial class FillOverlay : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PatternFill PatternFill
-    {
-        get => GetElement<PatternFill>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "pattFill", 4)]
+    public PatternFill PatternFill { get; set; }
     
     /// <summary>
     /// <para> Group Fill.</para>
@@ -4837,11 +4576,8 @@ public partial class FillOverlay : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public GroupFill GroupFill
-    {
-        get => GetElement<GroupFill>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "grpFill", 5)]
+    public GroupFill GroupFill { get; set; }
     
 
 
@@ -4924,13 +4660,7 @@ public partial class Glow : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -4939,11 +4669,8 @@ public partial class Glow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -4952,11 +4679,8 @@ public partial class Glow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -4965,11 +4689,8 @@ public partial class Glow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HslColor HslColor
-    {
-        get => GetElement<HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -4978,11 +4699,8 @@ public partial class Glow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SystemColor SystemColor
-    {
-        get => GetElement<SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -4991,11 +4709,8 @@ public partial class Glow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SchemeColor SchemeColor
-    {
-        get => GetElement<SchemeColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "schemeClr", 4)]
+    public SchemeColor SchemeColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -5004,11 +4719,8 @@ public partial class Glow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetColor PresetColor
-    {
-        get => GetElement<PresetColor>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstClr", 5)]
+    public PresetColor PresetColor { get; set; }
     
 
 
@@ -5183,13 +4895,7 @@ public partial class InnerShadow : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -5198,11 +4904,8 @@ public partial class InnerShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -5211,11 +4914,8 @@ public partial class InnerShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -5224,11 +4924,8 @@ public partial class InnerShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HslColor HslColor
-    {
-        get => GetElement<HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -5237,11 +4934,8 @@ public partial class InnerShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SystemColor SystemColor
-    {
-        get => GetElement<SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -5250,11 +4944,8 @@ public partial class InnerShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SchemeColor SchemeColor
-    {
-        get => GetElement<SchemeColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "schemeClr", 4)]
+    public SchemeColor SchemeColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -5263,11 +4954,8 @@ public partial class InnerShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetColor PresetColor
-    {
-        get => GetElement<PresetColor>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstClr", 5)]
+    public PresetColor PresetColor { get; set; }
     
 
 
@@ -5441,13 +5129,7 @@ public partial class OuterShadow : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -5456,11 +5138,8 @@ public partial class OuterShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -5469,11 +5148,8 @@ public partial class OuterShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -5482,11 +5158,8 @@ public partial class OuterShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HslColor HslColor
-    {
-        get => GetElement<HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -5495,11 +5168,8 @@ public partial class OuterShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SystemColor SystemColor
-    {
-        get => GetElement<SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -5508,11 +5178,8 @@ public partial class OuterShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SchemeColor SchemeColor
-    {
-        get => GetElement<SchemeColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "schemeClr", 4)]
+    public SchemeColor SchemeColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -5521,11 +5188,8 @@ public partial class OuterShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetColor PresetColor
-    {
-        get => GetElement<PresetColor>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstClr", 5)]
+    public PresetColor PresetColor { get; set; }
     
 
 
@@ -5620,13 +5284,7 @@ public partial class PresetShadow : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -5635,11 +5293,8 @@ public partial class PresetShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -5648,11 +5303,8 @@ public partial class PresetShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -5661,11 +5313,8 @@ public partial class PresetShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HslColor HslColor
-    {
-        get => GetElement<HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -5674,11 +5323,8 @@ public partial class PresetShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SystemColor SystemColor
-    {
-        get => GetElement<SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -5687,11 +5333,8 @@ public partial class PresetShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SchemeColor SchemeColor
-    {
-        get => GetElement<SchemeColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "schemeClr", 4)]
+    public SchemeColor SchemeColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -5700,11 +5343,8 @@ public partial class PresetShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetColor PresetColor
-    {
-        get => GetElement<PresetColor>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstClr", 5)]
+    public PresetColor PresetColor { get; set; }
     
 
 
@@ -6090,13 +5730,7 @@ public partial class EffectList : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "blur","fillOverlay","glow","innerShdw","outerShdw","prstShdw","reflection","softEdge" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Blur Effect.</para>
@@ -6105,11 +5739,8 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Blur Blur
-    {
-        get => GetElement<Blur>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "blur", 0)]
+    public Blur Blur { get; set; }
     
     /// <summary>
     /// <para> FillOverlay.</para>
@@ -6118,11 +5749,8 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public FillOverlay FillOverlay
-    {
-        get => GetElement<FillOverlay>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "fillOverlay", 1)]
+    public FillOverlay FillOverlay { get; set; }
     
     /// <summary>
     /// <para> Glow.</para>
@@ -6131,11 +5759,8 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Glow Glow
-    {
-        get => GetElement<Glow>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "glow", 2)]
+    public Glow Glow { get; set; }
     
     /// <summary>
     /// <para> InnerShadow.</para>
@@ -6144,11 +5769,8 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public InnerShadow InnerShadow
-    {
-        get => GetElement<InnerShadow>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "innerShdw", 3)]
+    public InnerShadow InnerShadow { get; set; }
     
     /// <summary>
     /// <para> OuterShadow.</para>
@@ -6157,11 +5779,8 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public OuterShadow OuterShadow
-    {
-        get => GetElement<OuterShadow>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "outerShdw", 4)]
+    public OuterShadow OuterShadow { get; set; }
     
     /// <summary>
     /// <para> PresetShadow.</para>
@@ -6170,11 +5789,8 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetShadow PresetShadow
-    {
-        get => GetElement<PresetShadow>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstShdw", 5)]
+    public PresetShadow PresetShadow { get; set; }
     
     /// <summary>
     /// <para> Reflection.</para>
@@ -6183,11 +5799,8 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Reflection Reflection
-    {
-        get => GetElement<Reflection>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(10, "reflection", 6)]
+    public Reflection Reflection { get; set; }
     
     /// <summary>
     /// <para> SoftEdge.</para>
@@ -6196,11 +5809,8 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SoftEdge SoftEdge
-    {
-        get => GetElement<SoftEdge>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(10, "softEdge", 7)]
+    public SoftEdge SoftEdge { get; set; }
     
 
 
@@ -6277,13 +5887,7 @@ public partial class CustomGeometry : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "avLst","gdLst","ahLst","cxnLst","rect","pathLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Adjust Value List.</para>
@@ -6292,11 +5896,8 @@ public partial class CustomGeometry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public AdjustValueList AdjustValueList
-    {
-        get => GetElement<AdjustValueList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "avLst", 0)]
+    public AdjustValueList AdjustValueList { get; set; }
     
     /// <summary>
     /// <para> List of Shape Guides.</para>
@@ -6305,11 +5906,8 @@ public partial class CustomGeometry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ShapeGuideList ShapeGuideList
-    {
-        get => GetElement<ShapeGuideList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "gdLst", 1)]
+    public ShapeGuideList ShapeGuideList { get; set; }
     
     /// <summary>
     /// <para> List of Shape Adjust Handles.</para>
@@ -6318,11 +5916,8 @@ public partial class CustomGeometry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public AdjustHandleList AdjustHandleList
-    {
-        get => GetElement<AdjustHandleList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "ahLst", 2)]
+    public AdjustHandleList AdjustHandleList { get; set; }
     
     /// <summary>
     /// <para> List of Shape Connection Sites.</para>
@@ -6331,11 +5926,8 @@ public partial class CustomGeometry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ConnectionSiteList ConnectionSiteList
-    {
-        get => GetElement<ConnectionSiteList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "cxnLst", 3)]
+    public ConnectionSiteList ConnectionSiteList { get; set; }
     
     /// <summary>
     /// <para> Shape Text Rectangle.</para>
@@ -6344,11 +5936,8 @@ public partial class CustomGeometry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Rectangle Rectangle
-    {
-        get => GetElement<Rectangle>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "rect", 4)]
+    public Rectangle Rectangle { get; set; }
     
     /// <summary>
     /// <para> List of Shape Paths.</para>
@@ -6357,11 +5946,8 @@ public partial class CustomGeometry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PathList PathList
-    {
-        get => GetElement<PathList>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "pathLst", 5)]
+    public PathList PathList { get; set; }
     
 
 
@@ -6434,13 +6020,7 @@ public partial class PresetGeometry : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "avLst" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> List of Shape Adjust Values.</para>
@@ -6449,11 +6029,8 @@ public partial class PresetGeometry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public AdjustValueList AdjustValueList
-    {
-        get => GetElement<AdjustValueList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "avLst", 0)]
+    public AdjustValueList AdjustValueList { get; set; }
     
 
 
@@ -6526,13 +6103,7 @@ public partial class PresetTextWrap : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "avLst" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Adjust Value List.</para>
@@ -6541,11 +6112,8 @@ public partial class PresetTextWrap : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public AdjustValueList AdjustValueList
-    {
-        get => GetElement<AdjustValueList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "avLst", 0)]
+    public AdjustValueList AdjustValueList { get; set; }
     
 
 
@@ -6822,13 +6390,7 @@ public partial class FillProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "noFill","solidFill","gradFill","blipFill","pattFill","grpFill" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> NoFill.</para>
@@ -6837,11 +6399,8 @@ public partial class FillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NoFill NoFill
-    {
-        get => GetElement<NoFill>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "noFill", 0)]
+    public NoFill NoFill { get; set; }
     
     /// <summary>
     /// <para> SolidFill.</para>
@@ -6850,11 +6409,8 @@ public partial class FillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SolidFill SolidFill
-    {
-        get => GetElement<SolidFill>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "solidFill", 1)]
+    public SolidFill SolidFill { get; set; }
     
     /// <summary>
     /// <para> GradientFill.</para>
@@ -6863,11 +6419,8 @@ public partial class FillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public GradientFill GradientFill
-    {
-        get => GetElement<GradientFill>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "gradFill", 2)]
+    public GradientFill GradientFill { get; set; }
     
     /// <summary>
     /// <para> BlipFill.</para>
@@ -6876,11 +6429,8 @@ public partial class FillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public BlipFill BlipFill
-    {
-        get => GetElement<BlipFill>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "blipFill", 3)]
+    public BlipFill BlipFill { get; set; }
     
     /// <summary>
     /// <para> Pattern Fill.</para>
@@ -6889,11 +6439,8 @@ public partial class FillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PatternFill PatternFill
-    {
-        get => GetElement<PatternFill>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "pattFill", 4)]
+    public PatternFill PatternFill { get; set; }
     
     /// <summary>
     /// <para> Group Fill.</para>
@@ -6902,11 +6449,8 @@ public partial class FillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public GroupFill GroupFill
-    {
-        get => GetElement<GroupFill>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "grpFill", 5)]
+    public GroupFill GroupFill { get; set; }
     
 
 
@@ -7130,13 +6674,7 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     public UInt32Value Index { get; set; }
 
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -7145,11 +6683,8 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -7158,11 +6693,8 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -7171,11 +6703,8 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HslColor HslColor
-    {
-        get => GetElement<HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -7184,11 +6713,8 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SystemColor SystemColor
-    {
-        get => GetElement<SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -7197,11 +6723,8 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SchemeColor SchemeColor
-    {
-        get => GetElement<SchemeColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "schemeClr", 4)]
+    public SchemeColor SchemeColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -7210,11 +6733,8 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetColor PresetColor
-    {
-        get => GetElement<PresetColor>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstClr", 5)]
+    public PresetColor PresetColor { get; set; }
     
 
 
@@ -7314,13 +6834,7 @@ public partial class EffectPropertiesType : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "effectLst","effectDag" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Effect Container.</para>
@@ -7329,11 +6843,8 @@ public partial class EffectPropertiesType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public EffectList EffectList
-    {
-        get => GetElement<EffectList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "effectLst", 0)]
+    public EffectList EffectList { get; set; }
     
     /// <summary>
     /// <para> Effect Container.</para>
@@ -7342,11 +6853,8 @@ public partial class EffectPropertiesType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public EffectDag EffectDag
-    {
-        get => GetElement<EffectDag>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "effectDag", 1)]
+    public EffectDag EffectDag { get; set; }
     
 
 
@@ -7559,13 +7067,7 @@ public abstract partial class FontCollectionType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "latin","ea","cs","font","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Latin Font.</para>
@@ -7574,11 +7076,8 @@ public abstract partial class FontCollectionType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public LatinFont LatinFont
-    {
-        get => GetElement<LatinFont>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "latin", 0)]
+    public LatinFont LatinFont { get; set; }
     
     /// <summary>
     /// <para> East Asian Font.</para>
@@ -7587,11 +7086,8 @@ public abstract partial class FontCollectionType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public EastAsianFont EastAsianFont
-    {
-        get => GetElement<EastAsianFont>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "ea", 1)]
+    public EastAsianFont EastAsianFont { get; set; }
     
     /// <summary>
     /// <para> Complex Script Font.</para>
@@ -7600,11 +7096,8 @@ public abstract partial class FontCollectionType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ComplexScriptFont ComplexScriptFont
-    {
-        get => GetElement<ComplexScriptFont>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "cs", 2)]
+    public ComplexScriptFont ComplexScriptFont { get; set; }
     
 
 
@@ -7718,13 +7211,7 @@ public partial class FontReference : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -7733,11 +7220,8 @@ public partial class FontReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -7746,11 +7230,8 @@ public partial class FontReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -7759,11 +7240,8 @@ public partial class FontReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HslColor HslColor
-    {
-        get => GetElement<HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -7772,11 +7250,8 @@ public partial class FontReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SystemColor SystemColor
-    {
-        get => GetElement<SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -7785,11 +7260,8 @@ public partial class FontReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SchemeColor SchemeColor
-    {
-        get => GetElement<SchemeColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "schemeClr", 4)]
+    public SchemeColor SchemeColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -7798,11 +7270,8 @@ public partial class FontReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetColor PresetColor
-    {
-        get => GetElement<PresetColor>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstClr", 5)]
+    public PresetColor PresetColor { get; set; }
     
 
 
@@ -8461,13 +7930,7 @@ public abstract partial class ColorType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -8476,11 +7939,8 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -8489,11 +7949,8 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -8502,11 +7959,8 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HslColor HslColor
-    {
-        get => GetElement<HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -8515,11 +7969,8 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SystemColor SystemColor
-    {
-        get => GetElement<SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -8528,11 +7979,8 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SchemeColor SchemeColor
-    {
-        get => GetElement<SchemeColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "schemeClr", 4)]
+    public SchemeColor SchemeColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -8541,11 +7989,8 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetColor PresetColor
-    {
-        get => GetElement<PresetColor>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstClr", 5)]
+    public PresetColor PresetColor { get; set; }
     
 
 
@@ -9054,13 +8499,7 @@ public partial class PictureBullet : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "blip" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Blip.</para>
@@ -9069,11 +8508,8 @@ public partial class PictureBullet : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Blip Blip
-    {
-        get => GetElement<Blip>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "blip", 0)]
+    public Blip Blip { get; set; }
     
 
 
@@ -9847,13 +9283,7 @@ public partial class UnderlineFill : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "noFill","solidFill","gradFill","blipFill","pattFill","grpFill" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> NoFill.</para>
@@ -9862,11 +9292,8 @@ public partial class UnderlineFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NoFill NoFill
-    {
-        get => GetElement<NoFill>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "noFill", 0)]
+    public NoFill NoFill { get; set; }
     
     /// <summary>
     /// <para> SolidFill.</para>
@@ -9875,11 +9302,8 @@ public partial class UnderlineFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SolidFill SolidFill
-    {
-        get => GetElement<SolidFill>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "solidFill", 1)]
+    public SolidFill SolidFill { get; set; }
     
     /// <summary>
     /// <para> GradientFill.</para>
@@ -9888,11 +9312,8 @@ public partial class UnderlineFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public GradientFill GradientFill
-    {
-        get => GetElement<GradientFill>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "gradFill", 2)]
+    public GradientFill GradientFill { get; set; }
     
     /// <summary>
     /// <para> BlipFill.</para>
@@ -9901,11 +9322,8 @@ public partial class UnderlineFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public BlipFill BlipFill
-    {
-        get => GetElement<BlipFill>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "blipFill", 3)]
+    public BlipFill BlipFill { get; set; }
     
     /// <summary>
     /// <para> Pattern Fill.</para>
@@ -9914,11 +9332,8 @@ public partial class UnderlineFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PatternFill PatternFill
-    {
-        get => GetElement<PatternFill>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "pattFill", 4)]
+    public PatternFill PatternFill { get; set; }
     
     /// <summary>
     /// <para> Group Fill.</para>
@@ -9927,11 +9342,8 @@ public partial class UnderlineFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public GroupFill GroupFill
-    {
-        get => GetElement<GroupFill>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "grpFill", 5)]
+    public GroupFill GroupFill { get; set; }
     
 
 
@@ -10000,13 +9412,7 @@ public partial class Run : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rPr","t" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Text Character Properties.</para>
@@ -10015,11 +9421,8 @@ public partial class Run : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RunProperties RunProperties
-    {
-        get => GetElement<RunProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "rPr", 0)]
+    public RunProperties RunProperties { get; set; }
     
     /// <summary>
     /// <para> Text String.</para>
@@ -10028,11 +9431,8 @@ public partial class Run : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Text Text
-    {
-        get => GetElement<Text>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "t", 1)]
+    public Text Text { get; set; }
     
 
 
@@ -10099,13 +9499,7 @@ public partial class Break : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rPr" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Text Run Properties.</para>
@@ -10114,11 +9508,8 @@ public partial class Break : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RunProperties RunProperties
-    {
-        get => GetElement<RunProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "rPr", 0)]
+    public RunProperties RunProperties { get; set; }
     
 
 
@@ -10201,13 +9592,7 @@ public partial class Field : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rPr","pPr","t" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Text Character Properties.</para>
@@ -10216,11 +9601,8 @@ public partial class Field : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RunProperties RunProperties
-    {
-        get => GetElement<RunProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "rPr", 0)]
+    public RunProperties RunProperties { get; set; }
     
     /// <summary>
     /// <para> Text Paragraph Properties.</para>
@@ -10229,11 +9611,8 @@ public partial class Field : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ParagraphProperties ParagraphProperties
-    {
-        get => GetElement<ParagraphProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "pPr", 1)]
+    public ParagraphProperties ParagraphProperties { get; set; }
     
     /// <summary>
     /// <para> Text.</para>
@@ -10242,11 +9621,8 @@ public partial class Field : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Text Text
-    {
-        get => GetElement<Text>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "t", 2)]
+    public Text Text { get; set; }
     
 
 
@@ -10313,13 +9689,7 @@ public partial class Graphic : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "graphicData" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Graphic Object Data.</para>
@@ -10328,11 +9698,8 @@ public partial class Graphic : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public GraphicData GraphicData
-    {
-        get => GetElement<GraphicData>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "graphicData", 0)]
+    public GraphicData GraphicData { get; set; }
     
 
 
@@ -10569,13 +9936,7 @@ public partial class Theme : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "themeElements","objectDefaults","extraClrSchemeLst","custClrLst","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ThemeElements.</para>
@@ -10584,11 +9945,8 @@ public partial class Theme : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ThemeElements ThemeElements
-    {
-        get => GetElement<ThemeElements>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "themeElements", 0)]
+    public ThemeElements ThemeElements { get; set; }
     
     /// <summary>
     /// <para> ObjectDefaults.</para>
@@ -10597,11 +9955,8 @@ public partial class Theme : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ObjectDefaults ObjectDefaults
-    {
-        get => GetElement<ObjectDefaults>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "objectDefaults", 1)]
+    public ObjectDefaults ObjectDefaults { get; set; }
     
     /// <summary>
     /// <para> ExtraColorSchemeList.</para>
@@ -10610,11 +9965,8 @@ public partial class Theme : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtraColorSchemeList ExtraColorSchemeList
-    {
-        get => GetElement<ExtraColorSchemeList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "extraClrSchemeLst", 2)]
+    public ExtraColorSchemeList ExtraColorSchemeList { get; set; }
     
     /// <summary>
     /// <para> CustomColorList.</para>
@@ -10623,11 +9975,8 @@ public partial class Theme : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public CustomColorList CustomColorList
-    {
-        get => GetElement<CustomColorList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "custClrLst", 3)]
+    public CustomColorList CustomColorList { get; set; }
     
     /// <summary>
     /// <para> OfficeStyleSheetExtensionList.</para>
@@ -10636,11 +9985,8 @@ public partial class Theme : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public OfficeStyleSheetExtensionList OfficeStyleSheetExtensionList
-    {
-        get => GetElement<OfficeStyleSheetExtensionList>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "extLst", 4)]
+    public OfficeStyleSheetExtensionList OfficeStyleSheetExtensionList { get; set; }
     
 
 
@@ -10739,13 +10085,7 @@ public partial class ThemeOverride : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "clrScheme","fontScheme","fmtScheme" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Color Scheme.</para>
@@ -10754,11 +10094,8 @@ public partial class ThemeOverride : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ColorScheme ColorScheme
-    {
-        get => GetElement<ColorScheme>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "clrScheme", 0)]
+    public ColorScheme ColorScheme { get; set; }
     
     /// <summary>
     /// <para> FontScheme.</para>
@@ -10767,11 +10104,8 @@ public partial class ThemeOverride : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public FontScheme FontScheme
-    {
-        get => GetElement<FontScheme>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "fontScheme", 1)]
+    public FontScheme FontScheme { get; set; }
     
     /// <summary>
     /// <para> FormatScheme.</para>
@@ -10780,11 +10114,8 @@ public partial class ThemeOverride : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public FormatScheme FormatScheme
-    {
-        get => GetElement<FormatScheme>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "fmtScheme", 2)]
+    public FormatScheme FormatScheme { get; set; }
     
 
 
@@ -10923,13 +10254,7 @@ public partial class Table : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tblPr","tblGrid","tr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Table Properties.</para>
@@ -10938,11 +10263,8 @@ public partial class Table : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TableProperties TableProperties
-    {
-        get => GetElement<TableProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "tblPr", 0)]
+    public TableProperties TableProperties { get; set; }
     
     /// <summary>
     /// <para> Table Grid.</para>
@@ -10951,11 +10273,8 @@ public partial class Table : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TableGrid TableGrid
-    {
-        get => GetElement<TableGrid>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "tblGrid", 1)]
+    public TableGrid TableGrid { get; set; }
     
 
 
@@ -11280,13 +10599,7 @@ public partial class CustomColor : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -11295,11 +10608,8 @@ public partial class CustomColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -11308,11 +10618,8 @@ public partial class CustomColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -11321,11 +10628,8 @@ public partial class CustomColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HslColor HslColor
-    {
-        get => GetElement<HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -11334,11 +10638,8 @@ public partial class CustomColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SystemColor SystemColor
-    {
-        get => GetElement<SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -11347,11 +10648,8 @@ public partial class CustomColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SchemeColor SchemeColor
-    {
-        get => GetElement<SchemeColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "schemeClr", 4)]
+    public SchemeColor SchemeColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -11360,11 +10658,8 @@ public partial class CustomColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetColor PresetColor
-    {
-        get => GetElement<PresetColor>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstClr", 5)]
+    public PresetColor PresetColor { get; set; }
     
 
 
@@ -11480,13 +10775,7 @@ public partial class Scene3DType : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "camera","lightRig","backdrop","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Camera.</para>
@@ -11495,11 +10784,8 @@ public partial class Scene3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Camera Camera
-    {
-        get => GetElement<Camera>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "camera", 0)]
+    public Camera Camera { get; set; }
     
     /// <summary>
     /// <para> Light Rig.</para>
@@ -11508,11 +10794,8 @@ public partial class Scene3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public LightRig LightRig
-    {
-        get => GetElement<LightRig>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "lightRig", 1)]
+    public LightRig LightRig { get; set; }
     
     /// <summary>
     /// <para> Backdrop Plane.</para>
@@ -11521,11 +10804,8 @@ public partial class Scene3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Backdrop Backdrop
-    {
-        get => GetElement<Backdrop>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "backdrop", 2)]
+    public Backdrop Backdrop { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -11534,11 +10814,8 @@ public partial class Scene3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "extLst", 3)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -11981,13 +11258,7 @@ public partial class ColorScheme : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "dk1","lt1","dk2","lt2","accent1","accent2","accent3","accent4","accent5","accent6","hlink","folHlink","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Dark 1.</para>
@@ -11996,11 +11267,8 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Dark1Color Dark1Color
-    {
-        get => GetElement<Dark1Color>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "dk1", 0)]
+    public Dark1Color Dark1Color { get; set; }
     
     /// <summary>
     /// <para> Light 1.</para>
@@ -12009,11 +11277,8 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Light1Color Light1Color
-    {
-        get => GetElement<Light1Color>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "lt1", 1)]
+    public Light1Color Light1Color { get; set; }
     
     /// <summary>
     /// <para> Dark 2.</para>
@@ -12022,11 +11287,8 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Dark2Color Dark2Color
-    {
-        get => GetElement<Dark2Color>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "dk2", 2)]
+    public Dark2Color Dark2Color { get; set; }
     
     /// <summary>
     /// <para> Light 2.</para>
@@ -12035,11 +11297,8 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Light2Color Light2Color
-    {
-        get => GetElement<Light2Color>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "lt2", 3)]
+    public Light2Color Light2Color { get; set; }
     
     /// <summary>
     /// <para> Accent 1.</para>
@@ -12048,11 +11307,8 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Accent1Color Accent1Color
-    {
-        get => GetElement<Accent1Color>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "accent1", 4)]
+    public Accent1Color Accent1Color { get; set; }
     
     /// <summary>
     /// <para> Accent 2.</para>
@@ -12061,11 +11317,8 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Accent2Color Accent2Color
-    {
-        get => GetElement<Accent2Color>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "accent2", 5)]
+    public Accent2Color Accent2Color { get; set; }
     
     /// <summary>
     /// <para> Accent 3.</para>
@@ -12074,11 +11327,8 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Accent3Color Accent3Color
-    {
-        get => GetElement<Accent3Color>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(10, "accent3", 6)]
+    public Accent3Color Accent3Color { get; set; }
     
     /// <summary>
     /// <para> Accent 4.</para>
@@ -12087,11 +11337,8 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Accent4Color Accent4Color
-    {
-        get => GetElement<Accent4Color>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(10, "accent4", 7)]
+    public Accent4Color Accent4Color { get; set; }
     
     /// <summary>
     /// <para> Accent 5.</para>
@@ -12100,11 +11347,8 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Accent5Color Accent5Color
-    {
-        get => GetElement<Accent5Color>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(10, "accent5", 8)]
+    public Accent5Color Accent5Color { get; set; }
     
     /// <summary>
     /// <para> Accent 6.</para>
@@ -12113,11 +11357,8 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Accent6Color Accent6Color
-    {
-        get => GetElement<Accent6Color>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(10, "accent6", 9)]
+    public Accent6Color Accent6Color { get; set; }
     
     /// <summary>
     /// <para> Hyperlink.</para>
@@ -12126,11 +11367,8 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Hyperlink Hyperlink
-    {
-        get => GetElement<Hyperlink>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(10, "hlink", 10)]
+    public Hyperlink Hyperlink { get; set; }
     
     /// <summary>
     /// <para> Followed Hyperlink.</para>
@@ -12139,11 +11377,8 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public FollowedHyperlinkColor FollowedHyperlinkColor
-    {
-        get => GetElement<FollowedHyperlinkColor>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(10, "folHlink", 11)]
+    public FollowedHyperlinkColor FollowedHyperlinkColor { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -12152,11 +11387,8 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(10, "extLst", 12)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -12233,13 +11465,7 @@ public partial class FontScheme : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "majorFont","minorFont","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Major Font.</para>
@@ -12248,11 +11474,8 @@ public partial class FontScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public MajorFont MajorFont
-    {
-        get => GetElement<MajorFont>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "majorFont", 0)]
+    public MajorFont MajorFont { get; set; }
     
     /// <summary>
     /// <para> Minor fonts.</para>
@@ -12261,11 +11484,8 @@ public partial class FontScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public MinorFont MinorFont
-    {
-        get => GetElement<MinorFont>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "minorFont", 1)]
+    public MinorFont MinorFont { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -12274,11 +11494,8 @@ public partial class FontScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "extLst", 2)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -12357,13 +11574,7 @@ public partial class FormatScheme : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fillStyleLst","lnStyleLst","effectStyleLst","bgFillStyleLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Fill Style List.</para>
@@ -12372,11 +11583,8 @@ public partial class FormatScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public FillStyleList FillStyleList
-    {
-        get => GetElement<FillStyleList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "fillStyleLst", 0)]
+    public FillStyleList FillStyleList { get; set; }
     
     /// <summary>
     /// <para> Line Style List.</para>
@@ -12385,11 +11593,8 @@ public partial class FormatScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public LineStyleList LineStyleList
-    {
-        get => GetElement<LineStyleList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "lnStyleLst", 1)]
+    public LineStyleList LineStyleList { get; set; }
     
     /// <summary>
     /// <para> Effect Style List.</para>
@@ -12398,11 +11603,8 @@ public partial class FormatScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public EffectStyleList EffectStyleList
-    {
-        get => GetElement<EffectStyleList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "effectStyleLst", 2)]
+    public EffectStyleList EffectStyleList { get; set; }
     
     /// <summary>
     /// <para> Background Fill Style List.</para>
@@ -12411,11 +11613,8 @@ public partial class FormatScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public BackgroundFillStyleList BackgroundFillStyleList
-    {
-        get => GetElement<BackgroundFillStyleList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "bgFillStyleLst", 3)]
+    public BackgroundFillStyleList BackgroundFillStyleList { get; set; }
     
 
 
@@ -13168,13 +12367,7 @@ public abstract partial class Color2Type : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -13183,11 +12376,8 @@ public abstract partial class Color2Type : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -13196,11 +12386,8 @@ public abstract partial class Color2Type : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -13209,11 +12396,8 @@ public abstract partial class Color2Type : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HslColor HslColor
-    {
-        get => GetElement<HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -13222,11 +12406,8 @@ public abstract partial class Color2Type : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SystemColor SystemColor
-    {
-        get => GetElement<SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -13235,11 +12416,8 @@ public abstract partial class Color2Type : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetColor PresetColor
-    {
-        get => GetElement<PresetColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "prstClr", 4)]
+    public PresetColor PresetColor { get; set; }
     
 
 
@@ -13643,13 +12821,7 @@ public partial class ShapeLocks : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -13658,11 +12830,8 @@ public partial class ShapeLocks : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -13789,13 +12958,7 @@ public partial class ConnectionShapeLocks : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ConnectorLockingExtensionList.</para>
@@ -13804,11 +12967,8 @@ public partial class ConnectionShapeLocks : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ConnectorLockingExtensionList ConnectorLockingExtensionList
-    {
-        get => GetElement<ConnectorLockingExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "extLst", 0)]
+    public ConnectorLockingExtensionList ConnectorLockingExtensionList { get; set; }
     
 
 
@@ -13991,13 +13151,7 @@ public partial class GraphicFrameLocks : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -14006,11 +13160,8 @@ public partial class GraphicFrameLocks : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -14815,13 +13966,7 @@ public partial class TextBody : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "bodyPr","lstStyle","p" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Body Properties.</para>
@@ -14830,11 +13975,8 @@ public partial class TextBody : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public BodyProperties BodyProperties
-    {
-        get => GetElement<BodyProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "bodyPr", 0)]
+    public BodyProperties BodyProperties { get; set; }
     
     /// <summary>
     /// <para> Text List Styles.</para>
@@ -14843,11 +13985,8 @@ public partial class TextBody : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ListStyle ListStyle
-    {
-        get => GetElement<ListStyle>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "lstStyle", 1)]
+    public ListStyle ListStyle { get; set; }
     
 
 
@@ -14965,13 +14104,7 @@ public partial class Transform2D : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "off","ext" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Offset.</para>
@@ -14980,11 +14113,8 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Offset Offset
-    {
-        get => GetElement<Offset>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "off", 0)]
+    public Offset Offset { get; set; }
     
     /// <summary>
     /// <para> Extents.</para>
@@ -14993,11 +14123,8 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Extents Extents
-    {
-        get => GetElement<Extents>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "ext", 1)]
+    public Extents Extents { get; set; }
     
 
 
@@ -15098,13 +14225,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
@@ -15113,11 +14234,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HyperlinkOnClick HyperlinkOnClick
-    {
-        get => GetElement<HyperlinkOnClick>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "hlinkClick", 0)]
+    public HyperlinkOnClick HyperlinkOnClick { get; set; }
     
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -15126,11 +14244,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HyperlinkOnHover HyperlinkOnHover
-    {
-        get => GetElement<HyperlinkOnHover>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "hlinkHover", 1)]
+    public HyperlinkOnHover HyperlinkOnHover { get; set; }
     
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -15139,11 +14254,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
-    {
-        get => GetElement<NonVisualDrawingPropertiesExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "extLst", 2)]
+    public NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList { get; set; }
     
 
 
@@ -15218,13 +14330,7 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "spLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Shape Locks.</para>
@@ -15233,11 +14339,8 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ShapeLocks ShapeLocks
-    {
-        get => GetElement<ShapeLocks>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "spLocks", 0)]
+    public ShapeLocks ShapeLocks { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -15246,11 +14349,8 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "extLst", 1)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -15319,13 +14419,7 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvSpPr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -15334,11 +14428,8 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "cNvPr", 0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> Non-Visual Shape Drawing Properties.</para>
@@ -15347,11 +14438,8 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualShapeDrawingProperties NonVisualShapeDrawingProperties
-    {
-        get => GetElement<NonVisualShapeDrawingProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "cNvSpPr", 1)]
+    public NonVisualShapeDrawingProperties NonVisualShapeDrawingProperties { get; set; }
     
 
 
@@ -15452,13 +14540,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "xfrm","custGeom","prstGeom","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","ln","effectLst","effectDag","scene3d","sp3d","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
@@ -15467,11 +14549,8 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Transform2D Transform2D
-    {
-        get => GetElement<Transform2D>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "xfrm", 0)]
+    public Transform2D Transform2D { get; set; }
     
 
 
@@ -15544,13 +14623,7 @@ public partial class TextShape : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "txBody","useSpRect","xfrm","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Shape Text Body.</para>
@@ -15559,11 +14632,8 @@ public partial class TextShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TextBody TextBody
-    {
-        get => GetElement<TextBody>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "txBody", 0)]
+    public TextBody TextBody { get; set; }
     
 
 
@@ -15636,13 +14706,7 @@ public partial class ShapeStyle : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "lnRef","fillRef","effectRef","fontRef" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> LineReference.</para>
@@ -15651,11 +14715,8 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public LineReference LineReference
-    {
-        get => GetElement<LineReference>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "lnRef", 0)]
+    public LineReference LineReference { get; set; }
     
     /// <summary>
     /// <para> FillReference.</para>
@@ -15664,11 +14725,8 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public FillReference FillReference
-    {
-        get => GetElement<FillReference>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "fillRef", 1)]
+    public FillReference FillReference { get; set; }
     
     /// <summary>
     /// <para> EffectReference.</para>
@@ -15677,11 +14735,8 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public EffectReference EffectReference
-    {
-        get => GetElement<EffectReference>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "effectRef", 2)]
+    public EffectReference EffectReference { get; set; }
     
     /// <summary>
     /// <para> Font Reference.</para>
@@ -15690,11 +14745,8 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public FontReference FontReference
-    {
-        get => GetElement<FontReference>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "fontRef", 3)]
+    public FontReference FontReference { get; set; }
     
 
 
@@ -15767,13 +14819,7 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
      
     
     
-        private static readonly string[] eleTagNames = { "cxnSpLocks","stCxn","endCxn","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Connection Shape Locks.</para>
@@ -15782,11 +14828,8 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ConnectionShapeLocks ConnectionShapeLocks
-    {
-        get => GetElement<ConnectionShapeLocks>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "cxnSpLocks", 0)]
+    public ConnectionShapeLocks ConnectionShapeLocks { get; set; }
     
     /// <summary>
     /// <para> Connection Start.</para>
@@ -15795,11 +14838,8 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public StartConnection StartConnection
-    {
-        get => GetElement<StartConnection>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "stCxn", 1)]
+    public StartConnection StartConnection { get; set; }
     
     /// <summary>
     /// <para> Connection End.</para>
@@ -15808,11 +14848,8 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public EndConnection EndConnection
-    {
-        get => GetElement<EndConnection>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "endCxn", 2)]
+    public EndConnection EndConnection { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -15821,11 +14858,8 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "extLst", 3)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -15894,13 +14928,7 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvCxnSpPr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Drawing Properties.</para>
@@ -15909,11 +14937,8 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "cNvPr", 0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> Non-Visual Connector Shape Drawing Properties.</para>
@@ -15922,11 +14947,8 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualConnectorShapeDrawingProperties NonVisualConnectorShapeDrawingProperties
-    {
-        get => GetElement<NonVisualConnectorShapeDrawingProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "cNvCxnSpPr", 1)]
+    public NonVisualConnectorShapeDrawingProperties NonVisualConnectorShapeDrawingProperties { get; set; }
     
 
 
@@ -16001,13 +15023,7 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "picLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PictureLocks.</para>
@@ -16016,11 +15032,8 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PictureLocks PictureLocks
-    {
-        get => GetElement<PictureLocks>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "picLocks", 0)]
+    public PictureLocks PictureLocks { get; set; }
     
     /// <summary>
     /// <para> NonVisualPicturePropertiesExtensionList.</para>
@@ -16029,11 +15042,8 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualPicturePropertiesExtensionList NonVisualPicturePropertiesExtensionList
-    {
-        get => GetElement<NonVisualPicturePropertiesExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "extLst", 1)]
+    public NonVisualPicturePropertiesExtensionList NonVisualPicturePropertiesExtensionList { get; set; }
     
 
 
@@ -16102,13 +15112,7 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvPicPr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -16117,11 +15121,8 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "cNvPr", 0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> Non-Visual Picture Drawing Properties.</para>
@@ -16130,11 +15131,8 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualPictureDrawingProperties NonVisualPictureDrawingProperties
-    {
-        get => GetElement<NonVisualPictureDrawingProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "cNvPicPr", 1)]
+    public NonVisualPictureDrawingProperties NonVisualPictureDrawingProperties { get; set; }
     
 
 
@@ -16203,13 +15201,7 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
      
     
     
-        private static readonly string[] eleTagNames = { "graphicFrameLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Graphic Frame Locks.</para>
@@ -16218,11 +15210,8 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public GraphicFrameLocks GraphicFrameLocks
-    {
-        get => GetElement<GraphicFrameLocks>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "graphicFrameLocks", 0)]
+    public GraphicFrameLocks GraphicFrameLocks { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -16231,11 +15220,8 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "extLst", 1)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -16304,13 +15290,7 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvGraphicFramePr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -16319,11 +15299,8 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "cNvPr", 0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> Non-Visual Graphic Frame Drawing Properties.</para>
@@ -16332,11 +15309,8 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualGraphicFrameDrawingProperties NonVisualGraphicFrameDrawingProperties
-    {
-        get => GetElement<NonVisualGraphicFrameDrawingProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "cNvGraphicFramePr", 1)]
+    public NonVisualGraphicFrameDrawingProperties NonVisualGraphicFrameDrawingProperties { get; set; }
     
 
 
@@ -16405,13 +15379,7 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
      
     
     
-        private static readonly string[] eleTagNames = { "grpSpLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> GroupShapeLocks.</para>
@@ -16420,11 +15388,8 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public GroupShapeLocks GroupShapeLocks
-    {
-        get => GetElement<GroupShapeLocks>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "grpSpLocks", 0)]
+    public GroupShapeLocks GroupShapeLocks { get; set; }
     
     /// <summary>
     /// <para> NonVisualGroupDrawingShapePropsExtensionList.</para>
@@ -16433,11 +15398,8 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualGroupDrawingShapePropsExtensionList NonVisualGroupDrawingShapePropsExtensionList
-    {
-        get => GetElement<NonVisualGroupDrawingShapePropsExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "extLst", 1)]
+    public NonVisualGroupDrawingShapePropsExtensionList NonVisualGroupDrawingShapePropsExtensionList { get; set; }
     
 
 
@@ -16571,13 +15533,7 @@ public partial class Camera : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rot" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Rotation.</para>
@@ -16586,11 +15542,8 @@ public partial class Camera : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Rotation Rotation
-    {
-        get => GetElement<Rotation>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "rot", 0)]
+    public Rotation Rotation { get; set; }
     
 
 
@@ -16669,13 +15622,7 @@ public partial class LightRig : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rot" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Rotation.</para>
@@ -16684,11 +15631,8 @@ public partial class LightRig : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Rotation Rotation
-    {
-        get => GetElement<Rotation>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "rot", 0)]
+    public Rotation Rotation { get; set; }
     
 
 
@@ -16761,13 +15705,7 @@ public partial class Backdrop : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "anchor","norm","up","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Anchor Point.</para>
@@ -16776,11 +15714,8 @@ public partial class Backdrop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Anchor Anchor
-    {
-        get => GetElement<Anchor>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "anchor", 0)]
+    public Anchor Anchor { get; set; }
     
     /// <summary>
     /// <para> Normal.</para>
@@ -16789,11 +15724,8 @@ public partial class Backdrop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Normal Normal
-    {
-        get => GetElement<Normal>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "norm", 1)]
+    public Normal Normal { get; set; }
     
     /// <summary>
     /// <para> Up Vector.</para>
@@ -16802,11 +15734,8 @@ public partial class Backdrop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public UpVector UpVector
-    {
-        get => GetElement<UpVector>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "up", 2)]
+    public UpVector UpVector { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -16815,11 +15744,8 @@ public partial class Backdrop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "extLst", 3)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -17287,13 +16213,7 @@ public partial class GradientStop : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -17302,11 +16222,8 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -17315,11 +16232,8 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -17328,11 +16242,8 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HslColor HslColor
-    {
-        get => GetElement<HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -17341,11 +16252,8 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SystemColor SystemColor
-    {
-        get => GetElement<SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -17354,11 +16262,8 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SchemeColor SchemeColor
-    {
-        get => GetElement<SchemeColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "schemeClr", 4)]
+    public SchemeColor SchemeColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -17367,11 +16272,8 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetColor PresetColor
-    {
-        get => GetElement<PresetColor>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstClr", 5)]
+    public PresetColor PresetColor { get; set; }
     
 
 
@@ -17661,13 +16563,7 @@ public partial class AdjustHandleXY : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pos" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Position.</para>
@@ -17676,11 +16572,8 @@ public partial class AdjustHandleXY : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Position Position
-    {
-        get => GetElement<Position>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "pos", 0)]
+    public Position Position { get; set; }
     
 
 
@@ -17783,13 +16676,7 @@ public partial class AdjustHandlePolar : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pos" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Shape Position Coordinate.</para>
@@ -17798,11 +16685,8 @@ public partial class AdjustHandlePolar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Position Position
-    {
-        get => GetElement<Position>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "pos", 0)]
+    public Position Position { get; set; }
     
 
 
@@ -17875,13 +16759,7 @@ public partial class ConnectionSite : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pos" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Position.</para>
@@ -17890,11 +16768,8 @@ public partial class ConnectionSite : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Position Position
-    {
-        get => GetElement<Position>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "pos", 0)]
+    public Position Position { get; set; }
     
 
 
@@ -17992,13 +16867,7 @@ public partial class MoveTo : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pt" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Move end point.</para>
@@ -18007,11 +16876,8 @@ public partial class MoveTo : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Point Point
-    {
-        get => GetElement<Point>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "pt", 0)]
+    public Point Point { get; set; }
     
 
 
@@ -18078,13 +16944,7 @@ public partial class LineTo : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pt" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Line end point.</para>
@@ -18093,11 +16953,8 @@ public partial class LineTo : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Point Point
-    {
-        get => GetElement<Point>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "pt", 0)]
+    public Point Point { get; set; }
     
 
 
@@ -19018,13 +17875,7 @@ public partial class TransformGroup : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "off","ext","chOff","chExt" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Offset.</para>
@@ -19033,11 +17884,8 @@ public partial class TransformGroup : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Offset Offset
-    {
-        get => GetElement<Offset>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "off", 0)]
+    public Offset Offset { get; set; }
     
     /// <summary>
     /// <para> Extents.</para>
@@ -19046,11 +17894,8 @@ public partial class TransformGroup : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Extents Extents
-    {
-        get => GetElement<Extents>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "ext", 1)]
+    public Extents Extents { get; set; }
     
     /// <summary>
     /// <para> Child Offset.</para>
@@ -19059,11 +17904,8 @@ public partial class TransformGroup : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ChildOffset ChildOffset
-    {
-        get => GetElement<ChildOffset>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "chOff", 2)]
+    public ChildOffset ChildOffset { get; set; }
     
     /// <summary>
     /// <para> Child Extents.</para>
@@ -19072,11 +17914,8 @@ public partial class TransformGroup : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ChildExtents ChildExtents
-    {
-        get => GetElement<ChildExtents>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "chExt", 3)]
+    public ChildExtents ChildExtents { get; set; }
     
 
 
@@ -19271,13 +18110,7 @@ public partial class BodyProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "prstTxWarp","noAutofit","normAutofit","spAutoFit","scene3d","sp3d","flatTx","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Preset Text Shape.</para>
@@ -19286,11 +18119,8 @@ public partial class BodyProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public PresetTextWrap PresetTextWrap
-    {
-        get => GetElement<PresetTextWrap>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "prstTxWarp", 0)]
+    public PresetTextWrap PresetTextWrap { get; set; }
     
 
 
@@ -19377,13 +18207,7 @@ public partial class ListStyle : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "defPPr","lvl1pPr","lvl2pPr","lvl3pPr","lvl4pPr","lvl5pPr","lvl6pPr","lvl7pPr","lvl8pPr","lvl9pPr","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Default Paragraph Style.</para>
@@ -19392,11 +18216,8 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DefaultParagraphProperties DefaultParagraphProperties
-    {
-        get => GetElement<DefaultParagraphProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "defPPr", 0)]
+    public DefaultParagraphProperties DefaultParagraphProperties { get; set; }
     
     /// <summary>
     /// <para> List Level 1 Text Style.</para>
@@ -19405,11 +18226,8 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Level1ParagraphProperties Level1ParagraphProperties
-    {
-        get => GetElement<Level1ParagraphProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "lvl1pPr", 1)]
+    public Level1ParagraphProperties Level1ParagraphProperties { get; set; }
     
     /// <summary>
     /// <para> List Level 2 Text Style.</para>
@@ -19418,11 +18236,8 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Level2ParagraphProperties Level2ParagraphProperties
-    {
-        get => GetElement<Level2ParagraphProperties>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "lvl2pPr", 2)]
+    public Level2ParagraphProperties Level2ParagraphProperties { get; set; }
     
     /// <summary>
     /// <para> List Level 3 Text Style.</para>
@@ -19431,11 +18246,8 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Level3ParagraphProperties Level3ParagraphProperties
-    {
-        get => GetElement<Level3ParagraphProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "lvl3pPr", 3)]
+    public Level3ParagraphProperties Level3ParagraphProperties { get; set; }
     
     /// <summary>
     /// <para> List Level 4 Text Style.</para>
@@ -19444,11 +18256,8 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Level4ParagraphProperties Level4ParagraphProperties
-    {
-        get => GetElement<Level4ParagraphProperties>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "lvl4pPr", 4)]
+    public Level4ParagraphProperties Level4ParagraphProperties { get; set; }
     
     /// <summary>
     /// <para> List Level 5 Text Style.</para>
@@ -19457,11 +18266,8 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Level5ParagraphProperties Level5ParagraphProperties
-    {
-        get => GetElement<Level5ParagraphProperties>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "lvl5pPr", 5)]
+    public Level5ParagraphProperties Level5ParagraphProperties { get; set; }
     
     /// <summary>
     /// <para> List Level 6 Text Style.</para>
@@ -19470,11 +18276,8 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Level6ParagraphProperties Level6ParagraphProperties
-    {
-        get => GetElement<Level6ParagraphProperties>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(10, "lvl6pPr", 6)]
+    public Level6ParagraphProperties Level6ParagraphProperties { get; set; }
     
     /// <summary>
     /// <para> List Level 7 Text Style.</para>
@@ -19483,11 +18286,8 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Level7ParagraphProperties Level7ParagraphProperties
-    {
-        get => GetElement<Level7ParagraphProperties>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(10, "lvl7pPr", 7)]
+    public Level7ParagraphProperties Level7ParagraphProperties { get; set; }
     
     /// <summary>
     /// <para> List Level 8 Text Style.</para>
@@ -19496,11 +18296,8 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Level8ParagraphProperties Level8ParagraphProperties
-    {
-        get => GetElement<Level8ParagraphProperties>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(10, "lvl8pPr", 8)]
+    public Level8ParagraphProperties Level8ParagraphProperties { get; set; }
     
     /// <summary>
     /// <para> List Level 9 Text Style.</para>
@@ -19509,11 +18306,8 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Level9ParagraphProperties Level9ParagraphProperties
-    {
-        get => GetElement<Level9ParagraphProperties>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(10, "lvl9pPr", 9)]
+    public Level9ParagraphProperties Level9ParagraphProperties { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -19522,11 +18316,8 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(10, "extLst", 10)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -19739,13 +18530,7 @@ public abstract partial class DefaultShapeDefinitionType : OpenXmlCompositeEleme
         
     
     
-        private static readonly string[] eleTagNames = { "spPr","bodyPr","lstStyle","style","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Visual Properties.</para>
@@ -19754,11 +18539,8 @@ public abstract partial class DefaultShapeDefinitionType : OpenXmlCompositeEleme
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ShapeProperties ShapeProperties
-    {
-        get => GetElement<ShapeProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "spPr", 0)]
+    public ShapeProperties ShapeProperties { get; set; }
     
     /// <summary>
     /// <para> BodyProperties.</para>
@@ -19767,11 +18549,8 @@ public abstract partial class DefaultShapeDefinitionType : OpenXmlCompositeEleme
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public BodyProperties BodyProperties
-    {
-        get => GetElement<BodyProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "bodyPr", 1)]
+    public BodyProperties BodyProperties { get; set; }
     
     /// <summary>
     /// <para> ListStyle.</para>
@@ -19780,11 +18559,8 @@ public abstract partial class DefaultShapeDefinitionType : OpenXmlCompositeEleme
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ListStyle ListStyle
-    {
-        get => GetElement<ListStyle>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "lstStyle", 2)]
+    public ListStyle ListStyle { get; set; }
     
     /// <summary>
     /// <para> ShapeStyle.</para>
@@ -19793,11 +18569,8 @@ public abstract partial class DefaultShapeDefinitionType : OpenXmlCompositeEleme
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ShapeStyle ShapeStyle
-    {
-        get => GetElement<ShapeStyle>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "style", 3)]
+    public ShapeStyle ShapeStyle { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -19806,11 +18579,8 @@ public abstract partial class DefaultShapeDefinitionType : OpenXmlCompositeEleme
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "extLst", 4)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -20050,13 +18820,7 @@ public abstract partial class ColorMappingType : OpenXmlCompositeElement
     public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink { get; set; }
 
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -20065,11 +18829,8 @@ public abstract partial class ColorMappingType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -20169,13 +18930,7 @@ public partial class ExtraColorScheme : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "clrScheme","clrMap" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ColorScheme.</para>
@@ -20184,11 +18939,8 @@ public partial class ExtraColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ColorScheme ColorScheme
-    {
-        get => GetElement<ColorScheme>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "clrScheme", 0)]
+    public ColorScheme ColorScheme { get; set; }
     
     /// <summary>
     /// <para> ColorMap.</para>
@@ -20197,11 +18949,8 @@ public partial class ExtraColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ColorMap ColorMap
-    {
-        get => GetElement<ColorMap>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "clrMap", 1)]
+    public ColorMap ColorMap { get; set; }
     
 
 
@@ -20274,13 +19023,7 @@ public partial class ThemeElements : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "clrScheme","fontScheme","fmtScheme","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ColorScheme.</para>
@@ -20289,11 +19032,8 @@ public partial class ThemeElements : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ColorScheme ColorScheme
-    {
-        get => GetElement<ColorScheme>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "clrScheme", 0)]
+    public ColorScheme ColorScheme { get; set; }
     
     /// <summary>
     /// <para> Font Scheme.</para>
@@ -20302,11 +19042,8 @@ public partial class ThemeElements : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public FontScheme FontScheme
-    {
-        get => GetElement<FontScheme>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "fontScheme", 1)]
+    public FontScheme FontScheme { get; set; }
     
     /// <summary>
     /// <para> Format Scheme.</para>
@@ -20315,11 +19052,8 @@ public partial class ThemeElements : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public FormatScheme FormatScheme
-    {
-        get => GetElement<FormatScheme>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "fmtScheme", 2)]
+    public FormatScheme FormatScheme { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -20328,11 +19062,8 @@ public partial class ThemeElements : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "extLst", 3)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -20409,13 +19140,7 @@ public partial class Cell3DProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "bevel","lightRig","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Bevel.</para>
@@ -20424,11 +19149,8 @@ public partial class Cell3DProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Bevel Bevel
-    {
-        get => GetElement<Bevel>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "bevel", 0)]
+    public Bevel Bevel { get; set; }
     
     /// <summary>
     /// <para> Light Rig.</para>
@@ -20437,11 +19159,8 @@ public partial class Cell3DProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public LightRig LightRig
-    {
-        get => GetElement<LightRig>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "lightRig", 1)]
+    public LightRig LightRig { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -20450,11 +19169,8 @@ public partial class Cell3DProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "extLst", 2)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -20595,13 +19311,7 @@ public partial class TableCellProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "lnL","lnR","lnT","lnB","lnTlToBr","lnBlToTr","cell3D","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Left Border Line Properties.</para>
@@ -20610,11 +19320,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public LeftBorderLineProperties LeftBorderLineProperties
-    {
-        get => GetElement<LeftBorderLineProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "lnL", 0)]
+    public LeftBorderLineProperties LeftBorderLineProperties { get; set; }
     
     /// <summary>
     /// <para> Right Border Line Properties.</para>
@@ -20623,11 +19330,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RightBorderLineProperties RightBorderLineProperties
-    {
-        get => GetElement<RightBorderLineProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "lnR", 1)]
+    public RightBorderLineProperties RightBorderLineProperties { get; set; }
     
     /// <summary>
     /// <para> Top Border Line Properties.</para>
@@ -20636,11 +19340,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TopBorderLineProperties TopBorderLineProperties
-    {
-        get => GetElement<TopBorderLineProperties>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "lnT", 2)]
+    public TopBorderLineProperties TopBorderLineProperties { get; set; }
     
     /// <summary>
     /// <para> Bottom Border Line Properties.</para>
@@ -20649,11 +19350,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public BottomBorderLineProperties BottomBorderLineProperties
-    {
-        get => GetElement<BottomBorderLineProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "lnB", 3)]
+    public BottomBorderLineProperties BottomBorderLineProperties { get; set; }
     
     /// <summary>
     /// <para> Top-Left to Bottom-Right Border Line Properties.</para>
@@ -20662,11 +19360,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TopLeftToBottomRightBorderLineProperties TopLeftToBottomRightBorderLineProperties
-    {
-        get => GetElement<TopLeftToBottomRightBorderLineProperties>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "lnTlToBr", 4)]
+    public TopLeftToBottomRightBorderLineProperties TopLeftToBottomRightBorderLineProperties { get; set; }
     
     /// <summary>
     /// <para> Bottom-Left to Top-Right Border Line Properties.</para>
@@ -20675,11 +19370,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public BottomLeftToTopRightBorderLineProperties BottomLeftToTopRightBorderLineProperties
-    {
-        get => GetElement<BottomLeftToTopRightBorderLineProperties>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "lnBlToTr", 5)]
+    public BottomLeftToTopRightBorderLineProperties BottomLeftToTopRightBorderLineProperties { get; set; }
     
     /// <summary>
     /// <para> Cell 3-D.</para>
@@ -20688,11 +19380,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Cell3DProperties Cell3DProperties
-    {
-        get => GetElement<Cell3DProperties>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(10, "cell3D", 6)]
+    public Cell3DProperties Cell3DProperties { get; set; }
     
 
 
@@ -20787,13 +19476,7 @@ public partial class TableCell : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "txBody","tcPr","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Text Body.</para>
@@ -20802,11 +19485,8 @@ public partial class TableCell : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TextBody TextBody
-    {
-        get => GetElement<TextBody>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "txBody", 0)]
+    public TextBody TextBody { get; set; }
     
     /// <summary>
     /// <para> Table Cell Properties.</para>
@@ -20815,11 +19495,8 @@ public partial class TableCell : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TableCellProperties TableCellProperties
-    {
-        get => GetElement<TableCellProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "tcPr", 1)]
+    public TableCellProperties TableCellProperties { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -20828,11 +19505,8 @@ public partial class TableCell : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "extLst", 2)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -21037,13 +19711,7 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     public StringValue StyleName { get; set; }
 
     
-        private static readonly string[] eleTagNames = { "tblBg","wholeTbl","band1H","band2H","band1V","band2V","lastCol","firstCol","lastRow","seCell","swCell","firstRow","neCell","nwCell","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Table Background.</para>
@@ -21052,11 +19720,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TableBackground TableBackground
-    {
-        get => GetElement<TableBackground>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "tblBg", 0)]
+    public TableBackground TableBackground { get; set; }
     
     /// <summary>
     /// <para> Whole Table.</para>
@@ -21065,11 +19730,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public WholeTable WholeTable
-    {
-        get => GetElement<WholeTable>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "wholeTbl", 1)]
+    public WholeTable WholeTable { get; set; }
     
     /// <summary>
     /// <para> Band 1 Horizontal.</para>
@@ -21078,11 +19740,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Band1Horizontal Band1Horizontal
-    {
-        get => GetElement<Band1Horizontal>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "band1H", 2)]
+    public Band1Horizontal Band1Horizontal { get; set; }
     
     /// <summary>
     /// <para> Band 2 Horizontal.</para>
@@ -21091,11 +19750,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Band2Horizontal Band2Horizontal
-    {
-        get => GetElement<Band2Horizontal>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "band2H", 3)]
+    public Band2Horizontal Band2Horizontal { get; set; }
     
     /// <summary>
     /// <para> Band 1 Vertical.</para>
@@ -21104,11 +19760,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Band1Vertical Band1Vertical
-    {
-        get => GetElement<Band1Vertical>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "band1V", 4)]
+    public Band1Vertical Band1Vertical { get; set; }
     
     /// <summary>
     /// <para> Band 2 Vertical.</para>
@@ -21117,11 +19770,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Band2Vertical Band2Vertical
-    {
-        get => GetElement<Band2Vertical>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "band2V", 5)]
+    public Band2Vertical Band2Vertical { get; set; }
     
     /// <summary>
     /// <para> Last Column.</para>
@@ -21130,11 +19780,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public LastColumn LastColumn
-    {
-        get => GetElement<LastColumn>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(10, "lastCol", 6)]
+    public LastColumn LastColumn { get; set; }
     
     /// <summary>
     /// <para> First Column.</para>
@@ -21143,11 +19790,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public FirstColumn FirstColumn
-    {
-        get => GetElement<FirstColumn>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(10, "firstCol", 7)]
+    public FirstColumn FirstColumn { get; set; }
     
     /// <summary>
     /// <para> Last Row.</para>
@@ -21156,11 +19800,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public LastRow LastRow
-    {
-        get => GetElement<LastRow>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(10, "lastRow", 8)]
+    public LastRow LastRow { get; set; }
     
     /// <summary>
     /// <para> Southeast Cell.</para>
@@ -21169,11 +19810,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SoutheastCell SoutheastCell
-    {
-        get => GetElement<SoutheastCell>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(10, "seCell", 9)]
+    public SoutheastCell SoutheastCell { get; set; }
     
     /// <summary>
     /// <para> Southwest Cell.</para>
@@ -21182,11 +19820,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SouthwestCell SouthwestCell
-    {
-        get => GetElement<SouthwestCell>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(10, "swCell", 10)]
+    public SouthwestCell SouthwestCell { get; set; }
     
     /// <summary>
     /// <para> First Row.</para>
@@ -21195,11 +19830,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public FirstRow FirstRow
-    {
-        get => GetElement<FirstRow>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(10, "firstRow", 11)]
+    public FirstRow FirstRow { get; set; }
     
     /// <summary>
     /// <para> Northeast Cell.</para>
@@ -21208,11 +19840,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NortheastCell NortheastCell
-    {
-        get => GetElement<NortheastCell>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(10, "neCell", 12)]
+    public NortheastCell NortheastCell { get; set; }
     
     /// <summary>
     /// <para> Northwest Cell.</para>
@@ -21221,11 +19850,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NorthwestCell NorthwestCell
-    {
-        get => GetElement<NorthwestCell>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(10, "nwCell", 13)]
+    public NorthwestCell NorthwestCell { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -21234,11 +19860,8 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(10, "extLst", 14)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -21386,13 +20009,7 @@ public partial class GridColumn : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -21401,11 +20018,8 @@ public partial class GridColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -22150,13 +20764,7 @@ public abstract partial class ThemeableLineStyleType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "ln","lnRef" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Outline.</para>
@@ -22165,11 +20773,8 @@ public abstract partial class ThemeableLineStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Outline Outline
-    {
-        get => GetElement<Outline>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "ln", 0)]
+    public Outline Outline { get; set; }
     
     /// <summary>
     /// <para> Line Reference.</para>
@@ -22178,11 +20783,8 @@ public abstract partial class ThemeableLineStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public LineReference LineReference
-    {
-        get => GetElement<LineReference>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "lnRef", 1)]
+    public LineReference LineReference { get; set; }
     
 
 
@@ -22296,13 +20898,7 @@ public partial class TableCellBorders : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "left","right","top","bottom","insideH","insideV","tl2br","tr2bl","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Left Border.</para>
@@ -22311,11 +20907,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public LeftBorder LeftBorder
-    {
-        get => GetElement<LeftBorder>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "left", 0)]
+    public LeftBorder LeftBorder { get; set; }
     
     /// <summary>
     /// <para> Right Border.</para>
@@ -22324,11 +20917,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public RightBorder RightBorder
-    {
-        get => GetElement<RightBorder>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "right", 1)]
+    public RightBorder RightBorder { get; set; }
     
     /// <summary>
     /// <para> Top Border.</para>
@@ -22337,11 +20927,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TopBorder TopBorder
-    {
-        get => GetElement<TopBorder>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "top", 2)]
+    public TopBorder TopBorder { get; set; }
     
     /// <summary>
     /// <para> Bottom Border.</para>
@@ -22350,11 +20937,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public BottomBorder BottomBorder
-    {
-        get => GetElement<BottomBorder>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "bottom", 3)]
+    public BottomBorder BottomBorder { get; set; }
     
     /// <summary>
     /// <para> Inside Horizontal Border.</para>
@@ -22363,11 +20947,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public InsideHorizontalBorder InsideHorizontalBorder
-    {
-        get => GetElement<InsideHorizontalBorder>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "insideH", 4)]
+    public InsideHorizontalBorder InsideHorizontalBorder { get; set; }
     
     /// <summary>
     /// <para> Inside Vertical Border.</para>
@@ -22376,11 +20957,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public InsideVerticalBorder InsideVerticalBorder
-    {
-        get => GetElement<InsideVerticalBorder>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "insideV", 5)]
+    public InsideVerticalBorder InsideVerticalBorder { get; set; }
     
     /// <summary>
     /// <para> Top Left to Bottom Right Border.</para>
@@ -22389,11 +20967,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TopLeftToBottomRightBorder TopLeftToBottomRightBorder
-    {
-        get => GetElement<TopLeftToBottomRightBorder>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(10, "tl2br", 6)]
+    public TopLeftToBottomRightBorder TopLeftToBottomRightBorder { get; set; }
     
     /// <summary>
     /// <para> Top Right to Bottom Left Border.</para>
@@ -22402,11 +20977,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TopRightToBottomLeftBorder TopRightToBottomLeftBorder
-    {
-        get => GetElement<TopRightToBottomLeftBorder>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(10, "tr2bl", 7)]
+    public TopRightToBottomLeftBorder TopRightToBottomLeftBorder { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -22415,11 +20987,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(10, "extLst", 8)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -22584,13 +21153,7 @@ public partial class TableCellStyle : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tcBdr","fill","fillRef","cell3D" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Table Cell Borders.</para>
@@ -22599,11 +21162,8 @@ public partial class TableCellStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TableCellBorders TableCellBorders
-    {
-        get => GetElement<TableCellBorders>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "tcBdr", 0)]
+    public TableCellBorders TableCellBorders { get; set; }
     
 
 
@@ -23441,13 +22001,7 @@ public abstract partial class TablePartStyleType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "tcTxStyle","tcStyle" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Table Cell Text Style.</para>
@@ -23456,11 +22010,8 @@ public abstract partial class TablePartStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TableCellTextStyle TableCellTextStyle
-    {
-        get => GetElement<TableCellTextStyle>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "tcTxStyle", 0)]
+    public TableCellTextStyle TableCellTextStyle { get; set; }
     
     /// <summary>
     /// <para> Table Cell Style.</para>
@@ -23469,11 +22020,8 @@ public abstract partial class TablePartStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TableCellStyle TableCellStyle
-    {
-        get => GetElement<TableCellStyle>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "tcStyle", 1)]
+    public TableCellStyle TableCellStyle { get; set; }
     
 
 
@@ -24419,13 +22967,7 @@ public abstract partial class TextParagraphPropertiesType : OpenXmlCompositeElem
     public BooleanValue Height { get; set; }
 
     
-        private static readonly string[] eleTagNames = { "lnSpc","spcBef","spcAft","buClrTx","buClr","buSzTx","buSzPct","buSzPts","buFontTx","buFont","buNone","buAutoNum","buChar","buBlip","tabLst","defRPr","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Line Spacing.</para>
@@ -24434,11 +22976,8 @@ public abstract partial class TextParagraphPropertiesType : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public LineSpacing LineSpacing
-    {
-        get => GetElement<LineSpacing>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "lnSpc", 0)]
+    public LineSpacing LineSpacing { get; set; }
     
     /// <summary>
     /// <para> Space Before.</para>
@@ -24447,11 +22986,8 @@ public abstract partial class TextParagraphPropertiesType : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SpaceBefore SpaceBefore
-    {
-        get => GetElement<SpaceBefore>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "spcBef", 1)]
+    public SpaceBefore SpaceBefore { get; set; }
     
     /// <summary>
     /// <para> Space After.</para>
@@ -24460,11 +22996,8 @@ public abstract partial class TextParagraphPropertiesType : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SpaceAfter SpaceAfter
-    {
-        get => GetElement<SpaceAfter>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "spcAft", 2)]
+    public SpaceAfter SpaceAfter { get; set; }
     
 
 
@@ -24895,13 +23428,7 @@ public abstract partial class TextCharacterPropertiesType : OpenXmlCompositeElem
     public StringValue Bookmark { get; set; }
 
     
-        private static readonly string[] eleTagNames = { "ln","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","effectLst","effectDag","highlight","uLnTx","uLn","uFillTx","uFill","latin","ea","cs","sym","hlinkClick","hlinkMouseOver","rtl","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Outline.</para>
@@ -24910,11 +23437,8 @@ public abstract partial class TextCharacterPropertiesType : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Outline Outline
-    {
-        get => GetElement<Outline>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "ln", 0)]
+    public Outline Outline { get; set; }
     
 
 
@@ -25022,13 +23546,7 @@ public partial class Paragraph : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pPr","r","br","fld","m","endParaRPr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,48,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Text Paragraph Properties.</para>
@@ -25037,11 +23555,8 @@ public partial class Paragraph : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ParagraphProperties ParagraphProperties
-    {
-        get => GetElement<ParagraphProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "pPr", 0)]
+    public ParagraphProperties ParagraphProperties { get; set; }
     
 
 
@@ -25356,13 +23871,7 @@ public abstract partial class TextSpacingType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "spcPct","spcPts" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Spacing Percent.</para>
@@ -25371,11 +23880,8 @@ public abstract partial class TextSpacingType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SpacingPercent SpacingPercent
-    {
-        get => GetElement<SpacingPercent>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "spcPct", 0)]
+    public SpacingPercent SpacingPercent { get; set; }
     
     /// <summary>
     /// <para> Spacing Points.</para>
@@ -25384,11 +23890,8 @@ public abstract partial class TextSpacingType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public SpacingPoints SpacingPoints
-    {
-        get => GetElement<SpacingPoints>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "spcPts", 1)]
+    public SpacingPoints SpacingPoints { get; set; }
     
 
 
@@ -25810,13 +24313,7 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvGrpSpPr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -25825,11 +24322,8 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "cNvPr", 0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> Non-Visual Group Shape Drawing Properties.</para>
@@ -25838,11 +24332,8 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualGroupShapeDrawingProperties NonVisualGroupShapeDrawingProperties
-    {
-        get => GetElement<NonVisualGroupShapeDrawingProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "cNvGrpSpPr", 1)]
+    public NonVisualGroupShapeDrawingProperties NonVisualGroupShapeDrawingProperties { get; set; }
     
 
 
@@ -25935,13 +24426,7 @@ public partial class VisualGroupShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "xfrm","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","effectLst","effectDag","scene3d","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Grouped Objects.</para>
@@ -25950,11 +24435,8 @@ public partial class VisualGroupShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TransformGroup TransformGroup
-    {
-        get => GetElement<TransformGroup>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "xfrm", 0)]
+    public TransformGroup TransformGroup { get; set; }
     
 
 
@@ -26029,13 +24511,7 @@ public partial class Shape : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nvSpPr","spPr","txSp","style","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Properties for a Shape.</para>
@@ -26044,11 +24520,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualShapeProperties NonVisualShapeProperties
-    {
-        get => GetElement<NonVisualShapeProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "nvSpPr", 0)]
+    public NonVisualShapeProperties NonVisualShapeProperties { get; set; }
     
     /// <summary>
     /// <para> Visual Properties.</para>
@@ -26057,11 +24530,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ShapeProperties ShapeProperties
-    {
-        get => GetElement<ShapeProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "spPr", 1)]
+    public ShapeProperties ShapeProperties { get; set; }
     
     /// <summary>
     /// <para> Text Shape.</para>
@@ -26070,11 +24540,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TextShape TextShape
-    {
-        get => GetElement<TextShape>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "txSp", 2)]
+    public TextShape TextShape { get; set; }
     
     /// <summary>
     /// <para> Style.</para>
@@ -26083,11 +24550,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ShapeStyle ShapeStyle
-    {
-        get => GetElement<ShapeStyle>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "style", 3)]
+    public ShapeStyle ShapeStyle { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -26096,11 +24560,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "extLst", 4)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -26173,13 +24634,7 @@ public partial class ConnectionShape : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nvCxnSpPr","spPr","style","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Properties for a Connection Shape.</para>
@@ -26188,11 +24643,8 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualConnectionShapeProperties NonVisualConnectionShapeProperties
-    {
-        get => GetElement<NonVisualConnectionShapeProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "nvCxnSpPr", 0)]
+    public NonVisualConnectionShapeProperties NonVisualConnectionShapeProperties { get; set; }
     
     /// <summary>
     /// <para> Visual Properties.</para>
@@ -26201,11 +24653,8 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ShapeProperties ShapeProperties
-    {
-        get => GetElement<ShapeProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "spPr", 1)]
+    public ShapeProperties ShapeProperties { get; set; }
     
     /// <summary>
     /// <para> Shape Style.</para>
@@ -26214,11 +24663,8 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ShapeStyle ShapeStyle
-    {
-        get => GetElement<ShapeStyle>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "style", 2)]
+    public ShapeStyle ShapeStyle { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -26227,11 +24673,8 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "extLst", 3)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -26306,13 +24749,7 @@ public partial class Picture : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nvPicPr","blipFill","spPr","style","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Properties for a Picture.</para>
@@ -26321,11 +24758,8 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualPictureProperties NonVisualPictureProperties
-    {
-        get => GetElement<NonVisualPictureProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "nvPicPr", 0)]
+    public NonVisualPictureProperties NonVisualPictureProperties { get; set; }
     
     /// <summary>
     /// <para> Picture Fill.</para>
@@ -26334,11 +24768,8 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public BlipFill BlipFill
-    {
-        get => GetElement<BlipFill>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "blipFill", 1)]
+    public BlipFill BlipFill { get; set; }
     
     /// <summary>
     /// <para> Shape Properties.</para>
@@ -26347,11 +24778,8 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ShapeProperties ShapeProperties
-    {
-        get => GetElement<ShapeProperties>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "spPr", 2)]
+    public ShapeProperties ShapeProperties { get; set; }
     
     /// <summary>
     /// <para> ShapeStyle.</para>
@@ -26360,11 +24788,8 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ShapeStyle ShapeStyle
-    {
-        get => GetElement<ShapeStyle>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "style", 3)]
+    public ShapeStyle ShapeStyle { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -26373,11 +24798,8 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "extLst", 4)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -26450,13 +24872,7 @@ public partial class GraphicFrame : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nvGraphicFramePr","graphic","xfrm","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Properties for a Graphic Frame.</para>
@@ -26465,11 +24881,8 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties
-    {
-        get => GetElement<NonVisualGraphicFrameProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "nvGraphicFramePr", 0)]
+    public NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties { get; set; }
     
     /// <summary>
     /// <para> Graphic.</para>
@@ -26478,11 +24891,8 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Graphic Graphic
-    {
-        get => GetElement<Graphic>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "graphic", 1)]
+    public Graphic Graphic { get; set; }
     
     /// <summary>
     /// <para> Transform2D.</para>
@@ -26491,11 +24901,8 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public Transform2D Transform2D
-    {
-        get => GetElement<Transform2D>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "xfrm", 2)]
+    public Transform2D Transform2D { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -26504,11 +24911,8 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "extLst", 3)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -26593,13 +24997,7 @@ public partial class GroupShape : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nvGrpSpPr","grpSpPr","txSp","sp","cxnSp","pic","contentPart","graphicFrame","grpSp","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,48,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Properties for a Group Shape.</para>
@@ -26608,11 +25006,8 @@ public partial class GroupShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public NonVisualGroupShapeProperties NonVisualGroupShapeProperties
-    {
-        get => GetElement<NonVisualGroupShapeProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "nvGrpSpPr", 0)]
+    public NonVisualGroupShapeProperties NonVisualGroupShapeProperties { get; set; }
     
     /// <summary>
     /// <para> Visual Group Shape Properties.</para>
@@ -26621,11 +25016,8 @@ public partial class GroupShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public VisualGroupShapeProperties VisualGroupShapeProperties
-    {
-        get => GetElement<VisualGroupShapeProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "grpSpPr", 1)]
+    public VisualGroupShapeProperties VisualGroupShapeProperties { get; set; }
     
 
 
@@ -27147,13 +25539,7 @@ public abstract partial class HyperlinkType : OpenXmlCompositeElement
     public BooleanValue EndSound { get; set; }
 
     
-        private static readonly string[] eleTagNames = { "snd","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Hyperlink Sound.</para>
@@ -27162,11 +25548,8 @@ public abstract partial class HyperlinkType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public HyperlinkSound HyperlinkSound
-    {
-        get => GetElement<HyperlinkSound>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "snd", 0)]
+    public HyperlinkSound HyperlinkSound { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -27175,11 +25558,8 @@ public abstract partial class HyperlinkType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "extLst", 1)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -27479,13 +25859,7 @@ public partial class PictureLocks : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -27494,11 +25868,8 @@ public partial class PictureLocks : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -27745,13 +26116,7 @@ public partial class GroupShapeLocks : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -27760,11 +26125,8 @@ public partial class GroupShapeLocks : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -28039,13 +26401,7 @@ public partial class ObjectDefaults : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "spDef","lnDef","txDef","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Shape Default.</para>
@@ -28054,11 +26410,8 @@ public partial class ObjectDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ShapeDefault ShapeDefault
-    {
-        get => GetElement<ShapeDefault>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "spDef", 0)]
+    public ShapeDefault ShapeDefault { get; set; }
     
     /// <summary>
     /// <para> Line Default.</para>
@@ -28067,11 +26420,8 @@ public partial class ObjectDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public LineDefault LineDefault
-    {
-        get => GetElement<LineDefault>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "lnDef", 1)]
+    public LineDefault LineDefault { get; set; }
     
     /// <summary>
     /// <para> Text Default.</para>
@@ -28080,11 +26430,8 @@ public partial class ObjectDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public TextDefault TextDefault
-    {
-        get => GetElement<TextDefault>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "txDef", 2)]
+    public TextDefault TextDefault { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -28093,11 +26440,8 @@ public partial class ObjectDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "extLst", 3)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 

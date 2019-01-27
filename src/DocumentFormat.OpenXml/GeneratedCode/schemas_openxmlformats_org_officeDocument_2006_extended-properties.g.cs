@@ -148,13 +148,7 @@ public partial class Properties : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "Template","Manager","Company","Pages","Words","Characters","PresentationFormat","Lines","Paragraphs","Slides","Notes","TotalTime","HiddenSlides","MMClips","ScaleCrop","HeadingPairs","TitlesOfParts","LinksUpToDate","CharactersWithSpaces","SharedDoc","HyperlinkBase","HLinks","HyperlinksChanged","DigSig","Application","AppVersion","DocSecurity" };
-    private static readonly byte[] eleNamespaceIds = { 3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
     
         /// <summary>
     /// <para> Name of Document Template.</para>
@@ -163,11 +157,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public Template Template
-    {
-        get => GetElement<Template>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(3, "Template", 0)]
+    public Template Template { get; set; }
     
     /// <summary>
     /// <para> Name of Manager.</para>
@@ -176,11 +167,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public Manager Manager
-    {
-        get => GetElement<Manager>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(3, "Manager", 1)]
+    public Manager Manager { get; set; }
     
     /// <summary>
     /// <para> Name of Company.</para>
@@ -189,11 +177,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public Company Company
-    {
-        get => GetElement<Company>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(3, "Company", 2)]
+    public Company Company { get; set; }
     
     /// <summary>
     /// <para> Total Number of Pages.</para>
@@ -202,11 +187,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public Pages Pages
-    {
-        get => GetElement<Pages>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(3, "Pages", 3)]
+    public Pages Pages { get; set; }
     
     /// <summary>
     /// <para> Word Count.</para>
@@ -215,11 +197,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public Words Words
-    {
-        get => GetElement<Words>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(3, "Words", 4)]
+    public Words Words { get; set; }
     
     /// <summary>
     /// <para> Total Number of Characters.</para>
@@ -228,11 +207,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public Characters Characters
-    {
-        get => GetElement<Characters>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(3, "Characters", 5)]
+    public Characters Characters { get; set; }
     
     /// <summary>
     /// <para> Intended Format of Presentation.</para>
@@ -241,11 +217,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public PresentationFormat PresentationFormat
-    {
-        get => GetElement<PresentationFormat>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(3, "PresentationFormat", 6)]
+    public PresentationFormat PresentationFormat { get; set; }
     
     /// <summary>
     /// <para> Number of Lines.</para>
@@ -254,11 +227,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public Lines Lines
-    {
-        get => GetElement<Lines>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(3, "Lines", 7)]
+    public Lines Lines { get; set; }
     
     /// <summary>
     /// <para> Total Number of Paragraphs.</para>
@@ -267,11 +237,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public Paragraphs Paragraphs
-    {
-        get => GetElement<Paragraphs>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(3, "Paragraphs", 8)]
+    public Paragraphs Paragraphs { get; set; }
     
     /// <summary>
     /// <para> Slides Metadata Element.</para>
@@ -280,11 +247,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public Slides Slides
-    {
-        get => GetElement<Slides>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(3, "Slides", 9)]
+    public Slides Slides { get; set; }
     
     /// <summary>
     /// <para> Number of Slides Containing Notes.</para>
@@ -293,11 +257,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public Notes Notes
-    {
-        get => GetElement<Notes>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(3, "Notes", 10)]
+    public Notes Notes { get; set; }
     
     /// <summary>
     /// <para> Total Edit Time Metadata Element.</para>
@@ -306,11 +267,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public TotalTime TotalTime
-    {
-        get => GetElement<TotalTime>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(3, "TotalTime", 11)]
+    public TotalTime TotalTime { get; set; }
     
     /// <summary>
     /// <para> Number of Hidden Slides.</para>
@@ -319,11 +277,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public HiddenSlides HiddenSlides
-    {
-        get => GetElement<HiddenSlides>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(3, "HiddenSlides", 12)]
+    public HiddenSlides HiddenSlides { get; set; }
     
     /// <summary>
     /// <para> Total Number of Multimedia Clips.</para>
@@ -332,11 +287,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public MultimediaClips MultimediaClips
-    {
-        get => GetElement<MultimediaClips>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(3, "MMClips", 13)]
+    public MultimediaClips MultimediaClips { get; set; }
     
     /// <summary>
     /// <para> Thumbnail Display Mode.</para>
@@ -345,11 +297,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public ScaleCrop ScaleCrop
-    {
-        get => GetElement<ScaleCrop>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(3, "ScaleCrop", 14)]
+    public ScaleCrop ScaleCrop { get; set; }
     
     /// <summary>
     /// <para> Heading Pairs.</para>
@@ -358,11 +307,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public HeadingPairs HeadingPairs
-    {
-        get => GetElement<HeadingPairs>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(3, "HeadingPairs", 15)]
+    public HeadingPairs HeadingPairs { get; set; }
     
     /// <summary>
     /// <para> Part Titles.</para>
@@ -371,11 +317,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public TitlesOfParts TitlesOfParts
-    {
-        get => GetElement<TitlesOfParts>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(3, "TitlesOfParts", 16)]
+    public TitlesOfParts TitlesOfParts { get; set; }
     
     /// <summary>
     /// <para> Links Up-to-Date.</para>
@@ -384,11 +327,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public LinksUpToDate LinksUpToDate
-    {
-        get => GetElement<LinksUpToDate>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(3, "LinksUpToDate", 17)]
+    public LinksUpToDate LinksUpToDate { get; set; }
     
     /// <summary>
     /// <para> Number of Characters (With Spaces).</para>
@@ -397,11 +337,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public CharactersWithSpaces CharactersWithSpaces
-    {
-        get => GetElement<CharactersWithSpaces>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(3, "CharactersWithSpaces", 18)]
+    public CharactersWithSpaces CharactersWithSpaces { get; set; }
     
     /// <summary>
     /// <para> Shared Document.</para>
@@ -410,11 +347,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public SharedDocument SharedDocument
-    {
-        get => GetElement<SharedDocument>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(3, "SharedDoc", 19)]
+    public SharedDocument SharedDocument { get; set; }
     
     /// <summary>
     /// <para> Relative Hyperlink Base.</para>
@@ -423,11 +357,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public HyperlinkBase HyperlinkBase
-    {
-        get => GetElement<HyperlinkBase>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(3, "HyperlinkBase", 20)]
+    public HyperlinkBase HyperlinkBase { get; set; }
     
     /// <summary>
     /// <para> Hyperlink List.</para>
@@ -436,11 +367,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public HyperlinkList HyperlinkList
-    {
-        get => GetElement<HyperlinkList>(21);
-        set => SetElement(21, value);
-    }
+	[SchemaAttr(3, "HLinks", 21)]
+    public HyperlinkList HyperlinkList { get; set; }
     
     /// <summary>
     /// <para> Hyperlinks Changed.</para>
@@ -449,11 +377,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public HyperlinksChanged HyperlinksChanged
-    {
-        get => GetElement<HyperlinksChanged>(22);
-        set => SetElement(22, value);
-    }
+	[SchemaAttr(3, "HyperlinksChanged", 22)]
+    public HyperlinksChanged HyperlinksChanged { get; set; }
     
     /// <summary>
     /// <para> Digital Signature.</para>
@@ -462,11 +387,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public DigitalSignature DigitalSignature
-    {
-        get => GetElement<DigitalSignature>(23);
-        set => SetElement(23, value);
-    }
+	[SchemaAttr(3, "DigSig", 23)]
+    public DigitalSignature DigitalSignature { get; set; }
     
     /// <summary>
     /// <para> Application Name.</para>
@@ -475,11 +397,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public Application Application
-    {
-        get => GetElement<Application>(24);
-        set => SetElement(24, value);
-    }
+	[SchemaAttr(3, "Application", 24)]
+    public Application Application { get; set; }
     
     /// <summary>
     /// <para> Application Version.</para>
@@ -488,11 +407,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public ApplicationVersion ApplicationVersion
-    {
-        get => GetElement<ApplicationVersion>(25);
-        set => SetElement(25, value);
-    }
+	[SchemaAttr(3, "AppVersion", 25)]
+    public ApplicationVersion ApplicationVersion { get; set; }
     
     /// <summary>
     /// <para> Document Security.</para>
@@ -501,11 +417,8 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
-    public DocumentSecurity DocumentSecurity
-    {
-        get => GetElement<DocumentSecurity>(26);
-        set => SetElement(26, value);
-    }
+	[SchemaAttr(3, "DocSecurity", 26)]
+    public DocumentSecurity DocumentSecurity { get; set; }
     
 
 
@@ -1493,13 +1406,7 @@ public abstract partial class VectorVariantType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "vector" };
-    private static readonly byte[] eleNamespaceIds = { 5 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Vector.</para>
@@ -1508,11 +1415,8 @@ public abstract partial class VectorVariantType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(5, "vector", 0)]
+    public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector { get; set; }
     
 
 
@@ -1610,13 +1514,7 @@ public partial class TitlesOfParts : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "vector" };
-    private static readonly byte[] eleNamespaceIds = { 5 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Vector.</para>
@@ -1625,11 +1523,8 @@ public partial class TitlesOfParts : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(5, "vector", 0)]
+    public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector { get; set; }
     
 
 
@@ -1696,13 +1591,7 @@ public partial class DigitalSignature : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "blob" };
-    private static readonly byte[] eleNamespaceIds = { 5 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Binary Blob.</para>
@@ -1711,11 +1600,8 @@ public partial class DigitalSignature : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-    public DocumentFormat.OpenXml.VariantTypes.VTBlob VTBlob
-    {
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(5, "blob", 0)]
+    public DocumentFormat.OpenXml.VariantTypes.VTBlob VTBlob { get; set; }
     
 
 

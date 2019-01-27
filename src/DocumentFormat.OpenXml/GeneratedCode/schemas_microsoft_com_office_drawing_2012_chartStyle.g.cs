@@ -282,13 +282,7 @@ public partial class ChartStyle : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "axisTitle","categoryAxis","chartArea","dataLabel","dataLabelCallout","dataPoint","dataPoint3D","dataPointLine","dataPointMarker","dataPointMarkerLayout","dataPointWireframe","dataTable","downBar","dropLine","errorBar","floor","gridlineMajor","gridlineMinor","hiLoLine","leaderLine","legend","plotArea","plotArea3D","seriesAxis","seriesLine","title","trendline","trendlineLabel","upBar","valueAxis","wall","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> AxisTitle.</para>
@@ -297,11 +291,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public AxisTitle AxisTitle
-    {
-        get => GetElement<AxisTitle>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(65, "axisTitle", 0)]
+    public AxisTitle AxisTitle { get; set; }
     
     /// <summary>
     /// <para> CategoryAxis.</para>
@@ -310,11 +301,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public CategoryAxis CategoryAxis
-    {
-        get => GetElement<CategoryAxis>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(65, "categoryAxis", 1)]
+    public CategoryAxis CategoryAxis { get; set; }
     
     /// <summary>
     /// <para> ChartArea.</para>
@@ -323,11 +311,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public ChartArea ChartArea
-    {
-        get => GetElement<ChartArea>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(65, "chartArea", 2)]
+    public ChartArea ChartArea { get; set; }
     
     /// <summary>
     /// <para> DataLabel.</para>
@@ -336,11 +321,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public DataLabel DataLabel
-    {
-        get => GetElement<DataLabel>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(65, "dataLabel", 3)]
+    public DataLabel DataLabel { get; set; }
     
     /// <summary>
     /// <para> DataLabelCallout.</para>
@@ -349,11 +331,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public DataLabelCallout DataLabelCallout
-    {
-        get => GetElement<DataLabelCallout>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(65, "dataLabelCallout", 4)]
+    public DataLabelCallout DataLabelCallout { get; set; }
     
     /// <summary>
     /// <para> DataPoint.</para>
@@ -362,11 +341,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public DataPoint DataPoint
-    {
-        get => GetElement<DataPoint>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(65, "dataPoint", 5)]
+    public DataPoint DataPoint { get; set; }
     
     /// <summary>
     /// <para> DataPoint3D.</para>
@@ -375,11 +351,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public DataPoint3D DataPoint3D
-    {
-        get => GetElement<DataPoint3D>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(65, "dataPoint3D", 6)]
+    public DataPoint3D DataPoint3D { get; set; }
     
     /// <summary>
     /// <para> DataPointLine.</para>
@@ -388,11 +361,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public DataPointLine DataPointLine
-    {
-        get => GetElement<DataPointLine>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(65, "dataPointLine", 7)]
+    public DataPointLine DataPointLine { get; set; }
     
     /// <summary>
     /// <para> DataPointMarker.</para>
@@ -401,11 +371,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public DataPointMarker DataPointMarker
-    {
-        get => GetElement<DataPointMarker>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(65, "dataPointMarker", 8)]
+    public DataPointMarker DataPointMarker { get; set; }
     
     /// <summary>
     /// <para> MarkerLayoutProperties.</para>
@@ -414,11 +381,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public MarkerLayoutProperties MarkerLayoutProperties
-    {
-        get => GetElement<MarkerLayoutProperties>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(65, "dataPointMarkerLayout", 9)]
+    public MarkerLayoutProperties MarkerLayoutProperties { get; set; }
     
     /// <summary>
     /// <para> DataPointWireframe.</para>
@@ -427,11 +391,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public DataPointWireframe DataPointWireframe
-    {
-        get => GetElement<DataPointWireframe>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(65, "dataPointWireframe", 10)]
+    public DataPointWireframe DataPointWireframe { get; set; }
     
     /// <summary>
     /// <para> DataTableStyle.</para>
@@ -440,11 +401,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public DataTableStyle DataTableStyle
-    {
-        get => GetElement<DataTableStyle>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(65, "dataTable", 11)]
+    public DataTableStyle DataTableStyle { get; set; }
     
     /// <summary>
     /// <para> DownBar.</para>
@@ -453,11 +411,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public DownBar DownBar
-    {
-        get => GetElement<DownBar>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(65, "downBar", 12)]
+    public DownBar DownBar { get; set; }
     
     /// <summary>
     /// <para> DropLine.</para>
@@ -466,11 +421,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public DropLine DropLine
-    {
-        get => GetElement<DropLine>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(65, "dropLine", 13)]
+    public DropLine DropLine { get; set; }
     
     /// <summary>
     /// <para> ErrorBar.</para>
@@ -479,11 +431,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public ErrorBar ErrorBar
-    {
-        get => GetElement<ErrorBar>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(65, "errorBar", 14)]
+    public ErrorBar ErrorBar { get; set; }
     
     /// <summary>
     /// <para> Floor.</para>
@@ -492,11 +441,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public Floor Floor
-    {
-        get => GetElement<Floor>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(65, "floor", 15)]
+    public Floor Floor { get; set; }
     
     /// <summary>
     /// <para> GridlineMajor.</para>
@@ -505,11 +451,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public GridlineMajor GridlineMajor
-    {
-        get => GetElement<GridlineMajor>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(65, "gridlineMajor", 16)]
+    public GridlineMajor GridlineMajor { get; set; }
     
     /// <summary>
     /// <para> GridlineMinor.</para>
@@ -518,11 +461,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public GridlineMinor GridlineMinor
-    {
-        get => GetElement<GridlineMinor>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(65, "gridlineMinor", 17)]
+    public GridlineMinor GridlineMinor { get; set; }
     
     /// <summary>
     /// <para> HiLoLine.</para>
@@ -531,11 +471,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public HiLoLine HiLoLine
-    {
-        get => GetElement<HiLoLine>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(65, "hiLoLine", 18)]
+    public HiLoLine HiLoLine { get; set; }
     
     /// <summary>
     /// <para> LeaderLine.</para>
@@ -544,11 +481,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public LeaderLine LeaderLine
-    {
-        get => GetElement<LeaderLine>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(65, "leaderLine", 19)]
+    public LeaderLine LeaderLine { get; set; }
     
     /// <summary>
     /// <para> LegendStyle.</para>
@@ -557,11 +491,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public LegendStyle LegendStyle
-    {
-        get => GetElement<LegendStyle>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(65, "legend", 20)]
+    public LegendStyle LegendStyle { get; set; }
     
     /// <summary>
     /// <para> PlotArea.</para>
@@ -570,11 +501,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public PlotArea PlotArea
-    {
-        get => GetElement<PlotArea>(21);
-        set => SetElement(21, value);
-    }
+	[SchemaAttr(65, "plotArea", 21)]
+    public PlotArea PlotArea { get; set; }
     
     /// <summary>
     /// <para> PlotArea3D.</para>
@@ -583,11 +511,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public PlotArea3D PlotArea3D
-    {
-        get => GetElement<PlotArea3D>(22);
-        set => SetElement(22, value);
-    }
+	[SchemaAttr(65, "plotArea3D", 22)]
+    public PlotArea3D PlotArea3D { get; set; }
     
     /// <summary>
     /// <para> SeriesAxis.</para>
@@ -596,11 +521,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public SeriesAxis SeriesAxis
-    {
-        get => GetElement<SeriesAxis>(23);
-        set => SetElement(23, value);
-    }
+	[SchemaAttr(65, "seriesAxis", 23)]
+    public SeriesAxis SeriesAxis { get; set; }
     
     /// <summary>
     /// <para> SeriesLine.</para>
@@ -609,11 +531,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public SeriesLine SeriesLine
-    {
-        get => GetElement<SeriesLine>(24);
-        set => SetElement(24, value);
-    }
+	[SchemaAttr(65, "seriesLine", 24)]
+    public SeriesLine SeriesLine { get; set; }
     
     /// <summary>
     /// <para> TitleStyle.</para>
@@ -622,11 +541,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public TitleStyle TitleStyle
-    {
-        get => GetElement<TitleStyle>(25);
-        set => SetElement(25, value);
-    }
+	[SchemaAttr(65, "title", 25)]
+    public TitleStyle TitleStyle { get; set; }
     
     /// <summary>
     /// <para> TrendlineStyle.</para>
@@ -635,11 +551,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public TrendlineStyle TrendlineStyle
-    {
-        get => GetElement<TrendlineStyle>(26);
-        set => SetElement(26, value);
-    }
+	[SchemaAttr(65, "trendline", 26)]
+    public TrendlineStyle TrendlineStyle { get; set; }
     
     /// <summary>
     /// <para> TrendlineLabel.</para>
@@ -648,11 +561,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public TrendlineLabel TrendlineLabel
-    {
-        get => GetElement<TrendlineLabel>(27);
-        set => SetElement(27, value);
-    }
+	[SchemaAttr(65, "trendlineLabel", 27)]
+    public TrendlineLabel TrendlineLabel { get; set; }
     
     /// <summary>
     /// <para> UpBar.</para>
@@ -661,11 +571,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public UpBar UpBar
-    {
-        get => GetElement<UpBar>(28);
-        set => SetElement(28, value);
-    }
+	[SchemaAttr(65, "upBar", 28)]
+    public UpBar UpBar { get; set; }
     
     /// <summary>
     /// <para> ValueAxis.</para>
@@ -674,11 +581,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public ValueAxis ValueAxis
-    {
-        get => GetElement<ValueAxis>(29);
-        set => SetElement(29, value);
-    }
+	[SchemaAttr(65, "valueAxis", 29)]
+    public ValueAxis ValueAxis { get; set; }
     
     /// <summary>
     /// <para> Wall.</para>
@@ -687,11 +591,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public Wall Wall
-    {
-        get => GetElement<Wall>(30);
-        set => SetElement(30, value);
-    }
+	[SchemaAttr(65, "wall", 30)]
+    public Wall Wall { get; set; }
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -700,11 +601,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public OfficeArtExtensionList OfficeArtExtensionList
-    {
-        get => GetElement<OfficeArtExtensionList>(31);
-        set => SetElement(31, value);
-    }
+	[SchemaAttr(65, "extLst", 31)]
+    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
     
 
 
@@ -1506,13 +1404,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "xfrm","custGeom","prstGeom","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","ln","effectLst","effectDag","scene3d","sp3d","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
@@ -1521,11 +1413,8 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "xfrm", 0)]
+    public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D { get; set; }
     
 
 
@@ -1736,13 +1625,7 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ln","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","effectLst","effectDag","highlight","uLnTx","uLn","uFillTx","uFill","latin","ea","cs","sym","hlinkClick","hlinkMouseOver","rtl","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Outline.</para>
@@ -1751,11 +1634,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Outline Outline
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "ln", 0)]
+    public DocumentFormat.OpenXml.Drawing.Outline Outline { get; set; }
     
 
 
@@ -1950,13 +1830,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "prstTxWarp","noAutofit","normAutofit","spAutoFit","scene3d","sp3d","flatTx","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Preset Text Shape.</para>
@@ -1965,11 +1839,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.PresetTextWrap PresetTextWrap
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetTextWrap>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "prstTxWarp", 0)]
+    public DocumentFormat.OpenXml.Drawing.PresetTextWrap PresetTextWrap { get; set; }
     
 
 
@@ -4473,13 +4344,7 @@ public abstract partial class StyleEntry : OpenXmlCompositeElement
     public ListValue<StringValue> Modifiers { get; set; }
 
     
-        private static readonly string[] eleTagNames = { "lnRef","lineWidthScale","fillRef","effectRef","fontRef","spPr","defRPr","bodyPr","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 65,65,65,65,65,65,65,65,65 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> LineReference.</para>
@@ -4488,11 +4353,8 @@ public abstract partial class StyleEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public LineReference LineReference
-    {
-        get => GetElement<LineReference>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(65, "lnRef", 0)]
+    public LineReference LineReference { get; set; }
     
     /// <summary>
     /// <para> LineWidthScale.</para>
@@ -4501,11 +4363,8 @@ public abstract partial class StyleEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public LineWidthScale LineWidthScale
-    {
-        get => GetElement<LineWidthScale>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(65, "lineWidthScale", 1)]
+    public LineWidthScale LineWidthScale { get; set; }
     
     /// <summary>
     /// <para> FillReference.</para>
@@ -4514,11 +4373,8 @@ public abstract partial class StyleEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public FillReference FillReference
-    {
-        get => GetElement<FillReference>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(65, "fillRef", 2)]
+    public FillReference FillReference { get; set; }
     
     /// <summary>
     /// <para> EffectReference.</para>
@@ -4527,11 +4383,8 @@ public abstract partial class StyleEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public EffectReference EffectReference
-    {
-        get => GetElement<EffectReference>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(65, "effectRef", 3)]
+    public EffectReference EffectReference { get; set; }
     
     /// <summary>
     /// <para> FontReference.</para>
@@ -4540,11 +4393,8 @@ public abstract partial class StyleEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public FontReference FontReference
-    {
-        get => GetElement<FontReference>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(65, "fontRef", 4)]
+    public FontReference FontReference { get; set; }
     
     /// <summary>
     /// <para> ShapeProperties.</para>
@@ -4553,11 +4403,8 @@ public abstract partial class StyleEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public ShapeProperties ShapeProperties
-    {
-        get => GetElement<ShapeProperties>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(65, "spPr", 5)]
+    public ShapeProperties ShapeProperties { get; set; }
     
     /// <summary>
     /// <para> TextCharacterPropertiesType.</para>
@@ -4566,11 +4413,8 @@ public abstract partial class StyleEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public TextCharacterPropertiesType TextCharacterPropertiesType
-    {
-        get => GetElement<TextCharacterPropertiesType>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(65, "defRPr", 6)]
+    public TextCharacterPropertiesType TextCharacterPropertiesType { get; set; }
     
     /// <summary>
     /// <para> TextBodyProperties.</para>
@@ -4579,11 +4423,8 @@ public abstract partial class StyleEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public TextBodyProperties TextBodyProperties
-    {
-        get => GetElement<TextBodyProperties>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(65, "bodyPr", 7)]
+    public TextBodyProperties TextBodyProperties { get; set; }
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -4592,11 +4433,8 @@ public abstract partial class StyleEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
     /// </remark>
-    public OfficeArtExtensionList OfficeArtExtensionList
-    {
-        get => GetElement<OfficeArtExtensionList>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(65, "extLst", 8)]
+    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
     
 
 

@@ -203,13 +203,7 @@ public partial class GvmlContentPart : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nvContentPartPr","xfrm","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 48,48,48 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualContentPartProperties.</para>
@@ -218,11 +212,8 @@ public partial class GvmlContentPart : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public NonVisualContentPartProperties NonVisualContentPartProperties
-    {
-        get => GetElement<NonVisualContentPartProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(48, "nvContentPartPr", 0)]
+    public NonVisualContentPartProperties NonVisualContentPartProperties { get; set; }
     
     /// <summary>
     /// <para> Transform2D.</para>
@@ -231,11 +222,8 @@ public partial class GvmlContentPart : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public Transform2D Transform2D
-    {
-        get => GetElement<Transform2D>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(48, "xfrm", 1)]
+    public Transform2D Transform2D { get; set; }
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -244,11 +232,8 @@ public partial class GvmlContentPart : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public OfficeArtExtensionList OfficeArtExtensionList
-    {
-        get => GetElement<OfficeArtExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(48, "extLst", 2)]
+    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
     
 
 
@@ -362,13 +347,7 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "noFill","solidFill","gradFill","blipFill","pattFill","grpFill" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> NoFill.</para>
@@ -377,11 +356,8 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.NoFill NoFill
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "noFill", 0)]
+    public DocumentFormat.OpenXml.Drawing.NoFill NoFill { get; set; }
     
     /// <summary>
     /// <para> SolidFill.</para>
@@ -390,11 +366,8 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.SolidFill SolidFill
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "solidFill", 1)]
+    public DocumentFormat.OpenXml.Drawing.SolidFill SolidFill { get; set; }
     
     /// <summary>
     /// <para> GradientFill.</para>
@@ -403,11 +376,8 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.GradientFill GradientFill
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "gradFill", 2)]
+    public DocumentFormat.OpenXml.Drawing.GradientFill GradientFill { get; set; }
     
     /// <summary>
     /// <para> BlipFill.</para>
@@ -416,11 +386,8 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.BlipFill BlipFill
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "blipFill", 3)]
+    public DocumentFormat.OpenXml.Drawing.BlipFill BlipFill { get; set; }
     
     /// <summary>
     /// <para> Pattern Fill.</para>
@@ -429,11 +396,8 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.PatternFill PatternFill
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "pattFill", 4)]
+    public DocumentFormat.OpenXml.Drawing.PatternFill PatternFill { get; set; }
     
     /// <summary>
     /// <para> Group Fill.</para>
@@ -442,11 +406,8 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.GroupFill GroupFill
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.GroupFill>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "grpFill", 5)]
+    public DocumentFormat.OpenXml.Drawing.GroupFill GroupFill { get; set; }
     
 
 
@@ -625,13 +586,7 @@ public partial class HiddenEffectsProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "effectLst","effectDag" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Effect Container.</para>
@@ -640,11 +595,8 @@ public partial class HiddenEffectsProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.EffectList EffectList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "effectLst", 0)]
+    public DocumentFormat.OpenXml.Drawing.EffectList EffectList { get; set; }
     
     /// <summary>
     /// <para> Effect Container.</para>
@@ -653,11 +605,8 @@ public partial class HiddenEffectsProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.EffectDag EffectDag
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectDag>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "effectDag", 1)]
+    public DocumentFormat.OpenXml.Drawing.EffectDag EffectDag { get; set; }
     
 
 
@@ -730,13 +679,7 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "camera","lightRig","backdrop","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Camera.</para>
@@ -745,11 +688,8 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Camera Camera
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Camera>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "camera", 0)]
+    public DocumentFormat.OpenXml.Drawing.Camera Camera { get; set; }
     
     /// <summary>
     /// <para> Light Rig.</para>
@@ -758,11 +698,8 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.LightRig LightRig
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.LightRig>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "lightRig", 1)]
+    public DocumentFormat.OpenXml.Drawing.LightRig LightRig { get; set; }
     
     /// <summary>
     /// <para> Backdrop Plane.</para>
@@ -771,11 +708,8 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Backdrop Backdrop
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Backdrop>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "backdrop", 2)]
+    public DocumentFormat.OpenXml.Drawing.Backdrop Backdrop { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -784,11 +718,8 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "extLst", 3)]
+    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList { get; set; }
     
 
 
@@ -887,13 +818,7 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "bevelT","bevelB","extrusionClr","contourClr","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Top Bevel.</para>
@@ -902,11 +827,8 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.BevelTop BevelTop
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.BevelTop>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "bevelT", 0)]
+    public DocumentFormat.OpenXml.Drawing.BevelTop BevelTop { get; set; }
     
     /// <summary>
     /// <para> Bottom Bevel.</para>
@@ -915,11 +837,8 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.BevelBottom BevelBottom
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.BevelBottom>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "bevelB", 1)]
+    public DocumentFormat.OpenXml.Drawing.BevelBottom BevelBottom { get; set; }
     
     /// <summary>
     /// <para> Extrusion Color.</para>
@@ -928,11 +847,8 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ExtrusionColor ExtrusionColor
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtrusionColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "extrusionClr", 2)]
+    public DocumentFormat.OpenXml.Drawing.ExtrusionColor ExtrusionColor { get; set; }
     
     /// <summary>
     /// <para> Contour Color.</para>
@@ -941,11 +857,8 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ContourColor ContourColor
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ContourColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "contourClr", 3)]
+    public DocumentFormat.OpenXml.Drawing.ContourColor ContourColor { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -954,11 +867,8 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "extLst", 4)]
+    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList { get; set; }
     
 
 
@@ -1025,13 +935,7 @@ public partial class ImageProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "imgLayer" };
-    private static readonly byte[] eleNamespaceIds = { 48 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ImageLayer.</para>
@@ -1040,11 +944,8 @@ public partial class ImageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ImageLayer ImageLayer
-    {
-        get => GetElement<ImageLayer>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(48, "imgLayer", 0)]
+    public ImageLayer ImageLayer { get; set; }
     
 
 
@@ -1303,13 +1204,7 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 48 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -1318,11 +1213,8 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public OfficeArtExtensionList OfficeArtExtensionList
-    {
-        get => GetElement<OfficeArtExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(48, "extLst", 0)]
+    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
     
 
 
@@ -2741,13 +2633,7 @@ public partial class ImageEffect : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "artisticBlur","artisticCement","artisticChalkSketch","artisticCrisscrossEtching","artisticCutout","artisticFilmGrain","artisticGlass","artisticGlowDiffused","artisticGlowEdges","artisticLightScreen","artisticLineDrawing","artisticMarker","artisticMosiaicBubbles","artisticPaintStrokes","artisticPaintBrush","artisticPastelsSmooth","artisticPencilGrayscale","artisticPencilSketch","artisticPhotocopy","artisticPlasticWrap","artisticTexturizer","artisticWatercolorSponge","backgroundRemoval","brightnessContrast","colorTemperature","saturation","sharpenSoften" };
-    private static readonly byte[] eleNamespaceIds = { 48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> ArtisticBlur.</para>
@@ -2756,11 +2642,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticBlur ArtisticBlur
-    {
-        get => GetElement<ArtisticBlur>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(48, "artisticBlur", 0)]
+    public ArtisticBlur ArtisticBlur { get; set; }
     
     /// <summary>
     /// <para> ArtisticCement.</para>
@@ -2769,11 +2652,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticCement ArtisticCement
-    {
-        get => GetElement<ArtisticCement>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(48, "artisticCement", 1)]
+    public ArtisticCement ArtisticCement { get; set; }
     
     /// <summary>
     /// <para> ArtisticChalkSketch.</para>
@@ -2782,11 +2662,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticChalkSketch ArtisticChalkSketch
-    {
-        get => GetElement<ArtisticChalkSketch>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(48, "artisticChalkSketch", 2)]
+    public ArtisticChalkSketch ArtisticChalkSketch { get; set; }
     
     /// <summary>
     /// <para> ArtisticCrisscrossEtching.</para>
@@ -2795,11 +2672,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticCrisscrossEtching ArtisticCrisscrossEtching
-    {
-        get => GetElement<ArtisticCrisscrossEtching>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(48, "artisticCrisscrossEtching", 3)]
+    public ArtisticCrisscrossEtching ArtisticCrisscrossEtching { get; set; }
     
     /// <summary>
     /// <para> ArtisticCutout.</para>
@@ -2808,11 +2682,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticCutout ArtisticCutout
-    {
-        get => GetElement<ArtisticCutout>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(48, "artisticCutout", 4)]
+    public ArtisticCutout ArtisticCutout { get; set; }
     
     /// <summary>
     /// <para> ArtisticFilmGrain.</para>
@@ -2821,11 +2692,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticFilmGrain ArtisticFilmGrain
-    {
-        get => GetElement<ArtisticFilmGrain>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(48, "artisticFilmGrain", 5)]
+    public ArtisticFilmGrain ArtisticFilmGrain { get; set; }
     
     /// <summary>
     /// <para> ArtisticGlass.</para>
@@ -2834,11 +2702,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticGlass ArtisticGlass
-    {
-        get => GetElement<ArtisticGlass>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(48, "artisticGlass", 6)]
+    public ArtisticGlass ArtisticGlass { get; set; }
     
     /// <summary>
     /// <para> ArtisticGlowDiffused.</para>
@@ -2847,11 +2712,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticGlowDiffused ArtisticGlowDiffused
-    {
-        get => GetElement<ArtisticGlowDiffused>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(48, "artisticGlowDiffused", 7)]
+    public ArtisticGlowDiffused ArtisticGlowDiffused { get; set; }
     
     /// <summary>
     /// <para> ArtisticGlowEdges.</para>
@@ -2860,11 +2722,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticGlowEdges ArtisticGlowEdges
-    {
-        get => GetElement<ArtisticGlowEdges>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(48, "artisticGlowEdges", 8)]
+    public ArtisticGlowEdges ArtisticGlowEdges { get; set; }
     
     /// <summary>
     /// <para> ArtisticLightScreen.</para>
@@ -2873,11 +2732,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticLightScreen ArtisticLightScreen
-    {
-        get => GetElement<ArtisticLightScreen>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(48, "artisticLightScreen", 9)]
+    public ArtisticLightScreen ArtisticLightScreen { get; set; }
     
     /// <summary>
     /// <para> ArtisticLineDrawing.</para>
@@ -2886,11 +2742,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticLineDrawing ArtisticLineDrawing
-    {
-        get => GetElement<ArtisticLineDrawing>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(48, "artisticLineDrawing", 10)]
+    public ArtisticLineDrawing ArtisticLineDrawing { get; set; }
     
     /// <summary>
     /// <para> ArtisticMarker.</para>
@@ -2899,11 +2752,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticMarker ArtisticMarker
-    {
-        get => GetElement<ArtisticMarker>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(48, "artisticMarker", 11)]
+    public ArtisticMarker ArtisticMarker { get; set; }
     
     /// <summary>
     /// <para> ArtisticMosaicBubbles.</para>
@@ -2912,11 +2762,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticMosaicBubbles ArtisticMosaicBubbles
-    {
-        get => GetElement<ArtisticMosaicBubbles>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(48, "artisticMosiaicBubbles", 12)]
+    public ArtisticMosaicBubbles ArtisticMosaicBubbles { get; set; }
     
     /// <summary>
     /// <para> ArtisticPaintStrokes.</para>
@@ -2925,11 +2772,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticPaintStrokes ArtisticPaintStrokes
-    {
-        get => GetElement<ArtisticPaintStrokes>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(48, "artisticPaintStrokes", 13)]
+    public ArtisticPaintStrokes ArtisticPaintStrokes { get; set; }
     
     /// <summary>
     /// <para> ArtisticPaintBrush.</para>
@@ -2938,11 +2782,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticPaintBrush ArtisticPaintBrush
-    {
-        get => GetElement<ArtisticPaintBrush>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(48, "artisticPaintBrush", 14)]
+    public ArtisticPaintBrush ArtisticPaintBrush { get; set; }
     
     /// <summary>
     /// <para> ArtisticPastelsSmooth.</para>
@@ -2951,11 +2792,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticPastelsSmooth ArtisticPastelsSmooth
-    {
-        get => GetElement<ArtisticPastelsSmooth>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(48, "artisticPastelsSmooth", 15)]
+    public ArtisticPastelsSmooth ArtisticPastelsSmooth { get; set; }
     
     /// <summary>
     /// <para> ArtisticPencilGrayscale.</para>
@@ -2964,11 +2802,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticPencilGrayscale ArtisticPencilGrayscale
-    {
-        get => GetElement<ArtisticPencilGrayscale>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(48, "artisticPencilGrayscale", 16)]
+    public ArtisticPencilGrayscale ArtisticPencilGrayscale { get; set; }
     
     /// <summary>
     /// <para> ArtisticPencilSketch.</para>
@@ -2977,11 +2812,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticPencilSketch ArtisticPencilSketch
-    {
-        get => GetElement<ArtisticPencilSketch>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(48, "artisticPencilSketch", 17)]
+    public ArtisticPencilSketch ArtisticPencilSketch { get; set; }
     
     /// <summary>
     /// <para> ArtisticPhotocopy.</para>
@@ -2990,11 +2822,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticPhotocopy ArtisticPhotocopy
-    {
-        get => GetElement<ArtisticPhotocopy>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(48, "artisticPhotocopy", 18)]
+    public ArtisticPhotocopy ArtisticPhotocopy { get; set; }
     
     /// <summary>
     /// <para> ArtisticPlasticWrap.</para>
@@ -3003,11 +2832,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticPlasticWrap ArtisticPlasticWrap
-    {
-        get => GetElement<ArtisticPlasticWrap>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(48, "artisticPlasticWrap", 19)]
+    public ArtisticPlasticWrap ArtisticPlasticWrap { get; set; }
     
     /// <summary>
     /// <para> ArtisticTexturizer.</para>
@@ -3016,11 +2842,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticTexturizer ArtisticTexturizer
-    {
-        get => GetElement<ArtisticTexturizer>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(48, "artisticTexturizer", 20)]
+    public ArtisticTexturizer ArtisticTexturizer { get; set; }
     
     /// <summary>
     /// <para> ArtisticWatercolorSponge.</para>
@@ -3029,11 +2852,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ArtisticWatercolorSponge ArtisticWatercolorSponge
-    {
-        get => GetElement<ArtisticWatercolorSponge>(21);
-        set => SetElement(21, value);
-    }
+	[SchemaAttr(48, "artisticWatercolorSponge", 21)]
+    public ArtisticWatercolorSponge ArtisticWatercolorSponge { get; set; }
     
     /// <summary>
     /// <para> BackgroundRemoval.</para>
@@ -3042,11 +2862,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public BackgroundRemoval BackgroundRemoval
-    {
-        get => GetElement<BackgroundRemoval>(22);
-        set => SetElement(22, value);
-    }
+	[SchemaAttr(48, "backgroundRemoval", 22)]
+    public BackgroundRemoval BackgroundRemoval { get; set; }
     
     /// <summary>
     /// <para> BrightnessContrast.</para>
@@ -3055,11 +2872,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public BrightnessContrast BrightnessContrast
-    {
-        get => GetElement<BrightnessContrast>(23);
-        set => SetElement(23, value);
-    }
+	[SchemaAttr(48, "brightnessContrast", 23)]
+    public BrightnessContrast BrightnessContrast { get; set; }
     
     /// <summary>
     /// <para> ColorTemperature.</para>
@@ -3068,11 +2882,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ColorTemperature ColorTemperature
-    {
-        get => GetElement<ColorTemperature>(24);
-        set => SetElement(24, value);
-    }
+	[SchemaAttr(48, "colorTemperature", 24)]
+    public ColorTemperature ColorTemperature { get; set; }
     
     /// <summary>
     /// <para> Saturation.</para>
@@ -3081,11 +2892,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public Saturation Saturation
-    {
-        get => GetElement<Saturation>(25);
-        set => SetElement(25, value);
-    }
+	[SchemaAttr(48, "saturation", 25)]
+    public Saturation Saturation { get; set; }
     
     /// <summary>
     /// <para> SharpenSoften.</para>
@@ -3094,11 +2902,8 @@ public partial class ImageEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public SharpenSoften SharpenSoften
-    {
-        get => GetElement<SharpenSoften>(26);
-        set => SetElement(26, value);
-    }
+	[SchemaAttr(48, "sharpenSoften", 26)]
+    public SharpenSoften SharpenSoften { get; set; }
     
 
 
@@ -3271,13 +3076,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
@@ -3286,11 +3085,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "hlinkClick", 0)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick { get; set; }
     
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -3299,11 +3095,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "hlinkHover", 1)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover { get; set; }
     
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -3312,11 +3105,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "extLst", 2)]
+    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList { get; set; }
     
 
 
@@ -3391,13 +3181,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cpLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 48,48 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ContentPartLocks.</para>
@@ -3406,11 +3190,8 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public ContentPartLocks ContentPartLocks
-    {
-        get => GetElement<ContentPartLocks>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(48, "cpLocks", 0)]
+    public ContentPartLocks ContentPartLocks { get; set; }
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -3419,11 +3200,8 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public OfficeArtExtensionList OfficeArtExtensionList
-    {
-        get => GetElement<OfficeArtExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(48, "extLst", 1)]
+    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
     
 
 
@@ -3492,13 +3270,7 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvContentPartPr" };
-    private static readonly byte[] eleNamespaceIds = { 48,48 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -3507,11 +3279,8 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(48, "cNvPr", 0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> NonVisualInkContentPartProperties.</para>
@@ -3520,11 +3289,8 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public NonVisualInkContentPartProperties NonVisualInkContentPartProperties
-    {
-        get => GetElement<NonVisualInkContentPartProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(48, "cNvContentPartPr", 1)]
+    public NonVisualInkContentPartProperties NonVisualInkContentPartProperties { get; set; }
     
 
 
@@ -3611,13 +3377,7 @@ public partial class Transform2D : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "off","ext" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Offset.</para>
@@ -3626,11 +3386,8 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Offset Offset
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "off", 0)]
+    public DocumentFormat.OpenXml.Drawing.Offset Offset { get; set; }
     
     /// <summary>
     /// <para> Extents.</para>
@@ -3639,11 +3396,8 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Extents Extents
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "ext", 1)]
+    public DocumentFormat.OpenXml.Drawing.Extents Extents { get; set; }
     
 
 

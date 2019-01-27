@@ -6229,13 +6229,7 @@ public partial class NumberingProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ilvl","numId","numberingChange","ins" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Numbering Level Reference.</para>
@@ -6244,11 +6238,8 @@ public partial class NumberingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingLevelReference NumberingLevelReference
-    {
-        get => GetElement<NumberingLevelReference>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "ilvl", 0)]
+    public NumberingLevelReference NumberingLevelReference { get; set; }
     
     /// <summary>
     /// <para> Numbering Definition Instance Reference.</para>
@@ -6257,11 +6248,8 @@ public partial class NumberingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingId NumberingId
-    {
-        get => GetElement<NumberingId>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "numId", 1)]
+    public NumberingId NumberingId { get; set; }
     
     /// <summary>
     /// <para> Previous Paragraph Numbering Properties.</para>
@@ -6270,11 +6258,8 @@ public partial class NumberingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingChange NumberingChange
-    {
-        get => GetElement<NumberingChange>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "numberingChange", 2)]
+    public NumberingChange NumberingChange { get; set; }
     
     /// <summary>
     /// <para> Inserted Numbering Properties.</para>
@@ -6283,11 +6268,8 @@ public partial class NumberingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Inserted Inserted
-    {
-        get => GetElement<Inserted>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "ins", 3)]
+    public Inserted Inserted { get; set; }
     
 
 
@@ -6364,13 +6346,7 @@ public partial class ParagraphBorders : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "top","left","bottom","right","between","bar" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Paragraph Border Above Identical Paragraphs.</para>
@@ -6379,11 +6355,8 @@ public partial class ParagraphBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopBorder TopBorder
-    {
-        get => GetElement<TopBorder>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "top", 0)]
+    public TopBorder TopBorder { get; set; }
     
     /// <summary>
     /// <para> Left Paragraph Border.</para>
@@ -6392,11 +6365,8 @@ public partial class ParagraphBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LeftBorder LeftBorder
-    {
-        get => GetElement<LeftBorder>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "left", 1)]
+    public LeftBorder LeftBorder { get; set; }
     
     /// <summary>
     /// <para> Paragraph Border Between Identical Paragraphs.</para>
@@ -6405,11 +6375,8 @@ public partial class ParagraphBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BottomBorder BottomBorder
-    {
-        get => GetElement<BottomBorder>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "bottom", 2)]
+    public BottomBorder BottomBorder { get; set; }
     
     /// <summary>
     /// <para> Right Paragraph Border.</para>
@@ -6418,11 +6385,8 @@ public partial class ParagraphBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RightBorder RightBorder
-    {
-        get => GetElement<RightBorder>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "right", 3)]
+    public RightBorder RightBorder { get; set; }
     
     /// <summary>
     /// <para> Paragraph Border Between Identical Paragraphs.</para>
@@ -6431,11 +6395,8 @@ public partial class ParagraphBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BetweenBorder BetweenBorder
-    {
-        get => GetElement<BetweenBorder>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "between", 4)]
+    public BetweenBorder BetweenBorder { get; set; }
     
     /// <summary>
     /// <para> Paragraph Border Between Facing Pages.</para>
@@ -6444,11 +6405,8 @@ public partial class ParagraphBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BarBorder BarBorder
-    {
-        get => GetElement<BarBorder>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "bar", 5)]
+    public BarBorder BarBorder { get; set; }
     
 
 
@@ -7424,13 +7382,7 @@ public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pPr" };
-    private static readonly byte[] eleNamespaceIds = { 23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Previous Paragraph Properties.</para>
@@ -7439,11 +7391,8 @@ public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphPropertiesExtended ParagraphPropertiesExtended
-    {
-        get => GetElement<ParagraphPropertiesExtended>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "pPr", 0)]
+    public ParagraphPropertiesExtended ParagraphPropertiesExtended { get; set; }
     
 
 
@@ -8717,13 +8666,7 @@ public partial class FieldChar : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fldData","ffData","numberingChange" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Custom Field Data.</para>
@@ -8732,11 +8675,8 @@ public partial class FieldChar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FieldData FieldData
-    {
-        get => GetElement<FieldData>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "fldData", 0)]
+    public FieldData FieldData { get; set; }
     
     /// <summary>
     /// <para> Form Field Properties.</para>
@@ -8745,11 +8685,8 @@ public partial class FieldChar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FormFieldData FormFieldData
-    {
-        get => GetElement<FormFieldData>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "ffData", 1)]
+    public FormFieldData FormFieldData { get; set; }
     
     /// <summary>
     /// <para> Previous Numbering Field Properties.</para>
@@ -8758,11 +8695,8 @@ public partial class FieldChar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingChange NumberingChange
-    {
-        get => GetElement<NumberingChange>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "numberingChange", 2)]
+    public NumberingChange NumberingChange { get; set; }
     
 
 
@@ -8833,13 +8767,7 @@ public partial class Ruby : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rubyPr","rt","rubyBase" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Phonetic Guide Properties.</para>
@@ -8848,11 +8776,8 @@ public partial class Ruby : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RubyProperties RubyProperties
-    {
-        get => GetElement<RubyProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "rubyPr", 0)]
+    public RubyProperties RubyProperties { get; set; }
     
     /// <summary>
     /// <para> Phonetic Guide Text.</para>
@@ -8861,11 +8786,8 @@ public partial class Ruby : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RubyContent RubyContent
-    {
-        get => GetElement<RubyContent>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "rt", 1)]
+    public RubyContent RubyContent { get; set; }
     
     /// <summary>
     /// <para> Phonetic Guide Base Text.</para>
@@ -8874,11 +8796,8 @@ public partial class Ruby : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RubyBase RubyBase
-    {
-        get => GetElement<RubyBase>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "rubyBase", 2)]
+    public RubyBase RubyBase { get; set; }
     
 
 
@@ -9031,13 +8950,7 @@ public partial class Drawing : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "anchor","inline" };
-    private static readonly byte[] eleNamespaceIds = { 16,16 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Drawing Element Anchor.</para>
@@ -9046,11 +8959,8 @@ public partial class Drawing : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor Anchor
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(16, "anchor", 0)]
+    public DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor Anchor { get; set; }
     
     /// <summary>
     /// <para> Inline Drawing Object.</para>
@@ -9059,11 +8969,8 @@ public partial class Drawing : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline Inline
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(16, "inline", 1)]
+    public DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline Inline { get; set; }
     
 
 
@@ -10836,13 +10743,7 @@ public partial class RunPropertiesChange : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rPr" };
-    private static readonly byte[] eleNamespaceIds = { 23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Previous Run Properties.</para>
@@ -10851,11 +10752,8 @@ public partial class RunPropertiesChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PreviousRunProperties PreviousRunProperties
-    {
-        get => GetElement<PreviousRunProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "rPr", 0)]
+    public PreviousRunProperties PreviousRunProperties { get; set; }
     
 
 
@@ -11022,13 +10920,7 @@ public partial class RunProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rStyle","rFonts","b","bCs","i","iCs","caps","smallCaps","strike","dstrike","outline","shadow","emboss","imprint","noProof","snapToGrid","vanish","webHidden","color","spacing","w","kern","position","sz","szCs","highlight","u","effect","bdr","shd","fitText","vertAlign","rtl","cs","em","lang","eastAsianLayout","specVanish","glow","shadow","reflection","textOutline","textFill","scene3d","props3d","ligatures","numForm","numSpacing","stylisticSets","cntxtAlts","rPrChange" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,52,52,52,52,52,52,52,52,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> RunStyle.</para>
@@ -11037,11 +10929,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RunStyle RunStyle
-    {
-        get => GetElement<RunStyle>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "rStyle", 0)]
+    public RunStyle RunStyle { get; set; }
     
     /// <summary>
     /// <para> RunFonts.</para>
@@ -11050,11 +10939,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RunFonts RunFonts
-    {
-        get => GetElement<RunFonts>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "rFonts", 1)]
+    public RunFonts RunFonts { get; set; }
     
     /// <summary>
     /// <para> Bold.</para>
@@ -11063,11 +10949,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Bold Bold
-    {
-        get => GetElement<Bold>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "b", 2)]
+    public Bold Bold { get; set; }
     
     /// <summary>
     /// <para> BoldComplexScript.</para>
@@ -11076,11 +10959,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BoldComplexScript BoldComplexScript
-    {
-        get => GetElement<BoldComplexScript>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "bCs", 3)]
+    public BoldComplexScript BoldComplexScript { get; set; }
     
     /// <summary>
     /// <para> Italic.</para>
@@ -11089,11 +10969,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Italic Italic
-    {
-        get => GetElement<Italic>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "i", 4)]
+    public Italic Italic { get; set; }
     
     /// <summary>
     /// <para> ItalicComplexScript.</para>
@@ -11102,11 +10979,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ItalicComplexScript ItalicComplexScript
-    {
-        get => GetElement<ItalicComplexScript>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "iCs", 5)]
+    public ItalicComplexScript ItalicComplexScript { get; set; }
     
     /// <summary>
     /// <para> Caps.</para>
@@ -11115,11 +10989,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Caps Caps
-    {
-        get => GetElement<Caps>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "caps", 6)]
+    public Caps Caps { get; set; }
     
     /// <summary>
     /// <para> SmallCaps.</para>
@@ -11128,11 +10999,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SmallCaps SmallCaps
-    {
-        get => GetElement<SmallCaps>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "smallCaps", 7)]
+    public SmallCaps SmallCaps { get; set; }
     
     /// <summary>
     /// <para> Strike.</para>
@@ -11141,11 +11009,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Strike Strike
-    {
-        get => GetElement<Strike>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "strike", 8)]
+    public Strike Strike { get; set; }
     
     /// <summary>
     /// <para> DoubleStrike.</para>
@@ -11154,11 +11019,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoubleStrike DoubleStrike
-    {
-        get => GetElement<DoubleStrike>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "dstrike", 9)]
+    public DoubleStrike DoubleStrike { get; set; }
     
     /// <summary>
     /// <para> Outline.</para>
@@ -11167,11 +11029,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Outline Outline
-    {
-        get => GetElement<Outline>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "outline", 10)]
+    public Outline Outline { get; set; }
     
     /// <summary>
     /// <para> Shadow.</para>
@@ -11180,11 +11039,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shadow Shadow
-    {
-        get => GetElement<Shadow>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "shadow", 11)]
+    public Shadow Shadow { get; set; }
     
     /// <summary>
     /// <para> Emboss.</para>
@@ -11193,11 +11049,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Emboss Emboss
-    {
-        get => GetElement<Emboss>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "emboss", 12)]
+    public Emboss Emboss { get; set; }
     
     /// <summary>
     /// <para> Imprint.</para>
@@ -11206,11 +11059,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Imprint Imprint
-    {
-        get => GetElement<Imprint>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "imprint", 13)]
+    public Imprint Imprint { get; set; }
     
     /// <summary>
     /// <para> NoProof.</para>
@@ -11219,11 +11069,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoProof NoProof
-    {
-        get => GetElement<NoProof>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "noProof", 14)]
+    public NoProof NoProof { get; set; }
     
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -11232,11 +11079,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SnapToGrid SnapToGrid
-    {
-        get => GetElement<SnapToGrid>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "snapToGrid", 15)]
+    public SnapToGrid SnapToGrid { get; set; }
     
     /// <summary>
     /// <para> Vanish.</para>
@@ -11245,11 +11089,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Vanish Vanish
-    {
-        get => GetElement<Vanish>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(23, "vanish", 16)]
+    public Vanish Vanish { get; set; }
     
     /// <summary>
     /// <para> WebHidden.</para>
@@ -11258,11 +11099,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WebHidden WebHidden
-    {
-        get => GetElement<WebHidden>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(23, "webHidden", 17)]
+    public WebHidden WebHidden { get; set; }
     
     /// <summary>
     /// <para> Color.</para>
@@ -11271,11 +11109,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Color Color
-    {
-        get => GetElement<Color>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(23, "color", 18)]
+    public Color Color { get; set; }
     
     /// <summary>
     /// <para> Spacing.</para>
@@ -11284,11 +11119,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Spacing Spacing
-    {
-        get => GetElement<Spacing>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(23, "spacing", 19)]
+    public Spacing Spacing { get; set; }
     
     /// <summary>
     /// <para> CharacterScale.</para>
@@ -11297,11 +11129,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public CharacterScale CharacterScale
-    {
-        get => GetElement<CharacterScale>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(23, "w", 20)]
+    public CharacterScale CharacterScale { get; set; }
     
     /// <summary>
     /// <para> Kern.</para>
@@ -11310,11 +11139,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Kern Kern
-    {
-        get => GetElement<Kern>(21);
-        set => SetElement(21, value);
-    }
+	[SchemaAttr(23, "kern", 21)]
+    public Kern Kern { get; set; }
     
     /// <summary>
     /// <para> Position.</para>
@@ -11323,11 +11149,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Position Position
-    {
-        get => GetElement<Position>(22);
-        set => SetElement(22, value);
-    }
+	[SchemaAttr(23, "position", 22)]
+    public Position Position { get; set; }
     
     /// <summary>
     /// <para> FontSize.</para>
@@ -11336,11 +11159,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FontSize FontSize
-    {
-        get => GetElement<FontSize>(23);
-        set => SetElement(23, value);
-    }
+	[SchemaAttr(23, "sz", 23)]
+    public FontSize FontSize { get; set; }
     
     /// <summary>
     /// <para> FontSizeComplexScript.</para>
@@ -11349,11 +11169,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FontSizeComplexScript FontSizeComplexScript
-    {
-        get => GetElement<FontSizeComplexScript>(24);
-        set => SetElement(24, value);
-    }
+	[SchemaAttr(23, "szCs", 24)]
+    public FontSizeComplexScript FontSizeComplexScript { get; set; }
     
     /// <summary>
     /// <para> Highlight.</para>
@@ -11362,11 +11179,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Highlight Highlight
-    {
-        get => GetElement<Highlight>(25);
-        set => SetElement(25, value);
-    }
+	[SchemaAttr(23, "highlight", 25)]
+    public Highlight Highlight { get; set; }
     
     /// <summary>
     /// <para> Underline.</para>
@@ -11375,11 +11189,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Underline Underline
-    {
-        get => GetElement<Underline>(26);
-        set => SetElement(26, value);
-    }
+	[SchemaAttr(23, "u", 26)]
+    public Underline Underline { get; set; }
     
     /// <summary>
     /// <para> TextEffect.</para>
@@ -11388,11 +11199,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextEffect TextEffect
-    {
-        get => GetElement<TextEffect>(27);
-        set => SetElement(27, value);
-    }
+	[SchemaAttr(23, "effect", 27)]
+    public TextEffect TextEffect { get; set; }
     
     /// <summary>
     /// <para> Border.</para>
@@ -11401,11 +11209,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Border Border
-    {
-        get => GetElement<Border>(28);
-        set => SetElement(28, value);
-    }
+	[SchemaAttr(23, "bdr", 28)]
+    public Border Border { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -11414,11 +11219,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(29);
-        set => SetElement(29, value);
-    }
+	[SchemaAttr(23, "shd", 29)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> FitText.</para>
@@ -11427,11 +11229,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FitText FitText
-    {
-        get => GetElement<FitText>(30);
-        set => SetElement(30, value);
-    }
+	[SchemaAttr(23, "fitText", 30)]
+    public FitText FitText { get; set; }
     
     /// <summary>
     /// <para> VerticalTextAlignment.</para>
@@ -11440,11 +11239,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public VerticalTextAlignment VerticalTextAlignment
-    {
-        get => GetElement<VerticalTextAlignment>(31);
-        set => SetElement(31, value);
-    }
+	[SchemaAttr(23, "vertAlign", 31)]
+    public VerticalTextAlignment VerticalTextAlignment { get; set; }
     
     /// <summary>
     /// <para> RightToLeftText.</para>
@@ -11453,11 +11249,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RightToLeftText RightToLeftText
-    {
-        get => GetElement<RightToLeftText>(32);
-        set => SetElement(32, value);
-    }
+	[SchemaAttr(23, "rtl", 32)]
+    public RightToLeftText RightToLeftText { get; set; }
     
     /// <summary>
     /// <para> ComplexScript.</para>
@@ -11466,11 +11259,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ComplexScript ComplexScript
-    {
-        get => GetElement<ComplexScript>(33);
-        set => SetElement(33, value);
-    }
+	[SchemaAttr(23, "cs", 33)]
+    public ComplexScript ComplexScript { get; set; }
     
     /// <summary>
     /// <para> Emphasis.</para>
@@ -11479,11 +11269,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Emphasis Emphasis
-    {
-        get => GetElement<Emphasis>(34);
-        set => SetElement(34, value);
-    }
+	[SchemaAttr(23, "em", 34)]
+    public Emphasis Emphasis { get; set; }
     
     /// <summary>
     /// <para> Languages.</para>
@@ -11492,11 +11279,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Languages Languages
-    {
-        get => GetElement<Languages>(35);
-        set => SetElement(35, value);
-    }
+	[SchemaAttr(23, "lang", 35)]
+    public Languages Languages { get; set; }
     
     /// <summary>
     /// <para> EastAsianLayout.</para>
@@ -11505,11 +11289,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EastAsianLayout EastAsianLayout
-    {
-        get => GetElement<EastAsianLayout>(36);
-        set => SetElement(36, value);
-    }
+	[SchemaAttr(23, "eastAsianLayout", 36)]
+    public EastAsianLayout EastAsianLayout { get; set; }
     
     /// <summary>
     /// <para> SpecVanish.</para>
@@ -11518,11 +11299,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SpecVanish SpecVanish
-    {
-        get => GetElement<SpecVanish>(37);
-        set => SetElement(37, value);
-    }
+	[SchemaAttr(23, "specVanish", 37)]
+    public SpecVanish SpecVanish { get; set; }
     
     /// <summary>
     /// <para> Glow.</para>
@@ -11531,11 +11309,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Word.Glow Glow
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Glow>(38);
-        set => SetElement(38, value);
-    }
+	[SchemaAttr(52, "glow", 38)]
+    public DocumentFormat.OpenXml.Office2010.Word.Glow Glow { get; set; }
     
     /// <summary>
     /// <para> Shadow14.</para>
@@ -11544,11 +11319,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Word.Shadow Shadow14
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Shadow>(39);
-        set => SetElement(39, value);
-    }
+	[SchemaAttr(52, "shadow", 39)]
+    public DocumentFormat.OpenXml.Office2010.Word.Shadow Shadow14 { get; set; }
     
     /// <summary>
     /// <para> Reflection.</para>
@@ -11557,11 +11329,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Word.Reflection Reflection
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Reflection>(40);
-        set => SetElement(40, value);
-    }
+	[SchemaAttr(52, "reflection", 40)]
+    public DocumentFormat.OpenXml.Office2010.Word.Reflection Reflection { get; set; }
     
     /// <summary>
     /// <para> TextOutlineEffect.</para>
@@ -11570,11 +11339,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect TextOutlineEffect
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>(41);
-        set => SetElement(41, value);
-    }
+	[SchemaAttr(52, "textOutline", 41)]
+    public DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect TextOutlineEffect { get; set; }
     
     /// <summary>
     /// <para> FillTextEffect.</para>
@@ -11583,11 +11349,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Word.FillTextEffect FillTextEffect
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>(42);
-        set => SetElement(42, value);
-    }
+	[SchemaAttr(52, "textFill", 42)]
+    public DocumentFormat.OpenXml.Office2010.Word.FillTextEffect FillTextEffect { get; set; }
     
     /// <summary>
     /// <para> Scene3D.</para>
@@ -11596,11 +11359,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Word.Scene3D Scene3D
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Scene3D>(43);
-        set => SetElement(43, value);
-    }
+	[SchemaAttr(52, "scene3d", 43)]
+    public DocumentFormat.OpenXml.Office2010.Word.Scene3D Scene3D { get; set; }
     
     /// <summary>
     /// <para> Properties3D.</para>
@@ -11609,11 +11369,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Word.Properties3D Properties3D
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Properties3D>(44);
-        set => SetElement(44, value);
-    }
+	[SchemaAttr(52, "props3d", 44)]
+    public DocumentFormat.OpenXml.Office2010.Word.Properties3D Properties3D { get; set; }
     
     /// <summary>
     /// <para> Ligatures.</para>
@@ -11622,11 +11379,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Word.Ligatures Ligatures
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Ligatures>(45);
-        set => SetElement(45, value);
-    }
+	[SchemaAttr(52, "ligatures", 45)]
+    public DocumentFormat.OpenXml.Office2010.Word.Ligatures Ligatures { get; set; }
     
     /// <summary>
     /// <para> NumberingFormat.</para>
@@ -11635,11 +11389,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Word.NumberingFormat NumberingFormat
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>(46);
-        set => SetElement(46, value);
-    }
+	[SchemaAttr(52, "numForm", 46)]
+    public DocumentFormat.OpenXml.Office2010.Word.NumberingFormat NumberingFormat { get; set; }
     
     /// <summary>
     /// <para> NumberSpacing.</para>
@@ -11648,11 +11399,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Word.NumberSpacing NumberSpacing
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>(47);
-        set => SetElement(47, value);
-    }
+	[SchemaAttr(52, "numSpacing", 47)]
+    public DocumentFormat.OpenXml.Office2010.Word.NumberSpacing NumberSpacing { get; set; }
     
     /// <summary>
     /// <para> StylisticSets.</para>
@@ -11661,11 +11409,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Word.StylisticSets StylisticSets
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>(48);
-        set => SetElement(48, value);
-    }
+	[SchemaAttr(52, "stylisticSets", 48)]
+    public DocumentFormat.OpenXml.Office2010.Word.StylisticSets StylisticSets { get; set; }
     
     /// <summary>
     /// <para> ContextualAlternatives.</para>
@@ -11674,11 +11419,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives ContextualAlternatives
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>(49);
-        set => SetElement(49, value);
-    }
+	[SchemaAttr(52, "cntxtAlts", 49)]
+    public DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives ContextualAlternatives { get; set; }
     
     /// <summary>
     /// <para> RunPropertiesChange.</para>
@@ -11687,11 +11429,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RunPropertiesChange RunPropertiesChange
-    {
-        get => GetElement<RunPropertiesChange>(50);
-        set => SetElement(50, value);
-    }
+	[SchemaAttr(23, "rPrChange", 50)]
+    public RunPropertiesChange RunPropertiesChange { get; set; }
     
 
 
@@ -12247,13 +11986,7 @@ public partial class CustomXmlRuby : CustomXmlElement
      
     
     
-        private static readonly string[] eleTagNames = { "customXmlPr","customXml","fldSimple","hyperlink","r","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","oMathPara","oMath","acc","bar","box","borderBox","d","eqArr","f","func","groupChr","limLow","limUpp","m","nary","phant","rad","sPre","sSub","sSubSup","sSup","r" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
     
 
@@ -12458,13 +12191,7 @@ public partial class SimpleFieldRuby : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fldData","customXml","fldSimple","hyperlink","r","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","oMathPara","oMath","acc","bar","box","borderBox","d","eqArr","f","func","groupChr","limLow","limUpp","m","nary","phant","rad","sPre","sSub","sSubSup","sSup","r" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> FieldData.</para>
@@ -12473,11 +12200,8 @@ public partial class SimpleFieldRuby : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FieldData FieldData
-    {
-        get => GetElement<FieldData>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "fldData", 0)]
+    public FieldData FieldData { get; set; }
     
 
 
@@ -12856,13 +12580,7 @@ public partial class Run : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rPr","br","t","delText","instrText","delInstrText","noBreakHyphen","softHyphen","dayShort","monthShort","yearShort","dayLong","monthLong","yearLong","annotationRef","footnoteRef","endnoteRef","separator","continuationSeparator","sym","pgNum","cr","tab","object","pict","fldChar","ruby","footnoteReference","endnoteReference","commentReference","drawing","ptab","lastRenderedPageBreak" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Run Properties.</para>
@@ -12871,11 +12589,8 @@ public partial class Run : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RunProperties RunProperties
-    {
-        get => GetElement<RunProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "rPr", 0)]
+    public RunProperties RunProperties { get; set; }
     
 
 
@@ -12986,13 +12701,7 @@ public partial class SdtRunRuby : SdtElement
      
     
     
-        private static readonly string[] eleTagNames = { "sdtPr","sdtEndPr","sdtContent","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SdtContentRunRuby.</para>
@@ -13001,11 +12710,8 @@ public partial class SdtRunRuby : SdtElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SdtContentRunRuby SdtContentRunRuby
-    {
-        get => GetElement<SdtContentRunRuby>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "sdtContent", 2)]
+    public SdtContentRunRuby SdtContentRunRuby { get; set; }
     
 
 
@@ -13951,13 +13657,7 @@ public partial class SdtRun : SdtElement
      
     
     
-        private static readonly string[] eleTagNames = { "sdtPr","sdtEndPr","sdtContent","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Inline-Level Structured Document Tag Content.</para>
@@ -13966,11 +13666,8 @@ public partial class SdtRun : SdtElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SdtContentRun SdtContentRun
-    {
-        get => GetElement<SdtContentRun>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "sdtContent", 2)]
+    public SdtContentRun SdtContentRun { get; set; }
     
 
 
@@ -14105,13 +13802,7 @@ public partial class CustomXmlBlock : CustomXmlElement
      
     
     
-        private static readonly string[] eleTagNames = { "customXmlPr","customXml","sdt","p","tbl","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
     
 
@@ -14222,13 +13913,7 @@ public partial class SdtBlock : SdtElement
      
     
     
-        private static readonly string[] eleTagNames = { "sdtPr","sdtEndPr","sdtContent","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Block-Level Structured Document Tag Content.</para>
@@ -14237,11 +13922,8 @@ public partial class SdtBlock : SdtElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SdtContentBlock SdtContentBlock
-    {
-        get => GetElement<SdtContentBlock>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "sdtContent", 2)]
+    public SdtContentBlock SdtContentBlock { get; set; }
     
 
 
@@ -14492,13 +14174,7 @@ public partial class Paragraph : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pPr","customXml","fldSimple","hyperlink","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","oMathPara","oMath","acc","bar","box","borderBox","d","eqArr","f","func","groupChr","limLow","limUpp","m","nary","phant","rad","sPre","sSub","sSubSup","sSup","r","r","bdo","dir","subDoc" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Paragraph Properties.</para>
@@ -14507,11 +14183,8 @@ public partial class Paragraph : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphProperties ParagraphProperties
-    {
-        get => GetElement<ParagraphProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "pPr", 0)]
+    public ParagraphProperties ParagraphProperties { get; set; }
     
 
 
@@ -14826,13 +14499,7 @@ public partial class TableRow : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tblPrEx","trPr","tc","customXml","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Table-Level Property Exceptions.</para>
@@ -14841,11 +14508,8 @@ public partial class TableRow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TablePropertyExceptions TablePropertyExceptions
-    {
-        get => GetElement<TablePropertyExceptions>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "tblPrEx", 0)]
+    public TablePropertyExceptions TablePropertyExceptions { get; set; }
     
     /// <summary>
     /// <para> Table Row Properties.</para>
@@ -14854,11 +14518,8 @@ public partial class TableRow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableRowProperties TableRowProperties
-    {
-        get => GetElement<TableRowProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "trPr", 1)]
+    public TableRowProperties TableRowProperties { get; set; }
     
 
 
@@ -14991,13 +14652,7 @@ public partial class CustomXmlRow : CustomXmlElement
      
     
     
-        private static readonly string[] eleTagNames = { "customXmlPr","tr","customXml","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
     
 
@@ -15108,13 +14763,7 @@ public partial class SdtRow : SdtElement
      
     
     
-        private static readonly string[] eleTagNames = { "sdtPr","sdtEndPr","sdtContent","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Row-Level Structured Document Tag Content.</para>
@@ -15123,11 +14772,8 @@ public partial class SdtRow : SdtElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SdtContentRow SdtContentRow
-    {
-        get => GetElement<SdtContentRow>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "sdtContent", 2)]
+    public SdtContentRow SdtContentRow { get; set; }
     
 
 
@@ -15264,13 +14910,7 @@ public partial class TableCell : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tcPr","altChunk","customXml","sdt","p","tbl","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Table Cell Properties.</para>
@@ -15279,11 +14919,8 @@ public partial class TableCell : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellProperties TableCellProperties
-    {
-        get => GetElement<TableCellProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "tcPr", 0)]
+    public TableCellProperties TableCellProperties { get; set; }
     
 
 
@@ -15416,13 +15053,7 @@ public partial class CustomXmlCell : CustomXmlElement
      
     
     
-        private static readonly string[] eleTagNames = { "customXmlPr","tc","customXml","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
     
 
@@ -15533,13 +15164,7 @@ public partial class SdtCell : SdtElement
      
     
     
-        private static readonly string[] eleTagNames = { "sdtPr","sdtEndPr","sdtContent","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Cell-Level Structured Document Tag Content.</para>
@@ -15548,11 +15173,8 @@ public partial class SdtCell : SdtElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SdtContentCell SdtContentCell
-    {
-        get => GetElement<SdtContentCell>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "sdtContent", 2)]
+    public SdtContentCell SdtContentCell { get; set; }
     
 
 
@@ -15739,13 +15361,7 @@ public partial class CustomXmlRun : CustomXmlElement
      
     
     
-        private static readonly string[] eleTagNames = { "customXmlPr","customXml","fldSimple","hyperlink","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","oMathPara","oMath","acc","bar","box","borderBox","d","eqArr","f","func","groupChr","limLow","limUpp","m","nary","phant","rad","sPre","sSub","sSubSup","sSup","r","r","bdo","dir","subDoc" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
     
 
@@ -15956,13 +15572,7 @@ public partial class SimpleField : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fldData","customXml","fldSimple","hyperlink","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","oMathPara","oMath","acc","bar","box","borderBox","d","eqArr","f","func","groupChr","limLow","limUpp","m","nary","phant","rad","sPre","sSub","sSubSup","sSup","r","r","bdo","dir","subDoc" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Custom Field Data.</para>
@@ -15971,11 +15581,8 @@ public partial class SimpleField : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FieldData FieldData
-    {
-        get => GetElement<FieldData>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "fldData", 0)]
+    public FieldData FieldData { get; set; }
     
 
 
@@ -17427,13 +17034,7 @@ public partial class TableCellBorders : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "top","left","start","bottom","right","end","insideH","insideV","tl2br","tr2bl" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Table Cell Top Border.</para>
@@ -17442,11 +17043,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopBorder TopBorder
-    {
-        get => GetElement<TopBorder>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "top", 0)]
+    public TopBorder TopBorder { get; set; }
     
     /// <summary>
     /// <para> Table Cell Left Border.</para>
@@ -17455,11 +17053,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LeftBorder LeftBorder
-    {
-        get => GetElement<LeftBorder>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "left", 1)]
+    public LeftBorder LeftBorder { get; set; }
     
     /// <summary>
     /// <para> StartBorder.</para>
@@ -17468,11 +17063,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StartBorder StartBorder
-    {
-        get => GetElement<StartBorder>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "start", 2)]
+    public StartBorder StartBorder { get; set; }
     
     /// <summary>
     /// <para> Table Cell Bottom Border.</para>
@@ -17481,11 +17073,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BottomBorder BottomBorder
-    {
-        get => GetElement<BottomBorder>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "bottom", 3)]
+    public BottomBorder BottomBorder { get; set; }
     
     /// <summary>
     /// <para> Table Cell Right Border.</para>
@@ -17494,11 +17083,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RightBorder RightBorder
-    {
-        get => GetElement<RightBorder>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "right", 4)]
+    public RightBorder RightBorder { get; set; }
     
     /// <summary>
     /// <para> EndBorder.</para>
@@ -17507,11 +17093,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EndBorder EndBorder
-    {
-        get => GetElement<EndBorder>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "end", 5)]
+    public EndBorder EndBorder { get; set; }
     
     /// <summary>
     /// <para> Table Cell Inside Horizontal Edges Border.</para>
@@ -17520,11 +17103,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public InsideHorizontalBorder InsideHorizontalBorder
-    {
-        get => GetElement<InsideHorizontalBorder>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "insideH", 6)]
+    public InsideHorizontalBorder InsideHorizontalBorder { get; set; }
     
     /// <summary>
     /// <para> Table Cell Inside Vertical Edges Border.</para>
@@ -17533,11 +17113,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public InsideVerticalBorder InsideVerticalBorder
-    {
-        get => GetElement<InsideVerticalBorder>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "insideV", 7)]
+    public InsideVerticalBorder InsideVerticalBorder { get; set; }
     
     /// <summary>
     /// <para> Table Cell Top Left to Bottom Right Diagonal Border.</para>
@@ -17546,11 +17123,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopLeftToBottomRightCellBorder TopLeftToBottomRightCellBorder
-    {
-        get => GetElement<TopLeftToBottomRightCellBorder>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "tl2br", 8)]
+    public TopLeftToBottomRightCellBorder TopLeftToBottomRightCellBorder { get; set; }
     
     /// <summary>
     /// <para> Table Cell Top Right to Bottom Left Diagonal Border.</para>
@@ -17559,11 +17133,8 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopRightToBottomLeftCellBorder TopRightToBottomLeftCellBorder
-    {
-        get => GetElement<TopRightToBottomLeftCellBorder>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "tr2bl", 9)]
+    public TopRightToBottomLeftCellBorder TopRightToBottomLeftCellBorder { get; set; }
     
 
 
@@ -18124,13 +17695,7 @@ public partial class TableCellMargin : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "top","left","start","bottom","right","end" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Table Cell Top Margin Exception.</para>
@@ -18139,11 +17704,8 @@ public partial class TableCellMargin : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopMargin TopMargin
-    {
-        get => GetElement<TopMargin>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "top", 0)]
+    public TopMargin TopMargin { get; set; }
     
     /// <summary>
     /// <para> Table Cell Left Margin Exception.</para>
@@ -18152,11 +17714,8 @@ public partial class TableCellMargin : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LeftMargin LeftMargin
-    {
-        get => GetElement<LeftMargin>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "left", 1)]
+    public LeftMargin LeftMargin { get; set; }
     
     /// <summary>
     /// <para> StartMargin.</para>
@@ -18165,11 +17724,8 @@ public partial class TableCellMargin : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StartMargin StartMargin
-    {
-        get => GetElement<StartMargin>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "start", 2)]
+    public StartMargin StartMargin { get; set; }
     
     /// <summary>
     /// <para> Table Cell Bottom Margin Exception.</para>
@@ -18178,11 +17734,8 @@ public partial class TableCellMargin : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BottomMargin BottomMargin
-    {
-        get => GetElement<BottomMargin>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "bottom", 3)]
+    public BottomMargin BottomMargin { get; set; }
     
     /// <summary>
     /// <para> Table Cell Right Margin Exception.</para>
@@ -18191,11 +17744,8 @@ public partial class TableCellMargin : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RightMargin RightMargin
-    {
-        get => GetElement<RightMargin>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "right", 4)]
+    public RightMargin RightMargin { get; set; }
     
     /// <summary>
     /// <para> EndMargin.</para>
@@ -18204,11 +17754,8 @@ public partial class TableCellMargin : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EndMargin EndMargin
-    {
-        get => GetElement<EndMargin>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "end", 5)]
+    public EndMargin EndMargin { get; set; }
     
 
 
@@ -18726,13 +18273,7 @@ public partial class TableBorders : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "top","left","start","bottom","right","end","insideH","insideV" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Table Top Border.</para>
@@ -18741,11 +18282,8 @@ public partial class TableBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopBorder TopBorder
-    {
-        get => GetElement<TopBorder>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "top", 0)]
+    public TopBorder TopBorder { get; set; }
     
     /// <summary>
     /// <para> Table Left Border.</para>
@@ -18754,11 +18292,8 @@ public partial class TableBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LeftBorder LeftBorder
-    {
-        get => GetElement<LeftBorder>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "left", 1)]
+    public LeftBorder LeftBorder { get; set; }
     
     /// <summary>
     /// <para> StartBorder.</para>
@@ -18767,11 +18302,8 @@ public partial class TableBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StartBorder StartBorder
-    {
-        get => GetElement<StartBorder>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "start", 2)]
+    public StartBorder StartBorder { get; set; }
     
     /// <summary>
     /// <para> Table Bottom Border.</para>
@@ -18780,11 +18312,8 @@ public partial class TableBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BottomBorder BottomBorder
-    {
-        get => GetElement<BottomBorder>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "bottom", 3)]
+    public BottomBorder BottomBorder { get; set; }
     
     /// <summary>
     /// <para> Table Right Border.</para>
@@ -18793,11 +18322,8 @@ public partial class TableBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RightBorder RightBorder
-    {
-        get => GetElement<RightBorder>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "right", 4)]
+    public RightBorder RightBorder { get; set; }
     
     /// <summary>
     /// <para> EndBorder.</para>
@@ -18806,11 +18332,8 @@ public partial class TableBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EndBorder EndBorder
-    {
-        get => GetElement<EndBorder>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "end", 5)]
+    public EndBorder EndBorder { get; set; }
     
     /// <summary>
     /// <para> Table Inside Horizontal Edges Border.</para>
@@ -18819,11 +18342,8 @@ public partial class TableBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public InsideHorizontalBorder InsideHorizontalBorder
-    {
-        get => GetElement<InsideHorizontalBorder>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "insideH", 6)]
+    public InsideHorizontalBorder InsideHorizontalBorder { get; set; }
     
     /// <summary>
     /// <para> Table Inside Vertical Edges Border.</para>
@@ -18832,11 +18352,8 @@ public partial class TableBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public InsideVerticalBorder InsideVerticalBorder
-    {
-        get => GetElement<InsideVerticalBorder>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "insideV", 7)]
+    public InsideVerticalBorder InsideVerticalBorder { get; set; }
     
 
 
@@ -18952,13 +18469,7 @@ public partial class TableCellMarginDefault : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "top","left","start","bottom","right","end" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Table Cell Top Margin Default.</para>
@@ -18967,11 +18478,8 @@ public partial class TableCellMarginDefault : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopMargin TopMargin
-    {
-        get => GetElement<TopMargin>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "top", 0)]
+    public TopMargin TopMargin { get; set; }
     
     /// <summary>
     /// <para> Table Cell Left Margin Default.</para>
@@ -18980,11 +18488,8 @@ public partial class TableCellMarginDefault : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellLeftMargin TableCellLeftMargin
-    {
-        get => GetElement<TableCellLeftMargin>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "left", 1)]
+    public TableCellLeftMargin TableCellLeftMargin { get; set; }
     
     /// <summary>
     /// <para> StartMargin.</para>
@@ -18993,11 +18498,8 @@ public partial class TableCellMarginDefault : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StartMargin StartMargin
-    {
-        get => GetElement<StartMargin>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "start", 2)]
+    public StartMargin StartMargin { get; set; }
     
     /// <summary>
     /// <para> Table Cell Bottom Margin Default.</para>
@@ -19006,11 +18508,8 @@ public partial class TableCellMarginDefault : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BottomMargin BottomMargin
-    {
-        get => GetElement<BottomMargin>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "bottom", 3)]
+    public BottomMargin BottomMargin { get; set; }
     
     /// <summary>
     /// <para> Table Cell Right Margin Default.</para>
@@ -19019,11 +18518,8 @@ public partial class TableCellMarginDefault : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellRightMargin TableCellRightMargin
-    {
-        get => GetElement<TableCellRightMargin>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "right", 4)]
+    public TableCellRightMargin TableCellRightMargin { get; set; }
     
     /// <summary>
     /// <para> EndMargin.</para>
@@ -19032,11 +18528,8 @@ public partial class TableCellMarginDefault : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EndMargin EndMargin
-    {
-        get => GetElement<EndMargin>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "end", 5)]
+    public EndMargin EndMargin { get; set; }
     
 
 
@@ -19189,13 +18682,7 @@ public partial class AltChunk : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "altChunkPr" };
-    private static readonly byte[] eleNamespaceIds = { 23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> External Content Import Properties.</para>
@@ -19204,11 +18691,8 @@ public partial class AltChunk : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AltChunkProperties AltChunkProperties
-    {
-        get => GetElement<AltChunkProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "altChunkPr", 0)]
+    public AltChunkProperties AltChunkProperties { get; set; }
     
 
 
@@ -19368,13 +18852,7 @@ public partial class FootnoteProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pos","numFmt","numStart","numRestart" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Footnote Placement.</para>
@@ -19383,11 +18861,8 @@ public partial class FootnoteProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FootnotePosition FootnotePosition
-    {
-        get => GetElement<FootnotePosition>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "pos", 0)]
+    public FootnotePosition FootnotePosition { get; set; }
     
     /// <summary>
     /// <para> Footnote Numbering Format.</para>
@@ -19396,11 +18871,8 @@ public partial class FootnoteProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingFormat NumberingFormat
-    {
-        get => GetElement<NumberingFormat>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "numFmt", 1)]
+    public NumberingFormat NumberingFormat { get; set; }
     
     /// <summary>
     /// <para> Footnote and Endnote Numbering Starting Value.</para>
@@ -19409,11 +18881,8 @@ public partial class FootnoteProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingStart NumberingStart
-    {
-        get => GetElement<NumberingStart>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "numStart", 2)]
+    public NumberingStart NumberingStart { get; set; }
     
     /// <summary>
     /// <para> Footnote and Endnote Numbering Restart Location.</para>
@@ -19422,11 +18891,8 @@ public partial class FootnoteProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingRestart NumberingRestart
-    {
-        get => GetElement<NumberingRestart>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "numRestart", 3)]
+    public NumberingRestart NumberingRestart { get; set; }
     
 
 
@@ -19499,13 +18965,7 @@ public partial class EndnoteProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pos","numFmt","numStart","numRestart" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Endnote Placement.</para>
@@ -19514,11 +18974,8 @@ public partial class EndnoteProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EndnotePosition EndnotePosition
-    {
-        get => GetElement<EndnotePosition>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "pos", 0)]
+    public EndnotePosition EndnotePosition { get; set; }
     
     /// <summary>
     /// <para> Endnote Numbering Format.</para>
@@ -19527,11 +18984,8 @@ public partial class EndnoteProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingFormat NumberingFormat
-    {
-        get => GetElement<NumberingFormat>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "numFmt", 1)]
+    public NumberingFormat NumberingFormat { get; set; }
     
     /// <summary>
     /// <para> Footnote and Endnote Numbering Starting Value.</para>
@@ -19540,11 +18994,8 @@ public partial class EndnoteProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingStart NumberingStart
-    {
-        get => GetElement<NumberingStart>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "numStart", 2)]
+    public NumberingStart NumberingStart { get; set; }
     
     /// <summary>
     /// <para> Footnote and Endnote Numbering Restart Location.</para>
@@ -19553,11 +19004,8 @@ public partial class EndnoteProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingRestart NumberingRestart
-    {
-        get => GetElement<NumberingRestart>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "numRestart", 3)]
+    public NumberingRestart NumberingRestart { get; set; }
     
 
 
@@ -19890,13 +19338,7 @@ public partial class PageBorders : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "top","left","bottom","right" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Top Border.</para>
@@ -19905,11 +19347,8 @@ public partial class PageBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopBorder TopBorder
-    {
-        get => GetElement<TopBorder>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "top", 0)]
+    public TopBorder TopBorder { get; set; }
     
     /// <summary>
     /// <para> Left Border.</para>
@@ -19918,11 +19357,8 @@ public partial class PageBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LeftBorder LeftBorder
-    {
-        get => GetElement<LeftBorder>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "left", 1)]
+    public LeftBorder LeftBorder { get; set; }
     
     /// <summary>
     /// <para> Bottom Border.</para>
@@ -19931,11 +19367,8 @@ public partial class PageBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BottomBorder BottomBorder
-    {
-        get => GetElement<BottomBorder>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "bottom", 2)]
+    public BottomBorder BottomBorder { get; set; }
     
     /// <summary>
     /// <para> Right Border.</para>
@@ -19944,11 +19377,8 @@ public partial class PageBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RightBorder RightBorder
-    {
-        get => GetElement<RightBorder>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "right", 3)]
+    public RightBorder RightBorder { get; set; }
     
 
 
@@ -21476,13 +20906,7 @@ public partial class Settings : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "writeProtection","view","zoom","removePersonalInformation","removeDateAndTime","doNotDisplayPageBoundaries","displayBackgroundShape","printPostScriptOverText","printFractionalCharacterWidth","printFormsData","embedTrueTypeFonts","embedSystemFonts","saveSubsetFonts","saveFormsData","mirrorMargins","alignBordersAndEdges","bordersDoNotSurroundHeader","bordersDoNotSurroundFooter","gutterAtTop","hideSpellingErrors","hideGrammaticalErrors","activeWritingStyle","proofState","formsDesign","attachedTemplate","linkStyles","stylePaneFormatFilter","stylePaneSortMethod","documentType","mailMerge","revisionView","trackRevisions","doNotTrackMoves","doNotTrackFormatting","documentProtection","autoFormatOverride","styleLockTheme","styleLockQFSet","defaultTabStop","autoHyphenation","consecutiveHyphenLimit","hyphenationZone","doNotHyphenateCaps","showEnvelope","summaryLength","clickAndTypeStyle","defaultTableStyle","evenAndOddHeaders","bookFoldRevPrinting","bookFoldPrinting","bookFoldPrintingSheets","drawingGridHorizontalSpacing","drawingGridVerticalSpacing","displayHorizontalDrawingGridEvery","displayVerticalDrawingGridEvery","doNotUseMarginsForDrawingGridOrigin","drawingGridHorizontalOrigin","drawingGridVerticalOrigin","doNotShadeFormData","noPunctuationKerning","characterSpacingControl","printTwoOnOne","strictFirstAndLastChars","noLineBreaksAfter","noLineBreaksBefore","savePreviewPicture","doNotValidateAgainstSchema","saveInvalidXml","ignoreMixedContent","alwaysShowPlaceholderText","doNotDemarcateInvalidXml","saveXmlDataOnly","useXSLTWhenSaving","saveThroughXslt","showXMLTags","alwaysMergeEmptyNamespace","updateFields","hdrShapeDefaults","footnotePr","endnotePr","compat","docVars","rsids","mathPr","uiCompat97To2003","attachedSchema","themeFontLang","clrSchemeMapping","doNotIncludeSubdocsInStats","doNotAutoCompressPictures","forceUpgrade","captions","readModeInkLockDown","schemaLibrary","shapeDefaults","decimalSymbol","listSeparator","docId","discardImageEditingData","defaultImageDpi","conflictMode","chartTrackingRefBased","docId" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,21,23,23,23,23,23,23,23,23,23,25,23,23,23,52,52,52,52,69,69 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Write Protection.</para>
@@ -21491,11 +20915,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WriteProtection WriteProtection
-    {
-        get => GetElement<WriteProtection>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "writeProtection", 0)]
+    public WriteProtection WriteProtection { get; set; }
     
     /// <summary>
     /// <para> Document View Setting.</para>
@@ -21504,11 +20925,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public View View
-    {
-        get => GetElement<View>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "view", 1)]
+    public View View { get; set; }
     
     /// <summary>
     /// <para> Magnification Setting.</para>
@@ -21517,11 +20935,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Zoom Zoom
-    {
-        get => GetElement<Zoom>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "zoom", 2)]
+    public Zoom Zoom { get; set; }
     
     /// <summary>
     /// <para> Remove Personal Information from Document Properties.</para>
@@ -21530,11 +20945,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RemovePersonalInformation RemovePersonalInformation
-    {
-        get => GetElement<RemovePersonalInformation>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "removePersonalInformation", 3)]
+    public RemovePersonalInformation RemovePersonalInformation { get; set; }
     
     /// <summary>
     /// <para> Remove Date and Time from Annotations.</para>
@@ -21543,11 +20955,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RemoveDateAndTime RemoveDateAndTime
-    {
-        get => GetElement<RemoveDateAndTime>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "removeDateAndTime", 4)]
+    public RemoveDateAndTime RemoveDateAndTime { get; set; }
     
     /// <summary>
     /// <para> Do Not Display Visual Boundary For Header/Footer or Between Pages.</para>
@@ -21556,11 +20965,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotDisplayPageBoundaries DoNotDisplayPageBoundaries
-    {
-        get => GetElement<DoNotDisplayPageBoundaries>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "doNotDisplayPageBoundaries", 5)]
+    public DoNotDisplayPageBoundaries DoNotDisplayPageBoundaries { get; set; }
     
     /// <summary>
     /// <para> Display Background Objects When Displaying Document.</para>
@@ -21569,11 +20975,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DisplayBackgroundShape DisplayBackgroundShape
-    {
-        get => GetElement<DisplayBackgroundShape>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "displayBackgroundShape", 6)]
+    public DisplayBackgroundShape DisplayBackgroundShape { get; set; }
     
     /// <summary>
     /// <para> Print PostScript Codes With Document Text.</para>
@@ -21582,11 +20985,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PrintPostScriptOverText PrintPostScriptOverText
-    {
-        get => GetElement<PrintPostScriptOverText>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "printPostScriptOverText", 7)]
+    public PrintPostScriptOverText PrintPostScriptOverText { get; set; }
     
     /// <summary>
     /// <para> Print Fractional Character Widths.</para>
@@ -21595,11 +20995,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PrintFractionalCharacterWidth PrintFractionalCharacterWidth
-    {
-        get => GetElement<PrintFractionalCharacterWidth>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "printFractionalCharacterWidth", 8)]
+    public PrintFractionalCharacterWidth PrintFractionalCharacterWidth { get; set; }
     
     /// <summary>
     /// <para> Only Print Form Field Content.</para>
@@ -21608,11 +21005,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PrintFormsData PrintFormsData
-    {
-        get => GetElement<PrintFormsData>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "printFormsData", 9)]
+    public PrintFormsData PrintFormsData { get; set; }
     
     /// <summary>
     /// <para> Embed TrueType Fonts.</para>
@@ -21621,11 +21015,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EmbedTrueTypeFonts EmbedTrueTypeFonts
-    {
-        get => GetElement<EmbedTrueTypeFonts>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "embedTrueTypeFonts", 10)]
+    public EmbedTrueTypeFonts EmbedTrueTypeFonts { get; set; }
     
     /// <summary>
     /// <para> Embed Common System Fonts.</para>
@@ -21634,11 +21025,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EmbedSystemFonts EmbedSystemFonts
-    {
-        get => GetElement<EmbedSystemFonts>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "embedSystemFonts", 11)]
+    public EmbedSystemFonts EmbedSystemFonts { get; set; }
     
     /// <summary>
     /// <para> Subset Fonts When Embedding.</para>
@@ -21647,11 +21035,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SaveSubsetFonts SaveSubsetFonts
-    {
-        get => GetElement<SaveSubsetFonts>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "saveSubsetFonts", 12)]
+    public SaveSubsetFonts SaveSubsetFonts { get; set; }
     
     /// <summary>
     /// <para> Only Save Form Field Content.</para>
@@ -21660,11 +21045,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SaveFormsData SaveFormsData
-    {
-        get => GetElement<SaveFormsData>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "saveFormsData", 13)]
+    public SaveFormsData SaveFormsData { get; set; }
     
     /// <summary>
     /// <para> Mirror Page Margins.</para>
@@ -21673,11 +21055,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MirrorMargins MirrorMargins
-    {
-        get => GetElement<MirrorMargins>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "mirrorMargins", 14)]
+    public MirrorMargins MirrorMargins { get; set; }
     
     /// <summary>
     /// <para> Align Paragraph and Table Borders with Page Border.</para>
@@ -21686,11 +21065,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AlignBorderAndEdges AlignBorderAndEdges
-    {
-        get => GetElement<AlignBorderAndEdges>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "alignBordersAndEdges", 15)]
+    public AlignBorderAndEdges AlignBorderAndEdges { get; set; }
     
     /// <summary>
     /// <para> Page Border Excludes Header.</para>
@@ -21699,11 +21075,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BordersDoNotSurroundHeader BordersDoNotSurroundHeader
-    {
-        get => GetElement<BordersDoNotSurroundHeader>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(23, "bordersDoNotSurroundHeader", 16)]
+    public BordersDoNotSurroundHeader BordersDoNotSurroundHeader { get; set; }
     
     /// <summary>
     /// <para> Page Border Excludes Footer.</para>
@@ -21712,11 +21085,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BordersDoNotSurroundFooter BordersDoNotSurroundFooter
-    {
-        get => GetElement<BordersDoNotSurroundFooter>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(23, "bordersDoNotSurroundFooter", 17)]
+    public BordersDoNotSurroundFooter BordersDoNotSurroundFooter { get; set; }
     
     /// <summary>
     /// <para> Position Gutter At Top of Page.</para>
@@ -21725,11 +21095,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public GutterAtTop GutterAtTop
-    {
-        get => GetElement<GutterAtTop>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(23, "gutterAtTop", 18)]
+    public GutterAtTop GutterAtTop { get; set; }
     
     /// <summary>
     /// <para> Do Not Display Visual Indication of Spelling Errors.</para>
@@ -21738,11 +21105,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public HideSpellingErrors HideSpellingErrors
-    {
-        get => GetElement<HideSpellingErrors>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(23, "hideSpellingErrors", 19)]
+    public HideSpellingErrors HideSpellingErrors { get; set; }
     
     /// <summary>
     /// <para> Do Not Display Visual Indication of Grammatical Errors.</para>
@@ -21751,11 +21115,8 @@ public partial class Settings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public HideGrammaticalErrors HideGrammaticalErrors
-    {
-        get => GetElement<HideGrammaticalErrors>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(23, "hideGrammaticalErrors", 20)]
+    public HideGrammaticalErrors HideGrammaticalErrors { get; set; }
     
 
 
@@ -21872,13 +21233,7 @@ public partial class WebSettings : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "frameset","divs","encoding","optimizeForBrowser","relyOnVML","allowPNG","doNotRelyOnCSS","doNotSaveAsSingleFile","doNotOrganizeInFolder","doNotUseLongFileNames","pixelsPerInch","targetScreenSz" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Frameset.</para>
@@ -21887,11 +21242,8 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Frameset Frameset
-    {
-        get => GetElement<Frameset>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "frameset", 0)]
+    public Frameset Frameset { get; set; }
     
     /// <summary>
     /// <para> Divs.</para>
@@ -21900,11 +21252,8 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Divs Divs
-    {
-        get => GetElement<Divs>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "divs", 1)]
+    public Divs Divs { get; set; }
     
     /// <summary>
     /// <para> WebPageEncoding.</para>
@@ -21913,11 +21262,8 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WebPageEncoding WebPageEncoding
-    {
-        get => GetElement<WebPageEncoding>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "encoding", 2)]
+    public WebPageEncoding WebPageEncoding { get; set; }
     
     /// <summary>
     /// <para> OptimizeForBrowser.</para>
@@ -21926,11 +21272,8 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public OptimizeForBrowser OptimizeForBrowser
-    {
-        get => GetElement<OptimizeForBrowser>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "optimizeForBrowser", 3)]
+    public OptimizeForBrowser OptimizeForBrowser { get; set; }
     
     /// <summary>
     /// <para> RelyOnVML.</para>
@@ -21939,11 +21282,8 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RelyOnVML RelyOnVML
-    {
-        get => GetElement<RelyOnVML>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "relyOnVML", 4)]
+    public RelyOnVML RelyOnVML { get; set; }
     
     /// <summary>
     /// <para> AllowPNG.</para>
@@ -21952,11 +21292,8 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AllowPNG AllowPNG
-    {
-        get => GetElement<AllowPNG>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "allowPNG", 5)]
+    public AllowPNG AllowPNG { get; set; }
     
     /// <summary>
     /// <para> DoNotRelyOnCSS.</para>
@@ -21965,11 +21302,8 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotRelyOnCSS DoNotRelyOnCSS
-    {
-        get => GetElement<DoNotRelyOnCSS>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "doNotRelyOnCSS", 6)]
+    public DoNotRelyOnCSS DoNotRelyOnCSS { get; set; }
     
     /// <summary>
     /// <para> DoNotSaveAsSingleFile.</para>
@@ -21978,11 +21312,8 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotSaveAsSingleFile DoNotSaveAsSingleFile
-    {
-        get => GetElement<DoNotSaveAsSingleFile>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "doNotSaveAsSingleFile", 7)]
+    public DoNotSaveAsSingleFile DoNotSaveAsSingleFile { get; set; }
     
     /// <summary>
     /// <para> DoNotOrganizeInFolder.</para>
@@ -21991,11 +21322,8 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotOrganizeInFolder DoNotOrganizeInFolder
-    {
-        get => GetElement<DoNotOrganizeInFolder>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "doNotOrganizeInFolder", 8)]
+    public DoNotOrganizeInFolder DoNotOrganizeInFolder { get; set; }
     
     /// <summary>
     /// <para> DoNotUseLongFileNames.</para>
@@ -22004,11 +21332,8 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotUseLongFileNames DoNotUseLongFileNames
-    {
-        get => GetElement<DoNotUseLongFileNames>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "doNotUseLongFileNames", 9)]
+    public DoNotUseLongFileNames DoNotUseLongFileNames { get; set; }
     
     /// <summary>
     /// <para> PixelsPerInch.</para>
@@ -22017,11 +21342,8 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PixelsPerInch PixelsPerInch
-    {
-        get => GetElement<PixelsPerInch>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "pixelsPerInch", 10)]
+    public PixelsPerInch PixelsPerInch { get; set; }
     
     /// <summary>
     /// <para> TargetScreenSize.</para>
@@ -22030,11 +21352,8 @@ public partial class WebSettings : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TargetScreenSize TargetScreenSize
-    {
-        get => GetElement<TargetScreenSize>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "targetScreenSz", 11)]
+    public TargetScreenSize TargetScreenSize { get; set; }
     
 
 
@@ -22295,13 +21614,7 @@ public partial class Styles : OpenXmlPartRootElement
      
     
     
-        private static readonly string[] eleTagNames = { "docDefaults","latentStyles","style" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Document Default Paragraph and Run Properties.</para>
@@ -22310,11 +21623,8 @@ public partial class Styles : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocDefaults DocDefaults
-    {
-        get => GetElement<DocDefaults>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "docDefaults", 0)]
+    public DocDefaults DocDefaults { get; set; }
     
     /// <summary>
     /// <para> Latent Style Information.</para>
@@ -22323,11 +21633,8 @@ public partial class Styles : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LatentStyles LatentStyles
-    {
-        get => GetElement<LatentStyles>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "latentStyles", 1)]
+    public LatentStyles LatentStyles { get; set; }
     
 
 
@@ -22432,13 +21739,7 @@ public partial class Document : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "background","body" };
-    private static readonly byte[] eleNamespaceIds = { 23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Document Background.</para>
@@ -22447,11 +21748,8 @@ public partial class Document : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocumentBackground DocumentBackground
-    {
-        get => GetElement<DocumentBackground>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "background", 0)]
+    public DocumentBackground DocumentBackground { get; set; }
     
     /// <summary>
     /// <para> Body.</para>
@@ -22460,11 +21758,8 @@ public partial class Document : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Body Body
-    {
-        get => GetElement<Body>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "body", 1)]
+    public Body Body { get; set; }
     
 
 
@@ -22561,13 +21856,7 @@ public partial class GlossaryDocument : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "background","docParts" };
-    private static readonly byte[] eleNamespaceIds = { 23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Document Background.</para>
@@ -22576,11 +21865,8 @@ public partial class GlossaryDocument : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocumentBackground DocumentBackground
-    {
-        get => GetElement<DocumentBackground>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "background", 0)]
+    public DocumentBackground DocumentBackground { get; set; }
     
     /// <summary>
     /// <para> List of Glossary Document Entries.</para>
@@ -22589,11 +21875,8 @@ public partial class GlossaryDocument : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocParts DocParts
-    {
-        get => GetElement<DocParts>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "docParts", 1)]
+    public DocParts DocParts { get; set; }
     
 
 
@@ -22676,13 +21959,7 @@ public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tblW","jc","tblCellSpacing","tblInd","tblBorders","shd","tblLayout","tblCellMar","tblLook" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Preferred Table Width Exception.</para>
@@ -22691,11 +21968,8 @@ public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableWidth TableWidth
-    {
-        get => GetElement<TableWidth>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "tblW", 0)]
+    public TableWidth TableWidth { get; set; }
     
     /// <summary>
     /// <para> Table Alignment Exception.</para>
@@ -22704,11 +21978,8 @@ public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableJustification TableJustification
-    {
-        get => GetElement<TableJustification>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "jc", 1)]
+    public TableJustification TableJustification { get; set; }
     
     /// <summary>
     /// <para> Table Cell Spacing Exception.</para>
@@ -22717,11 +21988,8 @@ public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellSpacing TableCellSpacing
-    {
-        get => GetElement<TableCellSpacing>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "tblCellSpacing", 2)]
+    public TableCellSpacing TableCellSpacing { get; set; }
     
     /// <summary>
     /// <para> Table Indent from Leading Margin Exception.</para>
@@ -22730,11 +21998,8 @@ public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableIndentation TableIndentation
-    {
-        get => GetElement<TableIndentation>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "tblInd", 3)]
+    public TableIndentation TableIndentation { get; set; }
     
     /// <summary>
     /// <para> Table Borders Exceptions.</para>
@@ -22743,11 +22008,8 @@ public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableBorders TableBorders
-    {
-        get => GetElement<TableBorders>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "tblBorders", 4)]
+    public TableBorders TableBorders { get; set; }
     
     /// <summary>
     /// <para> Table Shading Exception.</para>
@@ -22756,11 +22018,8 @@ public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "shd", 5)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> Table Layout Exception.</para>
@@ -22769,11 +22028,8 @@ public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableLayout TableLayout
-    {
-        get => GetElement<TableLayout>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "tblLayout", 6)]
+    public TableLayout TableLayout { get; set; }
     
     /// <summary>
     /// <para> Table Cell Margin Exceptions.</para>
@@ -22782,11 +22038,8 @@ public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellMarginDefault TableCellMarginDefault
-    {
-        get => GetElement<TableCellMarginDefault>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "tblCellMar", 7)]
+    public TableCellMarginDefault TableCellMarginDefault { get; set; }
     
     /// <summary>
     /// <para> Table Style Conditional Formatting Settings Exception.</para>
@@ -22795,11 +22048,8 @@ public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableLook TableLook
-    {
-        get => GetElement<TableLook>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "tblLook", 8)]
+    public TableLook TableLook { get; set; }
     
 
 
@@ -22896,13 +22146,7 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cnfStyle","tcW","gridSpan","hMerge","vMerge","tcBorders","shd","noWrap","tcMar","textDirection","tcFitText","vAlign","hideMark","cellIns","cellDel","cellMerge" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ConditionalFormatStyle.</para>
@@ -22911,11 +22155,8 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ConditionalFormatStyle ConditionalFormatStyle
-    {
-        get => GetElement<ConditionalFormatStyle>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "cnfStyle", 0)]
+    public ConditionalFormatStyle ConditionalFormatStyle { get; set; }
     
     /// <summary>
     /// <para> TableCellWidth.</para>
@@ -22924,11 +22165,8 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellWidth TableCellWidth
-    {
-        get => GetElement<TableCellWidth>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "tcW", 1)]
+    public TableCellWidth TableCellWidth { get; set; }
     
     /// <summary>
     /// <para> GridSpan.</para>
@@ -22937,11 +22175,8 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public GridSpan GridSpan
-    {
-        get => GetElement<GridSpan>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "gridSpan", 2)]
+    public GridSpan GridSpan { get; set; }
     
     /// <summary>
     /// <para> HorizontalMerge.</para>
@@ -22950,11 +22185,8 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public HorizontalMerge HorizontalMerge
-    {
-        get => GetElement<HorizontalMerge>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "hMerge", 3)]
+    public HorizontalMerge HorizontalMerge { get; set; }
     
     /// <summary>
     /// <para> VerticalMerge.</para>
@@ -22963,11 +22195,8 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public VerticalMerge VerticalMerge
-    {
-        get => GetElement<VerticalMerge>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "vMerge", 4)]
+    public VerticalMerge VerticalMerge { get; set; }
     
     /// <summary>
     /// <para> TableCellBorders.</para>
@@ -22976,11 +22205,8 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellBorders TableCellBorders
-    {
-        get => GetElement<TableCellBorders>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "tcBorders", 5)]
+    public TableCellBorders TableCellBorders { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -22989,11 +22215,8 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "shd", 6)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> NoWrap.</para>
@@ -23002,11 +22225,8 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoWrap NoWrap
-    {
-        get => GetElement<NoWrap>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "noWrap", 7)]
+    public NoWrap NoWrap { get; set; }
     
     /// <summary>
     /// <para> TableCellMargin.</para>
@@ -23015,11 +22235,8 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellMargin TableCellMargin
-    {
-        get => GetElement<TableCellMargin>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "tcMar", 8)]
+    public TableCellMargin TableCellMargin { get; set; }
     
     /// <summary>
     /// <para> TextDirection.</para>
@@ -23028,11 +22245,8 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextDirection TextDirection
-    {
-        get => GetElement<TextDirection>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "textDirection", 9)]
+    public TextDirection TextDirection { get; set; }
     
     /// <summary>
     /// <para> TableCellFitText.</para>
@@ -23041,11 +22255,8 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellFitText TableCellFitText
-    {
-        get => GetElement<TableCellFitText>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "tcFitText", 10)]
+    public TableCellFitText TableCellFitText { get; set; }
     
     /// <summary>
     /// <para> TableCellVerticalAlignment.</para>
@@ -23054,11 +22265,8 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellVerticalAlignment TableCellVerticalAlignment
-    {
-        get => GetElement<TableCellVerticalAlignment>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "vAlign", 11)]
+    public TableCellVerticalAlignment TableCellVerticalAlignment { get; set; }
     
     /// <summary>
     /// <para> HideMark.</para>
@@ -23067,11 +22275,8 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public HideMark HideMark
-    {
-        get => GetElement<HideMark>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "hideMark", 12)]
+    public HideMark HideMark { get; set; }
     
 
 
@@ -23252,13 +22457,7 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tblStyle","tblpPr","tblOverlap","bidiVisual","tblW","jc","tblCellSpacing","tblInd","tblBorders","shd","tblLayout","tblCellMar","tblLook","tblCaption","tblDescription" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> TableStyle.</para>
@@ -23267,11 +22466,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableStyle TableStyle
-    {
-        get => GetElement<TableStyle>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "tblStyle", 0)]
+    public TableStyle TableStyle { get; set; }
     
     /// <summary>
     /// <para> TablePositionProperties.</para>
@@ -23280,11 +22476,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TablePositionProperties TablePositionProperties
-    {
-        get => GetElement<TablePositionProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "tblpPr", 1)]
+    public TablePositionProperties TablePositionProperties { get; set; }
     
     /// <summary>
     /// <para> TableOverlap.</para>
@@ -23293,11 +22486,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableOverlap TableOverlap
-    {
-        get => GetElement<TableOverlap>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "tblOverlap", 2)]
+    public TableOverlap TableOverlap { get; set; }
     
     /// <summary>
     /// <para> BiDiVisual.</para>
@@ -23306,11 +22496,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BiDiVisual BiDiVisual
-    {
-        get => GetElement<BiDiVisual>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "bidiVisual", 3)]
+    public BiDiVisual BiDiVisual { get; set; }
     
     /// <summary>
     /// <para> TableWidth.</para>
@@ -23319,11 +22506,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableWidth TableWidth
-    {
-        get => GetElement<TableWidth>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "tblW", 4)]
+    public TableWidth TableWidth { get; set; }
     
     /// <summary>
     /// <para> TableJustification.</para>
@@ -23332,11 +22516,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableJustification TableJustification
-    {
-        get => GetElement<TableJustification>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "jc", 5)]
+    public TableJustification TableJustification { get; set; }
     
     /// <summary>
     /// <para> TableCellSpacing.</para>
@@ -23345,11 +22526,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellSpacing TableCellSpacing
-    {
-        get => GetElement<TableCellSpacing>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "tblCellSpacing", 6)]
+    public TableCellSpacing TableCellSpacing { get; set; }
     
     /// <summary>
     /// <para> TableIndentation.</para>
@@ -23358,11 +22536,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableIndentation TableIndentation
-    {
-        get => GetElement<TableIndentation>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "tblInd", 7)]
+    public TableIndentation TableIndentation { get; set; }
     
     /// <summary>
     /// <para> TableBorders.</para>
@@ -23371,11 +22546,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableBorders TableBorders
-    {
-        get => GetElement<TableBorders>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "tblBorders", 8)]
+    public TableBorders TableBorders { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -23384,11 +22556,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "shd", 9)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> TableLayout.</para>
@@ -23397,11 +22566,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableLayout TableLayout
-    {
-        get => GetElement<TableLayout>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "tblLayout", 10)]
+    public TableLayout TableLayout { get; set; }
     
     /// <summary>
     /// <para> TableCellMarginDefault.</para>
@@ -23410,11 +22576,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellMarginDefault TableCellMarginDefault
-    {
-        get => GetElement<TableCellMarginDefault>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "tblCellMar", 11)]
+    public TableCellMarginDefault TableCellMarginDefault { get; set; }
     
     /// <summary>
     /// <para> TableLook.</para>
@@ -23423,11 +22586,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableLook TableLook
-    {
-        get => GetElement<TableLook>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "tblLook", 12)]
+    public TableLook TableLook { get; set; }
     
     /// <summary>
     /// <para> TableCaption.</para>
@@ -23436,11 +22596,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCaption TableCaption
-    {
-        get => GetElement<TableCaption>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "tblCaption", 13)]
+    public TableCaption TableCaption { get; set; }
     
     /// <summary>
     /// <para> TableDescription.</para>
@@ -23449,11 +22606,8 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableDescription TableDescription
-    {
-        get => GetElement<TableDescription>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "tblDescription", 14)]
+    public TableDescription TableDescription { get; set; }
     
 
 
@@ -23590,13 +22744,7 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "footnotePr","endnotePr","type","pgSz","pgMar","paperSrc","pgBorders","lnNumType","pgNumType","cols","formProt","vAlign","noEndnote","titlePg","textDirection","bidi","rtlGutter","docGrid","printerSettings","footnoteColumns" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,69 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> FootnoteProperties.</para>
@@ -23605,11 +22753,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FootnoteProperties FootnoteProperties
-    {
-        get => GetElement<FootnoteProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "footnotePr", 0)]
+    public FootnoteProperties FootnoteProperties { get; set; }
     
     /// <summary>
     /// <para> EndnoteProperties.</para>
@@ -23618,11 +22763,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EndnoteProperties EndnoteProperties
-    {
-        get => GetElement<EndnoteProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "endnotePr", 1)]
+    public EndnoteProperties EndnoteProperties { get; set; }
     
     /// <summary>
     /// <para> SectionType.</para>
@@ -23631,11 +22773,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SectionType SectionType
-    {
-        get => GetElement<SectionType>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "type", 2)]
+    public SectionType SectionType { get; set; }
     
     /// <summary>
     /// <para> PageSize.</para>
@@ -23644,11 +22783,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PageSize PageSize
-    {
-        get => GetElement<PageSize>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "pgSz", 3)]
+    public PageSize PageSize { get; set; }
     
     /// <summary>
     /// <para> PageMargin.</para>
@@ -23657,11 +22793,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PageMargin PageMargin
-    {
-        get => GetElement<PageMargin>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "pgMar", 4)]
+    public PageMargin PageMargin { get; set; }
     
     /// <summary>
     /// <para> PaperSource.</para>
@@ -23670,11 +22803,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PaperSource PaperSource
-    {
-        get => GetElement<PaperSource>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "paperSrc", 5)]
+    public PaperSource PaperSource { get; set; }
     
     /// <summary>
     /// <para> PageBorders.</para>
@@ -23683,11 +22813,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PageBorders PageBorders
-    {
-        get => GetElement<PageBorders>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "pgBorders", 6)]
+    public PageBorders PageBorders { get; set; }
     
     /// <summary>
     /// <para> LineNumberType.</para>
@@ -23696,11 +22823,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LineNumberType LineNumberType
-    {
-        get => GetElement<LineNumberType>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "lnNumType", 7)]
+    public LineNumberType LineNumberType { get; set; }
     
     /// <summary>
     /// <para> PageNumberType.</para>
@@ -23709,11 +22833,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PageNumberType PageNumberType
-    {
-        get => GetElement<PageNumberType>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "pgNumType", 8)]
+    public PageNumberType PageNumberType { get; set; }
     
     /// <summary>
     /// <para> Columns.</para>
@@ -23722,11 +22843,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Columns Columns
-    {
-        get => GetElement<Columns>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "cols", 9)]
+    public Columns Columns { get; set; }
     
     /// <summary>
     /// <para> FormProtection.</para>
@@ -23735,11 +22853,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FormProtection FormProtection
-    {
-        get => GetElement<FormProtection>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "formProt", 10)]
+    public FormProtection FormProtection { get; set; }
     
     /// <summary>
     /// <para> VerticalTextAlignmentOnPage.</para>
@@ -23748,11 +22863,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public VerticalTextAlignmentOnPage VerticalTextAlignmentOnPage
-    {
-        get => GetElement<VerticalTextAlignmentOnPage>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "vAlign", 11)]
+    public VerticalTextAlignmentOnPage VerticalTextAlignmentOnPage { get; set; }
     
     /// <summary>
     /// <para> NoEndnote.</para>
@@ -23761,11 +22873,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoEndnote NoEndnote
-    {
-        get => GetElement<NoEndnote>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "noEndnote", 12)]
+    public NoEndnote NoEndnote { get; set; }
     
     /// <summary>
     /// <para> TitlePage.</para>
@@ -23774,11 +22883,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TitlePage TitlePage
-    {
-        get => GetElement<TitlePage>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "titlePg", 13)]
+    public TitlePage TitlePage { get; set; }
     
     /// <summary>
     /// <para> TextDirection.</para>
@@ -23787,11 +22893,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextDirection TextDirection
-    {
-        get => GetElement<TextDirection>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "textDirection", 14)]
+    public TextDirection TextDirection { get; set; }
     
     /// <summary>
     /// <para> BiDi.</para>
@@ -23800,11 +22903,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BiDi BiDi
-    {
-        get => GetElement<BiDi>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "bidi", 15)]
+    public BiDi BiDi { get; set; }
     
     /// <summary>
     /// <para> GutterOnRight.</para>
@@ -23813,11 +22913,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public GutterOnRight GutterOnRight
-    {
-        get => GetElement<GutterOnRight>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(23, "rtlGutter", 16)]
+    public GutterOnRight GutterOnRight { get; set; }
     
     /// <summary>
     /// <para> DocGrid.</para>
@@ -23826,11 +22923,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocGrid DocGrid
-    {
-        get => GetElement<DocGrid>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(23, "docGrid", 17)]
+    public DocGrid DocGrid { get; set; }
     
     /// <summary>
     /// <para> PrinterSettingsReference.</para>
@@ -23839,11 +22933,8 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PrinterSettingsReference PrinterSettingsReference
-    {
-        get => GetElement<PrinterSettingsReference>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(23, "printerSettings", 18)]
+    public PrinterSettingsReference PrinterSettingsReference { get; set; }
     
     /// <summary>
     /// <para> FootnoteColumns, this property is only available in Office2013.</para>
@@ -23852,12 +22943,9 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
     /// </remark>
+	[SchemaAttr(69, "footnoteColumns", 19)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
-    public DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns FootnoteColumns
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>(19);
-        set => SetElement(19, value);
-    }
+    public DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns FootnoteColumns { get; set; }
     
 
 
@@ -23988,13 +23076,7 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pStyle","keepNext","keepLines","pageBreakBefore","framePr","widowControl","numPr","suppressLineNumbers","pBdr","shd","tabs","suppressAutoHyphens","kinsoku","wordWrap","overflowPunct","topLinePunct","autoSpaceDE","autoSpaceDN","bidi","adjustRightInd","snapToGrid","spacing","ind","contextualSpacing","mirrorIndents","suppressOverlap","jc","textDirection","textAlignment","textboxTightWrap","outlineLvl","divId","cnfStyle" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ParagraphStyleId.</para>
@@ -24003,11 +23085,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphStyleId ParagraphStyleId
-    {
-        get => GetElement<ParagraphStyleId>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "pStyle", 0)]
+    public ParagraphStyleId ParagraphStyleId { get; set; }
     
     /// <summary>
     /// <para> KeepNext.</para>
@@ -24016,11 +23095,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public KeepNext KeepNext
-    {
-        get => GetElement<KeepNext>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "keepNext", 1)]
+    public KeepNext KeepNext { get; set; }
     
     /// <summary>
     /// <para> KeepLines.</para>
@@ -24029,11 +23105,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public KeepLines KeepLines
-    {
-        get => GetElement<KeepLines>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "keepLines", 2)]
+    public KeepLines KeepLines { get; set; }
     
     /// <summary>
     /// <para> PageBreakBefore.</para>
@@ -24042,11 +23115,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PageBreakBefore PageBreakBefore
-    {
-        get => GetElement<PageBreakBefore>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "pageBreakBefore", 3)]
+    public PageBreakBefore PageBreakBefore { get; set; }
     
     /// <summary>
     /// <para> FrameProperties.</para>
@@ -24055,11 +23125,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FrameProperties FrameProperties
-    {
-        get => GetElement<FrameProperties>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "framePr", 4)]
+    public FrameProperties FrameProperties { get; set; }
     
     /// <summary>
     /// <para> WidowControl.</para>
@@ -24068,11 +23135,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WidowControl WidowControl
-    {
-        get => GetElement<WidowControl>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "widowControl", 5)]
+    public WidowControl WidowControl { get; set; }
     
     /// <summary>
     /// <para> NumberingProperties.</para>
@@ -24081,11 +23145,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingProperties NumberingProperties
-    {
-        get => GetElement<NumberingProperties>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "numPr", 6)]
+    public NumberingProperties NumberingProperties { get; set; }
     
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
@@ -24094,11 +23155,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressLineNumbers SuppressLineNumbers
-    {
-        get => GetElement<SuppressLineNumbers>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "suppressLineNumbers", 7)]
+    public SuppressLineNumbers SuppressLineNumbers { get; set; }
     
     /// <summary>
     /// <para> ParagraphBorders.</para>
@@ -24107,11 +23165,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphBorders ParagraphBorders
-    {
-        get => GetElement<ParagraphBorders>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "pBdr", 8)]
+    public ParagraphBorders ParagraphBorders { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -24120,11 +23175,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "shd", 9)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> Tabs.</para>
@@ -24133,11 +23185,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Tabs Tabs
-    {
-        get => GetElement<Tabs>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "tabs", 10)]
+    public Tabs Tabs { get; set; }
     
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
@@ -24146,11 +23195,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressAutoHyphens SuppressAutoHyphens
-    {
-        get => GetElement<SuppressAutoHyphens>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "suppressAutoHyphens", 11)]
+    public SuppressAutoHyphens SuppressAutoHyphens { get; set; }
     
     /// <summary>
     /// <para> Kinsoku.</para>
@@ -24159,11 +23205,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Kinsoku Kinsoku
-    {
-        get => GetElement<Kinsoku>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "kinsoku", 12)]
+    public Kinsoku Kinsoku { get; set; }
     
     /// <summary>
     /// <para> WordWrap.</para>
@@ -24172,11 +23215,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WordWrap WordWrap
-    {
-        get => GetElement<WordWrap>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "wordWrap", 13)]
+    public WordWrap WordWrap { get; set; }
     
     /// <summary>
     /// <para> OverflowPunctuation.</para>
@@ -24185,11 +23225,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public OverflowPunctuation OverflowPunctuation
-    {
-        get => GetElement<OverflowPunctuation>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "overflowPunct", 14)]
+    public OverflowPunctuation OverflowPunctuation { get; set; }
     
     /// <summary>
     /// <para> TopLinePunctuation.</para>
@@ -24198,11 +23235,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopLinePunctuation TopLinePunctuation
-    {
-        get => GetElement<TopLinePunctuation>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "topLinePunct", 15)]
+    public TopLinePunctuation TopLinePunctuation { get; set; }
     
     /// <summary>
     /// <para> AutoSpaceDE.</para>
@@ -24211,11 +23245,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AutoSpaceDE AutoSpaceDE
-    {
-        get => GetElement<AutoSpaceDE>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(23, "autoSpaceDE", 16)]
+    public AutoSpaceDE AutoSpaceDE { get; set; }
     
     /// <summary>
     /// <para> AutoSpaceDN.</para>
@@ -24224,11 +23255,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AutoSpaceDN AutoSpaceDN
-    {
-        get => GetElement<AutoSpaceDN>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(23, "autoSpaceDN", 17)]
+    public AutoSpaceDN AutoSpaceDN { get; set; }
     
     /// <summary>
     /// <para> BiDi.</para>
@@ -24237,11 +23265,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BiDi BiDi
-    {
-        get => GetElement<BiDi>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(23, "bidi", 18)]
+    public BiDi BiDi { get; set; }
     
     /// <summary>
     /// <para> AdjustRightIndent.</para>
@@ -24250,11 +23275,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AdjustRightIndent AdjustRightIndent
-    {
-        get => GetElement<AdjustRightIndent>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(23, "adjustRightInd", 19)]
+    public AdjustRightIndent AdjustRightIndent { get; set; }
     
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -24263,11 +23285,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SnapToGrid SnapToGrid
-    {
-        get => GetElement<SnapToGrid>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(23, "snapToGrid", 20)]
+    public SnapToGrid SnapToGrid { get; set; }
     
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
@@ -24276,11 +23295,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SpacingBetweenLines SpacingBetweenLines
-    {
-        get => GetElement<SpacingBetweenLines>(21);
-        set => SetElement(21, value);
-    }
+	[SchemaAttr(23, "spacing", 21)]
+    public SpacingBetweenLines SpacingBetweenLines { get; set; }
     
     /// <summary>
     /// <para> Indentation.</para>
@@ -24289,11 +23305,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Indentation Indentation
-    {
-        get => GetElement<Indentation>(22);
-        set => SetElement(22, value);
-    }
+	[SchemaAttr(23, "ind", 22)]
+    public Indentation Indentation { get; set; }
     
     /// <summary>
     /// <para> ContextualSpacing.</para>
@@ -24302,11 +23315,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ContextualSpacing ContextualSpacing
-    {
-        get => GetElement<ContextualSpacing>(23);
-        set => SetElement(23, value);
-    }
+	[SchemaAttr(23, "contextualSpacing", 23)]
+    public ContextualSpacing ContextualSpacing { get; set; }
     
     /// <summary>
     /// <para> MirrorIndents.</para>
@@ -24315,11 +23325,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MirrorIndents MirrorIndents
-    {
-        get => GetElement<MirrorIndents>(24);
-        set => SetElement(24, value);
-    }
+	[SchemaAttr(23, "mirrorIndents", 24)]
+    public MirrorIndents MirrorIndents { get; set; }
     
     /// <summary>
     /// <para> SuppressOverlap.</para>
@@ -24328,11 +23335,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressOverlap SuppressOverlap
-    {
-        get => GetElement<SuppressOverlap>(25);
-        set => SetElement(25, value);
-    }
+	[SchemaAttr(23, "suppressOverlap", 25)]
+    public SuppressOverlap SuppressOverlap { get; set; }
     
     /// <summary>
     /// <para> Justification.</para>
@@ -24341,11 +23345,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Justification Justification
-    {
-        get => GetElement<Justification>(26);
-        set => SetElement(26, value);
-    }
+	[SchemaAttr(23, "jc", 26)]
+    public Justification Justification { get; set; }
     
     /// <summary>
     /// <para> TextDirection.</para>
@@ -24354,11 +23355,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextDirection TextDirection
-    {
-        get => GetElement<TextDirection>(27);
-        set => SetElement(27, value);
-    }
+	[SchemaAttr(23, "textDirection", 27)]
+    public TextDirection TextDirection { get; set; }
     
     /// <summary>
     /// <para> TextAlignment.</para>
@@ -24367,11 +23365,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextAlignment TextAlignment
-    {
-        get => GetElement<TextAlignment>(28);
-        set => SetElement(28, value);
-    }
+	[SchemaAttr(23, "textAlignment", 28)]
+    public TextAlignment TextAlignment { get; set; }
     
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
@@ -24380,11 +23375,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextBoxTightWrap TextBoxTightWrap
-    {
-        get => GetElement<TextBoxTightWrap>(29);
-        set => SetElement(29, value);
-    }
+	[SchemaAttr(23, "textboxTightWrap", 29)]
+    public TextBoxTightWrap TextBoxTightWrap { get; set; }
     
     /// <summary>
     /// <para> OutlineLevel.</para>
@@ -24393,11 +23385,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public OutlineLevel OutlineLevel
-    {
-        get => GetElement<OutlineLevel>(30);
-        set => SetElement(30, value);
-    }
+	[SchemaAttr(23, "outlineLvl", 30)]
+    public OutlineLevel OutlineLevel { get; set; }
     
     /// <summary>
     /// <para> DivId.</para>
@@ -24406,11 +23395,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DivId DivId
-    {
-        get => GetElement<DivId>(31);
-        set => SetElement(31, value);
-    }
+	[SchemaAttr(23, "divId", 31)]
+    public DivId DivId { get; set; }
     
     /// <summary>
     /// <para> ConditionalFormatStyle.</para>
@@ -24419,11 +23405,8 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ConditionalFormatStyle ConditionalFormatStyle
-    {
-        get => GetElement<ConditionalFormatStyle>(32);
-        set => SetElement(32, value);
-    }
+	[SchemaAttr(23, "cnfStyle", 32)]
+    public ConditionalFormatStyle ConditionalFormatStyle { get; set; }
     
 
 
@@ -24764,13 +23747,7 @@ public partial class PreviousParagraphMarkRunProperties : OpenXmlCompositeElemen
      
     
     
-        private static readonly string[] eleTagNames = { "ins","del","moveFrom","moveTo","conflictIns","conflictDel","rStyle","rFonts","b","bCs","i","iCs","caps","smallCaps","strike","dstrike","outline","shadow","emboss","imprint","noProof","snapToGrid","vanish","webHidden","color","spacing","w","kern","position","sz","szCs","highlight","u","effect","bdr","shd","fitText","vertAlign","rtl","cs","em","lang","eastAsianLayout","specVanish","glow","shadow","reflection","textOutline","textFill","scene3d","props3d","ligatures","numForm","numSpacing","stylisticSets","cntxtAlts","oMath" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,52,52,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,52,52,52,52,52,52,52,52,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Inserted Paragraph.</para>
@@ -24779,11 +23756,8 @@ public partial class PreviousParagraphMarkRunProperties : OpenXmlCompositeElemen
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Inserted Inserted
-    {
-        get => GetElement<Inserted>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "ins", 0)]
+    public Inserted Inserted { get; set; }
     
     /// <summary>
     /// <para> Deleted Paragraph.</para>
@@ -24792,11 +23766,8 @@ public partial class PreviousParagraphMarkRunProperties : OpenXmlCompositeElemen
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Deleted Deleted
-    {
-        get => GetElement<Deleted>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "del", 1)]
+    public Deleted Deleted { get; set; }
     
     /// <summary>
     /// <para> Move Source Paragraph.</para>
@@ -24805,11 +23776,8 @@ public partial class PreviousParagraphMarkRunProperties : OpenXmlCompositeElemen
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MoveFrom MoveFrom
-    {
-        get => GetElement<MoveFrom>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "moveFrom", 2)]
+    public MoveFrom MoveFrom { get; set; }
     
     /// <summary>
     /// <para> Move Destination Paragraph.</para>
@@ -24818,11 +23786,8 @@ public partial class PreviousParagraphMarkRunProperties : OpenXmlCompositeElemen
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MoveTo MoveTo
-    {
-        get => GetElement<MoveTo>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "moveTo", 3)]
+    public MoveTo MoveTo { get; set; }
     
 
 
@@ -25260,13 +24225,7 @@ public partial class ParagraphMarkRunProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ins","del","moveFrom","moveTo","conflictIns","conflictDel","rStyle","rFonts","b","bCs","i","iCs","caps","smallCaps","strike","dstrike","outline","shadow","emboss","imprint","noProof","snapToGrid","vanish","webHidden","color","spacing","w","kern","position","sz","szCs","highlight","u","effect","bdr","shd","fitText","vertAlign","rtl","cs","em","lang","eastAsianLayout","specVanish","glow","shadow","reflection","textOutline","textFill","scene3d","props3d","ligatures","numForm","numSpacing","stylisticSets","cntxtAlts","oMath","rPrChange" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,52,52,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,52,52,52,52,52,52,52,52,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Inserted Paragraph.</para>
@@ -25275,11 +24234,8 @@ public partial class ParagraphMarkRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Inserted Inserted
-    {
-        get => GetElement<Inserted>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "ins", 0)]
+    public Inserted Inserted { get; set; }
     
     /// <summary>
     /// <para> Deleted Paragraph.</para>
@@ -25288,11 +24244,8 @@ public partial class ParagraphMarkRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Deleted Deleted
-    {
-        get => GetElement<Deleted>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "del", 1)]
+    public Deleted Deleted { get; set; }
     
     /// <summary>
     /// <para> Move Source Paragraph.</para>
@@ -25301,11 +24254,8 @@ public partial class ParagraphMarkRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MoveFrom MoveFrom
-    {
-        get => GetElement<MoveFrom>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "moveFrom", 2)]
+    public MoveFrom MoveFrom { get; set; }
     
     /// <summary>
     /// <para> Move Destination Paragraph.</para>
@@ -25314,11 +24264,8 @@ public partial class ParagraphMarkRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MoveTo MoveTo
-    {
-        get => GetElement<MoveTo>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "moveTo", 3)]
+    public MoveTo MoveTo { get; set; }
     
 
 
@@ -25934,13 +24881,7 @@ public partial class DropDownListFormField : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "result","default","listEntry" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Drop-Down List Selection.</para>
@@ -25949,11 +24890,8 @@ public partial class DropDownListFormField : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DropDownListSelection DropDownListSelection
-    {
-        get => GetElement<DropDownListSelection>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "result", 0)]
+    public DropDownListSelection DropDownListSelection { get; set; }
     
     /// <summary>
     /// <para> Default Drop-Down List Item Index.</para>
@@ -25962,11 +24900,8 @@ public partial class DropDownListFormField : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DefaultDropDownListItemIndex DefaultDropDownListItemIndex
-    {
-        get => GetElement<DefaultDropDownListItemIndex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "default", 1)]
+    public DefaultDropDownListItemIndex DefaultDropDownListItemIndex { get; set; }
     
 
 
@@ -26039,13 +24974,7 @@ public partial class TextInput : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "type","default","maxLength","format" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Text Box Form Field Type.</para>
@@ -26054,11 +24983,8 @@ public partial class TextInput : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextBoxFormFieldType TextBoxFormFieldType
-    {
-        get => GetElement<TextBoxFormFieldType>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "type", 0)]
+    public TextBoxFormFieldType TextBoxFormFieldType { get; set; }
     
     /// <summary>
     /// <para> Default Text Box Form Field String.</para>
@@ -26067,11 +24993,8 @@ public partial class TextInput : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DefaultTextBoxFormFieldString DefaultTextBoxFormFieldString
-    {
-        get => GetElement<DefaultTextBoxFormFieldString>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "default", 1)]
+    public DefaultTextBoxFormFieldString DefaultTextBoxFormFieldString { get; set; }
     
     /// <summary>
     /// <para> Text Box Form Field Maximum Length.</para>
@@ -26080,11 +25003,8 @@ public partial class TextInput : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MaxLength MaxLength
-    {
-        get => GetElement<MaxLength>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "maxLength", 2)]
+    public MaxLength MaxLength { get; set; }
     
     /// <summary>
     /// <para> Text Box Form Field Formatting.</para>
@@ -26093,11 +25013,8 @@ public partial class TextInput : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Format Format
-    {
-        get => GetElement<Format>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "format", 3)]
+    public Format Format { get; set; }
     
 
 
@@ -26491,13 +25408,7 @@ public partial class SectionPropertiesChange : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sectPr" };
-    private static readonly byte[] eleNamespaceIds = { 23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Previous Section Properties.</para>
@@ -26506,11 +25417,8 @@ public partial class SectionPropertiesChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PreviousSectionProperties PreviousSectionProperties
-    {
-        get => GetElement<PreviousSectionProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "sectPr", 0)]
+    public PreviousSectionProperties PreviousSectionProperties { get; set; }
     
 
 
@@ -26601,13 +25509,7 @@ public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rPr" };
-    private static readonly byte[] eleNamespaceIds = { 23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Previous Run Properties for the Paragraph Mark.</para>
@@ -26616,11 +25518,8 @@ public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PreviousParagraphMarkRunProperties PreviousParagraphMarkRunProperties
-    {
-        get => GetElement<PreviousParagraphMarkRunProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "rPr", 0)]
+    public PreviousParagraphMarkRunProperties PreviousParagraphMarkRunProperties { get; set; }
     
 
 
@@ -26687,13 +25586,7 @@ public partial class AltChunkProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "matchSrc" };
-    private static readonly byte[] eleNamespaceIds = { 23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Keep Source Formatting on Import.</para>
@@ -26702,11 +25595,8 @@ public partial class AltChunkProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MatchSource MatchSource
-    {
-        get => GetElement<MatchSource>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "matchSrc", 0)]
+    public MatchSource MatchSource { get; set; }
     
 
 
@@ -26900,13 +25790,7 @@ public partial class RubyProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rubyAlign","hps","hpsRaise","hpsBaseText","lid","dirty" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Phonetic Guide Text Alignment.</para>
@@ -26915,11 +25799,8 @@ public partial class RubyProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RubyAlign RubyAlign
-    {
-        get => GetElement<RubyAlign>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "rubyAlign", 0)]
+    public RubyAlign RubyAlign { get; set; }
     
     /// <summary>
     /// <para> Phonetic Guide Text Font Size.</para>
@@ -26928,11 +25809,8 @@ public partial class RubyProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PhoneticGuideTextFontSize PhoneticGuideTextFontSize
-    {
-        get => GetElement<PhoneticGuideTextFontSize>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "hps", 1)]
+    public PhoneticGuideTextFontSize PhoneticGuideTextFontSize { get; set; }
     
     /// <summary>
     /// <para> Distance Between Phonetic Guide Text and Phonetic Guide Base Text.</para>
@@ -26941,11 +25819,8 @@ public partial class RubyProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PhoneticGuideRaise PhoneticGuideRaise
-    {
-        get => GetElement<PhoneticGuideRaise>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "hpsRaise", 2)]
+    public PhoneticGuideRaise PhoneticGuideRaise { get; set; }
     
     /// <summary>
     /// <para> Phonetic Guide Base Text Font Size.</para>
@@ -26954,11 +25829,8 @@ public partial class RubyProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PhoneticGuideBaseTextSize PhoneticGuideBaseTextSize
-    {
-        get => GetElement<PhoneticGuideBaseTextSize>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "hpsBaseText", 3)]
+    public PhoneticGuideBaseTextSize PhoneticGuideBaseTextSize { get; set; }
     
     /// <summary>
     /// <para> Language ID for Phonetic Guide.</para>
@@ -26967,11 +25839,8 @@ public partial class RubyProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LanguageId LanguageId
-    {
-        get => GetElement<LanguageId>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "lid", 4)]
+    public LanguageId LanguageId { get; set; }
     
     /// <summary>
     /// <para> Invalidated Field Cache.</para>
@@ -26980,11 +25849,8 @@ public partial class RubyProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Dirty Dirty
-    {
-        get => GetElement<Dirty>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "dirty", 5)]
+    public Dirty Dirty { get; set; }
     
 
 
@@ -28497,13 +27363,7 @@ public partial class CustomXmlProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "placeholder","attr" };
-    private static readonly byte[] eleNamespaceIds = { 23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Custom XML Element Placeholder Text.</para>
@@ -28512,11 +27372,8 @@ public partial class CustomXmlProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public CustomXmlPlaceholder CustomXmlPlaceholder
-    {
-        get => GetElement<CustomXmlPlaceholder>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "placeholder", 0)]
+    public CustomXmlPlaceholder CustomXmlPlaceholder { get; set; }
     
 
 
@@ -28685,13 +27542,7 @@ public partial class TableGridChange : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tblGrid" };
-    private static readonly byte[] eleNamespaceIds = { 23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Previous Table Grid.</para>
@@ -28700,11 +27551,8 @@ public partial class TableGridChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PreviousTableGrid PreviousTableGrid
-    {
-        get => GetElement<PreviousTableGrid>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "tblGrid", 0)]
+    public PreviousTableGrid PreviousTableGrid { get; set; }
     
 
 
@@ -28795,13 +27643,7 @@ public partial class TableCellPropertiesChange : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tcPr" };
-    private static readonly byte[] eleNamespaceIds = { 23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Previous Table Cell Properties.</para>
@@ -28810,11 +27652,8 @@ public partial class TableCellPropertiesChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PreviousTableCellProperties PreviousTableCellProperties
-    {
-        get => GetElement<PreviousTableCellProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "tcPr", 0)]
+    public PreviousTableCellProperties PreviousTableCellProperties { get; set; }
     
 
 
@@ -28913,13 +27752,7 @@ public partial class TableCellProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cnfStyle","tcW","gridSpan","hMerge","vMerge","tcBorders","shd","noWrap","tcMar","textDirection","tcFitText","vAlign","hideMark","cellIns","cellDel","cellMerge","tcPrChange" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ConditionalFormatStyle.</para>
@@ -28928,11 +27761,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ConditionalFormatStyle ConditionalFormatStyle
-    {
-        get => GetElement<ConditionalFormatStyle>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "cnfStyle", 0)]
+    public ConditionalFormatStyle ConditionalFormatStyle { get; set; }
     
     /// <summary>
     /// <para> TableCellWidth.</para>
@@ -28941,11 +27771,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellWidth TableCellWidth
-    {
-        get => GetElement<TableCellWidth>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "tcW", 1)]
+    public TableCellWidth TableCellWidth { get; set; }
     
     /// <summary>
     /// <para> GridSpan.</para>
@@ -28954,11 +27781,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public GridSpan GridSpan
-    {
-        get => GetElement<GridSpan>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "gridSpan", 2)]
+    public GridSpan GridSpan { get; set; }
     
     /// <summary>
     /// <para> HorizontalMerge.</para>
@@ -28967,11 +27791,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public HorizontalMerge HorizontalMerge
-    {
-        get => GetElement<HorizontalMerge>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "hMerge", 3)]
+    public HorizontalMerge HorizontalMerge { get; set; }
     
     /// <summary>
     /// <para> VerticalMerge.</para>
@@ -28980,11 +27801,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public VerticalMerge VerticalMerge
-    {
-        get => GetElement<VerticalMerge>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "vMerge", 4)]
+    public VerticalMerge VerticalMerge { get; set; }
     
     /// <summary>
     /// <para> TableCellBorders.</para>
@@ -28993,11 +27811,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellBorders TableCellBorders
-    {
-        get => GetElement<TableCellBorders>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "tcBorders", 5)]
+    public TableCellBorders TableCellBorders { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -29006,11 +27821,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "shd", 6)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> NoWrap.</para>
@@ -29019,11 +27831,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoWrap NoWrap
-    {
-        get => GetElement<NoWrap>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "noWrap", 7)]
+    public NoWrap NoWrap { get; set; }
     
     /// <summary>
     /// <para> TableCellMargin.</para>
@@ -29032,11 +27841,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellMargin TableCellMargin
-    {
-        get => GetElement<TableCellMargin>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "tcMar", 8)]
+    public TableCellMargin TableCellMargin { get; set; }
     
     /// <summary>
     /// <para> TextDirection.</para>
@@ -29045,11 +27851,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextDirection TextDirection
-    {
-        get => GetElement<TextDirection>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "textDirection", 9)]
+    public TextDirection TextDirection { get; set; }
     
     /// <summary>
     /// <para> TableCellFitText.</para>
@@ -29058,11 +27861,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellFitText TableCellFitText
-    {
-        get => GetElement<TableCellFitText>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "tcFitText", 10)]
+    public TableCellFitText TableCellFitText { get; set; }
     
     /// <summary>
     /// <para> TableCellVerticalAlignment.</para>
@@ -29071,11 +27871,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellVerticalAlignment TableCellVerticalAlignment
-    {
-        get => GetElement<TableCellVerticalAlignment>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "vAlign", 11)]
+    public TableCellVerticalAlignment TableCellVerticalAlignment { get; set; }
     
     /// <summary>
     /// <para> HideMark.</para>
@@ -29084,11 +27881,8 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public HideMark HideMark
-    {
-        get => GetElement<HideMark>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "hideMark", 12)]
+    public HideMark HideMark { get; set; }
     
 
 
@@ -29179,13 +27973,7 @@ public partial class TablePropertiesChange : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tblPr" };
-    private static readonly byte[] eleNamespaceIds = { 23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Previous Table Properties.</para>
@@ -29194,11 +27982,8 @@ public partial class TablePropertiesChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PreviousTableProperties PreviousTableProperties
-    {
-        get => GetElement<PreviousTableProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "tblPr", 0)]
+    public PreviousTableProperties PreviousTableProperties { get; set; }
     
 
 
@@ -29289,13 +28074,7 @@ public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tblPrEx" };
-    private static readonly byte[] eleNamespaceIds = { 23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Previous Table-Level Property Exceptions.</para>
@@ -29304,11 +28083,8 @@ public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PreviousTablePropertyExceptions PreviousTablePropertyExceptions
-    {
-        get => GetElement<PreviousTablePropertyExceptions>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "tblPrEx", 0)]
+    public PreviousTablePropertyExceptions PreviousTablePropertyExceptions { get; set; }
     
 
 
@@ -29405,13 +28181,7 @@ public partial class TableProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tblStyle","tblpPr","tblOverlap","bidiVisual","tblW","jc","tblCellSpacing","tblInd","tblBorders","shd","tblLayout","tblCellMar","tblLook","tblCaption","tblDescription","tblPrChange" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> TableStyle.</para>
@@ -29420,11 +28190,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableStyle TableStyle
-    {
-        get => GetElement<TableStyle>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "tblStyle", 0)]
+    public TableStyle TableStyle { get; set; }
     
     /// <summary>
     /// <para> TablePositionProperties.</para>
@@ -29433,11 +28200,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TablePositionProperties TablePositionProperties
-    {
-        get => GetElement<TablePositionProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "tblpPr", 1)]
+    public TablePositionProperties TablePositionProperties { get; set; }
     
     /// <summary>
     /// <para> TableOverlap.</para>
@@ -29446,11 +28210,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableOverlap TableOverlap
-    {
-        get => GetElement<TableOverlap>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "tblOverlap", 2)]
+    public TableOverlap TableOverlap { get; set; }
     
     /// <summary>
     /// <para> BiDiVisual.</para>
@@ -29459,11 +28220,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BiDiVisual BiDiVisual
-    {
-        get => GetElement<BiDiVisual>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "bidiVisual", 3)]
+    public BiDiVisual BiDiVisual { get; set; }
     
     /// <summary>
     /// <para> TableWidth.</para>
@@ -29472,11 +28230,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableWidth TableWidth
-    {
-        get => GetElement<TableWidth>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "tblW", 4)]
+    public TableWidth TableWidth { get; set; }
     
     /// <summary>
     /// <para> TableJustification.</para>
@@ -29485,11 +28240,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableJustification TableJustification
-    {
-        get => GetElement<TableJustification>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "jc", 5)]
+    public TableJustification TableJustification { get; set; }
     
     /// <summary>
     /// <para> TableCellSpacing.</para>
@@ -29498,11 +28250,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellSpacing TableCellSpacing
-    {
-        get => GetElement<TableCellSpacing>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "tblCellSpacing", 6)]
+    public TableCellSpacing TableCellSpacing { get; set; }
     
     /// <summary>
     /// <para> TableIndentation.</para>
@@ -29511,11 +28260,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableIndentation TableIndentation
-    {
-        get => GetElement<TableIndentation>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "tblInd", 7)]
+    public TableIndentation TableIndentation { get; set; }
     
     /// <summary>
     /// <para> TableBorders.</para>
@@ -29524,11 +28270,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableBorders TableBorders
-    {
-        get => GetElement<TableBorders>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "tblBorders", 8)]
+    public TableBorders TableBorders { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -29537,11 +28280,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "shd", 9)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> TableLayout.</para>
@@ -29550,11 +28290,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableLayout TableLayout
-    {
-        get => GetElement<TableLayout>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "tblLayout", 10)]
+    public TableLayout TableLayout { get; set; }
     
     /// <summary>
     /// <para> TableCellMarginDefault.</para>
@@ -29563,11 +28300,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellMarginDefault TableCellMarginDefault
-    {
-        get => GetElement<TableCellMarginDefault>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "tblCellMar", 11)]
+    public TableCellMarginDefault TableCellMarginDefault { get; set; }
     
     /// <summary>
     /// <para> TableLook.</para>
@@ -29576,11 +28310,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableLook TableLook
-    {
-        get => GetElement<TableLook>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "tblLook", 12)]
+    public TableLook TableLook { get; set; }
     
     /// <summary>
     /// <para> TableCaption.</para>
@@ -29589,11 +28320,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCaption TableCaption
-    {
-        get => GetElement<TableCaption>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "tblCaption", 13)]
+    public TableCaption TableCaption { get; set; }
     
     /// <summary>
     /// <para> TableDescription.</para>
@@ -29602,11 +28330,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableDescription TableDescription
-    {
-        get => GetElement<TableDescription>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "tblDescription", 14)]
+    public TableDescription TableDescription { get; set; }
     
     /// <summary>
     /// <para> Revision Information for Table Properties.</para>
@@ -29615,11 +28340,8 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TablePropertiesChange TablePropertiesChange
-    {
-        get => GetElement<TablePropertiesChange>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "tblPrChange", 15)]
+    public TablePropertiesChange TablePropertiesChange { get; set; }
     
 
 
@@ -30072,13 +28794,7 @@ public partial class RecipientData : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "active","column","uniqueTag" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Record Is Included in Mail Merge.</para>
@@ -30087,11 +28803,8 @@ public partial class RecipientData : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Active Active
-    {
-        get => GetElement<Active>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "active", 0)]
+    public Active Active { get; set; }
     
     /// <summary>
     /// <para> Index of Column Containing Unique Values for Record.</para>
@@ -30100,11 +28813,8 @@ public partial class RecipientData : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ColumnIndex ColumnIndex
-    {
-        get => GetElement<ColumnIndex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "column", 1)]
+    public ColumnIndex ColumnIndex { get; set; }
     
     /// <summary>
     /// <para> Unique Value for Record.</para>
@@ -30113,11 +28823,8 @@ public partial class RecipientData : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public UniqueTag UniqueTag
-    {
-        get => GetElement<UniqueTag>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "uniqueTag", 2)]
+    public UniqueTag UniqueTag { get; set; }
     
 
 
@@ -30272,13 +28979,7 @@ public partial class FieldMapData : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "type","name","mappedName","column","lid","dynamicAddress" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
     
         /// <summary>
     /// <para> Merge Field Mapping.</para>
@@ -30287,11 +28988,8 @@ public partial class FieldMapData : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MailMergeFieldType MailMergeFieldType
-    {
-        get => GetElement<MailMergeFieldType>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "type", 0)]
+    public MailMergeFieldType MailMergeFieldType { get; set; }
     
     /// <summary>
     /// <para> Data Source Name for Column.</para>
@@ -30300,11 +28998,8 @@ public partial class FieldMapData : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Name Name
-    {
-        get => GetElement<Name>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "name", 1)]
+    public Name Name { get; set; }
     
     /// <summary>
     /// <para> Predefined Merge Field Name.</para>
@@ -30313,11 +29008,8 @@ public partial class FieldMapData : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MappedName MappedName
-    {
-        get => GetElement<MappedName>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "mappedName", 2)]
+    public MappedName MappedName { get; set; }
     
     /// <summary>
     /// <para> Index of Column Being Mapped.</para>
@@ -30326,11 +29018,8 @@ public partial class FieldMapData : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ColumnIndex ColumnIndex
-    {
-        get => GetElement<ColumnIndex>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "column", 3)]
+    public ColumnIndex ColumnIndex { get; set; }
     
     /// <summary>
     /// <para> Merge Field Name Language ID.</para>
@@ -30339,11 +29028,8 @@ public partial class FieldMapData : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LanguageId LanguageId
-    {
-        get => GetElement<LanguageId>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "lid", 4)]
+    public LanguageId LanguageId { get; set; }
     
     /// <summary>
     /// <para> Use Country/Region-Based Address Field Ordering.</para>
@@ -30352,11 +29038,8 @@ public partial class FieldMapData : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DynamicAddress DynamicAddress
-    {
-        get => GetElement<DynamicAddress>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "dynamicAddress", 5)]
+    public DynamicAddress DynamicAddress { get; set; }
     
 
 
@@ -30554,13 +29237,7 @@ public partial class DataSourceObject : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "udl","table","src","colDelim","type","fHdr","fieldMapData","recipientData" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> UDL Connection String.</para>
@@ -30569,11 +29246,8 @@ public partial class DataSourceObject : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public UdlConnectionString UdlConnectionString
-    {
-        get => GetElement<UdlConnectionString>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "udl", 0)]
+    public UdlConnectionString UdlConnectionString { get; set; }
     
     /// <summary>
     /// <para> Data Source Table Name.</para>
@@ -30582,11 +29256,8 @@ public partial class DataSourceObject : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DataSourceTableName DataSourceTableName
-    {
-        get => GetElement<DataSourceTableName>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "table", 1)]
+    public DataSourceTableName DataSourceTableName { get; set; }
     
     /// <summary>
     /// <para> ODSO Data Source File Path.</para>
@@ -30595,11 +29266,8 @@ public partial class DataSourceObject : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SourceReference SourceReference
-    {
-        get => GetElement<SourceReference>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "src", 2)]
+    public SourceReference SourceReference { get; set; }
     
     /// <summary>
     /// <para> Column Delimiter for Data Source.</para>
@@ -30608,11 +29276,8 @@ public partial class DataSourceObject : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ColumnDelimiter ColumnDelimiter
-    {
-        get => GetElement<ColumnDelimiter>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "colDelim", 3)]
+    public ColumnDelimiter ColumnDelimiter { get; set; }
     
     /// <summary>
     /// <para> ODSO Data Source Type.</para>
@@ -30621,11 +29286,8 @@ public partial class DataSourceObject : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MailMergeSource MailMergeSource
-    {
-        get => GetElement<MailMergeSource>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "type", 4)]
+    public MailMergeSource MailMergeSource { get; set; }
     
     /// <summary>
     /// <para> First Row of Data Source Contains Column Names.</para>
@@ -30634,11 +29296,8 @@ public partial class DataSourceObject : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FirstRowHeader FirstRowHeader
-    {
-        get => GetElement<FirstRowHeader>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "fHdr", 5)]
+    public FirstRowHeader FirstRowHeader { get; set; }
     
 
 
@@ -30942,13 +29601,7 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rFonts","b","bCs","i","iCs","caps","smallCaps","strike","dstrike","outline","shadow","emboss","imprint","noProof","snapToGrid","vanish","webHidden","color","spacing","w","kern","position","sz","szCs","u","effect","bdr","shd","fitText","vertAlign","em","lang","eastAsianLayout","specVanish" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> RunFonts.</para>
@@ -30957,11 +29610,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RunFonts RunFonts
-    {
-        get => GetElement<RunFonts>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "rFonts", 0)]
+    public RunFonts RunFonts { get; set; }
     
     /// <summary>
     /// <para> Bold.</para>
@@ -30970,11 +29620,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Bold Bold
-    {
-        get => GetElement<Bold>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "b", 1)]
+    public Bold Bold { get; set; }
     
     /// <summary>
     /// <para> BoldComplexScript.</para>
@@ -30983,11 +29630,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BoldComplexScript BoldComplexScript
-    {
-        get => GetElement<BoldComplexScript>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "bCs", 2)]
+    public BoldComplexScript BoldComplexScript { get; set; }
     
     /// <summary>
     /// <para> Italic.</para>
@@ -30996,11 +29640,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Italic Italic
-    {
-        get => GetElement<Italic>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "i", 3)]
+    public Italic Italic { get; set; }
     
     /// <summary>
     /// <para> ItalicComplexScript.</para>
@@ -31009,11 +29650,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ItalicComplexScript ItalicComplexScript
-    {
-        get => GetElement<ItalicComplexScript>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "iCs", 4)]
+    public ItalicComplexScript ItalicComplexScript { get; set; }
     
     /// <summary>
     /// <para> Caps.</para>
@@ -31022,11 +29660,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Caps Caps
-    {
-        get => GetElement<Caps>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "caps", 5)]
+    public Caps Caps { get; set; }
     
     /// <summary>
     /// <para> SmallCaps.</para>
@@ -31035,11 +29670,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SmallCaps SmallCaps
-    {
-        get => GetElement<SmallCaps>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "smallCaps", 6)]
+    public SmallCaps SmallCaps { get; set; }
     
     /// <summary>
     /// <para> Strike.</para>
@@ -31048,11 +29680,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Strike Strike
-    {
-        get => GetElement<Strike>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "strike", 7)]
+    public Strike Strike { get; set; }
     
     /// <summary>
     /// <para> DoubleStrike.</para>
@@ -31061,11 +29690,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoubleStrike DoubleStrike
-    {
-        get => GetElement<DoubleStrike>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "dstrike", 8)]
+    public DoubleStrike DoubleStrike { get; set; }
     
     /// <summary>
     /// <para> Outline.</para>
@@ -31074,11 +29700,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Outline Outline
-    {
-        get => GetElement<Outline>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "outline", 9)]
+    public Outline Outline { get; set; }
     
     /// <summary>
     /// <para> Shadow.</para>
@@ -31087,11 +29710,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shadow Shadow
-    {
-        get => GetElement<Shadow>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "shadow", 10)]
+    public Shadow Shadow { get; set; }
     
     /// <summary>
     /// <para> Emboss.</para>
@@ -31100,11 +29720,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Emboss Emboss
-    {
-        get => GetElement<Emboss>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "emboss", 11)]
+    public Emboss Emboss { get; set; }
     
     /// <summary>
     /// <para> Imprint.</para>
@@ -31113,11 +29730,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Imprint Imprint
-    {
-        get => GetElement<Imprint>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "imprint", 12)]
+    public Imprint Imprint { get; set; }
     
     /// <summary>
     /// <para> NoProof.</para>
@@ -31126,11 +29740,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoProof NoProof
-    {
-        get => GetElement<NoProof>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "noProof", 13)]
+    public NoProof NoProof { get; set; }
     
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -31139,11 +29750,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SnapToGrid SnapToGrid
-    {
-        get => GetElement<SnapToGrid>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "snapToGrid", 14)]
+    public SnapToGrid SnapToGrid { get; set; }
     
     /// <summary>
     /// <para> Vanish.</para>
@@ -31152,11 +29760,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Vanish Vanish
-    {
-        get => GetElement<Vanish>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "vanish", 15)]
+    public Vanish Vanish { get; set; }
     
     /// <summary>
     /// <para> WebHidden.</para>
@@ -31165,11 +29770,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WebHidden WebHidden
-    {
-        get => GetElement<WebHidden>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(23, "webHidden", 16)]
+    public WebHidden WebHidden { get; set; }
     
     /// <summary>
     /// <para> Color.</para>
@@ -31178,11 +29780,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Color Color
-    {
-        get => GetElement<Color>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(23, "color", 17)]
+    public Color Color { get; set; }
     
     /// <summary>
     /// <para> Spacing.</para>
@@ -31191,11 +29790,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Spacing Spacing
-    {
-        get => GetElement<Spacing>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(23, "spacing", 18)]
+    public Spacing Spacing { get; set; }
     
     /// <summary>
     /// <para> CharacterScale.</para>
@@ -31204,11 +29800,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public CharacterScale CharacterScale
-    {
-        get => GetElement<CharacterScale>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(23, "w", 19)]
+    public CharacterScale CharacterScale { get; set; }
     
     /// <summary>
     /// <para> Kern.</para>
@@ -31217,11 +29810,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Kern Kern
-    {
-        get => GetElement<Kern>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(23, "kern", 20)]
+    public Kern Kern { get; set; }
     
     /// <summary>
     /// <para> Position.</para>
@@ -31230,11 +29820,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Position Position
-    {
-        get => GetElement<Position>(21);
-        set => SetElement(21, value);
-    }
+	[SchemaAttr(23, "position", 21)]
+    public Position Position { get; set; }
     
     /// <summary>
     /// <para> FontSize.</para>
@@ -31243,11 +29830,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FontSize FontSize
-    {
-        get => GetElement<FontSize>(22);
-        set => SetElement(22, value);
-    }
+	[SchemaAttr(23, "sz", 22)]
+    public FontSize FontSize { get; set; }
     
     /// <summary>
     /// <para> FontSizeComplexScript.</para>
@@ -31256,11 +29840,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FontSizeComplexScript FontSizeComplexScript
-    {
-        get => GetElement<FontSizeComplexScript>(23);
-        set => SetElement(23, value);
-    }
+	[SchemaAttr(23, "szCs", 23)]
+    public FontSizeComplexScript FontSizeComplexScript { get; set; }
     
     /// <summary>
     /// <para> Underline.</para>
@@ -31269,11 +29850,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Underline Underline
-    {
-        get => GetElement<Underline>(24);
-        set => SetElement(24, value);
-    }
+	[SchemaAttr(23, "u", 24)]
+    public Underline Underline { get; set; }
     
     /// <summary>
     /// <para> TextEffect.</para>
@@ -31282,11 +29860,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextEffect TextEffect
-    {
-        get => GetElement<TextEffect>(25);
-        set => SetElement(25, value);
-    }
+	[SchemaAttr(23, "effect", 25)]
+    public TextEffect TextEffect { get; set; }
     
     /// <summary>
     /// <para> Border.</para>
@@ -31295,11 +29870,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Border Border
-    {
-        get => GetElement<Border>(26);
-        set => SetElement(26, value);
-    }
+	[SchemaAttr(23, "bdr", 26)]
+    public Border Border { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -31308,11 +29880,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(27);
-        set => SetElement(27, value);
-    }
+	[SchemaAttr(23, "shd", 27)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> FitText.</para>
@@ -31321,11 +29890,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FitText FitText
-    {
-        get => GetElement<FitText>(28);
-        set => SetElement(28, value);
-    }
+	[SchemaAttr(23, "fitText", 28)]
+    public FitText FitText { get; set; }
     
     /// <summary>
     /// <para> VerticalTextAlignment.</para>
@@ -31334,11 +29900,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public VerticalTextAlignment VerticalTextAlignment
-    {
-        get => GetElement<VerticalTextAlignment>(29);
-        set => SetElement(29, value);
-    }
+	[SchemaAttr(23, "vertAlign", 29)]
+    public VerticalTextAlignment VerticalTextAlignment { get; set; }
     
     /// <summary>
     /// <para> Emphasis.</para>
@@ -31347,11 +29910,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Emphasis Emphasis
-    {
-        get => GetElement<Emphasis>(30);
-        set => SetElement(30, value);
-    }
+	[SchemaAttr(23, "em", 30)]
+    public Emphasis Emphasis { get; set; }
     
     /// <summary>
     /// <para> Languages.</para>
@@ -31360,11 +29920,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Languages Languages
-    {
-        get => GetElement<Languages>(31);
-        set => SetElement(31, value);
-    }
+	[SchemaAttr(23, "lang", 31)]
+    public Languages Languages { get; set; }
     
     /// <summary>
     /// <para> EastAsianLayout.</para>
@@ -31373,11 +29930,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EastAsianLayout EastAsianLayout
-    {
-        get => GetElement<EastAsianLayout>(32);
-        set => SetElement(32, value);
-    }
+	[SchemaAttr(23, "eastAsianLayout", 32)]
+    public EastAsianLayout EastAsianLayout { get; set; }
     
     /// <summary>
     /// <para> SpecVanish.</para>
@@ -31386,11 +29940,8 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SpecVanish SpecVanish
-    {
-        get => GetElement<SpecVanish>(33);
-        set => SetElement(33, value);
-    }
+	[SchemaAttr(23, "specVanish", 33)]
+    public SpecVanish SpecVanish { get; set; }
     
 
 
@@ -31515,13 +30066,7 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "keepNext","keepLines","pageBreakBefore","framePr","widowControl","numPr","suppressLineNumbers","pBdr","shd","tabs","suppressAutoHyphens","kinsoku","wordWrap","overflowPunct","topLinePunct","autoSpaceDE","autoSpaceDN","bidi","adjustRightInd","snapToGrid","spacing","ind","contextualSpacing","mirrorIndents","suppressOverlap","jc","textDirection","textAlignment","textboxTightWrap","outlineLvl" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> KeepNext.</para>
@@ -31530,11 +30075,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public KeepNext KeepNext
-    {
-        get => GetElement<KeepNext>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "keepNext", 0)]
+    public KeepNext KeepNext { get; set; }
     
     /// <summary>
     /// <para> KeepLines.</para>
@@ -31543,11 +30085,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public KeepLines KeepLines
-    {
-        get => GetElement<KeepLines>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "keepLines", 1)]
+    public KeepLines KeepLines { get; set; }
     
     /// <summary>
     /// <para> PageBreakBefore.</para>
@@ -31556,11 +30095,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PageBreakBefore PageBreakBefore
-    {
-        get => GetElement<PageBreakBefore>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "pageBreakBefore", 2)]
+    public PageBreakBefore PageBreakBefore { get; set; }
     
     /// <summary>
     /// <para> FrameProperties.</para>
@@ -31569,11 +30105,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FrameProperties FrameProperties
-    {
-        get => GetElement<FrameProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "framePr", 3)]
+    public FrameProperties FrameProperties { get; set; }
     
     /// <summary>
     /// <para> WidowControl.</para>
@@ -31582,11 +30115,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WidowControl WidowControl
-    {
-        get => GetElement<WidowControl>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "widowControl", 4)]
+    public WidowControl WidowControl { get; set; }
     
     /// <summary>
     /// <para> NumberingProperties.</para>
@@ -31595,11 +30125,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingProperties NumberingProperties
-    {
-        get => GetElement<NumberingProperties>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "numPr", 5)]
+    public NumberingProperties NumberingProperties { get; set; }
     
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
@@ -31608,11 +30135,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressLineNumbers SuppressLineNumbers
-    {
-        get => GetElement<SuppressLineNumbers>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "suppressLineNumbers", 6)]
+    public SuppressLineNumbers SuppressLineNumbers { get; set; }
     
     /// <summary>
     /// <para> ParagraphBorders.</para>
@@ -31621,11 +30145,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphBorders ParagraphBorders
-    {
-        get => GetElement<ParagraphBorders>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "pBdr", 7)]
+    public ParagraphBorders ParagraphBorders { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -31634,11 +30155,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "shd", 8)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> Tabs.</para>
@@ -31647,11 +30165,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Tabs Tabs
-    {
-        get => GetElement<Tabs>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "tabs", 9)]
+    public Tabs Tabs { get; set; }
     
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
@@ -31660,11 +30175,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressAutoHyphens SuppressAutoHyphens
-    {
-        get => GetElement<SuppressAutoHyphens>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "suppressAutoHyphens", 10)]
+    public SuppressAutoHyphens SuppressAutoHyphens { get; set; }
     
     /// <summary>
     /// <para> Kinsoku.</para>
@@ -31673,11 +30185,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Kinsoku Kinsoku
-    {
-        get => GetElement<Kinsoku>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "kinsoku", 11)]
+    public Kinsoku Kinsoku { get; set; }
     
     /// <summary>
     /// <para> WordWrap.</para>
@@ -31686,11 +30195,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WordWrap WordWrap
-    {
-        get => GetElement<WordWrap>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "wordWrap", 12)]
+    public WordWrap WordWrap { get; set; }
     
     /// <summary>
     /// <para> OverflowPunctuation.</para>
@@ -31699,11 +30205,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public OverflowPunctuation OverflowPunctuation
-    {
-        get => GetElement<OverflowPunctuation>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "overflowPunct", 13)]
+    public OverflowPunctuation OverflowPunctuation { get; set; }
     
     /// <summary>
     /// <para> TopLinePunctuation.</para>
@@ -31712,11 +30215,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopLinePunctuation TopLinePunctuation
-    {
-        get => GetElement<TopLinePunctuation>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "topLinePunct", 14)]
+    public TopLinePunctuation TopLinePunctuation { get; set; }
     
     /// <summary>
     /// <para> AutoSpaceDE.</para>
@@ -31725,11 +30225,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AutoSpaceDE AutoSpaceDE
-    {
-        get => GetElement<AutoSpaceDE>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "autoSpaceDE", 15)]
+    public AutoSpaceDE AutoSpaceDE { get; set; }
     
     /// <summary>
     /// <para> AutoSpaceDN.</para>
@@ -31738,11 +30235,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AutoSpaceDN AutoSpaceDN
-    {
-        get => GetElement<AutoSpaceDN>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(23, "autoSpaceDN", 16)]
+    public AutoSpaceDN AutoSpaceDN { get; set; }
     
     /// <summary>
     /// <para> BiDi.</para>
@@ -31751,11 +30245,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BiDi BiDi
-    {
-        get => GetElement<BiDi>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(23, "bidi", 17)]
+    public BiDi BiDi { get; set; }
     
     /// <summary>
     /// <para> AdjustRightIndent.</para>
@@ -31764,11 +30255,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AdjustRightIndent AdjustRightIndent
-    {
-        get => GetElement<AdjustRightIndent>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(23, "adjustRightInd", 18)]
+    public AdjustRightIndent AdjustRightIndent { get; set; }
     
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -31777,11 +30265,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SnapToGrid SnapToGrid
-    {
-        get => GetElement<SnapToGrid>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(23, "snapToGrid", 19)]
+    public SnapToGrid SnapToGrid { get; set; }
     
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
@@ -31790,11 +30275,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SpacingBetweenLines SpacingBetweenLines
-    {
-        get => GetElement<SpacingBetweenLines>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(23, "spacing", 20)]
+    public SpacingBetweenLines SpacingBetweenLines { get; set; }
     
     /// <summary>
     /// <para> Indentation.</para>
@@ -31803,11 +30285,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Indentation Indentation
-    {
-        get => GetElement<Indentation>(21);
-        set => SetElement(21, value);
-    }
+	[SchemaAttr(23, "ind", 21)]
+    public Indentation Indentation { get; set; }
     
     /// <summary>
     /// <para> ContextualSpacing.</para>
@@ -31816,11 +30295,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ContextualSpacing ContextualSpacing
-    {
-        get => GetElement<ContextualSpacing>(22);
-        set => SetElement(22, value);
-    }
+	[SchemaAttr(23, "contextualSpacing", 22)]
+    public ContextualSpacing ContextualSpacing { get; set; }
     
     /// <summary>
     /// <para> MirrorIndents.</para>
@@ -31829,11 +30305,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MirrorIndents MirrorIndents
-    {
-        get => GetElement<MirrorIndents>(23);
-        set => SetElement(23, value);
-    }
+	[SchemaAttr(23, "mirrorIndents", 23)]
+    public MirrorIndents MirrorIndents { get; set; }
     
     /// <summary>
     /// <para> SuppressOverlap.</para>
@@ -31842,11 +30315,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressOverlap SuppressOverlap
-    {
-        get => GetElement<SuppressOverlap>(24);
-        set => SetElement(24, value);
-    }
+	[SchemaAttr(23, "suppressOverlap", 24)]
+    public SuppressOverlap SuppressOverlap { get; set; }
     
     /// <summary>
     /// <para> Justification.</para>
@@ -31855,11 +30325,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Justification Justification
-    {
-        get => GetElement<Justification>(25);
-        set => SetElement(25, value);
-    }
+	[SchemaAttr(23, "jc", 25)]
+    public Justification Justification { get; set; }
     
     /// <summary>
     /// <para> TextDirection.</para>
@@ -31868,11 +30335,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextDirection TextDirection
-    {
-        get => GetElement<TextDirection>(26);
-        set => SetElement(26, value);
-    }
+	[SchemaAttr(23, "textDirection", 26)]
+    public TextDirection TextDirection { get; set; }
     
     /// <summary>
     /// <para> TextAlignment.</para>
@@ -31881,11 +30345,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextAlignment TextAlignment
-    {
-        get => GetElement<TextAlignment>(27);
-        set => SetElement(27, value);
-    }
+	[SchemaAttr(23, "textAlignment", 27)]
+    public TextAlignment TextAlignment { get; set; }
     
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
@@ -31894,11 +30355,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextBoxTightWrap TextBoxTightWrap
-    {
-        get => GetElement<TextBoxTightWrap>(28);
-        set => SetElement(28, value);
-    }
+	[SchemaAttr(23, "textboxTightWrap", 28)]
+    public TextBoxTightWrap TextBoxTightWrap { get; set; }
     
     /// <summary>
     /// <para> OutlineLevel.</para>
@@ -31907,11 +30365,8 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public OutlineLevel OutlineLevel
-    {
-        get => GetElement<OutlineLevel>(29);
-        set => SetElement(29, value);
-    }
+	[SchemaAttr(23, "outlineLvl", 29)]
+    public OutlineLevel OutlineLevel { get; set; }
     
 
 
@@ -31978,13 +30433,7 @@ public partial class RunPropertiesDefault : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rPr" };
-    private static readonly byte[] eleNamespaceIds = { 23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Run Properties.</para>
@@ -31993,11 +30442,8 @@ public partial class RunPropertiesDefault : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RunPropertiesBaseStyle RunPropertiesBaseStyle
-    {
-        get => GetElement<RunPropertiesBaseStyle>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "rPr", 0)]
+    public RunPropertiesBaseStyle RunPropertiesBaseStyle { get; set; }
     
 
 
@@ -32064,13 +30510,7 @@ public partial class ParagraphPropertiesDefault : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pPr" };
-    private static readonly byte[] eleNamespaceIds = { 23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Paragraph Properties.</para>
@@ -32079,11 +30519,8 @@ public partial class ParagraphPropertiesDefault : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphPropertiesBaseStyle ParagraphPropertiesBaseStyle
-    {
-        get => GetElement<ParagraphPropertiesBaseStyle>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "pPr", 0)]
+    public ParagraphPropertiesBaseStyle ParagraphPropertiesBaseStyle { get; set; }
     
 
 
@@ -32443,13 +30880,7 @@ public partial class FramesetSplitbar : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "w","color","noBorder","flatBorders" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Frameset Splitter Width.</para>
@@ -32458,11 +30889,8 @@ public partial class FramesetSplitbar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Width Width
-    {
-        get => GetElement<Width>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "w", 0)]
+    public Width Width { get; set; }
     
     /// <summary>
     /// <para> Frameset Splitter Color.</para>
@@ -32471,11 +30899,8 @@ public partial class FramesetSplitbar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Color Color
-    {
-        get => GetElement<Color>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "color", 1)]
+    public Color Color { get; set; }
     
     /// <summary>
     /// <para> Do Not Display Frameset Splitters.</para>
@@ -32484,11 +30909,8 @@ public partial class FramesetSplitbar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoBorder NoBorder
-    {
-        get => GetElement<NoBorder>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "noBorder", 2)]
+    public NoBorder NoBorder { get; set; }
     
     /// <summary>
     /// <para> Frameset Splitter Border Style.</para>
@@ -32497,11 +30919,8 @@ public partial class FramesetSplitbar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FlatBorders FlatBorders
-    {
-        get => GetElement<FlatBorders>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "flatBorders", 3)]
+    public FlatBorders FlatBorders { get; set; }
     
 
 
@@ -32615,13 +31034,7 @@ public partial class Frameset : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sz","framesetSplitbar","frameLayout","frameset","frame" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Nested Frameset Size.</para>
@@ -32630,11 +31043,8 @@ public partial class Frameset : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FrameSize FrameSize
-    {
-        get => GetElement<FrameSize>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "sz", 0)]
+    public FrameSize FrameSize { get; set; }
     
     /// <summary>
     /// <para> Frameset Splitter Properties.</para>
@@ -32643,11 +31053,8 @@ public partial class Frameset : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FramesetSplitbar FramesetSplitbar
-    {
-        get => GetElement<FramesetSplitbar>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "framesetSplitbar", 1)]
+    public FramesetSplitbar FramesetSplitbar { get; set; }
     
     /// <summary>
     /// <para> Frameset Layout.</para>
@@ -32656,11 +31063,8 @@ public partial class Frameset : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FrameLayout FrameLayout
-    {
-        get => GetElement<FrameLayout>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "frameLayout", 2)]
+    public FrameLayout FrameLayout { get; set; }
     
 
 
@@ -32741,13 +31145,7 @@ public partial class Frame : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sz","name","sourceFileName","marW","marH","scrollbar","noResizeAllowed","linkedToFile" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Frame Size.</para>
@@ -32756,11 +31154,8 @@ public partial class Frame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FrameSize FrameSize
-    {
-        get => GetElement<FrameSize>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "sz", 0)]
+    public FrameSize FrameSize { get; set; }
     
     /// <summary>
     /// <para> Frame Name.</para>
@@ -32769,11 +31164,8 @@ public partial class Frame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FrameName FrameName
-    {
-        get => GetElement<FrameName>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "name", 1)]
+    public FrameName FrameName { get; set; }
     
     /// <summary>
     /// <para> Source File for Frame.</para>
@@ -32782,11 +31174,8 @@ public partial class Frame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SourceFileReference SourceFileReference
-    {
-        get => GetElement<SourceFileReference>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "sourceFileName", 2)]
+    public SourceFileReference SourceFileReference { get; set; }
     
     /// <summary>
     /// <para> Left and Right Margin for Frame.</para>
@@ -32795,11 +31184,8 @@ public partial class Frame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MarginWidth MarginWidth
-    {
-        get => GetElement<MarginWidth>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "marW", 3)]
+    public MarginWidth MarginWidth { get; set; }
     
     /// <summary>
     /// <para> Top and Bottom Margin for Frame.</para>
@@ -32808,11 +31194,8 @@ public partial class Frame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MarginHeight MarginHeight
-    {
-        get => GetElement<MarginHeight>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "marH", 4)]
+    public MarginHeight MarginHeight { get; set; }
     
     /// <summary>
     /// <para> Scrollbar Display Option.</para>
@@ -32821,11 +31204,8 @@ public partial class Frame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ScrollbarVisibility ScrollbarVisibility
-    {
-        get => GetElement<ScrollbarVisibility>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "scrollbar", 5)]
+    public ScrollbarVisibility ScrollbarVisibility { get; set; }
     
     /// <summary>
     /// <para> Frame Cannot Be Resized.</para>
@@ -32834,11 +31214,8 @@ public partial class Frame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoResizeAllowed NoResizeAllowed
-    {
-        get => GetElement<NoResizeAllowed>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "noResizeAllowed", 6)]
+    public NoResizeAllowed NoResizeAllowed { get; set; }
     
     /// <summary>
     /// <para> Maintain Link to Existing File.</para>
@@ -32847,11 +31224,8 @@ public partial class Frame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LinkedToFile LinkedToFile
-    {
-        get => GetElement<LinkedToFile>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "linkedToFile", 7)]
+    public LinkedToFile LinkedToFile { get; set; }
     
 
 
@@ -33158,13 +31532,7 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pStyle","keepNext","keepLines","pageBreakBefore","framePr","widowControl","numPr","suppressLineNumbers","pBdr","shd","tabs","suppressAutoHyphens","kinsoku","wordWrap","overflowPunct","topLinePunct","autoSpaceDE","autoSpaceDN","bidi","adjustRightInd","snapToGrid","spacing","ind","contextualSpacing","mirrorIndents","suppressOverlap","jc","textDirection","textAlignment","textboxTightWrap","outlineLvl" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ParagraphStyleId.</para>
@@ -33173,11 +31541,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphStyleId ParagraphStyleId
-    {
-        get => GetElement<ParagraphStyleId>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "pStyle", 0)]
+    public ParagraphStyleId ParagraphStyleId { get; set; }
     
     /// <summary>
     /// <para> KeepNext.</para>
@@ -33186,11 +31551,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public KeepNext KeepNext
-    {
-        get => GetElement<KeepNext>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "keepNext", 1)]
+    public KeepNext KeepNext { get; set; }
     
     /// <summary>
     /// <para> KeepLines.</para>
@@ -33199,11 +31561,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public KeepLines KeepLines
-    {
-        get => GetElement<KeepLines>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "keepLines", 2)]
+    public KeepLines KeepLines { get; set; }
     
     /// <summary>
     /// <para> PageBreakBefore.</para>
@@ -33212,11 +31571,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PageBreakBefore PageBreakBefore
-    {
-        get => GetElement<PageBreakBefore>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "pageBreakBefore", 3)]
+    public PageBreakBefore PageBreakBefore { get; set; }
     
     /// <summary>
     /// <para> FrameProperties.</para>
@@ -33225,11 +31581,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FrameProperties FrameProperties
-    {
-        get => GetElement<FrameProperties>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "framePr", 4)]
+    public FrameProperties FrameProperties { get; set; }
     
     /// <summary>
     /// <para> WidowControl.</para>
@@ -33238,11 +31591,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WidowControl WidowControl
-    {
-        get => GetElement<WidowControl>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "widowControl", 5)]
+    public WidowControl WidowControl { get; set; }
     
     /// <summary>
     /// <para> NumberingProperties.</para>
@@ -33251,11 +31601,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingProperties NumberingProperties
-    {
-        get => GetElement<NumberingProperties>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "numPr", 6)]
+    public NumberingProperties NumberingProperties { get; set; }
     
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
@@ -33264,11 +31611,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressLineNumbers SuppressLineNumbers
-    {
-        get => GetElement<SuppressLineNumbers>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "suppressLineNumbers", 7)]
+    public SuppressLineNumbers SuppressLineNumbers { get; set; }
     
     /// <summary>
     /// <para> ParagraphBorders.</para>
@@ -33277,11 +31621,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphBorders ParagraphBorders
-    {
-        get => GetElement<ParagraphBorders>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "pBdr", 8)]
+    public ParagraphBorders ParagraphBorders { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -33290,11 +31631,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "shd", 9)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> Tabs.</para>
@@ -33303,11 +31641,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Tabs Tabs
-    {
-        get => GetElement<Tabs>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "tabs", 10)]
+    public Tabs Tabs { get; set; }
     
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
@@ -33316,11 +31651,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressAutoHyphens SuppressAutoHyphens
-    {
-        get => GetElement<SuppressAutoHyphens>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "suppressAutoHyphens", 11)]
+    public SuppressAutoHyphens SuppressAutoHyphens { get; set; }
     
     /// <summary>
     /// <para> Kinsoku.</para>
@@ -33329,11 +31661,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Kinsoku Kinsoku
-    {
-        get => GetElement<Kinsoku>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "kinsoku", 12)]
+    public Kinsoku Kinsoku { get; set; }
     
     /// <summary>
     /// <para> WordWrap.</para>
@@ -33342,11 +31671,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WordWrap WordWrap
-    {
-        get => GetElement<WordWrap>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "wordWrap", 13)]
+    public WordWrap WordWrap { get; set; }
     
     /// <summary>
     /// <para> OverflowPunctuation.</para>
@@ -33355,11 +31681,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public OverflowPunctuation OverflowPunctuation
-    {
-        get => GetElement<OverflowPunctuation>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "overflowPunct", 14)]
+    public OverflowPunctuation OverflowPunctuation { get; set; }
     
     /// <summary>
     /// <para> TopLinePunctuation.</para>
@@ -33368,11 +31691,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopLinePunctuation TopLinePunctuation
-    {
-        get => GetElement<TopLinePunctuation>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "topLinePunct", 15)]
+    public TopLinePunctuation TopLinePunctuation { get; set; }
     
     /// <summary>
     /// <para> AutoSpaceDE.</para>
@@ -33381,11 +31701,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AutoSpaceDE AutoSpaceDE
-    {
-        get => GetElement<AutoSpaceDE>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(23, "autoSpaceDE", 16)]
+    public AutoSpaceDE AutoSpaceDE { get; set; }
     
     /// <summary>
     /// <para> AutoSpaceDN.</para>
@@ -33394,11 +31711,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AutoSpaceDN AutoSpaceDN
-    {
-        get => GetElement<AutoSpaceDN>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(23, "autoSpaceDN", 17)]
+    public AutoSpaceDN AutoSpaceDN { get; set; }
     
     /// <summary>
     /// <para> BiDi.</para>
@@ -33407,11 +31721,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BiDi BiDi
-    {
-        get => GetElement<BiDi>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(23, "bidi", 18)]
+    public BiDi BiDi { get; set; }
     
     /// <summary>
     /// <para> AdjustRightIndent.</para>
@@ -33420,11 +31731,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AdjustRightIndent AdjustRightIndent
-    {
-        get => GetElement<AdjustRightIndent>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(23, "adjustRightInd", 19)]
+    public AdjustRightIndent AdjustRightIndent { get; set; }
     
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -33433,11 +31741,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SnapToGrid SnapToGrid
-    {
-        get => GetElement<SnapToGrid>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(23, "snapToGrid", 20)]
+    public SnapToGrid SnapToGrid { get; set; }
     
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
@@ -33446,11 +31751,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SpacingBetweenLines SpacingBetweenLines
-    {
-        get => GetElement<SpacingBetweenLines>(21);
-        set => SetElement(21, value);
-    }
+	[SchemaAttr(23, "spacing", 21)]
+    public SpacingBetweenLines SpacingBetweenLines { get; set; }
     
     /// <summary>
     /// <para> Indentation.</para>
@@ -33459,11 +31761,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Indentation Indentation
-    {
-        get => GetElement<Indentation>(22);
-        set => SetElement(22, value);
-    }
+	[SchemaAttr(23, "ind", 22)]
+    public Indentation Indentation { get; set; }
     
     /// <summary>
     /// <para> ContextualSpacing.</para>
@@ -33472,11 +31771,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ContextualSpacing ContextualSpacing
-    {
-        get => GetElement<ContextualSpacing>(23);
-        set => SetElement(23, value);
-    }
+	[SchemaAttr(23, "contextualSpacing", 23)]
+    public ContextualSpacing ContextualSpacing { get; set; }
     
     /// <summary>
     /// <para> MirrorIndents.</para>
@@ -33485,11 +31781,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MirrorIndents MirrorIndents
-    {
-        get => GetElement<MirrorIndents>(24);
-        set => SetElement(24, value);
-    }
+	[SchemaAttr(23, "mirrorIndents", 24)]
+    public MirrorIndents MirrorIndents { get; set; }
     
     /// <summary>
     /// <para> SuppressOverlap.</para>
@@ -33498,11 +31791,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressOverlap SuppressOverlap
-    {
-        get => GetElement<SuppressOverlap>(25);
-        set => SetElement(25, value);
-    }
+	[SchemaAttr(23, "suppressOverlap", 25)]
+    public SuppressOverlap SuppressOverlap { get; set; }
     
     /// <summary>
     /// <para> Justification.</para>
@@ -33511,11 +31801,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Justification Justification
-    {
-        get => GetElement<Justification>(26);
-        set => SetElement(26, value);
-    }
+	[SchemaAttr(23, "jc", 26)]
+    public Justification Justification { get; set; }
     
     /// <summary>
     /// <para> TextDirection.</para>
@@ -33524,11 +31811,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextDirection TextDirection
-    {
-        get => GetElement<TextDirection>(27);
-        set => SetElement(27, value);
-    }
+	[SchemaAttr(23, "textDirection", 27)]
+    public TextDirection TextDirection { get; set; }
     
     /// <summary>
     /// <para> TextAlignment.</para>
@@ -33537,11 +31821,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextAlignment TextAlignment
-    {
-        get => GetElement<TextAlignment>(28);
-        set => SetElement(28, value);
-    }
+	[SchemaAttr(23, "textAlignment", 28)]
+    public TextAlignment TextAlignment { get; set; }
     
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
@@ -33550,11 +31831,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextBoxTightWrap TextBoxTightWrap
-    {
-        get => GetElement<TextBoxTightWrap>(29);
-        set => SetElement(29, value);
-    }
+	[SchemaAttr(23, "textboxTightWrap", 29)]
+    public TextBoxTightWrap TextBoxTightWrap { get; set; }
     
     /// <summary>
     /// <para> OutlineLevel.</para>
@@ -33563,11 +31841,8 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public OutlineLevel OutlineLevel
-    {
-        get => GetElement<OutlineLevel>(30);
-        set => SetElement(30, value);
-    }
+	[SchemaAttr(23, "outlineLvl", 30)]
+    public OutlineLevel OutlineLevel { get; set; }
     
 
 
@@ -33704,13 +31979,7 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rFonts","b","bCs","i","iCs","caps","smallCaps","strike","dstrike","outline","shadow","emboss","imprint","noProof","snapToGrid","vanish","webHidden","color","spacing","w","kern","position","sz","szCs","u","effect","bdr","shd","fitText","vertAlign","rtl","cs","em","lang","eastAsianLayout","specVanish" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> RunFonts.</para>
@@ -33719,11 +31988,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RunFonts RunFonts
-    {
-        get => GetElement<RunFonts>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "rFonts", 0)]
+    public RunFonts RunFonts { get; set; }
     
     /// <summary>
     /// <para> Bold.</para>
@@ -33732,11 +31998,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Bold Bold
-    {
-        get => GetElement<Bold>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "b", 1)]
+    public Bold Bold { get; set; }
     
     /// <summary>
     /// <para> BoldComplexScript.</para>
@@ -33745,11 +32008,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BoldComplexScript BoldComplexScript
-    {
-        get => GetElement<BoldComplexScript>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "bCs", 2)]
+    public BoldComplexScript BoldComplexScript { get; set; }
     
     /// <summary>
     /// <para> Italic.</para>
@@ -33758,11 +32018,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Italic Italic
-    {
-        get => GetElement<Italic>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "i", 3)]
+    public Italic Italic { get; set; }
     
     /// <summary>
     /// <para> ItalicComplexScript.</para>
@@ -33771,11 +32028,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ItalicComplexScript ItalicComplexScript
-    {
-        get => GetElement<ItalicComplexScript>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "iCs", 4)]
+    public ItalicComplexScript ItalicComplexScript { get; set; }
     
     /// <summary>
     /// <para> Caps.</para>
@@ -33784,11 +32038,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Caps Caps
-    {
-        get => GetElement<Caps>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "caps", 5)]
+    public Caps Caps { get; set; }
     
     /// <summary>
     /// <para> SmallCaps.</para>
@@ -33797,11 +32048,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SmallCaps SmallCaps
-    {
-        get => GetElement<SmallCaps>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "smallCaps", 6)]
+    public SmallCaps SmallCaps { get; set; }
     
     /// <summary>
     /// <para> Strike.</para>
@@ -33810,11 +32058,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Strike Strike
-    {
-        get => GetElement<Strike>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "strike", 7)]
+    public Strike Strike { get; set; }
     
     /// <summary>
     /// <para> DoubleStrike.</para>
@@ -33823,11 +32068,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoubleStrike DoubleStrike
-    {
-        get => GetElement<DoubleStrike>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "dstrike", 8)]
+    public DoubleStrike DoubleStrike { get; set; }
     
     /// <summary>
     /// <para> Outline.</para>
@@ -33836,11 +32078,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Outline Outline
-    {
-        get => GetElement<Outline>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "outline", 9)]
+    public Outline Outline { get; set; }
     
     /// <summary>
     /// <para> Shadow.</para>
@@ -33849,11 +32088,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shadow Shadow
-    {
-        get => GetElement<Shadow>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "shadow", 10)]
+    public Shadow Shadow { get; set; }
     
     /// <summary>
     /// <para> Emboss.</para>
@@ -33862,11 +32098,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Emboss Emboss
-    {
-        get => GetElement<Emboss>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "emboss", 11)]
+    public Emboss Emboss { get; set; }
     
     /// <summary>
     /// <para> Imprint.</para>
@@ -33875,11 +32108,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Imprint Imprint
-    {
-        get => GetElement<Imprint>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "imprint", 12)]
+    public Imprint Imprint { get; set; }
     
     /// <summary>
     /// <para> NoProof.</para>
@@ -33888,11 +32118,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoProof NoProof
-    {
-        get => GetElement<NoProof>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "noProof", 13)]
+    public NoProof NoProof { get; set; }
     
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -33901,11 +32128,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SnapToGrid SnapToGrid
-    {
-        get => GetElement<SnapToGrid>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "snapToGrid", 14)]
+    public SnapToGrid SnapToGrid { get; set; }
     
     /// <summary>
     /// <para> Vanish.</para>
@@ -33914,11 +32138,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Vanish Vanish
-    {
-        get => GetElement<Vanish>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "vanish", 15)]
+    public Vanish Vanish { get; set; }
     
     /// <summary>
     /// <para> WebHidden.</para>
@@ -33927,11 +32148,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WebHidden WebHidden
-    {
-        get => GetElement<WebHidden>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(23, "webHidden", 16)]
+    public WebHidden WebHidden { get; set; }
     
     /// <summary>
     /// <para> Color.</para>
@@ -33940,11 +32158,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Color Color
-    {
-        get => GetElement<Color>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(23, "color", 17)]
+    public Color Color { get; set; }
     
     /// <summary>
     /// <para> Spacing.</para>
@@ -33953,11 +32168,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Spacing Spacing
-    {
-        get => GetElement<Spacing>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(23, "spacing", 18)]
+    public Spacing Spacing { get; set; }
     
     /// <summary>
     /// <para> CharacterScale.</para>
@@ -33966,11 +32178,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public CharacterScale CharacterScale
-    {
-        get => GetElement<CharacterScale>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(23, "w", 19)]
+    public CharacterScale CharacterScale { get; set; }
     
     /// <summary>
     /// <para> Kern.</para>
@@ -33979,11 +32188,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Kern Kern
-    {
-        get => GetElement<Kern>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(23, "kern", 20)]
+    public Kern Kern { get; set; }
     
     /// <summary>
     /// <para> Position.</para>
@@ -33992,11 +32198,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Position Position
-    {
-        get => GetElement<Position>(21);
-        set => SetElement(21, value);
-    }
+	[SchemaAttr(23, "position", 21)]
+    public Position Position { get; set; }
     
     /// <summary>
     /// <para> FontSize.</para>
@@ -34005,11 +32208,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FontSize FontSize
-    {
-        get => GetElement<FontSize>(22);
-        set => SetElement(22, value);
-    }
+	[SchemaAttr(23, "sz", 22)]
+    public FontSize FontSize { get; set; }
     
     /// <summary>
     /// <para> FontSizeComplexScript.</para>
@@ -34018,11 +32218,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FontSizeComplexScript FontSizeComplexScript
-    {
-        get => GetElement<FontSizeComplexScript>(23);
-        set => SetElement(23, value);
-    }
+	[SchemaAttr(23, "szCs", 23)]
+    public FontSizeComplexScript FontSizeComplexScript { get; set; }
     
     /// <summary>
     /// <para> Underline.</para>
@@ -34031,11 +32228,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Underline Underline
-    {
-        get => GetElement<Underline>(24);
-        set => SetElement(24, value);
-    }
+	[SchemaAttr(23, "u", 24)]
+    public Underline Underline { get; set; }
     
     /// <summary>
     /// <para> TextEffect.</para>
@@ -34044,11 +32238,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextEffect TextEffect
-    {
-        get => GetElement<TextEffect>(25);
-        set => SetElement(25, value);
-    }
+	[SchemaAttr(23, "effect", 25)]
+    public TextEffect TextEffect { get; set; }
     
     /// <summary>
     /// <para> Border.</para>
@@ -34057,11 +32248,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Border Border
-    {
-        get => GetElement<Border>(26);
-        set => SetElement(26, value);
-    }
+	[SchemaAttr(23, "bdr", 26)]
+    public Border Border { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -34070,11 +32258,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(27);
-        set => SetElement(27, value);
-    }
+	[SchemaAttr(23, "shd", 27)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> FitText.</para>
@@ -34083,11 +32268,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FitText FitText
-    {
-        get => GetElement<FitText>(28);
-        set => SetElement(28, value);
-    }
+	[SchemaAttr(23, "fitText", 28)]
+    public FitText FitText { get; set; }
     
     /// <summary>
     /// <para> VerticalTextAlignment.</para>
@@ -34096,11 +32278,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public VerticalTextAlignment VerticalTextAlignment
-    {
-        get => GetElement<VerticalTextAlignment>(29);
-        set => SetElement(29, value);
-    }
+	[SchemaAttr(23, "vertAlign", 29)]
+    public VerticalTextAlignment VerticalTextAlignment { get; set; }
     
     /// <summary>
     /// <para> RightToLeftText.</para>
@@ -34109,11 +32288,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RightToLeftText RightToLeftText
-    {
-        get => GetElement<RightToLeftText>(30);
-        set => SetElement(30, value);
-    }
+	[SchemaAttr(23, "rtl", 30)]
+    public RightToLeftText RightToLeftText { get; set; }
     
     /// <summary>
     /// <para> ComplexScript.</para>
@@ -34122,11 +32298,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ComplexScript ComplexScript
-    {
-        get => GetElement<ComplexScript>(31);
-        set => SetElement(31, value);
-    }
+	[SchemaAttr(23, "cs", 31)]
+    public ComplexScript ComplexScript { get; set; }
     
     /// <summary>
     /// <para> Emphasis.</para>
@@ -34135,11 +32308,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Emphasis Emphasis
-    {
-        get => GetElement<Emphasis>(32);
-        set => SetElement(32, value);
-    }
+	[SchemaAttr(23, "em", 32)]
+    public Emphasis Emphasis { get; set; }
     
     /// <summary>
     /// <para> Languages.</para>
@@ -34148,11 +32318,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Languages Languages
-    {
-        get => GetElement<Languages>(33);
-        set => SetElement(33, value);
-    }
+	[SchemaAttr(23, "lang", 33)]
+    public Languages Languages { get; set; }
     
     /// <summary>
     /// <para> EastAsianLayout.</para>
@@ -34161,11 +32328,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EastAsianLayout EastAsianLayout
-    {
-        get => GetElement<EastAsianLayout>(34);
-        set => SetElement(34, value);
-    }
+	[SchemaAttr(23, "eastAsianLayout", 34)]
+    public EastAsianLayout EastAsianLayout { get; set; }
     
     /// <summary>
     /// <para> SpecVanish.</para>
@@ -34174,11 +32338,8 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SpecVanish SpecVanish
-    {
-        get => GetElement<SpecVanish>(35);
-        set => SetElement(35, value);
-    }
+	[SchemaAttr(23, "specVanish", 35)]
+    public SpecVanish SpecVanish { get; set; }
     
 
 
@@ -34330,13 +32491,7 @@ public partial class Level : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "start","numFmt","lvlRestart","pStyle","isLgl","suff","lvlText","lvlPicBulletId","legacy","lvlJc","pPr","rPr" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Starting Value.</para>
@@ -34345,11 +32500,8 @@ public partial class Level : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StartNumberingValue StartNumberingValue
-    {
-        get => GetElement<StartNumberingValue>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "start", 0)]
+    public StartNumberingValue StartNumberingValue { get; set; }
     
     /// <summary>
     /// <para> Numbering Format.</para>
@@ -34358,11 +32510,8 @@ public partial class Level : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingFormat NumberingFormat
-    {
-        get => GetElement<NumberingFormat>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "numFmt", 1)]
+    public NumberingFormat NumberingFormat { get; set; }
     
     /// <summary>
     /// <para> Restart Numbering Level Symbol.</para>
@@ -34371,11 +32520,8 @@ public partial class Level : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LevelRestart LevelRestart
-    {
-        get => GetElement<LevelRestart>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "lvlRestart", 2)]
+    public LevelRestart LevelRestart { get; set; }
     
     /// <summary>
     /// <para> Paragraph Style's Associated Numbering Level.</para>
@@ -34384,11 +32530,8 @@ public partial class Level : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphStyleIdInLevel ParagraphStyleIdInLevel
-    {
-        get => GetElement<ParagraphStyleIdInLevel>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "pStyle", 3)]
+    public ParagraphStyleIdInLevel ParagraphStyleIdInLevel { get; set; }
     
     /// <summary>
     /// <para> Display All Levels Using Arabic Numerals.</para>
@@ -34397,11 +32540,8 @@ public partial class Level : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public IsLegalNumberingStyle IsLegalNumberingStyle
-    {
-        get => GetElement<IsLegalNumberingStyle>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "isLgl", 4)]
+    public IsLegalNumberingStyle IsLegalNumberingStyle { get; set; }
     
     /// <summary>
     /// <para> Content Between Numbering Symbol and Paragraph Text.</para>
@@ -34410,11 +32550,8 @@ public partial class Level : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LevelSuffix LevelSuffix
-    {
-        get => GetElement<LevelSuffix>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "suff", 5)]
+    public LevelSuffix LevelSuffix { get; set; }
     
     /// <summary>
     /// <para> Numbering Level Text.</para>
@@ -34423,11 +32560,8 @@ public partial class Level : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LevelText LevelText
-    {
-        get => GetElement<LevelText>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "lvlText", 6)]
+    public LevelText LevelText { get; set; }
     
     /// <summary>
     /// <para> Picture Numbering Symbol Definition Reference.</para>
@@ -34436,11 +32570,8 @@ public partial class Level : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LevelPictureBulletId LevelPictureBulletId
-    {
-        get => GetElement<LevelPictureBulletId>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "lvlPicBulletId", 7)]
+    public LevelPictureBulletId LevelPictureBulletId { get; set; }
     
     /// <summary>
     /// <para> Legacy Numbering Level Properties.</para>
@@ -34449,11 +32580,8 @@ public partial class Level : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LegacyNumbering LegacyNumbering
-    {
-        get => GetElement<LegacyNumbering>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "legacy", 8)]
+    public LegacyNumbering LegacyNumbering { get; set; }
     
     /// <summary>
     /// <para> Justification.</para>
@@ -34462,11 +32590,8 @@ public partial class Level : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LevelJustification LevelJustification
-    {
-        get => GetElement<LevelJustification>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "lvlJc", 9)]
+    public LevelJustification LevelJustification { get; set; }
     
     /// <summary>
     /// <para> Numbering Level Associated Paragraph Properties.</para>
@@ -34475,11 +32600,8 @@ public partial class Level : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PreviousParagraphProperties PreviousParagraphProperties
-    {
-        get => GetElement<PreviousParagraphProperties>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "pPr", 10)]
+    public PreviousParagraphProperties PreviousParagraphProperties { get; set; }
     
     /// <summary>
     /// <para> Numbering Symbol Run Properties.</para>
@@ -34488,11 +32610,8 @@ public partial class Level : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingSymbolRunProperties NumberingSymbolRunProperties
-    {
-        get => GetElement<NumberingSymbolRunProperties>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "rPr", 11)]
+    public NumberingSymbolRunProperties NumberingSymbolRunProperties { get; set; }
     
 
 
@@ -34569,13 +32688,7 @@ public partial class LevelOverride : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "startOverride","lvl" };
-    private static readonly byte[] eleNamespaceIds = { 23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Numbering Level Starting Value Override.</para>
@@ -34584,11 +32697,8 @@ public partial class LevelOverride : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StartOverrideNumberingValue StartOverrideNumberingValue
-    {
-        get => GetElement<StartOverrideNumberingValue>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "startOverride", 0)]
+    public StartOverrideNumberingValue StartOverrideNumberingValue { get; set; }
     
     /// <summary>
     /// <para> Numbering Level Override Definition.</para>
@@ -34597,11 +32707,8 @@ public partial class LevelOverride : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Level Level
-    {
-        get => GetElement<Level>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "lvl", 1)]
+    public Level Level { get; set; }
     
 
 
@@ -34678,13 +32785,7 @@ public partial class NumberingPictureBullet : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pict","drawing" };
-    private static readonly byte[] eleNamespaceIds = { 23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> PictureBulletBase.</para>
@@ -34693,11 +32794,8 @@ public partial class NumberingPictureBullet : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PictureBulletBase PictureBulletBase
-    {
-        get => GetElement<PictureBulletBase>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "pict", 0)]
+    public PictureBulletBase PictureBulletBase { get; set; }
     
     /// <summary>
     /// <para> Drawing.</para>
@@ -34706,11 +32804,8 @@ public partial class NumberingPictureBullet : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Drawing Drawing
-    {
-        get => GetElement<Drawing>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "drawing", 1)]
+    public Drawing Drawing { get; set; }
     
 
 
@@ -34797,13 +32892,7 @@ public partial class AbstractNum : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nsid","multiLevelType","tmpl","name","styleLink","numStyleLink","lvl" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Abstract Numbering Definition Identifier.</para>
@@ -34812,11 +32901,8 @@ public partial class AbstractNum : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Nsid Nsid
-    {
-        get => GetElement<Nsid>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "nsid", 0)]
+    public Nsid Nsid { get; set; }
     
     /// <summary>
     /// <para> Abstract Numbering Definition Type.</para>
@@ -34825,11 +32911,8 @@ public partial class AbstractNum : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MultiLevelType MultiLevelType
-    {
-        get => GetElement<MultiLevelType>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "multiLevelType", 1)]
+    public MultiLevelType MultiLevelType { get; set; }
     
     /// <summary>
     /// <para> Numbering Template Code.</para>
@@ -34838,11 +32921,8 @@ public partial class AbstractNum : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TemplateCode TemplateCode
-    {
-        get => GetElement<TemplateCode>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "tmpl", 2)]
+    public TemplateCode TemplateCode { get; set; }
     
     /// <summary>
     /// <para> Abstract Numbering Definition Name.</para>
@@ -34851,11 +32931,8 @@ public partial class AbstractNum : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AbstractNumDefinitionName AbstractNumDefinitionName
-    {
-        get => GetElement<AbstractNumDefinitionName>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "name", 3)]
+    public AbstractNumDefinitionName AbstractNumDefinitionName { get; set; }
     
     /// <summary>
     /// <para> Numbering Style Definition.</para>
@@ -34864,11 +32941,8 @@ public partial class AbstractNum : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StyleLink StyleLink
-    {
-        get => GetElement<StyleLink>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "styleLink", 4)]
+    public StyleLink StyleLink { get; set; }
     
     /// <summary>
     /// <para> Numbering Style Reference.</para>
@@ -34877,11 +32951,8 @@ public partial class AbstractNum : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingStyleLink NumberingStyleLink
-    {
-        get => GetElement<NumberingStyleLink>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "numStyleLink", 5)]
+    public NumberingStyleLink NumberingStyleLink { get; set; }
     
 
 
@@ -34958,13 +33029,7 @@ public partial class NumberingInstance : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "abstractNumId","lvlOverride" };
-    private static readonly byte[] eleNamespaceIds = { 23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Abstract Numbering Definition Reference.</para>
@@ -34973,11 +33038,8 @@ public partial class NumberingInstance : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AbstractNumId AbstractNumId
-    {
-        get => GetElement<AbstractNumId>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "abstractNumId", 0)]
+    public AbstractNumId AbstractNumId { get; set; }
     
 
 
@@ -35104,13 +33166,7 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "keepNext","keepLines","pageBreakBefore","framePr","widowControl","numPr","suppressLineNumbers","pBdr","shd","tabs","suppressAutoHyphens","kinsoku","wordWrap","overflowPunct","topLinePunct","autoSpaceDE","autoSpaceDN","bidi","adjustRightInd","snapToGrid","spacing","ind","contextualSpacing","mirrorIndents","suppressOverlap","jc","textDirection","textAlignment","textboxTightWrap","outlineLvl","pPrChange" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> KeepNext.</para>
@@ -35119,11 +33175,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public KeepNext KeepNext
-    {
-        get => GetElement<KeepNext>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "keepNext", 0)]
+    public KeepNext KeepNext { get; set; }
     
     /// <summary>
     /// <para> KeepLines.</para>
@@ -35132,11 +33185,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public KeepLines KeepLines
-    {
-        get => GetElement<KeepLines>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "keepLines", 1)]
+    public KeepLines KeepLines { get; set; }
     
     /// <summary>
     /// <para> PageBreakBefore.</para>
@@ -35145,11 +33195,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PageBreakBefore PageBreakBefore
-    {
-        get => GetElement<PageBreakBefore>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "pageBreakBefore", 2)]
+    public PageBreakBefore PageBreakBefore { get; set; }
     
     /// <summary>
     /// <para> FrameProperties.</para>
@@ -35158,11 +33205,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FrameProperties FrameProperties
-    {
-        get => GetElement<FrameProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "framePr", 3)]
+    public FrameProperties FrameProperties { get; set; }
     
     /// <summary>
     /// <para> WidowControl.</para>
@@ -35171,11 +33215,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WidowControl WidowControl
-    {
-        get => GetElement<WidowControl>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "widowControl", 4)]
+    public WidowControl WidowControl { get; set; }
     
     /// <summary>
     /// <para> NumberingProperties.</para>
@@ -35184,11 +33225,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingProperties NumberingProperties
-    {
-        get => GetElement<NumberingProperties>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "numPr", 5)]
+    public NumberingProperties NumberingProperties { get; set; }
     
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
@@ -35197,11 +33235,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressLineNumbers SuppressLineNumbers
-    {
-        get => GetElement<SuppressLineNumbers>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "suppressLineNumbers", 6)]
+    public SuppressLineNumbers SuppressLineNumbers { get; set; }
     
     /// <summary>
     /// <para> ParagraphBorders.</para>
@@ -35210,11 +33245,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphBorders ParagraphBorders
-    {
-        get => GetElement<ParagraphBorders>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "pBdr", 7)]
+    public ParagraphBorders ParagraphBorders { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -35223,11 +33255,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "shd", 8)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> Tabs.</para>
@@ -35236,11 +33265,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Tabs Tabs
-    {
-        get => GetElement<Tabs>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "tabs", 9)]
+    public Tabs Tabs { get; set; }
     
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
@@ -35249,11 +33275,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressAutoHyphens SuppressAutoHyphens
-    {
-        get => GetElement<SuppressAutoHyphens>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "suppressAutoHyphens", 10)]
+    public SuppressAutoHyphens SuppressAutoHyphens { get; set; }
     
     /// <summary>
     /// <para> Kinsoku.</para>
@@ -35262,11 +33285,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Kinsoku Kinsoku
-    {
-        get => GetElement<Kinsoku>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "kinsoku", 11)]
+    public Kinsoku Kinsoku { get; set; }
     
     /// <summary>
     /// <para> WordWrap.</para>
@@ -35275,11 +33295,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WordWrap WordWrap
-    {
-        get => GetElement<WordWrap>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "wordWrap", 12)]
+    public WordWrap WordWrap { get; set; }
     
     /// <summary>
     /// <para> OverflowPunctuation.</para>
@@ -35288,11 +33305,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public OverflowPunctuation OverflowPunctuation
-    {
-        get => GetElement<OverflowPunctuation>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "overflowPunct", 13)]
+    public OverflowPunctuation OverflowPunctuation { get; set; }
     
     /// <summary>
     /// <para> TopLinePunctuation.</para>
@@ -35301,11 +33315,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopLinePunctuation TopLinePunctuation
-    {
-        get => GetElement<TopLinePunctuation>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "topLinePunct", 14)]
+    public TopLinePunctuation TopLinePunctuation { get; set; }
     
     /// <summary>
     /// <para> AutoSpaceDE.</para>
@@ -35314,11 +33325,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AutoSpaceDE AutoSpaceDE
-    {
-        get => GetElement<AutoSpaceDE>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "autoSpaceDE", 15)]
+    public AutoSpaceDE AutoSpaceDE { get; set; }
     
     /// <summary>
     /// <para> AutoSpaceDN.</para>
@@ -35327,11 +33335,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AutoSpaceDN AutoSpaceDN
-    {
-        get => GetElement<AutoSpaceDN>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(23, "autoSpaceDN", 16)]
+    public AutoSpaceDN AutoSpaceDN { get; set; }
     
     /// <summary>
     /// <para> BiDi.</para>
@@ -35340,11 +33345,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BiDi BiDi
-    {
-        get => GetElement<BiDi>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(23, "bidi", 17)]
+    public BiDi BiDi { get; set; }
     
     /// <summary>
     /// <para> AdjustRightIndent.</para>
@@ -35353,11 +33355,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AdjustRightIndent AdjustRightIndent
-    {
-        get => GetElement<AdjustRightIndent>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(23, "adjustRightInd", 18)]
+    public AdjustRightIndent AdjustRightIndent { get; set; }
     
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -35366,11 +33365,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SnapToGrid SnapToGrid
-    {
-        get => GetElement<SnapToGrid>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(23, "snapToGrid", 19)]
+    public SnapToGrid SnapToGrid { get; set; }
     
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
@@ -35379,11 +33375,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SpacingBetweenLines SpacingBetweenLines
-    {
-        get => GetElement<SpacingBetweenLines>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(23, "spacing", 20)]
+    public SpacingBetweenLines SpacingBetweenLines { get; set; }
     
     /// <summary>
     /// <para> Indentation.</para>
@@ -35392,11 +33385,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Indentation Indentation
-    {
-        get => GetElement<Indentation>(21);
-        set => SetElement(21, value);
-    }
+	[SchemaAttr(23, "ind", 21)]
+    public Indentation Indentation { get; set; }
     
     /// <summary>
     /// <para> ContextualSpacing.</para>
@@ -35405,11 +33395,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ContextualSpacing ContextualSpacing
-    {
-        get => GetElement<ContextualSpacing>(22);
-        set => SetElement(22, value);
-    }
+	[SchemaAttr(23, "contextualSpacing", 22)]
+    public ContextualSpacing ContextualSpacing { get; set; }
     
     /// <summary>
     /// <para> MirrorIndents.</para>
@@ -35418,11 +33405,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MirrorIndents MirrorIndents
-    {
-        get => GetElement<MirrorIndents>(23);
-        set => SetElement(23, value);
-    }
+	[SchemaAttr(23, "mirrorIndents", 23)]
+    public MirrorIndents MirrorIndents { get; set; }
     
     /// <summary>
     /// <para> SuppressOverlap.</para>
@@ -35431,11 +33415,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressOverlap SuppressOverlap
-    {
-        get => GetElement<SuppressOverlap>(24);
-        set => SetElement(24, value);
-    }
+	[SchemaAttr(23, "suppressOverlap", 24)]
+    public SuppressOverlap SuppressOverlap { get; set; }
     
     /// <summary>
     /// <para> Justification.</para>
@@ -35444,11 +33425,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Justification Justification
-    {
-        get => GetElement<Justification>(25);
-        set => SetElement(25, value);
-    }
+	[SchemaAttr(23, "jc", 25)]
+    public Justification Justification { get; set; }
     
     /// <summary>
     /// <para> TextDirection.</para>
@@ -35457,11 +33435,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextDirection TextDirection
-    {
-        get => GetElement<TextDirection>(26);
-        set => SetElement(26, value);
-    }
+	[SchemaAttr(23, "textDirection", 26)]
+    public TextDirection TextDirection { get; set; }
     
     /// <summary>
     /// <para> TextAlignment.</para>
@@ -35470,11 +33445,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextAlignment TextAlignment
-    {
-        get => GetElement<TextAlignment>(27);
-        set => SetElement(27, value);
-    }
+	[SchemaAttr(23, "textAlignment", 27)]
+    public TextAlignment TextAlignment { get; set; }
     
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
@@ -35483,11 +33455,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextBoxTightWrap TextBoxTightWrap
-    {
-        get => GetElement<TextBoxTightWrap>(28);
-        set => SetElement(28, value);
-    }
+	[SchemaAttr(23, "textboxTightWrap", 28)]
+    public TextBoxTightWrap TextBoxTightWrap { get; set; }
     
     /// <summary>
     /// <para> OutlineLevel.</para>
@@ -35496,11 +33465,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public OutlineLevel OutlineLevel
-    {
-        get => GetElement<OutlineLevel>(29);
-        set => SetElement(29, value);
-    }
+	[SchemaAttr(23, "outlineLvl", 29)]
+    public OutlineLevel OutlineLevel { get; set; }
     
     /// <summary>
     /// <para> ParagraphPropertiesChange.</para>
@@ -35509,11 +33475,8 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphPropertiesChange ParagraphPropertiesChange
-    {
-        get => GetElement<ParagraphPropertiesChange>(30);
-        set => SetElement(30, value);
-    }
+	[SchemaAttr(23, "pPrChange", 30)]
+    public ParagraphPropertiesChange ParagraphPropertiesChange { get; set; }
     
 
 
@@ -35590,13 +33553,7 @@ public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCom
      
     
     
-        private static readonly string[] eleTagNames = { "jc","tblCellSpacing","tblInd","tblBorders","shd","tblCellMar" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> TableJustification.</para>
@@ -35605,11 +33562,8 @@ public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCom
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableJustification TableJustification
-    {
-        get => GetElement<TableJustification>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "jc", 0)]
+    public TableJustification TableJustification { get; set; }
     
     /// <summary>
     /// <para> TableCellSpacing.</para>
@@ -35618,11 +33572,8 @@ public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCom
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellSpacing TableCellSpacing
-    {
-        get => GetElement<TableCellSpacing>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "tblCellSpacing", 1)]
+    public TableCellSpacing TableCellSpacing { get; set; }
     
     /// <summary>
     /// <para> TableIndentation.</para>
@@ -35631,11 +33582,8 @@ public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCom
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableIndentation TableIndentation
-    {
-        get => GetElement<TableIndentation>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "tblInd", 2)]
+    public TableIndentation TableIndentation { get; set; }
     
     /// <summary>
     /// <para> TableBorders.</para>
@@ -35644,11 +33592,8 @@ public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCom
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableBorders TableBorders
-    {
-        get => GetElement<TableBorders>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "tblBorders", 3)]
+    public TableBorders TableBorders { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -35657,11 +33602,8 @@ public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCom
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "shd", 4)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> TableCellMarginDefault.</para>
@@ -35670,11 +33612,8 @@ public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCom
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellMarginDefault TableCellMarginDefault
-    {
-        get => GetElement<TableCellMarginDefault>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "tblCellMar", 5)]
+    public TableCellMarginDefault TableCellMarginDefault { get; set; }
     
 
 
@@ -35821,13 +33760,7 @@ public partial class TableStyleConditionalFormattingTableCellProperties : OpenXm
      
     
     
-        private static readonly string[] eleTagNames = { "tcBorders","shd","noWrap","tcMar","vAlign" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> TableCellBorders.</para>
@@ -35836,11 +33769,8 @@ public partial class TableStyleConditionalFormattingTableCellProperties : OpenXm
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellBorders TableCellBorders
-    {
-        get => GetElement<TableCellBorders>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "tcBorders", 0)]
+    public TableCellBorders TableCellBorders { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -35849,11 +33779,8 @@ public partial class TableStyleConditionalFormattingTableCellProperties : OpenXm
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "shd", 1)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> NoWrap.</para>
@@ -35862,11 +33789,8 @@ public partial class TableStyleConditionalFormattingTableCellProperties : OpenXm
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoWrap NoWrap
-    {
-        get => GetElement<NoWrap>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "noWrap", 2)]
+    public NoWrap NoWrap { get; set; }
     
     /// <summary>
     /// <para> TableCellMargin.</para>
@@ -35875,11 +33799,8 @@ public partial class TableStyleConditionalFormattingTableCellProperties : OpenXm
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellMargin TableCellMargin
-    {
-        get => GetElement<TableCellMargin>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "tcMar", 3)]
+    public TableCellMargin TableCellMargin { get; set; }
     
     /// <summary>
     /// <para> TableCellVerticalAlignment.</para>
@@ -35888,11 +33809,8 @@ public partial class TableStyleConditionalFormattingTableCellProperties : OpenXm
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellVerticalAlignment TableCellVerticalAlignment
-    {
-        get => GetElement<TableCellVerticalAlignment>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "vAlign", 4)]
+    public TableCellVerticalAlignment TableCellVerticalAlignment { get; set; }
     
 
 
@@ -36105,13 +34023,7 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rFonts","b","bCs","i","iCs","caps","smallCaps","strike","dstrike","outline","shadow","emboss","imprint","noProof","snapToGrid","vanish","webHidden","color","spacing","w","kern","position","sz","szCs","u","effect","bdr","shd","fitText","vertAlign","em","lang","eastAsianLayout","specVanish","rPrChange" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> RunFonts.</para>
@@ -36120,11 +34032,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RunFonts RunFonts
-    {
-        get => GetElement<RunFonts>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "rFonts", 0)]
+    public RunFonts RunFonts { get; set; }
     
     /// <summary>
     /// <para> Bold.</para>
@@ -36133,11 +34042,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Bold Bold
-    {
-        get => GetElement<Bold>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "b", 1)]
+    public Bold Bold { get; set; }
     
     /// <summary>
     /// <para> BoldComplexScript.</para>
@@ -36146,11 +34052,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BoldComplexScript BoldComplexScript
-    {
-        get => GetElement<BoldComplexScript>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "bCs", 2)]
+    public BoldComplexScript BoldComplexScript { get; set; }
     
     /// <summary>
     /// <para> Italic.</para>
@@ -36159,11 +34062,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Italic Italic
-    {
-        get => GetElement<Italic>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "i", 3)]
+    public Italic Italic { get; set; }
     
     /// <summary>
     /// <para> ItalicComplexScript.</para>
@@ -36172,11 +34072,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ItalicComplexScript ItalicComplexScript
-    {
-        get => GetElement<ItalicComplexScript>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "iCs", 4)]
+    public ItalicComplexScript ItalicComplexScript { get; set; }
     
     /// <summary>
     /// <para> Caps.</para>
@@ -36185,11 +34082,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Caps Caps
-    {
-        get => GetElement<Caps>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "caps", 5)]
+    public Caps Caps { get; set; }
     
     /// <summary>
     /// <para> SmallCaps.</para>
@@ -36198,11 +34092,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SmallCaps SmallCaps
-    {
-        get => GetElement<SmallCaps>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "smallCaps", 6)]
+    public SmallCaps SmallCaps { get; set; }
     
     /// <summary>
     /// <para> Strike.</para>
@@ -36211,11 +34102,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Strike Strike
-    {
-        get => GetElement<Strike>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "strike", 7)]
+    public Strike Strike { get; set; }
     
     /// <summary>
     /// <para> DoubleStrike.</para>
@@ -36224,11 +34112,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoubleStrike DoubleStrike
-    {
-        get => GetElement<DoubleStrike>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "dstrike", 8)]
+    public DoubleStrike DoubleStrike { get; set; }
     
     /// <summary>
     /// <para> Outline.</para>
@@ -36237,11 +34122,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Outline Outline
-    {
-        get => GetElement<Outline>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "outline", 9)]
+    public Outline Outline { get; set; }
     
     /// <summary>
     /// <para> Shadow.</para>
@@ -36250,11 +34132,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shadow Shadow
-    {
-        get => GetElement<Shadow>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "shadow", 10)]
+    public Shadow Shadow { get; set; }
     
     /// <summary>
     /// <para> Emboss.</para>
@@ -36263,11 +34142,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Emboss Emboss
-    {
-        get => GetElement<Emboss>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "emboss", 11)]
+    public Emboss Emboss { get; set; }
     
     /// <summary>
     /// <para> Imprint.</para>
@@ -36276,11 +34152,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Imprint Imprint
-    {
-        get => GetElement<Imprint>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "imprint", 12)]
+    public Imprint Imprint { get; set; }
     
     /// <summary>
     /// <para> NoProof.</para>
@@ -36289,11 +34162,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoProof NoProof
-    {
-        get => GetElement<NoProof>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "noProof", 13)]
+    public NoProof NoProof { get; set; }
     
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -36302,11 +34172,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SnapToGrid SnapToGrid
-    {
-        get => GetElement<SnapToGrid>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "snapToGrid", 14)]
+    public SnapToGrid SnapToGrid { get; set; }
     
     /// <summary>
     /// <para> Vanish.</para>
@@ -36315,11 +34182,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Vanish Vanish
-    {
-        get => GetElement<Vanish>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "vanish", 15)]
+    public Vanish Vanish { get; set; }
     
     /// <summary>
     /// <para> WebHidden.</para>
@@ -36328,11 +34192,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WebHidden WebHidden
-    {
-        get => GetElement<WebHidden>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(23, "webHidden", 16)]
+    public WebHidden WebHidden { get; set; }
     
     /// <summary>
     /// <para> Color.</para>
@@ -36341,11 +34202,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Color Color
-    {
-        get => GetElement<Color>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(23, "color", 17)]
+    public Color Color { get; set; }
     
     /// <summary>
     /// <para> Spacing.</para>
@@ -36354,11 +34212,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Spacing Spacing
-    {
-        get => GetElement<Spacing>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(23, "spacing", 18)]
+    public Spacing Spacing { get; set; }
     
     /// <summary>
     /// <para> CharacterScale.</para>
@@ -36367,11 +34222,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public CharacterScale CharacterScale
-    {
-        get => GetElement<CharacterScale>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(23, "w", 19)]
+    public CharacterScale CharacterScale { get; set; }
     
     /// <summary>
     /// <para> Kern.</para>
@@ -36380,11 +34232,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Kern Kern
-    {
-        get => GetElement<Kern>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(23, "kern", 20)]
+    public Kern Kern { get; set; }
     
     /// <summary>
     /// <para> Position.</para>
@@ -36393,11 +34242,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Position Position
-    {
-        get => GetElement<Position>(21);
-        set => SetElement(21, value);
-    }
+	[SchemaAttr(23, "position", 21)]
+    public Position Position { get; set; }
     
     /// <summary>
     /// <para> FontSize.</para>
@@ -36406,11 +34252,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FontSize FontSize
-    {
-        get => GetElement<FontSize>(22);
-        set => SetElement(22, value);
-    }
+	[SchemaAttr(23, "sz", 22)]
+    public FontSize FontSize { get; set; }
     
     /// <summary>
     /// <para> FontSizeComplexScript.</para>
@@ -36419,11 +34262,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FontSizeComplexScript FontSizeComplexScript
-    {
-        get => GetElement<FontSizeComplexScript>(23);
-        set => SetElement(23, value);
-    }
+	[SchemaAttr(23, "szCs", 23)]
+    public FontSizeComplexScript FontSizeComplexScript { get; set; }
     
     /// <summary>
     /// <para> Underline.</para>
@@ -36432,11 +34272,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Underline Underline
-    {
-        get => GetElement<Underline>(24);
-        set => SetElement(24, value);
-    }
+	[SchemaAttr(23, "u", 24)]
+    public Underline Underline { get; set; }
     
     /// <summary>
     /// <para> TextEffect.</para>
@@ -36445,11 +34282,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextEffect TextEffect
-    {
-        get => GetElement<TextEffect>(25);
-        set => SetElement(25, value);
-    }
+	[SchemaAttr(23, "effect", 25)]
+    public TextEffect TextEffect { get; set; }
     
     /// <summary>
     /// <para> Border.</para>
@@ -36458,11 +34292,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Border Border
-    {
-        get => GetElement<Border>(26);
-        set => SetElement(26, value);
-    }
+	[SchemaAttr(23, "bdr", 26)]
+    public Border Border { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -36471,11 +34302,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(27);
-        set => SetElement(27, value);
-    }
+	[SchemaAttr(23, "shd", 27)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> FitText.</para>
@@ -36484,11 +34312,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FitText FitText
-    {
-        get => GetElement<FitText>(28);
-        set => SetElement(28, value);
-    }
+	[SchemaAttr(23, "fitText", 28)]
+    public FitText FitText { get; set; }
     
     /// <summary>
     /// <para> VerticalTextAlignment.</para>
@@ -36497,11 +34322,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public VerticalTextAlignment VerticalTextAlignment
-    {
-        get => GetElement<VerticalTextAlignment>(29);
-        set => SetElement(29, value);
-    }
+	[SchemaAttr(23, "vertAlign", 29)]
+    public VerticalTextAlignment VerticalTextAlignment { get; set; }
     
     /// <summary>
     /// <para> Emphasis.</para>
@@ -36510,11 +34332,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Emphasis Emphasis
-    {
-        get => GetElement<Emphasis>(30);
-        set => SetElement(30, value);
-    }
+	[SchemaAttr(23, "em", 30)]
+    public Emphasis Emphasis { get; set; }
     
     /// <summary>
     /// <para> Languages.</para>
@@ -36523,11 +34342,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Languages Languages
-    {
-        get => GetElement<Languages>(31);
-        set => SetElement(31, value);
-    }
+	[SchemaAttr(23, "lang", 31)]
+    public Languages Languages { get; set; }
     
     /// <summary>
     /// <para> EastAsianLayout.</para>
@@ -36536,11 +34352,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EastAsianLayout EastAsianLayout
-    {
-        get => GetElement<EastAsianLayout>(32);
-        set => SetElement(32, value);
-    }
+	[SchemaAttr(23, "eastAsianLayout", 32)]
+    public EastAsianLayout EastAsianLayout { get; set; }
     
     /// <summary>
     /// <para> SpecVanish.</para>
@@ -36549,11 +34362,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SpecVanish SpecVanish
-    {
-        get => GetElement<SpecVanish>(33);
-        set => SetElement(33, value);
-    }
+	[SchemaAttr(23, "specVanish", 33)]
+    public SpecVanish SpecVanish { get; set; }
     
     /// <summary>
     /// <para> RunPropertiesChange.</para>
@@ -36562,11 +34372,8 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RunPropertiesChange RunPropertiesChange
-    {
-        get => GetElement<RunPropertiesChange>(34);
-        set => SetElement(34, value);
-    }
+	[SchemaAttr(23, "rPrChange", 34)]
+    public RunPropertiesChange RunPropertiesChange { get; set; }
     
 
 
@@ -36647,13 +34454,7 @@ public partial class StyleTableProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tblStyleRowBandSize","tblStyleColBandSize","jc","tblCellSpacing","tblInd","tblBorders","shd","tblCellMar" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> TableStyleRowBandSize.</para>
@@ -36662,11 +34463,8 @@ public partial class StyleTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableStyleRowBandSize TableStyleRowBandSize
-    {
-        get => GetElement<TableStyleRowBandSize>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "tblStyleRowBandSize", 0)]
+    public TableStyleRowBandSize TableStyleRowBandSize { get; set; }
     
     /// <summary>
     /// <para> TableStyleColumnBandSize.</para>
@@ -36675,11 +34473,8 @@ public partial class StyleTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableStyleColumnBandSize TableStyleColumnBandSize
-    {
-        get => GetElement<TableStyleColumnBandSize>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "tblStyleColBandSize", 1)]
+    public TableStyleColumnBandSize TableStyleColumnBandSize { get; set; }
     
     /// <summary>
     /// <para> TableJustification.</para>
@@ -36688,11 +34483,8 @@ public partial class StyleTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableJustification TableJustification
-    {
-        get => GetElement<TableJustification>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "jc", 2)]
+    public TableJustification TableJustification { get; set; }
     
     /// <summary>
     /// <para> TableCellSpacing.</para>
@@ -36701,11 +34493,8 @@ public partial class StyleTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellSpacing TableCellSpacing
-    {
-        get => GetElement<TableCellSpacing>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "tblCellSpacing", 3)]
+    public TableCellSpacing TableCellSpacing { get; set; }
     
     /// <summary>
     /// <para> TableIndentation.</para>
@@ -36714,11 +34503,8 @@ public partial class StyleTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableIndentation TableIndentation
-    {
-        get => GetElement<TableIndentation>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "tblInd", 4)]
+    public TableIndentation TableIndentation { get; set; }
     
     /// <summary>
     /// <para> TableBorders.</para>
@@ -36727,11 +34513,8 @@ public partial class StyleTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableBorders TableBorders
-    {
-        get => GetElement<TableBorders>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "tblBorders", 5)]
+    public TableBorders TableBorders { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -36740,11 +34523,8 @@ public partial class StyleTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "shd", 6)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> TableCellMarginDefault.</para>
@@ -36753,11 +34533,8 @@ public partial class StyleTableProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellMarginDefault TableCellMarginDefault
-    {
-        get => GetElement<TableCellMarginDefault>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "tblCellMar", 7)]
+    public TableCellMarginDefault TableCellMarginDefault { get; set; }
     
 
 
@@ -36830,13 +34607,7 @@ public partial class StyleTableCellProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "shd","noWrap","tcMar","vAlign" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Shading.</para>
@@ -36845,11 +34616,8 @@ public partial class StyleTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "shd", 0)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> NoWrap.</para>
@@ -36858,11 +34626,8 @@ public partial class StyleTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoWrap NoWrap
-    {
-        get => GetElement<NoWrap>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "noWrap", 1)]
+    public NoWrap NoWrap { get; set; }
     
     /// <summary>
     /// <para> TableCellMargin.</para>
@@ -36871,11 +34636,8 @@ public partial class StyleTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellMargin TableCellMargin
-    {
-        get => GetElement<TableCellMargin>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "tcMar", 2)]
+    public TableCellMargin TableCellMargin { get; set; }
     
     /// <summary>
     /// <para> TableCellVerticalAlignment.</para>
@@ -36884,11 +34646,8 @@ public partial class StyleTableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellVerticalAlignment TableCellVerticalAlignment
-    {
-        get => GetElement<TableCellVerticalAlignment>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "vAlign", 3)]
+    public TableCellVerticalAlignment TableCellVerticalAlignment { get; set; }
     
 
 
@@ -36971,13 +34730,7 @@ public partial class TableStyleProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pPr","rPr","tblPr","trPr","tcPr" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Table Style Conditional Formatting Paragraph Properties.</para>
@@ -36986,11 +34739,8 @@ public partial class TableStyleProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StyleParagraphProperties StyleParagraphProperties
-    {
-        get => GetElement<StyleParagraphProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "pPr", 0)]
+    public StyleParagraphProperties StyleParagraphProperties { get; set; }
     
     /// <summary>
     /// <para> Table Style Conditional Formatting Run Properties.</para>
@@ -36999,11 +34749,8 @@ public partial class TableStyleProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RunPropertiesBaseStyle RunPropertiesBaseStyle
-    {
-        get => GetElement<RunPropertiesBaseStyle>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "rPr", 1)]
+    public RunPropertiesBaseStyle RunPropertiesBaseStyle { get; set; }
     
     /// <summary>
     /// <para> Table Style Conditional Formatting Table Properties.</para>
@@ -37012,11 +34759,8 @@ public partial class TableStyleProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableStyleConditionalFormattingTableProperties TableStyleConditionalFormattingTableProperties
-    {
-        get => GetElement<TableStyleConditionalFormattingTableProperties>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "tblPr", 2)]
+    public TableStyleConditionalFormattingTableProperties TableStyleConditionalFormattingTableProperties { get; set; }
     
     /// <summary>
     /// <para> Table Style Conditional Formatting Table Row Properties.</para>
@@ -37025,11 +34769,8 @@ public partial class TableStyleProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableStyleConditionalFormattingTableRowProperties TableStyleConditionalFormattingTableRowProperties
-    {
-        get => GetElement<TableStyleConditionalFormattingTableRowProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "trPr", 3)]
+    public TableStyleConditionalFormattingTableRowProperties TableStyleConditionalFormattingTableRowProperties { get; set; }
     
     /// <summary>
     /// <para> Table Style Conditional Formatting Table Cell Properties.</para>
@@ -37038,11 +34779,8 @@ public partial class TableStyleProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableStyleConditionalFormattingTableCellProperties TableStyleConditionalFormattingTableCellProperties
-    {
-        get => GetElement<TableStyleConditionalFormattingTableCellProperties>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "tcPr", 4)]
+    public TableStyleConditionalFormattingTableCellProperties TableStyleConditionalFormattingTableCellProperties { get; set; }
     
 
 
@@ -37190,13 +34928,7 @@ public partial class DocDefaults : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rPrDefault","pPrDefault" };
-    private static readonly byte[] eleNamespaceIds = { 23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Default Run Properties.</para>
@@ -37205,11 +34937,8 @@ public partial class DocDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RunPropertiesDefault RunPropertiesDefault
-    {
-        get => GetElement<RunPropertiesDefault>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "rPrDefault", 0)]
+    public RunPropertiesDefault RunPropertiesDefault { get; set; }
     
     /// <summary>
     /// <para> Default Paragraph Properties.</para>
@@ -37218,11 +34947,8 @@ public partial class DocDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphPropertiesDefault ParagraphPropertiesDefault
-    {
-        get => GetElement<ParagraphPropertiesDefault>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "pPrDefault", 1)]
+    public ParagraphPropertiesDefault ParagraphPropertiesDefault { get; set; }
     
 
 
@@ -37475,13 +35201,7 @@ public partial class Style : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "name","aliases","basedOn","next","link","autoRedefine","hidden","uiPriority","semiHidden","unhideWhenUsed","qFormat","locked","personal","personalCompose","personalReply","rsid","pPr","rPr","tblPr","trPr","tcPr","tblStylePr" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Primary Style Name.</para>
@@ -37490,11 +35210,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StyleName StyleName
-    {
-        get => GetElement<StyleName>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "name", 0)]
+    public StyleName StyleName { get; set; }
     
     /// <summary>
     /// <para> Alternate Style Names.</para>
@@ -37503,11 +35220,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Aliases Aliases
-    {
-        get => GetElement<Aliases>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "aliases", 1)]
+    public Aliases Aliases { get; set; }
     
     /// <summary>
     /// <para> Parent Style ID.</para>
@@ -37516,11 +35230,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BasedOn BasedOn
-    {
-        get => GetElement<BasedOn>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "basedOn", 2)]
+    public BasedOn BasedOn { get; set; }
     
     /// <summary>
     /// <para> Style For Next Paragraph.</para>
@@ -37529,11 +35240,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NextParagraphStyle NextParagraphStyle
-    {
-        get => GetElement<NextParagraphStyle>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "next", 3)]
+    public NextParagraphStyle NextParagraphStyle { get; set; }
     
     /// <summary>
     /// <para> Linked Style Reference.</para>
@@ -37542,11 +35250,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LinkedStyle LinkedStyle
-    {
-        get => GetElement<LinkedStyle>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "link", 4)]
+    public LinkedStyle LinkedStyle { get; set; }
     
     /// <summary>
     /// <para> Automatically Merge User Formatting Into Style Definition.</para>
@@ -37555,11 +35260,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AutoRedefine AutoRedefine
-    {
-        get => GetElement<AutoRedefine>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "autoRedefine", 5)]
+    public AutoRedefine AutoRedefine { get; set; }
     
     /// <summary>
     /// <para> Hide Style From User Interface.</para>
@@ -37568,11 +35270,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StyleHidden StyleHidden
-    {
-        get => GetElement<StyleHidden>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "hidden", 6)]
+    public StyleHidden StyleHidden { get; set; }
     
     /// <summary>
     /// <para> Optional User Interface Sorting Order.</para>
@@ -37581,11 +35280,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public UIPriority UIPriority
-    {
-        get => GetElement<UIPriority>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "uiPriority", 7)]
+    public UIPriority UIPriority { get; set; }
     
     /// <summary>
     /// <para> Hide Style From Main User Interface.</para>
@@ -37594,11 +35290,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SemiHidden SemiHidden
-    {
-        get => GetElement<SemiHidden>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "semiHidden", 8)]
+    public SemiHidden SemiHidden { get; set; }
     
     /// <summary>
     /// <para> Remove Semi-Hidden Property When Style Is Used.</para>
@@ -37607,11 +35300,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public UnhideWhenUsed UnhideWhenUsed
-    {
-        get => GetElement<UnhideWhenUsed>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "unhideWhenUsed", 9)]
+    public UnhideWhenUsed UnhideWhenUsed { get; set; }
     
     /// <summary>
     /// <para> Primary Style.</para>
@@ -37620,11 +35310,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PrimaryStyle PrimaryStyle
-    {
-        get => GetElement<PrimaryStyle>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "qFormat", 10)]
+    public PrimaryStyle PrimaryStyle { get; set; }
     
     /// <summary>
     /// <para> Style Cannot Be Applied.</para>
@@ -37633,11 +35320,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Locked Locked
-    {
-        get => GetElement<Locked>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "locked", 11)]
+    public Locked Locked { get; set; }
     
     /// <summary>
     /// <para> E-Mail Message Text Style.</para>
@@ -37646,11 +35330,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Personal Personal
-    {
-        get => GetElement<Personal>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "personal", 12)]
+    public Personal Personal { get; set; }
     
     /// <summary>
     /// <para> E-Mail Message Composition Style.</para>
@@ -37659,11 +35340,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PersonalCompose PersonalCompose
-    {
-        get => GetElement<PersonalCompose>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "personalCompose", 13)]
+    public PersonalCompose PersonalCompose { get; set; }
     
     /// <summary>
     /// <para> E-Mail Message Reply Style.</para>
@@ -37672,11 +35350,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PersonalReply PersonalReply
-    {
-        get => GetElement<PersonalReply>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "personalReply", 14)]
+    public PersonalReply PersonalReply { get; set; }
     
     /// <summary>
     /// <para> Revision Identifier for Style Definition.</para>
@@ -37685,11 +35360,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Rsid Rsid
-    {
-        get => GetElement<Rsid>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "rsid", 15)]
+    public Rsid Rsid { get; set; }
     
     /// <summary>
     /// <para> Style Paragraph Properties.</para>
@@ -37698,11 +35370,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StyleParagraphProperties StyleParagraphProperties
-    {
-        get => GetElement<StyleParagraphProperties>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(23, "pPr", 16)]
+    public StyleParagraphProperties StyleParagraphProperties { get; set; }
     
     /// <summary>
     /// <para> Run Properties.</para>
@@ -37711,11 +35380,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StyleRunProperties StyleRunProperties
-    {
-        get => GetElement<StyleRunProperties>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(23, "rPr", 17)]
+    public StyleRunProperties StyleRunProperties { get; set; }
     
     /// <summary>
     /// <para> Style Table Properties.</para>
@@ -37724,11 +35390,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StyleTableProperties StyleTableProperties
-    {
-        get => GetElement<StyleTableProperties>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(23, "tblPr", 18)]
+    public StyleTableProperties StyleTableProperties { get; set; }
     
     /// <summary>
     /// <para> Style Table Row Properties.</para>
@@ -37737,11 +35400,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableStyleConditionalFormattingTableRowProperties TableStyleConditionalFormattingTableRowProperties
-    {
-        get => GetElement<TableStyleConditionalFormattingTableRowProperties>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(23, "trPr", 19)]
+    public TableStyleConditionalFormattingTableRowProperties TableStyleConditionalFormattingTableRowProperties { get; set; }
     
     /// <summary>
     /// <para> Style Table Cell Properties.</para>
@@ -37750,11 +35410,8 @@ public partial class Style : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StyleTableCellProperties StyleTableCellProperties
-    {
-        get => GetElement<StyleTableCellProperties>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(23, "tcPr", 20)]
+    public StyleTableCellProperties StyleTableCellProperties { get; set; }
     
 
 
@@ -37849,13 +35506,7 @@ public partial class Font : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "altName","panose1","charset","family","notTrueType","pitch","sig","embedRegular","embedBold","embedItalic","embedBoldItalic" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> AltName.</para>
@@ -37864,11 +35515,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AltName AltName
-    {
-        get => GetElement<AltName>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "altName", 0)]
+    public AltName AltName { get; set; }
     
     /// <summary>
     /// <para> Panose1Number.</para>
@@ -37877,11 +35525,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Panose1Number Panose1Number
-    {
-        get => GetElement<Panose1Number>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "panose1", 1)]
+    public Panose1Number Panose1Number { get; set; }
     
     /// <summary>
     /// <para> FontCharSet.</para>
@@ -37890,11 +35535,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FontCharSet FontCharSet
-    {
-        get => GetElement<FontCharSet>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "charset", 2)]
+    public FontCharSet FontCharSet { get; set; }
     
     /// <summary>
     /// <para> FontFamily.</para>
@@ -37903,11 +35545,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FontFamily FontFamily
-    {
-        get => GetElement<FontFamily>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "family", 3)]
+    public FontFamily FontFamily { get; set; }
     
     /// <summary>
     /// <para> NotTrueType.</para>
@@ -37916,11 +35555,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NotTrueType NotTrueType
-    {
-        get => GetElement<NotTrueType>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "notTrueType", 4)]
+    public NotTrueType NotTrueType { get; set; }
     
     /// <summary>
     /// <para> Pitch.</para>
@@ -37929,11 +35565,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Pitch Pitch
-    {
-        get => GetElement<Pitch>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "pitch", 5)]
+    public Pitch Pitch { get; set; }
     
     /// <summary>
     /// <para> FontSignature.</para>
@@ -37942,11 +35575,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FontSignature FontSignature
-    {
-        get => GetElement<FontSignature>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "sig", 6)]
+    public FontSignature FontSignature { get; set; }
     
     /// <summary>
     /// <para> EmbedRegularFont.</para>
@@ -37955,11 +35585,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EmbedRegularFont EmbedRegularFont
-    {
-        get => GetElement<EmbedRegularFont>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "embedRegular", 7)]
+    public EmbedRegularFont EmbedRegularFont { get; set; }
     
     /// <summary>
     /// <para> EmbedBoldFont.</para>
@@ -37968,11 +35595,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EmbedBoldFont EmbedBoldFont
-    {
-        get => GetElement<EmbedBoldFont>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "embedBold", 8)]
+    public EmbedBoldFont EmbedBoldFont { get; set; }
     
     /// <summary>
     /// <para> EmbedItalicFont.</para>
@@ -37981,11 +35605,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EmbedItalicFont EmbedItalicFont
-    {
-        get => GetElement<EmbedItalicFont>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "embedItalic", 9)]
+    public EmbedItalicFont EmbedItalicFont { get; set; }
     
     /// <summary>
     /// <para> EmbedBoldItalicFont.</para>
@@ -37994,11 +35615,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EmbedBoldItalicFont EmbedBoldItalicFont
-    {
-        get => GetElement<EmbedBoldItalicFont>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "embedBoldItalic", 10)]
+    public EmbedBoldItalicFont EmbedBoldItalicFont { get; set; }
     
 
 
@@ -38195,13 +35813,7 @@ public partial class DivBorder : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "top","left","bottom","right" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Top Border for HTML div.</para>
@@ -38210,11 +35822,8 @@ public partial class DivBorder : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopBorder TopBorder
-    {
-        get => GetElement<TopBorder>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "top", 0)]
+    public TopBorder TopBorder { get; set; }
     
     /// <summary>
     /// <para> Left Border for HTML div.</para>
@@ -38223,11 +35832,8 @@ public partial class DivBorder : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LeftBorder LeftBorder
-    {
-        get => GetElement<LeftBorder>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "left", 1)]
+    public LeftBorder LeftBorder { get; set; }
     
     /// <summary>
     /// <para> Bottom Border for HTML div.</para>
@@ -38236,11 +35842,8 @@ public partial class DivBorder : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BottomBorder BottomBorder
-    {
-        get => GetElement<BottomBorder>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "bottom", 2)]
+    public BottomBorder BottomBorder { get; set; }
     
     /// <summary>
     /// <para> Right Border for HTML div.</para>
@@ -38249,11 +35852,8 @@ public partial class DivBorder : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RightBorder RightBorder
-    {
-        get => GetElement<RightBorder>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "right", 3)]
+    public RightBorder RightBorder { get; set; }
     
 
 
@@ -38507,13 +36107,7 @@ public partial class Div : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "blockQuote","bodyDiv","marLeft","marRight","marTop","marBottom","divBdr","divsChild" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Data for HTML blockquote Element.</para>
@@ -38522,11 +36116,8 @@ public partial class Div : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BlockQuote BlockQuote
-    {
-        get => GetElement<BlockQuote>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "blockQuote", 0)]
+    public BlockQuote BlockQuote { get; set; }
     
     /// <summary>
     /// <para> Data for HTML body Element.</para>
@@ -38535,11 +36126,8 @@ public partial class Div : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BodyDiv BodyDiv
-    {
-        get => GetElement<BodyDiv>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "bodyDiv", 1)]
+    public BodyDiv BodyDiv { get; set; }
     
     /// <summary>
     /// <para> Left Margin for HTML div.</para>
@@ -38548,11 +36136,8 @@ public partial class Div : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LeftMarginDiv LeftMarginDiv
-    {
-        get => GetElement<LeftMarginDiv>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "marLeft", 2)]
+    public LeftMarginDiv LeftMarginDiv { get; set; }
     
     /// <summary>
     /// <para> Right Margin for HTML div.</para>
@@ -38561,11 +36146,8 @@ public partial class Div : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RightMarginDiv RightMarginDiv
-    {
-        get => GetElement<RightMarginDiv>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "marRight", 3)]
+    public RightMarginDiv RightMarginDiv { get; set; }
     
     /// <summary>
     /// <para> Top Margin for HTML div.</para>
@@ -38574,11 +36156,8 @@ public partial class Div : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopMarginDiv TopMarginDiv
-    {
-        get => GetElement<TopMarginDiv>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "marTop", 4)]
+    public TopMarginDiv TopMarginDiv { get; set; }
     
     /// <summary>
     /// <para> Bottom Margin for HTML div.</para>
@@ -38587,11 +36166,8 @@ public partial class Div : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BottomMarginDiv BottomMarginDiv
-    {
-        get => GetElement<BottomMarginDiv>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "marBottom", 5)]
+    public BottomMarginDiv BottomMarginDiv { get; set; }
     
     /// <summary>
     /// <para> Set of Borders for HTML div.</para>
@@ -38600,11 +36176,8 @@ public partial class Div : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DivBorder DivBorder
-    {
-        get => GetElement<DivBorder>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "divBdr", 6)]
+    public DivBorder DivBorder { get; set; }
     
 
 
@@ -39453,13 +37026,7 @@ public partial class DocumentBackground : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "background" };
-    private static readonly byte[] eleNamespaceIds = { 26 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Background.</para>
@@ -39468,11 +37035,8 @@ public partial class DocumentBackground : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
-    public DocumentFormat.OpenXml.Vml.Background Background
-    {
-        get => GetElement<DocumentFormat.OpenXml.Vml.Background>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(26, "background", 0)]
+    public DocumentFormat.OpenXml.Vml.Background Background { get; set; }
     
 
 
@@ -39652,13 +37216,7 @@ public partial class Category : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "name","gallery" };
-    private static readonly byte[] eleNamespaceIds = { 23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Category Associated With Entry.</para>
@@ -39667,11 +37225,8 @@ public partial class Category : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Name Name
-    {
-        get => GetElement<Name>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "name", 0)]
+    public Name Name { get; set; }
     
     /// <summary>
     /// <para> Gallery Associated With Entry.</para>
@@ -39680,11 +37235,8 @@ public partial class Category : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Gallery Gallery
-    {
-        get => GetElement<Gallery>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "gallery", 1)]
+    public Gallery Gallery { get; set; }
     
 
 
@@ -39938,13 +37490,7 @@ public partial class DocPartProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "name","style","category","types","behaviors","description","guid" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Entry Name.</para>
@@ -39953,11 +37499,8 @@ public partial class DocPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocPartName DocPartName
-    {
-        get => GetElement<DocPartName>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "name", 0)]
+    public DocPartName DocPartName { get; set; }
     
     /// <summary>
     /// <para> Associated Paragraph Style Name.</para>
@@ -39966,11 +37509,8 @@ public partial class DocPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public StyleId StyleId
-    {
-        get => GetElement<StyleId>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "style", 1)]
+    public StyleId StyleId { get; set; }
     
     /// <summary>
     /// <para> Entry Categorization.</para>
@@ -39979,11 +37519,8 @@ public partial class DocPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Category Category
-    {
-        get => GetElement<Category>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "category", 2)]
+    public Category Category { get; set; }
     
     /// <summary>
     /// <para> Entry Types.</para>
@@ -39992,11 +37529,8 @@ public partial class DocPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocPartTypes DocPartTypes
-    {
-        get => GetElement<DocPartTypes>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "types", 3)]
+    public DocPartTypes DocPartTypes { get; set; }
     
     /// <summary>
     /// <para> Entry Insertion Behaviors.</para>
@@ -40005,11 +37539,8 @@ public partial class DocPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Behaviors Behaviors
-    {
-        get => GetElement<Behaviors>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "behaviors", 4)]
+    public Behaviors Behaviors { get; set; }
     
     /// <summary>
     /// <para> Description for Entry.</para>
@@ -40018,11 +37549,8 @@ public partial class DocPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Description Description
-    {
-        get => GetElement<Description>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "description", 5)]
+    public Description Description { get; set; }
     
     /// <summary>
     /// <para> Entry ID.</para>
@@ -40031,11 +37559,8 @@ public partial class DocPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocPartId DocPartId
-    {
-        get => GetElement<DocPartId>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "guid", 6)]
+    public DocPartId DocPartId { get; set; }
     
 
 
@@ -40409,13 +37934,7 @@ public partial class DocPart : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "docPartPr","docPartBody" };
-    private static readonly byte[] eleNamespaceIds = { 23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Glossary Document Entry Properties.</para>
@@ -40424,11 +37943,8 @@ public partial class DocPart : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocPartProperties DocPartProperties
-    {
-        get => GetElement<DocPartProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "docPartPr", 0)]
+    public DocPartProperties DocPartProperties { get; set; }
     
     /// <summary>
     /// <para> Contents of Glossary Document Entry.</para>
@@ -40437,11 +37953,8 @@ public partial class DocPart : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocPartBody DocPartBody
-    {
-        get => GetElement<DocPartBody>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "docPartBody", 1)]
+    public DocPartBody DocPartBody { get; set; }
     
 
 
@@ -40665,13 +38178,7 @@ public partial class TablePropertyExceptions : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tblW","jc","tblCellSpacing","tblInd","tblBorders","shd","tblLayout","tblCellMar","tblLook","tblPrExChange" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Preferred Table Width Exception.</para>
@@ -40680,11 +38187,8 @@ public partial class TablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableWidth TableWidth
-    {
-        get => GetElement<TableWidth>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "tblW", 0)]
+    public TableWidth TableWidth { get; set; }
     
     /// <summary>
     /// <para> Table Alignment Exception.</para>
@@ -40693,11 +38197,8 @@ public partial class TablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableJustification TableJustification
-    {
-        get => GetElement<TableJustification>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "jc", 1)]
+    public TableJustification TableJustification { get; set; }
     
     /// <summary>
     /// <para> Table Cell Spacing Exception.</para>
@@ -40706,11 +38207,8 @@ public partial class TablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellSpacing TableCellSpacing
-    {
-        get => GetElement<TableCellSpacing>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "tblCellSpacing", 2)]
+    public TableCellSpacing TableCellSpacing { get; set; }
     
     /// <summary>
     /// <para> Table Indent from Leading Margin Exception.</para>
@@ -40719,11 +38217,8 @@ public partial class TablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableIndentation TableIndentation
-    {
-        get => GetElement<TableIndentation>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "tblInd", 3)]
+    public TableIndentation TableIndentation { get; set; }
     
     /// <summary>
     /// <para> Table Borders Exceptions.</para>
@@ -40732,11 +38227,8 @@ public partial class TablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableBorders TableBorders
-    {
-        get => GetElement<TableBorders>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "tblBorders", 4)]
+    public TableBorders TableBorders { get; set; }
     
     /// <summary>
     /// <para> Table Shading Exception.</para>
@@ -40745,11 +38237,8 @@ public partial class TablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "shd", 5)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> Table Layout Exception.</para>
@@ -40758,11 +38247,8 @@ public partial class TablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableLayout TableLayout
-    {
-        get => GetElement<TableLayout>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "tblLayout", 6)]
+    public TableLayout TableLayout { get; set; }
     
     /// <summary>
     /// <para> Table Cell Margin Exceptions.</para>
@@ -40771,11 +38257,8 @@ public partial class TablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableCellMarginDefault TableCellMarginDefault
-    {
-        get => GetElement<TableCellMarginDefault>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "tblCellMar", 7)]
+    public TableCellMarginDefault TableCellMarginDefault { get; set; }
     
     /// <summary>
     /// <para> Table Style Conditional Formatting Settings Exception.</para>
@@ -40784,11 +38267,8 @@ public partial class TablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TableLook TableLook
-    {
-        get => GetElement<TableLook>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "tblLook", 8)]
+    public TableLook TableLook { get; set; }
     
     /// <summary>
     /// <para> Revision Information for Table-Level Property Exceptions.</para>
@@ -40797,11 +38277,8 @@ public partial class TablePropertyExceptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TablePropertyExceptionsChange TablePropertyExceptionsChange
-    {
-        get => GetElement<TablePropertyExceptionsChange>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "tblPrExChange", 9)]
+    public TablePropertyExceptionsChange TablePropertyExceptionsChange { get; set; }
     
 
 
@@ -40988,13 +38465,7 @@ public partial class TableRowPropertiesChange : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "trPr" };
-    private static readonly byte[] eleNamespaceIds = { 23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Previous Table Row Properties.</para>
@@ -41003,11 +38474,8 @@ public partial class TableRowPropertiesChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PreviousTableRowProperties PreviousTableRowProperties
-    {
-        get => GetElement<PreviousTableRowProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "trPr", 0)]
+    public PreviousTableRowProperties PreviousTableRowProperties { get; set; }
     
 
 
@@ -41144,13 +38612,7 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pStyle","keepNext","keepLines","pageBreakBefore","framePr","widowControl","numPr","suppressLineNumbers","pBdr","shd","tabs","suppressAutoHyphens","kinsoku","wordWrap","overflowPunct","topLinePunct","autoSpaceDE","autoSpaceDN","bidi","adjustRightInd","snapToGrid","spacing","ind","contextualSpacing","mirrorIndents","suppressOverlap","jc","textDirection","textAlignment","textboxTightWrap","outlineLvl","divId","cnfStyle","rPr","sectPr","pPrChange" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ParagraphStyleId.</para>
@@ -41159,11 +38621,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphStyleId ParagraphStyleId
-    {
-        get => GetElement<ParagraphStyleId>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "pStyle", 0)]
+    public ParagraphStyleId ParagraphStyleId { get; set; }
     
     /// <summary>
     /// <para> KeepNext.</para>
@@ -41172,11 +38631,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public KeepNext KeepNext
-    {
-        get => GetElement<KeepNext>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "keepNext", 1)]
+    public KeepNext KeepNext { get; set; }
     
     /// <summary>
     /// <para> KeepLines.</para>
@@ -41185,11 +38641,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public KeepLines KeepLines
-    {
-        get => GetElement<KeepLines>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "keepLines", 2)]
+    public KeepLines KeepLines { get; set; }
     
     /// <summary>
     /// <para> PageBreakBefore.</para>
@@ -41198,11 +38651,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PageBreakBefore PageBreakBefore
-    {
-        get => GetElement<PageBreakBefore>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "pageBreakBefore", 3)]
+    public PageBreakBefore PageBreakBefore { get; set; }
     
     /// <summary>
     /// <para> FrameProperties.</para>
@@ -41211,11 +38661,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FrameProperties FrameProperties
-    {
-        get => GetElement<FrameProperties>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "framePr", 4)]
+    public FrameProperties FrameProperties { get; set; }
     
     /// <summary>
     /// <para> WidowControl.</para>
@@ -41224,11 +38671,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WidowControl WidowControl
-    {
-        get => GetElement<WidowControl>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "widowControl", 5)]
+    public WidowControl WidowControl { get; set; }
     
     /// <summary>
     /// <para> NumberingProperties.</para>
@@ -41237,11 +38681,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingProperties NumberingProperties
-    {
-        get => GetElement<NumberingProperties>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "numPr", 6)]
+    public NumberingProperties NumberingProperties { get; set; }
     
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
@@ -41250,11 +38691,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressLineNumbers SuppressLineNumbers
-    {
-        get => GetElement<SuppressLineNumbers>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "suppressLineNumbers", 7)]
+    public SuppressLineNumbers SuppressLineNumbers { get; set; }
     
     /// <summary>
     /// <para> ParagraphBorders.</para>
@@ -41263,11 +38701,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphBorders ParagraphBorders
-    {
-        get => GetElement<ParagraphBorders>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "pBdr", 8)]
+    public ParagraphBorders ParagraphBorders { get; set; }
     
     /// <summary>
     /// <para> Shading.</para>
@@ -41276,11 +38711,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Shading Shading
-    {
-        get => GetElement<Shading>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "shd", 9)]
+    public Shading Shading { get; set; }
     
     /// <summary>
     /// <para> Tabs.</para>
@@ -41289,11 +38721,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Tabs Tabs
-    {
-        get => GetElement<Tabs>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "tabs", 10)]
+    public Tabs Tabs { get; set; }
     
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
@@ -41302,11 +38731,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressAutoHyphens SuppressAutoHyphens
-    {
-        get => GetElement<SuppressAutoHyphens>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "suppressAutoHyphens", 11)]
+    public SuppressAutoHyphens SuppressAutoHyphens { get; set; }
     
     /// <summary>
     /// <para> Kinsoku.</para>
@@ -41315,11 +38741,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Kinsoku Kinsoku
-    {
-        get => GetElement<Kinsoku>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "kinsoku", 12)]
+    public Kinsoku Kinsoku { get; set; }
     
     /// <summary>
     /// <para> WordWrap.</para>
@@ -41328,11 +38751,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WordWrap WordWrap
-    {
-        get => GetElement<WordWrap>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "wordWrap", 13)]
+    public WordWrap WordWrap { get; set; }
     
     /// <summary>
     /// <para> OverflowPunctuation.</para>
@@ -41341,11 +38761,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public OverflowPunctuation OverflowPunctuation
-    {
-        get => GetElement<OverflowPunctuation>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "overflowPunct", 14)]
+    public OverflowPunctuation OverflowPunctuation { get; set; }
     
     /// <summary>
     /// <para> TopLinePunctuation.</para>
@@ -41354,11 +38771,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TopLinePunctuation TopLinePunctuation
-    {
-        get => GetElement<TopLinePunctuation>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "topLinePunct", 15)]
+    public TopLinePunctuation TopLinePunctuation { get; set; }
     
     /// <summary>
     /// <para> AutoSpaceDE.</para>
@@ -41367,11 +38781,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AutoSpaceDE AutoSpaceDE
-    {
-        get => GetElement<AutoSpaceDE>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(23, "autoSpaceDE", 16)]
+    public AutoSpaceDE AutoSpaceDE { get; set; }
     
     /// <summary>
     /// <para> AutoSpaceDN.</para>
@@ -41380,11 +38791,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AutoSpaceDN AutoSpaceDN
-    {
-        get => GetElement<AutoSpaceDN>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(23, "autoSpaceDN", 17)]
+    public AutoSpaceDN AutoSpaceDN { get; set; }
     
     /// <summary>
     /// <para> BiDi.</para>
@@ -41393,11 +38801,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BiDi BiDi
-    {
-        get => GetElement<BiDi>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(23, "bidi", 18)]
+    public BiDi BiDi { get; set; }
     
     /// <summary>
     /// <para> AdjustRightIndent.</para>
@@ -41406,11 +38811,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AdjustRightIndent AdjustRightIndent
-    {
-        get => GetElement<AdjustRightIndent>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(23, "adjustRightInd", 19)]
+    public AdjustRightIndent AdjustRightIndent { get; set; }
     
     /// <summary>
     /// <para> SnapToGrid.</para>
@@ -41419,11 +38821,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SnapToGrid SnapToGrid
-    {
-        get => GetElement<SnapToGrid>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(23, "snapToGrid", 20)]
+    public SnapToGrid SnapToGrid { get; set; }
     
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
@@ -41432,11 +38831,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SpacingBetweenLines SpacingBetweenLines
-    {
-        get => GetElement<SpacingBetweenLines>(21);
-        set => SetElement(21, value);
-    }
+	[SchemaAttr(23, "spacing", 21)]
+    public SpacingBetweenLines SpacingBetweenLines { get; set; }
     
     /// <summary>
     /// <para> Indentation.</para>
@@ -41445,11 +38841,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Indentation Indentation
-    {
-        get => GetElement<Indentation>(22);
-        set => SetElement(22, value);
-    }
+	[SchemaAttr(23, "ind", 22)]
+    public Indentation Indentation { get; set; }
     
     /// <summary>
     /// <para> ContextualSpacing.</para>
@@ -41458,11 +38851,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ContextualSpacing ContextualSpacing
-    {
-        get => GetElement<ContextualSpacing>(23);
-        set => SetElement(23, value);
-    }
+	[SchemaAttr(23, "contextualSpacing", 23)]
+    public ContextualSpacing ContextualSpacing { get; set; }
     
     /// <summary>
     /// <para> MirrorIndents.</para>
@@ -41471,11 +38861,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MirrorIndents MirrorIndents
-    {
-        get => GetElement<MirrorIndents>(24);
-        set => SetElement(24, value);
-    }
+	[SchemaAttr(23, "mirrorIndents", 24)]
+    public MirrorIndents MirrorIndents { get; set; }
     
     /// <summary>
     /// <para> SuppressOverlap.</para>
@@ -41484,11 +38871,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressOverlap SuppressOverlap
-    {
-        get => GetElement<SuppressOverlap>(25);
-        set => SetElement(25, value);
-    }
+	[SchemaAttr(23, "suppressOverlap", 25)]
+    public SuppressOverlap SuppressOverlap { get; set; }
     
     /// <summary>
     /// <para> Justification.</para>
@@ -41497,11 +38881,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Justification Justification
-    {
-        get => GetElement<Justification>(26);
-        set => SetElement(26, value);
-    }
+	[SchemaAttr(23, "jc", 26)]
+    public Justification Justification { get; set; }
     
     /// <summary>
     /// <para> TextDirection.</para>
@@ -41510,11 +38891,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextDirection TextDirection
-    {
-        get => GetElement<TextDirection>(27);
-        set => SetElement(27, value);
-    }
+	[SchemaAttr(23, "textDirection", 27)]
+    public TextDirection TextDirection { get; set; }
     
     /// <summary>
     /// <para> TextAlignment.</para>
@@ -41523,11 +38901,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextAlignment TextAlignment
-    {
-        get => GetElement<TextAlignment>(28);
-        set => SetElement(28, value);
-    }
+	[SchemaAttr(23, "textAlignment", 28)]
+    public TextAlignment TextAlignment { get; set; }
     
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
@@ -41536,11 +38911,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TextBoxTightWrap TextBoxTightWrap
-    {
-        get => GetElement<TextBoxTightWrap>(29);
-        set => SetElement(29, value);
-    }
+	[SchemaAttr(23, "textboxTightWrap", 29)]
+    public TextBoxTightWrap TextBoxTightWrap { get; set; }
     
     /// <summary>
     /// <para> OutlineLevel.</para>
@@ -41549,11 +38921,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public OutlineLevel OutlineLevel
-    {
-        get => GetElement<OutlineLevel>(30);
-        set => SetElement(30, value);
-    }
+	[SchemaAttr(23, "outlineLvl", 30)]
+    public OutlineLevel OutlineLevel { get; set; }
     
     /// <summary>
     /// <para> DivId.</para>
@@ -41562,11 +38931,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DivId DivId
-    {
-        get => GetElement<DivId>(31);
-        set => SetElement(31, value);
-    }
+	[SchemaAttr(23, "divId", 31)]
+    public DivId DivId { get; set; }
     
     /// <summary>
     /// <para> ConditionalFormatStyle.</para>
@@ -41575,11 +38941,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ConditionalFormatStyle ConditionalFormatStyle
-    {
-        get => GetElement<ConditionalFormatStyle>(32);
-        set => SetElement(32, value);
-    }
+	[SchemaAttr(23, "cnfStyle", 32)]
+    public ConditionalFormatStyle ConditionalFormatStyle { get; set; }
     
     /// <summary>
     /// <para> Run Properties for the Paragraph Mark.</para>
@@ -41588,11 +38951,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphMarkRunProperties ParagraphMarkRunProperties
-    {
-        get => GetElement<ParagraphMarkRunProperties>(33);
-        set => SetElement(33, value);
-    }
+	[SchemaAttr(23, "rPr", 33)]
+    public ParagraphMarkRunProperties ParagraphMarkRunProperties { get; set; }
     
     /// <summary>
     /// <para> Section Properties.</para>
@@ -41601,11 +38961,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SectionProperties SectionProperties
-    {
-        get => GetElement<SectionProperties>(34);
-        set => SetElement(34, value);
-    }
+	[SchemaAttr(23, "sectPr", 34)]
+    public SectionProperties SectionProperties { get; set; }
     
     /// <summary>
     /// <para> ParagraphPropertiesChange.</para>
@@ -41614,11 +38971,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ParagraphPropertiesChange ParagraphPropertiesChange
-    {
-        get => GetElement<ParagraphPropertiesChange>(35);
-        set => SetElement(35, value);
-    }
+	[SchemaAttr(23, "pPrChange", 35)]
+    public ParagraphPropertiesChange ParagraphPropertiesChange { get; set; }
     
 
 
@@ -42001,13 +39355,7 @@ public partial class SdtPlaceholder : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "docPart" };
-    private static readonly byte[] eleNamespaceIds = { 23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Document Part Reference.</para>
@@ -42016,11 +39364,8 @@ public partial class SdtPlaceholder : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocPartReference DocPartReference
-    {
-        get => GetElement<DocPartReference>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "docPart", 0)]
+    public DocPartReference DocPartReference { get; set; }
     
 
 
@@ -42228,13 +39573,7 @@ public partial class SdtContentDate : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "dateFormat","lid","storeMappedDataAs","calendar" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Date Display Mask.</para>
@@ -42243,11 +39582,8 @@ public partial class SdtContentDate : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DateFormat DateFormat
-    {
-        get => GetElement<DateFormat>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "dateFormat", 0)]
+    public DateFormat DateFormat { get; set; }
     
     /// <summary>
     /// <para> Date Picker Language ID.</para>
@@ -42256,11 +39592,8 @@ public partial class SdtContentDate : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LanguageId LanguageId
-    {
-        get => GetElement<LanguageId>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "lid", 1)]
+    public LanguageId LanguageId { get; set; }
     
     /// <summary>
     /// <para> Custom XML Data Date Storage Format.</para>
@@ -42269,11 +39602,8 @@ public partial class SdtContentDate : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SdtDateMappingType SdtDateMappingType
-    {
-        get => GetElement<SdtDateMappingType>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "storeMappedDataAs", 2)]
+    public SdtDateMappingType SdtDateMappingType { get; set; }
     
     /// <summary>
     /// <para> Date Picker Calendar Type.</para>
@@ -42282,11 +39612,8 @@ public partial class SdtContentDate : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Calendar Calendar
-    {
-        get => GetElement<Calendar>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "calendar", 3)]
+    public Calendar Calendar { get; set; }
     
 
 
@@ -42431,13 +39758,7 @@ public abstract partial class SdtDocPartType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "docPartGallery","docPartCategory","docPartUnique" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Document Part Gallery Filter.</para>
@@ -42446,11 +39767,8 @@ public abstract partial class SdtDocPartType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocPartGallery DocPartGallery
-    {
-        get => GetElement<DocPartGallery>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "docPartGallery", 0)]
+    public DocPartGallery DocPartGallery { get; set; }
     
     /// <summary>
     /// <para> Document Part Category Filter.</para>
@@ -42459,11 +39777,8 @@ public abstract partial class SdtDocPartType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocPartCategory DocPartCategory
-    {
-        get => GetElement<DocPartCategory>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "docPartCategory", 1)]
+    public DocPartCategory DocPartCategory { get; set; }
     
     /// <summary>
     /// <para> Built-In Document Part.</para>
@@ -42472,11 +39787,8 @@ public abstract partial class SdtDocPartType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocPartUnique DocPartUnique
-    {
-        get => GetElement<DocPartUnique>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "docPartUnique", 2)]
+    public DocPartUnique DocPartUnique { get; set; }
     
 
 
@@ -43331,13 +40643,7 @@ public partial class MailMerge : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "mainDocumentType","linkToQuery","dataType","connectString","query","dataSource","headerSource","doNotSuppressBlankLines","destination","addressFieldName","mailSubject","mailAsAttachment","viewMergedData","activeRecord","checkErrors","odso" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Source Document Type.</para>
@@ -43346,11 +40652,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MainDocumentType MainDocumentType
-    {
-        get => GetElement<MainDocumentType>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "mainDocumentType", 0)]
+    public MainDocumentType MainDocumentType { get; set; }
     
     /// <summary>
     /// <para> Query Contains Link to External Query File.</para>
@@ -43359,11 +40662,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LinkToQuery LinkToQuery
-    {
-        get => GetElement<LinkToQuery>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "linkToQuery", 1)]
+    public LinkToQuery LinkToQuery { get; set; }
     
     /// <summary>
     /// <para> Data Source Type.</para>
@@ -43372,11 +40672,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DataType DataType
-    {
-        get => GetElement<DataType>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "dataType", 2)]
+    public DataType DataType { get; set; }
     
     /// <summary>
     /// <para> Data Source Connection String.</para>
@@ -43385,11 +40682,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ConnectString ConnectString
-    {
-        get => GetElement<ConnectString>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "connectString", 3)]
+    public ConnectString ConnectString { get; set; }
     
     /// <summary>
     /// <para> Query For Data Source Records To Merge.</para>
@@ -43398,11 +40692,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Query Query
-    {
-        get => GetElement<Query>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "query", 4)]
+    public Query Query { get; set; }
     
     /// <summary>
     /// <para> Data Source File Path.</para>
@@ -43411,11 +40702,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DataSourceReference DataSourceReference
-    {
-        get => GetElement<DataSourceReference>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "dataSource", 5)]
+    public DataSourceReference DataSourceReference { get; set; }
     
     /// <summary>
     /// <para> Header Definition File Path.</para>
@@ -43424,11 +40712,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public HeaderSource HeaderSource
-    {
-        get => GetElement<HeaderSource>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "headerSource", 6)]
+    public HeaderSource HeaderSource { get; set; }
     
     /// <summary>
     /// <para> Remove Blank Lines from Merged Documents.</para>
@@ -43437,11 +40722,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotSuppressBlankLines DoNotSuppressBlankLines
-    {
-        get => GetElement<DoNotSuppressBlankLines>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "doNotSuppressBlankLines", 7)]
+    public DoNotSuppressBlankLines DoNotSuppressBlankLines { get; set; }
     
     /// <summary>
     /// <para> Merged Document Destination.</para>
@@ -43450,11 +40732,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public Destination Destination
-    {
-        get => GetElement<Destination>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "destination", 8)]
+    public Destination Destination { get; set; }
     
     /// <summary>
     /// <para> Column Containing E-mail Address.</para>
@@ -43463,11 +40742,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AddressFieldName AddressFieldName
-    {
-        get => GetElement<AddressFieldName>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "addressFieldName", 9)]
+    public AddressFieldName AddressFieldName { get; set; }
     
     /// <summary>
     /// <para> Merged E-mail or Fax Subject Line.</para>
@@ -43476,11 +40752,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MailSubject MailSubject
-    {
-        get => GetElement<MailSubject>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "mailSubject", 10)]
+    public MailSubject MailSubject { get; set; }
     
     /// <summary>
     /// <para> Merged Document To E-Mail Attachment.</para>
@@ -43489,11 +40762,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MailAsAttachment MailAsAttachment
-    {
-        get => GetElement<MailAsAttachment>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "mailAsAttachment", 11)]
+    public MailAsAttachment MailAsAttachment { get; set; }
     
     /// <summary>
     /// <para> View Merged Data Within Document.</para>
@@ -43502,11 +40772,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ViewMergedData ViewMergedData
-    {
-        get => GetElement<ViewMergedData>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "viewMergedData", 12)]
+    public ViewMergedData ViewMergedData { get; set; }
     
     /// <summary>
     /// <para> Record Currently Displayed In Merged Document.</para>
@@ -43515,11 +40782,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ActiveRecord ActiveRecord
-    {
-        get => GetElement<ActiveRecord>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "activeRecord", 13)]
+    public ActiveRecord ActiveRecord { get; set; }
     
     /// <summary>
     /// <para> Mail Merge Error Reporting Setting.</para>
@@ -43528,11 +40792,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public CheckErrors CheckErrors
-    {
-        get => GetElement<CheckErrors>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "checkErrors", 14)]
+    public CheckErrors CheckErrors { get; set; }
     
     /// <summary>
     /// <para> Office Data Source Object Settings.</para>
@@ -43541,11 +40802,8 @@ public partial class MailMerge : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DataSourceObject DataSourceObject
-    {
-        get => GetElement<DataSourceObject>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "odso", 15)]
+    public DataSourceObject DataSourceObject { get; set; }
     
 
 
@@ -44453,13 +41711,7 @@ public partial class FootnoteDocumentWideProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pos","numFmt","numStart","numRestart","footnote" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Footnote Placement.</para>
@@ -44468,11 +41720,8 @@ public partial class FootnoteDocumentWideProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FootnotePosition FootnotePosition
-    {
-        get => GetElement<FootnotePosition>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "pos", 0)]
+    public FootnotePosition FootnotePosition { get; set; }
     
     /// <summary>
     /// <para> Footnote Numbering Format.</para>
@@ -44481,11 +41730,8 @@ public partial class FootnoteDocumentWideProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingFormat NumberingFormat
-    {
-        get => GetElement<NumberingFormat>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "numFmt", 1)]
+    public NumberingFormat NumberingFormat { get; set; }
     
     /// <summary>
     /// <para> Footnote and Endnote Numbering Starting Value.</para>
@@ -44494,11 +41740,8 @@ public partial class FootnoteDocumentWideProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingStart NumberingStart
-    {
-        get => GetElement<NumberingStart>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "numStart", 2)]
+    public NumberingStart NumberingStart { get; set; }
     
     /// <summary>
     /// <para> Footnote and Endnote Numbering Restart Location.</para>
@@ -44507,11 +41750,8 @@ public partial class FootnoteDocumentWideProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingRestart NumberingRestart
-    {
-        get => GetElement<NumberingRestart>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "numRestart", 3)]
+    public NumberingRestart NumberingRestart { get; set; }
     
 
 
@@ -44586,13 +41826,7 @@ public partial class EndnoteDocumentWideProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pos","numFmt","numStart","numRestart","endnote" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Endnote Placement.</para>
@@ -44601,11 +41835,8 @@ public partial class EndnoteDocumentWideProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public EndnotePosition EndnotePosition
-    {
-        get => GetElement<EndnotePosition>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "pos", 0)]
+    public EndnotePosition EndnotePosition { get; set; }
     
     /// <summary>
     /// <para> Endnote Numbering Format.</para>
@@ -44614,11 +41845,8 @@ public partial class EndnoteDocumentWideProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingFormat NumberingFormat
-    {
-        get => GetElement<NumberingFormat>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "numFmt", 1)]
+    public NumberingFormat NumberingFormat { get; set; }
     
     /// <summary>
     /// <para> Footnote and Endnote Numbering Starting Value.</para>
@@ -44627,11 +41855,8 @@ public partial class EndnoteDocumentWideProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingStart NumberingStart
-    {
-        get => GetElement<NumberingStart>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "numStart", 2)]
+    public NumberingStart NumberingStart { get; set; }
     
     /// <summary>
     /// <para> Footnote and Endnote Numbering Restart Location.</para>
@@ -44640,11 +41865,8 @@ public partial class EndnoteDocumentWideProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NumberingRestart NumberingRestart
-    {
-        get => GetElement<NumberingRestart>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "numRestart", 3)]
+    public NumberingRestart NumberingRestart { get; set; }
     
 
 
@@ -44841,13 +42063,7 @@ public partial class Compatibility : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "useSingleBorderforContiguousCells","wpJustification","noTabHangInd","noLeading","spaceForUL","noColumnBalance","balanceSingleByteDoubleByteWidth","noExtraLineSpacing","doNotLeaveBackslashAlone","ulTrailSpace","doNotExpandShiftReturn","spacingInWholePoints","lineWrapLikeWord6","printBodyTextBeforeHeader","printColBlack","wpSpaceWidth","showBreaksInFrames","subFontBySize","suppressBottomSpacing","suppressTopSpacing","suppressSpacingAtTopOfPage","suppressTopSpacingWP","suppressSpBfAfterPgBrk","swapBordersFacingPages","convMailMergeEsc","truncateFontHeightsLikeWP6","mwSmallCaps","usePrinterMetrics","doNotSuppressParagraphBorders","wrapTrailSpaces","footnoteLayoutLikeWW8","shapeLayoutLikeWW8","alignTablesRowByRow","forgetLastTabAlignment","adjustLineHeightInTable","autoSpaceLikeWord95","noSpaceRaiseLower","doNotUseHTMLParagraphAutoSpacing","layoutRawTableWidth","layoutTableRowsApart","useWord97LineBreakRules","doNotBreakWrappedTables","doNotSnapToGridInCell","selectFldWithFirstOrLastChar","applyBreakingRules","doNotWrapTextWithPunct","doNotUseEastAsianBreakRules","useWord2002TableStyleRules","growAutofit","useFELayout","useNormalStyleForList","doNotUseIndentAsNumberingTabStop","useAltKinsokuLineBreakRules","allowSpaceOfSameStyleInTable","doNotSuppressIndentation","doNotAutofitConstrainedTables","autofitToFirstFixedWidthCell","underlineTabInNumList","displayHangulFixedWidth","splitPgBreakAndParaMark","doNotVertAlignCellWithSp","doNotBreakConstrainedForcedTable","doNotVertAlignInTxbx","useAnsiKerningPairs","cachedColBalance","compatSetting" };
-    private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Use Simplified Rules For Table Border Conflicts.</para>
@@ -44856,11 +42072,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public UseSingleBorderForContiguousCells UseSingleBorderForContiguousCells
-    {
-        get => GetElement<UseSingleBorderForContiguousCells>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "useSingleBorderforContiguousCells", 0)]
+    public UseSingleBorderForContiguousCells UseSingleBorderForContiguousCells { get; set; }
     
     /// <summary>
     /// <para> Emulate WordPerfect 6.x Paragraph Justification.</para>
@@ -44869,11 +42082,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WordPerfectJustification WordPerfectJustification
-    {
-        get => GetElement<WordPerfectJustification>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "wpJustification", 1)]
+    public WordPerfectJustification WordPerfectJustification { get; set; }
     
     /// <summary>
     /// <para> Do Not Create Custom Tab Stop for Hanging Indent.</para>
@@ -44882,11 +42092,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoTabHangIndent NoTabHangIndent
-    {
-        get => GetElement<NoTabHangIndent>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(23, "noTabHangInd", 2)]
+    public NoTabHangIndent NoTabHangIndent { get; set; }
     
     /// <summary>
     /// <para> Do Not Add Leading Between Lines of Text.</para>
@@ -44895,11 +42102,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoLeading NoLeading
-    {
-        get => GetElement<NoLeading>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(23, "noLeading", 3)]
+    public NoLeading NoLeading { get; set; }
     
     /// <summary>
     /// <para> Add Additional Space Below Baseline For Underlined East Asian Text.</para>
@@ -44908,11 +42112,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SpaceForUnderline SpaceForUnderline
-    {
-        get => GetElement<SpaceForUnderline>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(23, "spaceForUL", 4)]
+    public SpaceForUnderline SpaceForUnderline { get; set; }
     
     /// <summary>
     /// <para> Do Not Balance Text Columns within a Section.</para>
@@ -44921,11 +42122,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoColumnBalance NoColumnBalance
-    {
-        get => GetElement<NoColumnBalance>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(23, "noColumnBalance", 5)]
+    public NoColumnBalance NoColumnBalance { get; set; }
     
     /// <summary>
     /// <para> Balance Single Byte and Double Byte Characters.</para>
@@ -44934,11 +42132,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public BalanceSingleByteDoubleByteWidth BalanceSingleByteDoubleByteWidth
-    {
-        get => GetElement<BalanceSingleByteDoubleByteWidth>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(23, "balanceSingleByteDoubleByteWidth", 6)]
+    public BalanceSingleByteDoubleByteWidth BalanceSingleByteDoubleByteWidth { get; set; }
     
     /// <summary>
     /// <para> Do Not Center Content on Lines With Exact Line Height.</para>
@@ -44947,11 +42142,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoExtraLineSpacing NoExtraLineSpacing
-    {
-        get => GetElement<NoExtraLineSpacing>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(23, "noExtraLineSpacing", 7)]
+    public NoExtraLineSpacing NoExtraLineSpacing { get; set; }
     
     /// <summary>
     /// <para> Convert Backslash To Yen Sign When Entered.</para>
@@ -44960,11 +42152,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotLeaveBackslashAlone DoNotLeaveBackslashAlone
-    {
-        get => GetElement<DoNotLeaveBackslashAlone>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(23, "doNotLeaveBackslashAlone", 8)]
+    public DoNotLeaveBackslashAlone DoNotLeaveBackslashAlone { get; set; }
     
     /// <summary>
     /// <para> Underline All Trailing Spaces.</para>
@@ -44973,11 +42162,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public UnderlineTrailingSpaces UnderlineTrailingSpaces
-    {
-        get => GetElement<UnderlineTrailingSpaces>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(23, "ulTrailSpace", 9)]
+    public UnderlineTrailingSpaces UnderlineTrailingSpaces { get; set; }
     
     /// <summary>
     /// <para> Don't Justify Lines Ending in Soft Line Break.</para>
@@ -44986,11 +42172,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotExpandShiftReturn DoNotExpandShiftReturn
-    {
-        get => GetElement<DoNotExpandShiftReturn>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(23, "doNotExpandShiftReturn", 10)]
+    public DoNotExpandShiftReturn DoNotExpandShiftReturn { get; set; }
     
     /// <summary>
     /// <para> Only Expand/Condense Text By Whole Points.</para>
@@ -44999,11 +42182,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SpacingInWholePoints SpacingInWholePoints
-    {
-        get => GetElement<SpacingInWholePoints>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(23, "spacingInWholePoints", 11)]
+    public SpacingInWholePoints SpacingInWholePoints { get; set; }
     
     /// <summary>
     /// <para> Emulate Word 6.0 Line Wrapping for East Asian Text.</para>
@@ -45012,11 +42192,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LineWrapLikeWord6 LineWrapLikeWord6
-    {
-        get => GetElement<LineWrapLikeWord6>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(23, "lineWrapLikeWord6", 12)]
+    public LineWrapLikeWord6 LineWrapLikeWord6 { get; set; }
     
     /// <summary>
     /// <para> Print Body Text before Header/Footer Contents.</para>
@@ -45025,11 +42202,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PrintBodyTextBeforeHeader PrintBodyTextBeforeHeader
-    {
-        get => GetElement<PrintBodyTextBeforeHeader>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(23, "printBodyTextBeforeHeader", 13)]
+    public PrintBodyTextBeforeHeader PrintBodyTextBeforeHeader { get; set; }
     
     /// <summary>
     /// <para> Print Colors as Black And White without Dithering.</para>
@@ -45038,11 +42212,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public PrintColorBlackWhite PrintColorBlackWhite
-    {
-        get => GetElement<PrintColorBlackWhite>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(23, "printColBlack", 14)]
+    public PrintColorBlackWhite PrintColorBlackWhite { get; set; }
     
     /// <summary>
     /// <para> Space width.</para>
@@ -45051,11 +42222,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WordPerfectSpaceWidth WordPerfectSpaceWidth
-    {
-        get => GetElement<WordPerfectSpaceWidth>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(23, "wpSpaceWidth", 15)]
+    public WordPerfectSpaceWidth WordPerfectSpaceWidth { get; set; }
     
     /// <summary>
     /// <para> Display Page/Column Breaks Present in Frames.</para>
@@ -45064,11 +42232,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ShowBreaksInFrames ShowBreaksInFrames
-    {
-        get => GetElement<ShowBreaksInFrames>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(23, "showBreaksInFrames", 16)]
+    public ShowBreaksInFrames ShowBreaksInFrames { get; set; }
     
     /// <summary>
     /// <para> Increase Priority Of Font Size During Font Substitution.</para>
@@ -45077,11 +42242,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SubFontBySize SubFontBySize
-    {
-        get => GetElement<SubFontBySize>(17);
-        set => SetElement(17, value);
-    }
+	[SchemaAttr(23, "subFontBySize", 17)]
+    public SubFontBySize SubFontBySize { get; set; }
     
     /// <summary>
     /// <para> Ignore Exact Line Height for Last Line on Page.</para>
@@ -45090,11 +42252,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressBottomSpacing SuppressBottomSpacing
-    {
-        get => GetElement<SuppressBottomSpacing>(18);
-        set => SetElement(18, value);
-    }
+	[SchemaAttr(23, "suppressBottomSpacing", 18)]
+    public SuppressBottomSpacing SuppressBottomSpacing { get; set; }
     
     /// <summary>
     /// <para> Ignore Minimum and Exact Line Height for First Line on Page.</para>
@@ -45103,11 +42262,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressTopSpacing SuppressTopSpacing
-    {
-        get => GetElement<SuppressTopSpacing>(19);
-        set => SetElement(19, value);
-    }
+	[SchemaAttr(23, "suppressTopSpacing", 19)]
+    public SuppressTopSpacing SuppressTopSpacing { get; set; }
     
     /// <summary>
     /// <para> Ignore Minimum Line Height for First Line on Page.</para>
@@ -45116,11 +42272,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressSpacingAtTopOfPage SuppressSpacingAtTopOfPage
-    {
-        get => GetElement<SuppressSpacingAtTopOfPage>(20);
-        set => SetElement(20, value);
-    }
+	[SchemaAttr(23, "suppressSpacingAtTopOfPage", 20)]
+    public SuppressSpacingAtTopOfPage SuppressSpacingAtTopOfPage { get; set; }
     
     /// <summary>
     /// <para> Emulate WordPerfect 5.x Line Spacing.</para>
@@ -45129,11 +42282,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressTopSpacingWordPerfect SuppressTopSpacingWordPerfect
-    {
-        get => GetElement<SuppressTopSpacingWordPerfect>(21);
-        set => SetElement(21, value);
-    }
+	[SchemaAttr(23, "suppressTopSpacingWP", 21)]
+    public SuppressTopSpacingWordPerfect SuppressTopSpacingWordPerfect { get; set; }
     
     /// <summary>
     /// <para> Do Not Use Space Before On First Line After a Page Break.</para>
@@ -45142,11 +42292,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SuppressSpacingBeforeAfterPageBreak SuppressSpacingBeforeAfterPageBreak
-    {
-        get => GetElement<SuppressSpacingBeforeAfterPageBreak>(22);
-        set => SetElement(22, value);
-    }
+	[SchemaAttr(23, "suppressSpBfAfterPgBrk", 22)]
+    public SuppressSpacingBeforeAfterPageBreak SuppressSpacingBeforeAfterPageBreak { get; set; }
     
     /// <summary>
     /// <para> Swap Paragraph Borders on Odd Numbered Pages.</para>
@@ -45155,11 +42302,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SwapBordersFacingPages SwapBordersFacingPages
-    {
-        get => GetElement<SwapBordersFacingPages>(23);
-        set => SetElement(23, value);
-    }
+	[SchemaAttr(23, "swapBordersFacingPages", 23)]
+    public SwapBordersFacingPages SwapBordersFacingPages { get; set; }
     
     /// <summary>
     /// <para> Treat Backslash Quotation Delimiter as Two Quotation Marks.</para>
@@ -45168,11 +42312,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ConvertMailMergeEscape ConvertMailMergeEscape
-    {
-        get => GetElement<ConvertMailMergeEscape>(24);
-        set => SetElement(24, value);
-    }
+	[SchemaAttr(23, "convMailMergeEsc", 24)]
+    public ConvertMailMergeEscape ConvertMailMergeEscape { get; set; }
     
     /// <summary>
     /// <para> Emulate WordPerfect 6.x Font Height Calculation.</para>
@@ -45181,11 +42322,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public TruncateFontHeightsLikeWordPerfect TruncateFontHeightsLikeWordPerfect
-    {
-        get => GetElement<TruncateFontHeightsLikeWordPerfect>(25);
-        set => SetElement(25, value);
-    }
+	[SchemaAttr(23, "truncateFontHeightsLikeWP6", 25)]
+    public TruncateFontHeightsLikeWordPerfect TruncateFontHeightsLikeWordPerfect { get; set; }
     
     /// <summary>
     /// <para> Emulate Word 5.x for the Macintosh Small Caps Formatting.</para>
@@ -45194,11 +42332,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public MacWordSmallCaps MacWordSmallCaps
-    {
-        get => GetElement<MacWordSmallCaps>(26);
-        set => SetElement(26, value);
-    }
+	[SchemaAttr(23, "mwSmallCaps", 26)]
+    public MacWordSmallCaps MacWordSmallCaps { get; set; }
     
     /// <summary>
     /// <para> Use Printer Metrics To Display Documents.</para>
@@ -45207,11 +42342,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public UsePrinterMetrics UsePrinterMetrics
-    {
-        get => GetElement<UsePrinterMetrics>(27);
-        set => SetElement(27, value);
-    }
+	[SchemaAttr(23, "usePrinterMetrics", 27)]
+    public UsePrinterMetrics UsePrinterMetrics { get; set; }
     
     /// <summary>
     /// <para> Do Not Suppress Paragraph Borders Next To Frames.</para>
@@ -45220,11 +42352,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotSuppressParagraphBorders DoNotSuppressParagraphBorders
-    {
-        get => GetElement<DoNotSuppressParagraphBorders>(28);
-        set => SetElement(28, value);
-    }
+	[SchemaAttr(23, "doNotSuppressParagraphBorders", 28)]
+    public DoNotSuppressParagraphBorders DoNotSuppressParagraphBorders { get; set; }
     
     /// <summary>
     /// <para> Line Wrap Trailing Spaces.</para>
@@ -45233,11 +42362,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public WrapTrailSpaces WrapTrailSpaces
-    {
-        get => GetElement<WrapTrailSpaces>(29);
-        set => SetElement(29, value);
-    }
+	[SchemaAttr(23, "wrapTrailSpaces", 29)]
+    public WrapTrailSpaces WrapTrailSpaces { get; set; }
     
     /// <summary>
     /// <para> Emulate Word 6.x/95/97 Footnote Placement.</para>
@@ -45246,11 +42372,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public FootnoteLayoutLikeWord8 FootnoteLayoutLikeWord8
-    {
-        get => GetElement<FootnoteLayoutLikeWord8>(30);
-        set => SetElement(30, value);
-    }
+	[SchemaAttr(23, "footnoteLayoutLikeWW8", 30)]
+    public FootnoteLayoutLikeWord8 FootnoteLayoutLikeWord8 { get; set; }
     
     /// <summary>
     /// <para> Emulate Word 97 Text Wrapping Around Floating Objects.</para>
@@ -45259,11 +42382,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ShapeLayoutLikeWord8 ShapeLayoutLikeWord8
-    {
-        get => GetElement<ShapeLayoutLikeWord8>(31);
-        set => SetElement(31, value);
-    }
+	[SchemaAttr(23, "shapeLayoutLikeWW8", 31)]
+    public ShapeLayoutLikeWord8 ShapeLayoutLikeWord8 { get; set; }
     
     /// <summary>
     /// <para> Align Table Rows Independently.</para>
@@ -45272,11 +42392,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AlignTablesRowByRow AlignTablesRowByRow
-    {
-        get => GetElement<AlignTablesRowByRow>(32);
-        set => SetElement(32, value);
-    }
+	[SchemaAttr(23, "alignTablesRowByRow", 32)]
+    public AlignTablesRowByRow AlignTablesRowByRow { get; set; }
     
     /// <summary>
     /// <para> Ignore Width of Last Tab Stop When Aligning Paragraph If It Is Not Left Aligned.</para>
@@ -45285,11 +42402,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ForgetLastTabAlignment ForgetLastTabAlignment
-    {
-        get => GetElement<ForgetLastTabAlignment>(33);
-        set => SetElement(33, value);
-    }
+	[SchemaAttr(23, "forgetLastTabAlignment", 33)]
+    public ForgetLastTabAlignment ForgetLastTabAlignment { get; set; }
     
     /// <summary>
     /// <para> Add Document Grid Line Pitch To Lines in Table Cells.</para>
@@ -45298,11 +42412,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AdjustLineHeightInTable AdjustLineHeightInTable
-    {
-        get => GetElement<AdjustLineHeightInTable>(34);
-        set => SetElement(34, value);
-    }
+	[SchemaAttr(23, "adjustLineHeightInTable", 34)]
+    public AdjustLineHeightInTable AdjustLineHeightInTable { get; set; }
     
     /// <summary>
     /// <para> Emulate Word 95 Full-Width Character Spacing.</para>
@@ -45311,11 +42422,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AutoSpaceLikeWord95 AutoSpaceLikeWord95
-    {
-        get => GetElement<AutoSpaceLikeWord95>(35);
-        set => SetElement(35, value);
-    }
+	[SchemaAttr(23, "autoSpaceLikeWord95", 35)]
+    public AutoSpaceLikeWord95 AutoSpaceLikeWord95 { get; set; }
     
     /// <summary>
     /// <para> Do Not Increase Line Height for Raised/Lowered Text.</para>
@@ -45324,11 +42432,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public NoSpaceRaiseLower NoSpaceRaiseLower
-    {
-        get => GetElement<NoSpaceRaiseLower>(36);
-        set => SetElement(36, value);
-    }
+	[SchemaAttr(23, "noSpaceRaiseLower", 36)]
+    public NoSpaceRaiseLower NoSpaceRaiseLower { get; set; }
     
     /// <summary>
     /// <para> Use Fixed Paragraph Spacing for HTML Auto Setting.</para>
@@ -45337,11 +42442,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotUseHTMLParagraphAutoSpacing DoNotUseHTMLParagraphAutoSpacing
-    {
-        get => GetElement<DoNotUseHTMLParagraphAutoSpacing>(37);
-        set => SetElement(37, value);
-    }
+	[SchemaAttr(23, "doNotUseHTMLParagraphAutoSpacing", 37)]
+    public DoNotUseHTMLParagraphAutoSpacing DoNotUseHTMLParagraphAutoSpacing { get; set; }
     
     /// <summary>
     /// <para> Ignore Space Before Table When Deciding If Table Should Wrap Floating Object.</para>
@@ -45350,11 +42452,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LayoutRawTableWidth LayoutRawTableWidth
-    {
-        get => GetElement<LayoutRawTableWidth>(38);
-        set => SetElement(38, value);
-    }
+	[SchemaAttr(23, "layoutRawTableWidth", 38)]
+    public LayoutRawTableWidth LayoutRawTableWidth { get; set; }
     
     /// <summary>
     /// <para> Allow Table Rows to Wrap Inline Objects Independently.</para>
@@ -45363,11 +42462,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public LayoutTableRowsApart LayoutTableRowsApart
-    {
-        get => GetElement<LayoutTableRowsApart>(39);
-        set => SetElement(39, value);
-    }
+	[SchemaAttr(23, "layoutTableRowsApart", 39)]
+    public LayoutTableRowsApart LayoutTableRowsApart { get; set; }
     
     /// <summary>
     /// <para> Emulate Word 97 East Asian Line Breaking.</para>
@@ -45376,11 +42472,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public UseWord97LineBreakRules UseWord97LineBreakRules
-    {
-        get => GetElement<UseWord97LineBreakRules>(40);
-        set => SetElement(40, value);
-    }
+	[SchemaAttr(23, "useWord97LineBreakRules", 40)]
+    public UseWord97LineBreakRules UseWord97LineBreakRules { get; set; }
     
     /// <summary>
     /// <para> Do Not Allow Floating Tables To Break Across Pages.</para>
@@ -45389,11 +42482,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotBreakWrappedTables DoNotBreakWrappedTables
-    {
-        get => GetElement<DoNotBreakWrappedTables>(41);
-        set => SetElement(41, value);
-    }
+	[SchemaAttr(23, "doNotBreakWrappedTables", 41)]
+    public DoNotBreakWrappedTables DoNotBreakWrappedTables { get; set; }
     
     /// <summary>
     /// <para> Do Not Snap to Document Grid in Table Cells with Objects.</para>
@@ -45402,11 +42492,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotSnapToGridInCell DoNotSnapToGridInCell
-    {
-        get => GetElement<DoNotSnapToGridInCell>(42);
-        set => SetElement(42, value);
-    }
+	[SchemaAttr(23, "doNotSnapToGridInCell", 42)]
+    public DoNotSnapToGridInCell DoNotSnapToGridInCell { get; set; }
     
     /// <summary>
     /// <para> Select Field When First or Last Character Is Selected.</para>
@@ -45415,11 +42502,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SelectFieldWithFirstOrLastChar SelectFieldWithFirstOrLastChar
-    {
-        get => GetElement<SelectFieldWithFirstOrLastChar>(43);
-        set => SetElement(43, value);
-    }
+	[SchemaAttr(23, "selectFldWithFirstOrLastChar", 43)]
+    public SelectFieldWithFirstOrLastChar SelectFieldWithFirstOrLastChar { get; set; }
     
     /// <summary>
     /// <para> Use Legacy Ethiopic and Amharic Line Breaking Rules.</para>
@@ -45428,11 +42512,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public ApplyBreakingRules ApplyBreakingRules
-    {
-        get => GetElement<ApplyBreakingRules>(44);
-        set => SetElement(44, value);
-    }
+	[SchemaAttr(23, "applyBreakingRules", 44)]
+    public ApplyBreakingRules ApplyBreakingRules { get; set; }
     
     /// <summary>
     /// <para> Do Not Allow Hanging Punctuation With Character Grid.</para>
@@ -45441,11 +42522,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotWrapTextWithPunctuation DoNotWrapTextWithPunctuation
-    {
-        get => GetElement<DoNotWrapTextWithPunctuation>(45);
-        set => SetElement(45, value);
-    }
+	[SchemaAttr(23, "doNotWrapTextWithPunct", 45)]
+    public DoNotWrapTextWithPunctuation DoNotWrapTextWithPunctuation { get; set; }
     
     /// <summary>
     /// <para> Do Not Compress Compressible Characters When Using Document Grid.</para>
@@ -45454,11 +42532,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotUseEastAsianBreakRules DoNotUseEastAsianBreakRules
-    {
-        get => GetElement<DoNotUseEastAsianBreakRules>(46);
-        set => SetElement(46, value);
-    }
+	[SchemaAttr(23, "doNotUseEastAsianBreakRules", 46)]
+    public DoNotUseEastAsianBreakRules DoNotUseEastAsianBreakRules { get; set; }
     
     /// <summary>
     /// <para> Emulate Word 2002 Table Style Rules.</para>
@@ -45467,11 +42542,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public UseWord2002TableStyleRules UseWord2002TableStyleRules
-    {
-        get => GetElement<UseWord2002TableStyleRules>(47);
-        set => SetElement(47, value);
-    }
+	[SchemaAttr(23, "useWord2002TableStyleRules", 47)]
+    public UseWord2002TableStyleRules UseWord2002TableStyleRules { get; set; }
     
     /// <summary>
     /// <para> Allow Tables to AutoFit Into Page Margins.</para>
@@ -45480,11 +42552,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public GrowAutofit GrowAutofit
-    {
-        get => GetElement<GrowAutofit>(48);
-        set => SetElement(48, value);
-    }
+	[SchemaAttr(23, "growAutofit", 48)]
+    public GrowAutofit GrowAutofit { get; set; }
     
     /// <summary>
     /// <para> Do Not Bypass East Asian/Complex Script Layout Code.</para>
@@ -45493,11 +42562,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public UseFarEastLayout UseFarEastLayout
-    {
-        get => GetElement<UseFarEastLayout>(49);
-        set => SetElement(49, value);
-    }
+	[SchemaAttr(23, "useFELayout", 49)]
+    public UseFarEastLayout UseFarEastLayout { get; set; }
     
     /// <summary>
     /// <para> Do Not Automatically Apply List Paragraph Style To Bulleted/Numbered Text.</para>
@@ -45506,11 +42572,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public UseNormalStyleForList UseNormalStyleForList
-    {
-        get => GetElement<UseNormalStyleForList>(50);
-        set => SetElement(50, value);
-    }
+	[SchemaAttr(23, "useNormalStyleForList", 50)]
+    public UseNormalStyleForList UseNormalStyleForList { get; set; }
     
     /// <summary>
     /// <para> Ignore Hanging Indent When Creating Tab Stop After Numbering.</para>
@@ -45519,11 +42582,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotUseIndentAsNumberingTabStop DoNotUseIndentAsNumberingTabStop
-    {
-        get => GetElement<DoNotUseIndentAsNumberingTabStop>(51);
-        set => SetElement(51, value);
-    }
+	[SchemaAttr(23, "doNotUseIndentAsNumberingTabStop", 51)]
+    public DoNotUseIndentAsNumberingTabStop DoNotUseIndentAsNumberingTabStop { get; set; }
     
     /// <summary>
     /// <para> Use Alternate Set of East Asian Line Breaking Rules.</para>
@@ -45532,11 +42592,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public UseAltKinsokuLineBreakRules UseAltKinsokuLineBreakRules
-    {
-        get => GetElement<UseAltKinsokuLineBreakRules>(52);
-        set => SetElement(52, value);
-    }
+	[SchemaAttr(23, "useAltKinsokuLineBreakRules", 52)]
+    public UseAltKinsokuLineBreakRules UseAltKinsokuLineBreakRules { get; set; }
     
     /// <summary>
     /// <para> Allow Contextual Spacing of Paragraphs in Tables.</para>
@@ -45545,11 +42602,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AllowSpaceOfSameStyleInTable AllowSpaceOfSameStyleInTable
-    {
-        get => GetElement<AllowSpaceOfSameStyleInTable>(53);
-        set => SetElement(53, value);
-    }
+	[SchemaAttr(23, "allowSpaceOfSameStyleInTable", 53)]
+    public AllowSpaceOfSameStyleInTable AllowSpaceOfSameStyleInTable { get; set; }
     
     /// <summary>
     /// <para> Do Not Ignore Floating Objects When Calculating Paragraph Indentation.</para>
@@ -45558,11 +42612,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotSuppressIndentation DoNotSuppressIndentation
-    {
-        get => GetElement<DoNotSuppressIndentation>(54);
-        set => SetElement(54, value);
-    }
+	[SchemaAttr(23, "doNotSuppressIndentation", 54)]
+    public DoNotSuppressIndentation DoNotSuppressIndentation { get; set; }
     
     /// <summary>
     /// <para> Do Not AutoFit Tables To Fit Next To Wrapped Objects.</para>
@@ -45571,11 +42622,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotAutofitConstrainedTables DoNotAutofitConstrainedTables
-    {
-        get => GetElement<DoNotAutofitConstrainedTables>(55);
-        set => SetElement(55, value);
-    }
+	[SchemaAttr(23, "doNotAutofitConstrainedTables", 55)]
+    public DoNotAutofitConstrainedTables DoNotAutofitConstrainedTables { get; set; }
     
     /// <summary>
     /// <para> Allow Table Columns To Exceed Preferred Widths of Constituent Cells.</para>
@@ -45584,11 +42632,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public AutofitToFirstFixedWidthCell AutofitToFirstFixedWidthCell
-    {
-        get => GetElement<AutofitToFirstFixedWidthCell>(56);
-        set => SetElement(56, value);
-    }
+	[SchemaAttr(23, "autofitToFirstFixedWidthCell", 56)]
+    public AutofitToFirstFixedWidthCell AutofitToFirstFixedWidthCell { get; set; }
     
     /// <summary>
     /// <para> Underline Following Character Following Numbering.</para>
@@ -45597,11 +42642,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public UnderlineTabInNumberingList UnderlineTabInNumberingList
-    {
-        get => GetElement<UnderlineTabInNumberingList>(57);
-        set => SetElement(57, value);
-    }
+	[SchemaAttr(23, "underlineTabInNumList", 57)]
+    public UnderlineTabInNumberingList UnderlineTabInNumberingList { get; set; }
     
     /// <summary>
     /// <para> Always Use Fixed Width for Hangul Characters.</para>
@@ -45610,11 +42652,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DisplayHangulFixedWidth DisplayHangulFixedWidth
-    {
-        get => GetElement<DisplayHangulFixedWidth>(58);
-        set => SetElement(58, value);
-    }
+	[SchemaAttr(23, "displayHangulFixedWidth", 58)]
+    public DisplayHangulFixedWidth DisplayHangulFixedWidth { get; set; }
     
     /// <summary>
     /// <para> Always Move Paragraph Mark to Page after a Page Break.</para>
@@ -45623,11 +42662,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public SplitPageBreakAndParagraphMark SplitPageBreakAndParagraphMark
-    {
-        get => GetElement<SplitPageBreakAndParagraphMark>(59);
-        set => SetElement(59, value);
-    }
+	[SchemaAttr(23, "splitPgBreakAndParaMark", 59)]
+    public SplitPageBreakAndParagraphMark SplitPageBreakAndParagraphMark { get; set; }
     
     /// <summary>
     /// <para> Don't Vertically Align Cells Containing Floating Objects.</para>
@@ -45636,11 +42672,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotVerticallyAlignCellWithShape DoNotVerticallyAlignCellWithShape
-    {
-        get => GetElement<DoNotVerticallyAlignCellWithShape>(60);
-        set => SetElement(60, value);
-    }
+	[SchemaAttr(23, "doNotVertAlignCellWithSp", 60)]
+    public DoNotVerticallyAlignCellWithShape DoNotVerticallyAlignCellWithShape { get; set; }
     
     /// <summary>
     /// <para> Don't Break Table Rows Around Floating Tables.</para>
@@ -45649,11 +42682,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotBreakConstrainedForcedTable DoNotBreakConstrainedForcedTable
-    {
-        get => GetElement<DoNotBreakConstrainedForcedTable>(61);
-        set => SetElement(61, value);
-    }
+	[SchemaAttr(23, "doNotBreakConstrainedForcedTable", 61)]
+    public DoNotBreakConstrainedForcedTable DoNotBreakConstrainedForcedTable { get; set; }
     
     /// <summary>
     /// <para> Ignore Vertical Alignment in Textboxes.</para>
@@ -45662,11 +42692,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DoNotVerticallyAlignInTextBox DoNotVerticallyAlignInTextBox
-    {
-        get => GetElement<DoNotVerticallyAlignInTextBox>(62);
-        set => SetElement(62, value);
-    }
+	[SchemaAttr(23, "doNotVertAlignInTxbx", 62)]
+    public DoNotVerticallyAlignInTextBox DoNotVerticallyAlignInTextBox { get; set; }
     
     /// <summary>
     /// <para> Use ANSI Kerning Pairs from Fonts.</para>
@@ -45675,11 +42702,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public UseAnsiKerningPairs UseAnsiKerningPairs
-    {
-        get => GetElement<UseAnsiKerningPairs>(63);
-        set => SetElement(63, value);
-    }
+	[SchemaAttr(23, "useAnsiKerningPairs", 63)]
+    public UseAnsiKerningPairs UseAnsiKerningPairs { get; set; }
     
     /// <summary>
     /// <para> Use Cached Paragraph Information for Column Balancing.</para>
@@ -45688,11 +42712,8 @@ public partial class Compatibility : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public CachedColumnBalance CachedColumnBalance
-    {
-        get => GetElement<CachedColumnBalance>(64);
-        set => SetElement(64, value);
-    }
+	[SchemaAttr(23, "cachedColBalance", 64)]
+    public CachedColumnBalance CachedColumnBalance { get; set; }
     
 
 
@@ -45825,13 +42846,7 @@ public partial class Rsids : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rsidRoot","rsid" };
-    private static readonly byte[] eleNamespaceIds = { 23,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Original Document Revision Save ID.</para>
@@ -45840,11 +42855,8 @@ public partial class Rsids : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public RsidRoot RsidRoot
-    {
-        get => GetElement<RsidRoot>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(23, "rsidRoot", 0)]
+    public RsidRoot RsidRoot { get; set; }
     
 
 

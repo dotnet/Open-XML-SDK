@@ -143,13 +143,7 @@ public partial class RoamingProperty : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "key","value" };
-    private static readonly byte[] eleNamespaceIds = { 76,76 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Key.</para>
@@ -158,11 +152,8 @@ public partial class RoamingProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:pRoam = http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings
     /// </remark>
-    public Key Key
-    {
-        get => GetElement<Key>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(76, "key", 0)]
+    public Key Key { get; set; }
     
     /// <summary>
     /// <para> Value.</para>
@@ -171,11 +162,8 @@ public partial class RoamingProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:pRoam = http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings
     /// </remark>
-    public Value Value
-    {
-        get => GetElement<Value>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(76, "value", 1)]
+    public Value Value { get; set; }
     
 
 

@@ -89,13 +89,7 @@ public partial class ContentPart : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nvContentPartPr","nvPr","xfrm","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 47,47,47,47 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualContentPartProperties.</para>
@@ -104,11 +98,8 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
     /// </remark>
-    public NonVisualContentPartProperties NonVisualContentPartProperties
-    {
-        get => GetElement<NonVisualContentPartProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(47, "nvContentPartPr", 0)]
+    public NonVisualContentPartProperties NonVisualContentPartProperties { get; set; }
     
     /// <summary>
     /// <para> ApplicationNonVisualDrawingProperties.</para>
@@ -117,11 +108,8 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
     /// </remark>
-    public ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties
-    {
-        get => GetElement<ApplicationNonVisualDrawingProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(47, "nvPr", 1)]
+    public ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> Transform2D.</para>
@@ -130,11 +118,8 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
     /// </remark>
-    public Transform2D Transform2D
-    {
-        get => GetElement<Transform2D>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(47, "xfrm", 2)]
+    public Transform2D Transform2D { get; set; }
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -143,11 +128,8 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
     /// </remark>
-    public OfficeArtExtensionList OfficeArtExtensionList
-    {
-        get => GetElement<OfficeArtExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(47, "extLst", 3)]
+    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
     
 
 
@@ -248,13 +230,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
@@ -263,11 +239,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "hlinkClick", 0)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick { get; set; }
     
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -276,11 +249,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "hlinkHover", 1)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover { get; set; }
     
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -289,11 +259,8 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "extLst", 2)]
+    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList { get; set; }
     
 
 
@@ -368,13 +335,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cpLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 48,48 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ContentPartLocks.</para>
@@ -383,11 +344,8 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks ContentPartLocks
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(48, "cpLocks", 0)]
+    public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks ContentPartLocks { get; set; }
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -396,11 +354,8 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList OfficeArtExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(48, "extLst", 1)]
+    public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList OfficeArtExtensionList { get; set; }
     
 
 
@@ -469,13 +424,7 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvContentPartPr" };
-    private static readonly byte[] eleNamespaceIds = { 47,47 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -484,11 +433,8 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
     /// </remark>
-    public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
-        get => GetElement<NonVisualDrawingProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(47, "cNvPr", 0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> NonVisualInkContentPartProperties.</para>
@@ -497,11 +443,8 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
     /// </remark>
-    public NonVisualInkContentPartProperties NonVisualInkContentPartProperties
-    {
-        get => GetElement<NonVisualInkContentPartProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(47, "cNvContentPartPr", 1)]
+    public NonVisualInkContentPartProperties NonVisualInkContentPartProperties { get; set; }
     
 
 
@@ -631,13 +574,7 @@ public partial class Transform2D : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "off","ext" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Offset.</para>
@@ -646,11 +583,8 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Offset Offset
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "off", 0)]
+    public DocumentFormat.OpenXml.Drawing.Offset Offset { get; set; }
     
     /// <summary>
     /// <para> Extents.</para>
@@ -659,11 +593,8 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Extents Extents
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "ext", 1)]
+    public DocumentFormat.OpenXml.Drawing.Extents Extents { get; set; }
     
 
 

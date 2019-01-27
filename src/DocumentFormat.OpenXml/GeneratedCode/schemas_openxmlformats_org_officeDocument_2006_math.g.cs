@@ -214,13 +214,7 @@ public partial class Run : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rPr","rPr","br","t","delText","instrText","delInstrText","noBreakHyphen","softHyphen","dayShort","monthShort","yearShort","dayLong","monthLong","yearLong","annotationRef","footnoteRef","endnoteRef","separator","continuationSeparator","sym","pgNum","cr","tab","object","pict","fldChar","ruby","footnoteReference","endnoteReference","commentReference","drawing","ptab","lastRenderedPageBreak","t" };
-    private static readonly byte[] eleNamespaceIds = { 21,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Run Properties.</para>
@@ -229,11 +223,8 @@ public partial class Run : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public RunProperties MathRunProperties
-    {
-        get => GetElement<RunProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "rPr", 0)]
+    public RunProperties MathRunProperties { get; set; }
     
     /// <summary>
     /// <para> Run Properties.</para>
@@ -242,11 +233,8 @@ public partial class Run : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Wordprocessing.RunProperties RunProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(23, "rPr", 1)]
+    public DocumentFormat.OpenXml.Wordprocessing.RunProperties RunProperties { get; set; }
     
 
 
@@ -315,13 +303,7 @@ public partial class Accent : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "accPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Accent Properties.</para>
@@ -330,11 +312,8 @@ public partial class Accent : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public AccentProperties AccentProperties
-    {
-        get => GetElement<AccentProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "accPr", 0)]
+    public AccentProperties AccentProperties { get; set; }
     
     /// <summary>
     /// <para> Base.</para>
@@ -343,11 +322,8 @@ public partial class Accent : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "e", 1)]
+    public Base Base { get; set; }
     
 
 
@@ -416,13 +392,7 @@ public partial class Bar : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "barPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Bar Properties.</para>
@@ -431,11 +401,8 @@ public partial class Bar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public BarProperties BarProperties
-    {
-        get => GetElement<BarProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "barPr", 0)]
+    public BarProperties BarProperties { get; set; }
     
     /// <summary>
     /// <para> Base.</para>
@@ -444,11 +411,8 @@ public partial class Bar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "e", 1)]
+    public Base Base { get; set; }
     
 
 
@@ -517,13 +481,7 @@ public partial class Box : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "boxPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Box Properties.</para>
@@ -532,11 +490,8 @@ public partial class Box : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public BoxProperties BoxProperties
-    {
-        get => GetElement<BoxProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "boxPr", 0)]
+    public BoxProperties BoxProperties { get; set; }
     
     /// <summary>
     /// <para> Base.</para>
@@ -545,11 +500,8 @@ public partial class Box : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "e", 1)]
+    public Base Base { get; set; }
     
 
 
@@ -618,13 +570,7 @@ public partial class BorderBox : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "borderBoxPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Border Box Properties.</para>
@@ -633,11 +579,8 @@ public partial class BorderBox : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public BorderBoxProperties BorderBoxProperties
-    {
-        get => GetElement<BorderBoxProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "borderBoxPr", 0)]
+    public BorderBoxProperties BorderBoxProperties { get; set; }
     
     /// <summary>
     /// <para> Base.</para>
@@ -646,11 +589,8 @@ public partial class BorderBox : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "e", 1)]
+    public Base Base { get; set; }
     
 
 
@@ -719,13 +659,7 @@ public partial class Delimiter : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "dPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Delimiter Properties.</para>
@@ -734,11 +668,8 @@ public partial class Delimiter : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public DelimiterProperties DelimiterProperties
-    {
-        get => GetElement<DelimiterProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "dPr", 0)]
+    public DelimiterProperties DelimiterProperties { get; set; }
     
 
 
@@ -807,13 +738,7 @@ public partial class EquationArray : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "eqArrPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Equation Array Properties.</para>
@@ -822,11 +747,8 @@ public partial class EquationArray : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public EquationArrayProperties EquationArrayProperties
-    {
-        get => GetElement<EquationArrayProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "eqArrPr", 0)]
+    public EquationArrayProperties EquationArrayProperties { get; set; }
     
 
 
@@ -897,13 +819,7 @@ public partial class Fraction : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fPr","num","den" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Fraction Properties.</para>
@@ -912,11 +828,8 @@ public partial class Fraction : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public FractionProperties FractionProperties
-    {
-        get => GetElement<FractionProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "fPr", 0)]
+    public FractionProperties FractionProperties { get; set; }
     
     /// <summary>
     /// <para> Numerator.</para>
@@ -925,11 +838,8 @@ public partial class Fraction : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Numerator Numerator
-    {
-        get => GetElement<Numerator>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "num", 1)]
+    public Numerator Numerator { get; set; }
     
     /// <summary>
     /// <para> Denominator.</para>
@@ -938,11 +848,8 @@ public partial class Fraction : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Denominator Denominator
-    {
-        get => GetElement<Denominator>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "den", 2)]
+    public Denominator Denominator { get; set; }
     
 
 
@@ -1013,13 +920,7 @@ public partial class MathFunction : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "funcPr","fName","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Function Properties.</para>
@@ -1028,11 +929,8 @@ public partial class MathFunction : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public FunctionProperties FunctionProperties
-    {
-        get => GetElement<FunctionProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "funcPr", 0)]
+    public FunctionProperties FunctionProperties { get; set; }
     
     /// <summary>
     /// <para> Function Name.</para>
@@ -1041,11 +939,8 @@ public partial class MathFunction : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public FunctionName FunctionName
-    {
-        get => GetElement<FunctionName>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "fName", 1)]
+    public FunctionName FunctionName { get; set; }
     
     /// <summary>
     /// <para> Base (Argument).</para>
@@ -1054,11 +949,8 @@ public partial class MathFunction : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "e", 2)]
+    public Base Base { get; set; }
     
 
 
@@ -1127,13 +1019,7 @@ public partial class GroupChar : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "groupChrPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Group-Character Properties.</para>
@@ -1142,11 +1028,8 @@ public partial class GroupChar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public GroupCharProperties GroupCharProperties
-    {
-        get => GetElement<GroupCharProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "groupChrPr", 0)]
+    public GroupCharProperties GroupCharProperties { get; set; }
     
     /// <summary>
     /// <para> Base.</para>
@@ -1155,11 +1038,8 @@ public partial class GroupChar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "e", 1)]
+    public Base Base { get; set; }
     
 
 
@@ -1230,13 +1110,7 @@ public partial class LimitLower : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "limLowPr","e","lim" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Lower Limit Properties.</para>
@@ -1245,11 +1119,8 @@ public partial class LimitLower : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public LimitLowerProperties LimitLowerProperties
-    {
-        get => GetElement<LimitLowerProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "limLowPr", 0)]
+    public LimitLowerProperties LimitLowerProperties { get; set; }
     
     /// <summary>
     /// <para> Base.</para>
@@ -1258,11 +1129,8 @@ public partial class LimitLower : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "e", 1)]
+    public Base Base { get; set; }
     
     /// <summary>
     /// <para> Limit (Lower).</para>
@@ -1271,11 +1139,8 @@ public partial class LimitLower : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Limit Limit
-    {
-        get => GetElement<Limit>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "lim", 2)]
+    public Limit Limit { get; set; }
     
 
 
@@ -1346,13 +1211,7 @@ public partial class LimitUpper : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "limUppPr","e","lim" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Upper Limit Properties.</para>
@@ -1361,11 +1220,8 @@ public partial class LimitUpper : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public LimitUpperProperties LimitUpperProperties
-    {
-        get => GetElement<LimitUpperProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "limUppPr", 0)]
+    public LimitUpperProperties LimitUpperProperties { get; set; }
     
     /// <summary>
     /// <para> Base.</para>
@@ -1374,11 +1230,8 @@ public partial class LimitUpper : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "e", 1)]
+    public Base Base { get; set; }
     
     /// <summary>
     /// <para> Limit (Upper).</para>
@@ -1387,11 +1240,8 @@ public partial class LimitUpper : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Limit Limit
-    {
-        get => GetElement<Limit>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "lim", 2)]
+    public Limit Limit { get; set; }
     
 
 
@@ -1460,13 +1310,7 @@ public partial class Matrix : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "mPr","mr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Matrix Properties.</para>
@@ -1475,11 +1319,8 @@ public partial class Matrix : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public MatrixProperties MatrixProperties
-    {
-        get => GetElement<MatrixProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "mPr", 0)]
+    public MatrixProperties MatrixProperties { get; set; }
     
 
 
@@ -1552,13 +1393,7 @@ public partial class Nary : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "naryPr","sub","sup","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> n-ary Properties.</para>
@@ -1567,11 +1402,8 @@ public partial class Nary : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public NaryProperties NaryProperties
-    {
-        get => GetElement<NaryProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "naryPr", 0)]
+    public NaryProperties NaryProperties { get; set; }
     
     /// <summary>
     /// <para> Lower limit (n-ary) .</para>
@@ -1580,11 +1412,8 @@ public partial class Nary : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public SubArgument SubArgument
-    {
-        get => GetElement<SubArgument>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "sub", 1)]
+    public SubArgument SubArgument { get; set; }
     
     /// <summary>
     /// <para> Upper limit (n-ary).</para>
@@ -1593,11 +1422,8 @@ public partial class Nary : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public SuperArgument SuperArgument
-    {
-        get => GetElement<SuperArgument>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "sup", 2)]
+    public SuperArgument SuperArgument { get; set; }
     
     /// <summary>
     /// <para> Base (Argument).</para>
@@ -1606,11 +1432,8 @@ public partial class Nary : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(21, "e", 3)]
+    public Base Base { get; set; }
     
 
 
@@ -1679,13 +1502,7 @@ public partial class Phantom : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "phantPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Phantom Properties.</para>
@@ -1694,11 +1511,8 @@ public partial class Phantom : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public PhantomProperties PhantomProperties
-    {
-        get => GetElement<PhantomProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "phantPr", 0)]
+    public PhantomProperties PhantomProperties { get; set; }
     
     /// <summary>
     /// <para> Base.</para>
@@ -1707,11 +1521,8 @@ public partial class Phantom : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "e", 1)]
+    public Base Base { get; set; }
     
 
 
@@ -1782,13 +1593,7 @@ public partial class Radical : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "radPr","deg","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Radical Properties.</para>
@@ -1797,11 +1602,8 @@ public partial class Radical : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public RadicalProperties RadicalProperties
-    {
-        get => GetElement<RadicalProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "radPr", 0)]
+    public RadicalProperties RadicalProperties { get; set; }
     
     /// <summary>
     /// <para> Degree.</para>
@@ -1810,11 +1612,8 @@ public partial class Radical : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Degree Degree
-    {
-        get => GetElement<Degree>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "deg", 1)]
+    public Degree Degree { get; set; }
     
     /// <summary>
     /// <para> Base.</para>
@@ -1823,11 +1622,8 @@ public partial class Radical : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "e", 2)]
+    public Base Base { get; set; }
     
 
 
@@ -1900,13 +1696,7 @@ public partial class PreSubSuper : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sPrePr","sub","sup","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Pre-Sub-Superscript Properties.</para>
@@ -1915,11 +1705,8 @@ public partial class PreSubSuper : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public PreSubSuperProperties PreSubSuperProperties
-    {
-        get => GetElement<PreSubSuperProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "sPrePr", 0)]
+    public PreSubSuperProperties PreSubSuperProperties { get; set; }
     
     /// <summary>
     /// <para> Subscript (Pre-Sub-Superscript).</para>
@@ -1928,11 +1715,8 @@ public partial class PreSubSuper : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public SubArgument SubArgument
-    {
-        get => GetElement<SubArgument>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "sub", 1)]
+    public SubArgument SubArgument { get; set; }
     
     /// <summary>
     /// <para> Superscript(Pre-Sub-Superscript function).</para>
@@ -1941,11 +1725,8 @@ public partial class PreSubSuper : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public SuperArgument SuperArgument
-    {
-        get => GetElement<SuperArgument>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "sup", 2)]
+    public SuperArgument SuperArgument { get; set; }
     
     /// <summary>
     /// <para> Base.</para>
@@ -1954,11 +1735,8 @@ public partial class PreSubSuper : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(21, "e", 3)]
+    public Base Base { get; set; }
     
 
 
@@ -2029,13 +1807,7 @@ public partial class Subscript : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sSubPr","e","sub" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Subscript Properties.</para>
@@ -2044,11 +1816,8 @@ public partial class Subscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public SubscriptProperties SubscriptProperties
-    {
-        get => GetElement<SubscriptProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "sSubPr", 0)]
+    public SubscriptProperties SubscriptProperties { get; set; }
     
     /// <summary>
     /// <para> Base.</para>
@@ -2057,11 +1826,8 @@ public partial class Subscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "e", 1)]
+    public Base Base { get; set; }
     
     /// <summary>
     /// <para> Subscript (Subscript function).</para>
@@ -2070,11 +1836,8 @@ public partial class Subscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public SubArgument SubArgument
-    {
-        get => GetElement<SubArgument>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "sub", 2)]
+    public SubArgument SubArgument { get; set; }
     
 
 
@@ -2147,13 +1910,7 @@ public partial class SubSuperscript : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sSubSupPr","e","sub","sup" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Sub-Superscript Properties.</para>
@@ -2162,11 +1919,8 @@ public partial class SubSuperscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public SubSuperscriptProperties SubSuperscriptProperties
-    {
-        get => GetElement<SubSuperscriptProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "sSubSupPr", 0)]
+    public SubSuperscriptProperties SubSuperscriptProperties { get; set; }
     
     /// <summary>
     /// <para> Base.</para>
@@ -2175,11 +1929,8 @@ public partial class SubSuperscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "e", 1)]
+    public Base Base { get; set; }
     
     /// <summary>
     /// <para> Subscript (Sub-Superscript).</para>
@@ -2188,11 +1939,8 @@ public partial class SubSuperscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public SubArgument SubArgument
-    {
-        get => GetElement<SubArgument>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "sub", 2)]
+    public SubArgument SubArgument { get; set; }
     
     /// <summary>
     /// <para> Superscript (Sub-Superscript function).</para>
@@ -2201,11 +1949,8 @@ public partial class SubSuperscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public SuperArgument SuperArgument
-    {
-        get => GetElement<SuperArgument>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(21, "sup", 3)]
+    public SuperArgument SuperArgument { get; set; }
     
 
 
@@ -2276,13 +2021,7 @@ public partial class Superscript : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sSupPr","e","sup" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Superscript Properties.</para>
@@ -2291,11 +2030,8 @@ public partial class Superscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public SuperscriptProperties SuperscriptProperties
-    {
-        get => GetElement<SuperscriptProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "sSupPr", 0)]
+    public SuperscriptProperties SuperscriptProperties { get; set; }
     
     /// <summary>
     /// <para> Base.</para>
@@ -2304,11 +2040,8 @@ public partial class Superscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Base Base
-    {
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "e", 1)]
+    public Base Base { get; set; }
     
     /// <summary>
     /// <para> Superscript (Superscript function).</para>
@@ -2317,11 +2050,8 @@ public partial class Superscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public SuperArgument SuperArgument
-    {
-        get => GetElement<SuperArgument>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "sup", 2)]
+    public SuperArgument SuperArgument { get; set; }
     
 
 
@@ -2454,13 +2184,7 @@ public partial class Paragraph : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "oMathParaPr","oMath","r","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","r" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Office Math Paragraph Properties.</para>
@@ -2469,11 +2193,8 @@ public partial class Paragraph : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ParagraphProperties ParagraphProperties
-    {
-        get => GetElement<ParagraphProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "oMathParaPr", 0)]
+    public ParagraphProperties ParagraphProperties { get; set; }
     
 
 
@@ -2744,13 +2465,7 @@ public partial class MathProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "mathFont","brkBin","brkBinSub","smallFrac","dispDef","lMargin","rMargin","defJc","preSp","postSp","interSp","intraSp","wrapIndent","wrapRight","intLim","naryLim" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Math Font.</para>
@@ -2759,11 +2474,8 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public MathFont MathFont
-    {
-        get => GetElement<MathFont>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "mathFont", 0)]
+    public MathFont MathFont { get; set; }
     
     /// <summary>
     /// <para> Break on Binary Operators.</para>
@@ -2772,11 +2484,8 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public BreakBinary BreakBinary
-    {
-        get => GetElement<BreakBinary>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "brkBin", 1)]
+    public BreakBinary BreakBinary { get; set; }
     
     /// <summary>
     /// <para> Break on Binary Subtraction.</para>
@@ -2785,11 +2494,8 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public BreakBinarySubtraction BreakBinarySubtraction
-    {
-        get => GetElement<BreakBinarySubtraction>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "brkBinSub", 2)]
+    public BreakBinarySubtraction BreakBinarySubtraction { get; set; }
     
     /// <summary>
     /// <para> Small Fraction.</para>
@@ -2798,11 +2504,8 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public SmallFraction SmallFraction
-    {
-        get => GetElement<SmallFraction>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(21, "smallFrac", 3)]
+    public SmallFraction SmallFraction { get; set; }
     
     /// <summary>
     /// <para> Use Display Math Defaults.</para>
@@ -2811,11 +2514,8 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public DisplayDefaults DisplayDefaults
-    {
-        get => GetElement<DisplayDefaults>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(21, "dispDef", 4)]
+    public DisplayDefaults DisplayDefaults { get; set; }
     
     /// <summary>
     /// <para> Left Margin.</para>
@@ -2824,11 +2524,8 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public LeftMargin LeftMargin
-    {
-        get => GetElement<LeftMargin>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(21, "lMargin", 5)]
+    public LeftMargin LeftMargin { get; set; }
     
     /// <summary>
     /// <para> Right Margin.</para>
@@ -2837,11 +2534,8 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public RightMargin RightMargin
-    {
-        get => GetElement<RightMargin>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(21, "rMargin", 6)]
+    public RightMargin RightMargin { get; set; }
     
     /// <summary>
     /// <para> Default Justification.</para>
@@ -2850,11 +2544,8 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public DefaultJustification DefaultJustification
-    {
-        get => GetElement<DefaultJustification>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(21, "defJc", 7)]
+    public DefaultJustification DefaultJustification { get; set; }
     
     /// <summary>
     /// <para> Pre-Equation Spacing.</para>
@@ -2863,11 +2554,8 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public PreSpacing PreSpacing
-    {
-        get => GetElement<PreSpacing>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(21, "preSp", 8)]
+    public PreSpacing PreSpacing { get; set; }
     
     /// <summary>
     /// <para> Post-Equation Spacing.</para>
@@ -2876,11 +2564,8 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public PostSpacing PostSpacing
-    {
-        get => GetElement<PostSpacing>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(21, "postSp", 9)]
+    public PostSpacing PostSpacing { get; set; }
     
     /// <summary>
     /// <para> Inter-Equation Spacing.</para>
@@ -2889,11 +2574,8 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public InterSpacing InterSpacing
-    {
-        get => GetElement<InterSpacing>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(21, "interSp", 10)]
+    public InterSpacing InterSpacing { get; set; }
     
     /// <summary>
     /// <para> Intra-Equation Spacing.</para>
@@ -2902,11 +2584,8 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public IntraSpacing IntraSpacing
-    {
-        get => GetElement<IntraSpacing>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(21, "intraSp", 11)]
+    public IntraSpacing IntraSpacing { get; set; }
     
 
 
@@ -3778,13 +3457,7 @@ public partial class RunProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "lit","nor","scr","sty","brk","aln" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Literal.</para>
@@ -3793,11 +3466,8 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Literal Literal
-    {
-        get => GetElement<Literal>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "lit", 0)]
+    public Literal Literal { get; set; }
     
 
 
@@ -4114,13 +3784,7 @@ public partial class AccentProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "chr","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Accent Character.</para>
@@ -4129,11 +3793,8 @@ public partial class AccentProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public AccentChar AccentChar
-    {
-        get => GetElement<AccentChar>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "chr", 0)]
+    public AccentChar AccentChar { get; set; }
     
     /// <summary>
     /// <para> Control Properties.</para>
@@ -4142,11 +3803,8 @@ public partial class AccentProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 1)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -5189,13 +4847,7 @@ public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "argPr","acc","bar","box","borderBox","d","eqArr","f","func","groupChr","limLow","limUpp","m","nary","phant","rad","sPre","sSub","sSubSup","sSup","r","customXml","fldSimple","hyperlink","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","oMathPara","oMath","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Argument Properties.</para>
@@ -5204,11 +4856,8 @@ public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ArgumentProperties ArgumentProperties
-    {
-        get => GetElement<ArgumentProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "argPr", 0)]
+    public ArgumentProperties ArgumentProperties { get; set; }
     
 
 
@@ -5384,13 +5033,7 @@ public partial class BarProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pos","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Position (Bar).</para>
@@ -5399,11 +5042,8 @@ public partial class BarProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Position Position
-    {
-        get => GetElement<Position>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "pos", 0)]
+    public Position Position { get; set; }
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -5412,11 +5052,8 @@ public partial class BarProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 1)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -5493,13 +5130,7 @@ public partial class BoxProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "opEmu","noBreak","diff","brk","aln","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Operator Emulator.</para>
@@ -5508,11 +5139,8 @@ public partial class BoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public OperatorEmulator OperatorEmulator
-    {
-        get => GetElement<OperatorEmulator>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "opEmu", 0)]
+    public OperatorEmulator OperatorEmulator { get; set; }
     
     /// <summary>
     /// <para> No Break.</para>
@@ -5521,11 +5149,8 @@ public partial class BoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public NoBreak NoBreak
-    {
-        get => GetElement<NoBreak>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "noBreak", 1)]
+    public NoBreak NoBreak { get; set; }
     
     /// <summary>
     /// <para> Differential.</para>
@@ -5534,11 +5159,8 @@ public partial class BoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Differential Differential
-    {
-        get => GetElement<Differential>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "diff", 2)]
+    public Differential Differential { get; set; }
     
     /// <summary>
     /// <para> Break.</para>
@@ -5547,11 +5169,8 @@ public partial class BoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Break Break
-    {
-        get => GetElement<Break>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(21, "brk", 3)]
+    public Break Break { get; set; }
     
     /// <summary>
     /// <para> Alignment.</para>
@@ -5560,11 +5179,8 @@ public partial class BoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Alignment Alignment
-    {
-        get => GetElement<Alignment>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(21, "aln", 4)]
+    public Alignment Alignment { get; set; }
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -5573,11 +5189,8 @@ public partial class BoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 5)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -5660,13 +5273,7 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "hideTop","hideBot","hideLeft","hideRight","strikeH","strikeV","strikeBLTR","strikeTLBR","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Hide Top Edge.</para>
@@ -5675,11 +5282,8 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public HideTop HideTop
-    {
-        get => GetElement<HideTop>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "hideTop", 0)]
+    public HideTop HideTop { get; set; }
     
     /// <summary>
     /// <para> Hide Bottom Edge.</para>
@@ -5688,11 +5292,8 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public HideBottom HideBottom
-    {
-        get => GetElement<HideBottom>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "hideBot", 1)]
+    public HideBottom HideBottom { get; set; }
     
     /// <summary>
     /// <para> Hide Left Edge.</para>
@@ -5701,11 +5302,8 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public HideLeft HideLeft
-    {
-        get => GetElement<HideLeft>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "hideLeft", 2)]
+    public HideLeft HideLeft { get; set; }
     
     /// <summary>
     /// <para> Hide Right Edge.</para>
@@ -5714,11 +5312,8 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public HideRight HideRight
-    {
-        get => GetElement<HideRight>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(21, "hideRight", 3)]
+    public HideRight HideRight { get; set; }
     
     /// <summary>
     /// <para> Border Box Strikethrough Horizontal.</para>
@@ -5727,11 +5322,8 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public StrikeHorizontal StrikeHorizontal
-    {
-        get => GetElement<StrikeHorizontal>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(21, "strikeH", 4)]
+    public StrikeHorizontal StrikeHorizontal { get; set; }
     
     /// <summary>
     /// <para> Border Box Strikethrough Vertical.</para>
@@ -5740,11 +5332,8 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public StrikeVertical StrikeVertical
-    {
-        get => GetElement<StrikeVertical>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(21, "strikeV", 5)]
+    public StrikeVertical StrikeVertical { get; set; }
     
     /// <summary>
     /// <para> Border Box Strikethrough Bottom-Left to Top-Right.</para>
@@ -5753,11 +5342,8 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public StrikeBottomLeftToTopRight StrikeBottomLeftToTopRight
-    {
-        get => GetElement<StrikeBottomLeftToTopRight>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(21, "strikeBLTR", 6)]
+    public StrikeBottomLeftToTopRight StrikeBottomLeftToTopRight { get; set; }
     
     /// <summary>
     /// <para> Border Box Strikethrough Top-Left to Bottom-Right.</para>
@@ -5766,11 +5352,8 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public StrikeTopLeftToBottomRight StrikeTopLeftToBottomRight
-    {
-        get => GetElement<StrikeTopLeftToBottomRight>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(21, "strikeTLBR", 7)]
+    public StrikeTopLeftToBottomRight StrikeTopLeftToBottomRight { get; set; }
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -5779,11 +5362,8 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 8)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -5899,13 +5479,7 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "begChr","sepChr","endChr","grow","shp","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Delimiter Beginning Character.</para>
@@ -5914,11 +5488,8 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public BeginChar BeginChar
-    {
-        get => GetElement<BeginChar>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "begChr", 0)]
+    public BeginChar BeginChar { get; set; }
     
     /// <summary>
     /// <para> Delimiter Separator Character.</para>
@@ -5927,11 +5498,8 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public SeparatorChar SeparatorChar
-    {
-        get => GetElement<SeparatorChar>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "sepChr", 1)]
+    public SeparatorChar SeparatorChar { get; set; }
     
     /// <summary>
     /// <para> Delimiter Ending Character.</para>
@@ -5940,11 +5508,8 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public EndChar EndChar
-    {
-        get => GetElement<EndChar>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "endChr", 2)]
+    public EndChar EndChar { get; set; }
     
     /// <summary>
     /// <para> Delimiter Grow.</para>
@@ -5953,11 +5518,8 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public GrowOperators GrowOperators
-    {
-        get => GetElement<GrowOperators>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(21, "grow", 3)]
+    public GrowOperators GrowOperators { get; set; }
     
     /// <summary>
     /// <para> Shape (Delimiters).</para>
@@ -5966,11 +5528,8 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Shape Shape
-    {
-        get => GetElement<Shape>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(21, "shp", 4)]
+    public Shape Shape { get; set; }
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -5979,11 +5538,8 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 5)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -6251,13 +5807,7 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "baseJc","maxDist","objDist","rSpRule","rSp","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Equation Array Base Justification.</para>
@@ -6266,11 +5816,8 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public BaseJustification BaseJustification
-    {
-        get => GetElement<BaseJustification>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "baseJc", 0)]
+    public BaseJustification BaseJustification { get; set; }
     
     /// <summary>
     /// <para> Maximum Distribution.</para>
@@ -6279,11 +5826,8 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public MaxDistribution MaxDistribution
-    {
-        get => GetElement<MaxDistribution>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "maxDist", 1)]
+    public MaxDistribution MaxDistribution { get; set; }
     
     /// <summary>
     /// <para> Object Distribution.</para>
@@ -6292,11 +5836,8 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ObjectDistribution ObjectDistribution
-    {
-        get => GetElement<ObjectDistribution>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "objDist", 2)]
+    public ObjectDistribution ObjectDistribution { get; set; }
     
     /// <summary>
     /// <para> Row Spacing Rule.</para>
@@ -6305,11 +5846,8 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public RowSpacingRule RowSpacingRule
-    {
-        get => GetElement<RowSpacingRule>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(21, "rSpRule", 3)]
+    public RowSpacingRule RowSpacingRule { get; set; }
     
     /// <summary>
     /// <para> Row Spacing (Equation Array).</para>
@@ -6318,11 +5856,8 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public RowSpacing RowSpacing
-    {
-        get => GetElement<RowSpacing>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(21, "rSp", 4)]
+    public RowSpacing RowSpacing { get; set; }
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -6331,11 +5866,8 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 5)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -6443,13 +5975,7 @@ public partial class FractionProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "type","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Fraction type.</para>
@@ -6458,11 +5984,8 @@ public partial class FractionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public FractionType FractionType
-    {
-        get => GetElement<FractionType>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "type", 0)]
+    public FractionType FractionType { get; set; }
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -6471,11 +5994,8 @@ public partial class FractionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 1)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -6542,13 +6062,7 @@ public partial class FunctionProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ControlProperties.</para>
@@ -6557,11 +6071,8 @@ public partial class FunctionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 0)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -6634,13 +6145,7 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "chr","pos","vertJc","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Group Character (Grouping Character).</para>
@@ -6649,11 +6154,8 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public AccentChar AccentChar
-    {
-        get => GetElement<AccentChar>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "chr", 0)]
+    public AccentChar AccentChar { get; set; }
     
     /// <summary>
     /// <para> Position (Group Character).</para>
@@ -6662,11 +6164,8 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Position Position
-    {
-        get => GetElement<Position>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "pos", 1)]
+    public Position Position { get; set; }
     
     /// <summary>
     /// <para> Vertical Justification.</para>
@@ -6675,11 +6174,8 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public VerticalJustification VerticalJustification
-    {
-        get => GetElement<VerticalJustification>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "vertJc", 2)]
+    public VerticalJustification VerticalJustification { get; set; }
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -6688,11 +6184,8 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 3)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -6759,13 +6252,7 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ControlProperties.</para>
@@ -6774,11 +6261,8 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 0)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -6845,13 +6329,7 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ControlProperties.</para>
@@ -6860,11 +6338,8 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 0)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -7011,13 +6486,7 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "count","mcJc" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Matrix Column Count.</para>
@@ -7026,11 +6495,8 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public MatrixColumnCount MatrixColumnCount
-    {
-        get => GetElement<MatrixColumnCount>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "count", 0)]
+    public MatrixColumnCount MatrixColumnCount { get; set; }
     
     /// <summary>
     /// <para> Matrix Column Justification.</para>
@@ -7039,11 +6505,8 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public MatrixColumnJustification MatrixColumnJustification
-    {
-        get => GetElement<MatrixColumnJustification>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "mcJc", 1)]
+    public MatrixColumnJustification MatrixColumnJustification { get; set; }
     
 
 
@@ -7110,13 +6573,7 @@ public partial class MatrixColumn : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "mcPr" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Matrix Column Properties.</para>
@@ -7125,11 +6582,8 @@ public partial class MatrixColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public MatrixColumnProperties MatrixColumnProperties
-    {
-        get => GetElement<MatrixColumnProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "mcPr", 0)]
+    public MatrixColumnProperties MatrixColumnProperties { get; set; }
     
 
 
@@ -7496,13 +6950,7 @@ public partial class MatrixProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "baseJc","plcHide","rSpRule","cGpRule","rSp","cSp","cGp","mcs","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Matrix Base Justification.</para>
@@ -7511,11 +6959,8 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public BaseJustification BaseJustification
-    {
-        get => GetElement<BaseJustification>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "baseJc", 0)]
+    public BaseJustification BaseJustification { get; set; }
     
     /// <summary>
     /// <para> Hide Placeholders (Matrix).</para>
@@ -7524,11 +6969,8 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public HidePlaceholder HidePlaceholder
-    {
-        get => GetElement<HidePlaceholder>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "plcHide", 1)]
+    public HidePlaceholder HidePlaceholder { get; set; }
     
     /// <summary>
     /// <para> Row Spacing Rule.</para>
@@ -7537,11 +6979,8 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public RowSpacingRule RowSpacingRule
-    {
-        get => GetElement<RowSpacingRule>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "rSpRule", 2)]
+    public RowSpacingRule RowSpacingRule { get; set; }
     
     /// <summary>
     /// <para> Matrix Column Gap Rule.</para>
@@ -7550,11 +6989,8 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ColumnGapRule ColumnGapRule
-    {
-        get => GetElement<ColumnGapRule>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(21, "cGpRule", 3)]
+    public ColumnGapRule ColumnGapRule { get; set; }
     
     /// <summary>
     /// <para> Row Spacing (Matrix).</para>
@@ -7563,11 +6999,8 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public RowSpacing RowSpacing
-    {
-        get => GetElement<RowSpacing>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(21, "rSp", 4)]
+    public RowSpacing RowSpacing { get; set; }
     
     /// <summary>
     /// <para> Matrix Column Spacing.</para>
@@ -7576,11 +7009,8 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ColumnSpacing ColumnSpacing
-    {
-        get => GetElement<ColumnSpacing>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(21, "cSp", 5)]
+    public ColumnSpacing ColumnSpacing { get; set; }
     
     /// <summary>
     /// <para> Matrix Column Gap.</para>
@@ -7589,11 +7019,8 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ColumnGap ColumnGap
-    {
-        get => GetElement<ColumnGap>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(21, "cGp", 6)]
+    public ColumnGap ColumnGap { get; set; }
     
     /// <summary>
     /// <para> Matrix Columns.</para>
@@ -7602,11 +7029,8 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public MatrixColumns MatrixColumns
-    {
-        get => GetElement<MatrixColumns>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(21, "mcs", 7)]
+    public MatrixColumns MatrixColumns { get; set; }
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -7615,11 +7039,8 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 8)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -7860,13 +7281,7 @@ public partial class NaryProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "chr","limLoc","grow","subHide","supHide","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> n-ary Operator Character.</para>
@@ -7875,11 +7290,8 @@ public partial class NaryProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public AccentChar AccentChar
-    {
-        get => GetElement<AccentChar>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "chr", 0)]
+    public AccentChar AccentChar { get; set; }
     
     /// <summary>
     /// <para> n-ary Limit Location.</para>
@@ -7888,11 +7300,8 @@ public partial class NaryProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public LimitLocation LimitLocation
-    {
-        get => GetElement<LimitLocation>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "limLoc", 1)]
+    public LimitLocation LimitLocation { get; set; }
     
     /// <summary>
     /// <para> n-ary Grow.</para>
@@ -7901,11 +7310,8 @@ public partial class NaryProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public GrowOperators GrowOperators
-    {
-        get => GetElement<GrowOperators>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "grow", 2)]
+    public GrowOperators GrowOperators { get; set; }
     
     /// <summary>
     /// <para> Hide Subscript (n-ary).</para>
@@ -7914,11 +7320,8 @@ public partial class NaryProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public HideSubArgument HideSubArgument
-    {
-        get => GetElement<HideSubArgument>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(21, "subHide", 3)]
+    public HideSubArgument HideSubArgument { get; set; }
     
     /// <summary>
     /// <para> Hide Superscript (n-ary).</para>
@@ -7927,11 +7330,8 @@ public partial class NaryProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public HideSuperArgument HideSuperArgument
-    {
-        get => GetElement<HideSuperArgument>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(21, "supHide", 4)]
+    public HideSuperArgument HideSuperArgument { get; set; }
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -7940,11 +7340,8 @@ public partial class NaryProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 5)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -8021,13 +7418,7 @@ public partial class PhantomProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "show","zeroWid","zeroAsc","zeroDesc","transp","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Phantom Show.</para>
@@ -8036,11 +7427,8 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ShowPhantom ShowPhantom
-    {
-        get => GetElement<ShowPhantom>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "show", 0)]
+    public ShowPhantom ShowPhantom { get; set; }
     
     /// <summary>
     /// <para> Phantom Zero Width.</para>
@@ -8049,11 +7437,8 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ZeroWidth ZeroWidth
-    {
-        get => GetElement<ZeroWidth>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "zeroWid", 1)]
+    public ZeroWidth ZeroWidth { get; set; }
     
     /// <summary>
     /// <para> Phantom Zero Ascent.</para>
@@ -8062,11 +7447,8 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ZeroAscent ZeroAscent
-    {
-        get => GetElement<ZeroAscent>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(21, "zeroAsc", 2)]
+    public ZeroAscent ZeroAscent { get; set; }
     
     /// <summary>
     /// <para> Phantom Zero Descent.</para>
@@ -8075,11 +7457,8 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ZeroDescent ZeroDescent
-    {
-        get => GetElement<ZeroDescent>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(21, "zeroDesc", 3)]
+    public ZeroDescent ZeroDescent { get; set; }
     
     /// <summary>
     /// <para> Transparent (Phantom).</para>
@@ -8088,11 +7467,8 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Transparent Transparent
-    {
-        get => GetElement<Transparent>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(21, "transp", 4)]
+    public Transparent Transparent { get; set; }
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -8101,11 +7477,8 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 5)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -8174,13 +7547,7 @@ public partial class RadicalProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "degHide","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Hide Degree.</para>
@@ -8189,11 +7556,8 @@ public partial class RadicalProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public HideDegree HideDegree
-    {
-        get => GetElement<HideDegree>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "degHide", 0)]
+    public HideDegree HideDegree { get; set; }
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -8202,11 +7566,8 @@ public partial class RadicalProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 1)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -8273,13 +7634,7 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ControlProperties.</para>
@@ -8288,11 +7643,8 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 0)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -8359,13 +7711,7 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ControlProperties.</para>
@@ -8374,11 +7720,8 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 0)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -8447,13 +7790,7 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "alnScr","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Align Scripts.</para>
@@ -8462,11 +7799,8 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public AlignScripts AlignScripts
-    {
-        get => GetElement<AlignScripts>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "alnScr", 0)]
+    public AlignScripts AlignScripts { get; set; }
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -8475,11 +7809,8 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 1)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -8546,13 +7877,7 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ControlProperties.</para>
@@ -8561,11 +7886,8 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "ctrlPr", 0)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -8671,13 +7993,7 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "argSz" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Argument Size.</para>
@@ -8686,11 +8002,8 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public ArgumentSize ArgumentSize
-    {
-        get => GetElement<ArgumentSize>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "argSz", 0)]
+    public ArgumentSize ArgumentSize { get; set; }
     
 
 
@@ -8950,13 +8263,7 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "jc" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Justification.</para>
@@ -8965,11 +8272,8 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-    public Justification Justification
-    {
-        get => GetElement<Justification>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(21, "jc", 0)]
+    public Justification Justification { get; set; }
     
 
 

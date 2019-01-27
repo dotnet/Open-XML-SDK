@@ -156,13 +156,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fill","imagedata","stroke","textbox","shadow","skew","extrusion","callout","lock","colormru","colormenu" };
-    private static readonly byte[] eleNamespaceIds = { 26,26,26,26,26,27,27,27,27,27,27 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
     
         /// <summary>
     /// <para> Fill.</para>
@@ -171,11 +165,8 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
-    public DocumentFormat.OpenXml.Vml.Fill Fill
-    {
-        get => GetElement<DocumentFormat.OpenXml.Vml.Fill>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(26, "fill", 0)]
+    public DocumentFormat.OpenXml.Vml.Fill Fill { get; set; }
     
     /// <summary>
     /// <para> ImageData.</para>
@@ -184,11 +175,8 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
-    public DocumentFormat.OpenXml.Vml.ImageData ImageData
-    {
-        get => GetElement<DocumentFormat.OpenXml.Vml.ImageData>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(26, "imagedata", 1)]
+    public DocumentFormat.OpenXml.Vml.ImageData ImageData { get; set; }
     
     /// <summary>
     /// <para> Stroke.</para>
@@ -197,11 +185,8 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
-    public DocumentFormat.OpenXml.Vml.Stroke Stroke
-    {
-        get => GetElement<DocumentFormat.OpenXml.Vml.Stroke>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(26, "stroke", 2)]
+    public DocumentFormat.OpenXml.Vml.Stroke Stroke { get; set; }
     
     /// <summary>
     /// <para> TextBox.</para>
@@ -210,11 +195,8 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
-    public DocumentFormat.OpenXml.Vml.TextBox TextBox
-    {
-        get => GetElement<DocumentFormat.OpenXml.Vml.TextBox>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(26, "textbox", 3)]
+    public DocumentFormat.OpenXml.Vml.TextBox TextBox { get; set; }
     
     /// <summary>
     /// <para> Shadow.</para>
@@ -223,11 +205,8 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
-    public DocumentFormat.OpenXml.Vml.Shadow Shadow
-    {
-        get => GetElement<DocumentFormat.OpenXml.Vml.Shadow>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(26, "shadow", 4)]
+    public DocumentFormat.OpenXml.Vml.Shadow Shadow { get; set; }
     
     /// <summary>
     /// <para> Skew.</para>
@@ -236,11 +215,8 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public Skew Skew
-    {
-        get => GetElement<Skew>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(27, "skew", 5)]
+    public Skew Skew { get; set; }
     
     /// <summary>
     /// <para> Extrusion.</para>
@@ -249,11 +225,8 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public Extrusion Extrusion
-    {
-        get => GetElement<Extrusion>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(27, "extrusion", 6)]
+    public Extrusion Extrusion { get; set; }
     
     /// <summary>
     /// <para> Callout.</para>
@@ -262,11 +235,8 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public Callout Callout
-    {
-        get => GetElement<Callout>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(27, "callout", 7)]
+    public Callout Callout { get; set; }
     
     /// <summary>
     /// <para> Shape Protections.</para>
@@ -275,11 +245,8 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public Lock Lock
-    {
-        get => GetElement<Lock>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(27, "lock", 8)]
+    public Lock Lock { get; set; }
     
     /// <summary>
     /// <para> Most Recently Used Colors.</para>
@@ -288,11 +255,8 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public ColorMostRecentlyUsed ColorMostRecentlyUsed
-    {
-        get => GetElement<ColorMostRecentlyUsed>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(27, "colormru", 9)]
+    public ColorMostRecentlyUsed ColorMostRecentlyUsed { get; set; }
     
     /// <summary>
     /// <para> UI Default Colors.</para>
@@ -301,11 +265,8 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public ColorMenu ColorMenu
-    {
-        get => GetElement<ColorMenu>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(27, "colormenu", 10)]
+    public ColorMenu ColorMenu { get; set; }
     
 
 
@@ -384,13 +345,7 @@ public partial class ShapeLayout : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "idmap","regrouptable","rules" };
-    private static readonly byte[] eleNamespaceIds = { 27,27,27 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
     
         /// <summary>
     /// <para> Shape ID Map.</para>
@@ -399,11 +354,8 @@ public partial class ShapeLayout : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public ShapeIdMap ShapeIdMap
-    {
-        get => GetElement<ShapeIdMap>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(27, "idmap", 0)]
+    public ShapeIdMap ShapeIdMap { get; set; }
     
     /// <summary>
     /// <para> Shape Grouping History.</para>
@@ -412,11 +364,8 @@ public partial class ShapeLayout : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public RegroupTable RegroupTable
-    {
-        get => GetElement<RegroupTable>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(27, "regrouptable", 1)]
+    public RegroupTable RegroupTable { get; set; }
     
     /// <summary>
     /// <para> Rule Set.</para>
@@ -425,11 +374,8 @@ public partial class ShapeLayout : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public Rules Rules
-    {
-        get => GetElement<Rules>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(27, "rules", 2)]
+    public Rules Rules { get; set; }
     
 
 
@@ -718,13 +664,7 @@ public partial class Diagram : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "relationtable" };
-    private static readonly byte[] eleNamespaceIds = { 27 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Diagram Relationship Table.</para>
@@ -733,11 +673,8 @@ public partial class Diagram : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public RelationTable RelationTable
-    {
-        get => GetElement<RelationTable>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(27, "relationtable", 0)]
+    public RelationTable RelationTable { get; set; }
     
 
 
@@ -1362,13 +1299,7 @@ public partial class OleObject : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "LinkType","LockedField","FieldCodes" };
-    private static readonly byte[] eleNamespaceIds = { 27,27,27 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Embedded Object Alternate Image Request.</para>
@@ -1377,11 +1308,8 @@ public partial class OleObject : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public LinkType LinkType
-    {
-        get => GetElement<LinkType>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(27, "LinkType", 0)]
+    public LinkType LinkType { get; set; }
     
     /// <summary>
     /// <para> Embedded Object Cannot Be Refreshed.</para>
@@ -1390,11 +1318,8 @@ public partial class OleObject : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public LockedField LockedField
-    {
-        get => GetElement<LockedField>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(27, "LockedField", 1)]
+    public LockedField LockedField { get; set; }
     
     /// <summary>
     /// <para> WordprocessingML Field Switches.</para>
@@ -1403,11 +1328,8 @@ public partial class OleObject : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
-    public FieldCodes FieldCodes
-    {
-        get => GetElement<FieldCodes>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(27, "FieldCodes", 2)]
+    public FieldCodes FieldCodes { get; set; }
     
 
 

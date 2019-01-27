@@ -181,13 +181,7 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "font","picture" };
-    private static readonly byte[] eleNamespaceIds = { 35,35 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> SharedComFont.</para>
@@ -196,11 +190,8 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
     /// </remark>
-    public SharedComFont SharedComFont
-    {
-        get => GetElement<SharedComFont>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(35, "font", 0)]
+    public SharedComFont SharedComFont { get; set; }
     
     /// <summary>
     /// <para> SharedComPicture.</para>
@@ -209,11 +200,8 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
     /// </remark>
-    public SharedComPicture SharedComPicture
-    {
-        get => GetElement<SharedComPicture>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(35, "picture", 1)]
+    public SharedComPicture SharedComPicture { get; set; }
     
 
 

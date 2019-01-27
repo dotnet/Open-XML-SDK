@@ -259,13 +259,7 @@ public partial class VbaSuppData : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "docEvents","mcds" };
-    private static readonly byte[] eleNamespaceIds = { 33,33 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> DocEvents.</para>
@@ -274,11 +268,8 @@ public partial class VbaSuppData : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public DocEvents DocEvents
-    {
-        get => GetElement<DocEvents>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(33, "docEvents", 0)]
+    public DocEvents DocEvents { get; set; }
     
     /// <summary>
     /// <para> Mcds.</para>
@@ -287,11 +278,8 @@ public partial class VbaSuppData : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public Mcds Mcds
-    {
-        get => GetElement<Mcds>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(33, "mcds", 1)]
+    public Mcds Mcds { get; set; }
     
 
 
@@ -716,13 +704,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fci","macro","acd","wll","wch" };
-    private static readonly byte[] eleNamespaceIds = { 33,33,33,33,33 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> FixedCommandKeyboardCustomization.</para>
@@ -731,11 +713,8 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public FixedCommandKeyboardCustomization FixedCommandKeyboardCustomization
-    {
-        get => GetElement<FixedCommandKeyboardCustomization>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(33, "fci", 0)]
+    public FixedCommandKeyboardCustomization FixedCommandKeyboardCustomization { get; set; }
     
     /// <summary>
     /// <para> MacroKeyboardCustomization.</para>
@@ -744,11 +723,8 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public MacroKeyboardCustomization MacroKeyboardCustomization
-    {
-        get => GetElement<MacroKeyboardCustomization>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(33, "macro", 1)]
+    public MacroKeyboardCustomization MacroKeyboardCustomization { get; set; }
     
     /// <summary>
     /// <para> AllocatedCommandKeyboardCustomization.</para>
@@ -757,11 +733,8 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public AllocatedCommandKeyboardCustomization AllocatedCommandKeyboardCustomization
-    {
-        get => GetElement<AllocatedCommandKeyboardCustomization>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(33, "acd", 2)]
+    public AllocatedCommandKeyboardCustomization AllocatedCommandKeyboardCustomization { get; set; }
     
     /// <summary>
     /// <para> WllMacroKeyboardCustomization.</para>
@@ -770,11 +743,8 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public WllMacroKeyboardCustomization WllMacroKeyboardCustomization
-    {
-        get => GetElement<WllMacroKeyboardCustomization>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(33, "wll", 3)]
+    public WllMacroKeyboardCustomization WllMacroKeyboardCustomization { get; set; }
     
     /// <summary>
     /// <para> CharacterInsertion.</para>
@@ -783,11 +753,8 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public CharacterInsertion CharacterInsertion
-    {
-        get => GetElement<CharacterInsertion>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(33, "wch", 4)]
+    public CharacterInsertion CharacterInsertion { get; set; }
     
 
 
@@ -1493,13 +1460,7 @@ public partial class DocEvents : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "eventDocNew","eventDocOpen","eventDocClose","eventDocSync","eventDocXmlAfterInsert","eventDocXmlBeforeDelete","eventDocContentControlAfterInsert","eventDocContentControlBeforeDelete","eventDocContentControlOnExit","eventDocContentControlOnEnter","eventDocStoreUpdate","eventDocContentControlContentUpdate","eventDocBuildingBlockAfterInsert" };
-    private static readonly byte[] eleNamespaceIds = { 33,33,33,33,33,33,33,33,33,33,33,33,33 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> EventDocNewXsdString.</para>
@@ -1508,11 +1469,8 @@ public partial class DocEvents : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public EventDocNewXsdString EventDocNewXsdString
-    {
-        get => GetElement<EventDocNewXsdString>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(33, "eventDocNew", 0)]
+    public EventDocNewXsdString EventDocNewXsdString { get; set; }
     
     /// <summary>
     /// <para> EventDocOpenXsdString.</para>
@@ -1521,11 +1479,8 @@ public partial class DocEvents : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public EventDocOpenXsdString EventDocOpenXsdString
-    {
-        get => GetElement<EventDocOpenXsdString>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(33, "eventDocOpen", 1)]
+    public EventDocOpenXsdString EventDocOpenXsdString { get; set; }
     
     /// <summary>
     /// <para> EventDocCloseXsdString.</para>
@@ -1534,11 +1489,8 @@ public partial class DocEvents : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public EventDocCloseXsdString EventDocCloseXsdString
-    {
-        get => GetElement<EventDocCloseXsdString>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(33, "eventDocClose", 2)]
+    public EventDocCloseXsdString EventDocCloseXsdString { get; set; }
     
     /// <summary>
     /// <para> EventDocSyncXsdString.</para>
@@ -1547,11 +1499,8 @@ public partial class DocEvents : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public EventDocSyncXsdString EventDocSyncXsdString
-    {
-        get => GetElement<EventDocSyncXsdString>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(33, "eventDocSync", 3)]
+    public EventDocSyncXsdString EventDocSyncXsdString { get; set; }
     
     /// <summary>
     /// <para> EventDocXmlAfterInsertXsdString.</para>
@@ -1560,11 +1509,8 @@ public partial class DocEvents : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public EventDocXmlAfterInsertXsdString EventDocXmlAfterInsertXsdString
-    {
-        get => GetElement<EventDocXmlAfterInsertXsdString>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(33, "eventDocXmlAfterInsert", 4)]
+    public EventDocXmlAfterInsertXsdString EventDocXmlAfterInsertXsdString { get; set; }
     
     /// <summary>
     /// <para> EventDocXmlBeforeDeleteXsdString.</para>
@@ -1573,11 +1519,8 @@ public partial class DocEvents : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public EventDocXmlBeforeDeleteXsdString EventDocXmlBeforeDeleteXsdString
-    {
-        get => GetElement<EventDocXmlBeforeDeleteXsdString>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(33, "eventDocXmlBeforeDelete", 5)]
+    public EventDocXmlBeforeDeleteXsdString EventDocXmlBeforeDeleteXsdString { get; set; }
     
     /// <summary>
     /// <para> EventDocContentControlAfterInsertXsdString.</para>
@@ -1586,11 +1529,8 @@ public partial class DocEvents : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public EventDocContentControlAfterInsertXsdString EventDocContentControlAfterInsertXsdString
-    {
-        get => GetElement<EventDocContentControlAfterInsertXsdString>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(33, "eventDocContentControlAfterInsert", 6)]
+    public EventDocContentControlAfterInsertXsdString EventDocContentControlAfterInsertXsdString { get; set; }
     
     /// <summary>
     /// <para> EventDocContentControlBeforeDeleteXsdString.</para>
@@ -1599,11 +1539,8 @@ public partial class DocEvents : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public EventDocContentControlBeforeDeleteXsdString EventDocContentControlBeforeDeleteXsdString
-    {
-        get => GetElement<EventDocContentControlBeforeDeleteXsdString>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(33, "eventDocContentControlBeforeDelete", 7)]
+    public EventDocContentControlBeforeDeleteXsdString EventDocContentControlBeforeDeleteXsdString { get; set; }
     
     /// <summary>
     /// <para> EventDocContentControlOnExistXsdString.</para>
@@ -1612,11 +1549,8 @@ public partial class DocEvents : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public EventDocContentControlOnExistXsdString EventDocContentControlOnExistXsdString
-    {
-        get => GetElement<EventDocContentControlOnExistXsdString>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(33, "eventDocContentControlOnExit", 8)]
+    public EventDocContentControlOnExistXsdString EventDocContentControlOnExistXsdString { get; set; }
     
     /// <summary>
     /// <para> EventDocContentControlOnEnterXsdString.</para>
@@ -1625,11 +1559,8 @@ public partial class DocEvents : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public EventDocContentControlOnEnterXsdString EventDocContentControlOnEnterXsdString
-    {
-        get => GetElement<EventDocContentControlOnEnterXsdString>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(33, "eventDocContentControlOnEnter", 9)]
+    public EventDocContentControlOnEnterXsdString EventDocContentControlOnEnterXsdString { get; set; }
     
     /// <summary>
     /// <para> EventDocStoreUpdateXsdString.</para>
@@ -1638,11 +1569,8 @@ public partial class DocEvents : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public EventDocStoreUpdateXsdString EventDocStoreUpdateXsdString
-    {
-        get => GetElement<EventDocStoreUpdateXsdString>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(33, "eventDocStoreUpdate", 10)]
+    public EventDocStoreUpdateXsdString EventDocStoreUpdateXsdString { get; set; }
     
     /// <summary>
     /// <para> EventDocContentControlUpdateXsdString.</para>
@@ -1651,11 +1579,8 @@ public partial class DocEvents : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public EventDocContentControlUpdateXsdString EventDocContentControlUpdateXsdString
-    {
-        get => GetElement<EventDocContentControlUpdateXsdString>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(33, "eventDocContentControlContentUpdate", 11)]
+    public EventDocContentControlUpdateXsdString EventDocContentControlUpdateXsdString { get; set; }
     
     /// <summary>
     /// <para> EventDocBuildingBlockAfterInsertXsdString.</para>
@@ -1664,11 +1589,8 @@ public partial class DocEvents : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public EventDocBuildingBlockAfterInsertXsdString EventDocBuildingBlockAfterInsertXsdString
-    {
-        get => GetElement<EventDocBuildingBlockAfterInsertXsdString>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(33, "eventDocBuildingBlockAfterInsert", 12)]
+    public EventDocBuildingBlockAfterInsertXsdString EventDocBuildingBlockAfterInsertXsdString { get; set; }
     
 
 
@@ -2213,13 +2135,7 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "active","hash" };
-    private static readonly byte[] eleNamespaceIds = { 33,33 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> RecordIncluded.</para>
@@ -2228,11 +2144,8 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public RecordIncluded RecordIncluded
-    {
-        get => GetElement<RecordIncluded>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(33, "active", 0)]
+    public RecordIncluded RecordIncluded { get; set; }
     
     /// <summary>
     /// <para> RecordHashCode.</para>
@@ -2241,11 +2154,8 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-    public RecordHashCode RecordHashCode
-    {
-        get => GetElement<RecordHashCode>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(33, "hash", 1)]
+    public RecordHashCode RecordHashCode { get; set; }
     
 
 

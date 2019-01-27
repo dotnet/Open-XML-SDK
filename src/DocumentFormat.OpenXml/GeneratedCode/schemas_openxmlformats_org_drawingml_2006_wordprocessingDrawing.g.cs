@@ -130,13 +130,7 @@ public partial class WrapSquare : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "effectExtent" };
-    private static readonly byte[] eleNamespaceIds = { 16 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Object Extents Including Effects.</para>
@@ -145,11 +139,8 @@ public partial class WrapSquare : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public EffectExtent EffectExtent
-    {
-        get => GetElement<EffectExtent>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(16, "effectExtent", 0)]
+    public EffectExtent EffectExtent { get; set; }
     
 
 
@@ -234,13 +225,7 @@ public partial class WrapTight : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "wrapPolygon" };
-    private static readonly byte[] eleNamespaceIds = { 16 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Tight Wrapping Extents Polygon.</para>
@@ -249,11 +234,8 @@ public partial class WrapTight : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public WrapPolygon WrapPolygon
-    {
-        get => GetElement<WrapPolygon>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(16, "wrapPolygon", 0)]
+    public WrapPolygon WrapPolygon { get; set; }
     
 
 
@@ -338,13 +320,7 @@ public partial class WrapThrough : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "wrapPolygon" };
-    private static readonly byte[] eleNamespaceIds = { 16 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Wrapping Polygon.</para>
@@ -353,11 +329,8 @@ public partial class WrapThrough : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public WrapPolygon WrapPolygon
-    {
-        get => GetElement<WrapPolygon>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(16, "wrapPolygon", 0)]
+    public WrapPolygon WrapPolygon { get; set; }
     
 
 
@@ -436,13 +409,7 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "effectExtent" };
-    private static readonly byte[] eleNamespaceIds = { 16 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Wrapping Boundaries.</para>
@@ -451,11 +418,8 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public EffectExtent EffectExtent
-    {
-        get => GetElement<EffectExtent>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(16, "effectExtent", 0)]
+    public EffectExtent EffectExtent { get; set; }
     
 
 
@@ -570,13 +534,7 @@ public partial class Inline : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extent","effectExtent","docPr","cNvGraphicFramePr","graphic" };
-    private static readonly byte[] eleNamespaceIds = { 16,16,16,16,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Drawing Object Size.</para>
@@ -585,11 +543,8 @@ public partial class Inline : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public Extent Extent
-    {
-        get => GetElement<Extent>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(16, "extent", 0)]
+    public Extent Extent { get; set; }
     
     /// <summary>
     /// <para> Inline Wrapping Extent.</para>
@@ -598,11 +553,8 @@ public partial class Inline : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public EffectExtent EffectExtent
-    {
-        get => GetElement<EffectExtent>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(16, "effectExtent", 1)]
+    public EffectExtent EffectExtent { get; set; }
     
     /// <summary>
     /// <para> Drawing Object Non-Visual Properties.</para>
@@ -611,11 +563,8 @@ public partial class Inline : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public DocProperties DocProperties
-    {
-        get => GetElement<DocProperties>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(16, "docPr", 2)]
+    public DocProperties DocProperties { get; set; }
     
     /// <summary>
     /// <para> Common DrawingML Non-Visual Properties.</para>
@@ -624,11 +573,8 @@ public partial class Inline : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public NonVisualGraphicFrameDrawingProperties NonVisualGraphicFrameDrawingProperties
-    {
-        get => GetElement<NonVisualGraphicFrameDrawingProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(16, "cNvGraphicFramePr", 3)]
+    public NonVisualGraphicFrameDrawingProperties NonVisualGraphicFrameDrawingProperties { get; set; }
     
     /// <summary>
     /// <para> Graphic.</para>
@@ -637,11 +583,8 @@ public partial class Inline : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Graphic Graphic
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "graphic", 4)]
+    public DocumentFormat.OpenXml.Drawing.Graphic Graphic { get; set; }
     
 
 
@@ -818,13 +761,7 @@ public partial class Anchor : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "simplePos","positionH","positionV","extent","effectExtent","wrapNone","wrapSquare","wrapTight","wrapThrough","wrapTopAndBottom","docPr","cNvGraphicFramePr","graphic","sizeRelH","sizeRelV" };
-    private static readonly byte[] eleNamespaceIds = { 16,16,16,16,16,16,16,16,16,16,16,16,10,51,51 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Simple Positioning Coordinates.</para>
@@ -833,11 +770,8 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public SimplePosition SimplePosition
-    {
-        get => GetElement<SimplePosition>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(16, "simplePos", 0)]
+    public SimplePosition SimplePosition { get; set; }
     
     /// <summary>
     /// <para> Horizontal Positioning.</para>
@@ -846,11 +780,8 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public HorizontalPosition HorizontalPosition
-    {
-        get => GetElement<HorizontalPosition>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(16, "positionH", 1)]
+    public HorizontalPosition HorizontalPosition { get; set; }
     
     /// <summary>
     /// <para> Vertical Positioning.</para>
@@ -859,11 +790,8 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public VerticalPosition VerticalPosition
-    {
-        get => GetElement<VerticalPosition>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(16, "positionV", 2)]
+    public VerticalPosition VerticalPosition { get; set; }
     
     /// <summary>
     /// <para> Inline Drawing Object Extents.</para>
@@ -872,11 +800,8 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public Extent Extent
-    {
-        get => GetElement<Extent>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(16, "extent", 3)]
+    public Extent Extent { get; set; }
     
     /// <summary>
     /// <para> EffectExtent.</para>
@@ -885,11 +810,8 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public EffectExtent EffectExtent
-    {
-        get => GetElement<EffectExtent>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(16, "effectExtent", 4)]
+    public EffectExtent EffectExtent { get; set; }
     
 
 
@@ -1123,13 +1045,7 @@ public partial class WrapPolygon : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "start","lineTo" };
-    private static readonly byte[] eleNamespaceIds = { 16,16 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Wrapping Polygon Start.</para>
@@ -1138,11 +1054,8 @@ public partial class WrapPolygon : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public StartPoint StartPoint
-    {
-        get => GetElement<StartPoint>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(16, "start", 0)]
+    public StartPoint StartPoint { get; set; }
     
 
 
@@ -1219,13 +1132,7 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "align","posOffset","pctPosHOffset" };
-    private static readonly byte[] eleNamespaceIds = { 16,16,51 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Relative Horizontal Alignment.</para>
@@ -1234,11 +1141,8 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public HorizontalAlignment HorizontalAlignment
-    {
-        get => GetElement<HorizontalAlignment>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(16, "align", 0)]
+    public HorizontalAlignment HorizontalAlignment { get; set; }
     
     /// <summary>
     /// <para> Absolute Position Offset.</para>
@@ -1247,11 +1151,8 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public PositionOffset PositionOffset
-    {
-        get => GetElement<PositionOffset>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(16, "posOffset", 1)]
+    public PositionOffset PositionOffset { get; set; }
     
     /// <summary>
     /// <para> PercentagePositionHeightOffset.</para>
@@ -1260,11 +1161,8 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset PercentagePositionHeightOffset
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(51, "pctPosHOffset", 2)]
+    public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset PercentagePositionHeightOffset { get; set; }
     
 
 
@@ -1341,13 +1239,7 @@ public partial class VerticalPosition : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "align","posOffset","pctPosVOffset" };
-    private static readonly byte[] eleNamespaceIds = { 16,16,51 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Relative Vertical Alignment.</para>
@@ -1356,11 +1248,8 @@ public partial class VerticalPosition : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public VerticalAlignment VerticalAlignment
-    {
-        get => GetElement<VerticalAlignment>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(16, "align", 0)]
+    public VerticalAlignment VerticalAlignment { get; set; }
     
     /// <summary>
     /// <para> PositionOffset.</para>
@@ -1369,11 +1258,8 @@ public partial class VerticalPosition : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-    public PositionOffset PositionOffset
-    {
-        get => GetElement<PositionOffset>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(16, "posOffset", 1)]
+    public PositionOffset PositionOffset { get; set; }
     
     /// <summary>
     /// <para> PercentagePositionVerticalOffset.</para>
@@ -1382,11 +1268,8 @@ public partial class VerticalPosition : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset PercentagePositionVerticalOffset
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(51, "pctPosVOffset", 2)]
+    public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset PercentagePositionVerticalOffset { get; set; }
     
 
 
@@ -1530,13 +1413,7 @@ public partial class DocProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
@@ -1545,11 +1422,8 @@ public partial class DocProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "hlinkClick", 0)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick { get; set; }
     
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -1558,11 +1432,8 @@ public partial class DocProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "hlinkHover", 1)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover { get; set; }
     
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -1571,11 +1442,8 @@ public partial class DocProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "extLst", 2)]
+    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList { get; set; }
     
 
 
@@ -1644,13 +1512,7 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
      
     
     
-        private static readonly string[] eleTagNames = { "graphicFrameLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Graphic Frame Locks.</para>
@@ -1659,11 +1521,8 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks GraphicFrameLocks
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "graphicFrameLocks", 0)]
+    public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks GraphicFrameLocks { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -1672,11 +1531,8 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "extLst", 1)]
+    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList { get; set; }
     
 
 

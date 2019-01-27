@@ -73,13 +73,7 @@ public partial class PivotSource : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "name","fmtId","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Pivot Name.</para>
@@ -88,11 +82,8 @@ public partial class PivotSource : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.PivotTableName PivotTableName
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PivotTableName>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "name", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.PivotTableName PivotTableName { get; set; }
     
     /// <summary>
     /// <para> Format ID.</para>
@@ -101,11 +92,8 @@ public partial class PivotSource : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.FormatId FormatId
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatId>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(11, "fmtId", 1)]
+    public DocumentFormat.OpenXml.Drawing.Charts.FormatId FormatId { get; set; }
     
     /// <summary>
     /// <para> Chart Extensibility.</para>
@@ -114,11 +102,8 @@ public partial class PivotSource : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList ExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(11, "extLst", 2)]
+    public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList ExtensionList { get; set; }
     
 
 
@@ -262,13 +247,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "xfrm","custGeom","prstGeom","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","ln","effectLst","effectDag","scene3d","sp3d","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
@@ -277,11 +256,8 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "xfrm", 0)]
+    public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D { get; set; }
     
 
 
@@ -350,13 +326,7 @@ public partial class Layout : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "manualLayout","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Manual Layout.</para>
@@ -365,11 +335,8 @@ public partial class Layout : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.ManualLayout ManualLayout
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ManualLayout>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "manualLayout", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.ManualLayout ManualLayout { get; set; }
     
     /// <summary>
     /// <para> Chart Extensibility.</para>
@@ -378,11 +345,8 @@ public partial class Layout : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList ExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(11, "extLst", 1)]
+    public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList ExtensionList { get; set; }
     
 
 
@@ -449,13 +413,7 @@ public partial class FullReference : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sqref" };
-    private static readonly byte[] eleNamespaceIds = { 64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SequenceOfReferences.</para>
@@ -464,11 +422,8 @@ public partial class FullReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public SequenceOfReferences SequenceOfReferences
-    {
-        get => GetElement<SequenceOfReferences>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "sqref", 0)]
+    public SequenceOfReferences SequenceOfReferences { get; set; }
     
 
 
@@ -535,13 +490,7 @@ public partial class LevelReference : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sqref" };
-    private static readonly byte[] eleNamespaceIds = { 64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SequenceOfReferences.</para>
@@ -550,11 +499,8 @@ public partial class LevelReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public SequenceOfReferences SequenceOfReferences
-    {
-        get => GetElement<SequenceOfReferences>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "sqref", 0)]
+    public SequenceOfReferences SequenceOfReferences { get; set; }
     
 
 
@@ -621,13 +567,7 @@ public partial class FormulaReference : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sqref" };
-    private static readonly byte[] eleNamespaceIds = { 64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SequenceOfReferences.</para>
@@ -636,11 +576,8 @@ public partial class FormulaReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public SequenceOfReferences SequenceOfReferences
-    {
-        get => GetElement<SequenceOfReferences>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "sqref", 0)]
+    public SequenceOfReferences SequenceOfReferences { get; set; }
     
 
 
@@ -707,13 +644,7 @@ public partial class FilteredSeriesTitle : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tx" };
-    private static readonly byte[] eleNamespaceIds = { 64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ChartText.</para>
@@ -722,11 +653,8 @@ public partial class FilteredSeriesTitle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public ChartText ChartText
-    {
-        get => GetElement<ChartText>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "tx", 0)]
+    public ChartText ChartText { get; set; }
     
 
 
@@ -793,13 +721,7 @@ public partial class FilteredCategoryTitle : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cat" };
-    private static readonly byte[] eleNamespaceIds = { 64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> AxisDataSourceType.</para>
@@ -808,11 +730,8 @@ public partial class FilteredCategoryTitle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public AxisDataSourceType AxisDataSourceType
-    {
-        get => GetElement<AxisDataSourceType>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "cat", 0)]
+    public AxisDataSourceType AxisDataSourceType { get; set; }
     
 
 
@@ -879,13 +798,7 @@ public partial class FilteredAreaSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ser" };
-    private static readonly byte[] eleNamespaceIds = { 64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> AreaChartSeries.</para>
@@ -894,11 +807,8 @@ public partial class FilteredAreaSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public AreaChartSeries AreaChartSeries
-    {
-        get => GetElement<AreaChartSeries>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "ser", 0)]
+    public AreaChartSeries AreaChartSeries { get; set; }
     
 
 
@@ -965,13 +875,7 @@ public partial class FilteredBarSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ser" };
-    private static readonly byte[] eleNamespaceIds = { 64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> BarChartSeries.</para>
@@ -980,11 +884,8 @@ public partial class FilteredBarSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public BarChartSeries BarChartSeries
-    {
-        get => GetElement<BarChartSeries>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "ser", 0)]
+    public BarChartSeries BarChartSeries { get; set; }
     
 
 
@@ -1051,13 +952,7 @@ public partial class FilteredBubbleSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ser" };
-    private static readonly byte[] eleNamespaceIds = { 64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> BubbleChartSeries.</para>
@@ -1066,11 +961,8 @@ public partial class FilteredBubbleSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public BubbleChartSeries BubbleChartSeries
-    {
-        get => GetElement<BubbleChartSeries>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "ser", 0)]
+    public BubbleChartSeries BubbleChartSeries { get; set; }
     
 
 
@@ -1137,13 +1029,7 @@ public partial class FilteredLineSeriesExtension : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ser" };
-    private static readonly byte[] eleNamespaceIds = { 64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> LineChartSeries.</para>
@@ -1152,11 +1038,8 @@ public partial class FilteredLineSeriesExtension : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public LineChartSeries LineChartSeries
-    {
-        get => GetElement<LineChartSeries>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "ser", 0)]
+    public LineChartSeries LineChartSeries { get; set; }
     
 
 
@@ -1223,13 +1106,7 @@ public partial class FilteredPieSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ser" };
-    private static readonly byte[] eleNamespaceIds = { 64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PieChartSeries.</para>
@@ -1238,11 +1115,8 @@ public partial class FilteredPieSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public PieChartSeries PieChartSeries
-    {
-        get => GetElement<PieChartSeries>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "ser", 0)]
+    public PieChartSeries PieChartSeries { get; set; }
     
 
 
@@ -1309,13 +1183,7 @@ public partial class FilteredRadarSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ser" };
-    private static readonly byte[] eleNamespaceIds = { 64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> RadarChartSeries.</para>
@@ -1324,11 +1192,8 @@ public partial class FilteredRadarSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public RadarChartSeries RadarChartSeries
-    {
-        get => GetElement<RadarChartSeries>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "ser", 0)]
+    public RadarChartSeries RadarChartSeries { get; set; }
     
 
 
@@ -1395,13 +1260,7 @@ public partial class FilteredScatterSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ser" };
-    private static readonly byte[] eleNamespaceIds = { 64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ScatterChartSeries.</para>
@@ -1410,11 +1269,8 @@ public partial class FilteredScatterSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public ScatterChartSeries ScatterChartSeries
-    {
-        get => GetElement<ScatterChartSeries>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "ser", 0)]
+    public ScatterChartSeries ScatterChartSeries { get; set; }
     
 
 
@@ -1481,13 +1337,7 @@ public partial class FilteredSurfaceSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ser" };
-    private static readonly byte[] eleNamespaceIds = { 64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SurfaceChartSeries.</para>
@@ -1496,11 +1346,8 @@ public partial class FilteredSurfaceSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public SurfaceChartSeries SurfaceChartSeries
-    {
-        get => GetElement<SurfaceChartSeries>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "ser", 0)]
+    public SurfaceChartSeries SurfaceChartSeries { get; set; }
     
 
 
@@ -1569,13 +1416,7 @@ public partial class DataLabelsRange : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "f","dlblRangeCache" };
-    private static readonly byte[] eleNamespaceIds = { 64,64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Formula.</para>
@@ -1584,11 +1425,8 @@ public partial class DataLabelsRange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public Formula Formula
-    {
-        get => GetElement<Formula>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "f", 0)]
+    public Formula Formula { get; set; }
     
     /// <summary>
     /// <para> DataLabelsRangeChache.</para>
@@ -1597,11 +1435,8 @@ public partial class DataLabelsRange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public DataLabelsRangeChache DataLabelsRangeChache
-    {
-        get => GetElement<DataLabelsRangeChache>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(64, "dlblRangeCache", 1)]
+    public DataLabelsRangeChache DataLabelsRangeChache { get; set; }
     
 
 
@@ -1970,13 +1805,7 @@ public partial class ChartText : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "strRef","rich","strLit" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> String Reference.</para>
@@ -1985,11 +1814,8 @@ public partial class ChartText : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.StringReference StringReference
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "strRef", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.StringReference StringReference { get; set; }
     
     /// <summary>
     /// <para> Rich Text.</para>
@@ -1998,11 +1824,8 @@ public partial class ChartText : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.RichText RichText
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RichText>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(11, "rich", 1)]
+    public DocumentFormat.OpenXml.Drawing.Charts.RichText RichText { get; set; }
     
     /// <summary>
     /// <para> String Literal.</para>
@@ -2011,11 +1834,8 @@ public partial class ChartText : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral StringLiteral
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(11, "strLit", 2)]
+    public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral StringLiteral { get; set; }
     
 
 
@@ -2082,13 +1902,7 @@ public partial class LeaderLines : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "spPr" };
-    private static readonly byte[] eleNamespaceIds = { 11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -2097,11 +1911,8 @@ public partial class LeaderLines : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "spPr", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties { get; set; }
     
 
 
@@ -2287,13 +2098,7 @@ public partial class AxisDataSourceType : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "multiLvlStrRef","numRef","numLit","strRef","strLit" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Multi Level String Reference.</para>
@@ -2302,11 +2107,8 @@ public partial class AxisDataSourceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference MultiLevelStringReference
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "multiLvlStrRef", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference MultiLevelStringReference { get; set; }
     
     /// <summary>
     /// <para> Number Reference.</para>
@@ -2315,11 +2117,8 @@ public partial class AxisDataSourceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.NumberReference NumberReference
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(11, "numRef", 1)]
+    public DocumentFormat.OpenXml.Drawing.Charts.NumberReference NumberReference { get; set; }
     
     /// <summary>
     /// <para> Number Literal.</para>
@@ -2328,11 +2127,8 @@ public partial class AxisDataSourceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral NumberLiteral
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(11, "numLit", 2)]
+    public DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral NumberLiteral { get; set; }
     
     /// <summary>
     /// <para> StringReference.</para>
@@ -2341,11 +2137,8 @@ public partial class AxisDataSourceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.StringReference StringReference
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(11, "strRef", 3)]
+    public DocumentFormat.OpenXml.Drawing.Charts.StringReference StringReference { get; set; }
     
     /// <summary>
     /// <para> String Literal.</para>
@@ -2354,11 +2147,8 @@ public partial class AxisDataSourceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral StringLiteral
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(11, "strLit", 4)]
+    public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral StringLiteral { get; set; }
     
 
 
@@ -2451,13 +2241,7 @@ public partial class BarChartSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "idx","order","tx","spPr","invertIfNegative","pictureOptions","dPt","dLbls","trendline","errBars","cat","val","shape","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11,11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -2466,11 +2250,8 @@ public partial class BarChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Index Index
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "idx", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Index Index { get; set; }
     
     /// <summary>
     /// <para> Order.</para>
@@ -2479,11 +2260,8 @@ public partial class BarChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Order Order
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(11, "order", 1)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Order Order { get; set; }
     
     /// <summary>
     /// <para> Series Text.</para>
@@ -2492,11 +2270,8 @@ public partial class BarChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(11, "tx", 2)]
+    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText { get; set; }
     
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -2505,11 +2280,8 @@ public partial class BarChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(11, "spPr", 3)]
+    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties { get; set; }
     
     /// <summary>
     /// <para> InvertIfNegative.</para>
@@ -2518,11 +2290,8 @@ public partial class BarChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative InvertIfNegative
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(11, "invertIfNegative", 4)]
+    public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative InvertIfNegative { get; set; }
     
     /// <summary>
     /// <para> PictureOptions.</para>
@@ -2531,11 +2300,8 @@ public partial class BarChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(11, "pictureOptions", 5)]
+    public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions { get; set; }
     
 
 
@@ -2628,13 +2394,7 @@ public partial class LineChartSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "idx","order","tx","spPr","marker","pictureOptions","dPt","dLbls","trendline","errBars","cat","val","smooth","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11,11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -2643,11 +2403,8 @@ public partial class LineChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Index Index
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "idx", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Index Index { get; set; }
     
     /// <summary>
     /// <para> Order.</para>
@@ -2656,11 +2413,8 @@ public partial class LineChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Order Order
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(11, "order", 1)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Order Order { get; set; }
     
     /// <summary>
     /// <para> Series Text.</para>
@@ -2669,11 +2423,8 @@ public partial class LineChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(11, "tx", 2)]
+    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText { get; set; }
     
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -2682,11 +2433,8 @@ public partial class LineChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(11, "spPr", 3)]
+    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties { get; set; }
     
     /// <summary>
     /// <para> Marker.</para>
@@ -2695,11 +2443,8 @@ public partial class LineChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Marker Marker
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(11, "marker", 4)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Marker Marker { get; set; }
     
     /// <summary>
     /// <para> PictureOptions.</para>
@@ -2708,11 +2453,8 @@ public partial class LineChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(11, "pictureOptions", 5)]
+    public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions { get; set; }
     
 
 
@@ -2803,13 +2545,7 @@ public partial class ScatterChartSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "idx","order","tx","spPr","marker","dPt","dLbls","trendline","errBars","xVal","yVal","smooth","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -2818,11 +2554,8 @@ public partial class ScatterChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Index Index
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "idx", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Index Index { get; set; }
     
     /// <summary>
     /// <para> Order.</para>
@@ -2831,11 +2564,8 @@ public partial class ScatterChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Order Order
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(11, "order", 1)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Order Order { get; set; }
     
     /// <summary>
     /// <para> Series Text.</para>
@@ -2844,11 +2574,8 @@ public partial class ScatterChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(11, "tx", 2)]
+    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText { get; set; }
     
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -2857,11 +2584,8 @@ public partial class ScatterChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(11, "spPr", 3)]
+    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties { get; set; }
     
     /// <summary>
     /// <para> Marker.</para>
@@ -2870,11 +2594,8 @@ public partial class ScatterChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Marker Marker
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(11, "marker", 4)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Marker Marker { get; set; }
     
 
 
@@ -2963,13 +2684,7 @@ public partial class AreaChartSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "idx","order","tx","spPr","pictureOptions","dPt","dLbls","trendline","errBars","cat","val","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -2978,11 +2693,8 @@ public partial class AreaChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Index Index
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "idx", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Index Index { get; set; }
     
     /// <summary>
     /// <para> Order.</para>
@@ -2991,11 +2703,8 @@ public partial class AreaChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Order Order
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(11, "order", 1)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Order Order { get; set; }
     
     /// <summary>
     /// <para> Series Text.</para>
@@ -3004,11 +2713,8 @@ public partial class AreaChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(11, "tx", 2)]
+    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText { get; set; }
     
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -3017,11 +2723,8 @@ public partial class AreaChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(11, "spPr", 3)]
+    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties { get; set; }
     
     /// <summary>
     /// <para> PictureOptions.</para>
@@ -3030,11 +2733,8 @@ public partial class AreaChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(11, "pictureOptions", 4)]
+    public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions { get; set; }
     
 
 
@@ -3121,13 +2821,7 @@ public partial class PieChartSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "idx","order","tx","spPr","pictureOptions","explosion","dPt","dLbls","cat","val","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -3136,11 +2830,8 @@ public partial class PieChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Index Index
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "idx", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Index Index { get; set; }
     
     /// <summary>
     /// <para> Order.</para>
@@ -3149,11 +2840,8 @@ public partial class PieChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Order Order
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(11, "order", 1)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Order Order { get; set; }
     
     /// <summary>
     /// <para> Series Text.</para>
@@ -3162,11 +2850,8 @@ public partial class PieChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(11, "tx", 2)]
+    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText { get; set; }
     
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -3175,11 +2860,8 @@ public partial class PieChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(11, "spPr", 3)]
+    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties { get; set; }
     
     /// <summary>
     /// <para> PictureOptions.</para>
@@ -3188,11 +2870,8 @@ public partial class PieChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(11, "pictureOptions", 4)]
+    public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions { get; set; }
     
     /// <summary>
     /// <para> Explosion.</para>
@@ -3201,11 +2880,8 @@ public partial class PieChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Explosion Explosion
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Explosion>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(11, "explosion", 5)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Explosion Explosion { get; set; }
     
 
 
@@ -3300,13 +2976,7 @@ public partial class BubbleChartSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "idx","order","tx","spPr","pictureOptions","invertIfNegative","dPt","dLbls","trendline","errBars","xVal","yVal","bubbleSize","bubble3D","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11,11,11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -3315,11 +2985,8 @@ public partial class BubbleChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Index Index
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "idx", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Index Index { get; set; }
     
     /// <summary>
     /// <para> Order.</para>
@@ -3328,11 +2995,8 @@ public partial class BubbleChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Order Order
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(11, "order", 1)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Order Order { get; set; }
     
     /// <summary>
     /// <para> Series Text.</para>
@@ -3341,11 +3005,8 @@ public partial class BubbleChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(11, "tx", 2)]
+    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText { get; set; }
     
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -3354,11 +3015,8 @@ public partial class BubbleChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(11, "spPr", 3)]
+    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties { get; set; }
     
     /// <summary>
     /// <para> PictureOptions.</para>
@@ -3367,11 +3025,8 @@ public partial class BubbleChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(11, "pictureOptions", 4)]
+    public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions { get; set; }
     
     /// <summary>
     /// <para> InvertIfNegative.</para>
@@ -3380,11 +3035,8 @@ public partial class BubbleChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative InvertIfNegative
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(11, "invertIfNegative", 5)]
+    public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative InvertIfNegative { get; set; }
     
 
 
@@ -3471,13 +3123,7 @@ public partial class RadarChartSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "idx","order","tx","spPr","pictureOptions","marker","dPt","dLbls","cat","val","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -3486,11 +3132,8 @@ public partial class RadarChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Index Index
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "idx", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Index Index { get; set; }
     
     /// <summary>
     /// <para> Order.</para>
@@ -3499,11 +3142,8 @@ public partial class RadarChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Order Order
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(11, "order", 1)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Order Order { get; set; }
     
     /// <summary>
     /// <para> Series Text.</para>
@@ -3512,11 +3152,8 @@ public partial class RadarChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(11, "tx", 2)]
+    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText { get; set; }
     
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -3525,11 +3162,8 @@ public partial class RadarChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(11, "spPr", 3)]
+    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties { get; set; }
     
     /// <summary>
     /// <para> PictureOptions.</para>
@@ -3538,11 +3172,8 @@ public partial class RadarChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(11, "pictureOptions", 4)]
+    public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions { get; set; }
     
     /// <summary>
     /// <para> Marker.</para>
@@ -3551,11 +3182,8 @@ public partial class RadarChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Marker Marker
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(11, "marker", 5)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Marker Marker { get; set; }
     
 
 
@@ -3638,13 +3266,7 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "idx","order","tx","spPr","pictureOptions","cat","val","bubble3D","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -3653,11 +3275,8 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Index Index
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "idx", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Index Index { get; set; }
     
     /// <summary>
     /// <para> Order.</para>
@@ -3666,11 +3285,8 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Order Order
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(11, "order", 1)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Order Order { get; set; }
     
     /// <summary>
     /// <para> Series Text.</para>
@@ -3679,11 +3295,8 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(11, "tx", 2)]
+    public DocumentFormat.OpenXml.Drawing.Charts.SeriesText SeriesText { get; set; }
     
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -3692,11 +3305,8 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(11, "spPr", 3)]
+    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties { get; set; }
     
     /// <summary>
     /// <para> PictureOptions.</para>
@@ -3705,11 +3315,8 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(11, "pictureOptions", 4)]
+    public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions PictureOptions { get; set; }
     
     /// <summary>
     /// <para> CategoryAxisData.</para>
@@ -3718,11 +3325,8 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData CategoryAxisData
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(11, "cat", 5)]
+    public DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData CategoryAxisData { get; set; }
     
     /// <summary>
     /// <para> Values.</para>
@@ -3731,11 +3335,8 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Values Values
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Values>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(11, "val", 6)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Values Values { get; set; }
     
     /// <summary>
     /// <para> Bubble3D.</para>
@@ -3744,11 +3345,8 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D Bubble3D
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(11, "bubble3D", 7)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D Bubble3D { get; set; }
     
     /// <summary>
     /// <para> SurfaceSerExtensionList.</para>
@@ -3757,11 +3355,8 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList SurfaceSerExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(11, "extLst", 8)]
+    public DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList SurfaceSerExtensionList { get; set; }
     
 
 
@@ -3906,13 +3501,7 @@ public abstract partial class StringDataType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "ptCount","pt","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PointCount.</para>
@@ -3921,11 +3510,8 @@ public abstract partial class StringDataType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.PointCount PointCount
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "ptCount", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.PointCount PointCount { get; set; }
     
 
 
@@ -4066,13 +3652,7 @@ public partial class Marker : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "symbol","size","spPr","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Symbol.</para>
@@ -4081,11 +3661,8 @@ public partial class Marker : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Symbol Symbol
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Symbol>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "symbol", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Symbol Symbol { get; set; }
     
     /// <summary>
     /// <para> Size.</para>
@@ -4094,11 +3671,8 @@ public partial class Marker : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Size Size
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Size>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(11, "size", 1)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Size Size { get; set; }
     
     /// <summary>
     /// <para> ChartShapeProperties.</para>
@@ -4107,11 +3681,8 @@ public partial class Marker : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(11, "spPr", 2)]
+    public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties ChartShapeProperties { get; set; }
     
     /// <summary>
     /// <para> Chart Extensibility.</para>
@@ -4120,11 +3691,8 @@ public partial class Marker : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList ExtensionList
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(11, "extLst", 3)]
+    public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList ExtensionList { get; set; }
     
 
 
@@ -4221,13 +3789,7 @@ public partial class DataLabel : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "idx","delete","layout","tx","numFmt","spPr","txPr","dLblPos","showLegendKey","showVal","showCatName","showSerName","showPercent","showBubbleSize","separator","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Index.</para>
@@ -4236,11 +3798,8 @@ public partial class DataLabel : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Charts.Index Index
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(11, "idx", 0)]
+    public DocumentFormat.OpenXml.Drawing.Charts.Index Index { get; set; }
     
 
 
@@ -4319,13 +3878,7 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sqref","spPr","explosion","invertIfNegative","bubble3D","marker","dLbl" };
-    private static readonly byte[] eleNamespaceIds = { 64,64,64,64,64,64,64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SequenceOfReferences.</para>
@@ -4334,11 +3887,8 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public SequenceOfReferences SequenceOfReferences
-    {
-        get => GetElement<SequenceOfReferences>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "sqref", 0)]
+    public SequenceOfReferences SequenceOfReferences { get; set; }
     
     /// <summary>
     /// <para> ShapeProperties.</para>
@@ -4347,11 +3897,8 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public ShapeProperties ShapeProperties
-    {
-        get => GetElement<ShapeProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(64, "spPr", 1)]
+    public ShapeProperties ShapeProperties { get; set; }
     
     /// <summary>
     /// <para> Explosion.</para>
@@ -4360,11 +3907,8 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public Explosion Explosion
-    {
-        get => GetElement<Explosion>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(64, "explosion", 2)]
+    public Explosion Explosion { get; set; }
     
     /// <summary>
     /// <para> InvertIfNegativeBoolean.</para>
@@ -4373,11 +3917,8 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public InvertIfNegativeBoolean InvertIfNegativeBoolean
-    {
-        get => GetElement<InvertIfNegativeBoolean>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(64, "invertIfNegative", 3)]
+    public InvertIfNegativeBoolean InvertIfNegativeBoolean { get; set; }
     
     /// <summary>
     /// <para> Bubble3D.</para>
@@ -4386,11 +3927,8 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public Bubble3D Bubble3D
-    {
-        get => GetElement<Bubble3D>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(64, "bubble3D", 4)]
+    public Bubble3D Bubble3D { get; set; }
     
     /// <summary>
     /// <para> Marker.</para>
@@ -4399,11 +3937,8 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public Marker Marker
-    {
-        get => GetElement<Marker>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(64, "marker", 5)]
+    public Marker Marker { get; set; }
     
     /// <summary>
     /// <para> DataLabel.</para>
@@ -4412,11 +3947,8 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public DataLabel DataLabel
-    {
-        get => GetElement<DataLabel>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(64, "dLbl", 6)]
+    public DataLabel DataLabel { get; set; }
     
 
 
@@ -4487,13 +4019,7 @@ public partial class DataLabelFieldTableEntry : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "txfldGUID","f","dlblFieldTableCache" };
-    private static readonly byte[] eleNamespaceIds = { 64,64,64 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> TextFieldGuid.</para>
@@ -4502,11 +4028,8 @@ public partial class DataLabelFieldTableEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public TextFieldGuid TextFieldGuid
-    {
-        get => GetElement<TextFieldGuid>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(64, "txfldGUID", 0)]
+    public TextFieldGuid TextFieldGuid { get; set; }
     
     /// <summary>
     /// <para> Formula.</para>
@@ -4515,11 +4038,8 @@ public partial class DataLabelFieldTableEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public Formula Formula
-    {
-        get => GetElement<Formula>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(64, "f", 1)]
+    public Formula Formula { get; set; }
     
     /// <summary>
     /// <para> DataLabelFieldTableCache.</para>
@@ -4528,11 +4048,8 @@ public partial class DataLabelFieldTableEntry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c15 = http://schemas.microsoft.com/office/drawing/2012/chart
     /// </remark>
-    public DataLabelFieldTableCache DataLabelFieldTableCache
-    {
-        get => GetElement<DataLabelFieldTableCache>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(64, "dlblFieldTableCache", 2)]
+    public DataLabelFieldTableCache DataLabelFieldTableCache { get; set; }
     
 
 

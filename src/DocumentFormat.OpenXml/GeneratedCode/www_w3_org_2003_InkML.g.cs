@@ -1045,13 +1045,7 @@ public partial class AnnotationXml : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "emma" };
-    private static readonly byte[] eleNamespaceIds = { 44 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Emma.</para>
@@ -1060,11 +1054,8 @@ public partial class AnnotationXml : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:emma = http://www.w3.org/2003/04/emma
     /// </remark>
-    public DocumentFormat.OpenXml.EMMA.Emma Emma
-    {
-        get => GetElement<DocumentFormat.OpenXml.EMMA.Emma>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(44, "emma", 0)]
+    public DocumentFormat.OpenXml.EMMA.Emma Emma { get; set; }
     
 
 
@@ -1229,13 +1220,7 @@ public partial class Canvas : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "traceFormat" };
-    private static readonly byte[] eleNamespaceIds = { 43 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> TraceFormat.</para>
@@ -1244,11 +1229,8 @@ public partial class Canvas : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-    public TraceFormat TraceFormat
-    {
-        get => GetElement<TraceFormat>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(43, "traceFormat", 0)]
+    public TraceFormat TraceFormat { get; set; }
     
 
 
@@ -1441,13 +1423,7 @@ public partial class InkSource : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "traceFormat","sampleRate","latency","activeArea","srcProperty","channelProperties" };
-    private static readonly byte[] eleNamespaceIds = { 43,43,43,43,43,43 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> TraceFormat.</para>
@@ -1456,11 +1432,8 @@ public partial class InkSource : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-    public TraceFormat TraceFormat
-    {
-        get => GetElement<TraceFormat>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(43, "traceFormat", 0)]
+    public TraceFormat TraceFormat { get; set; }
     
     /// <summary>
     /// <para> SampleRate.</para>
@@ -1469,11 +1442,8 @@ public partial class InkSource : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-    public SampleRate SampleRate
-    {
-        get => GetElement<SampleRate>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(43, "sampleRate", 1)]
+    public SampleRate SampleRate { get; set; }
     
     /// <summary>
     /// <para> Latency.</para>
@@ -1482,11 +1452,8 @@ public partial class InkSource : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-    public Latency Latency
-    {
-        get => GetElement<Latency>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(43, "latency", 2)]
+    public Latency Latency { get; set; }
     
     /// <summary>
     /// <para> ActiveArea.</para>
@@ -1495,11 +1462,8 @@ public partial class InkSource : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-    public ActiveArea ActiveArea
-    {
-        get => GetElement<ActiveArea>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(43, "activeArea", 3)]
+    public ActiveArea ActiveArea { get; set; }
     
 
 
@@ -2055,13 +2019,7 @@ public partial class Context : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "canvas","canvasTransform","traceFormat","inkSource","brush","timestamp" };
-    private static readonly byte[] eleNamespaceIds = { 43,43,43,43,43,43 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Canvas.</para>
@@ -2070,11 +2028,8 @@ public partial class Context : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-    public Canvas Canvas
-    {
-        get => GetElement<Canvas>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(43, "canvas", 0)]
+    public Canvas Canvas { get; set; }
     
     /// <summary>
     /// <para> CanvasTransform.</para>
@@ -2083,11 +2038,8 @@ public partial class Context : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-    public CanvasTransform CanvasTransform
-    {
-        get => GetElement<CanvasTransform>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(43, "canvasTransform", 1)]
+    public CanvasTransform CanvasTransform { get; set; }
     
     /// <summary>
     /// <para> TraceFormat.</para>
@@ -2096,11 +2048,8 @@ public partial class Context : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-    public TraceFormat TraceFormat
-    {
-        get => GetElement<TraceFormat>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(43, "traceFormat", 2)]
+    public TraceFormat TraceFormat { get; set; }
     
     /// <summary>
     /// <para> InkSource.</para>
@@ -2109,11 +2058,8 @@ public partial class Context : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-    public InkSource InkSource
-    {
-        get => GetElement<InkSource>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(43, "inkSource", 3)]
+    public InkSource InkSource { get; set; }
     
     /// <summary>
     /// <para> Brush.</para>
@@ -2122,11 +2068,8 @@ public partial class Context : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-    public Brush Brush
-    {
-        get => GetElement<Brush>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(43, "brush", 4)]
+    public Brush Brush { get; set; }
     
     /// <summary>
     /// <para> Timestamp.</para>
@@ -2135,11 +2078,8 @@ public partial class Context : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-    public Timestamp Timestamp
-    {
-        get => GetElement<Timestamp>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(43, "timestamp", 5)]
+    public Timestamp Timestamp { get; set; }
     
 
 

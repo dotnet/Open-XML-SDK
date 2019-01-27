@@ -75,13 +75,7 @@ public partial class Slicer : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 62 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -90,11 +84,8 @@ public partial class Slicer : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:sle = http://schemas.microsoft.com/office/drawing/2010/slicer
     /// </remark>
-    public OfficeArtExtensionList OfficeArtExtensionList
-    {
-        get => GetElement<OfficeArtExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(62, "extLst", 0)]
+    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
     
 
 

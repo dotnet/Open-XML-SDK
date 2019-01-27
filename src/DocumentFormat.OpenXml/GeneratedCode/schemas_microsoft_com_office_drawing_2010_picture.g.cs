@@ -74,13 +74,7 @@ public partial class ShapeStyle : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "lnRef","fillRef","effectRef","fontRef" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> LineReference.</para>
@@ -89,11 +83,8 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.LineReference LineReference
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "lnRef", 0)]
+    public DocumentFormat.OpenXml.Drawing.LineReference LineReference { get; set; }
     
     /// <summary>
     /// <para> FillReference.</para>
@@ -102,11 +93,8 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.FillReference FillReference
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "fillRef", 1)]
+    public DocumentFormat.OpenXml.Drawing.FillReference FillReference { get; set; }
     
     /// <summary>
     /// <para> EffectReference.</para>
@@ -115,11 +103,8 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "effectRef", 2)]
+    public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference { get; set; }
     
     /// <summary>
     /// <para> Font Reference.</para>
@@ -128,11 +113,8 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.FontReference FontReference
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "fontRef", 3)]
+    public DocumentFormat.OpenXml.Drawing.FontReference FontReference { get; set; }
     
 
 

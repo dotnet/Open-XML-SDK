@@ -73,13 +73,7 @@ public partial class CustomXsn : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "xsnLocation","cached","openByDefault","xsnScope" };
-    private static readonly byte[] eleNamespaceIds = { 39,39,39,39 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> XsnLocation.</para>
@@ -88,11 +82,8 @@ public partial class CustomXsn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
     /// </remark>
-    public XsnLocation XsnLocation
-    {
-        get => GetElement<XsnLocation>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(39, "xsnLocation", 0)]
+    public XsnLocation XsnLocation { get; set; }
     
     /// <summary>
     /// <para> CachedView.</para>
@@ -101,11 +92,8 @@ public partial class CustomXsn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
     /// </remark>
-    public CachedView CachedView
-    {
-        get => GetElement<CachedView>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(39, "cached", 1)]
+    public CachedView CachedView { get; set; }
     
     /// <summary>
     /// <para> OpenByDefault.</para>
@@ -114,11 +102,8 @@ public partial class CustomXsn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
     /// </remark>
-    public OpenByDefault OpenByDefault
-    {
-        get => GetElement<OpenByDefault>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(39, "openByDefault", 2)]
+    public OpenByDefault OpenByDefault { get; set; }
     
     /// <summary>
     /// <para> Scope.</para>
@@ -127,11 +112,8 @@ public partial class CustomXsn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
     /// </remark>
-    public Scope Scope
-    {
-        get => GetElement<Scope>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(39, "xsnScope", 3)]
+    public Scope Scope { get; set; }
     
 
 

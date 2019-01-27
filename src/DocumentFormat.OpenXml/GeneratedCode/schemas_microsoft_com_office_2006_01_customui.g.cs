@@ -5407,13 +5407,7 @@ public partial class CustomUI : OpenXmlPartRootElement
      
     
     
-        private static readonly string[] eleTagNames = { "commands","ribbon" };
-    private static readonly byte[] eleNamespaceIds = { 34,34 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> RepurposedCommands.</para>
@@ -5422,11 +5416,8 @@ public partial class CustomUI : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
     /// </remark>
-    public RepurposedCommands RepurposedCommands
-    {
-        get => GetElement<RepurposedCommands>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(34, "commands", 0)]
+    public RepurposedCommands RepurposedCommands { get; set; }
     
     /// <summary>
     /// <para> Ribbon.</para>
@@ -5435,11 +5426,8 @@ public partial class CustomUI : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
     /// </remark>
-    public Ribbon Ribbon
-    {
-        get => GetElement<Ribbon>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(34, "ribbon", 1)]
+    public Ribbon Ribbon { get; set; }
     
 
 
@@ -6056,13 +6044,7 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "button" };
-    private static readonly byte[] eleNamespaceIds = { 34 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> UnsizedButton.</para>
@@ -6071,11 +6053,8 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
     /// </remark>
-    public UnsizedButton UnsizedButton
-    {
-        get => GetElement<UnsizedButton>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(34, "button", 0)]
+    public UnsizedButton UnsizedButton { get; set; }
     
 
 
@@ -7113,13 +7092,7 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sharedControls","documentControls" };
-    private static readonly byte[] eleNamespaceIds = { 34,34 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SharedQatControls.</para>
@@ -7128,11 +7101,8 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
     /// </remark>
-    public SharedQatControls SharedQatControls
-    {
-        get => GetElement<SharedQatControls>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(34, "sharedControls", 0)]
+    public SharedQatControls SharedQatControls { get; set; }
     
     /// <summary>
     /// <para> DocumentSpecificQuickAccessToolbarControls.</para>
@@ -7141,11 +7111,8 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
     /// </remark>
-    public DocumentSpecificQuickAccessToolbarControls DocumentSpecificQuickAccessToolbarControls
-    {
-        get => GetElement<DocumentSpecificQuickAccessToolbarControls>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(34, "documentControls", 1)]
+    public DocumentSpecificQuickAccessToolbarControls DocumentSpecificQuickAccessToolbarControls { get; set; }
     
 
 
@@ -7416,13 +7383,7 @@ public partial class Ribbon : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "officeMenu","qat","tabs","contextualTabs" };
-    private static readonly byte[] eleNamespaceIds = { 34,34,34,34 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
     
         /// <summary>
     /// <para> OfficeMenu.</para>
@@ -7431,11 +7392,8 @@ public partial class Ribbon : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
     /// </remark>
-    public OfficeMenu OfficeMenu
-    {
-        get => GetElement<OfficeMenu>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(34, "officeMenu", 0)]
+    public OfficeMenu OfficeMenu { get; set; }
     
     /// <summary>
     /// <para> QuickAccessToolbar.</para>
@@ -7444,11 +7402,8 @@ public partial class Ribbon : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
     /// </remark>
-    public QuickAccessToolbar QuickAccessToolbar
-    {
-        get => GetElement<QuickAccessToolbar>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(34, "qat", 1)]
+    public QuickAccessToolbar QuickAccessToolbar { get; set; }
     
     /// <summary>
     /// <para> Tabs.</para>
@@ -7457,11 +7412,8 @@ public partial class Ribbon : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
     /// </remark>
-    public Tabs Tabs
-    {
-        get => GetElement<Tabs>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(34, "tabs", 2)]
+    public Tabs Tabs { get; set; }
     
     /// <summary>
     /// <para> ContextualTabSets.</para>
@@ -7470,11 +7422,8 @@ public partial class Ribbon : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:mso = http://schemas.microsoft.com/office/2006/01/customui
     /// </remark>
-    public ContextualTabSets ContextualTabSets
-    {
-        get => GetElement<ContextualTabSets>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(34, "contextualTabs", 3)]
+    public ContextualTabSets ContextualTabSets { get; set; }
     
 
 

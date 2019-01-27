@@ -148,13 +148,7 @@ public partial class RelativeWidth : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pctWidth" };
-    private static readonly byte[] eleNamespaceIds = { 51 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PercentageWidth.</para>
@@ -163,11 +157,8 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
     /// </remark>
-    public PercentageWidth PercentageWidth
-    {
-        get => GetElement<PercentageWidth>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(51, "pctWidth", 0)]
+    public PercentageWidth PercentageWidth { get; set; }
     
 
 
@@ -240,13 +231,7 @@ public partial class RelativeHeight : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pctHeight" };
-    private static readonly byte[] eleNamespaceIds = { 51 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PercentageHeight.</para>
@@ -255,11 +240,8 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
     /// </remark>
-    public PercentageHeight PercentageHeight
-    {
-        get => GetElement<PercentageHeight>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(51, "pctHeight", 0)]
+    public PercentageHeight PercentageHeight { get; set; }
     
 
 

@@ -74,13 +74,7 @@ public partial class TimeSlicer : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 77 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -89,11 +83,8 @@ public partial class TimeSlicer : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:tsle = http://schemas.microsoft.com/office/drawing/2012/timeslicer
     /// </remark>
-    public OfficeArtExtensionList OfficeArtExtensionList
-    {
-        get => GetElement<OfficeArtExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(77, "extLst", 0)]
+    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
     
 
 

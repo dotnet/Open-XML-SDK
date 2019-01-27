@@ -71,13 +71,7 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "showOnOpen","defaultPropertyEditorNamespace","customPropertyEditor" };
-    private static readonly byte[] eleNamespaceIds = { 37,37,37 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ShowOnOpen.</para>
@@ -86,11 +80,8 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
     /// </remark>
-    public ShowOnOpen ShowOnOpen
-    {
-        get => GetElement<ShowOnOpen>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(37, "showOnOpen", 0)]
+    public ShowOnOpen ShowOnOpen { get; set; }
     
     /// <summary>
     /// <para> DefaultPropertyEditorNamespace.</para>
@@ -99,11 +90,8 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
     /// </remark>
-    public DefaultPropertyEditorNamespace DefaultPropertyEditorNamespace
-    {
-        get => GetElement<DefaultPropertyEditorNamespace>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(37, "defaultPropertyEditorNamespace", 1)]
+    public DefaultPropertyEditorNamespace DefaultPropertyEditorNamespace { get; set; }
     
 
 
@@ -334,13 +322,7 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "XMLNamespace","XSNLocation" };
-    private static readonly byte[] eleNamespaceIds = { 37,37 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PropertyEditorNamespace.</para>
@@ -349,11 +331,8 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
     /// </remark>
-    public PropertyEditorNamespace PropertyEditorNamespace
-    {
-        get => GetElement<PropertyEditorNamespace>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(37, "XMLNamespace", 0)]
+    public PropertyEditorNamespace PropertyEditorNamespace { get; set; }
     
     /// <summary>
     /// <para> XsnFileLocation.</para>
@@ -362,11 +341,8 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
     /// </remark>
-    public XsnFileLocation XsnFileLocation
-    {
-        get => GetElement<XsnFileLocation>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(37, "XSNLocation", 1)]
+    public XsnFileLocation XsnFileLocation { get; set; }
     
 
 

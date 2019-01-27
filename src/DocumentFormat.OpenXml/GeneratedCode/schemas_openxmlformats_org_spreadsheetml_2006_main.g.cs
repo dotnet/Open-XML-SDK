@@ -266,13 +266,7 @@ public partial class Comments : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "authors","commentList","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Authors.</para>
@@ -281,11 +275,8 @@ public partial class Comments : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Authors Authors
-    {
-        get => GetElement<Authors>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "authors", 0)]
+    public Authors Authors { get; set; }
     
     /// <summary>
     /// <para> List of Comments.</para>
@@ -294,11 +285,8 @@ public partial class Comments : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CommentList CommentList
-    {
-        get => GetElement<CommentList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "commentList", 1)]
+    public CommentList CommentList { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -307,11 +295,8 @@ public partial class Comments : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "extLst", 2)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -734,13 +719,7 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "cacheSource","cacheFields","cacheHierarchies","kpis","tupleCache","calculatedItems","calculatedMembers","dimensions","measureGroups","maps","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> CacheSource.</para>
@@ -749,11 +728,8 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CacheSource CacheSource
-    {
-        get => GetElement<CacheSource>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "cacheSource", 0)]
+    public CacheSource CacheSource { get; set; }
     
     /// <summary>
     /// <para> CacheFields.</para>
@@ -762,11 +738,8 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CacheFields CacheFields
-    {
-        get => GetElement<CacheFields>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "cacheFields", 1)]
+    public CacheFields CacheFields { get; set; }
     
     /// <summary>
     /// <para> CacheHierarchies.</para>
@@ -775,11 +748,8 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CacheHierarchies CacheHierarchies
-    {
-        get => GetElement<CacheHierarchies>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "cacheHierarchies", 2)]
+    public CacheHierarchies CacheHierarchies { get; set; }
     
     /// <summary>
     /// <para> Kpis.</para>
@@ -788,11 +758,8 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Kpis Kpis
-    {
-        get => GetElement<Kpis>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "kpis", 3)]
+    public Kpis Kpis { get; set; }
     
     /// <summary>
     /// <para> TupleCache.</para>
@@ -801,11 +768,8 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public TupleCache TupleCache
-    {
-        get => GetElement<TupleCache>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "tupleCache", 4)]
+    public TupleCache TupleCache { get; set; }
     
     /// <summary>
     /// <para> CalculatedItems.</para>
@@ -814,11 +778,8 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CalculatedItems CalculatedItems
-    {
-        get => GetElement<CalculatedItems>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(22, "calculatedItems", 5)]
+    public CalculatedItems CalculatedItems { get; set; }
     
     /// <summary>
     /// <para> CalculatedMembers.</para>
@@ -827,11 +788,8 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CalculatedMembers CalculatedMembers
-    {
-        get => GetElement<CalculatedMembers>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(22, "calculatedMembers", 6)]
+    public CalculatedMembers CalculatedMembers { get; set; }
     
     /// <summary>
     /// <para> Dimensions.</para>
@@ -840,11 +798,8 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Dimensions Dimensions
-    {
-        get => GetElement<Dimensions>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(22, "dimensions", 7)]
+    public Dimensions Dimensions { get; set; }
     
     /// <summary>
     /// <para> MeasureGroups.</para>
@@ -853,11 +808,8 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public MeasureGroups MeasureGroups
-    {
-        get => GetElement<MeasureGroups>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(22, "measureGroups", 8)]
+    public MeasureGroups MeasureGroups { get; set; }
     
     /// <summary>
     /// <para> Maps.</para>
@@ -866,11 +818,8 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Maps Maps
-    {
-        get => GetElement<Maps>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(22, "maps", 9)]
+    public Maps Maps { get; set; }
     
     /// <summary>
     /// <para> PivotCacheDefinitionExtensionList.</para>
@@ -879,11 +828,8 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotCacheDefinitionExtensionList PivotCacheDefinitionExtensionList
-    {
-        get => GetElement<PivotCacheDefinitionExtensionList>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(22, "extLst", 10)]
+    public PivotCacheDefinitionExtensionList PivotCacheDefinitionExtensionList { get; set; }
     
 
 
@@ -1518,13 +1464,7 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "location","pivotFields","rowFields","rowItems","colFields","colItems","pageFields","dataFields","formats","conditionalFormats","chartFormats","pivotHierarchies","pivotTableStyleInfo","filters","rowHierarchiesUsage","colHierarchiesUsage","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Location.</para>
@@ -1533,11 +1473,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Location Location
-    {
-        get => GetElement<Location>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "location", 0)]
+    public Location Location { get; set; }
     
     /// <summary>
     /// <para> PivotFields.</para>
@@ -1546,11 +1483,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotFields PivotFields
-    {
-        get => GetElement<PivotFields>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "pivotFields", 1)]
+    public PivotFields PivotFields { get; set; }
     
     /// <summary>
     /// <para> RowFields.</para>
@@ -1559,11 +1493,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public RowFields RowFields
-    {
-        get => GetElement<RowFields>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "rowFields", 2)]
+    public RowFields RowFields { get; set; }
     
     /// <summary>
     /// <para> RowItems.</para>
@@ -1572,11 +1503,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public RowItems RowItems
-    {
-        get => GetElement<RowItems>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "rowItems", 3)]
+    public RowItems RowItems { get; set; }
     
     /// <summary>
     /// <para> ColumnFields.</para>
@@ -1585,11 +1513,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ColumnFields ColumnFields
-    {
-        get => GetElement<ColumnFields>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "colFields", 4)]
+    public ColumnFields ColumnFields { get; set; }
     
     /// <summary>
     /// <para> ColumnItems.</para>
@@ -1598,11 +1523,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ColumnItems ColumnItems
-    {
-        get => GetElement<ColumnItems>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(22, "colItems", 5)]
+    public ColumnItems ColumnItems { get; set; }
     
     /// <summary>
     /// <para> PageFields.</para>
@@ -1611,11 +1533,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PageFields PageFields
-    {
-        get => GetElement<PageFields>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(22, "pageFields", 6)]
+    public PageFields PageFields { get; set; }
     
     /// <summary>
     /// <para> DataFields.</para>
@@ -1624,11 +1543,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DataFields DataFields
-    {
-        get => GetElement<DataFields>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(22, "dataFields", 7)]
+    public DataFields DataFields { get; set; }
     
     /// <summary>
     /// <para> Formats.</para>
@@ -1637,11 +1553,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Formats Formats
-    {
-        get => GetElement<Formats>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(22, "formats", 8)]
+    public Formats Formats { get; set; }
     
     /// <summary>
     /// <para> ConditionalFormats.</para>
@@ -1650,11 +1563,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ConditionalFormats ConditionalFormats
-    {
-        get => GetElement<ConditionalFormats>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(22, "conditionalFormats", 9)]
+    public ConditionalFormats ConditionalFormats { get; set; }
     
     /// <summary>
     /// <para> ChartFormats.</para>
@@ -1663,11 +1573,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ChartFormats ChartFormats
-    {
-        get => GetElement<ChartFormats>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(22, "chartFormats", 10)]
+    public ChartFormats ChartFormats { get; set; }
     
     /// <summary>
     /// <para> PivotHierarchies.</para>
@@ -1676,11 +1583,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotHierarchies PivotHierarchies
-    {
-        get => GetElement<PivotHierarchies>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(22, "pivotHierarchies", 11)]
+    public PivotHierarchies PivotHierarchies { get; set; }
     
     /// <summary>
     /// <para> PivotTableStyle.</para>
@@ -1689,11 +1593,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotTableStyle PivotTableStyle
-    {
-        get => GetElement<PivotTableStyle>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(22, "pivotTableStyleInfo", 12)]
+    public PivotTableStyle PivotTableStyle { get; set; }
     
     /// <summary>
     /// <para> PivotFilters.</para>
@@ -1702,11 +1603,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotFilters PivotFilters
-    {
-        get => GetElement<PivotFilters>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(22, "filters", 13)]
+    public PivotFilters PivotFilters { get; set; }
     
     /// <summary>
     /// <para> RowHierarchiesUsage.</para>
@@ -1715,11 +1613,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public RowHierarchiesUsage RowHierarchiesUsage
-    {
-        get => GetElement<RowHierarchiesUsage>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(22, "rowHierarchiesUsage", 14)]
+    public RowHierarchiesUsage RowHierarchiesUsage { get; set; }
     
     /// <summary>
     /// <para> ColumnHierarchiesUsage.</para>
@@ -1728,11 +1623,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ColumnHierarchiesUsage ColumnHierarchiesUsage
-    {
-        get => GetElement<ColumnHierarchiesUsage>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(22, "colHierarchiesUsage", 15)]
+    public ColumnHierarchiesUsage ColumnHierarchiesUsage { get; set; }
     
     /// <summary>
     /// <para> PivotTableDefinitionExtensionList.</para>
@@ -1741,11 +1633,8 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotTableDefinitionExtensionList PivotTableDefinitionExtensionList
-    {
-        get => GetElement<PivotTableDefinitionExtensionList>(16);
-        set => SetElement(16, value);
-    }
+	[SchemaAttr(22, "extLst", 16)]
+    public PivotTableDefinitionExtensionList PivotTableDefinitionExtensionList { get; set; }
     
 
 
@@ -1974,13 +1863,7 @@ public partial class QueryTable : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "queryTableRefresh","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> QueryTableRefresh.</para>
@@ -1989,11 +1872,8 @@ public partial class QueryTable : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public QueryTableRefresh QueryTableRefresh
-    {
-        get => GetElement<QueryTableRefresh>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "queryTableRefresh", 0)]
+    public QueryTableRefresh QueryTableRefresh { get; set; }
     
     /// <summary>
     /// <para> QueryTableExtensionList.</para>
@@ -2002,11 +1882,8 @@ public partial class QueryTable : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public QueryTableExtensionList QueryTableExtensionList
-    {
-        get => GetElement<QueryTableExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "extLst", 1)]
+    public QueryTableExtensionList QueryTableExtensionList { get; set; }
     
 
 
@@ -2657,13 +2534,7 @@ public partial class Worksheet : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "sheetPr","dimension","sheetViews","sheetFormatPr","cols","sheetData","sheetCalcPr","sheetProtection","protectedRanges","scenarios","autoFilter","sortState","dataConsolidate","customSheetViews","mergeCells","phoneticPr","conditionalFormatting","dataValidations","hyperlinks","printOptions","pageMargins","pageSetup","headerFooter","rowBreaks","colBreaks","customProperties","cellWatches","ignoredErrors","drawing","legacyDrawing","legacyDrawingHF","drawingHF","picture","oleObjects","controls","webPublishItems","tableParts","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SheetProperties.</para>
@@ -2672,11 +2543,8 @@ public partial class Worksheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public SheetProperties SheetProperties
-    {
-        get => GetElement<SheetProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "sheetPr", 0)]
+    public SheetProperties SheetProperties { get; set; }
     
     /// <summary>
     /// <para> SheetDimension.</para>
@@ -2685,11 +2553,8 @@ public partial class Worksheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public SheetDimension SheetDimension
-    {
-        get => GetElement<SheetDimension>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "dimension", 1)]
+    public SheetDimension SheetDimension { get; set; }
     
     /// <summary>
     /// <para> SheetViews.</para>
@@ -2698,11 +2563,8 @@ public partial class Worksheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public SheetViews SheetViews
-    {
-        get => GetElement<SheetViews>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "sheetViews", 2)]
+    public SheetViews SheetViews { get; set; }
     
     /// <summary>
     /// <para> SheetFormatProperties.</para>
@@ -2711,11 +2573,8 @@ public partial class Worksheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public SheetFormatProperties SheetFormatProperties
-    {
-        get => GetElement<SheetFormatProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "sheetFormatPr", 3)]
+    public SheetFormatProperties SheetFormatProperties { get; set; }
     
 
 
@@ -2836,13 +2695,7 @@ public partial class Chartsheet : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "sheetPr","sheetViews","sheetProtection","customSheetViews","pageMargins","pageSetup","headerFooter","drawing","legacyDrawing","legacyDrawingHF","drawingHF","picture","webPublishItems","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Chart Sheet Properties.</para>
@@ -2851,11 +2704,8 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ChartSheetProperties ChartSheetProperties
-    {
-        get => GetElement<ChartSheetProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "sheetPr", 0)]
+    public ChartSheetProperties ChartSheetProperties { get; set; }
     
     /// <summary>
     /// <para> Chart Sheet Views.</para>
@@ -2864,11 +2714,8 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ChartSheetViews ChartSheetViews
-    {
-        get => GetElement<ChartSheetViews>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "sheetViews", 1)]
+    public ChartSheetViews ChartSheetViews { get; set; }
     
     /// <summary>
     /// <para> Chart Sheet Protection.</para>
@@ -2877,11 +2724,8 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ChartSheetProtection ChartSheetProtection
-    {
-        get => GetElement<ChartSheetProtection>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "sheetProtection", 2)]
+    public ChartSheetProtection ChartSheetProtection { get; set; }
     
     /// <summary>
     /// <para> Custom Chart Sheet Views.</para>
@@ -2890,11 +2734,8 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CustomChartsheetViews CustomChartsheetViews
-    {
-        get => GetElement<CustomChartsheetViews>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "customSheetViews", 3)]
+    public CustomChartsheetViews CustomChartsheetViews { get; set; }
     
     /// <summary>
     /// <para> PageMargins.</para>
@@ -2903,11 +2744,8 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PageMargins PageMargins
-    {
-        get => GetElement<PageMargins>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "pageMargins", 4)]
+    public PageMargins PageMargins { get; set; }
     
     /// <summary>
     /// <para> ChartSheetPageSetup.</para>
@@ -2916,11 +2754,8 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ChartSheetPageSetup ChartSheetPageSetup
-    {
-        get => GetElement<ChartSheetPageSetup>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(22, "pageSetup", 5)]
+    public ChartSheetPageSetup ChartSheetPageSetup { get; set; }
     
     /// <summary>
     /// <para> HeaderFooter.</para>
@@ -2929,11 +2764,8 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public HeaderFooter HeaderFooter
-    {
-        get => GetElement<HeaderFooter>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(22, "headerFooter", 6)]
+    public HeaderFooter HeaderFooter { get; set; }
     
     /// <summary>
     /// <para> Drawing.</para>
@@ -2942,11 +2774,8 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Drawing Drawing
-    {
-        get => GetElement<Drawing>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(22, "drawing", 7)]
+    public Drawing Drawing { get; set; }
     
     /// <summary>
     /// <para> LegacyDrawing.</para>
@@ -2955,11 +2784,8 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public LegacyDrawing LegacyDrawing
-    {
-        get => GetElement<LegacyDrawing>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(22, "legacyDrawing", 8)]
+    public LegacyDrawing LegacyDrawing { get; set; }
     
     /// <summary>
     /// <para> Legacy Drawing Reference in  Header Footer.</para>
@@ -2968,11 +2794,8 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public LegacyDrawingHeaderFooter LegacyDrawingHeaderFooter
-    {
-        get => GetElement<LegacyDrawingHeaderFooter>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(22, "legacyDrawingHF", 9)]
+    public LegacyDrawingHeaderFooter LegacyDrawingHeaderFooter { get; set; }
     
     /// <summary>
     /// <para> DrawingHeaderFooter.</para>
@@ -2981,11 +2804,8 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DrawingHeaderFooter DrawingHeaderFooter
-    {
-        get => GetElement<DrawingHeaderFooter>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(22, "drawingHF", 10)]
+    public DrawingHeaderFooter DrawingHeaderFooter { get; set; }
     
     /// <summary>
     /// <para> Picture.</para>
@@ -2994,11 +2814,8 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Picture Picture
-    {
-        get => GetElement<Picture>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(22, "picture", 11)]
+    public Picture Picture { get; set; }
     
     /// <summary>
     /// <para> WebPublishItems.</para>
@@ -3007,11 +2824,8 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public WebPublishItems WebPublishItems
-    {
-        get => GetElement<WebPublishItems>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(22, "webPublishItems", 12)]
+    public WebPublishItems WebPublishItems { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -3020,11 +2834,8 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(22, "extLst", 13)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -3149,13 +2960,7 @@ public partial class DialogSheet : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "sheetPr","sheetViews","sheetFormatPr","sheetProtection","customSheetViews","printOptions","pageMargins","pageSetup","headerFooter","drawing","legacyDrawing","legacyDrawingHF","drawingHF","oleObjects","controls","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Sheet Properties.</para>
@@ -3164,11 +2969,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public SheetProperties SheetProperties
-    {
-        get => GetElement<SheetProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "sheetPr", 0)]
+    public SheetProperties SheetProperties { get; set; }
     
     /// <summary>
     /// <para> Dialog Sheet Views.</para>
@@ -3177,11 +2979,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public SheetViews SheetViews
-    {
-        get => GetElement<SheetViews>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "sheetViews", 1)]
+    public SheetViews SheetViews { get; set; }
     
     /// <summary>
     /// <para> Dialog Sheet Format Properties.</para>
@@ -3190,11 +2989,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public SheetFormatProperties SheetFormatProperties
-    {
-        get => GetElement<SheetFormatProperties>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "sheetFormatPr", 2)]
+    public SheetFormatProperties SheetFormatProperties { get; set; }
     
     /// <summary>
     /// <para> Sheet Protection.</para>
@@ -3203,11 +2999,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public SheetProtection SheetProtection
-    {
-        get => GetElement<SheetProtection>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "sheetProtection", 3)]
+    public SheetProtection SheetProtection { get; set; }
     
     /// <summary>
     /// <para> Custom Sheet Views.</para>
@@ -3216,11 +3009,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CustomSheetViews CustomSheetViews
-    {
-        get => GetElement<CustomSheetViews>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "customSheetViews", 4)]
+    public CustomSheetViews CustomSheetViews { get; set; }
     
     /// <summary>
     /// <para> Print Options.</para>
@@ -3229,11 +3019,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PrintOptions PrintOptions
-    {
-        get => GetElement<PrintOptions>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(22, "printOptions", 5)]
+    public PrintOptions PrintOptions { get; set; }
     
     /// <summary>
     /// <para> Page Margins.</para>
@@ -3242,11 +3029,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PageMargins PageMargins
-    {
-        get => GetElement<PageMargins>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(22, "pageMargins", 6)]
+    public PageMargins PageMargins { get; set; }
     
     /// <summary>
     /// <para> Page Setup Settings.</para>
@@ -3255,11 +3039,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PageSetup PageSetup
-    {
-        get => GetElement<PageSetup>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(22, "pageSetup", 7)]
+    public PageSetup PageSetup { get; set; }
     
     /// <summary>
     /// <para> Header and Footer Settings.</para>
@@ -3268,11 +3049,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public HeaderFooter HeaderFooter
-    {
-        get => GetElement<HeaderFooter>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(22, "headerFooter", 8)]
+    public HeaderFooter HeaderFooter { get; set; }
     
     /// <summary>
     /// <para> Drawing.</para>
@@ -3281,11 +3059,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Drawing Drawing
-    {
-        get => GetElement<Drawing>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(22, "drawing", 9)]
+    public Drawing Drawing { get; set; }
     
     /// <summary>
     /// <para> Legacy Drawing.</para>
@@ -3294,11 +3069,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public LegacyDrawing LegacyDrawing
-    {
-        get => GetElement<LegacyDrawing>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(22, "legacyDrawing", 10)]
+    public LegacyDrawing LegacyDrawing { get; set; }
     
     /// <summary>
     /// <para> Legacy Drawing Header Footer.</para>
@@ -3307,11 +3079,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public LegacyDrawingHeaderFooter LegacyDrawingHeaderFooter
-    {
-        get => GetElement<LegacyDrawingHeaderFooter>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(22, "legacyDrawingHF", 11)]
+    public LegacyDrawingHeaderFooter LegacyDrawingHeaderFooter { get; set; }
     
     /// <summary>
     /// <para> DrawingHeaderFooter.</para>
@@ -3320,11 +3089,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DrawingHeaderFooter DrawingHeaderFooter
-    {
-        get => GetElement<DrawingHeaderFooter>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(22, "drawingHF", 12)]
+    public DrawingHeaderFooter DrawingHeaderFooter { get; set; }
     
     /// <summary>
     /// <para> OleObjects.</para>
@@ -3333,11 +3099,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public OleObjects OleObjects
-    {
-        get => GetElement<OleObjects>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(22, "oleObjects", 13)]
+    public OleObjects OleObjects { get; set; }
     
     /// <summary>
     /// <para> Controls.</para>
@@ -3346,11 +3109,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Controls Controls
-    {
-        get => GetElement<Controls>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(22, "controls", 14)]
+    public Controls Controls { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -3359,11 +3119,8 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(15);
-        set => SetElement(15, value);
-    }
+	[SchemaAttr(22, "extLst", 15)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -3470,13 +3227,7 @@ public partial class Metadata : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "metadataTypes","metadataStrings","mdxMetadata","futureMetadata","cellMetadata","valueMetadata","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Metadata Types Collection.</para>
@@ -3485,11 +3236,8 @@ public partial class Metadata : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public MetadataTypes MetadataTypes
-    {
-        get => GetElement<MetadataTypes>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "metadataTypes", 0)]
+    public MetadataTypes MetadataTypes { get; set; }
     
     /// <summary>
     /// <para> Metadata String Store.</para>
@@ -3498,11 +3246,8 @@ public partial class Metadata : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public MetadataStrings MetadataStrings
-    {
-        get => GetElement<MetadataStrings>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "metadataStrings", 1)]
+    public MetadataStrings MetadataStrings { get; set; }
     
     /// <summary>
     /// <para> MDX Metadata Information.</para>
@@ -3511,11 +3256,8 @@ public partial class Metadata : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public MdxMetadata MdxMetadata
-    {
-        get => GetElement<MdxMetadata>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "mdxMetadata", 2)]
+    public MdxMetadata MdxMetadata { get; set; }
     
 
 
@@ -3722,13 +3464,7 @@ public partial class Stylesheet : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "numFmts","fonts","fills","borders","cellStyleXfs","cellXfs","cellStyles","dxfs","tableStyles","colors","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NumberingFormats.</para>
@@ -3737,11 +3473,8 @@ public partial class Stylesheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public NumberingFormats NumberingFormats
-    {
-        get => GetElement<NumberingFormats>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "numFmts", 0)]
+    public NumberingFormats NumberingFormats { get; set; }
     
     /// <summary>
     /// <para> Fonts.</para>
@@ -3750,11 +3483,8 @@ public partial class Stylesheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Fonts Fonts
-    {
-        get => GetElement<Fonts>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "fonts", 1)]
+    public Fonts Fonts { get; set; }
     
     /// <summary>
     /// <para> Fills.</para>
@@ -3763,11 +3493,8 @@ public partial class Stylesheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Fills Fills
-    {
-        get => GetElement<Fills>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "fills", 2)]
+    public Fills Fills { get; set; }
     
     /// <summary>
     /// <para> Borders.</para>
@@ -3776,11 +3503,8 @@ public partial class Stylesheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Borders Borders
-    {
-        get => GetElement<Borders>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "borders", 3)]
+    public Borders Borders { get; set; }
     
     /// <summary>
     /// <para> CellStyleFormats.</para>
@@ -3789,11 +3513,8 @@ public partial class Stylesheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CellStyleFormats CellStyleFormats
-    {
-        get => GetElement<CellStyleFormats>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "cellStyleXfs", 4)]
+    public CellStyleFormats CellStyleFormats { get; set; }
     
     /// <summary>
     /// <para> CellFormats.</para>
@@ -3802,11 +3523,8 @@ public partial class Stylesheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CellFormats CellFormats
-    {
-        get => GetElement<CellFormats>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(22, "cellXfs", 5)]
+    public CellFormats CellFormats { get; set; }
     
     /// <summary>
     /// <para> CellStyles.</para>
@@ -3815,11 +3533,8 @@ public partial class Stylesheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CellStyles CellStyles
-    {
-        get => GetElement<CellStyles>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(22, "cellStyles", 6)]
+    public CellStyles CellStyles { get; set; }
     
     /// <summary>
     /// <para> DifferentialFormats.</para>
@@ -3828,11 +3543,8 @@ public partial class Stylesheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DifferentialFormats DifferentialFormats
-    {
-        get => GetElement<DifferentialFormats>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(22, "dxfs", 7)]
+    public DifferentialFormats DifferentialFormats { get; set; }
     
     /// <summary>
     /// <para> TableStyles.</para>
@@ -3841,11 +3553,8 @@ public partial class Stylesheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public TableStyles TableStyles
-    {
-        get => GetElement<TableStyles>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(22, "tableStyles", 8)]
+    public TableStyles TableStyles { get; set; }
     
     /// <summary>
     /// <para> Colors.</para>
@@ -3854,11 +3563,8 @@ public partial class Stylesheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Colors Colors
-    {
-        get => GetElement<Colors>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(22, "colors", 9)]
+    public Colors Colors { get; set; }
     
     /// <summary>
     /// <para> StylesheetExtensionList.</para>
@@ -3867,11 +3573,8 @@ public partial class Stylesheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public StylesheetExtensionList StylesheetExtensionList
-    {
-        get => GetElement<StylesheetExtensionList>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(22, "extLst", 10)]
+    public StylesheetExtensionList StylesheetExtensionList { get; set; }
     
 
 
@@ -4204,13 +3907,7 @@ public partial class Table : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "autoFilter","sortState","tableColumns","tableStyleInfo","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Table AutoFilter.</para>
@@ -4219,11 +3916,8 @@ public partial class Table : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public AutoFilter AutoFilter
-    {
-        get => GetElement<AutoFilter>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "autoFilter", 0)]
+    public AutoFilter AutoFilter { get; set; }
     
     /// <summary>
     /// <para> Sort State.</para>
@@ -4232,11 +3926,8 @@ public partial class Table : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public SortState SortState
-    {
-        get => GetElement<SortState>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "sortState", 1)]
+    public SortState SortState { get; set; }
     
     /// <summary>
     /// <para> Table Columns.</para>
@@ -4245,11 +3936,8 @@ public partial class Table : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public TableColumns TableColumns
-    {
-        get => GetElement<TableColumns>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "tableColumns", 2)]
+    public TableColumns TableColumns { get; set; }
     
     /// <summary>
     /// <para> Table Style.</para>
@@ -4258,11 +3946,8 @@ public partial class Table : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public TableStyleInfo TableStyleInfo
-    {
-        get => GetElement<TableStyleInfo>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "tableStyleInfo", 3)]
+    public TableStyleInfo TableStyleInfo { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -4271,11 +3956,8 @@ public partial class Table : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public TableExtensionList TableExtensionList
-    {
-        get => GetElement<TableExtensionList>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "extLst", 4)]
+    public TableExtensionList TableExtensionList { get; set; }
     
 
 
@@ -4504,13 +4186,7 @@ public partial class Workbook : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "fileVersion","fileSharing","workbookPr","absPath","workbookProtection","bookViews","sheets","functionGroups","externalReferences","definedNames","calcPr","oleSize","customWorkbookViews","pivotCaches","webPublishing","fileRecoveryPr","webPublishObjects","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,74,22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> FileVersion.</para>
@@ -4519,11 +4195,8 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public FileVersion FileVersion
-    {
-        get => GetElement<FileVersion>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "fileVersion", 0)]
+    public FileVersion FileVersion { get; set; }
     
     /// <summary>
     /// <para> FileSharing.</para>
@@ -4532,11 +4205,8 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public FileSharing FileSharing
-    {
-        get => GetElement<FileSharing>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "fileSharing", 1)]
+    public FileSharing FileSharing { get; set; }
     
     /// <summary>
     /// <para> WorkbookProperties.</para>
@@ -4545,11 +4215,8 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public WorkbookProperties WorkbookProperties
-    {
-        get => GetElement<WorkbookProperties>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "workbookPr", 2)]
+    public WorkbookProperties WorkbookProperties { get; set; }
     
     /// <summary>
     /// <para> AbsolutePath, this property is only available in Office2013.</para>
@@ -4558,12 +4225,9 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x15ac = http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac
     /// </remark>
+	[SchemaAttr(74, "absPath", 3)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
-    public DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath AbsolutePath
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath>(3);
-        set => SetElement(3, value);
-    }
+    public DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath AbsolutePath { get; set; }
     
     /// <summary>
     /// <para> WorkbookProtection.</para>
@@ -4572,11 +4236,8 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public WorkbookProtection WorkbookProtection
-    {
-        get => GetElement<WorkbookProtection>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "workbookProtection", 4)]
+    public WorkbookProtection WorkbookProtection { get; set; }
     
     /// <summary>
     /// <para> BookViews.</para>
@@ -4585,11 +4246,8 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public BookViews BookViews
-    {
-        get => GetElement<BookViews>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(22, "bookViews", 5)]
+    public BookViews BookViews { get; set; }
     
     /// <summary>
     /// <para> Sheets.</para>
@@ -4598,11 +4256,8 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Sheets Sheets
-    {
-        get => GetElement<Sheets>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(22, "sheets", 6)]
+    public Sheets Sheets { get; set; }
     
     /// <summary>
     /// <para> FunctionGroups.</para>
@@ -4611,11 +4266,8 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public FunctionGroups FunctionGroups
-    {
-        get => GetElement<FunctionGroups>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(22, "functionGroups", 7)]
+    public FunctionGroups FunctionGroups { get; set; }
     
     /// <summary>
     /// <para> ExternalReferences.</para>
@@ -4624,11 +4276,8 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExternalReferences ExternalReferences
-    {
-        get => GetElement<ExternalReferences>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(22, "externalReferences", 8)]
+    public ExternalReferences ExternalReferences { get; set; }
     
     /// <summary>
     /// <para> DefinedNames.</para>
@@ -4637,11 +4286,8 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DefinedNames DefinedNames
-    {
-        get => GetElement<DefinedNames>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(22, "definedNames", 9)]
+    public DefinedNames DefinedNames { get; set; }
     
     /// <summary>
     /// <para> CalculationProperties.</para>
@@ -4650,11 +4296,8 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CalculationProperties CalculationProperties
-    {
-        get => GetElement<CalculationProperties>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(22, "calcPr", 10)]
+    public CalculationProperties CalculationProperties { get; set; }
     
     /// <summary>
     /// <para> OleSize.</para>
@@ -4663,11 +4306,8 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public OleSize OleSize
-    {
-        get => GetElement<OleSize>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(22, "oleSize", 11)]
+    public OleSize OleSize { get; set; }
     
     /// <summary>
     /// <para> CustomWorkbookViews.</para>
@@ -4676,11 +4316,8 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CustomWorkbookViews CustomWorkbookViews
-    {
-        get => GetElement<CustomWorkbookViews>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(22, "customWorkbookViews", 12)]
+    public CustomWorkbookViews CustomWorkbookViews { get; set; }
     
     /// <summary>
     /// <para> PivotCaches.</para>
@@ -4689,11 +4326,8 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotCaches PivotCaches
-    {
-        get => GetElement<PivotCaches>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(22, "pivotCaches", 13)]
+    public PivotCaches PivotCaches { get; set; }
     
     /// <summary>
     /// <para> WebPublishing.</para>
@@ -4702,11 +4336,8 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public WebPublishing WebPublishing
-    {
-        get => GetElement<WebPublishing>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(22, "webPublishing", 14)]
+    public WebPublishing WebPublishing { get; set; }
     
 
 
@@ -4807,13 +4438,7 @@ public partial class FilterColumn : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "filters","top10","customFilters","customFilters","dynamicFilter","colorFilter","iconFilter","iconFilter","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,53,22,22,22,53,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Filter Criteria.</para>
@@ -4822,11 +4447,8 @@ public partial class FilterColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Filters Filters
-    {
-        get => GetElement<Filters>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "filters", 0)]
+    public Filters Filters { get; set; }
     
     /// <summary>
     /// <para> Top 10.</para>
@@ -4835,11 +4457,8 @@ public partial class FilterColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Top10 Top10
-    {
-        get => GetElement<Top10>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "top10", 1)]
+    public Top10 Top10 { get; set; }
     
     /// <summary>
     /// <para> CustomFilters14.</para>
@@ -4848,11 +4467,8 @@ public partial class FilterColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Excel.CustomFilters CustomFilters14
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(53, "customFilters", 2)]
+    public DocumentFormat.OpenXml.Office2010.Excel.CustomFilters CustomFilters14 { get; set; }
     
     /// <summary>
     /// <para> Custom Filters.</para>
@@ -4861,11 +4477,8 @@ public partial class FilterColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CustomFilters CustomFilters
-    {
-        get => GetElement<CustomFilters>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "customFilters", 3)]
+    public CustomFilters CustomFilters { get; set; }
     
     /// <summary>
     /// <para> Dynamic Filter.</para>
@@ -4874,11 +4487,8 @@ public partial class FilterColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DynamicFilter DynamicFilter
-    {
-        get => GetElement<DynamicFilter>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "dynamicFilter", 4)]
+    public DynamicFilter DynamicFilter { get; set; }
     
     /// <summary>
     /// <para> Color Filter Criteria.</para>
@@ -4887,11 +4497,8 @@ public partial class FilterColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ColorFilter ColorFilter
-    {
-        get => GetElement<ColorFilter>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(22, "colorFilter", 5)]
+    public ColorFilter ColorFilter { get; set; }
     
     /// <summary>
     /// <para> IconFilter14.</para>
@@ -4900,11 +4507,8 @@ public partial class FilterColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
     /// </remark>
-    public DocumentFormat.OpenXml.Office2010.Excel.IconFilter IconFilter14
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(53, "iconFilter", 6)]
+    public DocumentFormat.OpenXml.Office2010.Excel.IconFilter IconFilter14 { get; set; }
     
     /// <summary>
     /// <para> Icon Filter.</para>
@@ -4913,11 +4517,8 @@ public partial class FilterColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public IconFilter IconFilter
-    {
-        get => GetElement<IconFilter>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(22, "iconFilter", 7)]
+    public IconFilter IconFilter { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -4926,11 +4527,8 @@ public partial class FilterColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(22, "extLst", 8)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -5417,13 +5015,7 @@ public partial class Comment : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "text","commentPr" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Comment Text.</para>
@@ -5432,11 +5024,8 @@ public partial class Comment : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CommentText CommentText
-    {
-        get => GetElement<CommentText>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "text", 0)]
+    public CommentText CommentText { get; set; }
     
     /// <summary>
     /// <para> CommentProperties.</para>
@@ -5445,11 +5034,8 @@ public partial class Comment : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CommentProperties CommentProperties
-    {
-        get => GetElement<CommentProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "commentPr", 1)]
+    public CommentProperties CommentProperties { get; set; }
     
 
 
@@ -6246,13 +5832,7 @@ public partial class Map : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "DataBinding" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> XML Mapping.</para>
@@ -6261,11 +5841,8 @@ public partial class Map : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DataBinding DataBinding
-    {
-        get => GetElement<DataBinding>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "DataBinding", 0)]
+    public DataBinding DataBinding { get; set; }
     
 
 
@@ -6554,13 +6131,7 @@ public partial class Connection : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "dbPr","olapPr","webPr","textPr","parameters","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> DatabaseProperties.</para>
@@ -6569,11 +6140,8 @@ public partial class Connection : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DatabaseProperties DatabaseProperties
-    {
-        get => GetElement<DatabaseProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "dbPr", 0)]
+    public DatabaseProperties DatabaseProperties { get; set; }
     
     /// <summary>
     /// <para> OlapProperties.</para>
@@ -6582,11 +6150,8 @@ public partial class Connection : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public OlapProperties OlapProperties
-    {
-        get => GetElement<OlapProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "olapPr", 1)]
+    public OlapProperties OlapProperties { get; set; }
     
     /// <summary>
     /// <para> WebQueryProperties.</para>
@@ -6595,11 +6160,8 @@ public partial class Connection : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public WebQueryProperties WebQueryProperties
-    {
-        get => GetElement<WebQueryProperties>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "webPr", 2)]
+    public WebQueryProperties WebQueryProperties { get; set; }
     
     /// <summary>
     /// <para> TextProperties.</para>
@@ -6608,11 +6170,8 @@ public partial class Connection : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public TextProperties TextProperties
-    {
-        get => GetElement<TextProperties>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "textPr", 3)]
+    public TextProperties TextProperties { get; set; }
     
     /// <summary>
     /// <para> Parameters.</para>
@@ -6621,11 +6180,8 @@ public partial class Connection : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Parameters Parameters
-    {
-        get => GetElement<Parameters>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "parameters", 4)]
+    public Parameters Parameters { get; set; }
     
     /// <summary>
     /// <para> ConnectionExtensionList.</para>
@@ -6634,11 +6190,8 @@ public partial class Connection : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ConnectionExtensionList ConnectionExtensionList
-    {
-        get => GetElement<ConnectionExtensionList>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(22, "extLst", 5)]
+    public ConnectionExtensionList ConnectionExtensionList { get; set; }
     
 
 
@@ -7102,13 +6655,7 @@ public partial class CacheField : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sharedItems","fieldGroup","mpMap","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SharedItems.</para>
@@ -7117,11 +6664,8 @@ public partial class CacheField : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public SharedItems SharedItems
-    {
-        get => GetElement<SharedItems>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "sharedItems", 0)]
+    public SharedItems SharedItems { get; set; }
     
     /// <summary>
     /// <para> FieldGroup.</para>
@@ -7130,11 +6674,8 @@ public partial class CacheField : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public FieldGroup FieldGroup
-    {
-        get => GetElement<FieldGroup>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "fieldGroup", 1)]
+    public FieldGroup FieldGroup { get; set; }
     
 
 
@@ -7967,13 +7508,7 @@ public partial class ErrorItem : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tpls","x" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Tuples.</para>
@@ -7982,11 +7517,8 @@ public partial class ErrorItem : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Tuples Tuples
-    {
-        get => GetElement<Tuples>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "tpls", 0)]
+    public Tuples Tuples { get; set; }
     
 
 
@@ -8760,13 +8292,7 @@ public partial class GroupLevel : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "groups","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OLAP Level Groups.</para>
@@ -8775,11 +8301,8 @@ public partial class GroupLevel : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Groups Groups
-    {
-        get => GetElement<Groups>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "groups", 0)]
+    public Groups Groups { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -8788,11 +8311,8 @@ public partial class GroupLevel : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "extLst", 1)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -8959,13 +8479,7 @@ public partial class Group : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "groupMembers" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OLAP Group Members.</para>
@@ -8974,11 +8488,8 @@ public partial class Group : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public GroupMembers GroupMembers
-    {
-        get => GetElement<GroupMembers>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "groupMembers", 0)]
+    public GroupMembers GroupMembers { get; set; }
     
 
 
@@ -9638,13 +9149,7 @@ public partial class Query : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tpls" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Tuples.</para>
@@ -9653,11 +9158,8 @@ public partial class Query : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Tuples Tuples
-    {
-        get => GetElement<Tuples>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "tpls", 0)]
+    public Tuples Tuples { get; set; }
     
 
 
@@ -9738,13 +9240,7 @@ public partial class CalculatedItem : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pivotArea","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Calculated Item Location.</para>
@@ -9753,11 +9249,8 @@ public partial class CalculatedItem : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotArea PivotArea
-    {
-        get => GetElement<PivotArea>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "pivotArea", 0)]
+    public PivotArea PivotArea { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -9766,11 +9259,8 @@ public partial class CalculatedItem : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "extLst", 1)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -9911,13 +9401,7 @@ public partial class PivotArea : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "references","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> References.</para>
@@ -9926,11 +9410,8 @@ public partial class PivotArea : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotAreaReferences PivotAreaReferences
-    {
-        get => GetElement<PivotAreaReferences>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "references", 0)]
+    public PivotAreaReferences PivotAreaReferences { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -9939,11 +9420,8 @@ public partial class PivotArea : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "extLst", 1)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -10052,13 +9530,7 @@ public partial class CalculatedMember : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> CalculatedMemberExtensionList.</para>
@@ -10067,11 +9539,8 @@ public partial class CalculatedMember : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CalculatedMemberExtensionList CalculatedMemberExtensionList
-    {
-        get => GetElement<CalculatedMemberExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "extLst", 0)]
+    public CalculatedMemberExtensionList CalculatedMemberExtensionList { get; set; }
     
 
 
@@ -10430,13 +9899,7 @@ public partial class PivotField : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "items","autoSortScope","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Field Items.</para>
@@ -10445,11 +9908,8 @@ public partial class PivotField : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Items Items
-    {
-        get => GetElement<Items>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "items", 0)]
+    public Items Items { get; set; }
     
     /// <summary>
     /// <para> AutoSort Scope.</para>
@@ -10458,11 +9918,8 @@ public partial class PivotField : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public AutoSortScope AutoSortScope
-    {
-        get => GetElement<AutoSortScope>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "autoSortScope", 1)]
+    public AutoSortScope AutoSortScope { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -10471,11 +9928,8 @@ public partial class PivotField : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotFieldExtensionList PivotFieldExtensionList
-    {
-        get => GetElement<PivotFieldExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "extLst", 2)]
+    public PivotFieldExtensionList PivotFieldExtensionList { get; set; }
     
 
 
@@ -10681,13 +10135,7 @@ public partial class DataField : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> DataFieldExtensionList.</para>
@@ -10696,11 +10144,8 @@ public partial class DataField : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DataFieldExtensionList DataFieldExtensionList
-    {
-        get => GetElement<DataFieldExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "extLst", 0)]
+    public DataFieldExtensionList DataFieldExtensionList { get; set; }
     
 
 
@@ -10900,13 +10345,7 @@ public partial class Format : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pivotArea","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Pivot Table Location.</para>
@@ -10915,11 +10354,8 @@ public partial class Format : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotArea PivotArea
-    {
-        get => GetElement<PivotArea>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "pivotArea", 0)]
+    public PivotArea PivotArea { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -10928,11 +10364,8 @@ public partial class Format : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "extLst", 1)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -11019,13 +10452,7 @@ public partial class ConditionalFormat : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pivotAreas","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Pivot Areas.</para>
@@ -11034,11 +10461,8 @@ public partial class ConditionalFormat : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotAreas PivotAreas
-    {
-        get => GetElement<PivotAreas>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "pivotAreas", 0)]
+    public PivotAreas PivotAreas { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -11047,11 +10471,8 @@ public partial class ConditionalFormat : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "extLst", 1)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -11206,13 +10627,7 @@ public partial class ChartFormat : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pivotArea" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Pivot Table Location Rule.</para>
@@ -11221,11 +10636,8 @@ public partial class ChartFormat : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotArea PivotArea
-    {
-        get => GetElement<PivotArea>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "pivotArea", 0)]
+    public PivotArea PivotArea { get; set; }
     
 
 
@@ -11362,13 +10774,7 @@ public partial class PivotHierarchy : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "mps","members","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OLAP Member Properties.</para>
@@ -11377,11 +10783,8 @@ public partial class PivotHierarchy : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public MemberProperties MemberProperties
-    {
-        get => GetElement<MemberProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "mps", 0)]
+    public MemberProperties MemberProperties { get; set; }
     
 
 
@@ -11853,13 +11256,7 @@ public partial class PivotFilter : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "autoFilter","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> AutoFilter.</para>
@@ -11868,11 +11265,8 @@ public partial class PivotFilter : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public AutoFilter AutoFilter
-    {
-        get => GetElement<AutoFilter>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "autoFilter", 0)]
+    public AutoFilter AutoFilter { get; set; }
     
     /// <summary>
     /// <para> PivotFilterExtensionList.</para>
@@ -11881,11 +11275,8 @@ public partial class PivotFilter : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotFilterExtensionList PivotFilterExtensionList
-    {
-        get => GetElement<PivotFilterExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "extLst", 1)]
+    public PivotFilterExtensionList PivotFilterExtensionList { get; set; }
     
 
 
@@ -12088,13 +11479,7 @@ public partial class CacheHierarchy : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fieldsUsage","groupLevels","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> FieldsUsage.</para>
@@ -12103,11 +11488,8 @@ public partial class CacheHierarchy : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public FieldsUsage FieldsUsage
-    {
-        get => GetElement<FieldsUsage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "fieldsUsage", 0)]
+    public FieldsUsage FieldsUsage { get; set; }
     
     /// <summary>
     /// <para> GroupLevels.</para>
@@ -12116,11 +11498,8 @@ public partial class CacheHierarchy : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public GroupLevels GroupLevels
-    {
-        get => GetElement<GroupLevels>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "groupLevels", 1)]
+    public GroupLevels GroupLevels { get; set; }
     
     /// <summary>
     /// <para> CacheHierarchyExtensionList.</para>
@@ -12129,11 +11508,8 @@ public partial class CacheHierarchy : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CacheHierarchyExtensionList CacheHierarchyExtensionList
-    {
-        get => GetElement<CacheHierarchyExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "extLst", 2)]
+    public CacheHierarchyExtensionList CacheHierarchyExtensionList { get; set; }
     
 
 
@@ -12459,13 +11835,7 @@ public partial class PageField : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -12474,11 +11844,8 @@ public partial class PageField : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -13002,13 +12369,7 @@ public partial class QueryTableField : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -13017,11 +12378,8 @@ public partial class QueryTableField : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -13229,13 +12587,7 @@ public abstract partial class RstType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "t","r","rPh","phoneticPr" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Text.</para>
@@ -13244,11 +12596,8 @@ public abstract partial class RstType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Text Text
-    {
-        get => GetElement<Text>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "t", 0)]
+    public Text Text { get; set; }
     
 
 
@@ -14039,13 +13388,7 @@ public partial class Run : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rPr","t" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Run Properties.</para>
@@ -14054,11 +13397,8 @@ public partial class Run : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public RunProperties RunProperties
-    {
-        get => GetElement<RunProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "rPr", 0)]
+    public RunProperties RunProperties { get; set; }
     
     /// <summary>
     /// <para> Text.</para>
@@ -14067,11 +13407,8 @@ public partial class Run : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Text Text
-    {
-        get => GetElement<Text>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "t", 1)]
+    public Text Text { get; set; }
     
 
 
@@ -14150,13 +13487,7 @@ public partial class PhoneticRun : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "t" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Text.</para>
@@ -14165,11 +13496,8 @@ public partial class PhoneticRun : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Text Text
-    {
-        get => GetElement<Text>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "t", 0)]
+    public Text Text { get; set; }
     
 
 
@@ -14333,13 +13661,7 @@ public partial class Header : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sheetIdMap","reviewedList","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Sheet Id Map.</para>
@@ -14348,11 +13670,8 @@ public partial class Header : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public SheetIdMap SheetIdMap
-    {
-        get => GetElement<SheetIdMap>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "sheetIdMap", 0)]
+    public SheetIdMap SheetIdMap { get; set; }
     
     /// <summary>
     /// <para> Reviewed List.</para>
@@ -14361,11 +13680,8 @@ public partial class Header : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ReviewedList ReviewedList
-    {
-        get => GetElement<ReviewedList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "reviewedList", 1)]
+    public ReviewedList ReviewedList { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -14374,11 +13690,8 @@ public partial class Header : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "extLst", 2)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -14750,13 +14063,7 @@ public partial class RevisionSheetName : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -14765,11 +14072,8 @@ public partial class RevisionSheetName : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -14995,13 +14299,7 @@ public partial class RevisionCellChange : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "oc","nc","odxf","ndxf","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Old Cell Data.</para>
@@ -15010,11 +14308,8 @@ public partial class RevisionCellChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public OldCell OldCell
-    {
-        get => GetElement<OldCell>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "oc", 0)]
+    public OldCell OldCell { get; set; }
     
     /// <summary>
     /// <para> New Cell Data.</para>
@@ -15023,11 +14318,8 @@ public partial class RevisionCellChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public NewCell NewCell
-    {
-        get => GetElement<NewCell>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "nc", 1)]
+    public NewCell NewCell { get; set; }
     
     /// <summary>
     /// <para> Old Formatting Information.</para>
@@ -15036,11 +14328,8 @@ public partial class RevisionCellChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public OldDifferentialFormat OldDifferentialFormat
-    {
-        get => GetElement<OldDifferentialFormat>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "odxf", 2)]
+    public OldDifferentialFormat OldDifferentialFormat { get; set; }
     
     /// <summary>
     /// <para> New Formatting Information.</para>
@@ -15049,11 +14338,8 @@ public partial class RevisionCellChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public NewDifferentialFormat NewDifferentialFormat
-    {
-        get => GetElement<NewDifferentialFormat>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "ndxf", 3)]
+    public NewDifferentialFormat NewDifferentialFormat { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -15062,11 +14348,8 @@ public partial class RevisionCellChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "extLst", 4)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -15171,13 +14454,7 @@ public partial class RevisionFormat : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "dxf","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Formatting.</para>
@@ -15186,11 +14463,8 @@ public partial class RevisionFormat : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DifferentialFormat DifferentialFormat
-    {
-        get => GetElement<DifferentialFormat>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "dxf", 0)]
+    public DifferentialFormat DifferentialFormat { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -15199,11 +14473,8 @@ public partial class RevisionFormat : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "extLst", 1)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -15503,13 +14774,7 @@ public partial class RevisionDefinedName : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "formula","oldFormula","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Formula.</para>
@@ -15518,11 +14783,8 @@ public partial class RevisionDefinedName : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Formula Formula
-    {
-        get => GetElement<Formula>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "formula", 0)]
+    public Formula Formula { get; set; }
     
     /// <summary>
     /// <para> Old Formula.</para>
@@ -15531,11 +14793,8 @@ public partial class RevisionDefinedName : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public OldFormula OldFormula
-    {
-        get => GetElement<OldFormula>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "oldFormula", 1)]
+    public OldFormula OldFormula { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -15544,11 +14803,8 @@ public partial class RevisionDefinedName : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "extLst", 2)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -16208,13 +15464,7 @@ public abstract partial class CellType : OpenXmlCompositeElement
     public BooleanValue ShowPhonetic { get; set; }
 
     
-        private static readonly string[] eleTagNames = { "f","v","is","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Formula.</para>
@@ -16223,11 +15473,8 @@ public abstract partial class CellType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CellFormula CellFormula
-    {
-        get => GetElement<CellFormula>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "f", 0)]
+    public CellFormula CellFormula { get; set; }
     
     /// <summary>
     /// <para> Cell Value.</para>
@@ -16236,11 +15483,8 @@ public abstract partial class CellType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CellValue CellValue
-    {
-        get => GetElement<CellValue>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "v", 1)]
+    public CellValue CellValue { get; set; }
     
     /// <summary>
     /// <para> Rich Text Inline.</para>
@@ -16249,11 +15493,8 @@ public abstract partial class CellType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public InlineString InlineString
-    {
-        get => GetElement<InlineString>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "is", 2)]
+    public InlineString InlineString { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -16262,11 +15503,8 @@ public abstract partial class CellType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "extLst", 3)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -16406,13 +15644,7 @@ public partial class NewCell : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "f","v","is","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Formula.</para>
@@ -16421,11 +15653,8 @@ public partial class NewCell : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CellFormula CellFormula
-    {
-        get => GetElement<CellFormula>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "f", 0)]
+    public CellFormula CellFormula { get; set; }
     
     /// <summary>
     /// <para> Cell Value.</para>
@@ -16434,11 +15663,8 @@ public partial class NewCell : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CellValue CellValue
-    {
-        get => GetElement<CellValue>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "v", 1)]
+    public CellValue CellValue { get; set; }
     
     /// <summary>
     /// <para> Rich Text Inline.</para>
@@ -16447,11 +15673,8 @@ public partial class NewCell : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public InlineString InlineString
-    {
-        get => GetElement<InlineString>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "is", 2)]
+    public InlineString InlineString { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -16460,11 +15683,8 @@ public partial class NewCell : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "extLst", 3)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -16687,13 +15907,7 @@ public abstract partial class DifferentialFormatType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "font","numFmt","fill","alignment","border","protection","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Font Properties.</para>
@@ -16702,11 +15916,8 @@ public abstract partial class DifferentialFormatType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Font Font
-    {
-        get => GetElement<Font>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "font", 0)]
+    public Font Font { get; set; }
     
     /// <summary>
     /// <para> Number Format.</para>
@@ -16715,11 +15926,8 @@ public abstract partial class DifferentialFormatType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public NumberingFormat NumberingFormat
-    {
-        get => GetElement<NumberingFormat>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "numFmt", 1)]
+    public NumberingFormat NumberingFormat { get; set; }
     
     /// <summary>
     /// <para> Fill.</para>
@@ -16728,11 +15936,8 @@ public abstract partial class DifferentialFormatType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Fill Fill
-    {
-        get => GetElement<Fill>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "fill", 2)]
+    public Fill Fill { get; set; }
     
     /// <summary>
     /// <para> Alignment.</para>
@@ -16741,11 +15946,8 @@ public abstract partial class DifferentialFormatType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Alignment Alignment
-    {
-        get => GetElement<Alignment>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "alignment", 3)]
+    public Alignment Alignment { get; set; }
     
     /// <summary>
     /// <para> Border Properties.</para>
@@ -16754,11 +15956,8 @@ public abstract partial class DifferentialFormatType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Border Border
-    {
-        get => GetElement<Border>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "border", 4)]
+    public Border Border { get; set; }
     
     /// <summary>
     /// <para> Protection Properties.</para>
@@ -16767,11 +15966,8 @@ public abstract partial class DifferentialFormatType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Protection Protection
-    {
-        get => GetElement<Protection>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(22, "protection", 5)]
+    public Protection Protection { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -16780,11 +15976,8 @@ public abstract partial class DifferentialFormatType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(22, "extLst", 6)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -17067,13 +16260,7 @@ public partial class UserInfo : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -17082,11 +16269,8 @@ public partial class UserInfo : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -17708,13 +16892,7 @@ public partial class PivotSelection : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pivotArea" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Pivot Area.</para>
@@ -17723,11 +16901,8 @@ public partial class PivotSelection : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotArea PivotArea
-    {
-        get => GetElement<PivotArea>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "pivotArea", 0)]
+    public PivotArea PivotArea { get; set; }
     
 
 
@@ -18386,13 +17561,7 @@ public partial class HeaderFooter : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "oddHeader","oddFooter","evenHeader","evenFooter","firstHeader","firstFooter" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Odd Header.</para>
@@ -18401,11 +17570,8 @@ public partial class HeaderFooter : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public OddHeader OddHeader
-    {
-        get => GetElement<OddHeader>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "oddHeader", 0)]
+    public OddHeader OddHeader { get; set; }
     
     /// <summary>
     /// <para> Odd Page Footer.</para>
@@ -18414,11 +17580,8 @@ public partial class HeaderFooter : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public OddFooter OddFooter
-    {
-        get => GetElement<OddFooter>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "oddFooter", 1)]
+    public OddFooter OddFooter { get; set; }
     
     /// <summary>
     /// <para> Even Page Header.</para>
@@ -18427,11 +17590,8 @@ public partial class HeaderFooter : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public EvenHeader EvenHeader
-    {
-        get => GetElement<EvenHeader>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "evenHeader", 2)]
+    public EvenHeader EvenHeader { get; set; }
     
     /// <summary>
     /// <para> Even Page Footer.</para>
@@ -18440,11 +17600,8 @@ public partial class HeaderFooter : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public EvenFooter EvenFooter
-    {
-        get => GetElement<EvenFooter>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "evenFooter", 3)]
+    public EvenFooter EvenFooter { get; set; }
     
     /// <summary>
     /// <para> First Page Header.</para>
@@ -18453,11 +17610,8 @@ public partial class HeaderFooter : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public FirstHeader FirstHeader
-    {
-        get => GetElement<FirstHeader>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "firstHeader", 4)]
+    public FirstHeader FirstHeader { get; set; }
     
     /// <summary>
     /// <para> First Page Footer.</para>
@@ -18466,11 +17620,8 @@ public partial class HeaderFooter : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public FirstFooter FirstFooter
-    {
-        get => GetElement<FirstFooter>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(22, "firstFooter", 5)]
+    public FirstFooter FirstFooter { get; set; }
     
 
 
@@ -18842,13 +17993,7 @@ public partial class ConditionalFormatValueObject : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -18857,11 +18002,8 @@ public partial class ConditionalFormatValueObject : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -19430,13 +18572,7 @@ public partial class ChartSheetView : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -19445,11 +18581,8 @@ public partial class ChartSheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -19544,13 +18677,7 @@ public partial class CustomChartsheetView : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pageMargins","pageSetup","headerFooter" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PageMargins.</para>
@@ -19559,11 +18686,8 @@ public partial class CustomChartsheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PageMargins PageMargins
-    {
-        get => GetElement<PageMargins>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "pageMargins", 0)]
+    public PageMargins PageMargins { get; set; }
     
     /// <summary>
     /// <para> Chart Sheet Page Setup.</para>
@@ -19572,11 +18696,8 @@ public partial class CustomChartsheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ChartSheetPageSetup ChartSheetPageSetup
-    {
-        get => GetElement<ChartSheetPageSetup>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "pageSetup", 1)]
+    public ChartSheetPageSetup ChartSheetPageSetup { get; set; }
     
     /// <summary>
     /// <para> HeaderFooter.</para>
@@ -19585,11 +18706,8 @@ public partial class CustomChartsheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public HeaderFooter HeaderFooter
-    {
-        get => GetElement<HeaderFooter>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "headerFooter", 2)]
+    public HeaderFooter HeaderFooter { get; set; }
     
 
 
@@ -19737,13 +18855,7 @@ public partial class Control : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "controlPr" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ControlProperties.</para>
@@ -19752,11 +18864,8 @@ public partial class Control : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ControlProperties ControlProperties
-    {
-        get => GetElement<ControlProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "controlPr", 0)]
+    public ControlProperties ControlProperties { get; set; }
     
 
 
@@ -20033,13 +19142,7 @@ public partial class DataValidation : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "list","formula1","formula2" };
-    private static readonly byte[] eleNamespaceIds = { 72,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> List, this property is only available in Office2013.</para>
@@ -20048,12 +19151,9 @@ public partial class DataValidation : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x12ac = http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac
     /// </remark>
+	[SchemaAttr(72, "list", 0)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
-    public DocumentFormat.OpenXml.Office2010.ExcelAc.List List
-    {
-        get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>(0);
-        set => SetElement(0, value);
-    }
+    public DocumentFormat.OpenXml.Office2010.ExcelAc.List List { get; set; }
     
     /// <summary>
     /// <para> Formula1.</para>
@@ -20062,11 +19162,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Formula1 Formula1
-    {
-        get => GetElement<Formula1>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "formula1", 1)]
+    public Formula1 Formula1 { get; set; }
     
     /// <summary>
     /// <para> Formula2.</para>
@@ -20075,11 +19172,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Formula2 Formula2
-    {
-        get => GetElement<Formula2>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "formula2", 2)]
+    public Formula2 Formula2 { get; set; }
     
 
 
@@ -20266,13 +19360,7 @@ public partial class SheetView : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pane","selection","pivotSelection","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> View Pane.</para>
@@ -20281,11 +19369,8 @@ public partial class SheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Pane Pane
-    {
-        get => GetElement<Pane>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "pane", 0)]
+    public Pane Pane { get; set; }
     
 
 
@@ -20490,13 +19575,7 @@ public partial class CustomSheetView : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pane","selection","rowBreaks","colBreaks","pageMargins","printOptions","pageSetup","headerFooter","autoFilter","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Pane Split Information.</para>
@@ -20505,11 +19584,8 @@ public partial class CustomSheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Pane Pane
-    {
-        get => GetElement<Pane>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "pane", 0)]
+    public Pane Pane { get; set; }
     
     /// <summary>
     /// <para> Selection.</para>
@@ -20518,11 +19594,8 @@ public partial class CustomSheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Selection Selection
-    {
-        get => GetElement<Selection>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "selection", 1)]
+    public Selection Selection { get; set; }
     
     /// <summary>
     /// <para> Horizontal Page Breaks.</para>
@@ -20531,11 +19604,8 @@ public partial class CustomSheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public RowBreaks RowBreaks
-    {
-        get => GetElement<RowBreaks>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "rowBreaks", 2)]
+    public RowBreaks RowBreaks { get; set; }
     
     /// <summary>
     /// <para> Vertical Page Breaks.</para>
@@ -20544,11 +19614,8 @@ public partial class CustomSheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ColumnBreaks ColumnBreaks
-    {
-        get => GetElement<ColumnBreaks>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "colBreaks", 3)]
+    public ColumnBreaks ColumnBreaks { get; set; }
     
     /// <summary>
     /// <para> Page Margins.</para>
@@ -20557,11 +19624,8 @@ public partial class CustomSheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PageMargins PageMargins
-    {
-        get => GetElement<PageMargins>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "pageMargins", 4)]
+    public PageMargins PageMargins { get; set; }
     
     /// <summary>
     /// <para> Print Options.</para>
@@ -20570,11 +19634,8 @@ public partial class CustomSheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PrintOptions PrintOptions
-    {
-        get => GetElement<PrintOptions>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(22, "printOptions", 5)]
+    public PrintOptions PrintOptions { get; set; }
     
     /// <summary>
     /// <para> Page Setup Settings.</para>
@@ -20583,11 +19644,8 @@ public partial class CustomSheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PageSetup PageSetup
-    {
-        get => GetElement<PageSetup>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(22, "pageSetup", 6)]
+    public PageSetup PageSetup { get; set; }
     
     /// <summary>
     /// <para> Header Footer Settings.</para>
@@ -20596,11 +19654,8 @@ public partial class CustomSheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public HeaderFooter HeaderFooter
-    {
-        get => GetElement<HeaderFooter>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(22, "headerFooter", 7)]
+    public HeaderFooter HeaderFooter { get; set; }
     
     /// <summary>
     /// <para> AutoFilter Settings.</para>
@@ -20609,11 +19664,8 @@ public partial class CustomSheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public AutoFilter AutoFilter
-    {
-        get => GetElement<AutoFilter>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(22, "autoFilter", 8)]
+    public AutoFilter AutoFilter { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -20622,11 +19674,8 @@ public partial class CustomSheetView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(22, "extLst", 9)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -20737,13 +19786,7 @@ public partial class OleObject : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "objectPr" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> EmbeddedObjectProperties.</para>
@@ -20752,11 +19795,8 @@ public partial class OleObject : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public EmbeddedObjectProperties EmbeddedObjectProperties
-    {
-        get => GetElement<EmbeddedObjectProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "objectPr", 0)]
+    public EmbeddedObjectProperties EmbeddedObjectProperties { get; set; }
     
 
 
@@ -21588,13 +20628,7 @@ public partial class FutureMetadataBlock : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Future Feature Storage Area.</para>
@@ -21603,11 +20637,8 @@ public partial class FutureMetadataBlock : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -21692,13 +20723,7 @@ public partial class Mdx : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "t","ms","p","k" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Tuple MDX Metadata.</para>
@@ -21707,11 +20732,8 @@ public partial class Mdx : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public MdxTuple MdxTuple
-    {
-        get => GetElement<MdxTuple>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "t", 0)]
+    public MdxTuple MdxTuple { get; set; }
     
     /// <summary>
     /// <para> Set MDX Metadata.</para>
@@ -21720,11 +20742,8 @@ public partial class Mdx : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public MdxSet MdxSet
-    {
-        get => GetElement<MdxSet>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "ms", 1)]
+    public MdxSet MdxSet { get; set; }
     
     /// <summary>
     /// <para> Member Property MDX Metadata.</para>
@@ -21733,11 +20752,8 @@ public partial class Mdx : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public MdxMemberProp MdxMemberProp
-    {
-        get => GetElement<MdxMemberProp>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "p", 2)]
+    public MdxMemberProp MdxMemberProp { get; set; }
     
     /// <summary>
     /// <para> KPI MDX Metadata.</para>
@@ -21746,11 +20762,8 @@ public partial class Mdx : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public MdxKpi MdxKpi
-    {
-        get => GetElement<MdxKpi>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "k", 3)]
+    public MdxKpi MdxKpi { get; set; }
     
 
 
@@ -22178,13 +21191,7 @@ public partial class SingleXmlCell : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "xmlCellPr","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Cell Properties.</para>
@@ -22193,11 +21200,8 @@ public partial class SingleXmlCell : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public XmlCellProperties XmlCellProperties
-    {
-        get => GetElement<XmlCellProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "xmlCellPr", 0)]
+    public XmlCellProperties XmlCellProperties { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -22206,11 +21210,8 @@ public partial class SingleXmlCell : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "extLst", 1)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -22291,13 +21292,7 @@ public partial class XmlCellProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "xmlPr","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Column XML Properties.</para>
@@ -22306,11 +21301,8 @@ public partial class XmlCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public XmlProperties XmlProperties
-    {
-        get => GetElement<XmlProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "xmlPr", 0)]
+    public XmlProperties XmlProperties { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -22319,11 +21311,8 @@ public partial class XmlCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "extLst", 1)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -22408,13 +21397,7 @@ public partial class XmlProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -22423,11 +21406,8 @@ public partial class XmlProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -22502,13 +21482,7 @@ public partial class PatternFill : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fgColor","bgColor" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Foreground Color.</para>
@@ -22517,11 +21491,8 @@ public partial class PatternFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ForegroundColor ForegroundColor
-    {
-        get => GetElement<ForegroundColor>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "fgColor", 0)]
+    public ForegroundColor ForegroundColor { get; set; }
     
     /// <summary>
     /// <para> Background Color.</para>
@@ -22530,11 +21501,8 @@ public partial class PatternFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public BackgroundColor BackgroundColor
-    {
-        get => GetElement<BackgroundColor>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "bgColor", 1)]
+    public BackgroundColor BackgroundColor { get; set; }
     
 
 
@@ -22707,13 +21675,7 @@ public partial class GradientStop : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "color" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Color.</para>
@@ -22722,11 +21684,8 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Color Color
-    {
-        get => GetElement<Color>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "color", 0)]
+    public Color Color { get; set; }
     
 
 
@@ -22998,13 +21957,7 @@ public partial class Font : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "b","i","strike","condense","extend","outline","shadow","u","vertAlign","sz","color","name","family","charset","scheme" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Bold.</para>
@@ -23013,11 +21966,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Bold Bold
-    {
-        get => GetElement<Bold>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "b", 0)]
+    public Bold Bold { get; set; }
     
     /// <summary>
     /// <para> Italic.</para>
@@ -23026,11 +21976,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Italic Italic
-    {
-        get => GetElement<Italic>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "i", 1)]
+    public Italic Italic { get; set; }
     
     /// <summary>
     /// <para> Strike Through.</para>
@@ -23039,11 +21986,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Strike Strike
-    {
-        get => GetElement<Strike>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "strike", 2)]
+    public Strike Strike { get; set; }
     
     /// <summary>
     /// <para> Condense.</para>
@@ -23052,11 +21996,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Condense Condense
-    {
-        get => GetElement<Condense>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "condense", 3)]
+    public Condense Condense { get; set; }
     
     /// <summary>
     /// <para> Extend.</para>
@@ -23065,11 +22006,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Extend Extend
-    {
-        get => GetElement<Extend>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "extend", 4)]
+    public Extend Extend { get; set; }
     
     /// <summary>
     /// <para> Outline.</para>
@@ -23078,11 +22016,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Outline Outline
-    {
-        get => GetElement<Outline>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(22, "outline", 5)]
+    public Outline Outline { get; set; }
     
     /// <summary>
     /// <para> Shadow.</para>
@@ -23091,11 +22026,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Shadow Shadow
-    {
-        get => GetElement<Shadow>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(22, "shadow", 6)]
+    public Shadow Shadow { get; set; }
     
     /// <summary>
     /// <para> Underline.</para>
@@ -23104,11 +22036,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Underline Underline
-    {
-        get => GetElement<Underline>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(22, "u", 7)]
+    public Underline Underline { get; set; }
     
     /// <summary>
     /// <para> Text Vertical Alignment.</para>
@@ -23117,11 +22046,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public VerticalTextAlignment VerticalTextAlignment
-    {
-        get => GetElement<VerticalTextAlignment>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(22, "vertAlign", 8)]
+    public VerticalTextAlignment VerticalTextAlignment { get; set; }
     
     /// <summary>
     /// <para> Font Size.</para>
@@ -23130,11 +22056,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public FontSize FontSize
-    {
-        get => GetElement<FontSize>(9);
-        set => SetElement(9, value);
-    }
+	[SchemaAttr(22, "sz", 9)]
+    public FontSize FontSize { get; set; }
     
     /// <summary>
     /// <para> Text Color.</para>
@@ -23143,11 +22066,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Color Color
-    {
-        get => GetElement<Color>(10);
-        set => SetElement(10, value);
-    }
+	[SchemaAttr(22, "color", 10)]
+    public Color Color { get; set; }
     
     /// <summary>
     /// <para> Font Name.</para>
@@ -23156,11 +22076,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public FontName FontName
-    {
-        get => GetElement<FontName>(11);
-        set => SetElement(11, value);
-    }
+	[SchemaAttr(22, "name", 11)]
+    public FontName FontName { get; set; }
     
     /// <summary>
     /// <para> Font Family.</para>
@@ -23169,11 +22086,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public FontFamilyNumbering FontFamilyNumbering
-    {
-        get => GetElement<FontFamilyNumbering>(12);
-        set => SetElement(12, value);
-    }
+	[SchemaAttr(22, "family", 12)]
+    public FontFamilyNumbering FontFamilyNumbering { get; set; }
     
     /// <summary>
     /// <para> Character Set.</para>
@@ -23182,11 +22096,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public FontCharSet FontCharSet
-    {
-        get => GetElement<FontCharSet>(13);
-        set => SetElement(13, value);
-    }
+	[SchemaAttr(22, "charset", 13)]
+    public FontCharSet FontCharSet { get; set; }
     
     /// <summary>
     /// <para> Scheme.</para>
@@ -23195,11 +22106,8 @@ public partial class Font : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public FontScheme FontScheme
-    {
-        get => GetElement<FontScheme>(14);
-        set => SetElement(14, value);
-    }
+	[SchemaAttr(22, "scheme", 14)]
+    public FontScheme FontScheme { get; set; }
     
 
 
@@ -23268,13 +22176,7 @@ public partial class Fill : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "patternFill","gradientFill" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Pattern.</para>
@@ -23283,11 +22185,8 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PatternFill PatternFill
-    {
-        get => GetElement<PatternFill>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "patternFill", 0)]
+    public PatternFill PatternFill { get; set; }
     
     /// <summary>
     /// <para> Gradient.</para>
@@ -23296,11 +22195,8 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public GradientFill GradientFill
-    {
-        get => GetElement<GradientFill>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "gradientFill", 1)]
+    public GradientFill GradientFill { get; set; }
     
 
 
@@ -23401,13 +22297,7 @@ public partial class Border : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "start","end","left","right","top","bottom","diagonal","vertical","horizontal" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> StartBorder.</para>
@@ -23416,11 +22306,8 @@ public partial class Border : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public StartBorder StartBorder
-    {
-        get => GetElement<StartBorder>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "start", 0)]
+    public StartBorder StartBorder { get; set; }
     
     /// <summary>
     /// <para> EndBorder.</para>
@@ -23429,11 +22316,8 @@ public partial class Border : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public EndBorder EndBorder
-    {
-        get => GetElement<EndBorder>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "end", 1)]
+    public EndBorder EndBorder { get; set; }
     
     /// <summary>
     /// <para> Left Border.</para>
@@ -23442,11 +22326,8 @@ public partial class Border : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public LeftBorder LeftBorder
-    {
-        get => GetElement<LeftBorder>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "left", 2)]
+    public LeftBorder LeftBorder { get; set; }
     
     /// <summary>
     /// <para> Right Border.</para>
@@ -23455,11 +22336,8 @@ public partial class Border : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public RightBorder RightBorder
-    {
-        get => GetElement<RightBorder>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "right", 3)]
+    public RightBorder RightBorder { get; set; }
     
     /// <summary>
     /// <para> Top Border.</para>
@@ -23468,11 +22346,8 @@ public partial class Border : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public TopBorder TopBorder
-    {
-        get => GetElement<TopBorder>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "top", 4)]
+    public TopBorder TopBorder { get; set; }
     
     /// <summary>
     /// <para> Bottom Border.</para>
@@ -23481,11 +22356,8 @@ public partial class Border : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public BottomBorder BottomBorder
-    {
-        get => GetElement<BottomBorder>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(22, "bottom", 5)]
+    public BottomBorder BottomBorder { get; set; }
     
     /// <summary>
     /// <para> Diagonal.</para>
@@ -23494,11 +22366,8 @@ public partial class Border : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DiagonalBorder DiagonalBorder
-    {
-        get => GetElement<DiagonalBorder>(6);
-        set => SetElement(6, value);
-    }
+	[SchemaAttr(22, "diagonal", 6)]
+    public DiagonalBorder DiagonalBorder { get; set; }
     
     /// <summary>
     /// <para> Vertical Inner Border.</para>
@@ -23507,11 +22376,8 @@ public partial class Border : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public VerticalBorder VerticalBorder
-    {
-        get => GetElement<VerticalBorder>(7);
-        set => SetElement(7, value);
-    }
+	[SchemaAttr(22, "vertical", 7)]
+    public VerticalBorder VerticalBorder { get; set; }
     
     /// <summary>
     /// <para> Horizontal Inner Borders.</para>
@@ -23520,11 +22386,8 @@ public partial class Border : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public HorizontalBorder HorizontalBorder
-    {
-        get => GetElement<HorizontalBorder>(8);
-        set => SetElement(8, value);
-    }
+	[SchemaAttr(22, "horizontal", 8)]
+    public HorizontalBorder HorizontalBorder { get; set; }
     
 
 
@@ -23880,13 +22743,7 @@ public partial class CellStyle : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -23895,11 +22752,8 @@ public partial class CellStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -24048,13 +22902,7 @@ public partial class CellFormat : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "alignment","protection","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Alignment.</para>
@@ -24063,11 +22911,8 @@ public partial class CellFormat : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Alignment Alignment
-    {
-        get => GetElement<Alignment>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "alignment", 0)]
+    public Alignment Alignment { get; set; }
     
     /// <summary>
     /// <para> Protection.</para>
@@ -24076,11 +22921,8 @@ public partial class CellFormat : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Protection Protection
-    {
-        get => GetElement<Protection>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "protection", 1)]
+    public Protection Protection { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -24089,11 +22931,8 @@ public partial class CellFormat : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "extLst", 2)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -24725,13 +23564,7 @@ public partial class ExternalCell : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "v" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Value.</para>
@@ -24740,11 +23573,8 @@ public partial class ExternalCell : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Xstring Xstring
-    {
-        get => GetElement<Xstring>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "v", 0)]
+    public Xstring Xstring { get; set; }
     
 
 
@@ -24899,13 +23729,7 @@ public partial class DdeItem : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "values" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> DDE Name Values.</para>
@@ -24914,11 +23738,8 @@ public partial class DdeItem : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Values Values
-    {
-        get => GetElement<Values>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "values", 0)]
+    public Values Values { get; set; }
     
 
 
@@ -25067,13 +23888,7 @@ public partial class Value : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "val" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> DDE Link Value.</para>
@@ -25082,11 +23897,8 @@ public partial class Value : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DdeLinkValue DdeLinkValue
-    {
-        get => GetElement<DdeLinkValue>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "val", 0)]
+    public DdeLinkValue DdeLinkValue { get; set; }
     
 
 
@@ -25231,13 +24043,7 @@ public partial class ExternalBook : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sheetNames","definedNames","sheetDataSet" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Supporting Workbook Sheet Names.</para>
@@ -25246,11 +24052,8 @@ public partial class ExternalBook : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public SheetNames SheetNames
-    {
-        get => GetElement<SheetNames>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "sheetNames", 0)]
+    public SheetNames SheetNames { get; set; }
     
     /// <summary>
     /// <para> Named Links.</para>
@@ -25259,11 +24062,8 @@ public partial class ExternalBook : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExternalDefinedNames ExternalDefinedNames
-    {
-        get => GetElement<ExternalDefinedNames>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "definedNames", 1)]
+    public ExternalDefinedNames ExternalDefinedNames { get; set; }
     
     /// <summary>
     /// <para> Cached Worksheet Data.</para>
@@ -25272,11 +24072,8 @@ public partial class ExternalBook : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public SheetDataSet SheetDataSet
-    {
-        get => GetElement<SheetDataSet>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "sheetDataSet", 2)]
+    public SheetDataSet SheetDataSet { get; set; }
     
 
 
@@ -25355,13 +24152,7 @@ public partial class DdeLink : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ddeItems" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> DDE Items Collection.</para>
@@ -25370,11 +24161,8 @@ public partial class DdeLink : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DdeItems DdeItems
-    {
-        get => GetElement<DdeItems>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "ddeItems", 0)]
+    public DdeItems DdeItems { get; set; }
     
 
 
@@ -25455,13 +24243,7 @@ public partial class OleLink : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "oleItems" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OLE Link Items.</para>
@@ -25470,11 +24252,8 @@ public partial class OleLink : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public OleItems OleItems
-    {
-        get => GetElement<OleItems>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "oleItems", 0)]
+    public OleItems OleItems { get; set; }
     
 
 
@@ -25700,13 +24479,7 @@ public partial class TableColumn : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "calculatedColumnFormula","totalsRowFormula","xmlColumnPr","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Calculated Column Formula.</para>
@@ -25715,11 +24488,8 @@ public partial class TableColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CalculatedColumnFormula CalculatedColumnFormula
-    {
-        get => GetElement<CalculatedColumnFormula>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "calculatedColumnFormula", 0)]
+    public CalculatedColumnFormula CalculatedColumnFormula { get; set; }
     
     /// <summary>
     /// <para> Totals Row Formula.</para>
@@ -25728,11 +24498,8 @@ public partial class TableColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public TotalsRowFormula TotalsRowFormula
-    {
-        get => GetElement<TotalsRowFormula>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "totalsRowFormula", 1)]
+    public TotalsRowFormula TotalsRowFormula { get; set; }
     
     /// <summary>
     /// <para> XML Column Properties.</para>
@@ -25741,11 +24508,8 @@ public partial class TableColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public XmlColumnProperties XmlColumnProperties
-    {
-        get => GetElement<XmlColumnProperties>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "xmlColumnPr", 2)]
+    public XmlColumnProperties XmlColumnProperties { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -25754,11 +24518,8 @@ public partial class TableColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "extLst", 3)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -25970,13 +24731,7 @@ public partial class XmlColumnProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -25985,11 +24740,8 @@ public partial class XmlColumnProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -26206,13 +24958,7 @@ public partial class Topic : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "v","stp","tr" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Topic Value.</para>
@@ -26221,11 +24967,8 @@ public partial class Topic : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Xstring Xstring
-    {
-        get => GetElement<Xstring>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "v", 0)]
+    public Xstring Xstring { get; set; }
     
 
 
@@ -26630,13 +25373,7 @@ public partial class CustomWorkbookView : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -26645,11 +25382,8 @@ public partial class CustomWorkbookView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -26851,13 +25585,7 @@ public partial class WorkbookView : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -26866,11 +25594,8 @@ public partial class WorkbookView : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "extLst", 0)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -27198,13 +25923,7 @@ public partial class ObjectAnchor : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "from","to" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> FromMarker.</para>
@@ -27213,11 +25932,8 @@ public partial class ObjectAnchor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public FromMarker FromMarker
-    {
-        get => GetElement<FromMarker>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "from", 0)]
+    public FromMarker FromMarker { get; set; }
     
     /// <summary>
     /// <para> ToMarker.</para>
@@ -27226,11 +25942,8 @@ public partial class ObjectAnchor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ToMarker ToMarker
-    {
-        get => GetElement<ToMarker>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "to", 1)]
+    public ToMarker ToMarker { get; set; }
     
 
 
@@ -27379,13 +26092,7 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "col","colOff","row","rowOff" };
-    private static readonly byte[] eleNamespaceIds = { 18,18,18,18 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Column).</para>
@@ -27394,11 +26101,8 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId ColumnId
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(18, "col", 0)]
+    public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId ColumnId { get; set; }
     
     /// <summary>
     /// <para> Column Offset.</para>
@@ -27407,11 +26111,8 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset ColumnOffset
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(18, "colOff", 1)]
+    public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset ColumnOffset { get; set; }
     
     /// <summary>
     /// <para> Row.</para>
@@ -27420,11 +26121,8 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId RowId
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(18, "row", 2)]
+    public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId RowId { get; set; }
     
     /// <summary>
     /// <para> Row Offset.</para>
@@ -27433,11 +26131,8 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset RowOffset
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(18, "rowOff", 3)]
+    public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset RowOffset { get; set; }
     
 
 
@@ -28533,13 +27228,7 @@ public abstract partial class BorderPropertiesType : OpenXmlCompositeElement
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues> Style { get; set; }
 
     
-        private static readonly string[] eleTagNames = { "color" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Color.</para>
@@ -28548,11 +27237,8 @@ public abstract partial class BorderPropertiesType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Color Color
-    {
-        get => GetElement<Color>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "color", 0)]
+    public Color Color { get; set; }
     
 
 
@@ -28742,13 +27428,7 @@ public partial class ControlProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "anchor" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ObjectAnchor.</para>
@@ -28757,11 +27437,8 @@ public partial class ControlProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ObjectAnchor ObjectAnchor
-    {
-        get => GetElement<ObjectAnchor>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "anchor", 0)]
+    public ObjectAnchor ObjectAnchor { get; set; }
     
 
 
@@ -28902,13 +27579,7 @@ public partial class EmbeddedObjectProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "anchor" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ObjectAnchor.</para>
@@ -28917,11 +27588,8 @@ public partial class EmbeddedObjectProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ObjectAnchor ObjectAnchor
-    {
-        get => GetElement<ObjectAnchor>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "anchor", 0)]
+    public ObjectAnchor ObjectAnchor { get; set; }
     
 
 
@@ -29000,13 +27668,7 @@ public partial class ChartSheetProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tabColor" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> TabColor.</para>
@@ -29015,11 +27677,8 @@ public partial class ChartSheetProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public TabColor TabColor
-    {
-        get => GetElement<TabColor>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "tabColor", 0)]
+    public TabColor TabColor { get; set; }
     
 
 
@@ -30090,13 +28749,7 @@ public partial class SheetProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tabColor","outlinePr","pageSetUpPr" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Sheet Tab Color.</para>
@@ -30105,11 +28758,8 @@ public partial class SheetProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public TabColor TabColor
-    {
-        get => GetElement<TabColor>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "tabColor", 0)]
+    public TabColor TabColor { get; set; }
     
     /// <summary>
     /// <para> Outline Properties.</para>
@@ -30118,11 +28768,8 @@ public partial class SheetProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public OutlineProperties OutlineProperties
-    {
-        get => GetElement<OutlineProperties>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "outlinePr", 1)]
+    public OutlineProperties OutlineProperties { get; set; }
     
     /// <summary>
     /// <para> Page Setup Properties.</para>
@@ -30131,11 +28778,8 @@ public partial class SheetProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PageSetupProperties PageSetupProperties
-    {
-        get => GetElement<PageSetupProperties>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "pageSetUpPr", 2)]
+    public PageSetupProperties PageSetupProperties { get; set; }
     
 
 
@@ -30905,13 +29549,7 @@ public partial class DataConsolidate : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "dataRefs" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Data Consolidation References.</para>
@@ -30920,11 +29558,8 @@ public partial class DataConsolidate : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public DataReferences DataReferences
-    {
-        get => GetElement<DataReferences>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "dataRefs", 0)]
+    public DataReferences DataReferences { get; set; }
     
 
 
@@ -31413,13 +30048,7 @@ public partial class AutoSortScope : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pivotArea" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Auto Sort Scope.</para>
@@ -31428,11 +30057,8 @@ public partial class AutoSortScope : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public PivotArea PivotArea
-    {
-        get => GetElement<PivotArea>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "pivotArea", 0)]
+    public PivotArea PivotArea { get; set; }
     
 
 
@@ -31628,13 +30254,7 @@ public partial class Consolidation : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pages","rangeSets" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Page Item Values.</para>
@@ -31643,11 +30263,8 @@ public partial class Consolidation : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Pages Pages
-    {
-        get => GetElement<Pages>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "pages", 0)]
+    public Pages Pages { get; set; }
     
     /// <summary>
     /// <para> Range Sets.</para>
@@ -31656,11 +30273,8 @@ public partial class Consolidation : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public RangeSets RangeSets
-    {
-        get => GetElement<RangeSets>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "rangeSets", 1)]
+    public RangeSets RangeSets { get; set; }
     
 
 
@@ -31881,13 +30495,7 @@ public partial class CommentProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "anchor" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ObjectAnchor.</para>
@@ -31896,11 +30504,8 @@ public partial class CommentProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ObjectAnchor ObjectAnchor
-    {
-        get => GetElement<ObjectAnchor>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "anchor", 0)]
+    public ObjectAnchor ObjectAnchor { get; set; }
     
 
 
@@ -32936,13 +31541,7 @@ public partial class WebQueryProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "tables" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Tables.</para>
@@ -32951,11 +31550,8 @@ public partial class WebQueryProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Tables Tables
-    {
-        get => GetElement<Tables>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "tables", 0)]
+    public Tables Tables { get; set; }
     
 
 
@@ -33118,13 +31714,7 @@ public partial class TextProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "textFields" };
-    private static readonly byte[] eleNamespaceIds = { 22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> TextFields.</para>
@@ -33133,11 +31723,8 @@ public partial class TextProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public TextFields TextFields
-    {
-        get => GetElement<TextFields>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "textFields", 0)]
+    public TextFields TextFields { get; set; }
     
 
 
@@ -33496,13 +32083,7 @@ public partial class CacheSource : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "worksheetSource","consolidation","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> WorksheetSource.</para>
@@ -33511,11 +32092,8 @@ public partial class CacheSource : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public WorksheetSource WorksheetSource
-    {
-        get => GetElement<WorksheetSource>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "worksheetSource", 0)]
+    public WorksheetSource WorksheetSource { get; set; }
     
     /// <summary>
     /// <para> Consolidation.</para>
@@ -33524,11 +32102,8 @@ public partial class CacheSource : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Consolidation Consolidation
-    {
-        get => GetElement<Consolidation>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "consolidation", 1)]
+    public Consolidation Consolidation { get; set; }
     
     /// <summary>
     /// <para> CacheSourceExtensionList.</para>
@@ -33537,11 +32112,8 @@ public partial class CacheSource : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public CacheSourceExtensionList CacheSourceExtensionList
-    {
-        get => GetElement<CacheSourceExtensionList>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "extLst", 2)]
+    public CacheSourceExtensionList CacheSourceExtensionList { get; set; }
     
 
 
@@ -33826,13 +32398,7 @@ public partial class TupleCache : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "entries","sets","queryCache","serverFormats","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Entries.</para>
@@ -33841,11 +32407,8 @@ public partial class TupleCache : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Entries Entries
-    {
-        get => GetElement<Entries>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "entries", 0)]
+    public Entries Entries { get; set; }
     
     /// <summary>
     /// <para> Sets.</para>
@@ -33854,11 +32417,8 @@ public partial class TupleCache : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public Sets Sets
-    {
-        get => GetElement<Sets>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "sets", 1)]
+    public Sets Sets { get; set; }
     
     /// <summary>
     /// <para> OLAP Query Cache.</para>
@@ -33867,11 +32427,8 @@ public partial class TupleCache : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public QueryCache QueryCache
-    {
-        get => GetElement<QueryCache>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "queryCache", 2)]
+    public QueryCache QueryCache { get; set; }
     
     /// <summary>
     /// <para> Server Formats.</para>
@@ -33880,11 +32437,8 @@ public partial class TupleCache : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ServerFormats ServerFormats
-    {
-        get => GetElement<ServerFormats>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "serverFormats", 3)]
+    public ServerFormats ServerFormats { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -33893,11 +32447,8 @@ public partial class TupleCache : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(22, "extLst", 4)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -36740,13 +35291,7 @@ public partial class QueryTableRefresh : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "queryTableFields","queryTableDeletedFields","sortState","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Query table fields.</para>
@@ -36755,11 +35300,8 @@ public partial class QueryTableRefresh : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public QueryTableFields QueryTableFields
-    {
-        get => GetElement<QueryTableFields>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "queryTableFields", 0)]
+    public QueryTableFields QueryTableFields { get; set; }
     
     /// <summary>
     /// <para> Deleted Fields.</para>
@@ -36768,11 +35310,8 @@ public partial class QueryTableRefresh : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public QueryTableDeletedFields QueryTableDeletedFields
-    {
-        get => GetElement<QueryTableDeletedFields>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "queryTableDeletedFields", 1)]
+    public QueryTableDeletedFields QueryTableDeletedFields { get; set; }
     
     /// <summary>
     /// <para> Sort State.</para>
@@ -36781,11 +35320,8 @@ public partial class QueryTableRefresh : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public SortState SortState
-    {
-        get => GetElement<SortState>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(22, "sortState", 2)]
+    public SortState SortState { get; set; }
     
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
@@ -36794,11 +35330,8 @@ public partial class QueryTableRefresh : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(22, "extLst", 3)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 
@@ -38334,13 +36867,7 @@ public partial class Colors : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "indexedColors","mruColors" };
-    private static readonly byte[] eleNamespaceIds = { 22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Color Indexes.</para>
@@ -38349,11 +36876,8 @@ public partial class Colors : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public IndexedColors IndexedColors
-    {
-        get => GetElement<IndexedColors>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(22, "indexedColors", 0)]
+    public IndexedColors IndexedColors { get; set; }
     
     /// <summary>
     /// <para> MRU Colors.</para>
@@ -38362,11 +36886,8 @@ public partial class Colors : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
-    public MruColors MruColors
-    {
-        get => GetElement<MruColors>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(22, "mruColors", 1)]
+    public MruColors MruColors { get; set; }
     
 
 

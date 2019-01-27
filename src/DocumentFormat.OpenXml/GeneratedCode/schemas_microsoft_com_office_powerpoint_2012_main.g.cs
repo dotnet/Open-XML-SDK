@@ -167,13 +167,7 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "parentCm" };
-    private static readonly byte[] eleNamespaceIds = { 68 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ParentCommentIdentifier.</para>
@@ -182,11 +176,8 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
     /// </remark>
-    public ParentCommentIdentifier ParentCommentIdentifier
-    {
-        get => GetElement<ParentCommentIdentifier>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(68, "parentCm", 0)]
+    public ParentCommentIdentifier ParentCommentIdentifier { get; set; }
     
 
 
@@ -512,13 +503,7 @@ public partial class ColorType : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -527,11 +512,8 @@ public partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "scrgbClr", 0)]
+    public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage { get; set; }
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -540,11 +522,8 @@ public partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(10, "srgbClr", 1)]
+    public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex { get; set; }
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -553,11 +532,8 @@ public partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.HslColor HslColor
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(10, "hslClr", 2)]
+    public DocumentFormat.OpenXml.Drawing.HslColor HslColor { get; set; }
     
     /// <summary>
     /// <para> System Color.</para>
@@ -566,11 +542,8 @@ public partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(10, "sysClr", 3)]
+    public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor { get; set; }
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -579,11 +552,8 @@ public partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(10, "schemeClr", 4)]
+    public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor { get; set; }
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -592,11 +562,8 @@ public partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(10, "prstClr", 5)]
+    public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor { get; set; }
     
 
 
@@ -759,13 +726,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "clr","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 68,68 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ColorType.</para>
@@ -774,11 +735,8 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
     /// </remark>
-    public ColorType ColorType
-    {
-        get => GetElement<ColorType>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(68, "clr", 0)]
+    public ColorType ColorType { get; set; }
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -787,11 +745,8 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
     /// </remark>
-    public ExtensionList ExtensionList
-    {
-        get => GetElement<ExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(68, "extLst", 1)]
+    public ExtensionList ExtensionList { get; set; }
     
 
 

@@ -118,13 +118,7 @@ public partial class WebExtension : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "reference","alternateReferences","properties","bindings","snapshot","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 66,66,66,66,66,66 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> WebExtensionStoreReference.</para>
@@ -133,11 +127,8 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-    public WebExtensionStoreReference WebExtensionStoreReference
-    {
-        get => GetElement<WebExtensionStoreReference>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(66, "reference", 0)]
+    public WebExtensionStoreReference WebExtensionStoreReference { get; set; }
     
     /// <summary>
     /// <para> WebExtensionReferenceList.</para>
@@ -146,11 +137,8 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-    public WebExtensionReferenceList WebExtensionReferenceList
-    {
-        get => GetElement<WebExtensionReferenceList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(66, "alternateReferences", 1)]
+    public WebExtensionReferenceList WebExtensionReferenceList { get; set; }
     
     /// <summary>
     /// <para> WebExtensionPropertyBag.</para>
@@ -159,11 +147,8 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-    public WebExtensionPropertyBag WebExtensionPropertyBag
-    {
-        get => GetElement<WebExtensionPropertyBag>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(66, "properties", 2)]
+    public WebExtensionPropertyBag WebExtensionPropertyBag { get; set; }
     
     /// <summary>
     /// <para> WebExtensionBindingList.</para>
@@ -172,11 +157,8 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-    public WebExtensionBindingList WebExtensionBindingList
-    {
-        get => GetElement<WebExtensionBindingList>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(66, "bindings", 3)]
+    public WebExtensionBindingList WebExtensionBindingList { get; set; }
     
     /// <summary>
     /// <para> Snapshot.</para>
@@ -185,11 +167,8 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-    public Snapshot Snapshot
-    {
-        get => GetElement<Snapshot>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(66, "snapshot", 4)]
+    public Snapshot Snapshot { get; set; }
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -198,11 +177,8 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-    public OfficeArtExtensionList OfficeArtExtensionList
-    {
-        get => GetElement<OfficeArtExtensionList>(5);
-        set => SetElement(5, value);
-    }
+	[SchemaAttr(66, "extLst", 5)]
+    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
     
 
 
@@ -433,13 +409,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 66 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -448,11 +418,8 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-    public OfficeArtExtensionList OfficeArtExtensionList
-    {
-        get => GetElement<OfficeArtExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(66, "extLst", 0)]
+    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
     
 
 
@@ -543,13 +510,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 66 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -558,11 +519,8 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-    public OfficeArtExtensionList OfficeArtExtensionList
-    {
-        get => GetElement<OfficeArtExtensionList>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(66, "extLst", 0)]
+    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
     
 
 

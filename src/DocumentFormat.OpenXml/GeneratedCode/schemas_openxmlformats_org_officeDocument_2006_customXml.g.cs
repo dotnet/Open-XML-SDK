@@ -103,13 +103,7 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "schemaRefs" };
-    private static readonly byte[] eleNamespaceIds = { 20 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Set of Associated XML Schemas.</para>
@@ -118,11 +112,8 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ds = http://schemas.openxmlformats.org/officeDocument/2006/customXml
     /// </remark>
-    public SchemaReferences SchemaReferences
-    {
-        get => GetElement<SchemaReferences>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(20, "schemaRefs", 0)]
+    public SchemaReferences SchemaReferences { get; set; }
     
 
 

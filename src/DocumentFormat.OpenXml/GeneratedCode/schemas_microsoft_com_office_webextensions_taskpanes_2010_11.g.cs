@@ -296,13 +296,7 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "webextensionref","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 70,70 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> WebExtensionPartReference.</para>
@@ -311,11 +305,8 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wetp = http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11
     /// </remark>
-    public WebExtensionPartReference WebExtensionPartReference
-    {
-        get => GetElement<WebExtensionPartReference>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(70, "webextensionref", 0)]
+    public WebExtensionPartReference WebExtensionPartReference { get; set; }
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -324,11 +315,8 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wetp = http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11
     /// </remark>
-    public OfficeArtExtensionList OfficeArtExtensionList
-    {
-        get => GetElement<OfficeArtExtensionList>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(70, "extLst", 1)]
+    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
     
 
 

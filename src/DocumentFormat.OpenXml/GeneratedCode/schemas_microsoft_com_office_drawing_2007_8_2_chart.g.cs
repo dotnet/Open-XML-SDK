@@ -78,13 +78,7 @@ public partial class PivotOptions : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "dropZoneFilter","dropZoneCategories","dropZoneData","dropZoneSeries","dropZonesVisible" };
-    private static readonly byte[] eleNamespaceIds = { 46,46,46,46,46 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> DropZoneFilter.</para>
@@ -93,11 +87,8 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-    public DropZoneFilter DropZoneFilter
-    {
-        get => GetElement<DropZoneFilter>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(46, "dropZoneFilter", 0)]
+    public DropZoneFilter DropZoneFilter { get; set; }
     
     /// <summary>
     /// <para> DropZoneCategories.</para>
@@ -106,11 +97,8 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-    public DropZoneCategories DropZoneCategories
-    {
-        get => GetElement<DropZoneCategories>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(46, "dropZoneCategories", 1)]
+    public DropZoneCategories DropZoneCategories { get; set; }
     
     /// <summary>
     /// <para> DropZoneData.</para>
@@ -119,11 +107,8 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-    public DropZoneData DropZoneData
-    {
-        get => GetElement<DropZoneData>(2);
-        set => SetElement(2, value);
-    }
+	[SchemaAttr(46, "dropZoneData", 2)]
+    public DropZoneData DropZoneData { get; set; }
     
     /// <summary>
     /// <para> DropZoneSeries.</para>
@@ -132,11 +117,8 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-    public DropZoneSeries DropZoneSeries
-    {
-        get => GetElement<DropZoneSeries>(3);
-        set => SetElement(3, value);
-    }
+	[SchemaAttr(46, "dropZoneSeries", 3)]
+    public DropZoneSeries DropZoneSeries { get; set; }
     
     /// <summary>
     /// <para> DropZonesVisible.</para>
@@ -145,11 +127,8 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-    public DropZonesVisible DropZonesVisible
-    {
-        get => GetElement<DropZonesVisible>(4);
-        set => SetElement(4, value);
-    }
+	[SchemaAttr(46, "dropZonesVisible", 4)]
+    public DropZonesVisible DropZonesVisible { get; set; }
     
 
 
@@ -218,13 +197,7 @@ public partial class SketchOptions : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "inSketchMode","showSketchBtn" };
-    private static readonly byte[] eleNamespaceIds = { 46,46 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> InSketchMode.</para>
@@ -233,11 +206,8 @@ public partial class SketchOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-    public InSketchMode InSketchMode
-    {
-        get => GetElement<InSketchMode>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(46, "inSketchMode", 0)]
+    public InSketchMode InSketchMode { get; set; }
     
     /// <summary>
     /// <para> ShowSketchButton.</para>
@@ -246,11 +216,8 @@ public partial class SketchOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-    public ShowSketchButton ShowSketchButton
-    {
-        get => GetElement<ShowSketchButton>(1);
-        set => SetElement(1, value);
-    }
+	[SchemaAttr(46, "showSketchBtn", 1)]
+    public ShowSketchButton ShowSketchButton { get; set; }
     
 
 
@@ -317,13 +284,7 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "spPr" };
-    private static readonly byte[] eleNamespaceIds = { 46 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ShapeProperties.</para>
@@ -332,11 +293,8 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-    public ShapeProperties ShapeProperties
-    {
-        get => GetElement<ShapeProperties>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(46, "spPr", 0)]
+    public ShapeProperties ShapeProperties { get; set; }
     
 
 
@@ -474,13 +432,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "xfrm","custGeom","prstGeom","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","ln","effectLst","effectDag","scene3d","sp3d","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
@@ -489,11 +441,8 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-    public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
-    {
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
-        set => SetElement(0, value);
-    }
+	[SchemaAttr(10, "xfrm", 0)]
+    public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D { get; set; }
     
 
 
