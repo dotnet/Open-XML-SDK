@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml
 
                 if (lastChild != null)
                 {
-                    return lastChild.next;
+                    return lastChild.Next;
                 }
 
                 return null;
@@ -228,13 +228,13 @@ namespace DocumentFormat.OpenXml
 
             if (prevNode == null)
             {
-                nextNode.next = nextNode;
+                nextNode.Next = nextNode;
                 _lastChild = nextNode;
             }
             else
             {
-                nextNode.next = prevNode.next;
-                prevNode.next = nextNode;
+                nextNode.Next = prevNode.Next;
+                prevNode.Next = nextNode;
                 _lastChild = nextNode;
             }
 
@@ -285,15 +285,15 @@ namespace DocumentFormat.OpenXml
 
             if (prevNode == _lastChild)
             {
-                nextNode.next = prevNode.next;
-                prevNode.next = nextNode;
+                nextNode.Next = prevNode.Next;
+                prevNode.Next = nextNode;
                 _lastChild = nextNode;
             }
             else
             {
-                OpenXmlElement next = prevNode.next;
-                nextNode.next = next;
-                prevNode.next = nextNode;
+                OpenXmlElement next = prevNode.Next;
+                nextNode.Next = next;
+                prevNode.Next = nextNode;
             }
 
             newChild.Parent = this;
@@ -343,14 +343,14 @@ namespace DocumentFormat.OpenXml
 
             if (nextNode == FirstChild)
             {
-                prevNode.next = nextNode;
-                _lastChild.next = prevNode;
+                prevNode.Next = nextNode;
+                _lastChild.Next = prevNode;
             }
             else
             {
                 OpenXmlElement previousSibling = nextNode.PreviousSibling();
-                prevNode.next = nextNode;
-                previousSibling.next = prevNode;
+                prevNode.Next = nextNode;
+                previousSibling.Next = prevNode;
             }
 
             newChild.Parent = this;
@@ -454,26 +454,26 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    OpenXmlElement nextNode = removedElement.next;
-                    last.next = nextNode;
+                    OpenXmlElement nextNode = removedElement.Next;
+                    last.Next = nextNode;
                 }
             }
             else if (removedElement == _lastChild)
             {
                 OpenXmlElement prevNode = removedElement.PreviousSibling();
-                OpenXmlElement next = removedElement.next;
-                prevNode.next = next;
+                OpenXmlElement next = removedElement.Next;
+                prevNode.Next = next;
                 _lastChild = prevNode;
             }
             else
             {
                 OpenXmlElement prevNode = removedElement.PreviousSibling();
-                OpenXmlElement next = removedElement.next;
+                OpenXmlElement next = removedElement.Next;
 
-                prevNode.next = next;
+                prevNode.Next = next;
             }
 
-            removedElement.next = null;
+            removedElement.Next = null;
             removedElement.Parent = null;
 
             ElementRemovedEvent(removedElement);
@@ -1058,13 +1058,13 @@ namespace DocumentFormat.OpenXml
             node.Parent = this;
             if (_lastChild == null)
             {
-                node.next = node;
+                node.Next = node;
                 _lastChild = node;
             }
             else
             {
-                node.next = _lastChild.next;
-                _lastChild.next = node;
+                node.Next = _lastChild.Next;
+                _lastChild.Next = node;
                 _lastChild = node;
             }
         }
