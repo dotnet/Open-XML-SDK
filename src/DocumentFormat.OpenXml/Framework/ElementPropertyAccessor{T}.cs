@@ -7,21 +7,21 @@ using System.Reflection;
 
 namespace DocumentFormat.OpenXml
 {
-    internal class OpenXmlElementPropertyAccessor
+    internal class ElementPropertyAccessor<T>
     {
         private PropertyInfo _property;
         private PackageCache _cache;
-        private Func<OpenXmlElement, OpenXmlSimpleType> _getter;
-        private Action<OpenXmlElement, OpenXmlSimpleType> _setter;
-        private Func<OpenXmlSimpleType> _activator;
+        private Func<OpenXmlElement, T> _getter;
+        private Action<OpenXmlElement, T> _setter;
+        private Func<T> _activator;
 
-        public OpenXmlElementPropertyAccessor(PackageCache cache, PropertyInfo property)
+        public ElementPropertyAccessor(PackageCache cache, PropertyInfo property)
         {
             _property = property;
             _cache = cache;
         }
 
-        public OpenXmlSimpleType Get(OpenXmlElement instance)
+        public T Get(OpenXmlElement instance)
         {
             if (_getter is null)
             {
@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml
             return _getter(instance);
         }
 
-        public void Set(OpenXmlElement instance, OpenXmlSimpleType value)
+        public void Set(OpenXmlElement instance, T value)
         {
             if (_setter is null)
             {
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml
             _setter(instance, value);
         }
 
-        public OpenXmlSimpleType Create()
+        public T Create()
         {
             if (_activator is null)
             {
@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml
                 {
                     if (_activator is null)
                     {
-                        _activator = _cache.GetSimpleTypeFactory(_property.PropertyType);
+                        _activator = _cache.GetFactory<T>(_property.PropertyType);
                         _cache = null;
                         CleanUp();
                     }
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private static Func<OpenXmlElement, OpenXmlSimpleType> CreateGetter(PropertyInfo property)
+        private static Func<OpenXmlElement, T> CreateGetter(PropertyInfo property)
         {
 #if NETSTANDARD1_3
             var method = property.GetMethod;
@@ -94,12 +94,12 @@ namespace DocumentFormat.OpenXml
 
             var instance = Expression.Parameter(typeof(OpenXmlElement), "instance");
             var instanceCast = Expression.Convert(instance, property.DeclaringType);
-            var result = Expression.Convert(Expression.Call(instanceCast, method), typeof(OpenXmlSimpleType));
+            var result = Expression.Convert(Expression.Call(instanceCast, method), typeof(T));
 
-            return Expression.Lambda<Func<OpenXmlElement, OpenXmlSimpleType>>(result, instance).Compile();
+            return Expression.Lambda<Func<OpenXmlElement, T>>(result, instance).Compile();
         }
 
-        private static Action<OpenXmlElement, OpenXmlSimpleType> CreateSetter(PropertyInfo property)
+        private static Action<OpenXmlElement, T> CreateSetter(PropertyInfo property)
         {
 #if NETSTANDARD1_3
             var method = property.SetMethod;
@@ -110,12 +110,12 @@ namespace DocumentFormat.OpenXml
             var instance = Expression.Parameter(typeof(OpenXmlElement), "instance");
             var instanceCast = Expression.Convert(instance, property.DeclaringType);
 
-            var param = Expression.Parameter(typeof(OpenXmlSimpleType), "value");
+            var param = Expression.Parameter(typeof(T), "value");
             var paramCast = Expression.Convert(param, property.PropertyType);
 
             var result = Expression.Call(instanceCast, method, paramCast);
 
-            return Expression.Lambda<Action<OpenXmlElement, OpenXmlSimpleType>>(result, instance, param).Compile();
+            return Expression.Lambda<Action<OpenXmlElement, T>>(result, instance, param).Compile();
         }
     }
 }

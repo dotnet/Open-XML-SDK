@@ -5,15 +5,15 @@ using System.Xml;
 
 namespace DocumentFormat.OpenXml
 {
-    internal readonly struct AttributeTag
+    internal readonly struct ElementProperty<T>
     {
-        private readonly OpenXmlElementPropertyAccessor _accessor;
+        private readonly ElementPropertyAccessor<T> _accessor;
 
-        internal AttributeTag(
+        internal ElementProperty(
             byte namespaceId,
             string name,
             int order,
-            OpenXmlElementPropertyAccessor accessor)
+            ElementPropertyAccessor<T> accessor)
         {
             _accessor = accessor;
 
@@ -34,11 +34,11 @@ namespace DocumentFormat.OpenXml
 
         public string NamespacePrefix => NamespaceIdMap.GetNamespacePrefix(NamespaceId);
 
-        public OpenXmlSimpleType GetValue(OpenXmlElement element) => _accessor.Get(element);
+        public T GetValue(OpenXmlElement element) => _accessor.Get(element);
 
-        public void SetValue(OpenXmlElement element, OpenXmlSimpleType value) => _accessor.Set(element, value);
+        public void SetValue(OpenXmlElement element, T value) => _accessor.Set(element, value);
 
-        public OpenXmlSimpleType CreateNew() => _accessor.Create();
+        public T CreateNew() => _accessor.Create();
 
         public XmlQualifiedName GetQName() => new XmlQualifiedName(Name, Namespace);
     }

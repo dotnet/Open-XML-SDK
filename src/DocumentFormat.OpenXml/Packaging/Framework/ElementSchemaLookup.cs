@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml
                     throw new InvalidOperationException($"{child} does not contain schema information");
                 }
 
-                var key = new ElementInfo(schema.NamespaceId, schema.Tag, cache.GetElementFactory(child));
+                var key = new ElementInfo(schema.NamespaceId, schema.Tag, cache.GetFactory<OpenXmlElement>(child));
 
                 lookup.Add(key);
             }

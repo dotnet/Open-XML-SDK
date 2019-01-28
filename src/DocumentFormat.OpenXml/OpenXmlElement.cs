@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml
     {
         #region data members
 
-        private AttributeTagCollection _rawAttributes;
+        private ElementPropertyCollection<OpenXmlSimpleType> _rawAttributes;
 
         // implement annotations mechanism like XObject in LINQ to XML
         // Annotations will not be cloned when calling .Clone() and .CloneNode(bool)
@@ -172,13 +172,13 @@ namespace DocumentFormat.OpenXml
         /// Gets an array of fixed attributes (attributes that are defined in the schema) without forcing any parsing of the element.
         /// If parsing is required, please use <see cref="Attributes"/>
         /// </summary>
-        internal AttributeTagCollection RawAttributes
+        internal ElementPropertyCollection<OpenXmlSimpleType> RawAttributes
         {
             get
             {
                 if (!_rawAttributes.IsValid)
                 {
-                    _rawAttributes = new AttributeTagCollection(this, PackageCache.Cache.GetAttributes(GetType()));
+                    _rawAttributes = new ElementPropertyCollection<OpenXmlSimpleType>(this, PackageCache.Cache.GetAttributes(GetType()));
                 }
 
                 return _rawAttributes;
@@ -189,7 +189,7 @@ namespace DocumentFormat.OpenXml
         /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please
         /// use <see cref="RawAttributes"/>
         /// </summary>
-        internal AttributeTagCollection Attributes
+        internal ElementPropertyCollection<OpenXmlSimpleType> Attributes
         {
             get
             {
@@ -505,8 +505,8 @@ namespace DocumentFormat.OpenXml
                     foreach (var attribute in Attributes)
                     {
                         if (attribute.HasValue &&
-                            attribute.Tag.Name == localName &&
-                            attribute.Tag.Namespace == namespaceUri)
+                            attribute.Property.Name == localName &&
+                            attribute.Property.Namespace == namespaceUri)
                         {
                             return new OpenXmlAttribute(attribute);
                         }
@@ -1422,7 +1422,7 @@ namespace DocumentFormat.OpenXml
                 {
                     if (attribute.HasValue)
                     {
-                        var ns = attribute.Tag.Namespace;
+                        var ns = attribute.Property.Namespace;
                         var prefix = string.Empty;
 
                         if (!string.IsNullOrEmpty(ns))
@@ -1430,11 +1430,11 @@ namespace DocumentFormat.OpenXml
                             prefix = xmlWriter.LookupPrefix(ns);
                             if (string.IsNullOrEmpty(prefix))
                             {
-                                prefix = attribute.Tag.NamespacePrefix;
+                                prefix = attribute.Property.NamespacePrefix;
                             }
                         }
 
-                        xmlWriter.WriteStartAttribute(prefix, attribute.Tag.Name, ns);
+                        xmlWriter.WriteStartAttribute(prefix, attribute.Property.Name, ns);
                         xmlWriter.WriteString(attribute.Value.InnerText);
                         xmlWriter.WriteEndAttribute();
                     }
@@ -1484,7 +1484,7 @@ namespace DocumentFormat.OpenXml
                 {
                     if (!attribute.HasValue)
                     {
-                        attribute.SetValue(attribute.Tag.CreateNew());
+                        attribute.SetValue(attribute.Property.CreateNew());
                     }
 
                     attribute.Value.InnerText = value;
@@ -2704,7 +2704,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (attribute.HasValue)
                 {
-                    var action = OpenXmlElementContext.MCContext.GetAttributeAction(attribute.Tag.Namespace, attribute.Tag.Name, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
+                    var action = OpenXmlElementContext.MCContext.GetAttributeAction(attribute.Property.Namespace, attribute.Property.Name, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
 
                     if (action == AttributeAction.Ignore)
                     {

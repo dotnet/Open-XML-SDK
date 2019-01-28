@@ -118,7 +118,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                             if (!attribute.HasValue)
                             {
-                                string attributeQname = attribute.Tag.GetQName().ToString();
+                                string attributeQname = attribute.Property.GetQName().ToString();
 
                                 // error: miss required attribute
                                 errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_MissRequiredAttribute", attributeQname);
@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     {
                         OpenXmlSimpleType attributeValue = element.Attributes[i].Value;
 
-                        string attributeQname = element.Attributes[i].Tag.GetQName().ToString();
+                        string attributeQname = element.Attributes[i].Property.GetQName().ToString();
 
                         ValidateValue(validationContext, attributeConstraint.SimpleTypeConstraint, attributeValue, attributeQname, true);
                     }
@@ -152,14 +152,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     if (element.Attributes[i].HasValue)
                     {
                         // The attribute is not defined in the specified version, report error.
-                        if (validationContext.McContext.IsIgnorableNs(element.Attributes[i].Tag.Namespace))
+                        if (validationContext.McContext.IsIgnorableNs(element.Attributes[i].Property.Namespace))
                         {
                             // Ignorable attribute, no error.
                         }
                         else
                         {
                             // emit error
-                            string attributeQname = element.Attributes[i].Tag.GetQName().ToString();
+                            string attributeQname = element.Attributes[i].Property.GetQName().ToString();
                             errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_UndeclaredAttribute", attributeQname);
                             errorInfo.SetDebugField(attributeQname, "Sch_UndeclaredAttribute");
                             validationContext.AddError(errorInfo);
