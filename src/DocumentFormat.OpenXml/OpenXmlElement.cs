@@ -24,8 +24,6 @@ namespace DocumentFormat.OpenXml
     {
         #region data members
 
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private OpenXmlElement _next;
         private AttributeTagCollection _rawAttributes;
 
         // implement annotations mechanism like XObject in LINQ to XML
@@ -145,11 +143,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets or sets the next element in the linked list.
         /// </summary>
-        internal OpenXmlElement next
-        {
-            get => _next;
-            set => _next = value;
-        }
+        internal OpenXmlElement Next { get; set; }
 
         /// <summary>
         /// Gets a value indicating whether the inner raw xml is parsed.
@@ -836,9 +830,9 @@ namespace DocumentFormat.OpenXml
         public OpenXmlElement NextSibling()
         {
             var parentNode = Parent;
-            if ((parentNode != null) && (next != parentNode.FirstChild))
+            if ((parentNode != null) && (Next != parentNode.FirstChild))
             {
-                return next;
+                return Next;
             }
 
             return null;
