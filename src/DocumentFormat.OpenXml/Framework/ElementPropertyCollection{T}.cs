@@ -9,12 +9,12 @@ using System.Reflection;
 
 namespace DocumentFormat.OpenXml
 {
-    internal readonly struct AttributeTagCollection : IEnumerable<OpenXmlAttribute>
+    internal readonly struct ElementPropertyCollection<T> : IEnumerable<OpenXmlAttribute>
     {
-        private readonly ReadOnlyArray<AttributeTag> _tags;
+        private readonly ReadOnlyArray<ElementProperty<T>> _tags;
         private readonly OpenXmlElement _element;
 
-        public AttributeTagCollection(OpenXmlElement element, ReadOnlyArray<AttributeTag> tags)
+        public ElementPropertyCollection(OpenXmlElement element, ReadOnlyArray<ElementProperty<T>> tags)
         {
             _tags = tags;
             _element = element;
@@ -24,9 +24,9 @@ namespace DocumentFormat.OpenXml
 
         public bool Any() => Length > 0;
 
-        public AttributeEntry this[int index] => new AttributeEntry(this, index);
+        public PropertyEntry this[int index] => new PropertyEntry(this, index);
 
-        public AttributeEntry this[string namespaceUri, string tagName] => this[GetIndex(namespaceUri, tagName)];
+        public PropertyEntry this[string namespaceUri, string tagName] => this[GetIndex(namespaceUri, tagName)];
 
         public int Length => _tags.Length;
 
@@ -50,9 +50,9 @@ namespace DocumentFormat.OpenXml
             return -1;
         }
 
-        public AttributeEntry[] ToArray()
+        public PropertyEntry[] ToArray()
         {
-            var array = new AttributeEntry[Length];
+            var array = new PropertyEntry[Length];
 
             for (var i = 0; i < Length; i++)
             {
@@ -70,56 +70,57 @@ namespace DocumentFormat.OpenXml
         {
             foreach (var attribute in this)
             {
-                yield return new OpenXmlAttribute(attribute.Tag.Name, attribute.Tag.Namespace, null);
+                yield return new OpenXmlAttribute(attribute.Property.Name, attribute.Property.Namespace, null);
             }
         }
 
-        public static ReadOnlyArray<AttributeTag> GetAttributes(PackageCache cache, Type type)
+        public static ReadOnlyArray<ElementProperty<T>> GetProperties(PackageCache cache, Type type)
         {
             return type.GetRuntimeProperties()
-               .Select(property =>
-               {
-                   var schema = property.GetCustomAttribute<SchemaAttrAttribute>();
+                .Where(property => typeof(T).GetTypeInfo().IsAssignableFrom(property.PropertyType.GetTypeInfo()))
+                .Select(property =>
+                {
+                    var schema = property.GetCustomAttribute<SchemaAttrAttribute>();
 
-                   if (schema is null)
-                   {
-                       return default;
-                   }
+                    if (schema is null)
+                    {
+                        return default;
+                    }
 
-                   return new AttributeTag(
-                       schema.NamespaceId,
-                       schema.Tag,
-                       schema.Index,
-                       new OpenXmlElementPropertyAccessor(cache, property));
-               })
-               .Where(tag => tag.IsValid)
-               .OrderBy(tag => tag.Order)
-               .ToArray();
+                    return new ElementProperty<T>(
+                        schema.NamespaceId,
+                        schema.Tag,
+                        schema.Index,
+                        new ElementPropertyAccessor<T>(cache, property));
+                })
+                .Where(tag => tag.IsValid)
+                .OrderBy(tag => tag.Order)
+                .ToArray();
         }
 
         public struct Enumerator
         {
-            private readonly AttributeTagCollection _collection;
+            private readonly ElementPropertyCollection<T> _collection;
             private int _index;
 
-            public Enumerator(in AttributeTagCollection collection)
+            public Enumerator(in ElementPropertyCollection<T> collection)
             {
                 _collection = collection;
                 _index = -1;
             }
 
-            public AttributeEntry Current => _collection[_index];
+            public PropertyEntry Current => _collection[_index];
 
             public bool MoveNext() => ++_index < _collection.Length;
         }
 
-        public readonly struct AttributeEntry
+        public readonly struct PropertyEntry
         {
-            private readonly AttributeTagCollection _collection;
+            private readonly ElementPropertyCollection<T> _collection;
 
             private readonly int _index;
 
-            public AttributeEntry(in AttributeTagCollection collection, int index)
+            public PropertyEntry(in ElementPropertyCollection<T> collection, int index)
             {
                 _collection = collection;
                 _index = index;
@@ -127,11 +128,11 @@ namespace DocumentFormat.OpenXml
 
             public bool IsNil => _index == -1;
 
-            public ref readonly AttributeTag Tag => ref _collection._tags[_index];
+            public ref readonly ElementProperty<T> Property => ref _collection._tags[_index];
 
-            public OpenXmlSimpleType Value => _collection._tags[_index].GetValue(_collection._element);
+            public T Value => _collection._tags[_index].GetValue(_collection._element);
 
-            public void SetValue(OpenXmlSimpleType value) => _collection._tags[_index].SetValue(_collection._element, value);
+            public void SetValue(T value) => _collection._tags[_index].SetValue(_collection._element, value);
 
             public bool HasValue => Value != null;
         }
