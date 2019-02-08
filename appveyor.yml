@@ -8,7 +8,6 @@ environment:
 install:
   - cmd: choco install gitversion.portable
   - cmd: gitversion /output buildserver
-  - ps:  Invoke-WebRequest https://packagecompatstorage.blob.core.windows.net/tools/compat-agent.exe -o compat-agent.exe
 
 build_script:
   - cmd: msbuild /t:restore;build /v:m /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
@@ -22,5 +21,6 @@ test_script:
 artifacts:
   - path: 'bin\**\*.nupkg'
 
-#on_finish:
-#  - cmd: compat-agent.exe -config compat.yml -version %GitVersion_NuGetVersionV2%
+on_finish:
+  - ps:  Invoke-WebRequest http://kompat.io/downloads/kompat.exe -o kompat.exe
+  - cmd: kompat.exe -config compat.yml -version %GitVersion_NuGetVersionV2%
