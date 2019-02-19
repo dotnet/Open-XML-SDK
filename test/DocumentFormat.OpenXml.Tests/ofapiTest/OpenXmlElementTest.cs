@@ -988,9 +988,16 @@ namespace DocumentFormat.OpenXml.Tests
 
             foreach (var type in types)
             {
-                foreach (var property in type.GetTypeInfo().DeclaredProperties.Where(p => typeof(OpenXmlElement).IsAssignableFrom(p.PropertyType)))
+                foreach (var property in type.GetTypeInfo().DeclaredProperties)
                 {
-                    Assert.NotNull(property.GetCustomAttribute<IndexAttribute>());
+                    if (typeof(OpenXmlElement).IsAssignableFrom(property.PropertyType) || typeof(OpenXmlSimpleType).IsAssignableFrom(property.PropertyType))
+                    {
+                        // Skip any obsolete properties as those redirect to other properties
+                        if (property.GetCustomAttribute<ObsoleteAttribute>() == null)
+                        {
+                            Assert.NotNull(property.GetCustomAttribute<IndexAttribute>());
+                        }
+                    }
                 }
             }
         }
