@@ -988,7 +988,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             foreach (var type in types)
             {
-                foreach (var property in type.GetTypeInfo().DeclaredProperties)
+                foreach (var property in type.GetTypeInfo().GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly))
                 {
                     if (typeof(OpenXmlElement).IsAssignableFrom(property.PropertyType) || typeof(OpenXmlSimpleType).IsAssignableFrom(property.PropertyType))
                     {
