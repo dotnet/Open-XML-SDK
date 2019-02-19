@@ -44,14 +44,11 @@ namespace DocumentFormat.OpenXml.Vml.Office
     [ChildElementInfo(typeof(ColorMenu))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "shapedefaults")]
 public partial class ShapeDefaults : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12470;
-    /// <inheritdoc/>
-    public override string LocalName => "shapedefaults";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -62,49 +59,49 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
     /// <summary>
     /// <para> Shape ID Optional Storage.</para>
     /// <para>Represents the following attribute in the schema: spidmax </para>
     /// </summary>
     [SchemaAttr(0, "spidmax")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public IntegerValue MaxShapeId { get; set; }
     /// <summary>
     /// <para> style.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
     [SchemaAttr(0, "style")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: fill </para>
     /// </summary>
     [SchemaAttr(0, "fill")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public TrueFalseValue BeFilled { get; set; }
     /// <summary>
     /// <para> Default Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
     /// </summary>
     [SchemaAttr(0, "fillcolor")]
-    [SchemaIndex(4)]
+    [Index(4)]
     public StringValue FillColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroke </para>
     /// </summary>
     [SchemaAttr(0, "stroke")]
-    [SchemaIndex(5)]
+    [Index(5)]
     public TrueFalseValue IsStroke { get; set; }
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
     /// </summary>
     [SchemaAttr(0, "strokecolor")]
-    [SchemaIndex(6)]
+    [Index(6)]
     public StringValue StrokeColor { get; set; }
     /// <summary>
     /// <para> Allow in Table Cell.</para>
@@ -113,7 +110,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
     [SchemaAttr(27, "allowincell")]
-    [SchemaIndex(7)]
+    [Index(7)]
     public TrueFalseValue AllowInCell { get; set; }
     /// <summary>
     /// <para> allowoverlap.</para>
@@ -122,7 +119,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
     [SchemaAttr(27, "allowoverlap")]
-    [SchemaIndex(8)]
+    [Index(8)]
     public TrueFalseValue AllowOverlap { get; set; }
     /// <summary>
     /// <para> insetmode.</para>
@@ -131,7 +128,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
     [SchemaAttr(27, "insetmode")]
-    [SchemaIndex(9)]
+    [Index(9)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
 
     /// <summary>
@@ -164,56 +161,12 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "fill" == name)
-    return new DocumentFormat.OpenXml.Vml.Fill();
     
-if( 26 == namespaceId && "imagedata" == name)
-    return new DocumentFormat.OpenXml.Vml.ImageData();
-    
-if( 26 == namespaceId && "stroke" == name)
-    return new DocumentFormat.OpenXml.Vml.Stroke();
-    
-if( 26 == namespaceId && "textbox" == name)
-    return new DocumentFormat.OpenXml.Vml.TextBox();
-    
-if( 26 == namespaceId && "shadow" == name)
-    return new DocumentFormat.OpenXml.Vml.Shadow();
-    
-if( 27 == namespaceId && "skew" == name)
-    return new Skew();
-    
-if( 27 == namespaceId && "extrusion" == name)
-    return new Extrusion();
-    
-if( 27 == namespaceId && "callout" == name)
-    return new Callout();
-    
-if( 27 == namespaceId && "lock" == name)
-    return new Lock();
-    
-if( 27 == namespaceId && "colormru" == name)
-    return new ColorMostRecentlyUsed();
-    
-if( 27 == namespaceId && "colormenu" == name)
-    return new ColorMenu();
-    
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "fill","imagedata","stroke","textbox","shadow","skew","extrusion","callout","lock","colormru","colormenu" };
-    private static readonly byte[] eleNamespaceIds = { 26,26,26,26,26,27,27,27,27,27,27 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
     
         /// <summary>
     /// <para> Fill.</para>
@@ -222,11 +175,13 @@ if( 27 == namespaceId && "colormenu" == name)
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Vml.Fill Fill
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Vml.Fill>(0);
         set => SetElement(0, value);
-    }
+	}
+    
     /// <summary>
     /// <para> ImageData.</para>
     /// <para> Represents the following element tag in the schema: v:imagedata </para>
@@ -234,11 +189,13 @@ if( 27 == namespaceId && "colormenu" == name)
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Vml.ImageData ImageData
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Vml.ImageData>(1);
         set => SetElement(1, value);
-    }
+	}
+    
     /// <summary>
     /// <para> Stroke.</para>
     /// <para> Represents the following element tag in the schema: v:stroke </para>
@@ -246,11 +203,13 @@ if( 27 == namespaceId && "colormenu" == name)
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
+	[Index(2)]
     public DocumentFormat.OpenXml.Vml.Stroke Stroke
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Vml.Stroke>(2);
         set => SetElement(2, value);
-    }
+	}
+    
     /// <summary>
     /// <para> TextBox.</para>
     /// <para> Represents the following element tag in the schema: v:textbox </para>
@@ -258,11 +217,13 @@ if( 27 == namespaceId && "colormenu" == name)
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
+	[Index(3)]
     public DocumentFormat.OpenXml.Vml.TextBox TextBox
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Vml.TextBox>(3);
         set => SetElement(3, value);
-    }
+	}
+    
     /// <summary>
     /// <para> Shadow.</para>
     /// <para> Represents the following element tag in the schema: v:shadow </para>
@@ -270,11 +231,13 @@ if( 27 == namespaceId && "colormenu" == name)
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
+	[Index(4)]
     public DocumentFormat.OpenXml.Vml.Shadow Shadow
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Vml.Shadow>(4);
         set => SetElement(4, value);
-    }
+	}
+    
     /// <summary>
     /// <para> Skew.</para>
     /// <para> Represents the following element tag in the schema: o:skew </para>
@@ -282,11 +245,13 @@ if( 27 == namespaceId && "colormenu" == name)
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(5)]
     public Skew Skew
-    {
+	{
         get => GetElement<Skew>(5);
         set => SetElement(5, value);
-    }
+	}
+    
     /// <summary>
     /// <para> Extrusion.</para>
     /// <para> Represents the following element tag in the schema: o:extrusion </para>
@@ -294,11 +259,13 @@ if( 27 == namespaceId && "colormenu" == name)
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(6)]
     public Extrusion Extrusion
-    {
+	{
         get => GetElement<Extrusion>(6);
         set => SetElement(6, value);
-    }
+	}
+    
     /// <summary>
     /// <para> Callout.</para>
     /// <para> Represents the following element tag in the schema: o:callout </para>
@@ -306,11 +273,13 @@ if( 27 == namespaceId && "colormenu" == name)
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(7)]
     public Callout Callout
-    {
+	{
         get => GetElement<Callout>(7);
         set => SetElement(7, value);
-    }
+	}
+    
     /// <summary>
     /// <para> Shape Protections.</para>
     /// <para> Represents the following element tag in the schema: o:lock </para>
@@ -318,11 +287,13 @@ if( 27 == namespaceId && "colormenu" == name)
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(8)]
     public Lock Lock
-    {
+	{
         get => GetElement<Lock>(8);
         set => SetElement(8, value);
-    }
+	}
+    
     /// <summary>
     /// <para> Most Recently Used Colors.</para>
     /// <para> Represents the following element tag in the schema: o:colormru </para>
@@ -330,11 +301,13 @@ if( 27 == namespaceId && "colormenu" == name)
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(9)]
     public ColorMostRecentlyUsed ColorMostRecentlyUsed
-    {
+	{
         get => GetElement<ColorMostRecentlyUsed>(9);
         set => SetElement(9, value);
-    }
+	}
+    
     /// <summary>
     /// <para> UI Default Colors.</para>
     /// <para> Represents the following element tag in the schema: o:colormenu </para>
@@ -342,11 +315,13 @@ if( 27 == namespaceId && "colormenu" == name)
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(10)]
     public ColorMenu ColorMenu
-    {
+	{
         get => GetElement<ColorMenu>(10);
         set => SetElement(10, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
@@ -372,14 +347,11 @@ if( 27 == namespaceId && "colormenu" == name)
     [ChildElementInfo(typeof(Rules))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "shapelayout")]
 public partial class ShapeLayout : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12471;
-    /// <inheritdoc/>
-    public override string LocalName => "shapelayout";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -390,7 +362,7 @@ public partial class ShapeLayout : OpenXmlCompositeElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
 
     /// <summary>
@@ -423,32 +395,12 @@ public partial class ShapeLayout : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 27 == namespaceId && "idmap" == name)
-    return new ShapeIdMap();
     
-if( 27 == namespaceId && "regrouptable" == name)
-    return new RegroupTable();
-    
-if( 27 == namespaceId && "rules" == name)
-    return new Rules();
-    
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "idmap","regrouptable","rules" };
-    private static readonly byte[] eleNamespaceIds = { 27,27,27 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
     
         /// <summary>
     /// <para> Shape ID Map.</para>
@@ -457,11 +409,13 @@ if( 27 == namespaceId && "rules" == name)
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(0)]
     public ShapeIdMap ShapeIdMap
-    {
+	{
         get => GetElement<ShapeIdMap>(0);
         set => SetElement(0, value);
-    }
+	}
+    
     /// <summary>
     /// <para> Shape Grouping History.</para>
     /// <para> Represents the following element tag in the schema: o:regrouptable </para>
@@ -469,11 +423,13 @@ if( 27 == namespaceId && "rules" == name)
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(1)]
     public RegroupTable RegroupTable
-    {
+	{
         get => GetElement<RegroupTable>(1);
         set => SetElement(1, value);
-    }
+	}
+    
     /// <summary>
     /// <para> Rule Set.</para>
     /// <para> Represents the following element tag in the schema: o:rules </para>
@@ -481,11 +437,13 @@ if( 27 == namespaceId && "rules" == name)
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(2)]
     public Rules Rules
-    {
+	{
         get => GetElement<Rules>(2);
         set => SetElement(2, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
@@ -500,14 +458,11 @@ if( 27 == namespaceId && "rules" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "signatureline")]
 public partial class SignatureLine : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12472;
-    /// <inheritdoc/>
-    public override string LocalName => "signatureline";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -518,49 +473,49 @@ public partial class SignatureLine : OpenXmlLeafElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
     /// <summary>
     /// <para> Signature Line Flag.</para>
     /// <para>Represents the following attribute in the schema: issignatureline </para>
     /// </summary>
     [SchemaAttr(0, "issignatureline")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public TrueFalseValue IsSignatureLine { get; set; }
     /// <summary>
     /// <para> Unique ID.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Signature Provider ID.</para>
     /// <para>Represents the following attribute in the schema: provid </para>
     /// </summary>
     [SchemaAttr(0, "provid")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public StringValue ProviderId { get; set; }
     /// <summary>
     /// <para> Use Signing Instructions Flag.</para>
     /// <para>Represents the following attribute in the schema: signinginstructionsset </para>
     /// </summary>
     [SchemaAttr(0, "signinginstructionsset")]
-    [SchemaIndex(4)]
+    [Index(4)]
     public TrueFalseValue SigningInstructionsSet { get; set; }
     /// <summary>
     /// <para> User-specified Comments Flag.</para>
     /// <para>Represents the following attribute in the schema: allowcomments </para>
     /// </summary>
     [SchemaAttr(0, "allowcomments")]
-    [SchemaIndex(5)]
+    [Index(5)]
     public TrueFalseValue AllowComments { get; set; }
     /// <summary>
     /// <para> Show Signed Date Flag.</para>
     /// <para>Represents the following attribute in the schema: showsigndate </para>
     /// </summary>
     [SchemaAttr(0, "showsigndate")]
-    [SchemaIndex(6)]
+    [Index(6)]
     public TrueFalseValue ShowSignDate { get; set; }
     /// <summary>
     /// <para> Suggested Signer Line 1.</para>
@@ -569,7 +524,7 @@ public partial class SignatureLine : OpenXmlLeafElement
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
     [SchemaAttr(27, "suggestedsigner")]
-    [SchemaIndex(7)]
+    [Index(7)]
     public StringValue SuggestedSigner { get; set; }
     /// <summary>
     /// <para> Suggested Signer Line 2.</para>
@@ -578,7 +533,7 @@ public partial class SignatureLine : OpenXmlLeafElement
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
     [SchemaAttr(27, "suggestedsigner2")]
-    [SchemaIndex(8)]
+    [Index(8)]
     public StringValue SuggestedSigner2 { get; set; }
     /// <summary>
     /// <para> Suggested Signer E-mail Address.</para>
@@ -587,28 +542,28 @@ public partial class SignatureLine : OpenXmlLeafElement
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
     [SchemaAttr(27, "suggestedsigneremail")]
-    [SchemaIndex(9)]
+    [Index(9)]
     public StringValue SuggestedSignerEmail { get; set; }
     /// <summary>
     /// <para> Instructions for Signing.</para>
     /// <para>Represents the following attribute in the schema: signinginstructions </para>
     /// </summary>
     [SchemaAttr(0, "signinginstructions")]
-    [SchemaIndex(10)]
+    [Index(10)]
     public StringValue SigningInstructions { get; set; }
     /// <summary>
     /// <para> Additional Signature Information.</para>
     /// <para>Represents the following attribute in the schema: addlxml </para>
     /// </summary>
     [SchemaAttr(0, "addlxml")]
-    [SchemaIndex(11)]
+    [Index(11)]
     public StringValue AdditionalXml { get; set; }
     /// <summary>
     /// <para> Signature Provider Download URL.</para>
     /// <para>Represents the following attribute in the schema: sigprovurl </para>
     /// </summary>
     [SchemaAttr(0, "sigprovurl")]
-    [SchemaIndex(12)]
+    [Index(12)]
     public StringValue SignatureProviderUrl { get; set; }
 
     /// <summary>
@@ -633,14 +588,11 @@ public partial class SignatureLine : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "ink")]
 public partial class Ink : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12473;
-    /// <inheritdoc/>
-    public override string LocalName => "ink";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -649,14 +601,14 @@ public partial class Ink : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: i </para>
     /// </summary>
     [SchemaAttr(0, "i")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public Base64BinaryValue InkData { get; set; }
     /// <summary>
     /// <para> Annotation Flag.</para>
     /// <para>Represents the following attribute in the schema: annotation </para>
     /// </summary>
     [SchemaAttr(0, "annotation")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public TrueFalseValue AnnotationFlag { get; set; }
 
     /// <summary>
@@ -688,14 +640,11 @@ public partial class Ink : OpenXmlLeafElement
     [ChildElementInfo(typeof(RelationTable))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "diagram")]
 public partial class Diagram : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12474;
-    /// <inheritdoc/>
-    public override string LocalName => "diagram";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -706,70 +655,70 @@ public partial class Diagram : OpenXmlCompositeElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
     /// <summary>
     /// <para> Diagram Style Options.</para>
     /// <para>Represents the following attribute in the schema: dgmstyle </para>
     /// </summary>
     [SchemaAttr(0, "dgmstyle")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public IntegerValue Style { get; set; }
     /// <summary>
     /// <para> Diagram Automatic Format.</para>
     /// <para>Represents the following attribute in the schema: autoformat </para>
     /// </summary>
     [SchemaAttr(0, "autoformat")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public TrueFalseValue AutoFormat { get; set; }
     /// <summary>
     /// <para> Diagram Reverse Direction.</para>
     /// <para>Represents the following attribute in the schema: reverse </para>
     /// </summary>
     [SchemaAttr(0, "reverse")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public TrueFalseValue Reverse { get; set; }
     /// <summary>
     /// <para> Diagram Automatic Layout.</para>
     /// <para>Represents the following attribute in the schema: autolayout </para>
     /// </summary>
     [SchemaAttr(0, "autolayout")]
-    [SchemaIndex(4)]
+    [Index(4)]
     public TrueFalseValue AutoLayout { get; set; }
     /// <summary>
     /// <para> Diagram Layout X Scale.</para>
     /// <para>Represents the following attribute in the schema: dgmscalex </para>
     /// </summary>
     [SchemaAttr(0, "dgmscalex")]
-    [SchemaIndex(5)]
+    [Index(5)]
     public IntegerValue ScaleX { get; set; }
     /// <summary>
     /// <para> Diagram Layout Y Scale.</para>
     /// <para>Represents the following attribute in the schema: dgmscaley </para>
     /// </summary>
     [SchemaAttr(0, "dgmscaley")]
-    [SchemaIndex(6)]
+    [Index(6)]
     public IntegerValue ScaleY { get; set; }
     /// <summary>
     /// <para> Diagram Font Size.</para>
     /// <para>Represents the following attribute in the schema: dgmfontsize </para>
     /// </summary>
     [SchemaAttr(0, "dgmfontsize")]
-    [SchemaIndex(7)]
+    [Index(7)]
     public IntegerValue FontSize { get; set; }
     /// <summary>
     /// <para> Diagram Layout Extents.</para>
     /// <para>Represents the following attribute in the schema: constrainbounds </para>
     /// </summary>
     [SchemaAttr(0, "constrainbounds")]
-    [SchemaIndex(8)]
+    [Index(8)]
     public StringValue ConstrainBounds { get; set; }
     /// <summary>
     /// <para> Diagram Base Font Size.</para>
     /// <para>Represents the following attribute in the schema: dgmbasetextscale </para>
     /// </summary>
     [SchemaAttr(0, "dgmbasetextscale")]
-    [SchemaIndex(9)]
+    [Index(9)]
     public IntegerValue BaseTextScale { get; set; }
 
     /// <summary>
@@ -802,26 +751,12 @@ public partial class Diagram : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 27 == namespaceId && "relationtable" == name)
-    return new RelationTable();
     
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "relationtable" };
-    private static readonly byte[] eleNamespaceIds = { 27 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Diagram Relationship Table.</para>
@@ -830,11 +765,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(0)]
     public RelationTable RelationTable
-    {
+	{
         get => GetElement<RelationTable>(0);
         set => SetElement(0, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
@@ -849,14 +786,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "skew")]
 public partial class Skew : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12475;
-    /// <inheritdoc/>
-    public override string LocalName => "skew";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -867,42 +801,42 @@ public partial class Skew : OpenXmlLeafElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
     /// <summary>
     /// <para> Skew ID.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Skew Toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
     /// </summary>
     [SchemaAttr(0, "on")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public TrueFalseValue On { get; set; }
     /// <summary>
     /// <para> Skew Offset.</para>
     /// <para>Represents the following attribute in the schema: offset </para>
     /// </summary>
     [SchemaAttr(0, "offset")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public StringValue Offset { get; set; }
     /// <summary>
     /// <para> Skew Origin.</para>
     /// <para>Represents the following attribute in the schema: origin </para>
     /// </summary>
     [SchemaAttr(0, "origin")]
-    [SchemaIndex(4)]
+    [Index(4)]
     public StringValue Origin { get; set; }
     /// <summary>
     /// <para> Skew Perspective Matrix.</para>
     /// <para>Represents the following attribute in the schema: matrix </para>
     /// </summary>
     [SchemaAttr(0, "matrix")]
-    [SchemaIndex(5)]
+    [Index(5)]
     public StringValue Matrix { get; set; }
 
     /// <summary>
@@ -927,14 +861,11 @@ public partial class Skew : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "extrusion")]
 public partial class Extrusion : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12476;
-    /// <inheritdoc/>
-    public override string LocalName => "extrusion";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -945,217 +876,217 @@ public partial class Extrusion : OpenXmlLeafElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
     /// <summary>
     /// <para> Extrusion Toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
     /// </summary>
     [SchemaAttr(0, "on")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public TrueFalseValue On { get; set; }
     /// <summary>
     /// <para> Extrusion Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionValues> Type { get; set; }
     /// <summary>
     /// <para> Extrusion Render Mode.</para>
     /// <para>Represents the following attribute in the schema: render </para>
     /// </summary>
     [SchemaAttr(0, "render")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionRenderValues> Render { get; set; }
     /// <summary>
     /// <para> Extrusion Viewpoint Origin.</para>
     /// <para>Represents the following attribute in the schema: viewpointorigin </para>
     /// </summary>
     [SchemaAttr(0, "viewpointorigin")]
-    [SchemaIndex(4)]
+    [Index(4)]
     public StringValue ViewpointOrigin { get; set; }
     /// <summary>
     /// <para> Extrusion Viewpoint.</para>
     /// <para>Represents the following attribute in the schema: viewpoint </para>
     /// </summary>
     [SchemaAttr(0, "viewpoint")]
-    [SchemaIndex(5)]
+    [Index(5)]
     public StringValue Viewpoint { get; set; }
     /// <summary>
     /// <para> Extrusion Skew Angle.</para>
     /// <para>Represents the following attribute in the schema: skewangle </para>
     /// </summary>
     [SchemaAttr(0, "skewangle")]
-    [SchemaIndex(6)]
+    [Index(6)]
     public SingleValue SkewAngle { get; set; }
     /// <summary>
     /// <para> Extrusion Skew.</para>
     /// <para>Represents the following attribute in the schema: skewamt </para>
     /// </summary>
     [SchemaAttr(0, "skewamt")]
-    [SchemaIndex(7)]
+    [Index(7)]
     public StringValue SkewAmount { get; set; }
     /// <summary>
     /// <para> Forward Extrusion.</para>
     /// <para>Represents the following attribute in the schema: foredepth </para>
     /// </summary>
     [SchemaAttr(0, "foredepth")]
-    [SchemaIndex(8)]
+    [Index(8)]
     public StringValue ForceDepth { get; set; }
     /// <summary>
     /// <para> Backward Extrusion Depth.</para>
     /// <para>Represents the following attribute in the schema: backdepth </para>
     /// </summary>
     [SchemaAttr(0, "backdepth")]
-    [SchemaIndex(9)]
+    [Index(9)]
     public StringValue BackDepth { get; set; }
     /// <summary>
     /// <para> Rotation Axis.</para>
     /// <para>Represents the following attribute in the schema: orientation </para>
     /// </summary>
     [SchemaAttr(0, "orientation")]
-    [SchemaIndex(10)]
+    [Index(10)]
     public StringValue Orientation { get; set; }
     /// <summary>
     /// <para> Rotation Around Axis.</para>
     /// <para>Represents the following attribute in the schema: orientationangle </para>
     /// </summary>
     [SchemaAttr(0, "orientationangle")]
-    [SchemaIndex(11)]
+    [Index(11)]
     public SingleValue OrientationAngle { get; set; }
     /// <summary>
     /// <para> Rotation Toggle.</para>
     /// <para>Represents the following attribute in the schema: lockrotationcenter </para>
     /// </summary>
     [SchemaAttr(0, "lockrotationcenter")]
-    [SchemaIndex(12)]
+    [Index(12)]
     public TrueFalseValue LockRotationCenter { get; set; }
     /// <summary>
     /// <para> Center of Rotation Toggle.</para>
     /// <para>Represents the following attribute in the schema: autorotationcenter </para>
     /// </summary>
     [SchemaAttr(0, "autorotationcenter")]
-    [SchemaIndex(13)]
+    [Index(13)]
     public TrueFalseValue AutoRotationCenter { get; set; }
     /// <summary>
     /// <para> Rotation Center.</para>
     /// <para>Represents the following attribute in the schema: rotationcenter </para>
     /// </summary>
     [SchemaAttr(0, "rotationcenter")]
-    [SchemaIndex(14)]
+    [Index(14)]
     public StringValue RotationCenter { get; set; }
     /// <summary>
     /// <para> X-Y Rotation Angle.</para>
     /// <para>Represents the following attribute in the schema: rotationangle </para>
     /// </summary>
     [SchemaAttr(0, "rotationangle")]
-    [SchemaIndex(15)]
+    [Index(15)]
     public StringValue RotationAngle { get; set; }
     /// <summary>
     /// <para> Extrusion Color.</para>
     /// <para>Represents the following attribute in the schema: color </para>
     /// </summary>
     [SchemaAttr(0, "color")]
-    [SchemaIndex(16)]
+    [Index(16)]
     public StringValue Color { get; set; }
     /// <summary>
     /// <para> Shininess.</para>
     /// <para>Represents the following attribute in the schema: shininess </para>
     /// </summary>
     [SchemaAttr(0, "shininess")]
-    [SchemaIndex(17)]
+    [Index(17)]
     public SingleValue Shininess { get; set; }
     /// <summary>
     /// <para> Specularity.</para>
     /// <para>Represents the following attribute in the schema: specularity </para>
     /// </summary>
     [SchemaAttr(0, "specularity")]
-    [SchemaIndex(18)]
+    [Index(18)]
     public StringValue Specularity { get; set; }
     /// <summary>
     /// <para> Diffuse Reflection.</para>
     /// <para>Represents the following attribute in the schema: diffusity </para>
     /// </summary>
     [SchemaAttr(0, "diffusity")]
-    [SchemaIndex(19)]
+    [Index(19)]
     public StringValue Diffusity { get; set; }
     /// <summary>
     /// <para> Metallic Surface Toggle.</para>
     /// <para>Represents the following attribute in the schema: metal </para>
     /// </summary>
     [SchemaAttr(0, "metal")]
-    [SchemaIndex(20)]
+    [Index(20)]
     public TrueFalseValue Metal { get; set; }
     /// <summary>
     /// <para> Simulated Bevel.</para>
     /// <para>Represents the following attribute in the schema: edge </para>
     /// </summary>
     [SchemaAttr(0, "edge")]
-    [SchemaIndex(21)]
+    [Index(21)]
     public StringValue Edge { get; set; }
     /// <summary>
     /// <para> Faceting Quality.</para>
     /// <para>Represents the following attribute in the schema: facet </para>
     /// </summary>
     [SchemaAttr(0, "facet")]
-    [SchemaIndex(22)]
+    [Index(22)]
     public StringValue Facet { get; set; }
     /// <summary>
     /// <para> Shape Face Lighting Toggle.</para>
     /// <para>Represents the following attribute in the schema: lightface </para>
     /// </summary>
     [SchemaAttr(0, "lightface")]
-    [SchemaIndex(23)]
+    [Index(23)]
     public TrueFalseValue LightFace { get; set; }
     /// <summary>
     /// <para> Brightness.</para>
     /// <para>Represents the following attribute in the schema: brightness </para>
     /// </summary>
     [SchemaAttr(0, "brightness")]
-    [SchemaIndex(24)]
+    [Index(24)]
     public StringValue Brightness { get; set; }
     /// <summary>
     /// <para> Primary Light Position.</para>
     /// <para>Represents the following attribute in the schema: lightposition </para>
     /// </summary>
     [SchemaAttr(0, "lightposition")]
-    [SchemaIndex(25)]
+    [Index(25)]
     public StringValue LightPosition { get; set; }
     /// <summary>
     /// <para> Primary Light Intensity.</para>
     /// <para>Represents the following attribute in the schema: lightlevel </para>
     /// </summary>
     [SchemaAttr(0, "lightlevel")]
-    [SchemaIndex(26)]
+    [Index(26)]
     public StringValue LightLevel { get; set; }
     /// <summary>
     /// <para> Primary Light Harshness Toggle.</para>
     /// <para>Represents the following attribute in the schema: lightharsh </para>
     /// </summary>
     [SchemaAttr(0, "lightharsh")]
-    [SchemaIndex(27)]
+    [Index(27)]
     public TrueFalseValue LightHarsh { get; set; }
     /// <summary>
     /// <para> Secondary Light Position.</para>
     /// <para>Represents the following attribute in the schema: lightposition2 </para>
     /// </summary>
     [SchemaAttr(0, "lightposition2")]
-    [SchemaIndex(28)]
+    [Index(28)]
     public StringValue LightPosition2 { get; set; }
     /// <summary>
     /// <para> Secondary Light Intensity.</para>
     /// <para>Represents the following attribute in the schema: lightlevel2 </para>
     /// </summary>
     [SchemaAttr(0, "lightlevel2")]
-    [SchemaIndex(29)]
+    [Index(29)]
     public StringValue LightLevel2 { get; set; }
     /// <summary>
     /// <para> Secondary Light Harshness Toggle.</para>
     /// <para>Represents the following attribute in the schema: lightharsh2 </para>
     /// </summary>
     [SchemaAttr(0, "lightharsh2")]
-    [SchemaIndex(30)]
+    [Index(30)]
     public TrueFalseValue LightHarsh2 { get; set; }
 
     /// <summary>
@@ -1180,14 +1111,11 @@ public partial class Extrusion : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "callout")]
 public partial class Callout : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12477;
-    /// <inheritdoc/>
-    public override string LocalName => "callout";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1198,98 +1126,98 @@ public partial class Callout : OpenXmlLeafElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
     /// <summary>
     /// <para> Callout toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
     /// </summary>
     [SchemaAttr(0, "on")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public TrueFalseValue On { get; set; }
     /// <summary>
     /// <para> Callout type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public StringValue Type { get; set; }
     /// <summary>
     /// <para> Callout gap.</para>
     /// <para>Represents the following attribute in the schema: gap </para>
     /// </summary>
     [SchemaAttr(0, "gap")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public StringValue Gap { get; set; }
     /// <summary>
     /// <para> Callout angle.</para>
     /// <para>Represents the following attribute in the schema: angle </para>
     /// </summary>
     [SchemaAttr(0, "angle")]
-    [SchemaIndex(4)]
+    [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.AngleValues> Angle { get; set; }
     /// <summary>
     /// <para> Callout automatic drop toggle.</para>
     /// <para>Represents the following attribute in the schema: dropauto </para>
     /// </summary>
     [SchemaAttr(0, "dropauto")]
-    [SchemaIndex(5)]
+    [Index(5)]
     public TrueFalseValue DropAuto { get; set; }
     /// <summary>
     /// <para> Callout drop position.</para>
     /// <para>Represents the following attribute in the schema: drop </para>
     /// </summary>
     [SchemaAttr(0, "drop")]
-    [SchemaIndex(6)]
+    [Index(6)]
     public StringValue Drop { get; set; }
     /// <summary>
     /// <para> Callout drop distance.</para>
     /// <para>Represents the following attribute in the schema: distance </para>
     /// </summary>
     [SchemaAttr(0, "distance")]
-    [SchemaIndex(7)]
+    [Index(7)]
     public StringValue Distance { get; set; }
     /// <summary>
     /// <para> Callout length toggle.</para>
     /// <para>Represents the following attribute in the schema: lengthspecified </para>
     /// </summary>
     [SchemaAttr(0, "lengthspecified")]
-    [SchemaIndex(8)]
+    [Index(8)]
     public TrueFalseValue LengthSpecified { get; set; }
     /// <summary>
     /// <para> Callout length.</para>
     /// <para>Represents the following attribute in the schema: length </para>
     /// </summary>
     [SchemaAttr(0, "length")]
-    [SchemaIndex(9)]
+    [Index(9)]
     public StringValue Length { get; set; }
     /// <summary>
     /// <para> Callout accent bar toggle.</para>
     /// <para>Represents the following attribute in the schema: accentbar </para>
     /// </summary>
     [SchemaAttr(0, "accentbar")]
-    [SchemaIndex(10)]
+    [Index(10)]
     public TrueFalseValue AccentBar { get; set; }
     /// <summary>
     /// <para> Callout text border toggle.</para>
     /// <para>Represents the following attribute in the schema: textborder </para>
     /// </summary>
     [SchemaAttr(0, "textborder")]
-    [SchemaIndex(11)]
+    [Index(11)]
     public TrueFalseValue TextBorder { get; set; }
     /// <summary>
     /// <para> Callout flip x.</para>
     /// <para>Represents the following attribute in the schema: minusx </para>
     /// </summary>
     [SchemaAttr(0, "minusx")]
-    [SchemaIndex(12)]
+    [Index(12)]
     public TrueFalseValue MinusX { get; set; }
     /// <summary>
     /// <para> Callout flip y.</para>
     /// <para>Represents the following attribute in the schema: minusy </para>
     /// </summary>
     [SchemaAttr(0, "minusy")]
-    [SchemaIndex(13)]
+    [Index(13)]
     public TrueFalseValue MinusY { get; set; }
 
     /// <summary>
@@ -1314,14 +1242,11 @@ public partial class Callout : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "lock")]
 public partial class Lock : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12478;
-    /// <inheritdoc/>
-    public override string LocalName => "lock";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1332,84 +1257,84 @@ public partial class Lock : OpenXmlLeafElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
     /// <summary>
     /// <para> Position Lock.</para>
     /// <para>Represents the following attribute in the schema: position </para>
     /// </summary>
     [SchemaAttr(0, "position")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public TrueFalseValue Position { get; set; }
     /// <summary>
     /// <para> Selection Lock.</para>
     /// <para>Represents the following attribute in the schema: selection </para>
     /// </summary>
     [SchemaAttr(0, "selection")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public TrueFalseValue Selection { get; set; }
     /// <summary>
     /// <para> Grouping Lock.</para>
     /// <para>Represents the following attribute in the schema: grouping </para>
     /// </summary>
     [SchemaAttr(0, "grouping")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public TrueFalseValue Grouping { get; set; }
     /// <summary>
     /// <para> Ungrouping Lock.</para>
     /// <para>Represents the following attribute in the schema: ungrouping </para>
     /// </summary>
     [SchemaAttr(0, "ungrouping")]
-    [SchemaIndex(4)]
+    [Index(4)]
     public TrueFalseValue Ungrouping { get; set; }
     /// <summary>
     /// <para> Rotation Lock.</para>
     /// <para>Represents the following attribute in the schema: rotation </para>
     /// </summary>
     [SchemaAttr(0, "rotation")]
-    [SchemaIndex(5)]
+    [Index(5)]
     public TrueFalseValue Rotation { get; set; }
     /// <summary>
     /// <para> Cropping Lock.</para>
     /// <para>Represents the following attribute in the schema: cropping </para>
     /// </summary>
     [SchemaAttr(0, "cropping")]
-    [SchemaIndex(6)]
+    [Index(6)]
     public TrueFalseValue Cropping { get; set; }
     /// <summary>
     /// <para> Vertices Lock.</para>
     /// <para>Represents the following attribute in the schema: verticies </para>
     /// </summary>
     [SchemaAttr(0, "verticies")]
-    [SchemaIndex(7)]
+    [Index(7)]
     public TrueFalseValue Verticies { get; set; }
     /// <summary>
     /// <para> Handles Lock.</para>
     /// <para>Represents the following attribute in the schema: adjusthandles </para>
     /// </summary>
     [SchemaAttr(0, "adjusthandles")]
-    [SchemaIndex(8)]
+    [Index(8)]
     public TrueFalseValue AdjustHandles { get; set; }
     /// <summary>
     /// <para> Text Lock.</para>
     /// <para>Represents the following attribute in the schema: text </para>
     /// </summary>
     [SchemaAttr(0, "text")]
-    [SchemaIndex(9)]
+    [Index(9)]
     public TrueFalseValue TextLock { get; set; }
     /// <summary>
     /// <para> Aspect Ratio Lock.</para>
     /// <para>Represents the following attribute in the schema: aspectratio </para>
     /// </summary>
     [SchemaAttr(0, "aspectratio")]
-    [SchemaIndex(10)]
+    [Index(10)]
     public TrueFalseValue AspectRatio { get; set; }
     /// <summary>
     /// <para> AutoShape Type Lock.</para>
     /// <para>Represents the following attribute in the schema: shapetype </para>
     /// </summary>
     [SchemaAttr(0, "shapetype")]
-    [SchemaIndex(11)]
+    [Index(11)]
     public TrueFalseValue ShapeType { get; set; }
 
     /// <summary>
@@ -1445,14 +1370,11 @@ public partial class Lock : OpenXmlLeafElement
     [ChildElementInfo(typeof(FieldCodes))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "OLEObject")]
 public partial class OleObject : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12479;
-    /// <inheritdoc/>
-    public override string LocalName => "OLEObject";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1461,35 +1383,35 @@ public partial class OleObject : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: Type </para>
     /// </summary>
     [SchemaAttr(0, "Type")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleValues> Type { get; set; }
     /// <summary>
     /// <para> OLE Object Application.</para>
     /// <para>Represents the following attribute in the schema: ProgID </para>
     /// </summary>
     [SchemaAttr(0, "ProgID")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue ProgId { get; set; }
     /// <summary>
     /// <para> OLE Object Shape.</para>
     /// <para>Represents the following attribute in the schema: ShapeID </para>
     /// </summary>
     [SchemaAttr(0, "ShapeID")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public StringValue ShapeId { get; set; }
     /// <summary>
     /// <para> OLE Object Representation.</para>
     /// <para>Represents the following attribute in the schema: DrawAspect </para>
     /// </summary>
     [SchemaAttr(0, "DrawAspect")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleDrawAspectValues> DrawAspect { get; set; }
     /// <summary>
     /// <para> OLE Object Unique ID.</para>
     /// <para>Represents the following attribute in the schema: ObjectID </para>
     /// </summary>
     [SchemaAttr(0, "ObjectID")]
-    [SchemaIndex(4)]
+    [Index(4)]
     public StringValue ObjectId { get; set; }
     /// <summary>
     /// <para> Relationship.</para>
@@ -1498,14 +1420,14 @@ public partial class OleObject : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    [SchemaIndex(5)]
+    [Index(5)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> OLE Update Mode.</para>
     /// <para>Represents the following attribute in the schema: UpdateMode </para>
     /// </summary>
     [SchemaAttr(0, "UpdateMode")]
-    [SchemaIndex(6)]
+    [Index(6)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleUpdateModeValues> UpdateMode { get; set; }
 
     /// <summary>
@@ -1538,32 +1460,12 @@ public partial class OleObject : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 27 == namespaceId && "LinkType" == name)
-    return new LinkType();
     
-if( 27 == namespaceId && "LockedField" == name)
-    return new LockedField();
-    
-if( 27 == namespaceId && "FieldCodes" == name)
-    return new FieldCodes();
-    
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "LinkType","LockedField","FieldCodes" };
-    private static readonly byte[] eleNamespaceIds = { 27,27,27 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Embedded Object Alternate Image Request.</para>
@@ -1572,11 +1474,13 @@ if( 27 == namespaceId && "FieldCodes" == name)
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(0)]
     public LinkType LinkType
-    {
+	{
         get => GetElement<LinkType>(0);
         set => SetElement(0, value);
-    }
+	}
+    
     /// <summary>
     /// <para> Embedded Object Cannot Be Refreshed.</para>
     /// <para> Represents the following element tag in the schema: o:LockedField </para>
@@ -1584,11 +1488,13 @@ if( 27 == namespaceId && "FieldCodes" == name)
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(1)]
     public LockedField LockedField
-    {
+	{
         get => GetElement<LockedField>(1);
         set => SetElement(1, value);
-    }
+	}
+    
     /// <summary>
     /// <para> WordprocessingML Field Switches.</para>
     /// <para> Represents the following element tag in the schema: o:FieldCodes </para>
@@ -1596,11 +1502,13 @@ if( 27 == namespaceId && "FieldCodes" == name)
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(2)]
     public FieldCodes FieldCodes
-    {
+	{
         get => GetElement<FieldCodes>(2);
         set => SetElement(2, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
@@ -1615,14 +1523,11 @@ if( 27 == namespaceId && "FieldCodes" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "complex")]
 public partial class Complex : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12480;
-    /// <inheritdoc/>
-    public override string LocalName => "complex";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1633,7 +1538,7 @@ public partial class Complex : OpenXmlLeafElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
 
     /// <summary>
@@ -1657,15 +1562,12 @@ public partial class Complex : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(27, "left")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeftStroke : StrokeChildType
 {
     internal const int ElementTypeIdConst = 12481;
-    /// <inheritdoc/>
-    public override string LocalName => "left";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the LeftStroke class.
@@ -1684,15 +1586,12 @@ public partial class LeftStroke : StrokeChildType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(27, "top")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopStroke : StrokeChildType
 {
     internal const int ElementTypeIdConst = 12482;
-    /// <inheritdoc/>
-    public override string LocalName => "top";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the TopStroke class.
@@ -1711,15 +1610,12 @@ public partial class TopStroke : StrokeChildType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(27, "right")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightStroke : StrokeChildType
 {
     internal const int ElementTypeIdConst = 12483;
-    /// <inheritdoc/>
-    public override string LocalName => "right";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the RightStroke class.
@@ -1738,15 +1634,12 @@ public partial class RightStroke : StrokeChildType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(27, "bottom")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BottomStroke : StrokeChildType
 {
     internal const int ElementTypeIdConst = 12484;
-    /// <inheritdoc/>
-    public override string LocalName => "bottom";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the BottomStroke class.
@@ -1765,15 +1658,12 @@ public partial class BottomStroke : StrokeChildType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(27, "column")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnStroke : StrokeChildType
 {
     internal const int ElementTypeIdConst = 12485;
-    /// <inheritdoc/>
-    public override string LocalName => "column";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ColumnStroke class.
@@ -1800,161 +1690,161 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
     /// <summary>
     /// <para> Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
     /// </summary>
     [SchemaAttr(0, "on")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public TrueFalseValue On { get; set; }
     /// <summary>
     /// <para> Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: weight </para>
     /// </summary>
     [SchemaAttr(0, "weight")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public StringValue Weight { get; set; }
     /// <summary>
     /// <para> Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: color </para>
     /// </summary>
     [SchemaAttr(0, "color")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public StringValue Color { get; set; }
     /// <summary>
     /// <para> Stroke Alternate Pattern Color.</para>
     /// <para>Represents the following attribute in the schema: color2 </para>
     /// </summary>
     [SchemaAttr(0, "color2")]
-    [SchemaIndex(4)]
+    [Index(4)]
     public StringValue Color2 { get; set; }
     /// <summary>
     /// <para> Stroke Opacity.</para>
     /// <para>Represents the following attribute in the schema: opacity </para>
     /// </summary>
     [SchemaAttr(0, "opacity")]
-    [SchemaIndex(5)]
+    [Index(5)]
     public StringValue Opacity { get; set; }
     /// <summary>
     /// <para> Stroke Line Style.</para>
     /// <para>Represents the following attribute in the schema: linestyle </para>
     /// </summary>
     [SchemaAttr(0, "linestyle")]
-    [SchemaIndex(6)]
+    [Index(6)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues> LineStyle { get; set; }
     /// <summary>
     /// <para> Miter Joint Limit.</para>
     /// <para>Represents the following attribute in the schema: miterlimit </para>
     /// </summary>
     [SchemaAttr(0, "miterlimit")]
-    [SchemaIndex(7)]
+    [Index(7)]
     public DecimalValue MiterLimit { get; set; }
     /// <summary>
     /// <para> Line End Join Style).</para>
     /// <para>Represents the following attribute in the schema: joinstyle </para>
     /// </summary>
     [SchemaAttr(0, "joinstyle")]
-    [SchemaIndex(8)]
+    [Index(8)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues> JoinStyle { get; set; }
     /// <summary>
     /// <para> Line End Cap.</para>
     /// <para>Represents the following attribute in the schema: endcap </para>
     /// </summary>
     [SchemaAttr(0, "endcap")]
-    [SchemaIndex(9)]
+    [Index(9)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues> EndCap { get; set; }
     /// <summary>
     /// <para> Stroke Dash Pattern.</para>
     /// <para>Represents the following attribute in the schema: dashstyle </para>
     /// </summary>
     [SchemaAttr(0, "dashstyle")]
-    [SchemaIndex(10)]
+    [Index(10)]
     public StringValue DashStyle { get; set; }
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
     /// </summary>
     [SchemaAttr(0, "insetpen")]
-    [SchemaIndex(11)]
+    [Index(11)]
     public TrueFalseValue InsetPen { get; set; }
     /// <summary>
     /// <para> Stroke Image Style.</para>
     /// <para>Represents the following attribute in the schema: filltype </para>
     /// </summary>
     [SchemaAttr(0, "filltype")]
-    [SchemaIndex(12)]
+    [Index(12)]
     public EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues> FillType { get; set; }
     /// <summary>
     /// <para> Stroke Image Location.</para>
     /// <para>Represents the following attribute in the schema: src </para>
     /// </summary>
     [SchemaAttr(0, "src")]
-    [SchemaIndex(13)]
+    [Index(13)]
     public StringValue Source { get; set; }
     /// <summary>
     /// <para> Stroke Image Aspect Ratio.</para>
     /// <para>Represents the following attribute in the schema: imageaspect </para>
     /// </summary>
     [SchemaAttr(0, "imageaspect")]
-    [SchemaIndex(14)]
+    [Index(14)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> ImageAspect { get; set; }
     /// <summary>
     /// <para> Stroke Image Size.</para>
     /// <para>Represents the following attribute in the schema: imagesize </para>
     /// </summary>
     [SchemaAttr(0, "imagesize")]
-    [SchemaIndex(15)]
+    [Index(15)]
     public StringValue ImageSize { get; set; }
     /// <summary>
     /// <para> Stoke Image Alignment.</para>
     /// <para>Represents the following attribute in the schema: imagealignshape </para>
     /// </summary>
     [SchemaAttr(0, "imagealignshape")]
-    [SchemaIndex(16)]
+    [Index(16)]
     public TrueFalseValue ImageAlignShape { get; set; }
     /// <summary>
     /// <para> Line Start Arrowhead.</para>
     /// <para>Represents the following attribute in the schema: startarrow </para>
     /// </summary>
     [SchemaAttr(0, "startarrow")]
-    [SchemaIndex(17)]
+    [Index(17)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> StartArrow { get; set; }
     /// <summary>
     /// <para> Line Start Arrowhead Width.</para>
     /// <para>Represents the following attribute in the schema: startarrowwidth </para>
     /// </summary>
     [SchemaAttr(0, "startarrowwidth")]
-    [SchemaIndex(18)]
+    [Index(18)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> StartArrowWidth { get; set; }
     /// <summary>
     /// <para> Line Start Arrowhead Length.</para>
     /// <para>Represents the following attribute in the schema: startarrowlength </para>
     /// </summary>
     [SchemaAttr(0, "startarrowlength")]
-    [SchemaIndex(19)]
+    [Index(19)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> StartArrowLength { get; set; }
     /// <summary>
     /// <para> Line End Arrowhead.</para>
     /// <para>Represents the following attribute in the schema: endarrow </para>
     /// </summary>
     [SchemaAttr(0, "endarrow")]
-    [SchemaIndex(20)]
+    [Index(20)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> EndArrow { get; set; }
     /// <summary>
     /// <para> Line End Arrowhead Width.</para>
     /// <para>Represents the following attribute in the schema: endarrowwidth </para>
     /// </summary>
     [SchemaAttr(0, "endarrowwidth")]
-    [SchemaIndex(21)]
+    [Index(21)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> EndArrowWidth { get; set; }
     /// <summary>
     /// <para> Line End Arrowhead Length.</para>
     /// <para>Represents the following attribute in the schema: endarrowlength </para>
     /// </summary>
     [SchemaAttr(0, "endarrowlength")]
-    [SchemaIndex(22)]
+    [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> EndArrowLength { get; set; }
     /// <summary>
     /// <para> Original Image Reference.</para>
@@ -1963,7 +1853,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
     [SchemaAttr(27, "href")]
-    [SchemaIndex(23)]
+    [Index(23)]
     public StringValue Href { get; set; }
     /// <summary>
     /// <para> Alternate Image Reference.</para>
@@ -1972,7 +1862,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
     [SchemaAttr(27, "althref")]
-    [SchemaIndex(24)]
+    [Index(24)]
     public StringValue AlternateImageReference { get; set; }
     /// <summary>
     /// <para> Stroke Title.</para>
@@ -1981,7 +1871,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
     [SchemaAttr(27, "title")]
-    [SchemaIndex(25)]
+    [Index(25)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> Force Dashed Outline.</para>
@@ -1990,7 +1880,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
     [SchemaAttr(27, "forcedash")]
-    [SchemaIndex(26)]
+    [Index(26)]
     public TrueFalseValue ForceDash { get; set; }
 
     
@@ -2012,14 +1902,11 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "clippath")]
 public partial class ClipPath : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12486;
-    /// <inheritdoc/>
-    public override string LocalName => "clippath";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2030,7 +1917,7 @@ public partial class ClipPath : OpenXmlLeafElement
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
     [SchemaAttr(27, "v")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue Value { get; set; }
 
     /// <summary>
@@ -2055,14 +1942,11 @@ public partial class ClipPath : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "fill")]
 public partial class FillExtendedProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12487;
-    /// <inheritdoc/>
-    public override string LocalName => "fill";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2073,14 +1957,14 @@ public partial class FillExtendedProperties : OpenXmlLeafElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
     /// <summary>
     /// <para> Fill Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.FillValues> Type { get; set; }
 
     /// <summary>
@@ -2105,14 +1989,11 @@ public partial class FillExtendedProperties : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "idmap")]
 public partial class ShapeIdMap : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12488;
-    /// <inheritdoc/>
-    public override string LocalName => "idmap";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2123,14 +2004,14 @@ public partial class ShapeIdMap : OpenXmlLeafElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
     /// <summary>
     /// <para> Shape IDs.</para>
     /// <para>Represents the following attribute in the schema: data </para>
     /// </summary>
     [SchemaAttr(0, "data")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue Data { get; set; }
 
     /// <summary>
@@ -2162,14 +2043,11 @@ public partial class ShapeIdMap : OpenXmlLeafElement
     [ChildElementInfo(typeof(Entry))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "regrouptable")]
 public partial class RegroupTable : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12489;
-    /// <inheritdoc/>
-    public override string LocalName => "regrouptable";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2180,7 +2058,7 @@ public partial class RegroupTable : OpenXmlCompositeElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
 
     /// <summary>
@@ -2213,19 +2091,11 @@ public partial class RegroupTable : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 27 == namespaceId && "entry" == name)
-    return new Entry();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RegroupTable>(deep);
@@ -2246,14 +2116,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Rule))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "rules")]
 public partial class Rules : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12490;
-    /// <inheritdoc/>
-    public override string LocalName => "rules";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2264,7 +2131,7 @@ public partial class Rules : OpenXmlCompositeElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
 
     /// <summary>
@@ -2297,19 +2164,11 @@ public partial class Rules : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 27 == namespaceId && "r" == name)
-    return new Rule();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Rules>(deep);
@@ -2323,14 +2182,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "entry")]
 public partial class Entry : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12491;
-    /// <inheritdoc/>
-    public override string LocalName => "entry";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2339,14 +2195,14 @@ public partial class Entry : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: new </para>
     /// </summary>
     [SchemaAttr(0, "new")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public Int32Value New { get; set; }
     /// <summary>
     /// <para> Old Group ID.</para>
     /// <para>Represents the following attribute in the schema: old </para>
     /// </summary>
     [SchemaAttr(0, "old")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public Int32Value Old { get; set; }
 
     /// <summary>
@@ -2378,14 +2234,11 @@ public partial class Entry : OpenXmlLeafElement
     [ChildElementInfo(typeof(Proxy))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "r")]
 public partial class Rule : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12492;
-    /// <inheritdoc/>
-    public override string LocalName => "r";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2394,28 +2247,28 @@ public partial class Rule : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Rule Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.RuleValues> Type { get; set; }
     /// <summary>
     /// <para> Alignment Rule Type.</para>
     /// <para>Represents the following attribute in the schema: how </para>
     /// </summary>
     [SchemaAttr(0, "how")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.AlignmentValues> How { get; set; }
     /// <summary>
     /// <para> Rule Shape Reference.</para>
     /// <para>Represents the following attribute in the schema: idref </para>
     /// </summary>
     [SchemaAttr(0, "idref")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public StringValue ShapeReference { get; set; }
 
     /// <summary>
@@ -2448,19 +2301,11 @@ public partial class Rule : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 27 == namespaceId && "proxy" == name)
-    return new Proxy();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Rule>(deep);
@@ -2481,14 +2326,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Relation))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "relationtable")]
 public partial class RelationTable : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12493;
-    /// <inheritdoc/>
-    public override string LocalName => "relationtable";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2499,7 +2341,7 @@ public partial class RelationTable : OpenXmlCompositeElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
 
     /// <summary>
@@ -2532,19 +2374,11 @@ public partial class RelationTable : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 27 == namespaceId && "rel" == name)
-    return new Relation();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelationTable>(deep);
@@ -2558,14 +2392,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "rel")]
 public partial class Relation : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12494;
-    /// <inheritdoc/>
-    public override string LocalName => "rel";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2576,28 +2407,28 @@ public partial class Relation : OpenXmlLeafElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
     /// <summary>
     /// <para> Diagram Relationship Source Shape.</para>
     /// <para>Represents the following attribute in the schema: idsrc </para>
     /// </summary>
     [SchemaAttr(0, "idsrc")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue SourceId { get; set; }
     /// <summary>
     /// <para> Diagram Relationship Destination Shape.</para>
     /// <para>Represents the following attribute in the schema: iddest </para>
     /// </summary>
     [SchemaAttr(0, "iddest")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public StringValue DestinationId { get; set; }
     /// <summary>
     /// <para> Diagram Relationship Center Shape.</para>
     /// <para>Represents the following attribute in the schema: idcntr </para>
     /// </summary>
     [SchemaAttr(0, "idcntr")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public StringValue CenterShapeId { get; set; }
 
     /// <summary>
@@ -2622,14 +2453,11 @@ public partial class Relation : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "LinkType")]
 public partial class LinkType : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12495;
-    /// <inheritdoc/>
-    public override string LocalName => "LinkType";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2669,14 +2497,11 @@ public partial class LinkType : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "LockedField")]
 public partial class LockedField : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12496;
-    /// <inheritdoc/>
-    public override string LocalName => "LockedField";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2716,14 +2541,11 @@ public partial class LockedField : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "FieldCodes")]
 public partial class FieldCodes : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12497;
-    /// <inheritdoc/>
-    public override string LocalName => "FieldCodes";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2763,14 +2585,11 @@ public partial class FieldCodes : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "proxy")]
 public partial class Proxy : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12498;
-    /// <inheritdoc/>
-    public override string LocalName => "proxy";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2779,28 +2598,28 @@ public partial class Proxy : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: start </para>
     /// </summary>
     [SchemaAttr(0, "start")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public TrueFalseBlankValue Start { get; set; }
     /// <summary>
     /// <para> End Point Connection Flag.</para>
     /// <para>Represents the following attribute in the schema: end </para>
     /// </summary>
     [SchemaAttr(0, "end")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public TrueFalseBlankValue End { get; set; }
     /// <summary>
     /// <para> Proxy Shape Reference.</para>
     /// <para>Represents the following attribute in the schema: idref </para>
     /// </summary>
     [SchemaAttr(0, "idref")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public StringValue ShapeReference { get; set; }
     /// <summary>
     /// <para> Connection Location.</para>
     /// <para>Represents the following attribute in the schema: connectloc </para>
     /// </summary>
     [SchemaAttr(0, "connectloc")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public Int32Value ConnectionLocation { get; set; }
 
     /// <summary>
@@ -2825,14 +2644,11 @@ public partial class Proxy : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "colormru")]
 public partial class ColorMostRecentlyUsed : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12499;
-    /// <inheritdoc/>
-    public override string LocalName => "colormru";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2843,14 +2659,14 @@ public partial class ColorMostRecentlyUsed : OpenXmlLeafElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
     /// <summary>
     /// <para> Recent colors.</para>
     /// <para>Represents the following attribute in the schema: colors </para>
     /// </summary>
     [SchemaAttr(0, "colors")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue Colors { get; set; }
 
     /// <summary>
@@ -2875,14 +2691,11 @@ public partial class ColorMostRecentlyUsed : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(27, "colormenu")]
 public partial class ColorMenu : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12500;
-    /// <inheritdoc/>
-    public override string LocalName => "colormenu";
-    internal override byte NamespaceId => 27;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2893,35 +2706,35 @@ public partial class ColorMenu : OpenXmlLeafElement
 ///<remark> xmlns:v=urn:schemas-microsoft-com:vml
 ///</remark>
     [SchemaAttr(26, "ext")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
     /// <summary>
     /// <para> Default stroke color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
     /// </summary>
     [SchemaAttr(0, "strokecolor")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue StrokeColor { get; set; }
     /// <summary>
     /// <para> Default fill color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
     /// </summary>
     [SchemaAttr(0, "fillcolor")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public StringValue FillColor { get; set; }
     /// <summary>
     /// <para> Default shadow color.</para>
     /// <para>Represents the following attribute in the schema: shadowcolor </para>
     /// </summary>
     [SchemaAttr(0, "shadowcolor")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public StringValue ShadowColor { get; set; }
     /// <summary>
     /// <para> Default extrusion color.</para>
     /// <para>Represents the following attribute in the schema: extrusioncolor </para>
     /// </summary>
     [SchemaAttr(0, "extrusioncolor")]
-    [SchemaIndex(4)]
+    [Index(4)]
     public StringValue ExtrusionColor { get; set; }
 
     /// <summary>

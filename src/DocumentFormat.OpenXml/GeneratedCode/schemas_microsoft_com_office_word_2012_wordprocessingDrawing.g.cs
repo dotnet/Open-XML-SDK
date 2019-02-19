@@ -17,14 +17,11 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(75, "webVideoPr")]
 public partial class WebVideoProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13435;
-    /// <inheritdoc/>
-    public override string LocalName => "webVideoPr";
-    internal override byte NamespaceId => 75;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -33,21 +30,21 @@ public partial class WebVideoProperty : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: embeddedHtml </para>
     /// </summary>
     [SchemaAttr(0, "embeddedHtml")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue EmbeddedHtml { get; set; }
     /// <summary>
     /// <para> h.</para>
     /// <para>Represents the following attribute in the schema: h </para>
     /// </summary>
     [SchemaAttr(0, "h")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public UInt32Value Height { get; set; }
     /// <summary>
     /// <para> w.</para>
     /// <para>Represents the following attribute in the schema: w </para>
     /// </summary>
     [SchemaAttr(0, "w")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public UInt32Value Width { get; set; }
 
     /// <summary>

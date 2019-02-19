@@ -33,15 +33,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(60, "wgp")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class WordprocessingGroup : WordprocessingGroupType
 {
     internal const int ElementTypeIdConst = 13187;
-    /// <inheritdoc/>
-    public override string LocalName => "wgp";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the WordprocessingGroup class.
@@ -72,6 +69,7 @@ public partial class WordprocessingGroup : WordprocessingGroupType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -99,15 +97,12 @@ public partial class WordprocessingGroup : WordprocessingGroupType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(60, "grpSp")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class GroupShape : WordprocessingGroupType
 {
     internal const int ElementTypeIdConst = 13194;
-    /// <inheritdoc/>
-    public override string LocalName => "grpSp";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the GroupShape class.
@@ -138,6 +133,7 @@ public partial class GroupShape : WordprocessingGroupType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -176,47 +172,8 @@ public abstract partial class WordprocessingGroupType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 60 == namespaceId && "cNvPr" == name)
-    return new NonVisualDrawingProperties();
     
-if( 60 == namespaceId && "cNvGrpSpPr" == name)
-    return new NonVisualGroupDrawingShapeProperties();
-    
-if( 60 == namespaceId && "grpSpPr" == name)
-    return new GroupShapeProperties();
-    
-if( 61 == namespaceId && "wsp" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape();
-    
-if( 60 == namespaceId && "grpSp" == name)
-    return new GroupShape();
-    
-if( 60 == namespaceId && "graphicFrame" == name)
-    return new GraphicFrame();
-    
-if( 17 == namespaceId && "pic" == name)
-    return new DocumentFormat.OpenXml.Drawing.Pictures.Picture();
-    
-if( 52 == namespaceId && "contentPart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.ContentPart();
-    
-if( 60 == namespaceId && "extLst" == name)
-    return new OfficeArtExtensionList();
-    
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "cNvPr","cNvGrpSpPr","grpSpPr","wsp","grpSp","graphicFrame","pic","contentPart","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 60,60,60,61,60,60,17,52,60 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -225,11 +182,13 @@ if( 60 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
+	[Index(0)]
     public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
+	{
         get => GetElement<NonVisualDrawingProperties>(0);
         set => SetElement(0, value);
-    }
+	}
+    
     /// <summary>
     /// <para> NonVisualGroupDrawingShapeProperties.</para>
     /// <para> Represents the following element tag in the schema: wpg:cNvGrpSpPr </para>
@@ -237,11 +196,13 @@ if( 60 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
+	[Index(1)]
     public NonVisualGroupDrawingShapeProperties NonVisualGroupDrawingShapeProperties
-    {
+	{
         get => GetElement<NonVisualGroupDrawingShapeProperties>(1);
         set => SetElement(1, value);
-    }
+	}
+    
     /// <summary>
     /// <para> GroupShapeProperties.</para>
     /// <para> Represents the following element tag in the schema: wpg:grpSpPr </para>
@@ -249,11 +210,13 @@ if( 60 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
+	[Index(2)]
     public GroupShapeProperties GroupShapeProperties
-    {
+	{
         get => GetElement<GroupShapeProperties>(2);
         set => SetElement(2, value);
-    }
+	}
+    
 
 
     
@@ -287,6 +250,7 @@ if( 60 == namespaceId && "extLst" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -309,14 +273,11 @@ if( 60 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(60, "cNvPr")]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13188;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvPr";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -325,35 +286,35 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
     [SchemaAttr(0, "descr")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
     [SchemaAttr(0, "hidden")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
     [SchemaAttr(0, "title")]
-    [SchemaIndex(4)]
+    [Index(4)]
     public StringValue Title { get; set; }
 
     /// <summary>
@@ -386,32 +347,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "hlinkClick" == name)
-    return new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick();
     
-if( 10 == namespaceId && "hlinkHover" == name)
-    return new DocumentFormat.OpenXml.Drawing.HyperlinkOnHover();
-    
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList();
-    
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
@@ -420,11 +361,13 @@ if( 10 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
         set => SetElement(0, value);
-    }
+	}
+    
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
     /// <para> Represents the following element tag in the schema: a:hlinkHover </para>
@@ -432,11 +375,13 @@ if( 10 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
         set => SetElement(1, value);
-    }
+	}
+    
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -444,11 +389,13 @@ if( 10 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(2)]
     public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
         set => SetElement(2, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
@@ -472,14 +419,11 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(60, "cNvFrPr")]
 public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13189;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvFrPr";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -514,29 +458,12 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "graphicFrameLocks" == name)
-    return new DocumentFormat.OpenXml.Drawing.GraphicFrameLocks();
     
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.ExtensionList();
-    
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "graphicFrameLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Graphic Frame Locks.</para>
@@ -545,11 +472,13 @@ if( 10 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks GraphicFrameLocks
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>(0);
         set => SetElement(0, value);
-    }
+	}
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -557,11 +486,13 @@ if( 10 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
         set => SetElement(1, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
@@ -585,14 +516,11 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(60, "xfrm")]
 public partial class Transform2D : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13190;
-    /// <inheritdoc/>
-    public override string LocalName => "xfrm";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -601,21 +529,21 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
     [SchemaAttr(0, "rot")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
     [SchemaAttr(0, "flipH")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
     [SchemaAttr(0, "flipV")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>
@@ -648,29 +576,12 @@ public partial class Transform2D : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "off" == name)
-    return new DocumentFormat.OpenXml.Drawing.Offset();
     
-if( 10 == namespaceId && "ext" == name)
-    return new DocumentFormat.OpenXml.Drawing.Extents();
-    
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "off","ext" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Offset.</para>
@@ -679,11 +590,13 @@ if( 10 == namespaceId && "ext" == name)
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.Offset Offset
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
         set => SetElement(0, value);
-    }
+	}
+    
     /// <summary>
     /// <para> Extents.</para>
     /// <para> Represents the following element tag in the schema: a:ext </para>
@@ -691,11 +604,13 @@ if( 10 == namespaceId && "ext" == name)
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.Extents Extents
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
         set => SetElement(1, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
@@ -717,14 +632,11 @@ if( 10 == namespaceId && "ext" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(60, "extLst")]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13191;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -759,19 +671,11 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "ext" == name)
-    return new DocumentFormat.OpenXml.Drawing.Extension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeArtExtensionList>(deep);
@@ -794,14 +698,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(60, "cNvGrpSpPr")]
 public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13192;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvGrpSpPr";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -836,29 +737,12 @@ public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElem
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "grpSpLocks" == name)
-    return new DocumentFormat.OpenXml.Drawing.GroupShapeLocks();
     
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList();
-    
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "grpSpLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> GroupShapeLocks.</para>
@@ -867,11 +751,13 @@ if( 10 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.GroupShapeLocks GroupShapeLocks
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>(0);
         set => SetElement(0, value);
-    }
+	}
+    
     /// <summary>
     /// <para> NonVisualGroupDrawingShapePropsExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -879,11 +765,13 @@ if( 10 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList NonVisualGroupDrawingShapePropsExtensionList
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>(1);
         set => SetElement(1, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
@@ -925,14 +813,11 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(60, "grpSpPr")]
 public partial class GroupShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13193;
-    /// <inheritdoc/>
-    public override string LocalName => "grpSpPr";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -941,7 +826,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
     [SchemaAttr(0, "bwMode")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -974,56 +859,12 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "xfrm" == name)
-    return new DocumentFormat.OpenXml.Drawing.TransformGroup();
     
-if( 10 == namespaceId && "noFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.NoFill();
-    
-if( 10 == namespaceId && "solidFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.SolidFill();
-    
-if( 10 == namespaceId && "gradFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.GradientFill();
-    
-if( 10 == namespaceId && "blipFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.BlipFill();
-    
-if( 10 == namespaceId && "pattFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.PatternFill();
-    
-if( 10 == namespaceId && "grpFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.GroupFill();
-    
-if( 10 == namespaceId && "effectLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.EffectList();
-    
-if( 10 == namespaceId && "effectDag" == name)
-    return new DocumentFormat.OpenXml.Drawing.EffectDag();
-    
-if( 10 == namespaceId && "scene3d" == name)
-    return new DocumentFormat.OpenXml.Drawing.Scene3DType();
-    
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.ExtensionList();
-    
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "xfrm","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","effectLst","effectDag","scene3d","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Grouped Objects.</para>
@@ -1032,11 +873,13 @@ if( 10 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.TransformGroup TransformGroup
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>(0);
         set => SetElement(0, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
@@ -1066,14 +909,11 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(60, "graphicFrame")]
 public partial class GraphicFrame : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13195;
-    /// <inheritdoc/>
-    public override string LocalName => "graphicFrame";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1108,38 +948,12 @@ public partial class GraphicFrame : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 60 == namespaceId && "cNvPr" == name)
-    return new NonVisualDrawingProperties();
     
-if( 60 == namespaceId && "cNvFrPr" == name)
-    return new NonVisualGraphicFrameProperties();
-    
-if( 60 == namespaceId && "xfrm" == name)
-    return new Transform2D();
-    
-if( 10 == namespaceId && "graphic" == name)
-    return new DocumentFormat.OpenXml.Drawing.Graphic();
-    
-if( 60 == namespaceId && "extLst" == name)
-    return new OfficeArtExtensionList();
-    
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "cNvPr","cNvFrPr","xfrm","graphic","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 60,60,60,10,60 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -1148,11 +962,13 @@ if( 60 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
+	[Index(0)]
     public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
+	{
         get => GetElement<NonVisualDrawingProperties>(0);
         set => SetElement(0, value);
-    }
+	}
+    
     /// <summary>
     /// <para> NonVisualGraphicFrameProperties.</para>
     /// <para> Represents the following element tag in the schema: wpg:cNvFrPr </para>
@@ -1160,11 +976,13 @@ if( 60 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
+	[Index(1)]
     public NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties
-    {
+	{
         get => GetElement<NonVisualGraphicFrameProperties>(1);
         set => SetElement(1, value);
-    }
+	}
+    
     /// <summary>
     /// <para> Transform2D.</para>
     /// <para> Represents the following element tag in the schema: wpg:xfrm </para>
@@ -1172,11 +990,13 @@ if( 60 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
+	[Index(2)]
     public Transform2D Transform2D
-    {
+	{
         get => GetElement<Transform2D>(2);
         set => SetElement(2, value);
-    }
+	}
+    
     /// <summary>
     /// <para> Graphic.</para>
     /// <para> Represents the following element tag in the schema: a:graphic </para>
@@ -1184,11 +1004,13 @@ if( 60 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(3)]
     public DocumentFormat.OpenXml.Drawing.Graphic Graphic
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(3);
         set => SetElement(3, value);
-    }
+	}
+    
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: wpg:extLst </para>
@@ -1196,11 +1018,13 @@ if( 60 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
+	[Index(4)]
     public OfficeArtExtensionList OfficeArtExtensionList
-    {
+	{
         get => GetElement<OfficeArtExtensionList>(4);
         set => SetElement(4, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>

@@ -8,8 +8,11 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines an mc:Choice element in mc:AlternateContent.
     /// </summary>
+    [SchemaAttr(AlternateContent.Namespace, Name)]
     public class AlternateContentChoice : OpenXmlCompositeElement
     {
+        private const string Name = "Choice";
+
         /// <summary>
         /// Initializes a new instance of the
         /// AlternateContentChoice class.
@@ -62,14 +65,12 @@ namespace DocumentFormat.OpenXml
         /// Gets a value that represents the tag name of the
         /// Choice element.
         /// </summary>
-        public static string TagName { get; } = "Choice";
+        public static string TagName =>Name;
 
         /// <summary>
         /// Gets the local name of the Choice element.
         /// </summary>
         public override string LocalName => TagName;
-
-        internal override byte NamespaceId => AlternateContent.MarkupCompatibilityNamespaceId;
 
         /// <summary>
         /// Gets or sets a whitespace-delimited list of namespace prefixes that identify the
@@ -77,18 +78,18 @@ namespace DocumentFormat.OpenXml
         /// Choice and process the content.
         /// </summary>
         [SchemaAttr(0, "Requires")]
-        [SchemaIndex(0)]
+        [Index(0)]
         public StringValue Requires { get; set; }
 
         internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         {
-            if (Parent != null && Parent is AlternateContent)
+            if (Parent is AlternateContent)
             {
-                var parentsParentElemnt = Parent.Parent;
+                var parentsParentElement = Parent.Parent;
 
-                if (parentsParentElemnt != null)
+                if (parentsParentElement != null)
                 {
-                    return parentsParentElemnt.ElementFactory(namespaceId, name);
+                    return parentsParentElement.ElementFactory(namespaceId, name);
                 }
             }
 
@@ -110,7 +111,5 @@ namespace DocumentFormat.OpenXml
         /// Gets the type ID of the element.
         /// </summary>
         internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentChoiceId;
-
-        internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     }
 }

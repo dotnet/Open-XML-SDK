@@ -5,20 +5,14 @@ using System;
 
 namespace DocumentFormat.OpenXml
 {
-    /// <summary>
-    /// Used to indicate order in a schema definition.
-    /// </summary>
-    /// <remarks>
-    /// This may only be here due to the validation system keying of an index.
-    /// </remarks>
     [AttributeUsage(AttributeTargets.Property, Inherited = true, AllowMultiple = false)]
-    internal sealed class SchemaIndexAttribute : Attribute
+    internal sealed class IndexAttribute : Attribute
     {
-        public SchemaIndexAttribute(int index)
+        public IndexAttribute(byte index)
         {
             Index = index;
         }
 
-        public int Index { get; }
+        public byte Index { get; }
     }
 }

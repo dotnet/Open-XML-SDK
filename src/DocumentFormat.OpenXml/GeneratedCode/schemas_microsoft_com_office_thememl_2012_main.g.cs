@@ -24,14 +24,11 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(73, "themeFamily")]
 public partial class ThemeFamily : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13430;
-    /// <inheritdoc/>
-    public override string LocalName => "themeFamily";
-    internal override byte NamespaceId => 73;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -40,21 +37,21 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> vid.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
     /// </summary>
     [SchemaAttr(0, "vid")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public StringValue Vid { get; set; }
 
     /// <summary>
@@ -87,26 +84,12 @@ public partial class ThemeFamily : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 73 == namespaceId && "extLst" == name)
-    return new OfficeArtExtensionList();
     
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 73 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -115,11 +98,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// <remark>
     /// xmlns:thm15 = http://schemas.microsoft.com/office/thememl/2012/main
     /// </remark>
+	[Index(0)]
     public OfficeArtExtensionList OfficeArtExtensionList
-    {
+	{
         get => GetElement<OfficeArtExtensionList>(0);
         set => SetElement(0, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
@@ -141,14 +126,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(73, "extLst")]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13431;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 73;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -183,19 +165,11 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "ext" == name)
-    return new DocumentFormat.OpenXml.Drawing.Extension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeArtExtensionList>(deep);
@@ -216,14 +190,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(73, "themeVariant")]
 public partial class ThemeVariant : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13432;
-    /// <inheritdoc/>
-    public override string LocalName => "themeVariant";
-    internal override byte NamespaceId => 73;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -232,28 +203,28 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> vid.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
     /// </summary>
     [SchemaAttr(0, "vid")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue Vid { get; set; }
     /// <summary>
     /// <para> cx.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
     [SchemaAttr(0, "cx")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public Int64Value X { get; set; }
     /// <summary>
     /// <para> cy.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
     [SchemaAttr(0, "cy")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public Int64Value Y { get; set; }
     /// <summary>
     /// <para> id.</para>
@@ -262,7 +233,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    [SchemaIndex(4)]
+    [Index(4)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -295,26 +266,12 @@ public partial class ThemeVariant : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 73 == namespaceId && "extLst" == name)
-    return new OfficeArtExtensionList();
     
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 73 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -323,11 +280,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// <remark>
     /// xmlns:thm15 = http://schemas.microsoft.com/office/thememl/2012/main
     /// </remark>
+	[Index(0)]
     public OfficeArtExtensionList OfficeArtExtensionList
-    {
+	{
         get => GetElement<OfficeArtExtensionList>(0);
         set => SetElement(0, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
@@ -349,14 +308,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ThemeVariant), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(73, "themeVariantLst")]
 public partial class ThemeVariantList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13433;
-    /// <inheritdoc/>
-    public override string LocalName => "themeVariantLst";
-    internal override byte NamespaceId => 73;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -391,19 +347,11 @@ public partial class ThemeVariantList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 73 == namespaceId && "themeVariant" == name)
-    return new ThemeVariant();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThemeVariantList>(deep);

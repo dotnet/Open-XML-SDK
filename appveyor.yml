@@ -2,25 +2,18 @@ os: Visual Studio 2017
 
 environment:
   image: Visual Studio 2017
-  SignClientSecret:
-    secure: mFGn2231Q1q2i0Ov227oDN/5cxwx4qRr2FOEnvMJNzk=
-  SignClientUser:
-    secure: wPNGuPyt7pAx9YDKurysk5polnxcGU7GiWmJ70r4tpyDUgGEqxRSZhZ8lWvBhwuC
   Configuration: Release
   ProjectLoadStyle: All
 
 install:
-  - ps: dotnet tool install --version 1.0.3 --tool-path ./build/ SignClient
   - cmd: choco install gitversion.portable
   - cmd: gitversion /output buildserver
-  - ps:  Invoke-WebRequest https://packagecompatstorage.blob.core.windows.net/tools/compat-agent.exe -o compat-agent.exe
 
 build_script:
   - cmd: msbuild /t:restore;build /v:m /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
 after_build:
   - cmd: msbuild /t:pack /m .\src\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
-  - ps: .\build\SignPackage.ps1
 
 test_script:
   - cmd: msbuild /m /t:test .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
@@ -29,12 +22,5 @@ artifacts:
   - path: 'bin\**\*.nupkg'
 
 on_finish:
-  - cmd: compat-agent.exe -config compat.yml -version %GitVersion_NuGetVersionV2%
-
-deploy:
-  provider: NuGet
-  server: https://dotnet.myget.org/F/open-xml-sdk/api/v2/package
-  api_key:
-    secure: SSFVVP2n8gyH0kiElrqwrIJJwL3C7XFnYnntr3z/h2Rwpa7/K1nDd2BP3JPB6347
-  on:
-    branch: [master]
+  - ps:  Invoke-WebRequest http://kompat.io/downloads/kompat.exe -o kompat.exe
+  - cmd: kompat.exe -config compat.yml -version %GitVersion_NuGetVersionV2%

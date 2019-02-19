@@ -161,7 +161,7 @@ namespace DocumentFormat.OpenXml
                 {
                     Type childType = childElementTypeAttribute.ElementType;
 
-                    var childElement = (OpenXmlElement)System.Activator.CreateInstance(childType);
+                    var childElement = PackageCache.Cache.CreateElement(childType);
 
                     foreach (var id in elementIds)
                     {

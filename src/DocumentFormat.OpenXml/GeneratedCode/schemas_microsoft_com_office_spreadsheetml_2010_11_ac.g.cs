@@ -17,14 +17,11 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(74, "absPath")]
 public partial class AbsolutePath : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13434;
-    /// <inheritdoc/>
-    public override string LocalName => "absPath";
-    internal override byte NamespaceId => 74;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -33,7 +30,7 @@ public partial class AbsolutePath : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: url </para>
     /// </summary>
     [SchemaAttr(0, "url")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue Url { get; set; }
 
     /// <summary>

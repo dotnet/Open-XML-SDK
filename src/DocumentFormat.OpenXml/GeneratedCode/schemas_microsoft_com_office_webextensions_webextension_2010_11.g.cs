@@ -32,15 +32,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     [ChildElementInfo(typeof(Snapshot), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(66, "webextension")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtension : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 13310;
-    /// <inheritdoc/>
-    public override string LocalName => "webextension";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -49,14 +46,14 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> frozen.</para>
     /// <para>Represents the following attribute in the schema: frozen </para>
     /// </summary>
     [SchemaAttr(0, "frozen")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public BooleanValue Frozen { get; set; }
 
     
@@ -104,6 +101,7 @@ public partial class WebExtension : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -121,38 +119,8 @@ public partial class WebExtension : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 66 == namespaceId && "reference" == name)
-    return new WebExtensionStoreReference();
     
-if( 66 == namespaceId && "alternateReferences" == name)
-    return new WebExtensionReferenceList();
-    
-if( 66 == namespaceId && "properties" == name)
-    return new WebExtensionPropertyBag();
-    
-if( 66 == namespaceId && "bindings" == name)
-    return new WebExtensionBindingList();
-    
-if( 66 == namespaceId && "snapshot" == name)
-    return new Snapshot();
-    
-if( 66 == namespaceId && "extLst" == name)
-    return new OfficeArtExtensionList();
-    
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "reference","alternateReferences","properties","bindings","snapshot","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 66,66,66,66,66,66 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> WebExtensionStoreReference.</para>
@@ -161,11 +129,13 @@ if( 66 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(0)]
     public WebExtensionStoreReference WebExtensionStoreReference
-    {
+	{
         get => GetElement<WebExtensionStoreReference>(0);
         set => SetElement(0, value);
-    }
+	}
+    
     /// <summary>
     /// <para> WebExtensionReferenceList.</para>
     /// <para> Represents the following element tag in the schema: we:alternateReferences </para>
@@ -173,11 +143,13 @@ if( 66 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(1)]
     public WebExtensionReferenceList WebExtensionReferenceList
-    {
+	{
         get => GetElement<WebExtensionReferenceList>(1);
         set => SetElement(1, value);
-    }
+	}
+    
     /// <summary>
     /// <para> WebExtensionPropertyBag.</para>
     /// <para> Represents the following element tag in the schema: we:properties </para>
@@ -185,11 +157,13 @@ if( 66 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(2)]
     public WebExtensionPropertyBag WebExtensionPropertyBag
-    {
+	{
         get => GetElement<WebExtensionPropertyBag>(2);
         set => SetElement(2, value);
-    }
+	}
+    
     /// <summary>
     /// <para> WebExtensionBindingList.</para>
     /// <para> Represents the following element tag in the schema: we:bindings </para>
@@ -197,11 +171,13 @@ if( 66 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(3)]
     public WebExtensionBindingList WebExtensionBindingList
-    {
+	{
         get => GetElement<WebExtensionBindingList>(3);
         set => SetElement(3, value);
-    }
+	}
+    
     /// <summary>
     /// <para> Snapshot.</para>
     /// <para> Represents the following element tag in the schema: we:snapshot </para>
@@ -209,11 +185,13 @@ if( 66 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(4)]
     public Snapshot Snapshot
-    {
+	{
         get => GetElement<Snapshot>(4);
         set => SetElement(4, value);
-    }
+	}
+    
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: we:extLst </para>
@@ -221,11 +199,13 @@ if( 66 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(5)]
     public OfficeArtExtensionList OfficeArtExtensionList
-    {
+	{
         get => GetElement<OfficeArtExtensionList>(5);
         set => SetElement(5, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
@@ -240,14 +220,11 @@ if( 66 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(66, "webextensionref")]
 public partial class WebExtensionReference : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13311;
-    /// <inheritdoc/>
-    public override string LocalName => "webextensionref";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -258,7 +235,7 @@ public partial class WebExtensionReference : OpenXmlLeafElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -283,14 +260,11 @@ public partial class WebExtensionReference : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(66, "property")]
 public partial class WebExtensionProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13312;
-    /// <inheritdoc/>
-    public override string LocalName => "property";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -299,14 +273,14 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
     [SchemaAttr(0, "value")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue Value { get; set; }
 
     /// <summary>
@@ -338,14 +312,11 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(66, "extLst")]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13313;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -380,19 +351,11 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "ext" == name)
-    return new DocumentFormat.OpenXml.Drawing.Extension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeArtExtensionList>(deep);
@@ -413,14 +376,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(66, "binding")]
 public partial class WebExtensionBinding : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13314;
-    /// <inheritdoc/>
-    public override string LocalName => "binding";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -429,21 +389,21 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue Type { get; set; }
     /// <summary>
     /// <para> appref.</para>
     /// <para>Represents the following attribute in the schema: appref </para>
     /// </summary>
     [SchemaAttr(0, "appref")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public StringValue AppReference { get; set; }
 
     /// <summary>
@@ -476,26 +436,12 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 66 == namespaceId && "extLst" == name)
-    return new OfficeArtExtensionList();
     
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 66 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -504,11 +450,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(0)]
     public OfficeArtExtensionList OfficeArtExtensionList
-    {
+	{
         get => GetElement<OfficeArtExtensionList>(0);
         set => SetElement(0, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
@@ -530,14 +478,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(66, "reference")]
 public partial class WebExtensionStoreReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13315;
-    /// <inheritdoc/>
-    public override string LocalName => "reference";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -546,28 +491,28 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> version.</para>
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
     [SchemaAttr(0, "version")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue Version { get; set; }
     /// <summary>
     /// <para> store.</para>
     /// <para>Represents the following attribute in the schema: store </para>
     /// </summary>
     [SchemaAttr(0, "store")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public StringValue Store { get; set; }
     /// <summary>
     /// <para> storeType.</para>
     /// <para>Represents the following attribute in the schema: storeType </para>
     /// </summary>
     [SchemaAttr(0, "storeType")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public StringValue StoreType { get; set; }
 
     /// <summary>
@@ -600,26 +545,12 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 66 == namespaceId && "extLst" == name)
-    return new OfficeArtExtensionList();
     
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 66 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -628,11 +559,13 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(0)]
     public OfficeArtExtensionList OfficeArtExtensionList
-    {
+	{
         get => GetElement<OfficeArtExtensionList>(0);
         set => SetElement(0, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
@@ -654,14 +587,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(WebExtensionStoreReference), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(66, "alternateReferences")]
 public partial class WebExtensionReferenceList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13316;
-    /// <inheritdoc/>
-    public override string LocalName => "alternateReferences";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -696,19 +626,11 @@ public partial class WebExtensionReferenceList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 66 == namespaceId && "reference" == name)
-    return new WebExtensionStoreReference();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionReferenceList>(deep);
@@ -729,14 +651,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(WebExtensionProperty), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(66, "properties")]
 public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13317;
-    /// <inheritdoc/>
-    public override string LocalName => "properties";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -771,19 +690,11 @@ public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 66 == namespaceId && "property" == name)
-    return new WebExtensionProperty();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionPropertyBag>(deep);
@@ -804,14 +715,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(WebExtensionBinding), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(66, "bindings")]
 public partial class WebExtensionBindingList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13318;
-    /// <inheritdoc/>
-    public override string LocalName => "bindings";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -846,19 +754,11 @@ public partial class WebExtensionBindingList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 66 == namespaceId && "binding" == name)
-    return new WebExtensionBinding();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionBindingList>(deep);
@@ -913,14 +813,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(66, "snapshot")]
 public partial class Snapshot : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13319;
-    /// <inheritdoc/>
-    public override string LocalName => "snapshot";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -931,7 +828,7 @@ public partial class Snapshot : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "embed")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue Embed { get; set; }
     /// <summary>
     /// <para> Linked Picture Reference.</para>
@@ -940,14 +837,14 @@ public partial class Snapshot : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "link")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue Link { get; set; }
     /// <summary>
     /// <para> cstate.</para>
     /// <para>Represents the following attribute in the schema: cstate </para>
     /// </summary>
     [SchemaAttr(0, "cstate")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues> CompressionState { get; set; }
 
     /// <summary>
@@ -980,70 +877,11 @@ public partial class Snapshot : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "alphaBiLevel" == name)
-    return new DocumentFormat.OpenXml.Drawing.AlphaBiLevel();
     
-if( 10 == namespaceId && "alphaCeiling" == name)
-    return new DocumentFormat.OpenXml.Drawing.AlphaCeiling();
-    
-if( 10 == namespaceId && "alphaFloor" == name)
-    return new DocumentFormat.OpenXml.Drawing.AlphaFloor();
-    
-if( 10 == namespaceId && "alphaInv" == name)
-    return new DocumentFormat.OpenXml.Drawing.AlphaInverse();
-    
-if( 10 == namespaceId && "alphaMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.AlphaModulationEffect();
-    
-if( 10 == namespaceId && "alphaModFix" == name)
-    return new DocumentFormat.OpenXml.Drawing.AlphaModulationFixed();
-    
-if( 10 == namespaceId && "alphaRepl" == name)
-    return new DocumentFormat.OpenXml.Drawing.AlphaReplace();
-    
-if( 10 == namespaceId && "biLevel" == name)
-    return new DocumentFormat.OpenXml.Drawing.BiLevel();
-    
-if( 10 == namespaceId && "blur" == name)
-    return new DocumentFormat.OpenXml.Drawing.Blur();
-    
-if( 10 == namespaceId && "clrChange" == name)
-    return new DocumentFormat.OpenXml.Drawing.ColorChange();
-    
-if( 10 == namespaceId && "clrRepl" == name)
-    return new DocumentFormat.OpenXml.Drawing.ColorReplacement();
-    
-if( 10 == namespaceId && "duotone" == name)
-    return new DocumentFormat.OpenXml.Drawing.Duotone();
-    
-if( 10 == namespaceId && "fillOverlay" == name)
-    return new DocumentFormat.OpenXml.Drawing.FillOverlay();
-    
-if( 10 == namespaceId && "grayscl" == name)
-    return new DocumentFormat.OpenXml.Drawing.Grayscale();
-    
-if( 10 == namespaceId && "hsl" == name)
-    return new DocumentFormat.OpenXml.Drawing.Hsl();
-    
-if( 10 == namespaceId && "lum" == name)
-    return new DocumentFormat.OpenXml.Drawing.LuminanceEffect();
-    
-if( 10 == namespaceId && "tint" == name)
-    return new DocumentFormat.OpenXml.Drawing.TintEffect();
-    
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.BlipExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Snapshot>(deep);

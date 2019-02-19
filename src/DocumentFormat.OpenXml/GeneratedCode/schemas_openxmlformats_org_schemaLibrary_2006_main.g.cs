@@ -23,14 +23,11 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     [ChildElementInfo(typeof(Schema))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(25, "schemaLibrary")]
 public partial class SchemaLibrary : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12468;
-    /// <inheritdoc/>
-    public override string LocalName => "schemaLibrary";
-    internal override byte NamespaceId => 25;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -65,19 +62,11 @@ public partial class SchemaLibrary : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 25 == namespaceId && "schema" == name)
-    return new Schema();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SchemaLibrary>(deep);
@@ -91,14 +80,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(25, "schema")]
 public partial class Schema : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12469;
-    /// <inheritdoc/>
-    public override string LocalName => "schema";
-    internal override byte NamespaceId => 25;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -109,7 +95,7 @@ public partial class Schema : OpenXmlLeafElement
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
     [SchemaAttr(25, "uri")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue Uri { get; set; }
     /// <summary>
     /// <para> Resource File Location.</para>
@@ -118,7 +104,7 @@ public partial class Schema : OpenXmlLeafElement
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
     [SchemaAttr(25, "manifestLocation")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue ManifestLocation { get; set; }
     /// <summary>
     /// <para> Custom XML Schema Location.</para>
@@ -127,7 +113,7 @@ public partial class Schema : OpenXmlLeafElement
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
     [SchemaAttr(25, "schemaLocation")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public StringValue SchemaLocation { get; set; }
 
     /// <summary>

@@ -27,14 +27,11 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     [ChildElementInfo(typeof(DestinationLink))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(45, "context")]
 public partial class ContextNode : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12758;
-    /// <inheritdoc/>
-    public override string LocalName => "context";
-    internal override byte NamespaceId => 45;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -43,147 +40,147 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue Type { get; set; }
     /// <summary>
     /// <para> rotatedBoundingBox.</para>
     /// <para>Represents the following attribute in the schema: rotatedBoundingBox </para>
     /// </summary>
     [SchemaAttr(0, "rotatedBoundingBox")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public ListValue<StringValue> RotatedBoundingBox { get; set; }
     /// <summary>
     /// <para> alignmentLevel.</para>
     /// <para>Represents the following attribute in the schema: alignmentLevel </para>
     /// </summary>
     [SchemaAttr(0, "alignmentLevel")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public Int32Value AlignmentLevel { get; set; }
     /// <summary>
     /// <para> contentType.</para>
     /// <para>Represents the following attribute in the schema: contentType </para>
     /// </summary>
     [SchemaAttr(0, "contentType")]
-    [SchemaIndex(4)]
+    [Index(4)]
     public Int32Value ContentType { get; set; }
     /// <summary>
     /// <para> ascender.</para>
     /// <para>Represents the following attribute in the schema: ascender </para>
     /// </summary>
     [SchemaAttr(0, "ascender")]
-    [SchemaIndex(5)]
+    [Index(5)]
     public StringValue Ascender { get; set; }
     /// <summary>
     /// <para> descender.</para>
     /// <para>Represents the following attribute in the schema: descender </para>
     /// </summary>
     [SchemaAttr(0, "descender")]
-    [SchemaIndex(6)]
+    [Index(6)]
     public StringValue Descender { get; set; }
     /// <summary>
     /// <para> baseline.</para>
     /// <para>Represents the following attribute in the schema: baseline </para>
     /// </summary>
     [SchemaAttr(0, "baseline")]
-    [SchemaIndex(7)]
+    [Index(7)]
     public StringValue Baseline { get; set; }
     /// <summary>
     /// <para> midline.</para>
     /// <para>Represents the following attribute in the schema: midline </para>
     /// </summary>
     [SchemaAttr(0, "midline")]
-    [SchemaIndex(8)]
+    [Index(8)]
     public StringValue Midline { get; set; }
     /// <summary>
     /// <para> customRecognizerId.</para>
     /// <para>Represents the following attribute in the schema: customRecognizerId </para>
     /// </summary>
     [SchemaAttr(0, "customRecognizerId")]
-    [SchemaIndex(9)]
+    [Index(9)]
     public StringValue CustomRecognizerId { get; set; }
     /// <summary>
     /// <para> mathML.</para>
     /// <para>Represents the following attribute in the schema: mathML </para>
     /// </summary>
     [SchemaAttr(0, "mathML")]
-    [SchemaIndex(10)]
+    [Index(10)]
     public StringValue MathML { get; set; }
     /// <summary>
     /// <para> mathStruct.</para>
     /// <para>Represents the following attribute in the schema: mathStruct </para>
     /// </summary>
     [SchemaAttr(0, "mathStruct")]
-    [SchemaIndex(11)]
+    [Index(11)]
     public StringValue MathStruct { get; set; }
     /// <summary>
     /// <para> mathSymbol.</para>
     /// <para>Represents the following attribute in the schema: mathSymbol </para>
     /// </summary>
     [SchemaAttr(0, "mathSymbol")]
-    [SchemaIndex(12)]
+    [Index(12)]
     public StringValue MathSymbol { get; set; }
     /// <summary>
     /// <para> beginModifierType.</para>
     /// <para>Represents the following attribute in the schema: beginModifierType </para>
     /// </summary>
     [SchemaAttr(0, "beginModifierType")]
-    [SchemaIndex(13)]
+    [Index(13)]
     public StringValue BeginModifierType { get; set; }
     /// <summary>
     /// <para> endModifierType.</para>
     /// <para>Represents the following attribute in the schema: endModifierType </para>
     /// </summary>
     [SchemaAttr(0, "endModifierType")]
-    [SchemaIndex(14)]
+    [Index(14)]
     public StringValue EndModifierType { get; set; }
     /// <summary>
     /// <para> rotationAngle.</para>
     /// <para>Represents the following attribute in the schema: rotationAngle </para>
     /// </summary>
     [SchemaAttr(0, "rotationAngle")]
-    [SchemaIndex(15)]
+    [Index(15)]
     public Int32Value RotationAngle { get; set; }
     /// <summary>
     /// <para> hotPoints.</para>
     /// <para>Represents the following attribute in the schema: hotPoints </para>
     /// </summary>
     [SchemaAttr(0, "hotPoints")]
-    [SchemaIndex(16)]
+    [Index(16)]
     public ListValue<StringValue> HotPoints { get; set; }
     /// <summary>
     /// <para> centroid.</para>
     /// <para>Represents the following attribute in the schema: centroid </para>
     /// </summary>
     [SchemaAttr(0, "centroid")]
-    [SchemaIndex(17)]
+    [Index(17)]
     public StringValue Centroid { get; set; }
     /// <summary>
     /// <para> semanticType.</para>
     /// <para>Represents the following attribute in the schema: semanticType </para>
     /// </summary>
     [SchemaAttr(0, "semanticType")]
-    [SchemaIndex(18)]
+    [Index(18)]
     public StringValue SemanticType { get; set; }
     /// <summary>
     /// <para> shapeName.</para>
     /// <para>Represents the following attribute in the schema: shapeName </para>
     /// </summary>
     [SchemaAttr(0, "shapeName")]
-    [SchemaIndex(19)]
+    [Index(19)]
     public StringValue ShapeName { get; set; }
     /// <summary>
     /// <para> shapeGeometry.</para>
     /// <para>Represents the following attribute in the schema: shapeGeometry </para>
     /// </summary>
     [SchemaAttr(0, "shapeGeometry")]
-    [SchemaIndex(20)]
+    [Index(20)]
     public ListValue<StringValue> ShapeGeometry { get; set; }
 
     /// <summary>
@@ -216,25 +213,11 @@ public partial class ContextNode : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 45 == namespaceId && "property" == name)
-    return new ContextNodeProperty();
     
-if( 45 == namespaceId && "sourceLink" == name)
-    return new SourceLink();
-    
-if( 45 == namespaceId && "destinationLink" == name)
-    return new DestinationLink();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextNode>(deep);
@@ -248,14 +231,11 @@ if( 45 == namespaceId && "destinationLink" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(45, "property")]
 public partial class ContextNodeProperty : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12759;
-    /// <inheritdoc/>
-    public override string LocalName => "property";
-    internal override byte NamespaceId => 45;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -264,7 +244,7 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue Type { get; set; }
 
     /// <summary>
@@ -301,15 +281,12 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(45, "sourceLink")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SourceLink : ContextLinkType
 {
     internal const int ElementTypeIdConst = 12760;
-    /// <inheritdoc/>
-    public override string LocalName => "sourceLink";
-    internal override byte NamespaceId => 45;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the SourceLink class.
@@ -328,15 +305,12 @@ public partial class SourceLink : ContextLinkType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(45, "destinationLink")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DestinationLink : ContextLinkType
 {
     internal const int ElementTypeIdConst = 12761;
-    /// <inheritdoc/>
-    public override string LocalName => "destinationLink";
-    internal override byte NamespaceId => 45;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the DestinationLink class.
@@ -361,14 +335,14 @@ public abstract partial class ContextLinkType : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: direction </para>
     /// </summary>
     [SchemaAttr(0, "direction")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues> Direction { get; set; }
     /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
     [SchemaAttr(0, "ref")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public StringValue Reference { get; set; }
 
     

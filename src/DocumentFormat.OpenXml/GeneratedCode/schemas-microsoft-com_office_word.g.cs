@@ -15,15 +15,12 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(28, "bordertop")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopBorder : BorderType
 {
     internal const int ElementTypeIdConst = 12501;
-    /// <inheritdoc/>
-    public override string LocalName => "bordertop";
-    internal override byte NamespaceId => 28;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the TopBorder class.
@@ -42,15 +39,12 @@ public partial class TopBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(28, "borderleft")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeftBorder : BorderType
 {
     internal const int ElementTypeIdConst = 12502;
-    /// <inheritdoc/>
-    public override string LocalName => "borderleft";
-    internal override byte NamespaceId => 28;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the LeftBorder class.
@@ -69,15 +63,12 @@ public partial class LeftBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(28, "borderright")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightBorder : BorderType
 {
     internal const int ElementTypeIdConst = 12503;
-    /// <inheritdoc/>
-    public override string LocalName => "borderright";
-    internal override byte NamespaceId => 28;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the RightBorder class.
@@ -96,15 +87,12 @@ public partial class RightBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(28, "borderbottom")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BottomBorder : BorderType
 {
     internal const int ElementTypeIdConst = 12504;
-    /// <inheritdoc/>
-    public override string LocalName => "borderbottom";
-    internal override byte NamespaceId => 28;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the BottomBorder class.
@@ -129,21 +117,21 @@ public abstract partial class BorderType : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues> Type { get; set; }
     /// <summary>
     /// <para> Border Width.</para>
     /// <para>Represents the following attribute in the schema: width </para>
     /// </summary>
     [SchemaAttr(0, "width")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public IntegerValue Width { get; set; }
     /// <summary>
     /// <para> Border shadow.</para>
     /// <para>Represents the following attribute in the schema: shadow </para>
     /// </summary>
     [SchemaAttr(0, "shadow")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public TrueFalseValue Shadow { get; set; }
 
     
@@ -165,14 +153,11 @@ public abstract partial class BorderType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(28, "wrap")]
 public partial class TextWrap : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12505;
-    /// <inheritdoc/>
-    public override string LocalName => "wrap";
-    internal override byte NamespaceId => 28;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -181,28 +166,28 @@ public partial class TextWrap : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues> Type { get; set; }
     /// <summary>
     /// <para> Wrapping side.</para>
     /// <para>Represents the following attribute in the schema: side </para>
     /// </summary>
     [SchemaAttr(0, "side")]
-    [SchemaIndex(1)]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues> Side { get; set; }
     /// <summary>
     /// <para> Horizontal Positioning Base.</para>
     /// <para>Represents the following attribute in the schema: anchorx </para>
     /// </summary>
     [SchemaAttr(0, "anchorx")]
-    [SchemaIndex(2)]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues> AnchorX { get; set; }
     /// <summary>
     /// <para> Vertical Positioning Base.</para>
     /// <para>Represents the following attribute in the schema: anchory </para>
     /// </summary>
     [SchemaAttr(0, "anchory")]
-    [SchemaIndex(3)]
+    [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues> AnchorY { get; set; }
 
     /// <summary>
@@ -227,14 +212,11 @@ public partial class TextWrap : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(28, "anchorlock")]
 public partial class AnchorLock : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12506;
-    /// <inheritdoc/>
-    public override string LocalName => "anchorlock";
-    internal override byte NamespaceId => 28;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     

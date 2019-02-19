@@ -17,14 +17,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(63, "compatSp")]
 public partial class CompatibilityShape : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13208;
-    /// <inheritdoc/>
-    public override string LocalName => "compatSp";
-    internal override byte NamespaceId => 63;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -33,7 +30,7 @@ public partial class CompatibilityShape : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: spid </para>
     /// </summary>
     [SchemaAttr(0, "spid")]
-    [SchemaIndex(0)]
+    [Index(0)]
     public StringValue ShapeId { get; set; }
 
     /// <summary>

@@ -8,8 +8,11 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines a mc:Fallback element in mc:AlternateContent.
     /// </summary>
+    [SchemaAttr(AlternateContent.Namespace, Name)]
     public class AlternateContentFallback : OpenXmlCompositeElement
     {
+        private const string Name = "Fallback";
+
         /// <summary>
         /// Initializes a new instance of the AlternateContentFallback class.
         /// </summary>
@@ -55,14 +58,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets a value that represents the tag name of the AlternateContentFallback element.
         /// </summary>
-        public static string TagName { get; } = "Fallback";
-
-        /// <summary>
-        /// Gets the local name of the element.
-        /// </summary>
-        public override string LocalName => TagName;
-
-        internal override byte NamespaceId => AlternateContent.MarkupCompatibilityNamespaceId;
+        public static string TagName => Name;
 
         internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         {
@@ -99,7 +95,5 @@ namespace DocumentFormat.OpenXml
         /// Gets the type ID of the element.
         /// </summary>
         internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentFallbackId;
-
-        internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     }
 }
