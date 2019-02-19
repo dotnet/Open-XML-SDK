@@ -86,8 +86,12 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
     /// </remark>
-	[SchemaAttr(17, "nvPicPr", 0)]
-    public NonVisualPictureProperties NonVisualPictureProperties { get; set; }
+	[Index(0)]
+    public NonVisualPictureProperties NonVisualPictureProperties
+	{
+        get => GetElement<NonVisualPictureProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Picture Fill.</para>
@@ -96,8 +100,12 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
     /// </remark>
-	[SchemaAttr(17, "blipFill", 1)]
-    public BlipFill BlipFill { get; set; }
+	[Index(1)]
+    public BlipFill BlipFill
+	{
+        get => GetElement<BlipFill>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Shape Properties.</para>
@@ -106,8 +114,12 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
     /// </remark>
-	[SchemaAttr(17, "spPr", 2)]
-    public ShapeProperties ShapeProperties { get; set; }
+	[Index(2)]
+    public ShapeProperties ShapeProperties
+	{
+        get => GetElement<ShapeProperties>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> ShapeStyle.</para>
@@ -116,8 +128,12 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:pic14 = http://schemas.microsoft.com/office/drawing/2010/picture
     /// </remark>
-	[SchemaAttr(50, "style", 3)]
-    public DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle ShapeStyle { get; set; }
+	[Index(3)]
+    public DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle ShapeStyle
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -126,8 +142,12 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:pic14 = http://schemas.microsoft.com/office/drawing/2010/picture
     /// </remark>
-	[SchemaAttr(50, "extLst", 4)]
-    public DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList OfficeArtExtensionList { get; set; }
+	[Index(4)]
+    public DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList OfficeArtExtensionList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList>(4);
+        set => SetElement(4, value);
+	}
     
 
 
@@ -166,31 +186,36 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 1)]
+    [SchemaAttr(0, "name")]
+    [Index(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
-    [SchemaAttr(0, "descr", 2)]
+    [SchemaAttr(0, "descr")]
+    [Index(2)]
     public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    [SchemaAttr(0, "hidden", 3)]
+    [SchemaAttr(0, "hidden")]
+    [Index(3)]
     public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 4)]
+    [SchemaAttr(0, "title")]
+    [Index(4)]
     public StringValue Title { get; set; }
 
     /// <summary>
@@ -237,8 +262,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hlinkClick", 0)]
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -247,8 +276,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hlinkHover", 1)]
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -257,8 +290,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 2)]
-    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList { get; set; }
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -295,7 +332,8 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     /// <para> preferRelativeResize.</para>
     /// <para>Represents the following attribute in the schema: preferRelativeResize </para>
     /// </summary>
-    [SchemaAttr(0, "preferRelativeResize", 0)]
+    [SchemaAttr(0, "preferRelativeResize")]
+    [Index(0)]
     public BooleanValue PreferRelativeResize { get; set; }
 
     /// <summary>
@@ -342,8 +380,12 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "picLocks", 0)]
-    public DocumentFormat.OpenXml.Drawing.PictureLocks PictureLocks { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.PictureLocks PictureLocks
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> NonVisualPicturePropertiesExtensionList.</para>
@@ -352,8 +394,12 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 1)]
-    public DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList NonVisualPicturePropertiesExtensionList { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList NonVisualPicturePropertiesExtensionList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -431,8 +477,12 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
     /// </remark>
-	[SchemaAttr(17, "cNvPr", 0)]
-    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
+	[Index(0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties
+	{
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Non-Visual Picture Drawing Properties.</para>
@@ -441,8 +491,12 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:pic = http://schemas.openxmlformats.org/drawingml/2006/picture
     /// </remark>
-	[SchemaAttr(17, "cNvPicPr", 1)]
-    public NonVisualPictureDrawingProperties NonVisualPictureDrawingProperties { get; set; }
+	[Index(1)]
+    public NonVisualPictureDrawingProperties NonVisualPictureDrawingProperties
+	{
+        get => GetElement<NonVisualPictureDrawingProperties>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -483,13 +537,15 @@ public partial class BlipFill : OpenXmlCompositeElement
     /// <para> DPI Setting.</para>
     /// <para>Represents the following attribute in the schema: dpi </para>
     /// </summary>
-    [SchemaAttr(0, "dpi", 0)]
+    [SchemaAttr(0, "dpi")]
+    [Index(0)]
     public UInt32Value Dpi { get; set; }
     /// <summary>
     /// <para> Rotate With Shape.</para>
     /// <para>Represents the following attribute in the schema: rotWithShape </para>
     /// </summary>
-    [SchemaAttr(0, "rotWithShape", 1)]
+    [SchemaAttr(0, "rotWithShape")]
+    [Index(1)]
     public BooleanValue RotateWithShape { get; set; }
 
     /// <summary>
@@ -536,8 +592,12 @@ public partial class BlipFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "blip", 0)]
-    public DocumentFormat.OpenXml.Drawing.Blip Blip { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.Blip Blip
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Source Rectangle.</para>
@@ -546,8 +606,12 @@ public partial class BlipFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srcRect", 1)]
-    public DocumentFormat.OpenXml.Drawing.SourceRectangle SourceRectangle { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.SourceRectangle SourceRectangle
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -610,7 +674,8 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode", 0)]
+    [SchemaAttr(0, "bwMode")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -657,8 +722,12 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "xfrm", 0)]
-    public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
+        set => SetElement(0, value);
+	}
     
 
 

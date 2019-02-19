@@ -86,8 +86,12 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-	[SchemaAttr(36, "PublishDate", 0)]
-    public PublishDate PublishDate { get; set; }
+	[Index(0)]
+    public PublishDate PublishDate
+	{
+        get => GetElement<PublishDate>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> DocumentAbstract.</para>
@@ -96,8 +100,12 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-	[SchemaAttr(36, "Abstract", 1)]
-    public DocumentAbstract DocumentAbstract { get; set; }
+	[Index(1)]
+    public DocumentAbstract DocumentAbstract
+	{
+        get => GetElement<DocumentAbstract>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> CompanyAddress.</para>
@@ -106,8 +114,12 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-	[SchemaAttr(36, "CompanyAddress", 2)]
-    public CompanyAddress CompanyAddress { get; set; }
+	[Index(2)]
+    public CompanyAddress CompanyAddress
+	{
+        get => GetElement<CompanyAddress>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> CompanyPhoneNumber.</para>
@@ -116,8 +128,12 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-	[SchemaAttr(36, "CompanyPhone", 3)]
-    public CompanyPhoneNumber CompanyPhoneNumber { get; set; }
+	[Index(3)]
+    public CompanyPhoneNumber CompanyPhoneNumber
+	{
+        get => GetElement<CompanyPhoneNumber>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> CompanyFaxNumber.</para>
@@ -126,8 +142,12 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-	[SchemaAttr(36, "CompanyFax", 4)]
-    public CompanyFaxNumber CompanyFaxNumber { get; set; }
+	[Index(4)]
+    public CompanyFaxNumber CompanyFaxNumber
+	{
+        get => GetElement<CompanyFaxNumber>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> CompanyEmailAddress.</para>
@@ -136,8 +156,12 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-	[SchemaAttr(36, "CompanyEmail", 5)]
-    public CompanyEmailAddress CompanyEmailAddress { get; set; }
+	[Index(5)]
+    public CompanyEmailAddress CompanyEmailAddress
+	{
+        get => GetElement<CompanyEmailAddress>(5);
+        set => SetElement(5, value);
+	}
     
 
 

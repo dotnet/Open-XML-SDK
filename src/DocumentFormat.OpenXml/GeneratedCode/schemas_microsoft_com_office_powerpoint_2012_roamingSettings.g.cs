@@ -152,8 +152,12 @@ public partial class RoamingProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:pRoam = http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings
     /// </remark>
-	[SchemaAttr(76, "key", 0)]
-    public Key Key { get; set; }
+	[Index(0)]
+    public Key Key
+	{
+        get => GetElement<Key>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Value.</para>
@@ -162,8 +166,12 @@ public partial class RoamingProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:pRoam = http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings
     /// </remark>
-	[SchemaAttr(76, "value", 1)]
-    public Value Value { get; set; }
+	[Index(1)]
+    public Value Value
+	{
+        get => GetElement<Value>(1);
+        set => SetElement(1, value);
+	}
     
 
 

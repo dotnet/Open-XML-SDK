@@ -25,6 +25,7 @@ namespace DocumentFormat.OpenXml
         #region data members
 
         private ElementPropertyCollection<OpenXmlSimpleType> _rawAttributes;
+        private ElementPropertyCollection<OpenXmlElement> _rawElements;
 
         // implement annotations mechanism like XObject in LINQ to XML
         // Annotations will not be cloned when calling .Clone() and .CloneNode(bool)
@@ -195,6 +196,19 @@ namespace DocumentFormat.OpenXml
             {
                 MakeSureParsed();
                 return RawAttributes;
+            }
+        }
+
+        internal ElementPropertyCollection<OpenXmlElement> RawElements
+        {
+            get
+            {
+                if (!_rawElements.IsValid)
+                {
+                    _rawElements= new ElementPropertyCollection<OpenXmlElement>(this, PackageCache.Cache.GetElements(GetType()));
+                }
+
+                return _rawElements;
             }
         }
 

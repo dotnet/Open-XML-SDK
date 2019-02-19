@@ -83,8 +83,12 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lnRef", 0)]
-    public DocumentFormat.OpenXml.Drawing.LineReference LineReference { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.LineReference LineReference
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> FillReference.</para>
@@ -93,8 +97,12 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "fillRef", 1)]
-    public DocumentFormat.OpenXml.Drawing.FillReference FillReference { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.FillReference FillReference
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> EffectReference.</para>
@@ -103,8 +111,12 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "effectRef", 2)]
-    public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference { get; set; }
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Font Reference.</para>
@@ -113,8 +125,12 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "fontRef", 3)]
-    public DocumentFormat.OpenXml.Drawing.FontReference FontReference { get; set; }
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.FontReference FontReference
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(3);
+        set => SetElement(3, value);
+	}
     
 
 

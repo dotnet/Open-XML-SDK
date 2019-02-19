@@ -45,13 +45,15 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id", 0)]
+    [SchemaAttr(19, "id")]
+    [Index(0)]
     public StringValue RelationshipId { get; set; }
     /// <summary>
     /// <para> bwMode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode", 1)]
+    [SchemaAttr(0, "bwMode")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -98,8 +100,12 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
     /// </remark>
-	[SchemaAttr(47, "nvContentPartPr", 0)]
-    public NonVisualContentPartProperties NonVisualContentPartProperties { get; set; }
+	[Index(0)]
+    public NonVisualContentPartProperties NonVisualContentPartProperties
+	{
+        get => GetElement<NonVisualContentPartProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> ApplicationNonVisualDrawingProperties.</para>
@@ -108,8 +114,12 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
     /// </remark>
-	[SchemaAttr(47, "nvPr", 1)]
-    public ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties { get; set; }
+	[Index(1)]
+    public ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties
+	{
+        get => GetElement<ApplicationNonVisualDrawingProperties>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Transform2D.</para>
@@ -118,8 +128,12 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
     /// </remark>
-	[SchemaAttr(47, "xfrm", 2)]
-    public Transform2D Transform2D { get; set; }
+	[Index(2)]
+    public Transform2D Transform2D
+	{
+        get => GetElement<Transform2D>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -128,8 +142,12 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
     /// </remark>
-	[SchemaAttr(47, "extLst", 3)]
-    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
+	[Index(3)]
+    public OfficeArtExtensionList OfficeArtExtensionList
+	{
+        get => GetElement<OfficeArtExtensionList>(3);
+        set => SetElement(3, value);
+	}
     
 
 
@@ -168,31 +186,36 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 1)]
+    [SchemaAttr(0, "name")]
+    [Index(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
-    [SchemaAttr(0, "descr", 2)]
+    [SchemaAttr(0, "descr")]
+    [Index(2)]
     public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    [SchemaAttr(0, "hidden", 3)]
+    [SchemaAttr(0, "hidden")]
+    [Index(3)]
     public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 4)]
+    [SchemaAttr(0, "title")]
+    [Index(4)]
     public StringValue Title { get; set; }
 
     /// <summary>
@@ -239,8 +262,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hlinkClick", 0)]
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -249,8 +276,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hlinkHover", 1)]
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -259,8 +290,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 2)]
-    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList { get; set; }
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -297,7 +332,8 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <para> isComment.</para>
     /// <para>Represents the following attribute in the schema: isComment </para>
     /// </summary>
-    [SchemaAttr(0, "isComment", 0)]
+    [SchemaAttr(0, "isComment")]
+    [Index(0)]
     public BooleanValue IsComment { get; set; }
 
     /// <summary>
@@ -344,8 +380,12 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-	[SchemaAttr(48, "cpLocks", 0)]
-    public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks ContentPartLocks { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks ContentPartLocks
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -354,8 +394,12 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-	[SchemaAttr(48, "extLst", 1)]
-    public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList OfficeArtExtensionList { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList OfficeArtExtensionList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -433,8 +477,12 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
     /// </remark>
-	[SchemaAttr(47, "cNvPr", 0)]
-    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
+	[Index(0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties
+	{
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> NonVisualInkContentPartProperties.</para>
@@ -443,8 +491,12 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
     /// </remark>
-	[SchemaAttr(47, "cNvContentPartPr", 1)]
-    public NonVisualInkContentPartProperties NonVisualInkContentPartProperties { get; set; }
+	[Index(1)]
+    public NonVisualInkContentPartProperties NonVisualInkContentPartProperties
+	{
+        get => GetElement<NonVisualInkContentPartProperties>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -472,13 +524,15 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
     /// <para> macro.</para>
     /// <para>Represents the following attribute in the schema: macro </para>
     /// </summary>
-    [SchemaAttr(0, "macro", 0)]
+    [SchemaAttr(0, "macro")]
+    [Index(0)]
     public StringValue Macro { get; set; }
     /// <summary>
     /// <para> fPublished.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
     /// </summary>
-    [SchemaAttr(0, "fPublished", 1)]
+    [SchemaAttr(0, "fPublished")]
+    [Index(1)]
     public BooleanValue Published { get; set; }
 
     /// <summary>
@@ -524,19 +578,22 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
-    [SchemaAttr(0, "rot", 0)]
+    [SchemaAttr(0, "rot")]
+    [Index(0)]
     public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
-    [SchemaAttr(0, "flipH", 1)]
+    [SchemaAttr(0, "flipH")]
+    [Index(1)]
     public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
-    [SchemaAttr(0, "flipV", 2)]
+    [SchemaAttr(0, "flipV")]
+    [Index(2)]
     public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>
@@ -583,8 +640,12 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "off", 0)]
-    public DocumentFormat.OpenXml.Drawing.Offset Offset { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.Offset Offset
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Extents.</para>
@@ -593,8 +654,12 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "ext", 1)]
-    public DocumentFormat.OpenXml.Drawing.Extents Extents { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.Extents Extents
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
+        set => SetElement(1, value);
+	}
     
 
 

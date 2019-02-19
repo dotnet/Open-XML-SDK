@@ -124,7 +124,8 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id", 0)]
+    [SchemaAttr(19, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -234,31 +235,36 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     /// <para> dockstate.</para>
     /// <para>Represents the following attribute in the schema: dockstate </para>
     /// </summary>
-    [SchemaAttr(0, "dockstate", 0)]
+    [SchemaAttr(0, "dockstate")]
+    [Index(0)]
     public StringValue DockState { get; set; }
     /// <summary>
     /// <para> visibility.</para>
     /// <para>Represents the following attribute in the schema: visibility </para>
     /// </summary>
-    [SchemaAttr(0, "visibility", 1)]
+    [SchemaAttr(0, "visibility")]
+    [Index(1)]
     public BooleanValue Visibility { get; set; }
     /// <summary>
     /// <para> width.</para>
     /// <para>Represents the following attribute in the schema: width </para>
     /// </summary>
-    [SchemaAttr(0, "width", 2)]
+    [SchemaAttr(0, "width")]
+    [Index(2)]
     public DoubleValue Width { get; set; }
     /// <summary>
     /// <para> row.</para>
     /// <para>Represents the following attribute in the schema: row </para>
     /// </summary>
-    [SchemaAttr(0, "row", 3)]
+    [SchemaAttr(0, "row")]
+    [Index(3)]
     public UInt32Value Row { get; set; }
     /// <summary>
     /// <para> locked.</para>
     /// <para>Represents the following attribute in the schema: locked </para>
     /// </summary>
-    [SchemaAttr(0, "locked", 4)]
+    [SchemaAttr(0, "locked")]
+    [Index(4)]
     public BooleanValue Locked { get; set; }
 
     /// <summary>
@@ -305,8 +311,12 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wetp = http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11
     /// </remark>
-	[SchemaAttr(70, "webextensionref", 0)]
-    public WebExtensionPartReference WebExtensionPartReference { get; set; }
+	[Index(0)]
+    public WebExtensionPartReference WebExtensionPartReference
+	{
+        get => GetElement<WebExtensionPartReference>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -315,8 +325,12 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wetp = http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11
     /// </remark>
-	[SchemaAttr(70, "extLst", 1)]
-    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
+	[Index(1)]
+    public OfficeArtExtensionList OfficeArtExtensionList
+	{
+        get => GetElement<OfficeArtExtensionList>(1);
+        set => SetElement(1, value);
+	}
     
 
 

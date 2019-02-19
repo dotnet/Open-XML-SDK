@@ -95,8 +95,12 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wpc = http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas
     /// </remark>
-	[SchemaAttr(59, "bg", 0)]
-    public BackgroundFormatting BackgroundFormatting { get; set; }
+	[Index(0)]
+    public BackgroundFormatting BackgroundFormatting
+	{
+        get => GetElement<BackgroundFormatting>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> WholeFormatting.</para>
@@ -105,8 +109,12 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wpc = http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas
     /// </remark>
-	[SchemaAttr(59, "whole", 1)]
-    public WholeFormatting WholeFormatting { get; set; }
+	[Index(1)]
+    public WholeFormatting WholeFormatting
+	{
+        get => GetElement<WholeFormatting>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -264,8 +272,12 @@ public partial class WholeFormatting : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "ln", 0)]
-    public DocumentFormat.OpenXml.Drawing.Outline Outline { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.Outline Outline
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -349,8 +361,12 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
-	[SchemaAttr(60, "cNvPr", 0)]
-    public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties NonVisualDrawingProperties
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> NonVisualGraphicFrameProperties.</para>
@@ -359,8 +375,12 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
-	[SchemaAttr(60, "cNvFrPr", 1)]
-    public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Transform2D.</para>
@@ -369,8 +389,12 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
-	[SchemaAttr(60, "xfrm", 2)]
-    public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D Transform2D { get; set; }
+	[Index(2)]
+    public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D Transform2D
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Graphic.</para>
@@ -379,8 +403,12 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "graphic", 3)]
-    public DocumentFormat.OpenXml.Drawing.Graphic Graphic { get; set; }
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.Graphic Graphic
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -389,8 +417,12 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
-	[SchemaAttr(60, "extLst", 4)]
-    public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList OfficeArtExtensionList { get; set; }
+	[Index(4)]
+    public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList OfficeArtExtensionList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList>(4);
+        set => SetElement(4, value);
+	}
     
 
 

@@ -26,6 +26,7 @@ namespace DocumentFormat.OpenXml
         private readonly TypeConcurrentDictionary<PartConstraintCollection> _partConstraints = new TypeConcurrentDictionary<PartConstraintCollection>();
         private readonly TypeConcurrentDictionary<PartConstraintCollection> _dataPartConstraints = new TypeConcurrentDictionary<PartConstraintCollection>();
         private readonly TypeConcurrentDictionary<ReadOnlyArray<ElementProperty<OpenXmlSimpleType>>> _attributes = new TypeConcurrentDictionary<ReadOnlyArray<ElementProperty<OpenXmlSimpleType>>>();
+        private readonly TypeConcurrentDictionary<ReadOnlyArray<ElementProperty<OpenXmlElement>>> _elements = new TypeConcurrentDictionary<ReadOnlyArray<ElementProperty<OpenXmlElement>>>();
         private readonly TypeConcurrentDictionary<Func<OpenXmlSimpleType>> _simpleTypeFactory = new TypeConcurrentDictionary<Func<OpenXmlSimpleType>>();
         private readonly TypeConcurrentDictionary<Func<OpenXmlElement>> _elementFactory = new TypeConcurrentDictionary<Func<OpenXmlElement>>();
         private readonly TypeConcurrentDictionary<ElementSchemaLookup> _factory = new TypeConcurrentDictionary<ElementSchemaLookup>();
@@ -39,6 +40,8 @@ namespace DocumentFormat.OpenXml
         public PartConstraintCollection GetDataPartConstraints(Type type) => _dataPartConstraints.GetOrAdd(type, CreateDataPartConstraints);
 
         public ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> GetAttributes(Type type) => _attributes.GetOrAdd(type, CreateAttributes);
+
+        public ReadOnlyArray<ElementProperty<OpenXmlElement>> GetElements(Type type) => _elements.GetOrAdd(type, CreateElements);
 
         public OpenXmlElement CreateElement(Type type, byte ns, string name) => _factory.GetOrAdd(type, CreateLookup).Create(ns, name);
 
@@ -62,7 +65,9 @@ namespace DocumentFormat.OpenXml
 
         private ElementSchemaLookup CreateLookup(Type type) => ElementSchemaLookup.CreateLookup(type, this);
 
-        private ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> CreateAttributes(Type type) => ElementPropertyCollection<OpenXmlSimpleType>.GetProperties(this, type);
+        private ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> CreateAttributes(Type type) => ElementPropertyCollection.GetProperties(this, type);
+
+        private ReadOnlyArray<ElementProperty<OpenXmlElement>> CreateElements(Type type) => ElementPropertyCollection.GetElements(this, type);
 
         private PartConstraintCollection CreatePartConstraints(Type type) => PartConstraintCollection.Create<PartConstraintAttribute>(this, type);
 

@@ -83,8 +83,12 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "cNvPr", 0)]
-    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
+	[Index(0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties
+	{
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> NonVisualInkContentPartProperties.</para>
@@ -93,8 +97,12 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "cNvContentPartPr", 1)]
-    public NonVisualInkContentPartProperties NonVisualInkContentPartProperties { get; set; }
+	[Index(1)]
+    public NonVisualInkContentPartProperties NonVisualInkContentPartProperties
+	{
+        get => GetElement<NonVisualInkContentPartProperties>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> ApplicationNonVisualDrawingProperties.</para>
@@ -103,8 +111,12 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "nvPr", 2)]
-    public ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties { get; set; }
+	[Index(2)]
+    public ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties
+	{
+        get => GetElement<ApplicationNonVisualDrawingProperties>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -141,19 +153,22 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
-    [SchemaAttr(0, "rot", 0)]
+    [SchemaAttr(0, "rot")]
+    [Index(0)]
     public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
-    [SchemaAttr(0, "flipH", 1)]
+    [SchemaAttr(0, "flipH")]
+    [Index(1)]
     public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
-    [SchemaAttr(0, "flipV", 2)]
+    [SchemaAttr(0, "flipV")]
+    [Index(2)]
     public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>
@@ -200,8 +215,12 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "off", 0)]
-    public DocumentFormat.OpenXml.Drawing.Offset Offset { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.Offset Offset
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Extents.</para>
@@ -210,8 +229,12 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "ext", 1)]
-    public DocumentFormat.OpenXml.Drawing.Extents Extents { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.Extents Extents
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -246,7 +269,8 @@ public partial class ExtensionListModify : OpenXmlCompositeElement
     /// <para> Modify.</para>
     /// <para>Represents the following attribute in the schema: mod </para>
     /// </summary>
-    [SchemaAttr(0, "mod", 0)]
+    [SchemaAttr(0, "mod")]
+    [Index(0)]
     public BooleanValue Modify { get; set; }
 
     /// <summary>
@@ -324,7 +348,8 @@ public partial class Media : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "embed", 0)]
+    [SchemaAttr(19, "embed")]
+    [Index(0)]
     public StringValue Embed { get; set; }
     /// <summary>
     /// <para> Linked Picture Reference.</para>
@@ -332,7 +357,8 @@ public partial class Media : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "link", 1)]
+    [SchemaAttr(19, "link")]
+    [Index(1)]
     public StringValue Link { get; set; }
 
     /// <summary>
@@ -379,8 +405,12 @@ public partial class Media : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "trim", 0)]
-    public MediaTrim MediaTrim { get; set; }
+	[Index(0)]
+    public MediaTrim MediaTrim
+	{
+        get => GetElement<MediaTrim>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> MediaFade.</para>
@@ -389,8 +419,12 @@ public partial class Media : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "fade", 1)]
-    public MediaFade MediaFade { get; set; }
+	[Index(1)]
+    public MediaFade MediaFade
+	{
+        get => GetElement<MediaFade>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> MediaBookmarkList.</para>
@@ -399,8 +433,12 @@ public partial class Media : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "bmkLst", 2)]
-    public MediaBookmarkList MediaBookmarkList { get; set; }
+	[Index(2)]
+    public MediaBookmarkList MediaBookmarkList
+	{
+        get => GetElement<MediaBookmarkList>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -409,8 +447,12 @@ public partial class Media : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "extLst", 3)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(3)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(3);
+        set => SetElement(3, value);
+	}
     
 
 
@@ -478,7 +520,8 @@ public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
     /// <para> Direction.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get; set; }
 
     
@@ -624,7 +667,8 @@ public abstract partial class LeftRightDirectionTransitionType : OpenXmlLeafElem
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction { get; set; }
 
     
@@ -658,7 +702,8 @@ public partial class RippleTransition : OpenXmlLeafElement
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public StringValue Direction { get; set; }
 
     /// <summary>
@@ -763,19 +808,22 @@ public partial class PrismTransition : OpenXmlLeafElement
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get; set; }
     /// <summary>
     /// <para> isContent.</para>
     /// <para>Represents the following attribute in the schema: isContent </para>
     /// </summary>
-    [SchemaAttr(0, "isContent", 1)]
+    [SchemaAttr(0, "isContent")]
+    [Index(1)]
     public BooleanValue IsContent { get; set; }
     /// <summary>
     /// <para> isInverted.</para>
     /// <para>Represents the following attribute in the schema: isInverted </para>
     /// </summary>
-    [SchemaAttr(0, "isInverted", 2)]
+    [SchemaAttr(0, "isInverted")]
+    [Index(2)]
     public BooleanValue IsInverted { get; set; }
 
     /// <summary>
@@ -852,7 +900,8 @@ public abstract partial class OrientationTransitionType : OpenXmlLeafElement
     /// <para> Transition Direction.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Direction { get; set; }
 
     
@@ -886,13 +935,15 @@ public partial class GlitterTransition : OpenXmlLeafElement
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get; set; }
     /// <summary>
     /// <para> pattern.</para>
     /// <para>Represents the following attribute in the schema: pattern </para>
     /// </summary>
-    [SchemaAttr(0, "pattern", 1)]
+    [SchemaAttr(0, "pattern")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues> Pattern { get; set; }
 
     /// <summary>
@@ -929,7 +980,8 @@ public partial class WarpTransition : OpenXmlLeafElement
     /// <para> Direction.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get; set; }
 
     /// <summary>
@@ -966,13 +1018,15 @@ public partial class FlythroughTransition : OpenXmlLeafElement
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get; set; }
     /// <summary>
     /// <para> hasBounce.</para>
     /// <para>Represents the following attribute in the schema: hasBounce </para>
     /// </summary>
-    [SchemaAttr(0, "hasBounce", 1)]
+    [SchemaAttr(0, "hasBounce")]
+    [Index(1)]
     public BooleanValue HasBounce { get; set; }
 
     /// <summary>
@@ -1009,13 +1063,15 @@ public partial class ShredTransition : OpenXmlLeafElement
     /// <para> pattern.</para>
     /// <para>Represents the following attribute in the schema: pattern </para>
     /// </summary>
-    [SchemaAttr(0, "pattern", 0)]
+    [SchemaAttr(0, "pattern")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues> Pattern { get; set; }
     /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 1)]
+    [SchemaAttr(0, "dir")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get; set; }
 
     /// <summary>
@@ -1052,13 +1108,15 @@ public partial class RevealTransition : OpenXmlLeafElement
     /// <para> thruBlk.</para>
     /// <para>Represents the following attribute in the schema: thruBlk </para>
     /// </summary>
-    [SchemaAttr(0, "thruBlk", 0)]
+    [SchemaAttr(0, "thruBlk")]
+    [Index(0)]
     public BooleanValue ThroughBlack { get; set; }
     /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 1)]
+    [SchemaAttr(0, "dir")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction { get; set; }
 
     /// <summary>
@@ -1095,7 +1153,8 @@ public partial class WheelReverseTransition : OpenXmlLeafElement
     /// <para> Spokes.</para>
     /// <para>Represents the following attribute in the schema: spokes </para>
     /// </summary>
-    [SchemaAttr(0, "spokes", 0)]
+    [SchemaAttr(0, "spokes")]
+    [Index(0)]
     public UInt32Value Spokes { get; set; }
 
     /// <summary>
@@ -1132,13 +1191,15 @@ public partial class BookmarkTarget : OpenXmlLeafElement
     /// <para> spid.</para>
     /// <para>Represents the following attribute in the schema: spid </para>
     /// </summary>
-    [SchemaAttr(0, "spid", 0)]
+    [SchemaAttr(0, "spid")]
+    [Index(0)]
     public UInt32Value ShapeId { get; set; }
     /// <summary>
     /// <para> bmkName.</para>
     /// <para>Represents the following attribute in the schema: bmkName </para>
     /// </summary>
-    [SchemaAttr(0, "bmkName", 1)]
+    [SchemaAttr(0, "bmkName")]
+    [Index(1)]
     public StringValue BookmarkName { get; set; }
 
     /// <summary>
@@ -1303,7 +1364,8 @@ public partial class BrowseMode : OpenXmlLeafElement
     /// <para> showStatus.</para>
     /// <para>Represents the following attribute in the schema: showStatus </para>
     /// </summary>
-    [SchemaAttr(0, "showStatus", 0)]
+    [SchemaAttr(0, "showStatus")]
+    [Index(0)]
     public BooleanValue ShowStatus { get; set; }
 
     /// <summary>
@@ -1398,8 +1460,12 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -1408,8 +1474,12 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -1418,8 +1488,12 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public DocumentFormat.OpenXml.Drawing.HslColor HslColor { get; set; }
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.HslColor HslColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -1428,8 +1502,12 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -1438,8 +1516,12 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "schemeClr", 4)]
-    public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor { get; set; }
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -1448,8 +1530,12 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 5)]
-    public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor { get; set; }
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -1477,7 +1563,8 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public UInt32Value Val { get; set; }
 
     /// <summary>
@@ -1514,7 +1601,8 @@ public partial class DiscardImageEditData : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public BooleanValue Val { get; set; }
 
     /// <summary>
@@ -1551,7 +1639,8 @@ public partial class ShowMediaControls : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public BooleanValue Val { get; set; }
 
     /// <summary>
@@ -1692,7 +1781,8 @@ public abstract partial class RandomIdType : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public UInt32Value Val { get; set; }
 
     
@@ -1786,8 +1876,12 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "triggerEvt", 0)]
-    public TriggerEventRecord TriggerEventRecord { get; set; }
+	[Index(0)]
+    public TriggerEventRecord TriggerEventRecord
+	{
+        get => GetElement<TriggerEventRecord>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> PlayEventRecord.</para>
@@ -1796,8 +1890,12 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "playEvt", 1)]
-    public PlayEventRecord PlayEventRecord { get; set; }
+	[Index(1)]
+    public PlayEventRecord PlayEventRecord
+	{
+        get => GetElement<PlayEventRecord>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> StopEventRecord.</para>
@@ -1806,8 +1904,12 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "stopEvt", 2)]
-    public StopEventRecord StopEventRecord { get; set; }
+	[Index(2)]
+    public StopEventRecord StopEventRecord
+	{
+        get => GetElement<StopEventRecord>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> PauseEventRecord.</para>
@@ -1816,8 +1918,12 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "pauseEvt", 3)]
-    public PauseEventRecord PauseEventRecord { get; set; }
+	[Index(3)]
+    public PauseEventRecord PauseEventRecord
+	{
+        get => GetElement<PauseEventRecord>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> ResumeEventRecord.</para>
@@ -1826,8 +1932,12 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "resumeEvt", 4)]
-    public ResumeEventRecord ResumeEventRecord { get; set; }
+	[Index(4)]
+    public ResumeEventRecord ResumeEventRecord
+	{
+        get => GetElement<ResumeEventRecord>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> SeekEventRecord.</para>
@@ -1836,8 +1946,12 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "seekEvt", 5)]
-    public SeekEventRecord SeekEventRecord { get; set; }
+	[Index(5)]
+    public SeekEventRecord SeekEventRecord
+	{
+        get => GetElement<SeekEventRecord>(5);
+        set => SetElement(5, value);
+	}
     
     /// <summary>
     /// <para> NullEventRecord.</para>
@@ -1846,8 +1960,12 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "nullEvt", 6)]
-    public NullEventRecord NullEventRecord { get; set; }
+	[Index(6)]
+    public NullEventRecord NullEventRecord
+	{
+        get => GetElement<NullEventRecord>(6);
+        set => SetElement(6, value);
+	}
     
 
 
@@ -1886,31 +2004,36 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 1)]
+    [SchemaAttr(0, "name")]
+    [Index(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
-    [SchemaAttr(0, "descr", 2)]
+    [SchemaAttr(0, "descr")]
+    [Index(2)]
     public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    [SchemaAttr(0, "hidden", 3)]
+    [SchemaAttr(0, "hidden")]
+    [Index(3)]
     public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 4)]
+    [SchemaAttr(0, "title")]
+    [Index(4)]
     public StringValue Title { get; set; }
 
     /// <summary>
@@ -1957,8 +2080,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hlinkClick", 0)]
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -1967,8 +2094,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hlinkHover", 1)]
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -1977,8 +2108,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 2)]
-    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList { get; set; }
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -2015,7 +2150,8 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <para> isComment.</para>
     /// <para>Represents the following attribute in the schema: isComment </para>
     /// </summary>
-    [SchemaAttr(0, "isComment", 0)]
+    [SchemaAttr(0, "isComment")]
+    [Index(0)]
     public BooleanValue IsComment { get; set; }
 
     /// <summary>
@@ -2062,8 +2198,12 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-	[SchemaAttr(48, "cpLocks", 0)]
-    public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks ContentPartLocks { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks ContentPartLocks
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -2072,8 +2212,12 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
-	[SchemaAttr(48, "extLst", 1)]
-    public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList OfficeArtExtensionList { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList OfficeArtExtensionList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -2122,13 +2266,15 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
     /// <para> Is a Photo Album.</para>
     /// <para>Represents the following attribute in the schema: isPhoto </para>
     /// </summary>
-    [SchemaAttr(0, "isPhoto", 0)]
+    [SchemaAttr(0, "isPhoto")]
+    [Index(0)]
     public BooleanValue IsPhoto { get; set; }
     /// <summary>
     /// <para> Is User Drawn.</para>
     /// <para>Represents the following attribute in the schema: userDrawn </para>
     /// </summary>
-    [SchemaAttr(0, "userDrawn", 1)]
+    [SchemaAttr(0, "userDrawn")]
+    [Index(1)]
     public BooleanValue UserDrawn { get; set; }
 
     /// <summary>
@@ -2175,8 +2321,12 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
     /// <remark>
     /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
     /// </remark>
-	[SchemaAttr(24, "ph", 0)]
-    public DocumentFormat.OpenXml.Presentation.PlaceholderShape PlaceholderShape { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Presentation.PlaceholderShape PlaceholderShape
+	{
+        get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -2204,13 +2354,15 @@ public partial class MediaBookmark : OpenXmlLeafElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    [SchemaAttr(0, "time", 1)]
+    [SchemaAttr(0, "time")]
+    [Index(1)]
     public StringValue Time { get; set; }
 
     /// <summary>
@@ -2247,13 +2399,15 @@ public partial class MediaTrim : OpenXmlLeafElement
     /// <para> st.</para>
     /// <para>Represents the following attribute in the schema: st </para>
     /// </summary>
-    [SchemaAttr(0, "st", 0)]
+    [SchemaAttr(0, "st")]
+    [Index(0)]
     public StringValue Start { get; set; }
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: end </para>
     /// </summary>
-    [SchemaAttr(0, "end", 1)]
+    [SchemaAttr(0, "end")]
+    [Index(1)]
     public StringValue End { get; set; }
 
     /// <summary>
@@ -2290,13 +2444,15 @@ public partial class MediaFade : OpenXmlLeafElement
     /// <para> in.</para>
     /// <para>Represents the following attribute in the schema: in </para>
     /// </summary>
-    [SchemaAttr(0, "in", 0)]
+    [SchemaAttr(0, "in")]
+    [Index(0)]
     public StringValue InDuration { get; set; }
     /// <summary>
     /// <para> out.</para>
     /// <para>Represents the following attribute in the schema: out </para>
     /// </summary>
-    [SchemaAttr(0, "out", 1)]
+    [SchemaAttr(0, "out")]
+    [Index(1)]
     public StringValue OutDuration { get; set; }
 
     /// <summary>
@@ -2468,19 +2624,22 @@ public partial class SectionOld : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> slideIdLst.</para>
     /// <para>Represents the following attribute in the schema: slideIdLst </para>
     /// </summary>
-    [SchemaAttr(0, "slideIdLst", 1)]
+    [SchemaAttr(0, "slideIdLst")]
+    [Index(1)]
     public ListValue<UInt32Value> SlideIdList { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 2)]
+    [SchemaAttr(0, "id")]
+    [Index(2)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -2527,8 +2686,12 @@ public partial class SectionOld : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "extLst", 0)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(0)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -2556,7 +2719,8 @@ public partial class SectionSlideIdListEntry : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public UInt32Value Id { get; set; }
 
     /// <summary>
@@ -2666,13 +2830,15 @@ public partial class Section : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 1)]
+    [SchemaAttr(0, "id")]
+    [Index(1)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -2719,8 +2885,12 @@ public partial class Section : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "sldIdLst", 0)]
-    public SectionSlideIdList SectionSlideIdList { get; set; }
+	[Index(0)]
+    public SectionSlideIdList SectionSlideIdList
+	{
+        get => GetElement<SectionSlideIdList>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -2729,8 +2899,12 @@ public partial class Section : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
-	[SchemaAttr(49, "extLst", 1)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(1)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -2758,19 +2932,22 @@ public partial class TracePoint : OpenXmlLeafElement
     /// <para> t.</para>
     /// <para>Represents the following attribute in the schema: t </para>
     /// </summary>
-    [SchemaAttr(0, "t", 0)]
+    [SchemaAttr(0, "t")]
+    [Index(0)]
     public StringValue Time { get; set; }
     /// <summary>
     /// <para> x.</para>
     /// <para>Represents the following attribute in the schema: x </para>
     /// </summary>
-    [SchemaAttr(0, "x", 1)]
+    [SchemaAttr(0, "x")]
+    [Index(1)]
     public Int64Value XCoordinate { get; set; }
     /// <summary>
     /// <para> y.</para>
     /// <para>Represents the following attribute in the schema: y </para>
     /// </summary>
-    [SchemaAttr(0, "y", 2)]
+    [SchemaAttr(0, "y")]
+    [Index(2)]
     public Int64Value YCoordinate { get; set; }
 
     /// <summary>
@@ -2871,19 +3048,22 @@ public partial class TriggerEventRecord : OpenXmlLeafElement
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type", 0)]
+    [SchemaAttr(0, "type")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues> Type { get; set; }
     /// <summary>
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    [SchemaAttr(0, "time", 1)]
+    [SchemaAttr(0, "time")]
+    [Index(1)]
     public StringValue Time { get; set; }
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
     /// </summary>
-    [SchemaAttr(0, "objId", 2)]
+    [SchemaAttr(0, "objId")]
+    [Index(2)]
     public UInt32Value ObjectId { get; set; }
 
     /// <summary>
@@ -3008,13 +3188,15 @@ public abstract partial class MediaPlaybackEventRecordType : OpenXmlLeafElement
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    [SchemaAttr(0, "time", 0)]
+    [SchemaAttr(0, "time")]
+    [Index(0)]
     public StringValue Time { get; set; }
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
     /// </summary>
-    [SchemaAttr(0, "objId", 1)]
+    [SchemaAttr(0, "objId")]
+    [Index(1)]
     public UInt32Value ObjectId { get; set; }
 
     
@@ -3048,19 +3230,22 @@ public partial class SeekEventRecord : OpenXmlLeafElement
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    [SchemaAttr(0, "time", 0)]
+    [SchemaAttr(0, "time")]
+    [Index(0)]
     public StringValue Time { get; set; }
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
     /// </summary>
-    [SchemaAttr(0, "objId", 1)]
+    [SchemaAttr(0, "objId")]
+    [Index(1)]
     public UInt32Value ObjectId { get; set; }
     /// <summary>
     /// <para> seek.</para>
     /// <para>Represents the following attribute in the schema: seek </para>
     /// </summary>
-    [SchemaAttr(0, "seek", 2)]
+    [SchemaAttr(0, "seek")]
+    [Index(2)]
     public StringValue Seek { get; set; }
 
     /// <summary>
@@ -3097,13 +3282,15 @@ public partial class NullEventRecord : OpenXmlLeafElement
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    [SchemaAttr(0, "time", 0)]
+    [SchemaAttr(0, "time")]
+    [Index(0)]
     public StringValue Time { get; set; }
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
     /// </summary>
-    [SchemaAttr(0, "objId", 1)]
+    [SchemaAttr(0, "objId")]
+    [Index(1)]
     public UInt32Value ObjectId { get; set; }
 
     /// <summary>

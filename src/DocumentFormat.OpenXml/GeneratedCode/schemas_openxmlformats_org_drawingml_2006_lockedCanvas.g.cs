@@ -95,8 +95,12 @@ public partial class LockedCanvas : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "nvGrpSpPr", 0)]
-    public DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties NonVisualGroupShapeProperties { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties NonVisualGroupShapeProperties
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Visual Group Shape Properties.</para>
@@ -105,8 +109,12 @@ public partial class LockedCanvas : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "grpSpPr", 1)]
-    public DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties VisualGroupShapeProperties { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties VisualGroupShapeProperties
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>(1);
+        set => SetElement(1, value);
+	}
     
 
 

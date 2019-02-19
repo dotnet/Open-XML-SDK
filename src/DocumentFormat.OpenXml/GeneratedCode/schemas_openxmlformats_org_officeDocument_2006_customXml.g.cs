@@ -36,7 +36,8 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     /// </summary>
 ///<remark> xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
 ///</remark>
-    [SchemaAttr(20, "itemID", 0)]
+    [SchemaAttr(20, "itemID")]
+    [Index(0)]
     public StringValue ItemId { get; set; }
 
     
@@ -112,8 +113,12 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ds = http://schemas.openxmlformats.org/officeDocument/2006/customXml
     /// </remark>
-	[SchemaAttr(20, "schemaRefs", 0)]
-    public SchemaReferences SchemaReferences { get; set; }
+	[Index(0)]
+    public SchemaReferences SchemaReferences
+	{
+        get => GetElement<SchemaReferences>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -143,7 +148,8 @@ public partial class SchemaReference : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
 ///</remark>
-    [SchemaAttr(20, "uri", 0)]
+    [SchemaAttr(20, "uri")]
+    [Index(0)]
     public StringValue Uri { get; set; }
 
     /// <summary>

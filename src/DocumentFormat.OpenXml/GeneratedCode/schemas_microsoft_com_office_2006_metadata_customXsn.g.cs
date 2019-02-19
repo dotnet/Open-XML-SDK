@@ -82,8 +82,12 @@ public partial class CustomXsn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
     /// </remark>
-	[SchemaAttr(39, "xsnLocation", 0)]
-    public XsnLocation XsnLocation { get; set; }
+	[Index(0)]
+    public XsnLocation XsnLocation
+	{
+        get => GetElement<XsnLocation>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> CachedView.</para>
@@ -92,8 +96,12 @@ public partial class CustomXsn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
     /// </remark>
-	[SchemaAttr(39, "cached", 1)]
-    public CachedView CachedView { get; set; }
+	[Index(1)]
+    public CachedView CachedView
+	{
+        get => GetElement<CachedView>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> OpenByDefault.</para>
@@ -102,8 +110,12 @@ public partial class CustomXsn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
     /// </remark>
-	[SchemaAttr(39, "openByDefault", 2)]
-    public OpenByDefault OpenByDefault { get; set; }
+	[Index(2)]
+    public OpenByDefault OpenByDefault
+	{
+        get => GetElement<OpenByDefault>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Scope.</para>
@@ -112,8 +124,12 @@ public partial class CustomXsn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
     /// </remark>
-	[SchemaAttr(39, "xsnScope", 3)]
-    public Scope Scope { get; set; }
+	[Index(3)]
+    public Scope Scope
+	{
+        get => GetElement<Scope>(3);
+        set => SetElement(3, value);
+	}
     
 
 

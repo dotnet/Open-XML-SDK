@@ -182,8 +182,12 @@ public abstract partial class WordprocessingGroupType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
-	[SchemaAttr(60, "cNvPr", 0)]
-    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
+	[Index(0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties
+	{
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> NonVisualGroupDrawingShapeProperties.</para>
@@ -192,8 +196,12 @@ public abstract partial class WordprocessingGroupType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
-	[SchemaAttr(60, "cNvGrpSpPr", 1)]
-    public NonVisualGroupDrawingShapeProperties NonVisualGroupDrawingShapeProperties { get; set; }
+	[Index(1)]
+    public NonVisualGroupDrawingShapeProperties NonVisualGroupDrawingShapeProperties
+	{
+        get => GetElement<NonVisualGroupDrawingShapeProperties>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> GroupShapeProperties.</para>
@@ -202,8 +210,12 @@ public abstract partial class WordprocessingGroupType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
-	[SchemaAttr(60, "grpSpPr", 2)]
-    public GroupShapeProperties GroupShapeProperties { get; set; }
+	[Index(2)]
+    public GroupShapeProperties GroupShapeProperties
+	{
+        get => GetElement<GroupShapeProperties>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -273,31 +285,36 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 1)]
+    [SchemaAttr(0, "name")]
+    [Index(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
-    [SchemaAttr(0, "descr", 2)]
+    [SchemaAttr(0, "descr")]
+    [Index(2)]
     public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    [SchemaAttr(0, "hidden", 3)]
+    [SchemaAttr(0, "hidden")]
+    [Index(3)]
     public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 4)]
+    [SchemaAttr(0, "title")]
+    [Index(4)]
     public StringValue Title { get; set; }
 
     /// <summary>
@@ -344,8 +361,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hlinkClick", 0)]
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -354,8 +375,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hlinkHover", 1)]
-    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -364,8 +389,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 2)]
-    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList { get; set; }
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -443,8 +472,12 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "graphicFrameLocks", 0)]
-    public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks GraphicFrameLocks { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks GraphicFrameLocks
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -453,8 +486,12 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 1)]
-    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -491,19 +528,22 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
-    [SchemaAttr(0, "rot", 0)]
+    [SchemaAttr(0, "rot")]
+    [Index(0)]
     public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
-    [SchemaAttr(0, "flipH", 1)]
+    [SchemaAttr(0, "flipH")]
+    [Index(1)]
     public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
-    [SchemaAttr(0, "flipV", 2)]
+    [SchemaAttr(0, "flipV")]
+    [Index(2)]
     public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>
@@ -550,8 +590,12 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "off", 0)]
-    public DocumentFormat.OpenXml.Drawing.Offset Offset { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.Offset Offset
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Extents.</para>
@@ -560,8 +604,12 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "ext", 1)]
-    public DocumentFormat.OpenXml.Drawing.Extents Extents { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.Extents Extents
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -703,8 +751,12 @@ public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "grpSpLocks", 0)]
-    public DocumentFormat.OpenXml.Drawing.GroupShapeLocks GroupShapeLocks { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.GroupShapeLocks GroupShapeLocks
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> NonVisualGroupDrawingShapePropsExtensionList.</para>
@@ -713,8 +765,12 @@ public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 1)]
-    public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList NonVisualGroupDrawingShapePropsExtensionList { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList NonVisualGroupDrawingShapePropsExtensionList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -769,7 +825,8 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode", 0)]
+    [SchemaAttr(0, "bwMode")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -816,8 +873,12 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "xfrm", 0)]
-    public DocumentFormat.OpenXml.Drawing.TransformGroup TransformGroup { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.TransformGroup TransformGroup
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -901,8 +962,12 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
-	[SchemaAttr(60, "cNvPr", 0)]
-    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
+	[Index(0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties
+	{
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> NonVisualGraphicFrameProperties.</para>
@@ -911,8 +976,12 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
-	[SchemaAttr(60, "cNvFrPr", 1)]
-    public NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties { get; set; }
+	[Index(1)]
+    public NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties
+	{
+        get => GetElement<NonVisualGraphicFrameProperties>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Transform2D.</para>
@@ -921,8 +990,12 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
-	[SchemaAttr(60, "xfrm", 2)]
-    public Transform2D Transform2D { get; set; }
+	[Index(2)]
+    public Transform2D Transform2D
+	{
+        get => GetElement<Transform2D>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Graphic.</para>
@@ -931,8 +1004,12 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "graphic", 3)]
-    public DocumentFormat.OpenXml.Drawing.Graphic Graphic { get; set; }
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.Graphic Graphic
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -941,8 +1018,12 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
     /// </remark>
-	[SchemaAttr(60, "extLst", 4)]
-    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
+	[Index(4)]
+    public OfficeArtExtensionList OfficeArtExtensionList
+	{
+        get => GetElement<OfficeArtExtensionList>(4);
+        set => SetElement(4, value);
+	}
     
 
 

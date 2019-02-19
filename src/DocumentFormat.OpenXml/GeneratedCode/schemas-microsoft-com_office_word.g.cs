@@ -116,19 +116,22 @@ public abstract partial class BorderType : OpenXmlLeafElement
     /// <para> Border Style.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type", 0)]
+    [SchemaAttr(0, "type")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues> Type { get; set; }
     /// <summary>
     /// <para> Border Width.</para>
     /// <para>Represents the following attribute in the schema: width </para>
     /// </summary>
-    [SchemaAttr(0, "width", 1)]
+    [SchemaAttr(0, "width")]
+    [Index(1)]
     public IntegerValue Width { get; set; }
     /// <summary>
     /// <para> Border shadow.</para>
     /// <para>Represents the following attribute in the schema: shadow </para>
     /// </summary>
-    [SchemaAttr(0, "shadow", 2)]
+    [SchemaAttr(0, "shadow")]
+    [Index(2)]
     public TrueFalseValue Shadow { get; set; }
 
     
@@ -162,25 +165,29 @@ public partial class TextWrap : OpenXmlLeafElement
     /// <para> Wrapping type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type", 0)]
+    [SchemaAttr(0, "type")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues> Type { get; set; }
     /// <summary>
     /// <para> Wrapping side.</para>
     /// <para>Represents the following attribute in the schema: side </para>
     /// </summary>
-    [SchemaAttr(0, "side", 1)]
+    [SchemaAttr(0, "side")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues> Side { get; set; }
     /// <summary>
     /// <para> Horizontal Positioning Base.</para>
     /// <para>Represents the following attribute in the schema: anchorx </para>
     /// </summary>
-    [SchemaAttr(0, "anchorx", 2)]
+    [SchemaAttr(0, "anchorx")]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues> AnchorX { get; set; }
     /// <summary>
     /// <para> Vertical Positioning Base.</para>
     /// <para>Represents the following attribute in the schema: anchory </para>
     /// </summary>
-    [SchemaAttr(0, "anchory", 3)]
+    [SchemaAttr(0, "anchory")]
+    [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues> AnchorY { get; set; }
 
     /// <summary>

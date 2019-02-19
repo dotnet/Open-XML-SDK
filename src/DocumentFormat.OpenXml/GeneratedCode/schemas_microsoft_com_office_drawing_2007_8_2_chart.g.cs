@@ -87,8 +87,12 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[SchemaAttr(46, "dropZoneFilter", 0)]
-    public DropZoneFilter DropZoneFilter { get; set; }
+	[Index(0)]
+    public DropZoneFilter DropZoneFilter
+	{
+        get => GetElement<DropZoneFilter>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> DropZoneCategories.</para>
@@ -97,8 +101,12 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[SchemaAttr(46, "dropZoneCategories", 1)]
-    public DropZoneCategories DropZoneCategories { get; set; }
+	[Index(1)]
+    public DropZoneCategories DropZoneCategories
+	{
+        get => GetElement<DropZoneCategories>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> DropZoneData.</para>
@@ -107,8 +115,12 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[SchemaAttr(46, "dropZoneData", 2)]
-    public DropZoneData DropZoneData { get; set; }
+	[Index(2)]
+    public DropZoneData DropZoneData
+	{
+        get => GetElement<DropZoneData>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> DropZoneSeries.</para>
@@ -117,8 +129,12 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[SchemaAttr(46, "dropZoneSeries", 3)]
-    public DropZoneSeries DropZoneSeries { get; set; }
+	[Index(3)]
+    public DropZoneSeries DropZoneSeries
+	{
+        get => GetElement<DropZoneSeries>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> DropZonesVisible.</para>
@@ -127,8 +143,12 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[SchemaAttr(46, "dropZonesVisible", 4)]
-    public DropZonesVisible DropZonesVisible { get; set; }
+	[Index(4)]
+    public DropZonesVisible DropZonesVisible
+	{
+        get => GetElement<DropZonesVisible>(4);
+        set => SetElement(4, value);
+	}
     
 
 
@@ -206,8 +226,12 @@ public partial class SketchOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[SchemaAttr(46, "inSketchMode", 0)]
-    public InSketchMode InSketchMode { get; set; }
+	[Index(0)]
+    public InSketchMode InSketchMode
+	{
+        get => GetElement<InSketchMode>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> ShowSketchButton.</para>
@@ -216,8 +240,12 @@ public partial class SketchOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[SchemaAttr(46, "showSketchBtn", 1)]
-    public ShowSketchButton ShowSketchButton { get; set; }
+	[Index(1)]
+    public ShowSketchButton ShowSketchButton
+	{
+        get => GetElement<ShowSketchButton>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -293,8 +321,12 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[SchemaAttr(46, "spPr", 0)]
-    public ShapeProperties ShapeProperties { get; set; }
+	[Index(0)]
+    public ShapeProperties ShapeProperties
+	{
+        get => GetElement<ShapeProperties>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -322,7 +354,8 @@ public partial class Style : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public ByteValue Val { get; set; }
 
     /// <summary>
@@ -394,7 +427,8 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode", 0)]
+    [SchemaAttr(0, "bwMode")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -441,8 +475,12 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "xfrm", 0)]
-    public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -606,7 +644,8 @@ public abstract partial class BooleanFalseType : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public BooleanValue Val { get; set; }
 
     
@@ -640,7 +679,8 @@ public partial class ShowSketchButton : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public BooleanValue Val { get; set; }
 
     /// <summary>

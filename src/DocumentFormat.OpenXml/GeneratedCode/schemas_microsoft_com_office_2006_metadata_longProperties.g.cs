@@ -92,7 +92,8 @@ public partial class LongProperty : OpenXmlLeafTextElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
 
     /// <summary>

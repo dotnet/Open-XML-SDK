@@ -110,7 +110,8 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     /// <para> relativeFrom.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
-    [SchemaAttr(0, "relativeFrom", 0)]
+    [SchemaAttr(0, "relativeFrom")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId { get; set; }
 
     /// <summary>
@@ -157,8 +158,12 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
     /// </remark>
-	[SchemaAttr(51, "pctWidth", 0)]
-    public PercentageWidth PercentageWidth { get; set; }
+	[Index(0)]
+    public PercentageWidth PercentageWidth
+	{
+        get => GetElement<PercentageWidth>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -193,7 +198,8 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     /// <para> relativeFrom.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
-    [SchemaAttr(0, "relativeFrom", 0)]
+    [SchemaAttr(0, "relativeFrom")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom { get; set; }
 
     /// <summary>
@@ -240,8 +246,12 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
     /// </remark>
-	[SchemaAttr(51, "pctHeight", 0)]
-    public PercentageHeight PercentageHeight { get; set; }
+	[Index(0)]
+    public PercentageHeight PercentageHeight
+	{
+        get => GetElement<PercentageHeight>(0);
+        set => SetElement(0, value);
+	}
     
 
 

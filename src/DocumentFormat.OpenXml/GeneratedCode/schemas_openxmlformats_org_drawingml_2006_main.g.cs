@@ -86,8 +86,12 @@ public partial class AudioFromCD : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "st", 0)]
-    public StartTime StartTime { get; set; }
+	[Index(0)]
+    public StartTime StartTime
+	{
+        get => GetElement<StartTime>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Audio End Time.</para>
@@ -96,8 +100,12 @@ public partial class AudioFromCD : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "end", 1)]
-    public EndTime EndTime { get; set; }
+	[Index(1)]
+    public EndTime EndTime
+	{
+        get => GetElement<EndTime>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -106,8 +114,12 @@ public partial class AudioFromCD : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 2)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(2)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -177,19 +189,22 @@ public abstract partial class EmbeddedWavAudioFileType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "embed", 0)]
+    [SchemaAttr(19, "embed")]
+    [Index(0)]
     public StringValue Embed { get; set; }
     /// <summary>
     /// <para> Sound Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 1)]
+    [SchemaAttr(0, "name")]
+    [Index(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> Recognized Built-In Sound.</para>
     /// <para>Represents the following attribute in the schema: builtIn </para>
     /// </summary>
-    [SchemaAttr(0, "builtIn", 2)]
+    [SchemaAttr(0, "builtIn")]
+    [Index(2)]
     public BooleanValue BuiltIn { get; set; }
 
     
@@ -232,7 +247,8 @@ public partial class AudioFromFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "link", 0)]
+    [SchemaAttr(19, "link")]
+    [Index(0)]
     public StringValue Link { get; set; }
 
     /// <summary>
@@ -279,8 +295,12 @@ public partial class AudioFromFile : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 0)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(0)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -317,7 +337,8 @@ public partial class VideoFromFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "link", 0)]
+    [SchemaAttr(19, "link")]
+    [Index(0)]
     public StringValue Link { get; set; }
 
     /// <summary>
@@ -364,8 +385,12 @@ public partial class VideoFromFile : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 0)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(0)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -402,7 +427,8 @@ public partial class QuickTimeFromFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "link", 0)]
+    [SchemaAttr(19, "link")]
+    [Index(0)]
     public StringValue Link { get; set; }
 
     /// <summary>
@@ -449,8 +475,12 @@ public partial class QuickTimeFromFile : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 0)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(0)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -542,7 +572,8 @@ public abstract partial class PositiveFixedPercentageType : OpenXmlLeafElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public Int32Value Val { get; set; }
 
     
@@ -669,7 +700,8 @@ public partial class AlphaOffset : OpenXmlLeafElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -746,7 +778,8 @@ public abstract partial class PositivePercentageType : OpenXmlLeafElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public Int32Value Val { get; set; }
 
     
@@ -780,7 +813,8 @@ public partial class Hue : OpenXmlLeafElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -817,7 +851,8 @@ public partial class HueOffset : OpenXmlLeafElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -1206,7 +1241,8 @@ public abstract partial class PercentageType : OpenXmlLeafElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public Int32Value Val { get; set; }
 
     
@@ -1307,7 +1343,8 @@ public partial class Extension : OpenXmlCompositeElement
     /// <para> URI.</para>
     /// <para>Represents the following attribute in the schema: uri </para>
     /// </summary>
-    [SchemaAttr(0, "uri", 0)]
+    [SchemaAttr(0, "uri")]
+    [Index(0)]
     public StringValue Uri { get; set; }
 
     /// <summary>
@@ -1431,19 +1468,22 @@ public partial class RgbColorModelPercentage : OpenXmlCompositeElement
     /// <para> Red.</para>
     /// <para>Represents the following attribute in the schema: r </para>
     /// </summary>
-    [SchemaAttr(0, "r", 0)]
+    [SchemaAttr(0, "r")]
+    [Index(0)]
     public Int32Value RedPortion { get; set; }
     /// <summary>
     /// <para> Green.</para>
     /// <para>Represents the following attribute in the schema: g </para>
     /// </summary>
-    [SchemaAttr(0, "g", 1)]
+    [SchemaAttr(0, "g")]
+    [Index(1)]
     public Int32Value GreenPortion { get; set; }
     /// <summary>
     /// <para> Blue.</para>
     /// <para>Represents the following attribute in the schema: b </para>
     /// </summary>
-    [SchemaAttr(0, "b", 2)]
+    [SchemaAttr(0, "b")]
+    [Index(2)]
     public Int32Value BluePortion { get; set; }
 
     /// <summary>
@@ -1567,7 +1607,8 @@ public partial class RgbColorModelHex : OpenXmlCompositeElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public HexBinaryValue Val { get; set; }
     /// <summary>
     /// <para> legacySpreadsheetColorIndex.</para>
@@ -1575,7 +1616,8 @@ public partial class RgbColorModelHex : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:a14=http://schemas.microsoft.com/office/drawing/2010/main
 ///</remark>
-    [SchemaAttr(48, "legacySpreadsheetColorIndex", 1)]
+    [SchemaAttr(48, "legacySpreadsheetColorIndex")]
+    [Index(1)]
     public Int32Value LegacySpreadsheetColorIndex { get; set; }
 
     /// <summary>
@@ -1699,19 +1741,22 @@ public partial class HslColor : OpenXmlCompositeElement
     /// <para> Hue.</para>
     /// <para>Represents the following attribute in the schema: hue </para>
     /// </summary>
-    [SchemaAttr(0, "hue", 0)]
+    [SchemaAttr(0, "hue")]
+    [Index(0)]
     public Int32Value HueValue { get; set; }
     /// <summary>
     /// <para> Saturation.</para>
     /// <para>Represents the following attribute in the schema: sat </para>
     /// </summary>
-    [SchemaAttr(0, "sat", 1)]
+    [SchemaAttr(0, "sat")]
+    [Index(1)]
     public Int32Value SatValue { get; set; }
     /// <summary>
     /// <para> Luminance.</para>
     /// <para>Represents the following attribute in the schema: lum </para>
     /// </summary>
-    [SchemaAttr(0, "lum", 2)]
+    [SchemaAttr(0, "lum")]
+    [Index(2)]
     public Int32Value LumValue { get; set; }
 
     /// <summary>
@@ -1835,13 +1880,15 @@ public partial class SystemColor : OpenXmlCompositeElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.SystemColorValues> Val { get; set; }
     /// <summary>
     /// <para> Last Color.</para>
     /// <para>Represents the following attribute in the schema: lastClr </para>
     /// </summary>
-    [SchemaAttr(0, "lastClr", 1)]
+    [SchemaAttr(0, "lastClr")]
+    [Index(1)]
     public HexBinaryValue LastColor { get; set; }
 
     /// <summary>
@@ -1965,7 +2012,8 @@ public partial class SchemeColor : OpenXmlCompositeElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.SchemeColorValues> Val { get; set; }
 
     /// <summary>
@@ -2089,7 +2137,8 @@ public partial class PresetColor : OpenXmlCompositeElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.PresetColorValues> Val { get; set; }
 
     /// <summary>
@@ -2167,25 +2216,29 @@ public partial class Shape3DType : OpenXmlCompositeElement
     /// <para> Shape Depth.</para>
     /// <para>Represents the following attribute in the schema: z </para>
     /// </summary>
-    [SchemaAttr(0, "z", 0)]
+    [SchemaAttr(0, "z")]
+    [Index(0)]
     public Int64Value Z { get; set; }
     /// <summary>
     /// <para> Extrusion Height.</para>
     /// <para>Represents the following attribute in the schema: extrusionH </para>
     /// </summary>
-    [SchemaAttr(0, "extrusionH", 1)]
+    [SchemaAttr(0, "extrusionH")]
+    [Index(1)]
     public Int64Value ExtrusionHeight { get; set; }
     /// <summary>
     /// <para> Contour Width.</para>
     /// <para>Represents the following attribute in the schema: contourW </para>
     /// </summary>
-    [SchemaAttr(0, "contourW", 2)]
+    [SchemaAttr(0, "contourW")]
+    [Index(2)]
     public Int64Value ContourWidth { get; set; }
     /// <summary>
     /// <para> Preset Material Type.</para>
     /// <para>Represents the following attribute in the schema: prstMaterial </para>
     /// </summary>
-    [SchemaAttr(0, "prstMaterial", 3)]
+    [SchemaAttr(0, "prstMaterial")]
+    [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial { get; set; }
 
     /// <summary>
@@ -2232,8 +2285,12 @@ public partial class Shape3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "bevelT", 0)]
-    public BevelTop BevelTop { get; set; }
+	[Index(0)]
+    public BevelTop BevelTop
+	{
+        get => GetElement<BevelTop>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Bottom Bevel.</para>
@@ -2242,8 +2299,12 @@ public partial class Shape3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "bevelB", 1)]
-    public BevelBottom BevelBottom { get; set; }
+	[Index(1)]
+    public BevelBottom BevelBottom
+	{
+        get => GetElement<BevelBottom>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Extrusion Color.</para>
@@ -2252,8 +2313,12 @@ public partial class Shape3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extrusionClr", 2)]
-    public ExtrusionColor ExtrusionColor { get; set; }
+	[Index(2)]
+    public ExtrusionColor ExtrusionColor
+	{
+        get => GetElement<ExtrusionColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Contour Color.</para>
@@ -2262,8 +2327,12 @@ public partial class Shape3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "contourClr", 3)]
-    public ContourColor ContourColor { get; set; }
+	[Index(3)]
+    public ContourColor ContourColor
+	{
+        get => GetElement<ContourColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -2272,8 +2341,12 @@ public partial class Shape3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 4)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(4)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(4);
+        set => SetElement(4, value);
+	}
     
 
 
@@ -2301,7 +2374,8 @@ public partial class FlatText : OpenXmlLeafElement
     /// <para> Z Coordinate.</para>
     /// <para>Represents the following attribute in the schema: z </para>
     /// </summary>
-    [SchemaAttr(0, "z", 0)]
+    [SchemaAttr(0, "z")]
+    [Index(0)]
     public Int64Value Z { get; set; }
 
     /// <summary>
@@ -2338,13 +2412,15 @@ public partial class LinearGradientFill : OpenXmlLeafElement
     /// <para> Angle.</para>
     /// <para>Represents the following attribute in the schema: ang </para>
     /// </summary>
-    [SchemaAttr(0, "ang", 0)]
+    [SchemaAttr(0, "ang")]
+    [Index(0)]
     public Int32Value Angle { get; set; }
     /// <summary>
     /// <para> Scaled.</para>
     /// <para>Represents the following attribute in the schema: scaled </para>
     /// </summary>
-    [SchemaAttr(0, "scaled", 1)]
+    [SchemaAttr(0, "scaled")]
+    [Index(1)]
     public BooleanValue Scaled { get; set; }
 
     /// <summary>
@@ -2388,7 +2464,8 @@ public partial class PathGradientFill : OpenXmlCompositeElement
     /// <para> Gradient Fill Path.</para>
     /// <para>Represents the following attribute in the schema: path </para>
     /// </summary>
-    [SchemaAttr(0, "path", 0)]
+    [SchemaAttr(0, "path")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.PathShadeValues> Path { get; set; }
 
     /// <summary>
@@ -2435,8 +2512,12 @@ public partial class PathGradientFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "fillToRect", 0)]
-    public FillToRectangle FillToRectangle { get; set; }
+	[Index(0)]
+    public FillToRectangle FillToRectangle
+	{
+        get => GetElement<FillToRectangle>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -2464,37 +2545,43 @@ public partial class Tile : OpenXmlLeafElement
     /// <para> Horizontal Offset.</para>
     /// <para>Represents the following attribute in the schema: tx </para>
     /// </summary>
-    [SchemaAttr(0, "tx", 0)]
+    [SchemaAttr(0, "tx")]
+    [Index(0)]
     public Int64Value HorizontalOffset { get; set; }
     /// <summary>
     /// <para> Vertical Offset.</para>
     /// <para>Represents the following attribute in the schema: ty </para>
     /// </summary>
-    [SchemaAttr(0, "ty", 1)]
+    [SchemaAttr(0, "ty")]
+    [Index(1)]
     public Int64Value VerticalOffset { get; set; }
     /// <summary>
     /// <para> Horizontal Ratio.</para>
     /// <para>Represents the following attribute in the schema: sx </para>
     /// </summary>
-    [SchemaAttr(0, "sx", 2)]
+    [SchemaAttr(0, "sx")]
+    [Index(2)]
     public Int32Value HorizontalRatio { get; set; }
     /// <summary>
     /// <para> Vertical Ratio.</para>
     /// <para>Represents the following attribute in the schema: sy </para>
     /// </summary>
-    [SchemaAttr(0, "sy", 3)]
+    [SchemaAttr(0, "sy")]
+    [Index(3)]
     public Int32Value VerticalRatio { get; set; }
     /// <summary>
     /// <para> Tile Flipping.</para>
     /// <para>Represents the following attribute in the schema: flip </para>
     /// </summary>
-    [SchemaAttr(0, "flip", 4)]
+    [SchemaAttr(0, "flip")]
+    [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TileFlipValues> Flip { get; set; }
     /// <summary>
     /// <para> Alignment.</para>
     /// <para>Represents the following attribute in the schema: algn </para>
     /// </summary>
-    [SchemaAttr(0, "algn", 5)]
+    [SchemaAttr(0, "algn")]
+    [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues> Alignment { get; set; }
 
     /// <summary>
@@ -2579,8 +2666,12 @@ public partial class Stretch : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "fillRect", 0)]
-    public FillRectangle FillRectangle { get; set; }
+	[Index(0)]
+    public FillRectangle FillRectangle
+	{
+        get => GetElement<FillRectangle>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -2697,8 +2788,12 @@ public partial class SolidFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -2707,8 +2802,12 @@ public partial class SolidFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -2717,8 +2816,12 @@ public partial class SolidFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public HslColor HslColor { get; set; }
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -2727,8 +2830,12 @@ public partial class SolidFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -2737,8 +2844,12 @@ public partial class SolidFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "schemeClr", 4)]
-    public SchemeColor SchemeColor { get; set; }
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -2747,8 +2858,12 @@ public partial class SolidFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 5)]
-    public PresetColor PresetColor { get; set; }
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -2789,13 +2904,15 @@ public partial class GradientFill : OpenXmlCompositeElement
     /// <para> Tile Flip.</para>
     /// <para>Represents the following attribute in the schema: flip </para>
     /// </summary>
-    [SchemaAttr(0, "flip", 0)]
+    [SchemaAttr(0, "flip")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TileFlipValues> Flip { get; set; }
     /// <summary>
     /// <para> Rotate With Shape.</para>
     /// <para>Represents the following attribute in the schema: rotWithShape </para>
     /// </summary>
-    [SchemaAttr(0, "rotWithShape", 1)]
+    [SchemaAttr(0, "rotWithShape")]
+    [Index(1)]
     public BooleanValue RotateWithShape { get; set; }
 
     /// <summary>
@@ -2842,8 +2959,12 @@ public partial class GradientFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "gsLst", 0)]
-    public GradientStopList GradientStopList { get; set; }
+	[Index(0)]
+    public GradientStopList GradientStopList
+	{
+        get => GetElement<GradientStopList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -2884,13 +3005,15 @@ public partial class BlipFill : OpenXmlCompositeElement
     /// <para> DPI Setting.</para>
     /// <para>Represents the following attribute in the schema: dpi </para>
     /// </summary>
-    [SchemaAttr(0, "dpi", 0)]
+    [SchemaAttr(0, "dpi")]
+    [Index(0)]
     public UInt32Value Dpi { get; set; }
     /// <summary>
     /// <para> Rotate With Shape.</para>
     /// <para>Represents the following attribute in the schema: rotWithShape </para>
     /// </summary>
-    [SchemaAttr(0, "rotWithShape", 1)]
+    [SchemaAttr(0, "rotWithShape")]
+    [Index(1)]
     public BooleanValue RotateWithShape { get; set; }
 
     /// <summary>
@@ -2937,8 +3060,12 @@ public partial class BlipFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "blip", 0)]
-    public Blip Blip { get; set; }
+	[Index(0)]
+    public Blip Blip
+	{
+        get => GetElement<Blip>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Source Rectangle.</para>
@@ -2947,8 +3074,12 @@ public partial class BlipFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srcRect", 1)]
-    public SourceRectangle SourceRectangle { get; set; }
+	[Index(1)]
+    public SourceRectangle SourceRectangle
+	{
+        get => GetElement<SourceRectangle>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -2985,7 +3116,8 @@ public partial class PatternFill : OpenXmlCompositeElement
     /// <para> Preset Pattern.</para>
     /// <para>Represents the following attribute in the schema: prst </para>
     /// </summary>
-    [SchemaAttr(0, "prst", 0)]
+    [SchemaAttr(0, "prst")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.PresetPatternValues> Preset { get; set; }
 
     /// <summary>
@@ -3032,8 +3164,12 @@ public partial class PatternFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "fgClr", 0)]
-    public ForegroundColor ForegroundColor { get; set; }
+	[Index(0)]
+    public ForegroundColor ForegroundColor
+	{
+        get => GetElement<ForegroundColor>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Background color.</para>
@@ -3042,8 +3178,12 @@ public partial class PatternFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "bgClr", 1)]
-    public BackgroundColor BackgroundColor { get; set; }
+	[Index(1)]
+    public BackgroundColor BackgroundColor
+	{
+        get => GetElement<BackgroundColor>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -3329,13 +3469,15 @@ public abstract partial class EffectContainerType : OpenXmlCompositeElement
     /// <para> Effect Container Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type", 0)]
+    [SchemaAttr(0, "type")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.EffectContainerValues> Type { get; set; }
     /// <summary>
     /// <para> Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 1)]
+    [SchemaAttr(0, "name")]
+    [Index(1)]
     public StringValue Name { get; set; }
 
     
@@ -3395,7 +3537,8 @@ public partial class Effect : OpenXmlLeafElement
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
-    [SchemaAttr(0, "ref", 0)]
+    [SchemaAttr(0, "ref")]
+    [Index(0)]
     public StringValue Reference { get; set; }
 
     /// <summary>
@@ -3432,7 +3575,8 @@ public partial class AlphaBiLevel : OpenXmlLeafElement
     /// <para> Threshold.</para>
     /// <para>Represents the following attribute in the schema: thresh </para>
     /// </summary>
-    [SchemaAttr(0, "thresh", 0)]
+    [SchemaAttr(0, "thresh")]
+    [Index(0)]
     public Int32Value Threshold { get; set; }
 
     /// <summary>
@@ -3589,8 +3733,12 @@ public partial class AlphaInverse : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -3599,8 +3747,12 @@ public partial class AlphaInverse : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -3609,8 +3761,12 @@ public partial class AlphaInverse : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public HslColor HslColor { get; set; }
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -3619,8 +3775,12 @@ public partial class AlphaInverse : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -3629,8 +3789,12 @@ public partial class AlphaInverse : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "schemeClr", 4)]
-    public SchemeColor SchemeColor { get; set; }
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -3639,8 +3803,12 @@ public partial class AlphaInverse : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 5)]
-    public PresetColor PresetColor { get; set; }
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -3716,8 +3884,12 @@ public partial class AlphaModulationEffect : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cont", 0)]
-    public EffectContainer EffectContainer { get; set; }
+	[Index(0)]
+    public EffectContainer EffectContainer
+	{
+        get => GetElement<EffectContainer>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -3745,7 +3917,8 @@ public partial class AlphaModulationFixed : OpenXmlLeafElement
     /// <para> Amount.</para>
     /// <para>Represents the following attribute in the schema: amt </para>
     /// </summary>
-    [SchemaAttr(0, "amt", 0)]
+    [SchemaAttr(0, "amt")]
+    [Index(0)]
     public Int32Value Amount { get; set; }
 
     /// <summary>
@@ -3782,7 +3955,8 @@ public partial class AlphaOutset : OpenXmlLeafElement
     /// <para> Radius.</para>
     /// <para>Represents the following attribute in the schema: rad </para>
     /// </summary>
-    [SchemaAttr(0, "rad", 0)]
+    [SchemaAttr(0, "rad")]
+    [Index(0)]
     public Int64Value Radius { get; set; }
 
     /// <summary>
@@ -3819,7 +3993,8 @@ public partial class AlphaReplace : OpenXmlLeafElement
     /// <para> Alpha.</para>
     /// <para>Represents the following attribute in the schema: a </para>
     /// </summary>
-    [SchemaAttr(0, "a", 0)]
+    [SchemaAttr(0, "a")]
+    [Index(0)]
     public Int32Value Alpha { get; set; }
 
     /// <summary>
@@ -3856,7 +4031,8 @@ public partial class BiLevel : OpenXmlLeafElement
     /// <para> Threshold.</para>
     /// <para>Represents the following attribute in the schema: thresh </para>
     /// </summary>
-    [SchemaAttr(0, "thresh", 0)]
+    [SchemaAttr(0, "thresh")]
+    [Index(0)]
     public Int32Value Threshold { get; set; }
 
     /// <summary>
@@ -3900,7 +4076,8 @@ public partial class Blend : OpenXmlCompositeElement
     /// <para> Blend Mode.</para>
     /// <para>Represents the following attribute in the schema: blend </para>
     /// </summary>
-    [SchemaAttr(0, "blend", 0)]
+    [SchemaAttr(0, "blend")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlendModeValues> BlendMode { get; set; }
 
     /// <summary>
@@ -3947,8 +4124,12 @@ public partial class Blend : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cont", 0)]
-    public EffectContainer EffectContainer { get; set; }
+	[Index(0)]
+    public EffectContainer EffectContainer
+	{
+        get => GetElement<EffectContainer>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -3976,13 +4157,15 @@ public partial class Blur : OpenXmlLeafElement
     /// <para> Radius.</para>
     /// <para>Represents the following attribute in the schema: rad </para>
     /// </summary>
-    [SchemaAttr(0, "rad", 0)]
+    [SchemaAttr(0, "rad")]
+    [Index(0)]
     public Int64Value Radius { get; set; }
     /// <summary>
     /// <para> Grow Bounds.</para>
     /// <para>Represents the following attribute in the schema: grow </para>
     /// </summary>
-    [SchemaAttr(0, "grow", 1)]
+    [SchemaAttr(0, "grow")]
+    [Index(1)]
     public BooleanValue Grow { get; set; }
 
     /// <summary>
@@ -4028,7 +4211,8 @@ public partial class ColorChange : OpenXmlCompositeElement
     /// <para> Consider Alpha Values.</para>
     /// <para>Represents the following attribute in the schema: useA </para>
     /// </summary>
-    [SchemaAttr(0, "useA", 0)]
+    [SchemaAttr(0, "useA")]
+    [Index(0)]
     public BooleanValue UseAlpha { get; set; }
 
     /// <summary>
@@ -4075,8 +4259,12 @@ public partial class ColorChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "clrFrom", 0)]
-    public ColorFrom ColorFrom { get; set; }
+	[Index(0)]
+    public ColorFrom ColorFrom
+	{
+        get => GetElement<ColorFrom>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Change Color To.</para>
@@ -4085,8 +4273,12 @@ public partial class ColorChange : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "clrTo", 1)]
-    public ColorTo ColorTo { get; set; }
+	[Index(1)]
+    public ColorTo ColorTo
+	{
+        get => GetElement<ColorTo>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -4172,8 +4364,12 @@ public partial class ColorReplacement : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -4182,8 +4378,12 @@ public partial class ColorReplacement : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -4192,8 +4392,12 @@ public partial class ColorReplacement : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public HslColor HslColor { get; set; }
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -4202,8 +4406,12 @@ public partial class ColorReplacement : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -4212,8 +4420,12 @@ public partial class ColorReplacement : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "schemeClr", 4)]
-    public SchemeColor SchemeColor { get; set; }
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -4222,8 +4434,12 @@ public partial class ColorReplacement : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 5)]
-    public PresetColor PresetColor { get; set; }
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -4383,8 +4599,12 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "noFill", 0)]
-    public NoFill NoFill { get; set; }
+	[Index(0)]
+    public NoFill NoFill
+	{
+        get => GetElement<NoFill>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> SolidFill.</para>
@@ -4393,8 +4613,12 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "solidFill", 1)]
-    public SolidFill SolidFill { get; set; }
+	[Index(1)]
+    public SolidFill SolidFill
+	{
+        get => GetElement<SolidFill>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> GradientFill.</para>
@@ -4403,8 +4627,12 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "gradFill", 2)]
-    public GradientFill GradientFill { get; set; }
+	[Index(2)]
+    public GradientFill GradientFill
+	{
+        get => GetElement<GradientFill>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> BlipFill.</para>
@@ -4413,8 +4641,12 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "blipFill", 3)]
-    public BlipFill BlipFill { get; set; }
+	[Index(3)]
+    public BlipFill BlipFill
+	{
+        get => GetElement<BlipFill>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Pattern Fill.</para>
@@ -4423,8 +4655,12 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "pattFill", 4)]
-    public PatternFill PatternFill { get; set; }
+	[Index(4)]
+    public PatternFill PatternFill
+	{
+        get => GetElement<PatternFill>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Group Fill.</para>
@@ -4433,8 +4669,12 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "grpFill", 5)]
-    public GroupFill GroupFill { get; set; }
+	[Index(5)]
+    public GroupFill GroupFill
+	{
+        get => GetElement<GroupFill>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -4479,7 +4719,8 @@ public partial class FillOverlay : OpenXmlCompositeElement
     /// <para> Blend.</para>
     /// <para>Represents the following attribute in the schema: blend </para>
     /// </summary>
-    [SchemaAttr(0, "blend", 0)]
+    [SchemaAttr(0, "blend")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlendModeValues> Blend { get; set; }
 
     /// <summary>
@@ -4526,8 +4767,12 @@ public partial class FillOverlay : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "noFill", 0)]
-    public NoFill NoFill { get; set; }
+	[Index(0)]
+    public NoFill NoFill
+	{
+        get => GetElement<NoFill>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> SolidFill.</para>
@@ -4536,8 +4781,12 @@ public partial class FillOverlay : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "solidFill", 1)]
-    public SolidFill SolidFill { get; set; }
+	[Index(1)]
+    public SolidFill SolidFill
+	{
+        get => GetElement<SolidFill>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> GradientFill.</para>
@@ -4546,8 +4795,12 @@ public partial class FillOverlay : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "gradFill", 2)]
-    public GradientFill GradientFill { get; set; }
+	[Index(2)]
+    public GradientFill GradientFill
+	{
+        get => GetElement<GradientFill>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> BlipFill.</para>
@@ -4556,8 +4809,12 @@ public partial class FillOverlay : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "blipFill", 3)]
-    public BlipFill BlipFill { get; set; }
+	[Index(3)]
+    public BlipFill BlipFill
+	{
+        get => GetElement<BlipFill>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Pattern Fill.</para>
@@ -4566,8 +4823,12 @@ public partial class FillOverlay : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "pattFill", 4)]
-    public PatternFill PatternFill { get; set; }
+	[Index(4)]
+    public PatternFill PatternFill
+	{
+        get => GetElement<PatternFill>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Group Fill.</para>
@@ -4576,8 +4837,12 @@ public partial class FillOverlay : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "grpFill", 5)]
-    public GroupFill GroupFill { get; set; }
+	[Index(5)]
+    public GroupFill GroupFill
+	{
+        get => GetElement<GroupFill>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -4622,7 +4887,8 @@ public partial class Glow : OpenXmlCompositeElement
     /// <para> Radius.</para>
     /// <para>Represents the following attribute in the schema: rad </para>
     /// </summary>
-    [SchemaAttr(0, "rad", 0)]
+    [SchemaAttr(0, "rad")]
+    [Index(0)]
     public Int64Value Radius { get; set; }
 
     /// <summary>
@@ -4669,8 +4935,12 @@ public partial class Glow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -4679,8 +4949,12 @@ public partial class Glow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -4689,8 +4963,12 @@ public partial class Glow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public HslColor HslColor { get; set; }
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -4699,8 +4977,12 @@ public partial class Glow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -4709,8 +4991,12 @@ public partial class Glow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "schemeClr", 4)]
-    public SchemeColor SchemeColor { get; set; }
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -4719,8 +5005,12 @@ public partial class Glow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 5)]
-    public PresetColor PresetColor { get; set; }
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -4779,19 +5069,22 @@ public partial class Hsl : OpenXmlLeafElement
     /// <para> Hue.</para>
     /// <para>Represents the following attribute in the schema: hue </para>
     /// </summary>
-    [SchemaAttr(0, "hue", 0)]
+    [SchemaAttr(0, "hue")]
+    [Index(0)]
     public Int32Value Hue { get; set; }
     /// <summary>
     /// <para> Saturation.</para>
     /// <para>Represents the following attribute in the schema: sat </para>
     /// </summary>
-    [SchemaAttr(0, "sat", 1)]
+    [SchemaAttr(0, "sat")]
+    [Index(1)]
     public Int32Value Saturation { get; set; }
     /// <summary>
     /// <para> Luminance.</para>
     /// <para>Represents the following attribute in the schema: lum </para>
     /// </summary>
-    [SchemaAttr(0, "lum", 2)]
+    [SchemaAttr(0, "lum")]
+    [Index(2)]
     public Int32Value Luminance { get; set; }
 
     /// <summary>
@@ -4845,19 +5138,22 @@ public partial class InnerShadow : OpenXmlCompositeElement
     /// <para> Blur Radius.</para>
     /// <para>Represents the following attribute in the schema: blurRad </para>
     /// </summary>
-    [SchemaAttr(0, "blurRad", 0)]
+    [SchemaAttr(0, "blurRad")]
+    [Index(0)]
     public Int64Value BlurRadius { get; set; }
     /// <summary>
     /// <para> Distance.</para>
     /// <para>Represents the following attribute in the schema: dist </para>
     /// </summary>
-    [SchemaAttr(0, "dist", 1)]
+    [SchemaAttr(0, "dist")]
+    [Index(1)]
     public Int64Value Distance { get; set; }
     /// <summary>
     /// <para> Direction.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 2)]
+    [SchemaAttr(0, "dir")]
+    [Index(2)]
     public Int32Value Direction { get; set; }
 
     /// <summary>
@@ -4904,8 +5200,12 @@ public partial class InnerShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -4914,8 +5214,12 @@ public partial class InnerShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -4924,8 +5228,12 @@ public partial class InnerShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public HslColor HslColor { get; set; }
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -4934,8 +5242,12 @@ public partial class InnerShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -4944,8 +5256,12 @@ public partial class InnerShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "schemeClr", 4)]
-    public SchemeColor SchemeColor { get; set; }
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -4954,8 +5270,12 @@ public partial class InnerShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 5)]
-    public PresetColor PresetColor { get; set; }
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -4983,13 +5303,15 @@ public partial class LuminanceEffect : OpenXmlLeafElement
     /// <para> Brightness.</para>
     /// <para>Represents the following attribute in the schema: bright </para>
     /// </summary>
-    [SchemaAttr(0, "bright", 0)]
+    [SchemaAttr(0, "bright")]
+    [Index(0)]
     public Int32Value Brightness { get; set; }
     /// <summary>
     /// <para> Contrast.</para>
     /// <para>Represents the following attribute in the schema: contrast </para>
     /// </summary>
-    [SchemaAttr(0, "contrast", 1)]
+    [SchemaAttr(0, "contrast")]
+    [Index(1)]
     public Int32Value Contrast { get; set; }
 
     /// <summary>
@@ -5043,55 +5365,64 @@ public partial class OuterShadow : OpenXmlCompositeElement
     /// <para> Blur Radius.</para>
     /// <para>Represents the following attribute in the schema: blurRad </para>
     /// </summary>
-    [SchemaAttr(0, "blurRad", 0)]
+    [SchemaAttr(0, "blurRad")]
+    [Index(0)]
     public Int64Value BlurRadius { get; set; }
     /// <summary>
     /// <para> Shadow Offset Distance.</para>
     /// <para>Represents the following attribute in the schema: dist </para>
     /// </summary>
-    [SchemaAttr(0, "dist", 1)]
+    [SchemaAttr(0, "dist")]
+    [Index(1)]
     public Int64Value Distance { get; set; }
     /// <summary>
     /// <para> Shadow Direction.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 2)]
+    [SchemaAttr(0, "dir")]
+    [Index(2)]
     public Int32Value Direction { get; set; }
     /// <summary>
     /// <para> Horizontal Scaling Factor.</para>
     /// <para>Represents the following attribute in the schema: sx </para>
     /// </summary>
-    [SchemaAttr(0, "sx", 3)]
+    [SchemaAttr(0, "sx")]
+    [Index(3)]
     public Int32Value HorizontalRatio { get; set; }
     /// <summary>
     /// <para> Vertical Scaling Factor.</para>
     /// <para>Represents the following attribute in the schema: sy </para>
     /// </summary>
-    [SchemaAttr(0, "sy", 4)]
+    [SchemaAttr(0, "sy")]
+    [Index(4)]
     public Int32Value VerticalRatio { get; set; }
     /// <summary>
     /// <para> Horizontal Skew.</para>
     /// <para>Represents the following attribute in the schema: kx </para>
     /// </summary>
-    [SchemaAttr(0, "kx", 5)]
+    [SchemaAttr(0, "kx")]
+    [Index(5)]
     public Int32Value HorizontalSkew { get; set; }
     /// <summary>
     /// <para> Vertical Skew.</para>
     /// <para>Represents the following attribute in the schema: ky </para>
     /// </summary>
-    [SchemaAttr(0, "ky", 6)]
+    [SchemaAttr(0, "ky")]
+    [Index(6)]
     public Int32Value VerticalSkew { get; set; }
     /// <summary>
     /// <para> Shadow Alignment.</para>
     /// <para>Represents the following attribute in the schema: algn </para>
     /// </summary>
-    [SchemaAttr(0, "algn", 7)]
+    [SchemaAttr(0, "algn")]
+    [Index(7)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues> Alignment { get; set; }
     /// <summary>
     /// <para> Rotate With Shape.</para>
     /// <para>Represents the following attribute in the schema: rotWithShape </para>
     /// </summary>
-    [SchemaAttr(0, "rotWithShape", 8)]
+    [SchemaAttr(0, "rotWithShape")]
+    [Index(8)]
     public BooleanValue RotateWithShape { get; set; }
 
     /// <summary>
@@ -5138,8 +5469,12 @@ public partial class OuterShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -5148,8 +5483,12 @@ public partial class OuterShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -5158,8 +5497,12 @@ public partial class OuterShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public HslColor HslColor { get; set; }
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -5168,8 +5511,12 @@ public partial class OuterShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -5178,8 +5525,12 @@ public partial class OuterShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "schemeClr", 4)]
-    public SchemeColor SchemeColor { get; set; }
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -5188,8 +5539,12 @@ public partial class OuterShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 5)]
-    public PresetColor PresetColor { get; set; }
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -5234,19 +5589,22 @@ public partial class PresetShadow : OpenXmlCompositeElement
     /// <para> Preset Shadow.</para>
     /// <para>Represents the following attribute in the schema: prst </para>
     /// </summary>
-    [SchemaAttr(0, "prst", 0)]
+    [SchemaAttr(0, "prst")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.PresetShadowValues> Preset { get; set; }
     /// <summary>
     /// <para> Distance.</para>
     /// <para>Represents the following attribute in the schema: dist </para>
     /// </summary>
-    [SchemaAttr(0, "dist", 1)]
+    [SchemaAttr(0, "dist")]
+    [Index(1)]
     public Int64Value Distance { get; set; }
     /// <summary>
     /// <para> Direction.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 2)]
+    [SchemaAttr(0, "dir")]
+    [Index(2)]
     public Int32Value Direction { get; set; }
 
     /// <summary>
@@ -5293,8 +5651,12 @@ public partial class PresetShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -5303,8 +5665,12 @@ public partial class PresetShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -5313,8 +5679,12 @@ public partial class PresetShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public HslColor HslColor { get; set; }
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -5323,8 +5693,12 @@ public partial class PresetShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -5333,8 +5707,12 @@ public partial class PresetShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "schemeClr", 4)]
-    public SchemeColor SchemeColor { get; set; }
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -5343,8 +5721,12 @@ public partial class PresetShadow : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 5)]
-    public PresetColor PresetColor { get; set; }
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -5372,85 +5754,99 @@ public partial class Reflection : OpenXmlLeafElement
     /// <para> Blur Radius.</para>
     /// <para>Represents the following attribute in the schema: blurRad </para>
     /// </summary>
-    [SchemaAttr(0, "blurRad", 0)]
+    [SchemaAttr(0, "blurRad")]
+    [Index(0)]
     public Int64Value BlurRadius { get; set; }
     /// <summary>
     /// <para> Start Opacity.</para>
     /// <para>Represents the following attribute in the schema: stA </para>
     /// </summary>
-    [SchemaAttr(0, "stA", 1)]
+    [SchemaAttr(0, "stA")]
+    [Index(1)]
     public Int32Value StartOpacity { get; set; }
     /// <summary>
     /// <para> Start Position.</para>
     /// <para>Represents the following attribute in the schema: stPos </para>
     /// </summary>
-    [SchemaAttr(0, "stPos", 2)]
+    [SchemaAttr(0, "stPos")]
+    [Index(2)]
     public Int32Value StartPosition { get; set; }
     /// <summary>
     /// <para> End Alpha.</para>
     /// <para>Represents the following attribute in the schema: endA </para>
     /// </summary>
-    [SchemaAttr(0, "endA", 3)]
+    [SchemaAttr(0, "endA")]
+    [Index(3)]
     public Int32Value EndAlpha { get; set; }
     /// <summary>
     /// <para> End Position.</para>
     /// <para>Represents the following attribute in the schema: endPos </para>
     /// </summary>
-    [SchemaAttr(0, "endPos", 4)]
+    [SchemaAttr(0, "endPos")]
+    [Index(4)]
     public Int32Value EndPosition { get; set; }
     /// <summary>
     /// <para> Distance.</para>
     /// <para>Represents the following attribute in the schema: dist </para>
     /// </summary>
-    [SchemaAttr(0, "dist", 5)]
+    [SchemaAttr(0, "dist")]
+    [Index(5)]
     public Int64Value Distance { get; set; }
     /// <summary>
     /// <para> Direction.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 6)]
+    [SchemaAttr(0, "dir")]
+    [Index(6)]
     public Int32Value Direction { get; set; }
     /// <summary>
     /// <para> Fade Direction.</para>
     /// <para>Represents the following attribute in the schema: fadeDir </para>
     /// </summary>
-    [SchemaAttr(0, "fadeDir", 7)]
+    [SchemaAttr(0, "fadeDir")]
+    [Index(7)]
     public Int32Value FadeDirection { get; set; }
     /// <summary>
     /// <para> Horizontal Ratio.</para>
     /// <para>Represents the following attribute in the schema: sx </para>
     /// </summary>
-    [SchemaAttr(0, "sx", 8)]
+    [SchemaAttr(0, "sx")]
+    [Index(8)]
     public Int32Value HorizontalRatio { get; set; }
     /// <summary>
     /// <para> Vertical Ratio.</para>
     /// <para>Represents the following attribute in the schema: sy </para>
     /// </summary>
-    [SchemaAttr(0, "sy", 9)]
+    [SchemaAttr(0, "sy")]
+    [Index(9)]
     public Int32Value VerticalRatio { get; set; }
     /// <summary>
     /// <para> Horizontal Skew.</para>
     /// <para>Represents the following attribute in the schema: kx </para>
     /// </summary>
-    [SchemaAttr(0, "kx", 10)]
+    [SchemaAttr(0, "kx")]
+    [Index(10)]
     public Int32Value HorizontalSkew { get; set; }
     /// <summary>
     /// <para> Vertical Skew.</para>
     /// <para>Represents the following attribute in the schema: ky </para>
     /// </summary>
-    [SchemaAttr(0, "ky", 11)]
+    [SchemaAttr(0, "ky")]
+    [Index(11)]
     public Int32Value VerticalSkew { get; set; }
     /// <summary>
     /// <para> Shadow Alignment.</para>
     /// <para>Represents the following attribute in the schema: algn </para>
     /// </summary>
-    [SchemaAttr(0, "algn", 12)]
+    [SchemaAttr(0, "algn")]
+    [Index(12)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.RectangleAlignmentValues> Alignment { get; set; }
     /// <summary>
     /// <para> Rotate With Shape.</para>
     /// <para>Represents the following attribute in the schema: rotWithShape </para>
     /// </summary>
-    [SchemaAttr(0, "rotWithShape", 13)]
+    [SchemaAttr(0, "rotWithShape")]
+    [Index(13)]
     public BooleanValue RotateWithShape { get; set; }
 
     /// <summary>
@@ -5487,13 +5883,15 @@ public partial class RelativeOffset : OpenXmlLeafElement
     /// <para> Offset X.</para>
     /// <para>Represents the following attribute in the schema: tx </para>
     /// </summary>
-    [SchemaAttr(0, "tx", 0)]
+    [SchemaAttr(0, "tx")]
+    [Index(0)]
     public Int32Value OffsetX { get; set; }
     /// <summary>
     /// <para> Offset Y.</para>
     /// <para>Represents the following attribute in the schema: ty </para>
     /// </summary>
-    [SchemaAttr(0, "ty", 1)]
+    [SchemaAttr(0, "ty")]
+    [Index(1)]
     public Int32Value OffsetY { get; set; }
 
     /// <summary>
@@ -5530,7 +5928,8 @@ public partial class SoftEdge : OpenXmlLeafElement
     /// <para> Radius.</para>
     /// <para>Represents the following attribute in the schema: rad </para>
     /// </summary>
-    [SchemaAttr(0, "rad", 0)]
+    [SchemaAttr(0, "rad")]
+    [Index(0)]
     public Int64Value Radius { get; set; }
 
     /// <summary>
@@ -5567,13 +5966,15 @@ public partial class TintEffect : OpenXmlLeafElement
     /// <para> Hue.</para>
     /// <para>Represents the following attribute in the schema: hue </para>
     /// </summary>
-    [SchemaAttr(0, "hue", 0)]
+    [SchemaAttr(0, "hue")]
+    [Index(0)]
     public Int32Value Hue { get; set; }
     /// <summary>
     /// <para> Amount.</para>
     /// <para>Represents the following attribute in the schema: amt </para>
     /// </summary>
-    [SchemaAttr(0, "amt", 1)]
+    [SchemaAttr(0, "amt")]
+    [Index(1)]
     public Int32Value Amount { get; set; }
 
     /// <summary>
@@ -5610,37 +6011,43 @@ public partial class TransformEffect : OpenXmlLeafElement
     /// <para> Horizontal Ratio.</para>
     /// <para>Represents the following attribute in the schema: sx </para>
     /// </summary>
-    [SchemaAttr(0, "sx", 0)]
+    [SchemaAttr(0, "sx")]
+    [Index(0)]
     public Int32Value HorizontalRatio { get; set; }
     /// <summary>
     /// <para> Vertical Ratio.</para>
     /// <para>Represents the following attribute in the schema: sy </para>
     /// </summary>
-    [SchemaAttr(0, "sy", 1)]
+    [SchemaAttr(0, "sy")]
+    [Index(1)]
     public Int32Value VerticalRatio { get; set; }
     /// <summary>
     /// <para> Horizontal Skew.</para>
     /// <para>Represents the following attribute in the schema: kx </para>
     /// </summary>
-    [SchemaAttr(0, "kx", 2)]
+    [SchemaAttr(0, "kx")]
+    [Index(2)]
     public Int32Value HorizontalSkew { get; set; }
     /// <summary>
     /// <para> Vertical Skew.</para>
     /// <para>Represents the following attribute in the schema: ky </para>
     /// </summary>
-    [SchemaAttr(0, "ky", 3)]
+    [SchemaAttr(0, "ky")]
+    [Index(3)]
     public Int32Value VerticalSkew { get; set; }
     /// <summary>
     /// <para> Horizontal Shift.</para>
     /// <para>Represents the following attribute in the schema: tx </para>
     /// </summary>
-    [SchemaAttr(0, "tx", 4)]
+    [SchemaAttr(0, "tx")]
+    [Index(4)]
     public Int64Value HorizontalShift { get; set; }
     /// <summary>
     /// <para> Vertical Shift.</para>
     /// <para>Represents the following attribute in the schema: ty </para>
     /// </summary>
-    [SchemaAttr(0, "ty", 5)]
+    [SchemaAttr(0, "ty")]
+    [Index(5)]
     public Int64Value VerticalShift { get; set; }
 
     /// <summary>
@@ -5739,8 +6146,12 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "blur", 0)]
-    public Blur Blur { get; set; }
+	[Index(0)]
+    public Blur Blur
+	{
+        get => GetElement<Blur>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> FillOverlay.</para>
@@ -5749,8 +6160,12 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "fillOverlay", 1)]
-    public FillOverlay FillOverlay { get; set; }
+	[Index(1)]
+    public FillOverlay FillOverlay
+	{
+        get => GetElement<FillOverlay>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Glow.</para>
@@ -5759,8 +6174,12 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "glow", 2)]
-    public Glow Glow { get; set; }
+	[Index(2)]
+    public Glow Glow
+	{
+        get => GetElement<Glow>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> InnerShadow.</para>
@@ -5769,8 +6188,12 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "innerShdw", 3)]
-    public InnerShadow InnerShadow { get; set; }
+	[Index(3)]
+    public InnerShadow InnerShadow
+	{
+        get => GetElement<InnerShadow>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> OuterShadow.</para>
@@ -5779,8 +6202,12 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "outerShdw", 4)]
-    public OuterShadow OuterShadow { get; set; }
+	[Index(4)]
+    public OuterShadow OuterShadow
+	{
+        get => GetElement<OuterShadow>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> PresetShadow.</para>
@@ -5789,8 +6216,12 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstShdw", 5)]
-    public PresetShadow PresetShadow { get; set; }
+	[Index(5)]
+    public PresetShadow PresetShadow
+	{
+        get => GetElement<PresetShadow>(5);
+        set => SetElement(5, value);
+	}
     
     /// <summary>
     /// <para> Reflection.</para>
@@ -5799,8 +6230,12 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "reflection", 6)]
-    public Reflection Reflection { get; set; }
+	[Index(6)]
+    public Reflection Reflection
+	{
+        get => GetElement<Reflection>(6);
+        set => SetElement(6, value);
+	}
     
     /// <summary>
     /// <para> SoftEdge.</para>
@@ -5809,8 +6244,12 @@ public partial class EffectList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "softEdge", 7)]
-    public SoftEdge SoftEdge { get; set; }
+	[Index(7)]
+    public SoftEdge SoftEdge
+	{
+        get => GetElement<SoftEdge>(7);
+        set => SetElement(7, value);
+	}
     
 
 
@@ -5896,8 +6335,12 @@ public partial class CustomGeometry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "avLst", 0)]
-    public AdjustValueList AdjustValueList { get; set; }
+	[Index(0)]
+    public AdjustValueList AdjustValueList
+	{
+        get => GetElement<AdjustValueList>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> List of Shape Guides.</para>
@@ -5906,8 +6349,12 @@ public partial class CustomGeometry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "gdLst", 1)]
-    public ShapeGuideList ShapeGuideList { get; set; }
+	[Index(1)]
+    public ShapeGuideList ShapeGuideList
+	{
+        get => GetElement<ShapeGuideList>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> List of Shape Adjust Handles.</para>
@@ -5916,8 +6363,12 @@ public partial class CustomGeometry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "ahLst", 2)]
-    public AdjustHandleList AdjustHandleList { get; set; }
+	[Index(2)]
+    public AdjustHandleList AdjustHandleList
+	{
+        get => GetElement<AdjustHandleList>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> List of Shape Connection Sites.</para>
@@ -5926,8 +6377,12 @@ public partial class CustomGeometry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cxnLst", 3)]
-    public ConnectionSiteList ConnectionSiteList { get; set; }
+	[Index(3)]
+    public ConnectionSiteList ConnectionSiteList
+	{
+        get => GetElement<ConnectionSiteList>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Shape Text Rectangle.</para>
@@ -5936,8 +6391,12 @@ public partial class CustomGeometry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "rect", 4)]
-    public Rectangle Rectangle { get; set; }
+	[Index(4)]
+    public Rectangle Rectangle
+	{
+        get => GetElement<Rectangle>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> List of Shape Paths.</para>
@@ -5946,8 +6405,12 @@ public partial class CustomGeometry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "pathLst", 5)]
-    public PathList PathList { get; set; }
+	[Index(5)]
+    public PathList PathList
+	{
+        get => GetElement<PathList>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -5982,7 +6445,8 @@ public partial class PresetGeometry : OpenXmlCompositeElement
     /// <para> Preset Shape.</para>
     /// <para>Represents the following attribute in the schema: prst </para>
     /// </summary>
-    [SchemaAttr(0, "prst", 0)]
+    [SchemaAttr(0, "prst")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.ShapeTypeValues> Preset { get; set; }
 
     /// <summary>
@@ -6029,8 +6493,12 @@ public partial class PresetGeometry : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "avLst", 0)]
-    public AdjustValueList AdjustValueList { get; set; }
+	[Index(0)]
+    public AdjustValueList AdjustValueList
+	{
+        get => GetElement<AdjustValueList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -6065,7 +6533,8 @@ public partial class PresetTextWrap : OpenXmlCompositeElement
     /// <para> Preset Warp Shape.</para>
     /// <para>Represents the following attribute in the schema: prst </para>
     /// </summary>
-    [SchemaAttr(0, "prst", 0)]
+    [SchemaAttr(0, "prst")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextShapeValues> Preset { get; set; }
 
     /// <summary>
@@ -6112,8 +6581,12 @@ public partial class PresetTextWrap : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "avLst", 0)]
-    public AdjustValueList AdjustValueList { get; set; }
+	[Index(0)]
+    public AdjustValueList AdjustValueList
+	{
+        get => GetElement<AdjustValueList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -6203,7 +6676,8 @@ public partial class Miter : OpenXmlLeafElement
     /// <para> Miter Join Limit.</para>
     /// <para>Represents the following attribute in the schema: lim </para>
     /// </summary>
-    [SchemaAttr(0, "lim", 0)]
+    [SchemaAttr(0, "lim")]
+    [Index(0)]
     public Int32Value Limit { get; set; }
 
     /// <summary>
@@ -6240,7 +6714,8 @@ public partial class PresetDash : OpenXmlLeafElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.PresetLineDashValues> Val { get; set; }
 
     /// <summary>
@@ -6399,8 +6874,12 @@ public partial class FillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "noFill", 0)]
-    public NoFill NoFill { get; set; }
+	[Index(0)]
+    public NoFill NoFill
+	{
+        get => GetElement<NoFill>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> SolidFill.</para>
@@ -6409,8 +6888,12 @@ public partial class FillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "solidFill", 1)]
-    public SolidFill SolidFill { get; set; }
+	[Index(1)]
+    public SolidFill SolidFill
+	{
+        get => GetElement<SolidFill>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> GradientFill.</para>
@@ -6419,8 +6902,12 @@ public partial class FillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "gradFill", 2)]
-    public GradientFill GradientFill { get; set; }
+	[Index(2)]
+    public GradientFill GradientFill
+	{
+        get => GetElement<GradientFill>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> BlipFill.</para>
@@ -6429,8 +6916,12 @@ public partial class FillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "blipFill", 3)]
-    public BlipFill BlipFill { get; set; }
+	[Index(3)]
+    public BlipFill BlipFill
+	{
+        get => GetElement<BlipFill>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Pattern Fill.</para>
@@ -6439,8 +6930,12 @@ public partial class FillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "pattFill", 4)]
-    public PatternFill PatternFill { get; set; }
+	[Index(4)]
+    public PatternFill PatternFill
+	{
+        get => GetElement<PatternFill>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Group Fill.</para>
@@ -6449,8 +6944,12 @@ public partial class FillProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "grpFill", 5)]
-    public GroupFill GroupFill { get; set; }
+	[Index(5)]
+    public GroupFill GroupFill
+	{
+        get => GetElement<GroupFill>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -6670,7 +7169,8 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     /// <para> Style Matrix Index.</para>
     /// <para>Represents the following attribute in the schema: idx </para>
     /// </summary>
-    [SchemaAttr(0, "idx", 0)]
+    [SchemaAttr(0, "idx")]
+    [Index(0)]
     public UInt32Value Index { get; set; }
 
     
@@ -6683,8 +7183,12 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -6693,8 +7197,12 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -6703,8 +7211,12 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public HslColor HslColor { get; set; }
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -6713,8 +7225,12 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -6723,8 +7239,12 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "schemeClr", 4)]
-    public SchemeColor SchemeColor { get; set; }
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -6733,8 +7253,12 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 5)]
-    public PresetColor PresetColor { get; set; }
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -6843,8 +7367,12 @@ public partial class EffectPropertiesType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "effectLst", 0)]
-    public EffectList EffectList { get; set; }
+	[Index(0)]
+    public EffectList EffectList
+	{
+        get => GetElement<EffectList>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Effect Container.</para>
@@ -6853,8 +7381,12 @@ public partial class EffectPropertiesType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "effectDag", 1)]
-    public EffectDag EffectDag { get; set; }
+	[Index(1)]
+    public EffectDag EffectDag
+	{
+        get => GetElement<EffectDag>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -7076,8 +7608,12 @@ public abstract partial class FontCollectionType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "latin", 0)]
-    public LatinFont LatinFont { get; set; }
+	[Index(0)]
+    public LatinFont LatinFont
+	{
+        get => GetElement<LatinFont>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> East Asian Font.</para>
@@ -7086,8 +7622,12 @@ public abstract partial class FontCollectionType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "ea", 1)]
-    public EastAsianFont EastAsianFont { get; set; }
+	[Index(1)]
+    public EastAsianFont EastAsianFont
+	{
+        get => GetElement<EastAsianFont>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Complex Script Font.</para>
@@ -7096,8 +7636,12 @@ public abstract partial class FontCollectionType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cs", 2)]
-    public ComplexScriptFont ComplexScriptFont { get; set; }
+	[Index(2)]
+    public ComplexScriptFont ComplexScriptFont
+	{
+        get => GetElement<ComplexScriptFont>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -7173,7 +7717,8 @@ public partial class FontReference : OpenXmlCompositeElement
     /// <para> Identifier.</para>
     /// <para>Represents the following attribute in the schema: idx </para>
     /// </summary>
-    [SchemaAttr(0, "idx", 0)]
+    [SchemaAttr(0, "idx")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues> Index { get; set; }
 
     /// <summary>
@@ -7220,8 +7765,12 @@ public partial class FontReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -7230,8 +7779,12 @@ public partial class FontReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -7240,8 +7793,12 @@ public partial class FontReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public HslColor HslColor { get; set; }
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -7250,8 +7807,12 @@ public partial class FontReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -7260,8 +7821,12 @@ public partial class FontReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "schemeClr", 4)]
-    public SchemeColor SchemeColor { get; set; }
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -7270,8 +7835,12 @@ public partial class FontReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 5)]
-    public PresetColor PresetColor { get; set; }
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -7330,13 +7899,15 @@ public partial class NormalAutoFit : OpenXmlLeafElement
     /// <para> Font Scale.</para>
     /// <para>Represents the following attribute in the schema: fontScale </para>
     /// </summary>
-    [SchemaAttr(0, "fontScale", 0)]
+    [SchemaAttr(0, "fontScale")]
+    [Index(0)]
     public Int32Value FontScale { get; set; }
     /// <summary>
     /// <para> Line Space Reduction.</para>
     /// <para>Represents the following attribute in the schema: lnSpcReduction </para>
     /// </summary>
-    [SchemaAttr(0, "lnSpcReduction", 1)]
+    [SchemaAttr(0, "lnSpcReduction")]
+    [Index(1)]
     public Int32Value LineSpaceReduction { get; set; }
 
     /// <summary>
@@ -7939,8 +8510,12 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -7949,8 +8524,12 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -7959,8 +8538,12 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public HslColor HslColor { get; set; }
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -7969,8 +8552,12 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -7979,8 +8566,12 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "schemeClr", 4)]
-    public SchemeColor SchemeColor { get; set; }
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -7989,8 +8580,12 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 5)]
-    public PresetColor PresetColor { get; set; }
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -8080,7 +8675,8 @@ public partial class BulletSizePercentage : OpenXmlLeafElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -8117,7 +8713,8 @@ public partial class BulletSizePoints : OpenXmlLeafElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -8297,25 +8894,29 @@ public abstract partial class TextFontType : OpenXmlLeafElement
     /// <para> Text Typeface.</para>
     /// <para>Represents the following attribute in the schema: typeface </para>
     /// </summary>
-    [SchemaAttr(0, "typeface", 0)]
+    [SchemaAttr(0, "typeface")]
+    [Index(0)]
     public StringValue Typeface { get; set; }
     /// <summary>
     /// <para> Panose Setting.</para>
     /// <para>Represents the following attribute in the schema: panose </para>
     /// </summary>
-    [SchemaAttr(0, "panose", 1)]
+    [SchemaAttr(0, "panose")]
+    [Index(1)]
     public HexBinaryValue Panose { get; set; }
     /// <summary>
     /// <para> Similar Font Family.</para>
     /// <para>Represents the following attribute in the schema: pitchFamily </para>
     /// </summary>
-    [SchemaAttr(0, "pitchFamily", 2)]
+    [SchemaAttr(0, "pitchFamily")]
+    [Index(2)]
     public SByteValue PitchFamily { get; set; }
     /// <summary>
     /// <para> Similar Character Set.</para>
     /// <para>Represents the following attribute in the schema: charset </para>
     /// </summary>
-    [SchemaAttr(0, "charset", 3)]
+    [SchemaAttr(0, "charset")]
+    [Index(3)]
     public SByteValue CharacterSet { get; set; }
 
     
@@ -8380,13 +8981,15 @@ public partial class AutoNumberedBullet : OpenXmlLeafElement
     /// <para> Bullet Autonumbering Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type", 0)]
+    [SchemaAttr(0, "type")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextAutoNumberSchemeValues> Type { get; set; }
     /// <summary>
     /// <para> Start Numbering At.</para>
     /// <para>Represents the following attribute in the schema: startAt </para>
     /// </summary>
-    [SchemaAttr(0, "startAt", 1)]
+    [SchemaAttr(0, "startAt")]
+    [Index(1)]
     public Int32Value StartAt { get; set; }
 
     /// <summary>
@@ -8423,7 +9026,8 @@ public partial class CharacterBullet : OpenXmlLeafElement
     /// <para> Bullet Character.</para>
     /// <para>Represents the following attribute in the schema: char </para>
     /// </summary>
-    [SchemaAttr(0, "char", 0)]
+    [SchemaAttr(0, "char")]
+    [Index(0)]
     public StringValue Char { get; set; }
 
     /// <summary>
@@ -8508,8 +9112,12 @@ public partial class PictureBullet : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "blip", 0)]
-    public Blip Blip { get; set; }
+	[Index(0)]
+    public Blip Blip
+	{
+        get => GetElement<Blip>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -9125,25 +9733,29 @@ public abstract partial class LinePropertiesType : OpenXmlCompositeElement
     /// <para> Line Width.</para>
     /// <para>Represents the following attribute in the schema: w </para>
     /// </summary>
-    [SchemaAttr(0, "w", 0)]
+    [SchemaAttr(0, "w")]
+    [Index(0)]
     public Int32Value Width { get; set; }
     /// <summary>
     /// <para> Line Ending Cap Type.</para>
     /// <para>Represents the following attribute in the schema: cap </para>
     /// </summary>
-    [SchemaAttr(0, "cap", 1)]
+    [SchemaAttr(0, "cap")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues> CapType { get; set; }
     /// <summary>
     /// <para> Compound Line Type.</para>
     /// <para>Represents the following attribute in the schema: cmpd </para>
     /// </summary>
-    [SchemaAttr(0, "cmpd", 2)]
+    [SchemaAttr(0, "cmpd")]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues> CompoundLineType { get; set; }
     /// <summary>
     /// <para> Stroke Alignment.</para>
     /// <para>Represents the following attribute in the schema: algn </para>
     /// </summary>
-    [SchemaAttr(0, "algn", 3)]
+    [SchemaAttr(0, "algn")]
+    [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues> Alignment { get; set; }
 
     
@@ -9292,8 +9904,12 @@ public partial class UnderlineFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "noFill", 0)]
-    public NoFill NoFill { get; set; }
+	[Index(0)]
+    public NoFill NoFill
+	{
+        get => GetElement<NoFill>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> SolidFill.</para>
@@ -9302,8 +9918,12 @@ public partial class UnderlineFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "solidFill", 1)]
-    public SolidFill SolidFill { get; set; }
+	[Index(1)]
+    public SolidFill SolidFill
+	{
+        get => GetElement<SolidFill>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> GradientFill.</para>
@@ -9312,8 +9932,12 @@ public partial class UnderlineFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "gradFill", 2)]
-    public GradientFill GradientFill { get; set; }
+	[Index(2)]
+    public GradientFill GradientFill
+	{
+        get => GetElement<GradientFill>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> BlipFill.</para>
@@ -9322,8 +9946,12 @@ public partial class UnderlineFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "blipFill", 3)]
-    public BlipFill BlipFill { get; set; }
+	[Index(3)]
+    public BlipFill BlipFill
+	{
+        get => GetElement<BlipFill>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Pattern Fill.</para>
@@ -9332,8 +9960,12 @@ public partial class UnderlineFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "pattFill", 4)]
-    public PatternFill PatternFill { get; set; }
+	[Index(4)]
+    public PatternFill PatternFill
+	{
+        get => GetElement<PatternFill>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Group Fill.</para>
@@ -9342,8 +9974,12 @@ public partial class UnderlineFill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "grpFill", 5)]
-    public GroupFill GroupFill { get; set; }
+	[Index(5)]
+    public GroupFill GroupFill
+	{
+        get => GetElement<GroupFill>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -9421,8 +10057,12 @@ public partial class Run : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "rPr", 0)]
-    public RunProperties RunProperties { get; set; }
+	[Index(0)]
+    public RunProperties RunProperties
+	{
+        get => GetElement<RunProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Text String.</para>
@@ -9431,8 +10071,12 @@ public partial class Run : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "t", 1)]
-    public Text Text { get; set; }
+	[Index(1)]
+    public Text Text
+	{
+        get => GetElement<Text>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -9508,8 +10152,12 @@ public partial class Break : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "rPr", 0)]
-    public RunProperties RunProperties { get; set; }
+	[Index(0)]
+    public RunProperties RunProperties
+	{
+        get => GetElement<RunProperties>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -9548,13 +10196,15 @@ public partial class Field : OpenXmlCompositeElement
     /// <para> Field ID.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Field Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type", 1)]
+    [SchemaAttr(0, "type")]
+    [Index(1)]
     public StringValue Type { get; set; }
 
     /// <summary>
@@ -9601,8 +10251,12 @@ public partial class Field : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "rPr", 0)]
-    public RunProperties RunProperties { get; set; }
+	[Index(0)]
+    public RunProperties RunProperties
+	{
+        get => GetElement<RunProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Text Paragraph Properties.</para>
@@ -9611,8 +10265,12 @@ public partial class Field : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "pPr", 1)]
-    public ParagraphProperties ParagraphProperties { get; set; }
+	[Index(1)]
+    public ParagraphProperties ParagraphProperties
+	{
+        get => GetElement<ParagraphProperties>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Text.</para>
@@ -9621,8 +10279,12 @@ public partial class Field : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "t", 2)]
-    public Text Text { get; set; }
+	[Index(2)]
+    public Text Text
+	{
+        get => GetElement<Text>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -9698,8 +10360,12 @@ public partial class Graphic : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "graphicData", 0)]
-    public GraphicData GraphicData { get; set; }
+	[Index(0)]
+    public GraphicData GraphicData
+	{
+        get => GetElement<GraphicData>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -9770,7 +10436,8 @@ public partial class Blip : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "embed", 0)]
+    [SchemaAttr(19, "embed")]
+    [Index(0)]
     public StringValue Embed { get; set; }
     /// <summary>
     /// <para> Linked Picture Reference.</para>
@@ -9778,13 +10445,15 @@ public partial class Blip : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "link", 1)]
+    [SchemaAttr(19, "link")]
+    [Index(1)]
     public StringValue Link { get; set; }
     /// <summary>
     /// <para> cstate.</para>
     /// <para>Represents the following attribute in the schema: cstate </para>
     /// </summary>
-    [SchemaAttr(0, "cstate", 2)]
+    [SchemaAttr(0, "cstate")]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues> CompressionState { get; set; }
 
     /// <summary>
@@ -9861,7 +10530,8 @@ public partial class Theme : OpenXmlPartRootElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> id.</para>
@@ -9869,7 +10539,8 @@ public partial class Theme : OpenXmlPartRootElement
     /// </summary>
 ///<remark> xmlns:thm15=http://schemas.microsoft.com/office/thememl/2012/main
 ///</remark>
-    [SchemaAttr(73, "id", 1)]
+    [SchemaAttr(73, "id")]
+    [Index(1)]
     public StringValue ThemeId { get; set; }
 
     
@@ -9945,8 +10616,12 @@ public partial class Theme : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "themeElements", 0)]
-    public ThemeElements ThemeElements { get; set; }
+	[Index(0)]
+    public ThemeElements ThemeElements
+	{
+        get => GetElement<ThemeElements>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> ObjectDefaults.</para>
@@ -9955,8 +10630,12 @@ public partial class Theme : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "objectDefaults", 1)]
-    public ObjectDefaults ObjectDefaults { get; set; }
+	[Index(1)]
+    public ObjectDefaults ObjectDefaults
+	{
+        get => GetElement<ObjectDefaults>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> ExtraColorSchemeList.</para>
@@ -9965,8 +10644,12 @@ public partial class Theme : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extraClrSchemeLst", 2)]
-    public ExtraColorSchemeList ExtraColorSchemeList { get; set; }
+	[Index(2)]
+    public ExtraColorSchemeList ExtraColorSchemeList
+	{
+        get => GetElement<ExtraColorSchemeList>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> CustomColorList.</para>
@@ -9975,8 +10658,12 @@ public partial class Theme : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "custClrLst", 3)]
-    public CustomColorList CustomColorList { get; set; }
+	[Index(3)]
+    public CustomColorList CustomColorList
+	{
+        get => GetElement<CustomColorList>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> OfficeStyleSheetExtensionList.</para>
@@ -9985,8 +10672,12 @@ public partial class Theme : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 4)]
-    public OfficeStyleSheetExtensionList OfficeStyleSheetExtensionList { get; set; }
+	[Index(4)]
+    public OfficeStyleSheetExtensionList OfficeStyleSheetExtensionList
+	{
+        get => GetElement<OfficeStyleSheetExtensionList>(4);
+        set => SetElement(4, value);
+	}
     
 
 
@@ -10094,8 +10785,12 @@ public partial class ThemeOverride : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "clrScheme", 0)]
-    public ColorScheme ColorScheme { get; set; }
+	[Index(0)]
+    public ColorScheme ColorScheme
+	{
+        get => GetElement<ColorScheme>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> FontScheme.</para>
@@ -10104,8 +10799,12 @@ public partial class ThemeOverride : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "fontScheme", 1)]
-    public FontScheme FontScheme { get; set; }
+	[Index(1)]
+    public FontScheme FontScheme
+	{
+        get => GetElement<FontScheme>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> FormatScheme.</para>
@@ -10114,8 +10813,12 @@ public partial class ThemeOverride : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "fmtScheme", 2)]
-    public FormatScheme FormatScheme { get; set; }
+	[Index(2)]
+    public FormatScheme FormatScheme
+	{
+        get => GetElement<FormatScheme>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -10263,8 +10966,12 @@ public partial class Table : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "tblPr", 0)]
-    public TableProperties TableProperties { get; set; }
+	[Index(0)]
+    public TableProperties TableProperties
+	{
+        get => GetElement<TableProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Table Grid.</para>
@@ -10273,8 +10980,12 @@ public partial class Table : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "tblGrid", 1)]
-    public TableGrid TableGrid { get; set; }
+	[Index(1)]
+    public TableGrid TableGrid
+	{
+        get => GetElement<TableGrid>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -10308,7 +11019,8 @@ public partial class TableStyleList : OpenXmlPartRootElement
     /// <para> Default.</para>
     /// <para>Represents the following attribute in the schema: def </para>
     /// </summary>
-    [SchemaAttr(0, "def", 0)]
+    [SchemaAttr(0, "def")]
+    [Index(0)]
     public StringValue Default { get; set; }
 
     
@@ -10504,13 +11216,15 @@ public abstract partial class AudioCDTimeType : OpenXmlLeafElement
     /// <para> Track.</para>
     /// <para>Represents the following attribute in the schema: track </para>
     /// </summary>
-    [SchemaAttr(0, "track", 0)]
+    [SchemaAttr(0, "track")]
+    [Index(0)]
     public ByteValue Track { get; set; }
     /// <summary>
     /// <para> Time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    [SchemaAttr(0, "time", 1)]
+    [SchemaAttr(0, "time")]
+    [Index(1)]
     public UInt32Value Time { get; set; }
 
     
@@ -10561,7 +11275,8 @@ public partial class CustomColor : OpenXmlCompositeElement
     /// <para> Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
 
     /// <summary>
@@ -10608,8 +11323,12 @@ public partial class CustomColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -10618,8 +11337,12 @@ public partial class CustomColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -10628,8 +11351,12 @@ public partial class CustomColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public HslColor HslColor { get; set; }
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -10638,8 +11365,12 @@ public partial class CustomColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -10648,8 +11379,12 @@ public partial class CustomColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "schemeClr", 4)]
-    public SchemeColor SchemeColor { get; set; }
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -10658,8 +11393,12 @@ public partial class CustomColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 5)]
-    public PresetColor PresetColor { get; set; }
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -10687,13 +11426,15 @@ public partial class SupplementalFont : OpenXmlLeafElement
     /// <para> Script.</para>
     /// <para>Represents the following attribute in the schema: script </para>
     /// </summary>
-    [SchemaAttr(0, "script", 0)]
+    [SchemaAttr(0, "script")]
+    [Index(0)]
     public StringValue Script { get; set; }
     /// <summary>
     /// <para> Typeface.</para>
     /// <para>Represents the following attribute in the schema: typeface </para>
     /// </summary>
-    [SchemaAttr(0, "typeface", 1)]
+    [SchemaAttr(0, "typeface")]
+    [Index(1)]
     public StringValue Typeface { get; set; }
 
     /// <summary>
@@ -10784,8 +11525,12 @@ public partial class Scene3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "camera", 0)]
-    public Camera Camera { get; set; }
+	[Index(0)]
+    public Camera Camera
+	{
+        get => GetElement<Camera>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Light Rig.</para>
@@ -10794,8 +11539,12 @@ public partial class Scene3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lightRig", 1)]
-    public LightRig LightRig { get; set; }
+	[Index(1)]
+    public LightRig LightRig
+	{
+        get => GetElement<LightRig>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Backdrop Plane.</para>
@@ -10804,8 +11553,12 @@ public partial class Scene3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "backdrop", 2)]
-    public Backdrop Backdrop { get; set; }
+	[Index(2)]
+    public Backdrop Backdrop
+	{
+        get => GetElement<Backdrop>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -10814,8 +11567,12 @@ public partial class Scene3DType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 3)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(3)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(3);
+        set => SetElement(3, value);
+	}
     
 
 
@@ -11220,7 +11977,8 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <para> Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
 
     /// <summary>
@@ -11267,8 +12025,12 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "dk1", 0)]
-    public Dark1Color Dark1Color { get; set; }
+	[Index(0)]
+    public Dark1Color Dark1Color
+	{
+        get => GetElement<Dark1Color>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Light 1.</para>
@@ -11277,8 +12039,12 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lt1", 1)]
-    public Light1Color Light1Color { get; set; }
+	[Index(1)]
+    public Light1Color Light1Color
+	{
+        get => GetElement<Light1Color>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Dark 2.</para>
@@ -11287,8 +12053,12 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "dk2", 2)]
-    public Dark2Color Dark2Color { get; set; }
+	[Index(2)]
+    public Dark2Color Dark2Color
+	{
+        get => GetElement<Dark2Color>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Light 2.</para>
@@ -11297,8 +12067,12 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lt2", 3)]
-    public Light2Color Light2Color { get; set; }
+	[Index(3)]
+    public Light2Color Light2Color
+	{
+        get => GetElement<Light2Color>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Accent 1.</para>
@@ -11307,8 +12081,12 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "accent1", 4)]
-    public Accent1Color Accent1Color { get; set; }
+	[Index(4)]
+    public Accent1Color Accent1Color
+	{
+        get => GetElement<Accent1Color>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Accent 2.</para>
@@ -11317,8 +12095,12 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "accent2", 5)]
-    public Accent2Color Accent2Color { get; set; }
+	[Index(5)]
+    public Accent2Color Accent2Color
+	{
+        get => GetElement<Accent2Color>(5);
+        set => SetElement(5, value);
+	}
     
     /// <summary>
     /// <para> Accent 3.</para>
@@ -11327,8 +12109,12 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "accent3", 6)]
-    public Accent3Color Accent3Color { get; set; }
+	[Index(6)]
+    public Accent3Color Accent3Color
+	{
+        get => GetElement<Accent3Color>(6);
+        set => SetElement(6, value);
+	}
     
     /// <summary>
     /// <para> Accent 4.</para>
@@ -11337,8 +12123,12 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "accent4", 7)]
-    public Accent4Color Accent4Color { get; set; }
+	[Index(7)]
+    public Accent4Color Accent4Color
+	{
+        get => GetElement<Accent4Color>(7);
+        set => SetElement(7, value);
+	}
     
     /// <summary>
     /// <para> Accent 5.</para>
@@ -11347,8 +12137,12 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "accent5", 8)]
-    public Accent5Color Accent5Color { get; set; }
+	[Index(8)]
+    public Accent5Color Accent5Color
+	{
+        get => GetElement<Accent5Color>(8);
+        set => SetElement(8, value);
+	}
     
     /// <summary>
     /// <para> Accent 6.</para>
@@ -11357,8 +12151,12 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "accent6", 9)]
-    public Accent6Color Accent6Color { get; set; }
+	[Index(9)]
+    public Accent6Color Accent6Color
+	{
+        get => GetElement<Accent6Color>(9);
+        set => SetElement(9, value);
+	}
     
     /// <summary>
     /// <para> Hyperlink.</para>
@@ -11367,8 +12165,12 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hlink", 10)]
-    public Hyperlink Hyperlink { get; set; }
+	[Index(10)]
+    public Hyperlink Hyperlink
+	{
+        get => GetElement<Hyperlink>(10);
+        set => SetElement(10, value);
+	}
     
     /// <summary>
     /// <para> Followed Hyperlink.</para>
@@ -11377,8 +12179,12 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "folHlink", 11)]
-    public FollowedHyperlinkColor FollowedHyperlinkColor { get; set; }
+	[Index(11)]
+    public FollowedHyperlinkColor FollowedHyperlinkColor
+	{
+        get => GetElement<FollowedHyperlinkColor>(11);
+        set => SetElement(11, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -11387,8 +12193,12 @@ public partial class ColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 12)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(12)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(12);
+        set => SetElement(12, value);
+	}
     
 
 
@@ -11427,7 +12237,8 @@ public partial class FontScheme : OpenXmlCompositeElement
     /// <para> Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
 
     /// <summary>
@@ -11474,8 +12285,12 @@ public partial class FontScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "majorFont", 0)]
-    public MajorFont MajorFont { get; set; }
+	[Index(0)]
+    public MajorFont MajorFont
+	{
+        get => GetElement<MajorFont>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Minor fonts.</para>
@@ -11484,8 +12299,12 @@ public partial class FontScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "minorFont", 1)]
-    public MinorFont MinorFont { get; set; }
+	[Index(1)]
+    public MinorFont MinorFont
+	{
+        get => GetElement<MinorFont>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -11494,8 +12313,12 @@ public partial class FontScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 2)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(2)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -11536,7 +12359,8 @@ public partial class FormatScheme : OpenXmlCompositeElement
     /// <para> Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
 
     /// <summary>
@@ -11583,8 +12407,12 @@ public partial class FormatScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "fillStyleLst", 0)]
-    public FillStyleList FillStyleList { get; set; }
+	[Index(0)]
+    public FillStyleList FillStyleList
+	{
+        get => GetElement<FillStyleList>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Line Style List.</para>
@@ -11593,8 +12421,12 @@ public partial class FormatScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lnStyleLst", 1)]
-    public LineStyleList LineStyleList { get; set; }
+	[Index(1)]
+    public LineStyleList LineStyleList
+	{
+        get => GetElement<LineStyleList>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Effect Style List.</para>
@@ -11603,8 +12435,12 @@ public partial class FormatScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "effectStyleLst", 2)]
-    public EffectStyleList EffectStyleList { get; set; }
+	[Index(2)]
+    public EffectStyleList EffectStyleList
+	{
+        get => GetElement<EffectStyleList>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Background Fill Style List.</para>
@@ -11613,8 +12449,12 @@ public partial class FormatScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "bgFillStyleLst", 3)]
-    public BackgroundFillStyleList BackgroundFillStyleList { get; set; }
+	[Index(3)]
+    public BackgroundFillStyleList BackgroundFillStyleList
+	{
+        get => GetElement<BackgroundFillStyleList>(3);
+        set => SetElement(3, value);
+	}
     
 
 
@@ -12376,8 +13216,12 @@ public abstract partial class Color2Type : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -12386,8 +13230,12 @@ public abstract partial class Color2Type : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -12396,8 +13244,12 @@ public abstract partial class Color2Type : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public HslColor HslColor { get; set; }
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -12406,8 +13258,12 @@ public abstract partial class Color2Type : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -12416,8 +13272,12 @@ public abstract partial class Color2Type : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 4)]
-    public PresetColor PresetColor { get; set; }
+	[Index(4)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(4);
+        set => SetElement(4, value);
+	}
     
 
 
@@ -12516,13 +13376,15 @@ public abstract partial class RatioType : OpenXmlLeafElement
     /// <para> Numerator.</para>
     /// <para>Represents the following attribute in the schema: n </para>
     /// </summary>
-    [SchemaAttr(0, "n", 0)]
+    [SchemaAttr(0, "n")]
+    [Index(0)]
     public Int32Value Numerator { get; set; }
     /// <summary>
     /// <para> Denominator.</para>
     /// <para>Represents the following attribute in the schema: d </para>
     /// </summary>
-    [SchemaAttr(0, "d", 1)]
+    [SchemaAttr(0, "d")]
+    [Index(1)]
     public Int32Value Denominator { get; set; }
 
     
@@ -12596,13 +13458,15 @@ public abstract partial class Point2DType : OpenXmlLeafElement
     /// <para> X-Axis Coordinate.</para>
     /// <para>Represents the following attribute in the schema: x </para>
     /// </summary>
-    [SchemaAttr(0, "x", 0)]
+    [SchemaAttr(0, "x")]
+    [Index(0)]
     public Int64Value X { get; set; }
     /// <summary>
     /// <para> Y-Axis Coordinate.</para>
     /// <para>Represents the following attribute in the schema: y </para>
     /// </summary>
-    [SchemaAttr(0, "y", 1)]
+    [SchemaAttr(0, "y")]
+    [Index(1)]
     public Int64Value Y { get; set; }
 
     
@@ -12676,13 +13540,15 @@ public abstract partial class PositiveSize2DType : OpenXmlLeafElement
     /// <para> Extent Length.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
-    [SchemaAttr(0, "cx", 0)]
+    [SchemaAttr(0, "cx")]
+    [Index(0)]
     public Int64Value Cx { get; set; }
     /// <summary>
     /// <para> Extent Width.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
-    [SchemaAttr(0, "cy", 1)]
+    [SchemaAttr(0, "cy")]
+    [Index(1)]
     public Int64Value Cy { get; set; }
 
     
@@ -12723,67 +13589,78 @@ public partial class ShapeLocks : OpenXmlCompositeElement
     /// <para> Disallow Shape Grouping.</para>
     /// <para>Represents the following attribute in the schema: noGrp </para>
     /// </summary>
-    [SchemaAttr(0, "noGrp", 0)]
+    [SchemaAttr(0, "noGrp")]
+    [Index(0)]
     public BooleanValue NoGrouping { get; set; }
     /// <summary>
     /// <para> Disallow Shape Selection.</para>
     /// <para>Represents the following attribute in the schema: noSelect </para>
     /// </summary>
-    [SchemaAttr(0, "noSelect", 1)]
+    [SchemaAttr(0, "noSelect")]
+    [Index(1)]
     public BooleanValue NoSelection { get; set; }
     /// <summary>
     /// <para> Disallow Shape Rotation.</para>
     /// <para>Represents the following attribute in the schema: noRot </para>
     /// </summary>
-    [SchemaAttr(0, "noRot", 2)]
+    [SchemaAttr(0, "noRot")]
+    [Index(2)]
     public BooleanValue NoRotation { get; set; }
     /// <summary>
     /// <para> Disallow Aspect Ratio Change.</para>
     /// <para>Represents the following attribute in the schema: noChangeAspect </para>
     /// </summary>
-    [SchemaAttr(0, "noChangeAspect", 3)]
+    [SchemaAttr(0, "noChangeAspect")]
+    [Index(3)]
     public BooleanValue NoChangeAspect { get; set; }
     /// <summary>
     /// <para> Disallow Shape Movement.</para>
     /// <para>Represents the following attribute in the schema: noMove </para>
     /// </summary>
-    [SchemaAttr(0, "noMove", 4)]
+    [SchemaAttr(0, "noMove")]
+    [Index(4)]
     public BooleanValue NoMove { get; set; }
     /// <summary>
     /// <para> Disallow Shape Resize.</para>
     /// <para>Represents the following attribute in the schema: noResize </para>
     /// </summary>
-    [SchemaAttr(0, "noResize", 5)]
+    [SchemaAttr(0, "noResize")]
+    [Index(5)]
     public BooleanValue NoResize { get; set; }
     /// <summary>
     /// <para> Disallow Shape Point Editing.</para>
     /// <para>Represents the following attribute in the schema: noEditPoints </para>
     /// </summary>
-    [SchemaAttr(0, "noEditPoints", 6)]
+    [SchemaAttr(0, "noEditPoints")]
+    [Index(6)]
     public BooleanValue NoEditPoints { get; set; }
     /// <summary>
     /// <para> Disallow Showing Adjust Handles.</para>
     /// <para>Represents the following attribute in the schema: noAdjustHandles </para>
     /// </summary>
-    [SchemaAttr(0, "noAdjustHandles", 7)]
+    [SchemaAttr(0, "noAdjustHandles")]
+    [Index(7)]
     public BooleanValue NoAdjustHandles { get; set; }
     /// <summary>
     /// <para> Disallow Arrowhead Changes.</para>
     /// <para>Represents the following attribute in the schema: noChangeArrowheads </para>
     /// </summary>
-    [SchemaAttr(0, "noChangeArrowheads", 8)]
+    [SchemaAttr(0, "noChangeArrowheads")]
+    [Index(8)]
     public BooleanValue NoChangeArrowheads { get; set; }
     /// <summary>
     /// <para> Disallow Shape Type Change.</para>
     /// <para>Represents the following attribute in the schema: noChangeShapeType </para>
     /// </summary>
-    [SchemaAttr(0, "noChangeShapeType", 9)]
+    [SchemaAttr(0, "noChangeShapeType")]
+    [Index(9)]
     public BooleanValue NoChangeShapeType { get; set; }
     /// <summary>
     /// <para> Disallow Shape Text Editing.</para>
     /// <para>Represents the following attribute in the schema: noTextEdit </para>
     /// </summary>
-    [SchemaAttr(0, "noTextEdit", 10)]
+    [SchemaAttr(0, "noTextEdit")]
+    [Index(10)]
     public BooleanValue NoTextEdit { get; set; }
 
     /// <summary>
@@ -12830,8 +13707,12 @@ public partial class ShapeLocks : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 0)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(0)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -12866,61 +13747,71 @@ public partial class ConnectionShapeLocks : OpenXmlCompositeElement
     /// <para> Disallow Shape Grouping.</para>
     /// <para>Represents the following attribute in the schema: noGrp </para>
     /// </summary>
-    [SchemaAttr(0, "noGrp", 0)]
+    [SchemaAttr(0, "noGrp")]
+    [Index(0)]
     public BooleanValue NoGrouping { get; set; }
     /// <summary>
     /// <para> Disallow Shape Selection.</para>
     /// <para>Represents the following attribute in the schema: noSelect </para>
     /// </summary>
-    [SchemaAttr(0, "noSelect", 1)]
+    [SchemaAttr(0, "noSelect")]
+    [Index(1)]
     public BooleanValue NoSelection { get; set; }
     /// <summary>
     /// <para> Disallow Shape Rotation.</para>
     /// <para>Represents the following attribute in the schema: noRot </para>
     /// </summary>
-    [SchemaAttr(0, "noRot", 2)]
+    [SchemaAttr(0, "noRot")]
+    [Index(2)]
     public BooleanValue NoRotation { get; set; }
     /// <summary>
     /// <para> Disallow Aspect Ratio Change.</para>
     /// <para>Represents the following attribute in the schema: noChangeAspect </para>
     /// </summary>
-    [SchemaAttr(0, "noChangeAspect", 3)]
+    [SchemaAttr(0, "noChangeAspect")]
+    [Index(3)]
     public BooleanValue NoChangeAspect { get; set; }
     /// <summary>
     /// <para> Disallow Shape Movement.</para>
     /// <para>Represents the following attribute in the schema: noMove </para>
     /// </summary>
-    [SchemaAttr(0, "noMove", 4)]
+    [SchemaAttr(0, "noMove")]
+    [Index(4)]
     public BooleanValue NoMove { get; set; }
     /// <summary>
     /// <para> Disallow Shape Resize.</para>
     /// <para>Represents the following attribute in the schema: noResize </para>
     /// </summary>
-    [SchemaAttr(0, "noResize", 5)]
+    [SchemaAttr(0, "noResize")]
+    [Index(5)]
     public BooleanValue NoResize { get; set; }
     /// <summary>
     /// <para> Disallow Shape Point Editing.</para>
     /// <para>Represents the following attribute in the schema: noEditPoints </para>
     /// </summary>
-    [SchemaAttr(0, "noEditPoints", 6)]
+    [SchemaAttr(0, "noEditPoints")]
+    [Index(6)]
     public BooleanValue NoEditPoints { get; set; }
     /// <summary>
     /// <para> Disallow Showing Adjust Handles.</para>
     /// <para>Represents the following attribute in the schema: noAdjustHandles </para>
     /// </summary>
-    [SchemaAttr(0, "noAdjustHandles", 7)]
+    [SchemaAttr(0, "noAdjustHandles")]
+    [Index(7)]
     public BooleanValue NoAdjustHandles { get; set; }
     /// <summary>
     /// <para> Disallow Arrowhead Changes.</para>
     /// <para>Represents the following attribute in the schema: noChangeArrowheads </para>
     /// </summary>
-    [SchemaAttr(0, "noChangeArrowheads", 8)]
+    [SchemaAttr(0, "noChangeArrowheads")]
+    [Index(8)]
     public BooleanValue NoChangeArrowheads { get; set; }
     /// <summary>
     /// <para> Disallow Shape Type Change.</para>
     /// <para>Represents the following attribute in the schema: noChangeShapeType </para>
     /// </summary>
-    [SchemaAttr(0, "noChangeShapeType", 9)]
+    [SchemaAttr(0, "noChangeShapeType")]
+    [Index(9)]
     public BooleanValue NoChangeShapeType { get; set; }
 
     /// <summary>
@@ -12967,8 +13858,12 @@ public partial class ConnectionShapeLocks : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 0)]
-    public ConnectorLockingExtensionList ConnectorLockingExtensionList { get; set; }
+	[Index(0)]
+    public ConnectorLockingExtensionList ConnectorLockingExtensionList
+	{
+        get => GetElement<ConnectorLockingExtensionList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -13036,13 +13931,15 @@ public abstract partial class ConnectionType : OpenXmlLeafElement
     /// <para> Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> Index.</para>
     /// <para>Represents the following attribute in the schema: idx </para>
     /// </summary>
-    [SchemaAttr(0, "idx", 1)]
+    [SchemaAttr(0, "idx")]
+    [Index(1)]
     public UInt32Value Index { get; set; }
 
     
@@ -13083,37 +13980,43 @@ public partial class GraphicFrameLocks : OpenXmlCompositeElement
     /// <para> Disallow Shape Grouping.</para>
     /// <para>Represents the following attribute in the schema: noGrp </para>
     /// </summary>
-    [SchemaAttr(0, "noGrp", 0)]
+    [SchemaAttr(0, "noGrp")]
+    [Index(0)]
     public BooleanValue NoGrouping { get; set; }
     /// <summary>
     /// <para> Disallow Selection of Child Shapes.</para>
     /// <para>Represents the following attribute in the schema: noDrilldown </para>
     /// </summary>
-    [SchemaAttr(0, "noDrilldown", 1)]
+    [SchemaAttr(0, "noDrilldown")]
+    [Index(1)]
     public BooleanValue NoDrilldown { get; set; }
     /// <summary>
     /// <para> Disallow Shape Selection.</para>
     /// <para>Represents the following attribute in the schema: noSelect </para>
     /// </summary>
-    [SchemaAttr(0, "noSelect", 2)]
+    [SchemaAttr(0, "noSelect")]
+    [Index(2)]
     public BooleanValue NoSelection { get; set; }
     /// <summary>
     /// <para> Disallow Aspect Ratio Change.</para>
     /// <para>Represents the following attribute in the schema: noChangeAspect </para>
     /// </summary>
-    [SchemaAttr(0, "noChangeAspect", 3)]
+    [SchemaAttr(0, "noChangeAspect")]
+    [Index(3)]
     public BooleanValue NoChangeAspect { get; set; }
     /// <summary>
     /// <para> Disallow Shape Movement.</para>
     /// <para>Represents the following attribute in the schema: noMove </para>
     /// </summary>
-    [SchemaAttr(0, "noMove", 4)]
+    [SchemaAttr(0, "noMove")]
+    [Index(4)]
     public BooleanValue NoMove { get; set; }
     /// <summary>
     /// <para> Disallow Shape Resize.</para>
     /// <para>Represents the following attribute in the schema: noResize </para>
     /// </summary>
-    [SchemaAttr(0, "noResize", 5)]
+    [SchemaAttr(0, "noResize")]
+    [Index(5)]
     public BooleanValue NoResize { get; set; }
 
     /// <summary>
@@ -13160,8 +14063,12 @@ public partial class GraphicFrameLocks : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 0)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(0)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -13682,7 +14589,8 @@ public partial class GraphicData : OpenXmlCompositeElement
     /// <para> Uniform Resource Identifier.</para>
     /// <para>Represents the following attribute in the schema: uri </para>
     /// </summary>
-    [SchemaAttr(0, "uri", 0)]
+    [SchemaAttr(0, "uri")]
+    [Index(0)]
     public StringValue Uri { get; set; }
 
     /// <summary>
@@ -13745,13 +14653,15 @@ public partial class Diagram : OpenXmlLeafElement
     /// <para> Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Animation Build Step.</para>
     /// <para>Represents the following attribute in the schema: bldStep </para>
     /// </summary>
-    [SchemaAttr(0, "bldStep", 1)]
+    [SchemaAttr(0, "bldStep")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.DiagramBuildStepValues> BuildStep { get; set; }
 
     /// <summary>
@@ -13788,19 +14698,22 @@ public partial class Chart : OpenXmlLeafElement
     /// <para> Series Index.</para>
     /// <para>Represents the following attribute in the schema: seriesIdx </para>
     /// </summary>
-    [SchemaAttr(0, "seriesIdx", 0)]
+    [SchemaAttr(0, "seriesIdx")]
+    [Index(0)]
     public Int32Value SeriesIndex { get; set; }
     /// <summary>
     /// <para> Category Index.</para>
     /// <para>Represents the following attribute in the schema: categoryIdx </para>
     /// </summary>
-    [SchemaAttr(0, "categoryIdx", 1)]
+    [SchemaAttr(0, "categoryIdx")]
+    [Index(1)]
     public Int32Value CategoryIndex { get; set; }
     /// <summary>
     /// <para> Animation Build Step.</para>
     /// <para>Represents the following attribute in the schema: bldStep </para>
     /// </summary>
-    [SchemaAttr(0, "bldStep", 2)]
+    [SchemaAttr(0, "bldStep")]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.ChartBuildStepValues> BuildStep { get; set; }
 
     /// <summary>
@@ -13837,13 +14750,15 @@ public partial class BuildDiagram : OpenXmlLeafElement
     /// <para> Build.</para>
     /// <para>Represents the following attribute in the schema: bld </para>
     /// </summary>
-    [SchemaAttr(0, "bld", 0)]
+    [SchemaAttr(0, "bld")]
+    [Index(0)]
     public StringValue Build { get; set; }
     /// <summary>
     /// <para> Reverse Animation.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
-    [SchemaAttr(0, "rev", 1)]
+    [SchemaAttr(0, "rev")]
+    [Index(1)]
     public BooleanValue ReverseAnimation { get; set; }
 
     /// <summary>
@@ -13880,13 +14795,15 @@ public partial class BuildChart : OpenXmlLeafElement
     /// <para> Build.</para>
     /// <para>Represents the following attribute in the schema: bld </para>
     /// </summary>
-    [SchemaAttr(0, "bld", 0)]
+    [SchemaAttr(0, "bld")]
+    [Index(0)]
     public StringValue Build { get; set; }
     /// <summary>
     /// <para> Animate Background.</para>
     /// <para>Represents the following attribute in the schema: animBg </para>
     /// </summary>
-    [SchemaAttr(0, "animBg", 1)]
+    [SchemaAttr(0, "animBg")]
+    [Index(1)]
     public BooleanValue AnimateBackground { get; set; }
 
     /// <summary>
@@ -13975,8 +14892,12 @@ public partial class TextBody : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "bodyPr", 0)]
-    public BodyProperties BodyProperties { get; set; }
+	[Index(0)]
+    public BodyProperties BodyProperties
+	{
+        get => GetElement<BodyProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Text List Styles.</para>
@@ -13985,8 +14906,12 @@ public partial class TextBody : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lstStyle", 1)]
-    public ListStyle ListStyle { get; set; }
+	[Index(1)]
+    public ListStyle ListStyle
+	{
+        get => GetElement<ListStyle>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -14054,19 +14979,22 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
-    [SchemaAttr(0, "rot", 0)]
+    [SchemaAttr(0, "rot")]
+    [Index(0)]
     public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
-    [SchemaAttr(0, "flipH", 1)]
+    [SchemaAttr(0, "flipH")]
+    [Index(1)]
     public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
-    [SchemaAttr(0, "flipV", 2)]
+    [SchemaAttr(0, "flipV")]
+    [Index(2)]
     public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>
@@ -14113,8 +15041,12 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "off", 0)]
-    public Offset Offset { get; set; }
+	[Index(0)]
+    public Offset Offset
+	{
+        get => GetElement<Offset>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Extents.</para>
@@ -14123,8 +15055,12 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "ext", 1)]
-    public Extents Extents { get; set; }
+	[Index(1)]
+    public Extents Extents
+	{
+        get => GetElement<Extents>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -14163,31 +15099,36 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 1)]
+    [SchemaAttr(0, "name")]
+    [Index(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
-    [SchemaAttr(0, "descr", 2)]
+    [SchemaAttr(0, "descr")]
+    [Index(2)]
     public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    [SchemaAttr(0, "hidden", 3)]
+    [SchemaAttr(0, "hidden")]
+    [Index(3)]
     public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 4)]
+    [SchemaAttr(0, "title")]
+    [Index(4)]
     public StringValue Title { get; set; }
 
     /// <summary>
@@ -14234,8 +15175,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hlinkClick", 0)]
-    public HyperlinkOnClick HyperlinkOnClick { get; set; }
+	[Index(0)]
+    public HyperlinkOnClick HyperlinkOnClick
+	{
+        get => GetElement<HyperlinkOnClick>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -14244,8 +15189,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hlinkHover", 1)]
-    public HyperlinkOnHover HyperlinkOnHover { get; set; }
+	[Index(1)]
+    public HyperlinkOnHover HyperlinkOnHover
+	{
+        get => GetElement<HyperlinkOnHover>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -14254,8 +15203,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 2)]
-    public NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList { get; set; }
+	[Index(2)]
+    public NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
+	{
+        get => GetElement<NonVisualDrawingPropertiesExtensionList>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -14292,7 +15245,8 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     /// <para> Text Box.</para>
     /// <para>Represents the following attribute in the schema: txBox </para>
     /// </summary>
-    [SchemaAttr(0, "txBox", 0)]
+    [SchemaAttr(0, "txBox")]
+    [Index(0)]
     public BooleanValue TextBox { get; set; }
 
     /// <summary>
@@ -14339,8 +15293,12 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "spLocks", 0)]
-    public ShapeLocks ShapeLocks { get; set; }
+	[Index(0)]
+    public ShapeLocks ShapeLocks
+	{
+        get => GetElement<ShapeLocks>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -14349,8 +15307,12 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 1)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(1)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -14428,8 +15390,12 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cNvPr", 0)]
-    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
+	[Index(0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties
+	{
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Non-Visual Shape Drawing Properties.</para>
@@ -14438,8 +15404,12 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cNvSpPr", 1)]
-    public NonVisualShapeDrawingProperties NonVisualShapeDrawingProperties { get; set; }
+	[Index(1)]
+    public NonVisualShapeDrawingProperties NonVisualShapeDrawingProperties
+	{
+        get => GetElement<NonVisualShapeDrawingProperties>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -14502,7 +15472,8 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode", 0)]
+    [SchemaAttr(0, "bwMode")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -14549,8 +15520,12 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "xfrm", 0)]
-    public Transform2D Transform2D { get; set; }
+	[Index(0)]
+    public Transform2D Transform2D
+	{
+        get => GetElement<Transform2D>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -14632,8 +15607,12 @@ public partial class TextShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "txBody", 0)]
-    public TextBody TextBody { get; set; }
+	[Index(0)]
+    public TextBody TextBody
+	{
+        get => GetElement<TextBody>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -14715,8 +15694,12 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lnRef", 0)]
-    public LineReference LineReference { get; set; }
+	[Index(0)]
+    public LineReference LineReference
+	{
+        get => GetElement<LineReference>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> FillReference.</para>
@@ -14725,8 +15708,12 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "fillRef", 1)]
-    public FillReference FillReference { get; set; }
+	[Index(1)]
+    public FillReference FillReference
+	{
+        get => GetElement<FillReference>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> EffectReference.</para>
@@ -14735,8 +15722,12 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "effectRef", 2)]
-    public EffectReference EffectReference { get; set; }
+	[Index(2)]
+    public EffectReference EffectReference
+	{
+        get => GetElement<EffectReference>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Font Reference.</para>
@@ -14745,8 +15736,12 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "fontRef", 3)]
-    public FontReference FontReference { get; set; }
+	[Index(3)]
+    public FontReference FontReference
+	{
+        get => GetElement<FontReference>(3);
+        set => SetElement(3, value);
+	}
     
 
 
@@ -14828,8 +15823,12 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cxnSpLocks", 0)]
-    public ConnectionShapeLocks ConnectionShapeLocks { get; set; }
+	[Index(0)]
+    public ConnectionShapeLocks ConnectionShapeLocks
+	{
+        get => GetElement<ConnectionShapeLocks>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Connection Start.</para>
@@ -14838,8 +15837,12 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "stCxn", 1)]
-    public StartConnection StartConnection { get; set; }
+	[Index(1)]
+    public StartConnection StartConnection
+	{
+        get => GetElement<StartConnection>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Connection End.</para>
@@ -14848,8 +15851,12 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "endCxn", 2)]
-    public EndConnection EndConnection { get; set; }
+	[Index(2)]
+    public EndConnection EndConnection
+	{
+        get => GetElement<EndConnection>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -14858,8 +15865,12 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 3)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(3)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(3);
+        set => SetElement(3, value);
+	}
     
 
 
@@ -14937,8 +15948,12 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cNvPr", 0)]
-    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
+	[Index(0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties
+	{
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Non-Visual Connector Shape Drawing Properties.</para>
@@ -14947,8 +15962,12 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cNvCxnSpPr", 1)]
-    public NonVisualConnectorShapeDrawingProperties NonVisualConnectorShapeDrawingProperties { get; set; }
+	[Index(1)]
+    public NonVisualConnectorShapeDrawingProperties NonVisualConnectorShapeDrawingProperties
+	{
+        get => GetElement<NonVisualConnectorShapeDrawingProperties>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -14985,7 +16004,8 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     /// <para> preferRelativeResize.</para>
     /// <para>Represents the following attribute in the schema: preferRelativeResize </para>
     /// </summary>
-    [SchemaAttr(0, "preferRelativeResize", 0)]
+    [SchemaAttr(0, "preferRelativeResize")]
+    [Index(0)]
     public BooleanValue PreferRelativeResize { get; set; }
 
     /// <summary>
@@ -15032,8 +16052,12 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "picLocks", 0)]
-    public PictureLocks PictureLocks { get; set; }
+	[Index(0)]
+    public PictureLocks PictureLocks
+	{
+        get => GetElement<PictureLocks>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> NonVisualPicturePropertiesExtensionList.</para>
@@ -15042,8 +16066,12 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 1)]
-    public NonVisualPicturePropertiesExtensionList NonVisualPicturePropertiesExtensionList { get; set; }
+	[Index(1)]
+    public NonVisualPicturePropertiesExtensionList NonVisualPicturePropertiesExtensionList
+	{
+        get => GetElement<NonVisualPicturePropertiesExtensionList>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -15121,8 +16149,12 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cNvPr", 0)]
-    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
+	[Index(0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties
+	{
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Non-Visual Picture Drawing Properties.</para>
@@ -15131,8 +16163,12 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cNvPicPr", 1)]
-    public NonVisualPictureDrawingProperties NonVisualPictureDrawingProperties { get; set; }
+	[Index(1)]
+    public NonVisualPictureDrawingProperties NonVisualPictureDrawingProperties
+	{
+        get => GetElement<NonVisualPictureDrawingProperties>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -15210,8 +16246,12 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "graphicFrameLocks", 0)]
-    public GraphicFrameLocks GraphicFrameLocks { get; set; }
+	[Index(0)]
+    public GraphicFrameLocks GraphicFrameLocks
+	{
+        get => GetElement<GraphicFrameLocks>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -15220,8 +16260,12 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 1)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(1)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -15299,8 +16343,12 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cNvPr", 0)]
-    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
+	[Index(0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties
+	{
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Non-Visual Graphic Frame Drawing Properties.</para>
@@ -15309,8 +16357,12 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cNvGraphicFramePr", 1)]
-    public NonVisualGraphicFrameDrawingProperties NonVisualGraphicFrameDrawingProperties { get; set; }
+	[Index(1)]
+    public NonVisualGraphicFrameDrawingProperties NonVisualGraphicFrameDrawingProperties
+	{
+        get => GetElement<NonVisualGraphicFrameDrawingProperties>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -15388,8 +16440,12 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "grpSpLocks", 0)]
-    public GroupShapeLocks GroupShapeLocks { get; set; }
+	[Index(0)]
+    public GroupShapeLocks GroupShapeLocks
+	{
+        get => GetElement<GroupShapeLocks>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> NonVisualGroupDrawingShapePropsExtensionList.</para>
@@ -15398,8 +16454,12 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 1)]
-    public NonVisualGroupDrawingShapePropsExtensionList NonVisualGroupDrawingShapePropsExtensionList { get; set; }
+	[Index(1)]
+    public NonVisualGroupDrawingShapePropsExtensionList NonVisualGroupDrawingShapePropsExtensionList
+	{
+        get => GetElement<NonVisualGroupDrawingShapePropsExtensionList>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -15427,19 +16487,22 @@ public partial class Rotation : OpenXmlLeafElement
     /// <para> Latitude.</para>
     /// <para>Represents the following attribute in the schema: lat </para>
     /// </summary>
-    [SchemaAttr(0, "lat", 0)]
+    [SchemaAttr(0, "lat")]
+    [Index(0)]
     public Int32Value Latitude { get; set; }
     /// <summary>
     /// <para> Longitude.</para>
     /// <para>Represents the following attribute in the schema: lon </para>
     /// </summary>
-    [SchemaAttr(0, "lon", 1)]
+    [SchemaAttr(0, "lon")]
+    [Index(1)]
     public Int32Value Longitude { get; set; }
     /// <summary>
     /// <para> Revolution.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
-    [SchemaAttr(0, "rev", 2)]
+    [SchemaAttr(0, "rev")]
+    [Index(2)]
     public Int32Value Revolution { get; set; }
 
     /// <summary>
@@ -15483,19 +16546,22 @@ public partial class Camera : OpenXmlCompositeElement
     /// <para> Preset Camera Type.</para>
     /// <para>Represents the following attribute in the schema: prst </para>
     /// </summary>
-    [SchemaAttr(0, "prst", 0)]
+    [SchemaAttr(0, "prst")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.PresetCameraValues> Preset { get; set; }
     /// <summary>
     /// <para> Field of View.</para>
     /// <para>Represents the following attribute in the schema: fov </para>
     /// </summary>
-    [SchemaAttr(0, "fov", 1)]
+    [SchemaAttr(0, "fov")]
+    [Index(1)]
     public Int32Value FieldOfView { get; set; }
     /// <summary>
     /// <para> Zoom.</para>
     /// <para>Represents the following attribute in the schema: zoom </para>
     /// </summary>
-    [SchemaAttr(0, "zoom", 2)]
+    [SchemaAttr(0, "zoom")]
+    [Index(2)]
     public Int32Value Zoom { get; set; }
 
     /// <summary>
@@ -15542,8 +16608,12 @@ public partial class Camera : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "rot", 0)]
-    public Rotation Rotation { get; set; }
+	[Index(0)]
+    public Rotation Rotation
+	{
+        get => GetElement<Rotation>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -15578,13 +16648,15 @@ public partial class LightRig : OpenXmlCompositeElement
     /// <para> Rig Preset.</para>
     /// <para>Represents the following attribute in the schema: rig </para>
     /// </summary>
-    [SchemaAttr(0, "rig", 0)]
+    [SchemaAttr(0, "rig")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.LightRigValues> Rig { get; set; }
     /// <summary>
     /// <para> Direction.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 1)]
+    [SchemaAttr(0, "dir")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.LightRigDirectionValues> Direction { get; set; }
 
     /// <summary>
@@ -15631,8 +16703,12 @@ public partial class LightRig : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "rot", 0)]
-    public Rotation Rotation { get; set; }
+	[Index(0)]
+    public Rotation Rotation
+	{
+        get => GetElement<Rotation>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -15714,8 +16790,12 @@ public partial class Backdrop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "anchor", 0)]
-    public Anchor Anchor { get; set; }
+	[Index(0)]
+    public Anchor Anchor
+	{
+        get => GetElement<Anchor>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Normal.</para>
@@ -15724,8 +16804,12 @@ public partial class Backdrop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "norm", 1)]
-    public Normal Normal { get; set; }
+	[Index(1)]
+    public Normal Normal
+	{
+        get => GetElement<Normal>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Up Vector.</para>
@@ -15734,8 +16818,12 @@ public partial class Backdrop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "up", 2)]
-    public UpVector UpVector { get; set; }
+	[Index(2)]
+    public UpVector UpVector
+	{
+        get => GetElement<UpVector>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -15744,8 +16832,12 @@ public partial class Backdrop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 3)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(3)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(3);
+        set => SetElement(3, value);
+	}
     
 
 
@@ -15773,19 +16865,22 @@ public partial class Anchor : OpenXmlLeafElement
     /// <para> X-Coordinate in 3D.</para>
     /// <para>Represents the following attribute in the schema: x </para>
     /// </summary>
-    [SchemaAttr(0, "x", 0)]
+    [SchemaAttr(0, "x")]
+    [Index(0)]
     public Int64Value X { get; set; }
     /// <summary>
     /// <para> Y-Coordinate in 3D.</para>
     /// <para>Represents the following attribute in the schema: y </para>
     /// </summary>
-    [SchemaAttr(0, "y", 1)]
+    [SchemaAttr(0, "y")]
+    [Index(1)]
     public Int64Value Y { get; set; }
     /// <summary>
     /// <para> Z-Coordinate in 3D.</para>
     /// <para>Represents the following attribute in the schema: z </para>
     /// </summary>
-    [SchemaAttr(0, "z", 2)]
+    [SchemaAttr(0, "z")]
+    [Index(2)]
     public Int64Value Z { get; set; }
 
     /// <summary>
@@ -15862,19 +16957,22 @@ public abstract partial class Vector3DType : OpenXmlLeafElement
     /// <para> Distance along X-axis in 3D.</para>
     /// <para>Represents the following attribute in the schema: dx </para>
     /// </summary>
-    [SchemaAttr(0, "dx", 0)]
+    [SchemaAttr(0, "dx")]
+    [Index(0)]
     public Int64Value Dx { get; set; }
     /// <summary>
     /// <para> Distance along Y-axis in 3D.</para>
     /// <para>Represents the following attribute in the schema: dy </para>
     /// </summary>
-    [SchemaAttr(0, "dy", 1)]
+    [SchemaAttr(0, "dy")]
+    [Index(1)]
     public Int64Value Dy { get; set; }
     /// <summary>
     /// <para> Distance along Z-axis in 3D.</para>
     /// <para>Represents the following attribute in the schema: dz </para>
     /// </summary>
-    [SchemaAttr(0, "dz", 2)]
+    [SchemaAttr(0, "dz")]
+    [Index(2)]
     public Int64Value Dz { get; set; }
 
     
@@ -15972,19 +17070,22 @@ public abstract partial class BevelType : OpenXmlLeafElement
     /// <para> Width.</para>
     /// <para>Represents the following attribute in the schema: w </para>
     /// </summary>
-    [SchemaAttr(0, "w", 0)]
+    [SchemaAttr(0, "w")]
+    [Index(0)]
     public Int64Value Width { get; set; }
     /// <summary>
     /// <para> Height.</para>
     /// <para>Represents the following attribute in the schema: h </para>
     /// </summary>
-    [SchemaAttr(0, "h", 1)]
+    [SchemaAttr(0, "h")]
+    [Index(1)]
     public Int64Value Height { get; set; }
     /// <summary>
     /// <para> Preset Bevel.</para>
     /// <para>Represents the following attribute in the schema: prst </para>
     /// </summary>
-    [SchemaAttr(0, "prst", 2)]
+    [SchemaAttr(0, "prst")]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BevelPresetValues> Preset { get; set; }
 
     
@@ -16106,25 +17207,29 @@ public abstract partial class RelativeRectangleType : OpenXmlLeafElement
     /// <para> Left Offset.</para>
     /// <para>Represents the following attribute in the schema: l </para>
     /// </summary>
-    [SchemaAttr(0, "l", 0)]
+    [SchemaAttr(0, "l")]
+    [Index(0)]
     public Int32Value Left { get; set; }
     /// <summary>
     /// <para> Top Offset.</para>
     /// <para>Represents the following attribute in the schema: t </para>
     /// </summary>
-    [SchemaAttr(0, "t", 1)]
+    [SchemaAttr(0, "t")]
+    [Index(1)]
     public Int32Value Top { get; set; }
     /// <summary>
     /// <para> Right Offset.</para>
     /// <para>Represents the following attribute in the schema: r </para>
     /// </summary>
-    [SchemaAttr(0, "r", 2)]
+    [SchemaAttr(0, "r")]
+    [Index(2)]
     public Int32Value Right { get; set; }
     /// <summary>
     /// <para> Bottom Offset.</para>
     /// <para>Represents the following attribute in the schema: b </para>
     /// </summary>
-    [SchemaAttr(0, "b", 3)]
+    [SchemaAttr(0, "b")]
+    [Index(3)]
     public Int32Value Bottom { get; set; }
 
     
@@ -16175,7 +17280,8 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// <para> Position.</para>
     /// <para>Represents the following attribute in the schema: pos </para>
     /// </summary>
-    [SchemaAttr(0, "pos", 0)]
+    [SchemaAttr(0, "pos")]
+    [Index(0)]
     public Int32Value Position { get; set; }
 
     /// <summary>
@@ -16222,8 +17328,12 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -16232,8 +17342,12 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -16242,8 +17356,12 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public HslColor HslColor { get; set; }
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -16252,8 +17370,12 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -16262,8 +17384,12 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "schemeClr", 4)]
-    public SchemeColor SchemeColor { get; set; }
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -16272,8 +17398,12 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 5)]
-    public PresetColor PresetColor { get; set; }
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -16365,13 +17495,15 @@ public partial class ShapeGuide : OpenXmlLeafElement
     /// <para> Shape Guide Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> Shape Guide Formula.</para>
     /// <para>Represents the following attribute in the schema: fmla </para>
     /// </summary>
-    [SchemaAttr(0, "fmla", 1)]
+    [SchemaAttr(0, "fmla")]
+    [Index(1)]
     public StringValue Formula { get; set; }
 
     /// <summary>
@@ -16448,13 +17580,15 @@ public abstract partial class AdjustPoint2DType : OpenXmlLeafElement
     /// <para> X-Coordinate.</para>
     /// <para>Represents the following attribute in the schema: x </para>
     /// </summary>
-    [SchemaAttr(0, "x", 0)]
+    [SchemaAttr(0, "x")]
+    [Index(0)]
     public StringValue X { get; set; }
     /// <summary>
     /// <para> Y-Coordinate.</para>
     /// <para>Represents the following attribute in the schema: y </para>
     /// </summary>
-    [SchemaAttr(0, "y", 1)]
+    [SchemaAttr(0, "y")]
+    [Index(1)]
     public StringValue Y { get; set; }
 
     
@@ -16495,37 +17629,43 @@ public partial class AdjustHandleXY : OpenXmlCompositeElement
     /// <para> Horizontal Adjustment Guide.</para>
     /// <para>Represents the following attribute in the schema: gdRefX </para>
     /// </summary>
-    [SchemaAttr(0, "gdRefX", 0)]
+    [SchemaAttr(0, "gdRefX")]
+    [Index(0)]
     public StringValue XAdjustmentGuide { get; set; }
     /// <summary>
     /// <para> Minimum Horizontal Adjustment.</para>
     /// <para>Represents the following attribute in the schema: minX </para>
     /// </summary>
-    [SchemaAttr(0, "minX", 1)]
+    [SchemaAttr(0, "minX")]
+    [Index(1)]
     public StringValue MinX { get; set; }
     /// <summary>
     /// <para> Maximum Horizontal Adjustment.</para>
     /// <para>Represents the following attribute in the schema: maxX </para>
     /// </summary>
-    [SchemaAttr(0, "maxX", 2)]
+    [SchemaAttr(0, "maxX")]
+    [Index(2)]
     public StringValue MaxX { get; set; }
     /// <summary>
     /// <para> Vertical Adjustment Guide.</para>
     /// <para>Represents the following attribute in the schema: gdRefY </para>
     /// </summary>
-    [SchemaAttr(0, "gdRefY", 3)]
+    [SchemaAttr(0, "gdRefY")]
+    [Index(3)]
     public StringValue YAdjustmentGuide { get; set; }
     /// <summary>
     /// <para> Minimum Vertical Adjustment.</para>
     /// <para>Represents the following attribute in the schema: minY </para>
     /// </summary>
-    [SchemaAttr(0, "minY", 4)]
+    [SchemaAttr(0, "minY")]
+    [Index(4)]
     public StringValue MinY { get; set; }
     /// <summary>
     /// <para> Maximum Vertical Adjustment.</para>
     /// <para>Represents the following attribute in the schema: maxY </para>
     /// </summary>
-    [SchemaAttr(0, "maxY", 5)]
+    [SchemaAttr(0, "maxY")]
+    [Index(5)]
     public StringValue MaxY { get; set; }
 
     /// <summary>
@@ -16572,8 +17712,12 @@ public partial class AdjustHandleXY : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "pos", 0)]
-    public Position Position { get; set; }
+	[Index(0)]
+    public Position Position
+	{
+        get => GetElement<Position>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -16608,37 +17752,43 @@ public partial class AdjustHandlePolar : OpenXmlCompositeElement
     /// <para> Radial Adjustment Guide.</para>
     /// <para>Represents the following attribute in the schema: gdRefR </para>
     /// </summary>
-    [SchemaAttr(0, "gdRefR", 0)]
+    [SchemaAttr(0, "gdRefR")]
+    [Index(0)]
     public StringValue RadialAdjustmentGuide { get; set; }
     /// <summary>
     /// <para> Minimum Radial Adjustment.</para>
     /// <para>Represents the following attribute in the schema: minR </para>
     /// </summary>
-    [SchemaAttr(0, "minR", 1)]
+    [SchemaAttr(0, "minR")]
+    [Index(1)]
     public StringValue MinRadial { get; set; }
     /// <summary>
     /// <para> Maximum Radial Adjustment.</para>
     /// <para>Represents the following attribute in the schema: maxR </para>
     /// </summary>
-    [SchemaAttr(0, "maxR", 2)]
+    [SchemaAttr(0, "maxR")]
+    [Index(2)]
     public StringValue MaxRadial { get; set; }
     /// <summary>
     /// <para> Angle Adjustment Guide.</para>
     /// <para>Represents the following attribute in the schema: gdRefAng </para>
     /// </summary>
-    [SchemaAttr(0, "gdRefAng", 3)]
+    [SchemaAttr(0, "gdRefAng")]
+    [Index(3)]
     public StringValue AngleAdjustmentGuide { get; set; }
     /// <summary>
     /// <para> Minimum Angle Adjustment.</para>
     /// <para>Represents the following attribute in the schema: minAng </para>
     /// </summary>
-    [SchemaAttr(0, "minAng", 4)]
+    [SchemaAttr(0, "minAng")]
+    [Index(4)]
     public StringValue MinAngle { get; set; }
     /// <summary>
     /// <para> Maximum Angle Adjustment.</para>
     /// <para>Represents the following attribute in the schema: maxAng </para>
     /// </summary>
-    [SchemaAttr(0, "maxAng", 5)]
+    [SchemaAttr(0, "maxAng")]
+    [Index(5)]
     public StringValue MaxAngle { get; set; }
 
     /// <summary>
@@ -16685,8 +17835,12 @@ public partial class AdjustHandlePolar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "pos", 0)]
-    public Position Position { get; set; }
+	[Index(0)]
+    public Position Position
+	{
+        get => GetElement<Position>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -16721,7 +17875,8 @@ public partial class ConnectionSite : OpenXmlCompositeElement
     /// <para> Connection Site Angle.</para>
     /// <para>Represents the following attribute in the schema: ang </para>
     /// </summary>
-    [SchemaAttr(0, "ang", 0)]
+    [SchemaAttr(0, "ang")]
+    [Index(0)]
     public StringValue Angle { get; set; }
 
     /// <summary>
@@ -16768,8 +17923,12 @@ public partial class ConnectionSite : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "pos", 0)]
-    public Position Position { get; set; }
+	[Index(0)]
+    public Position Position
+	{
+        get => GetElement<Position>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -16876,8 +18035,12 @@ public partial class MoveTo : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "pt", 0)]
-    public Point Point { get; set; }
+	[Index(0)]
+    public Point Point
+	{
+        get => GetElement<Point>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -16953,8 +18116,12 @@ public partial class LineTo : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "pt", 0)]
-    public Point Point { get; set; }
+	[Index(0)]
+    public Point Point
+	{
+        get => GetElement<Point>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -16982,25 +18149,29 @@ public partial class ArcTo : OpenXmlLeafElement
     /// <para> Shape Arc Width Radius.</para>
     /// <para>Represents the following attribute in the schema: wR </para>
     /// </summary>
-    [SchemaAttr(0, "wR", 0)]
+    [SchemaAttr(0, "wR")]
+    [Index(0)]
     public StringValue WidthRadius { get; set; }
     /// <summary>
     /// <para> Shape Arc Height Radius.</para>
     /// <para>Represents the following attribute in the schema: hR </para>
     /// </summary>
-    [SchemaAttr(0, "hR", 1)]
+    [SchemaAttr(0, "hR")]
+    [Index(1)]
     public StringValue HeightRadius { get; set; }
     /// <summary>
     /// <para> Shape Arc Start Angle.</para>
     /// <para>Represents the following attribute in the schema: stAng </para>
     /// </summary>
-    [SchemaAttr(0, "stAng", 2)]
+    [SchemaAttr(0, "stAng")]
+    [Index(2)]
     public StringValue StartAngle { get; set; }
     /// <summary>
     /// <para> Shape Arc Swing Angle.</para>
     /// <para>Represents the following attribute in the schema: swAng </para>
     /// </summary>
-    [SchemaAttr(0, "swAng", 3)]
+    [SchemaAttr(0, "swAng")]
+    [Index(3)]
     public StringValue SwingAngle { get; set; }
 
     /// <summary>
@@ -17182,31 +18353,36 @@ public partial class Path : OpenXmlCompositeElement
     /// <para> Path Width.</para>
     /// <para>Represents the following attribute in the schema: w </para>
     /// </summary>
-    [SchemaAttr(0, "w", 0)]
+    [SchemaAttr(0, "w")]
+    [Index(0)]
     public Int64Value Width { get; set; }
     /// <summary>
     /// <para> Path Height.</para>
     /// <para>Represents the following attribute in the schema: h </para>
     /// </summary>
-    [SchemaAttr(0, "h", 1)]
+    [SchemaAttr(0, "h")]
+    [Index(1)]
     public Int64Value Height { get; set; }
     /// <summary>
     /// <para> Path Fill.</para>
     /// <para>Represents the following attribute in the schema: fill </para>
     /// </summary>
-    [SchemaAttr(0, "fill", 2)]
+    [SchemaAttr(0, "fill")]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.PathFillModeValues> Fill { get; set; }
     /// <summary>
     /// <para> Path Stroke.</para>
     /// <para>Represents the following attribute in the schema: stroke </para>
     /// </summary>
-    [SchemaAttr(0, "stroke", 3)]
+    [SchemaAttr(0, "stroke")]
+    [Index(3)]
     public BooleanValue Stroke { get; set; }
     /// <summary>
     /// <para> 3D Extrusion Allowed.</para>
     /// <para>Represents the following attribute in the schema: extrusionOk </para>
     /// </summary>
-    [SchemaAttr(0, "extrusionOk", 4)]
+    [SchemaAttr(0, "extrusionOk")]
+    [Index(4)]
     public BooleanValue ExtrusionOk { get; set; }
 
     /// <summary>
@@ -17564,25 +18740,29 @@ public partial class Rectangle : OpenXmlLeafElement
     /// <para> Left.</para>
     /// <para>Represents the following attribute in the schema: l </para>
     /// </summary>
-    [SchemaAttr(0, "l", 0)]
+    [SchemaAttr(0, "l")]
+    [Index(0)]
     public StringValue Left { get; set; }
     /// <summary>
     /// <para> Top.</para>
     /// <para>Represents the following attribute in the schema: t </para>
     /// </summary>
-    [SchemaAttr(0, "t", 1)]
+    [SchemaAttr(0, "t")]
+    [Index(1)]
     public StringValue Top { get; set; }
     /// <summary>
     /// <para> Right.</para>
     /// <para>Represents the following attribute in the schema: r </para>
     /// </summary>
-    [SchemaAttr(0, "r", 2)]
+    [SchemaAttr(0, "r")]
+    [Index(2)]
     public StringValue Right { get; set; }
     /// <summary>
     /// <para> Bottom Position.</para>
     /// <para>Represents the following attribute in the schema: b </para>
     /// </summary>
-    [SchemaAttr(0, "b", 3)]
+    [SchemaAttr(0, "b")]
+    [Index(3)]
     public StringValue Bottom { get; set; }
 
     /// <summary>
@@ -17683,13 +18863,15 @@ public partial class DashStop : OpenXmlLeafElement
     /// <para> Dash Length.</para>
     /// <para>Represents the following attribute in the schema: d </para>
     /// </summary>
-    [SchemaAttr(0, "d", 0)]
+    [SchemaAttr(0, "d")]
+    [Index(0)]
     public Int32Value DashLength { get; set; }
     /// <summary>
     /// <para> Space Length.</para>
     /// <para>Represents the following attribute in the schema: sp </para>
     /// </summary>
-    [SchemaAttr(0, "sp", 1)]
+    [SchemaAttr(0, "sp")]
+    [Index(1)]
     public Int32Value SpaceLength { get; set; }
 
     /// <summary>
@@ -17766,19 +18948,22 @@ public abstract partial class LineEndPropertiesType : OpenXmlLeafElement
     /// <para> Line Head/End Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type", 0)]
+    [SchemaAttr(0, "type")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndValues> Type { get; set; }
     /// <summary>
     /// <para> Width of Head/End.</para>
     /// <para>Represents the following attribute in the schema: w </para>
     /// </summary>
-    [SchemaAttr(0, "w", 1)]
+    [SchemaAttr(0, "w")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndWidthValues> Width { get; set; }
     /// <summary>
     /// <para> Length of Head/End.</para>
     /// <para>Represents the following attribute in the schema: len </para>
     /// </summary>
-    [SchemaAttr(0, "len", 2)]
+    [SchemaAttr(0, "len")]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndLengthValues> Length { get; set; }
 
     
@@ -17825,19 +19010,22 @@ public partial class TransformGroup : OpenXmlCompositeElement
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
-    [SchemaAttr(0, "rot", 0)]
+    [SchemaAttr(0, "rot")]
+    [Index(0)]
     public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
-    [SchemaAttr(0, "flipH", 1)]
+    [SchemaAttr(0, "flipH")]
+    [Index(1)]
     public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
-    [SchemaAttr(0, "flipV", 2)]
+    [SchemaAttr(0, "flipV")]
+    [Index(2)]
     public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>
@@ -17884,8 +19072,12 @@ public partial class TransformGroup : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "off", 0)]
-    public Offset Offset { get; set; }
+	[Index(0)]
+    public Offset Offset
+	{
+        get => GetElement<Offset>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Extents.</para>
@@ -17894,8 +19086,12 @@ public partial class TransformGroup : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "ext", 1)]
-    public Extents Extents { get; set; }
+	[Index(1)]
+    public Extents Extents
+	{
+        get => GetElement<Extents>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Child Offset.</para>
@@ -17904,8 +19100,12 @@ public partial class TransformGroup : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "chOff", 2)]
-    public ChildOffset ChildOffset { get; set; }
+	[Index(2)]
+    public ChildOffset ChildOffset
+	{
+        get => GetElement<ChildOffset>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Child Extents.</para>
@@ -17914,8 +19114,12 @@ public partial class TransformGroup : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "chExt", 3)]
-    public ChildExtents ChildExtents { get; set; }
+	[Index(3)]
+    public ChildExtents ChildExtents
+	{
+        get => GetElement<ChildExtents>(3);
+        set => SetElement(3, value);
+	}
     
 
 
@@ -17964,115 +19168,134 @@ public partial class BodyProperties : OpenXmlCompositeElement
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
-    [SchemaAttr(0, "rot", 0)]
+    [SchemaAttr(0, "rot")]
+    [Index(0)]
     public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Paragraph Spacing.</para>
     /// <para>Represents the following attribute in the schema: spcFirstLastPara </para>
     /// </summary>
-    [SchemaAttr(0, "spcFirstLastPara", 1)]
+    [SchemaAttr(0, "spcFirstLastPara")]
+    [Index(1)]
     public BooleanValue UseParagraphSpacing { get; set; }
     /// <summary>
     /// <para> Text Vertical Overflow.</para>
     /// <para>Represents the following attribute in the schema: vertOverflow </para>
     /// </summary>
-    [SchemaAttr(0, "vertOverflow", 2)]
+    [SchemaAttr(0, "vertOverflow")]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues> VerticalOverflow { get; set; }
     /// <summary>
     /// <para> Text Horizontal Overflow.</para>
     /// <para>Represents the following attribute in the schema: horzOverflow </para>
     /// </summary>
-    [SchemaAttr(0, "horzOverflow", 3)]
+    [SchemaAttr(0, "horzOverflow")]
+    [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow { get; set; }
     /// <summary>
     /// <para> Vertical Text.</para>
     /// <para>Represents the following attribute in the schema: vert </para>
     /// </summary>
-    [SchemaAttr(0, "vert", 4)]
+    [SchemaAttr(0, "vert")]
+    [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical { get; set; }
     /// <summary>
     /// <para> Text Wrapping Type.</para>
     /// <para>Represents the following attribute in the schema: wrap </para>
     /// </summary>
-    [SchemaAttr(0, "wrap", 5)]
+    [SchemaAttr(0, "wrap")]
+    [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues> Wrap { get; set; }
     /// <summary>
     /// <para> Left Inset.</para>
     /// <para>Represents the following attribute in the schema: lIns </para>
     /// </summary>
-    [SchemaAttr(0, "lIns", 6)]
+    [SchemaAttr(0, "lIns")]
+    [Index(6)]
     public Int32Value LeftInset { get; set; }
     /// <summary>
     /// <para> Top Inset.</para>
     /// <para>Represents the following attribute in the schema: tIns </para>
     /// </summary>
-    [SchemaAttr(0, "tIns", 7)]
+    [SchemaAttr(0, "tIns")]
+    [Index(7)]
     public Int32Value TopInset { get; set; }
     /// <summary>
     /// <para> Right Inset.</para>
     /// <para>Represents the following attribute in the schema: rIns </para>
     /// </summary>
-    [SchemaAttr(0, "rIns", 8)]
+    [SchemaAttr(0, "rIns")]
+    [Index(8)]
     public Int32Value RightInset { get; set; }
     /// <summary>
     /// <para> Bottom Inset.</para>
     /// <para>Represents the following attribute in the schema: bIns </para>
     /// </summary>
-    [SchemaAttr(0, "bIns", 9)]
+    [SchemaAttr(0, "bIns")]
+    [Index(9)]
     public Int32Value BottomInset { get; set; }
     /// <summary>
     /// <para> Number of Columns.</para>
     /// <para>Represents the following attribute in the schema: numCol </para>
     /// </summary>
-    [SchemaAttr(0, "numCol", 10)]
+    [SchemaAttr(0, "numCol")]
+    [Index(10)]
     public Int32Value ColumnCount { get; set; }
     /// <summary>
     /// <para> Space Between Columns.</para>
     /// <para>Represents the following attribute in the schema: spcCol </para>
     /// </summary>
-    [SchemaAttr(0, "spcCol", 11)]
+    [SchemaAttr(0, "spcCol")]
+    [Index(11)]
     public Int32Value ColumnSpacing { get; set; }
     /// <summary>
     /// <para> Columns Right-To-Left.</para>
     /// <para>Represents the following attribute in the schema: rtlCol </para>
     /// </summary>
-    [SchemaAttr(0, "rtlCol", 12)]
+    [SchemaAttr(0, "rtlCol")]
+    [Index(12)]
     public BooleanValue RightToLeftColumns { get; set; }
     /// <summary>
     /// <para> From WordArt.</para>
     /// <para>Represents the following attribute in the schema: fromWordArt </para>
     /// </summary>
-    [SchemaAttr(0, "fromWordArt", 13)]
+    [SchemaAttr(0, "fromWordArt")]
+    [Index(13)]
     public BooleanValue FromWordArt { get; set; }
     /// <summary>
     /// <para> Anchor.</para>
     /// <para>Represents the following attribute in the schema: anchor </para>
     /// </summary>
-    [SchemaAttr(0, "anchor", 14)]
+    [SchemaAttr(0, "anchor")]
+    [Index(14)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor { get; set; }
     /// <summary>
     /// <para> Anchor Center.</para>
     /// <para>Represents the following attribute in the schema: anchorCtr </para>
     /// </summary>
-    [SchemaAttr(0, "anchorCtr", 15)]
+    [SchemaAttr(0, "anchorCtr")]
+    [Index(15)]
     public BooleanValue AnchorCenter { get; set; }
     /// <summary>
     /// <para> Force Anti-Alias.</para>
     /// <para>Represents the following attribute in the schema: forceAA </para>
     /// </summary>
-    [SchemaAttr(0, "forceAA", 16)]
+    [SchemaAttr(0, "forceAA")]
+    [Index(16)]
     public BooleanValue ForceAntiAlias { get; set; }
     /// <summary>
     /// <para> Text Upright.</para>
     /// <para>Represents the following attribute in the schema: upright </para>
     /// </summary>
-    [SchemaAttr(0, "upright", 17)]
+    [SchemaAttr(0, "upright")]
+    [Index(17)]
     public BooleanValue UpRight { get; set; }
     /// <summary>
     /// <para> Compatible Line Spacing.</para>
     /// <para>Represents the following attribute in the schema: compatLnSpc </para>
     /// </summary>
-    [SchemaAttr(0, "compatLnSpc", 18)]
+    [SchemaAttr(0, "compatLnSpc")]
+    [Index(18)]
     public BooleanValue CompatibleLineSpacing { get; set; }
 
     /// <summary>
@@ -18119,8 +19342,12 @@ public partial class BodyProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstTxWarp", 0)]
-    public PresetTextWrap PresetTextWrap { get; set; }
+	[Index(0)]
+    public PresetTextWrap PresetTextWrap
+	{
+        get => GetElement<PresetTextWrap>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -18216,8 +19443,12 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "defPPr", 0)]
-    public DefaultParagraphProperties DefaultParagraphProperties { get; set; }
+	[Index(0)]
+    public DefaultParagraphProperties DefaultParagraphProperties
+	{
+        get => GetElement<DefaultParagraphProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> List Level 1 Text Style.</para>
@@ -18226,8 +19457,12 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lvl1pPr", 1)]
-    public Level1ParagraphProperties Level1ParagraphProperties { get; set; }
+	[Index(1)]
+    public Level1ParagraphProperties Level1ParagraphProperties
+	{
+        get => GetElement<Level1ParagraphProperties>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> List Level 2 Text Style.</para>
@@ -18236,8 +19471,12 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lvl2pPr", 2)]
-    public Level2ParagraphProperties Level2ParagraphProperties { get; set; }
+	[Index(2)]
+    public Level2ParagraphProperties Level2ParagraphProperties
+	{
+        get => GetElement<Level2ParagraphProperties>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> List Level 3 Text Style.</para>
@@ -18246,8 +19485,12 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lvl3pPr", 3)]
-    public Level3ParagraphProperties Level3ParagraphProperties { get; set; }
+	[Index(3)]
+    public Level3ParagraphProperties Level3ParagraphProperties
+	{
+        get => GetElement<Level3ParagraphProperties>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> List Level 4 Text Style.</para>
@@ -18256,8 +19499,12 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lvl4pPr", 4)]
-    public Level4ParagraphProperties Level4ParagraphProperties { get; set; }
+	[Index(4)]
+    public Level4ParagraphProperties Level4ParagraphProperties
+	{
+        get => GetElement<Level4ParagraphProperties>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> List Level 5 Text Style.</para>
@@ -18266,8 +19513,12 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lvl5pPr", 5)]
-    public Level5ParagraphProperties Level5ParagraphProperties { get; set; }
+	[Index(5)]
+    public Level5ParagraphProperties Level5ParagraphProperties
+	{
+        get => GetElement<Level5ParagraphProperties>(5);
+        set => SetElement(5, value);
+	}
     
     /// <summary>
     /// <para> List Level 6 Text Style.</para>
@@ -18276,8 +19527,12 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lvl6pPr", 6)]
-    public Level6ParagraphProperties Level6ParagraphProperties { get; set; }
+	[Index(6)]
+    public Level6ParagraphProperties Level6ParagraphProperties
+	{
+        get => GetElement<Level6ParagraphProperties>(6);
+        set => SetElement(6, value);
+	}
     
     /// <summary>
     /// <para> List Level 7 Text Style.</para>
@@ -18286,8 +19541,12 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lvl7pPr", 7)]
-    public Level7ParagraphProperties Level7ParagraphProperties { get; set; }
+	[Index(7)]
+    public Level7ParagraphProperties Level7ParagraphProperties
+	{
+        get => GetElement<Level7ParagraphProperties>(7);
+        set => SetElement(7, value);
+	}
     
     /// <summary>
     /// <para> List Level 8 Text Style.</para>
@@ -18296,8 +19555,12 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lvl8pPr", 8)]
-    public Level8ParagraphProperties Level8ParagraphProperties { get; set; }
+	[Index(8)]
+    public Level8ParagraphProperties Level8ParagraphProperties
+	{
+        get => GetElement<Level8ParagraphProperties>(8);
+        set => SetElement(8, value);
+	}
     
     /// <summary>
     /// <para> List Level 9 Text Style.</para>
@@ -18306,8 +19569,12 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lvl9pPr", 9)]
-    public Level9ParagraphProperties Level9ParagraphProperties { get; set; }
+	[Index(9)]
+    public Level9ParagraphProperties Level9ParagraphProperties
+	{
+        get => GetElement<Level9ParagraphProperties>(9);
+        set => SetElement(9, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -18316,8 +19583,12 @@ public partial class ListStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 10)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(10)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(10);
+        set => SetElement(10, value);
+	}
     
 
 
@@ -18539,8 +19810,12 @@ public abstract partial class DefaultShapeDefinitionType : OpenXmlCompositeEleme
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "spPr", 0)]
-    public ShapeProperties ShapeProperties { get; set; }
+	[Index(0)]
+    public ShapeProperties ShapeProperties
+	{
+        get => GetElement<ShapeProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> BodyProperties.</para>
@@ -18549,8 +19824,12 @@ public abstract partial class DefaultShapeDefinitionType : OpenXmlCompositeEleme
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "bodyPr", 1)]
-    public BodyProperties BodyProperties { get; set; }
+	[Index(1)]
+    public BodyProperties BodyProperties
+	{
+        get => GetElement<BodyProperties>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> ListStyle.</para>
@@ -18559,8 +19838,12 @@ public abstract partial class DefaultShapeDefinitionType : OpenXmlCompositeEleme
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lstStyle", 2)]
-    public ListStyle ListStyle { get; set; }
+	[Index(2)]
+    public ListStyle ListStyle
+	{
+        get => GetElement<ListStyle>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> ShapeStyle.</para>
@@ -18569,8 +19852,12 @@ public abstract partial class DefaultShapeDefinitionType : OpenXmlCompositeEleme
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "style", 3)]
-    public ShapeStyle ShapeStyle { get; set; }
+	[Index(3)]
+    public ShapeStyle ShapeStyle
+	{
+        get => GetElement<ShapeStyle>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -18579,8 +19866,12 @@ public abstract partial class DefaultShapeDefinitionType : OpenXmlCompositeEleme
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 4)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(4)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(4);
+        set => SetElement(4, value);
+	}
     
 
 
@@ -18750,73 +20041,85 @@ public abstract partial class ColorMappingType : OpenXmlCompositeElement
     /// <para> Background 1.</para>
     /// <para>Represents the following attribute in the schema: bg1 </para>
     /// </summary>
-    [SchemaAttr(0, "bg1", 0)]
+    [SchemaAttr(0, "bg1")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1 { get; set; }
     /// <summary>
     /// <para> Text 1.</para>
     /// <para>Represents the following attribute in the schema: tx1 </para>
     /// </summary>
-    [SchemaAttr(0, "tx1", 1)]
+    [SchemaAttr(0, "tx1")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1 { get; set; }
     /// <summary>
     /// <para> Background 2.</para>
     /// <para>Represents the following attribute in the schema: bg2 </para>
     /// </summary>
-    [SchemaAttr(0, "bg2", 2)]
+    [SchemaAttr(0, "bg2")]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2 { get; set; }
     /// <summary>
     /// <para> Text 2.</para>
     /// <para>Represents the following attribute in the schema: tx2 </para>
     /// </summary>
-    [SchemaAttr(0, "tx2", 3)]
+    [SchemaAttr(0, "tx2")]
+    [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2 { get; set; }
     /// <summary>
     /// <para> Accent 1.</para>
     /// <para>Represents the following attribute in the schema: accent1 </para>
     /// </summary>
-    [SchemaAttr(0, "accent1", 4)]
+    [SchemaAttr(0, "accent1")]
+    [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1 { get; set; }
     /// <summary>
     /// <para> Accent 2.</para>
     /// <para>Represents the following attribute in the schema: accent2 </para>
     /// </summary>
-    [SchemaAttr(0, "accent2", 5)]
+    [SchemaAttr(0, "accent2")]
+    [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2 { get; set; }
     /// <summary>
     /// <para> Accent 3.</para>
     /// <para>Represents the following attribute in the schema: accent3 </para>
     /// </summary>
-    [SchemaAttr(0, "accent3", 6)]
+    [SchemaAttr(0, "accent3")]
+    [Index(6)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3 { get; set; }
     /// <summary>
     /// <para> Accent 4.</para>
     /// <para>Represents the following attribute in the schema: accent4 </para>
     /// </summary>
-    [SchemaAttr(0, "accent4", 7)]
+    [SchemaAttr(0, "accent4")]
+    [Index(7)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4 { get; set; }
     /// <summary>
     /// <para> Accent 5.</para>
     /// <para>Represents the following attribute in the schema: accent5 </para>
     /// </summary>
-    [SchemaAttr(0, "accent5", 8)]
+    [SchemaAttr(0, "accent5")]
+    [Index(8)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5 { get; set; }
     /// <summary>
     /// <para> Accent 6.</para>
     /// <para>Represents the following attribute in the schema: accent6 </para>
     /// </summary>
-    [SchemaAttr(0, "accent6", 9)]
+    [SchemaAttr(0, "accent6")]
+    [Index(9)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6 { get; set; }
     /// <summary>
     /// <para> Hyperlink.</para>
     /// <para>Represents the following attribute in the schema: hlink </para>
     /// </summary>
-    [SchemaAttr(0, "hlink", 10)]
+    [SchemaAttr(0, "hlink")]
+    [Index(10)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink { get; set; }
     /// <summary>
     /// <para> Followed Hyperlink.</para>
     /// <para>Represents the following attribute in the schema: folHlink </para>
     /// </summary>
-    [SchemaAttr(0, "folHlink", 11)]
+    [SchemaAttr(0, "folHlink")]
+    [Index(11)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink { get; set; }
 
     
@@ -18829,8 +20132,12 @@ public abstract partial class ColorMappingType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 0)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(0)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -18939,8 +20246,12 @@ public partial class ExtraColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "clrScheme", 0)]
-    public ColorScheme ColorScheme { get; set; }
+	[Index(0)]
+    public ColorScheme ColorScheme
+	{
+        get => GetElement<ColorScheme>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> ColorMap.</para>
@@ -18949,8 +20260,12 @@ public partial class ExtraColorScheme : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "clrMap", 1)]
-    public ColorMap ColorMap { get; set; }
+	[Index(1)]
+    public ColorMap ColorMap
+	{
+        get => GetElement<ColorMap>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -19032,8 +20347,12 @@ public partial class ThemeElements : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "clrScheme", 0)]
-    public ColorScheme ColorScheme { get; set; }
+	[Index(0)]
+    public ColorScheme ColorScheme
+	{
+        get => GetElement<ColorScheme>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Font Scheme.</para>
@@ -19042,8 +20361,12 @@ public partial class ThemeElements : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "fontScheme", 1)]
-    public FontScheme FontScheme { get; set; }
+	[Index(1)]
+    public FontScheme FontScheme
+	{
+        get => GetElement<FontScheme>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Format Scheme.</para>
@@ -19052,8 +20375,12 @@ public partial class ThemeElements : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "fmtScheme", 2)]
-    public FormatScheme FormatScheme { get; set; }
+	[Index(2)]
+    public FormatScheme FormatScheme
+	{
+        get => GetElement<FormatScheme>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -19062,8 +20389,12 @@ public partial class ThemeElements : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 3)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(3)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(3);
+        set => SetElement(3, value);
+	}
     
 
 
@@ -19102,7 +20433,8 @@ public partial class Cell3DProperties : OpenXmlCompositeElement
     /// <para> Preset Material.</para>
     /// <para>Represents the following attribute in the schema: prstMaterial </para>
     /// </summary>
-    [SchemaAttr(0, "prstMaterial", 0)]
+    [SchemaAttr(0, "prstMaterial")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial { get; set; }
 
     /// <summary>
@@ -19149,8 +20481,12 @@ public partial class Cell3DProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "bevel", 0)]
-    public Bevel Bevel { get; set; }
+	[Index(0)]
+    public Bevel Bevel
+	{
+        get => GetElement<Bevel>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Light Rig.</para>
@@ -19159,8 +20495,12 @@ public partial class Cell3DProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lightRig", 1)]
-    public LightRig LightRig { get; set; }
+	[Index(1)]
+    public LightRig LightRig
+	{
+        get => GetElement<LightRig>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -19169,8 +20509,12 @@ public partial class Cell3DProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 2)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(2)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -19231,49 +20575,57 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <para> Left Margin.</para>
     /// <para>Represents the following attribute in the schema: marL </para>
     /// </summary>
-    [SchemaAttr(0, "marL", 0)]
+    [SchemaAttr(0, "marL")]
+    [Index(0)]
     public Int32Value LeftMargin { get; set; }
     /// <summary>
     /// <para> Right Margin.</para>
     /// <para>Represents the following attribute in the schema: marR </para>
     /// </summary>
-    [SchemaAttr(0, "marR", 1)]
+    [SchemaAttr(0, "marR")]
+    [Index(1)]
     public Int32Value RightMargin { get; set; }
     /// <summary>
     /// <para> Top Margin.</para>
     /// <para>Represents the following attribute in the schema: marT </para>
     /// </summary>
-    [SchemaAttr(0, "marT", 2)]
+    [SchemaAttr(0, "marT")]
+    [Index(2)]
     public Int32Value TopMargin { get; set; }
     /// <summary>
     /// <para> Bottom Margin.</para>
     /// <para>Represents the following attribute in the schema: marB </para>
     /// </summary>
-    [SchemaAttr(0, "marB", 3)]
+    [SchemaAttr(0, "marB")]
+    [Index(3)]
     public Int32Value BottomMargin { get; set; }
     /// <summary>
     /// <para> Text Direction.</para>
     /// <para>Represents the following attribute in the schema: vert </para>
     /// </summary>
-    [SchemaAttr(0, "vert", 4)]
+    [SchemaAttr(0, "vert")]
+    [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical { get; set; }
     /// <summary>
     /// <para> Anchor.</para>
     /// <para>Represents the following attribute in the schema: anchor </para>
     /// </summary>
-    [SchemaAttr(0, "anchor", 5)]
+    [SchemaAttr(0, "anchor")]
+    [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor { get; set; }
     /// <summary>
     /// <para> Anchor Center.</para>
     /// <para>Represents the following attribute in the schema: anchorCtr </para>
     /// </summary>
-    [SchemaAttr(0, "anchorCtr", 6)]
+    [SchemaAttr(0, "anchorCtr")]
+    [Index(6)]
     public BooleanValue AnchorCenter { get; set; }
     /// <summary>
     /// <para> Horizontal Overflow.</para>
     /// <para>Represents the following attribute in the schema: horzOverflow </para>
     /// </summary>
-    [SchemaAttr(0, "horzOverflow", 7)]
+    [SchemaAttr(0, "horzOverflow")]
+    [Index(7)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow { get; set; }
 
     /// <summary>
@@ -19320,8 +20672,12 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lnL", 0)]
-    public LeftBorderLineProperties LeftBorderLineProperties { get; set; }
+	[Index(0)]
+    public LeftBorderLineProperties LeftBorderLineProperties
+	{
+        get => GetElement<LeftBorderLineProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Right Border Line Properties.</para>
@@ -19330,8 +20686,12 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lnR", 1)]
-    public RightBorderLineProperties RightBorderLineProperties { get; set; }
+	[Index(1)]
+    public RightBorderLineProperties RightBorderLineProperties
+	{
+        get => GetElement<RightBorderLineProperties>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Top Border Line Properties.</para>
@@ -19340,8 +20700,12 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lnT", 2)]
-    public TopBorderLineProperties TopBorderLineProperties { get; set; }
+	[Index(2)]
+    public TopBorderLineProperties TopBorderLineProperties
+	{
+        get => GetElement<TopBorderLineProperties>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Bottom Border Line Properties.</para>
@@ -19350,8 +20714,12 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lnB", 3)]
-    public BottomBorderLineProperties BottomBorderLineProperties { get; set; }
+	[Index(3)]
+    public BottomBorderLineProperties BottomBorderLineProperties
+	{
+        get => GetElement<BottomBorderLineProperties>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Top-Left to Bottom-Right Border Line Properties.</para>
@@ -19360,8 +20728,12 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lnTlToBr", 4)]
-    public TopLeftToBottomRightBorderLineProperties TopLeftToBottomRightBorderLineProperties { get; set; }
+	[Index(4)]
+    public TopLeftToBottomRightBorderLineProperties TopLeftToBottomRightBorderLineProperties
+	{
+        get => GetElement<TopLeftToBottomRightBorderLineProperties>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Bottom-Left to Top-Right Border Line Properties.</para>
@@ -19370,8 +20742,12 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lnBlToTr", 5)]
-    public BottomLeftToTopRightBorderLineProperties BottomLeftToTopRightBorderLineProperties { get; set; }
+	[Index(5)]
+    public BottomLeftToTopRightBorderLineProperties BottomLeftToTopRightBorderLineProperties
+	{
+        get => GetElement<BottomLeftToTopRightBorderLineProperties>(5);
+        set => SetElement(5, value);
+	}
     
     /// <summary>
     /// <para> Cell 3-D.</para>
@@ -19380,8 +20756,12 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cell3D", 6)]
-    public Cell3DProperties Cell3DProperties { get; set; }
+	[Index(6)]
+    public Cell3DProperties Cell3DProperties
+	{
+        get => GetElement<Cell3DProperties>(6);
+        set => SetElement(6, value);
+	}
     
 
 
@@ -19420,25 +20800,29 @@ public partial class TableCell : OpenXmlCompositeElement
     /// <para> Row Span.</para>
     /// <para>Represents the following attribute in the schema: rowSpan </para>
     /// </summary>
-    [SchemaAttr(0, "rowSpan", 0)]
+    [SchemaAttr(0, "rowSpan")]
+    [Index(0)]
     public Int32Value RowSpan { get; set; }
     /// <summary>
     /// <para> Grid Span.</para>
     /// <para>Represents the following attribute in the schema: gridSpan </para>
     /// </summary>
-    [SchemaAttr(0, "gridSpan", 1)]
+    [SchemaAttr(0, "gridSpan")]
+    [Index(1)]
     public Int32Value GridSpan { get; set; }
     /// <summary>
     /// <para> Horizontal Merge.</para>
     /// <para>Represents the following attribute in the schema: hMerge </para>
     /// </summary>
-    [SchemaAttr(0, "hMerge", 2)]
+    [SchemaAttr(0, "hMerge")]
+    [Index(2)]
     public BooleanValue HorizontalMerge { get; set; }
     /// <summary>
     /// <para> Vertical Merge.</para>
     /// <para>Represents the following attribute in the schema: vMerge </para>
     /// </summary>
-    [SchemaAttr(0, "vMerge", 3)]
+    [SchemaAttr(0, "vMerge")]
+    [Index(3)]
     public BooleanValue VerticalMerge { get; set; }
 
     /// <summary>
@@ -19485,8 +20869,12 @@ public partial class TableCell : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "txBody", 0)]
-    public TextBody TextBody { get; set; }
+	[Index(0)]
+    public TextBody TextBody
+	{
+        get => GetElement<TextBody>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Table Cell Properties.</para>
@@ -19495,8 +20883,12 @@ public partial class TableCell : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "tcPr", 1)]
-    public TableCellProperties TableCellProperties { get; set; }
+	[Index(1)]
+    public TableCellProperties TableCellProperties
+	{
+        get => GetElement<TableCellProperties>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -19505,8 +20897,12 @@ public partial class TableCell : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 2)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(2)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -19701,13 +21097,15 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <para> Style ID.</para>
     /// <para>Represents the following attribute in the schema: styleId </para>
     /// </summary>
-    [SchemaAttr(0, "styleId", 0)]
+    [SchemaAttr(0, "styleId")]
+    [Index(0)]
     public StringValue StyleId { get; set; }
     /// <summary>
     /// <para> Name.</para>
     /// <para>Represents the following attribute in the schema: styleName </para>
     /// </summary>
-    [SchemaAttr(0, "styleName", 1)]
+    [SchemaAttr(0, "styleName")]
+    [Index(1)]
     public StringValue StyleName { get; set; }
 
     
@@ -19720,8 +21118,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "tblBg", 0)]
-    public TableBackground TableBackground { get; set; }
+	[Index(0)]
+    public TableBackground TableBackground
+	{
+        get => GetElement<TableBackground>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Whole Table.</para>
@@ -19730,8 +21132,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "wholeTbl", 1)]
-    public WholeTable WholeTable { get; set; }
+	[Index(1)]
+    public WholeTable WholeTable
+	{
+        get => GetElement<WholeTable>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Band 1 Horizontal.</para>
@@ -19740,8 +21146,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "band1H", 2)]
-    public Band1Horizontal Band1Horizontal { get; set; }
+	[Index(2)]
+    public Band1Horizontal Band1Horizontal
+	{
+        get => GetElement<Band1Horizontal>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Band 2 Horizontal.</para>
@@ -19750,8 +21160,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "band2H", 3)]
-    public Band2Horizontal Band2Horizontal { get; set; }
+	[Index(3)]
+    public Band2Horizontal Band2Horizontal
+	{
+        get => GetElement<Band2Horizontal>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Band 1 Vertical.</para>
@@ -19760,8 +21174,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "band1V", 4)]
-    public Band1Vertical Band1Vertical { get; set; }
+	[Index(4)]
+    public Band1Vertical Band1Vertical
+	{
+        get => GetElement<Band1Vertical>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Band 2 Vertical.</para>
@@ -19770,8 +21188,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "band2V", 5)]
-    public Band2Vertical Band2Vertical { get; set; }
+	[Index(5)]
+    public Band2Vertical Band2Vertical
+	{
+        get => GetElement<Band2Vertical>(5);
+        set => SetElement(5, value);
+	}
     
     /// <summary>
     /// <para> Last Column.</para>
@@ -19780,8 +21202,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lastCol", 6)]
-    public LastColumn LastColumn { get; set; }
+	[Index(6)]
+    public LastColumn LastColumn
+	{
+        get => GetElement<LastColumn>(6);
+        set => SetElement(6, value);
+	}
     
     /// <summary>
     /// <para> First Column.</para>
@@ -19790,8 +21216,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "firstCol", 7)]
-    public FirstColumn FirstColumn { get; set; }
+	[Index(7)]
+    public FirstColumn FirstColumn
+	{
+        get => GetElement<FirstColumn>(7);
+        set => SetElement(7, value);
+	}
     
     /// <summary>
     /// <para> Last Row.</para>
@@ -19800,8 +21230,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lastRow", 8)]
-    public LastRow LastRow { get; set; }
+	[Index(8)]
+    public LastRow LastRow
+	{
+        get => GetElement<LastRow>(8);
+        set => SetElement(8, value);
+	}
     
     /// <summary>
     /// <para> Southeast Cell.</para>
@@ -19810,8 +21244,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "seCell", 9)]
-    public SoutheastCell SoutheastCell { get; set; }
+	[Index(9)]
+    public SoutheastCell SoutheastCell
+	{
+        get => GetElement<SoutheastCell>(9);
+        set => SetElement(9, value);
+	}
     
     /// <summary>
     /// <para> Southwest Cell.</para>
@@ -19820,8 +21258,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "swCell", 10)]
-    public SouthwestCell SouthwestCell { get; set; }
+	[Index(10)]
+    public SouthwestCell SouthwestCell
+	{
+        get => GetElement<SouthwestCell>(10);
+        set => SetElement(10, value);
+	}
     
     /// <summary>
     /// <para> First Row.</para>
@@ -19830,8 +21272,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "firstRow", 11)]
-    public FirstRow FirstRow { get; set; }
+	[Index(11)]
+    public FirstRow FirstRow
+	{
+        get => GetElement<FirstRow>(11);
+        set => SetElement(11, value);
+	}
     
     /// <summary>
     /// <para> Northeast Cell.</para>
@@ -19840,8 +21286,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "neCell", 12)]
-    public NortheastCell NortheastCell { get; set; }
+	[Index(12)]
+    public NortheastCell NortheastCell
+	{
+        get => GetElement<NortheastCell>(12);
+        set => SetElement(12, value);
+	}
     
     /// <summary>
     /// <para> Northwest Cell.</para>
@@ -19850,8 +21300,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "nwCell", 13)]
-    public NorthwestCell NorthwestCell { get; set; }
+	[Index(13)]
+    public NorthwestCell NorthwestCell
+	{
+        get => GetElement<NorthwestCell>(13);
+        set => SetElement(13, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -19860,8 +21314,12 @@ public abstract partial class TableStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 14)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(14)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(14);
+        set => SetElement(14, value);
+	}
     
 
 
@@ -19971,7 +21429,8 @@ public partial class GridColumn : OpenXmlCompositeElement
     /// <para> Width.</para>
     /// <para>Represents the following attribute in the schema: w </para>
     /// </summary>
-    [SchemaAttr(0, "w", 0)]
+    [SchemaAttr(0, "w")]
+    [Index(0)]
     public Int64Value Width { get; set; }
 
     /// <summary>
@@ -20018,8 +21477,12 @@ public partial class GridColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 0)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(0)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -20074,43 +21537,50 @@ public partial class TableProperties : OpenXmlCompositeElement
     /// <para> Right-to-Left.</para>
     /// <para>Represents the following attribute in the schema: rtl </para>
     /// </summary>
-    [SchemaAttr(0, "rtl", 0)]
+    [SchemaAttr(0, "rtl")]
+    [Index(0)]
     public BooleanValue RightToLeft { get; set; }
     /// <summary>
     /// <para> First Row.</para>
     /// <para>Represents the following attribute in the schema: firstRow </para>
     /// </summary>
-    [SchemaAttr(0, "firstRow", 1)]
+    [SchemaAttr(0, "firstRow")]
+    [Index(1)]
     public BooleanValue FirstRow { get; set; }
     /// <summary>
     /// <para> First Column.</para>
     /// <para>Represents the following attribute in the schema: firstCol </para>
     /// </summary>
-    [SchemaAttr(0, "firstCol", 2)]
+    [SchemaAttr(0, "firstCol")]
+    [Index(2)]
     public BooleanValue FirstColumn { get; set; }
     /// <summary>
     /// <para> Last Row.</para>
     /// <para>Represents the following attribute in the schema: lastRow </para>
     /// </summary>
-    [SchemaAttr(0, "lastRow", 3)]
+    [SchemaAttr(0, "lastRow")]
+    [Index(3)]
     public BooleanValue LastRow { get; set; }
     /// <summary>
     /// <para> Last Column.</para>
     /// <para>Represents the following attribute in the schema: lastCol </para>
     /// </summary>
-    [SchemaAttr(0, "lastCol", 4)]
+    [SchemaAttr(0, "lastCol")]
+    [Index(4)]
     public BooleanValue LastColumn { get; set; }
     /// <summary>
     /// <para> Banded Rows.</para>
     /// <para>Represents the following attribute in the schema: bandRow </para>
     /// </summary>
-    [SchemaAttr(0, "bandRow", 5)]
+    [SchemaAttr(0, "bandRow")]
+    [Index(5)]
     public BooleanValue BandRow { get; set; }
     /// <summary>
     /// <para> Banded Columns.</para>
     /// <para>Represents the following attribute in the schema: bandCol </para>
     /// </summary>
-    [SchemaAttr(0, "bandCol", 6)]
+    [SchemaAttr(0, "bandCol")]
+    [Index(6)]
     public BooleanValue BandColumn { get; set; }
 
     /// <summary>
@@ -20246,7 +21716,8 @@ public partial class TableRow : OpenXmlCompositeElement
     /// <para> Height.</para>
     /// <para>Represents the following attribute in the schema: h </para>
     /// </summary>
-    [SchemaAttr(0, "h", 0)]
+    [SchemaAttr(0, "h")]
+    [Index(0)]
     public Int64Value Height { get; set; }
 
     /// <summary>
@@ -20773,8 +22244,12 @@ public abstract partial class ThemeableLineStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "ln", 0)]
-    public Outline Outline { get; set; }
+	[Index(0)]
+    public Outline Outline
+	{
+        get => GetElement<Outline>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Line Reference.</para>
@@ -20783,8 +22258,12 @@ public abstract partial class ThemeableLineStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lnRef", 1)]
-    public LineReference LineReference { get; set; }
+	[Index(1)]
+    public LineReference LineReference
+	{
+        get => GetElement<LineReference>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -20907,8 +22386,12 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "left", 0)]
-    public LeftBorder LeftBorder { get; set; }
+	[Index(0)]
+    public LeftBorder LeftBorder
+	{
+        get => GetElement<LeftBorder>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Right Border.</para>
@@ -20917,8 +22400,12 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "right", 1)]
-    public RightBorder RightBorder { get; set; }
+	[Index(1)]
+    public RightBorder RightBorder
+	{
+        get => GetElement<RightBorder>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Top Border.</para>
@@ -20927,8 +22414,12 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "top", 2)]
-    public TopBorder TopBorder { get; set; }
+	[Index(2)]
+    public TopBorder TopBorder
+	{
+        get => GetElement<TopBorder>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Bottom Border.</para>
@@ -20937,8 +22428,12 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "bottom", 3)]
-    public BottomBorder BottomBorder { get; set; }
+	[Index(3)]
+    public BottomBorder BottomBorder
+	{
+        get => GetElement<BottomBorder>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Inside Horizontal Border.</para>
@@ -20947,8 +22442,12 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "insideH", 4)]
-    public InsideHorizontalBorder InsideHorizontalBorder { get; set; }
+	[Index(4)]
+    public InsideHorizontalBorder InsideHorizontalBorder
+	{
+        get => GetElement<InsideHorizontalBorder>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Inside Vertical Border.</para>
@@ -20957,8 +22456,12 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "insideV", 5)]
-    public InsideVerticalBorder InsideVerticalBorder { get; set; }
+	[Index(5)]
+    public InsideVerticalBorder InsideVerticalBorder
+	{
+        get => GetElement<InsideVerticalBorder>(5);
+        set => SetElement(5, value);
+	}
     
     /// <summary>
     /// <para> Top Left to Bottom Right Border.</para>
@@ -20967,8 +22470,12 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "tl2br", 6)]
-    public TopLeftToBottomRightBorder TopLeftToBottomRightBorder { get; set; }
+	[Index(6)]
+    public TopLeftToBottomRightBorder TopLeftToBottomRightBorder
+	{
+        get => GetElement<TopLeftToBottomRightBorder>(6);
+        set => SetElement(6, value);
+	}
     
     /// <summary>
     /// <para> Top Right to Bottom Left Border.</para>
@@ -20977,8 +22484,12 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "tr2bl", 7)]
-    public TopRightToBottomLeftBorder TopRightToBottomLeftBorder { get; set; }
+	[Index(7)]
+    public TopRightToBottomLeftBorder TopRightToBottomLeftBorder
+	{
+        get => GetElement<TopRightToBottomLeftBorder>(7);
+        set => SetElement(7, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -20987,8 +22498,12 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 8)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(8)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(8);
+        set => SetElement(8, value);
+	}
     
 
 
@@ -21039,13 +22554,15 @@ public partial class TableCellTextStyle : OpenXmlCompositeElement
     /// <para> Bold.</para>
     /// <para>Represents the following attribute in the schema: b </para>
     /// </summary>
-    [SchemaAttr(0, "b", 0)]
+    [SchemaAttr(0, "b")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BooleanStyleValues> Bold { get; set; }
     /// <summary>
     /// <para> Italic.</para>
     /// <para>Represents the following attribute in the schema: i </para>
     /// </summary>
-    [SchemaAttr(0, "i", 1)]
+    [SchemaAttr(0, "i")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BooleanStyleValues> Italic { get; set; }
 
     /// <summary>
@@ -21162,8 +22679,12 @@ public partial class TableCellStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "tcBdr", 0)]
-    public TableCellBorders TableCellBorders { get; set; }
+	[Index(0)]
+    public TableCellBorders TableCellBorders
+	{
+        get => GetElement<TableCellBorders>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -22010,8 +23531,12 @@ public abstract partial class TablePartStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "tcTxStyle", 0)]
-    public TableCellTextStyle TableCellTextStyle { get; set; }
+	[Index(0)]
+    public TableCellTextStyle TableCellTextStyle
+	{
+        get => GetElement<TableCellTextStyle>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Table Cell Style.</para>
@@ -22020,8 +23545,12 @@ public abstract partial class TablePartStyleType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "tcStyle", 1)]
-    public TableCellStyle TableCellStyle { get; set; }
+	[Index(1)]
+    public TableCellStyle TableCellStyle
+	{
+        get => GetElement<TableCellStyle>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -22903,67 +24432,78 @@ public abstract partial class TextParagraphPropertiesType : OpenXmlCompositeElem
     /// <para> Left Margin.</para>
     /// <para>Represents the following attribute in the schema: marL </para>
     /// </summary>
-    [SchemaAttr(0, "marL", 0)]
+    [SchemaAttr(0, "marL")]
+    [Index(0)]
     public Int32Value LeftMargin { get; set; }
     /// <summary>
     /// <para> Right Margin.</para>
     /// <para>Represents the following attribute in the schema: marR </para>
     /// </summary>
-    [SchemaAttr(0, "marR", 1)]
+    [SchemaAttr(0, "marR")]
+    [Index(1)]
     public Int32Value RightMargin { get; set; }
     /// <summary>
     /// <para> Level.</para>
     /// <para>Represents the following attribute in the schema: lvl </para>
     /// </summary>
-    [SchemaAttr(0, "lvl", 2)]
+    [SchemaAttr(0, "lvl")]
+    [Index(2)]
     public Int32Value Level { get; set; }
     /// <summary>
     /// <para> Indent.</para>
     /// <para>Represents the following attribute in the schema: indent </para>
     /// </summary>
-    [SchemaAttr(0, "indent", 3)]
+    [SchemaAttr(0, "indent")]
+    [Index(3)]
     public Int32Value Indent { get; set; }
     /// <summary>
     /// <para> Alignment.</para>
     /// <para>Represents the following attribute in the schema: algn </para>
     /// </summary>
-    [SchemaAttr(0, "algn", 4)]
+    [SchemaAttr(0, "algn")]
+    [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextAlignmentTypeValues> Alignment { get; set; }
     /// <summary>
     /// <para> Default Tab Size.</para>
     /// <para>Represents the following attribute in the schema: defTabSz </para>
     /// </summary>
-    [SchemaAttr(0, "defTabSz", 5)]
+    [SchemaAttr(0, "defTabSz")]
+    [Index(5)]
     public Int32Value DefaultTabSize { get; set; }
     /// <summary>
     /// <para> Right To Left.</para>
     /// <para>Represents the following attribute in the schema: rtl </para>
     /// </summary>
-    [SchemaAttr(0, "rtl", 6)]
+    [SchemaAttr(0, "rtl")]
+    [Index(6)]
     public BooleanValue RightToLeft { get; set; }
     /// <summary>
     /// <para> East Asian Line Break.</para>
     /// <para>Represents the following attribute in the schema: eaLnBrk </para>
     /// </summary>
-    [SchemaAttr(0, "eaLnBrk", 7)]
+    [SchemaAttr(0, "eaLnBrk")]
+    [Index(7)]
     public BooleanValue EastAsianLineBreak { get; set; }
     /// <summary>
     /// <para> Font Alignment.</para>
     /// <para>Represents the following attribute in the schema: fontAlgn </para>
     /// </summary>
-    [SchemaAttr(0, "fontAlgn", 8)]
+    [SchemaAttr(0, "fontAlgn")]
+    [Index(8)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextFontAlignmentValues> FontAlignment { get; set; }
     /// <summary>
     /// <para> Latin Line Break.</para>
     /// <para>Represents the following attribute in the schema: latinLnBrk </para>
     /// </summary>
-    [SchemaAttr(0, "latinLnBrk", 9)]
+    [SchemaAttr(0, "latinLnBrk")]
+    [Index(9)]
     public BooleanValue LatinLineBreak { get; set; }
     /// <summary>
     /// <para> Hanging Punctuation.</para>
     /// <para>Represents the following attribute in the schema: hangingPunct </para>
     /// </summary>
-    [SchemaAttr(0, "hangingPunct", 10)]
+    [SchemaAttr(0, "hangingPunct")]
+    [Index(10)]
     public BooleanValue Height { get; set; }
 
     
@@ -22976,8 +24516,12 @@ public abstract partial class TextParagraphPropertiesType : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lnSpc", 0)]
-    public LineSpacing LineSpacing { get; set; }
+	[Index(0)]
+    public LineSpacing LineSpacing
+	{
+        get => GetElement<LineSpacing>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Space Before.</para>
@@ -22986,8 +24530,12 @@ public abstract partial class TextParagraphPropertiesType : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "spcBef", 1)]
-    public SpaceBefore SpaceBefore { get; set; }
+	[Index(1)]
+    public SpaceBefore SpaceBefore
+	{
+        get => GetElement<SpaceBefore>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Space After.</para>
@@ -22996,8 +24544,12 @@ public abstract partial class TextParagraphPropertiesType : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "spcAft", 2)]
-    public SpaceAfter SpaceAfter { get; set; }
+	[Index(2)]
+    public SpaceAfter SpaceAfter
+	{
+        get => GetElement<SpaceAfter>(2);
+        set => SetElement(2, value);
+	}
     
 
 
@@ -23328,103 +24880,120 @@ public abstract partial class TextCharacterPropertiesType : OpenXmlCompositeElem
     /// <para> kumimoji.</para>
     /// <para>Represents the following attribute in the schema: kumimoji </para>
     /// </summary>
-    [SchemaAttr(0, "kumimoji", 0)]
+    [SchemaAttr(0, "kumimoji")]
+    [Index(0)]
     public BooleanValue Kumimoji { get; set; }
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: lang </para>
     /// </summary>
-    [SchemaAttr(0, "lang", 1)]
+    [SchemaAttr(0, "lang")]
+    [Index(1)]
     public StringValue Language { get; set; }
     /// <summary>
     /// <para> altLang.</para>
     /// <para>Represents the following attribute in the schema: altLang </para>
     /// </summary>
-    [SchemaAttr(0, "altLang", 2)]
+    [SchemaAttr(0, "altLang")]
+    [Index(2)]
     public StringValue AlternativeLanguage { get; set; }
     /// <summary>
     /// <para> sz.</para>
     /// <para>Represents the following attribute in the schema: sz </para>
     /// </summary>
-    [SchemaAttr(0, "sz", 3)]
+    [SchemaAttr(0, "sz")]
+    [Index(3)]
     public Int32Value FontSize { get; set; }
     /// <summary>
     /// <para> b.</para>
     /// <para>Represents the following attribute in the schema: b </para>
     /// </summary>
-    [SchemaAttr(0, "b", 4)]
+    [SchemaAttr(0, "b")]
+    [Index(4)]
     public BooleanValue Bold { get; set; }
     /// <summary>
     /// <para> i.</para>
     /// <para>Represents the following attribute in the schema: i </para>
     /// </summary>
-    [SchemaAttr(0, "i", 5)]
+    [SchemaAttr(0, "i")]
+    [Index(5)]
     public BooleanValue Italic { get; set; }
     /// <summary>
     /// <para> u.</para>
     /// <para>Represents the following attribute in the schema: u </para>
     /// </summary>
-    [SchemaAttr(0, "u", 6)]
+    [SchemaAttr(0, "u")]
+    [Index(6)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues> Underline { get; set; }
     /// <summary>
     /// <para> strike.</para>
     /// <para>Represents the following attribute in the schema: strike </para>
     /// </summary>
-    [SchemaAttr(0, "strike", 7)]
+    [SchemaAttr(0, "strike")]
+    [Index(7)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues> Strike { get; set; }
     /// <summary>
     /// <para> kern.</para>
     /// <para>Represents the following attribute in the schema: kern </para>
     /// </summary>
-    [SchemaAttr(0, "kern", 8)]
+    [SchemaAttr(0, "kern")]
+    [Index(8)]
     public Int32Value Kerning { get; set; }
     /// <summary>
     /// <para> cap.</para>
     /// <para>Represents the following attribute in the schema: cap </para>
     /// </summary>
-    [SchemaAttr(0, "cap", 9)]
+    [SchemaAttr(0, "cap")]
+    [Index(9)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues> Capital { get; set; }
     /// <summary>
     /// <para> spc.</para>
     /// <para>Represents the following attribute in the schema: spc </para>
     /// </summary>
-    [SchemaAttr(0, "spc", 10)]
+    [SchemaAttr(0, "spc")]
+    [Index(10)]
     public Int32Value Spacing { get; set; }
     /// <summary>
     /// <para> normalizeH.</para>
     /// <para>Represents the following attribute in the schema: normalizeH </para>
     /// </summary>
-    [SchemaAttr(0, "normalizeH", 11)]
+    [SchemaAttr(0, "normalizeH")]
+    [Index(11)]
     public BooleanValue NormalizeHeight { get; set; }
     /// <summary>
     /// <para> baseline.</para>
     /// <para>Represents the following attribute in the schema: baseline </para>
     /// </summary>
-    [SchemaAttr(0, "baseline", 12)]
+    [SchemaAttr(0, "baseline")]
+    [Index(12)]
     public Int32Value Baseline { get; set; }
     /// <summary>
     /// <para> noProof.</para>
     /// <para>Represents the following attribute in the schema: noProof </para>
     /// </summary>
-    [SchemaAttr(0, "noProof", 13)]
+    [SchemaAttr(0, "noProof")]
+    [Index(13)]
     public BooleanValue NoProof { get; set; }
     /// <summary>
     /// <para> dirty.</para>
     /// <para>Represents the following attribute in the schema: dirty </para>
     /// </summary>
-    [SchemaAttr(0, "dirty", 14)]
+    [SchemaAttr(0, "dirty")]
+    [Index(14)]
     public BooleanValue Dirty { get; set; }
     /// <summary>
     /// <para> err.</para>
     /// <para>Represents the following attribute in the schema: err </para>
     /// </summary>
-    [SchemaAttr(0, "err", 15)]
+    [SchemaAttr(0, "err")]
+    [Index(15)]
     public BooleanValue SpellingError { get; set; }
     /// <summary>
     /// <para> bmk.</para>
     /// <para>Represents the following attribute in the schema: bmk </para>
     /// </summary>
-    [SchemaAttr(0, "bmk", 16)]
+    [SchemaAttr(0, "bmk")]
+    [Index(16)]
     public StringValue Bookmark { get; set; }
 
     
@@ -23437,8 +25006,12 @@ public abstract partial class TextCharacterPropertiesType : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "ln", 0)]
-    public Outline Outline { get; set; }
+	[Index(0)]
+    public Outline Outline
+	{
+        get => GetElement<Outline>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -23555,8 +25128,12 @@ public partial class Paragraph : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "pPr", 0)]
-    public ParagraphProperties ParagraphProperties { get; set; }
+	[Index(0)]
+    public ParagraphProperties ParagraphProperties
+	{
+        get => GetElement<ParagraphProperties>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -23584,13 +25161,15 @@ public partial class TabStop : OpenXmlLeafElement
     /// <para> Tab Position.</para>
     /// <para>Represents the following attribute in the schema: pos </para>
     /// </summary>
-    [SchemaAttr(0, "pos", 0)]
+    [SchemaAttr(0, "pos")]
+    [Index(0)]
     public Int32Value Position { get; set; }
     /// <summary>
     /// <para> Tab Alignment.</para>
     /// <para>Represents the following attribute in the schema: algn </para>
     /// </summary>
-    [SchemaAttr(0, "algn", 1)]
+    [SchemaAttr(0, "algn")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextTabAlignmentValues> Alignment { get; set; }
 
     /// <summary>
@@ -23627,7 +25206,8 @@ public partial class SpacingPercent : OpenXmlLeafElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -23664,7 +25244,8 @@ public partial class SpacingPoints : OpenXmlLeafElement
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -23880,8 +25461,12 @@ public abstract partial class TextSpacingType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "spcPct", 0)]
-    public SpacingPercent SpacingPercent { get; set; }
+	[Index(0)]
+    public SpacingPercent SpacingPercent
+	{
+        get => GetElement<SpacingPercent>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Spacing Points.</para>
@@ -23890,8 +25475,12 @@ public abstract partial class TextSpacingType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "spcPts", 1)]
-    public SpacingPoints SpacingPoints { get; set; }
+	[Index(1)]
+    public SpacingPoints SpacingPoints
+	{
+        get => GetElement<SpacingPoints>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -24075,7 +25664,8 @@ public partial class ShapePropertiesExtension : OpenXmlCompositeElement
     /// <para> URI.</para>
     /// <para>Represents the following attribute in the schema: uri </para>
     /// </summary>
-    [SchemaAttr(0, "uri", 0)]
+    [SchemaAttr(0, "uri")]
+    [Index(0)]
     public StringValue Uri { get; set; }
 
     /// <summary>
@@ -24145,7 +25735,8 @@ public partial class GvmlGroupShapeExtension : OpenXmlCompositeElement
     /// <para> URI.</para>
     /// <para>Represents the following attribute in the schema: uri </para>
     /// </summary>
-    [SchemaAttr(0, "uri", 0)]
+    [SchemaAttr(0, "uri")]
+    [Index(0)]
     public StringValue Uri { get; set; }
 
     /// <summary>
@@ -24322,8 +25913,12 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cNvPr", 0)]
-    public NonVisualDrawingProperties NonVisualDrawingProperties { get; set; }
+	[Index(0)]
+    public NonVisualDrawingProperties NonVisualDrawingProperties
+	{
+        get => GetElement<NonVisualDrawingProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Non-Visual Group Shape Drawing Properties.</para>
@@ -24332,8 +25927,12 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "cNvGrpSpPr", 1)]
-    public NonVisualGroupShapeDrawingProperties NonVisualGroupShapeDrawingProperties { get; set; }
+	[Index(1)]
+    public NonVisualGroupShapeDrawingProperties NonVisualGroupShapeDrawingProperties
+	{
+        get => GetElement<NonVisualGroupShapeDrawingProperties>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -24388,7 +25987,8 @@ public partial class VisualGroupShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode", 0)]
+    [SchemaAttr(0, "bwMode")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -24435,8 +26035,12 @@ public partial class VisualGroupShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "xfrm", 0)]
-    public TransformGroup TransformGroup { get; set; }
+	[Index(0)]
+    public TransformGroup TransformGroup
+	{
+        get => GetElement<TransformGroup>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -24520,8 +26124,12 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "nvSpPr", 0)]
-    public NonVisualShapeProperties NonVisualShapeProperties { get; set; }
+	[Index(0)]
+    public NonVisualShapeProperties NonVisualShapeProperties
+	{
+        get => GetElement<NonVisualShapeProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Visual Properties.</para>
@@ -24530,8 +26138,12 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "spPr", 1)]
-    public ShapeProperties ShapeProperties { get; set; }
+	[Index(1)]
+    public ShapeProperties ShapeProperties
+	{
+        get => GetElement<ShapeProperties>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Text Shape.</para>
@@ -24540,8 +26152,12 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "txSp", 2)]
-    public TextShape TextShape { get; set; }
+	[Index(2)]
+    public TextShape TextShape
+	{
+        get => GetElement<TextShape>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Style.</para>
@@ -24550,8 +26166,12 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "style", 3)]
-    public ShapeStyle ShapeStyle { get; set; }
+	[Index(3)]
+    public ShapeStyle ShapeStyle
+	{
+        get => GetElement<ShapeStyle>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -24560,8 +26180,12 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 4)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(4)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(4);
+        set => SetElement(4, value);
+	}
     
 
 
@@ -24643,8 +26267,12 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "nvCxnSpPr", 0)]
-    public NonVisualConnectionShapeProperties NonVisualConnectionShapeProperties { get; set; }
+	[Index(0)]
+    public NonVisualConnectionShapeProperties NonVisualConnectionShapeProperties
+	{
+        get => GetElement<NonVisualConnectionShapeProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Visual Properties.</para>
@@ -24653,8 +26281,12 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "spPr", 1)]
-    public ShapeProperties ShapeProperties { get; set; }
+	[Index(1)]
+    public ShapeProperties ShapeProperties
+	{
+        get => GetElement<ShapeProperties>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Shape Style.</para>
@@ -24663,8 +26295,12 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "style", 2)]
-    public ShapeStyle ShapeStyle { get; set; }
+	[Index(2)]
+    public ShapeStyle ShapeStyle
+	{
+        get => GetElement<ShapeStyle>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -24673,8 +26309,12 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 3)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(3)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(3);
+        set => SetElement(3, value);
+	}
     
 
 
@@ -24758,8 +26398,12 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "nvPicPr", 0)]
-    public NonVisualPictureProperties NonVisualPictureProperties { get; set; }
+	[Index(0)]
+    public NonVisualPictureProperties NonVisualPictureProperties
+	{
+        get => GetElement<NonVisualPictureProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Picture Fill.</para>
@@ -24768,8 +26412,12 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "blipFill", 1)]
-    public BlipFill BlipFill { get; set; }
+	[Index(1)]
+    public BlipFill BlipFill
+	{
+        get => GetElement<BlipFill>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Shape Properties.</para>
@@ -24778,8 +26426,12 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "spPr", 2)]
-    public ShapeProperties ShapeProperties { get; set; }
+	[Index(2)]
+    public ShapeProperties ShapeProperties
+	{
+        get => GetElement<ShapeProperties>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> ShapeStyle.</para>
@@ -24788,8 +26440,12 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "style", 3)]
-    public ShapeStyle ShapeStyle { get; set; }
+	[Index(3)]
+    public ShapeStyle ShapeStyle
+	{
+        get => GetElement<ShapeStyle>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -24798,8 +26454,12 @@ public partial class Picture : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 4)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(4)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(4);
+        set => SetElement(4, value);
+	}
     
 
 
@@ -24881,8 +26541,12 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "nvGraphicFramePr", 0)]
-    public NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties { get; set; }
+	[Index(0)]
+    public NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties
+	{
+        get => GetElement<NonVisualGraphicFrameProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Graphic.</para>
@@ -24891,8 +26555,12 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "graphic", 1)]
-    public Graphic Graphic { get; set; }
+	[Index(1)]
+    public Graphic Graphic
+	{
+        get => GetElement<Graphic>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Transform2D.</para>
@@ -24901,8 +26569,12 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "xfrm", 2)]
-    public Transform2D Transform2D { get; set; }
+	[Index(2)]
+    public Transform2D Transform2D
+	{
+        get => GetElement<Transform2D>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -24911,8 +26583,12 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 3)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(3)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(3);
+        set => SetElement(3, value);
+	}
     
 
 
@@ -25006,8 +26682,12 @@ public partial class GroupShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "nvGrpSpPr", 0)]
-    public NonVisualGroupShapeProperties NonVisualGroupShapeProperties { get; set; }
+	[Index(0)]
+    public NonVisualGroupShapeProperties NonVisualGroupShapeProperties
+	{
+        get => GetElement<NonVisualGroupShapeProperties>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Visual Group Shape Properties.</para>
@@ -25016,8 +26696,12 @@ public partial class GroupShape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "grpSpPr", 1)]
-    public VisualGroupShapeProperties VisualGroupShapeProperties { get; set; }
+	[Index(1)]
+    public VisualGroupShapeProperties VisualGroupShapeProperties
+	{
+        get => GetElement<VisualGroupShapeProperties>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -25116,7 +26800,8 @@ public partial class NonVisualGroupDrawingShapePropsExtension : OpenXmlComposite
     /// <para> URI.</para>
     /// <para>Represents the following attribute in the schema: uri </para>
     /// </summary>
-    [SchemaAttr(0, "uri", 0)]
+    [SchemaAttr(0, "uri")]
+    [Index(0)]
     public StringValue Uri { get; set; }
 
     /// <summary>
@@ -25186,7 +26871,8 @@ public partial class OfficeStyleSheetExtension : OpenXmlCompositeElement
     /// <para> URI.</para>
     /// <para>Represents the following attribute in the schema: uri </para>
     /// </summary>
-    [SchemaAttr(0, "uri", 0)]
+    [SchemaAttr(0, "uri")]
+    [Index(0)]
     public StringValue Uri { get; set; }
 
     /// <summary>
@@ -25256,7 +26942,8 @@ public partial class ConnectorLockingExtension : OpenXmlCompositeElement
     /// <para> URI.</para>
     /// <para>Represents the following attribute in the schema: uri </para>
     /// </summary>
-    [SchemaAttr(0, "uri", 0)]
+    [SchemaAttr(0, "uri")]
+    [Index(0)]
     public StringValue Uri { get; set; }
 
     /// <summary>
@@ -25493,49 +27180,57 @@ public abstract partial class HyperlinkType : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id", 0)]
+    [SchemaAttr(19, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Invalid URL.</para>
     /// <para>Represents the following attribute in the schema: invalidUrl </para>
     /// </summary>
-    [SchemaAttr(0, "invalidUrl", 1)]
+    [SchemaAttr(0, "invalidUrl")]
+    [Index(1)]
     public StringValue InvalidUrl { get; set; }
     /// <summary>
     /// <para> Action Setting.</para>
     /// <para>Represents the following attribute in the schema: action </para>
     /// </summary>
-    [SchemaAttr(0, "action", 2)]
+    [SchemaAttr(0, "action")]
+    [Index(2)]
     public StringValue Action { get; set; }
     /// <summary>
     /// <para> Target Frame.</para>
     /// <para>Represents the following attribute in the schema: tgtFrame </para>
     /// </summary>
-    [SchemaAttr(0, "tgtFrame", 3)]
+    [SchemaAttr(0, "tgtFrame")]
+    [Index(3)]
     public StringValue TargetFrame { get; set; }
     /// <summary>
     /// <para> Hyperlink Tooltip.</para>
     /// <para>Represents the following attribute in the schema: tooltip </para>
     /// </summary>
-    [SchemaAttr(0, "tooltip", 4)]
+    [SchemaAttr(0, "tooltip")]
+    [Index(4)]
     public StringValue Tooltip { get; set; }
     /// <summary>
     /// <para> Add Hyperlink to Page History.</para>
     /// <para>Represents the following attribute in the schema: history </para>
     /// </summary>
-    [SchemaAttr(0, "history", 5)]
+    [SchemaAttr(0, "history")]
+    [Index(5)]
     public BooleanValue History { get; set; }
     /// <summary>
     /// <para> Highlight Click.</para>
     /// <para>Represents the following attribute in the schema: highlightClick </para>
     /// </summary>
-    [SchemaAttr(0, "highlightClick", 6)]
+    [SchemaAttr(0, "highlightClick")]
+    [Index(6)]
     public BooleanValue HighlightClick { get; set; }
     /// <summary>
     /// <para> End Sounds.</para>
     /// <para>Represents the following attribute in the schema: endSnd </para>
     /// </summary>
-    [SchemaAttr(0, "endSnd", 7)]
+    [SchemaAttr(0, "endSnd")]
+    [Index(7)]
     public BooleanValue EndSound { get; set; }
 
     
@@ -25548,8 +27243,12 @@ public abstract partial class HyperlinkType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "snd", 0)]
-    public HyperlinkSound HyperlinkSound { get; set; }
+	[Index(0)]
+    public HyperlinkSound HyperlinkSound
+	{
+        get => GetElement<HyperlinkSound>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -25558,8 +27257,12 @@ public abstract partial class HyperlinkType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 1)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(1)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -25691,7 +27394,8 @@ public partial class NonVisualDrawingPropertiesExtension : OpenXmlCompositeEleme
     /// <para> URI.</para>
     /// <para>Represents the following attribute in the schema: uri </para>
     /// </summary>
-    [SchemaAttr(0, "uri", 0)]
+    [SchemaAttr(0, "uri")]
+    [Index(0)]
     public StringValue Uri { get; set; }
 
     /// <summary>
@@ -25761,67 +27465,78 @@ public partial class PictureLocks : OpenXmlCompositeElement
     /// <para> Disallow Shape Grouping.</para>
     /// <para>Represents the following attribute in the schema: noGrp </para>
     /// </summary>
-    [SchemaAttr(0, "noGrp", 0)]
+    [SchemaAttr(0, "noGrp")]
+    [Index(0)]
     public BooleanValue NoGrouping { get; set; }
     /// <summary>
     /// <para> Disallow Shape Selection.</para>
     /// <para>Represents the following attribute in the schema: noSelect </para>
     /// </summary>
-    [SchemaAttr(0, "noSelect", 1)]
+    [SchemaAttr(0, "noSelect")]
+    [Index(1)]
     public BooleanValue NoSelection { get; set; }
     /// <summary>
     /// <para> Disallow Shape Rotation.</para>
     /// <para>Represents the following attribute in the schema: noRot </para>
     /// </summary>
-    [SchemaAttr(0, "noRot", 2)]
+    [SchemaAttr(0, "noRot")]
+    [Index(2)]
     public BooleanValue NoRotation { get; set; }
     /// <summary>
     /// <para> Disallow Aspect Ratio Change.</para>
     /// <para>Represents the following attribute in the schema: noChangeAspect </para>
     /// </summary>
-    [SchemaAttr(0, "noChangeAspect", 3)]
+    [SchemaAttr(0, "noChangeAspect")]
+    [Index(3)]
     public BooleanValue NoChangeAspect { get; set; }
     /// <summary>
     /// <para> Disallow Shape Movement.</para>
     /// <para>Represents the following attribute in the schema: noMove </para>
     /// </summary>
-    [SchemaAttr(0, "noMove", 4)]
+    [SchemaAttr(0, "noMove")]
+    [Index(4)]
     public BooleanValue NoMove { get; set; }
     /// <summary>
     /// <para> Disallow Shape Resize.</para>
     /// <para>Represents the following attribute in the schema: noResize </para>
     /// </summary>
-    [SchemaAttr(0, "noResize", 5)]
+    [SchemaAttr(0, "noResize")]
+    [Index(5)]
     public BooleanValue NoResize { get; set; }
     /// <summary>
     /// <para> Disallow Shape Point Editing.</para>
     /// <para>Represents the following attribute in the schema: noEditPoints </para>
     /// </summary>
-    [SchemaAttr(0, "noEditPoints", 6)]
+    [SchemaAttr(0, "noEditPoints")]
+    [Index(6)]
     public BooleanValue NoEditPoints { get; set; }
     /// <summary>
     /// <para> Disallow Showing Adjust Handles.</para>
     /// <para>Represents the following attribute in the schema: noAdjustHandles </para>
     /// </summary>
-    [SchemaAttr(0, "noAdjustHandles", 7)]
+    [SchemaAttr(0, "noAdjustHandles")]
+    [Index(7)]
     public BooleanValue NoAdjustHandles { get; set; }
     /// <summary>
     /// <para> Disallow Arrowhead Changes.</para>
     /// <para>Represents the following attribute in the schema: noChangeArrowheads </para>
     /// </summary>
-    [SchemaAttr(0, "noChangeArrowheads", 8)]
+    [SchemaAttr(0, "noChangeArrowheads")]
+    [Index(8)]
     public BooleanValue NoChangeArrowheads { get; set; }
     /// <summary>
     /// <para> Disallow Shape Type Change.</para>
     /// <para>Represents the following attribute in the schema: noChangeShapeType </para>
     /// </summary>
-    [SchemaAttr(0, "noChangeShapeType", 9)]
+    [SchemaAttr(0, "noChangeShapeType")]
+    [Index(9)]
     public BooleanValue NoChangeShapeType { get; set; }
     /// <summary>
     /// <para> Disallow Crop Changes.</para>
     /// <para>Represents the following attribute in the schema: noCrop </para>
     /// </summary>
-    [SchemaAttr(0, "noCrop", 10)]
+    [SchemaAttr(0, "noCrop")]
+    [Index(10)]
     public BooleanValue NoCrop { get; set; }
 
     /// <summary>
@@ -25868,8 +27583,12 @@ public partial class PictureLocks : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 0)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(0)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -25972,7 +27691,8 @@ public partial class NonVisualPicturePropertiesExtension : OpenXmlCompositeEleme
     /// <para> URI.</para>
     /// <para>Represents the following attribute in the schema: uri </para>
     /// </summary>
-    [SchemaAttr(0, "uri", 0)]
+    [SchemaAttr(0, "uri")]
+    [Index(0)]
     public StringValue Uri { get; set; }
 
     /// <summary>
@@ -26042,43 +27762,50 @@ public partial class GroupShapeLocks : OpenXmlCompositeElement
     /// <para> Disallow Shape Grouping.</para>
     /// <para>Represents the following attribute in the schema: noGrp </para>
     /// </summary>
-    [SchemaAttr(0, "noGrp", 0)]
+    [SchemaAttr(0, "noGrp")]
+    [Index(0)]
     public BooleanValue NoGrouping { get; set; }
     /// <summary>
     /// <para> Disallow Shape Ungrouping.</para>
     /// <para>Represents the following attribute in the schema: noUngrp </para>
     /// </summary>
-    [SchemaAttr(0, "noUngrp", 1)]
+    [SchemaAttr(0, "noUngrp")]
+    [Index(1)]
     public BooleanValue NoUngrouping { get; set; }
     /// <summary>
     /// <para> Disallow Shape Selection.</para>
     /// <para>Represents the following attribute in the schema: noSelect </para>
     /// </summary>
-    [SchemaAttr(0, "noSelect", 2)]
+    [SchemaAttr(0, "noSelect")]
+    [Index(2)]
     public BooleanValue NoSelection { get; set; }
     /// <summary>
     /// <para> Disallow Shape Rotation.</para>
     /// <para>Represents the following attribute in the schema: noRot </para>
     /// </summary>
-    [SchemaAttr(0, "noRot", 3)]
+    [SchemaAttr(0, "noRot")]
+    [Index(3)]
     public BooleanValue NoRotation { get; set; }
     /// <summary>
     /// <para> Disallow Aspect Ratio Change.</para>
     /// <para>Represents the following attribute in the schema: noChangeAspect </para>
     /// </summary>
-    [SchemaAttr(0, "noChangeAspect", 4)]
+    [SchemaAttr(0, "noChangeAspect")]
+    [Index(4)]
     public BooleanValue NoChangeAspect { get; set; }
     /// <summary>
     /// <para> Disallow Moving Shape.</para>
     /// <para>Represents the following attribute in the schema: noMove </para>
     /// </summary>
-    [SchemaAttr(0, "noMove", 5)]
+    [SchemaAttr(0, "noMove")]
+    [Index(5)]
     public BooleanValue NoMove { get; set; }
     /// <summary>
     /// <para> Disallow Shape Resizing.</para>
     /// <para>Represents the following attribute in the schema: noResize </para>
     /// </summary>
-    [SchemaAttr(0, "noResize", 6)]
+    [SchemaAttr(0, "noResize")]
+    [Index(6)]
     public BooleanValue NoResize { get; set; }
 
     /// <summary>
@@ -26125,8 +27852,12 @@ public partial class GroupShapeLocks : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 0)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(0)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -26293,7 +28024,8 @@ public partial class BlipExtension : OpenXmlCompositeElement
     /// <para> URI.</para>
     /// <para>Represents the following attribute in the schema: uri </para>
     /// </summary>
-    [SchemaAttr(0, "uri", 0)]
+    [SchemaAttr(0, "uri")]
+    [Index(0)]
     public StringValue Uri { get; set; }
 
     /// <summary>
@@ -26410,8 +28142,12 @@ public partial class ObjectDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "spDef", 0)]
-    public ShapeDefault ShapeDefault { get; set; }
+	[Index(0)]
+    public ShapeDefault ShapeDefault
+	{
+        get => GetElement<ShapeDefault>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Line Default.</para>
@@ -26420,8 +28156,12 @@ public partial class ObjectDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "lnDef", 1)]
-    public LineDefault LineDefault { get; set; }
+	[Index(1)]
+    public LineDefault LineDefault
+	{
+        get => GetElement<LineDefault>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Text Default.</para>
@@ -26430,8 +28170,12 @@ public partial class ObjectDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "txDef", 2)]
-    public TextDefault TextDefault { get; set; }
+	[Index(2)]
+    public TextDefault TextDefault
+	{
+        get => GetElement<TextDefault>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -26440,8 +28184,12 @@ public partial class ObjectDefaults : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "extLst", 3)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(3)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(3);
+        set => SetElement(3, value);
+	}
     
 
 
@@ -26661,7 +28409,8 @@ public partial class RightToLeft : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public BooleanValue Val { get; set; }
 
     /// <summary>
@@ -26771,7 +28520,8 @@ public partial class DataModelExtension : OpenXmlCompositeElement
     /// <para> URI.</para>
     /// <para>Represents the following attribute in the schema: uri </para>
     /// </summary>
-    [SchemaAttr(0, "uri", 0)]
+    [SchemaAttr(0, "uri")]
+    [Index(0)]
     public StringValue Uri { get; set; }
 
     /// <summary>
@@ -26841,7 +28591,8 @@ public partial class PtExtension : OpenXmlCompositeElement
     /// <para> URI.</para>
     /// <para>Represents the following attribute in the schema: uri </para>
     /// </summary>
-    [SchemaAttr(0, "uri", 0)]
+    [SchemaAttr(0, "uri")]
+    [Index(0)]
     public StringValue Uri { get; set; }
 
     /// <summary>

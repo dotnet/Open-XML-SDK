@@ -77,7 +77,8 @@ namespace DocumentFormat.OpenXml
         /// namespaces a markup consumer needs in order to understand and select that
         /// Choice and process the content.
         /// </summary>
-        [SchemaAttr(0, "Requires", 0)]
+        [SchemaAttr(0, "Requires")]
+        [Index(0)]
         public StringValue Requires { get; set; }
 
         internal override OpenXmlElement ElementFactory(byte namespaceId, string name)

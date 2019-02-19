@@ -36,19 +36,22 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 1)]
+    [SchemaAttr(0, "id")]
+    [Index(1)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> vid.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
     /// </summary>
-    [SchemaAttr(0, "vid", 2)]
+    [SchemaAttr(0, "vid")]
+    [Index(2)]
     public StringValue Vid { get; set; }
 
     /// <summary>
@@ -95,8 +98,12 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:thm15 = http://schemas.microsoft.com/office/thememl/2012/main
     /// </remark>
-	[SchemaAttr(73, "extLst", 0)]
-    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
+	[Index(0)]
+    public OfficeArtExtensionList OfficeArtExtensionList
+	{
+        get => GetElement<OfficeArtExtensionList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -195,25 +202,29 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> vid.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
     /// </summary>
-    [SchemaAttr(0, "vid", 1)]
+    [SchemaAttr(0, "vid")]
+    [Index(1)]
     public StringValue Vid { get; set; }
     /// <summary>
     /// <para> cx.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
-    [SchemaAttr(0, "cx", 2)]
+    [SchemaAttr(0, "cx")]
+    [Index(2)]
     public Int64Value X { get; set; }
     /// <summary>
     /// <para> cy.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
-    [SchemaAttr(0, "cy", 3)]
+    [SchemaAttr(0, "cy")]
+    [Index(3)]
     public Int64Value Y { get; set; }
     /// <summary>
     /// <para> id.</para>
@@ -221,7 +232,8 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id", 4)]
+    [SchemaAttr(19, "id")]
+    [Index(4)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -268,8 +280,12 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:thm15 = http://schemas.microsoft.com/office/thememl/2012/main
     /// </remark>
-	[SchemaAttr(73, "extLst", 0)]
-    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
+	[Index(0)]
+    public OfficeArtExtensionList OfficeArtExtensionList
+	{
+        get => GetElement<OfficeArtExtensionList>(0);
+        set => SetElement(0, value);
+	}
     
 
 

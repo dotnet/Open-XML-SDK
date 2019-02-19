@@ -36,7 +36,8 @@ public partial class TimeSlicer : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
 
     /// <summary>
@@ -83,8 +84,12 @@ public partial class TimeSlicer : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:tsle = http://schemas.microsoft.com/office/drawing/2012/timeslicer
     /// </remark>
-	[SchemaAttr(77, "extLst", 0)]
-    public OfficeArtExtensionList OfficeArtExtensionList { get; set; }
+	[Index(0)]
+    public OfficeArtExtensionList OfficeArtExtensionList
+	{
+        get => GetElement<OfficeArtExtensionList>(0);
+        set => SetElement(0, value);
+	}
     
 
 

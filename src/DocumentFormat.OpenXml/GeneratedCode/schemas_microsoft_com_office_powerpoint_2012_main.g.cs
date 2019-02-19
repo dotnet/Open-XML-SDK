@@ -30,19 +30,22 @@ public partial class PresetTransition : OpenXmlLeafElement
     /// <para> prst.</para>
     /// <para>Represents the following attribute in the schema: prst </para>
     /// </summary>
-    [SchemaAttr(0, "prst", 0)]
+    [SchemaAttr(0, "prst")]
+    [Index(0)]
     public StringValue Preset { get; set; }
     /// <summary>
     /// <para> invX.</para>
     /// <para>Represents the following attribute in the schema: invX </para>
     /// </summary>
-    [SchemaAttr(0, "invX", 1)]
+    [SchemaAttr(0, "invX")]
+    [Index(1)]
     public BooleanValue InvX { get; set; }
     /// <summary>
     /// <para> invY.</para>
     /// <para>Represents the following attribute in the schema: invY </para>
     /// </summary>
-    [SchemaAttr(0, "invY", 2)]
+    [SchemaAttr(0, "invY")]
+    [Index(2)]
     public BooleanValue InvY { get; set; }
 
     /// <summary>
@@ -79,13 +82,15 @@ public partial class PresenceInfo : OpenXmlLeafElement
     /// <para> userId.</para>
     /// <para>Represents the following attribute in the schema: userId </para>
     /// </summary>
-    [SchemaAttr(0, "userId", 0)]
+    [SchemaAttr(0, "userId")]
+    [Index(0)]
     public StringValue UserId { get; set; }
     /// <summary>
     /// <para> providerId.</para>
     /// <para>Represents the following attribute in the schema: providerId </para>
     /// </summary>
-    [SchemaAttr(0, "providerId", 1)]
+    [SchemaAttr(0, "providerId")]
+    [Index(1)]
     public StringValue ProviderId { get; set; }
 
     /// <summary>
@@ -129,7 +134,8 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
     /// <para> timeZoneBias.</para>
     /// <para>Represents the following attribute in the schema: timeZoneBias </para>
     /// </summary>
-    [SchemaAttr(0, "timeZoneBias", 0)]
+    [SchemaAttr(0, "timeZoneBias")]
+    [Index(0)]
     public Int32Value TimeZoneBias { get; set; }
 
     /// <summary>
@@ -176,8 +182,12 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
     /// </remark>
-	[SchemaAttr(68, "parentCm", 0)]
-    public ParentCommentIdentifier ParentCommentIdentifier { get; set; }
+	[Index(0)]
+    public ParentCommentIdentifier ParentCommentIdentifier
+	{
+        get => GetElement<ParentCommentIdentifier>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -374,7 +384,8 @@ public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public BooleanValue Val { get; set; }
 
     /// <summary>
@@ -411,13 +422,15 @@ public partial class ParentCommentIdentifier : OpenXmlLeafElement
     /// <para> authorId.</para>
     /// <para>Represents the following attribute in the schema: authorId </para>
     /// </summary>
-    [SchemaAttr(0, "authorId", 0)]
+    [SchemaAttr(0, "authorId")]
+    [Index(0)]
     public UInt32Value AuthorId { get; set; }
     /// <summary>
     /// <para> idx.</para>
     /// <para>Represents the following attribute in the schema: idx </para>
     /// </summary>
-    [SchemaAttr(0, "idx", 1)]
+    [SchemaAttr(0, "idx")]
+    [Index(1)]
     public UInt32Value Index { get; set; }
 
     /// <summary>
@@ -512,8 +525,12 @@ public partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "scrgbClr", 0)]
-    public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage { get; set; }
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -522,8 +539,12 @@ public partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "srgbClr", 1)]
-    public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex { get; set; }
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -532,8 +553,12 @@ public partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "hslClr", 2)]
-    public DocumentFormat.OpenXml.Drawing.HslColor HslColor { get; set; }
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.HslColor HslColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -542,8 +567,12 @@ public partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "sysClr", 3)]
-    public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor { get; set; }
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -552,8 +581,12 @@ public partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "schemeClr", 4)]
-    public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor { get; set; }
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -562,8 +595,12 @@ public partial class ColorType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[SchemaAttr(10, "prstClr", 5)]
-    public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor { get; set; }
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(5);
+        set => SetElement(5, value);
+	}
     
 
 
@@ -664,31 +701,36 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 1)]
+    [SchemaAttr(0, "name")]
+    [Index(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> orient.</para>
     /// <para>Represents the following attribute in the schema: orient </para>
     /// </summary>
-    [SchemaAttr(0, "orient", 2)]
+    [SchemaAttr(0, "orient")]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Orientation { get; set; }
     /// <summary>
     /// <para> pos.</para>
     /// <para>Represents the following attribute in the schema: pos </para>
     /// </summary>
-    [SchemaAttr(0, "pos", 3)]
+    [SchemaAttr(0, "pos")]
+    [Index(3)]
     public Int32Value Position { get; set; }
     /// <summary>
     /// <para> userDrawn.</para>
     /// <para>Represents the following attribute in the schema: userDrawn </para>
     /// </summary>
-    [SchemaAttr(0, "userDrawn", 4)]
+    [SchemaAttr(0, "userDrawn")]
+    [Index(4)]
     public BooleanValue IsUserDrawn { get; set; }
 
     /// <summary>
@@ -735,8 +777,12 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
     /// </remark>
-	[SchemaAttr(68, "clr", 0)]
-    public ColorType ColorType { get; set; }
+	[Index(0)]
+    public ColorType ColorType
+	{
+        get => GetElement<ColorType>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -745,8 +791,12 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
     /// </remark>
-	[SchemaAttr(68, "extLst", 1)]
-    public ExtensionList ExtensionList { get; set; }
+	[Index(1)]
+    public ExtensionList ExtensionList
+	{
+        get => GetElement<ExtensionList>(1);
+        set => SetElement(1, value);
+	}
     
 
 

@@ -35,19 +35,22 @@ public partial class Sources : OpenXmlPartRootElement
     /// <para> Selected Style.</para>
     /// <para>Represents the following attribute in the schema: SelectedStyle </para>
     /// </summary>
-    [SchemaAttr(0, "SelectedStyle", 0)]
+    [SchemaAttr(0, "SelectedStyle")]
+    [Index(0)]
     public StringValue SelectedStyle { get; set; }
     /// <summary>
     /// <para> Documentation Style Name.</para>
     /// <para>Represents the following attribute in the schema: StyleName </para>
     /// </summary>
-    [SchemaAttr(0, "StyleName", 1)]
+    [SchemaAttr(0, "StyleName")]
+    [Index(1)]
     public StringValue StyleName { get; set; }
     /// <summary>
     /// <para> Uniform Resource Identifier.</para>
     /// <para>Represents the following attribute in the schema: URI </para>
     /// </summary>
-    [SchemaAttr(0, "URI", 2)]
+    [SchemaAttr(0, "URI")]
+    [Index(2)]
     public StringValue Uri { get; set; }
 
     /// <summary>
@@ -3030,8 +3033,12 @@ public abstract partial class NameType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "NameList", 0)]
-    public NameList NameList { get; set; }
+	[Index(0)]
+    public NameList NameList
+	{
+        get => GetElement<NameList>(0);
+        set => SetElement(0, value);
+	}
     
 
 
@@ -3212,8 +3219,12 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "NameList", 0)]
-    public NameList NameList { get; set; }
+	[Index(0)]
+    public NameList NameList
+	{
+        get => GetElement<NameList>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Corporate Author.</para>
@@ -3222,8 +3233,12 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Corporate", 1)]
-    public Corporate Corporate { get; set; }
+	[Index(1)]
+    public Corporate Corporate
+	{
+        get => GetElement<Corporate>(1);
+        set => SetElement(1, value);
+	}
     
 
 
@@ -3360,8 +3375,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Artist", 0)]
-    public Artist Artist { get; set; }
+	[Index(0)]
+    public Artist Artist
+	{
+        get => GetElement<Artist>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Author.</para>
@@ -3370,8 +3389,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Author", 1)]
-    public Author Author { get; set; }
+	[Index(1)]
+    public Author Author
+	{
+        get => GetElement<Author>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Book Author.</para>
@@ -3380,8 +3403,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "BookAuthor", 2)]
-    public BookAuthor BookAuthor { get; set; }
+	[Index(2)]
+    public BookAuthor BookAuthor
+	{
+        get => GetElement<BookAuthor>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Compiler.</para>
@@ -3390,8 +3417,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Compiler", 3)]
-    public Compiler Compiler { get; set; }
+	[Index(3)]
+    public Compiler Compiler
+	{
+        get => GetElement<Compiler>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Composer.</para>
@@ -3400,8 +3431,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Composer", 4)]
-    public Composer Composer { get; set; }
+	[Index(4)]
+    public Composer Composer
+	{
+        get => GetElement<Composer>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Conductor.</para>
@@ -3410,8 +3445,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Conductor", 5)]
-    public Conductor Conductor { get; set; }
+	[Index(5)]
+    public Conductor Conductor
+	{
+        get => GetElement<Conductor>(5);
+        set => SetElement(5, value);
+	}
     
     /// <summary>
     /// <para> Counsel.</para>
@@ -3420,8 +3459,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Counsel", 6)]
-    public Counsel Counsel { get; set; }
+	[Index(6)]
+    public Counsel Counsel
+	{
+        get => GetElement<Counsel>(6);
+        set => SetElement(6, value);
+	}
     
     /// <summary>
     /// <para> Director.</para>
@@ -3430,8 +3473,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Director", 7)]
-    public Director Director { get; set; }
+	[Index(7)]
+    public Director Director
+	{
+        get => GetElement<Director>(7);
+        set => SetElement(7, value);
+	}
     
     /// <summary>
     /// <para> Editor.</para>
@@ -3440,8 +3487,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Editor", 8)]
-    public Editor Editor { get; set; }
+	[Index(8)]
+    public Editor Editor
+	{
+        get => GetElement<Editor>(8);
+        set => SetElement(8, value);
+	}
     
     /// <summary>
     /// <para> Interviewee.</para>
@@ -3450,8 +3501,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Interviewee", 9)]
-    public Interviewee Interviewee { get; set; }
+	[Index(9)]
+    public Interviewee Interviewee
+	{
+        get => GetElement<Interviewee>(9);
+        set => SetElement(9, value);
+	}
     
     /// <summary>
     /// <para> Interviewer.</para>
@@ -3460,8 +3515,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Interviewer", 10)]
-    public Interviewer Interviewer { get; set; }
+	[Index(10)]
+    public Interviewer Interviewer
+	{
+        get => GetElement<Interviewer>(10);
+        set => SetElement(10, value);
+	}
     
     /// <summary>
     /// <para> Inventor.</para>
@@ -3470,8 +3529,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Inventor", 11)]
-    public Inventor Inventor { get; set; }
+	[Index(11)]
+    public Inventor Inventor
+	{
+        get => GetElement<Inventor>(11);
+        set => SetElement(11, value);
+	}
     
     /// <summary>
     /// <para> Performer.</para>
@@ -3480,8 +3543,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Performer", 12)]
-    public Performer Performer { get; set; }
+	[Index(12)]
+    public Performer Performer
+	{
+        get => GetElement<Performer>(12);
+        set => SetElement(12, value);
+	}
     
     /// <summary>
     /// <para> Producer Name.</para>
@@ -3490,8 +3557,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "ProducerName", 13)]
-    public ProducerName ProducerName { get; set; }
+	[Index(13)]
+    public ProducerName ProducerName
+	{
+        get => GetElement<ProducerName>(13);
+        set => SetElement(13, value);
+	}
     
     /// <summary>
     /// <para> Translator.</para>
@@ -3500,8 +3571,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Translator", 14)]
-    public Translator Translator { get; set; }
+	[Index(14)]
+    public Translator Translator
+	{
+        get => GetElement<Translator>(14);
+        set => SetElement(14, value);
+	}
     
     /// <summary>
     /// <para> Writer.</para>
@@ -3510,8 +3585,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Writer", 15)]
-    public Writer Writer { get; set; }
+	[Index(15)]
+    public Writer Writer
+	{
+        get => GetElement<Writer>(15);
+        set => SetElement(15, value);
+	}
     
 
 
@@ -3733,8 +3812,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "AbbreviatedCaseNumber", 0)]
-    public AbbreviatedCaseNumber AbbreviatedCaseNumber { get; set; }
+	[Index(0)]
+    public AbbreviatedCaseNumber AbbreviatedCaseNumber
+	{
+        get => GetElement<AbbreviatedCaseNumber>(0);
+        set => SetElement(0, value);
+	}
     
     /// <summary>
     /// <para> Album Title.</para>
@@ -3743,8 +3826,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "AlbumTitle", 1)]
-    public AlbumTitle AlbumTitle { get; set; }
+	[Index(1)]
+    public AlbumTitle AlbumTitle
+	{
+        get => GetElement<AlbumTitle>(1);
+        set => SetElement(1, value);
+	}
     
     /// <summary>
     /// <para> Contributors List.</para>
@@ -3753,8 +3840,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Author", 2)]
-    public AuthorList AuthorList { get; set; }
+	[Index(2)]
+    public AuthorList AuthorList
+	{
+        get => GetElement<AuthorList>(2);
+        set => SetElement(2, value);
+	}
     
     /// <summary>
     /// <para> Book Title.</para>
@@ -3763,8 +3854,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "BookTitle", 3)]
-    public BookTitle BookTitle { get; set; }
+	[Index(3)]
+    public BookTitle BookTitle
+	{
+        get => GetElement<BookTitle>(3);
+        set => SetElement(3, value);
+	}
     
     /// <summary>
     /// <para> Broadcaster.</para>
@@ -3773,8 +3868,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Broadcaster", 4)]
-    public Broadcaster Broadcaster { get; set; }
+	[Index(4)]
+    public Broadcaster Broadcaster
+	{
+        get => GetElement<Broadcaster>(4);
+        set => SetElement(4, value);
+	}
     
     /// <summary>
     /// <para> Broadcast Title.</para>
@@ -3783,8 +3882,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "BroadcastTitle", 5)]
-    public BroadcastTitle BroadcastTitle { get; set; }
+	[Index(5)]
+    public BroadcastTitle BroadcastTitle
+	{
+        get => GetElement<BroadcastTitle>(5);
+        set => SetElement(5, value);
+	}
     
     /// <summary>
     /// <para> Case Number.</para>
@@ -3793,8 +3896,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "CaseNumber", 6)]
-    public CaseNumber CaseNumber { get; set; }
+	[Index(6)]
+    public CaseNumber CaseNumber
+	{
+        get => GetElement<CaseNumber>(6);
+        set => SetElement(6, value);
+	}
     
     /// <summary>
     /// <para> Chapter Number.</para>
@@ -3803,8 +3910,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "ChapterNumber", 7)]
-    public ChapterNumber ChapterNumber { get; set; }
+	[Index(7)]
+    public ChapterNumber ChapterNumber
+	{
+        get => GetElement<ChapterNumber>(7);
+        set => SetElement(7, value);
+	}
     
     /// <summary>
     /// <para> City.</para>
@@ -3813,8 +3924,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "City", 8)]
-    public City City { get; set; }
+	[Index(8)]
+    public City City
+	{
+        get => GetElement<City>(8);
+        set => SetElement(8, value);
+	}
     
     /// <summary>
     /// <para> Comments.</para>
@@ -3823,8 +3938,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Comments", 9)]
-    public Comments Comments { get; set; }
+	[Index(9)]
+    public Comments Comments
+	{
+        get => GetElement<Comments>(9);
+        set => SetElement(9, value);
+	}
     
     /// <summary>
     /// <para> Conference or Proceedings Name.</para>
@@ -3833,8 +3952,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "ConferenceName", 10)]
-    public ConferenceName ConferenceName { get; set; }
+	[Index(10)]
+    public ConferenceName ConferenceName
+	{
+        get => GetElement<ConferenceName>(10);
+        set => SetElement(10, value);
+	}
     
     /// <summary>
     /// <para> Country or Region.</para>
@@ -3843,8 +3966,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "CountryRegion", 11)]
-    public CountryRegion CountryRegion { get; set; }
+	[Index(11)]
+    public CountryRegion CountryRegion
+	{
+        get => GetElement<CountryRegion>(11);
+        set => SetElement(11, value);
+	}
     
     /// <summary>
     /// <para> Court.</para>
@@ -3853,8 +3980,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Court", 12)]
-    public Court Court { get; set; }
+	[Index(12)]
+    public Court Court
+	{
+        get => GetElement<Court>(12);
+        set => SetElement(12, value);
+	}
     
     /// <summary>
     /// <para> Day.</para>
@@ -3863,8 +3994,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Day", 13)]
-    public Day Day { get; set; }
+	[Index(13)]
+    public Day Day
+	{
+        get => GetElement<Day>(13);
+        set => SetElement(13, value);
+	}
     
     /// <summary>
     /// <para> Day Accessed.</para>
@@ -3873,8 +4008,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "DayAccessed", 14)]
-    public DayAccessed DayAccessed { get; set; }
+	[Index(14)]
+    public DayAccessed DayAccessed
+	{
+        get => GetElement<DayAccessed>(14);
+        set => SetElement(14, value);
+	}
     
     /// <summary>
     /// <para> Department.</para>
@@ -3883,8 +4022,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Department", 15)]
-    public Department Department { get; set; }
+	[Index(15)]
+    public Department Department
+	{
+        get => GetElement<Department>(15);
+        set => SetElement(15, value);
+	}
     
     /// <summary>
     /// <para> Distributor.</para>
@@ -3893,8 +4036,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Distributor", 16)]
-    public Distributor Distributor { get; set; }
+	[Index(16)]
+    public Distributor Distributor
+	{
+        get => GetElement<Distributor>(16);
+        set => SetElement(16, value);
+	}
     
     /// <summary>
     /// <para> Editor.</para>
@@ -3903,8 +4050,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Edition", 17)]
-    public Edition Edition { get; set; }
+	[Index(17)]
+    public Edition Edition
+	{
+        get => GetElement<Edition>(17);
+        set => SetElement(17, value);
+	}
     
     /// <summary>
     /// <para> GUID.</para>
@@ -3913,8 +4064,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Guid", 18)]
-    public GuidString GuidString { get; set; }
+	[Index(18)]
+    public GuidString GuidString
+	{
+        get => GetElement<GuidString>(18);
+        set => SetElement(18, value);
+	}
     
     /// <summary>
     /// <para> Institution.</para>
@@ -3923,8 +4078,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Institution", 19)]
-    public Institution Institution { get; set; }
+	[Index(19)]
+    public Institution Institution
+	{
+        get => GetElement<Institution>(19);
+        set => SetElement(19, value);
+	}
     
     /// <summary>
     /// <para> Internet Site Title.</para>
@@ -3933,8 +4092,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "InternetSiteTitle", 20)]
-    public InternetSiteTitle InternetSiteTitle { get; set; }
+	[Index(20)]
+    public InternetSiteTitle InternetSiteTitle
+	{
+        get => GetElement<InternetSiteTitle>(20);
+        set => SetElement(20, value);
+	}
     
     /// <summary>
     /// <para> Issue.</para>
@@ -3943,8 +4106,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Issue", 21)]
-    public Issue Issue { get; set; }
+	[Index(21)]
+    public Issue Issue
+	{
+        get => GetElement<Issue>(21);
+        set => SetElement(21, value);
+	}
     
     /// <summary>
     /// <para> Journal Name.</para>
@@ -3953,8 +4120,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "JournalName", 22)]
-    public JournalName JournalName { get; set; }
+	[Index(22)]
+    public JournalName JournalName
+	{
+        get => GetElement<JournalName>(22);
+        set => SetElement(22, value);
+	}
     
     /// <summary>
     /// <para> Locale ID.</para>
@@ -3963,8 +4134,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "LCID", 23)]
-    public LcId LcId { get; set; }
+	[Index(23)]
+    public LcId LcId
+	{
+        get => GetElement<LcId>(23);
+        set => SetElement(23, value);
+	}
     
     /// <summary>
     /// <para> Medium.</para>
@@ -3973,8 +4148,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Medium", 24)]
-    public Medium Medium { get; set; }
+	[Index(24)]
+    public Medium Medium
+	{
+        get => GetElement<Medium>(24);
+        set => SetElement(24, value);
+	}
     
     /// <summary>
     /// <para> Month.</para>
@@ -3983,8 +4162,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Month", 25)]
-    public Month Month { get; set; }
+	[Index(25)]
+    public Month Month
+	{
+        get => GetElement<Month>(25);
+        set => SetElement(25, value);
+	}
     
     /// <summary>
     /// <para> Month Accessed.</para>
@@ -3993,8 +4176,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "MonthAccessed", 26)]
-    public MonthAccessed MonthAccessed { get; set; }
+	[Index(26)]
+    public MonthAccessed MonthAccessed
+	{
+        get => GetElement<MonthAccessed>(26);
+        set => SetElement(26, value);
+	}
     
     /// <summary>
     /// <para> Number of Volumes.</para>
@@ -4003,8 +4190,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "NumberVolumes", 27)]
-    public NumberVolumes NumberVolumes { get; set; }
+	[Index(27)]
+    public NumberVolumes NumberVolumes
+	{
+        get => GetElement<NumberVolumes>(27);
+        set => SetElement(27, value);
+	}
     
     /// <summary>
     /// <para> Pages.</para>
@@ -4013,8 +4204,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Pages", 28)]
-    public Pages Pages { get; set; }
+	[Index(28)]
+    public Pages Pages
+	{
+        get => GetElement<Pages>(28);
+        set => SetElement(28, value);
+	}
     
     /// <summary>
     /// <para> Patent Number.</para>
@@ -4023,8 +4218,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "PatentNumber", 29)]
-    public PatentNumber PatentNumber { get; set; }
+	[Index(29)]
+    public PatentNumber PatentNumber
+	{
+        get => GetElement<PatentNumber>(29);
+        set => SetElement(29, value);
+	}
     
     /// <summary>
     /// <para> Periodical Title.</para>
@@ -4033,8 +4232,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "PeriodicalTitle", 30)]
-    public PeriodicalTitle PeriodicalTitle { get; set; }
+	[Index(30)]
+    public PeriodicalTitle PeriodicalTitle
+	{
+        get => GetElement<PeriodicalTitle>(30);
+        set => SetElement(30, value);
+	}
     
     /// <summary>
     /// <para> Production Company.</para>
@@ -4043,8 +4246,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "ProductionCompany", 31)]
-    public ProductionCompany ProductionCompany { get; set; }
+	[Index(31)]
+    public ProductionCompany ProductionCompany
+	{
+        get => GetElement<ProductionCompany>(31);
+        set => SetElement(31, value);
+	}
     
     /// <summary>
     /// <para> Publication Title.</para>
@@ -4053,8 +4260,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "PublicationTitle", 32)]
-    public PublicationTitle PublicationTitle { get; set; }
+	[Index(32)]
+    public PublicationTitle PublicationTitle
+	{
+        get => GetElement<PublicationTitle>(32);
+        set => SetElement(32, value);
+	}
     
     /// <summary>
     /// <para> Publisher.</para>
@@ -4063,8 +4274,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Publisher", 33)]
-    public Publisher Publisher { get; set; }
+	[Index(33)]
+    public Publisher Publisher
+	{
+        get => GetElement<Publisher>(33);
+        set => SetElement(33, value);
+	}
     
     /// <summary>
     /// <para> Recording Number.</para>
@@ -4073,8 +4288,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "RecordingNumber", 34)]
-    public RecordingNumber RecordingNumber { get; set; }
+	[Index(34)]
+    public RecordingNumber RecordingNumber
+	{
+        get => GetElement<RecordingNumber>(34);
+        set => SetElement(34, value);
+	}
     
     /// <summary>
     /// <para> Reference Order.</para>
@@ -4083,8 +4302,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "RefOrder", 35)]
-    public ReferenceOrder ReferenceOrder { get; set; }
+	[Index(35)]
+    public ReferenceOrder ReferenceOrder
+	{
+        get => GetElement<ReferenceOrder>(35);
+        set => SetElement(35, value);
+	}
     
     /// <summary>
     /// <para> Reporter.</para>
@@ -4093,8 +4316,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Reporter", 36)]
-    public Reporter Reporter { get; set; }
+	[Index(36)]
+    public Reporter Reporter
+	{
+        get => GetElement<Reporter>(36);
+        set => SetElement(36, value);
+	}
     
     /// <summary>
     /// <para> Source Type.</para>
@@ -4103,8 +4330,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "SourceType", 37)]
-    public SourceType SourceType { get; set; }
+	[Index(37)]
+    public SourceType SourceType
+	{
+        get => GetElement<SourceType>(37);
+        set => SetElement(37, value);
+	}
     
     /// <summary>
     /// <para> Short Title.</para>
@@ -4113,8 +4344,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "ShortTitle", 38)]
-    public ShortTitle ShortTitle { get; set; }
+	[Index(38)]
+    public ShortTitle ShortTitle
+	{
+        get => GetElement<ShortTitle>(38);
+        set => SetElement(38, value);
+	}
     
     /// <summary>
     /// <para> Standard Number.</para>
@@ -4123,8 +4358,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "StandardNumber", 39)]
-    public StandardNumber StandardNumber { get; set; }
+	[Index(39)]
+    public StandardNumber StandardNumber
+	{
+        get => GetElement<StandardNumber>(39);
+        set => SetElement(39, value);
+	}
     
     /// <summary>
     /// <para> State or Province.</para>
@@ -4133,8 +4372,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "StateProvince", 40)]
-    public StateProvince StateProvince { get; set; }
+	[Index(40)]
+    public StateProvince StateProvince
+	{
+        get => GetElement<StateProvince>(40);
+        set => SetElement(40, value);
+	}
     
     /// <summary>
     /// <para> Station.</para>
@@ -4143,8 +4386,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Station", 41)]
-    public Station Station { get; set; }
+	[Index(41)]
+    public Station Station
+	{
+        get => GetElement<Station>(41);
+        set => SetElement(41, value);
+	}
     
     /// <summary>
     /// <para> Tag.</para>
@@ -4153,8 +4400,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Tag", 42)]
-    public Tag Tag { get; set; }
+	[Index(42)]
+    public Tag Tag
+	{
+        get => GetElement<Tag>(42);
+        set => SetElement(42, value);
+	}
     
     /// <summary>
     /// <para> Theater.</para>
@@ -4163,8 +4414,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Theater", 43)]
-    public Theater Theater { get; set; }
+	[Index(43)]
+    public Theater Theater
+	{
+        get => GetElement<Theater>(43);
+        set => SetElement(43, value);
+	}
     
     /// <summary>
     /// <para> Thesis Type.</para>
@@ -4173,8 +4428,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "ThesisType", 44)]
-    public ThesisType ThesisType { get; set; }
+	[Index(44)]
+    public ThesisType ThesisType
+	{
+        get => GetElement<ThesisType>(44);
+        set => SetElement(44, value);
+	}
     
     /// <summary>
     /// <para> Title.</para>
@@ -4183,8 +4442,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Title", 45)]
-    public Title Title { get; set; }
+	[Index(45)]
+    public Title Title
+	{
+        get => GetElement<Title>(45);
+        set => SetElement(45, value);
+	}
     
     /// <summary>
     /// <para> Type.</para>
@@ -4193,8 +4456,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Type", 46)]
-    public PatentType PatentType { get; set; }
+	[Index(46)]
+    public PatentType PatentType
+	{
+        get => GetElement<PatentType>(46);
+        set => SetElement(46, value);
+	}
     
     /// <summary>
     /// <para> URL.</para>
@@ -4203,8 +4470,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "URL", 47)]
-    public UrlString UrlString { get; set; }
+	[Index(47)]
+    public UrlString UrlString
+	{
+        get => GetElement<UrlString>(47);
+        set => SetElement(47, value);
+	}
     
     /// <summary>
     /// <para> Version.</para>
@@ -4213,8 +4484,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Version", 48)]
-    public Version Version { get; set; }
+	[Index(48)]
+    public Version Version
+	{
+        get => GetElement<Version>(48);
+        set => SetElement(48, value);
+	}
     
     /// <summary>
     /// <para> Volume.</para>
@@ -4223,8 +4498,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Volume", 49)]
-    public Volume Volume { get; set; }
+	[Index(49)]
+    public Volume Volume
+	{
+        get => GetElement<Volume>(49);
+        set => SetElement(49, value);
+	}
     
     /// <summary>
     /// <para> Year.</para>
@@ -4233,8 +4512,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "Year", 50)]
-    public Year Year { get; set; }
+	[Index(50)]
+    public Year Year
+	{
+        get => GetElement<Year>(50);
+        set => SetElement(50, value);
+	}
     
     /// <summary>
     /// <para> Year Accessed.</para>
@@ -4243,8 +4526,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
-	[SchemaAttr(9, "YearAccessed", 51)]
-    public YearAccessed YearAccessed { get; set; }
+	[Index(51)]
+    public YearAccessed YearAccessed
+	{
+        get => GetElement<YearAccessed>(51);
+        set => SetElement(51, value);
+	}
     
 
 
