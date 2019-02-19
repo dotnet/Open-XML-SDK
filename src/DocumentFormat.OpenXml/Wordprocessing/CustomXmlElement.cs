@@ -65,6 +65,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// </remark>
         [SchemaAttr(0, "customXmlPr")]
         [Index(0)]
-        public CustomXmlProperties CustomXmlProperties { get; set; }
+        public CustomXmlProperties CustomXmlProperties
+        {
+            get => GetElement<CustomXmlProperties>(0);
+            set => SetElement(0, value);
+        }
     }
 }
