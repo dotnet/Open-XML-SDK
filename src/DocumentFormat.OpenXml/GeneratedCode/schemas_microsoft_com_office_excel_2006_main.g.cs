@@ -79,11 +79,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
 public partial class Macrosheet : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12600;
-    /// <inheritdoc/>
-    public override string LocalName => "macrosheet";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -152,13 +148,7 @@ public partial class Macrosheet : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "sheetPr","dimension","sheetViews","sheetFormatPr","cols","sheetData","sheetProtection","autoFilter","sortState","dataConsolidate","customSheetViews","phoneticPr","conditionalFormatting","printOptions","pageMargins","pageSetup","headerFooter","rowBreaks","colBreaks","customProperties","drawing","legacyDrawing","legacyDrawingHF","picture","oleObjects","drawingHF","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Sheet Properties.</para>
@@ -167,11 +157,12 @@ public partial class Macrosheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Spreadsheet.SheetProperties SheetProperties
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Macro Sheet Dimensions.</para>
@@ -180,11 +171,12 @@ public partial class Macrosheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Spreadsheet.SheetDimension SheetDimension
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Macro Sheet Views.</para>
@@ -193,11 +185,12 @@ public partial class Macrosheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
+	[Index(2)]
     public DocumentFormat.OpenXml.Spreadsheet.SheetViews SheetViews
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Sheet Format Properties.</para>
@@ -206,11 +199,12 @@ public partial class Macrosheet : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
     /// </remark>
+	[Index(3)]
     public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties SheetFormatProperties
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>(3);
         set => SetElement(3, value);
-    }
+	}
     
 
 
@@ -238,11 +232,7 @@ public partial class Macrosheet : OpenXmlPartRootElement
 public partial class WorksheetSortMap : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12601;
-    /// <inheritdoc/>
-    public override string LocalName => "worksheetSortMap";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -311,13 +301,7 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "rowSortMap","colSortMap" };
-    private static readonly byte[] eleNamespaceIds = { 32,32 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Row Sort Map.</para>
@@ -326,11 +310,12 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
     /// </remark>
+	[Index(0)]
     public RowSortMap RowSortMap
-    {
+	{
         get => GetElement<RowSortMap>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Column Sort Map.</para>
@@ -339,11 +324,12 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
     /// </remark>
+	[Index(1)]
     public ColumnSortMap ColumnSortMap
-    {
+	{
         get => GetElement<ColumnSortMap>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -363,11 +349,7 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
 public partial class ReferenceSequence : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12602;
-    /// <inheritdoc/>
-    public override string LocalName => "sqref";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -411,11 +393,7 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
 public partial class Formula : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12603;
-    /// <inheritdoc/>
-    public override string LocalName => "f";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -466,11 +444,7 @@ public partial class Formula : OpenXmlLeafTextElement
 public partial class RowSortMap : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12604;
-    /// <inheritdoc/>
-    public override string LocalName => "rowSortMap";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -478,13 +452,15 @@ public partial class RowSortMap : OpenXmlCompositeElement
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
-    [SchemaAttr(0, "ref", 0)]
+    [SchemaAttr(0, "ref")]
+    [Index(0)]
     public StringValue Ref { get; set; }
     /// <summary>
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count", 1)]
+    [SchemaAttr(0, "count")]
+    [Index(1)]
     public UInt32Value Count { get; set; }
 
     /// <summary>
@@ -546,11 +522,7 @@ public partial class RowSortMap : OpenXmlCompositeElement
 public partial class ColumnSortMap : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12605;
-    /// <inheritdoc/>
-    public override string LocalName => "colSortMap";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -558,13 +530,15 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
-    [SchemaAttr(0, "ref", 0)]
+    [SchemaAttr(0, "ref")]
+    [Index(0)]
     public StringValue Ref { get; set; }
     /// <summary>
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count", 1)]
+    [SchemaAttr(0, "count")]
+    [Index(1)]
     public UInt32Value Count { get; set; }
 
     /// <summary>
@@ -619,11 +593,7 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
 public partial class RowSortMapItem : SortMapItemType
 {
     internal const int ElementTypeIdConst = 12606;
-    /// <inheritdoc/>
-    public override string LocalName => "row";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the RowSortMapItem class.
@@ -647,11 +617,7 @@ public partial class RowSortMapItem : SortMapItemType
 public partial class ColumnSortMapItem : SortMapItemType
 {
     internal const int ElementTypeIdConst = 12607;
-    /// <inheritdoc/>
-    public override string LocalName => "col";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ColumnSortMapItem class.
@@ -675,13 +641,15 @@ public abstract partial class SortMapItemType : OpenXmlLeafElement
     /// <para> New Value.</para>
     /// <para>Represents the following attribute in the schema: newVal </para>
     /// </summary>
-    [SchemaAttr(0, "newVal", 0)]
+    [SchemaAttr(0, "newVal")]
+    [Index(0)]
     public UInt32Value NewVal { get; set; }
     /// <summary>
     /// <para> Old Value.</para>
     /// <para>Represents the following attribute in the schema: oldVal </para>
     /// </summary>
-    [SchemaAttr(0, "oldVal", 1)]
+    [SchemaAttr(0, "oldVal")]
+    [Index(1)]
     public UInt32Value OldVal { get; set; }
 
     

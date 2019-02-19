@@ -37,11 +37,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
 public partial class CoverPageProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12692;
-    /// <inheritdoc/>
-    public override string LocalName => "CoverPageProperties";
-    internal override byte NamespaceId => 36;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -81,13 +77,7 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "PublishDate","Abstract","CompanyAddress","CompanyPhone","CompanyFax","CompanyEmail" };
-    private static readonly byte[] eleNamespaceIds = { 36,36,36,36,36,36 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PublishDate.</para>
@@ -96,11 +86,12 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
+	[Index(0)]
     public PublishDate PublishDate
-    {
+	{
         get => GetElement<PublishDate>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> DocumentAbstract.</para>
@@ -109,11 +100,12 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
+	[Index(1)]
     public DocumentAbstract DocumentAbstract
-    {
+	{
         get => GetElement<DocumentAbstract>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> CompanyAddress.</para>
@@ -122,11 +114,12 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
+	[Index(2)]
     public CompanyAddress CompanyAddress
-    {
+	{
         get => GetElement<CompanyAddress>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> CompanyPhoneNumber.</para>
@@ -135,11 +128,12 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
+	[Index(3)]
     public CompanyPhoneNumber CompanyPhoneNumber
-    {
+	{
         get => GetElement<CompanyPhoneNumber>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> CompanyFaxNumber.</para>
@@ -148,11 +142,12 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
+	[Index(4)]
     public CompanyFaxNumber CompanyFaxNumber
-    {
+	{
         get => GetElement<CompanyFaxNumber>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> CompanyEmailAddress.</para>
@@ -161,11 +156,12 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
+	[Index(5)]
     public CompanyEmailAddress CompanyEmailAddress
-    {
+	{
         get => GetElement<CompanyEmailAddress>(5);
         set => SetElement(5, value);
-    }
+	}
     
 
 
@@ -185,11 +181,7 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
 public partial class PublishDate : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12693;
-    /// <inheritdoc/>
-    public override string LocalName => "PublishDate";
-    internal override byte NamespaceId => 36;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -233,11 +225,7 @@ public partial class PublishDate : OpenXmlLeafTextElement
 public partial class DocumentAbstract : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12694;
-    /// <inheritdoc/>
-    public override string LocalName => "Abstract";
-    internal override byte NamespaceId => 36;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the DocumentAbstract class.
@@ -274,11 +262,7 @@ public partial class DocumentAbstract : OpenXmlLeafTextElement
 public partial class CompanyAddress : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12695;
-    /// <inheritdoc/>
-    public override string LocalName => "CompanyAddress";
-    internal override byte NamespaceId => 36;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the CompanyAddress class.
@@ -315,11 +299,7 @@ public partial class CompanyAddress : OpenXmlLeafTextElement
 public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12696;
-    /// <inheritdoc/>
-    public override string LocalName => "CompanyPhone";
-    internal override byte NamespaceId => 36;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the CompanyPhoneNumber class.
@@ -356,11 +336,7 @@ public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
 public partial class CompanyFaxNumber : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12697;
-    /// <inheritdoc/>
-    public override string LocalName => "CompanyFax";
-    internal override byte NamespaceId => 36;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the CompanyFaxNumber class.
@@ -397,11 +373,7 @@ public partial class CompanyFaxNumber : OpenXmlLeafTextElement
 public partial class CompanyEmailAddress : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12698;
-    /// <inheritdoc/>
-    public override string LocalName => "CompanyEmail";
-    internal override byte NamespaceId => 36;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the CompanyEmailAddress class.

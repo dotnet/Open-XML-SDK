@@ -17,11 +17,6 @@ namespace DocumentFormat.OpenXml
         /// <param name="nsId">Specifies the Namespace Id of the schema attribute.</param>
         /// <param name="tag">Specifies the Tag name of the schema attribute.</param>
         public SchemaAttrAttribute(byte nsId, string tag)
-            : this(nsId, tag, byte.MaxValue)
-        {
-        }
-
-        internal SchemaAttrAttribute(byte nsId, string tag, byte index)
         {
             if (string.IsNullOrEmpty(tag))
             {
@@ -30,7 +25,6 @@ namespace DocumentFormat.OpenXml
 
             NamespaceId = nsId;
             Tag = tag;
-            Index = index;
         }
 
         internal SchemaAttrAttribute(string ns, string tag)
@@ -47,8 +41,6 @@ namespace DocumentFormat.OpenXml
         /// Gets the id of the namespace
         /// </summary>
         internal byte NamespaceId { get; }
-
-        internal byte Index { get; }
 
         /// <summary>
         /// Gets the Namespace Uri of the schema attribute.

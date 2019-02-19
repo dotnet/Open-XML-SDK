@@ -38,11 +38,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
 public partial class PivotOptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12762;
-    /// <inheritdoc/>
-    public override string LocalName => "pivotOptions";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -82,13 +78,7 @@ public partial class PivotOptions : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "dropZoneFilter","dropZoneCategories","dropZoneData","dropZoneSeries","dropZonesVisible" };
-    private static readonly byte[] eleNamespaceIds = { 46,46,46,46,46 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> DropZoneFilter.</para>
@@ -97,11 +87,12 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
+	[Index(0)]
     public DropZoneFilter DropZoneFilter
-    {
+	{
         get => GetElement<DropZoneFilter>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> DropZoneCategories.</para>
@@ -110,11 +101,12 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
+	[Index(1)]
     public DropZoneCategories DropZoneCategories
-    {
+	{
         get => GetElement<DropZoneCategories>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> DropZoneData.</para>
@@ -123,11 +115,12 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
+	[Index(2)]
     public DropZoneData DropZoneData
-    {
+	{
         get => GetElement<DropZoneData>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> DropZoneSeries.</para>
@@ -136,11 +129,12 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
+	[Index(3)]
     public DropZoneSeries DropZoneSeries
-    {
+	{
         get => GetElement<DropZoneSeries>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> DropZonesVisible.</para>
@@ -149,11 +143,12 @@ public partial class PivotOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
+	[Index(4)]
     public DropZonesVisible DropZonesVisible
-    {
+	{
         get => GetElement<DropZonesVisible>(4);
         set => SetElement(4, value);
-    }
+	}
     
 
 
@@ -182,11 +177,7 @@ public partial class PivotOptions : OpenXmlCompositeElement
 public partial class SketchOptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12763;
-    /// <inheritdoc/>
-    public override string LocalName => "sketchOptions";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -226,13 +217,7 @@ public partial class SketchOptions : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "inSketchMode","showSketchBtn" };
-    private static readonly byte[] eleNamespaceIds = { 46,46 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> InSketchMode.</para>
@@ -241,11 +226,12 @@ public partial class SketchOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
+	[Index(0)]
     public InSketchMode InSketchMode
-    {
+	{
         get => GetElement<InSketchMode>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> ShowSketchButton.</para>
@@ -254,11 +240,12 @@ public partial class SketchOptions : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
+	[Index(1)]
     public ShowSketchButton ShowSketchButton
-    {
+	{
         get => GetElement<ShowSketchButton>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -285,11 +272,7 @@ public partial class SketchOptions : OpenXmlCompositeElement
 public partial class InvertSolidFillFormat : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12764;
-    /// <inheritdoc/>
-    public override string LocalName => "invertSolidFillFmt";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -329,13 +312,7 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "spPr" };
-    private static readonly byte[] eleNamespaceIds = { 46 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ShapeProperties.</para>
@@ -344,11 +321,12 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
+	[Index(0)]
     public ShapeProperties ShapeProperties
-    {
+	{
         get => GetElement<ShapeProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -368,11 +346,7 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
 public partial class Style : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12765;
-    /// <inheritdoc/>
-    public override string LocalName => "style";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -380,7 +354,8 @@ public partial class Style : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public ByteValue Val { get; set; }
 
     /// <summary>
@@ -444,11 +419,7 @@ public partial class Style : OpenXmlLeafElement
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12766;
-    /// <inheritdoc/>
-    public override string LocalName => "spPr";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -456,7 +427,8 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode", 0)]
+    [SchemaAttr(0, "bwMode")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -494,13 +466,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "xfrm","custGeom","prstGeom","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","ln","effectLst","effectDag","scene3d","sp3d","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
@@ -509,11 +475,12 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -533,11 +500,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
 public partial class DropZoneFilter : BooleanFalseType
 {
     internal const int ElementTypeIdConst = 12767;
-    /// <inheritdoc/>
-    public override string LocalName => "dropZoneFilter";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the DropZoneFilter class.
@@ -561,11 +524,7 @@ public partial class DropZoneFilter : BooleanFalseType
 public partial class DropZoneCategories : BooleanFalseType
 {
     internal const int ElementTypeIdConst = 12768;
-    /// <inheritdoc/>
-    public override string LocalName => "dropZoneCategories";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the DropZoneCategories class.
@@ -589,11 +548,7 @@ public partial class DropZoneCategories : BooleanFalseType
 public partial class DropZoneData : BooleanFalseType
 {
     internal const int ElementTypeIdConst = 12769;
-    /// <inheritdoc/>
-    public override string LocalName => "dropZoneData";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the DropZoneData class.
@@ -617,11 +572,7 @@ public partial class DropZoneData : BooleanFalseType
 public partial class DropZoneSeries : BooleanFalseType
 {
     internal const int ElementTypeIdConst = 12770;
-    /// <inheritdoc/>
-    public override string LocalName => "dropZoneSeries";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the DropZoneSeries class.
@@ -645,11 +596,7 @@ public partial class DropZoneSeries : BooleanFalseType
 public partial class DropZonesVisible : BooleanFalseType
 {
     internal const int ElementTypeIdConst = 12771;
-    /// <inheritdoc/>
-    public override string LocalName => "dropZonesVisible";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the DropZonesVisible class.
@@ -673,11 +620,7 @@ public partial class DropZonesVisible : BooleanFalseType
 public partial class InSketchMode : BooleanFalseType
 {
     internal const int ElementTypeIdConst = 12772;
-    /// <inheritdoc/>
-    public override string LocalName => "inSketchMode";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the InSketchMode class.
@@ -701,7 +644,8 @@ public abstract partial class BooleanFalseType : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public BooleanValue Val { get; set; }
 
     
@@ -727,11 +671,7 @@ public abstract partial class BooleanFalseType : OpenXmlLeafElement
 public partial class ShowSketchButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12773;
-    /// <inheritdoc/>
-    public override string LocalName => "showSketchBtn";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -739,7 +679,8 @@ public partial class ShowSketchButton : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public BooleanValue Val { get; set; }
 
     /// <summary>

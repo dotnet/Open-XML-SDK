@@ -34,11 +34,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
 public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12831;
-    /// <inheritdoc/>
-    public override string LocalName => "nvContentPartPr";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -78,13 +74,7 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvContentPartPr","nvPr" };
-    private static readonly byte[] eleNamespaceIds = { 49,49,49 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -93,11 +83,12 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(0)]
     public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
+	{
         get => GetElement<NonVisualDrawingProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> NonVisualInkContentPartProperties.</para>
@@ -106,11 +97,12 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(1)]
     public NonVisualInkContentPartProperties NonVisualInkContentPartProperties
-    {
+	{
         get => GetElement<NonVisualInkContentPartProperties>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> ApplicationNonVisualDrawingProperties.</para>
@@ -119,11 +111,12 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(2)]
     public ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties
-    {
+	{
         get => GetElement<ApplicationNonVisualDrawingProperties>(2);
         set => SetElement(2, value);
-    }
+	}
     
 
 
@@ -152,11 +145,7 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
 public partial class Transform2D : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12832;
-    /// <inheritdoc/>
-    public override string LocalName => "xfrm";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -164,19 +153,22 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
-    [SchemaAttr(0, "rot", 0)]
+    [SchemaAttr(0, "rot")]
+    [Index(0)]
     public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
-    [SchemaAttr(0, "flipH", 1)]
+    [SchemaAttr(0, "flipH")]
+    [Index(1)]
     public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
-    [SchemaAttr(0, "flipV", 2)]
+    [SchemaAttr(0, "flipV")]
+    [Index(2)]
     public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>
@@ -214,13 +206,7 @@ public partial class Transform2D : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "off","ext" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Offset.</para>
@@ -229,11 +215,12 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.Offset Offset
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Extents.</para>
@@ -242,11 +229,12 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.Extents Extents
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -273,11 +261,7 @@ public partial class Transform2D : OpenXmlCompositeElement
 public partial class ExtensionListModify : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12833;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -285,7 +269,8 @@ public partial class ExtensionListModify : OpenXmlCompositeElement
     /// <para> Modify.</para>
     /// <para>Represents the following attribute in the schema: mod </para>
     /// </summary>
-    [SchemaAttr(0, "mod", 0)]
+    [SchemaAttr(0, "mod")]
+    [Index(0)]
     public BooleanValue Modify { get; set; }
 
     /// <summary>
@@ -353,11 +338,7 @@ public partial class ExtensionListModify : OpenXmlCompositeElement
 public partial class Media : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12834;
-    /// <inheritdoc/>
-    public override string LocalName => "media";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -367,7 +348,8 @@ public partial class Media : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "embed", 0)]
+    [SchemaAttr(19, "embed")]
+    [Index(0)]
     public StringValue Embed { get; set; }
     /// <summary>
     /// <para> Linked Picture Reference.</para>
@@ -375,7 +357,8 @@ public partial class Media : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "link", 1)]
+    [SchemaAttr(19, "link")]
+    [Index(1)]
     public StringValue Link { get; set; }
 
     /// <summary>
@@ -413,13 +396,7 @@ public partial class Media : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "trim","fade","bmkLst","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 49,49,49,49 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> MediaTrim.</para>
@@ -428,11 +405,12 @@ public partial class Media : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(0)]
     public MediaTrim MediaTrim
-    {
+	{
         get => GetElement<MediaTrim>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> MediaFade.</para>
@@ -441,11 +419,12 @@ public partial class Media : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(1)]
     public MediaFade MediaFade
-    {
+	{
         get => GetElement<MediaFade>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> MediaBookmarkList.</para>
@@ -454,11 +433,12 @@ public partial class Media : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(2)]
     public MediaBookmarkList MediaBookmarkList
-    {
+	{
         get => GetElement<MediaBookmarkList>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -467,11 +447,12 @@ public partial class Media : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(3)]
     public ExtensionList ExtensionList
-    {
+	{
         get => GetElement<ExtensionList>(3);
         set => SetElement(3, value);
-    }
+	}
     
 
 
@@ -491,11 +472,7 @@ public partial class Media : OpenXmlCompositeElement
 public partial class VortexTransition : SideDirectionTransitionType
 {
     internal const int ElementTypeIdConst = 12835;
-    /// <inheritdoc/>
-    public override string LocalName => "vortex";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the VortexTransition class.
@@ -519,11 +496,7 @@ public partial class VortexTransition : SideDirectionTransitionType
 public partial class PanTransition : SideDirectionTransitionType
 {
     internal const int ElementTypeIdConst = 12846;
-    /// <inheritdoc/>
-    public override string LocalName => "pan";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the PanTransition class.
@@ -547,7 +520,8 @@ public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
     /// <para> Direction.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get; set; }
 
     
@@ -573,11 +547,7 @@ public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
 public partial class SwitchTransition : LeftRightDirectionTransitionType
 {
     internal const int ElementTypeIdConst = 12836;
-    /// <inheritdoc/>
-    public override string LocalName => "switch";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the SwitchTransition class.
@@ -601,11 +571,7 @@ public partial class SwitchTransition : LeftRightDirectionTransitionType
 public partial class FlipTransition : LeftRightDirectionTransitionType
 {
     internal const int ElementTypeIdConst = 12837;
-    /// <inheritdoc/>
-    public override string LocalName => "flip";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the FlipTransition class.
@@ -629,11 +595,7 @@ public partial class FlipTransition : LeftRightDirectionTransitionType
 public partial class FerrisTransition : LeftRightDirectionTransitionType
 {
     internal const int ElementTypeIdConst = 12843;
-    /// <inheritdoc/>
-    public override string LocalName => "ferris";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the FerrisTransition class.
@@ -657,11 +619,7 @@ public partial class FerrisTransition : LeftRightDirectionTransitionType
 public partial class GalleryTransition : LeftRightDirectionTransitionType
 {
     internal const int ElementTypeIdConst = 12844;
-    /// <inheritdoc/>
-    public override string LocalName => "gallery";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the GalleryTransition class.
@@ -685,11 +643,7 @@ public partial class GalleryTransition : LeftRightDirectionTransitionType
 public partial class ConveyorTransition : LeftRightDirectionTransitionType
 {
     internal const int ElementTypeIdConst = 12845;
-    /// <inheritdoc/>
-    public override string LocalName => "conveyor";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the ConveyorTransition class.
@@ -713,7 +667,8 @@ public abstract partial class LeftRightDirectionTransitionType : OpenXmlLeafElem
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction { get; set; }
 
     
@@ -739,11 +694,7 @@ public abstract partial class LeftRightDirectionTransitionType : OpenXmlLeafElem
 public partial class RippleTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12838;
-    /// <inheritdoc/>
-    public override string LocalName => "ripple";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -751,7 +702,8 @@ public partial class RippleTransition : OpenXmlLeafElement
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public StringValue Direction { get; set; }
 
     /// <summary>
@@ -780,11 +732,7 @@ public partial class RippleTransition : OpenXmlLeafElement
 public partial class HoneycombTransition : EmptyType
 {
     internal const int ElementTypeIdConst = 12839;
-    /// <inheritdoc/>
-    public override string LocalName => "honeycomb";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the HoneycombTransition class.
@@ -808,11 +756,7 @@ public partial class HoneycombTransition : EmptyType
 public partial class FlashTransition : EmptyType
 {
     internal const int ElementTypeIdConst = 12850;
-    /// <inheritdoc/>
-    public override string LocalName => "flash";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the FlashTransition class.
@@ -856,11 +800,7 @@ public abstract partial class EmptyType : OpenXmlLeafElement
 public partial class PrismTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12840;
-    /// <inheritdoc/>
-    public override string LocalName => "prism";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -868,19 +808,22 @@ public partial class PrismTransition : OpenXmlLeafElement
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get; set; }
     /// <summary>
     /// <para> isContent.</para>
     /// <para>Represents the following attribute in the schema: isContent </para>
     /// </summary>
-    [SchemaAttr(0, "isContent", 1)]
+    [SchemaAttr(0, "isContent")]
+    [Index(1)]
     public BooleanValue IsContent { get; set; }
     /// <summary>
     /// <para> isInverted.</para>
     /// <para>Represents the following attribute in the schema: isInverted </para>
     /// </summary>
-    [SchemaAttr(0, "isInverted", 2)]
+    [SchemaAttr(0, "isInverted")]
+    [Index(2)]
     public BooleanValue IsInverted { get; set; }
 
     /// <summary>
@@ -909,11 +852,7 @@ public partial class PrismTransition : OpenXmlLeafElement
 public partial class DoorsTransition : OrientationTransitionType
 {
     internal const int ElementTypeIdConst = 12841;
-    /// <inheritdoc/>
-    public override string LocalName => "doors";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the DoorsTransition class.
@@ -937,11 +876,7 @@ public partial class DoorsTransition : OrientationTransitionType
 public partial class WindowTransition : OrientationTransitionType
 {
     internal const int ElementTypeIdConst = 12842;
-    /// <inheritdoc/>
-    public override string LocalName => "window";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the WindowTransition class.
@@ -965,7 +900,8 @@ public abstract partial class OrientationTransitionType : OpenXmlLeafElement
     /// <para> Transition Direction.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Direction { get; set; }
 
     
@@ -991,11 +927,7 @@ public abstract partial class OrientationTransitionType : OpenXmlLeafElement
 public partial class GlitterTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12847;
-    /// <inheritdoc/>
-    public override string LocalName => "glitter";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1003,13 +935,15 @@ public partial class GlitterTransition : OpenXmlLeafElement
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get; set; }
     /// <summary>
     /// <para> pattern.</para>
     /// <para>Represents the following attribute in the schema: pattern </para>
     /// </summary>
-    [SchemaAttr(0, "pattern", 1)]
+    [SchemaAttr(0, "pattern")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues> Pattern { get; set; }
 
     /// <summary>
@@ -1038,11 +972,7 @@ public partial class GlitterTransition : OpenXmlLeafElement
 public partial class WarpTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12848;
-    /// <inheritdoc/>
-    public override string LocalName => "warp";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1050,7 +980,8 @@ public partial class WarpTransition : OpenXmlLeafElement
     /// <para> Direction.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get; set; }
 
     /// <summary>
@@ -1079,11 +1010,7 @@ public partial class WarpTransition : OpenXmlLeafElement
 public partial class FlythroughTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12849;
-    /// <inheritdoc/>
-    public override string LocalName => "flythrough";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1091,13 +1018,15 @@ public partial class FlythroughTransition : OpenXmlLeafElement
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 0)]
+    [SchemaAttr(0, "dir")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get; set; }
     /// <summary>
     /// <para> hasBounce.</para>
     /// <para>Represents the following attribute in the schema: hasBounce </para>
     /// </summary>
-    [SchemaAttr(0, "hasBounce", 1)]
+    [SchemaAttr(0, "hasBounce")]
+    [Index(1)]
     public BooleanValue HasBounce { get; set; }
 
     /// <summary>
@@ -1126,11 +1055,7 @@ public partial class FlythroughTransition : OpenXmlLeafElement
 public partial class ShredTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12851;
-    /// <inheritdoc/>
-    public override string LocalName => "shred";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1138,13 +1063,15 @@ public partial class ShredTransition : OpenXmlLeafElement
     /// <para> pattern.</para>
     /// <para>Represents the following attribute in the schema: pattern </para>
     /// </summary>
-    [SchemaAttr(0, "pattern", 0)]
+    [SchemaAttr(0, "pattern")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues> Pattern { get; set; }
     /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 1)]
+    [SchemaAttr(0, "dir")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get; set; }
 
     /// <summary>
@@ -1173,11 +1100,7 @@ public partial class ShredTransition : OpenXmlLeafElement
 public partial class RevealTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12852;
-    /// <inheritdoc/>
-    public override string LocalName => "reveal";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1185,13 +1108,15 @@ public partial class RevealTransition : OpenXmlLeafElement
     /// <para> thruBlk.</para>
     /// <para>Represents the following attribute in the schema: thruBlk </para>
     /// </summary>
-    [SchemaAttr(0, "thruBlk", 0)]
+    [SchemaAttr(0, "thruBlk")]
+    [Index(0)]
     public BooleanValue ThroughBlack { get; set; }
     /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    [SchemaAttr(0, "dir", 1)]
+    [SchemaAttr(0, "dir")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction { get; set; }
 
     /// <summary>
@@ -1220,11 +1145,7 @@ public partial class RevealTransition : OpenXmlLeafElement
 public partial class WheelReverseTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12853;
-    /// <inheritdoc/>
-    public override string LocalName => "wheelReverse";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1232,7 +1153,8 @@ public partial class WheelReverseTransition : OpenXmlLeafElement
     /// <para> Spokes.</para>
     /// <para>Represents the following attribute in the schema: spokes </para>
     /// </summary>
-    [SchemaAttr(0, "spokes", 0)]
+    [SchemaAttr(0, "spokes")]
+    [Index(0)]
     public UInt32Value Spokes { get; set; }
 
     /// <summary>
@@ -1261,11 +1183,7 @@ public partial class WheelReverseTransition : OpenXmlLeafElement
 public partial class BookmarkTarget : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12854;
-    /// <inheritdoc/>
-    public override string LocalName => "bmkTgt";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1273,13 +1191,15 @@ public partial class BookmarkTarget : OpenXmlLeafElement
     /// <para> spid.</para>
     /// <para>Represents the following attribute in the schema: spid </para>
     /// </summary>
-    [SchemaAttr(0, "spid", 0)]
+    [SchemaAttr(0, "spid")]
+    [Index(0)]
     public UInt32Value ShapeId { get; set; }
     /// <summary>
     /// <para> bmkName.</para>
     /// <para>Represents the following attribute in the schema: bmkName </para>
     /// </summary>
-    [SchemaAttr(0, "bmkName", 1)]
+    [SchemaAttr(0, "bmkName")]
+    [Index(1)]
     public StringValue BookmarkName { get; set; }
 
     /// <summary>
@@ -1315,11 +1235,7 @@ public partial class BookmarkTarget : OpenXmlLeafElement
 public partial class SectionProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12855;
-    /// <inheritdoc/>
-    public override string LocalName => "sectionPr";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1383,11 +1299,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
 public partial class SectionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12856;
-    /// <inheritdoc/>
-    public override string LocalName => "sectionLst";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1444,11 +1356,7 @@ public partial class SectionList : OpenXmlCompositeElement
 public partial class BrowseMode : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12857;
-    /// <inheritdoc/>
-    public override string LocalName => "browseMode";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1456,7 +1364,8 @@ public partial class BrowseMode : OpenXmlLeafElement
     /// <para> showStatus.</para>
     /// <para>Represents the following attribute in the schema: showStatus </para>
     /// </summary>
-    [SchemaAttr(0, "showStatus", 0)]
+    [SchemaAttr(0, "showStatus")]
+    [Index(0)]
     public BooleanValue ShowStatus { get; set; }
 
     /// <summary>
@@ -1502,11 +1411,7 @@ public partial class BrowseMode : OpenXmlLeafElement
 public partial class LaserColor : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12858;
-    /// <inheritdoc/>
-    public override string LocalName => "laserClr";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1546,13 +1451,7 @@ public partial class LaserColor : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> RGB Color Model - Percentage Variant.</para>
@@ -1561,11 +1460,12 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
@@ -1574,11 +1474,12 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
@@ -1587,11 +1488,12 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(2)]
     public DocumentFormat.OpenXml.Drawing.HslColor HslColor
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> System Color.</para>
@@ -1600,11 +1502,12 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(3)]
     public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Scheme Color.</para>
@@ -1613,11 +1516,12 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(4)]
     public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> Preset Color.</para>
@@ -1626,11 +1530,12 @@ public partial class LaserColor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(5)]
     public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(5);
         set => SetElement(5, value);
-    }
+	}
     
 
 
@@ -1650,11 +1555,7 @@ public partial class LaserColor : OpenXmlCompositeElement
 public partial class DefaultImageDpi : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12859;
-    /// <inheritdoc/>
-    public override string LocalName => "defaultImageDpi";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1662,7 +1563,8 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public UInt32Value Val { get; set; }
 
     /// <summary>
@@ -1691,11 +1593,7 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
 public partial class DiscardImageEditData : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12860;
-    /// <inheritdoc/>
-    public override string LocalName => "discardImageEditData";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1703,7 +1601,8 @@ public partial class DiscardImageEditData : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public BooleanValue Val { get; set; }
 
     /// <summary>
@@ -1732,11 +1631,7 @@ public partial class DiscardImageEditData : OpenXmlLeafElement
 public partial class ShowMediaControls : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12861;
-    /// <inheritdoc/>
-    public override string LocalName => "showMediaCtrls";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1744,7 +1639,8 @@ public partial class ShowMediaControls : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public BooleanValue Val { get; set; }
 
     /// <summary>
@@ -1780,11 +1676,7 @@ public partial class ShowMediaControls : OpenXmlLeafElement
 public partial class LaserTraceList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12862;
-    /// <inheritdoc/>
-    public override string LocalName => "laserTraceLst";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1841,11 +1733,7 @@ public partial class LaserTraceList : OpenXmlCompositeElement
 public partial class CreationId : RandomIdType
 {
     internal const int ElementTypeIdConst = 12863;
-    /// <inheritdoc/>
-    public override string LocalName => "creationId";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the CreationId class.
@@ -1869,11 +1757,7 @@ public partial class CreationId : RandomIdType
 public partial class ModificationId : RandomIdType
 {
     internal const int ElementTypeIdConst = 12864;
-    /// <inheritdoc/>
-    public override string LocalName => "modId";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the ModificationId class.
@@ -1897,7 +1781,8 @@ public abstract partial class RandomIdType : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val", 0)]
+    [SchemaAttr(0, "val")]
+    [Index(0)]
     public UInt32Value Val { get; set; }
 
     
@@ -1942,11 +1827,7 @@ public abstract partial class RandomIdType : OpenXmlLeafElement
 public partial class ShowEventRecordList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12865;
-    /// <inheritdoc/>
-    public override string LocalName => "showEvtLst";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1986,13 +1867,7 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "triggerEvt","playEvt","stopEvt","pauseEvt","resumeEvt","seekEvt","nullEvt" };
-    private static readonly byte[] eleNamespaceIds = { 49,49,49,49,49,49,49 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
     
         /// <summary>
     /// <para> TriggerEventRecord.</para>
@@ -2001,11 +1876,12 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(0)]
     public TriggerEventRecord TriggerEventRecord
-    {
+	{
         get => GetElement<TriggerEventRecord>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> PlayEventRecord.</para>
@@ -2014,11 +1890,12 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(1)]
     public PlayEventRecord PlayEventRecord
-    {
+	{
         get => GetElement<PlayEventRecord>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> StopEventRecord.</para>
@@ -2027,11 +1904,12 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(2)]
     public StopEventRecord StopEventRecord
-    {
+	{
         get => GetElement<StopEventRecord>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> PauseEventRecord.</para>
@@ -2040,11 +1918,12 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(3)]
     public PauseEventRecord PauseEventRecord
-    {
+	{
         get => GetElement<PauseEventRecord>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> ResumeEventRecord.</para>
@@ -2053,11 +1932,12 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(4)]
     public ResumeEventRecord ResumeEventRecord
-    {
+	{
         get => GetElement<ResumeEventRecord>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> SeekEventRecord.</para>
@@ -2066,11 +1946,12 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(5)]
     public SeekEventRecord SeekEventRecord
-    {
+	{
         get => GetElement<SeekEventRecord>(5);
         set => SetElement(5, value);
-    }
+	}
     
     /// <summary>
     /// <para> NullEventRecord.</para>
@@ -2079,11 +1960,12 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(6)]
     public NullEventRecord NullEventRecord
-    {
+	{
         get => GetElement<NullEventRecord>(6);
         set => SetElement(6, value);
-    }
+	}
     
 
 
@@ -2114,11 +1996,7 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12866;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvPr";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -2126,31 +2004,36 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 1)]
+    [SchemaAttr(0, "name")]
+    [Index(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
-    [SchemaAttr(0, "descr", 2)]
+    [SchemaAttr(0, "descr")]
+    [Index(2)]
     public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    [SchemaAttr(0, "hidden", 3)]
+    [SchemaAttr(0, "hidden")]
+    [Index(3)]
     public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 4)]
+    [SchemaAttr(0, "title")]
+    [Index(4)]
     public StringValue Title { get; set; }
 
     /// <summary>
@@ -2188,13 +2071,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
@@ -2203,11 +2080,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -2216,11 +2094,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -2229,11 +2108,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(2)]
     public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
         set => SetElement(2, value);
-    }
+	}
     
 
 
@@ -2262,11 +2142,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12867;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvContentPartPr";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -2274,7 +2150,8 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <para> isComment.</para>
     /// <para>Represents the following attribute in the schema: isComment </para>
     /// </summary>
-    [SchemaAttr(0, "isComment", 0)]
+    [SchemaAttr(0, "isComment")]
+    [Index(0)]
     public BooleanValue IsComment { get; set; }
 
     /// <summary>
@@ -2312,13 +2189,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cpLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 48,48 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ContentPartLocks.</para>
@@ -2327,11 +2198,12 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks ContentPartLocks
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -2340,11 +2212,12 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList OfficeArtExtensionList
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -2385,11 +2258,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12868;
-    /// <inheritdoc/>
-    public override string LocalName => "nvPr";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -2397,13 +2266,15 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
     /// <para> Is a Photo Album.</para>
     /// <para>Represents the following attribute in the schema: isPhoto </para>
     /// </summary>
-    [SchemaAttr(0, "isPhoto", 0)]
+    [SchemaAttr(0, "isPhoto")]
+    [Index(0)]
     public BooleanValue IsPhoto { get; set; }
     /// <summary>
     /// <para> Is User Drawn.</para>
     /// <para>Represents the following attribute in the schema: userDrawn </para>
     /// </summary>
-    [SchemaAttr(0, "userDrawn", 1)]
+    [SchemaAttr(0, "userDrawn")]
+    [Index(1)]
     public BooleanValue UserDrawn { get; set; }
 
     /// <summary>
@@ -2441,13 +2312,7 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
      
     
     
-        private static readonly string[] eleTagNames = { "ph","audioCd","wavAudioFile","audioFile","videoFile","quickTimeFile","custDataLst","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 24,10,10,10,10,10,24,24 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Placeholder Shape.</para>
@@ -2456,11 +2321,12 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
     /// <remark>
     /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Presentation.PlaceholderShape PlaceholderShape
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -2480,11 +2346,7 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
 public partial class MediaBookmark : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12869;
-    /// <inheritdoc/>
-    public override string LocalName => "bmk";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -2492,13 +2354,15 @@ public partial class MediaBookmark : OpenXmlLeafElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    [SchemaAttr(0, "time", 1)]
+    [SchemaAttr(0, "time")]
+    [Index(1)]
     public StringValue Time { get; set; }
 
     /// <summary>
@@ -2527,11 +2391,7 @@ public partial class MediaBookmark : OpenXmlLeafElement
 public partial class MediaTrim : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12870;
-    /// <inheritdoc/>
-    public override string LocalName => "trim";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -2539,13 +2399,15 @@ public partial class MediaTrim : OpenXmlLeafElement
     /// <para> st.</para>
     /// <para>Represents the following attribute in the schema: st </para>
     /// </summary>
-    [SchemaAttr(0, "st", 0)]
+    [SchemaAttr(0, "st")]
+    [Index(0)]
     public StringValue Start { get; set; }
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: end </para>
     /// </summary>
-    [SchemaAttr(0, "end", 1)]
+    [SchemaAttr(0, "end")]
+    [Index(1)]
     public StringValue End { get; set; }
 
     /// <summary>
@@ -2574,11 +2436,7 @@ public partial class MediaTrim : OpenXmlLeafElement
 public partial class MediaFade : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12871;
-    /// <inheritdoc/>
-    public override string LocalName => "fade";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -2586,13 +2444,15 @@ public partial class MediaFade : OpenXmlLeafElement
     /// <para> in.</para>
     /// <para>Represents the following attribute in the schema: in </para>
     /// </summary>
-    [SchemaAttr(0, "in", 0)]
+    [SchemaAttr(0, "in")]
+    [Index(0)]
     public StringValue InDuration { get; set; }
     /// <summary>
     /// <para> out.</para>
     /// <para>Represents the following attribute in the schema: out </para>
     /// </summary>
-    [SchemaAttr(0, "out", 1)]
+    [SchemaAttr(0, "out")]
+    [Index(1)]
     public StringValue OutDuration { get; set; }
 
     /// <summary>
@@ -2628,11 +2488,7 @@ public partial class MediaFade : OpenXmlLeafElement
 public partial class MediaBookmarkList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12872;
-    /// <inheritdoc/>
-    public override string LocalName => "bmkLst";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -2696,11 +2552,7 @@ public partial class MediaBookmarkList : OpenXmlCompositeElement
 public partial class ExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12873;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -2764,11 +2616,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
 public partial class SectionOld : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12874;
-    /// <inheritdoc/>
-    public override string LocalName => "section";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -2776,19 +2624,22 @@ public partial class SectionOld : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> slideIdLst.</para>
     /// <para>Represents the following attribute in the schema: slideIdLst </para>
     /// </summary>
-    [SchemaAttr(0, "slideIdLst", 1)]
+    [SchemaAttr(0, "slideIdLst")]
+    [Index(1)]
     public ListValue<UInt32Value> SlideIdList { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 2)]
+    [SchemaAttr(0, "id")]
+    [Index(2)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -2826,13 +2677,7 @@ public partial class SectionOld : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 49 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ExtensionList.</para>
@@ -2841,11 +2686,12 @@ public partial class SectionOld : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(0)]
     public ExtensionList ExtensionList
-    {
+	{
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -2865,11 +2711,7 @@ public partial class SectionOld : OpenXmlCompositeElement
 public partial class SectionSlideIdListEntry : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12875;
-    /// <inheritdoc/>
-    public override string LocalName => "sldId";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -2877,7 +2719,8 @@ public partial class SectionSlideIdListEntry : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public UInt32Value Id { get; set; }
 
     /// <summary>
@@ -2913,11 +2756,7 @@ public partial class SectionSlideIdListEntry : OpenXmlLeafElement
 public partial class SectionSlideIdList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12876;
-    /// <inheritdoc/>
-    public override string LocalName => "sldIdLst";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -2983,11 +2822,7 @@ public partial class SectionSlideIdList : OpenXmlCompositeElement
 public partial class Section : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12877;
-    /// <inheritdoc/>
-    public override string LocalName => "section";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -2995,13 +2830,15 @@ public partial class Section : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 1)]
+    [SchemaAttr(0, "id")]
+    [Index(1)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -3039,13 +2876,7 @@ public partial class Section : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sldIdLst","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 49,49 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> SectionSlideIdList.</para>
@@ -3054,11 +2885,12 @@ public partial class Section : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(0)]
     public SectionSlideIdList SectionSlideIdList
-    {
+	{
         get => GetElement<SectionSlideIdList>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -3067,11 +2899,12 @@ public partial class Section : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
     /// </remark>
+	[Index(1)]
     public ExtensionList ExtensionList
-    {
+	{
         get => GetElement<ExtensionList>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -3091,11 +2924,7 @@ public partial class Section : OpenXmlCompositeElement
 public partial class TracePoint : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12878;
-    /// <inheritdoc/>
-    public override string LocalName => "tracePt";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -3103,19 +2932,22 @@ public partial class TracePoint : OpenXmlLeafElement
     /// <para> t.</para>
     /// <para>Represents the following attribute in the schema: t </para>
     /// </summary>
-    [SchemaAttr(0, "t", 0)]
+    [SchemaAttr(0, "t")]
+    [Index(0)]
     public StringValue Time { get; set; }
     /// <summary>
     /// <para> x.</para>
     /// <para>Represents the following attribute in the schema: x </para>
     /// </summary>
-    [SchemaAttr(0, "x", 1)]
+    [SchemaAttr(0, "x")]
+    [Index(1)]
     public Int64Value XCoordinate { get; set; }
     /// <summary>
     /// <para> y.</para>
     /// <para>Represents the following attribute in the schema: y </para>
     /// </summary>
-    [SchemaAttr(0, "y", 2)]
+    [SchemaAttr(0, "y")]
+    [Index(2)]
     public Int64Value YCoordinate { get; set; }
 
     /// <summary>
@@ -3151,11 +2983,7 @@ public partial class TracePoint : OpenXmlLeafElement
 public partial class TracePointList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12879;
-    /// <inheritdoc/>
-    public override string LocalName => "tracePtLst";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -3212,11 +3040,7 @@ public partial class TracePointList : OpenXmlCompositeElement
 public partial class TriggerEventRecord : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12880;
-    /// <inheritdoc/>
-    public override string LocalName => "triggerEvt";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -3224,19 +3048,22 @@ public partial class TriggerEventRecord : OpenXmlLeafElement
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type", 0)]
+    [SchemaAttr(0, "type")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues> Type { get; set; }
     /// <summary>
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    [SchemaAttr(0, "time", 1)]
+    [SchemaAttr(0, "time")]
+    [Index(1)]
     public StringValue Time { get; set; }
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
     /// </summary>
-    [SchemaAttr(0, "objId", 2)]
+    [SchemaAttr(0, "objId")]
+    [Index(2)]
     public UInt32Value ObjectId { get; set; }
 
     /// <summary>
@@ -3265,11 +3092,7 @@ public partial class TriggerEventRecord : OpenXmlLeafElement
 public partial class PlayEventRecord : MediaPlaybackEventRecordType
 {
     internal const int ElementTypeIdConst = 12881;
-    /// <inheritdoc/>
-    public override string LocalName => "playEvt";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the PlayEventRecord class.
@@ -3293,11 +3116,7 @@ public partial class PlayEventRecord : MediaPlaybackEventRecordType
 public partial class StopEventRecord : MediaPlaybackEventRecordType
 {
     internal const int ElementTypeIdConst = 12882;
-    /// <inheritdoc/>
-    public override string LocalName => "stopEvt";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the StopEventRecord class.
@@ -3321,11 +3140,7 @@ public partial class StopEventRecord : MediaPlaybackEventRecordType
 public partial class PauseEventRecord : MediaPlaybackEventRecordType
 {
     internal const int ElementTypeIdConst = 12883;
-    /// <inheritdoc/>
-    public override string LocalName => "pauseEvt";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the PauseEventRecord class.
@@ -3349,11 +3164,7 @@ public partial class PauseEventRecord : MediaPlaybackEventRecordType
 public partial class ResumeEventRecord : MediaPlaybackEventRecordType
 {
     internal const int ElementTypeIdConst = 12884;
-    /// <inheritdoc/>
-    public override string LocalName => "resumeEvt";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the ResumeEventRecord class.
@@ -3377,13 +3188,15 @@ public abstract partial class MediaPlaybackEventRecordType : OpenXmlLeafElement
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    [SchemaAttr(0, "time", 0)]
+    [SchemaAttr(0, "time")]
+    [Index(0)]
     public StringValue Time { get; set; }
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
     /// </summary>
-    [SchemaAttr(0, "objId", 1)]
+    [SchemaAttr(0, "objId")]
+    [Index(1)]
     public UInt32Value ObjectId { get; set; }
 
     
@@ -3409,11 +3222,7 @@ public abstract partial class MediaPlaybackEventRecordType : OpenXmlLeafElement
 public partial class SeekEventRecord : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12885;
-    /// <inheritdoc/>
-    public override string LocalName => "seekEvt";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -3421,19 +3230,22 @@ public partial class SeekEventRecord : OpenXmlLeafElement
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    [SchemaAttr(0, "time", 0)]
+    [SchemaAttr(0, "time")]
+    [Index(0)]
     public StringValue Time { get; set; }
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
     /// </summary>
-    [SchemaAttr(0, "objId", 1)]
+    [SchemaAttr(0, "objId")]
+    [Index(1)]
     public UInt32Value ObjectId { get; set; }
     /// <summary>
     /// <para> seek.</para>
     /// <para>Represents the following attribute in the schema: seek </para>
     /// </summary>
-    [SchemaAttr(0, "seek", 2)]
+    [SchemaAttr(0, "seek")]
+    [Index(2)]
     public StringValue Seek { get; set; }
 
     /// <summary>
@@ -3462,11 +3274,7 @@ public partial class SeekEventRecord : OpenXmlLeafElement
 public partial class NullEventRecord : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12886;
-    /// <inheritdoc/>
-    public override string LocalName => "nullEvt";
-    internal override byte NamespaceId => 49;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -3474,13 +3282,15 @@ public partial class NullEventRecord : OpenXmlLeafElement
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    [SchemaAttr(0, "time", 0)]
+    [SchemaAttr(0, "time")]
+    [Index(0)]
     public StringValue Time { get; set; }
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
     /// </summary>
-    [SchemaAttr(0, "objId", 1)]
+    [SchemaAttr(0, "objId")]
+    [Index(1)]
     public UInt32Value ObjectId { get; set; }
 
     /// <summary>

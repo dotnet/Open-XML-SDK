@@ -79,11 +79,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 public partial class Properties : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 11064;
-    /// <inheritdoc/>
-    public override string LocalName => "Properties";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -152,13 +148,7 @@ public partial class Properties : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "Template","Manager","Company","Pages","Words","Characters","PresentationFormat","Lines","Paragraphs","Slides","Notes","TotalTime","HiddenSlides","MMClips","ScaleCrop","HeadingPairs","TitlesOfParts","LinksUpToDate","CharactersWithSpaces","SharedDoc","HyperlinkBase","HLinks","HyperlinksChanged","DigSig","Application","AppVersion","DocSecurity" };
-    private static readonly byte[] eleNamespaceIds = { 3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
     
         /// <summary>
     /// <para> Name of Document Template.</para>
@@ -167,11 +157,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(0)]
     public Template Template
-    {
+	{
         get => GetElement<Template>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Name of Manager.</para>
@@ -180,11 +171,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(1)]
     public Manager Manager
-    {
+	{
         get => GetElement<Manager>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Name of Company.</para>
@@ -193,11 +185,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(2)]
     public Company Company
-    {
+	{
         get => GetElement<Company>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Total Number of Pages.</para>
@@ -206,11 +199,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(3)]
     public Pages Pages
-    {
+	{
         get => GetElement<Pages>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Word Count.</para>
@@ -219,11 +213,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(4)]
     public Words Words
-    {
+	{
         get => GetElement<Words>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> Total Number of Characters.</para>
@@ -232,11 +227,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(5)]
     public Characters Characters
-    {
+	{
         get => GetElement<Characters>(5);
         set => SetElement(5, value);
-    }
+	}
     
     /// <summary>
     /// <para> Intended Format of Presentation.</para>
@@ -245,11 +241,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(6)]
     public PresentationFormat PresentationFormat
-    {
+	{
         get => GetElement<PresentationFormat>(6);
         set => SetElement(6, value);
-    }
+	}
     
     /// <summary>
     /// <para> Number of Lines.</para>
@@ -258,11 +255,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(7)]
     public Lines Lines
-    {
+	{
         get => GetElement<Lines>(7);
         set => SetElement(7, value);
-    }
+	}
     
     /// <summary>
     /// <para> Total Number of Paragraphs.</para>
@@ -271,11 +269,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(8)]
     public Paragraphs Paragraphs
-    {
+	{
         get => GetElement<Paragraphs>(8);
         set => SetElement(8, value);
-    }
+	}
     
     /// <summary>
     /// <para> Slides Metadata Element.</para>
@@ -284,11 +283,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(9)]
     public Slides Slides
-    {
+	{
         get => GetElement<Slides>(9);
         set => SetElement(9, value);
-    }
+	}
     
     /// <summary>
     /// <para> Number of Slides Containing Notes.</para>
@@ -297,11 +297,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(10)]
     public Notes Notes
-    {
+	{
         get => GetElement<Notes>(10);
         set => SetElement(10, value);
-    }
+	}
     
     /// <summary>
     /// <para> Total Edit Time Metadata Element.</para>
@@ -310,11 +311,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(11)]
     public TotalTime TotalTime
-    {
+	{
         get => GetElement<TotalTime>(11);
         set => SetElement(11, value);
-    }
+	}
     
     /// <summary>
     /// <para> Number of Hidden Slides.</para>
@@ -323,11 +325,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(12)]
     public HiddenSlides HiddenSlides
-    {
+	{
         get => GetElement<HiddenSlides>(12);
         set => SetElement(12, value);
-    }
+	}
     
     /// <summary>
     /// <para> Total Number of Multimedia Clips.</para>
@@ -336,11 +339,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(13)]
     public MultimediaClips MultimediaClips
-    {
+	{
         get => GetElement<MultimediaClips>(13);
         set => SetElement(13, value);
-    }
+	}
     
     /// <summary>
     /// <para> Thumbnail Display Mode.</para>
@@ -349,11 +353,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(14)]
     public ScaleCrop ScaleCrop
-    {
+	{
         get => GetElement<ScaleCrop>(14);
         set => SetElement(14, value);
-    }
+	}
     
     /// <summary>
     /// <para> Heading Pairs.</para>
@@ -362,11 +367,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(15)]
     public HeadingPairs HeadingPairs
-    {
+	{
         get => GetElement<HeadingPairs>(15);
         set => SetElement(15, value);
-    }
+	}
     
     /// <summary>
     /// <para> Part Titles.</para>
@@ -375,11 +381,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(16)]
     public TitlesOfParts TitlesOfParts
-    {
+	{
         get => GetElement<TitlesOfParts>(16);
         set => SetElement(16, value);
-    }
+	}
     
     /// <summary>
     /// <para> Links Up-to-Date.</para>
@@ -388,11 +395,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(17)]
     public LinksUpToDate LinksUpToDate
-    {
+	{
         get => GetElement<LinksUpToDate>(17);
         set => SetElement(17, value);
-    }
+	}
     
     /// <summary>
     /// <para> Number of Characters (With Spaces).</para>
@@ -401,11 +409,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(18)]
     public CharactersWithSpaces CharactersWithSpaces
-    {
+	{
         get => GetElement<CharactersWithSpaces>(18);
         set => SetElement(18, value);
-    }
+	}
     
     /// <summary>
     /// <para> Shared Document.</para>
@@ -414,11 +423,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(19)]
     public SharedDocument SharedDocument
-    {
+	{
         get => GetElement<SharedDocument>(19);
         set => SetElement(19, value);
-    }
+	}
     
     /// <summary>
     /// <para> Relative Hyperlink Base.</para>
@@ -427,11 +437,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(20)]
     public HyperlinkBase HyperlinkBase
-    {
+	{
         get => GetElement<HyperlinkBase>(20);
         set => SetElement(20, value);
-    }
+	}
     
     /// <summary>
     /// <para> Hyperlink List.</para>
@@ -440,11 +451,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(21)]
     public HyperlinkList HyperlinkList
-    {
+	{
         get => GetElement<HyperlinkList>(21);
         set => SetElement(21, value);
-    }
+	}
     
     /// <summary>
     /// <para> Hyperlinks Changed.</para>
@@ -453,11 +465,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(22)]
     public HyperlinksChanged HyperlinksChanged
-    {
+	{
         get => GetElement<HyperlinksChanged>(22);
         set => SetElement(22, value);
-    }
+	}
     
     /// <summary>
     /// <para> Digital Signature.</para>
@@ -466,11 +479,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(23)]
     public DigitalSignature DigitalSignature
-    {
+	{
         get => GetElement<DigitalSignature>(23);
         set => SetElement(23, value);
-    }
+	}
     
     /// <summary>
     /// <para> Application Name.</para>
@@ -479,11 +493,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(24)]
     public Application Application
-    {
+	{
         get => GetElement<Application>(24);
         set => SetElement(24, value);
-    }
+	}
     
     /// <summary>
     /// <para> Application Version.</para>
@@ -492,11 +507,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(25)]
     public ApplicationVersion ApplicationVersion
-    {
+	{
         get => GetElement<ApplicationVersion>(25);
         set => SetElement(25, value);
-    }
+	}
     
     /// <summary>
     /// <para> Document Security.</para>
@@ -505,11 +521,12 @@ public partial class Properties : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
     /// </remark>
+	[Index(26)]
     public DocumentSecurity DocumentSecurity
-    {
+	{
         get => GetElement<DocumentSecurity>(26);
         set => SetElement(26, value);
-    }
+	}
     
 
 
@@ -529,11 +546,7 @@ public partial class Properties : OpenXmlPartRootElement
 public partial class Template : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11065;
-    /// <inheritdoc/>
-    public override string LocalName => "Template";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Template class.
@@ -570,11 +583,7 @@ public partial class Template : OpenXmlLeafTextElement
 public partial class Manager : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11066;
-    /// <inheritdoc/>
-    public override string LocalName => "Manager";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Manager class.
@@ -611,11 +620,7 @@ public partial class Manager : OpenXmlLeafTextElement
 public partial class Company : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11067;
-    /// <inheritdoc/>
-    public override string LocalName => "Company";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Company class.
@@ -652,11 +657,7 @@ public partial class Company : OpenXmlLeafTextElement
 public partial class PresentationFormat : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11071;
-    /// <inheritdoc/>
-    public override string LocalName => "PresentationFormat";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the PresentationFormat class.
@@ -693,11 +694,7 @@ public partial class PresentationFormat : OpenXmlLeafTextElement
 public partial class HyperlinkBase : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11085;
-    /// <inheritdoc/>
-    public override string LocalName => "HyperlinkBase";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the HyperlinkBase class.
@@ -734,11 +731,7 @@ public partial class HyperlinkBase : OpenXmlLeafTextElement
 public partial class Application : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11089;
-    /// <inheritdoc/>
-    public override string LocalName => "Application";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Application class.
@@ -775,11 +768,7 @@ public partial class Application : OpenXmlLeafTextElement
 public partial class ApplicationVersion : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11090;
-    /// <inheritdoc/>
-    public override string LocalName => "AppVersion";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ApplicationVersion class.
@@ -816,11 +805,7 @@ public partial class ApplicationVersion : OpenXmlLeafTextElement
 public partial class Pages : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11068;
-    /// <inheritdoc/>
-    public override string LocalName => "Pages";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Pages class.
@@ -857,11 +842,7 @@ public partial class Pages : OpenXmlLeafTextElement
 public partial class Words : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11069;
-    /// <inheritdoc/>
-    public override string LocalName => "Words";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Words class.
@@ -898,11 +879,7 @@ public partial class Words : OpenXmlLeafTextElement
 public partial class Characters : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11070;
-    /// <inheritdoc/>
-    public override string LocalName => "Characters";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Characters class.
@@ -939,11 +916,7 @@ public partial class Characters : OpenXmlLeafTextElement
 public partial class Lines : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11072;
-    /// <inheritdoc/>
-    public override string LocalName => "Lines";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Lines class.
@@ -980,11 +953,7 @@ public partial class Lines : OpenXmlLeafTextElement
 public partial class Paragraphs : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11073;
-    /// <inheritdoc/>
-    public override string LocalName => "Paragraphs";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Paragraphs class.
@@ -1021,11 +990,7 @@ public partial class Paragraphs : OpenXmlLeafTextElement
 public partial class Slides : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11074;
-    /// <inheritdoc/>
-    public override string LocalName => "Slides";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Slides class.
@@ -1062,11 +1027,7 @@ public partial class Slides : OpenXmlLeafTextElement
 public partial class Notes : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11075;
-    /// <inheritdoc/>
-    public override string LocalName => "Notes";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Notes class.
@@ -1103,11 +1064,7 @@ public partial class Notes : OpenXmlLeafTextElement
 public partial class TotalTime : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11076;
-    /// <inheritdoc/>
-    public override string LocalName => "TotalTime";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the TotalTime class.
@@ -1144,11 +1101,7 @@ public partial class TotalTime : OpenXmlLeafTextElement
 public partial class HiddenSlides : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11077;
-    /// <inheritdoc/>
-    public override string LocalName => "HiddenSlides";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the HiddenSlides class.
@@ -1185,11 +1138,7 @@ public partial class HiddenSlides : OpenXmlLeafTextElement
 public partial class MultimediaClips : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11078;
-    /// <inheritdoc/>
-    public override string LocalName => "MMClips";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the MultimediaClips class.
@@ -1226,11 +1175,7 @@ public partial class MultimediaClips : OpenXmlLeafTextElement
 public partial class CharactersWithSpaces : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11083;
-    /// <inheritdoc/>
-    public override string LocalName => "CharactersWithSpaces";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the CharactersWithSpaces class.
@@ -1267,11 +1212,7 @@ public partial class CharactersWithSpaces : OpenXmlLeafTextElement
 public partial class DocumentSecurity : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11091;
-    /// <inheritdoc/>
-    public override string LocalName => "DocSecurity";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the DocumentSecurity class.
@@ -1308,11 +1249,7 @@ public partial class DocumentSecurity : OpenXmlLeafTextElement
 public partial class ScaleCrop : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11079;
-    /// <inheritdoc/>
-    public override string LocalName => "ScaleCrop";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ScaleCrop class.
@@ -1349,11 +1286,7 @@ public partial class ScaleCrop : OpenXmlLeafTextElement
 public partial class LinksUpToDate : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11082;
-    /// <inheritdoc/>
-    public override string LocalName => "LinksUpToDate";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the LinksUpToDate class.
@@ -1390,11 +1323,7 @@ public partial class LinksUpToDate : OpenXmlLeafTextElement
 public partial class SharedDocument : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11084;
-    /// <inheritdoc/>
-    public override string LocalName => "SharedDoc";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the SharedDocument class.
@@ -1431,11 +1360,7 @@ public partial class SharedDocument : OpenXmlLeafTextElement
 public partial class HyperlinksChanged : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11087;
-    /// <inheritdoc/>
-    public override string LocalName => "HyperlinksChanged";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the HyperlinksChanged class.
@@ -1478,11 +1403,7 @@ public partial class HyperlinksChanged : OpenXmlLeafTextElement
 public partial class HeadingPairs : VectorVariantType
 {
     internal const int ElementTypeIdConst = 11080;
-    /// <inheritdoc/>
-    public override string LocalName => "HeadingPairs";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the HeadingPairs class.
@@ -1538,11 +1459,7 @@ public partial class HeadingPairs : VectorVariantType
 public partial class HyperlinkList : VectorVariantType
 {
     internal const int ElementTypeIdConst = 11086;
-    /// <inheritdoc/>
-    public override string LocalName => "HLinks";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the HyperlinkList class.
@@ -1597,13 +1514,7 @@ public abstract partial class VectorVariantType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "vector" };
-    private static readonly byte[] eleNamespaceIds = { 5 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Vector.</para>
@@ -1612,11 +1523,12 @@ public abstract partial class VectorVariantType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -1674,11 +1586,7 @@ public abstract partial class VectorVariantType : OpenXmlCompositeElement
 public partial class TitlesOfParts : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11081;
-    /// <inheritdoc/>
-    public override string LocalName => "TitlesOfParts";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1718,13 +1626,7 @@ public partial class TitlesOfParts : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "vector" };
-    private static readonly byte[] eleNamespaceIds = { 5 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Vector.</para>
@@ -1733,11 +1635,12 @@ public partial class TitlesOfParts : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -1764,11 +1667,7 @@ public partial class TitlesOfParts : OpenXmlCompositeElement
 public partial class DigitalSignature : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11088;
-    /// <inheritdoc/>
-    public override string LocalName => "DigSig";
-    internal override byte NamespaceId => 3;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1808,13 +1707,7 @@ public partial class DigitalSignature : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "blob" };
-    private static readonly byte[] eleNamespaceIds = { 5 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Binary Blob.</para>
@@ -1823,11 +1716,12 @@ public partial class DigitalSignature : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.VariantTypes.VTBlob VTBlob
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 

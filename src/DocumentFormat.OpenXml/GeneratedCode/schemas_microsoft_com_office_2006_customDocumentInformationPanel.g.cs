@@ -31,11 +31,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 public partial class CustomPropertyEditors : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12699;
-    /// <inheritdoc/>
-    public override string LocalName => "customPropertyEditors";
-    internal override byte NamespaceId => 37;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -75,13 +71,7 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "showOnOpen","defaultPropertyEditorNamespace","customPropertyEditor" };
-    private static readonly byte[] eleNamespaceIds = { 37,37,37 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ShowOnOpen.</para>
@@ -90,11 +80,12 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
     /// </remark>
+	[Index(0)]
     public ShowOnOpen ShowOnOpen
-    {
+	{
         get => GetElement<ShowOnOpen>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> DefaultPropertyEditorNamespace.</para>
@@ -103,11 +94,12 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
     /// </remark>
+	[Index(1)]
     public DefaultPropertyEditorNamespace DefaultPropertyEditorNamespace
-    {
+	{
         get => GetElement<DefaultPropertyEditorNamespace>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -127,11 +119,7 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
 public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12700;
-    /// <inheritdoc/>
-    public override string LocalName => "XMLNamespace";
-    internal override byte NamespaceId => 37;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the PropertyEditorNamespace class.
@@ -168,11 +156,7 @@ public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
 public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12703;
-    /// <inheritdoc/>
-    public override string LocalName => "defaultPropertyEditorNamespace";
-    internal override byte NamespaceId => 37;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the DefaultPropertyEditorNamespace class.
@@ -209,11 +193,7 @@ public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
 public partial class XsnFileLocation : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12701;
-    /// <inheritdoc/>
-    public override string LocalName => "XSNLocation";
-    internal override byte NamespaceId => 37;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -257,11 +237,7 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
 public partial class ShowOnOpen : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12702;
-    /// <inheritdoc/>
-    public override string LocalName => "showOnOpen";
-    internal override byte NamespaceId => 37;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -314,11 +290,7 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
 public partial class CustomPropertyEditor : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12704;
-    /// <inheritdoc/>
-    public override string LocalName => "customPropertyEditor";
-    internal override byte NamespaceId => 37;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -358,13 +330,7 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "XMLNamespace","XSNLocation" };
-    private static readonly byte[] eleNamespaceIds = { 37,37 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PropertyEditorNamespace.</para>
@@ -373,11 +339,12 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
     /// </remark>
+	[Index(0)]
     public PropertyEditorNamespace PropertyEditorNamespace
-    {
+	{
         get => GetElement<PropertyEditorNamespace>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> XsnFileLocation.</para>
@@ -386,11 +353,12 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
     /// </remark>
+	[Index(1)]
     public XsnFileLocation XsnFileLocation
-    {
+	{
         get => GetElement<XsnFileLocation>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 

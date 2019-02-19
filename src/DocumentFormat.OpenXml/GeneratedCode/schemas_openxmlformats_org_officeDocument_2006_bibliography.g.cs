@@ -27,11 +27,7 @@ namespace DocumentFormat.OpenXml.Bibliography
 public partial class Sources : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 10824;
-    /// <inheritdoc/>
-    public override string LocalName => "Sources";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -39,19 +35,22 @@ public partial class Sources : OpenXmlPartRootElement
     /// <para> Selected Style.</para>
     /// <para>Represents the following attribute in the schema: SelectedStyle </para>
     /// </summary>
-    [SchemaAttr(0, "SelectedStyle", 0)]
+    [SchemaAttr(0, "SelectedStyle")]
+    [Index(0)]
     public StringValue SelectedStyle { get; set; }
     /// <summary>
     /// <para> Documentation Style Name.</para>
     /// <para>Represents the following attribute in the schema: StyleName </para>
     /// </summary>
-    [SchemaAttr(0, "StyleName", 1)]
+    [SchemaAttr(0, "StyleName")]
+    [Index(1)]
     public StringValue StyleName { get; set; }
     /// <summary>
     /// <para> Uniform Resource Identifier.</para>
     /// <para>Represents the following attribute in the schema: URI </para>
     /// </summary>
-    [SchemaAttr(0, "URI", 2)]
+    [SchemaAttr(0, "URI")]
+    [Index(2)]
     public StringValue Uri { get; set; }
 
     /// <summary>
@@ -117,11 +116,7 @@ public partial class Sources : OpenXmlPartRootElement
 public partial class Person : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10825;
-    /// <inheritdoc/>
-    public override string LocalName => "Person";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -178,11 +173,7 @@ public partial class Person : OpenXmlCompositeElement
 public partial class Last : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10826;
-    /// <inheritdoc/>
-    public override string LocalName => "Last";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Last class.
@@ -219,11 +210,7 @@ public partial class Last : OpenXmlLeafTextElement
 public partial class First : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10827;
-    /// <inheritdoc/>
-    public override string LocalName => "First";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the First class.
@@ -260,11 +247,7 @@ public partial class First : OpenXmlLeafTextElement
 public partial class Middle : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10828;
-    /// <inheritdoc/>
-    public override string LocalName => "Middle";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Middle class.
@@ -301,11 +284,7 @@ public partial class Middle : OpenXmlLeafTextElement
 public partial class Corporate : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10830;
-    /// <inheritdoc/>
-    public override string LocalName => "Corporate";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Corporate class.
@@ -342,11 +321,7 @@ public partial class Corporate : OpenXmlLeafTextElement
 public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10847;
-    /// <inheritdoc/>
-    public override string LocalName => "AbbreviatedCaseNumber";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the AbbreviatedCaseNumber class.
@@ -383,11 +358,7 @@ public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
 public partial class AlbumTitle : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10848;
-    /// <inheritdoc/>
-    public override string LocalName => "AlbumTitle";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the AlbumTitle class.
@@ -424,11 +395,7 @@ public partial class AlbumTitle : OpenXmlLeafTextElement
 public partial class BookTitle : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10850;
-    /// <inheritdoc/>
-    public override string LocalName => "BookTitle";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the BookTitle class.
@@ -465,11 +432,7 @@ public partial class BookTitle : OpenXmlLeafTextElement
 public partial class Broadcaster : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10851;
-    /// <inheritdoc/>
-    public override string LocalName => "Broadcaster";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Broadcaster class.
@@ -506,11 +469,7 @@ public partial class Broadcaster : OpenXmlLeafTextElement
 public partial class BroadcastTitle : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10852;
-    /// <inheritdoc/>
-    public override string LocalName => "BroadcastTitle";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the BroadcastTitle class.
@@ -547,11 +506,7 @@ public partial class BroadcastTitle : OpenXmlLeafTextElement
 public partial class CaseNumber : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10853;
-    /// <inheritdoc/>
-    public override string LocalName => "CaseNumber";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the CaseNumber class.
@@ -588,11 +543,7 @@ public partial class CaseNumber : OpenXmlLeafTextElement
 public partial class ChapterNumber : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10854;
-    /// <inheritdoc/>
-    public override string LocalName => "ChapterNumber";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ChapterNumber class.
@@ -629,11 +580,7 @@ public partial class ChapterNumber : OpenXmlLeafTextElement
 public partial class City : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10855;
-    /// <inheritdoc/>
-    public override string LocalName => "City";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the City class.
@@ -670,11 +617,7 @@ public partial class City : OpenXmlLeafTextElement
 public partial class Comments : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10856;
-    /// <inheritdoc/>
-    public override string LocalName => "Comments";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Comments class.
@@ -711,11 +654,7 @@ public partial class Comments : OpenXmlLeafTextElement
 public partial class ConferenceName : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10857;
-    /// <inheritdoc/>
-    public override string LocalName => "ConferenceName";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ConferenceName class.
@@ -752,11 +691,7 @@ public partial class ConferenceName : OpenXmlLeafTextElement
 public partial class CountryRegion : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10858;
-    /// <inheritdoc/>
-    public override string LocalName => "CountryRegion";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the CountryRegion class.
@@ -793,11 +728,7 @@ public partial class CountryRegion : OpenXmlLeafTextElement
 public partial class Court : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10859;
-    /// <inheritdoc/>
-    public override string LocalName => "Court";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Court class.
@@ -834,11 +765,7 @@ public partial class Court : OpenXmlLeafTextElement
 public partial class Day : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10860;
-    /// <inheritdoc/>
-    public override string LocalName => "Day";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Day class.
@@ -875,11 +802,7 @@ public partial class Day : OpenXmlLeafTextElement
 public partial class DayAccessed : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10861;
-    /// <inheritdoc/>
-    public override string LocalName => "DayAccessed";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the DayAccessed class.
@@ -916,11 +839,7 @@ public partial class DayAccessed : OpenXmlLeafTextElement
 public partial class Department : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10862;
-    /// <inheritdoc/>
-    public override string LocalName => "Department";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Department class.
@@ -957,11 +876,7 @@ public partial class Department : OpenXmlLeafTextElement
 public partial class Distributor : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10863;
-    /// <inheritdoc/>
-    public override string LocalName => "Distributor";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Distributor class.
@@ -998,11 +913,7 @@ public partial class Distributor : OpenXmlLeafTextElement
 public partial class Edition : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10864;
-    /// <inheritdoc/>
-    public override string LocalName => "Edition";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Edition class.
@@ -1039,11 +950,7 @@ public partial class Edition : OpenXmlLeafTextElement
 public partial class GuidString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10865;
-    /// <inheritdoc/>
-    public override string LocalName => "Guid";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the GuidString class.
@@ -1080,11 +987,7 @@ public partial class GuidString : OpenXmlLeafTextElement
 public partial class Institution : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10866;
-    /// <inheritdoc/>
-    public override string LocalName => "Institution";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Institution class.
@@ -1121,11 +1024,7 @@ public partial class Institution : OpenXmlLeafTextElement
 public partial class InternetSiteTitle : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10867;
-    /// <inheritdoc/>
-    public override string LocalName => "InternetSiteTitle";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the InternetSiteTitle class.
@@ -1162,11 +1061,7 @@ public partial class InternetSiteTitle : OpenXmlLeafTextElement
 public partial class Issue : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10868;
-    /// <inheritdoc/>
-    public override string LocalName => "Issue";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Issue class.
@@ -1203,11 +1098,7 @@ public partial class Issue : OpenXmlLeafTextElement
 public partial class JournalName : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10869;
-    /// <inheritdoc/>
-    public override string LocalName => "JournalName";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the JournalName class.
@@ -1244,11 +1135,7 @@ public partial class JournalName : OpenXmlLeafTextElement
 public partial class LcId : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10870;
-    /// <inheritdoc/>
-    public override string LocalName => "LCID";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the LcId class.
@@ -1285,11 +1172,7 @@ public partial class LcId : OpenXmlLeafTextElement
 public partial class Medium : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10871;
-    /// <inheritdoc/>
-    public override string LocalName => "Medium";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Medium class.
@@ -1326,11 +1209,7 @@ public partial class Medium : OpenXmlLeafTextElement
 public partial class Month : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10872;
-    /// <inheritdoc/>
-    public override string LocalName => "Month";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Month class.
@@ -1367,11 +1246,7 @@ public partial class Month : OpenXmlLeafTextElement
 public partial class MonthAccessed : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10873;
-    /// <inheritdoc/>
-    public override string LocalName => "MonthAccessed";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the MonthAccessed class.
@@ -1408,11 +1283,7 @@ public partial class MonthAccessed : OpenXmlLeafTextElement
 public partial class NumberVolumes : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10874;
-    /// <inheritdoc/>
-    public override string LocalName => "NumberVolumes";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the NumberVolumes class.
@@ -1449,11 +1320,7 @@ public partial class NumberVolumes : OpenXmlLeafTextElement
 public partial class Pages : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10875;
-    /// <inheritdoc/>
-    public override string LocalName => "Pages";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Pages class.
@@ -1490,11 +1357,7 @@ public partial class Pages : OpenXmlLeafTextElement
 public partial class PatentNumber : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10876;
-    /// <inheritdoc/>
-    public override string LocalName => "PatentNumber";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the PatentNumber class.
@@ -1531,11 +1394,7 @@ public partial class PatentNumber : OpenXmlLeafTextElement
 public partial class PeriodicalTitle : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10877;
-    /// <inheritdoc/>
-    public override string LocalName => "PeriodicalTitle";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the PeriodicalTitle class.
@@ -1572,11 +1431,7 @@ public partial class PeriodicalTitle : OpenXmlLeafTextElement
 public partial class ProductionCompany : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10878;
-    /// <inheritdoc/>
-    public override string LocalName => "ProductionCompany";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ProductionCompany class.
@@ -1613,11 +1468,7 @@ public partial class ProductionCompany : OpenXmlLeafTextElement
 public partial class PublicationTitle : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10879;
-    /// <inheritdoc/>
-    public override string LocalName => "PublicationTitle";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the PublicationTitle class.
@@ -1654,11 +1505,7 @@ public partial class PublicationTitle : OpenXmlLeafTextElement
 public partial class Publisher : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10880;
-    /// <inheritdoc/>
-    public override string LocalName => "Publisher";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Publisher class.
@@ -1695,11 +1542,7 @@ public partial class Publisher : OpenXmlLeafTextElement
 public partial class RecordingNumber : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10881;
-    /// <inheritdoc/>
-    public override string LocalName => "RecordingNumber";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the RecordingNumber class.
@@ -1736,11 +1579,7 @@ public partial class RecordingNumber : OpenXmlLeafTextElement
 public partial class ReferenceOrder : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10882;
-    /// <inheritdoc/>
-    public override string LocalName => "RefOrder";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ReferenceOrder class.
@@ -1777,11 +1616,7 @@ public partial class ReferenceOrder : OpenXmlLeafTextElement
 public partial class Reporter : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10883;
-    /// <inheritdoc/>
-    public override string LocalName => "Reporter";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Reporter class.
@@ -1818,11 +1653,7 @@ public partial class Reporter : OpenXmlLeafTextElement
 public partial class ShortTitle : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10885;
-    /// <inheritdoc/>
-    public override string LocalName => "ShortTitle";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ShortTitle class.
@@ -1859,11 +1690,7 @@ public partial class ShortTitle : OpenXmlLeafTextElement
 public partial class StandardNumber : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10886;
-    /// <inheritdoc/>
-    public override string LocalName => "StandardNumber";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the StandardNumber class.
@@ -1900,11 +1727,7 @@ public partial class StandardNumber : OpenXmlLeafTextElement
 public partial class StateProvince : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10887;
-    /// <inheritdoc/>
-    public override string LocalName => "StateProvince";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the StateProvince class.
@@ -1941,11 +1764,7 @@ public partial class StateProvince : OpenXmlLeafTextElement
 public partial class Station : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10888;
-    /// <inheritdoc/>
-    public override string LocalName => "Station";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Station class.
@@ -1982,11 +1801,7 @@ public partial class Station : OpenXmlLeafTextElement
 public partial class Tag : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10889;
-    /// <inheritdoc/>
-    public override string LocalName => "Tag";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Tag class.
@@ -2023,11 +1838,7 @@ public partial class Tag : OpenXmlLeafTextElement
 public partial class Theater : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10890;
-    /// <inheritdoc/>
-    public override string LocalName => "Theater";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Theater class.
@@ -2064,11 +1875,7 @@ public partial class Theater : OpenXmlLeafTextElement
 public partial class ThesisType : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10891;
-    /// <inheritdoc/>
-    public override string LocalName => "ThesisType";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ThesisType class.
@@ -2105,11 +1912,7 @@ public partial class ThesisType : OpenXmlLeafTextElement
 public partial class Title : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10892;
-    /// <inheritdoc/>
-    public override string LocalName => "Title";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Title class.
@@ -2146,11 +1949,7 @@ public partial class Title : OpenXmlLeafTextElement
 public partial class PatentType : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10893;
-    /// <inheritdoc/>
-    public override string LocalName => "Type";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the PatentType class.
@@ -2187,11 +1986,7 @@ public partial class PatentType : OpenXmlLeafTextElement
 public partial class UrlString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10894;
-    /// <inheritdoc/>
-    public override string LocalName => "URL";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the UrlString class.
@@ -2228,11 +2023,7 @@ public partial class UrlString : OpenXmlLeafTextElement
 public partial class Version : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10895;
-    /// <inheritdoc/>
-    public override string LocalName => "Version";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Version class.
@@ -2269,11 +2060,7 @@ public partial class Version : OpenXmlLeafTextElement
 public partial class Volume : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10896;
-    /// <inheritdoc/>
-    public override string LocalName => "Volume";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Volume class.
@@ -2310,11 +2097,7 @@ public partial class Volume : OpenXmlLeafTextElement
 public partial class Year : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10897;
-    /// <inheritdoc/>
-    public override string LocalName => "Year";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Year class.
@@ -2351,11 +2134,7 @@ public partial class Year : OpenXmlLeafTextElement
 public partial class YearAccessed : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10898;
-    /// <inheritdoc/>
-    public override string LocalName => "YearAccessed";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the YearAccessed class.
@@ -2399,11 +2178,7 @@ public partial class YearAccessed : OpenXmlLeafTextElement
 public partial class NameList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10829;
-    /// <inheritdoc/>
-    public override string LocalName => "NameList";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2466,11 +2241,7 @@ public partial class NameList : OpenXmlCompositeElement
 public partial class Artist : NameType
 {
     internal const int ElementTypeIdConst = 10831;
-    /// <inheritdoc/>
-    public override string LocalName => "Artist";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Artist class.
@@ -2526,11 +2297,7 @@ public partial class Artist : NameType
 public partial class BookAuthor : NameType
 {
     internal const int ElementTypeIdConst = 10833;
-    /// <inheritdoc/>
-    public override string LocalName => "BookAuthor";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the BookAuthor class.
@@ -2586,11 +2353,7 @@ public partial class BookAuthor : NameType
 public partial class Compiler : NameType
 {
     internal const int ElementTypeIdConst = 10834;
-    /// <inheritdoc/>
-    public override string LocalName => "Compiler";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Compiler class.
@@ -2646,11 +2409,7 @@ public partial class Compiler : NameType
 public partial class Composer : NameType
 {
     internal const int ElementTypeIdConst = 10835;
-    /// <inheritdoc/>
-    public override string LocalName => "Composer";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Composer class.
@@ -2706,11 +2465,7 @@ public partial class Composer : NameType
 public partial class Conductor : NameType
 {
     internal const int ElementTypeIdConst = 10836;
-    /// <inheritdoc/>
-    public override string LocalName => "Conductor";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Conductor class.
@@ -2766,11 +2521,7 @@ public partial class Conductor : NameType
 public partial class Counsel : NameType
 {
     internal const int ElementTypeIdConst = 10837;
-    /// <inheritdoc/>
-    public override string LocalName => "Counsel";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Counsel class.
@@ -2826,11 +2577,7 @@ public partial class Counsel : NameType
 public partial class Director : NameType
 {
     internal const int ElementTypeIdConst = 10838;
-    /// <inheritdoc/>
-    public override string LocalName => "Director";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Director class.
@@ -2886,11 +2633,7 @@ public partial class Director : NameType
 public partial class Editor : NameType
 {
     internal const int ElementTypeIdConst = 10839;
-    /// <inheritdoc/>
-    public override string LocalName => "Editor";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Editor class.
@@ -2946,11 +2689,7 @@ public partial class Editor : NameType
 public partial class Interviewee : NameType
 {
     internal const int ElementTypeIdConst = 10840;
-    /// <inheritdoc/>
-    public override string LocalName => "Interviewee";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Interviewee class.
@@ -3006,11 +2745,7 @@ public partial class Interviewee : NameType
 public partial class Interviewer : NameType
 {
     internal const int ElementTypeIdConst = 10841;
-    /// <inheritdoc/>
-    public override string LocalName => "Interviewer";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Interviewer class.
@@ -3066,11 +2801,7 @@ public partial class Interviewer : NameType
 public partial class Inventor : NameType
 {
     internal const int ElementTypeIdConst = 10842;
-    /// <inheritdoc/>
-    public override string LocalName => "Inventor";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Inventor class.
@@ -3126,11 +2857,7 @@ public partial class Inventor : NameType
 public partial class ProducerName : NameType
 {
     internal const int ElementTypeIdConst = 10844;
-    /// <inheritdoc/>
-    public override string LocalName => "ProducerName";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ProducerName class.
@@ -3186,11 +2913,7 @@ public partial class ProducerName : NameType
 public partial class Translator : NameType
 {
     internal const int ElementTypeIdConst = 10845;
-    /// <inheritdoc/>
-    public override string LocalName => "Translator";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Translator class.
@@ -3246,11 +2969,7 @@ public partial class Translator : NameType
 public partial class Writer : NameType
 {
     internal const int ElementTypeIdConst = 10846;
-    /// <inheritdoc/>
-    public override string LocalName => "Writer";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Writer class.
@@ -3305,13 +3024,7 @@ public abstract partial class NameType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "NameList" };
-    private static readonly byte[] eleNamespaceIds = { 9 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Name List.</para>
@@ -3320,11 +3033,12 @@ public abstract partial class NameType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(0)]
     public NameList NameList
-    {
+	{
         get => GetElement<NameList>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -3382,11 +3096,7 @@ public abstract partial class NameType : OpenXmlCompositeElement
 public partial class Author : NameOrCorporateType
 {
     internal const int ElementTypeIdConst = 10832;
-    /// <inheritdoc/>
-    public override string LocalName => "Author";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Author class.
@@ -3443,11 +3153,7 @@ public partial class Author : NameOrCorporateType
 public partial class Performer : NameOrCorporateType
 {
     internal const int ElementTypeIdConst = 10843;
-    /// <inheritdoc/>
-    public override string LocalName => "Performer";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Performer class.
@@ -3504,13 +3210,7 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "NameList","Corporate" };
-    private static readonly byte[] eleNamespaceIds = { 9,9 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> NameList.</para>
@@ -3519,11 +3219,12 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(0)]
     public NameList NameList
-    {
+	{
         get => GetElement<NameList>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Corporate Author.</para>
@@ -3532,11 +3233,12 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(1)]
     public Corporate Corporate
-    {
+	{
         get => GetElement<Corporate>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -3624,11 +3326,7 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
 public partial class AuthorList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10849;
-    /// <inheritdoc/>
-    public override string LocalName => "Author";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -3668,13 +3366,7 @@ public partial class AuthorList : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "Artist","Author","BookAuthor","Compiler","Composer","Conductor","Counsel","Director","Editor","Interviewee","Interviewer","Inventor","Performer","ProducerName","Translator","Writer" };
-    private static readonly byte[] eleNamespaceIds = { 9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
     
         /// <summary>
     /// <para> Artist.</para>
@@ -3683,11 +3375,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(0)]
     public Artist Artist
-    {
+	{
         get => GetElement<Artist>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Author.</para>
@@ -3696,11 +3389,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(1)]
     public Author Author
-    {
+	{
         get => GetElement<Author>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Book Author.</para>
@@ -3709,11 +3403,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(2)]
     public BookAuthor BookAuthor
-    {
+	{
         get => GetElement<BookAuthor>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Compiler.</para>
@@ -3722,11 +3417,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(3)]
     public Compiler Compiler
-    {
+	{
         get => GetElement<Compiler>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Composer.</para>
@@ -3735,11 +3431,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(4)]
     public Composer Composer
-    {
+	{
         get => GetElement<Composer>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> Conductor.</para>
@@ -3748,11 +3445,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(5)]
     public Conductor Conductor
-    {
+	{
         get => GetElement<Conductor>(5);
         set => SetElement(5, value);
-    }
+	}
     
     /// <summary>
     /// <para> Counsel.</para>
@@ -3761,11 +3459,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(6)]
     public Counsel Counsel
-    {
+	{
         get => GetElement<Counsel>(6);
         set => SetElement(6, value);
-    }
+	}
     
     /// <summary>
     /// <para> Director.</para>
@@ -3774,11 +3473,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(7)]
     public Director Director
-    {
+	{
         get => GetElement<Director>(7);
         set => SetElement(7, value);
-    }
+	}
     
     /// <summary>
     /// <para> Editor.</para>
@@ -3787,11 +3487,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(8)]
     public Editor Editor
-    {
+	{
         get => GetElement<Editor>(8);
         set => SetElement(8, value);
-    }
+	}
     
     /// <summary>
     /// <para> Interviewee.</para>
@@ -3800,11 +3501,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(9)]
     public Interviewee Interviewee
-    {
+	{
         get => GetElement<Interviewee>(9);
         set => SetElement(9, value);
-    }
+	}
     
     /// <summary>
     /// <para> Interviewer.</para>
@@ -3813,11 +3515,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(10)]
     public Interviewer Interviewer
-    {
+	{
         get => GetElement<Interviewer>(10);
         set => SetElement(10, value);
-    }
+	}
     
     /// <summary>
     /// <para> Inventor.</para>
@@ -3826,11 +3529,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(11)]
     public Inventor Inventor
-    {
+	{
         get => GetElement<Inventor>(11);
         set => SetElement(11, value);
-    }
+	}
     
     /// <summary>
     /// <para> Performer.</para>
@@ -3839,11 +3543,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(12)]
     public Performer Performer
-    {
+	{
         get => GetElement<Performer>(12);
         set => SetElement(12, value);
-    }
+	}
     
     /// <summary>
     /// <para> Producer Name.</para>
@@ -3852,11 +3557,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(13)]
     public ProducerName ProducerName
-    {
+	{
         get => GetElement<ProducerName>(13);
         set => SetElement(13, value);
-    }
+	}
     
     /// <summary>
     /// <para> Translator.</para>
@@ -3865,11 +3571,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(14)]
     public Translator Translator
-    {
+	{
         get => GetElement<Translator>(14);
         set => SetElement(14, value);
-    }
+	}
     
     /// <summary>
     /// <para> Writer.</para>
@@ -3878,11 +3585,12 @@ public partial class AuthorList : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(15)]
     public Writer Writer
-    {
+	{
         get => GetElement<Writer>(15);
         set => SetElement(15, value);
-    }
+	}
     
 
 
@@ -3902,11 +3610,7 @@ public partial class AuthorList : OpenXmlCompositeElement
 public partial class SourceType : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10884;
-    /// <inheritdoc/>
-    public override string LocalName => "SourceType";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -4059,11 +3763,7 @@ public partial class SourceType : OpenXmlLeafTextElement
 public partial class Source : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10899;
-    /// <inheritdoc/>
-    public override string LocalName => "Source";
-    internal override byte NamespaceId => 9;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -4103,13 +3803,7 @@ public partial class Source : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "AbbreviatedCaseNumber","AlbumTitle","Author","BookTitle","Broadcaster","BroadcastTitle","CaseNumber","ChapterNumber","City","Comments","ConferenceName","CountryRegion","Court","Day","DayAccessed","Department","Distributor","Edition","Guid","Institution","InternetSiteTitle","Issue","JournalName","LCID","Medium","Month","MonthAccessed","NumberVolumes","Pages","PatentNumber","PeriodicalTitle","ProductionCompany","PublicationTitle","Publisher","RecordingNumber","RefOrder","Reporter","SourceType","ShortTitle","StandardNumber","StateProvince","Station","Tag","Theater","ThesisType","Title","Type","URL","Version","Volume","Year","YearAccessed" };
-    private static readonly byte[] eleNamespaceIds = { 9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
     
         /// <summary>
     /// <para> Abbreviated Case Number.</para>
@@ -4118,11 +3812,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(0)]
     public AbbreviatedCaseNumber AbbreviatedCaseNumber
-    {
+	{
         get => GetElement<AbbreviatedCaseNumber>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Album Title.</para>
@@ -4131,11 +3826,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(1)]
     public AlbumTitle AlbumTitle
-    {
+	{
         get => GetElement<AlbumTitle>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Contributors List.</para>
@@ -4144,11 +3840,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(2)]
     public AuthorList AuthorList
-    {
+	{
         get => GetElement<AuthorList>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Book Title.</para>
@@ -4157,11 +3854,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(3)]
     public BookTitle BookTitle
-    {
+	{
         get => GetElement<BookTitle>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Broadcaster.</para>
@@ -4170,11 +3868,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(4)]
     public Broadcaster Broadcaster
-    {
+	{
         get => GetElement<Broadcaster>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> Broadcast Title.</para>
@@ -4183,11 +3882,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(5)]
     public BroadcastTitle BroadcastTitle
-    {
+	{
         get => GetElement<BroadcastTitle>(5);
         set => SetElement(5, value);
-    }
+	}
     
     /// <summary>
     /// <para> Case Number.</para>
@@ -4196,11 +3896,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(6)]
     public CaseNumber CaseNumber
-    {
+	{
         get => GetElement<CaseNumber>(6);
         set => SetElement(6, value);
-    }
+	}
     
     /// <summary>
     /// <para> Chapter Number.</para>
@@ -4209,11 +3910,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(7)]
     public ChapterNumber ChapterNumber
-    {
+	{
         get => GetElement<ChapterNumber>(7);
         set => SetElement(7, value);
-    }
+	}
     
     /// <summary>
     /// <para> City.</para>
@@ -4222,11 +3924,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(8)]
     public City City
-    {
+	{
         get => GetElement<City>(8);
         set => SetElement(8, value);
-    }
+	}
     
     /// <summary>
     /// <para> Comments.</para>
@@ -4235,11 +3938,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(9)]
     public Comments Comments
-    {
+	{
         get => GetElement<Comments>(9);
         set => SetElement(9, value);
-    }
+	}
     
     /// <summary>
     /// <para> Conference or Proceedings Name.</para>
@@ -4248,11 +3952,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(10)]
     public ConferenceName ConferenceName
-    {
+	{
         get => GetElement<ConferenceName>(10);
         set => SetElement(10, value);
-    }
+	}
     
     /// <summary>
     /// <para> Country or Region.</para>
@@ -4261,11 +3966,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(11)]
     public CountryRegion CountryRegion
-    {
+	{
         get => GetElement<CountryRegion>(11);
         set => SetElement(11, value);
-    }
+	}
     
     /// <summary>
     /// <para> Court.</para>
@@ -4274,11 +3980,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(12)]
     public Court Court
-    {
+	{
         get => GetElement<Court>(12);
         set => SetElement(12, value);
-    }
+	}
     
     /// <summary>
     /// <para> Day.</para>
@@ -4287,11 +3994,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(13)]
     public Day Day
-    {
+	{
         get => GetElement<Day>(13);
         set => SetElement(13, value);
-    }
+	}
     
     /// <summary>
     /// <para> Day Accessed.</para>
@@ -4300,11 +4008,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(14)]
     public DayAccessed DayAccessed
-    {
+	{
         get => GetElement<DayAccessed>(14);
         set => SetElement(14, value);
-    }
+	}
     
     /// <summary>
     /// <para> Department.</para>
@@ -4313,11 +4022,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(15)]
     public Department Department
-    {
+	{
         get => GetElement<Department>(15);
         set => SetElement(15, value);
-    }
+	}
     
     /// <summary>
     /// <para> Distributor.</para>
@@ -4326,11 +4036,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(16)]
     public Distributor Distributor
-    {
+	{
         get => GetElement<Distributor>(16);
         set => SetElement(16, value);
-    }
+	}
     
     /// <summary>
     /// <para> Editor.</para>
@@ -4339,11 +4050,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(17)]
     public Edition Edition
-    {
+	{
         get => GetElement<Edition>(17);
         set => SetElement(17, value);
-    }
+	}
     
     /// <summary>
     /// <para> GUID.</para>
@@ -4352,11 +4064,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(18)]
     public GuidString GuidString
-    {
+	{
         get => GetElement<GuidString>(18);
         set => SetElement(18, value);
-    }
+	}
     
     /// <summary>
     /// <para> Institution.</para>
@@ -4365,11 +4078,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(19)]
     public Institution Institution
-    {
+	{
         get => GetElement<Institution>(19);
         set => SetElement(19, value);
-    }
+	}
     
     /// <summary>
     /// <para> Internet Site Title.</para>
@@ -4378,11 +4092,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(20)]
     public InternetSiteTitle InternetSiteTitle
-    {
+	{
         get => GetElement<InternetSiteTitle>(20);
         set => SetElement(20, value);
-    }
+	}
     
     /// <summary>
     /// <para> Issue.</para>
@@ -4391,11 +4106,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(21)]
     public Issue Issue
-    {
+	{
         get => GetElement<Issue>(21);
         set => SetElement(21, value);
-    }
+	}
     
     /// <summary>
     /// <para> Journal Name.</para>
@@ -4404,11 +4120,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(22)]
     public JournalName JournalName
-    {
+	{
         get => GetElement<JournalName>(22);
         set => SetElement(22, value);
-    }
+	}
     
     /// <summary>
     /// <para> Locale ID.</para>
@@ -4417,11 +4134,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(23)]
     public LcId LcId
-    {
+	{
         get => GetElement<LcId>(23);
         set => SetElement(23, value);
-    }
+	}
     
     /// <summary>
     /// <para> Medium.</para>
@@ -4430,11 +4148,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(24)]
     public Medium Medium
-    {
+	{
         get => GetElement<Medium>(24);
         set => SetElement(24, value);
-    }
+	}
     
     /// <summary>
     /// <para> Month.</para>
@@ -4443,11 +4162,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(25)]
     public Month Month
-    {
+	{
         get => GetElement<Month>(25);
         set => SetElement(25, value);
-    }
+	}
     
     /// <summary>
     /// <para> Month Accessed.</para>
@@ -4456,11 +4176,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(26)]
     public MonthAccessed MonthAccessed
-    {
+	{
         get => GetElement<MonthAccessed>(26);
         set => SetElement(26, value);
-    }
+	}
     
     /// <summary>
     /// <para> Number of Volumes.</para>
@@ -4469,11 +4190,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(27)]
     public NumberVolumes NumberVolumes
-    {
+	{
         get => GetElement<NumberVolumes>(27);
         set => SetElement(27, value);
-    }
+	}
     
     /// <summary>
     /// <para> Pages.</para>
@@ -4482,11 +4204,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(28)]
     public Pages Pages
-    {
+	{
         get => GetElement<Pages>(28);
         set => SetElement(28, value);
-    }
+	}
     
     /// <summary>
     /// <para> Patent Number.</para>
@@ -4495,11 +4218,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(29)]
     public PatentNumber PatentNumber
-    {
+	{
         get => GetElement<PatentNumber>(29);
         set => SetElement(29, value);
-    }
+	}
     
     /// <summary>
     /// <para> Periodical Title.</para>
@@ -4508,11 +4232,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(30)]
     public PeriodicalTitle PeriodicalTitle
-    {
+	{
         get => GetElement<PeriodicalTitle>(30);
         set => SetElement(30, value);
-    }
+	}
     
     /// <summary>
     /// <para> Production Company.</para>
@@ -4521,11 +4246,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(31)]
     public ProductionCompany ProductionCompany
-    {
+	{
         get => GetElement<ProductionCompany>(31);
         set => SetElement(31, value);
-    }
+	}
     
     /// <summary>
     /// <para> Publication Title.</para>
@@ -4534,11 +4260,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(32)]
     public PublicationTitle PublicationTitle
-    {
+	{
         get => GetElement<PublicationTitle>(32);
         set => SetElement(32, value);
-    }
+	}
     
     /// <summary>
     /// <para> Publisher.</para>
@@ -4547,11 +4274,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(33)]
     public Publisher Publisher
-    {
+	{
         get => GetElement<Publisher>(33);
         set => SetElement(33, value);
-    }
+	}
     
     /// <summary>
     /// <para> Recording Number.</para>
@@ -4560,11 +4288,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(34)]
     public RecordingNumber RecordingNumber
-    {
+	{
         get => GetElement<RecordingNumber>(34);
         set => SetElement(34, value);
-    }
+	}
     
     /// <summary>
     /// <para> Reference Order.</para>
@@ -4573,11 +4302,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(35)]
     public ReferenceOrder ReferenceOrder
-    {
+	{
         get => GetElement<ReferenceOrder>(35);
         set => SetElement(35, value);
-    }
+	}
     
     /// <summary>
     /// <para> Reporter.</para>
@@ -4586,11 +4316,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(36)]
     public Reporter Reporter
-    {
+	{
         get => GetElement<Reporter>(36);
         set => SetElement(36, value);
-    }
+	}
     
     /// <summary>
     /// <para> Source Type.</para>
@@ -4599,11 +4330,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(37)]
     public SourceType SourceType
-    {
+	{
         get => GetElement<SourceType>(37);
         set => SetElement(37, value);
-    }
+	}
     
     /// <summary>
     /// <para> Short Title.</para>
@@ -4612,11 +4344,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(38)]
     public ShortTitle ShortTitle
-    {
+	{
         get => GetElement<ShortTitle>(38);
         set => SetElement(38, value);
-    }
+	}
     
     /// <summary>
     /// <para> Standard Number.</para>
@@ -4625,11 +4358,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(39)]
     public StandardNumber StandardNumber
-    {
+	{
         get => GetElement<StandardNumber>(39);
         set => SetElement(39, value);
-    }
+	}
     
     /// <summary>
     /// <para> State or Province.</para>
@@ -4638,11 +4372,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(40)]
     public StateProvince StateProvince
-    {
+	{
         get => GetElement<StateProvince>(40);
         set => SetElement(40, value);
-    }
+	}
     
     /// <summary>
     /// <para> Station.</para>
@@ -4651,11 +4386,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(41)]
     public Station Station
-    {
+	{
         get => GetElement<Station>(41);
         set => SetElement(41, value);
-    }
+	}
     
     /// <summary>
     /// <para> Tag.</para>
@@ -4664,11 +4400,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(42)]
     public Tag Tag
-    {
+	{
         get => GetElement<Tag>(42);
         set => SetElement(42, value);
-    }
+	}
     
     /// <summary>
     /// <para> Theater.</para>
@@ -4677,11 +4414,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(43)]
     public Theater Theater
-    {
+	{
         get => GetElement<Theater>(43);
         set => SetElement(43, value);
-    }
+	}
     
     /// <summary>
     /// <para> Thesis Type.</para>
@@ -4690,11 +4428,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(44)]
     public ThesisType ThesisType
-    {
+	{
         get => GetElement<ThesisType>(44);
         set => SetElement(44, value);
-    }
+	}
     
     /// <summary>
     /// <para> Title.</para>
@@ -4703,11 +4442,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(45)]
     public Title Title
-    {
+	{
         get => GetElement<Title>(45);
         set => SetElement(45, value);
-    }
+	}
     
     /// <summary>
     /// <para> Type.</para>
@@ -4716,11 +4456,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(46)]
     public PatentType PatentType
-    {
+	{
         get => GetElement<PatentType>(46);
         set => SetElement(46, value);
-    }
+	}
     
     /// <summary>
     /// <para> URL.</para>
@@ -4729,11 +4470,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(47)]
     public UrlString UrlString
-    {
+	{
         get => GetElement<UrlString>(47);
         set => SetElement(47, value);
-    }
+	}
     
     /// <summary>
     /// <para> Version.</para>
@@ -4742,11 +4484,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(48)]
     public Version Version
-    {
+	{
         get => GetElement<Version>(48);
         set => SetElement(48, value);
-    }
+	}
     
     /// <summary>
     /// <para> Volume.</para>
@@ -4755,11 +4498,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(49)]
     public Volume Volume
-    {
+	{
         get => GetElement<Volume>(49);
         set => SetElement(49, value);
-    }
+	}
     
     /// <summary>
     /// <para> Year.</para>
@@ -4768,11 +4512,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(50)]
     public Year Year
-    {
+	{
         get => GetElement<Year>(50);
         set => SetElement(50, value);
-    }
+	}
     
     /// <summary>
     /// <para> Year Accessed.</para>
@@ -4781,11 +4526,12 @@ public partial class Source : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
     /// </remark>
+	[Index(51)]
     public YearAccessed YearAccessed
-    {
+	{
         get => GetElement<YearAccessed>(51);
         set => SetElement(51, value);
-    }
+	}
     
 
 

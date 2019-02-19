@@ -21,11 +21,7 @@ namespace DocumentFormat.OpenXml.Math
 public partial class Script : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10905;
-    /// <inheritdoc/>
-    public override string LocalName => "scr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -35,7 +31,8 @@ public partial class Script : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val { get; set; }
 
     /// <summary>
@@ -64,11 +61,7 @@ public partial class Script : OpenXmlLeafElement
 public partial class Style : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10906;
-    /// <inheritdoc/>
-    public override string LocalName => "sty";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -78,7 +71,8 @@ public partial class Style : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val { get; set; }
 
     /// <summary>
@@ -182,11 +176,7 @@ public partial class Style : OpenXmlLeafElement
 public partial class Run : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10907;
-    /// <inheritdoc/>
-    public override string LocalName => "r";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -226,13 +216,7 @@ public partial class Run : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "rPr","rPr","br","t","delText","instrText","delInstrText","noBreakHyphen","softHyphen","dayShort","monthShort","yearShort","dayLong","monthLong","yearLong","annotationRef","footnoteRef","endnoteRef","separator","continuationSeparator","sym","pgNum","cr","tab","object","pict","fldChar","ruby","footnoteReference","endnoteReference","commentReference","drawing","ptab","lastRenderedPageBreak","t" };
-    private static readonly byte[] eleNamespaceIds = { 21,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Run Properties.</para>
@@ -241,11 +225,12 @@ public partial class Run : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public RunProperties MathRunProperties
-    {
+	{
         get => GetElement<RunProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Run Properties.</para>
@@ -254,11 +239,12 @@ public partial class Run : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Wordprocessing.RunProperties RunProperties
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunProperties>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -287,11 +273,7 @@ public partial class Run : OpenXmlCompositeElement
 public partial class Accent : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10908;
-    /// <inheritdoc/>
-    public override string LocalName => "acc";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -331,13 +313,7 @@ public partial class Accent : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "accPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Accent Properties.</para>
@@ -346,11 +322,12 @@ public partial class Accent : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public AccentProperties AccentProperties
-    {
+	{
         get => GetElement<AccentProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base.</para>
@@ -359,11 +336,12 @@ public partial class Accent : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -392,11 +370,7 @@ public partial class Accent : OpenXmlCompositeElement
 public partial class Bar : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10909;
-    /// <inheritdoc/>
-    public override string LocalName => "bar";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -436,13 +410,7 @@ public partial class Bar : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "barPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Bar Properties.</para>
@@ -451,11 +419,12 @@ public partial class Bar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public BarProperties BarProperties
-    {
+	{
         get => GetElement<BarProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base.</para>
@@ -464,11 +433,12 @@ public partial class Bar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -497,11 +467,7 @@ public partial class Bar : OpenXmlCompositeElement
 public partial class Box : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10910;
-    /// <inheritdoc/>
-    public override string LocalName => "box";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -541,13 +507,7 @@ public partial class Box : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "boxPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Box Properties.</para>
@@ -556,11 +516,12 @@ public partial class Box : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public BoxProperties BoxProperties
-    {
+	{
         get => GetElement<BoxProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base.</para>
@@ -569,11 +530,12 @@ public partial class Box : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -602,11 +564,7 @@ public partial class Box : OpenXmlCompositeElement
 public partial class BorderBox : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10911;
-    /// <inheritdoc/>
-    public override string LocalName => "borderBox";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -646,13 +604,7 @@ public partial class BorderBox : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "borderBoxPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Border Box Properties.</para>
@@ -661,11 +613,12 @@ public partial class BorderBox : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public BorderBoxProperties BorderBoxProperties
-    {
+	{
         get => GetElement<BorderBoxProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base.</para>
@@ -674,11 +627,12 @@ public partial class BorderBox : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -707,11 +661,7 @@ public partial class BorderBox : OpenXmlCompositeElement
 public partial class Delimiter : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10912;
-    /// <inheritdoc/>
-    public override string LocalName => "d";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -751,13 +701,7 @@ public partial class Delimiter : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "dPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Delimiter Properties.</para>
@@ -766,11 +710,12 @@ public partial class Delimiter : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public DelimiterProperties DelimiterProperties
-    {
+	{
         get => GetElement<DelimiterProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -799,11 +744,7 @@ public partial class Delimiter : OpenXmlCompositeElement
 public partial class EquationArray : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10913;
-    /// <inheritdoc/>
-    public override string LocalName => "eqArr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -843,13 +784,7 @@ public partial class EquationArray : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "eqArrPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Equation Array Properties.</para>
@@ -858,11 +793,12 @@ public partial class EquationArray : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public EquationArrayProperties EquationArrayProperties
-    {
+	{
         get => GetElement<EquationArrayProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -893,11 +829,7 @@ public partial class EquationArray : OpenXmlCompositeElement
 public partial class Fraction : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10914;
-    /// <inheritdoc/>
-    public override string LocalName => "f";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -937,13 +869,7 @@ public partial class Fraction : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fPr","num","den" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Fraction Properties.</para>
@@ -952,11 +878,12 @@ public partial class Fraction : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public FractionProperties FractionProperties
-    {
+	{
         get => GetElement<FractionProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Numerator.</para>
@@ -965,11 +892,12 @@ public partial class Fraction : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public Numerator Numerator
-    {
+	{
         get => GetElement<Numerator>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Denominator.</para>
@@ -978,11 +906,12 @@ public partial class Fraction : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public Denominator Denominator
-    {
+	{
         get => GetElement<Denominator>(2);
         set => SetElement(2, value);
-    }
+	}
     
 
 
@@ -1013,11 +942,7 @@ public partial class Fraction : OpenXmlCompositeElement
 public partial class MathFunction : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10915;
-    /// <inheritdoc/>
-    public override string LocalName => "func";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1057,13 +982,7 @@ public partial class MathFunction : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "funcPr","fName","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Function Properties.</para>
@@ -1072,11 +991,12 @@ public partial class MathFunction : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public FunctionProperties FunctionProperties
-    {
+	{
         get => GetElement<FunctionProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Function Name.</para>
@@ -1085,11 +1005,12 @@ public partial class MathFunction : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public FunctionName FunctionName
-    {
+	{
         get => GetElement<FunctionName>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base (Argument).</para>
@@ -1098,11 +1019,12 @@ public partial class MathFunction : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(2);
         set => SetElement(2, value);
-    }
+	}
     
 
 
@@ -1131,11 +1053,7 @@ public partial class MathFunction : OpenXmlCompositeElement
 public partial class GroupChar : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10916;
-    /// <inheritdoc/>
-    public override string LocalName => "groupChr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1175,13 +1093,7 @@ public partial class GroupChar : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "groupChrPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Group-Character Properties.</para>
@@ -1190,11 +1102,12 @@ public partial class GroupChar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public GroupCharProperties GroupCharProperties
-    {
+	{
         get => GetElement<GroupCharProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base.</para>
@@ -1203,11 +1116,12 @@ public partial class GroupChar : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -1238,11 +1152,7 @@ public partial class GroupChar : OpenXmlCompositeElement
 public partial class LimitLower : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10917;
-    /// <inheritdoc/>
-    public override string LocalName => "limLow";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1282,13 +1192,7 @@ public partial class LimitLower : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "limLowPr","e","lim" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Lower Limit Properties.</para>
@@ -1297,11 +1201,12 @@ public partial class LimitLower : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public LimitLowerProperties LimitLowerProperties
-    {
+	{
         get => GetElement<LimitLowerProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base.</para>
@@ -1310,11 +1215,12 @@ public partial class LimitLower : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Limit (Lower).</para>
@@ -1323,11 +1229,12 @@ public partial class LimitLower : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public Limit Limit
-    {
+	{
         get => GetElement<Limit>(2);
         set => SetElement(2, value);
-    }
+	}
     
 
 
@@ -1358,11 +1265,7 @@ public partial class LimitLower : OpenXmlCompositeElement
 public partial class LimitUpper : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10918;
-    /// <inheritdoc/>
-    public override string LocalName => "limUpp";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1402,13 +1305,7 @@ public partial class LimitUpper : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "limUppPr","e","lim" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Upper Limit Properties.</para>
@@ -1417,11 +1314,12 @@ public partial class LimitUpper : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public LimitUpperProperties LimitUpperProperties
-    {
+	{
         get => GetElement<LimitUpperProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base.</para>
@@ -1430,11 +1328,12 @@ public partial class LimitUpper : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Limit (Upper).</para>
@@ -1443,11 +1342,12 @@ public partial class LimitUpper : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public Limit Limit
-    {
+	{
         get => GetElement<Limit>(2);
         set => SetElement(2, value);
-    }
+	}
     
 
 
@@ -1476,11 +1376,7 @@ public partial class LimitUpper : OpenXmlCompositeElement
 public partial class Matrix : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10919;
-    /// <inheritdoc/>
-    public override string LocalName => "m";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1520,13 +1416,7 @@ public partial class Matrix : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "mPr","mr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Matrix Properties.</para>
@@ -1535,11 +1425,12 @@ public partial class Matrix : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public MatrixProperties MatrixProperties
-    {
+	{
         get => GetElement<MatrixProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -1572,11 +1463,7 @@ public partial class Matrix : OpenXmlCompositeElement
 public partial class Nary : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10920;
-    /// <inheritdoc/>
-    public override string LocalName => "nary";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1616,13 +1503,7 @@ public partial class Nary : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "naryPr","sub","sup","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> n-ary Properties.</para>
@@ -1631,11 +1512,12 @@ public partial class Nary : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public NaryProperties NaryProperties
-    {
+	{
         get => GetElement<NaryProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Lower limit (n-ary) .</para>
@@ -1644,11 +1526,12 @@ public partial class Nary : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public SubArgument SubArgument
-    {
+	{
         get => GetElement<SubArgument>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Upper limit (n-ary).</para>
@@ -1657,11 +1540,12 @@ public partial class Nary : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public SuperArgument SuperArgument
-    {
+	{
         get => GetElement<SuperArgument>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base (Argument).</para>
@@ -1670,11 +1554,12 @@ public partial class Nary : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(3)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(3);
         set => SetElement(3, value);
-    }
+	}
     
 
 
@@ -1703,11 +1588,7 @@ public partial class Nary : OpenXmlCompositeElement
 public partial class Phantom : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10921;
-    /// <inheritdoc/>
-    public override string LocalName => "phant";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1747,13 +1628,7 @@ public partial class Phantom : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "phantPr","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Phantom Properties.</para>
@@ -1762,11 +1637,12 @@ public partial class Phantom : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public PhantomProperties PhantomProperties
-    {
+	{
         get => GetElement<PhantomProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base.</para>
@@ -1775,11 +1651,12 @@ public partial class Phantom : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -1810,11 +1687,7 @@ public partial class Phantom : OpenXmlCompositeElement
 public partial class Radical : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10922;
-    /// <inheritdoc/>
-    public override string LocalName => "rad";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1854,13 +1727,7 @@ public partial class Radical : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "radPr","deg","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Radical Properties.</para>
@@ -1869,11 +1736,12 @@ public partial class Radical : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public RadicalProperties RadicalProperties
-    {
+	{
         get => GetElement<RadicalProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Degree.</para>
@@ -1882,11 +1750,12 @@ public partial class Radical : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public Degree Degree
-    {
+	{
         get => GetElement<Degree>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base.</para>
@@ -1895,11 +1764,12 @@ public partial class Radical : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(2);
         set => SetElement(2, value);
-    }
+	}
     
 
 
@@ -1932,11 +1802,7 @@ public partial class Radical : OpenXmlCompositeElement
 public partial class PreSubSuper : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10923;
-    /// <inheritdoc/>
-    public override string LocalName => "sPre";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1976,13 +1842,7 @@ public partial class PreSubSuper : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sPrePr","sub","sup","e" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Pre-Sub-Superscript Properties.</para>
@@ -1991,11 +1851,12 @@ public partial class PreSubSuper : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public PreSubSuperProperties PreSubSuperProperties
-    {
+	{
         get => GetElement<PreSubSuperProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Subscript (Pre-Sub-Superscript).</para>
@@ -2004,11 +1865,12 @@ public partial class PreSubSuper : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public SubArgument SubArgument
-    {
+	{
         get => GetElement<SubArgument>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Superscript(Pre-Sub-Superscript function).</para>
@@ -2017,11 +1879,12 @@ public partial class PreSubSuper : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public SuperArgument SuperArgument
-    {
+	{
         get => GetElement<SuperArgument>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base.</para>
@@ -2030,11 +1893,12 @@ public partial class PreSubSuper : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(3)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(3);
         set => SetElement(3, value);
-    }
+	}
     
 
 
@@ -2065,11 +1929,7 @@ public partial class PreSubSuper : OpenXmlCompositeElement
 public partial class Subscript : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10924;
-    /// <inheritdoc/>
-    public override string LocalName => "sSub";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2109,13 +1969,7 @@ public partial class Subscript : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sSubPr","e","sub" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Subscript Properties.</para>
@@ -2124,11 +1978,12 @@ public partial class Subscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public SubscriptProperties SubscriptProperties
-    {
+	{
         get => GetElement<SubscriptProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base.</para>
@@ -2137,11 +1992,12 @@ public partial class Subscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Subscript (Subscript function).</para>
@@ -2150,11 +2006,12 @@ public partial class Subscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public SubArgument SubArgument
-    {
+	{
         get => GetElement<SubArgument>(2);
         set => SetElement(2, value);
-    }
+	}
     
 
 
@@ -2187,11 +2044,7 @@ public partial class Subscript : OpenXmlCompositeElement
 public partial class SubSuperscript : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10925;
-    /// <inheritdoc/>
-    public override string LocalName => "sSubSup";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2231,13 +2084,7 @@ public partial class SubSuperscript : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sSubSupPr","e","sub","sup" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Sub-Superscript Properties.</para>
@@ -2246,11 +2093,12 @@ public partial class SubSuperscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public SubSuperscriptProperties SubSuperscriptProperties
-    {
+	{
         get => GetElement<SubSuperscriptProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base.</para>
@@ -2259,11 +2107,12 @@ public partial class SubSuperscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Subscript (Sub-Superscript).</para>
@@ -2272,11 +2121,12 @@ public partial class SubSuperscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public SubArgument SubArgument
-    {
+	{
         get => GetElement<SubArgument>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Superscript (Sub-Superscript function).</para>
@@ -2285,11 +2135,12 @@ public partial class SubSuperscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(3)]
     public SuperArgument SuperArgument
-    {
+	{
         get => GetElement<SuperArgument>(3);
         set => SetElement(3, value);
-    }
+	}
     
 
 
@@ -2320,11 +2171,7 @@ public partial class SubSuperscript : OpenXmlCompositeElement
 public partial class Superscript : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10926;
-    /// <inheritdoc/>
-    public override string LocalName => "sSup";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2364,13 +2211,7 @@ public partial class Superscript : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "sSupPr","e","sup" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Superscript Properties.</para>
@@ -2379,11 +2220,12 @@ public partial class Superscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public SuperscriptProperties SuperscriptProperties
-    {
+	{
         get => GetElement<SuperscriptProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Base.</para>
@@ -2392,11 +2234,12 @@ public partial class Superscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public Base Base
-    {
+	{
         get => GetElement<Base>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Superscript (Superscript function).</para>
@@ -2405,11 +2248,12 @@ public partial class Superscript : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public SuperArgument SuperArgument
-    {
+	{
         get => GetElement<SuperArgument>(2);
         set => SetElement(2, value);
-    }
+	}
     
 
 
@@ -2502,11 +2346,7 @@ public partial class Superscript : OpenXmlCompositeElement
 public partial class Paragraph : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10927;
-    /// <inheritdoc/>
-    public override string LocalName => "oMathPara";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2546,13 +2386,7 @@ public partial class Paragraph : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "oMathParaPr","oMath","r","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","r" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,23 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Office Math Paragraph Properties.</para>
@@ -2561,11 +2395,12 @@ public partial class Paragraph : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public ParagraphProperties ParagraphProperties
-    {
+	{
         get => GetElement<ParagraphProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -2702,11 +2537,7 @@ public partial class Paragraph : OpenXmlCompositeElement
 public partial class OfficeMath : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10928;
-    /// <inheritdoc/>
-    public override string LocalName => "oMath";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2800,11 +2631,7 @@ public partial class OfficeMath : OpenXmlCompositeElement
 public partial class MathProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10929;
-    /// <inheritdoc/>
-    public override string LocalName => "mathPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2844,13 +2671,7 @@ public partial class MathProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "mathFont","brkBin","brkBinSub","smallFrac","dispDef","lMargin","rMargin","defJc","preSp","postSp","interSp","intraSp","wrapIndent","wrapRight","intLim","naryLim" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Math Font.</para>
@@ -2859,11 +2680,12 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public MathFont MathFont
-    {
+	{
         get => GetElement<MathFont>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Break on Binary Operators.</para>
@@ -2872,11 +2694,12 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public BreakBinary BreakBinary
-    {
+	{
         get => GetElement<BreakBinary>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Break on Binary Subtraction.</para>
@@ -2885,11 +2708,12 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public BreakBinarySubtraction BreakBinarySubtraction
-    {
+	{
         get => GetElement<BreakBinarySubtraction>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Small Fraction.</para>
@@ -2898,11 +2722,12 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(3)]
     public SmallFraction SmallFraction
-    {
+	{
         get => GetElement<SmallFraction>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Use Display Math Defaults.</para>
@@ -2911,11 +2736,12 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(4)]
     public DisplayDefaults DisplayDefaults
-    {
+	{
         get => GetElement<DisplayDefaults>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> Left Margin.</para>
@@ -2924,11 +2750,12 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(5)]
     public LeftMargin LeftMargin
-    {
+	{
         get => GetElement<LeftMargin>(5);
         set => SetElement(5, value);
-    }
+	}
     
     /// <summary>
     /// <para> Right Margin.</para>
@@ -2937,11 +2764,12 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(6)]
     public RightMargin RightMargin
-    {
+	{
         get => GetElement<RightMargin>(6);
         set => SetElement(6, value);
-    }
+	}
     
     /// <summary>
     /// <para> Default Justification.</para>
@@ -2950,11 +2778,12 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(7)]
     public DefaultJustification DefaultJustification
-    {
+	{
         get => GetElement<DefaultJustification>(7);
         set => SetElement(7, value);
-    }
+	}
     
     /// <summary>
     /// <para> Pre-Equation Spacing.</para>
@@ -2963,11 +2792,12 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(8)]
     public PreSpacing PreSpacing
-    {
+	{
         get => GetElement<PreSpacing>(8);
         set => SetElement(8, value);
-    }
+	}
     
     /// <summary>
     /// <para> Post-Equation Spacing.</para>
@@ -2976,11 +2806,12 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(9)]
     public PostSpacing PostSpacing
-    {
+	{
         get => GetElement<PostSpacing>(9);
         set => SetElement(9, value);
-    }
+	}
     
     /// <summary>
     /// <para> Inter-Equation Spacing.</para>
@@ -2989,11 +2820,12 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(10)]
     public InterSpacing InterSpacing
-    {
+	{
         get => GetElement<InterSpacing>(10);
         set => SetElement(10, value);
-    }
+	}
     
     /// <summary>
     /// <para> Intra-Equation Spacing.</para>
@@ -3002,11 +2834,12 @@ public partial class MathProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(11)]
     public IntraSpacing IntraSpacing
-    {
+	{
         get => GetElement<IntraSpacing>(11);
         set => SetElement(11, value);
-    }
+	}
     
 
 
@@ -3026,11 +2859,7 @@ public partial class MathProperties : OpenXmlCompositeElement
 public partial class Literal : OnOffType
 {
     internal const int ElementTypeIdConst = 10930;
-    /// <inheritdoc/>
-    public override string LocalName => "lit";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Literal class.
@@ -3054,11 +2883,7 @@ public partial class Literal : OnOffType
 public partial class NormalText : OnOffType
 {
     internal const int ElementTypeIdConst = 10931;
-    /// <inheritdoc/>
-    public override string LocalName => "nor";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the NormalText class.
@@ -3082,11 +2907,7 @@ public partial class NormalText : OnOffType
 public partial class Alignment : OnOffType
 {
     internal const int ElementTypeIdConst = 10933;
-    /// <inheritdoc/>
-    public override string LocalName => "aln";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Alignment class.
@@ -3110,11 +2931,7 @@ public partial class Alignment : OnOffType
 public partial class OperatorEmulator : OnOffType
 {
     internal const int ElementTypeIdConst = 10942;
-    /// <inheritdoc/>
-    public override string LocalName => "opEmu";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the OperatorEmulator class.
@@ -3138,11 +2955,7 @@ public partial class OperatorEmulator : OnOffType
 public partial class NoBreak : OnOffType
 {
     internal const int ElementTypeIdConst = 10943;
-    /// <inheritdoc/>
-    public override string LocalName => "noBreak";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the NoBreak class.
@@ -3166,11 +2979,7 @@ public partial class NoBreak : OnOffType
 public partial class Differential : OnOffType
 {
     internal const int ElementTypeIdConst = 10944;
-    /// <inheritdoc/>
-    public override string LocalName => "diff";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Differential class.
@@ -3194,11 +3003,7 @@ public partial class Differential : OnOffType
 public partial class HideTop : OnOffType
 {
     internal const int ElementTypeIdConst = 10946;
-    /// <inheritdoc/>
-    public override string LocalName => "hideTop";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the HideTop class.
@@ -3222,11 +3027,7 @@ public partial class HideTop : OnOffType
 public partial class HideBottom : OnOffType
 {
     internal const int ElementTypeIdConst = 10947;
-    /// <inheritdoc/>
-    public override string LocalName => "hideBot";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the HideBottom class.
@@ -3250,11 +3051,7 @@ public partial class HideBottom : OnOffType
 public partial class HideLeft : OnOffType
 {
     internal const int ElementTypeIdConst = 10948;
-    /// <inheritdoc/>
-    public override string LocalName => "hideLeft";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the HideLeft class.
@@ -3278,11 +3075,7 @@ public partial class HideLeft : OnOffType
 public partial class HideRight : OnOffType
 {
     internal const int ElementTypeIdConst = 10949;
-    /// <inheritdoc/>
-    public override string LocalName => "hideRight";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the HideRight class.
@@ -3306,11 +3099,7 @@ public partial class HideRight : OnOffType
 public partial class StrikeHorizontal : OnOffType
 {
     internal const int ElementTypeIdConst = 10950;
-    /// <inheritdoc/>
-    public override string LocalName => "strikeH";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the StrikeHorizontal class.
@@ -3334,11 +3123,7 @@ public partial class StrikeHorizontal : OnOffType
 public partial class StrikeVertical : OnOffType
 {
     internal const int ElementTypeIdConst = 10951;
-    /// <inheritdoc/>
-    public override string LocalName => "strikeV";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the StrikeVertical class.
@@ -3362,11 +3147,7 @@ public partial class StrikeVertical : OnOffType
 public partial class StrikeBottomLeftToTopRight : OnOffType
 {
     internal const int ElementTypeIdConst = 10952;
-    /// <inheritdoc/>
-    public override string LocalName => "strikeBLTR";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the StrikeBottomLeftToTopRight class.
@@ -3390,11 +3171,7 @@ public partial class StrikeBottomLeftToTopRight : OnOffType
 public partial class StrikeTopLeftToBottomRight : OnOffType
 {
     internal const int ElementTypeIdConst = 10953;
-    /// <inheritdoc/>
-    public override string LocalName => "strikeTLBR";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the StrikeTopLeftToBottomRight class.
@@ -3418,11 +3195,7 @@ public partial class StrikeTopLeftToBottomRight : OnOffType
 public partial class GrowOperators : OnOffType
 {
     internal const int ElementTypeIdConst = 10958;
-    /// <inheritdoc/>
-    public override string LocalName => "grow";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the GrowOperators class.
@@ -3446,11 +3219,7 @@ public partial class GrowOperators : OnOffType
 public partial class MaxDistribution : OnOffType
 {
     internal const int ElementTypeIdConst = 10962;
-    /// <inheritdoc/>
-    public override string LocalName => "maxDist";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the MaxDistribution class.
@@ -3474,11 +3243,7 @@ public partial class MaxDistribution : OnOffType
 public partial class ObjectDistribution : OnOffType
 {
     internal const int ElementTypeIdConst = 10963;
-    /// <inheritdoc/>
-    public override string LocalName => "objDist";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ObjectDistribution class.
@@ -3502,11 +3267,7 @@ public partial class ObjectDistribution : OnOffType
 public partial class HidePlaceholder : OnOffType
 {
     internal const int ElementTypeIdConst = 10982;
-    /// <inheritdoc/>
-    public override string LocalName => "plcHide";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the HidePlaceholder class.
@@ -3530,11 +3291,7 @@ public partial class HidePlaceholder : OnOffType
 public partial class HideSubArgument : OnOffType
 {
     internal const int ElementTypeIdConst = 10990;
-    /// <inheritdoc/>
-    public override string LocalName => "subHide";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the HideSubArgument class.
@@ -3558,11 +3315,7 @@ public partial class HideSubArgument : OnOffType
 public partial class HideSuperArgument : OnOffType
 {
     internal const int ElementTypeIdConst = 10991;
-    /// <inheritdoc/>
-    public override string LocalName => "supHide";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the HideSuperArgument class.
@@ -3586,11 +3339,7 @@ public partial class HideSuperArgument : OnOffType
 public partial class ShowPhantom : OnOffType
 {
     internal const int ElementTypeIdConst = 10995;
-    /// <inheritdoc/>
-    public override string LocalName => "show";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ShowPhantom class.
@@ -3614,11 +3363,7 @@ public partial class ShowPhantom : OnOffType
 public partial class ZeroWidth : OnOffType
 {
     internal const int ElementTypeIdConst = 10996;
-    /// <inheritdoc/>
-    public override string LocalName => "zeroWid";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ZeroWidth class.
@@ -3642,11 +3387,7 @@ public partial class ZeroWidth : OnOffType
 public partial class ZeroAscent : OnOffType
 {
     internal const int ElementTypeIdConst = 10997;
-    /// <inheritdoc/>
-    public override string LocalName => "zeroAsc";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ZeroAscent class.
@@ -3670,11 +3411,7 @@ public partial class ZeroAscent : OnOffType
 public partial class ZeroDescent : OnOffType
 {
     internal const int ElementTypeIdConst = 10998;
-    /// <inheritdoc/>
-    public override string LocalName => "zeroDesc";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ZeroDescent class.
@@ -3698,11 +3435,7 @@ public partial class ZeroDescent : OnOffType
 public partial class Transparent : OnOffType
 {
     internal const int ElementTypeIdConst = 10999;
-    /// <inheritdoc/>
-    public override string LocalName => "transp";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Transparent class.
@@ -3726,11 +3459,7 @@ public partial class Transparent : OnOffType
 public partial class HideDegree : OnOffType
 {
     internal const int ElementTypeIdConst = 11001;
-    /// <inheritdoc/>
-    public override string LocalName => "degHide";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the HideDegree class.
@@ -3754,11 +3483,7 @@ public partial class HideDegree : OnOffType
 public partial class AlignScripts : OnOffType
 {
     internal const int ElementTypeIdConst = 11006;
-    /// <inheritdoc/>
-    public override string LocalName => "alnScr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the AlignScripts class.
@@ -3782,11 +3507,7 @@ public partial class AlignScripts : OnOffType
 public partial class SmallFraction : OnOffType
 {
     internal const int ElementTypeIdConst = 11015;
-    /// <inheritdoc/>
-    public override string LocalName => "smallFrac";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the SmallFraction class.
@@ -3810,11 +3531,7 @@ public partial class SmallFraction : OnOffType
 public partial class DisplayDefaults : OnOffType
 {
     internal const int ElementTypeIdConst = 11016;
-    /// <inheritdoc/>
-    public override string LocalName => "dispDef";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the DisplayDefaults class.
@@ -3838,11 +3555,7 @@ public partial class DisplayDefaults : OnOffType
 public partial class WrapRight : OnOffType
 {
     internal const int ElementTypeIdConst = 11025;
-    /// <inheritdoc/>
-    public override string LocalName => "wrapRight";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the WrapRight class.
@@ -3868,7 +3581,8 @@ public abstract partial class OnOffType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val { get; set; }
 
     
@@ -3894,11 +3608,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 public partial class Break : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10932;
-    /// <inheritdoc/>
-    public override string LocalName => "brk";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -3908,7 +3618,8 @@ public partial class Break : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "alnAt", 0)]
+    [SchemaAttr(21, "alnAt")]
+    [Index(0)]
     public IntegerValue AlignAt { get; set; }
     /// <summary>
     /// <para> Index of Operator to Align To.</para>
@@ -3916,7 +3627,8 @@ public partial class Break : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 1)]
+    [SchemaAttr(21, "val")]
+    [Index(1)]
     public IntegerValue Val { get; set; }
 
     /// <summary>
@@ -3962,11 +3674,7 @@ public partial class Break : OpenXmlLeafElement
 public partial class RunProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10934;
-    /// <inheritdoc/>
-    public override string LocalName => "rPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -4006,13 +3714,7 @@ public partial class RunProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "lit","nor","scr","sty","brk","aln" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Literal.</para>
@@ -4021,11 +3723,12 @@ public partial class RunProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public Literal Literal
-    {
+	{
         get => GetElement<Literal>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -4045,11 +3748,7 @@ public partial class RunProperties : OpenXmlCompositeElement
 public partial class Text : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10935;
-    /// <inheritdoc/>
-    public override string LocalName => "t";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -4059,7 +3758,8 @@ public partial class Text : OpenXmlLeafTextElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
-    [SchemaAttr(1, "space", 0)]
+    [SchemaAttr(1, "space")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get; set; }
 
     /// <summary>
@@ -4101,11 +3801,7 @@ public partial class Text : OpenXmlLeafTextElement
 public partial class AccentChar : CharType
 {
     internal const int ElementTypeIdConst = 10936;
-    /// <inheritdoc/>
-    public override string LocalName => "chr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the AccentChar class.
@@ -4129,11 +3825,7 @@ public partial class AccentChar : CharType
 public partial class BeginChar : CharType
 {
     internal const int ElementTypeIdConst = 10955;
-    /// <inheritdoc/>
-    public override string LocalName => "begChr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the BeginChar class.
@@ -4157,11 +3849,7 @@ public partial class BeginChar : CharType
 public partial class SeparatorChar : CharType
 {
     internal const int ElementTypeIdConst = 10956;
-    /// <inheritdoc/>
-    public override string LocalName => "sepChr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the SeparatorChar class.
@@ -4185,11 +3873,7 @@ public partial class SeparatorChar : CharType
 public partial class EndChar : CharType
 {
     internal const int ElementTypeIdConst = 10957;
-    /// <inheritdoc/>
-    public override string LocalName => "endChr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the EndChar class.
@@ -4215,7 +3899,8 @@ public abstract partial class CharType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public StringValue Val { get; set; }
 
     
@@ -4256,11 +3941,7 @@ public abstract partial class CharType : OpenXmlLeafElement
 public partial class ControlProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10937;
-    /// <inheritdoc/>
-    public override string LocalName => "ctrlPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -4326,11 +4007,7 @@ public partial class ControlProperties : OpenXmlCompositeElement
 public partial class AccentProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10938;
-    /// <inheritdoc/>
-    public override string LocalName => "accPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -4370,13 +4047,7 @@ public partial class AccentProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "chr","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Accent Character.</para>
@@ -4385,11 +4056,12 @@ public partial class AccentProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public AccentChar AccentChar
-    {
+	{
         get => GetElement<AccentChar>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Control Properties.</para>
@@ -4398,11 +4070,12 @@ public partial class AccentProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -4485,11 +4158,7 @@ public partial class AccentProperties : OpenXmlCompositeElement
 public partial class Base : OfficeMathArgumentType
 {
     internal const int ElementTypeIdConst = 10939;
-    /// <inheritdoc/>
-    public override string LocalName => "e";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Base class.
@@ -4602,11 +4271,7 @@ public partial class Base : OfficeMathArgumentType
 public partial class Numerator : OfficeMathArgumentType
 {
     internal const int ElementTypeIdConst = 10969;
-    /// <inheritdoc/>
-    public override string LocalName => "num";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Numerator class.
@@ -4719,11 +4384,7 @@ public partial class Numerator : OfficeMathArgumentType
 public partial class Denominator : OfficeMathArgumentType
 {
     internal const int ElementTypeIdConst = 10970;
-    /// <inheritdoc/>
-    public override string LocalName => "den";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Denominator class.
@@ -4836,11 +4497,7 @@ public partial class Denominator : OfficeMathArgumentType
 public partial class FunctionName : OfficeMathArgumentType
 {
     internal const int ElementTypeIdConst = 10972;
-    /// <inheritdoc/>
-    public override string LocalName => "fName";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the FunctionName class.
@@ -4953,11 +4610,7 @@ public partial class FunctionName : OfficeMathArgumentType
 public partial class Limit : OfficeMathArgumentType
 {
     internal const int ElementTypeIdConst = 10976;
-    /// <inheritdoc/>
-    public override string LocalName => "lim";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Limit class.
@@ -5070,11 +4723,7 @@ public partial class Limit : OfficeMathArgumentType
 public partial class SubArgument : OfficeMathArgumentType
 {
     internal const int ElementTypeIdConst = 10993;
-    /// <inheritdoc/>
-    public override string LocalName => "sub";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the SubArgument class.
@@ -5187,11 +4836,7 @@ public partial class SubArgument : OfficeMathArgumentType
 public partial class SuperArgument : OfficeMathArgumentType
 {
     internal const int ElementTypeIdConst = 10994;
-    /// <inheritdoc/>
-    public override string LocalName => "sup";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the SuperArgument class.
@@ -5304,11 +4949,7 @@ public partial class SuperArgument : OfficeMathArgumentType
 public partial class Degree : OfficeMathArgumentType
 {
     internal const int ElementTypeIdConst = 11003;
-    /// <inheritdoc/>
-    public override string LocalName => "deg";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Degree class.
@@ -5477,13 +5118,7 @@ public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "argPr","acc","bar","box","borderBox","d","eqArr","f","func","groupChr","limLow","limUpp","m","nary","phant","rad","sPre","sSub","sSubSup","sSup","r","customXml","fldSimple","hyperlink","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","oMathPara","oMath","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Argument Properties.</para>
@@ -5492,11 +5127,12 @@ public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public ArgumentProperties ArgumentProperties
-    {
+	{
         get => GetElement<ArgumentProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -5547,11 +5183,7 @@ public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
 public partial class Position : TopBottomType
 {
     internal const int ElementTypeIdConst = 10940;
-    /// <inheritdoc/>
-    public override string LocalName => "pos";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Position class.
@@ -5575,11 +5207,7 @@ public partial class Position : TopBottomType
 public partial class VerticalJustification : TopBottomType
 {
     internal const int ElementTypeIdConst = 10973;
-    /// <inheritdoc/>
-    public override string LocalName => "vertJc";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VerticalJustification class.
@@ -5605,7 +5233,8 @@ public abstract partial class TopBottomType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val { get; set; }
 
     
@@ -5640,11 +5269,7 @@ public abstract partial class TopBottomType : OpenXmlLeafElement
 public partial class BarProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10941;
-    /// <inheritdoc/>
-    public override string LocalName => "barPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -5684,13 +5309,7 @@ public partial class BarProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "pos","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Position (Bar).</para>
@@ -5699,11 +5318,12 @@ public partial class BarProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public Position Position
-    {
+	{
         get => GetElement<Position>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -5712,11 +5332,12 @@ public partial class BarProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -5753,11 +5374,7 @@ public partial class BarProperties : OpenXmlCompositeElement
 public partial class BoxProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10945;
-    /// <inheritdoc/>
-    public override string LocalName => "boxPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -5797,13 +5414,7 @@ public partial class BoxProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "opEmu","noBreak","diff","brk","aln","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Operator Emulator.</para>
@@ -5812,11 +5423,12 @@ public partial class BoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public OperatorEmulator OperatorEmulator
-    {
+	{
         get => GetElement<OperatorEmulator>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> No Break.</para>
@@ -5825,11 +5437,12 @@ public partial class BoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public NoBreak NoBreak
-    {
+	{
         get => GetElement<NoBreak>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Differential.</para>
@@ -5838,11 +5451,12 @@ public partial class BoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public Differential Differential
-    {
+	{
         get => GetElement<Differential>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Break.</para>
@@ -5851,11 +5465,12 @@ public partial class BoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(3)]
     public Break Break
-    {
+	{
         get => GetElement<Break>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Alignment.</para>
@@ -5864,11 +5479,12 @@ public partial class BoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(4)]
     public Alignment Alignment
-    {
+	{
         get => GetElement<Alignment>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -5877,11 +5493,12 @@ public partial class BoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(5)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
-    }
+	}
     
 
 
@@ -5924,11 +5541,7 @@ public partial class BoxProperties : OpenXmlCompositeElement
 public partial class BorderBoxProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10954;
-    /// <inheritdoc/>
-    public override string LocalName => "borderBoxPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -5968,13 +5581,7 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "hideTop","hideBot","hideLeft","hideRight","strikeH","strikeV","strikeBLTR","strikeTLBR","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Hide Top Edge.</para>
@@ -5983,11 +5590,12 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public HideTop HideTop
-    {
+	{
         get => GetElement<HideTop>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Hide Bottom Edge.</para>
@@ -5996,11 +5604,12 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public HideBottom HideBottom
-    {
+	{
         get => GetElement<HideBottom>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Hide Left Edge.</para>
@@ -6009,11 +5618,12 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public HideLeft HideLeft
-    {
+	{
         get => GetElement<HideLeft>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Hide Right Edge.</para>
@@ -6022,11 +5632,12 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(3)]
     public HideRight HideRight
-    {
+	{
         get => GetElement<HideRight>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Border Box Strikethrough Horizontal.</para>
@@ -6035,11 +5646,12 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(4)]
     public StrikeHorizontal StrikeHorizontal
-    {
+	{
         get => GetElement<StrikeHorizontal>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> Border Box Strikethrough Vertical.</para>
@@ -6048,11 +5660,12 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(5)]
     public StrikeVertical StrikeVertical
-    {
+	{
         get => GetElement<StrikeVertical>(5);
         set => SetElement(5, value);
-    }
+	}
     
     /// <summary>
     /// <para> Border Box Strikethrough Bottom-Left to Top-Right.</para>
@@ -6061,11 +5674,12 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(6)]
     public StrikeBottomLeftToTopRight StrikeBottomLeftToTopRight
-    {
+	{
         get => GetElement<StrikeBottomLeftToTopRight>(6);
         set => SetElement(6, value);
-    }
+	}
     
     /// <summary>
     /// <para> Border Box Strikethrough Top-Left to Bottom-Right.</para>
@@ -6074,11 +5688,12 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(7)]
     public StrikeTopLeftToBottomRight StrikeTopLeftToBottomRight
-    {
+	{
         get => GetElement<StrikeTopLeftToBottomRight>(7);
         set => SetElement(7, value);
-    }
+	}
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -6087,11 +5702,12 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(8)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(8);
         set => SetElement(8, value);
-    }
+	}
     
 
 
@@ -6111,11 +5727,7 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
 public partial class Shape : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10959;
-    /// <inheritdoc/>
-    public override string LocalName => "shp";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -6125,7 +5737,8 @@ public partial class Shape : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val { get; set; }
 
     /// <summary>
@@ -6171,11 +5784,7 @@ public partial class Shape : OpenXmlLeafElement
 public partial class DelimiterProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10960;
-    /// <inheritdoc/>
-    public override string LocalName => "dPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -6215,13 +5824,7 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "begChr","sepChr","endChr","grow","shp","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Delimiter Beginning Character.</para>
@@ -6230,11 +5833,12 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public BeginChar BeginChar
-    {
+	{
         get => GetElement<BeginChar>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Delimiter Separator Character.</para>
@@ -6243,11 +5847,12 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public SeparatorChar SeparatorChar
-    {
+	{
         get => GetElement<SeparatorChar>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Delimiter Ending Character.</para>
@@ -6256,11 +5861,12 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public EndChar EndChar
-    {
+	{
         get => GetElement<EndChar>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Delimiter Grow.</para>
@@ -6269,11 +5875,12 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(3)]
     public GrowOperators GrowOperators
-    {
+	{
         get => GetElement<GrowOperators>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Shape (Delimiters).</para>
@@ -6282,11 +5889,12 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(4)]
     public Shape Shape
-    {
+	{
         get => GetElement<Shape>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -6295,11 +5903,12 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(5)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
-    }
+	}
     
 
 
@@ -6319,11 +5928,7 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
 public partial class BaseJustification : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10961;
-    /// <inheritdoc/>
-    public override string LocalName => "baseJc";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -6333,7 +5938,8 @@ public partial class BaseJustification : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val { get; set; }
 
     /// <summary>
@@ -6362,11 +5968,7 @@ public partial class BaseJustification : OpenXmlLeafElement
 public partial class RowSpacingRule : SpacingRuleType
 {
     internal const int ElementTypeIdConst = 10964;
-    /// <inheritdoc/>
-    public override string LocalName => "rSpRule";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the RowSpacingRule class.
@@ -6390,11 +5992,7 @@ public partial class RowSpacingRule : SpacingRuleType
 public partial class ColumnGapRule : SpacingRuleType
 {
     internal const int ElementTypeIdConst = 10983;
-    /// <inheritdoc/>
-    public override string LocalName => "cGpRule";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ColumnGapRule class.
@@ -6420,7 +6018,8 @@ public abstract partial class SpacingRuleType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public IntegerValue Val { get; set; }
 
     
@@ -6446,11 +6045,7 @@ public abstract partial class SpacingRuleType : OpenXmlLeafElement
 public partial class RowSpacing : UnsignedShortType
 {
     internal const int ElementTypeIdConst = 10965;
-    /// <inheritdoc/>
-    public override string LocalName => "rSp";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the RowSpacing class.
@@ -6474,11 +6069,7 @@ public partial class RowSpacing : UnsignedShortType
 public partial class ColumnGap : UnsignedShortType
 {
     internal const int ElementTypeIdConst = 10985;
-    /// <inheritdoc/>
-    public override string LocalName => "cGp";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ColumnGap class.
@@ -6504,7 +6095,8 @@ public abstract partial class UnsignedShortType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public UInt16Value Val { get; set; }
 
     
@@ -6547,11 +6139,7 @@ public abstract partial class UnsignedShortType : OpenXmlLeafElement
 public partial class EquationArrayProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10966;
-    /// <inheritdoc/>
-    public override string LocalName => "eqArrPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -6591,13 +6179,7 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "baseJc","maxDist","objDist","rSpRule","rSp","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Equation Array Base Justification.</para>
@@ -6606,11 +6188,12 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public BaseJustification BaseJustification
-    {
+	{
         get => GetElement<BaseJustification>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Maximum Distribution.</para>
@@ -6619,11 +6202,12 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public MaxDistribution MaxDistribution
-    {
+	{
         get => GetElement<MaxDistribution>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Object Distribution.</para>
@@ -6632,11 +6216,12 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public ObjectDistribution ObjectDistribution
-    {
+	{
         get => GetElement<ObjectDistribution>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Row Spacing Rule.</para>
@@ -6645,11 +6230,12 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(3)]
     public RowSpacingRule RowSpacingRule
-    {
+	{
         get => GetElement<RowSpacingRule>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Row Spacing (Equation Array).</para>
@@ -6658,11 +6244,12 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(4)]
     public RowSpacing RowSpacing
-    {
+	{
         get => GetElement<RowSpacing>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -6671,11 +6258,12 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(5)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
-    }
+	}
     
 
 
@@ -6695,11 +6283,7 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
 public partial class FractionType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10967;
-    /// <inheritdoc/>
-    public override string LocalName => "type";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -6709,7 +6293,8 @@ public partial class FractionType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val { get; set; }
 
     /// <summary>
@@ -6747,11 +6332,7 @@ public partial class FractionType : OpenXmlLeafElement
 public partial class FractionProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10968;
-    /// <inheritdoc/>
-    public override string LocalName => "fPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -6791,13 +6372,7 @@ public partial class FractionProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "type","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Fraction type.</para>
@@ -6806,11 +6381,12 @@ public partial class FractionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public FractionType FractionType
-    {
+	{
         get => GetElement<FractionType>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -6819,11 +6395,12 @@ public partial class FractionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -6850,11 +6427,7 @@ public partial class FractionProperties : OpenXmlCompositeElement
 public partial class FunctionProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10971;
-    /// <inheritdoc/>
-    public override string LocalName => "funcPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -6894,13 +6467,7 @@ public partial class FunctionProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ControlProperties.</para>
@@ -6909,11 +6476,12 @@ public partial class FunctionProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -6946,11 +6514,7 @@ public partial class FunctionProperties : OpenXmlCompositeElement
 public partial class GroupCharProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10974;
-    /// <inheritdoc/>
-    public override string LocalName => "groupChrPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -6990,13 +6554,7 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "chr","pos","vertJc","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Group Character (Grouping Character).</para>
@@ -7005,11 +6563,12 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public AccentChar AccentChar
-    {
+	{
         get => GetElement<AccentChar>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Position (Group Character).</para>
@@ -7018,11 +6577,12 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public Position Position
-    {
+	{
         get => GetElement<Position>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Vertical Justification.</para>
@@ -7031,11 +6591,12 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public VerticalJustification VerticalJustification
-    {
+	{
         get => GetElement<VerticalJustification>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -7044,11 +6605,12 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(3)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(3);
         set => SetElement(3, value);
-    }
+	}
     
 
 
@@ -7075,11 +6637,7 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
 public partial class LimitLowerProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10975;
-    /// <inheritdoc/>
-    public override string LocalName => "limLowPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -7119,13 +6677,7 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ControlProperties.</para>
@@ -7134,11 +6686,12 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -7165,11 +6718,7 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
 public partial class LimitUpperProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10977;
-    /// <inheritdoc/>
-    public override string LocalName => "limUppPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -7209,13 +6758,7 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ControlProperties.</para>
@@ -7224,11 +6767,12 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -7248,11 +6792,7 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
 public partial class MatrixColumnCount : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10978;
-    /// <inheritdoc/>
-    public override string LocalName => "count";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -7262,7 +6802,8 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public IntegerValue Val { get; set; }
 
     /// <summary>
@@ -7291,11 +6832,7 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
 public partial class MatrixColumnJustification : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10979;
-    /// <inheritdoc/>
-    public override string LocalName => "mcJc";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -7305,7 +6842,8 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val { get; set; }
 
     /// <summary>
@@ -7343,11 +6881,7 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
 public partial class MatrixColumnProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10980;
-    /// <inheritdoc/>
-    public override string LocalName => "mcPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -7387,13 +6921,7 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "count","mcJc" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Matrix Column Count.</para>
@@ -7402,11 +6930,12 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public MatrixColumnCount MatrixColumnCount
-    {
+	{
         get => GetElement<MatrixColumnCount>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Matrix Column Justification.</para>
@@ -7415,11 +6944,12 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public MatrixColumnJustification MatrixColumnJustification
-    {
+	{
         get => GetElement<MatrixColumnJustification>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -7446,11 +6976,7 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
 public partial class MatrixColumn : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10981;
-    /// <inheritdoc/>
-    public override string LocalName => "mc";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -7490,13 +7016,7 @@ public partial class MatrixColumn : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "mcPr" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Matrix Column Properties.</para>
@@ -7505,11 +7025,12 @@ public partial class MatrixColumn : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public MatrixColumnProperties MatrixColumnProperties
-    {
+	{
         get => GetElement<MatrixColumnProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -7529,11 +7050,7 @@ public partial class MatrixColumn : OpenXmlCompositeElement
 public partial class ColumnSpacing : TwipsMeasureType
 {
     internal const int ElementTypeIdConst = 10984;
-    /// <inheritdoc/>
-    public override string LocalName => "cSp";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ColumnSpacing class.
@@ -7557,11 +7074,7 @@ public partial class ColumnSpacing : TwipsMeasureType
 public partial class LeftMargin : TwipsMeasureType
 {
     internal const int ElementTypeIdConst = 11017;
-    /// <inheritdoc/>
-    public override string LocalName => "lMargin";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the LeftMargin class.
@@ -7585,11 +7098,7 @@ public partial class LeftMargin : TwipsMeasureType
 public partial class RightMargin : TwipsMeasureType
 {
     internal const int ElementTypeIdConst = 11018;
-    /// <inheritdoc/>
-    public override string LocalName => "rMargin";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the RightMargin class.
@@ -7613,11 +7122,7 @@ public partial class RightMargin : TwipsMeasureType
 public partial class PreSpacing : TwipsMeasureType
 {
     internal const int ElementTypeIdConst = 11020;
-    /// <inheritdoc/>
-    public override string LocalName => "preSp";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the PreSpacing class.
@@ -7641,11 +7146,7 @@ public partial class PreSpacing : TwipsMeasureType
 public partial class PostSpacing : TwipsMeasureType
 {
     internal const int ElementTypeIdConst = 11021;
-    /// <inheritdoc/>
-    public override string LocalName => "postSp";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the PostSpacing class.
@@ -7669,11 +7170,7 @@ public partial class PostSpacing : TwipsMeasureType
 public partial class InterSpacing : TwipsMeasureType
 {
     internal const int ElementTypeIdConst = 11022;
-    /// <inheritdoc/>
-    public override string LocalName => "interSp";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the InterSpacing class.
@@ -7697,11 +7194,7 @@ public partial class InterSpacing : TwipsMeasureType
 public partial class IntraSpacing : TwipsMeasureType
 {
     internal const int ElementTypeIdConst = 11023;
-    /// <inheritdoc/>
-    public override string LocalName => "intraSp";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the IntraSpacing class.
@@ -7725,11 +7218,7 @@ public partial class IntraSpacing : TwipsMeasureType
 public partial class WrapIndent : TwipsMeasureType
 {
     internal const int ElementTypeIdConst = 11024;
-    /// <inheritdoc/>
-    public override string LocalName => "wrapIndent";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the WrapIndent class.
@@ -7755,7 +7244,8 @@ public abstract partial class TwipsMeasureType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public UInt32Value Val { get; set; }
 
     
@@ -7788,11 +7278,7 @@ public abstract partial class TwipsMeasureType : OpenXmlLeafElement
 public partial class MatrixColumns : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10986;
-    /// <inheritdoc/>
-    public override string LocalName => "mcs";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -7872,11 +7358,7 @@ public partial class MatrixColumns : OpenXmlCompositeElement
 public partial class MatrixProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10987;
-    /// <inheritdoc/>
-    public override string LocalName => "mPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -7916,13 +7398,7 @@ public partial class MatrixProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "baseJc","plcHide","rSpRule","cGpRule","rSp","cSp","cGp","mcs","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Matrix Base Justification.</para>
@@ -7931,11 +7407,12 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public BaseJustification BaseJustification
-    {
+	{
         get => GetElement<BaseJustification>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Hide Placeholders (Matrix).</para>
@@ -7944,11 +7421,12 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public HidePlaceholder HidePlaceholder
-    {
+	{
         get => GetElement<HidePlaceholder>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Row Spacing Rule.</para>
@@ -7957,11 +7435,12 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public RowSpacingRule RowSpacingRule
-    {
+	{
         get => GetElement<RowSpacingRule>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Matrix Column Gap Rule.</para>
@@ -7970,11 +7449,12 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(3)]
     public ColumnGapRule ColumnGapRule
-    {
+	{
         get => GetElement<ColumnGapRule>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Row Spacing (Matrix).</para>
@@ -7983,11 +7463,12 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(4)]
     public RowSpacing RowSpacing
-    {
+	{
         get => GetElement<RowSpacing>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> Matrix Column Spacing.</para>
@@ -7996,11 +7477,12 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(5)]
     public ColumnSpacing ColumnSpacing
-    {
+	{
         get => GetElement<ColumnSpacing>(5);
         set => SetElement(5, value);
-    }
+	}
     
     /// <summary>
     /// <para> Matrix Column Gap.</para>
@@ -8009,11 +7491,12 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(6)]
     public ColumnGap ColumnGap
-    {
+	{
         get => GetElement<ColumnGap>(6);
         set => SetElement(6, value);
-    }
+	}
     
     /// <summary>
     /// <para> Matrix Columns.</para>
@@ -8022,11 +7505,12 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(7)]
     public MatrixColumns MatrixColumns
-    {
+	{
         get => GetElement<MatrixColumns>(7);
         set => SetElement(7, value);
-    }
+	}
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -8035,11 +7519,12 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(8)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(8);
         set => SetElement(8, value);
-    }
+	}
     
 
 
@@ -8066,11 +7551,7 @@ public partial class MatrixProperties : OpenXmlCompositeElement
 public partial class MatrixRow : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10988;
-    /// <inheritdoc/>
-    public override string LocalName => "mr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -8127,11 +7608,7 @@ public partial class MatrixRow : OpenXmlCompositeElement
 public partial class LimitLocation : LimitLocationType
 {
     internal const int ElementTypeIdConst = 10989;
-    /// <inheritdoc/>
-    public override string LocalName => "limLoc";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the LimitLocation class.
@@ -8155,11 +7632,7 @@ public partial class LimitLocation : LimitLocationType
 public partial class IntegralLimitLocation : LimitLocationType
 {
     internal const int ElementTypeIdConst = 11026;
-    /// <inheritdoc/>
-    public override string LocalName => "intLim";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the IntegralLimitLocation class.
@@ -8183,11 +7656,7 @@ public partial class IntegralLimitLocation : LimitLocationType
 public partial class NaryLimitLocation : LimitLocationType
 {
     internal const int ElementTypeIdConst = 11027;
-    /// <inheritdoc/>
-    public override string LocalName => "naryLim";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the NaryLimitLocation class.
@@ -8213,7 +7682,8 @@ public abstract partial class LimitLocationType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val { get; set; }
 
     
@@ -8256,11 +7726,7 @@ public abstract partial class LimitLocationType : OpenXmlLeafElement
 public partial class NaryProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10992;
-    /// <inheritdoc/>
-    public override string LocalName => "naryPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -8300,13 +7766,7 @@ public partial class NaryProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "chr","limLoc","grow","subHide","supHide","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> n-ary Operator Character.</para>
@@ -8315,11 +7775,12 @@ public partial class NaryProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public AccentChar AccentChar
-    {
+	{
         get => GetElement<AccentChar>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> n-ary Limit Location.</para>
@@ -8328,11 +7789,12 @@ public partial class NaryProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public LimitLocation LimitLocation
-    {
+	{
         get => GetElement<LimitLocation>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> n-ary Grow.</para>
@@ -8341,11 +7803,12 @@ public partial class NaryProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public GrowOperators GrowOperators
-    {
+	{
         get => GetElement<GrowOperators>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Hide Subscript (n-ary).</para>
@@ -8354,11 +7817,12 @@ public partial class NaryProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(3)]
     public HideSubArgument HideSubArgument
-    {
+	{
         get => GetElement<HideSubArgument>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Hide Superscript (n-ary).</para>
@@ -8367,11 +7831,12 @@ public partial class NaryProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(4)]
     public HideSuperArgument HideSuperArgument
-    {
+	{
         get => GetElement<HideSuperArgument>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -8380,11 +7845,12 @@ public partial class NaryProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(5)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
-    }
+	}
     
 
 
@@ -8421,11 +7887,7 @@ public partial class NaryProperties : OpenXmlCompositeElement
 public partial class PhantomProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11000;
-    /// <inheritdoc/>
-    public override string LocalName => "phantPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -8465,13 +7927,7 @@ public partial class PhantomProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "show","zeroWid","zeroAsc","zeroDesc","transp","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Phantom Show.</para>
@@ -8480,11 +7936,12 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public ShowPhantom ShowPhantom
-    {
+	{
         get => GetElement<ShowPhantom>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Phantom Zero Width.</para>
@@ -8493,11 +7950,12 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public ZeroWidth ZeroWidth
-    {
+	{
         get => GetElement<ZeroWidth>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Phantom Zero Ascent.</para>
@@ -8506,11 +7964,12 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(2)]
     public ZeroAscent ZeroAscent
-    {
+	{
         get => GetElement<ZeroAscent>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Phantom Zero Descent.</para>
@@ -8519,11 +7978,12 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(3)]
     public ZeroDescent ZeroDescent
-    {
+	{
         get => GetElement<ZeroDescent>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Transparent (Phantom).</para>
@@ -8532,11 +7992,12 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(4)]
     public Transparent Transparent
-    {
+	{
         get => GetElement<Transparent>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -8545,11 +8006,12 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(5)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
-    }
+	}
     
 
 
@@ -8578,11 +8040,7 @@ public partial class PhantomProperties : OpenXmlCompositeElement
 public partial class RadicalProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11002;
-    /// <inheritdoc/>
-    public override string LocalName => "radPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -8622,13 +8080,7 @@ public partial class RadicalProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "degHide","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Hide Degree.</para>
@@ -8637,11 +8089,12 @@ public partial class RadicalProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public HideDegree HideDegree
-    {
+	{
         get => GetElement<HideDegree>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -8650,11 +8103,12 @@ public partial class RadicalProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -8681,11 +8135,7 @@ public partial class RadicalProperties : OpenXmlCompositeElement
 public partial class PreSubSuperProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11004;
-    /// <inheritdoc/>
-    public override string LocalName => "sPrePr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -8725,13 +8175,7 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ControlProperties.</para>
@@ -8740,11 +8184,12 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -8771,11 +8216,7 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
 public partial class SubscriptProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11005;
-    /// <inheritdoc/>
-    public override string LocalName => "sSubPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -8815,13 +8256,7 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ControlProperties.</para>
@@ -8830,11 +8265,12 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -8863,11 +8299,7 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
 public partial class SubSuperscriptProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11007;
-    /// <inheritdoc/>
-    public override string LocalName => "sSubSupPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -8907,13 +8339,7 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "alnScr","ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Align Scripts.</para>
@@ -8922,11 +8348,12 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public AlignScripts AlignScripts
-    {
+	{
         get => GetElement<AlignScripts>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -8935,11 +8362,12 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(1)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -8966,11 +8394,7 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
 public partial class SuperscriptProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11008;
-    /// <inheritdoc/>
-    public override string LocalName => "sSupPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -9010,13 +8434,7 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "ctrlPr" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ControlProperties.</para>
@@ -9025,11 +8443,12 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public ControlProperties ControlProperties
-    {
+	{
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -9049,11 +8468,7 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
 public partial class ArgumentSize : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11009;
-    /// <inheritdoc/>
-    public override string LocalName => "argSz";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -9063,7 +8478,8 @@ public partial class ArgumentSize : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public IntegerValue Val { get; set; }
 
     /// <summary>
@@ -9099,11 +8515,7 @@ public partial class ArgumentSize : OpenXmlLeafElement
 public partial class ArgumentProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11010;
-    /// <inheritdoc/>
-    public override string LocalName => "argPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -9143,13 +8555,7 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "argSz" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Argument Size.</para>
@@ -9158,11 +8564,12 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public ArgumentSize ArgumentSize
-    {
+	{
         get => GetElement<ArgumentSize>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -9182,11 +8589,7 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
 public partial class Justification : OfficeMathJustificationType
 {
     internal const int ElementTypeIdConst = 11011;
-    /// <inheritdoc/>
-    public override string LocalName => "jc";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Justification class.
@@ -9210,11 +8613,7 @@ public partial class Justification : OfficeMathJustificationType
 public partial class DefaultJustification : OfficeMathJustificationType
 {
     internal const int ElementTypeIdConst = 11019;
-    /// <inheritdoc/>
-    public override string LocalName => "defJc";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the DefaultJustification class.
@@ -9240,7 +8639,8 @@ public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val { get; set; }
 
     
@@ -9266,11 +8666,7 @@ public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
 public partial class MathFont : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11012;
-    /// <inheritdoc/>
-    public override string LocalName => "mathFont";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -9280,7 +8676,8 @@ public partial class MathFont : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -9309,11 +8706,7 @@ public partial class MathFont : OpenXmlLeafElement
 public partial class BreakBinary : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11013;
-    /// <inheritdoc/>
-    public override string LocalName => "brkBin";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -9323,7 +8716,8 @@ public partial class BreakBinary : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val { get; set; }
 
     /// <summary>
@@ -9352,11 +8746,7 @@ public partial class BreakBinary : OpenXmlLeafElement
 public partial class BreakBinarySubtraction : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11014;
-    /// <inheritdoc/>
-    public override string LocalName => "brkBinSub";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -9366,7 +8756,8 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    [SchemaAttr(21, "val", 0)]
+    [SchemaAttr(21, "val")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val { get; set; }
 
     /// <summary>
@@ -9402,11 +8793,7 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
 public partial class ParagraphProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11028;
-    /// <inheritdoc/>
-    public override string LocalName => "oMathParaPr";
-    internal override byte NamespaceId => 21;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -9446,13 +8833,7 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "jc" };
-    private static readonly byte[] eleNamespaceIds = { 21 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Justification.</para>
@@ -9461,11 +8842,12 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
+	[Index(0)]
     public Justification Justification
-    {
+	{
         get => GetElement<Justification>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 

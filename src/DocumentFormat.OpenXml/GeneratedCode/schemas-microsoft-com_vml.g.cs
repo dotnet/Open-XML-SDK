@@ -25,11 +25,7 @@ namespace DocumentFormat.OpenXml.Vml
 public partial class Path : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12577;
-    /// <inheritdoc/>
-    public override string LocalName => "path";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -37,67 +33,78 @@ public partial class Path : OpenXmlLeafElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Path Definition.</para>
     /// <para>Represents the following attribute in the schema: v </para>
     /// </summary>
-    [SchemaAttr(0, "v", 1)]
+    [SchemaAttr(0, "v")]
+    [Index(1)]
     public StringValue Value { get; set; }
     /// <summary>
     /// <para> Limo Stretch Point.</para>
     /// <para>Represents the following attribute in the schema: limo </para>
     /// </summary>
-    [SchemaAttr(0, "limo", 2)]
+    [SchemaAttr(0, "limo")]
+    [Index(2)]
     public StringValue Limo { get; set; }
     /// <summary>
     /// <para> Text Box Bounding Box.</para>
     /// <para>Represents the following attribute in the schema: textboxrect </para>
     /// </summary>
-    [SchemaAttr(0, "textboxrect", 3)]
+    [SchemaAttr(0, "textboxrect")]
+    [Index(3)]
     public StringValue TextboxRectangle { get; set; }
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: fillok </para>
     /// </summary>
-    [SchemaAttr(0, "fillok", 4)]
+    [SchemaAttr(0, "fillok")]
+    [Index(4)]
     public TrueFalseValue AllowFill { get; set; }
     /// <summary>
     /// <para> Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: strokeok </para>
     /// </summary>
-    [SchemaAttr(0, "strokeok", 5)]
+    [SchemaAttr(0, "strokeok")]
+    [Index(5)]
     public TrueFalseValue AllowStroke { get; set; }
     /// <summary>
     /// <para> Shadow Toggle.</para>
     /// <para>Represents the following attribute in the schema: shadowok </para>
     /// </summary>
-    [SchemaAttr(0, "shadowok", 6)]
+    [SchemaAttr(0, "shadowok")]
+    [Index(6)]
     public TrueFalseValue AllowShading { get; set; }
     /// <summary>
     /// <para> Arrowhead Display Toggle.</para>
     /// <para>Represents the following attribute in the schema: arrowok </para>
     /// </summary>
-    [SchemaAttr(0, "arrowok", 7)]
+    [SchemaAttr(0, "arrowok")]
+    [Index(7)]
     public TrueFalseValue ShowArrowhead { get; set; }
     /// <summary>
     /// <para> Gradient Shape Toggle.</para>
     /// <para>Represents the following attribute in the schema: gradientshapeok </para>
     /// </summary>
-    [SchemaAttr(0, "gradientshapeok", 8)]
+    [SchemaAttr(0, "gradientshapeok")]
+    [Index(8)]
     public TrueFalseValue AllowGradientShape { get; set; }
     /// <summary>
     /// <para> Text Path Toggle.</para>
     /// <para>Represents the following attribute in the schema: textpathok </para>
     /// </summary>
-    [SchemaAttr(0, "textpathok", 9)]
+    [SchemaAttr(0, "textpathok")]
+    [Index(9)]
     public TrueFalseValue AllowTextPath { get; set; }
     /// <summary>
     /// <para> Inset Stroke From Path Flag.</para>
     /// <para>Represents the following attribute in the schema: insetpenok </para>
     /// </summary>
-    [SchemaAttr(0, "insetpenok", 10)]
+    [SchemaAttr(0, "insetpenok")]
+    [Index(10)]
     public TrueFalseValue AllowInsetPen { get; set; }
     /// <summary>
     /// <para> Connection Point Type.</para>
@@ -105,7 +112,8 @@ public partial class Path : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "connecttype", 11)]
+    [SchemaAttr(27, "connecttype")]
+    [Index(11)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectValues> ConnectionPointType { get; set; }
     /// <summary>
     /// <para> Connection Points.</para>
@@ -113,7 +121,8 @@ public partial class Path : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "connectlocs", 12)]
+    [SchemaAttr(27, "connectlocs")]
+    [Index(12)]
     public StringValue ConnectionPoints { get; set; }
     /// <summary>
     /// <para> Connection Point Connect Angles.</para>
@@ -121,7 +130,8 @@ public partial class Path : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "connectangles", 13)]
+    [SchemaAttr(27, "connectangles")]
+    [Index(13)]
     public StringValue ConnectAngles { get; set; }
     /// <summary>
     /// <para> Extrusion Toggle.</para>
@@ -129,7 +139,8 @@ public partial class Path : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "extrusionok", 14)]
+    [SchemaAttr(27, "extrusionok")]
+    [Index(14)]
     public TrueFalseValue AllowExtrusion { get; set; }
 
     /// <summary>
@@ -165,11 +176,7 @@ public partial class Path : OpenXmlLeafElement
 public partial class Formulas : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12578;
-    /// <inheritdoc/>
-    public override string LocalName => "formulas";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -233,11 +240,7 @@ public partial class Formulas : OpenXmlCompositeElement
 public partial class ShapeHandles : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12579;
-    /// <inheritdoc/>
-    public override string LocalName => "handles";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -301,11 +304,7 @@ public partial class ShapeHandles : OpenXmlCompositeElement
 public partial class Fill : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12580;
-    /// <inheritdoc/>
-    public override string LocalName => "fill";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -313,43 +312,50 @@ public partial class Fill : OpenXmlCompositeElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Fill Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type", 1)]
+    [SchemaAttr(0, "type")]
+    [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues> Type { get; set; }
     /// <summary>
     /// <para> Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
     /// </summary>
-    [SchemaAttr(0, "on", 2)]
+    [SchemaAttr(0, "on")]
+    [Index(2)]
     public TrueFalseValue On { get; set; }
     /// <summary>
     /// <para> Primary Color.</para>
     /// <para>Represents the following attribute in the schema: color </para>
     /// </summary>
-    [SchemaAttr(0, "color", 3)]
+    [SchemaAttr(0, "color")]
+    [Index(3)]
     public StringValue Color { get; set; }
     /// <summary>
     /// <para> Primary Color Opacity.</para>
     /// <para>Represents the following attribute in the schema: opacity </para>
     /// </summary>
-    [SchemaAttr(0, "opacity", 4)]
+    [SchemaAttr(0, "opacity")]
+    [Index(4)]
     public StringValue Opacity { get; set; }
     /// <summary>
     /// <para> Secondary Color.</para>
     /// <para>Represents the following attribute in the schema: color2 </para>
     /// </summary>
-    [SchemaAttr(0, "color2", 5)]
+    [SchemaAttr(0, "color2")]
+    [Index(5)]
     public StringValue Color2 { get; set; }
     /// <summary>
     /// <para> Fill Image Source.</para>
     /// <para>Represents the following attribute in the schema: src </para>
     /// </summary>
-    [SchemaAttr(0, "src", 6)]
+    [SchemaAttr(0, "src")]
+    [Index(6)]
     public StringValue Source { get; set; }
     /// <summary>
     /// <para> Hyperlink Target.</para>
@@ -357,7 +363,8 @@ public partial class Fill : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "href", 7)]
+    [SchemaAttr(27, "href")]
+    [Index(7)]
     public StringValue Href { get; set; }
     /// <summary>
     /// <para> Alternate Image Reference Location.</para>
@@ -365,73 +372,85 @@ public partial class Fill : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "althref", 8)]
+    [SchemaAttr(27, "althref")]
+    [Index(8)]
     public StringValue AlternateImageReference { get; set; }
     /// <summary>
     /// <para> Fill Image Size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size", 9)]
+    [SchemaAttr(0, "size")]
+    [Index(9)]
     public StringValue Size { get; set; }
     /// <summary>
     /// <para> Fill Image Origin.</para>
     /// <para>Represents the following attribute in the schema: origin </para>
     /// </summary>
-    [SchemaAttr(0, "origin", 10)]
+    [SchemaAttr(0, "origin")]
+    [Index(10)]
     public StringValue Origin { get; set; }
     /// <summary>
     /// <para> Fill Image Position.</para>
     /// <para>Represents the following attribute in the schema: position </para>
     /// </summary>
-    [SchemaAttr(0, "position", 11)]
+    [SchemaAttr(0, "position")]
+    [Index(11)]
     public StringValue Position { get; set; }
     /// <summary>
     /// <para> Image Aspect Ratio.</para>
     /// <para>Represents the following attribute in the schema: aspect </para>
     /// </summary>
-    [SchemaAttr(0, "aspect", 12)]
+    [SchemaAttr(0, "aspect")]
+    [Index(12)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> Aspect { get; set; }
     /// <summary>
     /// <para> Intermediate Colors.</para>
     /// <para>Represents the following attribute in the schema: colors </para>
     /// </summary>
-    [SchemaAttr(0, "colors", 13)]
+    [SchemaAttr(0, "colors")]
+    [Index(13)]
     public StringValue Colors { get; set; }
     /// <summary>
     /// <para> Gradient Angle.</para>
     /// <para>Represents the following attribute in the schema: angle </para>
     /// </summary>
-    [SchemaAttr(0, "angle", 14)]
+    [SchemaAttr(0, "angle")]
+    [Index(14)]
     public DecimalValue Angle { get; set; }
     /// <summary>
     /// <para> Align Image With Shape.</para>
     /// <para>Represents the following attribute in the schema: alignshape </para>
     /// </summary>
-    [SchemaAttr(0, "alignshape", 15)]
+    [SchemaAttr(0, "alignshape")]
+    [Index(15)]
     public TrueFalseValue AlignShape { get; set; }
     /// <summary>
     /// <para> Gradient Center.</para>
     /// <para>Represents the following attribute in the schema: focus </para>
     /// </summary>
-    [SchemaAttr(0, "focus", 16)]
+    [SchemaAttr(0, "focus")]
+    [Index(16)]
     public StringValue Focus { get; set; }
     /// <summary>
     /// <para> Radial Gradient Size.</para>
     /// <para>Represents the following attribute in the schema: focussize </para>
     /// </summary>
-    [SchemaAttr(0, "focussize", 17)]
+    [SchemaAttr(0, "focussize")]
+    [Index(17)]
     public StringValue FocusSize { get; set; }
     /// <summary>
     /// <para> Radial Gradient Center.</para>
     /// <para>Represents the following attribute in the schema: focusposition </para>
     /// </summary>
-    [SchemaAttr(0, "focusposition", 18)]
+    [SchemaAttr(0, "focusposition")]
+    [Index(18)]
     public StringValue FocusPosition { get; set; }
     /// <summary>
     /// <para> Gradient Fill Method.</para>
     /// <para>Represents the following attribute in the schema: method </para>
     /// </summary>
-    [SchemaAttr(0, "method", 19)]
+    [SchemaAttr(0, "method")]
+    [Index(19)]
     public EnumValue<DocumentFormat.OpenXml.Vml.FillMethodValues> Method { get; set; }
     /// <summary>
     /// <para> Detect Mouse Click.</para>
@@ -439,7 +458,8 @@ public partial class Fill : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "detectmouseclick", 20)]
+    [SchemaAttr(27, "detectmouseclick")]
+    [Index(20)]
     public TrueFalseValue DetectMouseClick { get; set; }
     /// <summary>
     /// <para> Title.</para>
@@ -447,7 +467,8 @@ public partial class Fill : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "title", 21)]
+    [SchemaAttr(27, "title")]
+    [Index(21)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> Secondary Color Opacity.</para>
@@ -455,19 +476,22 @@ public partial class Fill : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "opacity2", 22)]
+    [SchemaAttr(27, "opacity2")]
+    [Index(22)]
     public StringValue Opacity2 { get; set; }
     /// <summary>
     /// <para> Recolor Fill as Picture.</para>
     /// <para>Represents the following attribute in the schema: recolor </para>
     /// </summary>
-    [SchemaAttr(0, "recolor", 23)]
+    [SchemaAttr(0, "recolor")]
+    [Index(23)]
     public TrueFalseValue Recolor { get; set; }
     /// <summary>
     /// <para> Rotate Fill with Shape.</para>
     /// <para>Represents the following attribute in the schema: rotate </para>
     /// </summary>
-    [SchemaAttr(0, "rotate", 24)]
+    [SchemaAttr(0, "rotate")]
+    [Index(24)]
     public TrueFalseValue Rotate { get; set; }
     /// <summary>
     /// <para> Relationship to Part.</para>
@@ -475,7 +499,8 @@ public partial class Fill : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id", 25)]
+    [SchemaAttr(19, "id")]
+    [Index(25)]
     public StringValue RelationshipId { get; set; }
 
     /// <summary>
@@ -513,13 +538,7 @@ public partial class Fill : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fill" };
-    private static readonly byte[] eleNamespaceIds = { 27 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> FillExtendedProperties.</para>
@@ -528,11 +547,12 @@ public partial class Fill : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties FillExtendedProperties
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -567,11 +587,7 @@ public partial class Fill : OpenXmlCompositeElement
 public partial class Stroke : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12581;
-    /// <inheritdoc/>
-    public override string LocalName => "stroke";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -579,133 +595,155 @@ public partial class Stroke : OpenXmlCompositeElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
     /// </summary>
-    [SchemaAttr(0, "on", 1)]
+    [SchemaAttr(0, "on")]
+    [Index(1)]
     public TrueFalseValue On { get; set; }
     /// <summary>
     /// <para> Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: weight </para>
     /// </summary>
-    [SchemaAttr(0, "weight", 2)]
+    [SchemaAttr(0, "weight")]
+    [Index(2)]
     public StringValue Weight { get; set; }
     /// <summary>
     /// <para> Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: color </para>
     /// </summary>
-    [SchemaAttr(0, "color", 3)]
+    [SchemaAttr(0, "color")]
+    [Index(3)]
     public StringValue Color { get; set; }
     /// <summary>
     /// <para> Stroke Opacity.</para>
     /// <para>Represents the following attribute in the schema: opacity </para>
     /// </summary>
-    [SchemaAttr(0, "opacity", 4)]
+    [SchemaAttr(0, "opacity")]
+    [Index(4)]
     public StringValue Opacity { get; set; }
     /// <summary>
     /// <para> Stroke Line Style.</para>
     /// <para>Represents the following attribute in the schema: linestyle </para>
     /// </summary>
-    [SchemaAttr(0, "linestyle", 5)]
+    [SchemaAttr(0, "linestyle")]
+    [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues> LineStyle { get; set; }
     /// <summary>
     /// <para> Miter Joint Limit.</para>
     /// <para>Represents the following attribute in the schema: miterlimit </para>
     /// </summary>
-    [SchemaAttr(0, "miterlimit", 6)]
+    [SchemaAttr(0, "miterlimit")]
+    [Index(6)]
     public StringValue Miterlimit { get; set; }
     /// <summary>
     /// <para> Line End Join Style.</para>
     /// <para>Represents the following attribute in the schema: joinstyle </para>
     /// </summary>
-    [SchemaAttr(0, "joinstyle", 7)]
+    [SchemaAttr(0, "joinstyle")]
+    [Index(7)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues> JoinStyle { get; set; }
     /// <summary>
     /// <para> Line End Cap.</para>
     /// <para>Represents the following attribute in the schema: endcap </para>
     /// </summary>
-    [SchemaAttr(0, "endcap", 8)]
+    [SchemaAttr(0, "endcap")]
+    [Index(8)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues> EndCap { get; set; }
     /// <summary>
     /// <para> Stroke Dash Pattern.</para>
     /// <para>Represents the following attribute in the schema: dashstyle </para>
     /// </summary>
-    [SchemaAttr(0, "dashstyle", 9)]
+    [SchemaAttr(0, "dashstyle")]
+    [Index(9)]
     public StringValue DashStyle { get; set; }
     /// <summary>
     /// <para> Stroke Image Style.</para>
     /// <para>Represents the following attribute in the schema: filltype </para>
     /// </summary>
-    [SchemaAttr(0, "filltype", 10)]
+    [SchemaAttr(0, "filltype")]
+    [Index(10)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeFillTypeValues> FillType { get; set; }
     /// <summary>
     /// <para> Stroke Image Location.</para>
     /// <para>Represents the following attribute in the schema: src </para>
     /// </summary>
-    [SchemaAttr(0, "src", 11)]
+    [SchemaAttr(0, "src")]
+    [Index(11)]
     public StringValue Source { get; set; }
     /// <summary>
     /// <para> Stroke Image Aspect Ratio.</para>
     /// <para>Represents the following attribute in the schema: imageaspect </para>
     /// </summary>
-    [SchemaAttr(0, "imageaspect", 12)]
+    [SchemaAttr(0, "imageaspect")]
+    [Index(12)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> ImageAspect { get; set; }
     /// <summary>
     /// <para> Stroke Image Size.</para>
     /// <para>Represents the following attribute in the schema: imagesize </para>
     /// </summary>
-    [SchemaAttr(0, "imagesize", 13)]
+    [SchemaAttr(0, "imagesize")]
+    [Index(13)]
     public StringValue ImageSize { get; set; }
     /// <summary>
     /// <para> Stoke Image Alignment.</para>
     /// <para>Represents the following attribute in the schema: imagealignshape </para>
     /// </summary>
-    [SchemaAttr(0, "imagealignshape", 14)]
+    [SchemaAttr(0, "imagealignshape")]
+    [Index(14)]
     public TrueFalseValue ImageAlignShape { get; set; }
     /// <summary>
     /// <para> Stroke Alternate Pattern Color.</para>
     /// <para>Represents the following attribute in the schema: color2 </para>
     /// </summary>
-    [SchemaAttr(0, "color2", 15)]
+    [SchemaAttr(0, "color2")]
+    [Index(15)]
     public StringValue Color2 { get; set; }
     /// <summary>
     /// <para> Line Start Arrowhead.</para>
     /// <para>Represents the following attribute in the schema: startarrow </para>
     /// </summary>
-    [SchemaAttr(0, "startarrow", 16)]
+    [SchemaAttr(0, "startarrow")]
+    [Index(16)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> StartArrow { get; set; }
     /// <summary>
     /// <para> Line Start Arrowhead Width.</para>
     /// <para>Represents the following attribute in the schema: startarrowwidth </para>
     /// </summary>
-    [SchemaAttr(0, "startarrowwidth", 17)]
+    [SchemaAttr(0, "startarrowwidth")]
+    [Index(17)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> StartArrowWidth { get; set; }
     /// <summary>
     /// <para> Line Start Arrowhead Length.</para>
     /// <para>Represents the following attribute in the schema: startarrowlength </para>
     /// </summary>
-    [SchemaAttr(0, "startarrowlength", 18)]
+    [SchemaAttr(0, "startarrowlength")]
+    [Index(18)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> StartArrowLength { get; set; }
     /// <summary>
     /// <para> Line End Arrowhead.</para>
     /// <para>Represents the following attribute in the schema: endarrow </para>
     /// </summary>
-    [SchemaAttr(0, "endarrow", 19)]
+    [SchemaAttr(0, "endarrow")]
+    [Index(19)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> EndArrow { get; set; }
     /// <summary>
     /// <para> Line End Arrowhead Width.</para>
     /// <para>Represents the following attribute in the schema: endarrowwidth </para>
     /// </summary>
-    [SchemaAttr(0, "endarrowwidth", 20)]
+    [SchemaAttr(0, "endarrowwidth")]
+    [Index(20)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> EndArrowWidth { get; set; }
     /// <summary>
     /// <para> Line End Arrowhead Length.</para>
     /// <para>Represents the following attribute in the schema: endarrowlength </para>
     /// </summary>
-    [SchemaAttr(0, "endarrowlength", 21)]
+    [SchemaAttr(0, "endarrowlength")]
+    [Index(21)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> EndArrowLength { get; set; }
     /// <summary>
     /// <para> Original Image Reference.</para>
@@ -713,7 +751,8 @@ public partial class Stroke : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "href", 22)]
+    [SchemaAttr(27, "href")]
+    [Index(22)]
     public StringValue Href { get; set; }
     /// <summary>
     /// <para> Alternate Image Reference.</para>
@@ -721,7 +760,8 @@ public partial class Stroke : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "althref", 23)]
+    [SchemaAttr(27, "althref")]
+    [Index(23)]
     public StringValue AlternateImageReference { get; set; }
     /// <summary>
     /// <para> Stroke Title.</para>
@@ -729,7 +769,8 @@ public partial class Stroke : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "title", 24)]
+    [SchemaAttr(27, "title")]
+    [Index(24)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> Force Dashed Outline.</para>
@@ -737,7 +778,8 @@ public partial class Stroke : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "forcedash", 25)]
+    [SchemaAttr(27, "forcedash")]
+    [Index(25)]
     public TrueFalseValue ForceDash { get; set; }
     /// <summary>
     /// <para> Relationship.</para>
@@ -745,13 +787,15 @@ public partial class Stroke : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id", 26)]
+    [SchemaAttr(19, "id")]
+    [Index(26)]
     public StringValue RelationshipId { get; set; }
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
     /// </summary>
-    [SchemaAttr(0, "insetpen", 27)]
+    [SchemaAttr(0, "insetpen")]
+    [Index(27)]
     public TrueFalseValue Insetpen { get; set; }
 
     /// <summary>
@@ -789,13 +833,7 @@ public partial class Stroke : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "left","top","right","bottom","column" };
-    private static readonly byte[] eleNamespaceIds = { 27,27,27,27,27 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> LeftStroke.</para>
@@ -804,11 +842,12 @@ public partial class Stroke : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Vml.Office.LeftStroke LeftStroke
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Vml.Office.LeftStroke>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> TopStroke.</para>
@@ -817,11 +856,12 @@ public partial class Stroke : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Vml.Office.TopStroke TopStroke
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Vml.Office.TopStroke>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> RightStroke.</para>
@@ -830,11 +870,12 @@ public partial class Stroke : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(2)]
     public DocumentFormat.OpenXml.Vml.Office.RightStroke RightStroke
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Vml.Office.RightStroke>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> BottomStroke.</para>
@@ -843,11 +884,12 @@ public partial class Stroke : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(3)]
     public DocumentFormat.OpenXml.Vml.Office.BottomStroke BottomStroke
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Vml.Office.BottomStroke>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> ColumnStroke.</para>
@@ -856,11 +898,12 @@ public partial class Stroke : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:o = urn:schemas-microsoft-com:office:office
     /// </remark>
+	[Index(4)]
     public DocumentFormat.OpenXml.Vml.Office.ColumnStroke ColumnStroke
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>(4);
         set => SetElement(4, value);
-    }
+	}
     
 
 
@@ -880,11 +923,7 @@ public partial class Stroke : OpenXmlCompositeElement
 public partial class Shadow : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12582;
-    /// <inheritdoc/>
-    public override string LocalName => "shadow";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -892,67 +931,78 @@ public partial class Shadow : OpenXmlLeafElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Shadow Toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
     /// </summary>
-    [SchemaAttr(0, "on", 1)]
+    [SchemaAttr(0, "on")]
+    [Index(1)]
     public TrueFalseValue On { get; set; }
     /// <summary>
     /// <para> Shadow Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type", 2)]
+    [SchemaAttr(0, "type")]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ShadowValues> Type { get; set; }
     /// <summary>
     /// <para> Shadow Transparency.</para>
     /// <para>Represents the following attribute in the schema: obscured </para>
     /// </summary>
-    [SchemaAttr(0, "obscured", 3)]
+    [SchemaAttr(0, "obscured")]
+    [Index(3)]
     public TrueFalseValue Obscured { get; set; }
     /// <summary>
     /// <para> Shadow Primary Color.</para>
     /// <para>Represents the following attribute in the schema: color </para>
     /// </summary>
-    [SchemaAttr(0, "color", 4)]
+    [SchemaAttr(0, "color")]
+    [Index(4)]
     public StringValue Color { get; set; }
     /// <summary>
     /// <para> Shadow Opacity.</para>
     /// <para>Represents the following attribute in the schema: opacity </para>
     /// </summary>
-    [SchemaAttr(0, "opacity", 5)]
+    [SchemaAttr(0, "opacity")]
+    [Index(5)]
     public StringValue Opacity { get; set; }
     /// <summary>
     /// <para> Shadow Primary Offset.</para>
     /// <para>Represents the following attribute in the schema: offset </para>
     /// </summary>
-    [SchemaAttr(0, "offset", 6)]
+    [SchemaAttr(0, "offset")]
+    [Index(6)]
     public StringValue Offset { get; set; }
     /// <summary>
     /// <para> Shadow Secondary Color.</para>
     /// <para>Represents the following attribute in the schema: color2 </para>
     /// </summary>
-    [SchemaAttr(0, "color2", 7)]
+    [SchemaAttr(0, "color2")]
+    [Index(7)]
     public StringValue Color2 { get; set; }
     /// <summary>
     /// <para> Shadow Secondary Offset.</para>
     /// <para>Represents the following attribute in the schema: offset2 </para>
     /// </summary>
-    [SchemaAttr(0, "offset2", 8)]
+    [SchemaAttr(0, "offset2")]
+    [Index(8)]
     public StringValue Offset2 { get; set; }
     /// <summary>
     /// <para> Shadow Origin.</para>
     /// <para>Represents the following attribute in the schema: origin </para>
     /// </summary>
-    [SchemaAttr(0, "origin", 9)]
+    [SchemaAttr(0, "origin")]
+    [Index(9)]
     public StringValue Origin { get; set; }
     /// <summary>
     /// <para> Shadow Perspective Matrix.</para>
     /// <para>Represents the following attribute in the schema: matrix </para>
     /// </summary>
-    [SchemaAttr(0, "matrix", 10)]
+    [SchemaAttr(0, "matrix")]
+    [Index(10)]
     public StringValue Matrix { get; set; }
 
     /// <summary>
@@ -988,11 +1038,7 @@ public partial class Shadow : OpenXmlLeafElement
 public partial class TextBox : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12583;
-    /// <inheritdoc/>
-    public override string LocalName => "textbox";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1000,19 +1046,22 @@ public partial class TextBox : OpenXmlCompositeElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style", 1)]
+    [SchemaAttr(0, "style")]
+    [Index(1)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> Text Box Inset.</para>
     /// <para>Represents the following attribute in the schema: inset </para>
     /// </summary>
-    [SchemaAttr(0, "inset", 2)]
+    [SchemaAttr(0, "inset")]
+    [Index(2)]
     public StringValue Inset { get; set; }
     /// <summary>
     /// <para> Text Box Single-Click Selection Toggle.</para>
@@ -1020,7 +1069,8 @@ public partial class TextBox : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "singleclick", 3)]
+    [SchemaAttr(27, "singleclick")]
+    [Index(3)]
     public TrueFalseValue SingleClick { get; set; }
 
     /// <summary>
@@ -1075,11 +1125,7 @@ public partial class TextBox : OpenXmlCompositeElement
 public partial class TextPath : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12584;
-    /// <inheritdoc/>
-    public override string LocalName => "textpath";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1087,49 +1133,57 @@ public partial class TextPath : OpenXmlLeafElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style", 1)]
+    [SchemaAttr(0, "style")]
+    [Index(1)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> Text Path Toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
     /// </summary>
-    [SchemaAttr(0, "on", 2)]
+    [SchemaAttr(0, "on")]
+    [Index(2)]
     public TrueFalseValue On { get; set; }
     /// <summary>
     /// <para> Shape Fit Toggle.</para>
     /// <para>Represents the following attribute in the schema: fitshape </para>
     /// </summary>
-    [SchemaAttr(0, "fitshape", 3)]
+    [SchemaAttr(0, "fitshape")]
+    [Index(3)]
     public TrueFalseValue FitShape { get; set; }
     /// <summary>
     /// <para> Path Fit Toggle.</para>
     /// <para>Represents the following attribute in the schema: fitpath </para>
     /// </summary>
-    [SchemaAttr(0, "fitpath", 4)]
+    [SchemaAttr(0, "fitpath")]
+    [Index(4)]
     public TrueFalseValue FitPath { get; set; }
     /// <summary>
     /// <para> Text Path Trim Toggle.</para>
     /// <para>Represents the following attribute in the schema: trim </para>
     /// </summary>
-    [SchemaAttr(0, "trim", 5)]
+    [SchemaAttr(0, "trim")]
+    [Index(5)]
     public TrueFalseValue Trim { get; set; }
     /// <summary>
     /// <para> Text X-Scaling.</para>
     /// <para>Represents the following attribute in the schema: xscale </para>
     /// </summary>
-    [SchemaAttr(0, "xscale", 6)]
+    [SchemaAttr(0, "xscale")]
+    [Index(6)]
     public TrueFalseValue XScale { get; set; }
     /// <summary>
     /// <para> Text Path Text.</para>
     /// <para>Represents the following attribute in the schema: string </para>
     /// </summary>
-    [SchemaAttr(0, "string", 7)]
+    [SchemaAttr(0, "string")]
+    [Index(7)]
     public StringValue String { get; set; }
 
     /// <summary>
@@ -1158,11 +1212,7 @@ public partial class TextPath : OpenXmlLeafElement
 public partial class ImageData : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12585;
-    /// <inheritdoc/>
-    public override string LocalName => "imagedata";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1170,79 +1220,92 @@ public partial class ImageData : OpenXmlLeafElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Image Transparency Color.</para>
     /// <para>Represents the following attribute in the schema: chromakey </para>
     /// </summary>
-    [SchemaAttr(0, "chromakey", 1)]
+    [SchemaAttr(0, "chromakey")]
+    [Index(1)]
     public StringValue ChromAKey { get; set; }
     /// <summary>
     /// <para> Image Left Crop.</para>
     /// <para>Represents the following attribute in the schema: cropleft </para>
     /// </summary>
-    [SchemaAttr(0, "cropleft", 2)]
+    [SchemaAttr(0, "cropleft")]
+    [Index(2)]
     public StringValue CropLeft { get; set; }
     /// <summary>
     /// <para> Image Top Crop.</para>
     /// <para>Represents the following attribute in the schema: croptop </para>
     /// </summary>
-    [SchemaAttr(0, "croptop", 3)]
+    [SchemaAttr(0, "croptop")]
+    [Index(3)]
     public StringValue CropTop { get; set; }
     /// <summary>
     /// <para> Image Right Crop.</para>
     /// <para>Represents the following attribute in the schema: cropright </para>
     /// </summary>
-    [SchemaAttr(0, "cropright", 4)]
+    [SchemaAttr(0, "cropright")]
+    [Index(4)]
     public StringValue CropRight { get; set; }
     /// <summary>
     /// <para> Image Bottom Crop.</para>
     /// <para>Represents the following attribute in the schema: cropbottom </para>
     /// </summary>
-    [SchemaAttr(0, "cropbottom", 5)]
+    [SchemaAttr(0, "cropbottom")]
+    [Index(5)]
     public StringValue CropBottom { get; set; }
     /// <summary>
     /// <para> Image Intensity.</para>
     /// <para>Represents the following attribute in the schema: gain </para>
     /// </summary>
-    [SchemaAttr(0, "gain", 6)]
+    [SchemaAttr(0, "gain")]
+    [Index(6)]
     public StringValue Gain { get; set; }
     /// <summary>
     /// <para> Image Brightness.</para>
     /// <para>Represents the following attribute in the schema: blacklevel </para>
     /// </summary>
-    [SchemaAttr(0, "blacklevel", 7)]
+    [SchemaAttr(0, "blacklevel")]
+    [Index(7)]
     public StringValue BlackLevel { get; set; }
     /// <summary>
     /// <para> Image Gamma Correction.</para>
     /// <para>Represents the following attribute in the schema: gamma </para>
     /// </summary>
-    [SchemaAttr(0, "gamma", 8)]
+    [SchemaAttr(0, "gamma")]
+    [Index(8)]
     public StringValue Gamma { get; set; }
     /// <summary>
     /// <para> Image Grayscale Toggle.</para>
     /// <para>Represents the following attribute in the schema: grayscale </para>
     /// </summary>
-    [SchemaAttr(0, "grayscale", 9)]
+    [SchemaAttr(0, "grayscale")]
+    [Index(9)]
     public TrueFalseValue Grayscale { get; set; }
     /// <summary>
     /// <para> Image Bilevel Toggle.</para>
     /// <para>Represents the following attribute in the schema: bilevel </para>
     /// </summary>
-    [SchemaAttr(0, "bilevel", 10)]
+    [SchemaAttr(0, "bilevel")]
+    [Index(10)]
     public TrueFalseValue BiLevel { get; set; }
     /// <summary>
     /// <para> Embossed Color.</para>
     /// <para>Represents the following attribute in the schema: embosscolor </para>
     /// </summary>
-    [SchemaAttr(0, "embosscolor", 11)]
+    [SchemaAttr(0, "embosscolor")]
+    [Index(11)]
     public StringValue EmbossColor { get; set; }
     /// <summary>
     /// <para> Black Recoloring Color.</para>
     /// <para>Represents the following attribute in the schema: recolortarget </para>
     /// </summary>
-    [SchemaAttr(0, "recolortarget", 12)]
+    [SchemaAttr(0, "recolortarget")]
+    [Index(12)]
     public StringValue RecolorTarget { get; set; }
     /// <summary>
     /// <para> Image Data Title.</para>
@@ -1250,7 +1313,8 @@ public partial class ImageData : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "title", 13)]
+    [SchemaAttr(27, "title")]
+    [Index(13)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> Detect Mouse Click.</para>
@@ -1258,7 +1322,8 @@ public partial class ImageData : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "detectmouseclick", 14)]
+    [SchemaAttr(27, "detectmouseclick")]
+    [Index(14)]
     public TrueFalseValue DetectMouseClick { get; set; }
     /// <summary>
     /// <para> Relationship to Part.</para>
@@ -1266,7 +1331,8 @@ public partial class ImageData : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "relid", 15)]
+    [SchemaAttr(27, "relid")]
+    [Index(15)]
     public StringValue RelId { get; set; }
     /// <summary>
     /// <para> Explicit Relationship to Image Data.</para>
@@ -1274,7 +1340,8 @@ public partial class ImageData : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id", 16)]
+    [SchemaAttr(19, "id")]
+    [Index(16)]
     public StringValue RelationshipId { get; set; }
     /// <summary>
     /// <para> Explicit Relationship to Alternate Image Data.</para>
@@ -1282,7 +1349,8 @@ public partial class ImageData : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "pict", 17)]
+    [SchemaAttr(19, "pict")]
+    [Index(17)]
     public StringValue Picture { get; set; }
     /// <summary>
     /// <para> Explicit Relationship to Hyperlink Target.</para>
@@ -1290,7 +1358,8 @@ public partial class ImageData : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "href", 18)]
+    [SchemaAttr(19, "href")]
+    [Index(18)]
     public StringValue RelHref { get; set; }
 
     /// <summary>
@@ -1374,11 +1443,7 @@ public partial class ImageData : OpenXmlLeafElement
 public partial class Shape : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12586;
-    /// <inheritdoc/>
-    public override string LocalName => "shape";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1386,67 +1451,78 @@ public partial class Shape : OpenXmlCompositeElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style", 1)]
+    [SchemaAttr(0, "style")]
+    [Index(1)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
     /// </summary>
-    [SchemaAttr(0, "href", 2)]
+    [SchemaAttr(0, "href")]
+    [Index(2)]
     public StringValue Href { get; set; }
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
-    [SchemaAttr(0, "target", 3)]
+    [SchemaAttr(0, "target")]
+    [Index(3)]
     public StringValue Target { get; set; }
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
     /// </summary>
-    [SchemaAttr(0, "class", 4)]
+    [SchemaAttr(0, "class")]
+    [Index(4)]
     public StringValue Class { get; set; }
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 5)]
+    [SchemaAttr(0, "title")]
+    [Index(5)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
     /// </summary>
-    [SchemaAttr(0, "alt", 6)]
+    [SchemaAttr(0, "alt")]
+    [Index(6)]
     public StringValue Alternate { get; set; }
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
     /// </summary>
-    [SchemaAttr(0, "coordsize", 7)]
+    [SchemaAttr(0, "coordsize")]
+    [Index(7)]
     public StringValue CoordinateSize { get; set; }
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
     /// </summary>
-    [SchemaAttr(0, "coordorigin", 8)]
+    [SchemaAttr(0, "coordorigin")]
+    [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
     /// </summary>
-    [SchemaAttr(0, "wrapcoords", 9)]
+    [SchemaAttr(0, "wrapcoords")]
+    [Index(9)]
     public StringValue WrapCoordinates { get; set; }
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
     /// </summary>
-    [SchemaAttr(0, "print", 10)]
+    [SchemaAttr(0, "print")]
+    [Index(10)]
     public TrueFalseValue Print { get; set; }
     /// <summary>
     /// <para> Optional String.</para>
@@ -1454,7 +1530,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spid", 11)]
+    [SchemaAttr(27, "spid")]
+    [Index(11)]
     public StringValue OptionalString { get; set; }
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
@@ -1462,7 +1539,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oned", 12)]
+    [SchemaAttr(27, "oned")]
+    [Index(12)]
     public TrueFalseValue Oned { get; set; }
     /// <summary>
     /// <para> Regroup ID.</para>
@@ -1470,7 +1548,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "regroupid", 13)]
+    [SchemaAttr(27, "regroupid")]
+    [Index(13)]
     public IntegerValue RegroupId { get; set; }
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
@@ -1478,7 +1557,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "doubleclicknotify", 14)]
+    [SchemaAttr(27, "doubleclicknotify")]
+    [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
@@ -1486,7 +1566,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "button", 15)]
+    [SchemaAttr(27, "button")]
+    [Index(15)]
     public TrueFalseValue Button { get; set; }
     /// <summary>
     /// <para> Hide Script Anchors.</para>
@@ -1494,7 +1575,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userhidden", 16)]
+    [SchemaAttr(27, "userhidden")]
+    [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
     /// <summary>
     /// <para> Graphical Bullet.</para>
@@ -1502,7 +1584,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bullet", 17)]
+    [SchemaAttr(27, "bullet")]
+    [Index(17)]
     public TrueFalseValue Bullet { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
@@ -1510,7 +1593,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hr", 18)]
+    [SchemaAttr(27, "hr")]
+    [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
@@ -1518,7 +1602,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrstd", 19)]
+    [SchemaAttr(27, "hrstd")]
+    [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
@@ -1526,7 +1611,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrnoshade", 20)]
+    [SchemaAttr(27, "hrnoshade")]
+    [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
@@ -1534,7 +1620,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrpct", 21)]
+    [SchemaAttr(27, "hrpct")]
+    [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
@@ -1542,7 +1629,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hralign", 22)]
+    [SchemaAttr(27, "hralign")]
+    [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
     /// <summary>
     /// <para> Allow in Table Cell.</para>
@@ -1550,7 +1638,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowincell", 23)]
+    [SchemaAttr(27, "allowincell")]
+    [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
@@ -1558,7 +1647,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowoverlap", 24)]
+    [SchemaAttr(27, "allowoverlap")]
+    [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
     /// <summary>
     /// <para> Exists In Master Slide.</para>
@@ -1566,7 +1656,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userdrawn", 25)]
+    [SchemaAttr(27, "userdrawn")]
+    [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
     /// <summary>
     /// <para> Border Top Color.</para>
@@ -1574,7 +1665,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bordertopcolor", 26)]
+    [SchemaAttr(27, "bordertopcolor")]
+    [Index(26)]
     public StringValue BorderTopColor { get; set; }
     /// <summary>
     /// <para> Border Left Color.</para>
@@ -1582,7 +1674,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderleftcolor", 27)]
+    [SchemaAttr(27, "borderleftcolor")]
+    [Index(27)]
     public StringValue BorderLeftColor { get; set; }
     /// <summary>
     /// <para> Bottom Border Color.</para>
@@ -1590,7 +1683,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderbottomcolor", 28)]
+    [SchemaAttr(27, "borderbottomcolor")]
+    [Index(28)]
     public StringValue BorderBottomColor { get; set; }
     /// <summary>
     /// <para> Border Right Color.</para>
@@ -1598,7 +1692,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderrightcolor", 29)]
+    [SchemaAttr(27, "borderrightcolor")]
+    [Index(29)]
     public StringValue BorderRightColor { get; set; }
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
@@ -1606,7 +1701,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayout", 30)]
+    [SchemaAttr(27, "dgmlayout")]
+    [Index(30)]
     public IntegerValue DiagramLayout { get; set; }
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
@@ -1614,7 +1710,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmnodekind", 31)]
+    [SchemaAttr(27, "dgmnodekind")]
+    [Index(31)]
     public IntegerValue DiagramNodeKind { get; set; }
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
@@ -1622,7 +1719,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayoutmru", 32)]
+    [SchemaAttr(27, "dgmlayoutmru")]
+    [Index(32)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
     /// <summary>
     /// <para> Text Inset Mode.</para>
@@ -1630,43 +1728,50 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "insetmode", 33)]
+    [SchemaAttr(27, "insetmode")]
+    [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
     /// </summary>
-    [SchemaAttr(0, "filled", 34)]
+    [SchemaAttr(0, "filled")]
+    [Index(34)]
     public TrueFalseValue Filled { get; set; }
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
     /// </summary>
-    [SchemaAttr(0, "fillcolor", 35)]
+    [SchemaAttr(0, "fillcolor")]
+    [Index(35)]
     public StringValue FillColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
     /// </summary>
-    [SchemaAttr(0, "stroked", 36)]
+    [SchemaAttr(0, "stroked")]
+    [Index(36)]
     public TrueFalseValue Stroked { get; set; }
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
     /// </summary>
-    [SchemaAttr(0, "strokecolor", 37)]
+    [SchemaAttr(0, "strokecolor")]
+    [Index(37)]
     public StringValue StrokeColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
     /// </summary>
-    [SchemaAttr(0, "strokeweight", 38)]
+    [SchemaAttr(0, "strokeweight")]
+    [Index(38)]
     public StringValue StrokeWeight { get; set; }
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
     /// </summary>
-    [SchemaAttr(0, "insetpen", 39)]
+    [SchemaAttr(0, "insetpen")]
+    [Index(39)]
     public TrueFalseValue InsetPen { get; set; }
     /// <summary>
     /// <para> Optional Number.</para>
@@ -1674,7 +1779,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spt", 40)]
+    [SchemaAttr(27, "spt")]
+    [Index(40)]
     public Int32Value OptionalNumber { get; set; }
     /// <summary>
     /// <para> Shape Connector Type.</para>
@@ -1682,7 +1788,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "connectortype", 41)]
+    [SchemaAttr(27, "connectortype")]
+    [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
     /// <summary>
     /// <para> Black-and-White Mode.</para>
@@ -1690,7 +1797,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwmode", 42)]
+    [SchemaAttr(27, "bwmode")]
+    [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
@@ -1698,7 +1806,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwpure", 43)]
+    [SchemaAttr(27, "bwpure")]
+    [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
@@ -1706,7 +1815,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwnormal", 44)]
+    [SchemaAttr(27, "bwnormal")]
+    [Index(44)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Force Dashed Outline.</para>
@@ -1714,7 +1824,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "forcedash", 45)]
+    [SchemaAttr(27, "forcedash")]
+    [Index(45)]
     public TrueFalseValue ForceDash { get; set; }
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
@@ -1722,7 +1833,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oleicon", 46)]
+    [SchemaAttr(27, "oleicon")]
+    [Index(46)]
     public TrueFalseValue OleIcon { get; set; }
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
@@ -1730,7 +1842,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "ole", 47)]
+    [SchemaAttr(27, "ole")]
+    [Index(47)]
     public TrueFalseBlankValue Ole { get; set; }
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
@@ -1738,7 +1851,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "preferrelative", 48)]
+    [SchemaAttr(27, "preferrelative")]
+    [Index(48)]
     public TrueFalseValue PreferRelative { get; set; }
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
@@ -1746,7 +1860,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "cliptowrap", 49)]
+    [SchemaAttr(27, "cliptowrap")]
+    [Index(49)]
     public TrueFalseValue ClipToWrap { get; set; }
     /// <summary>
     /// <para> Clipping Toggle.</para>
@@ -1754,25 +1869,29 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "clip", 50)]
+    [SchemaAttr(27, "clip")]
+    [Index(50)]
     public TrueFalseValue Clip { get; set; }
     /// <summary>
     /// <para> Shape Type Reference.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type", 51)]
+    [SchemaAttr(0, "type")]
+    [Index(51)]
     public StringValue Type { get; set; }
     /// <summary>
     /// <para> Adjustment Parameters.</para>
     /// <para>Represents the following attribute in the schema: adj </para>
     /// </summary>
-    [SchemaAttr(0, "adj", 52)]
+    [SchemaAttr(0, "adj")]
+    [Index(52)]
     public StringValue Adjustment { get; set; }
     /// <summary>
     /// <para> Edge Path.</para>
     /// <para>Represents the following attribute in the schema: path </para>
     /// </summary>
-    [SchemaAttr(0, "path", 53)]
+    [SchemaAttr(0, "path")]
+    [Index(53)]
     public StringValue EdgePath { get; set; }
     /// <summary>
     /// <para> Encoded Package.</para>
@@ -1780,13 +1899,15 @@ public partial class Shape : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "gfxdata", 54)]
+    [SchemaAttr(27, "gfxdata")]
+    [Index(54)]
     public Base64BinaryValue EncodedPackage { get; set; }
     /// <summary>
     /// <para> Storage for Alternate Math Content.</para>
     /// <para>Represents the following attribute in the schema: equationxml </para>
     /// </summary>
-    [SchemaAttr(0, "equationxml", 55)]
+    [SchemaAttr(0, "equationxml")]
+    [Index(55)]
     public StringValue EquationXml { get; set; }
 
     /// <summary>
@@ -1894,11 +2015,7 @@ public partial class Shape : OpenXmlCompositeElement
 public partial class Shapetype : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12587;
-    /// <inheritdoc/>
-    public override string LocalName => "shapetype";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1906,67 +2023,78 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style", 1)]
+    [SchemaAttr(0, "style")]
+    [Index(1)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
     /// </summary>
-    [SchemaAttr(0, "href", 2)]
+    [SchemaAttr(0, "href")]
+    [Index(2)]
     public StringValue Href { get; set; }
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
-    [SchemaAttr(0, "target", 3)]
+    [SchemaAttr(0, "target")]
+    [Index(3)]
     public StringValue Target { get; set; }
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
     /// </summary>
-    [SchemaAttr(0, "class", 4)]
+    [SchemaAttr(0, "class")]
+    [Index(4)]
     public StringValue Class { get; set; }
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 5)]
+    [SchemaAttr(0, "title")]
+    [Index(5)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
     /// </summary>
-    [SchemaAttr(0, "alt", 6)]
+    [SchemaAttr(0, "alt")]
+    [Index(6)]
     public StringValue Alternate { get; set; }
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
     /// </summary>
-    [SchemaAttr(0, "coordsize", 7)]
+    [SchemaAttr(0, "coordsize")]
+    [Index(7)]
     public StringValue CoordinateSize { get; set; }
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
     /// </summary>
-    [SchemaAttr(0, "coordorigin", 8)]
+    [SchemaAttr(0, "coordorigin")]
+    [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
     /// </summary>
-    [SchemaAttr(0, "wrapcoords", 9)]
+    [SchemaAttr(0, "wrapcoords")]
+    [Index(9)]
     public StringValue WrapCoordinates { get; set; }
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
     /// </summary>
-    [SchemaAttr(0, "print", 10)]
+    [SchemaAttr(0, "print")]
+    [Index(10)]
     public TrueFalseValue Print { get; set; }
     /// <summary>
     /// <para> Optional String.</para>
@@ -1974,7 +2102,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spid", 11)]
+    [SchemaAttr(27, "spid")]
+    [Index(11)]
     public StringValue OptionalString { get; set; }
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
@@ -1982,7 +2111,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oned", 12)]
+    [SchemaAttr(27, "oned")]
+    [Index(12)]
     public TrueFalseValue Oned { get; set; }
     /// <summary>
     /// <para> Regroup ID.</para>
@@ -1990,7 +2120,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "regroupid", 13)]
+    [SchemaAttr(27, "regroupid")]
+    [Index(13)]
     public IntegerValue RegroupId { get; set; }
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
@@ -1998,7 +2129,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "doubleclicknotify", 14)]
+    [SchemaAttr(27, "doubleclicknotify")]
+    [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
@@ -2006,7 +2138,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "button", 15)]
+    [SchemaAttr(27, "button")]
+    [Index(15)]
     public TrueFalseValue Button { get; set; }
     /// <summary>
     /// <para> Hide Script Anchors.</para>
@@ -2014,7 +2147,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userhidden", 16)]
+    [SchemaAttr(27, "userhidden")]
+    [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
     /// <summary>
     /// <para> Graphical Bullet.</para>
@@ -2022,7 +2156,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bullet", 17)]
+    [SchemaAttr(27, "bullet")]
+    [Index(17)]
     public TrueFalseValue Bullet { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
@@ -2030,7 +2165,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hr", 18)]
+    [SchemaAttr(27, "hr")]
+    [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
@@ -2038,7 +2174,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrstd", 19)]
+    [SchemaAttr(27, "hrstd")]
+    [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
@@ -2046,7 +2183,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrnoshade", 20)]
+    [SchemaAttr(27, "hrnoshade")]
+    [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
@@ -2054,7 +2192,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrpct", 21)]
+    [SchemaAttr(27, "hrpct")]
+    [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
@@ -2062,7 +2201,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hralign", 22)]
+    [SchemaAttr(27, "hralign")]
+    [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
     /// <summary>
     /// <para> Allow in Table Cell.</para>
@@ -2070,7 +2210,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowincell", 23)]
+    [SchemaAttr(27, "allowincell")]
+    [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
@@ -2078,7 +2219,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowoverlap", 24)]
+    [SchemaAttr(27, "allowoverlap")]
+    [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
     /// <summary>
     /// <para> Exists In Master Slide.</para>
@@ -2086,7 +2228,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userdrawn", 25)]
+    [SchemaAttr(27, "userdrawn")]
+    [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
     /// <summary>
     /// <para> Border Top Color.</para>
@@ -2094,7 +2237,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bordertopcolor", 26)]
+    [SchemaAttr(27, "bordertopcolor")]
+    [Index(26)]
     public StringValue BorderTopColor { get; set; }
     /// <summary>
     /// <para> Border Left Color.</para>
@@ -2102,7 +2246,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderleftcolor", 27)]
+    [SchemaAttr(27, "borderleftcolor")]
+    [Index(27)]
     public StringValue BorderLeftColor { get; set; }
     /// <summary>
     /// <para> Bottom Border Color.</para>
@@ -2110,7 +2255,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderbottomcolor", 28)]
+    [SchemaAttr(27, "borderbottomcolor")]
+    [Index(28)]
     public StringValue BorderBottomColor { get; set; }
     /// <summary>
     /// <para> Border Right Color.</para>
@@ -2118,7 +2264,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderrightcolor", 29)]
+    [SchemaAttr(27, "borderrightcolor")]
+    [Index(29)]
     public StringValue BorderRightColor { get; set; }
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
@@ -2126,7 +2273,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayout", 30)]
+    [SchemaAttr(27, "dgmlayout")]
+    [Index(30)]
     public IntegerValue DiagramLayout { get; set; }
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
@@ -2134,7 +2282,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmnodekind", 31)]
+    [SchemaAttr(27, "dgmnodekind")]
+    [Index(31)]
     public IntegerValue DiagramNodeKind { get; set; }
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
@@ -2142,7 +2291,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayoutmru", 32)]
+    [SchemaAttr(27, "dgmlayoutmru")]
+    [Index(32)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
     /// <summary>
     /// <para> Text Inset Mode.</para>
@@ -2150,43 +2300,50 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "insetmode", 33)]
+    [SchemaAttr(27, "insetmode")]
+    [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
     /// </summary>
-    [SchemaAttr(0, "filled", 34)]
+    [SchemaAttr(0, "filled")]
+    [Index(34)]
     public TrueFalseValue Filled { get; set; }
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
     /// </summary>
-    [SchemaAttr(0, "fillcolor", 35)]
+    [SchemaAttr(0, "fillcolor")]
+    [Index(35)]
     public StringValue FillColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
     /// </summary>
-    [SchemaAttr(0, "stroked", 36)]
+    [SchemaAttr(0, "stroked")]
+    [Index(36)]
     public TrueFalseValue Stroked { get; set; }
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
     /// </summary>
-    [SchemaAttr(0, "strokecolor", 37)]
+    [SchemaAttr(0, "strokecolor")]
+    [Index(37)]
     public StringValue StrokeColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
     /// </summary>
-    [SchemaAttr(0, "strokeweight", 38)]
+    [SchemaAttr(0, "strokeweight")]
+    [Index(38)]
     public StringValue StrokeWeight { get; set; }
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
     /// </summary>
-    [SchemaAttr(0, "insetpen", 39)]
+    [SchemaAttr(0, "insetpen")]
+    [Index(39)]
     public TrueFalseValue InsetPen { get; set; }
     /// <summary>
     /// <para> Optional Number.</para>
@@ -2194,7 +2351,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spt", 40)]
+    [SchemaAttr(27, "spt")]
+    [Index(40)]
     public Int32Value OptionalNumber { get; set; }
     /// <summary>
     /// <para> Shape Connector Type.</para>
@@ -2202,7 +2360,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "connectortype", 41)]
+    [SchemaAttr(27, "connectortype")]
+    [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
     /// <summary>
     /// <para> Black-and-White Mode.</para>
@@ -2210,7 +2369,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwmode", 42)]
+    [SchemaAttr(27, "bwmode")]
+    [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
@@ -2218,7 +2378,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwpure", 43)]
+    [SchemaAttr(27, "bwpure")]
+    [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
@@ -2226,7 +2387,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwnormal", 44)]
+    [SchemaAttr(27, "bwnormal")]
+    [Index(44)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Force Dashed Outline.</para>
@@ -2234,7 +2396,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "forcedash", 45)]
+    [SchemaAttr(27, "forcedash")]
+    [Index(45)]
     public TrueFalseValue ForceDash { get; set; }
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
@@ -2242,7 +2405,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oleicon", 46)]
+    [SchemaAttr(27, "oleicon")]
+    [Index(46)]
     public TrueFalseValue OleIcon { get; set; }
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
@@ -2250,7 +2414,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "ole", 47)]
+    [SchemaAttr(27, "ole")]
+    [Index(47)]
     public TrueFalseBlankValue Ole { get; set; }
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
@@ -2258,7 +2423,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "preferrelative", 48)]
+    [SchemaAttr(27, "preferrelative")]
+    [Index(48)]
     public TrueFalseValue PreferRelative { get; set; }
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
@@ -2266,7 +2432,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "cliptowrap", 49)]
+    [SchemaAttr(27, "cliptowrap")]
+    [Index(49)]
     public TrueFalseValue ClipToWrap { get; set; }
     /// <summary>
     /// <para> Clipping Toggle.</para>
@@ -2274,19 +2441,22 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "clip", 50)]
+    [SchemaAttr(27, "clip")]
+    [Index(50)]
     public TrueFalseValue Clip { get; set; }
     /// <summary>
     /// <para> Adjustment Parameters.</para>
     /// <para>Represents the following attribute in the schema: adj </para>
     /// </summary>
-    [SchemaAttr(0, "adj", 51)]
+    [SchemaAttr(0, "adj")]
+    [Index(51)]
     public StringValue Adjustment { get; set; }
     /// <summary>
     /// <para> Edge Path.</para>
     /// <para>Represents the following attribute in the schema: path </para>
     /// </summary>
-    [SchemaAttr(0, "path", 52)]
+    [SchemaAttr(0, "path")]
+    [Index(52)]
     public StringValue EdgePath { get; set; }
     /// <summary>
     /// <para> Master Element Toggle.</para>
@@ -2294,7 +2464,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "master", 53)]
+    [SchemaAttr(27, "master")]
+    [Index(53)]
     public StringValue Master { get; set; }
 
     /// <summary>
@@ -2388,11 +2559,7 @@ public partial class Shapetype : OpenXmlCompositeElement
 public partial class Group : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12588;
-    /// <inheritdoc/>
-    public override string LocalName => "group";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2400,67 +2567,78 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style", 1)]
+    [SchemaAttr(0, "style")]
+    [Index(1)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
     /// </summary>
-    [SchemaAttr(0, "href", 2)]
+    [SchemaAttr(0, "href")]
+    [Index(2)]
     public StringValue Href { get; set; }
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
-    [SchemaAttr(0, "target", 3)]
+    [SchemaAttr(0, "target")]
+    [Index(3)]
     public StringValue Target { get; set; }
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
     /// </summary>
-    [SchemaAttr(0, "class", 4)]
+    [SchemaAttr(0, "class")]
+    [Index(4)]
     public StringValue Class { get; set; }
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 5)]
+    [SchemaAttr(0, "title")]
+    [Index(5)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
     /// </summary>
-    [SchemaAttr(0, "alt", 6)]
+    [SchemaAttr(0, "alt")]
+    [Index(6)]
     public StringValue Alternate { get; set; }
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
     /// </summary>
-    [SchemaAttr(0, "coordsize", 7)]
+    [SchemaAttr(0, "coordsize")]
+    [Index(7)]
     public StringValue CoordinateSize { get; set; }
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
     /// </summary>
-    [SchemaAttr(0, "coordorigin", 8)]
+    [SchemaAttr(0, "coordorigin")]
+    [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
     /// </summary>
-    [SchemaAttr(0, "wrapcoords", 9)]
+    [SchemaAttr(0, "wrapcoords")]
+    [Index(9)]
     public StringValue WrapCoordinates { get; set; }
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
     /// </summary>
-    [SchemaAttr(0, "print", 10)]
+    [SchemaAttr(0, "print")]
+    [Index(10)]
     public TrueFalseValue Print { get; set; }
     /// <summary>
     /// <para> spid.</para>
@@ -2468,7 +2646,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spid", 11)]
+    [SchemaAttr(27, "spid")]
+    [Index(11)]
     public StringValue OptionalString { get; set; }
     /// <summary>
     /// <para> oned.</para>
@@ -2476,7 +2655,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oned", 12)]
+    [SchemaAttr(27, "oned")]
+    [Index(12)]
     public TrueFalseValue Oned { get; set; }
     /// <summary>
     /// <para> regroupid.</para>
@@ -2484,7 +2664,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "regroupid", 13)]
+    [SchemaAttr(27, "regroupid")]
+    [Index(13)]
     public IntegerValue RegroupId { get; set; }
     /// <summary>
     /// <para> doubleclicknotify.</para>
@@ -2492,7 +2673,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "doubleclicknotify", 14)]
+    [SchemaAttr(27, "doubleclicknotify")]
+    [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
     /// <summary>
     /// <para> button.</para>
@@ -2500,7 +2682,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "button", 15)]
+    [SchemaAttr(27, "button")]
+    [Index(15)]
     public TrueFalseValue Button { get; set; }
     /// <summary>
     /// <para> userhidden.</para>
@@ -2508,7 +2691,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userhidden", 16)]
+    [SchemaAttr(27, "userhidden")]
+    [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
     /// <summary>
     /// <para> bullet.</para>
@@ -2516,7 +2700,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bullet", 17)]
+    [SchemaAttr(27, "bullet")]
+    [Index(17)]
     public TrueFalseValue Bullet { get; set; }
     /// <summary>
     /// <para> hr.</para>
@@ -2524,7 +2709,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hr", 18)]
+    [SchemaAttr(27, "hr")]
+    [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
     /// <summary>
     /// <para> hrstd.</para>
@@ -2532,7 +2718,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrstd", 19)]
+    [SchemaAttr(27, "hrstd")]
+    [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
     /// <summary>
     /// <para> hrnoshade.</para>
@@ -2540,7 +2727,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrnoshade", 20)]
+    [SchemaAttr(27, "hrnoshade")]
+    [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
     /// <summary>
     /// <para> hrpct.</para>
@@ -2548,7 +2736,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrpct", 21)]
+    [SchemaAttr(27, "hrpct")]
+    [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
     /// <summary>
     /// <para> hralign.</para>
@@ -2556,7 +2745,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hralign", 22)]
+    [SchemaAttr(27, "hralign")]
+    [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
     /// <summary>
     /// <para> allowincell.</para>
@@ -2564,7 +2754,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowincell", 23)]
+    [SchemaAttr(27, "allowincell")]
+    [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
     /// <summary>
     /// <para> allowoverlap.</para>
@@ -2572,7 +2763,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowoverlap", 24)]
+    [SchemaAttr(27, "allowoverlap")]
+    [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
     /// <summary>
     /// <para> userdrawn.</para>
@@ -2580,7 +2772,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userdrawn", 25)]
+    [SchemaAttr(27, "userdrawn")]
+    [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
     /// <summary>
     /// <para> dgmlayout.</para>
@@ -2588,7 +2781,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayout", 26)]
+    [SchemaAttr(27, "dgmlayout")]
+    [Index(26)]
     public IntegerValue DiagramLayout { get; set; }
     /// <summary>
     /// <para> dgmnodekind.</para>
@@ -2596,7 +2790,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmnodekind", 27)]
+    [SchemaAttr(27, "dgmnodekind")]
+    [Index(27)]
     public IntegerValue DiagramNodeKind { get; set; }
     /// <summary>
     /// <para> dgmlayoutmru.</para>
@@ -2604,7 +2799,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayoutmru", 28)]
+    [SchemaAttr(27, "dgmlayoutmru")]
+    [Index(28)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
     /// <summary>
     /// <para> insetmode.</para>
@@ -2612,13 +2808,15 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "insetmode", 29)]
+    [SchemaAttr(27, "insetmode")]
+    [Index(29)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
     /// <summary>
     /// <para> Group Diagram Type.</para>
     /// <para>Represents the following attribute in the schema: editas </para>
     /// </summary>
-    [SchemaAttr(0, "editas", 30)]
+    [SchemaAttr(0, "editas")]
+    [Index(30)]
     public EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues> EditAs { get; set; }
     /// <summary>
     /// <para> Table Properties.</para>
@@ -2626,7 +2824,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "tableproperties", 31)]
+    [SchemaAttr(27, "tableproperties")]
+    [Index(31)]
     public StringValue TableProperties { get; set; }
     /// <summary>
     /// <para> Table Row Height Limits.</para>
@@ -2634,7 +2833,8 @@ public partial class Group : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "tablelimits", 32)]
+    [SchemaAttr(27, "tablelimits")]
+    [Index(32)]
     public StringValue TableLimits { get; set; }
 
     /// <summary>
@@ -2696,11 +2896,7 @@ public partial class Group : OpenXmlCompositeElement
 public partial class Background : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12589;
-    /// <inheritdoc/>
-    public override string LocalName => "background";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2708,19 +2904,22 @@ public partial class Background : OpenXmlCompositeElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: fill </para>
     /// </summary>
-    [SchemaAttr(0, "fill", 1)]
+    [SchemaAttr(0, "fill")]
+    [Index(1)]
     public TrueFalseValue Filled { get; set; }
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
     /// </summary>
-    [SchemaAttr(0, "fillcolor", 2)]
+    [SchemaAttr(0, "fillcolor")]
+    [Index(2)]
     public StringValue Fillcolor { get; set; }
     /// <summary>
     /// <para> Black-and-White Mode.</para>
@@ -2728,7 +2927,8 @@ public partial class Background : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwmode", 3)]
+    [SchemaAttr(27, "bwmode")]
+    [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
@@ -2736,7 +2936,8 @@ public partial class Background : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwpure", 4)]
+    [SchemaAttr(27, "bwpure")]
+    [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
@@ -2744,7 +2945,8 @@ public partial class Background : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwnormal", 5)]
+    [SchemaAttr(27, "bwnormal")]
+    [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Target Screen Size.</para>
@@ -2752,7 +2954,8 @@ public partial class Background : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "targetscreensize", 6)]
+    [SchemaAttr(27, "targetscreensize")]
+    [Index(6)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ScreenSizeValues> TargetScreenSize { get; set; }
 
     /// <summary>
@@ -2790,13 +2993,7 @@ public partial class Background : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "fill" };
-    private static readonly byte[] eleNamespaceIds = { 26 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Fill.</para>
@@ -2805,11 +3002,12 @@ public partial class Background : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:v = urn:schemas-microsoft-com:vml
     /// </remark>
+	[Index(0)]
     public Fill Fill
-    {
+	{
         get => GetElement<Fill>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -2880,11 +3078,7 @@ public partial class Background : OpenXmlCompositeElement
 public partial class Arc : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12590;
-    /// <inheritdoc/>
-    public override string LocalName => "arc";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2894,7 +3088,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spid", 0)]
+    [SchemaAttr(27, "spid")]
+    [Index(0)]
     public StringValue OptionalString { get; set; }
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
@@ -2902,7 +3097,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oned", 1)]
+    [SchemaAttr(27, "oned")]
+    [Index(1)]
     public TrueFalseValue Oned { get; set; }
     /// <summary>
     /// <para> Regroup ID.</para>
@@ -2910,7 +3106,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "regroupid", 2)]
+    [SchemaAttr(27, "regroupid")]
+    [Index(2)]
     public IntegerValue RegroupId { get; set; }
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
@@ -2918,7 +3115,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "doubleclicknotify", 3)]
+    [SchemaAttr(27, "doubleclicknotify")]
+    [Index(3)]
     public TrueFalseValue DoubleClickNotify { get; set; }
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
@@ -2926,7 +3124,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "button", 4)]
+    [SchemaAttr(27, "button")]
+    [Index(4)]
     public TrueFalseValue Button { get; set; }
     /// <summary>
     /// <para> Hide Script Anchors.</para>
@@ -2934,7 +3133,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userhidden", 5)]
+    [SchemaAttr(27, "userhidden")]
+    [Index(5)]
     public TrueFalseValue UserHidden { get; set; }
     /// <summary>
     /// <para> Graphical Bullet.</para>
@@ -2942,7 +3142,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bullet", 6)]
+    [SchemaAttr(27, "bullet")]
+    [Index(6)]
     public TrueFalseValue Bullet { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
@@ -2950,7 +3151,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hr", 7)]
+    [SchemaAttr(27, "hr")]
+    [Index(7)]
     public TrueFalseValue Horizontal { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
@@ -2958,7 +3160,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrstd", 8)]
+    [SchemaAttr(27, "hrstd")]
+    [Index(8)]
     public TrueFalseValue HorizontalStandard { get; set; }
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
@@ -2966,7 +3169,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrnoshade", 9)]
+    [SchemaAttr(27, "hrnoshade")]
+    [Index(9)]
     public TrueFalseValue HorizontalNoShade { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
@@ -2974,7 +3178,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrpct", 10)]
+    [SchemaAttr(27, "hrpct")]
+    [Index(10)]
     public SingleValue HorizontalPercentage { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
@@ -2982,7 +3187,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hralign", 11)]
+    [SchemaAttr(27, "hralign")]
+    [Index(11)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
     /// <summary>
     /// <para> Allow in Table Cell.</para>
@@ -2990,7 +3196,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowincell", 12)]
+    [SchemaAttr(27, "allowincell")]
+    [Index(12)]
     public TrueFalseValue AllowInCell { get; set; }
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
@@ -2998,7 +3205,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowoverlap", 13)]
+    [SchemaAttr(27, "allowoverlap")]
+    [Index(13)]
     public TrueFalseValue AllowOverlap { get; set; }
     /// <summary>
     /// <para> Exists In Master Slide.</para>
@@ -3006,7 +3214,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userdrawn", 14)]
+    [SchemaAttr(27, "userdrawn")]
+    [Index(14)]
     public TrueFalseValue UserDrawn { get; set; }
     /// <summary>
     /// <para> Border Top Color.</para>
@@ -3014,7 +3223,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bordertopcolor", 15)]
+    [SchemaAttr(27, "bordertopcolor")]
+    [Index(15)]
     public StringValue BorderTopColor { get; set; }
     /// <summary>
     /// <para> Border Left Color.</para>
@@ -3022,7 +3232,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderleftcolor", 16)]
+    [SchemaAttr(27, "borderleftcolor")]
+    [Index(16)]
     public StringValue BorderLeftColor { get; set; }
     /// <summary>
     /// <para> Bottom Border Color.</para>
@@ -3030,7 +3241,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderbottomcolor", 17)]
+    [SchemaAttr(27, "borderbottomcolor")]
+    [Index(17)]
     public StringValue BorderBottomColor { get; set; }
     /// <summary>
     /// <para> Border Right Color.</para>
@@ -3038,7 +3250,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderrightcolor", 18)]
+    [SchemaAttr(27, "borderrightcolor")]
+    [Index(18)]
     public StringValue BorderRightColor { get; set; }
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
@@ -3046,7 +3259,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayout", 19)]
+    [SchemaAttr(27, "dgmlayout")]
+    [Index(19)]
     public IntegerValue DiagramLayout { get; set; }
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
@@ -3054,7 +3268,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmnodekind", 20)]
+    [SchemaAttr(27, "dgmnodekind")]
+    [Index(20)]
     public IntegerValue DiagramNodeKind { get; set; }
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
@@ -3062,7 +3277,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayoutmru", 21)]
+    [SchemaAttr(27, "dgmlayoutmru")]
+    [Index(21)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
     /// <summary>
     /// <para> Text Inset Mode.</para>
@@ -3070,43 +3286,50 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "insetmode", 22)]
+    [SchemaAttr(27, "insetmode")]
+    [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
     /// </summary>
-    [SchemaAttr(0, "filled", 23)]
+    [SchemaAttr(0, "filled")]
+    [Index(23)]
     public TrueFalseValue Filled { get; set; }
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
     /// </summary>
-    [SchemaAttr(0, "fillcolor", 24)]
+    [SchemaAttr(0, "fillcolor")]
+    [Index(24)]
     public StringValue FillColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
     /// </summary>
-    [SchemaAttr(0, "stroked", 25)]
+    [SchemaAttr(0, "stroked")]
+    [Index(25)]
     public TrueFalseValue Stroked { get; set; }
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
     /// </summary>
-    [SchemaAttr(0, "strokecolor", 26)]
+    [SchemaAttr(0, "strokecolor")]
+    [Index(26)]
     public StringValue StrokeColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
     /// </summary>
-    [SchemaAttr(0, "strokeweight", 27)]
+    [SchemaAttr(0, "strokeweight")]
+    [Index(27)]
     public StringValue StrokeWeight { get; set; }
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
     /// </summary>
-    [SchemaAttr(0, "insetpen", 28)]
+    [SchemaAttr(0, "insetpen")]
+    [Index(28)]
     public TrueFalseValue InsetPen { get; set; }
     /// <summary>
     /// <para> Optional Number.</para>
@@ -3114,7 +3337,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spt", 29)]
+    [SchemaAttr(27, "spt")]
+    [Index(29)]
     public Int32Value OptionalNumber { get; set; }
     /// <summary>
     /// <para> Shape Connector Type.</para>
@@ -3122,7 +3346,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "connectortype", 30)]
+    [SchemaAttr(27, "connectortype")]
+    [Index(30)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
     /// <summary>
     /// <para> Black-and-White Mode.</para>
@@ -3130,7 +3355,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwmode", 31)]
+    [SchemaAttr(27, "bwmode")]
+    [Index(31)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
@@ -3138,7 +3364,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwpure", 32)]
+    [SchemaAttr(27, "bwpure")]
+    [Index(32)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
@@ -3146,7 +3373,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwnormal", 33)]
+    [SchemaAttr(27, "bwnormal")]
+    [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Force Dashed Outline.</para>
@@ -3154,7 +3382,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "forcedash", 34)]
+    [SchemaAttr(27, "forcedash")]
+    [Index(34)]
     public TrueFalseValue ForceDash { get; set; }
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
@@ -3162,7 +3391,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oleicon", 35)]
+    [SchemaAttr(27, "oleicon")]
+    [Index(35)]
     public TrueFalseValue OleIcon { get; set; }
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
@@ -3170,7 +3400,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "ole", 36)]
+    [SchemaAttr(27, "ole")]
+    [Index(36)]
     public TrueFalseBlankValue Ole { get; set; }
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
@@ -3178,7 +3409,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "preferrelative", 37)]
+    [SchemaAttr(27, "preferrelative")]
+    [Index(37)]
     public TrueFalseValue PreferRelative { get; set; }
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
@@ -3186,7 +3418,8 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "cliptowrap", 38)]
+    [SchemaAttr(27, "cliptowrap")]
+    [Index(38)]
     public TrueFalseValue ClipToWrap { get; set; }
     /// <summary>
     /// <para> Clipping Toggle.</para>
@@ -3194,79 +3427,92 @@ public partial class Arc : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "clip", 39)]
+    [SchemaAttr(27, "clip")]
+    [Index(39)]
     public TrueFalseValue Clip { get; set; }
     /// <summary>
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 40)]
+    [SchemaAttr(0, "id")]
+    [Index(40)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style", 41)]
+    [SchemaAttr(0, "style")]
+    [Index(41)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
     /// </summary>
-    [SchemaAttr(0, "href", 42)]
+    [SchemaAttr(0, "href")]
+    [Index(42)]
     public StringValue Href { get; set; }
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
-    [SchemaAttr(0, "target", 43)]
+    [SchemaAttr(0, "target")]
+    [Index(43)]
     public StringValue Target { get; set; }
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 44)]
+    [SchemaAttr(0, "title")]
+    [Index(44)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
     /// </summary>
-    [SchemaAttr(0, "alt", 45)]
+    [SchemaAttr(0, "alt")]
+    [Index(45)]
     public StringValue Alternate { get; set; }
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
     /// </summary>
-    [SchemaAttr(0, "coordsize", 46)]
+    [SchemaAttr(0, "coordsize")]
+    [Index(46)]
     public StringValue CoordinateSize { get; set; }
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
     /// </summary>
-    [SchemaAttr(0, "coordorigin", 47)]
+    [SchemaAttr(0, "coordorigin")]
+    [Index(47)]
     public StringValue CoordinateOrigin { get; set; }
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
     /// </summary>
-    [SchemaAttr(0, "wrapcoords", 48)]
+    [SchemaAttr(0, "wrapcoords")]
+    [Index(48)]
     public StringValue Wrapcoords { get; set; }
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
     /// </summary>
-    [SchemaAttr(0, "print", 49)]
+    [SchemaAttr(0, "print")]
+    [Index(49)]
     public TrueFalseValue Print { get; set; }
     /// <summary>
     /// <para> Starting Angle.</para>
     /// <para>Represents the following attribute in the schema: startangle </para>
     /// </summary>
-    [SchemaAttr(0, "startangle", 50)]
+    [SchemaAttr(0, "startangle")]
+    [Index(50)]
     public DecimalValue StartAngle { get; set; }
     /// <summary>
     /// <para> Ending Angle.</para>
     /// <para>Represents the following attribute in the schema: endangle </para>
     /// </summary>
-    [SchemaAttr(0, "endangle", 51)]
+    [SchemaAttr(0, "endangle")]
+    [Index(51)]
     public DecimalValue EndAngle { get; set; }
 
     /// <summary>
@@ -3372,11 +3618,7 @@ public partial class Arc : OpenXmlCompositeElement
 public partial class Curve : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12591;
-    /// <inheritdoc/>
-    public override string LocalName => "curve";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -3384,67 +3626,78 @@ public partial class Curve : OpenXmlCompositeElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style", 1)]
+    [SchemaAttr(0, "style")]
+    [Index(1)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
     /// </summary>
-    [SchemaAttr(0, "href", 2)]
+    [SchemaAttr(0, "href")]
+    [Index(2)]
     public StringValue Href { get; set; }
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
-    [SchemaAttr(0, "target", 3)]
+    [SchemaAttr(0, "target")]
+    [Index(3)]
     public StringValue Target { get; set; }
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
     /// </summary>
-    [SchemaAttr(0, "class", 4)]
+    [SchemaAttr(0, "class")]
+    [Index(4)]
     public StringValue Class { get; set; }
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 5)]
+    [SchemaAttr(0, "title")]
+    [Index(5)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
     /// </summary>
-    [SchemaAttr(0, "alt", 6)]
+    [SchemaAttr(0, "alt")]
+    [Index(6)]
     public StringValue Alternate { get; set; }
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
     /// </summary>
-    [SchemaAttr(0, "coordsize", 7)]
+    [SchemaAttr(0, "coordsize")]
+    [Index(7)]
     public StringValue CoordinateSize { get; set; }
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
     /// </summary>
-    [SchemaAttr(0, "coordorigin", 8)]
+    [SchemaAttr(0, "coordorigin")]
+    [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
     /// </summary>
-    [SchemaAttr(0, "wrapcoords", 9)]
+    [SchemaAttr(0, "wrapcoords")]
+    [Index(9)]
     public StringValue WrapCoordinates { get; set; }
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
     /// </summary>
-    [SchemaAttr(0, "print", 10)]
+    [SchemaAttr(0, "print")]
+    [Index(10)]
     public TrueFalseValue Print { get; set; }
     /// <summary>
     /// <para> Optional String.</para>
@@ -3452,7 +3705,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spid", 11)]
+    [SchemaAttr(27, "spid")]
+    [Index(11)]
     public StringValue OptionalString { get; set; }
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
@@ -3460,7 +3714,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oned", 12)]
+    [SchemaAttr(27, "oned")]
+    [Index(12)]
     public TrueFalseValue Oned { get; set; }
     /// <summary>
     /// <para> Regroup ID.</para>
@@ -3468,7 +3723,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "regroupid", 13)]
+    [SchemaAttr(27, "regroupid")]
+    [Index(13)]
     public IntegerValue RegroupId { get; set; }
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
@@ -3476,7 +3732,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "doubleclicknotify", 14)]
+    [SchemaAttr(27, "doubleclicknotify")]
+    [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
@@ -3484,7 +3741,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "button", 15)]
+    [SchemaAttr(27, "button")]
+    [Index(15)]
     public TrueFalseValue Button { get; set; }
     /// <summary>
     /// <para> Hide Script Anchors.</para>
@@ -3492,7 +3750,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userhidden", 16)]
+    [SchemaAttr(27, "userhidden")]
+    [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
     /// <summary>
     /// <para> Graphical Bullet.</para>
@@ -3500,7 +3759,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bullet", 17)]
+    [SchemaAttr(27, "bullet")]
+    [Index(17)]
     public TrueFalseValue Bullet { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
@@ -3508,7 +3768,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hr", 18)]
+    [SchemaAttr(27, "hr")]
+    [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
@@ -3516,7 +3777,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrstd", 19)]
+    [SchemaAttr(27, "hrstd")]
+    [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
@@ -3524,7 +3786,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrnoshade", 20)]
+    [SchemaAttr(27, "hrnoshade")]
+    [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
@@ -3532,7 +3795,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrpct", 21)]
+    [SchemaAttr(27, "hrpct")]
+    [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
@@ -3540,7 +3804,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hralign", 22)]
+    [SchemaAttr(27, "hralign")]
+    [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
     /// <summary>
     /// <para> Allow in Table Cell.</para>
@@ -3548,7 +3813,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowincell", 23)]
+    [SchemaAttr(27, "allowincell")]
+    [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
@@ -3556,7 +3822,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowoverlap", 24)]
+    [SchemaAttr(27, "allowoverlap")]
+    [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
     /// <summary>
     /// <para> Exists In Master Slide.</para>
@@ -3564,7 +3831,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userdrawn", 25)]
+    [SchemaAttr(27, "userdrawn")]
+    [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
     /// <summary>
     /// <para> Border Top Color.</para>
@@ -3572,7 +3840,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bordertopcolor", 26)]
+    [SchemaAttr(27, "bordertopcolor")]
+    [Index(26)]
     public StringValue BorderTopColor { get; set; }
     /// <summary>
     /// <para> Border Left Color.</para>
@@ -3580,7 +3849,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderleftcolor", 27)]
+    [SchemaAttr(27, "borderleftcolor")]
+    [Index(27)]
     public StringValue BorderLeftColor { get; set; }
     /// <summary>
     /// <para> Bottom Border Color.</para>
@@ -3588,7 +3858,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderbottomcolor", 28)]
+    [SchemaAttr(27, "borderbottomcolor")]
+    [Index(28)]
     public StringValue BorderBottomColor { get; set; }
     /// <summary>
     /// <para> Border Right Color.</para>
@@ -3596,7 +3867,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderrightcolor", 29)]
+    [SchemaAttr(27, "borderrightcolor")]
+    [Index(29)]
     public StringValue BorderRightColor { get; set; }
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
@@ -3604,7 +3876,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayout", 30)]
+    [SchemaAttr(27, "dgmlayout")]
+    [Index(30)]
     public IntegerValue DiagramLayout { get; set; }
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
@@ -3612,7 +3885,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmnodekind", 31)]
+    [SchemaAttr(27, "dgmnodekind")]
+    [Index(31)]
     public IntegerValue DiagramNodeKind { get; set; }
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
@@ -3620,7 +3894,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayoutmru", 32)]
+    [SchemaAttr(27, "dgmlayoutmru")]
+    [Index(32)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
     /// <summary>
     /// <para> Text Inset Mode.</para>
@@ -3628,43 +3903,50 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "insetmode", 33)]
+    [SchemaAttr(27, "insetmode")]
+    [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
     /// </summary>
-    [SchemaAttr(0, "filled", 34)]
+    [SchemaAttr(0, "filled")]
+    [Index(34)]
     public TrueFalseValue Filled { get; set; }
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
     /// </summary>
-    [SchemaAttr(0, "fillcolor", 35)]
+    [SchemaAttr(0, "fillcolor")]
+    [Index(35)]
     public StringValue FillColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
     /// </summary>
-    [SchemaAttr(0, "stroked", 36)]
+    [SchemaAttr(0, "stroked")]
+    [Index(36)]
     public TrueFalseValue Stroked { get; set; }
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
     /// </summary>
-    [SchemaAttr(0, "strokecolor", 37)]
+    [SchemaAttr(0, "strokecolor")]
+    [Index(37)]
     public StringValue StrokeColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
     /// </summary>
-    [SchemaAttr(0, "strokeweight", 38)]
+    [SchemaAttr(0, "strokeweight")]
+    [Index(38)]
     public StringValue StrokeWeight { get; set; }
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
     /// </summary>
-    [SchemaAttr(0, "insetpen", 39)]
+    [SchemaAttr(0, "insetpen")]
+    [Index(39)]
     public TrueFalseValue InsetPen { get; set; }
     /// <summary>
     /// <para> Optional Number.</para>
@@ -3672,7 +3954,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spt", 40)]
+    [SchemaAttr(27, "spt")]
+    [Index(40)]
     public Int32Value OptionalNumber { get; set; }
     /// <summary>
     /// <para> Shape Connector Type.</para>
@@ -3680,7 +3963,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "connectortype", 41)]
+    [SchemaAttr(27, "connectortype")]
+    [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
     /// <summary>
     /// <para> Black-and-White Mode.</para>
@@ -3688,7 +3972,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwmode", 42)]
+    [SchemaAttr(27, "bwmode")]
+    [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
@@ -3696,7 +3981,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwpure", 43)]
+    [SchemaAttr(27, "bwpure")]
+    [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
@@ -3704,7 +3990,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwnormal", 44)]
+    [SchemaAttr(27, "bwnormal")]
+    [Index(44)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Force Dashed Outline.</para>
@@ -3712,7 +3999,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "forcedash", 45)]
+    [SchemaAttr(27, "forcedash")]
+    [Index(45)]
     public TrueFalseValue ForceDash { get; set; }
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
@@ -3720,7 +4008,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oleicon", 46)]
+    [SchemaAttr(27, "oleicon")]
+    [Index(46)]
     public TrueFalseValue OleIcon { get; set; }
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
@@ -3728,7 +4017,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "ole", 47)]
+    [SchemaAttr(27, "ole")]
+    [Index(47)]
     public TrueFalseBlankValue Ole { get; set; }
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
@@ -3736,7 +4026,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "preferrelative", 48)]
+    [SchemaAttr(27, "preferrelative")]
+    [Index(48)]
     public TrueFalseValue PreferRelative { get; set; }
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
@@ -3744,7 +4035,8 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "cliptowrap", 49)]
+    [SchemaAttr(27, "cliptowrap")]
+    [Index(49)]
     public TrueFalseValue ClipToWrap { get; set; }
     /// <summary>
     /// <para> Clipping Toggle.</para>
@@ -3752,31 +4044,36 @@ public partial class Curve : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "clip", 50)]
+    [SchemaAttr(27, "clip")]
+    [Index(50)]
     public TrueFalseValue Clip { get; set; }
     /// <summary>
     /// <para> Curve Starting Point.</para>
     /// <para>Represents the following attribute in the schema: from </para>
     /// </summary>
-    [SchemaAttr(0, "from", 51)]
+    [SchemaAttr(0, "from")]
+    [Index(51)]
     public StringValue From { get; set; }
     /// <summary>
     /// <para> First Curve Control Point.</para>
     /// <para>Represents the following attribute in the schema: control1 </para>
     /// </summary>
-    [SchemaAttr(0, "control1", 52)]
+    [SchemaAttr(0, "control1")]
+    [Index(52)]
     public StringValue Control1 { get; set; }
     /// <summary>
     /// <para> Second Curve Control Point.</para>
     /// <para>Represents the following attribute in the schema: control2 </para>
     /// </summary>
-    [SchemaAttr(0, "control2", 53)]
+    [SchemaAttr(0, "control2")]
+    [Index(53)]
     public StringValue Control2 { get; set; }
     /// <summary>
     /// <para> Curve Ending Point.</para>
     /// <para>Represents the following attribute in the schema: to </para>
     /// </summary>
-    [SchemaAttr(0, "to", 54)]
+    [SchemaAttr(0, "to")]
+    [Index(54)]
     public StringValue To { get; set; }
 
     /// <summary>
@@ -3882,11 +4179,7 @@ public partial class Curve : OpenXmlCompositeElement
 public partial class ImageFile : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12592;
-    /// <inheritdoc/>
-    public override string LocalName => "image";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -3894,61 +4187,71 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> style.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style", 1)]
+    [SchemaAttr(0, "style")]
+    [Index(1)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> href.</para>
     /// <para>Represents the following attribute in the schema: href </para>
     /// </summary>
-    [SchemaAttr(0, "href", 2)]
+    [SchemaAttr(0, "href")]
+    [Index(2)]
     public StringValue Href { get; set; }
     /// <summary>
     /// <para> target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
-    [SchemaAttr(0, "target", 3)]
+    [SchemaAttr(0, "target")]
+    [Index(3)]
     public StringValue Target { get; set; }
     /// <summary>
     /// <para> class.</para>
     /// <para>Represents the following attribute in the schema: class </para>
     /// </summary>
-    [SchemaAttr(0, "class", 4)]
+    [SchemaAttr(0, "class")]
+    [Index(4)]
     public StringValue Class { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 5)]
+    [SchemaAttr(0, "title")]
+    [Index(5)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> alt.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
     /// </summary>
-    [SchemaAttr(0, "alt", 6)]
+    [SchemaAttr(0, "alt")]
+    [Index(6)]
     public StringValue Alternate { get; set; }
     /// <summary>
     /// <para> coordsize.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
     /// </summary>
-    [SchemaAttr(0, "coordsize", 7)]
+    [SchemaAttr(0, "coordsize")]
+    [Index(7)]
     public StringValue CoordinateSize { get; set; }
     /// <summary>
     /// <para> wrapcoords.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
     /// </summary>
-    [SchemaAttr(0, "wrapcoords", 8)]
+    [SchemaAttr(0, "wrapcoords")]
+    [Index(8)]
     public StringValue WrapCoordinates { get; set; }
     /// <summary>
     /// <para> print.</para>
     /// <para>Represents the following attribute in the schema: print </para>
     /// </summary>
-    [SchemaAttr(0, "print", 9)]
+    [SchemaAttr(0, "print")]
+    [Index(9)]
     public TrueFalseValue Print { get; set; }
     /// <summary>
     /// <para> Optional String.</para>
@@ -3956,7 +4259,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spid", 10)]
+    [SchemaAttr(27, "spid")]
+    [Index(10)]
     public StringValue OptionalString { get; set; }
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
@@ -3964,7 +4268,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oned", 11)]
+    [SchemaAttr(27, "oned")]
+    [Index(11)]
     public TrueFalseValue Oned { get; set; }
     /// <summary>
     /// <para> Regroup ID.</para>
@@ -3972,7 +4277,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "regroupid", 12)]
+    [SchemaAttr(27, "regroupid")]
+    [Index(12)]
     public IntegerValue RegroupId { get; set; }
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
@@ -3980,7 +4286,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "doubleclicknotify", 13)]
+    [SchemaAttr(27, "doubleclicknotify")]
+    [Index(13)]
     public TrueFalseValue DoubleClickNotify { get; set; }
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
@@ -3988,7 +4295,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "button", 14)]
+    [SchemaAttr(27, "button")]
+    [Index(14)]
     public TrueFalseValue Button { get; set; }
     /// <summary>
     /// <para> Hide Script Anchors.</para>
@@ -3996,7 +4304,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userhidden", 15)]
+    [SchemaAttr(27, "userhidden")]
+    [Index(15)]
     public TrueFalseValue UserHidden { get; set; }
     /// <summary>
     /// <para> Graphical Bullet.</para>
@@ -4004,7 +4313,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bullet", 16)]
+    [SchemaAttr(27, "bullet")]
+    [Index(16)]
     public TrueFalseValue Bullet { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
@@ -4012,7 +4322,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hr", 17)]
+    [SchemaAttr(27, "hr")]
+    [Index(17)]
     public TrueFalseValue Horizontal { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
@@ -4020,7 +4331,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrstd", 18)]
+    [SchemaAttr(27, "hrstd")]
+    [Index(18)]
     public TrueFalseValue HorizontalStandard { get; set; }
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
@@ -4028,7 +4340,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrnoshade", 19)]
+    [SchemaAttr(27, "hrnoshade")]
+    [Index(19)]
     public TrueFalseValue HorizontalNoShade { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
@@ -4036,7 +4349,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrpct", 20)]
+    [SchemaAttr(27, "hrpct")]
+    [Index(20)]
     public SingleValue HorizontalPercentage { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
@@ -4044,7 +4358,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hralign", 21)]
+    [SchemaAttr(27, "hralign")]
+    [Index(21)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
     /// <summary>
     /// <para> Allow in Table Cell.</para>
@@ -4052,7 +4367,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowincell", 22)]
+    [SchemaAttr(27, "allowincell")]
+    [Index(22)]
     public TrueFalseValue AllowInCell { get; set; }
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
@@ -4060,7 +4376,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowoverlap", 23)]
+    [SchemaAttr(27, "allowoverlap")]
+    [Index(23)]
     public TrueFalseValue AllowOverlap { get; set; }
     /// <summary>
     /// <para> Exists In Master Slide.</para>
@@ -4068,7 +4385,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userdrawn", 24)]
+    [SchemaAttr(27, "userdrawn")]
+    [Index(24)]
     public TrueFalseValue UserDrawn { get; set; }
     /// <summary>
     /// <para> Border Top Color.</para>
@@ -4076,7 +4394,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bordertopcolor", 25)]
+    [SchemaAttr(27, "bordertopcolor")]
+    [Index(25)]
     public StringValue BorderTopColor { get; set; }
     /// <summary>
     /// <para> Border Left Color.</para>
@@ -4084,7 +4403,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderleftcolor", 26)]
+    [SchemaAttr(27, "borderleftcolor")]
+    [Index(26)]
     public StringValue BorderLeftColor { get; set; }
     /// <summary>
     /// <para> Bottom Border Color.</para>
@@ -4092,7 +4412,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderbottomcolor", 27)]
+    [SchemaAttr(27, "borderbottomcolor")]
+    [Index(27)]
     public StringValue BorderBottomColor { get; set; }
     /// <summary>
     /// <para> Border Right Color.</para>
@@ -4100,7 +4421,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderrightcolor", 28)]
+    [SchemaAttr(27, "borderrightcolor")]
+    [Index(28)]
     public StringValue BorderRightColor { get; set; }
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
@@ -4108,7 +4430,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayout", 29)]
+    [SchemaAttr(27, "dgmlayout")]
+    [Index(29)]
     public IntegerValue DiagramLayout { get; set; }
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
@@ -4116,7 +4439,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmnodekind", 30)]
+    [SchemaAttr(27, "dgmnodekind")]
+    [Index(30)]
     public IntegerValue DiagramNodeKind { get; set; }
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
@@ -4124,7 +4448,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayoutmru", 31)]
+    [SchemaAttr(27, "dgmlayoutmru")]
+    [Index(31)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
     /// <summary>
     /// <para> Text Inset Mode.</para>
@@ -4132,43 +4457,50 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "insetmode", 32)]
+    [SchemaAttr(27, "insetmode")]
+    [Index(32)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
     /// </summary>
-    [SchemaAttr(0, "filled", 33)]
+    [SchemaAttr(0, "filled")]
+    [Index(33)]
     public TrueFalseValue Filled { get; set; }
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
     /// </summary>
-    [SchemaAttr(0, "fillcolor", 34)]
+    [SchemaAttr(0, "fillcolor")]
+    [Index(34)]
     public StringValue FillColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
     /// </summary>
-    [SchemaAttr(0, "stroked", 35)]
+    [SchemaAttr(0, "stroked")]
+    [Index(35)]
     public TrueFalseValue Stroked { get; set; }
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
     /// </summary>
-    [SchemaAttr(0, "strokecolor", 36)]
+    [SchemaAttr(0, "strokecolor")]
+    [Index(36)]
     public StringValue StrokeColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
     /// </summary>
-    [SchemaAttr(0, "strokeweight", 37)]
+    [SchemaAttr(0, "strokeweight")]
+    [Index(37)]
     public StringValue StrokeWeight { get; set; }
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
     /// </summary>
-    [SchemaAttr(0, "insetpen", 38)]
+    [SchemaAttr(0, "insetpen")]
+    [Index(38)]
     public TrueFalseValue InsetPen { get; set; }
     /// <summary>
     /// <para> Optional Number.</para>
@@ -4176,7 +4508,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spt", 39)]
+    [SchemaAttr(27, "spt")]
+    [Index(39)]
     public Int32Value OptionalNumber { get; set; }
     /// <summary>
     /// <para> Shape Connector Type.</para>
@@ -4184,7 +4517,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "connectortype", 40)]
+    [SchemaAttr(27, "connectortype")]
+    [Index(40)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
     /// <summary>
     /// <para> Black-and-White Mode.</para>
@@ -4192,7 +4526,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwmode", 41)]
+    [SchemaAttr(27, "bwmode")]
+    [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
@@ -4200,7 +4535,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwpure", 42)]
+    [SchemaAttr(27, "bwpure")]
+    [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
@@ -4208,7 +4544,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwnormal", 43)]
+    [SchemaAttr(27, "bwnormal")]
+    [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Force Dashed Outline.</para>
@@ -4216,7 +4553,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "forcedash", 44)]
+    [SchemaAttr(27, "forcedash")]
+    [Index(44)]
     public TrueFalseValue ForceDash { get; set; }
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
@@ -4224,7 +4562,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oleicon", 45)]
+    [SchemaAttr(27, "oleicon")]
+    [Index(45)]
     public TrueFalseValue OleIcon { get; set; }
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
@@ -4232,7 +4571,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "ole", 46)]
+    [SchemaAttr(27, "ole")]
+    [Index(46)]
     public TrueFalseBlankValue Ole { get; set; }
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
@@ -4240,7 +4580,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "preferrelative", 47)]
+    [SchemaAttr(27, "preferrelative")]
+    [Index(47)]
     public TrueFalseValue PreferRelative { get; set; }
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
@@ -4248,7 +4589,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "cliptowrap", 48)]
+    [SchemaAttr(27, "cliptowrap")]
+    [Index(48)]
     public TrueFalseValue ClipToWrap { get; set; }
     /// <summary>
     /// <para> Clipping Toggle.</para>
@@ -4256,67 +4598,78 @@ public partial class ImageFile : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "clip", 49)]
+    [SchemaAttr(27, "clip")]
+    [Index(49)]
     public TrueFalseValue Clip { get; set; }
     /// <summary>
     /// <para> Image Source.</para>
     /// <para>Represents the following attribute in the schema: src </para>
     /// </summary>
-    [SchemaAttr(0, "src", 50)]
+    [SchemaAttr(0, "src")]
+    [Index(50)]
     public StringValue Source { get; set; }
     /// <summary>
     /// <para> Image Left Crop.</para>
     /// <para>Represents the following attribute in the schema: cropleft </para>
     /// </summary>
-    [SchemaAttr(0, "cropleft", 51)]
+    [SchemaAttr(0, "cropleft")]
+    [Index(51)]
     public StringValue CropLeft { get; set; }
     /// <summary>
     /// <para> Image Top Crop.</para>
     /// <para>Represents the following attribute in the schema: croptop </para>
     /// </summary>
-    [SchemaAttr(0, "croptop", 52)]
+    [SchemaAttr(0, "croptop")]
+    [Index(52)]
     public StringValue CropTop { get; set; }
     /// <summary>
     /// <para> Image Right Crop.</para>
     /// <para>Represents the following attribute in the schema: cropright </para>
     /// </summary>
-    [SchemaAttr(0, "cropright", 53)]
+    [SchemaAttr(0, "cropright")]
+    [Index(53)]
     public StringValue CropRight { get; set; }
     /// <summary>
     /// <para> Image Bottom Crop.</para>
     /// <para>Represents the following attribute in the schema: cropbottom </para>
     /// </summary>
-    [SchemaAttr(0, "cropbottom", 54)]
+    [SchemaAttr(0, "cropbottom")]
+    [Index(54)]
     public StringValue CropBottom { get; set; }
     /// <summary>
     /// <para> Image Intensity.</para>
     /// <para>Represents the following attribute in the schema: gain </para>
     /// </summary>
-    [SchemaAttr(0, "gain", 55)]
+    [SchemaAttr(0, "gain")]
+    [Index(55)]
     public StringValue Gain { get; set; }
     /// <summary>
     /// <para> Image Brightness.</para>
     /// <para>Represents the following attribute in the schema: blacklevel </para>
     /// </summary>
-    [SchemaAttr(0, "blacklevel", 56)]
+    [SchemaAttr(0, "blacklevel")]
+    [Index(56)]
     public StringValue BlackLevel { get; set; }
     /// <summary>
     /// <para> Image Gamma Correction.</para>
     /// <para>Represents the following attribute in the schema: gamma </para>
     /// </summary>
-    [SchemaAttr(0, "gamma", 57)]
+    [SchemaAttr(0, "gamma")]
+    [Index(57)]
     public StringValue Gamma { get; set; }
     /// <summary>
     /// <para> Image Grayscale Toggle.</para>
     /// <para>Represents the following attribute in the schema: grayscale </para>
     /// </summary>
-    [SchemaAttr(0, "grayscale", 58)]
+    [SchemaAttr(0, "grayscale")]
+    [Index(58)]
     public TrueFalseValue GrayScale { get; set; }
     /// <summary>
     /// <para> Image Bilevel Toggle.</para>
     /// <para>Represents the following attribute in the schema: bilevel </para>
     /// </summary>
-    [SchemaAttr(0, "bilevel", 59)]
+    [SchemaAttr(0, "bilevel")]
+    [Index(59)]
     public TrueFalseValue BiLevel { get; set; }
 
     /// <summary>
@@ -4422,11 +4775,7 @@ public partial class ImageFile : OpenXmlCompositeElement
 public partial class Line : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12593;
-    /// <inheritdoc/>
-    public override string LocalName => "line";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -4434,67 +4783,78 @@ public partial class Line : OpenXmlCompositeElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style", 1)]
+    [SchemaAttr(0, "style")]
+    [Index(1)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
     /// </summary>
-    [SchemaAttr(0, "href", 2)]
+    [SchemaAttr(0, "href")]
+    [Index(2)]
     public StringValue Href { get; set; }
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
-    [SchemaAttr(0, "target", 3)]
+    [SchemaAttr(0, "target")]
+    [Index(3)]
     public StringValue Target { get; set; }
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
     /// </summary>
-    [SchemaAttr(0, "class", 4)]
+    [SchemaAttr(0, "class")]
+    [Index(4)]
     public StringValue Class { get; set; }
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 5)]
+    [SchemaAttr(0, "title")]
+    [Index(5)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
     /// </summary>
-    [SchemaAttr(0, "alt", 6)]
+    [SchemaAttr(0, "alt")]
+    [Index(6)]
     public StringValue Alternate { get; set; }
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
     /// </summary>
-    [SchemaAttr(0, "coordsize", 7)]
+    [SchemaAttr(0, "coordsize")]
+    [Index(7)]
     public StringValue CoordinateSize { get; set; }
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
     /// </summary>
-    [SchemaAttr(0, "coordorigin", 8)]
+    [SchemaAttr(0, "coordorigin")]
+    [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
     /// </summary>
-    [SchemaAttr(0, "wrapcoords", 9)]
+    [SchemaAttr(0, "wrapcoords")]
+    [Index(9)]
     public StringValue WrapCoordinates { get; set; }
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
     /// </summary>
-    [SchemaAttr(0, "print", 10)]
+    [SchemaAttr(0, "print")]
+    [Index(10)]
     public TrueFalseValue Print { get; set; }
     /// <summary>
     /// <para> Optional String.</para>
@@ -4502,7 +4862,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spid", 11)]
+    [SchemaAttr(27, "spid")]
+    [Index(11)]
     public StringValue OptionalString { get; set; }
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
@@ -4510,7 +4871,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oned", 12)]
+    [SchemaAttr(27, "oned")]
+    [Index(12)]
     public TrueFalseValue Oned { get; set; }
     /// <summary>
     /// <para> Regroup ID.</para>
@@ -4518,7 +4880,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "regroupid", 13)]
+    [SchemaAttr(27, "regroupid")]
+    [Index(13)]
     public IntegerValue RegroupId { get; set; }
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
@@ -4526,7 +4889,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "doubleclicknotify", 14)]
+    [SchemaAttr(27, "doubleclicknotify")]
+    [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
@@ -4534,7 +4898,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "button", 15)]
+    [SchemaAttr(27, "button")]
+    [Index(15)]
     public TrueFalseValue Button { get; set; }
     /// <summary>
     /// <para> Hide Script Anchors.</para>
@@ -4542,7 +4907,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userhidden", 16)]
+    [SchemaAttr(27, "userhidden")]
+    [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
     /// <summary>
     /// <para> Graphical Bullet.</para>
@@ -4550,7 +4916,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bullet", 17)]
+    [SchemaAttr(27, "bullet")]
+    [Index(17)]
     public TrueFalseValue Bullet { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
@@ -4558,7 +4925,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hr", 18)]
+    [SchemaAttr(27, "hr")]
+    [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
@@ -4566,7 +4934,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrstd", 19)]
+    [SchemaAttr(27, "hrstd")]
+    [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
@@ -4574,7 +4943,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrnoshade", 20)]
+    [SchemaAttr(27, "hrnoshade")]
+    [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
@@ -4582,7 +4952,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrpct", 21)]
+    [SchemaAttr(27, "hrpct")]
+    [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
@@ -4590,7 +4961,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hralign", 22)]
+    [SchemaAttr(27, "hralign")]
+    [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
     /// <summary>
     /// <para> Allow in Table Cell.</para>
@@ -4598,7 +4970,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowincell", 23)]
+    [SchemaAttr(27, "allowincell")]
+    [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
@@ -4606,7 +4979,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowoverlap", 24)]
+    [SchemaAttr(27, "allowoverlap")]
+    [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
     /// <summary>
     /// <para> Exists In Master Slide.</para>
@@ -4614,7 +4988,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userdrawn", 25)]
+    [SchemaAttr(27, "userdrawn")]
+    [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
     /// <summary>
     /// <para> Border Top Color.</para>
@@ -4622,7 +4997,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bordertopcolor", 26)]
+    [SchemaAttr(27, "bordertopcolor")]
+    [Index(26)]
     public StringValue BorderTopColor { get; set; }
     /// <summary>
     /// <para> Border Left Color.</para>
@@ -4630,7 +5006,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderleftcolor", 27)]
+    [SchemaAttr(27, "borderleftcolor")]
+    [Index(27)]
     public StringValue BorderLeftColor { get; set; }
     /// <summary>
     /// <para> Bottom Border Color.</para>
@@ -4638,7 +5015,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderbottomcolor", 28)]
+    [SchemaAttr(27, "borderbottomcolor")]
+    [Index(28)]
     public StringValue BorderBottomColor { get; set; }
     /// <summary>
     /// <para> Border Right Color.</para>
@@ -4646,7 +5024,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderrightcolor", 29)]
+    [SchemaAttr(27, "borderrightcolor")]
+    [Index(29)]
     public StringValue BorderRightColor { get; set; }
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
@@ -4654,7 +5033,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayout", 30)]
+    [SchemaAttr(27, "dgmlayout")]
+    [Index(30)]
     public IntegerValue DiagramLayout { get; set; }
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
@@ -4662,7 +5042,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmnodekind", 31)]
+    [SchemaAttr(27, "dgmnodekind")]
+    [Index(31)]
     public IntegerValue DiagramNodeKind { get; set; }
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
@@ -4670,7 +5051,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayoutmru", 32)]
+    [SchemaAttr(27, "dgmlayoutmru")]
+    [Index(32)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
     /// <summary>
     /// <para> Text Inset Mode.</para>
@@ -4678,43 +5060,50 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "insetmode", 33)]
+    [SchemaAttr(27, "insetmode")]
+    [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
     /// </summary>
-    [SchemaAttr(0, "filled", 34)]
+    [SchemaAttr(0, "filled")]
+    [Index(34)]
     public TrueFalseValue Filled { get; set; }
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
     /// </summary>
-    [SchemaAttr(0, "fillcolor", 35)]
+    [SchemaAttr(0, "fillcolor")]
+    [Index(35)]
     public StringValue FillColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
     /// </summary>
-    [SchemaAttr(0, "stroked", 36)]
+    [SchemaAttr(0, "stroked")]
+    [Index(36)]
     public TrueFalseValue Stroked { get; set; }
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
     /// </summary>
-    [SchemaAttr(0, "strokecolor", 37)]
+    [SchemaAttr(0, "strokecolor")]
+    [Index(37)]
     public StringValue StrokeColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
     /// </summary>
-    [SchemaAttr(0, "strokeweight", 38)]
+    [SchemaAttr(0, "strokeweight")]
+    [Index(38)]
     public StringValue StrokeWeight { get; set; }
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
     /// </summary>
-    [SchemaAttr(0, "insetpen", 39)]
+    [SchemaAttr(0, "insetpen")]
+    [Index(39)]
     public TrueFalseValue InsetPen { get; set; }
     /// <summary>
     /// <para> Optional Number.</para>
@@ -4722,7 +5111,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spt", 40)]
+    [SchemaAttr(27, "spt")]
+    [Index(40)]
     public Int32Value OptionalNumber { get; set; }
     /// <summary>
     /// <para> Shape Connector Type.</para>
@@ -4730,7 +5120,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "connectortype", 41)]
+    [SchemaAttr(27, "connectortype")]
+    [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
     /// <summary>
     /// <para> Black-and-White Mode.</para>
@@ -4738,7 +5129,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwmode", 42)]
+    [SchemaAttr(27, "bwmode")]
+    [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
@@ -4746,7 +5138,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwpure", 43)]
+    [SchemaAttr(27, "bwpure")]
+    [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
@@ -4754,7 +5147,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwnormal", 44)]
+    [SchemaAttr(27, "bwnormal")]
+    [Index(44)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Force Dashed Outline.</para>
@@ -4762,7 +5156,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "forcedash", 45)]
+    [SchemaAttr(27, "forcedash")]
+    [Index(45)]
     public TrueFalseValue ForceDash { get; set; }
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
@@ -4770,7 +5165,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oleicon", 46)]
+    [SchemaAttr(27, "oleicon")]
+    [Index(46)]
     public TrueFalseValue OleIcon { get; set; }
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
@@ -4778,7 +5174,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "ole", 47)]
+    [SchemaAttr(27, "ole")]
+    [Index(47)]
     public TrueFalseBlankValue Ole { get; set; }
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
@@ -4786,7 +5183,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "preferrelative", 48)]
+    [SchemaAttr(27, "preferrelative")]
+    [Index(48)]
     public TrueFalseValue PreferRelative { get; set; }
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
@@ -4794,7 +5192,8 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "cliptowrap", 49)]
+    [SchemaAttr(27, "cliptowrap")]
+    [Index(49)]
     public TrueFalseValue ClipToWrap { get; set; }
     /// <summary>
     /// <para> Clipping Toggle.</para>
@@ -4802,19 +5201,22 @@ public partial class Line : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "clip", 50)]
+    [SchemaAttr(27, "clip")]
+    [Index(50)]
     public TrueFalseValue Clip { get; set; }
     /// <summary>
     /// <para> Line Start.</para>
     /// <para>Represents the following attribute in the schema: from </para>
     /// </summary>
-    [SchemaAttr(0, "from", 51)]
+    [SchemaAttr(0, "from")]
+    [Index(51)]
     public StringValue From { get; set; }
     /// <summary>
     /// <para> Line End Point.</para>
     /// <para>Represents the following attribute in the schema: to </para>
     /// </summary>
-    [SchemaAttr(0, "to", 52)]
+    [SchemaAttr(0, "to")]
+    [Index(52)]
     public StringValue To { get; set; }
 
     /// <summary>
@@ -4920,11 +5322,7 @@ public partial class Line : OpenXmlCompositeElement
 public partial class Oval : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12594;
-    /// <inheritdoc/>
-    public override string LocalName => "oval";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -4932,67 +5330,78 @@ public partial class Oval : OpenXmlCompositeElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style", 1)]
+    [SchemaAttr(0, "style")]
+    [Index(1)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
     /// </summary>
-    [SchemaAttr(0, "href", 2)]
+    [SchemaAttr(0, "href")]
+    [Index(2)]
     public StringValue Href { get; set; }
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
-    [SchemaAttr(0, "target", 3)]
+    [SchemaAttr(0, "target")]
+    [Index(3)]
     public StringValue Target { get; set; }
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
     /// </summary>
-    [SchemaAttr(0, "class", 4)]
+    [SchemaAttr(0, "class")]
+    [Index(4)]
     public StringValue Class { get; set; }
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 5)]
+    [SchemaAttr(0, "title")]
+    [Index(5)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
     /// </summary>
-    [SchemaAttr(0, "alt", 6)]
+    [SchemaAttr(0, "alt")]
+    [Index(6)]
     public StringValue Alternate { get; set; }
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
     /// </summary>
-    [SchemaAttr(0, "coordsize", 7)]
+    [SchemaAttr(0, "coordsize")]
+    [Index(7)]
     public StringValue CoordinateSize { get; set; }
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
     /// </summary>
-    [SchemaAttr(0, "coordorigin", 8)]
+    [SchemaAttr(0, "coordorigin")]
+    [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
     /// </summary>
-    [SchemaAttr(0, "wrapcoords", 9)]
+    [SchemaAttr(0, "wrapcoords")]
+    [Index(9)]
     public StringValue WrapCoordinates { get; set; }
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
     /// </summary>
-    [SchemaAttr(0, "print", 10)]
+    [SchemaAttr(0, "print")]
+    [Index(10)]
     public TrueFalseValue Print { get; set; }
     /// <summary>
     /// <para> Optional String.</para>
@@ -5000,7 +5409,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spid", 11)]
+    [SchemaAttr(27, "spid")]
+    [Index(11)]
     public StringValue OptionalString { get; set; }
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
@@ -5008,7 +5418,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oned", 12)]
+    [SchemaAttr(27, "oned")]
+    [Index(12)]
     public TrueFalseValue Oned { get; set; }
     /// <summary>
     /// <para> Regroup ID.</para>
@@ -5016,7 +5427,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "regroupid", 13)]
+    [SchemaAttr(27, "regroupid")]
+    [Index(13)]
     public IntegerValue RegroupId { get; set; }
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
@@ -5024,7 +5436,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "doubleclicknotify", 14)]
+    [SchemaAttr(27, "doubleclicknotify")]
+    [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
@@ -5032,7 +5445,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "button", 15)]
+    [SchemaAttr(27, "button")]
+    [Index(15)]
     public TrueFalseValue Button { get; set; }
     /// <summary>
     /// <para> Hide Script Anchors.</para>
@@ -5040,7 +5454,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userhidden", 16)]
+    [SchemaAttr(27, "userhidden")]
+    [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
     /// <summary>
     /// <para> Graphical Bullet.</para>
@@ -5048,7 +5463,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bullet", 17)]
+    [SchemaAttr(27, "bullet")]
+    [Index(17)]
     public TrueFalseValue Bullet { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
@@ -5056,7 +5472,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hr", 18)]
+    [SchemaAttr(27, "hr")]
+    [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
@@ -5064,7 +5481,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrstd", 19)]
+    [SchemaAttr(27, "hrstd")]
+    [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
@@ -5072,7 +5490,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrnoshade", 20)]
+    [SchemaAttr(27, "hrnoshade")]
+    [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
@@ -5080,7 +5499,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrpct", 21)]
+    [SchemaAttr(27, "hrpct")]
+    [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
@@ -5088,7 +5508,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hralign", 22)]
+    [SchemaAttr(27, "hralign")]
+    [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
     /// <summary>
     /// <para> Allow in Table Cell.</para>
@@ -5096,7 +5517,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowincell", 23)]
+    [SchemaAttr(27, "allowincell")]
+    [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
@@ -5104,7 +5526,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowoverlap", 24)]
+    [SchemaAttr(27, "allowoverlap")]
+    [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
     /// <summary>
     /// <para> Exists In Master Slide.</para>
@@ -5112,7 +5535,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userdrawn", 25)]
+    [SchemaAttr(27, "userdrawn")]
+    [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
     /// <summary>
     /// <para> Border Top Color.</para>
@@ -5120,7 +5544,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bordertopcolor", 26)]
+    [SchemaAttr(27, "bordertopcolor")]
+    [Index(26)]
     public StringValue BorderTopColor { get; set; }
     /// <summary>
     /// <para> Border Left Color.</para>
@@ -5128,7 +5553,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderleftcolor", 27)]
+    [SchemaAttr(27, "borderleftcolor")]
+    [Index(27)]
     public StringValue BorderLeftColor { get; set; }
     /// <summary>
     /// <para> Bottom Border Color.</para>
@@ -5136,7 +5562,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderbottomcolor", 28)]
+    [SchemaAttr(27, "borderbottomcolor")]
+    [Index(28)]
     public StringValue BorderBottomColor { get; set; }
     /// <summary>
     /// <para> Border Right Color.</para>
@@ -5144,7 +5571,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderrightcolor", 29)]
+    [SchemaAttr(27, "borderrightcolor")]
+    [Index(29)]
     public StringValue BorderRightColor { get; set; }
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
@@ -5152,7 +5580,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayout", 30)]
+    [SchemaAttr(27, "dgmlayout")]
+    [Index(30)]
     public IntegerValue DiagramLayout { get; set; }
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
@@ -5160,7 +5589,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmnodekind", 31)]
+    [SchemaAttr(27, "dgmnodekind")]
+    [Index(31)]
     public IntegerValue DiagramNodeKind { get; set; }
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
@@ -5168,7 +5598,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayoutmru", 32)]
+    [SchemaAttr(27, "dgmlayoutmru")]
+    [Index(32)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
     /// <summary>
     /// <para> Text Inset Mode.</para>
@@ -5176,43 +5607,50 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "insetmode", 33)]
+    [SchemaAttr(27, "insetmode")]
+    [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
     /// </summary>
-    [SchemaAttr(0, "filled", 34)]
+    [SchemaAttr(0, "filled")]
+    [Index(34)]
     public TrueFalseValue Filled { get; set; }
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
     /// </summary>
-    [SchemaAttr(0, "fillcolor", 35)]
+    [SchemaAttr(0, "fillcolor")]
+    [Index(35)]
     public StringValue FillColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
     /// </summary>
-    [SchemaAttr(0, "stroked", 36)]
+    [SchemaAttr(0, "stroked")]
+    [Index(36)]
     public TrueFalseValue Stroked { get; set; }
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
     /// </summary>
-    [SchemaAttr(0, "strokecolor", 37)]
+    [SchemaAttr(0, "strokecolor")]
+    [Index(37)]
     public StringValue StrokeColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
     /// </summary>
-    [SchemaAttr(0, "strokeweight", 38)]
+    [SchemaAttr(0, "strokeweight")]
+    [Index(38)]
     public StringValue StrokeWeight { get; set; }
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
     /// </summary>
-    [SchemaAttr(0, "insetpen", 39)]
+    [SchemaAttr(0, "insetpen")]
+    [Index(39)]
     public TrueFalseValue InsetPen { get; set; }
     /// <summary>
     /// <para> Optional Number.</para>
@@ -5220,7 +5658,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spt", 40)]
+    [SchemaAttr(27, "spt")]
+    [Index(40)]
     public Int32Value OptionalNumber { get; set; }
     /// <summary>
     /// <para> Shape Connector Type.</para>
@@ -5228,7 +5667,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "connectortype", 41)]
+    [SchemaAttr(27, "connectortype")]
+    [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
     /// <summary>
     /// <para> Black-and-White Mode.</para>
@@ -5236,7 +5676,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwmode", 42)]
+    [SchemaAttr(27, "bwmode")]
+    [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
@@ -5244,7 +5685,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwpure", 43)]
+    [SchemaAttr(27, "bwpure")]
+    [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
@@ -5252,7 +5694,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwnormal", 44)]
+    [SchemaAttr(27, "bwnormal")]
+    [Index(44)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Force Dashed Outline.</para>
@@ -5260,7 +5703,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "forcedash", 45)]
+    [SchemaAttr(27, "forcedash")]
+    [Index(45)]
     public TrueFalseValue ForceDash { get; set; }
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
@@ -5268,7 +5712,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oleicon", 46)]
+    [SchemaAttr(27, "oleicon")]
+    [Index(46)]
     public TrueFalseValue OleIcon { get; set; }
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
@@ -5276,7 +5721,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "ole", 47)]
+    [SchemaAttr(27, "ole")]
+    [Index(47)]
     public TrueFalseBlankValue Ole { get; set; }
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
@@ -5284,7 +5730,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "preferrelative", 48)]
+    [SchemaAttr(27, "preferrelative")]
+    [Index(48)]
     public TrueFalseValue PreferRelative { get; set; }
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
@@ -5292,7 +5739,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "cliptowrap", 49)]
+    [SchemaAttr(27, "cliptowrap")]
+    [Index(49)]
     public TrueFalseValue ClipToWrap { get; set; }
     /// <summary>
     /// <para> Clipping Toggle.</para>
@@ -5300,7 +5748,8 @@ public partial class Oval : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "clip", 50)]
+    [SchemaAttr(27, "clip")]
+    [Index(50)]
     public TrueFalseValue Clip { get; set; }
 
     /// <summary>
@@ -5408,11 +5857,7 @@ public partial class Oval : OpenXmlCompositeElement
 public partial class PolyLine : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12595;
-    /// <inheritdoc/>
-    public override string LocalName => "polyline";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -5420,67 +5865,78 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style", 1)]
+    [SchemaAttr(0, "style")]
+    [Index(1)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
     /// </summary>
-    [SchemaAttr(0, "href", 2)]
+    [SchemaAttr(0, "href")]
+    [Index(2)]
     public StringValue Href { get; set; }
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
-    [SchemaAttr(0, "target", 3)]
+    [SchemaAttr(0, "target")]
+    [Index(3)]
     public StringValue Target { get; set; }
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
     /// </summary>
-    [SchemaAttr(0, "class", 4)]
+    [SchemaAttr(0, "class")]
+    [Index(4)]
     public StringValue Class { get; set; }
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 5)]
+    [SchemaAttr(0, "title")]
+    [Index(5)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
     /// </summary>
-    [SchemaAttr(0, "alt", 6)]
+    [SchemaAttr(0, "alt")]
+    [Index(6)]
     public StringValue Alternate { get; set; }
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
     /// </summary>
-    [SchemaAttr(0, "coordsize", 7)]
+    [SchemaAttr(0, "coordsize")]
+    [Index(7)]
     public StringValue CoordinateSize { get; set; }
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
     /// </summary>
-    [SchemaAttr(0, "coordorigin", 8)]
+    [SchemaAttr(0, "coordorigin")]
+    [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
     /// </summary>
-    [SchemaAttr(0, "wrapcoords", 9)]
+    [SchemaAttr(0, "wrapcoords")]
+    [Index(9)]
     public StringValue WrapCoordinates { get; set; }
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
     /// </summary>
-    [SchemaAttr(0, "print", 10)]
+    [SchemaAttr(0, "print")]
+    [Index(10)]
     public TrueFalseValue Print { get; set; }
     /// <summary>
     /// <para> Optional String.</para>
@@ -5488,7 +5944,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spid", 11)]
+    [SchemaAttr(27, "spid")]
+    [Index(11)]
     public StringValue OptionalString { get; set; }
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
@@ -5496,7 +5953,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oned", 12)]
+    [SchemaAttr(27, "oned")]
+    [Index(12)]
     public TrueFalseValue Oned { get; set; }
     /// <summary>
     /// <para> Regroup ID.</para>
@@ -5504,7 +5962,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "regroupid", 13)]
+    [SchemaAttr(27, "regroupid")]
+    [Index(13)]
     public IntegerValue RegroupId { get; set; }
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
@@ -5512,7 +5971,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "doubleclicknotify", 14)]
+    [SchemaAttr(27, "doubleclicknotify")]
+    [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
@@ -5520,7 +5980,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "button", 15)]
+    [SchemaAttr(27, "button")]
+    [Index(15)]
     public TrueFalseValue Button { get; set; }
     /// <summary>
     /// <para> Hide Script Anchors.</para>
@@ -5528,7 +5989,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userhidden", 16)]
+    [SchemaAttr(27, "userhidden")]
+    [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
     /// <summary>
     /// <para> Graphical Bullet.</para>
@@ -5536,7 +5998,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bullet", 17)]
+    [SchemaAttr(27, "bullet")]
+    [Index(17)]
     public TrueFalseValue Bullet { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
@@ -5544,7 +6007,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hr", 18)]
+    [SchemaAttr(27, "hr")]
+    [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
@@ -5552,7 +6016,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrstd", 19)]
+    [SchemaAttr(27, "hrstd")]
+    [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
@@ -5560,7 +6025,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrnoshade", 20)]
+    [SchemaAttr(27, "hrnoshade")]
+    [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
@@ -5568,7 +6034,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrpct", 21)]
+    [SchemaAttr(27, "hrpct")]
+    [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
@@ -5576,7 +6043,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hralign", 22)]
+    [SchemaAttr(27, "hralign")]
+    [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
     /// <summary>
     /// <para> Allow in Table Cell.</para>
@@ -5584,7 +6052,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowincell", 23)]
+    [SchemaAttr(27, "allowincell")]
+    [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
@@ -5592,7 +6061,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowoverlap", 24)]
+    [SchemaAttr(27, "allowoverlap")]
+    [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
     /// <summary>
     /// <para> Exists In Master Slide.</para>
@@ -5600,7 +6070,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userdrawn", 25)]
+    [SchemaAttr(27, "userdrawn")]
+    [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
     /// <summary>
     /// <para> Border Top Color.</para>
@@ -5608,7 +6079,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bordertopcolor", 26)]
+    [SchemaAttr(27, "bordertopcolor")]
+    [Index(26)]
     public StringValue BorderTopColor { get; set; }
     /// <summary>
     /// <para> Border Left Color.</para>
@@ -5616,7 +6088,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderleftcolor", 27)]
+    [SchemaAttr(27, "borderleftcolor")]
+    [Index(27)]
     public StringValue BorderLeftColor { get; set; }
     /// <summary>
     /// <para> Bottom Border Color.</para>
@@ -5624,7 +6097,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderbottomcolor", 28)]
+    [SchemaAttr(27, "borderbottomcolor")]
+    [Index(28)]
     public StringValue BorderBottomColor { get; set; }
     /// <summary>
     /// <para> Border Right Color.</para>
@@ -5632,7 +6106,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderrightcolor", 29)]
+    [SchemaAttr(27, "borderrightcolor")]
+    [Index(29)]
     public StringValue BorderRightColor { get; set; }
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
@@ -5640,7 +6115,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayout", 30)]
+    [SchemaAttr(27, "dgmlayout")]
+    [Index(30)]
     public IntegerValue DiagramLayout { get; set; }
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
@@ -5648,7 +6124,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmnodekind", 31)]
+    [SchemaAttr(27, "dgmnodekind")]
+    [Index(31)]
     public IntegerValue DiagramNodeKind { get; set; }
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
@@ -5656,7 +6133,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayoutmru", 32)]
+    [SchemaAttr(27, "dgmlayoutmru")]
+    [Index(32)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
     /// <summary>
     /// <para> Text Inset Mode.</para>
@@ -5664,43 +6142,50 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "insetmode", 33)]
+    [SchemaAttr(27, "insetmode")]
+    [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
     /// </summary>
-    [SchemaAttr(0, "filled", 34)]
+    [SchemaAttr(0, "filled")]
+    [Index(34)]
     public TrueFalseValue Filled { get; set; }
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
     /// </summary>
-    [SchemaAttr(0, "fillcolor", 35)]
+    [SchemaAttr(0, "fillcolor")]
+    [Index(35)]
     public StringValue FillColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
     /// </summary>
-    [SchemaAttr(0, "stroked", 36)]
+    [SchemaAttr(0, "stroked")]
+    [Index(36)]
     public TrueFalseValue Stroked { get; set; }
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
     /// </summary>
-    [SchemaAttr(0, "strokecolor", 37)]
+    [SchemaAttr(0, "strokecolor")]
+    [Index(37)]
     public StringValue StrokeColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
     /// </summary>
-    [SchemaAttr(0, "strokeweight", 38)]
+    [SchemaAttr(0, "strokeweight")]
+    [Index(38)]
     public StringValue StrokeWeight { get; set; }
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
     /// </summary>
-    [SchemaAttr(0, "insetpen", 39)]
+    [SchemaAttr(0, "insetpen")]
+    [Index(39)]
     public TrueFalseValue InsetPen { get; set; }
     /// <summary>
     /// <para> Optional Number.</para>
@@ -5708,7 +6193,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spt", 40)]
+    [SchemaAttr(27, "spt")]
+    [Index(40)]
     public Int32Value OptionalNumber { get; set; }
     /// <summary>
     /// <para> Shape Connector Type.</para>
@@ -5716,7 +6202,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "connectortype", 41)]
+    [SchemaAttr(27, "connectortype")]
+    [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
     /// <summary>
     /// <para> Black-and-White Mode.</para>
@@ -5724,7 +6211,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwmode", 42)]
+    [SchemaAttr(27, "bwmode")]
+    [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
@@ -5732,7 +6220,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwpure", 43)]
+    [SchemaAttr(27, "bwpure")]
+    [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
@@ -5740,7 +6229,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwnormal", 44)]
+    [SchemaAttr(27, "bwnormal")]
+    [Index(44)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Force Dashed Outline.</para>
@@ -5748,7 +6238,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "forcedash", 45)]
+    [SchemaAttr(27, "forcedash")]
+    [Index(45)]
     public TrueFalseValue ForceDash { get; set; }
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
@@ -5756,7 +6247,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oleicon", 46)]
+    [SchemaAttr(27, "oleicon")]
+    [Index(46)]
     public TrueFalseValue OleIcon { get; set; }
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
@@ -5764,7 +6256,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "ole", 47)]
+    [SchemaAttr(27, "ole")]
+    [Index(47)]
     public TrueFalseBlankValue Ole { get; set; }
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
@@ -5772,7 +6265,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "preferrelative", 48)]
+    [SchemaAttr(27, "preferrelative")]
+    [Index(48)]
     public TrueFalseValue PreferRelative { get; set; }
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
@@ -5780,7 +6274,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "cliptowrap", 49)]
+    [SchemaAttr(27, "cliptowrap")]
+    [Index(49)]
     public TrueFalseValue ClipToWrap { get; set; }
     /// <summary>
     /// <para> Clipping Toggle.</para>
@@ -5788,13 +6283,15 @@ public partial class PolyLine : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "clip", 50)]
+    [SchemaAttr(27, "clip")]
+    [Index(50)]
     public TrueFalseValue Clip { get; set; }
     /// <summary>
     /// <para> Points for Compound Line.</para>
     /// <para>Represents the following attribute in the schema: points </para>
     /// </summary>
-    [SchemaAttr(0, "points", 51)]
+    [SchemaAttr(0, "points")]
+    [Index(51)]
     public StringValue Points { get; set; }
 
     /// <summary>
@@ -5900,11 +6397,7 @@ public partial class PolyLine : OpenXmlCompositeElement
 public partial class Rectangle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12596;
-    /// <inheritdoc/>
-    public override string LocalName => "rect";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -5912,67 +6405,78 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style", 1)]
+    [SchemaAttr(0, "style")]
+    [Index(1)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
     /// </summary>
-    [SchemaAttr(0, "href", 2)]
+    [SchemaAttr(0, "href")]
+    [Index(2)]
     public StringValue Href { get; set; }
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
-    [SchemaAttr(0, "target", 3)]
+    [SchemaAttr(0, "target")]
+    [Index(3)]
     public StringValue Target { get; set; }
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
     /// </summary>
-    [SchemaAttr(0, "class", 4)]
+    [SchemaAttr(0, "class")]
+    [Index(4)]
     public StringValue Class { get; set; }
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 5)]
+    [SchemaAttr(0, "title")]
+    [Index(5)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
     /// </summary>
-    [SchemaAttr(0, "alt", 6)]
+    [SchemaAttr(0, "alt")]
+    [Index(6)]
     public StringValue Alternate { get; set; }
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
     /// </summary>
-    [SchemaAttr(0, "coordsize", 7)]
+    [SchemaAttr(0, "coordsize")]
+    [Index(7)]
     public StringValue CoordinateSize { get; set; }
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
     /// </summary>
-    [SchemaAttr(0, "coordorigin", 8)]
+    [SchemaAttr(0, "coordorigin")]
+    [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
     /// </summary>
-    [SchemaAttr(0, "wrapcoords", 9)]
+    [SchemaAttr(0, "wrapcoords")]
+    [Index(9)]
     public StringValue WrapCoordinates { get; set; }
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
     /// </summary>
-    [SchemaAttr(0, "print", 10)]
+    [SchemaAttr(0, "print")]
+    [Index(10)]
     public TrueFalseValue Print { get; set; }
     /// <summary>
     /// <para> Optional String.</para>
@@ -5980,7 +6484,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spid", 11)]
+    [SchemaAttr(27, "spid")]
+    [Index(11)]
     public StringValue OptionalString { get; set; }
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
@@ -5988,7 +6493,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oned", 12)]
+    [SchemaAttr(27, "oned")]
+    [Index(12)]
     public TrueFalseValue Oned { get; set; }
     /// <summary>
     /// <para> Regroup ID.</para>
@@ -5996,7 +6502,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "regroupid", 13)]
+    [SchemaAttr(27, "regroupid")]
+    [Index(13)]
     public IntegerValue RegroupId { get; set; }
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
@@ -6004,7 +6511,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "doubleclicknotify", 14)]
+    [SchemaAttr(27, "doubleclicknotify")]
+    [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
@@ -6012,7 +6520,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "button", 15)]
+    [SchemaAttr(27, "button")]
+    [Index(15)]
     public TrueFalseValue Button { get; set; }
     /// <summary>
     /// <para> Hide Script Anchors.</para>
@@ -6020,7 +6529,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userhidden", 16)]
+    [SchemaAttr(27, "userhidden")]
+    [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
     /// <summary>
     /// <para> Graphical Bullet.</para>
@@ -6028,7 +6538,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bullet", 17)]
+    [SchemaAttr(27, "bullet")]
+    [Index(17)]
     public TrueFalseValue Bullet { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
@@ -6036,7 +6547,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hr", 18)]
+    [SchemaAttr(27, "hr")]
+    [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
@@ -6044,7 +6556,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrstd", 19)]
+    [SchemaAttr(27, "hrstd")]
+    [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
@@ -6052,7 +6565,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrnoshade", 20)]
+    [SchemaAttr(27, "hrnoshade")]
+    [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
@@ -6060,7 +6574,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrpct", 21)]
+    [SchemaAttr(27, "hrpct")]
+    [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
@@ -6068,7 +6583,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hralign", 22)]
+    [SchemaAttr(27, "hralign")]
+    [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
     /// <summary>
     /// <para> Allow in Table Cell.</para>
@@ -6076,7 +6592,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowincell", 23)]
+    [SchemaAttr(27, "allowincell")]
+    [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
@@ -6084,7 +6601,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowoverlap", 24)]
+    [SchemaAttr(27, "allowoverlap")]
+    [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
     /// <summary>
     /// <para> Exists In Master Slide.</para>
@@ -6092,7 +6610,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userdrawn", 25)]
+    [SchemaAttr(27, "userdrawn")]
+    [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
     /// <summary>
     /// <para> Border Top Color.</para>
@@ -6100,7 +6619,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bordertopcolor", 26)]
+    [SchemaAttr(27, "bordertopcolor")]
+    [Index(26)]
     public StringValue BorderTopColor { get; set; }
     /// <summary>
     /// <para> Border Left Color.</para>
@@ -6108,7 +6628,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderleftcolor", 27)]
+    [SchemaAttr(27, "borderleftcolor")]
+    [Index(27)]
     public StringValue BorderLeftColor { get; set; }
     /// <summary>
     /// <para> Bottom Border Color.</para>
@@ -6116,7 +6637,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderbottomcolor", 28)]
+    [SchemaAttr(27, "borderbottomcolor")]
+    [Index(28)]
     public StringValue BorderBottomColor { get; set; }
     /// <summary>
     /// <para> Border Right Color.</para>
@@ -6124,7 +6646,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderrightcolor", 29)]
+    [SchemaAttr(27, "borderrightcolor")]
+    [Index(29)]
     public StringValue BorderRightColor { get; set; }
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
@@ -6132,7 +6655,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayout", 30)]
+    [SchemaAttr(27, "dgmlayout")]
+    [Index(30)]
     public IntegerValue DiagramLayout { get; set; }
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
@@ -6140,7 +6664,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmnodekind", 31)]
+    [SchemaAttr(27, "dgmnodekind")]
+    [Index(31)]
     public IntegerValue DiagramNodeKind { get; set; }
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
@@ -6148,7 +6673,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayoutmru", 32)]
+    [SchemaAttr(27, "dgmlayoutmru")]
+    [Index(32)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
     /// <summary>
     /// <para> Text Inset Mode.</para>
@@ -6156,43 +6682,50 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "insetmode", 33)]
+    [SchemaAttr(27, "insetmode")]
+    [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
     /// </summary>
-    [SchemaAttr(0, "filled", 34)]
+    [SchemaAttr(0, "filled")]
+    [Index(34)]
     public TrueFalseValue Filled { get; set; }
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
     /// </summary>
-    [SchemaAttr(0, "fillcolor", 35)]
+    [SchemaAttr(0, "fillcolor")]
+    [Index(35)]
     public StringValue FillColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
     /// </summary>
-    [SchemaAttr(0, "stroked", 36)]
+    [SchemaAttr(0, "stroked")]
+    [Index(36)]
     public TrueFalseValue Stroked { get; set; }
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
     /// </summary>
-    [SchemaAttr(0, "strokecolor", 37)]
+    [SchemaAttr(0, "strokecolor")]
+    [Index(37)]
     public StringValue StrokeColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
     /// </summary>
-    [SchemaAttr(0, "strokeweight", 38)]
+    [SchemaAttr(0, "strokeweight")]
+    [Index(38)]
     public StringValue StrokeWeight { get; set; }
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
     /// </summary>
-    [SchemaAttr(0, "insetpen", 39)]
+    [SchemaAttr(0, "insetpen")]
+    [Index(39)]
     public TrueFalseValue InsetPen { get; set; }
     /// <summary>
     /// <para> Optional Number.</para>
@@ -6200,7 +6733,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spt", 40)]
+    [SchemaAttr(27, "spt")]
+    [Index(40)]
     public Int32Value OptionalNumber { get; set; }
     /// <summary>
     /// <para> Shape Connector Type.</para>
@@ -6208,7 +6742,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "connectortype", 41)]
+    [SchemaAttr(27, "connectortype")]
+    [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
     /// <summary>
     /// <para> Black-and-White Mode.</para>
@@ -6216,7 +6751,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwmode", 42)]
+    [SchemaAttr(27, "bwmode")]
+    [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
@@ -6224,7 +6760,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwpure", 43)]
+    [SchemaAttr(27, "bwpure")]
+    [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
@@ -6232,7 +6769,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwnormal", 44)]
+    [SchemaAttr(27, "bwnormal")]
+    [Index(44)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Force Dashed Outline.</para>
@@ -6240,7 +6778,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "forcedash", 45)]
+    [SchemaAttr(27, "forcedash")]
+    [Index(45)]
     public TrueFalseValue ForceDash { get; set; }
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
@@ -6248,7 +6787,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oleicon", 46)]
+    [SchemaAttr(27, "oleicon")]
+    [Index(46)]
     public TrueFalseValue OleIcon { get; set; }
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
@@ -6256,7 +6796,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "ole", 47)]
+    [SchemaAttr(27, "ole")]
+    [Index(47)]
     public TrueFalseBlankValue Ole { get; set; }
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
@@ -6264,7 +6805,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "preferrelative", 48)]
+    [SchemaAttr(27, "preferrelative")]
+    [Index(48)]
     public TrueFalseValue PreferRelative { get; set; }
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
@@ -6272,7 +6814,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "cliptowrap", 49)]
+    [SchemaAttr(27, "cliptowrap")]
+    [Index(49)]
     public TrueFalseValue ClipToWrap { get; set; }
     /// <summary>
     /// <para> Clipping Toggle.</para>
@@ -6280,7 +6823,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "clip", 50)]
+    [SchemaAttr(27, "clip")]
+    [Index(50)]
     public TrueFalseValue Clip { get; set; }
 
     /// <summary>
@@ -6386,11 +6930,7 @@ public partial class Rectangle : OpenXmlCompositeElement
 public partial class RoundRectangle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12597;
-    /// <inheritdoc/>
-    public override string LocalName => "roundrect";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -6398,61 +6938,71 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> style.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style", 1)]
+    [SchemaAttr(0, "style")]
+    [Index(1)]
     public StringValue Style { get; set; }
     /// <summary>
     /// <para> href.</para>
     /// <para>Represents the following attribute in the schema: href </para>
     /// </summary>
-    [SchemaAttr(0, "href", 2)]
+    [SchemaAttr(0, "href")]
+    [Index(2)]
     public StringValue Href { get; set; }
     /// <summary>
     /// <para> target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
-    [SchemaAttr(0, "target", 3)]
+    [SchemaAttr(0, "target")]
+    [Index(3)]
     public StringValue Target { get; set; }
     /// <summary>
     /// <para> class.</para>
     /// <para>Represents the following attribute in the schema: class </para>
     /// </summary>
-    [SchemaAttr(0, "class", 4)]
+    [SchemaAttr(0, "class")]
+    [Index(4)]
     public StringValue Class { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 5)]
+    [SchemaAttr(0, "title")]
+    [Index(5)]
     public StringValue Title { get; set; }
     /// <summary>
     /// <para> alt.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
     /// </summary>
-    [SchemaAttr(0, "alt", 6)]
+    [SchemaAttr(0, "alt")]
+    [Index(6)]
     public StringValue Alternate { get; set; }
     /// <summary>
     /// <para> coordsize.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
     /// </summary>
-    [SchemaAttr(0, "coordsize", 7)]
+    [SchemaAttr(0, "coordsize")]
+    [Index(7)]
     public StringValue CoordinateSize { get; set; }
     /// <summary>
     /// <para> wrapcoords.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
     /// </summary>
-    [SchemaAttr(0, "wrapcoords", 8)]
+    [SchemaAttr(0, "wrapcoords")]
+    [Index(8)]
     public StringValue WrapCoordinates { get; set; }
     /// <summary>
     /// <para> print.</para>
     /// <para>Represents the following attribute in the schema: print </para>
     /// </summary>
-    [SchemaAttr(0, "print", 9)]
+    [SchemaAttr(0, "print")]
+    [Index(9)]
     public TrueFalseValue Print { get; set; }
     /// <summary>
     /// <para> Optional String.</para>
@@ -6460,7 +7010,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spid", 10)]
+    [SchemaAttr(27, "spid")]
+    [Index(10)]
     public StringValue OptionalString { get; set; }
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
@@ -6468,7 +7019,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oned", 11)]
+    [SchemaAttr(27, "oned")]
+    [Index(11)]
     public TrueFalseValue Oned { get; set; }
     /// <summary>
     /// <para> Regroup ID.</para>
@@ -6476,7 +7028,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "regroupid", 12)]
+    [SchemaAttr(27, "regroupid")]
+    [Index(12)]
     public IntegerValue RegroupId { get; set; }
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
@@ -6484,7 +7037,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "doubleclicknotify", 13)]
+    [SchemaAttr(27, "doubleclicknotify")]
+    [Index(13)]
     public TrueFalseValue DoubleClickNotify { get; set; }
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
@@ -6492,7 +7046,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "button", 14)]
+    [SchemaAttr(27, "button")]
+    [Index(14)]
     public TrueFalseValue Button { get; set; }
     /// <summary>
     /// <para> Hide Script Anchors.</para>
@@ -6500,7 +7055,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userhidden", 15)]
+    [SchemaAttr(27, "userhidden")]
+    [Index(15)]
     public TrueFalseValue UserHidden { get; set; }
     /// <summary>
     /// <para> Graphical Bullet.</para>
@@ -6508,7 +7064,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bullet", 16)]
+    [SchemaAttr(27, "bullet")]
+    [Index(16)]
     public TrueFalseValue Bullet { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
@@ -6516,7 +7073,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hr", 17)]
+    [SchemaAttr(27, "hr")]
+    [Index(17)]
     public TrueFalseValue Horizontal { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
@@ -6524,7 +7082,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrstd", 18)]
+    [SchemaAttr(27, "hrstd")]
+    [Index(18)]
     public TrueFalseValue HorizontalStandard { get; set; }
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
@@ -6532,7 +7091,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrnoshade", 19)]
+    [SchemaAttr(27, "hrnoshade")]
+    [Index(19)]
     public TrueFalseValue HorizontalNoShade { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
@@ -6540,7 +7100,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hrpct", 20)]
+    [SchemaAttr(27, "hrpct")]
+    [Index(20)]
     public SingleValue HorizontalPercentage { get; set; }
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
@@ -6548,7 +7109,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "hralign", 21)]
+    [SchemaAttr(27, "hralign")]
+    [Index(21)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
     /// <summary>
     /// <para> Allow in Table Cell.</para>
@@ -6556,7 +7118,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowincell", 22)]
+    [SchemaAttr(27, "allowincell")]
+    [Index(22)]
     public TrueFalseValue AllowInCell { get; set; }
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
@@ -6564,7 +7127,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "allowoverlap", 23)]
+    [SchemaAttr(27, "allowoverlap")]
+    [Index(23)]
     public TrueFalseValue AllowOverlap { get; set; }
     /// <summary>
     /// <para> Exists In Master Slide.</para>
@@ -6572,7 +7136,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "userdrawn", 24)]
+    [SchemaAttr(27, "userdrawn")]
+    [Index(24)]
     public TrueFalseValue UserDrawn { get; set; }
     /// <summary>
     /// <para> Border Top Color.</para>
@@ -6580,7 +7145,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bordertopcolor", 25)]
+    [SchemaAttr(27, "bordertopcolor")]
+    [Index(25)]
     public StringValue BorderTopColor { get; set; }
     /// <summary>
     /// <para> Border Left Color.</para>
@@ -6588,7 +7154,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderleftcolor", 26)]
+    [SchemaAttr(27, "borderleftcolor")]
+    [Index(26)]
     public StringValue BorderLeftColor { get; set; }
     /// <summary>
     /// <para> Bottom Border Color.</para>
@@ -6596,7 +7163,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderbottomcolor", 27)]
+    [SchemaAttr(27, "borderbottomcolor")]
+    [Index(27)]
     public StringValue BorderBottomColor { get; set; }
     /// <summary>
     /// <para> Border Right Color.</para>
@@ -6604,7 +7172,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "borderrightcolor", 28)]
+    [SchemaAttr(27, "borderrightcolor")]
+    [Index(28)]
     public StringValue BorderRightColor { get; set; }
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
@@ -6612,7 +7181,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayout", 29)]
+    [SchemaAttr(27, "dgmlayout")]
+    [Index(29)]
     public IntegerValue DiagramLayout { get; set; }
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
@@ -6620,7 +7190,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmnodekind", 30)]
+    [SchemaAttr(27, "dgmnodekind")]
+    [Index(30)]
     public IntegerValue DiagramNodeKind { get; set; }
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
@@ -6628,7 +7199,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "dgmlayoutmru", 31)]
+    [SchemaAttr(27, "dgmlayoutmru")]
+    [Index(31)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
     /// <summary>
     /// <para> Text Inset Mode.</para>
@@ -6636,43 +7208,50 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "insetmode", 32)]
+    [SchemaAttr(27, "insetmode")]
+    [Index(32)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
     /// </summary>
-    [SchemaAttr(0, "filled", 33)]
+    [SchemaAttr(0, "filled")]
+    [Index(33)]
     public TrueFalseValue Filled { get; set; }
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
     /// </summary>
-    [SchemaAttr(0, "fillcolor", 34)]
+    [SchemaAttr(0, "fillcolor")]
+    [Index(34)]
     public StringValue FillColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
     /// </summary>
-    [SchemaAttr(0, "stroked", 35)]
+    [SchemaAttr(0, "stroked")]
+    [Index(35)]
     public TrueFalseValue Stroked { get; set; }
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
     /// </summary>
-    [SchemaAttr(0, "strokecolor", 36)]
+    [SchemaAttr(0, "strokecolor")]
+    [Index(36)]
     public StringValue StrokeColor { get; set; }
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
     /// </summary>
-    [SchemaAttr(0, "strokeweight", 37)]
+    [SchemaAttr(0, "strokeweight")]
+    [Index(37)]
     public StringValue StrokeWeight { get; set; }
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
     /// </summary>
-    [SchemaAttr(0, "insetpen", 38)]
+    [SchemaAttr(0, "insetpen")]
+    [Index(38)]
     public TrueFalseValue InsetPen { get; set; }
     /// <summary>
     /// <para> Optional Number.</para>
@@ -6680,7 +7259,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "spt", 39)]
+    [SchemaAttr(27, "spt")]
+    [Index(39)]
     public Int32Value OptionalNumber { get; set; }
     /// <summary>
     /// <para> Shape Connector Type.</para>
@@ -6688,7 +7268,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "connectortype", 40)]
+    [SchemaAttr(27, "connectortype")]
+    [Index(40)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
     /// <summary>
     /// <para> Black-and-White Mode.</para>
@@ -6696,7 +7277,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwmode", 41)]
+    [SchemaAttr(27, "bwmode")]
+    [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
@@ -6704,7 +7286,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwpure", 42)]
+    [SchemaAttr(27, "bwpure")]
+    [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
@@ -6712,7 +7295,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "bwnormal", 43)]
+    [SchemaAttr(27, "bwnormal")]
+    [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
     /// <summary>
     /// <para> Force Dashed Outline.</para>
@@ -6720,7 +7304,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "forcedash", 44)]
+    [SchemaAttr(27, "forcedash")]
+    [Index(44)]
     public TrueFalseValue ForceDash { get; set; }
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
@@ -6728,7 +7313,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "oleicon", 45)]
+    [SchemaAttr(27, "oleicon")]
+    [Index(45)]
     public TrueFalseValue OleIcon { get; set; }
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
@@ -6736,7 +7322,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "ole", 46)]
+    [SchemaAttr(27, "ole")]
+    [Index(46)]
     public TrueFalseBlankValue Ole { get; set; }
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
@@ -6744,7 +7331,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "preferrelative", 47)]
+    [SchemaAttr(27, "preferrelative")]
+    [Index(47)]
     public TrueFalseValue PreferRelative { get; set; }
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
@@ -6752,7 +7340,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "cliptowrap", 48)]
+    [SchemaAttr(27, "cliptowrap")]
+    [Index(48)]
     public TrueFalseValue ClipToWrap { get; set; }
     /// <summary>
     /// <para> Clipping Toggle.</para>
@@ -6760,13 +7349,15 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:o=urn:schemas-microsoft-com:office:office
 ///</remark>
-    [SchemaAttr(27, "clip", 49)]
+    [SchemaAttr(27, "clip")]
+    [Index(49)]
     public TrueFalseValue Clip { get; set; }
     /// <summary>
     /// <para> Rounded Corner Arc Size.</para>
     /// <para>Represents the following attribute in the schema: arcsize </para>
     /// </summary>
-    [SchemaAttr(0, "arcsize", 50)]
+    [SchemaAttr(0, "arcsize")]
+    [Index(50)]
     public StringValue ArcSize { get; set; }
 
     /// <summary>
@@ -6821,11 +7412,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
 public partial class ShapeHandle : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12598;
-    /// <inheritdoc/>
-    public override string LocalName => "h";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -6833,55 +7420,64 @@ public partial class ShapeHandle : OpenXmlLeafElement
     /// <para> Handle Position.</para>
     /// <para>Represents the following attribute in the schema: position </para>
     /// </summary>
-    [SchemaAttr(0, "position", 0)]
+    [SchemaAttr(0, "position")]
+    [Index(0)]
     public StringValue Position { get; set; }
     /// <summary>
     /// <para> Handle Polar Center.</para>
     /// <para>Represents the following attribute in the schema: polar </para>
     /// </summary>
-    [SchemaAttr(0, "polar", 1)]
+    [SchemaAttr(0, "polar")]
+    [Index(1)]
     public StringValue Polar { get; set; }
     /// <summary>
     /// <para> Handle Coordinate Mapping.</para>
     /// <para>Represents the following attribute in the schema: map </para>
     /// </summary>
-    [SchemaAttr(0, "map", 2)]
+    [SchemaAttr(0, "map")]
+    [Index(2)]
     public StringValue Map { get; set; }
     /// <summary>
     /// <para> Invert Handle's X Position.</para>
     /// <para>Represents the following attribute in the schema: invx </para>
     /// </summary>
-    [SchemaAttr(0, "invx", 3)]
+    [SchemaAttr(0, "invx")]
+    [Index(3)]
     public TrueFalseBlankValue InvertX { get; set; }
     /// <summary>
     /// <para> Invert Handle's Y Position.</para>
     /// <para>Represents the following attribute in the schema: invy </para>
     /// </summary>
-    [SchemaAttr(0, "invy", 4)]
+    [SchemaAttr(0, "invy")]
+    [Index(4)]
     public TrueFalseBlankValue InvertY { get; set; }
     /// <summary>
     /// <para> Handle Inversion Toggle.</para>
     /// <para>Represents the following attribute in the schema: switch </para>
     /// </summary>
-    [SchemaAttr(0, "switch", 5)]
+    [SchemaAttr(0, "switch")]
+    [Index(5)]
     public TrueFalseBlankValue Switch { get; set; }
     /// <summary>
     /// <para> Handle X Position Range.</para>
     /// <para>Represents the following attribute in the schema: xrange </para>
     /// </summary>
-    [SchemaAttr(0, "xrange", 6)]
+    [SchemaAttr(0, "xrange")]
+    [Index(6)]
     public StringValue XRange { get; set; }
     /// <summary>
     /// <para> Handle Y Position Range.</para>
     /// <para>Represents the following attribute in the schema: yrange </para>
     /// </summary>
-    [SchemaAttr(0, "yrange", 7)]
+    [SchemaAttr(0, "yrange")]
+    [Index(7)]
     public StringValue YRange { get; set; }
     /// <summary>
     /// <para> Handle Polar Radius Range.</para>
     /// <para>Represents the following attribute in the schema: radiusrange </para>
     /// </summary>
-    [SchemaAttr(0, "radiusrange", 8)]
+    [SchemaAttr(0, "radiusrange")]
+    [Index(8)]
     public StringValue RadiusRange { get; set; }
 
     /// <summary>
@@ -6910,11 +7506,7 @@ public partial class ShapeHandle : OpenXmlLeafElement
 public partial class Formula : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12599;
-    /// <inheritdoc/>
-    public override string LocalName => "f";
-    internal override byte NamespaceId => 26;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -6922,7 +7514,8 @@ public partial class Formula : OpenXmlLeafElement
     /// <para> Equation.</para>
     /// <para>Represents the following attribute in the schema: eqn </para>
     /// </summary>
-    [SchemaAttr(0, "eqn", 0)]
+    [SchemaAttr(0, "eqn")]
+    [Index(0)]
     public StringValue Equation { get; set; }
 
     /// <summary>

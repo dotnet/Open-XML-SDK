@@ -105,25 +105,10 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        internal override int ElementTypeId
-        {
-            get { return ReservedElementTypeIds.OpenXmlMiscNodeId; }
-        }
+        internal override int ElementTypeId => ReservedElementTypeIds.OpenXmlMiscNodeId;
 
         /// <inheritdoc/>
-        internal override byte NamespaceId
-        {
-            get
-            {
-                throw new InvalidOperationException();
-            }
-        }
-
-        /// <inheritdoc/>
-        public override bool HasChildren
-        {
-            get { return false; }
-        }
+        public override bool HasChildren => false;
 
         /// <inheritdoc/>
         public override string LocalName
@@ -390,8 +375,6 @@ namespace DocumentFormat.OpenXml
             LoadOuterXml(xmlReader);
             xmlReader.Read();
         }
-
-        internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
         internal static OpenXmlMiscNode CreateFromText(string text)
         {

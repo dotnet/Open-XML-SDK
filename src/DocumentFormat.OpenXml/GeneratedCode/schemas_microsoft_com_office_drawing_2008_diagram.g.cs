@@ -28,11 +28,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
 public partial class Drawing : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 13083;
-    /// <inheritdoc/>
-    public override string LocalName => "drawing";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -101,13 +97,7 @@ public partial class Drawing : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "spTree" };
-    private static readonly byte[] eleNamespaceIds = { 56 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ShapeTree.</para>
@@ -116,11 +106,12 @@ public partial class Drawing : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
     /// </remark>
+	[Index(0)]
     public ShapeTree ShapeTree
-    {
+	{
         get => GetElement<ShapeTree>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -140,11 +131,7 @@ public partial class Drawing : OpenXmlPartRootElement
 public partial class DataModelExtensionBlock : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13084;
-    /// <inheritdoc/>
-    public override string LocalName => "dataModelExt";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -152,13 +139,15 @@ public partial class DataModelExtensionBlock : OpenXmlLeafElement
     /// <para> relId.</para>
     /// <para>Represents the following attribute in the schema: relId </para>
     /// </summary>
-    [SchemaAttr(0, "relId", 0)]
+    [SchemaAttr(0, "relId")]
+    [Index(0)]
     public StringValue RelId { get; set; }
     /// <summary>
     /// <para> minVer.</para>
     /// <para>Represents the following attribute in the schema: minVer </para>
     /// </summary>
-    [SchemaAttr(0, "minVer", 1)]
+    [SchemaAttr(0, "minVer")]
+    [Index(1)]
     public StringValue MinVer { get; set; }
 
     /// <summary>
@@ -198,11 +187,7 @@ public partial class DataModelExtensionBlock : OpenXmlLeafElement
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13085;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvPr";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -210,31 +195,36 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 1)]
+    [SchemaAttr(0, "name")]
+    [Index(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
-    [SchemaAttr(0, "descr", 2)]
+    [SchemaAttr(0, "descr")]
+    [Index(2)]
     public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    [SchemaAttr(0, "hidden", 3)]
+    [SchemaAttr(0, "hidden")]
+    [Index(3)]
     public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title", 4)]
+    [SchemaAttr(0, "title")]
+    [Index(4)]
     public StringValue Title { get; set; }
 
     /// <summary>
@@ -272,13 +262,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
@@ -287,11 +271,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -300,11 +285,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -313,11 +299,12 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(2)]
     public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
         set => SetElement(2, value);
-    }
+	}
     
 
 
@@ -346,11 +333,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13086;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvSpPr";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -358,7 +341,8 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     /// <para> Text Box.</para>
     /// <para>Represents the following attribute in the schema: txBox </para>
     /// </summary>
-    [SchemaAttr(0, "txBox", 0)]
+    [SchemaAttr(0, "txBox")]
+    [Index(0)]
     public BooleanValue TextBox { get; set; }
 
     /// <summary>
@@ -396,13 +380,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "spLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Shape Locks.</para>
@@ -411,11 +389,12 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.ShapeLocks ShapeLocks
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -424,11 +403,12 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -457,11 +437,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
 public partial class ShapeNonVisualProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13087;
-    /// <inheritdoc/>
-    public override string LocalName => "nvSpPr";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -501,13 +477,7 @@ public partial class ShapeNonVisualProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvSpPr" };
-    private static readonly byte[] eleNamespaceIds = { 56,56 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -516,11 +486,12 @@ public partial class ShapeNonVisualProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
     /// </remark>
+	[Index(0)]
     public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
+	{
         get => GetElement<NonVisualDrawingProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> NonVisualDrawingShapeProperties.</para>
@@ -529,11 +500,12 @@ public partial class ShapeNonVisualProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
     /// </remark>
+	[Index(1)]
     public NonVisualDrawingShapeProperties NonVisualDrawingShapeProperties
-    {
+	{
         get => GetElement<NonVisualDrawingShapeProperties>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -588,11 +560,7 @@ public partial class ShapeNonVisualProperties : OpenXmlCompositeElement
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13088;
-    /// <inheritdoc/>
-    public override string LocalName => "spPr";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -600,7 +568,8 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode", 0)]
+    [SchemaAttr(0, "bwMode")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -638,13 +607,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "xfrm","custGeom","prstGeom","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","ln","effectLst","effectDag","scene3d","sp3d","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
@@ -653,11 +616,12 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -690,11 +654,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
 public partial class ShapeStyle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13089;
-    /// <inheritdoc/>
-    public override string LocalName => "style";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -734,13 +694,7 @@ public partial class ShapeStyle : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "lnRef","fillRef","effectRef","fontRef" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> LineReference.</para>
@@ -749,11 +703,12 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.LineReference LineReference
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> FillReference.</para>
@@ -762,11 +717,12 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.FillReference FillReference
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> EffectReference.</para>
@@ -775,11 +731,12 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(2)]
     public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Font Reference.</para>
@@ -788,11 +745,12 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(3)]
     public DocumentFormat.OpenXml.Drawing.FontReference FontReference
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(3);
         set => SetElement(3, value);
-    }
+	}
     
 
 
@@ -823,11 +781,7 @@ public partial class ShapeStyle : OpenXmlCompositeElement
 public partial class TextBody : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13090;
-    /// <inheritdoc/>
-    public override string LocalName => "txBody";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -867,13 +821,7 @@ public partial class TextBody : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "bodyPr","lstStyle","p" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Body Properties.</para>
@@ -882,11 +830,12 @@ public partial class TextBody : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.BodyProperties BodyProperties
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Text List Styles.</para>
@@ -895,11 +844,12 @@ public partial class TextBody : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.ListStyle ListStyle
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -928,11 +878,7 @@ public partial class TextBody : OpenXmlCompositeElement
 public partial class Transform2D : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13091;
-    /// <inheritdoc/>
-    public override string LocalName => "txXfrm";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -940,19 +886,22 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
-    [SchemaAttr(0, "rot", 0)]
+    [SchemaAttr(0, "rot")]
+    [Index(0)]
     public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
-    [SchemaAttr(0, "flipH", 1)]
+    [SchemaAttr(0, "flipH")]
+    [Index(1)]
     public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
-    [SchemaAttr(0, "flipV", 2)]
+    [SchemaAttr(0, "flipV")]
+    [Index(2)]
     public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>
@@ -990,13 +939,7 @@ public partial class Transform2D : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "off","ext" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Offset.</para>
@@ -1005,11 +948,12 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.Offset Offset
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Extents.</para>
@@ -1018,11 +962,12 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.Extents Extents
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -1049,11 +994,7 @@ public partial class Transform2D : OpenXmlCompositeElement
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13092;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1119,11 +1060,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13093;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvGrpSpPr";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1163,13 +1100,7 @@ public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElem
      
     
     
-        private static readonly string[] eleTagNames = { "grpSpLocks","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> GroupShapeLocks.</para>
@@ -1178,11 +1109,12 @@ public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.GroupShapeLocks GroupShapeLocks
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> NonVisualGroupDrawingShapePropsExtensionList.</para>
@@ -1191,11 +1123,12 @@ public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElem
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList NonVisualGroupDrawingShapePropsExtensionList
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -1224,11 +1157,7 @@ public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElem
 public partial class GroupShapeNonVisualProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13094;
-    /// <inheritdoc/>
-    public override string LocalName => "nvGrpSpPr";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1268,13 +1197,7 @@ public partial class GroupShapeNonVisualProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "cNvPr","cNvGrpSpPr" };
-    private static readonly byte[] eleNamespaceIds = { 56,56 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
@@ -1283,11 +1206,12 @@ public partial class GroupShapeNonVisualProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
     /// </remark>
+	[Index(0)]
     public NonVisualDrawingProperties NonVisualDrawingProperties
-    {
+	{
         get => GetElement<NonVisualDrawingProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> NonVisualGroupDrawingShapeProperties.</para>
@@ -1296,11 +1220,12 @@ public partial class GroupShapeNonVisualProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
     /// </remark>
+	[Index(1)]
     public NonVisualGroupDrawingShapeProperties NonVisualGroupDrawingShapeProperties
-    {
+	{
         get => GetElement<NonVisualGroupDrawingShapeProperties>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -1347,11 +1272,7 @@ public partial class GroupShapeNonVisualProperties : OpenXmlCompositeElement
 public partial class GroupShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13095;
-    /// <inheritdoc/>
-    public override string LocalName => "grpSpPr";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1359,7 +1280,8 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode", 0)]
+    [SchemaAttr(0, "bwMode")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -1397,13 +1319,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "xfrm","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","effectLst","effectDag","scene3d","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> 2D Transform for Grouped Objects.</para>
@@ -1412,11 +1328,12 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.TransformGroup TransformGroup
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -1453,11 +1370,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
 public partial class Shape : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13096;
-    /// <inheritdoc/>
-    public override string LocalName => "sp";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1465,7 +1378,8 @@ public partial class Shape : OpenXmlCompositeElement
     /// <para> modelId.</para>
     /// <para>Represents the following attribute in the schema: modelId </para>
     /// </summary>
-    [SchemaAttr(0, "modelId", 0)]
+    [SchemaAttr(0, "modelId")]
+    [Index(0)]
     public StringValue ModelId { get; set; }
 
     /// <summary>
@@ -1503,13 +1417,7 @@ public partial class Shape : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nvSpPr","spPr","style","txBody","txXfrm","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 56,56,56,56,56,56 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> ShapeNonVisualProperties.</para>
@@ -1518,11 +1426,12 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
     /// </remark>
+	[Index(0)]
     public ShapeNonVisualProperties ShapeNonVisualProperties
-    {
+	{
         get => GetElement<ShapeNonVisualProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> ShapeProperties.</para>
@@ -1531,11 +1440,12 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
     /// </remark>
+	[Index(1)]
     public ShapeProperties ShapeProperties
-    {
+	{
         get => GetElement<ShapeProperties>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> ShapeStyle.</para>
@@ -1544,11 +1454,12 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
     /// </remark>
+	[Index(2)]
     public ShapeStyle ShapeStyle
-    {
+	{
         get => GetElement<ShapeStyle>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> TextBody.</para>
@@ -1557,11 +1468,12 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
     /// </remark>
+	[Index(3)]
     public TextBody TextBody
-    {
+	{
         get => GetElement<TextBody>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Transform2D.</para>
@@ -1570,11 +1482,12 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
     /// </remark>
+	[Index(4)]
     public Transform2D Transform2D
-    {
+	{
         get => GetElement<Transform2D>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -1583,11 +1496,12 @@ public partial class Shape : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
     /// </remark>
+	[Index(5)]
     public OfficeArtExtensionList OfficeArtExtensionList
-    {
+	{
         get => GetElement<OfficeArtExtensionList>(5);
         set => SetElement(5, value);
-    }
+	}
     
 
 
@@ -1617,11 +1531,7 @@ public partial class Shape : OpenXmlCompositeElement
 public partial class GroupShape : GroupShapeType
 {
     internal const int ElementTypeIdConst = 13097;
-    /// <inheritdoc/>
-    public override string LocalName => "grpSp";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the GroupShape class.
@@ -1681,11 +1591,7 @@ public partial class GroupShape : GroupShapeType
 public partial class ShapeTree : GroupShapeType
 {
     internal const int ElementTypeIdConst = 13098;
-    /// <inheritdoc/>
-    public override string LocalName => "spTree";
-    internal override byte NamespaceId => 56;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ShapeTree class.
@@ -1748,13 +1654,7 @@ public abstract partial class GroupShapeType : OpenXmlCompositeElement
         
     
     
-        private static readonly string[] eleTagNames = { "nvGrpSpPr","grpSpPr","sp","grpSp","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 56,56,56,56,56 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> GroupShapeNonVisualProperties.</para>
@@ -1763,11 +1663,12 @@ public abstract partial class GroupShapeType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
     /// </remark>
+	[Index(0)]
     public GroupShapeNonVisualProperties GroupShapeNonVisualProperties
-    {
+	{
         get => GetElement<GroupShapeNonVisualProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> GroupShapeProperties.</para>
@@ -1776,11 +1677,12 @@ public abstract partial class GroupShapeType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
     /// </remark>
+	[Index(1)]
     public GroupShapeProperties GroupShapeProperties
-    {
+	{
         get => GetElement<GroupShapeProperties>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 

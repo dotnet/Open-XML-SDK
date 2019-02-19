@@ -42,7 +42,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// Represents the attribute in schema: w:uri.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
-        [SchemaAttr(23, "uri", 0)]
+        [SchemaAttr(23, "uri")]
+        [Index(0)]
         public StringValue Uri { get; set; }
 
         /// <summary>
@@ -52,7 +53,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// Represents the attribute in schema: w:element.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
-        [SchemaAttr(23, "element", 0)]
+        [SchemaAttr(23, "element")]
+        [Index(0)]
         public StringValue Element { get; set; }
 
         /// <summary>
@@ -61,6 +63,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
+        [SchemaAttr(0, "customXmlPr")]
+        [Index(0)]
         public CustomXmlProperties CustomXmlProperties
         {
             get => GetElement<CustomXmlProperties>(0);

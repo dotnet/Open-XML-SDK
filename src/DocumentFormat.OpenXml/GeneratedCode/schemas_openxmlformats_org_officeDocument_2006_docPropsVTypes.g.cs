@@ -95,11 +95,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
 public partial class Variant : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11029;
-    /// <inheritdoc/>
-    public override string LocalName => "variant";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -139,13 +135,7 @@ public partial class Variant : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "variant","vector","array","blob","oblob","empty","null","i1","i2","i4","i8","int","ui1","ui2","ui4","ui8","uint","r4","r8","decimal","lpstr","lpwstr","bstr","date","filetime","bool","cy","error","stream","ostream","storage","ostorage","vstream","clsid","cf" };
-    private static readonly byte[] eleNamespaceIds = { 5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> Variant.</para>
@@ -154,11 +144,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(0)]
     public Variant InnerVariant
-    {
+	{
         get => GetElement<Variant>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Vector.</para>
@@ -167,11 +158,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(1)]
     public VTVector VTVector
-    {
+	{
         get => GetElement<VTVector>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> Array.</para>
@@ -180,11 +172,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(2)]
     public VTArray VTArray
-    {
+	{
         get => GetElement<VTArray>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> Binary Blob.</para>
@@ -193,11 +186,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(3)]
     public VTBlob VTBlob
-    {
+	{
         get => GetElement<VTBlob>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Binary Blob Object.</para>
@@ -206,11 +200,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(4)]
     public VTOBlob VTOBlob
-    {
+	{
         get => GetElement<VTOBlob>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> Empty.</para>
@@ -219,11 +214,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(5)]
     public VTEmpty VTEmpty
-    {
+	{
         get => GetElement<VTEmpty>(5);
         set => SetElement(5, value);
-    }
+	}
     
     /// <summary>
     /// <para> Null.</para>
@@ -232,11 +228,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(6)]
     public VTNull VTNull
-    {
+	{
         get => GetElement<VTNull>(6);
         set => SetElement(6, value);
-    }
+	}
     
     /// <summary>
     /// <para> 1-Byte Signed Integer.</para>
@@ -245,11 +242,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(7)]
     public VTByte VTByte
-    {
+	{
         get => GetElement<VTByte>(7);
         set => SetElement(7, value);
-    }
+	}
     
     /// <summary>
     /// <para> 2-Byte Signed Integer.</para>
@@ -258,11 +256,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(8)]
     public VTShort VTShort
-    {
+	{
         get => GetElement<VTShort>(8);
         set => SetElement(8, value);
-    }
+	}
     
     /// <summary>
     /// <para> 4-Byte Signed Integer.</para>
@@ -271,11 +270,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(9)]
     public VTInt32 VTInt32
-    {
+	{
         get => GetElement<VTInt32>(9);
         set => SetElement(9, value);
-    }
+	}
     
     /// <summary>
     /// <para> 8-Byte Signed Integer.</para>
@@ -284,11 +284,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(10)]
     public VTInt64 VTInt64
-    {
+	{
         get => GetElement<VTInt64>(10);
         set => SetElement(10, value);
-    }
+	}
     
     /// <summary>
     /// <para> Integer.</para>
@@ -297,11 +298,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(11)]
     public VTInteger VTInteger
-    {
+	{
         get => GetElement<VTInteger>(11);
         set => SetElement(11, value);
-    }
+	}
     
     /// <summary>
     /// <para> 1-Byte Unsigned Integer.</para>
@@ -310,11 +312,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(12)]
     public VTUnsignedByte VTUnsignedByte
-    {
+	{
         get => GetElement<VTUnsignedByte>(12);
         set => SetElement(12, value);
-    }
+	}
     
     /// <summary>
     /// <para> 2-Byte Unsigned Integer.</para>
@@ -323,11 +326,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(13)]
     public VTUnsignedShort VTUnsignedShort
-    {
+	{
         get => GetElement<VTUnsignedShort>(13);
         set => SetElement(13, value);
-    }
+	}
     
     /// <summary>
     /// <para> 4-Byte Unsigned Integer.</para>
@@ -336,11 +340,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(14)]
     public VTUnsignedInt32 VTUnsignedInt32
-    {
+	{
         get => GetElement<VTUnsignedInt32>(14);
         set => SetElement(14, value);
-    }
+	}
     
     /// <summary>
     /// <para> 8-Byte Unsigned Integer.</para>
@@ -349,11 +354,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(15)]
     public VTUnsignedInt64 VTUnsignedInt64
-    {
+	{
         get => GetElement<VTUnsignedInt64>(15);
         set => SetElement(15, value);
-    }
+	}
     
     /// <summary>
     /// <para> Unsigned Integer.</para>
@@ -362,11 +368,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(16)]
     public VTUnsignedInteger VTUnsignedInteger
-    {
+	{
         get => GetElement<VTUnsignedInteger>(16);
         set => SetElement(16, value);
-    }
+	}
     
     /// <summary>
     /// <para> 4-Byte Real Number.</para>
@@ -375,11 +382,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(17)]
     public VTFloat VTFloat
-    {
+	{
         get => GetElement<VTFloat>(17);
         set => SetElement(17, value);
-    }
+	}
     
     /// <summary>
     /// <para> 8-Byte Real Number.</para>
@@ -388,11 +396,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(18)]
     public VTDouble VTDouble
-    {
+	{
         get => GetElement<VTDouble>(18);
         set => SetElement(18, value);
-    }
+	}
     
     /// <summary>
     /// <para> Decimal.</para>
@@ -401,11 +410,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(19)]
     public VTDecimal VTDecimal
-    {
+	{
         get => GetElement<VTDecimal>(19);
         set => SetElement(19, value);
-    }
+	}
     
     /// <summary>
     /// <para> LPSTR.</para>
@@ -414,11 +424,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(20)]
     public VTLPSTR VTLPSTR
-    {
+	{
         get => GetElement<VTLPSTR>(20);
         set => SetElement(20, value);
-    }
+	}
     
     /// <summary>
     /// <para> LPWSTR.</para>
@@ -427,11 +438,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(21)]
     public VTLPWSTR VTLPWSTR
-    {
+	{
         get => GetElement<VTLPWSTR>(21);
         set => SetElement(21, value);
-    }
+	}
     
     /// <summary>
     /// <para> Basic String.</para>
@@ -440,11 +452,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(22)]
     public VTBString VTBString
-    {
+	{
         get => GetElement<VTBString>(22);
         set => SetElement(22, value);
-    }
+	}
     
     /// <summary>
     /// <para> Date and Time.</para>
@@ -453,11 +466,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(23)]
     public VTDate VTDate
-    {
+	{
         get => GetElement<VTDate>(23);
         set => SetElement(23, value);
-    }
+	}
     
     /// <summary>
     /// <para> File Time.</para>
@@ -466,11 +480,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(24)]
     public VTFileTime VTFileTime
-    {
+	{
         get => GetElement<VTFileTime>(24);
         set => SetElement(24, value);
-    }
+	}
     
     /// <summary>
     /// <para> Boolean.</para>
@@ -479,11 +494,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(25)]
     public VTBool VTBool
-    {
+	{
         get => GetElement<VTBool>(25);
         set => SetElement(25, value);
-    }
+	}
     
     /// <summary>
     /// <para> Currency.</para>
@@ -492,11 +508,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(26)]
     public VTCurrency VTCurrency
-    {
+	{
         get => GetElement<VTCurrency>(26);
         set => SetElement(26, value);
-    }
+	}
     
     /// <summary>
     /// <para> Error Status Code.</para>
@@ -505,11 +522,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(27)]
     public VTError VTError
-    {
+	{
         get => GetElement<VTError>(27);
         set => SetElement(27, value);
-    }
+	}
     
     /// <summary>
     /// <para> Binary Stream.</para>
@@ -518,11 +536,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(28)]
     public VTStreamData VTStreamData
-    {
+	{
         get => GetElement<VTStreamData>(28);
         set => SetElement(28, value);
-    }
+	}
     
     /// <summary>
     /// <para> Binary Stream Object.</para>
@@ -531,11 +550,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(29)]
     public VTOStreamData VTOStreamData
-    {
+	{
         get => GetElement<VTOStreamData>(29);
         set => SetElement(29, value);
-    }
+	}
     
     /// <summary>
     /// <para> Binary Storage.</para>
@@ -544,11 +564,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(30)]
     public VTStorage VTStorage
-    {
+	{
         get => GetElement<VTStorage>(30);
         set => SetElement(30, value);
-    }
+	}
     
     /// <summary>
     /// <para> Binary Storage Object.</para>
@@ -557,11 +578,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(31)]
     public VTOStorage VTOStorage
-    {
+	{
         get => GetElement<VTOStorage>(31);
         set => SetElement(31, value);
-    }
+	}
     
     /// <summary>
     /// <para> Binary Versioned Stream.</para>
@@ -570,11 +592,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(32)]
     public VTVStreamData VTVStreamData
-    {
+	{
         get => GetElement<VTVStreamData>(32);
         set => SetElement(32, value);
-    }
+	}
     
     /// <summary>
     /// <para> Class ID.</para>
@@ -583,11 +606,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(33)]
     public VTClassId VTClassId
-    {
+	{
         get => GetElement<VTClassId>(33);
         set => SetElement(33, value);
-    }
+	}
     
     /// <summary>
     /// <para> Clipboard Data.</para>
@@ -596,11 +620,12 @@ public partial class Variant : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
+	[Index(34)]
     public VTClipboardData VTClipboardData
-    {
+	{
         get => GetElement<VTClipboardData>(34);
         set => SetElement(34, value);
-    }
+	}
     
 
 
@@ -667,11 +692,7 @@ public partial class Variant : OpenXmlCompositeElement
 public partial class VTVector : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11030;
-    /// <inheritdoc/>
-    public override string LocalName => "vector";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -679,13 +700,15 @@ public partial class VTVector : OpenXmlCompositeElement
     /// <para> Vector Base Type.</para>
     /// <para>Represents the following attribute in the schema: baseType </para>
     /// </summary>
-    [SchemaAttr(0, "baseType", 0)]
+    [SchemaAttr(0, "baseType")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues> BaseType { get; set; }
     /// <summary>
     /// <para> Vector Size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size", 1)]
+    [SchemaAttr(0, "size")]
+    [Index(1)]
     public UInt32Value Size { get; set; }
 
     /// <summary>
@@ -779,11 +802,7 @@ public partial class VTVector : OpenXmlCompositeElement
 public partial class VTArray : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11031;
-    /// <inheritdoc/>
-    public override string LocalName => "array";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -791,19 +810,22 @@ public partial class VTArray : OpenXmlCompositeElement
     /// <para> Array Lower Bounds Attribute.</para>
     /// <para>Represents the following attribute in the schema: lBound </para>
     /// </summary>
-    [SchemaAttr(0, "lBound", 0)]
+    [SchemaAttr(0, "lBound")]
+    [Index(0)]
     public Int32Value LowerBounds { get; set; }
     /// <summary>
     /// <para> Array Upper Bounds Attribute.</para>
     /// <para>Represents the following attribute in the schema: uBound </para>
     /// </summary>
-    [SchemaAttr(0, "uBound", 1)]
+    [SchemaAttr(0, "uBound")]
+    [Index(1)]
     public Int32Value UpperBounds { get; set; }
     /// <summary>
     /// <para> Array Base Type.</para>
     /// <para>Represents the following attribute in the schema: baseType </para>
     /// </summary>
-    [SchemaAttr(0, "baseType", 2)]
+    [SchemaAttr(0, "baseType")]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues> BaseType { get; set; }
 
     /// <summary>
@@ -858,11 +880,7 @@ public partial class VTArray : OpenXmlCompositeElement
 public partial class VTBlob : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11032;
-    /// <inheritdoc/>
-    public override string LocalName => "blob";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTBlob class.
@@ -899,11 +917,7 @@ public partial class VTBlob : OpenXmlLeafTextElement
 public partial class VTOBlob : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11033;
-    /// <inheritdoc/>
-    public override string LocalName => "oblob";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTOBlob class.
@@ -940,11 +954,7 @@ public partial class VTOBlob : OpenXmlLeafTextElement
 public partial class VTStreamData : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11057;
-    /// <inheritdoc/>
-    public override string LocalName => "stream";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTStreamData class.
@@ -981,11 +991,7 @@ public partial class VTStreamData : OpenXmlLeafTextElement
 public partial class VTOStreamData : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11058;
-    /// <inheritdoc/>
-    public override string LocalName => "ostream";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTOStreamData class.
@@ -1022,11 +1028,7 @@ public partial class VTOStreamData : OpenXmlLeafTextElement
 public partial class VTStorage : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11059;
-    /// <inheritdoc/>
-    public override string LocalName => "storage";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTStorage class.
@@ -1063,11 +1065,7 @@ public partial class VTStorage : OpenXmlLeafTextElement
 public partial class VTOStorage : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11060;
-    /// <inheritdoc/>
-    public override string LocalName => "ostorage";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTOStorage class.
@@ -1104,11 +1102,7 @@ public partial class VTOStorage : OpenXmlLeafTextElement
 public partial class VTEmpty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11034;
-    /// <inheritdoc/>
-    public override string LocalName => "empty";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1139,11 +1133,7 @@ public partial class VTEmpty : OpenXmlLeafElement
 public partial class VTNull : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11035;
-    /// <inheritdoc/>
-    public override string LocalName => "null";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1174,11 +1164,7 @@ public partial class VTNull : OpenXmlLeafElement
 public partial class VTByte : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11036;
-    /// <inheritdoc/>
-    public override string LocalName => "i1";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1222,11 +1208,7 @@ public partial class VTByte : OpenXmlLeafTextElement
 public partial class VTShort : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11037;
-    /// <inheritdoc/>
-    public override string LocalName => "i2";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1270,11 +1252,7 @@ public partial class VTShort : OpenXmlLeafTextElement
 public partial class VTInt32 : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11038;
-    /// <inheritdoc/>
-    public override string LocalName => "i4";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTInt32 class.
@@ -1311,11 +1289,7 @@ public partial class VTInt32 : OpenXmlLeafTextElement
 public partial class VTInteger : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11040;
-    /// <inheritdoc/>
-    public override string LocalName => "int";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTInteger class.
@@ -1352,11 +1326,7 @@ public partial class VTInteger : OpenXmlLeafTextElement
 public partial class VTInt64 : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11039;
-    /// <inheritdoc/>
-    public override string LocalName => "i8";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1400,11 +1370,7 @@ public partial class VTInt64 : OpenXmlLeafTextElement
 public partial class VTUnsignedByte : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11041;
-    /// <inheritdoc/>
-    public override string LocalName => "ui1";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1448,11 +1414,7 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
 public partial class VTUnsignedShort : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11042;
-    /// <inheritdoc/>
-    public override string LocalName => "ui2";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1496,11 +1458,7 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
 public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11043;
-    /// <inheritdoc/>
-    public override string LocalName => "ui4";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTUnsignedInt32 class.
@@ -1537,11 +1495,7 @@ public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
 public partial class VTUnsignedInteger : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11045;
-    /// <inheritdoc/>
-    public override string LocalName => "uint";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTUnsignedInteger class.
@@ -1578,11 +1532,7 @@ public partial class VTUnsignedInteger : OpenXmlLeafTextElement
 public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11044;
-    /// <inheritdoc/>
-    public override string LocalName => "ui8";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1626,11 +1576,7 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
 public partial class VTFloat : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11046;
-    /// <inheritdoc/>
-    public override string LocalName => "r4";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1674,11 +1620,7 @@ public partial class VTFloat : OpenXmlLeafTextElement
 public partial class VTDouble : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11047;
-    /// <inheritdoc/>
-    public override string LocalName => "r8";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1722,11 +1664,7 @@ public partial class VTDouble : OpenXmlLeafTextElement
 public partial class VTDecimal : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11048;
-    /// <inheritdoc/>
-    public override string LocalName => "decimal";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1770,11 +1708,7 @@ public partial class VTDecimal : OpenXmlLeafTextElement
 public partial class VTLPSTR : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11049;
-    /// <inheritdoc/>
-    public override string LocalName => "lpstr";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTLPSTR class.
@@ -1811,11 +1745,7 @@ public partial class VTLPSTR : OpenXmlLeafTextElement
 public partial class VTLPWSTR : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11050;
-    /// <inheritdoc/>
-    public override string LocalName => "lpwstr";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTLPWSTR class.
@@ -1852,11 +1782,7 @@ public partial class VTLPWSTR : OpenXmlLeafTextElement
 public partial class VTBString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11051;
-    /// <inheritdoc/>
-    public override string LocalName => "bstr";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTBString class.
@@ -1893,11 +1819,7 @@ public partial class VTBString : OpenXmlLeafTextElement
 public partial class VTDate : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11052;
-    /// <inheritdoc/>
-    public override string LocalName => "date";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTDate class.
@@ -1934,11 +1856,7 @@ public partial class VTDate : OpenXmlLeafTextElement
 public partial class VTFileTime : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11053;
-    /// <inheritdoc/>
-    public override string LocalName => "filetime";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the VTFileTime class.
@@ -1975,11 +1893,7 @@ public partial class VTFileTime : OpenXmlLeafTextElement
 public partial class VTBool : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11054;
-    /// <inheritdoc/>
-    public override string LocalName => "bool";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2023,11 +1937,7 @@ public partial class VTBool : OpenXmlLeafTextElement
 public partial class VTCurrency : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11055;
-    /// <inheritdoc/>
-    public override string LocalName => "cy";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2071,11 +1981,7 @@ public partial class VTCurrency : OpenXmlLeafTextElement
 public partial class VTError : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11056;
-    /// <inheritdoc/>
-    public override string LocalName => "error";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2119,11 +2025,7 @@ public partial class VTError : OpenXmlLeafTextElement
 public partial class VTVStreamData : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11061;
-    /// <inheritdoc/>
-    public override string LocalName => "vstream";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2131,7 +2033,8 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     /// <para> VSTREAM Version Attribute.</para>
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
-    [SchemaAttr(0, "version", 0)]
+    [SchemaAttr(0, "version")]
+    [Index(0)]
     public StringValue Version { get; set; }
 
     /// <summary>
@@ -2173,11 +2076,7 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
 public partial class VTClassId : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11062;
-    /// <inheritdoc/>
-    public override string LocalName => "clsid";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2221,11 +2120,7 @@ public partial class VTClassId : OpenXmlLeafTextElement
 public partial class VTClipboardData : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11063;
-    /// <inheritdoc/>
-    public override string LocalName => "cf";
-    internal override byte NamespaceId => 5;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2233,13 +2128,15 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     /// <para> Format Attribute.</para>
     /// <para>Represents the following attribute in the schema: format </para>
     /// </summary>
-    [SchemaAttr(0, "format", 0)]
+    [SchemaAttr(0, "format")]
+    [Index(0)]
     public Int32Value Format { get; set; }
     /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size", 1)]
+    [SchemaAttr(0, "size")]
+    [Index(1)]
     public UInt32Value Size { get; set; }
 
     /// <summary>

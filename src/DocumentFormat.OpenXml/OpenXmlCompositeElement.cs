@@ -763,35 +763,13 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets the tag names of the child elements.
-        /// </summary>
-        /// <remarks>
-        /// This property is overridden in generated classes.
-        /// </remarks>
-        internal virtual string[] ElementTagNames
-        {
-            get { return null; }
-        }
-
-        /// <summary>
-        /// Gets the namespace IDs of the child elements.
-        /// </summary>
-        /// <remarks>
-        /// This property is overridden in generated classes.
-        /// </remarks>
-        internal virtual byte[] ElementNamespaceIds
-        {
-            get { return null; }
-        }
-
         private int GetSequenceNumber(OpenXmlElement child)
         {
-            for (int i = 0; i < ElementNamespaceIds.Length; i++)
+            foreach (var element in RawElements)
             {
-                if (ElementNamespaceIds[i] == child.NamespaceId && object.Equals(ElementTagNames[i], child.LocalName))
+                if (element.Property.NamespaceId == child.NamespaceId && object.Equals(element.Property.Name, child.LocalName))
                 {
-                    return i;
+                    return element.Property.Order;
                 }
             }
 
@@ -817,7 +795,7 @@ namespace DocumentFormat.OpenXml
                     throw new InvalidOperationException();
 
                 case OpenXmlCompositeType.OneAll:
-                    foreach (OpenXmlElement child in ChildElements)
+                    foreach (var child in ChildElements)
                     {
                         // skip unknown element and MiscNode
                         if (IsKnownElement(child))
@@ -842,7 +820,7 @@ namespace DocumentFormat.OpenXml
 
                 case OpenXmlCompositeType.OneChoice:
                     {
-                        OpenXmlElement child = FirstChild;
+                        var child = FirstChild;
 
                         // skip unknown element and MiscNode
                         while (child != null && !IsKnownElement(child))
@@ -875,7 +853,7 @@ namespace DocumentFormat.OpenXml
 
                 case OpenXmlCompositeType.OneSequence:
                     {
-                        OpenXmlElement child = FirstChild;
+                        var child = FirstChild;
 
                         while (child != null)
                         {

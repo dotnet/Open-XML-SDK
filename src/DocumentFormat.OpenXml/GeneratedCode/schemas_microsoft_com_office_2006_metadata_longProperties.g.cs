@@ -27,11 +27,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
 public partial class LongProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12711;
-    /// <inheritdoc/>
-    public override string LocalName => "LongProperties";
-    internal override byte NamespaceId => 40;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -88,11 +84,7 @@ public partial class LongProperties : OpenXmlCompositeElement
 public partial class LongProperty : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12712;
-    /// <inheritdoc/>
-    public override string LocalName => "LongProp";
-    internal override byte NamespaceId => 40;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -100,7 +92,8 @@ public partial class LongProperty : OpenXmlLeafTextElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
 
     /// <summary>

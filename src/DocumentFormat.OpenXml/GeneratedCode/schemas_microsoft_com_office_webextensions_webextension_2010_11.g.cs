@@ -37,11 +37,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
 public partial class WebExtension : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 13310;
-    /// <inheritdoc/>
-    public override string LocalName => "webextension";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -49,13 +45,15 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> frozen.</para>
     /// <para>Represents the following attribute in the schema: frozen </para>
     /// </summary>
-    [SchemaAttr(0, "frozen", 1)]
+    [SchemaAttr(0, "frozen")]
+    [Index(1)]
     public BooleanValue Frozen { get; set; }
 
     
@@ -122,13 +120,7 @@ public partial class WebExtension : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "reference","alternateReferences","properties","bindings","snapshot","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 66,66,66,66,66,66 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> WebExtensionStoreReference.</para>
@@ -137,11 +129,12 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(0)]
     public WebExtensionStoreReference WebExtensionStoreReference
-    {
+	{
         get => GetElement<WebExtensionStoreReference>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> WebExtensionReferenceList.</para>
@@ -150,11 +143,12 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(1)]
     public WebExtensionReferenceList WebExtensionReferenceList
-    {
+	{
         get => GetElement<WebExtensionReferenceList>(1);
         set => SetElement(1, value);
-    }
+	}
     
     /// <summary>
     /// <para> WebExtensionPropertyBag.</para>
@@ -163,11 +157,12 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(2)]
     public WebExtensionPropertyBag WebExtensionPropertyBag
-    {
+	{
         get => GetElement<WebExtensionPropertyBag>(2);
         set => SetElement(2, value);
-    }
+	}
     
     /// <summary>
     /// <para> WebExtensionBindingList.</para>
@@ -176,11 +171,12 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(3)]
     public WebExtensionBindingList WebExtensionBindingList
-    {
+	{
         get => GetElement<WebExtensionBindingList>(3);
         set => SetElement(3, value);
-    }
+	}
     
     /// <summary>
     /// <para> Snapshot.</para>
@@ -189,11 +185,12 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(4)]
     public Snapshot Snapshot
-    {
+	{
         get => GetElement<Snapshot>(4);
         set => SetElement(4, value);
-    }
+	}
     
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -202,11 +199,12 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(5)]
     public OfficeArtExtensionList OfficeArtExtensionList
-    {
+	{
         get => GetElement<OfficeArtExtensionList>(5);
         set => SetElement(5, value);
-    }
+	}
     
 
 
@@ -226,11 +224,7 @@ public partial class WebExtension : OpenXmlPartRootElement
 public partial class WebExtensionReference : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13311;
-    /// <inheritdoc/>
-    public override string LocalName => "webextensionref";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -240,7 +234,8 @@ public partial class WebExtensionReference : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id", 0)]
+    [SchemaAttr(19, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -269,11 +264,7 @@ public partial class WebExtensionReference : OpenXmlLeafElement
 public partial class WebExtensionProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13312;
-    /// <inheritdoc/>
-    public override string LocalName => "property";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -281,13 +272,15 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name", 0)]
+    [SchemaAttr(0, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
-    [SchemaAttr(0, "value", 1)]
+    [SchemaAttr(0, "value")]
+    [Index(1)]
     public StringValue Value { get; set; }
 
     /// <summary>
@@ -323,11 +316,7 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13313;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -391,11 +380,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 public partial class WebExtensionBinding : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13314;
-    /// <inheritdoc/>
-    public override string LocalName => "binding";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -403,19 +388,22 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    [SchemaAttr(0, "type", 1)]
+    [SchemaAttr(0, "type")]
+    [Index(1)]
     public StringValue Type { get; set; }
     /// <summary>
     /// <para> appref.</para>
     /// <para>Represents the following attribute in the schema: appref </para>
     /// </summary>
-    [SchemaAttr(0, "appref", 2)]
+    [SchemaAttr(0, "appref")]
+    [Index(2)]
     public StringValue AppReference { get; set; }
 
     /// <summary>
@@ -453,13 +441,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 66 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -468,11 +450,12 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(0)]
     public OfficeArtExtensionList OfficeArtExtensionList
-    {
+	{
         get => GetElement<OfficeArtExtensionList>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -499,11 +482,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
 public partial class WebExtensionStoreReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13315;
-    /// <inheritdoc/>
-    public override string LocalName => "reference";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -511,25 +490,29 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id", 0)]
+    [SchemaAttr(0, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> version.</para>
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
-    [SchemaAttr(0, "version", 1)]
+    [SchemaAttr(0, "version")]
+    [Index(1)]
     public StringValue Version { get; set; }
     /// <summary>
     /// <para> store.</para>
     /// <para>Represents the following attribute in the schema: store </para>
     /// </summary>
-    [SchemaAttr(0, "store", 2)]
+    [SchemaAttr(0, "store")]
+    [Index(2)]
     public StringValue Store { get; set; }
     /// <summary>
     /// <para> storeType.</para>
     /// <para>Represents the following attribute in the schema: storeType </para>
     /// </summary>
-    [SchemaAttr(0, "storeType", 3)]
+    [SchemaAttr(0, "storeType")]
+    [Index(3)]
     public StringValue StoreType { get; set; }
 
     /// <summary>
@@ -567,13 +550,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "extLst" };
-    private static readonly byte[] eleNamespaceIds = { 66 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -582,11 +559,12 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
+	[Index(0)]
     public OfficeArtExtensionList OfficeArtExtensionList
-    {
+	{
         get => GetElement<OfficeArtExtensionList>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -613,11 +591,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
 public partial class WebExtensionReferenceList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13316;
-    /// <inheritdoc/>
-    public override string LocalName => "alternateReferences";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -681,11 +655,7 @@ public partial class WebExtensionReferenceList : OpenXmlCompositeElement
 public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13317;
-    /// <inheritdoc/>
-    public override string LocalName => "properties";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -749,11 +719,7 @@ public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
 public partial class WebExtensionBindingList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13318;
-    /// <inheritdoc/>
-    public override string LocalName => "bindings";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -851,11 +817,7 @@ public partial class WebExtensionBindingList : OpenXmlCompositeElement
 public partial class Snapshot : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13319;
-    /// <inheritdoc/>
-    public override string LocalName => "snapshot";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -865,7 +827,8 @@ public partial class Snapshot : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "embed", 0)]
+    [SchemaAttr(19, "embed")]
+    [Index(0)]
     public StringValue Embed { get; set; }
     /// <summary>
     /// <para> Linked Picture Reference.</para>
@@ -873,13 +836,15 @@ public partial class Snapshot : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "link", 1)]
+    [SchemaAttr(19, "link")]
+    [Index(1)]
     public StringValue Link { get; set; }
     /// <summary>
     /// <para> cstate.</para>
     /// <para>Represents the following attribute in the schema: cstate </para>
     /// </summary>
-    [SchemaAttr(0, "cstate", 2)]
+    [SchemaAttr(0, "cstate")]
+    [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues> CompressionState { get; set; }
 
     /// <summary>

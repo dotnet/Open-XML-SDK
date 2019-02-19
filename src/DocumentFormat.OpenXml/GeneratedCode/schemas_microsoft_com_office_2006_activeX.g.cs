@@ -27,11 +27,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
 public partial class ActiveXControlData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12688;
-    /// <inheritdoc/>
-    public override string LocalName => "ocx";
-    internal override byte NamespaceId => 35;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -41,7 +37,8 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
-    [SchemaAttr(35, "classid", 0)]
+    [SchemaAttr(35, "classid")]
+    [Index(0)]
     public StringValue ActiveXControlClassId { get; set; }
     /// <summary>
     /// <para> license.</para>
@@ -49,7 +46,8 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
-    [SchemaAttr(35, "license", 1)]
+    [SchemaAttr(35, "license")]
+    [Index(1)]
     public StringValue License { get; set; }
     /// <summary>
     /// <para> id.</para>
@@ -57,7 +55,8 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id", 2)]
+    [SchemaAttr(19, "id")]
+    [Index(2)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> persistence.</para>
@@ -65,7 +64,8 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
-    [SchemaAttr(35, "persistence", 3)]
+    [SchemaAttr(35, "persistence")]
+    [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence { get; set; }
 
     /// <summary>
@@ -129,11 +129,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
 public partial class ActiveXObjectProperty : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12689;
-    /// <inheritdoc/>
-    public override string LocalName => "ocxPr";
-    internal override byte NamespaceId => 35;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -143,7 +139,8 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
-    [SchemaAttr(35, "name", 0)]
+    [SchemaAttr(35, "name")]
+    [Index(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> value.</para>
@@ -151,7 +148,8 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
-    [SchemaAttr(35, "value", 1)]
+    [SchemaAttr(35, "value")]
+    [Index(1)]
     public StringValue Value { get; set; }
 
     /// <summary>
@@ -189,13 +187,7 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "font","picture" };
-    private static readonly byte[] eleNamespaceIds = { 35,35 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
     
         /// <summary>
     /// <para> SharedComFont.</para>
@@ -204,11 +196,12 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
     /// </remark>
+	[Index(0)]
     public SharedComFont SharedComFont
-    {
+	{
         get => GetElement<SharedComFont>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> SharedComPicture.</para>
@@ -217,11 +210,12 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
     /// </remark>
+	[Index(1)]
     public SharedComPicture SharedComPicture
-    {
+	{
         get => GetElement<SharedComPicture>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 
@@ -248,11 +242,7 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
 public partial class SharedComFont : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12690;
-    /// <inheritdoc/>
-    public override string LocalName => "font";
-    internal override byte NamespaceId => 35;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -262,7 +252,8 @@ public partial class SharedComFont : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
-    [SchemaAttr(35, "persistence", 0)]
+    [SchemaAttr(35, "persistence")]
+    [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence { get; set; }
     /// <summary>
     /// <para> id.</para>
@@ -270,7 +261,8 @@ public partial class SharedComFont : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id", 1)]
+    [SchemaAttr(19, "id")]
+    [Index(1)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -325,11 +317,7 @@ public partial class SharedComFont : OpenXmlCompositeElement
 public partial class SharedComPicture : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12691;
-    /// <inheritdoc/>
-    public override string LocalName => "picture";
-    internal override byte NamespaceId => 35;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -339,7 +327,8 @@ public partial class SharedComPicture : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id", 0)]
+    [SchemaAttr(19, "id")]
+    [Index(0)]
     public StringValue Id { get; set; }
 
     /// <summary>

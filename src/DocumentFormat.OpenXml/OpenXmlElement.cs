@@ -25,6 +25,7 @@ namespace DocumentFormat.OpenXml
         #region data members
 
         private ElementPropertyCollection<OpenXmlSimpleType> _rawAttributes;
+        private ElementPropertyCollection<OpenXmlElement> _rawElements;
 
         // implement annotations mechanism like XObject in LINQ to XML
         // Annotations will not be cloned when calling .Clone() and .CloneNode(bool)
@@ -198,17 +199,23 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        #endregion
+        internal ElementPropertyCollection<OpenXmlElement> RawElements
+        {
+            get
+            {
+                if (!_rawElements.IsValid)
+                {
+                    _rawElements= new ElementPropertyCollection<OpenXmlElement>(this, PackageCache.Cache.GetElements(GetType()));
+                }
 
-        #region internal virtual properties
-
-        // following properties will be overridden in all generated classes.
-        // generate will generate the constant data
+                return _rawElements;
+            }
+        }
 
         /// <summary>
         /// Gets the namespace ID of the current element.
         /// </summary>
-        internal abstract byte NamespaceId { get; }
+        internal byte NamespaceId => PackageCache.Cache.GetElementTypeInfo(GetType()).Schema?.NamespaceId ?? throw new InvalidOperationException();
 
         #endregion
 
@@ -317,16 +324,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the local name of the current element.
         /// </summary>
-        public virtual string LocalName
-        {
-            get
-            {
-#if DEBUG
-                Debug.Assert(false, "LocalName not implemented.");
-#endif
-                return null;
-            }
-        }
+        public virtual string LocalName => PackageCache.Cache.GetElementTypeInfo(GetType()).Schema.Tag;
 
         /// <summary>
         /// Gets the namespace prefix of current element.
@@ -1930,7 +1928,7 @@ namespace DocumentFormat.OpenXml
         /// For <see cref="OpenXmlUnknownElement"/>, always returns <c>false</c>
         /// For <see cref="OpenXmlMiscNode"/>, always returns <c>true</c>
         /// </summary>
-        internal abstract FileFormatVersions InitialVersion { get; }
+        internal FileFormatVersions InitialVersion => PackageCache.Cache.GetElementTypeInfo(GetType()).Availability;
 
         #endregion
 

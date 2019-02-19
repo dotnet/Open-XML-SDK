@@ -46,11 +46,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
 public partial class LockedCanvas : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10759;
-    /// <inheritdoc/>
-    public override string LocalName => "lockedCanvas";
-    internal override byte NamespaceId => 15;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -90,13 +86,7 @@ public partial class LockedCanvas : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "nvGrpSpPr","grpSpPr","txSp","sp","cxnSp","pic","contentPart","graphicFrame","grpSp","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,48,10,10,10 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Non-Visual Properties for a Group Shape.</para>
@@ -105,11 +95,12 @@ public partial class LockedCanvas : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties NonVisualGroupShapeProperties
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Visual Group Shape Properties.</para>
@@ -118,11 +109,12 @@ public partial class LockedCanvas : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
+	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties VisualGroupShapeProperties
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 

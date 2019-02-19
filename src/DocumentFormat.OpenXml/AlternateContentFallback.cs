@@ -60,13 +60,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public static string TagName => Name;
 
-        /// <summary>
-        /// Gets the local name of the element.
-        /// </summary>
-        public override string LocalName => TagName;
-
-        internal override byte NamespaceId => AlternateContent.MarkupCompatibilityNamespaceId;
-
         internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         {
             OpenXmlElement newElement = null;
@@ -102,7 +95,5 @@ namespace DocumentFormat.OpenXml
         /// Gets the type ID of the element.
         /// </summary>
         internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentFallbackId;
-
-        internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     }
 }

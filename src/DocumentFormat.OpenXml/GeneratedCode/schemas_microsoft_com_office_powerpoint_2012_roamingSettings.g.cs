@@ -20,11 +20,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
 public partial class Key : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 13436;
-    /// <inheritdoc/>
-    public override string LocalName => "key";
-    internal override byte NamespaceId => 76;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the Key class.
@@ -61,11 +57,7 @@ public partial class Key : OpenXmlLeafTextElement
 public partial class Value : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 13437;
-    /// <inheritdoc/>
-    public override string LocalName => "value";
-    internal override byte NamespaceId => 76;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the Value class.
@@ -111,11 +103,7 @@ public partial class Value : OpenXmlLeafTextElement
 public partial class RoamingProperty : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13438;
-    /// <inheritdoc/>
-    public override string LocalName => "props";
-    internal override byte NamespaceId => 76;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -155,13 +143,7 @@ public partial class RoamingProperty : OpenXmlCompositeElement
      
     
     
-        private static readonly string[] eleTagNames = { "key","value" };
-    private static readonly byte[] eleNamespaceIds = { 76,76 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Key.</para>
@@ -170,11 +152,12 @@ public partial class RoamingProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:pRoam = http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings
     /// </remark>
+	[Index(0)]
     public Key Key
-    {
+	{
         get => GetElement<Key>(0);
         set => SetElement(0, value);
-    }
+	}
     
     /// <summary>
     /// <para> Value.</para>
@@ -183,11 +166,12 @@ public partial class RoamingProperty : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:pRoam = http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings
     /// </remark>
+	[Index(1)]
     public Value Value
-    {
+	{
         get => GetElement<Value>(1);
         set => SetElement(1, value);
-    }
+	}
     
 
 

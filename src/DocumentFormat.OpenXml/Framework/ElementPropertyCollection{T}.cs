@@ -74,15 +74,15 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        public static ReadOnlyArray<ElementProperty<T>> GetProperties(PackageCache cache, Type type)
+        public static ReadOnlyArray<ElementProperty<T>> GetProperties(PackageCache cache, Type type, Func<PropertyInfo, SchemaIndex> getSchema)
         {
             return type.GetRuntimeProperties()
                 .Where(property => typeof(T).GetTypeInfo().IsAssignableFrom(property.PropertyType.GetTypeInfo()))
                 .Select(property =>
                 {
-                    var schema = property.GetCustomAttribute<SchemaAttrAttribute>();
+                    var schema = getSchema(property);
 
-                    if (schema is null)
+                    if (!schema.IsValid)
                     {
                         return default;
                     }

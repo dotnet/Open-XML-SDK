@@ -26,11 +26,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
 public partial class DataStoreItem : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 10900;
-    /// <inheritdoc/>
-    public override string LocalName => "datastoreItem";
-    internal override byte NamespaceId => 20;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -40,7 +36,8 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     /// </summary>
 ///<remark> xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
 ///</remark>
-    [SchemaAttr(20, "itemID", 0)]
+    [SchemaAttr(20, "itemID")]
+    [Index(0)]
     public StringValue ItemId { get; set; }
 
     
@@ -107,13 +104,7 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     }
     
     
-        private static readonly string[] eleTagNames = { "schemaRefs" };
-    private static readonly byte[] eleNamespaceIds = { 20 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> Set of Associated XML Schemas.</para>
@@ -122,11 +113,12 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ds = http://schemas.openxmlformats.org/officeDocument/2006/customXml
     /// </remark>
+	[Index(0)]
     public SchemaReferences SchemaReferences
-    {
+	{
         get => GetElement<SchemaReferences>(0);
         set => SetElement(0, value);
-    }
+	}
     
 
 
@@ -146,11 +138,7 @@ public partial class DataStoreItem : OpenXmlPartRootElement
 public partial class SchemaReference : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10901;
-    /// <inheritdoc/>
-    public override string LocalName => "schemaRef";
-    internal override byte NamespaceId => 20;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -160,7 +148,8 @@ public partial class SchemaReference : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
 ///</remark>
-    [SchemaAttr(20, "uri", 0)]
+    [SchemaAttr(20, "uri")]
+    [Index(0)]
     public StringValue Uri { get; set; }
 
     /// <summary>
@@ -196,11 +185,7 @@ public partial class SchemaReference : OpenXmlLeafElement
 public partial class SchemaReferences : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10902;
-    /// <inheritdoc/>
-    public override string LocalName => "schemaRefs";
-    internal override byte NamespaceId => 20;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
