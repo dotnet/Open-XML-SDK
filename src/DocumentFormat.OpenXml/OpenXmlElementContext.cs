@@ -68,16 +68,6 @@ namespace DocumentFormat.OpenXml
 
         internal static XmlReaderSettings CreateDefaultXmlReaderSettings()
         {
-            var nameTable = new NameTable();
-
-            // load predefined namespace to nametable
-            for (int i = 1; i < NamespaceIdMap.Count; i++)
-            {
-                nameTable.Add(NamespaceIdMap.GetNamespaceUri((byte)i));
-            }
-
-            nameTable.Add(xmlnsUri);
-
             return new XmlReaderSettings
             {
 #if FEATURE_XML_PROHIBIT_DTD
@@ -85,7 +75,6 @@ namespace DocumentFormat.OpenXml
 #else
                 DtdProcessing = DtdProcessing.Prohibit,
 #endif
-                NameTable = new NameTable(),
 
                 // Set IgnoreWhitespace to false for the SDK to handle the whitespace node type. We have to do this because
                 // PPT does not use the preserve attribute (xml:space="preserve") for non-ignorable whitespace.

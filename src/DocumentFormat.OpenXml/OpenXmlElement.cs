@@ -205,7 +205,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (!_rawElements.IsValid)
                 {
-                    _rawElements= new ElementPropertyCollection<OpenXmlElement>(this, PackageCache.Cache.GetElements(GetType()));
+                    _rawElements = new ElementPropertyCollection<OpenXmlElement>(this, PackageCache.Cache.GetElements(GetType()));
                 }
 
                 return _rawElements;
@@ -334,13 +334,15 @@ namespace DocumentFormat.OpenXml
             get
             {
                 MakeSureParsed();
-                var ret = LookupPrefix(NamespaceUri);
-                if (string.IsNullOrEmpty(ret))
+
+                var prefix = LookupPrefix(NamespaceUri);
+
+                if (!string.IsNullOrEmpty(prefix))
                 {
-                    ret = NamespaceIdMap.GetNamespacePrefix(NamespaceId);
+                    return prefix;
                 }
 
-                return ret;
+                return NamespaceIdMap.GetNamespacePrefix(NamespaceId);
             }
         }
 
