@@ -3,12 +3,18 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using System;
-using System.Globalization;
 
 namespace DocumentFormat.OpenXml
 {
     internal static class FileFormatVersionExtensions
     {
+        public static FileFormatVersions[] AllVersions { get; } = new[]
+        {
+            FileFormatVersions.Office2007,
+            FileFormatVersions.Office2010,
+            FileFormatVersions.Office2013,
+        };
+
         /// <summary>
         /// Determines whether the supplied version is within the known set of versions
         /// </summary>

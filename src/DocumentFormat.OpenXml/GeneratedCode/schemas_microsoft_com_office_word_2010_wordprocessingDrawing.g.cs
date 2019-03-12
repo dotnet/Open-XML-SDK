@@ -16,19 +16,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(51, "pctPosHOffset")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12889;
-    /// <inheritdoc/>
-    public override string LocalName => "pctPosHOffset";
-    
-    internal override byte NamespaceId => 51;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the PercentagePositionHeightOffset class.
@@ -60,19 +53,12 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(51, "pctPosVOffset")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12890;
-    /// <inheritdoc/>
-    public override string LocalName => "pctPosVOffset";
-    
-    internal override byte NamespaceId => 51;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the PercentagePositionVerticalOffset class.
@@ -112,39 +98,21 @@ public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(PercentageWidth), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(51, "sizeRelH")]
 public partial class RelativeWidth : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12891;
-    /// <inheritdoc/>
-    public override string LocalName => "sizeRelH";
-    
-    internal override byte NamespaceId => 51;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "relativeFrom" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> relativeFrom.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
     [SchemaAttr(0, "relativeFrom")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [Index(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the RelativeWidth class.
@@ -176,26 +144,12 @@ public partial class RelativeWidth : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 51 == namespaceId && "pctWidth" == name)
-    return new PercentageWidth();
     
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "pctWidth" };
-    private static readonly byte[] eleNamespaceIds = { 51 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PercentageWidth.</para>
@@ -204,22 +158,14 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// <remark>
     /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
     /// </remark>
+	[Index(0)]
     public PercentageWidth PercentageWidth
-    {
+	{
         get => GetElement<PercentageWidth>(0);
         set => SetElement(0, value);
-    }
-
-
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "relativeFrom" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>();
+	}
     
 
-    
-    return base.AttributeFactory(namespaceId, name);
-}
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelativeWidth>(deep);
@@ -240,39 +186,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PercentageHeight), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(51, "sizeRelV")]
 public partial class RelativeHeight : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12892;
-    /// <inheritdoc/>
-    public override string LocalName => "sizeRelV";
-    
-    internal override byte NamespaceId => 51;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "relativeFrom" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> relativeFrom.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
     [SchemaAttr(0, "relativeFrom")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [Index(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the RelativeHeight class.
@@ -304,26 +232,12 @@ public partial class RelativeHeight : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 51 == namespaceId && "pctHeight" == name)
-    return new PercentageHeight();
     
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "pctHeight" };
-    private static readonly byte[] eleNamespaceIds = { 51 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PercentageHeight.</para>
@@ -332,22 +246,14 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     /// <remark>
     /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
     /// </remark>
+	[Index(0)]
     public PercentageHeight PercentageHeight
-    {
+	{
         get => GetElement<PercentageHeight>(0);
         set => SetElement(0, value);
-    }
-
-
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "relativeFrom" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>();
+	}
     
 
-    
-    return base.AttributeFactory(namespaceId, name);
-}
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelativeHeight>(deep);
@@ -360,19 +266,12 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(51, "pctWidth")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentageWidth : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12893;
-    /// <inheritdoc/>
-    public override string LocalName => "pctWidth";
-    
-    internal override byte NamespaceId => 51;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the PercentageWidth class.
@@ -404,19 +303,12 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(51, "pctHeight")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentageHeight : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12894;
-    /// <inheritdoc/>
-    public override string LocalName => "pctHeight";
-    
-    internal override byte NamespaceId => 51;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the PercentageHeight class.

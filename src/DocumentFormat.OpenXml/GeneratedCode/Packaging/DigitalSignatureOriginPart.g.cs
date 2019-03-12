@@ -9,13 +9,13 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DigitalSignatureOriginPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(XmlSignaturePart), false, true)]
     public partial class DigitalSignatureOriginPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-package.digital-signature-origin";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin";
-        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Creates an instance of the DigitalSignatureOriginPart OpenXmlType
@@ -26,29 +26,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        {
-                            "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/signature",
-                            PartConstraintRule.Create<XmlSignaturePart>(false, true)
-                        }
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

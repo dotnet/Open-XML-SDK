@@ -99,8 +99,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             var element = validationContext.Element;
 
-            Debug.Assert(element.Attributes == null && schemaTypeData.AttributeConstraintsCount == 0 ||
-                          element.Attributes.Length == schemaTypeData.AttributeConstraintsCount);
+            Debug.Assert(schemaTypeData.AttributeConstraintsCount == 0 || element.Attributes.Length == schemaTypeData.AttributeConstraintsCount);
 
             ValidationErrorInfo errorInfo;
 
@@ -115,9 +114,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     switch (attributeConstraint.XsdAttributeUse)
                     {
                         case XsdAttributeUse.Required:
-                            if (element.Attributes[i] == null)
+                            var attribute = element.Attributes[i];
+
+                            if (!attribute.HasValue)
                             {
-                                string attributeQname = element.GetFixedAttributeQname(i).ToString();
+                                string attributeQname = attribute.Property.GetQName().ToString();
 
                                 // error: miss required attribute
                                 errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_MissRequiredAttribute", attributeQname);
@@ -137,28 +138,28 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             break;
                     }
 
-                    if (element.Attributes[i] != null)
+                    if (element.Attributes[i].HasValue)
                     {
-                        OpenXmlSimpleType attributeValue = element.Attributes[i];
+                        OpenXmlSimpleType attributeValue = element.Attributes[i].Value;
 
-                        string attributeQname = element.GetFixedAttributeQname(i).ToString();
+                        string attributeQname = element.Attributes[i].Property.GetQName().ToString();
 
                         ValidateValue(validationContext, attributeConstraint.SimpleTypeConstraint, attributeValue, attributeQname, true);
                     }
                 }
                 else
                 {
-                    if (element.Attributes[i] != null)
+                    if (element.Attributes[i].HasValue)
                     {
                         // The attribute is not defined in the specified version, report error.
-                        if (validationContext.McContext.IsIgnorableNs(element.AttributeNamespaceIds[i]))
+                        if (validationContext.McContext.IsIgnorableNs(element.Attributes[i].Property.Namespace))
                         {
                             // Ignorable attribute, no error.
                         }
                         else
                         {
                             // emit error
-                            string attributeQname = element.GetFixedAttributeQname(i).ToString();
+                            string attributeQname = element.Attributes[i].Property.GetQName().ToString();
                             errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_UndeclaredAttribute", attributeQname);
                             errorInfo.SetDebugField(attributeQname, "Sch_UndeclaredAttribute");
                             validationContext.AddError(errorInfo);

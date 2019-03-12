@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
-
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
@@ -24,26 +22,26 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
+            var attribute = context.Element.Attributes[_attribute];
 
-            if (attributeValue == null)
+            if (!attribute.HasValue)
             {
                 return null;
             }
 
-            if (!GetAttrNumVal(attributeValue, out double val))
+            if (!GetAttrNumVal(attribute.Value, out double val))
             {
                 return null;
             }
 
-            OpenXmlSimpleType otherAttributeValue = context.Element.Attributes[_otherAttribute];
+            var other = context.Element.Attributes[_otherAttribute];
 
-            if (otherAttributeValue == null)
+            if (!other.HasValue)
             {
                 return null;
             }
 
-            if (!GetAttrNumVal(otherAttributeValue, out double otherVal))
+            if (!GetAttrNumVal(other.Value, out double otherVal))
             {
                 return null;
             }
@@ -63,9 +61,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Description = SR.Format(
                     format,
                     GetAttributeQualifiedName(context.Element, _attribute),
-                    attributeValue.InnerText,
+                    attribute.Value.InnerText,
                     GetAttributeQualifiedName(context.Element, _otherAttribute),
-                    otherAttributeValue.InnerText),
+                    other.Value.InnerText),
             };
         }
     }

@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Xml;
 using Xunit;
 
@@ -91,7 +92,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.NotNull(target.Type);
             Assert.True(target.Type.HasValue);
             Assert.Equal(HeaderFooterValues.Default, target.Type.Value);
-            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues) target.Type);
+            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues)target.Type);
 
             Assert.NotNull(target.Id);
             Assert.Equal("1", target.Id);
@@ -105,7 +106,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.NotNull(target.Type);
             Assert.True(target.Type.HasValue);
             Assert.Equal(HeaderFooterValues.Default, target.Type.Value);
-            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues) target.Type);
+            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues)target.Type);
 
             Assert.NotNull(target.Id);
             Assert.Equal("1", target.Id);
@@ -120,7 +121,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.NotNull(target.Type);
             Assert.True(target.Type.HasValue);
             Assert.Equal(HeaderFooterValues.Default, target.Type.Value);
-            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues) target.Type);
+            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues)target.Type);
 
             Assert.Null(target.Id);
 
@@ -552,7 +553,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var clonedParagraph = paragraph.CloneNode(false);
                 Assert.False(clonedParagraph.HasChildren);
                 Assert.True(clonedParagraph.HasAttributes);
-                Assert.Equal(paragraph.Attributes.Count(), clonedParagraph.Attributes.Count());
+                Assert.Equal(paragraph.Attributes.Length, clonedParagraph.Attributes.Length);
                 Assert.Equal(paragraph.ExtendedAttributes.Count(), clonedParagraph.ExtendedAttributes.Count());
 
                 // Deep clone the document
@@ -568,11 +569,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(curElem.GetType(), elem.GetType());
                     Assert.Equal(curElem.NamespaceUri, elem.NamespaceUri);
                     Assert.Equal(curElem.XmlQualifiedName, elem.XmlQualifiedName);
-                    Assert.Equal(curElem.Attributes == null, elem.Attributes == null);
-                    if (curElem.Attributes != null)
-                    {
-                        Assert.Equal(curElem.Attributes.Length, elem.Attributes.Length);
-                    }
+                    Assert.Equal(curElem.Attributes.Length, elem.Attributes.Length);
 
                     Assert.Equal(curElem.ExtendedAttributes.Count(), elem.ExtendedAttributes.Count());
                     var a1 = curElem.ExtendedAttributes.ToArray();
@@ -971,6 +968,37 @@ namespace DocumentFormat.OpenXml.Tests
             catch
             {
                 Assert.True(false); // Assert.Fail("Should not throw exception.");
+            }
+        }
+
+        [Fact]
+        public void AllElementsHaveIndexAttribute()
+        {
+            var skippedTypes = new HashSet<Type>
+            {
+                typeof(OpenXmlElement),
+                typeof(OpenXmlCompositeElement),
+                typeof(OpenXmlLeafElement),
+                typeof(OpenXmlLeafTextElement),
+            };
+
+            var types = typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes()
+                .Where(t => typeof(OpenXmlElement).IsAssignableFrom(t))
+                .Where(t => !skippedTypes.Contains(t));
+
+            foreach (var type in types)
+            {
+                foreach (var property in type.GetTypeInfo().GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly))
+                {
+                    if (typeof(OpenXmlElement).IsAssignableFrom(property.PropertyType) || typeof(OpenXmlSimpleType).IsAssignableFrom(property.PropertyType))
+                    {
+                        // Skip any obsolete properties as those redirect to other properties
+                        if (property.GetCustomAttribute<ObsoleteAttribute>() == null)
+                        {
+                            Assert.NotNull(property.GetCustomAttribute<IndexAttribute>());
+                        }
+                    }
+                }
             }
         }
     }

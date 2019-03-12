@@ -68,16 +68,6 @@ namespace DocumentFormat.OpenXml
 
         internal static XmlReaderSettings CreateDefaultXmlReaderSettings()
         {
-            var nameTable = new NameTable();
-
-            // load predefined namespace to nametable
-            for (int i = 1; i < NamespaceIdMap.Count; i++)
-            {
-                nameTable.Add(NamespaceIdMap.GetNamespaceUri((byte)i));
-            }
-
-            nameTable.Add(xmlnsUri);
-
             return new XmlReaderSettings
             {
 #if FEATURE_XML_PROHIBIT_DTD

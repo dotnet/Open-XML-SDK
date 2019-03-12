@@ -17,39 +17,21 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(74, "absPath")]
 public partial class AbsolutePath : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13434;
-    /// <inheritdoc/>
-    public override string LocalName => "absPath";
-    
-    internal override byte NamespaceId => 74;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
 
-    	private static readonly string[] attributeTagNames = { "url" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> url.</para>
     /// <para>Represents the following attribute in the schema: url </para>
     /// </summary>
     [SchemaAttr(0, "url")]
-    public StringValue Url
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [Index(0)]
+    public StringValue Url { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the AbsolutePath class.
@@ -61,16 +43,6 @@ public partial class AbsolutePath : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "url" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbsolutePath>(deep);
 

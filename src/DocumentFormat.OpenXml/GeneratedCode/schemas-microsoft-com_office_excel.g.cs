@@ -155,39 +155,21 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     [ChildElementInfo(typeof(FormulaTextBox))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(29, "ClientData")]
 public partial class ClientData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12507;
-    /// <inheritdoc/>
-    public override string LocalName => "ClientData";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    	private static readonly string[] attributeTagNames = { "ObjectType" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> Object type.</para>
     /// <para>Represents the following attribute in the schema: ObjectType </para>
     /// </summary>
     [SchemaAttr(0, "ObjectType")]
-    public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues> ObjectType
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [Index(0)]
+    public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues> ObjectType { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ClientData class.
@@ -219,228 +201,12 @@ public partial class ClientData : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 29 == namespaceId && "MoveWithCells" == name)
-    return new MoveWithCells();
     
-if( 29 == namespaceId && "SizeWithCells" == name)
-    return new ResizeWithCells();
     
-if( 29 == namespaceId && "Anchor" == name)
-    return new Anchor();
-    
-if( 29 == namespaceId && "Locked" == name)
-    return new Locked();
-    
-if( 29 == namespaceId && "DefaultSize" == name)
-    return new DefaultSize();
-    
-if( 29 == namespaceId && "PrintObject" == name)
-    return new PrintObject();
-    
-if( 29 == namespaceId && "Disabled" == name)
-    return new Disabled();
-    
-if( 29 == namespaceId && "AutoFill" == name)
-    return new AutoFill();
-    
-if( 29 == namespaceId && "AutoLine" == name)
-    return new AutoLine();
-    
-if( 29 == namespaceId && "AutoPict" == name)
-    return new AutoSizePicture();
-    
-if( 29 == namespaceId && "FmlaMacro" == name)
-    return new FormulaMacro();
-    
-if( 29 == namespaceId && "TextHAlign" == name)
-    return new HorizontalTextAlignment();
-    
-if( 29 == namespaceId && "TextVAlign" == name)
-    return new VerticalTextAlignment();
-    
-if( 29 == namespaceId && "LockText" == name)
-    return new LockText();
-    
-if( 29 == namespaceId && "JustLastX" == name)
-    return new JustifyLastLine();
-    
-if( 29 == namespaceId && "SecretEdit" == name)
-    return new SecretEdit();
-    
-if( 29 == namespaceId && "Default" == name)
-    return new DefaultButton();
-    
-if( 29 == namespaceId && "Help" == name)
-    return new HelpButton();
-    
-if( 29 == namespaceId && "Cancel" == name)
-    return new CancelButton();
-    
-if( 29 == namespaceId && "Dismiss" == name)
-    return new DismissButton();
-    
-if( 29 == namespaceId && "Accel" == name)
-    return new AcceleratorPrimary();
-    
-if( 29 == namespaceId && "Accel2" == name)
-    return new AcceleratorSecondary();
-    
-if( 29 == namespaceId && "Row" == name)
-    return new CommentRowTarget();
-    
-if( 29 == namespaceId && "Column" == name)
-    return new CommentColumnTarget();
-    
-if( 29 == namespaceId && "Visible" == name)
-    return new Visible();
-    
-if( 29 == namespaceId && "RowHidden" == name)
-    return new RowHidden();
-    
-if( 29 == namespaceId && "ColHidden" == name)
-    return new ColumnHidden();
-    
-if( 29 == namespaceId && "VTEdit" == name)
-    return new InputValidationType();
-    
-if( 29 == namespaceId && "MultiLine" == name)
-    return new MultiLine();
-    
-if( 29 == namespaceId && "VScroll" == name)
-    return new VerticalScrollBar();
-    
-if( 29 == namespaceId && "ValidIds" == name)
-    return new ValidIds();
-    
-if( 29 == namespaceId && "FmlaRange" == name)
-    return new FormulaRange();
-    
-if( 29 == namespaceId && "WidthMin" == name)
-    return new MinDropDownWidth();
-    
-if( 29 == namespaceId && "Sel" == name)
-    return new SelectionEntry();
-    
-if( 29 == namespaceId && "NoThreeD2" == name)
-    return new Disable3DForListBoxAndDropDown();
-    
-if( 29 == namespaceId && "SelType" == name)
-    return new SelectionType();
-    
-if( 29 == namespaceId && "MultiSel" == name)
-    return new MultiSelections();
-    
-if( 29 == namespaceId && "LCT" == name)
-    return new ListBoxCallbackType();
-    
-if( 29 == namespaceId && "ListItem" == name)
-    return new ListItem();
-    
-if( 29 == namespaceId && "DropStyle" == name)
-    return new DropStyle();
-    
-if( 29 == namespaceId && "Colored" == name)
-    return new Colored();
-    
-if( 29 == namespaceId && "DropLines" == name)
-    return new DropLines();
-    
-if( 29 == namespaceId && "Checked" == name)
-    return new Checked();
-    
-if( 29 == namespaceId && "FmlaLink" == name)
-    return new FormulaLink();
-    
-if( 29 == namespaceId && "FmlaPict" == name)
-    return new FormulaPicture();
-    
-if( 29 == namespaceId && "NoThreeD" == name)
-    return new Disable3D();
-    
-if( 29 == namespaceId && "FirstButton" == name)
-    return new FirstButton();
-    
-if( 29 == namespaceId && "FmlaGroup" == name)
-    return new FormulaGroup();
-    
-if( 29 == namespaceId && "Val" == name)
-    return new ScrollBarPosition();
-    
-if( 29 == namespaceId && "Min" == name)
-    return new ScrollBarMin();
-    
-if( 29 == namespaceId && "Max" == name)
-    return new ScrollBarMax();
-    
-if( 29 == namespaceId && "Inc" == name)
-    return new ScrollBarIncrement();
-    
-if( 29 == namespaceId && "Page" == name)
-    return new ScrollBarPageIncrement();
-    
-if( 29 == namespaceId && "Horiz" == name)
-    return new HorizontalScrollBar();
-    
-if( 29 == namespaceId && "Dx" == name)
-    return new ScrollBarWidth();
-    
-if( 29 == namespaceId && "MapOCX" == name)
-    return new MapOcxControl();
-    
-if( 29 == namespaceId && "CF" == name)
-    return new ClipboardFormat();
-    
-if( 29 == namespaceId && "Camera" == name)
-    return new CameraObject();
-    
-if( 29 == namespaceId && "RecalcAlways" == name)
-    return new RecalculateAlways();
-    
-if( 29 == namespaceId && "AutoScale" == name)
-    return new AutoScaleFont();
-    
-if( 29 == namespaceId && "DDE" == name)
-    return new DdeObject();
-    
-if( 29 == namespaceId && "UIObj" == name)
-    return new UIObject();
-    
-if( 29 == namespaceId && "ScriptText" == name)
-    return new ScriptText();
-    
-if( 29 == namespaceId && "ScriptExtended" == name)
-    return new ScriptExtended();
-    
-if( 29 == namespaceId && "ScriptLanguage" == name)
-    return new ScriptLanguage();
-    
-if( 29 == namespaceId && "ScriptLocation" == name)
-    return new ScriptLocation();
-    
-if( 29 == namespaceId && "FmlaTxbx" == name)
-    return new FormulaTextBox();
-    
-
-    return null;
-}
-
-    
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "ObjectType" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ClientData>(deep);
 
@@ -452,19 +218,12 @@ if( 29 == namespaceId && "FmlaTxbx" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "MoveWithCells")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MoveWithCells : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12508;
-    /// <inheritdoc/>
-    public override string LocalName => "MoveWithCells";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MoveWithCells class.
@@ -496,19 +255,12 @@ public partial class MoveWithCells : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "SizeWithCells")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ResizeWithCells : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12509;
-    /// <inheritdoc/>
-    public override string LocalName => "SizeWithCells";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ResizeWithCells class.
@@ -540,19 +292,12 @@ public partial class ResizeWithCells : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Locked")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Locked : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12511;
-    /// <inheritdoc/>
-    public override string LocalName => "Locked";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Locked class.
@@ -584,19 +329,12 @@ public partial class Locked : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "DefaultSize")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultSize : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12512;
-    /// <inheritdoc/>
-    public override string LocalName => "DefaultSize";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DefaultSize class.
@@ -628,19 +366,12 @@ public partial class DefaultSize : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "PrintObject")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PrintObject : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12513;
-    /// <inheritdoc/>
-    public override string LocalName => "PrintObject";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the PrintObject class.
@@ -672,19 +403,12 @@ public partial class PrintObject : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Disabled")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Disabled : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12514;
-    /// <inheritdoc/>
-    public override string LocalName => "Disabled";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Disabled class.
@@ -716,19 +440,12 @@ public partial class Disabled : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "AutoFill")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoFill : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12515;
-    /// <inheritdoc/>
-    public override string LocalName => "AutoFill";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AutoFill class.
@@ -760,19 +477,12 @@ public partial class AutoFill : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "AutoLine")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoLine : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12516;
-    /// <inheritdoc/>
-    public override string LocalName => "AutoLine";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AutoLine class.
@@ -804,19 +514,12 @@ public partial class AutoLine : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "AutoPict")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoSizePicture : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12517;
-    /// <inheritdoc/>
-    public override string LocalName => "AutoPict";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AutoSizePicture class.
@@ -848,19 +551,12 @@ public partial class AutoSizePicture : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "LockText")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LockText : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12521;
-    /// <inheritdoc/>
-    public override string LocalName => "LockText";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the LockText class.
@@ -892,19 +588,12 @@ public partial class LockText : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "JustLastX")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class JustifyLastLine : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12522;
-    /// <inheritdoc/>
-    public override string LocalName => "JustLastX";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the JustifyLastLine class.
@@ -936,19 +625,12 @@ public partial class JustifyLastLine : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "SecretEdit")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SecretEdit : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12523;
-    /// <inheritdoc/>
-    public override string LocalName => "SecretEdit";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SecretEdit class.
@@ -980,19 +662,12 @@ public partial class SecretEdit : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Default")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultButton : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12524;
-    /// <inheritdoc/>
-    public override string LocalName => "Default";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DefaultButton class.
@@ -1024,19 +699,12 @@ public partial class DefaultButton : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Help")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HelpButton : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12525;
-    /// <inheritdoc/>
-    public override string LocalName => "Help";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HelpButton class.
@@ -1068,19 +736,12 @@ public partial class HelpButton : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Cancel")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CancelButton : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12526;
-    /// <inheritdoc/>
-    public override string LocalName => "Cancel";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CancelButton class.
@@ -1112,19 +773,12 @@ public partial class CancelButton : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Dismiss")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DismissButton : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12527;
-    /// <inheritdoc/>
-    public override string LocalName => "Dismiss";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DismissButton class.
@@ -1156,19 +810,12 @@ public partial class DismissButton : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Visible")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Visible : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12532;
-    /// <inheritdoc/>
-    public override string LocalName => "Visible";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Visible class.
@@ -1200,19 +847,12 @@ public partial class Visible : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "RowHidden")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RowHidden : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12533;
-    /// <inheritdoc/>
-    public override string LocalName => "RowHidden";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the RowHidden class.
@@ -1244,19 +884,12 @@ public partial class RowHidden : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "ColHidden")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnHidden : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12534;
-    /// <inheritdoc/>
-    public override string LocalName => "ColHidden";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ColumnHidden class.
@@ -1288,19 +921,12 @@ public partial class ColumnHidden : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "MultiLine")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MultiLine : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12536;
-    /// <inheritdoc/>
-    public override string LocalName => "MultiLine";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MultiLine class.
@@ -1332,19 +958,12 @@ public partial class MultiLine : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "VScroll")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VerticalScrollBar : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12537;
-    /// <inheritdoc/>
-    public override string LocalName => "VScroll";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the VerticalScrollBar class.
@@ -1376,19 +995,12 @@ public partial class VerticalScrollBar : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "ValidIds")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ValidIds : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12538;
-    /// <inheritdoc/>
-    public override string LocalName => "ValidIds";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ValidIds class.
@@ -1420,19 +1032,12 @@ public partial class ValidIds : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "NoThreeD2")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12542;
-    /// <inheritdoc/>
-    public override string LocalName => "NoThreeD2";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Disable3DForListBoxAndDropDown class.
@@ -1464,19 +1069,12 @@ public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Colored")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Colored : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12548;
-    /// <inheritdoc/>
-    public override string LocalName => "Colored";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Colored class.
@@ -1508,19 +1106,12 @@ public partial class Colored : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "NoThreeD")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Disable3D : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12553;
-    /// <inheritdoc/>
-    public override string LocalName => "NoThreeD";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Disable3D class.
@@ -1552,19 +1143,12 @@ public partial class Disable3D : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "FirstButton")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FirstButton : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12554;
-    /// <inheritdoc/>
-    public override string LocalName => "FirstButton";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the FirstButton class.
@@ -1596,19 +1180,12 @@ public partial class FirstButton : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Horiz")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HorizontalScrollBar : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12561;
-    /// <inheritdoc/>
-    public override string LocalName => "Horiz";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HorizontalScrollBar class.
@@ -1640,19 +1217,12 @@ public partial class HorizontalScrollBar : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "MapOCX")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MapOcxControl : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12563;
-    /// <inheritdoc/>
-    public override string LocalName => "MapOCX";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MapOcxControl class.
@@ -1684,19 +1254,12 @@ public partial class MapOcxControl : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Camera")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CameraObject : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12565;
-    /// <inheritdoc/>
-    public override string LocalName => "Camera";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CameraObject class.
@@ -1728,19 +1291,12 @@ public partial class CameraObject : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "RecalcAlways")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RecalculateAlways : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12566;
-    /// <inheritdoc/>
-    public override string LocalName => "RecalcAlways";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the RecalculateAlways class.
@@ -1772,19 +1328,12 @@ public partial class RecalculateAlways : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "AutoScale")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoScaleFont : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12567;
-    /// <inheritdoc/>
-    public override string LocalName => "AutoScale";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AutoScaleFont class.
@@ -1816,19 +1365,12 @@ public partial class AutoScaleFont : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "DDE")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DdeObject : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12568;
-    /// <inheritdoc/>
-    public override string LocalName => "DDE";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DdeObject class.
@@ -1860,19 +1402,12 @@ public partial class DdeObject : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "UIObj")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UIObject : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12569;
-    /// <inheritdoc/>
-    public override string LocalName => "UIObj";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the UIObject class.
@@ -1904,19 +1439,12 @@ public partial class UIObject : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Anchor")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Anchor : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12510;
-    /// <inheritdoc/>
-    public override string LocalName => "Anchor";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Anchor class.
@@ -1948,19 +1476,12 @@ public partial class Anchor : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "TextHAlign")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HorizontalTextAlignment : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12519;
-    /// <inheritdoc/>
-    public override string LocalName => "TextHAlign";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HorizontalTextAlignment class.
@@ -1992,19 +1513,12 @@ public partial class HorizontalTextAlignment : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "TextVAlign")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VerticalTextAlignment : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12520;
-    /// <inheritdoc/>
-    public override string LocalName => "TextVAlign";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the VerticalTextAlignment class.
@@ -2036,19 +1550,12 @@ public partial class VerticalTextAlignment : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "FmlaRange")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaRange : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12539;
-    /// <inheritdoc/>
-    public override string LocalName => "FmlaRange";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the FormulaRange class.
@@ -2080,19 +1587,12 @@ public partial class FormulaRange : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "SelType")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SelectionType : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12543;
-    /// <inheritdoc/>
-    public override string LocalName => "SelType";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SelectionType class.
@@ -2124,19 +1624,12 @@ public partial class SelectionType : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "MultiSel")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MultiSelections : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12544;
-    /// <inheritdoc/>
-    public override string LocalName => "MultiSel";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MultiSelections class.
@@ -2168,19 +1661,12 @@ public partial class MultiSelections : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "LCT")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ListBoxCallbackType : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12545;
-    /// <inheritdoc/>
-    public override string LocalName => "LCT";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ListBoxCallbackType class.
@@ -2212,19 +1698,12 @@ public partial class ListBoxCallbackType : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "ListItem")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ListItem : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12546;
-    /// <inheritdoc/>
-    public override string LocalName => "ListItem";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ListItem class.
@@ -2256,19 +1735,12 @@ public partial class ListItem : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "DropStyle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DropStyle : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12547;
-    /// <inheritdoc/>
-    public override string LocalName => "DropStyle";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DropStyle class.
@@ -2300,19 +1772,12 @@ public partial class DropStyle : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "FmlaLink")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaLink : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12551;
-    /// <inheritdoc/>
-    public override string LocalName => "FmlaLink";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the FormulaLink class.
@@ -2344,19 +1809,12 @@ public partial class FormulaLink : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "FmlaPict")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaPicture : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12552;
-    /// <inheritdoc/>
-    public override string LocalName => "FmlaPict";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the FormulaPicture class.
@@ -2388,19 +1846,12 @@ public partial class FormulaPicture : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "FmlaGroup")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaGroup : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12555;
-    /// <inheritdoc/>
-    public override string LocalName => "FmlaGroup";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the FormulaGroup class.
@@ -2432,19 +1883,12 @@ public partial class FormulaGroup : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "ScriptText")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScriptText : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12570;
-    /// <inheritdoc/>
-    public override string LocalName => "ScriptText";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScriptText class.
@@ -2476,19 +1920,12 @@ public partial class ScriptText : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "ScriptExtended")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScriptExtended : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12571;
-    /// <inheritdoc/>
-    public override string LocalName => "ScriptExtended";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScriptExtended class.
@@ -2520,19 +1957,12 @@ public partial class ScriptExtended : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "FmlaTxbx")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaTextBox : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12574;
-    /// <inheritdoc/>
-    public override string LocalName => "FmlaTxbx";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the FormulaTextBox class.
@@ -2565,18 +1995,11 @@ public partial class FormulaTextBox : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(29, "FmlaMacro")]
 public partial class FormulaMacro : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12518;
-    /// <inheritdoc/>
-    public override string LocalName => "FmlaMacro";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2604,7 +2027,6 @@ public partial class FormulaMacro : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaMacro>(deep);
 
@@ -2616,19 +2038,12 @@ public partial class FormulaMacro : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Accel")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AcceleratorPrimary : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12528;
-    /// <inheritdoc/>
-    public override string LocalName => "Accel";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AcceleratorPrimary class.
@@ -2660,19 +2075,12 @@ public partial class AcceleratorPrimary : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Accel2")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AcceleratorSecondary : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12529;
-    /// <inheritdoc/>
-    public override string LocalName => "Accel2";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AcceleratorSecondary class.
@@ -2704,19 +2112,12 @@ public partial class AcceleratorSecondary : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Row")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CommentRowTarget : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12530;
-    /// <inheritdoc/>
-    public override string LocalName => "Row";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CommentRowTarget class.
@@ -2748,19 +2149,12 @@ public partial class CommentRowTarget : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Column")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CommentColumnTarget : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12531;
-    /// <inheritdoc/>
-    public override string LocalName => "Column";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CommentColumnTarget class.
@@ -2792,19 +2186,12 @@ public partial class CommentColumnTarget : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "VTEdit")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class InputValidationType : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12535;
-    /// <inheritdoc/>
-    public override string LocalName => "VTEdit";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the InputValidationType class.
@@ -2836,19 +2223,12 @@ public partial class InputValidationType : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "WidthMin")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MinDropDownWidth : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12540;
-    /// <inheritdoc/>
-    public override string LocalName => "WidthMin";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MinDropDownWidth class.
@@ -2880,19 +2260,12 @@ public partial class MinDropDownWidth : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Sel")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SelectionEntry : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12541;
-    /// <inheritdoc/>
-    public override string LocalName => "Sel";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SelectionEntry class.
@@ -2924,19 +2297,12 @@ public partial class SelectionEntry : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "DropLines")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DropLines : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12549;
-    /// <inheritdoc/>
-    public override string LocalName => "DropLines";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DropLines class.
@@ -2968,19 +2334,12 @@ public partial class DropLines : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Checked")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Checked : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12550;
-    /// <inheritdoc/>
-    public override string LocalName => "Checked";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Checked class.
@@ -3012,19 +2371,12 @@ public partial class Checked : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Val")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarPosition : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12556;
-    /// <inheritdoc/>
-    public override string LocalName => "Val";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScrollBarPosition class.
@@ -3056,19 +2408,12 @@ public partial class ScrollBarPosition : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Min")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarMin : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12557;
-    /// <inheritdoc/>
-    public override string LocalName => "Min";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScrollBarMin class.
@@ -3100,19 +2445,12 @@ public partial class ScrollBarMin : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Max")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarMax : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12558;
-    /// <inheritdoc/>
-    public override string LocalName => "Max";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScrollBarMax class.
@@ -3144,19 +2482,12 @@ public partial class ScrollBarMax : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Inc")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarIncrement : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12559;
-    /// <inheritdoc/>
-    public override string LocalName => "Inc";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScrollBarIncrement class.
@@ -3188,19 +2519,12 @@ public partial class ScrollBarIncrement : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Page")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12560;
-    /// <inheritdoc/>
-    public override string LocalName => "Page";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScrollBarPageIncrement class.
@@ -3232,19 +2556,12 @@ public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "Dx")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarWidth : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12562;
-    /// <inheritdoc/>
-    public override string LocalName => "Dx";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScrollBarWidth class.
@@ -3277,18 +2594,11 @@ public partial class ScrollBarWidth : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(29, "CF")]
 public partial class ClipboardFormat : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12564;
-    /// <inheritdoc/>
-    public override string LocalName => "CF";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -3316,7 +2626,6 @@ public partial class ClipboardFormat : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ClipboardFormat>(deep);
 
@@ -3328,19 +2637,12 @@ public partial class ClipboardFormat : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "ScriptLanguage")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScriptLanguage : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12572;
-    /// <inheritdoc/>
-    public override string LocalName => "ScriptLanguage";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScriptLanguage class.
@@ -3372,19 +2674,12 @@ public partial class ScriptLanguage : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(29, "ScriptLocation")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScriptLocation : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12573;
-    /// <inheritdoc/>
-    public override string LocalName => "ScriptLocation";
-    
-    internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScriptLocation class.

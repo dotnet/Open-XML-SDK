@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the AlternativeFormatImportPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class AlternativeFormatImportPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk";
@@ -20,9 +20,6 @@ namespace DocumentFormat.OpenXml.Packaging
         internal protected AlternativeFormatImportPart()
         {
         }
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => false;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

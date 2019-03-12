@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml
 
                 if (lastChild != null)
                 {
-                    return lastChild.next;
+                    return lastChild.Next;
                 }
 
                 return null;
@@ -228,13 +228,13 @@ namespace DocumentFormat.OpenXml
 
             if (prevNode == null)
             {
-                nextNode.next = nextNode;
+                nextNode.Next = nextNode;
                 _lastChild = nextNode;
             }
             else
             {
-                nextNode.next = prevNode.next;
-                prevNode.next = nextNode;
+                nextNode.Next = prevNode.Next;
+                prevNode.Next = nextNode;
                 _lastChild = nextNode;
             }
 
@@ -285,15 +285,15 @@ namespace DocumentFormat.OpenXml
 
             if (prevNode == _lastChild)
             {
-                nextNode.next = prevNode.next;
-                prevNode.next = nextNode;
+                nextNode.Next = prevNode.Next;
+                prevNode.Next = nextNode;
                 _lastChild = nextNode;
             }
             else
             {
-                OpenXmlElement next = prevNode.next;
-                nextNode.next = next;
-                prevNode.next = nextNode;
+                OpenXmlElement next = prevNode.Next;
+                nextNode.Next = next;
+                prevNode.Next = nextNode;
             }
 
             newChild.Parent = this;
@@ -343,14 +343,14 @@ namespace DocumentFormat.OpenXml
 
             if (nextNode == FirstChild)
             {
-                prevNode.next = nextNode;
-                _lastChild.next = prevNode;
+                prevNode.Next = nextNode;
+                _lastChild.Next = prevNode;
             }
             else
             {
                 OpenXmlElement previousSibling = nextNode.PreviousSibling();
-                prevNode.next = nextNode;
-                previousSibling.next = prevNode;
+                prevNode.Next = nextNode;
+                previousSibling.Next = prevNode;
             }
 
             newChild.Parent = this;
@@ -454,26 +454,26 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    OpenXmlElement nextNode = removedElement.next;
-                    last.next = nextNode;
+                    OpenXmlElement nextNode = removedElement.Next;
+                    last.Next = nextNode;
                 }
             }
             else if (removedElement == _lastChild)
             {
                 OpenXmlElement prevNode = removedElement.PreviousSibling();
-                OpenXmlElement next = removedElement.next;
-                prevNode.next = next;
+                OpenXmlElement next = removedElement.Next;
+                prevNode.Next = next;
                 _lastChild = prevNode;
             }
             else
             {
                 OpenXmlElement prevNode = removedElement.PreviousSibling();
-                OpenXmlElement next = removedElement.next;
+                OpenXmlElement next = removedElement.Next;
 
-                prevNode.next = next;
+                prevNode.Next = next;
             }
 
-            removedElement.next = null;
+            removedElement.Next = null;
             removedElement.Parent = null;
 
             ElementRemovedEvent(removedElement);
@@ -552,13 +552,11 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        #region Event mechanism
-
         /// <summary>
         /// Fires the ElementInserting event.
         /// </summary>
         /// <param name="element">The OpenXmlElement element to insert.</param>
-        internal void ElementInsertingEvent(OpenXmlElement element)
+        private void ElementInsertingEvent(OpenXmlElement element)
         {
             if (OpenXmlElementContext != null)
             {
@@ -570,7 +568,7 @@ namespace DocumentFormat.OpenXml
         /// Fires the ElementInserted event.
         /// </summary>
         /// <param name="element">The OpenXmlElement element to insert.</param>
-        internal void ElementInsertedEvent(OpenXmlElement element)
+        private void ElementInsertedEvent(OpenXmlElement element)
         {
             if (OpenXmlElementContext != null)
             {
@@ -582,7 +580,7 @@ namespace DocumentFormat.OpenXml
         /// Fires the ElementRemoving event.
         /// </summary>
         /// <param name="element">The OpenXmlElement element to remove.</param>
-        internal void ElementRemovingEvent(OpenXmlElement element)
+        private void ElementRemovingEvent(OpenXmlElement element)
         {
             if (OpenXmlElementContext != null)
             {
@@ -594,7 +592,7 @@ namespace DocumentFormat.OpenXml
         /// Fires the ElementRemoved event.
         /// </summary>
         /// <param name="element">The OpenXmlElement element to be removed.</param>
-        internal void ElementRemovedEvent(OpenXmlElement element)
+        private void ElementRemovedEvent(OpenXmlElement element)
         {
             if (OpenXmlElementContext != null)
             {
@@ -602,16 +600,12 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        #endregion
-
-        #region internal methods
-
         /// <summary>
         /// Populates the XML into a strong typed DOM tree.
         /// </summary>
         /// <param name="xmlReader">The XmlReader to read the XML content.</param>
         /// <param name="loadMode">Specifies a load mode that is either lazy or full.</param>
-        internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
+        private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
             LoadAttributes(xmlReader);
 
@@ -769,35 +763,13 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets the tag names of the child elements.
-        /// </summary>
-        /// <remarks>
-        /// This property is overridden in generated classes.
-        /// </remarks>
-        internal virtual string[] ElementTagNames
-        {
-            get { return null; }
-        }
-
-        /// <summary>
-        /// Gets the namespace IDs of the child elements.
-        /// </summary>
-        /// <remarks>
-        /// This property is overridden in generated classes.
-        /// </remarks>
-        internal virtual byte[] ElementNamespaceIds
-        {
-            get { return null; }
-        }
-
         private int GetSequenceNumber(OpenXmlElement child)
         {
-            for (int i = 0; i < ElementNamespaceIds.Length; i++)
+            foreach (var element in RawElements)
             {
-                if (ElementNamespaceIds[i] == child.NamespaceId && object.Equals(ElementTagNames[i], child.LocalName))
+                if (element.Property.NamespaceId == child.NamespaceId && object.Equals(element.Property.Name, child.LocalName))
                 {
-                    return i;
+                    return element.Property.Order;
                 }
             }
 
@@ -813,7 +785,8 @@ namespace DocumentFormat.OpenXml
         /// <remarks>
         /// Returns null if there are invalid children.
         /// </remarks>
-        internal T GetElement<T>(int sequenceNumber) where T : OpenXmlElement
+        private protected T GetElement<T>(int sequenceNumber)
+            where T : OpenXmlElement
         {
             T theChild;
             switch (OpenXmlCompositeType)
@@ -822,10 +795,10 @@ namespace DocumentFormat.OpenXml
                     throw new InvalidOperationException();
 
                 case OpenXmlCompositeType.OneAll:
-                    foreach (OpenXmlElement child in ChildElements)
+                    foreach (var child in ChildElements)
                     {
                         // skip unknown element and MiscNode
-                        if (OpenXmlElement.IsKnownElement(child))
+                        if (IsKnownElement(child))
                         {
                             int childSequenceNumber = GetSequenceNumber(child);
                             if (childSequenceNumber == sequenceNumber)
@@ -847,10 +820,10 @@ namespace DocumentFormat.OpenXml
 
                 case OpenXmlCompositeType.OneChoice:
                     {
-                        OpenXmlElement child = FirstChild;
+                        var child = FirstChild;
 
                         // skip unknown element and MiscNode
-                        while (child != null && !OpenXmlElement.IsKnownElement(child))
+                        while (child != null && !IsKnownElement(child))
                         {
                             child = child.NextSibling();
                         }
@@ -858,7 +831,7 @@ namespace DocumentFormat.OpenXml
                         // There should be only one valid child.
                         if (child != null)
                         {
-                            Debug.Assert(OpenXmlElement.IsKnownElement(child));
+                            Debug.Assert(IsKnownElement(child));
 
                             int childSequenceNumber = GetSequenceNumber(child);
                             if (childSequenceNumber == sequenceNumber)
@@ -880,11 +853,11 @@ namespace DocumentFormat.OpenXml
 
                 case OpenXmlCompositeType.OneSequence:
                     {
-                        OpenXmlElement child = FirstChild;
+                        var child = FirstChild;
 
                         while (child != null)
                         {
-                            if (OpenXmlElement.IsKnownElement(child))
+                            if (IsKnownElement(child))
                             {
                                 int childSequenceNumber = GetSequenceNumber(child);
 
@@ -928,7 +901,8 @@ namespace DocumentFormat.OpenXml
             return null;
         }
 
-        internal void SetElement<T>(int sequenceNumber, T newChild) where T : OpenXmlElement
+        private protected void SetElement<T>(int sequenceNumber, T newChild)
+            where T : OpenXmlElement
         {
             switch (OpenXmlCompositeType)
             {
@@ -962,7 +936,7 @@ namespace DocumentFormat.OpenXml
                         OpenXmlElement previousChild = null;
 
                         // skip unknown element and MiscNode
-                        while (child != null && !OpenXmlElement.IsKnownElement(child))
+                        while (child != null && !IsKnownElement(child))
                         {
                             previousChild = child;
                             child = child.NextSibling();
@@ -1001,7 +975,7 @@ namespace DocumentFormat.OpenXml
 
                         while (child != null)
                         {
-                            if (OpenXmlElement.IsKnownElement(child))
+                            if (IsKnownElement(child))
                             {
                                 int childSequenceNumber = GetSequenceNumber(child);
 
@@ -1057,25 +1031,20 @@ namespace DocumentFormat.OpenXml
             get { return OpenXmlCompositeType.Other; }
         }
 
-        #endregion
-
-        #region private methods
         private void AddANode(OpenXmlElement node)
         {
             node.Parent = this;
             if (_lastChild == null)
             {
-                node.next = node;
+                node.Next = node;
                 _lastChild = node;
             }
             else
             {
-                node.next = _lastChild.next;
-                _lastChild.next = node;
+                node.Next = _lastChild.Next;
+                _lastChild.Next = node;
                 _lastChild = node;
             }
         }
-
-        #endregion
     }
 }

@@ -38,22 +38,28 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc />
         public int CompareTo(object obj)
         {
-            switch (obj)
+            if (obj is null || !HasValue)
             {
-                case null:
-                    return 1;
-
-                case OpenXmlComparableSimpleReference<T> other:
-                    return CompareTo(other);
+                return 1;
             }
-
-            throw new ArgumentException(SR.Format(ExceptionMessages.IncompatibleArgumentType, obj.GetType().FullName));
+            else if (obj is OpenXmlComparableSimpleReference<T> other)
+            {
+                return CompareTo(other);
+            }
+            else if (obj is T t)
+            {
+                return Value.CompareTo(t);
+            }
+            else
+            {
+                return Value.CompareTo(obj);
+            }
         }
 
         /// <inheritdoc />
         public int CompareTo(OpenXmlComparableSimpleReference<T> other)
         {
-            if (other is null)
+            if (other is null || !HasValue)
             {
                 return 1;
             }
@@ -75,19 +81,25 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc />
         public override bool Equals(object obj)
         {
-            switch (obj)
+            if (obj is null || !HasValue)
             {
-                case null:
-                    return false;
-
-                case OpenXmlComparableSimpleReference<T> other:
-                    return Equals(other);
-
-                case T otherValue:
-                    return otherValue.Equals(Value);
-
-                default:
-                    return false;
+                return false;
+            }
+            else if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+            else if (obj is OpenXmlComparableSimpleReference<T> other)
+            {
+                return Equals(other);
+            }
+            else if (obj is T otherValue)
+            {
+                return otherValue.Equals(Value);
+            }
+            else
+            {
+                return false;
             }
         }
 

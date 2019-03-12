@@ -22,7 +22,6 @@
          helper files to fill the gaps of the various platforms that are targeted -->
     <Compile Remove="System\**\*.cs" />
     <Compile Include="System\UriHelper.cs" />
-    <Compile Remove="PartActivator.Custom.cs" />
   </ItemGroup>
 
   <Choose>
@@ -78,9 +77,6 @@
         <Compile Include="System\NonSerializedAttribute.cs" />
         <Compile Include="System\SerializableAttribute.cs" />
         <Compile Include="System\Reflection\SubclassExtensions.cs" />
-
-        <Compile Include="PartActivator.Custom.cs" />
-        <Compile Remove="PartActivator.Activator.cs" />
       </ItemGroup>
     </When>
   </Choose>

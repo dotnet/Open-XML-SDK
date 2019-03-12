@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the FontPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class FontPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font";
@@ -20,9 +20,6 @@ namespace DocumentFormat.OpenXml.Packaging
         internal protected FontPart()
         {
         }
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => false;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

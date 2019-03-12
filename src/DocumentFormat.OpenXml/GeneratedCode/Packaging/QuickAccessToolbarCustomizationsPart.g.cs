@@ -9,8 +9,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the QuickAccessToolbarCustomizationsPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class QuickAccessToolbarCustomizationsPart : CustomUIPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/xml";
@@ -25,9 +25,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

@@ -23,18 +23,11 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     [ChildElementInfo(typeof(LongProperty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(40, "LongProperties")]
 public partial class LongProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12711;
-    /// <inheritdoc/>
-    public override string LocalName => "LongProperties";
-    
-    internal override byte NamespaceId => 40;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -69,19 +62,10 @@ public partial class LongProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 40 == namespaceId && "LongProp" == name)
-    return new LongProperty();
-    
-
-    return null;
-}
-
     
     
     /// <inheritdoc/>
@@ -96,39 +80,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(40, "LongProp")]
 public partial class LongProperty : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12712;
-    /// <inheritdoc/>
-    public override string LocalName => "LongProp";
-    
-    internal override byte NamespaceId => 40;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    	private static readonly string[] attributeTagNames = { "name" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [Index(0)]
+    public StringValue Name { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the LongProperty class.
@@ -153,16 +119,6 @@ public partial class LongProperty : OpenXmlLeafTextElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "name" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LongProperty>(deep);
 

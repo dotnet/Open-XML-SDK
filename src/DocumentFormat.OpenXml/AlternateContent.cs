@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml
@@ -9,12 +10,14 @@ namespace DocumentFormat.OpenXml
     /// Represents the mc:AlternateContent element of markup
     /// compatibility.
     /// </summary>
+    [SchemaAttr(Namespace, Name)]
+    [ChildElementInfo(typeof(AlternateContentChoice))]
+    [ChildElementInfo(typeof(AlternateContentFallback))]
     public class AlternateContent : OpenXmlCompositeElement
     {
-        private static string _mcNamespace = @"http://schemas.openxmlformats.org/markup-compatibility/2006";
+        internal const string Namespace = @"http://schemas.openxmlformats.org/markup-compatibility/2006";
+        private const string Name = "AlternateContent";
         private static byte _mcNamespaceId = byte.MaxValue;
-
-        private static string tagName = "AlternateContent";
 
         /// <summary>
         /// Initializes a new instance of the AlternateContent
@@ -64,10 +67,7 @@ namespace DocumentFormat.OpenXml
         /// Gets a value that represents the markup compatibility
         /// namespace.
         /// </summary>
-        public static string MarkupCompatibilityNamespace
-        {
-            get { return _mcNamespace; }
-        }
+        public static string MarkupCompatibilityNamespace => Namespace;
 
         /// <summary>
         /// Gets a value that represents the markup compatibility
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (_mcNamespaceId == byte.MaxValue)
                 {
-                    _mcNamespaceId = NamespaceIdMap.GetNamespaceId(_mcNamespace);
+                    _mcNamespaceId = NamespaceIdMap.GetNamespaceId(MarkupCompatibilityNamespace);
                 }
 
                 return _mcNamespaceId;
@@ -90,55 +90,10 @@ namespace DocumentFormat.OpenXml
         /// Gets a value that represents the tag name of the
         /// AlternateContent element.
         /// </summary>
-        public static string TagName
-        {
-            get { return tagName; }
-        }
+        public static string TagName => Name;
 
         /// <inheritdoc/>
-        public override string LocalName
-        {
-            get { return tagName; }
-        }
-
-        /// <inheritdoc/>
-        internal override byte NamespaceId
-        {
-            get { return MarkupCompatibilityNamespaceId; }
-        }
-
-        private static string[] attributeTagNames = Cached.Array<string>();
-        private static byte[] attributeNamespaceIds = Cached.Array<byte>();
-
-        /// <inheritdoc/>
-        internal override string[] AttributeTagNames
-        {
-            get
-            {
-                return attributeTagNames;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal override byte[] AttributeNamespaceIds
-        {
-            get
-            {
-                return attributeNamespaceIds;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-        {
-            if (MarkupCompatibilityNamespaceId == namespaceId && AlternateContentChoice.TagName == name)
-                return new AlternateContentChoice();
-
-            if (MarkupCompatibilityNamespaceId == namespaceId && AlternateContentFallback.TagName == name)
-                return new AlternateContentFallback();
-
-            return null;
-        }
+        public override string LocalName => TagName;
 
         /// <summary>
         /// Appends a new child of type T:DocumentFormat.OpenXml.AlternateContentChoice
@@ -167,23 +122,12 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-        {
-            return null;
-        }
-
-        /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep)
         {
             return CloneImp<AlternateContent>(deep);
         }
 
         /// <inheritdoc/>
-        internal override int ElementTypeId
-        {
-            get { return ReservedElementTypeIds.AlternateContentId; }
-        }
-
-        internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+        internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentId;
     }
 }

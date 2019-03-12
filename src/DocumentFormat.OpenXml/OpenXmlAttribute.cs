@@ -13,9 +13,11 @@ namespace DocumentFormat.OpenXml
     public struct OpenXmlAttribute : IEquatable<OpenXmlAttribute>
     {
         private string _namespaceUri;
-        private string _tagName;
-        private string _prefix;
-        private string _value;
+
+        internal OpenXmlAttribute(in ElementPropertyCollection<OpenXmlSimpleType>.PropertyEntry entry)
+            : this(entry.Property.NamespacePrefix, entry.Property.Name, entry.Property.Namespace, entry.Value?.ToString())
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlAttribute structure using the supplied qualified name, namespace URI, and text value.
@@ -31,8 +33,12 @@ namespace DocumentFormat.OpenXml
             }
 
             _namespaceUri = namespaceUri;
-            OpenXmlElement.SplitName(qualifiedName, out _prefix, out _tagName);
-            _value = value;
+
+            OpenXmlElement.SplitName(qualifiedName, out var prefix, out var localName);
+
+            Prefix = prefix;
+            LocalName = localName;
+            Value = value;
         }
 
         /// <summary>
@@ -50,9 +56,9 @@ namespace DocumentFormat.OpenXml
             }
 
             _namespaceUri = namespaceUri;
-            _tagName = localName;
-            _prefix = prefix;
-            _value = value;
+            LocalName = localName;
+            Prefix = prefix;
+            Value = value;
         }
 
         /// <summary>
@@ -60,69 +66,34 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public string NamespaceUri
         {
-            get
-            {
-                if (_namespaceUri == null)
-                {
-                    return string.Empty;
-                }
-
-                return _namespaceUri;
-            }
-
-            set { _namespaceUri = value; }
+            get => _namespaceUri ?? string.Empty;
+            set => _namespaceUri = value;
         }
 
         /// <summary>
         /// Gets or sets the local name of the attribute.
         /// </summary>
-        public string LocalName
-        {
-            get { return _tagName; }
-            set { _tagName = value; }
-        }
+        public string LocalName { get; set; }
 
         /// <summary>
         /// Gets or sets the namespace prefix of the current attribute.
         /// </summary>
-        public string Prefix
-        {
-            get { return _prefix; }
-            set { _prefix = value; }
-        }
+        public string Prefix { get; set; }
 
         /// <summary>
         /// Gets or sets the text value of the attribute.
         /// </summary>
-        public string Value
-        {
-            get { return _value; }
-            set { _value = value; }
-        }
+        public string Value { get; set; }
 
         /// <summary>
         /// Gets the qualified name of the attribute.
         /// </summary>
-        public XmlQualifiedName XmlQualifiedName
-        {
-            get
-            {
-                return new XmlQualifiedName(_tagName, _namespaceUri);
-            }
-        }
+        public XmlQualifiedName XmlQualifiedName => new XmlQualifiedName(LocalName, _namespaceUri);
 
         /// <summary>
         /// Gets the qualified name of the current attribute.
         /// </summary>
-        public XName XName
-        {
-            get
-            {
-                return XName.Get(_tagName, _namespaceUri);
-            }
-        }
-
-        #region IEquatable<OpenXmlAttribute> Members
+        public XName XName => XName.Get(LocalName, _namespaceUri);
 
         /// <summary>
         /// Determines if this instance of an OpenXmlAttribute structure is equal to the specified instance of an OpenXmlAttribute structure.
@@ -131,16 +102,11 @@ namespace DocumentFormat.OpenXml
         /// <returns>Returns true if instances are equal; otherwise, returns false.</returns>
         public bool Equals(OpenXmlAttribute other)
         {
-            return LocalName == other.LocalName &&
-                    NamespaceUri == other.NamespaceUri &&
-                    Prefix == other.Prefix &&
-                    Value == other.Value;
+            return string.Equals(LocalName, other.LocalName, StringComparison.Ordinal)
+                && string.Equals(NamespaceUri, other.NamespaceUri, StringComparison.Ordinal)
+                && string.Equals(Prefix, other.Prefix, StringComparison.Ordinal)
+                && string.Equals(Value, other.Value, StringComparison.Ordinal);
         }
-
-        #endregion
-
-        // implement to follow Framework design guideline
-        // FDG ***** CONSIDER overloading operator== and operator!= whenever implementing IEquatable<T>.
 
         /// <summary>
         /// Determines if two instances of OpenXmlAttribute structures are equal.
@@ -150,7 +116,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>Returns true if all corresponding members are equal; otherwise, returns false.</returns>
         public static bool operator ==(OpenXmlAttribute attribute1, OpenXmlAttribute attribute2)
         {
-            return attribute1.Equals( attribute2 );
+            return attribute1.Equals(attribute2);
         }
 
         /// <summary>
@@ -164,19 +130,6 @@ namespace DocumentFormat.OpenXml
             return !(attribute1 == attribute2);
         }
 
-        ///// <summary>
-        ///// Determines if two instances of OpenXmlAttribute structures are equal.
-        ///// </summary>
-        ///// <param name="attribute1">The first instance of an OpenXmlAttribute structure.</param>
-        ///// <param name="attribute2">The second instance of an OpenXmlAttribute structure.</param>
-        ///// <returns>Returns true if all corresponding members are equal; otherwise, returns false.</returns>
-        //public static bool Equals(OpenXmlAttribute attribute1, OpenXmlAttribute attribute2)
-        //{
-        //    return attribute1.Equals( attribute2 );
-        //}
-
-        // FDG ***** DO override Object.Equals whenever implementing IEquatable<T>.
-
         /// <summary>
         /// Determines whether the specified Object is a OpenXmlAttribute structure and if so, indicates whether it is equal to this instance of an OpenXmlAttribute structure.
         /// </summary>
@@ -184,16 +137,13 @@ namespace DocumentFormat.OpenXml
         /// <returns>Returns true if obj is an OpenXmlAttribute structure and it is equal to this instance of an OpenXmlAttribute structure; otherwise, returns false.</returns>
         public override bool Equals(object obj)
         {
-            if ((obj == null) || !(obj is OpenXmlAttribute))
+            if (obj is OpenXmlAttribute attribute)
             {
-                return false;
+                return Equals(attribute);
             }
 
-            OpenXmlAttribute attribute = (OpenXmlAttribute)obj;
-            return Equals(attribute);
+            return false;
         }
-
-        // FDG ***** DO override GetHashCode whenever you override Equals.
 
         /// <summary>
         /// Gets the hash code for this instance of an OpenXmlAttribute structure.
@@ -201,29 +151,14 @@ namespace DocumentFormat.OpenXml
         /// <returns>The hash code for this instance of an OpenXmlAttribute structure.</returns>
         public override int GetHashCode()
         {
-            int hashCode = 0;
+            int hash = 23;
 
-            if (LocalName != null)
-            {
-                hashCode ^= LocalName.GetHashCode();
-            }
+            hash = hash * 31 + (LocalName?.GetHashCode() ?? 0);
+            hash = hash * 31 + (NamespaceUri?.GetHashCode() ?? 0);
+            hash = hash * 31 + (Prefix?.GetHashCode() ?? 0);
+            hash = hash * 31 + (Value?.GetHashCode() ?? 0);
 
-            if (NamespaceUri != null)
-            {
-                hashCode ^= NamespaceUri.GetHashCode();
-            }
-
-            if (Prefix != null)
-            {
-                hashCode ^= Prefix.GetHashCode();
-            }
-
-            if (Value != null)
-            {
-                hashCode ^= Value.GetHashCode();
-            }
-
-            return hashCode;
+            return hash;
         }
     }
 }

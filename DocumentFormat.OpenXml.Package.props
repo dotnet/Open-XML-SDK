@@ -18,7 +18,7 @@
     <ChangelogFile>$(MSBuildThisFileDirectory)\CHANGELOG.md</ChangelogFile>
     <PackageReleaseNotes>$([System.IO.File]::ReadAllText($(ChangelogFile)))</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/OfficeDev/Open-XML-SDK</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/OfficeDev/Open-XML-SDK/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIconUrl>https://raw.githubusercontent.com/OfficeDev/Open-XML-SDK/master/icon.png</PackageIconUrl>
   </PropertyGroup>
 </Project>

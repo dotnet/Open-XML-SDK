@@ -22,27 +22,13 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(38, "contentTypeSchema")]
 public partial class ContentTypeSchema : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12705;
-    /// <inheritdoc/>
-    public override string LocalName => "contentTypeSchema";
-    
-    internal override byte NamespaceId => 38;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    	private static readonly string[] attributeTagNames = { "_","_","contentTypeName","contentTypeID","contentTypeVersion","contentTypeDescription","contentTypeScope","versionID" };
-    private static readonly byte[] attributeNamespaceIds = { 38,41,41,41,41,41,41,41 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> _.</para>
@@ -51,12 +37,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
 ///<remark> xmlns:ct=http://schemas.microsoft.com/office/2006/metadata/contentType
 ///</remark>
     [SchemaAttr(38, "_")]
-    public StringValue UnderScore
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [Index(0)]
+    public StringValue UnderScore { get; set; }
     /// <summary>
     /// <para> _.</para>
     /// <para>Represents the following attribute in the schema: ma:_ </para>
@@ -64,12 +46,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
 ///<remark> xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
 ///</remark>
     [SchemaAttr(41, "_")]
-    public StringValue ReservedAttributeString
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [Index(1)]
+    public StringValue ReservedAttributeString { get; set; }
     /// <summary>
     /// <para> contentTypeName.</para>
     /// <para>Represents the following attribute in the schema: ma:contentTypeName </para>
@@ -77,12 +55,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
 ///<remark> xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
 ///</remark>
     [SchemaAttr(41, "contentTypeName")]
-    public StringValue ContentTypeName
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [Index(2)]
+    public StringValue ContentTypeName { get; set; }
     /// <summary>
     /// <para> contentTypeID.</para>
     /// <para>Represents the following attribute in the schema: ma:contentTypeID </para>
@@ -90,12 +64,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
 ///<remark> xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
 ///</remark>
     [SchemaAttr(41, "contentTypeID")]
-    public StringValue ContentTypeID
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [Index(3)]
+    public StringValue ContentTypeID { get; set; }
     /// <summary>
     /// <para> contentTypeVersion.</para>
     /// <para>Represents the following attribute in the schema: ma:contentTypeVersion </para>
@@ -103,12 +73,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
 ///<remark> xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
 ///</remark>
     [SchemaAttr(41, "contentTypeVersion")]
-    public Int32Value ContentTypeVersion
-    {
-        get { return (Int32Value)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [Index(4)]
+    public Int32Value ContentTypeVersion { get; set; }
     /// <summary>
     /// <para> contentTypeDescription.</para>
     /// <para>Represents the following attribute in the schema: ma:contentTypeDescription </para>
@@ -116,12 +82,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
 ///<remark> xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
 ///</remark>
     [SchemaAttr(41, "contentTypeDescription")]
-    public StringValue ContentTypeDescription
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [Index(5)]
+    public StringValue ContentTypeDescription { get; set; }
     /// <summary>
     /// <para> contentTypeScope.</para>
     /// <para>Represents the following attribute in the schema: ma:contentTypeScope </para>
@@ -129,12 +91,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
 ///<remark> xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
 ///</remark>
     [SchemaAttr(41, "contentTypeScope")]
-    public StringValue ContentTypeScope
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [Index(6)]
+    public StringValue ContentTypeScope { get; set; }
     /// <summary>
     /// <para> versionID.</para>
     /// <para>Represents the following attribute in the schema: ma:versionID </para>
@@ -142,12 +100,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
 ///<remark> xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
 ///</remark>
     [SchemaAttr(41, "versionID")]
-    public StringValue VersionID
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [Index(7)]
+    public StringValue VersionID { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ContentTypeSchema class.
@@ -179,48 +133,12 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
     
-    return null;
-}
-
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 38 == namespaceId && "_" == name)
-    return new StringValue();
-    
-if( 41 == namespaceId && "_" == name)
-    return new StringValue();
-    
-if( 41 == namespaceId && "contentTypeName" == name)
-    return new StringValue();
-    
-if( 41 == namespaceId && "contentTypeID" == name)
-    return new StringValue();
-    
-if( 41 == namespaceId && "contentTypeVersion" == name)
-    return new Int32Value();
-    
-if( 41 == namespaceId && "contentTypeDescription" == name)
-    return new StringValue();
-    
-if( 41 == namespaceId && "contentTypeScope" == name)
-    return new StringValue();
-    
-if( 41 == namespaceId && "versionID" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContentTypeSchema>(deep);
 

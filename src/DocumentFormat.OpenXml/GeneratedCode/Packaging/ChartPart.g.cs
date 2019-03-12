@@ -9,13 +9,18 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ChartPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(ChartDrawingPart), false, false)]
+    [PartConstraint(typeof(EmbeddedPackagePart), false, false)]
+    [PartConstraint(typeof(ImagePart), false, true)]
+    [PartConstraint(typeof(ThemeOverridePart), false, false)]
+    [PartConstraint(typeof(ChartStylePart), false, true)]
+    [PartConstraint(typeof(ChartColorStylePart), false, true)]
     public partial class ChartPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.chart+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Drawing.Charts.ChartSpace _rootElement;
 
         /// <summary>
@@ -89,49 +94,6 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Drawing.Charts.ChartSpace;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes",
-                            PartConstraintRule.Create<ChartDrawingPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-                            PartConstraintRule.Create<EmbeddedPackagePart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                            PartConstraintRule.Create<ImagePart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride",
-                            PartConstraintRule.Create<ThemeOverridePart>(false, false)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2011/relationships/chartStyle",
-                            PartConstraintRule.Create<ChartStylePart>(false, true)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle",
-                            PartConstraintRule.Create<ChartColorStylePart>(false, true)
-                        }
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 

@@ -9,11 +9,24 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the PresentationPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(CustomXmlPart), false, true)]
+    [PartConstraint(typeof(FontPart), false, true)]
+    [PartConstraint(typeof(PresentationPropertiesPart), false, false)]
+    [PartConstraint(typeof(TableStylesPart), false, false)]
+    [PartConstraint(typeof(ThemePart), false, false)]
+    [PartConstraint(typeof(ViewPropertiesPart), false, false)]
+    [PartConstraint(typeof(NotesMasterPart), false, false)]
+    [PartConstraint(typeof(SlidePart), false, true)]
+    [PartConstraint(typeof(SlideMasterPart), true, true)]
+    [PartConstraint(typeof(UserDefinedTagsPart), false, false)]
+    [PartConstraint(typeof(CommentAuthorsPart), false, false)]
+    [PartConstraint(typeof(HandoutMasterPart), false, false)]
+    [PartConstraint(typeof(LegacyDiagramTextInfoPart), false, false)]
+    [PartConstraint(typeof(VbaProjectPart), false, false)]
     public partial class PresentationPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Presentation.Presentation _rootElement;
 
         /// <summary>
@@ -56,9 +69,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => false;
-
         /// <summary>
         /// Gets the LegacyDiagramTextInfoPart of the PresentationPart
         /// </summary>
@@ -68,78 +78,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the NotesMasterPart of the PresentationPart
         /// </summary>
         public NotesMasterPart NotesMasterPart => GetSubPartOfType<NotesMasterPart>();
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-                            PartConstraintRule.Create<CustomXmlPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/font",
-                            PartConstraintRule.Create<FontPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps",
-                            PartConstraintRule.Create<PresentationPropertiesPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles",
-                            PartConstraintRule.Create<TableStylesPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
-                            PartConstraintRule.Create<ThemePart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps",
-                            PartConstraintRule.Create<ViewPropertiesPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster",
-                            PartConstraintRule.Create<NotesMasterPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide",
-                            PartConstraintRule.Create<SlidePart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster",
-                            PartConstraintRule.Create<SlideMasterPart>(true, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags",
-                            PartConstraintRule.Create<UserDefinedTagsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors",
-                            PartConstraintRule.Create<CommentAuthorsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster",
-                            PartConstraintRule.Create<HandoutMasterPart>(false, false)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2006/relationships/legacyDocTextInfo",
-                            PartConstraintRule.Create<LegacyDiagramTextInfoPart>(false, false)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
-                            PartConstraintRule.Create<VbaProjectPart>(false, false)
-                        }
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
 
         internal override OpenXmlPartRootElement PartRootElement => Presentation;
 

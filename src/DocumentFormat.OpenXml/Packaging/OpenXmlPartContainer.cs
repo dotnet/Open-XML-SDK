@@ -432,7 +432,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.ForeignMediaDataPart);
             }
 
-            T dataPartReferenceRelationship = PartActivator.CreateInstance<T>();
+            T dataPartReferenceRelationship = ClassActivator.CreateInstance<T>();
 
             PackageRelationship relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType);
 
@@ -469,7 +469,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.ForeignMediaDataPart);
             }
 
-            T dataPartReferenceRelationship = PartActivator.CreateInstance<T>();
+            T dataPartReferenceRelationship = ClassActivator.CreateInstance<T>();
 
             PackageRelationship relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType, id);
 
@@ -1282,7 +1282,7 @@ namespace DocumentFormat.OpenXml.Packaging
             ThrowIfObjectDisposed();
 
             // use reflection to create the instance. As the default constructor of part is not "public"
-            var part = PartActivator.CreateInstance<T>();
+            var part = ClassActivator.CreateInstance<T>();
 
             try
             {
@@ -1341,7 +1341,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // Use reflection to create the instance as the default constructor of part is not public
-            var part = PartActivator.CreateInstance<T>();
+            var part = ClassActivator.CreateInstance<T>();
 
             if (part is ExtendedPart)
             {
@@ -2066,13 +2066,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the constraint rule
         /// </summary>
         /// <returns>The constraint rule.</returns>
-        internal virtual PartConstraintCollection PartConstraints => PartConstraintCollection.Instance;
+        internal PartConstraintCollection PartConstraints => PackageCache.Cache.GetPartConstraints(GetType());
 
         /// <summary>
         /// Gets the constraint rule of DataPartReferenceRelationship.
         /// </summary>
         /// <returns>The constraint rule.</returns>
-        internal virtual PartConstraintCollection DataPartReferenceConstraints => PartConstraintCollection.Instance;
+        internal PartConstraintCollection DataPartReferenceConstraints => PackageCache.Cache.GetDataPartConstraints(GetType());
 
         /// <summary>
         /// Test whether the object is already disposed.

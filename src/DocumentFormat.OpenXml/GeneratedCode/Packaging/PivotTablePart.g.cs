@@ -9,13 +9,13 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the PivotTablePart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(PivotTableCacheDefinitionPart), true, false)]
     public partial class PivotTablePart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotTable+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotTable";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinition _rootElement;
 
         /// <summary>
@@ -38,29 +38,6 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinition;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition",
-                            PartConstraintRule.Create<PivotTableCacheDefinitionPart>(true, false)
-                        }
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 
