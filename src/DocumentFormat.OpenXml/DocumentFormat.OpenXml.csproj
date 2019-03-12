@@ -45,6 +45,7 @@
 
       <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
         <Compile Include="System\IO\StreamCopyExtensions.cs" />
+        <Compile Include="System\Lazy{T}.cs" />
       </ItemGroup>
     </When>
 

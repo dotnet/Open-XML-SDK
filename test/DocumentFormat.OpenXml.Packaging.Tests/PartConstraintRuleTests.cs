@@ -57,17 +57,17 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var data = GetConstraintData(part);
 
-            Assert.Same(part.PartConstraints, part.PartConstraints);
-            Assert.Same(part.DataPartReferenceConstraints, part.DataPartReferenceConstraints);
+            Assert.Same(part.Data.PartConstraints, part.Data.PartConstraints);
+            Assert.Same(part.Data.DataPartReferenceConstraints, part.Data.DataPartReferenceConstraints);
 
-            if (!part.PartConstraints.Any())
+            if (!part.Data.PartConstraints.Any())
             {
-                Assert.Same(PartConstraintCollection.Instance, part.PartConstraints);
+                Assert.Same(PartConstraintCollection.Instance, part.Data.PartConstraints);
             }
 
-            if (!part.DataPartReferenceConstraints.Any())
+            if (!part.Data.DataPartReferenceConstraints.Any())
             {
-                Assert.Same(PartConstraintCollection.Instance, part.DataPartReferenceConstraints);
+                Assert.Same(PartConstraintCollection.Instance, part.Data.DataPartReferenceConstraints);
             }
 
             Assert.Equal(data.IsContentTypeFixed, part.IsContentTypeFixed);
@@ -81,8 +81,8 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal(data.ContentType, part.ContentType);
             }
 
-            AssertDictionary(data.DataParts, part.DataPartReferenceConstraints);
-            AssertDictionary(data.Parts, part.PartConstraints);
+            AssertDictionary(data.DataParts, part.Data.DataPartReferenceConstraints);
+            AssertDictionary(data.Parts, part.Data.PartConstraints);
         }
 
         [MemberData(nameof(GetOpenXmlParts))]
@@ -113,8 +113,8 @@ namespace DocumentFormat.OpenXml.Tests
                     TargetFileExtension = t.TargetFileExtension,
                     TargetName = t.TargetName,
                     TargetPath = t.TargetPath,
-                    DataParts = t.DataPartReferenceConstraints,
-                    Parts = t.PartConstraints,
+                    DataParts = t.Data.DataPartReferenceConstraints,
+                    Parts = t.Data.PartConstraints,
                 })
                 .OrderBy(d => d.Name, StringComparer.Ordinal);
 
