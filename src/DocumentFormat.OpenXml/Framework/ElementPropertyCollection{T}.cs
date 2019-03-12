@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        public static ReadOnlyArray<ElementProperty<T>> GetProperties(PackageCache cache, Type type, Func<PropertyInfo, SchemaIndex> getSchema)
+        public static ReadOnlyArray<ElementProperty<T>> GetProperties(Func<Type, Func<T>> activator, Type type, Func<PropertyInfo, SchemaIndex> getSchema)
         {
             return type.GetRuntimeProperties()
                 .Where(property => typeof(T).GetTypeInfo().IsAssignableFrom(property.PropertyType.GetTypeInfo()))
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml
                         schema.NamespaceId,
                         schema.Tag,
                         schema.Index,
-                        new ElementPropertyAccessor<T>(cache, property));
+                        new ElementPropertyAccessor<T>(activator, property));
                 })
                 .Where(tag => tag.IsValid)
                 .OrderBy(tag => tag.Order)

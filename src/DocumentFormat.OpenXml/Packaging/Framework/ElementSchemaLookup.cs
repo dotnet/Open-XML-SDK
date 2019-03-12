@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml
             return _lookup[idx].Create();
         }
 
-        public static ElementSchemaLookup CreateLookup(Type type, PackageCache cache)
+        public static ElementSchemaLookup CreateLookup(Type type, Func<Type, Func<OpenXmlElement>> activatorFactory)
         {
             List<ElementInfo> lookup = null;
 
@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml
                     throw new InvalidOperationException($"{child} does not contain schema information");
                 }
 
-                var key = new ElementInfo(schema.NamespaceId, schema.Tag, cache.GetFactory<OpenXmlElement>(child));
+                var key = new ElementInfo(schema.NamespaceId, schema.Tag, activatorFactory(child));
 
                 lookup.Add(key);
             }
