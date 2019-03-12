@@ -3,7 +3,7 @@
 
 using System;
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml.Framework
 {
     internal static class ClassActivator
     {

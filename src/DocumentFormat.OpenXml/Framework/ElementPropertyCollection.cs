@@ -4,7 +4,7 @@
 using System;
 using System.Reflection;
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml.Framework
 {
     internal static class ElementPropertyCollection
     {

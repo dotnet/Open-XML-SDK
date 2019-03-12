@@ -3,12 +3,12 @@
 
 using System;
 
-namespace DocumentFormat.OpenXml.Packaging
+namespace DocumentFormat.OpenXml.Framework
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
-    internal sealed class PartConstraintAttribute : Attribute, IConstraintAttribute
+    internal sealed class DataPartConstraintAttribute : Attribute, IConstraintAttribute
     {
-        public PartConstraintAttribute(Type constraintType, bool minOccursIsNonZero, bool maxOccursGreatThanOne)
+        public DataPartConstraintAttribute(Type constraintType, bool minOccursIsNonZero, bool maxOccursGreatThanOne)
         {
             ConstraintType = constraintType;
             MinOccursIsNonZero = minOccursIsNonZero;

@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Collections.Concurrent;
 #endif
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml.Framework
 {
     /// <summary>
     /// A cache to hold elements that are relatively expensive to create. Common items held here are reflection related, including objects that hold data parsed from
@@ -30,6 +30,8 @@ namespace DocumentFormat.OpenXml
         public static PackageCache Cache { get; } = new PackageCache();
 
         public OpenXmlElement CreateElement(Type type) => GetFactory<OpenXmlElement>(type)();
+
+        public OpenXmlSimpleType CreateSimpleType(Type type) => GetFactory<OpenXmlSimpleType>(type)();
 
         public Func<T> GetFactory<T>(Type type)
         {
@@ -55,7 +57,7 @@ namespace DocumentFormat.OpenXml
 
         public OpenXmlElementData ParseElement(OpenXmlElement element) => ParseElement(element.GetType());
 
-        private OpenXmlPartData CreatePartData(Type type) => new OpenXmlPartData(type, this);
+        private OpenXmlPartData CreatePartData(Type type) => new OpenXmlPartData(type, ParseElement);
 
         private OpenXmlElementData CreateElementData(Type type) => new OpenXmlElementData(type, this);
 
