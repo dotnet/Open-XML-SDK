@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml
 
         public ReadOnlyArray<ElementProperty<OpenXmlElement>> GetElements(Type type) => _elements.GetOrAdd(type, CreateElements);
 
-        public OpenXmlElement CreateElement(Type type, byte ns, string name) => _factory.GetOrAdd(type, CreateLookup).Create(ns, name);
+        public ElementSchemaLookup GetElementLookup(Type type) => _factory.GetOrAdd(type, CreateLookup);
 
         public OpenXmlElement CreateElement(Type type) => GetFactory<OpenXmlElement>(type)();
 

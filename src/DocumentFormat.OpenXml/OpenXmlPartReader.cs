@@ -736,7 +736,7 @@ namespace DocumentFormat.OpenXml
             }
 
             // create the root element object
-            OpenXmlElement rootElement = CreateElement(_xmlReader.NamespaceURI, _xmlReader.LocalName);
+            var rootElement = CreateElement(_xmlReader.NamespaceURI, _xmlReader.LocalName);
 
             if (rootElement == null)
             {
@@ -768,7 +768,7 @@ namespace DocumentFormat.OpenXml
             }
 
             if (NamespaceIdMap.TryGetNamespaceId(namespaceUri, out byte nsId)
-                && PackageCache.Cache.CreateElement(GetType(), nsId, name) is OpenXmlElement element)
+                && PackageCache.Cache.GetElementLookup(GetType()).Create(nsId, name) is OpenXmlElement element)
             {
                 return element;
             }
