@@ -9,10 +9,20 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// <summary>
     /// Particle constraint data.
     /// </summary>
+    /// <remarks>
+    /// We cannot use auto-properties here due to failure in .NET Native to compile them. For further details, https://github.com/OfficeDev/Open-XML-SDK/issues/567.
+    /// </remarks>
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
     [DebuggerDisplay("ParticleType={ParticleType}")]
     internal readonly struct SdbParticleConstraint
     {
+        private readonly ParticleType _particleType;
+        private readonly ushort _elementTypeId;
+        private readonly ushort _minOccurs;
+        private readonly int _maxOccurs;
+        private readonly ushort _childrenCount;
+        private readonly ushort _childrenStartIndex;
+
         public SdbParticleConstraint(
             ParticleType particleType,
             ushort elementTypeId,
@@ -21,45 +31,45 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             ushort childrenCount,
             ushort childrenStartIndex)
         {
-            ParticleType = particleType;
-            ElementTypeId = elementTypeId;
-            MinOccurs = minOccurs;
-            MaxOccurs = maxOccurs;
-            ChildrenCount = childrenCount;
-            ChildrenStartIndex = childrenStartIndex;
+            _particleType = particleType;
+            _elementTypeId = elementTypeId;
+            _minOccurs = minOccurs;
+            _maxOccurs = maxOccurs;
+            _childrenCount = childrenCount;
+            _childrenStartIndex = childrenStartIndex;
         }
 
         /// <summary>
         /// Gets the particle type of this particle.
         /// </summary>
-        public ParticleType ParticleType { get; }
+        public ParticleType ParticleType => _particleType;
 
         /// <summary>
         /// Gets the element type ID (class ID).
         /// </summary>
-        public ushort ElementTypeId { get; }
+        public ushort ElementTypeId => _elementTypeId;
 
         /// <summary>
         /// Gets the xsd:minOccurs value of this particle.
         /// Just use ushort at now. throw exceptions if there are numbers > ushort.MaxValue.
         /// </summary>
-        public ushort MinOccurs { get; }
+        public ushort MinOccurs => _minOccurs;
 
         /// <summary>
         /// Gets the xsd:maxOccurs value of this particle.
         /// ushort is not enough.
         /// </summary>
-        public int MaxOccurs { get; }
+        public int MaxOccurs => _maxOccurs;
 
         /// <summary>
         /// Gets count of children particles.
         /// </summary>
-        public ushort ChildrenCount { get; }
+        public ushort ChildrenCount => _childrenCount;
 
         /// <summary>
         /// Gets the index of the first child particle index in the SdbParticleChildrenIndex data array.
         /// </summary>
-        public ushort ChildrenStartIndex { get; }
+        public ushort ChildrenStartIndex => _childrenStartIndex;
 
 #if DEBUG
         /// <summary>
