@@ -11,6 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2010)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class CustomDataPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/binary";
@@ -25,9 +26,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

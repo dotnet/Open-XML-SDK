@@ -9,13 +9,16 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DialogsheetPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(SpreadsheetPrinterSettingsPart), false, true)]
+    [PartConstraint(typeof(DrawingsPart), false, false)]
+    [PartConstraint(typeof(VmlDrawingPart), false, true)]
+    [PartConstraint(typeof(EmbeddedObjectPart), false, true)]
     public partial class DialogsheetPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Spreadsheet.DialogSheet _rootElement;
 
         /// <summary>
@@ -74,41 +77,6 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.DialogSheet;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
-                            PartConstraintRule.Create<SpreadsheetPrinterSettingsPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing",
-                            PartConstraintRule.Create<DrawingsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-                            PartConstraintRule.Create<VmlDrawingPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-                            PartConstraintRule.Create<EmbeddedObjectPart>(false, true)
-                        }
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 

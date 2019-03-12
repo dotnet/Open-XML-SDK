@@ -9,8 +9,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the SharedStringTablePart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class SharedStringTablePart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.sharedStrings+xml";
@@ -39,9 +39,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.SharedStringTable;
             }
         }
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
 
         internal override OpenXmlPartRootElement PartRootElement => SharedStringTable;
 

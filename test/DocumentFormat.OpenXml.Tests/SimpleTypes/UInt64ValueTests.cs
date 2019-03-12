@@ -5,6 +5,10 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
     public class UInt64ValueTests : OpenXmlComparableSimpleValueTests<ulong>
     {
+        protected override OpenXmlComparableSimpleValue<ulong> Create(ulong input) => new UInt64Value(input);
+
+        protected override ulong[] Values => new[] { ulong.MinValue, ulong.MinValue + 1, ulong.MaxValue - 1, ulong.MaxValue };
+
         public UInt64ValueTests()
         {
             SmallValue1 = new UInt64Value(10UL);

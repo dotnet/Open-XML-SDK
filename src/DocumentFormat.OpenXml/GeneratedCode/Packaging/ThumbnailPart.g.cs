@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ThumbnailPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class ThumbnailPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail";
@@ -20,9 +20,6 @@ namespace DocumentFormat.OpenXml.Packaging
         internal protected ThumbnailPart()
         {
         }
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => false;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

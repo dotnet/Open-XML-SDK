@@ -49,5 +49,10 @@ namespace DocumentFormat.OpenXml
         {
             return type.GetField(name);
         }
+
+        public static IEnumerable<PropertyInfo> GetRuntimeProperties(this Type type)
+        {
+            return type.GetProperties(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance);
+        }
     }
 }

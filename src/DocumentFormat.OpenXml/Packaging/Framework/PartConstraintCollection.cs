@@ -4,6 +4,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -18,23 +20,43 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        public static PartConstraintCollection Instance { get; } = new PartConstraintCollection(false);
+        public static PartConstraintCollection Create<T>(PackageCache cache, Type type)
+            where T : IConstraintAttribute
+        {
+            var collection = new PartConstraintCollection();
 
-        public int Count => _dictionary.Count;
+            foreach (var constraint in type.GetTypeInfo().GetCustomAttributes(inherit: false).OfType<T>())
+            {
+                collection.Add(new PartConstraintRule(cache.GetElementTypeInfo(constraint.ConstraintType), constraint.MinOccursIsNonZero, constraint.MaxOccursGreatThanOne));
+            }
+
+            if (collection.Count == 0)
+            {
+                return Instance;
+            }
+
+            collection._writeable = false;
+
+            return collection;
+        }
+
+        public static PartConstraintCollection Instance { get; } = new PartConstraintCollection(false);
 
         public PartConstraintCollection(bool writeable)
         {
             _writeable = writeable;
         }
 
-        public void Add(string key, PartConstraintRule value)
+        public int Count => _dictionary.Count;
+
+        public void Add(PartConstraintRule value)
         {
             if (!_writeable)
             {
                 throw new InvalidOperationException();
             }
 
-            _dictionary.Add(key, value);
+            _dictionary.Add(value.RelationshipType, value);
         }
 
         public bool TryGetValue(string key, out PartConstraintRule rule) => _dictionary.TryGetValue(key, out rule);
@@ -47,7 +69,20 @@ namespace DocumentFormat.OpenXml.Packaging
 
         IEnumerable<PartConstraintRule> IReadOnlyDictionary<string, PartConstraintRule>.Values => _dictionary.Values;
 
-        PartConstraintRule IReadOnlyDictionary<string, PartConstraintRule>.this[string key] => _dictionary[key];
+        PartConstraintRule IReadOnlyDictionary<string, PartConstraintRule>.this[string key]
+        {
+            get
+            {
+                try
+                {
+                    return _dictionary[key];
+                }
+                catch (Exception e)
+                {
+                    throw new KeyNotFoundException(key, e);
+                }
+            }
+        }
 
         IEnumerator<KeyValuePair<string, PartConstraintRule>> IEnumerable<KeyValuePair<string, PartConstraintRule>>.GetEnumerator() => _dictionary.GetEnumerator();
 

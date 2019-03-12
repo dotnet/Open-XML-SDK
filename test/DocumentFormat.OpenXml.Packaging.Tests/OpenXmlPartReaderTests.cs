@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Xunit;
@@ -20,7 +19,13 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Throws<ArgumentNullException>(() => new OpenXmlPartReader((Stream)null));
         }
 
-        [MemberData(nameof(GetXmlData))]
+        [InlineData("<?xml version='1.0' encoding='UTF-8' standalone='yes'?><root/>", "UTF-8", true)]
+        [InlineData("<?xml version='1.0' encoding='UTF-32' standalone='yes'?><root/>", "UTF-32", true)]
+        [InlineData("<?xml version='1.0' standalone='yes'?><root/>", null, true)]
+        [InlineData("<?xml version='1.0' standalone='no'?><root/>", null, false)]
+        [InlineData("<?xml version='1.0'?><root/>", null, null)]
+        [InlineData("<?xml version='1.0'?>", null, null)]
+        [InlineData("<root/>", null, null)]
         [Theory]
         public void ExtractsInfoFromStream(string xml, string encoding, bool? standalone)
         {
@@ -35,17 +40,6 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 // Ensure the part reader did not dispose the stream when it is disposed
                 Assert.True(stream.CanRead);
             }
-        }
-
-        public static IEnumerable<object[]> GetXmlData()
-        {
-            yield return new object[] { "<?xml version='1.0' encoding='UTF-8' standalone='yes'?><root/>", "UTF-8", true };
-            yield return new object[] { "<?xml version='1.0' encoding='UTF-32' standalone='yes'?><root/>", "UTF-32", true };
-            yield return new object[] { "<?xml version='1.0' standalone='yes'?><root/>", null, true };
-            yield return new object[] { "<?xml version='1.0' standalone='no'?><root/>", null, false };
-            yield return new object[] { "<?xml version='1.0'?><root/>", null, null };
-            yield return new object[] { "<?xml version='1.0'?>", null, null };
-            yield return new object[] { "<root/>", null, null };
         }
     }
 }

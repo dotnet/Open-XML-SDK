@@ -300,7 +300,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 // ST_GapWidthRatio
                 case 879:
-                    simpleValues[0] = new DoubleValue();
                     break;
 
                 // ST_ValueAxisUnit

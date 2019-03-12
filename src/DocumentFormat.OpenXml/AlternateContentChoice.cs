@@ -8,8 +8,11 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines an mc:Choice element in mc:AlternateContent.
     /// </summary>
+    [SchemaAttr(AlternateContent.Namespace, Name)]
     public class AlternateContentChoice : OpenXmlCompositeElement
     {
+        private const string Name = "Choice";
+
         /// <summary>
         /// Initializes a new instance of the
         /// AlternateContentChoice class.
@@ -62,52 +65,35 @@ namespace DocumentFormat.OpenXml
         /// Gets a value that represents the tag name of the
         /// Choice element.
         /// </summary>
-        public static string TagName { get; } = "Choice";
+        public static string TagName =>Name;
 
         /// <summary>
         /// Gets the local name of the Choice element.
         /// </summary>
         public override string LocalName => TagName;
 
-        internal override byte NamespaceId => AlternateContent.MarkupCompatibilityNamespaceId;
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new[]
-        {
-            AttributeTag.Create<StringValue>(0, "Requires"),
-        };
-
-        internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
         /// <summary>
         /// Gets or sets a whitespace-delimited list of namespace prefixes that identify the
         /// namespaces a markup consumer needs in order to understand and select that
         /// Choice and process the content.
         /// </summary>
-        public StringValue Requires
-        {
-            get { return (StringValue)Attributes[0].Value; }
-            set { Attributes[0].Value = value; }
-        }
+        [SchemaAttr(0, "Requires")]
+        [Index(0)]
+        public StringValue Requires { get; set; }
 
         internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         {
-            OpenXmlElement newElement = null;
-
-            if (Parent != null &&
-                 Parent is AlternateContent)
+            if (Parent is AlternateContent)
             {
-                OpenXmlElement parentsParentElemnt = Parent.Parent;
-                if (parentsParentElemnt != null)
+                var parentsParentElement = Parent.Parent;
+
+                if (parentsParentElement != null)
                 {
-                    newElement = parentsParentElemnt.ElementFactory(namespaceId, name);
-                    if (newElement == null)
-                    {
-                        newElement = parentsParentElemnt.AlternateContentElementFactory(namespaceId, name);
-                    }
+                    return parentsParentElement.ElementFactory(namespaceId, name);
                 }
             }
 
-            return newElement;
+            return null;
         }
 
         /// <returns>The cloned node. </returns>
@@ -119,16 +105,11 @@ namespace DocumentFormat.OpenXml
         /// True to recursively clone the subtree under the specified node; False
         ///  to clone only the node itself.
         /// </param>
-        public override OpenXmlElement CloneNode(bool deep)
-        {
-            return CloneImp<AlternateContentChoice>(deep);
-        }
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlternateContentChoice>(deep);
 
         /// <summary>
         /// Gets the type ID of the element.
         /// </summary>
         internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentChoiceId;
-
-        internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     }
 }

@@ -2,16 +2,15 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
     internal readonly struct PartConstraintRule
     {
-        private readonly TypeConstraintInfo _info;
+        private readonly ElementTypeInfo _info;
 
-        private PartConstraintRule(
-            TypeConstraintInfo info,
+        public PartConstraintRule(
+            ElementTypeInfo info,
             bool minOccursIsNonZero,
             bool maxOccursGreatThanOne)
         {
@@ -21,10 +20,10 @@ namespace DocumentFormat.OpenXml.Packaging
             MaxOccursGreatThanOne = maxOccursGreatThanOne;
         }
 
-        public static PartConstraintRule Create<T>(bool minOccursIsNonZero, bool maxOccursGreatThanOne)
-        {
-            return new PartConstraintRule(CachedTypeInfo<T>.Instance, minOccursIsNonZero, maxOccursGreatThanOne);
-        }
+        /// <summary>
+        /// Gets the relationship type.
+        /// </summary>
+        public string RelationshipType => _info.RelationshipType;
 
         /// <summary>
         /// Gets the class name for the relationship type.
@@ -52,26 +51,5 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the file format version information.
         /// </summary>
         public FileFormatVersions FileFormat => _info.Availability;
-
-        private static class CachedTypeInfo<T>
-        {
-            public static TypeConstraintInfo Instance { get; } = new TypeConstraintInfo(typeof(T));
-        }
-
-        private class TypeConstraintInfo
-        {
-            public TypeConstraintInfo(Type type)
-            {
-                PartClassName = type.Name;
-                PartContentType = type.GetTypeInfo().GetCustomAttribute<ContentTypeAttribute>()?.ContentType;
-                Availability = type.GetTypeInfo().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
-            }
-
-            public string PartClassName { get; }
-
-            public string PartContentType { get; }
-
-            public FileFormatVersions Availability { get; }
-        }
     }
 }

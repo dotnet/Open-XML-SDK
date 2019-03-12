@@ -11,6 +11,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents elements that are not defined in the Office Open XML ECMA standard.
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.None)]
     public class OpenXmlUnknownElement : OpenXmlCompositeElement
     {
         private string _namespaceUri;
@@ -140,8 +141,6 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override XmlQualifiedName XmlQualifiedName => new XmlQualifiedName(_tagName, _namespaceUri);
 
-        internal override byte NamespaceId => throw new InvalidOperationException();
-
         /// <inheritdoc/>
         internal override int ElementTypeId => ReservedElementTypeIds.OpenXmlUnknownElementId;
 
@@ -177,7 +176,7 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep)
         {
-            OpenXmlUnknownElement element = new OpenXmlUnknownElement(_prefix, _tagName, _namespaceUri)
+            var element = new OpenXmlUnknownElement(_prefix, _tagName, _namespaceUri)
             {
                 _text = Text,
             };
@@ -230,7 +229,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        internal override void LazyLoad(XmlReader xmlReader)
+        private protected override void LazyLoad(XmlReader xmlReader)
         {
             _tagName = xmlReader.LocalName;
             _prefix = xmlReader.Prefix;
@@ -240,7 +239,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
+        private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
             if (string.IsNullOrEmpty(_tagName))
             {
@@ -261,8 +260,7 @@ namespace DocumentFormat.OpenXml
             if (FirstChild != null && FirstChild.NextSibling() == null)
             {
                 // only one child
-                OpenXmlMiscNode miscNode = FirstChild as OpenXmlMiscNode;
-                if (miscNode != null)
+                if (FirstChild is OpenXmlMiscNode miscNode)
                 {
                     switch (miscNode.XmlNodeType)
                     {
@@ -280,7 +278,5 @@ namespace DocumentFormat.OpenXml
                 }
             }
         }
-
-        internal override FileFormatVersions InitialVersion => FileFormatVersions.None;
     }
 }

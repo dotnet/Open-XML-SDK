@@ -14,6 +14,10 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 
         protected OpenXmlComparableSimpleValue<T> LargeValue { get; set; }
 
+        protected abstract T[] Values { get; }
+
+        protected abstract OpenXmlComparableSimpleValue<T> Create(T input);
+
         [Fact]
         public void TestValuesAreConsistent()
         {
@@ -30,35 +34,64 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
         public void CompareTo_InstanceFollowsArgumentInSortOrder_PositiveValueReturned()
         {
             Assert.True(LargeValue.CompareTo(SmallValue1) > 0);
-            Assert.True(LargeValue.CompareTo((object) SmallValue1) > 0);
+            Assert.True(LargeValue.CompareTo((object)SmallValue1) > 0);
         }
 
         [Fact]
         public void CompareTo_SameSortOrder_ZeroReturned()
         {
             Assert.Equal(0, LargeValue.CompareTo(LargeValue));
-            Assert.Equal(0, LargeValue.CompareTo((object) LargeValue));
+            Assert.Equal(0, LargeValue.CompareTo((object)LargeValue));
         }
 
         [Fact]
         public void CompareTo_InstancePrecedesArgumentInSortOrder_NegativeValueReturned()
         {
             Assert.True(SmallValue1.CompareTo(LargeValue) < 0);
-            Assert.True(SmallValue1.CompareTo((object) LargeValue) < 0);
+            Assert.True(SmallValue1.CompareTo((object)LargeValue) < 0);
         }
 
         [Fact]
         public void CompareTo_ArgumentIsNull_PositiveValueReturned()
         {
             Assert.True(SmallValue1.CompareTo(null) > 0);
-            Assert.True(SmallValue1.CompareTo((object) null) > 0);
+            Assert.True(SmallValue1.CompareTo((object)null) > 0);
+        }
+
+        [Fact]
+        public void CompareTo_NoValue()
+        {
+            var value = Create(default);
+            value.InnerText = Guid.NewGuid().ToString();
+
+            Assert.False(value.HasValue);
+            Assert.Equal(1, value.CompareTo(default(T)));
+
+            foreach (var other in Values)
+            {
+                Assert.Equal(1, value.CompareTo(other));
+            }
         }
 
         [Fact]
         public void CompareTo_ArgumentIncompatible_ExceptionThrown()
         {
             Assert.Throws<ArgumentException>(() => SmallValue1.CompareTo("Some string"));
-            Assert.Throws<ArgumentException>(() => SmallValue1.CompareTo(1));
+        }
+
+        [Fact]
+        public void CompareTo_Values()
+        {
+            var random = new Random();
+
+            foreach (var value in Values)
+            {
+                var idx = random.Next(0, Values.Length - 1);
+
+                Assert.Equal(Create(value).CompareTo(Values[idx]), value.CompareTo(Values[idx]));
+                Assert.Equal(Create(value).Equals(Create(Values[idx])), value.Equals(Values[idx]));
+                Assert.Equal(Create(value).Equals((object)Values[idx]), value.Equals(Values[idx]));
+            }
         }
 
         [Fact]
@@ -79,6 +112,35 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
         {
             Assert.False(SmallValue1.Equals(null));
             Assert.False(LargeValue.Equals(null));
+        }
+
+        [Fact]
+        public void Equals_NoValue()
+        {
+            var value = Create(default);
+            value.InnerText = Guid.NewGuid().ToString();
+
+            Assert.False(value.HasValue);
+
+            foreach (var other in Values)
+            {
+                Assert.False(value.Equals(other));
+            }
+        }
+
+        [Fact]
+        public void Equality_Values()
+        {
+            var random = new Random();
+
+            foreach (var value in Values)
+            {
+                var idx = random.Next(0, Values.Length - 1);
+
+                Assert.Equal(Create(value).Equals(Values[idx]), value.Equals(Values[idx]));
+                Assert.Equal(Create(value).Equals(Create(Values[idx])), value.Equals(Values[idx]));
+                Assert.Equal(Create(value).Equals((object)Values[idx]), value.Equals(Values[idx]));
+            }
         }
 
         [Fact]

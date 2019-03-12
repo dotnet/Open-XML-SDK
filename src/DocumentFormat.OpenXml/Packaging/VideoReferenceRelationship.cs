@@ -8,6 +8,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Represents an internal video reference relationship to a MediaDataPart element.
     /// </summary>
+    [RelationshipType(RelationshipTypeConst)]
     public class VideoReferenceRelationship : DataPartReferenceRelationship
     {
         /// <summary>
@@ -18,10 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the source relationship type for an audio reference.
         /// </summary>
-        public static string VideoReferenceRelationshipType
-        {
-            get { return RelationshipTypeConst; }
-        }
+        public static string VideoReferenceRelationshipType => RelationshipTypeConst;
 
         /// <summary>
         /// Initializes a new instance of the VideoReferenceRelationship class.
@@ -47,9 +45,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the relationship type for a video reference.
         /// </summary>
-        public override string RelationshipType
-        {
-            get { return RelationshipTypeConst; }
-        }
+        public override string RelationshipType => RelationshipTypeConst;
     }
 }

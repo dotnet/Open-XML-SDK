@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ImagePart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class ImagePart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image";
@@ -20,9 +20,6 @@ namespace DocumentFormat.OpenXml.Packaging
         internal protected ImagePart()
         {
         }
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => false;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

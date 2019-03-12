@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Xml;
 using Xunit;
 
@@ -967,6 +968,37 @@ namespace DocumentFormat.OpenXml.Tests
             catch
             {
                 Assert.True(false); // Assert.Fail("Should not throw exception.");
+            }
+        }
+
+        [Fact]
+        public void AllElementsHaveIndexAttribute()
+        {
+            var skippedTypes = new HashSet<Type>
+            {
+                typeof(OpenXmlElement),
+                typeof(OpenXmlCompositeElement),
+                typeof(OpenXmlLeafElement),
+                typeof(OpenXmlLeafTextElement),
+            };
+
+            var types = typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes()
+                .Where(t => typeof(OpenXmlElement).IsAssignableFrom(t))
+                .Where(t => !skippedTypes.Contains(t));
+
+            foreach (var type in types)
+            {
+                foreach (var property in type.GetTypeInfo().GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly))
+                {
+                    if (typeof(OpenXmlElement).IsAssignableFrom(property.PropertyType) || typeof(OpenXmlSimpleType).IsAssignableFrom(property.PropertyType))
+                    {
+                        // Skip any obsolete properties as those redirect to other properties
+                        if (property.GetCustomAttribute<ObsoleteAttribute>() == null)
+                        {
+                            Assert.NotNull(property.GetCustomAttribute<IndexAttribute>());
+                        }
+                    }
+                }
             }
         }
     }

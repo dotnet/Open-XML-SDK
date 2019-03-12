@@ -90,15 +90,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// </summary>
         /// <param name="e">OpenXmlElement or derived classes that has properties with SchemaAttrAttribute</param>
         /// <returns>IEnumerable<OpenXmlAttribute> for fixed attributes of type of pass-in OpenXmlElement</returns>
-        public static IEnumerable<OpenXmlAttribute> GetFixedAttributes(this OpenXmlElement e)
-        {
-            var flag = BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public;
-            var properties = e.GetType().GetProperties(flag)
-                .Where(p => p.GetCustomAttributes(typeof(SchemaAttrAttribute), false).Any());
-            return properties
-                .Select(p => p.GetCustomAttributes(typeof(SchemaAttrAttribute), false).First() as SchemaAttrAttribute)
-                .Select(sa => new OpenXmlAttribute(sa.Tag, sa.NamespaceUri, null));
-        }
+        public static IEnumerable<OpenXmlAttribute> GetFixedAttributes(this OpenXmlElement e) => e.Attributes;
 
         /// <summary>
         /// Get XName of pass-in OpenXmlElement.

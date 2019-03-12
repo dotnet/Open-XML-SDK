@@ -9,13 +9,15 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ChartDrawingPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(ChartPart), false, false)]
+    [PartConstraint(typeof(ExtendedChartPart), false, false)]
+    [PartConstraint(typeof(ImagePart), false, true)]
     public partial class ChartDrawingPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Drawing.Charts.UserShapes _rootElement;
 
         /// <summary>
@@ -53,37 +55,6 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Drawing.Charts.UserShapes;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-                            PartConstraintRule.Create<ChartPart>(false, false)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-                            PartConstraintRule.Create<ExtendedChartPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                            PartConstraintRule.Create<ImagePart>(false, true)
-                        }
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 

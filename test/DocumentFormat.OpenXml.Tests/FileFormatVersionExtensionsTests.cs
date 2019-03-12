@@ -6,6 +6,7 @@ using NSubstitute;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -96,9 +97,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void ValidateElementThrows(FileFormatVersions version)
         {
             var name = version.ToString().Substring("Office".Length);
-            var element = Substitute.ForPartsOf<OpenXmlElement>();
-
-            element.InitialVersion.Returns(FileFormatVersions.None);
+            var element = new OfficeNonElement();
 
             var exception = Assert.Throws<InvalidOperationException>(() => version.ThrowIfNotInVersion(element));
 
@@ -144,8 +143,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Assert.True(version == default || !Enum.IsDefined(typeof(FileFormatVersions), version));
 
-            var element = Substitute.ForPartsOf<OpenXmlElement>();
-            element.InitialVersion.Returns(FileFormatVersions.Office2007);
+            var element = new Office2007Element();
 
             Assert.Throws<ArgumentOutOfRangeException>(ParamName, () => version.ThrowIfNotInVersion(element));
         }
@@ -160,6 +158,27 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 yield return new object[] { version };
             }
+        }
+
+        [OfficeAvailability(FileFormatVersions.None)]
+        private class OfficeNonElement : MockedXmlElement
+        {
+        }
+
+        [OfficeAvailability(FileFormatVersions.Office2007)]
+        private class Office2007Element : MockedXmlElement
+        {
+        }
+
+        private class MockedXmlElement : OpenXmlElement
+        {
+            public override bool HasChildren => throw new NotImplementedException();
+
+            public override void RemoveAllChildren() => throw new NotImplementedException();
+
+            internal override void WriteContentTo(XmlWriter w) => throw new NotImplementedException();
+
+            private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode) => throw new NotImplementedException();
         }
     }
 }

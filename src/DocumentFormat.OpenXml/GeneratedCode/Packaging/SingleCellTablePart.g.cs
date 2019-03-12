@@ -9,8 +9,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the SingleCellTablePart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class SingleCellTablePart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.tableSingleCells+xml";
@@ -39,9 +39,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.SingleXmlCells;
             }
         }
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
 
         internal override OpenXmlPartRootElement PartRootElement => SingleXmlCells;
 

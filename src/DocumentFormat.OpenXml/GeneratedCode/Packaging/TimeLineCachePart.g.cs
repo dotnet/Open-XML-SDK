@@ -11,6 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2013)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class TimeLineCachePart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.timelineCache+xml";
@@ -39,9 +40,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 _rootElement = value as DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheDefinition;
             }
         }
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
 
         internal override OpenXmlPartRootElement PartRootElement => TimelineCacheDefinition;
 

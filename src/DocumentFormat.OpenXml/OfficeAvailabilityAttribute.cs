@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the Office version of the available property.
         /// </summary>
-        public FileFormatVersions OfficeVersion { get; internal set; }
+        public FileFormatVersions OfficeVersion { get; }
 
         /// <summary>
         /// Initializes a new instance of the OfficeAvailabilityAttribute class.

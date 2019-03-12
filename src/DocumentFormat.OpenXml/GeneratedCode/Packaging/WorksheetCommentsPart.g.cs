@@ -9,8 +9,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WorksheetCommentsPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class WorksheetCommentsPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml";
@@ -65,9 +65,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Comments;
             }
         }
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
 
         internal override OpenXmlPartRootElement PartRootElement => Comments;
 

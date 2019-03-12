@@ -9,13 +9,20 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the MacroSheetPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(SpreadsheetPrinterSettingsPart), false, true)]
+    [PartConstraint(typeof(DrawingsPart), false, false)]
+    [PartConstraint(typeof(VmlDrawingPart), false, true)]
+    [PartConstraint(typeof(WorksheetCommentsPart), false, false)]
+    [PartConstraint(typeof(CustomPropertyPart), false, true)]
+    [PartConstraint(typeof(EmbeddedObjectPart), false, true)]
+    [PartConstraint(typeof(EmbeddedPackagePart), false, true)]
+    [PartConstraint(typeof(ImagePart), false, true)]
     public partial class MacroSheetPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.macrosheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Office.Excel.Macrosheet _rootElement;
 
         /// <summary>
@@ -66,9 +73,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
-
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
@@ -92,54 +96,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
 
                 SetDomTree(value);
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
-                            PartConstraintRule.Create<SpreadsheetPrinterSettingsPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing",
-                            PartConstraintRule.Create<DrawingsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-                            PartConstraintRule.Create<VmlDrawingPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
-                            PartConstraintRule.Create<WorksheetCommentsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty",
-                            PartConstraintRule.Create<CustomPropertyPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-                            PartConstraintRule.Create<EmbeddedObjectPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-                            PartConstraintRule.Create<EmbeddedPackagePart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                            PartConstraintRule.Create<ImagePart>(false, true)
-                        }
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 
