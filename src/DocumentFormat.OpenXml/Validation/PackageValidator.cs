@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Validation
                 }
 
                 if (!(container is ExtendedPart) &&
-                    !container.PartConstraints.ContainsRelationship(part.RelationshipType) &&
+                    !container.Data.PartConstraints.ContainsRelationship(part.RelationshipType) &&
                     part.IsInVersion(version))
                 {
                     yield return new OpenXmlPackageValidationEventArgs(container)
@@ -107,7 +107,7 @@ namespace DocumentFormat.OpenXml.Validation
                 // if the part is not defined in this version, then should not report error, just treat it as ExtendedPart.
             }
 
-            foreach (var constraintRulePair in container.PartConstraints)
+            foreach (var constraintRulePair in container.Data.PartConstraints)
             {
                 var relatinshipType = constraintRulePair.Key;
                 var constraintRule = constraintRulePair.Value;
@@ -160,7 +160,7 @@ namespace DocumentFormat.OpenXml.Validation
                 {
                     if (!(part is ExtendedPart))
                     {
-                        if (container.PartConstraints.TryGetValue(part.RelationshipType, out var rule))
+                        if (container.Data.PartConstraints.TryGetValue(part.RelationshipType, out var rule))
                         {
                             if (version.AtLeast(rule.FileFormat))
                             {
@@ -215,7 +215,7 @@ namespace DocumentFormat.OpenXml.Validation
             // So just check whether the reference is allowed.
             foreach (var dataPartReference in container.DataPartReferenceRelationships)
             {
-                if (!container.DataPartReferenceConstraints.TryGetValue(dataPartReference.RelationshipType, out var constraintRule))
+                if (!container.Data.DataPartReferenceConstraints.TryGetValue(dataPartReference.RelationshipType, out var constraintRule))
                 {
                     yield return new OpenXmlPackageValidationEventArgs(container)
                     {
