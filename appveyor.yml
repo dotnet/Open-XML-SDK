@@ -30,11 +30,3 @@ artifacts:
 on_finish:
   - ps:  Invoke-WebRequest http://kompat.io/downloads/kompat.exe -o kompat.exe
   - cmd: kompat.exe -config compat.yml -version %GitVersion_NuGetVersionV2%
-
-deploy:
-  provider: NuGet
-  server: https://dotnet.myget.org/F/open-xml-sdk/api/v2/package
-  api_key:
-    secure: SSFVVP2n8gyH0kiElrqwrIJJwL3C7XFnYnntr3z/h2Rwpa7/K1nDd2BP3JPB6347
-  on:
-    branch: [master]
