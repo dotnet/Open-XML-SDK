@@ -73,6 +73,7 @@ namespace DocumentFormat.OpenXml
 
         private static IEnumerable<Type> GetChildTypes(Type type)
         {
+            // If type is OpenXmlPartReader, we are looking for the root elements and must parse all the elements in the assembly.
             if (typeof(OpenXmlPartReader) == type)
             {
 #if NETSTANDARD1_3

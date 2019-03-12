@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
             SchemaIndex GetSchema(PropertyInfo property)
             {
                 var index = property.GetCustomAttribute<IndexAttribute>();
-                var schema = cache.GetElementTypeInfo(property.PropertyType).Schema;
+                var schema = cache.ParseElement(property.PropertyType).Info.Schema;
 
                 return new SchemaIndex(schema, index);
             }

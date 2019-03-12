@@ -768,7 +768,7 @@ namespace DocumentFormat.OpenXml
             }
 
             if (NamespaceIdMap.TryGetNamespaceId(namespaceUri, out byte nsId)
-                && PackageCache.Cache.GetElementLookup(GetType()).Create(nsId, name) is OpenXmlElement element)
+                && PackageCache.Cache.ParseElement(GetType()).SchemaLookup.Create(nsId, name) is OpenXmlElement element)
             {
                 return element;
             }

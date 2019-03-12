@@ -22,24 +22,12 @@ namespace DocumentFormat.OpenXml
     /// </remarks>
     internal class PackageCache
     {
-        private readonly TypeConcurrentDictionary<ElementTypeInfo> _typeConstraintInfoCache = new TypeConcurrentDictionary<ElementTypeInfo>();
-        private readonly TypeConcurrentDictionary<PartConstraintCollection> _partConstraints = new TypeConcurrentDictionary<PartConstraintCollection>();
-        private readonly TypeConcurrentDictionary<PartConstraintCollection> _dataPartConstraints = new TypeConcurrentDictionary<PartConstraintCollection>();
         private readonly TypeConcurrentDictionary<Func<OpenXmlSimpleType>> _simpleTypeFactory = new TypeConcurrentDictionary<Func<OpenXmlSimpleType>>();
         private readonly TypeConcurrentDictionary<Func<OpenXmlElement>> _elementFactory = new TypeConcurrentDictionary<Func<OpenXmlElement>>();
-        private readonly TypeConcurrentDictionary<ElementSchemaLookup> _factory = new TypeConcurrentDictionary<ElementSchemaLookup>();
-
         private readonly TypeConcurrentDictionary<OpenXmlElementData> _elementData = new TypeConcurrentDictionary<OpenXmlElementData>();
+        private readonly TypeConcurrentDictionary<OpenXmlPartData> _partData = new TypeConcurrentDictionary<OpenXmlPartData>();
 
         public static PackageCache Cache { get; } = new PackageCache();
-
-        public ElementTypeInfo GetElementTypeInfo(Type type) => _typeConstraintInfoCache.GetOrAdd(type, ElementTypeInfo.Create);
-
-        public PartConstraintCollection GetPartConstraints(Type type) => _partConstraints.GetOrAdd(type, CreatePartConstraints);
-
-        public PartConstraintCollection GetDataPartConstraints(Type type) => _dataPartConstraints.GetOrAdd(type, CreateDataPartConstraints);
-
-        public ElementSchemaLookup GetElementLookup(Type type) => _factory.GetOrAdd(type, CreateLookup);
 
         public OpenXmlElement CreateElement(Type type) => GetFactory<OpenXmlElement>(type)();
 
@@ -59,15 +47,17 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private ElementSchemaLookup CreateLookup(Type type) => ElementSchemaLookup.CreateLookup(type, this);
+        public OpenXmlPartData ParsePart(Type type) => _partData.GetOrAdd(type, CreatePartData);
 
-        private ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> CreateAttributes(Type type) => ElementPropertyCollection.GetProperties(this, type);
+        public OpenXmlPartData ParsePart(OpenXmlPartContainer part) => ParsePart(part.GetType());
 
-        public OpenXmlElementData ParseData(OpenXmlElement element) => _elementData.GetOrAdd(element.GetType(), type => new OpenXmlElementData(type, this));
+        public OpenXmlElementData ParseElement(Type type) => _elementData.GetOrAdd(type, CreateElementData);
 
-        private PartConstraintCollection CreatePartConstraints(Type type) => PartConstraintCollection.Create<PartConstraintAttribute>(this, type);
+        public OpenXmlElementData ParseElement(OpenXmlElement element) => ParseElement(element.GetType());
 
-        private PartConstraintCollection CreateDataPartConstraints(Type type) => PartConstraintCollection.Create<DataPartConstraintAttribute>(this, type);
+        private OpenXmlPartData CreatePartData(Type type) => new OpenXmlPartData(type, this);
+
+        private OpenXmlElementData CreateElementData(Type type) => new OpenXmlElementData(type, this);
 
 #if NO_CONCURRENT_COLLECTIONS
         private sealed class TypeConcurrentDictionary<TValue>

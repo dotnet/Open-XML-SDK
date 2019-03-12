@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             foreach (var constraint in type.GetTypeInfo().GetCustomAttributes(inherit: false).OfType<T>())
             {
-                collection.Add(new PartConstraintRule(cache.GetElementTypeInfo(constraint.ConstraintType), constraint.MinOccursIsNonZero, constraint.MaxOccursGreatThanOne));
+                collection.Add(new PartConstraintRule(cache.ParseElement(constraint.ConstraintType).Info, constraint.MinOccursIsNonZero, constraint.MaxOccursGreatThanOne));
             }
 
             if (collection.Count == 0)
