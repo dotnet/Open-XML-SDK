@@ -9,13 +9,13 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the VbaProjectPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(VbaDataPart), false, false)]
     public partial class VbaProjectPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.vbaProject";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/vbaProject";
-        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Creates an instance of the VbaProjectPart OpenXmlType
@@ -26,29 +26,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        {
-                            "http://schemas.microsoft.com/office/2006/relationships/wordVbaData",
-                            PartConstraintRule.Create<VbaDataPart>(false, false)
-                        }
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

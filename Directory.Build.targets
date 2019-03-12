@@ -10,6 +10,7 @@
     FEATURE_CLOSE                    : Stream.Close is available in the platform
     FEATURE_DCS_SETTINGS             : DataContractSerializer settings class exists
     FEATURE_PACKAGE_FLUSH            : System.IO.Package.Flush will correctly flush all data
+    NO_CONCURRENT_COLLECTIONS        : Concurrent collections are not available
     FEATURE_SERIALIZATION            : Serialization using ISerializable is in the platform
     FEATURE_SCHEMA_GENERATOR         : Provides access to helpers to generate schema information
     FEATURE_SYSTEMEXCEPTION          : SytemException is available in the platform
@@ -20,7 +21,7 @@
   -->
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
-    <DefineConstants>$(DefineConstants);FEATURE_PACKAGE_FLUSH;FEATURE_XML_PROHIBIT_DTD</DefineConstants>
+    <DefineConstants>$(DefineConstants);FEATURE_PACKAGE_FLUSH;FEATURE_XML_PROHIBIT_DTD;NO_CONCURRENT_COLLECTIONS</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net452' ">
@@ -40,17 +41,17 @@
 
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)\stylecop.json" />
 
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004">
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.1-beta.61">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
 
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0">
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.2">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
 
     <!-- GitVersionTask is not compiled against .NET Core, so importing the targets will
          result in a failure because it will try to resolve Microsoft.Build.Utilities v4.0 -->
-    <PackageReference Include="GitVersionTask" Version="4.0.0-beta0012" Condition=" '$(MSBuildRuntimeType)' != 'Core' ">
+    <PackageReference Include="GitVersionTask" Version="4.0.0" Condition=" '$(MSBuildRuntimeType)' != 'Core' ">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
 

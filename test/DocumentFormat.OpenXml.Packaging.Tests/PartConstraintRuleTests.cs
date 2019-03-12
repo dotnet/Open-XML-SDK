@@ -89,7 +89,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         public void ValidateValid(OpenXmlPart part)
         {
-            var availability = part.GetType().GetCustomAttribute<OfficeAvailabilityAttribute>().OfficeVersion;
+            var availability = part.GetType().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
             var versions = Enum.GetValues(typeof(FileFormatVersions))
                 .Cast<FileFormatVersions>()
                 .Where(v => v != FileFormatVersions.None);

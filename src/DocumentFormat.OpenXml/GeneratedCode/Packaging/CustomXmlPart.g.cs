@@ -9,11 +9,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the CustomXmlPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(CustomXmlPropertiesPart), false, false)]
     public partial class CustomXmlPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml";
-        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Creates an instance of the CustomXmlPart OpenXmlType
@@ -26,29 +26,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the CustomXmlPropertiesPart of the CustomXmlPart
         /// </summary>
         public CustomXmlPropertiesPart CustomXmlPropertiesPart => GetSubPartOfType<CustomXmlPropertiesPart>();
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => false;
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps",
-                            PartConstraintRule.Create<CustomXmlPropertiesPart>(false, false)
-                        }
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

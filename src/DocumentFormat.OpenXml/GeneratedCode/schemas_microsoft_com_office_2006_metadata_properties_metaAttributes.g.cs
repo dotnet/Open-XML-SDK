@@ -16,229 +16,133 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(41, "DummyContentTypeElement")]
 public partial class Dummy : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12713;
-    /// <inheritdoc/>
-    public override string LocalName => "DummyContentTypeElement";
-    
-    internal override byte NamespaceId => 41;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "decimals"),
-		AttributeTag.Create<StringValue>(0, "default"),
-		AttributeTag.Create<StringValue>(0, "description"),
-		AttributeTag.Create<StringValue>(0, "displayName"),
-		AttributeTag.Create<StringValue>(0, "fieldsID"),
-		AttributeTag.Create<StringValue>(0, "format"),
-		AttributeTag.Create<StringValue>(0, "hidden"),
-		AttributeTag.Create<Int32Value>(0, "index"),
-		AttributeTag.Create<StringValue>(0, "internalName"),
-		AttributeTag.Create<Int32Value>(0, "LCID"),
-		AttributeTag.Create<StringValue>(0, "list"),
-		AttributeTag.Create<StringValue>(0, "percentage"),
-		AttributeTag.Create<StringValue>(0, "readOnly"),
-		AttributeTag.Create<StringValue>(0, "requiredMultiChoice"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues>>(0, "root"),
-		AttributeTag.Create<StringValue>(0, "showField"),
-		AttributeTag.Create<StringValue>(0, "web")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> decimals.</para>
     /// <para>Represents the following attribute in the schema: decimals </para>
     /// </summary>
     [SchemaAttr(0, "decimals")]
-    public StringValue Decimals
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [Index(0)]
+    public StringValue Decimals { get; set; }
     /// <summary>
     /// <para> default.</para>
     /// <para>Represents the following attribute in the schema: default </para>
     /// </summary>
     [SchemaAttr(0, "default")]
-    public StringValue Default
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [Index(1)]
+    public StringValue Default { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [Index(2)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> displayName.</para>
     /// <para>Represents the following attribute in the schema: displayName </para>
     /// </summary>
     [SchemaAttr(0, "displayName")]
-    public StringValue DisplayName
-    {
-        get { return (StringValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [Index(3)]
+    public StringValue DisplayName { get; set; }
     /// <summary>
     /// <para> fieldsID.</para>
     /// <para>Represents the following attribute in the schema: fieldsID </para>
     /// </summary>
     [SchemaAttr(0, "fieldsID")]
-    public StringValue FieldsID
-    {
-        get { return (StringValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [Index(4)]
+    public StringValue FieldsID { get; set; }
     /// <summary>
     /// <para> format.</para>
     /// <para>Represents the following attribute in the schema: format </para>
     /// </summary>
     [SchemaAttr(0, "format")]
-    public StringValue Format
-    {
-        get { return (StringValue)Attributes[5].Value; }
-        set { Attributes[5].Value = value; }
-    }
-    
+    [Index(5)]
+    public StringValue Format { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
     [SchemaAttr(0, "hidden")]
-    public StringValue Hidden
-    {
-        get { return (StringValue)Attributes[6].Value; }
-        set { Attributes[6].Value = value; }
-    }
-    
+    [Index(6)]
+    public StringValue Hidden { get; set; }
     /// <summary>
     /// <para> index.</para>
     /// <para>Represents the following attribute in the schema: index </para>
     /// </summary>
     [SchemaAttr(0, "index")]
-    public Int32Value Index
-    {
-        get { return (Int32Value)Attributes[7].Value; }
-        set { Attributes[7].Value = value; }
-    }
-    
+    [Index(7)]
+    public Int32Value Index { get; set; }
     /// <summary>
     /// <para> internalName.</para>
     /// <para>Represents the following attribute in the schema: internalName </para>
     /// </summary>
     [SchemaAttr(0, "internalName")]
-    public StringValue InternalName
-    {
-        get { return (StringValue)Attributes[8].Value; }
-        set { Attributes[8].Value = value; }
-    }
-    
+    [Index(8)]
+    public StringValue InternalName { get; set; }
     /// <summary>
     /// <para> LCID.</para>
     /// <para>Represents the following attribute in the schema: LCID </para>
     /// </summary>
     [SchemaAttr(0, "LCID")]
-    public Int32Value LCID
-    {
-        get { return (Int32Value)Attributes[9].Value; }
-        set { Attributes[9].Value = value; }
-    }
-    
+    [Index(9)]
+    public Int32Value LCID { get; set; }
     /// <summary>
     /// <para> list.</para>
     /// <para>Represents the following attribute in the schema: list </para>
     /// </summary>
     [SchemaAttr(0, "list")]
-    public StringValue List
-    {
-        get { return (StringValue)Attributes[10].Value; }
-        set { Attributes[10].Value = value; }
-    }
-    
+    [Index(10)]
+    public StringValue List { get; set; }
     /// <summary>
     /// <para> percentage.</para>
     /// <para>Represents the following attribute in the schema: percentage </para>
     /// </summary>
     [SchemaAttr(0, "percentage")]
-    public StringValue Percentage
-    {
-        get { return (StringValue)Attributes[11].Value; }
-        set { Attributes[11].Value = value; }
-    }
-    
+    [Index(11)]
+    public StringValue Percentage { get; set; }
     /// <summary>
     /// <para> readOnly.</para>
     /// <para>Represents the following attribute in the schema: readOnly </para>
     /// </summary>
     [SchemaAttr(0, "readOnly")]
-    public StringValue ReadOnly
-    {
-        get { return (StringValue)Attributes[12].Value; }
-        set { Attributes[12].Value = value; }
-    }
-    
+    [Index(12)]
+    public StringValue ReadOnly { get; set; }
     /// <summary>
     /// <para> requiredMultiChoice.</para>
     /// <para>Represents the following attribute in the schema: requiredMultiChoice </para>
     /// </summary>
     [SchemaAttr(0, "requiredMultiChoice")]
-    public StringValue RequiredMultiChoice
-    {
-        get { return (StringValue)Attributes[13].Value; }
-        set { Attributes[13].Value = value; }
-    }
-    
+    [Index(13)]
+    public StringValue RequiredMultiChoice { get; set; }
     /// <summary>
     /// <para> root.</para>
     /// <para>Represents the following attribute in the schema: root </para>
     /// </summary>
     [SchemaAttr(0, "root")]
-    public EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues> Root
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues>)Attributes[14].Value; }
-        set { Attributes[14].Value = value; }
-    }
-    
+    [Index(14)]
+    public EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues> Root { get; set; }
     /// <summary>
     /// <para> showField.</para>
     /// <para>Represents the following attribute in the schema: showField </para>
     /// </summary>
     [SchemaAttr(0, "showField")]
-    public StringValue ShowField
-    {
-        get { return (StringValue)Attributes[15].Value; }
-        set { Attributes[15].Value = value; }
-    }
-    
+    [Index(15)]
+    public StringValue ShowField { get; set; }
     /// <summary>
     /// <para> web.</para>
     /// <para>Represents the following attribute in the schema: web </para>
     /// </summary>
     [SchemaAttr(0, "web")]
-    public StringValue Web
-    {
-        get { return (StringValue)Attributes[16].Value; }
-        set { Attributes[16].Value = value; }
-    }
-    
+    [Index(16)]
+    public StringValue Web { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Dummy class.

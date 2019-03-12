@@ -12,49 +12,22 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines SpreadsheetDocument - an OpenXmlPackage represents a Spreadsheet document.
     /// </summary>
+    [PartConstraint(typeof(WorkbookPart), true, false)]
+    [PartConstraint(typeof(CoreFilePropertiesPart), false, false)]
+    [PartConstraint(typeof(ExtendedFilePropertiesPart), false, false)]
+    [PartConstraint(typeof(CustomFilePropertiesPart), false, false)]
+    [PartConstraint(typeof(ThumbnailPart), false, false)]
+    [PartConstraint(typeof(DigitalSignatureOriginPart), false, false)]
+    [PartConstraint(typeof(QuickAccessToolbarCustomizationsPart), false, false)]
+    [PartConstraint(typeof(RibbonExtensibilityPart), false, false)]
+    [PartConstraint(typeof(RibbonAndBackstageCustomizationsPart), false, false)]
+    [PartConstraint(typeof(WebExTaskpanesPart), false, false)]
     public partial class SpreadsheetDocument : OpenXmlPackage
     {
-        private static PartConstraintCollection _partConstraints;
-
-        /// <summary>
-        /// Gets part constraint data.
-        /// </summary>
-        /// <returns>The constraint data of the part.</returns>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints == null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", PartConstraintRule.Create<WorkbookPart>(true, false) },
-                        { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", PartConstraintRule.Create<CoreFilePropertiesPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", PartConstraintRule.Create<ExtendedFilePropertiesPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", PartConstraintRule.Create<CustomFilePropertiesPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", PartConstraintRule.Create<ThumbnailPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", PartConstraintRule.Create<DigitalSignatureOriginPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", PartConstraintRule.Create<RibbonExtensibilityPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", PartConstraintRule.Create<WebExTaskpanesPart>(false, false) },
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
-
         /// <summary>
         /// Gets the relationship type of the main part.
         /// </summary>
-        internal sealed override string MainPartRelationshipType
-        {
-            get
-            {
-                return WorkbookPart.RelationshipTypeConstant;
-            }
-        }
+        internal sealed override string MainPartRelationshipType => WorkbookPart.RelationshipTypeConstant;
 
         private static Dictionary<SpreadsheetDocumentType, string> _validMainPartContentType;
 
@@ -64,14 +37,14 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (_validMainPartContentType == null)
                 {
-                    Dictionary<SpreadsheetDocumentType, string> tempData = new Dictionary<SpreadsheetDocumentType, string>();
-                    tempData.Add(SpreadsheetDocumentType.Workbook, @"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml");
-                    tempData.Add(SpreadsheetDocumentType.Template, @"application/vnd.openxmlformats-officedocument.spreadsheetml.template.main+xml");
-                    tempData.Add(SpreadsheetDocumentType.MacroEnabledWorkbook, @"application/vnd.ms-excel.sheet.macroEnabled.main+xml");
-                    tempData.Add(SpreadsheetDocumentType.MacroEnabledTemplate, @"application/vnd.ms-excel.template.macroEnabled.main+xml");
-                    tempData.Add(SpreadsheetDocumentType.AddIn, @"application/vnd.ms-excel.addin.macroEnabled.main+xml");
-
-                    _validMainPartContentType = tempData;
+                    _validMainPartContentType = new Dictionary<SpreadsheetDocumentType, string>
+                    {
+                        { SpreadsheetDocumentType.Workbook, @"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml" },
+                        { SpreadsheetDocumentType.Template, @"application/vnd.openxmlformats-officedocument.spreadsheetml.template.main+xml" },
+                        { SpreadsheetDocumentType.MacroEnabledWorkbook, @"application/vnd.ms-excel.sheet.macroEnabled.main+xml" },
+                        { SpreadsheetDocumentType.MacroEnabledTemplate, @"application/vnd.ms-excel.template.macroEnabled.main+xml" },
+                        { SpreadsheetDocumentType.AddIn, @"application/vnd.ms-excel.addin.macroEnabled.main+xml" },
+                    };
                 }
 
                 return _validMainPartContentType;
@@ -81,13 +54,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the list of valid content type for main part.
         /// </summary>
-        internal sealed override ICollection<string> ValidMainPartContentTypes
-        {
-            get
-            {
-                return MainPartContentTypes.Values;
-            }
-        }
+        internal sealed override ICollection<string> ValidMainPartContentTypes => MainPartContentTypes.Values;
 
         /// <summary>
         /// Creates a SpreadsheetDocument.

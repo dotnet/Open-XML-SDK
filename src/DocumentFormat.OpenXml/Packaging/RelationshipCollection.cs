@@ -24,8 +24,6 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             foreach (PackageRelationship relationship in BasePackageRelationshipCollection)
             {
-                bool found;
-                string transitionalNamespace;
                 RelationshipProperty relationshipProperty;
 
                 relationshipProperty.TargetUri = relationship.TargetUri;
@@ -34,8 +32,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 relationshipProperty.RelationshipType = relationship.RelationshipType;
 
                 // If packageRel.RelationshipType is something for Strict, it tries to get the equivalent in Transitional.
-                found = NamespaceIdMap.TryGetTransitionalRelationship(relationshipProperty.RelationshipType, out transitionalNamespace);
-                if (found)
+                if (NamespaceIdMap.TryGetTransitionalRelationship(relationshipProperty.RelationshipType, out var transitionalNamespace))
                 {
                     relationshipProperty.RelationshipType = transitionalNamespace;
                     StrictTranslation = true;

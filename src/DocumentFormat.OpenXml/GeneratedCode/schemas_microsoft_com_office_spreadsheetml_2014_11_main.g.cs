@@ -24,18 +24,11 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     [ChildElementInfo(typeof(ModelTimeGrouping), FileFormatVersions.Office2016)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2016)]
+[SchemaAttr(84, "modelTimeGroupings")]
 public partial class ModelTimeGroupings : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13589;
-    /// <inheritdoc/>
-    public override string LocalName => "modelTimeGroupings";
-    
-    internal override byte NamespaceId => 84;
-    
+    internal const int ElementTypeIdConst = 13588;
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
-    
 
     
     
@@ -70,19 +63,11 @@ public partial class ModelTimeGroupings : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 84 == namespaceId && "modelTimeGrouping" == name)
-    return new ModelTimeGrouping();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ModelTimeGroupings>(deep);
@@ -103,61 +88,35 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(CalculatedTimeColumn), FileFormatVersions.Office2016)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2016)]
+[SchemaAttr(84, "modelTimeGrouping")]
 public partial class ModelTimeGrouping : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13590;
-    /// <inheritdoc/>
-    public override string LocalName => "modelTimeGrouping";
-    
-    internal override byte NamespaceId => 84;
-    
+    internal const int ElementTypeIdConst = 13589;
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "tableName"),
-		AttributeTag.Create<StringValue>(0, "columnName"),
-		AttributeTag.Create<StringValue>(0, "columnId")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> tableName.</para>
     /// <para>Represents the following attribute in the schema: tableName </para>
     /// </summary>
     [SchemaAttr(0, "tableName")]
-    public StringValue TableName
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [Index(0)]
+    public StringValue TableName { get; set; }
     /// <summary>
     /// <para> columnName.</para>
     /// <para>Represents the following attribute in the schema: columnName </para>
     /// </summary>
     [SchemaAttr(0, "columnName")]
-    public StringValue ColumnName
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [Index(1)]
+    public StringValue ColumnName { get; set; }
     /// <summary>
     /// <para> columnId.</para>
     /// <para>Represents the following attribute in the schema: columnId </para>
     /// </summary>
     [SchemaAttr(0, "columnId")]
-    public StringValue ColumnId
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [Index(2)]
+    public StringValue ColumnId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ModelTimeGrouping class.
@@ -189,19 +148,11 @@ public partial class ModelTimeGrouping : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 84 == namespaceId && "calculatedTimeColumn" == name)
-    return new CalculatedTimeColumn();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ModelTimeGrouping>(deep);
@@ -215,73 +166,42 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2016)]
+[SchemaAttr(84, "calculatedTimeColumn")]
 public partial class CalculatedTimeColumn : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13591;
-    /// <inheritdoc/>
-    public override string LocalName => "calculatedTimeColumn";
-    
-    internal override byte NamespaceId => 84;
-    
+    internal const int ElementTypeIdConst = 13590;
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "columnName"),
-		AttributeTag.Create<StringValue>(0, "columnId"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType>>(0, "contentType"),
-		AttributeTag.Create<BooleanValue>(0, "isSelected")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> columnName.</para>
     /// <para>Represents the following attribute in the schema: columnName </para>
     /// </summary>
     [SchemaAttr(0, "columnName")]
-    public StringValue ColumnName
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [Index(0)]
+    public StringValue ColumnName { get; set; }
     /// <summary>
     /// <para> columnId.</para>
     /// <para>Represents the following attribute in the schema: columnId </para>
     /// </summary>
     [SchemaAttr(0, "columnId")]
-    public StringValue ColumnId
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [Index(1)]
+    public StringValue ColumnId { get; set; }
     /// <summary>
     /// <para> contentType.</para>
     /// <para>Represents the following attribute in the schema: contentType </para>
     /// </summary>
     [SchemaAttr(0, "contentType")]
-    public EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType> ContentType
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType>)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [Index(2)]
+    public EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType> ContentType { get; set; }
     /// <summary>
     /// <para> isSelected.</para>
     /// <para>Represents the following attribute in the schema: isSelected </para>
     /// </summary>
     [SchemaAttr(0, "isSelected")]
-    public BooleanValue IsSelected
-    {
-        get { return (BooleanValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [Index(3)]
+    public BooleanValue IsSelected { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the CalculatedTimeColumn class.

@@ -2,14 +2,115 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml
 {
     internal static partial class NamespaceIdMap
     {
+        /// <summary>
+        /// A list of namespaces, associated prefixes and the version in which it was introduced.
+        /// </summary>
+        /// <remarks>
+        /// CAUTION: Do NOT modify this list except by adding to the end. The index of the entry is tied
+        /// directly to an id used extensively throughout the SDK. Ideally, this will be updated to not
+        /// have this magic, but that will take time. If any items are updated in the middle of the list,
+        /// the strongly typed schema classes and validation data will need to be regenerated.
+        /// </remarks>
+        private static readonly NamespaceResolver _namespaceResolver = new NamespaceResolver
+        {
+            { string.Empty, string.Empty, FileFormatVersions.None },
+            { "http://www.w3.org/XML/1998/namespace", "xml", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/package/2006/metadata/core-properties", "cp", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "ap", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/officeDocument/2006/custom-properties", "op", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes", "vt", FileFormatVersions.Office2007 },
+            { "http://purl.org/dc/elements/1.1/", "dc", FileFormatVersions.Office2007 },
+            { "http://purl.org/dc/terms/", "dcterms", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/officeDocument/2006/characteristics", "ac", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "b", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/drawingml/2006/main", "a", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/drawingml/2006/chart", "c", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/drawingml/2006/chartDrawing", "cdr", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/drawingml/2006/compatibility", "comp", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/drawingml/2006/diagram", "dgm", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas", "lc", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "wp", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/drawingml/2006/picture", "pic", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "xdr", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/officeDocument/2006/relationships", "r", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/officeDocument/2006/customXml", "ds", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/officeDocument/2006/math", "m", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/spreadsheetml/2006/main", "x", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "w", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/presentationml/2006/main", "p", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/schemaLibrary/2006/main", "sl", FileFormatVersions.Office2007 },
+            { "urn:schemas-microsoft-com:vml", "v", FileFormatVersions.Office2007 },
+            { "urn:schemas-microsoft-com:office:office", "o", FileFormatVersions.Office2007 },
+            { "urn:schemas-microsoft-com:office:word", "w10", FileFormatVersions.Office2007 },
+            { "urn:schemas-microsoft-com:office:excel", "xvml", FileFormatVersions.Office2007 },
+            { "urn:schemas-microsoft-com:office:powerpoint", "pvml", FileFormatVersions.Office2007 },
+            { "http://schemas.openxmlformats.org/markup-compatibility/2006", "mc", FileFormatVersions.Office2007 },
+            { "http://schemas.microsoft.com/office/excel/2006/main", "xne", FileFormatVersions.Office2007 },
+            { "http://schemas.microsoft.com/office/word/2006/wordml", "wne", FileFormatVersions.Office2007 },
+            { "http://schemas.microsoft.com/office/2006/01/customui", "mso", FileFormatVersions.Office2007 },
+            { "http://schemas.microsoft.com/office/2006/activeX", "ax", FileFormatVersions.Office2007 },
+            { "http://schemas.microsoft.com/office/2006/coverPageProps", "cppr", FileFormatVersions.Office2007 },
+            { "http://schemas.microsoft.com/office/2006/customDocumentInformationPanel", "cdip", FileFormatVersions.Office2007 },
+            { "http://schemas.microsoft.com/office/2006/metadata/contentType", "ct", FileFormatVersions.Office2007 },
+            { "http://schemas.microsoft.com/office/2006/metadata/customXsn", "ntns", FileFormatVersions.Office2007 },
+            { "http://schemas.microsoft.com/office/2006/metadata/longProperties", "lp", FileFormatVersions.Office2007 },
+            { "http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes", "ma", FileFormatVersions.Office2007 },
+            { "http://www.w3.org/2001/XMLSchema", "xsd", FileFormatVersions.Office2007 },
+            { "http://www.w3.org/2003/InkML", "inkml", FileFormatVersions.Office2007 },
+            { "http://www.w3.org/2003/04/emma", "emma", FileFormatVersions.Office2007 },
+            { "http://schemas.microsoft.com/ink/2010/main", "msink", FileFormatVersions.Office2007 },
+            { "http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "c14", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/drawing/2010/chartDrawing", "cdr14", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/drawing/2010/main", "a14", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/powerpoint/2010/main", "p14", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/drawing/2010/picture", "pic14", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "wp14", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/word/2010/wordml", "w14", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "x14", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "xdr14", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac", "x14ac", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/drawing/2008/diagram", "dsp", FileFormatVersions.Office2007 },
+            { "http://schemas.microsoft.com/office/2009/07/customui", "mso14", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/drawing/2010/diagram", "dgm14", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas", "wpc", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "wpg", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "wps", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/drawing/2010/slicer", "sle", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/drawing/2010/compatibility", "com14", FileFormatVersions.Office2010 },
+            { "http://schemas.microsoft.com/office/drawing/2012/chart", "c15", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/drawing/2012/chartStyle", "cs", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/webextensions/webextension/2010/11", "we", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/drawing/2012/main", "a15", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/powerpoint/2012/main", "p15", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/word/2012/wordml", "w15", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11", "wetp", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "x15", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac", "x12ac", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/thememl/2012/main", "thm15", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac", "x15ac", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing", "wp15", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings", "pRoam", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/drawing/2012/timeslicer", "tsle", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/powerpoint/2015/main", "p16", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/drawing/2014/main", "a16", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/drawing/2014/chartex", "cx", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/drawing/2014/chart/ac", "c16ac", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/drawing/2014/chart", "c16", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xr", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2014/11/main", "x16", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2015/02/main", "x16r2", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/word/2015/wordml/symex", "w16se", FileFormatVersions.Office2016 },
+        };
+
         // This dictionary contains the Strict and Transitional namespaces pairs to be interpreted equivalent.
-        private static Dictionary<string, string> _namespaceTranslationDic = new Dictionary<string, string>(StringComparer.Ordinal)
+        private static readonly Dictionary<string, string> _strictTransitionalNamespaces = new Dictionary<string, string>(StringComparer.Ordinal)
         {
             // Namespaces
             { "http://purl.oclc.org/ooxml/descriptions/base", "http://descriptions.openxmlformats.org/description/base" },
@@ -47,7 +148,7 @@ namespace DocumentFormat.OpenXml
         };
 
         // This dictionary contains the Strict and Transitional relationship pairs to be interpreted equivalent.
-        private static Dictionary<string, string> _relationshipTranslationDic = new Dictionary<string, string>(StringComparer.Ordinal)
+        private static readonly Dictionary<string, string> _strictTransitionalRelationshipPairs = new Dictionary<string, string>(StringComparer.Ordinal)
         {
             { "http://purl.oclc.org/ooxml/officeDocument/relationships/aFChunk", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk" },
             { "http://purl.oclc.org/ooxml/officeDocument/relationships/attachedTemplate", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate" },
@@ -130,114 +231,9 @@ namespace DocumentFormat.OpenXml
             { "http://purl.oclc.org/ooxml/officeDocument/relationships/xmlMaps", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/xmlMaps" },
         };
 
-        // the namespace list, the index is the namespace-id
-        // in another file, generated by the generator
-        // !! CAUTION !!
-        // Please do not delete / add namespace in middle.
-        // The ID is used by generator. If modified, rebuild the generator and regenerate the DOM classes.
-        // !! CAUTION !!
-        private static string[] _namespaceList =
-        {
-            string.Empty,
-            "http://www.w3.org/XML/1998/namespace",
-            "http://schemas.openxmlformats.org/package/2006/metadata/core-properties",
-            "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties",
-            "http://schemas.openxmlformats.org/officeDocument/2006/custom-properties",
-            "http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes",
-            "http://purl.org/dc/elements/1.1/",
-            "http://purl.org/dc/terms/",
-            "http://schemas.openxmlformats.org/officeDocument/2006/characteristics",
-            "http://schemas.openxmlformats.org/officeDocument/2006/bibliography",
-            "http://schemas.openxmlformats.org/drawingml/2006/main",
-            "http://schemas.openxmlformats.org/drawingml/2006/chart",
-            "http://schemas.openxmlformats.org/drawingml/2006/chartDrawing",
-            "http://schemas.openxmlformats.org/drawingml/2006/compatibility",
-            "http://schemas.openxmlformats.org/drawingml/2006/diagram",
-            "http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas",
-            "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing",
-            "http://schemas.openxmlformats.org/drawingml/2006/picture",
-            "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing",
-            "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
-            "http://schemas.openxmlformats.org/officeDocument/2006/customXml",
-            "http://schemas.openxmlformats.org/officeDocument/2006/math",
-            "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
-            "http://schemas.openxmlformats.org/wordprocessingml/2006/main",
-            "http://schemas.openxmlformats.org/presentationml/2006/main",
-            "http://schemas.openxmlformats.org/schemaLibrary/2006/main",
-            "urn:schemas-microsoft-com:vml",
-            "urn:schemas-microsoft-com:office:office",
-            "urn:schemas-microsoft-com:office:word",
-            "urn:schemas-microsoft-com:office:excel",
-            "urn:schemas-microsoft-com:office:powerpoint",
-            "http://schemas.openxmlformats.org/markup-compatibility/2006",
-            "http://schemas.microsoft.com/office/excel/2006/main",
-            "http://schemas.microsoft.com/office/word/2006/wordml",
-            "http://schemas.microsoft.com/office/2006/01/customui",
-            "http://schemas.microsoft.com/office/2006/activeX",
-            "http://schemas.microsoft.com/office/2006/coverPageProps",
-            "http://schemas.microsoft.com/office/2006/customDocumentInformationPanel",
-            "http://schemas.microsoft.com/office/2006/metadata/contentType",
-            "http://schemas.microsoft.com/office/2006/metadata/customXsn",
-            "http://schemas.microsoft.com/office/2006/metadata/longProperties",
-            "http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes",
-            "http://www.w3.org/2001/XMLSchema",
-            "http://www.w3.org/2003/InkML",
-            "http://www.w3.org/2003/04/emma",
-            "http://schemas.microsoft.com/ink/2010/main",
-
-            //o14 extensions
-            "http://schemas.microsoft.com/office/drawing/2007/8/2/chart",
-            "http://schemas.microsoft.com/office/drawing/2010/chartDrawing",
-            "http://schemas.microsoft.com/office/drawing/2010/main",
-            "http://schemas.microsoft.com/office/powerpoint/2010/main",
-            "http://schemas.microsoft.com/office/drawing/2010/picture",
-            "http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing",
-            "http://schemas.microsoft.com/office/word/2010/wordml",
-            "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main",
-            "http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing",
-            "http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac",
-            "http://schemas.microsoft.com/office/drawing/2008/diagram",
-            "http://schemas.microsoft.com/office/2009/07/customui",
-            "http://schemas.microsoft.com/office/drawing/2010/diagram",
-            "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas",
-            "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
-            "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
-            "http://schemas.microsoft.com/office/drawing/2010/slicer",
-
-            //"http://schemas.microsoft.com/office/2007/6/19/audiovideo",
-            "http://schemas.microsoft.com/office/drawing/2010/compatibility",
-
-            //o15 extension
-            "http://schemas.microsoft.com/office/drawing/2012/chart",
-            "http://schemas.microsoft.com/office/drawing/2012/chartStyle",
-            "http://schemas.microsoft.com/office/webextensions/webextension/2010/11",
-            "http://schemas.microsoft.com/office/drawing/2012/main",
-            "http://schemas.microsoft.com/office/powerpoint/2012/main",
-            "http://schemas.microsoft.com/office/word/2012/wordml",
-            "http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11",
-            "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main",
-            "http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac",
-            "http://schemas.microsoft.com/office/thememl/2012/main",
-            "http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac",
-            "http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing",
-            "http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings",
-            "http://schemas.microsoft.com/office/drawing/2012/timeslicer",
-
-            //o16 extension
-            "http://schemas.microsoft.com/office/powerpoint/2015/main",
-            "http://schemas.microsoft.com/office/drawing/2014/main",
-            "http://schemas.microsoft.com/office/drawing/2014/chartex",
-            "http://schemas.microsoft.com/office/drawing/2014/chart/ac",
-            "http://schemas.microsoft.com/office/drawing/2014/chart",
-            "http://schemas.microsoft.com/office/spreadsheetml/2014/revision",
-            "http://schemas.microsoft.com/office/spreadsheetml/2014/11/main",
-            "http://schemas.microsoft.com/office/spreadsheetml/2015/02/main",
-            "http://schemas.microsoft.com/office/word/2015/wordml/symex",
-        };
-
         // The namespaces listed here are somewhat obsolete ones that we need to support. Before we try to get the index of a namespace,
         // we check if it's in this list to rename to the expected correct namespace.
-        private static Dictionary<string, string> _extendedNamespaceDic = new Dictionary<string, string>(StringComparer.Ordinal)
+        private static readonly Dictionary<string, string> _extendedNamespaces = new Dictionary<string, string>(StringComparer.Ordinal)
         {
             { "http://schemas.openxmlformats.org/wordprocessingml/2006/3/main", "http://schemas.openxmlformats.org/wordprocessingml/2006/main" },
             { "http://schemas.openxmlformats.org/wordprocessingml/2006/5/main", "http://schemas.openxmlformats.org/wordprocessingml/2006/main" },
@@ -249,217 +245,7 @@ namespace DocumentFormat.OpenXml
             { "http://schemas.microsoft.com/office/word/2010/11/wordml", "http://schemas.microsoft.com/office/word/2012/wordml" },
         };
 
-        // namespace prefix list, most of them are come from dev14\tools\inc\xsd\xsdnamespace.h in Office14 depot.
-        private static string[] _namespacePrefixList =
-        {
-            string.Empty,
-            "xml",
-            "cp",
-            "ap",
-            "op",
-            "vt",
-            "dc",
-            "dcterms",
-            "ac",
-            "b",
-            "a",
-            "c",
-            "cdr",
-            "comp",
-            "dgm",
-            "lc",
-            "wp",
-            "pic",
-            "xdr",
-            "r",
-            "ds",
-            "m",
-            "x",
-            "w",
-            "p",
-            "sl",
-            "v",
-            "o",
-            "w10",
-            "xvml",
-            "pvml",
-            "mc",
-            "xne",
-            "wne",
-            "mso",
-            "ax",
-            "cppr",
-            "cdip",
-            "ct",
-            "ntns",
-            "lp",
-            "ma",
-            "xsd",
-            "inkml",
-            "emma",
-            "msink",
-
-            //o14 extensions
-            "c14",
-            "cdr14",
-            "a14",
-            "p14",
-            "pic14",
-            "wp14",
-            "w14",
-            "x14",
-            "xdr14",
-            "x14ac",
-            "dsp",
-            "mso14",
-            "dgm14",
-            "wpc",
-            "wpg",
-            "wps",
-            "sle",
-
-            //"pav",
-            "com14",
-
-            // o15 extension
-            "c15",
-            "cs",
-            "we",
-            "a15",
-            "p15",
-            "w15",
-            "wetp",
-            "x15",
-            "x12ac",
-            "thm15",
-            "x15ac",
-            "wp15",
-            "pRoam",
-            "tsle",
-
-            // o16 extension
-            "p16",
-            "a16",
-            "cx",
-            "c16ac",
-            "c16",
-            "xr",
-            "x16",
-            "x16r2",
-            "w16se",
-        };
-
-        private static HashSet<string> _O12NamespaceSet = new HashSet<string>(StringComparer.Ordinal)
-        {
-            "http://www.w3.org/XML/1998/namespace",
-            "http://schemas.openxmlformats.org/package/2006/metadata/core-properties",
-            "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties",
-            "http://schemas.openxmlformats.org/officeDocument/2006/custom-properties",
-            "http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes",
-            "http://purl.org/dc/elements/1.1/",
-            "http://purl.org/dc/terms/",
-            "http://schemas.openxmlformats.org/officeDocument/2006/characteristics",
-            "http://schemas.openxmlformats.org/officeDocument/2006/bibliography",
-            "http://schemas.openxmlformats.org/drawingml/2006/main",
-            "http://schemas.openxmlformats.org/drawingml/2006/chart",
-            "http://schemas.openxmlformats.org/drawingml/2006/chartDrawing",
-            "http://schemas.openxmlformats.org/drawingml/2006/compatibility",
-            "http://schemas.openxmlformats.org/drawingml/2006/diagram",
-            "http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas",
-            "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing",
-            "http://schemas.openxmlformats.org/drawingml/2006/picture",
-            "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing",
-            "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
-            "http://schemas.openxmlformats.org/officeDocument/2006/customXml",
-            "http://schemas.openxmlformats.org/officeDocument/2006/math",
-            "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
-            "http://schemas.openxmlformats.org/wordprocessingml/2006/main",
-            "http://schemas.openxmlformats.org/presentationml/2006/main",
-            "http://schemas.openxmlformats.org/schemaLibrary/2006/main",
-            "urn:schemas-microsoft-com:vml",
-            "urn:schemas-microsoft-com:office:office",
-            "urn:schemas-microsoft-com:office:word",
-            "urn:schemas-microsoft-com:office:excel",
-            "urn:schemas-microsoft-com:office:powerpoint",
-            "http://schemas.openxmlformats.org/markup-compatibility/2006",
-            "http://schemas.microsoft.com/office/excel/2006/main",
-            "http://schemas.microsoft.com/office/word/2006/wordml",
-            "http://schemas.microsoft.com/office/2006/01/customui",
-            "http://schemas.microsoft.com/office/2006/activeX",
-            "http://schemas.microsoft.com/office/2006/coverPageProps",
-            "http://schemas.microsoft.com/office/2006/customDocumentInformationPanel",
-            "http://schemas.microsoft.com/office/2006/metadata/contentType",
-            "http://schemas.microsoft.com/office/2006/metadata/customXsn",
-            "http://schemas.microsoft.com/office/2006/metadata/longProperties",
-            "http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes",
-            "http://www.w3.org/2001/XMLSchema",
-            "http://schemas.microsoft.com/office/drawing/2008/diagram",
-            "http://www.w3.org/2003/InkML",
-            "http://www.w3.org/2003/04/emma",
-            "http://schemas.microsoft.com/ink/2010/main",
-        };
-
-        private static HashSet<string> _O14NamespaceSet = new HashSet<string>(StringComparer.Ordinal)
-        {
-            "http://schemas.microsoft.com/office/drawing/2007/8/2/chart",
-            "http://schemas.microsoft.com/office/drawing/2010/chartDrawing",
-            "http://schemas.microsoft.com/office/drawing/2010/main",
-            "http://schemas.microsoft.com/office/powerpoint/2010/main",
-            "http://schemas.microsoft.com/office/drawing/2010/picture",
-            "http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing",
-            "http://schemas.microsoft.com/office/word/2010/wordml",
-            "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main",
-            "http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing",
-            "http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac",
-            "http://schemas.microsoft.com/office/2009/07/customui",
-            "http://schemas.microsoft.com/office/drawing/2010/diagram",
-            "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas",
-            "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
-            "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
-            "http://schemas.microsoft.com/office/drawing/2010/slicer",
-
-            //"http://schemas.microsoft.com/office/2007/6/19/audiovideo",
-            "http://schemas.microsoft.com/office/drawing/2010/compatibility",
-        };
-
-        private static HashSet<string> _O15NamespaceSet = new HashSet<string>(StringComparer.Ordinal)
-        {
-            "http://schemas.microsoft.com/office/drawing/2012/chart",
-            "http://schemas.microsoft.com/office/drawing/2012/chartStyle",
-            "http://schemas.microsoft.com/office/webextensions/webextension/2010/11",
-            "http://schemas.microsoft.com/office/drawing/2012/main",
-            "http://schemas.microsoft.com/office/powerpoint/2012/main",
-            "http://schemas.microsoft.com/office/word/2012/wordml",
-            "http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11",
-            "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main",
-            "http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac",
-            "http://schemas.microsoft.com/office/thememl/2012/main",
-            "http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac",
-            "http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing",
-            "http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings",
-            "http://schemas.microsoft.com/office/drawing/2012/timeslicer",
-        };
-
-        private static HashSet<string> _O16NamespaceSet = new HashSet<string>(StringComparer.Ordinal)
-        {
-            "http://schemas.microsoft.com/office/powerpoint/2015/main",
-            "http://schemas.microsoft.com/office/drawing/2014/main",
-            "http://schemas.microsoft.com/office/drawing/2014/chartex",
-            "http://schemas.microsoft.com/office/drawing/2014/chart/ac",
-            "http://schemas.microsoft.com/office/drawing/2014/chart",
-            "http://schemas.microsoft.com/office/spreadsheetml/2014/revision",
-            "http://schemas.microsoft.com/office/spreadsheetml/2014/11/main",
-            "http://schemas.microsoft.com/office/spreadsheetml/2015/02/main",
-            "http://schemas.microsoft.com/office/word/2015/wordml/symex",
-        };
-
-        private static Dictionary<FileFormatVersions, HashSet<string>> _namespaceSets = new Dictionary<FileFormatVersions, HashSet<string>>
-        {
-            { FileFormatVersions.Office2007, _O12NamespaceSet },
-            { FileFormatVersions.Office2010, _O14NamespaceSet },
-            { FileFormatVersions.Office2013, _O15NamespaceSet },
-            { FileFormatVersions.Office2016, _O16NamespaceSet },
-        };
+        public static int Count => _namespaceResolver.Count;
 
         /// <summary>
         /// Attempts to get the Transitional equivalent namespace.
@@ -474,7 +260,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(strictNamespace));
             }
 
-            return _namespaceTranslationDic.TryGetValue(strictNamespace, out transitionalNamespace);
+            return _strictTransitionalNamespaces.TryGetValue(strictNamespace, out transitionalNamespace);
         }
 
         /// <summary>
@@ -490,20 +276,18 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(strictRelationship));
             }
 
-            return _relationshipTranslationDic.TryGetValue(strictRelationship, out transitionalRelationship);
+            return _strictTransitionalRelationshipPairs.TryGetValue(strictRelationship, out transitionalRelationship);
         }
 
         public static bool IsInFileFormat(string ns, FileFormatVersions format)
         {
-            if (_namespaceSets.TryGetValue(format, out var set))
+            if (_namespaceResolver.TryGetByNamespace(ns, out var info))
             {
-                return set.Contains(ns);
+                return info.Version == format;
             }
 
-            throw new ArgumentOutOfRangeException(nameof(format));
+            return false;
         }
-
-        public static int Count => _namespaceList.Length;
 
         public static byte GetNamespaceId(string namespaceUri)
         {
@@ -515,19 +299,11 @@ namespace DocumentFormat.OpenXml
             throw new KeyNotFoundException();
         }
 
-        // id = byte.MaxValue when the namespace is unknown.
         public static bool TryGetNamespaceId(string namespaceUri, out byte id)
         {
-            if (namespaceUri == null)
+            if (namespaceUri != null && _namespaceResolver.TryGetByNamespace(NormalizeNamespace(namespaceUri), out var info))
             {
-                throw new ArgumentNullException(nameof(namespaceUri));
-            }
-
-            int index = Array.IndexOf(_namespaceList, NormalizeNamespace(namespaceUri));
-
-            if (index >= byte.MinValue && index <= byte.MaxValue)
-            {
-                id = Convert.ToByte(index);
+                id = info.Id;
                 return true;
             }
             else
@@ -542,7 +318,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="namespaceId">The namespace ID.</param>
         /// <returns></returns>
-        public static string GetNamespaceUri(byte namespaceId) => _namespaceList[namespaceId];
+        public static string GetNamespaceUri(byte namespaceId) => _namespaceResolver[namespaceId].Namespace;
 
         /// <summary>
         /// Gets the namespace URI for the specified namespace prefix.
@@ -556,10 +332,9 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(prefix));
             }
 
-            int index = Array.IndexOf(_namespacePrefixList, prefix);
-            if (index >= 0)
+            if (_namespaceResolver.TryGetByPrefix(prefix, out var info))
             {
-                return _namespaceList[index];
+                return info.Namespace;
             }
 
             return null;
@@ -570,20 +345,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="namespaceId">The namespace ID.</param>
         /// <returns></returns>
-        public static string GetNamespacePrefix(byte namespaceId)
-        {
-            return _namespacePrefixList[namespaceId];
-        }
+        public static string GetNamespacePrefix(byte namespaceId) => _namespaceResolver[namespaceId].Prefix;
 
-        private static string NormalizeNamespace(string ns)
-        {
-            if (_extendedNamespaceDic.TryGetValue(ns, out var result))
-            {
-                return result;
-            }
-
-            return ns;
-        }
+        public static string GetNamespacePrefix(string namespaceUri) => _namespaceResolver.TryGetByNamespace(namespaceUri, out var info) ? info.Prefix : null;
 
         /// <summary>
         /// Try to get the expected namespace if the passed namespace is an obsolete.
@@ -593,7 +357,62 @@ namespace DocumentFormat.OpenXml
         /// <returns>True when the passed namespace is an obsolete and the expected namespace found</returns>
         public static bool TryGetExtendedNamespace(string namespaceUri, out string extNamespaceUri)
         {
-            return _extendedNamespaceDic.TryGetValue(namespaceUri, out extNamespaceUri);
+            return _extendedNamespaces.TryGetValue(namespaceUri, out extNamespaceUri);
+        }
+
+        private static string NormalizeNamespace(string ns)
+        {
+            if (_extendedNamespaces.TryGetValue(ns, out var result))
+            {
+                return result;
+            }
+
+            return ns;
+        }
+
+        private class NamespaceResolver : IEnumerable
+        {
+            private readonly Dictionary<string, NamespaceInfo> _byNamespace = new Dictionary<string, NamespaceInfo>(StringComparer.Ordinal);
+            private readonly Dictionary<string, NamespaceInfo> _byPrefix = new Dictionary<string, NamespaceInfo>(StringComparer.Ordinal);
+            private readonly List<NamespaceInfo> _info = new List<NamespaceInfo>();
+
+            public int Count => _info.Count;
+
+            public void Add(string @namespace, string prefix, FileFormatVersions version)
+            {
+                var info = new NamespaceInfo(@namespace, prefix, version, (byte)_info.Count);
+
+                _byNamespace.Add(@namespace, info);
+                _byPrefix.Add(prefix, info);
+                _info.Add(info);
+            }
+
+            public NamespaceInfo this[int id] => _info[id];
+
+            public bool TryGetByNamespace(string ns, out NamespaceInfo info) => _byNamespace.TryGetValue(ns, out info);
+
+            public bool TryGetByPrefix(string prefix, out NamespaceInfo info) => _byPrefix.TryGetValue(prefix, out info);
+
+            IEnumerator IEnumerable.GetEnumerator() => _info.GetEnumerator();
+
+            public class NamespaceInfo
+            {
+                public NamespaceInfo(string ns, string prefix, FileFormatVersions version, byte id)
+                {
+                    Namespace = ns;
+                    Prefix = prefix;
+                    Version = version;
+                    Id = id;
+                }
+
+                public string Namespace { get; }
+
+                public string Prefix { get; }
+
+                public FileFormatVersions Version { get; }
+
+                public byte Id { get; }
+            }
         }
     }
 }

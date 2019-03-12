@@ -27,6 +27,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
+#if FALSE
         [Theory]
         [InlineData(TestFiles.Of16_09_unknownelement_docx)]
         public void OF16_006_AccessChartPart_IntentionalUnknownElement(string name)
@@ -74,6 +75,7 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
         }
+#endif
 
         [Theory]
         [InlineData(TestFiles.Of16_01_pptx)]

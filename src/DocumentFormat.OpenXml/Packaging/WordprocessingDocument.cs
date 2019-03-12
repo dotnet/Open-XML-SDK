@@ -12,49 +12,22 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines WordprocessingDocument - an OpenXmlPackage represents a Word document.
     /// </summary>
+    [PartConstraint(typeof(MainDocumentPart), true, false)]
+    [PartConstraint(typeof(CoreFilePropertiesPart), false, false)]
+    [PartConstraint(typeof(ExtendedFilePropertiesPart), false, false)]
+    [PartConstraint(typeof(CustomFilePropertiesPart), false, false)]
+    [PartConstraint(typeof(ThumbnailPart), false, false)]
+    [PartConstraint(typeof(DigitalSignatureOriginPart), false, false)]
+    [PartConstraint(typeof(QuickAccessToolbarCustomizationsPart), false, false)]
+    [PartConstraint(typeof(RibbonExtensibilityPart), false, false)]
+    [PartConstraint(typeof(RibbonAndBackstageCustomizationsPart), false, false)]
+    [PartConstraint(typeof(WebExTaskpanesPart), false, false)]
     public partial class WordprocessingDocument : OpenXmlPackage
     {
-        private static PartConstraintCollection  _partConstraints;
-
-        /// <summary>
-        /// Gets part constraint data.
-        /// </summary>
-        /// <returns>The constraint data of the part.</returns>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints == null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", PartConstraintRule.Create<MainDocumentPart>(true, false) },
-                        { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", PartConstraintRule.Create<CoreFilePropertiesPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", PartConstraintRule.Create<ExtendedFilePropertiesPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", PartConstraintRule.Create<CustomFilePropertiesPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", PartConstraintRule.Create<ThumbnailPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", PartConstraintRule.Create<DigitalSignatureOriginPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", PartConstraintRule.Create<RibbonExtensibilityPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", PartConstraintRule.Create<WebExTaskpanesPart>(false, false) },
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
-
         /// <summary>
         /// Gets the relationship type of the main part.
         /// </summary>
-        internal sealed override string MainPartRelationshipType
-        {
-            get
-            {
-                return MainDocumentPart.RelationshipTypeConstant;
-            }
-        }
+        internal sealed override string MainPartRelationshipType => MainDocumentPart.RelationshipTypeConstant;
 
         private static Dictionary<WordprocessingDocumentType, string> _validMainPartContentType;
 
@@ -64,13 +37,13 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (_validMainPartContentType == null)
                 {
-                    Dictionary<WordprocessingDocumentType, string> tempData = new Dictionary<WordprocessingDocumentType, string>();
-                    tempData.Add(WordprocessingDocumentType.Document, @"application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml");
-                    tempData.Add(WordprocessingDocumentType.Template, @"application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml");
-                    tempData.Add(WordprocessingDocumentType.MacroEnabledDocument, @"application/vnd.ms-word.document.macroEnabled.main+xml");
-                    tempData.Add(WordprocessingDocumentType.MacroEnabledTemplate, @"application/vnd.ms-word.template.macroEnabledTemplate.main+xml");
-
-                    _validMainPartContentType = tempData;
+                    _validMainPartContentType = new Dictionary<WordprocessingDocumentType, string>
+                    {
+                        { WordprocessingDocumentType.Document, @"application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml" },
+                        { WordprocessingDocumentType.Template, @"application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml" },
+                        { WordprocessingDocumentType.MacroEnabledDocument, @"application/vnd.ms-word.document.macroEnabled.main+xml" },
+                        { WordprocessingDocumentType.MacroEnabledTemplate, @"application/vnd.ms-word.template.macroEnabledTemplate.main+xml" },
+                    };
                 }
 
                 return _validMainPartContentType;
@@ -80,13 +53,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the list of valid content type for main part.
         /// </summary>
-        internal sealed override ICollection<string> ValidMainPartContentTypes
-        {
-            get
-            {
-                return MainPartContentTypes.Values;
-            }
-        }
+        internal sealed override ICollection<string> ValidMainPartContentTypes => MainPartContentTypes.Values;
 
         /// <summary>
         /// Creates a WordprocessingDocument.

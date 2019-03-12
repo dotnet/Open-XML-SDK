@@ -9,14 +9,18 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ExtendedChartPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(ChartDrawingPart), false, false)]
+    [PartConstraint(typeof(EmbeddedPackagePart), false, false)]
+    [PartConstraint(typeof(ImagePart), false, true)]
+    [PartConstraint(typeof(ThemeOverridePart), false, false)]
+    [PartConstraint(typeof(ChartStylePart), false, true)]
+    [PartConstraint(typeof(ChartColorStylePart), false, true)]
     public partial class ExtendedChartPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.chartex+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2014/relationships/chartEx";
-        private static PartConstraintCollection _partConstraints;
-        private DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace _rootElement;
 
         /// <summary>
         /// Creates an instance of the ExtendedChartPart OpenXmlType
@@ -36,32 +40,6 @@ namespace DocumentFormat.OpenXml.Packaging
         public ChartDrawingPart ChartDrawingPart => GetSubPartOfType<ChartDrawingPart>();
 
         /// <summary>
-        /// Gets or sets the root element of this part.
-        /// </summary>
-        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace ChartSpace
-        {
-            get
-            {
-                if (_rootElement is null)
-                {
-                    LoadDomTree<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace>();
-                }
-
-                return _rootElement;
-            }
-
-            set
-            {
-                if (value is null)
-                {
-                    throw new ArgumentNullException(nameof(value));
-                }
-
-                SetDomTree(value);
-            }
-        }
-
-        /// <summary>
         /// Gets the ChartStyleParts of the ExtendedChartPart
         /// </summary>
         public IEnumerable<ChartStylePart> ChartStyleParts => GetPartsOfType<ChartStylePart>();
@@ -78,64 +56,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ImageParts of the ExtendedChartPart
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
-
-        private protected override OpenXmlPartRootElement InternalRootElement
-        {
-            get
-            {
-                return _rootElement;
-            }
-
-            set
-            {
-                _rootElement = value as DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes",
-                            PartConstraintRule.Create<ChartDrawingPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-                            PartConstraintRule.Create<EmbeddedPackagePart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                            PartConstraintRule.Create<ImagePart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride",
-                            PartConstraintRule.Create<ThemeOverridePart>(false, false)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2011/relationships/chartStyle",
-                            PartConstraintRule.Create<ChartStylePart>(false, true)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle",
-                            PartConstraintRule.Create<ChartColorStylePart>(false, true)
-                        }
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
-
-        internal override OpenXmlPartRootElement PartRootElement => ChartSpace;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

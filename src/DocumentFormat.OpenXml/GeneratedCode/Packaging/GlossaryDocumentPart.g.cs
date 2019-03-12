@@ -9,14 +9,41 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the GlossaryDocumentPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(WordprocessingCommentsPart), false, false)]
+    [PartConstraint(typeof(DocumentSettingsPart), false, false)]
+    [PartConstraint(typeof(EndnotesPart), false, false)]
+    [PartConstraint(typeof(FontTablePart), false, false)]
+    [PartConstraint(typeof(FootnotesPart), false, false)]
+    [PartConstraint(typeof(NumberingDefinitionsPart), false, false)]
+    [PartConstraint(typeof(StyleDefinitionsPart), false, false)]
+    [PartConstraint(typeof(StylesWithEffectsPart), false, false)]
+    [PartConstraint(typeof(WebSettingsPart), false, false)]
+    [PartConstraint(typeof(FooterPart), false, true)]
+    [PartConstraint(typeof(HeaderPart), false, true)]
+    [PartConstraint(typeof(WordprocessingPrinterSettingsPart), false, true)]
+    [PartConstraint(typeof(CustomizationPart), false, false)]
+    [PartConstraint(typeof(VbaProjectPart), false, false)]
+    [PartConstraint(typeof(WordprocessingCommentsExPart), false, false)]
+    [PartConstraint(typeof(WordprocessingPeoplePart), false, false)]
+    [PartConstraint(typeof(AlternativeFormatImportPart), false, true)]
+    [PartConstraint(typeof(ChartPart), false, true)]
+    [PartConstraint(typeof(ExtendedChartPart), false, true)]
+    [PartConstraint(typeof(DiagramColorsPart), false, true)]
+    [PartConstraint(typeof(DiagramDataPart), false, true)]
+    [PartConstraint(typeof(DiagramPersistLayoutPart), false, true)]
+    [PartConstraint(typeof(DiagramLayoutDefinitionPart), false, true)]
+    [PartConstraint(typeof(DiagramStylePart), false, true)]
+    [PartConstraint(typeof(EmbeddedControlPersistencePart), false, true)]
+    [PartConstraint(typeof(EmbeddedObjectPart), false, true)]
+    [PartConstraint(typeof(EmbeddedPackagePart), false, true)]
+    [PartConstraint(typeof(ImagePart), false, true)]
+    [DataPartConstraint(typeof(VideoReferenceRelationship), false, true)]
     public partial class GlossaryDocumentPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.document.glossary+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/glossaryDocument";
-        private static PartConstraintCollection _dataPartConstraints;
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument _rootElement;
 
         /// <summary>
@@ -43,26 +70,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the CustomizationPart of the GlossaryDocumentPart
         /// </summary>
         public CustomizationPart CustomizationPart => GetSubPartOfType<CustomizationPart>();
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection DataPartReferenceConstraints
-        {
-            get
-            {
-                if (_dataPartConstraints is null)
-                {
-                    _dataPartConstraints = new PartConstraintCollection
-                    {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/video",
-                            PartConstraintRule.Create<VideoReferenceRelationship>(false, true)
-                        }
-                    };
-                }
-
-                return _dataPartConstraints;
-            }
-        }
 
         /// <summary>
         /// Gets the DiagramColorsParts of the GlossaryDocumentPart
@@ -183,141 +190,10 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
-
         /// <summary>
         /// Gets the NumberingDefinitionsPart of the GlossaryDocumentPart
         /// </summary>
         public NumberingDefinitionsPart NumberingDefinitionsPart => GetSubPartOfType<NumberingDefinitionsPart>();
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
-                            PartConstraintRule.Create<WordprocessingCommentsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings",
-                            PartConstraintRule.Create<DocumentSettingsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes",
-                            PartConstraintRule.Create<EndnotesPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable",
-                            PartConstraintRule.Create<FontTablePart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes",
-                            PartConstraintRule.Create<FootnotesPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering",
-                            PartConstraintRule.Create<NumberingDefinitionsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles",
-                            PartConstraintRule.Create<StyleDefinitionsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2007/relationships/stylesWithEffects",
-                            PartConstraintRule.Create<StylesWithEffectsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings",
-                            PartConstraintRule.Create<WebSettingsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer",
-                            PartConstraintRule.Create<FooterPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header",
-                            PartConstraintRule.Create<HeaderPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
-                            PartConstraintRule.Create<WordprocessingPrinterSettingsPart>(false, true)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations",
-                            PartConstraintRule.Create<CustomizationPart>(false, false)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
-                            PartConstraintRule.Create<VbaProjectPart>(false, false)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2011/relationships/commentsExtended",
-                            PartConstraintRule.Create<WordprocessingCommentsExPart>(false, false)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2011/relationships/people",
-                            PartConstraintRule.Create<WordprocessingPeoplePart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk",
-                            PartConstraintRule.Create<AlternativeFormatImportPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-                            PartConstraintRule.Create<ChartPart>(false, true)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2014/relationships/chartEx",
-                            PartConstraintRule.Create<ExtendedChartPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-                            PartConstraintRule.Create<DiagramColorsPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-                            PartConstraintRule.Create<DiagramDataPart>(false, true)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-                            PartConstraintRule.Create<DiagramPersistLayoutPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-                            PartConstraintRule.Create<DiagramLayoutDefinitionPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-                            PartConstraintRule.Create<DiagramStylePart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-                            PartConstraintRule.Create<EmbeddedControlPersistencePart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-                            PartConstraintRule.Create<EmbeddedObjectPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-                            PartConstraintRule.Create<EmbeddedPackagePart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                            PartConstraintRule.Create<ImagePart>(false, true)
-                        }
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
 
         internal override OpenXmlPartRootElement PartRootElement => GlossaryDocument;
 

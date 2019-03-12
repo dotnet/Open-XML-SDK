@@ -28,18 +28,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2016)]
+[SchemaAttr(81, "multiLvlStrLit")]
 public partial class MultiLvlStrData : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13517;
-    /// <inheritdoc/>
-    public override string LocalName => "multiLvlStrLit";
-    
-    internal override byte NamespaceId => 81;
-    
+    internal const int ElementTypeIdConst = 13516;
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
-    
 
     
     
@@ -74,32 +67,12 @@ public partial class MultiLvlStrData : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 11 == namespaceId && "ptCount" == name)
-    return new DocumentFormat.OpenXml.Drawing.Charts.PointCount();
     
-if( 11 == namespaceId && "lvl" == name)
-    return new DocumentFormat.OpenXml.Drawing.Charts.Level();
-    
-if( 11 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList();
-    
-
-    return null;
-}
-
-        private static readonly string[] eleTagNames = { "ptCount","lvl","extLst" };
-    private static readonly byte[] eleNamespaceIds = { 11,11,11 };
-    
-    internal override string[] ElementTagNames => eleTagNames;
-    
-    internal override byte[] ElementNamespaceIds => eleNamespaceIds;
-    internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
     /// <para> PointCount.</para>
@@ -108,11 +81,13 @@ if( 11 == namespaceId && "extLst" == name)
     /// <remark>
     /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
     /// </remark>
+	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.Charts.PointCount PointCount
-    {
+	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>(0);
         set => SetElement(0, value);
-    }
+	}
+    
 
 
     /// <inheritdoc/>
