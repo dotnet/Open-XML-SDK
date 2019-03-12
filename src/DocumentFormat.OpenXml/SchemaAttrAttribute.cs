@@ -14,8 +14,9 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Initializes a new instance of the SchemaAttrAttribute.
         /// </summary>
-        /// <param name="nsId">Specifies the Namespace Id of the schema attribute.</param>
+        /// <param name="nsId">Specifies the namespace Id of the schema attribute.</param>
         /// <param name="tag">Specifies the Tag name of the schema attribute.</param>
+        /// <remarks>This will be removed once the concept of id can be removed. Please use <see cref="SchemaAttrAttribute(string, string)"/></remarks>
         public SchemaAttrAttribute(byte nsId, string tag)
         {
             if (string.IsNullOrEmpty(tag))
@@ -27,7 +28,12 @@ namespace DocumentFormat.OpenXml
             Tag = tag;
         }
 
-        internal SchemaAttrAttribute(string ns, string tag)
+        /// <summary>
+        /// Initializes a new instance of the SchemaAttrAttribute.
+        /// </summary>
+        /// <param name="ns">Specifies the namespace of the schema attribute.</param>
+        /// <param name="tag">Specifies the Tag name of the schema attribute.</param>
+        public SchemaAttrAttribute(string ns, string tag)
             : this(NamespaceIdMap.GetNamespaceId(ns), tag)
         {
         }
