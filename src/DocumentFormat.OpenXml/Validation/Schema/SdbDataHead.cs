@@ -10,6 +10,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// <summary>
     /// The data head of the binary schema constraint data
     /// </summary>
+    /// <remarks>
+    /// We cannot use auto-properties here due to failure in .NET Native to compile them. For further details, https://github.com/OfficeDev/Open-XML-SDK/issues/567.
+    /// </remarks>
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
     internal readonly struct SdbDataHead
     {
@@ -20,6 +23,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         private static readonly Guid CurrentVersion = new Guid("06dd55b7-ef4d-46ee-a618-042af4c3904e");
 
+        private readonly Guid _version;
+        private readonly FileFormatVersions _fileFormat;
+        private readonly SdbSpan _classIds;
+        private readonly SdbSpan _schemaType;
+        private readonly SdbSpan _particles;
+        private readonly SdbSpan _particleChildren;
+        private readonly SdbSpan _attributes;
+
         public SdbDataHead(
             FileFormatVersions fileFormat,
             SdbClassIdToSchemaTypeIndex[] classIdMap,
@@ -28,13 +39,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             SdbParticleChildrenIndex[] particleIndexes,
             SdbAttributeConstraint[] attributes)
         {
-            Version = CurrentVersion;
-            FileFormat = fileFormat;
-            ClassIds = SdbSpan.Create(Marshal.SizeOf<SdbDataHead>(), classIdMap);
-            SchemaType = SdbSpan.Create(ClassIds.End, schemaTypes);
-            Particles = SdbSpan.Create(SchemaType.End, particles);
-            ParticleChildren = SdbSpan.Create(Particles.End, particleIndexes);
-            Attributes = SdbSpan.Create(ParticleChildren.End, attributes);
+            _version = CurrentVersion;
+            _fileFormat = fileFormat;
+            _classIds = SdbSpan.Create(Marshal.SizeOf<SdbDataHead>(), classIdMap);
+            _schemaType = SdbSpan.Create(_classIds.End, schemaTypes);
+            _particles = SdbSpan.Create(_schemaType.End, particles);
+            _particleChildren = SdbSpan.Create(_particles.End, particleIndexes);
+            _attributes = SdbSpan.Create(_particleChildren.End, attributes);
         }
 
         public void Validate()
@@ -50,20 +61,20 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
 
-        public Guid Version { get; }
+        public Guid Version => _version;
 
-        public FileFormatVersions FileFormat { get; }
+        public FileFormatVersions FileFormat => _fileFormat;
 
         public int End => Attributes.End;
 
-        public SdbSpan ClassIds { get; }
+        public SdbSpan ClassIds => _classIds;
 
-        public SdbSpan SchemaType { get; }
+        public SdbSpan SchemaType => _schemaType;
 
-        public SdbSpan Particles { get; }
+        public SdbSpan Particles => _particles;
 
-        public SdbSpan ParticleChildren { get; }
+        public SdbSpan ParticleChildren => _particleChildren;
 
-        public SdbSpan Attributes { get; }
+        public SdbSpan Attributes => _attributes;
     }
 }
