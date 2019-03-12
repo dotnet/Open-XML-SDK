@@ -12,8 +12,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
         public OpenXmlPartData(Type type, PackageCache cache)
         {
-            _constraints = new Lazy<PartConstraintCollection>(() => PartConstraintCollection.Create<PartConstraintAttribute>(cache, type));
-            _dataParts = new Lazy<PartConstraintCollection>(() => PartConstraintCollection.Create<DataPartConstraintAttribute>(cache, type));
+            _constraints = new Lazy<PartConstraintCollection>(() => PartConstraintCollection.Create<PartConstraintAttribute>(cache, type), true);
+            _dataParts = new Lazy<PartConstraintCollection>(() => PartConstraintCollection.Create<DataPartConstraintAttribute>(cache, type), true);
         }
 
         public static OpenXmlPartData Create(OpenXmlPartContainer part) => PackageCache.Cache.ParsePart(part);
