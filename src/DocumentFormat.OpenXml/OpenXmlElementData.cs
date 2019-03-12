@@ -2,43 +2,48 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
+using System;
 
 namespace DocumentFormat.OpenXml
 {
     internal class OpenXmlElementData
     {
-        private readonly OpenXmlElement _element;
+        private readonly Type _type;
+        private readonly PackageCache _cache;
 
-        private ElementPropertyCollection<OpenXmlSimpleType> _rawAttributes;
-        private ElementPropertyCollection<OpenXmlElement> _rawElements;
+        private ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> _rawAttributes;
+        private ReadOnlyArray<ElementProperty<OpenXmlElement>> _rawElements;
         private ElementTypeInfo _info;
         private ElementSchemaLookup _lookup;
 
-        public OpenXmlElementData(OpenXmlElement element)
+        public OpenXmlElementData(Type type, PackageCache cache)
         {
-            _element = element;
+            _type = type;
+            _cache = cache;
         }
 
-        public ElementPropertyCollection<OpenXmlSimpleType> RawAttributes
+        public static OpenXmlElementData Create(OpenXmlElement element) => PackageCache.Cache.ParseData(element);
+
+        public ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> RawAttributes
         {
             get
             {
-                if (!_rawAttributes.IsValid)
+                if (_rawAttributes.IsNull)
                 {
-                    _rawAttributes = new ElementPropertyCollection<OpenXmlSimpleType>(_element, PackageCache.Cache.GetAttributes(_element.GetType()));
+                    _rawAttributes = ElementPropertyCollection.GetProperties(_cache, _type);
                 }
 
                 return _rawAttributes;
             }
         }
 
-        public ElementPropertyCollection<OpenXmlElement> RawElements
+        public ReadOnlyArray<ElementProperty<OpenXmlElement>> RawElements
         {
             get
             {
-                if (!_rawElements.IsValid)
+                if (!_rawElements.IsNull)
                 {
-                    _rawElements = new ElementPropertyCollection<OpenXmlElement>(_element, PackageCache.Cache.GetElements(_element.GetType()));
+                    _rawElements = ElementPropertyCollection.GetElements(_cache, _type);
                 }
 
                 return _rawElements;
@@ -51,7 +56,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (_info == null)
                 {
-                    _info = PackageCache.Cache.GetElementTypeInfo(_element.GetType());
+                    _info = _cache.GetElementTypeInfo(_type);
                 }
 
                 return _info;
@@ -64,7 +69,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (_lookup == null)
                 {
-                    _lookup = PackageCache.Cache.GetElementLookup(_element.GetType());
+                    _lookup = _cache.GetElementLookup(_type);
                 }
 
                 return _lookup;

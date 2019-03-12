@@ -16,6 +16,8 @@ namespace DocumentFormat.OpenXml
             _array = array;
         }
 
+        public bool IsNull => _array is null;
+
         public bool Any() => Length > 0;
 
         public ref T this[int index] => ref _array[index];

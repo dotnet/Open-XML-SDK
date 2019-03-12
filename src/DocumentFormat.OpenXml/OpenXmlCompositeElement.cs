@@ -765,7 +765,7 @@ namespace DocumentFormat.OpenXml
 
         private int GetSequenceNumber(OpenXmlElement child)
         {
-            foreach (var element in ElementData.RawElements)
+            foreach (var element in RawElements)
             {
                 if (element.Property.NamespaceId == child.NamespaceId && object.Equals(element.Property.Name, child.LocalName))
                 {

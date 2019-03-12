@@ -112,7 +112,7 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlElement()
             : base()
         {
-            ElementData = new OpenXmlElementData(this);
+            ElementData = OpenXmlElementData.Create(this);
         }
 
         /// <summary>
@@ -166,17 +166,25 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
+        /// Gets an array of fixed attributes (attributes that are defined in the schema) without forcing any parsing of the element.
+        /// If parsing is required, please use <see cref="Attributes"/>
+        /// </summary>
+        internal ElementPropertyCollection<OpenXmlSimpleType> RawAttributes => ElementData.RawAttributes.WrapElement(this);
+
+        /// <summary>
         /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please
-        /// use <see cref="ElementData"/>
+        /// use <see cref="RawAttributes"/>.
         /// </summary>
         internal ElementPropertyCollection<OpenXmlSimpleType> Attributes
         {
             get
             {
                 MakeSureParsed();
-                return ElementData.RawAttributes;
+                return RawAttributes;
             }
         }
+
+        internal ElementPropertyCollection<OpenXmlElement> RawElements => ElementData.RawElements.WrapElement(this);
 
         /// <summary>
         /// Gets the namespace ID of the current element.
@@ -415,7 +423,7 @@ namespace DocumentFormat.OpenXml
                     NamespaceDeclField = null;
                     ExtendedAttributesField = null;
 
-                    foreach (var attribute in ElementData.RawAttributes)
+                    foreach (var attribute in RawAttributes)
                     {
                         attribute.SetValue(null);
                     }
@@ -617,7 +625,7 @@ namespace DocumentFormat.OpenXml
             if (HasAttributes)
             {
                 // get attribute namespace ID
-                var attribute = ElementData.RawAttributes[namespaceUri, localName];
+                var attribute = RawAttributes[namespaceUri, localName];
                 if (!attribute.IsNil)
                 {
                     attribute.SetValue(null);
@@ -675,7 +683,7 @@ namespace DocumentFormat.OpenXml
             MakeSureParsed();
 
             // clear known attributes defined in schema
-            foreach (var attribute in ElementData.RawAttributes)
+            foreach (var attribute in RawAttributes)
             {
                 attribute.SetValue(null);
             }
@@ -1444,7 +1452,7 @@ namespace DocumentFormat.OpenXml
                     return StrictTranslateAttribute(namespaceUri, localName, value);
                 }
 
-                var attribute = ElementData.RawAttributes[namespaceUri, localName];
+                var attribute = RawAttributes[namespaceUri, localName];
 
                 if (!attribute.IsNil)
                 {
@@ -1820,14 +1828,14 @@ namespace DocumentFormat.OpenXml
                 }
 
                 // Copy Attributes.
-                Debug.Assert(container.ElementData.RawAttributes.Length == container.ElementData.RawAttributes.Length);
+                Debug.Assert(container.RawAttributes.Length == container.RawAttributes.Length);
                 for (var i = 0; i < container.Attributes.Length; i++)
                 {
                     var attribute = container.Attributes[i];
 
                     if (attribute.HasValue)
                     {
-                        ElementData.RawAttributes[i].SetValue((OpenXmlSimpleType)attribute.Value.Clone());
+                        RawAttributes[i].SetValue((OpenXmlSimpleType)attribute.Value.Clone());
                     }
                 }
 
@@ -2666,7 +2674,7 @@ namespace DocumentFormat.OpenXml
                 return;
             }
 
-            foreach (var attribute in ElementData.RawAttributes)
+            foreach (var attribute in RawAttributes)
             {
                 if (attribute.HasValue)
                 {
