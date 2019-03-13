@@ -36,16 +36,17 @@ namespace DocumentFormat.OpenXml.Tests
         public void AllExpectedParts()
         {
             var actual = typeof(OpenXmlPart)
+                .GetTypeInfo()
                 .Assembly
                 .DefinedTypes
-                .Where(typeof(OpenXmlPart).IsAssignableFrom)
-                .Select(GetName)
+                .Where(t => typeof(OpenXmlPart).GetTypeInfo().IsAssignableFrom(t))
+                .Select(t => t.FullName)
                 .OrderBy(v => v, StringComparer.Ordinal)
                 .ToList();
 
             var expected = _cachedConstraintData.Value
                 .Select(v => v.Key)
-                .Concat(_abstractOpenXmlParts.Select(GetName))
+                .Concat(_abstractOpenXmlParts.Select(t => t.FullName))
                 .OrderBy(v => v, StringComparer.Ordinal)
                 .ToList();
 
@@ -90,7 +91,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         public void ValidateValid(OpenXmlPart part)
         {
-            var availability = part.GetType().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
+            var availability = part.GetType().GetTypeInfo().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
             var versions = Enum.GetValues(typeof(FileFormatVersions))
                 .Cast<FileFormatVersions>()
                 .Where(v => v != FileFormatVersions.None);
@@ -107,7 +108,7 @@ namespace DocumentFormat.OpenXml.Tests
             var result = GetParts()
                 .Select(t => new
                 {
-                    Name = GetName(t.GetType()),
+                    Name = t.GetType().FullName,
                     ContentType = t.IsContentTypeFixed ? t.ContentType : null,
                     IsContentTypeFixed = t.IsContentTypeFixed,
                     RelationshipType = t.RelationshipType,
@@ -128,6 +129,7 @@ namespace DocumentFormat.OpenXml.Tests
         private static IEnumerable<OpenXmlPart> GetParts()
         {
             return typeof(OpenXmlPart)
+                .GetTypeInfo()
                 .Assembly
                 .GetTypes()
                 .Where(typeof(OpenXmlPart).IsAssignableFrom)
@@ -135,15 +137,13 @@ namespace DocumentFormat.OpenXml.Tests
                 .Select(a => (OpenXmlPart)Activator.CreateInstance(a, true));
         }
 
-        private static string GetName(Type type) => type.FullName;
-
-        private static ConstraintData GetConstraintData(OpenXmlPart part) => _cachedConstraintData.Value[GetName(part.GetType())];
+        private static ConstraintData GetConstraintData(OpenXmlPart part) => _cachedConstraintData.Value[part.GetType().FullName];
 
         private static Lazy<Dictionary<string, ConstraintData>> _cachedConstraintData = new Lazy<Dictionary<string, ConstraintData>>(() =>
         {
-            var names = typeof(PartConstraintRuleTests).Assembly.GetManifestResourceNames();
+            var names = typeof(PartConstraintRuleTests).GetTypeInfo().Assembly.GetManifestResourceNames();
 
-            using (var stream = typeof(PartConstraintRuleTests).Assembly.GetManifestResourceStream("DocumentFormat.OpenXml.Packaging.Tests.data.PartConstraintData.json"))
+            using (var stream = typeof(PartConstraintRuleTests).GetTypeInfo().Assembly.GetManifestResourceStream("DocumentFormat.OpenXml.Packaging.Tests.data.PartConstraintData.json"))
             using (var reader = new StreamReader(stream))
             {
                 return JsonConvert.DeserializeObject<ConstraintData[]>(reader.ReadToEnd(), new StringEnumConverter())
