@@ -113,8 +113,4 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Packaging\Framework\" />
-  </ItemGroup>
-
 </Project>
