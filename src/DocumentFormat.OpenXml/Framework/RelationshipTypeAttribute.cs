@@ -3,7 +3,7 @@
 
 using System;
 
-namespace DocumentFormat.OpenXml.Packaging
+namespace DocumentFormat.OpenXml.Framework
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
     internal sealed class RelationshipTypeAttribute : Attribute

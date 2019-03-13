@@ -5,9 +5,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml.Framework
 {
-    internal static partial class NamespaceIdMap
+    internal static class NamespaceIdMap
     {
         /// <summary>
         /// A list of namespaces, associated prefixes and the version in which it was introduced.

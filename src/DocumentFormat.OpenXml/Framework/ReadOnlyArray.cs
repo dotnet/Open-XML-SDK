@@ -3,7 +3,7 @@
 
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml.Framework
 {
     [DebuggerDisplay("Length = {Length}")]
     internal readonly struct ReadOnlyArray<T>

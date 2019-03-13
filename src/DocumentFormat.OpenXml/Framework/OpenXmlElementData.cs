@@ -4,7 +4,7 @@
 using DocumentFormat.OpenXml.Packaging;
 using System;
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml.Framework
 {
     internal class OpenXmlElementData
     {

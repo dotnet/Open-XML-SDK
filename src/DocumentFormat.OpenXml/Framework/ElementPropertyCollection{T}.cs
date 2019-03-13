@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml.Framework
 {
     internal readonly struct ElementPropertyCollection<T> : IEnumerable<OpenXmlAttribute>
     {

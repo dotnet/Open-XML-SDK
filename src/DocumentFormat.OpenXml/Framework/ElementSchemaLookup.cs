@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml.Framework
 {
     internal class ElementSchemaLookup
     {

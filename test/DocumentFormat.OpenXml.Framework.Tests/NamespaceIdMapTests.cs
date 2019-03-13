@@ -3,7 +3,7 @@
 
 using Xunit;
 
-namespace DocumentFormat.OpenXml.Tests
+namespace DocumentFormat.OpenXml.Framework.Tests
 {
     public class NamespaceIdMapTests
     {
