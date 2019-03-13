@@ -59,9 +59,11 @@
         -->
         <ProductTargetFrameworks>netstandard1.3;net35;net40;net46</ProductTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard1.3</AssetsTargetFrameworks>
-        <!-- Cannot run tests on .NET Core 1.x due to https://github.com/NuGet/Home/issues/7414 -->
-        <TestTargetFrameworks>net452;net46;netcoreapp2.1</TestTargetFrameworks>
+        <TestTargetFrameworks>net452;net46;netcoreapp1.0;netcoreapp1.1;netcoreapp2.1</TestTargetFrameworks>
         <BenchmarkTargetFrameworks>net461;netcoreapp2.1</BenchmarkTargetFrameworks>
+
+        <!-- Must disable this due to https://github.com/NuGet/Home/issues/7414 so .NET Core 1.x will build -->
+        <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
       </PropertyGroup>
     </When>
   </Choose>
