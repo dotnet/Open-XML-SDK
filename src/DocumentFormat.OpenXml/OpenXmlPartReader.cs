@@ -761,7 +761,7 @@ namespace DocumentFormat.OpenXml
             return true;
         }
 
-        private OpenXmlElement CreateElement(string namespaceUri, string name)
+        private static OpenXmlElement CreateElement(string namespaceUri, string name)
         {
             if (string.IsNullOrEmpty(name))
             {
@@ -769,7 +769,7 @@ namespace DocumentFormat.OpenXml
             }
 
             if (NamespaceIdMap.TryGetNamespaceId(namespaceUri, out byte nsId)
-                && PackageCache.Cache.ParseElement(GetType()).SchemaLookup.Create(nsId, name) is OpenXmlElement element)
+                && PackageCache.Cache.ParseElement(typeof(OpenXmlPartRootElement)).SchemaLookup.Create(nsId, name) is OpenXmlElement element)
             {
                 return element;
             }
@@ -796,8 +796,7 @@ namespace DocumentFormat.OpenXml
                     }
                     else
                     {
-                        OpenXmlAttribute attribute = new OpenXmlAttribute(_xmlReader.Prefix, _xmlReader.LocalName, _xmlReader.NamespaceURI, _xmlReader.Value);
-                        _attributeList.Add(attribute);
+                        _attributeList.Add(new OpenXmlAttribute(_xmlReader.Prefix, _xmlReader.LocalName, _xmlReader.NamespaceURI, _xmlReader.Value));
                     }
                 }
 
