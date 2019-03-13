@@ -1,12 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <!-- TargetFrameworks can be set to various combinations as described in Directory.Build.props -->
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevCore10' ">netcoreapp1.0</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework40' ">net452</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework46' ">net46</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'All' ">net452;net46;netcoreapp1.0</TargetFrameworks>
-
+    <TargetFrameworks>$(TestTargetFrameworks)</TargetFrameworks>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 

@@ -3,16 +3,7 @@
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), DocumentFormat.OpenXml.Package.props))\DocumentFormat.OpenXml.Package.props" />
 
   <PropertyGroup>
-    <!-- TargetFrameworks can be set to various combinations as described in Directory.Build.props -->
-    <!--
-      .NET Standard target must be first to avoid a ResXFileCodeGenerator issue
-      (tracked at https://github.com/dotnet/project-system/issues/1519)
-    -->
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevCore10' ">netstandard1.3</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework40' ">net40</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework46' ">net46</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'All' ">netstandard1.3;net35;net40;net46</TargetFrameworks>
-
+    <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks> 
     <NoWarn>$(NoWarn);3003</NoWarn>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
