@@ -8,6 +8,10 @@ using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Framework
 {
+    /// <summary>
+    /// A lookup that identifies properties on an <see cref="OpenXmlElement"/> and caches the schema information
+    /// from those elements (identified by the <see cref="SchemaAttrAttribute"/> on the property type.
+    /// </summary>
     internal class ElementLookup
     {
         private static readonly ElementLookup Empty = new ElementLookup(null);
