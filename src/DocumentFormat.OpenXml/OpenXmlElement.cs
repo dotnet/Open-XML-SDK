@@ -1802,7 +1802,7 @@ namespace DocumentFormat.OpenXml
             return newElement;
         }
 
-        internal virtual OpenXmlElement ElementFactory(byte namespaceId, string name) => ElementData.SchemaLookup.Create(namespaceId, name);
+        internal virtual OpenXmlElement ElementFactory(byte namespaceId, string name) => ElementData.Children.Create(namespaceId, name);
 
         internal virtual T CloneImp<T>(bool deep) where T : OpenXmlElement, new()
         {

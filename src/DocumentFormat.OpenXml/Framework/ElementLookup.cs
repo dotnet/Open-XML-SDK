@@ -2,22 +2,30 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics;
 using System.Reflection;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal class ElementSchemaLookup
+    /// <summary>
+    /// A lookup that identifies properties on an <see cref="OpenXmlElement"/> and caches the schema information
+    /// from those elements (identified by the <see cref="SchemaAttrAttribute"/> on the property type.
+    /// </summary>
+    internal class ElementLookup : IEnumerable<XmlQualifiedName>
     {
-        private static readonly ElementSchemaLookup Empty = new ElementSchemaLookup(null);
+        private static readonly ElementLookup Empty = new ElementLookup(null);
 
         private readonly List<ElementInfo> _lookup;
 
-        private ElementSchemaLookup(List<ElementInfo> lookup)
+        private ElementLookup(List<ElementInfo> lookup)
         {
             _lookup = lookup;
         }
+
+        public int Count => _lookup?.Count ?? 0;
 
         public OpenXmlElement Create(byte id, string name)
         {
@@ -38,7 +46,7 @@ namespace DocumentFormat.OpenXml.Framework
             return _lookup[idx].Create();
         }
 
-        public static ElementSchemaLookup CreateLookup(Type type, Func<Type, Func<OpenXmlElement>> activatorFactory)
+        public static ElementLookup CreateLookup(Type type, Func<Type, Func<OpenXmlElement>> activatorFactory)
         {
             List<ElementInfo> lookup = null;
 
@@ -68,42 +76,69 @@ namespace DocumentFormat.OpenXml.Framework
 
             lookup.Sort(ElementInfoComparer.Instance);
 
-            return new ElementSchemaLookup(lookup);
+            return new ElementLookup(lookup);
         }
 
+        /// <summary>
+        /// Gets the elements that can be created for a given type. If <paramref name="type"/> is <see cref="OpenXmlPartRootElement"/> this will return
+        /// all the root elements contained in the assembly.
+        /// </summary>
+        /// <param name="type">The type to return child types.</param>
+        /// <returns>A collection of types that the supplied type can create.</returns>
         private static IEnumerable<Type> GetChildTypes(Type type)
         {
-            // If type is OpenXmlPartReader, we are looking for the root elements and must parse all the elements in the assembly.
-            if (typeof(OpenXmlPartReader) == type)
+            if (typeof(OpenXmlPartRootElement) == type)
             {
-#if NETSTANDARD1_3
-                var types = typeof(OpenXmlPartRootElement).GetTypeInfo().Assembly.DefinedTypes;
-#else
-                var types = typeof(OpenXmlPartRootElement).Assembly.GetTypes();
-#endif
-
-                foreach (var elementType in types)
-                {
-                    if (!elementType.IsAbstract && typeof(OpenXmlPartRootElement).GetTypeInfo().IsAssignableFrom(elementType))
-                    {
-#if NETSTANDARD1_3
-                        yield return elementType.AsType();
-#else
-                        yield return elementType;
-#endif
-                    }
-                }
+                return GetAllRootElements(type);
             }
             else
             {
-                // We need to include inherited attributes as some of the elements are abstract bases that other
-                // elements build on top of.
-                foreach (var attribute in type.GetTypeInfo().GetCustomAttributes(inherit: true))
+                return GetElementChildTypes(type);
+            }
+        }
+
+        private static IEnumerable<Type> GetAllRootElements(Type type)
+        {
+            var types = type.GetTypeInfo().Assembly.GetTypes();
+
+            foreach (var elementType in types)
+            {
+                if (!elementType.GetTypeInfo().IsAbstract && type.GetTypeInfo().IsAssignableFrom(elementType.GetTypeInfo()))
                 {
-                    if (attribute is ChildElementInfoAttribute child)
+                    yield return elementType;
+                }
+            }
+        }
+
+        private static IEnumerable<Type> GetElementChildTypes(Type type)
+        {
+            // We need to include inherited attributes as some of the elements are abstract bases that other
+            // elements build on top of.
+            foreach (var attribute in type.GetTypeInfo().GetCustomAttributes(inherit: true))
+            {
+                if (attribute is ChildElementInfoAttribute child)
+                {
+                    if (!typeof(OpenXmlElement).GetTypeInfo().IsAssignableFrom(child.ElementType.GetTypeInfo()))
                     {
-                        yield return child.ElementType;
+                        throw new InvalidOperationException($"{child} must derive from OpenXmlElement");
                     }
+
+                    yield return child.ElementType;
+                }
+            }
+        }
+
+        public IEnumerator<XmlQualifiedName> GetEnumerator() => Names().GetEnumerator();
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+        private IEnumerable<XmlQualifiedName> Names()
+        {
+            if (_lookup != null)
+            {
+                foreach (var item in _lookup)
+                {
+                    yield return new XmlQualifiedName(item.Name, NamespaceIdMap.GetNamespaceUri(item.Namespace));
                 }
             }
         }
@@ -129,6 +164,7 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
+        [DebuggerDisplay("{Namespace}:{Name}")]
         private readonly struct ElementInfo
         {
             private readonly Func<OpenXmlElement> _activator;
@@ -151,11 +187,6 @@ namespace DocumentFormat.OpenXml.Framework
             public string Name { get; }
 
             public OpenXmlElement Create() => _activator();
-
-            public override string ToString()
-            {
-                return $"{Namespace}:{Name}";
-            }
         }
     }
 }
