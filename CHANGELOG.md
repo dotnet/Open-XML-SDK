@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Version 2.9.1 - 2019-03-13
 ### Changed
-- Replaced readonly properties in structs that are marshalled with explicit field backing to work around a .NET Native compiler error (#569)
+- Added a workaround for a .NET Native compiler issue that doesn't support calling Marshal.SizeOf<T> with a struct that contains auto-implemented properties (#569)
 - Fixed a documentation error (#528)
 
 ## Version 2.9.0 - 2018-06-08
