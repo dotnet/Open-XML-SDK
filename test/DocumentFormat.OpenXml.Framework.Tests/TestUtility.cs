@@ -7,11 +7,11 @@ using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Framework.Tests
 {
-    internal static class Serializer
+    internal static class TestUtility
     {
         public static T Deserialize<T>(string name)
         {
-            using (var stream = typeof(Serializer).GetTypeInfo().Assembly.GetManifestResourceStream(typeof(Serializer), name))
+            using (var stream = typeof(TestUtility).GetTypeInfo().Assembly.GetManifestResourceStream(typeof(TestUtility), name))
             using (var reader = new StreamReader(stream))
             {
                 var txt = reader.ReadToEnd();
