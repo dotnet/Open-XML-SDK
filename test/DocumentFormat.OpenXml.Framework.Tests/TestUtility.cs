@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
     {
         public static T Deserialize<T>(string name)
         {
-            using (var stream = typeof(TestUtility).GetTypeInfo().Assembly.GetManifestResourceStream(typeof(TestUtility), name))
+            using (var stream = typeof(TestUtility).GetTypeInfo().Assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.Framework.Tests.{name}"))
             using (var reader = new StreamReader(stream))
             {
                 var txt = reader.ReadToEnd();
