@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## Version 2.9.1 - 2019-03-13
+### Changed
+- Added a workaround for a .NET Native compiler issue that doesn't support calling Marshal.SizeOf<T> with a struct that contains auto-implemented properties (#569)
+- Fixed a documentation error (#528)
+
 ## Version 2.9.0 - 2018-06-08
 ### Added
 - `ListValue` now implements `IEnumerable<T>` (#385)
