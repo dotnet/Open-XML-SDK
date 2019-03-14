@@ -2,8 +2,13 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using System.Xml;
 using Xunit;
+
+using static DocumentFormat.OpenXml.Framework.Tests.Serializer;
 
 namespace DocumentFormat.OpenXml.Framework.Tests
 {
@@ -81,11 +86,91 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             Assert.IsType<Element3>(lookup.Create(Namespace3, Name3));
         }
 
+        [Fact]
+        public void BuiltInOpenXmlElements()
+        {
+            var expected = Deserialize<LookupData[]>("ElementChildren.json");
+            var actual = GetBuiltIn().ToArray();
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void DumpBuiltInOpenXmlElements()
+        {
+            // This should align with the text in ElementChildren.json
+            var expected = Serialize(GetBuiltIn());
+
+            Assert.NotNull(expected);
+        }
+
+        private static IEnumerable<LookupData> GetBuiltIn()
+        {
+            return typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes()
+                .Where(t => !t.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).GetTypeInfo().IsAssignableFrom(t))
+                .Concat(new[] { typeof(OpenXmlPartRootElement) })
+                .OrderBy(type => type.FullName)
+                .Select(type => new LookupData(type));
+        }
+
         private static ElementLookup CreateLookup<T>() => CreateLookup(typeof(T));
 
         private static ElementLookup CreateLookup(Type t)
         {
             return ElementLookup.CreateLookup(t, type => () => (OpenXmlElement)Activator.CreateInstance(type));
+        }
+
+        private class LookupData : IEquatable<LookupData>
+        {
+            public LookupData()
+            {
+            }
+
+            public LookupData(Type type)
+            {
+                Element = type.FullName;
+                Children = CreateLookup(type).Select(t => new ChildData
+                {
+                    Name = t.Name,
+                    Namespace = t.Namespace,
+                });
+            }
+
+            public string Element { get; set; }
+
+            public IEnumerable<ChildData> Children { get; set; }
+
+            public override bool Equals(object obj) => Equals(obj as LookupData);
+
+            public bool Equals(LookupData other)
+            {
+                if (other == null)
+                {
+                    return false;
+                }
+
+                return string.Equals(Element, other.Element, StringComparison.Ordinal)
+                    && Children.SequenceEqual(other.Children);
+            }
+
+            public override int GetHashCode() => throw new NotImplementedException();
+
+            public class ChildData : IEquatable<ChildData>
+            {
+                public string Name { get; set; }
+
+                public string Namespace { get; set; }
+
+                public bool Equals(ChildData other)
+                {
+                    return string.Equals(Name, other.Name, StringComparison.Ordinal)
+                        && string.Equals(Namespace, other.Namespace, StringComparison.Ordinal);
+                }
+
+                public override int GetHashCode() => throw new NotImplementedException();
+
+                public override bool Equals(object obj) => Equals(obj as ChildData);
+            }
         }
 
 #pragma warning disable CA1812

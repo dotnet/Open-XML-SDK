@@ -2,9 +2,11 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
+using System.Xml;
 
 namespace DocumentFormat.OpenXml.Framework
 {
@@ -12,7 +14,7 @@ namespace DocumentFormat.OpenXml.Framework
     /// A lookup that identifies properties on an <see cref="OpenXmlElement"/> and caches the schema information
     /// from those elements (identified by the <see cref="SchemaAttrAttribute"/> on the property type.
     /// </summary>
-    internal class ElementLookup
+    internal class ElementLookup : IEnumerable<XmlQualifiedName>
     {
         private static readonly ElementLookup Empty = new ElementLookup(null);
 
@@ -122,6 +124,21 @@ namespace DocumentFormat.OpenXml.Framework
                     }
 
                     yield return child.ElementType;
+                }
+            }
+        }
+
+        public IEnumerator<XmlQualifiedName> GetEnumerator() => Names().GetEnumerator();
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+        private IEnumerable<XmlQualifiedName> Names()
+        {
+            if (_lookup != null)
+            {
+                foreach (var item in _lookup)
+                {
+                    yield return new XmlQualifiedName(item.Name, NamespaceIdMap.GetNamespaceUri(item.Namespace));
                 }
             }
         }
