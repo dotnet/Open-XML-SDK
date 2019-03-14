@@ -6,8 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Version 2.9.1 - 2019-03-13
 ### Changed
-- Replaced readonly properties in structs that are marshalled with explicit field backing to work around a .NET Native compiler error
-- Fixed a documentation error
+- Replaced readonly properties in structs that are marshalled with explicit field backing to work around a .NET Native compiler error (#569)
+- Fixed a documentation error (#528)
 
 ## Version 2.9.0 - 2018-06-08
 ### Added
