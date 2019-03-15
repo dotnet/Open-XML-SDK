@@ -16,9 +16,10 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
 /// <para> When the object is serialized out as xml, its qualified name is wp15:webVideoPr.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(75, "webVideoPr")]
+[Id(ElementTypeIdConst)]
 public partial class WebVideoProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13435;
@@ -33,6 +34,7 @@ public partial class WebVideoProperty : OpenXmlLeafElement
     [SchemaAttr(0, "embeddedHtml")]
     [Index(0)]
     public StringValue EmbeddedHtml { get; set; }
+	
     /// <summary>
     /// <para> h.</para>
     /// <para>Represents the following attribute in the schema: h </para>
@@ -40,6 +42,7 @@ public partial class WebVideoProperty : OpenXmlLeafElement
     [SchemaAttr(0, "h")]
     [Index(1)]
     public UInt32Value Height { get; set; }
+	
     /// <summary>
     /// <para> w.</para>
     /// <para>Represents the following attribute in the schema: w </para>
@@ -47,6 +50,7 @@ public partial class WebVideoProperty : OpenXmlLeafElement
     [SchemaAttr(0, "w")]
     [Index(2)]
     public UInt32Value Width { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WebVideoProperty class.

@@ -2,11 +2,10 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Reflection;
-using System.Xml;
 
 namespace DocumentFormat.OpenXml.Framework
 {
@@ -14,18 +13,20 @@ namespace DocumentFormat.OpenXml.Framework
     /// A lookup that identifies properties on an <see cref="OpenXmlElement"/> and caches the schema information
     /// from those elements (identified by the <see cref="SchemaAttrAttribute"/> on the property type.
     /// </summary>
-    internal class ElementLookup : IEnumerable<XmlQualifiedName>
+    internal class ElementLookup
     {
         private static readonly ElementLookup Empty = new ElementLookup(null);
 
-        private readonly List<ElementInfo> _lookup;
+        private readonly List<ElementChild> _lookup;
 
-        private ElementLookup(List<ElementInfo> lookup)
+        private ElementLookup(List<ElementChild> lookup)
         {
             _lookup = lookup;
         }
 
         public int Count => _lookup?.Count ?? 0;
+
+        public IEnumerable<ElementChild> Elements => _lookup ?? Enumerable.Empty<ElementChild>();
 
         public OpenXmlElement Create(byte id, string name)
         {
@@ -36,7 +37,7 @@ namespace DocumentFormat.OpenXml.Framework
 
             // This is on a hot-path and using a dictionary adds substantial time to the lookup. Most child lists are small, so using a sorted
             // list to store them with a binary search improves overall performance.
-            var idx = _lookup.BinarySearch(new ElementInfo(id, name), ElementInfoComparer.Instance);
+            var idx = _lookup.BinarySearch(new ElementChild(id, name), ElementChildNameComparer.Instance);
 
             if (idx < 0)
             {
@@ -48,23 +49,16 @@ namespace DocumentFormat.OpenXml.Framework
 
         public static ElementLookup CreateLookup(Type type, Func<Type, Func<OpenXmlElement>> activatorFactory)
         {
-            List<ElementInfo> lookup = null;
+            List<ElementChild> lookup = null;
 
             foreach (var child in GetChildTypes(type))
             {
                 if (lookup == null)
                 {
-                    lookup = new List<ElementInfo>();
+                    lookup = new List<ElementChild>();
                 }
 
-                var schema = child.GetTypeInfo().GetCustomAttribute<SchemaAttrAttribute>();
-
-                if (schema == null)
-                {
-                    throw new InvalidOperationException($"{child} does not contain schema information");
-                }
-
-                var key = new ElementInfo(schema.NamespaceId, schema.Tag, activatorFactory(child));
+                var key = new ElementChild(child, activatorFactory(child));
 
                 lookup.Add(key);
             }
@@ -74,7 +68,7 @@ namespace DocumentFormat.OpenXml.Framework
                 return Empty;
             }
 
-            lookup.Sort(ElementInfoComparer.Instance);
+            lookup.Sort(ElementChildNameComparer.Instance);
 
             return new ElementLookup(lookup);
         }
@@ -128,32 +122,17 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        public IEnumerator<XmlQualifiedName> GetEnumerator() => Names().GetEnumerator();
-
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-
-        private IEnumerable<XmlQualifiedName> Names()
+        private class ElementChildNameComparer : IComparer<ElementChild>
         {
-            if (_lookup != null)
-            {
-                foreach (var item in _lookup)
-                {
-                    yield return new XmlQualifiedName(item.Name, NamespaceIdMap.GetNamespaceUri(item.Namespace));
-                }
-            }
-        }
+            public static IComparer<ElementChild> Instance { get; } = new ElementChildNameComparer();
 
-        private class ElementInfoComparer : IComparer<ElementInfo>
-        {
-            public static IComparer<ElementInfo> Instance { get; } = new ElementInfoComparer();
-
-            private ElementInfoComparer()
+            private ElementChildNameComparer()
             {
             }
 
-            public int Compare(ElementInfo x, ElementInfo y)
+            public int Compare(ElementChild x, ElementChild y)
             {
-                var nsCompare = x.Namespace.CompareTo(y.Namespace);
+                var nsCompare = x.NamespaceId.CompareTo(y.NamespaceId);
 
                 if (nsCompare != 0)
                 {
@@ -165,24 +144,40 @@ namespace DocumentFormat.OpenXml.Framework
         }
 
         [DebuggerDisplay("{Namespace}:{Name}")]
-        private readonly struct ElementInfo
+        public readonly struct ElementChild
         {
             private readonly Func<OpenXmlElement> _activator;
 
-            public ElementInfo(byte ns, string name)
-                : this(ns, name, null)
+            public ElementChild(Type child, Func<OpenXmlElement> activator)
             {
-            }
-
-            public ElementInfo(byte ns, string name, Func<OpenXmlElement> activator)
-            {
-                Namespace = ns;
-                Name = name;
-
                 _activator = activator;
+
+                var schema = child.GetTypeInfo().GetCustomAttribute<SchemaAttrAttribute>();
+
+                if (schema == null)
+                {
+                    throw new InvalidOperationException($"{child} does not contain schema information");
+                }
+
+                Type = child;
+                NamespaceId = schema.NamespaceId;
+                Name = schema.Tag;
             }
 
-            public byte Namespace { get; }
+            public ElementChild(byte ns, string name)
+            {
+                _activator = null;
+
+                Type = null;
+                NamespaceId = ns;
+                Name = name;
+            }
+
+            public Type Type { get; }
+
+            public byte NamespaceId { get; }
+
+            public string Namespace => NamespaceIdMap.GetNamespaceUri(NamespaceId);
 
             public string Name { get; }
 

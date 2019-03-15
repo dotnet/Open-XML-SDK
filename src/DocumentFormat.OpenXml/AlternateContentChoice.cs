@@ -10,6 +10,7 @@ namespace DocumentFormat.OpenXml
     /// Defines an mc:Choice element in mc:AlternateContent.
     /// </summary>
     [SchemaAttr(AlternateContent.Namespace, Name)]
+    [Id(ReservedElementTypeIds.AlternateContentChoiceId)]
     public class AlternateContentChoice : OpenXmlCompositeElement
     {
         private const string Name = "Choice";

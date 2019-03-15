@@ -21,10 +21,11 @@ namespace DocumentFormat.OpenXml.Office.Drawing
 ///<item><description>ShapeTree &lt;dsp:spTree></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(ShapeTree))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(56, "drawing")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Drawing : OpenXmlPartRootElement
 {
@@ -126,9 +127,10 @@ public partial class Drawing : OpenXmlPartRootElement
 /// <para> When the object is serialized out as xml, its qualified name is dsp:dataModelExt.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(56, "dataModelExt")]
+[Id(ElementTypeIdConst)]
 public partial class DataModelExtensionBlock : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13084;
@@ -143,6 +145,7 @@ public partial class DataModelExtensionBlock : OpenXmlLeafElement
     [SchemaAttr(0, "relId")]
     [Index(0)]
     public StringValue RelId { get; set; }
+	
     /// <summary>
     /// <para> minVer.</para>
     /// <para>Represents the following attribute in the schema: minVer </para>
@@ -150,6 +153,7 @@ public partial class DataModelExtensionBlock : OpenXmlLeafElement
     [SchemaAttr(0, "minVer")]
     [Index(1)]
     public StringValue MinVer { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the DataModelExtensionBlock class.
@@ -182,9 +186,10 @@ public partial class DataModelExtensionBlock : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(56, "cNvPr")]
+[Id(ElementTypeIdConst)]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13085;
@@ -199,6 +204,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public UInt32Value Id { get; set; }
+	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -206,6 +212,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(1)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
@@ -213,6 +220,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "descr")]
     [Index(2)]
     public StringValue Description { get; set; }
+	
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
@@ -220,6 +228,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "hidden")]
     [Index(3)]
     public BooleanValue Hidden { get; set; }
+	
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -227,6 +236,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(4)]
     public StringValue Title { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -328,9 +338,10 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(56, "cNvSpPr")]
+[Id(ElementTypeIdConst)]
 public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13086;
@@ -345,6 +356,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "txBox")]
     [Index(0)]
     public BooleanValue TextBox { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingShapeProperties class.
@@ -432,9 +444,10 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualDrawingShapeProperties))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(56, "nvSpPr")]
+[Id(ElementTypeIdConst)]
 public partial class ShapeNonVisualProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13087;
@@ -555,9 +568,10 @@ public partial class ShapeNonVisualProperties : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(56, "spPr")]
+[Id(ElementTypeIdConst)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13088;
@@ -572,6 +586,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "bwMode")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class.
@@ -649,9 +664,10 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(56, "style")]
+[Id(ElementTypeIdConst)]
 public partial class ShapeStyle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13089;
@@ -776,9 +792,10 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(56, "txBody")]
+[Id(ElementTypeIdConst)]
 public partial class TextBody : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13090;
@@ -873,9 +890,10 @@ public partial class TextBody : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(56, "txXfrm")]
+[Id(ElementTypeIdConst)]
 public partial class Transform2D : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13091;
@@ -890,6 +908,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     [SchemaAttr(0, "rot")]
     [Index(0)]
     public Int32Value Rotation { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
@@ -897,6 +916,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     [SchemaAttr(0, "flipH")]
     [Index(1)]
     public BooleanValue HorizontalFlip { get; set; }
+	
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
@@ -904,6 +924,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     [SchemaAttr(0, "flipV")]
     [Index(2)]
     public BooleanValue VerticalFlip { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Transform2D class.
@@ -989,9 +1010,10 @@ public partial class Transform2D : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(56, "extLst")]
+[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13092;
@@ -1055,9 +1077,10 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(56, "cNvGrpSpPr")]
+[Id(ElementTypeIdConst)]
 public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13093;
@@ -1152,9 +1175,10 @@ public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElem
 
     [ChildElementInfo(typeof(NonVisualDrawingProperties))]
     [ChildElementInfo(typeof(NonVisualGroupDrawingShapeProperties))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(56, "nvGrpSpPr")]
+[Id(ElementTypeIdConst)]
 public partial class GroupShapeNonVisualProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13094;
@@ -1267,9 +1291,10 @@ public partial class GroupShapeNonVisualProperties : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(56, "grpSpPr")]
+[Id(ElementTypeIdConst)]
 public partial class GroupShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13095;
@@ -1284,6 +1309,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "bwMode")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the GroupShapeProperties class.
@@ -1365,9 +1391,10 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     [ChildElementInfo(typeof(TextBody))]
     [ChildElementInfo(typeof(Transform2D))]
     [ChildElementInfo(typeof(OfficeArtExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(56, "sp")]
+[Id(ElementTypeIdConst)]
 public partial class Shape : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13096;
@@ -1382,6 +1409,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "modelId")]
     [Index(0)]
     public StringValue ModelId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Shape class.
@@ -1525,9 +1553,15 @@ public partial class Shape : OpenXmlCompositeElement
 ///<item><description>OfficeArtExtensionList &lt;dsp:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(GroupShapeNonVisualProperties))]
+    [ChildElementInfo(typeof(GroupShapeProperties))]
+    [ChildElementInfo(typeof(Shape))]
+    [ChildElementInfo(typeof(GroupShape))]
+    [ChildElementInfo(typeof(OfficeArtExtensionList))]
+
 [SchemaAttr(56, "grpSp")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GroupShape : GroupShapeType
 {
@@ -1585,9 +1619,15 @@ public partial class GroupShape : GroupShapeType
 ///<item><description>OfficeArtExtensionList &lt;dsp:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+    [ChildElementInfo(typeof(GroupShapeNonVisualProperties))]
+    [ChildElementInfo(typeof(GroupShapeProperties))]
+    [ChildElementInfo(typeof(Shape))]
+    [ChildElementInfo(typeof(GroupShape))]
+    [ChildElementInfo(typeof(OfficeArtExtensionList))]
+
 [SchemaAttr(56, "spTree")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShapeTree : GroupShapeType
 {
@@ -1643,13 +1683,13 @@ public partial class ShapeTree : GroupShapeType
 ///<item><description>OfficeArtExtensionList &lt;dsp:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(GroupShapeNonVisualProperties))]
     [ChildElementInfo(typeof(GroupShapeProperties))]
     [ChildElementInfo(typeof(Shape))]
     [ChildElementInfo(typeof(GroupShape))]
     [ChildElementInfo(typeof(OfficeArtExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 public abstract partial class GroupShapeType : OpenXmlCompositeElement
 {
         

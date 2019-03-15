@@ -41,9 +41,10 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(GraphicFrameType), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(59, "wpc")]
+[Id(ElementTypeIdConst)]
 public partial class WordprocessingCanvas : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13182;
@@ -150,9 +151,10 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(59, "bg")]
+[Id(ElementTypeIdConst)]
 public partial class BackgroundFormatting : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13183;
@@ -218,9 +220,10 @@ public partial class BackgroundFormatting : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Outline))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(59, "whole")]
+[Id(ElementTypeIdConst)]
 public partial class WholeFormatting : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13184;
@@ -307,9 +310,10 @@ public partial class WholeFormatting : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(59, "graphicFrame")]
+[Id(ElementTypeIdConst)]
 public partial class GraphicFrameType : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13185;
@@ -444,9 +448,10 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(59, "extLst")]
+[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13186;

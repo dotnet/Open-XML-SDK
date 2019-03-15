@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
 ///<item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetDimension))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetViews))]
@@ -74,8 +74,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObjects))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(32, "macrosheet")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Macrosheet : OpenXmlPartRootElement
 {
@@ -224,11 +225,12 @@ public partial class Macrosheet : OpenXmlPartRootElement
 ///<item><description>ColumnSortMap &lt;xne:colSortMap></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(RowSortMap))]
     [ChildElementInfo(typeof(ColumnSortMap))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(32, "worksheetSortMap")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WorksheetSortMap : OpenXmlPartRootElement
 {
@@ -344,9 +346,10 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
 /// <para> When the object is serialized out as xml, its qualified name is xne:sqref.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(32, "sqref")]
+[Id(ElementTypeIdConst)]
 public partial class ReferenceSequence : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12602;
@@ -388,9 +391,10 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xne:f.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(32, "f")]
+[Id(ElementTypeIdConst)]
 public partial class Formula : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12603;
@@ -439,9 +443,10 @@ public partial class Formula : OpenXmlLeafTextElement
 /// </remarks>
 
     [ChildElementInfo(typeof(RowSortMapItem))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(32, "rowSortMap")]
+[Id(ElementTypeIdConst)]
 public partial class RowSortMap : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12604;
@@ -456,6 +461,7 @@ public partial class RowSortMap : OpenXmlCompositeElement
     [SchemaAttr(0, "ref")]
     [Index(0)]
     public StringValue Ref { get; set; }
+	
     /// <summary>
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
@@ -463,6 +469,7 @@ public partial class RowSortMap : OpenXmlCompositeElement
     [SchemaAttr(0, "count")]
     [Index(1)]
     public UInt32Value Count { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RowSortMap class.
@@ -517,9 +524,10 @@ public partial class RowSortMap : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(ColumnSortMapItem))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(32, "colSortMap")]
+[Id(ElementTypeIdConst)]
 public partial class ColumnSortMap : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12605;
@@ -534,6 +542,7 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     [SchemaAttr(0, "ref")]
     [Index(0)]
     public StringValue Ref { get; set; }
+	
     /// <summary>
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
@@ -541,6 +550,7 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     [SchemaAttr(0, "count")]
     [Index(1)]
     public UInt32Value Count { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ColumnSortMap class.
@@ -587,9 +597,10 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xne:row.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(32, "row")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RowSortMapItem : SortMapItemType
 {
@@ -611,9 +622,10 @@ public partial class RowSortMapItem : SortMapItemType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xne:col.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(32, "col")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnSortMapItem : SortMapItemType
 {
@@ -633,8 +645,8 @@ public partial class ColumnSortMapItem : SortMapItemType
 /// <summary>
 /// Defines the SortMapItemType class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class SortMapItemType : OpenXmlLeafElement
 {
         
@@ -645,6 +657,7 @@ public abstract partial class SortMapItemType : OpenXmlLeafElement
     [SchemaAttr(0, "newVal")]
     [Index(0)]
     public UInt32Value NewVal { get; set; }
+	
     /// <summary>
     /// <para> Old Value.</para>
     /// <para>Represents the following attribute in the schema: oldVal </para>
@@ -652,6 +665,7 @@ public abstract partial class SortMapItemType : OpenXmlLeafElement
     [SchemaAttr(0, "oldVal")]
     [Index(1)]
     public UInt32Value OldVal { get; set; }
+	
 
     
     

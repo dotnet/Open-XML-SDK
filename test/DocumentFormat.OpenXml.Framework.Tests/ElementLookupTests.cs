@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             public LookupData(Type type)
             {
                 Element = type.FullName;
-                Children = CreateLookup(type).Select(t => new ChildData
+                Children = CreateLookup(type).Elements.Select(t => new ChildData
                 {
                     Name = t.Name,
                     Namespace = t.Namespace,
@@ -206,6 +206,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [SchemaAttr(Namespace1, Name1)]
         private class NotElement
         {
+            public NotElement Element { get; set; }
         }
 
         private class OnDerived : MultiplePropertyTest

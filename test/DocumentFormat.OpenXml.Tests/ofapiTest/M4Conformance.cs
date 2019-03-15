@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
@@ -20,23 +21,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void O14OnlyElesInO12()
         {
-            //"w:start" element is newly added
-            //its class is StartBorder
-            //its parent is TableCellBorder
-            //its parent should have corresponding attribute
-            foreach (var ce in typeof(TableCellBorders).GetTypeInfo().GetCustomAttributes<ChildElementInfoAttribute>(false))
-            {
-                if (ce.ElementType == typeof(TopBorder))
-                {
-                    Assert.True((ce.AvailableInVersion & FileFormatVersions.Office2007) > 0);
-                    Assert.True((ce.AvailableInVersion & FileFormatVersions.Office2010) > 0);
-                }
-                else if (ce.ElementType == typeof(StartBorder) || ce.ElementType == typeof(EndBorder))
-                {
-                    Assert.True((ce.AvailableInVersion & FileFormatVersions.Office2010) > 0);
-                }
-            }
-
             EndBorder eb = new EndBorder();
             Assert.True(eb.IsInVersion(FileFormatVersions.Office2010));
             Assert.False(eb.IsInVersion(FileFormatVersions.Office2007));
@@ -51,18 +35,6 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void O14ElesInO14()
         {
-            foreach (var attr in typeof(TableCellBorders).GetTypeInfo().GetCustomAttributes<ChildElementInfoAttribute>(false))
-            {
-                if (attr.ElementType == typeof(TopBorder))
-                {
-                    Assert.True(attr.AvailableInVersion.All());
-                }
-                else if (attr.ElementType == typeof(StartBorder) || attr.ElementType == typeof(EndBorder))
-                {
-                    Assert.True(attr.AvailableInVersion.Includes(FileFormatVersions.Office2010));
-                }
-            }
-
             EndBorder eb = new EndBorder();
             Assert.True(eb.IsInVersion(FileFormatVersions.Office2010));
             Assert.False(eb.IsInVersion(FileFormatVersions.Office2007));

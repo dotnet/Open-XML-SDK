@@ -27,8 +27,10 @@ namespace DocumentFormat.OpenXml
         /// <param name="availableInOfficeVersion">Specifies the office version where the child element is first available.</param>
         public ChildElementInfoAttribute(Type elementType, FileFormatVersions availableInOfficeVersion)
         {
+#pragma warning disable CS0618 // Type or member is obsolete
             ElementType = elementType;
             AvailableInVersion = availableInOfficeVersion.AndLater();
+#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         /// <summary>
@@ -39,6 +41,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the Office version(s) where the child element is available.
         /// </summary>
+        [Obsolete("This property is no longer used and will be removed in a later release")]
         public FileFormatVersions AvailableInVersion { get; }
     }
 }

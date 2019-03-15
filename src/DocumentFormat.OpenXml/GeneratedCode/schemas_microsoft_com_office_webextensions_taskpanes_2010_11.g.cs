@@ -21,10 +21,11 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
 ///<item><description>WebExtensionTaskpane &lt;wetp:taskpane></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(WebExtensionTaskpane), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(70, "taskpanes")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Taskpanes : OpenXmlPartRootElement
 {
@@ -109,9 +110,10 @@ public partial class Taskpanes : OpenXmlPartRootElement
 /// <para> When the object is serialized out as xml, its qualified name is wetp:webextensionref.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(70, "webextensionref")]
+[Id(ElementTypeIdConst)]
 public partial class WebExtensionPartReference : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13353;
@@ -128,6 +130,7 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionPartReference class.
@@ -156,9 +159,10 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(70, "extLst")]
+[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13354;
@@ -222,9 +226,10 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(WebExtensionPartReference), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(70, "taskpane")]
+[Id(ElementTypeIdConst)]
 public partial class WebExtensionTaskpane : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13355;
@@ -239,6 +244,7 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     [SchemaAttr(0, "dockstate")]
     [Index(0)]
     public StringValue DockState { get; set; }
+	
     /// <summary>
     /// <para> visibility.</para>
     /// <para>Represents the following attribute in the schema: visibility </para>
@@ -246,6 +252,7 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     [SchemaAttr(0, "visibility")]
     [Index(1)]
     public BooleanValue Visibility { get; set; }
+	
     /// <summary>
     /// <para> width.</para>
     /// <para>Represents the following attribute in the schema: width </para>
@@ -253,6 +260,7 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     [SchemaAttr(0, "width")]
     [Index(2)]
     public DoubleValue Width { get; set; }
+	
     /// <summary>
     /// <para> row.</para>
     /// <para>Represents the following attribute in the schema: row </para>
@@ -260,6 +268,7 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     [SchemaAttr(0, "row")]
     [Index(3)]
     public UInt32Value Row { get; set; }
+	
     /// <summary>
     /// <para> locked.</para>
     /// <para>Represents the following attribute in the schema: locked </para>
@@ -267,6 +276,7 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     [SchemaAttr(0, "locked")]
     [Index(4)]
     public BooleanValue Locked { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionTaskpane class.

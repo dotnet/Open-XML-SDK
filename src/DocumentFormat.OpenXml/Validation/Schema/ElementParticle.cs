@@ -1,7 +1,11 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -11,8 +15,22 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("ElementId={ElementId}")]
     internal class ElementParticle : ParticleConstraint, IParticleValidator
     {
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private int _elementId;
+        private static readonly Lazy<Dictionary<int, Type>> _elementIdMapper = new Lazy<Dictionary<int, Type>>(() =>
+        {
+            var dictionary = new Dictionary<int, Type>();
+
+            foreach (var element in typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes())
+            {
+                if (!element.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).GetTypeInfo().IsAssignableFrom(element.GetTypeInfo()))
+                {
+                    var attribute = element.GetTypeInfo().GetCustomAttribute<IdAttribute>();
+
+                    dictionary.Add(attribute.Id, element);
+                }
+            }
+
+            return dictionary;
+        }, true);
 
         /// <summary>
         /// Initializes a new instance of the ElementParticle.
@@ -30,11 +48,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <inheritdoc/>
-        internal override int ElementId
-        {
-            get { return _elementId; }
-            set { _elementId = value; }
-        }
+        internal override int ElementId { get; set; }
+
+        internal override Type ElementType => _elementIdMapper.Value[ElementId];
 
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator
@@ -106,7 +122,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             particleMatchInfo.InitExpectedChildren();
                         }
 
-                        particleMatchInfo.ExpectedChildren.Add(ElementId);
+                        particleMatchInfo.ExpectedChildren.Add(ElementType);
                     }
                 }
             }
@@ -121,7 +137,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 if (result != null)
                 {
-                    result.Add(ElementId);
+                    result.Add(ElementType);
                 }
 
                 return true;
@@ -137,7 +153,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             if (MinOccurs > 0)
             {
-                requiredElements.Add(ElementId);
+                requiredElements.Add(ElementType);
             }
 
             return requiredElements;
@@ -146,7 +162,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public bool GetExpectedElements(ExpectedChildren result)
         {
-            result.Add(ElementId);
+            result.Add(ElementType);
             return true;
         }
 
@@ -155,7 +171,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             ExpectedChildren expectedElements = new ExpectedChildren();
 
-            expectedElements.Add(ElementId);
+            expectedElements.Add(ElementType);
 
             return expectedElements;
         }

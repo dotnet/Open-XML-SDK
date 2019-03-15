@@ -20,9 +20,10 @@ namespace DocumentFormat.OpenXml.Vml
 /// <para> When the object is serialized out as xml, its qualified name is v:path.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "path")]
+[Id(ElementTypeIdConst)]
 public partial class Path : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12577;
@@ -37,6 +38,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Path Definition.</para>
     /// <para>Represents the following attribute in the schema: v </para>
@@ -44,6 +46,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "v")]
     [Index(1)]
     public StringValue Value { get; set; }
+	
     /// <summary>
     /// <para> Limo Stretch Point.</para>
     /// <para>Represents the following attribute in the schema: limo </para>
@@ -51,6 +54,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "limo")]
     [Index(2)]
     public StringValue Limo { get; set; }
+	
     /// <summary>
     /// <para> Text Box Bounding Box.</para>
     /// <para>Represents the following attribute in the schema: textboxrect </para>
@@ -58,6 +62,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "textboxrect")]
     [Index(3)]
     public StringValue TextboxRectangle { get; set; }
+	
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: fillok </para>
@@ -65,6 +70,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "fillok")]
     [Index(4)]
     public TrueFalseValue AllowFill { get; set; }
+	
     /// <summary>
     /// <para> Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: strokeok </para>
@@ -72,6 +78,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "strokeok")]
     [Index(5)]
     public TrueFalseValue AllowStroke { get; set; }
+	
     /// <summary>
     /// <para> Shadow Toggle.</para>
     /// <para>Represents the following attribute in the schema: shadowok </para>
@@ -79,6 +86,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "shadowok")]
     [Index(6)]
     public TrueFalseValue AllowShading { get; set; }
+	
     /// <summary>
     /// <para> Arrowhead Display Toggle.</para>
     /// <para>Represents the following attribute in the schema: arrowok </para>
@@ -86,6 +94,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "arrowok")]
     [Index(7)]
     public TrueFalseValue ShowArrowhead { get; set; }
+	
     /// <summary>
     /// <para> Gradient Shape Toggle.</para>
     /// <para>Represents the following attribute in the schema: gradientshapeok </para>
@@ -93,6 +102,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "gradientshapeok")]
     [Index(8)]
     public TrueFalseValue AllowGradientShape { get; set; }
+	
     /// <summary>
     /// <para> Text Path Toggle.</para>
     /// <para>Represents the following attribute in the schema: textpathok </para>
@@ -100,6 +110,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "textpathok")]
     [Index(9)]
     public TrueFalseValue AllowTextPath { get; set; }
+	
     /// <summary>
     /// <para> Inset Stroke From Path Flag.</para>
     /// <para>Represents the following attribute in the schema: insetpenok </para>
@@ -107,6 +118,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "insetpenok")]
     [Index(10)]
     public TrueFalseValue AllowInsetPen { get; set; }
+	
     /// <summary>
     /// <para> Connection Point Type.</para>
     /// <para>Represents the following attribute in the schema: o:connecttype </para>
@@ -116,6 +128,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(27, "connecttype")]
     [Index(11)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectValues> ConnectionPointType { get; set; }
+	
     /// <summary>
     /// <para> Connection Points.</para>
     /// <para>Represents the following attribute in the schema: o:connectlocs </para>
@@ -125,6 +138,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(27, "connectlocs")]
     [Index(12)]
     public StringValue ConnectionPoints { get; set; }
+	
     /// <summary>
     /// <para> Connection Point Connect Angles.</para>
     /// <para>Represents the following attribute in the schema: o:connectangles </para>
@@ -134,6 +148,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(27, "connectangles")]
     [Index(13)]
     public StringValue ConnectAngles { get; set; }
+	
     /// <summary>
     /// <para> Extrusion Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:extrusionok </para>
@@ -143,6 +158,7 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(27, "extrusionok")]
     [Index(14)]
     public TrueFalseValue AllowExtrusion { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Path class.
@@ -171,9 +187,10 @@ public partial class Path : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(Formula))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "formulas")]
+[Id(ElementTypeIdConst)]
 public partial class Formulas : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12578;
@@ -235,9 +252,10 @@ public partial class Formulas : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(ShapeHandle))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "handles")]
+[Id(ElementTypeIdConst)]
 public partial class ShapeHandles : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12579;
@@ -299,9 +317,10 @@ public partial class ShapeHandles : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "fill")]
+[Id(ElementTypeIdConst)]
 public partial class Fill : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12580;
@@ -316,6 +335,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Fill Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -323,6 +343,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues> Type { get; set; }
+	
     /// <summary>
     /// <para> Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
@@ -330,6 +351,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "on")]
     [Index(2)]
     public TrueFalseValue On { get; set; }
+	
     /// <summary>
     /// <para> Primary Color.</para>
     /// <para>Represents the following attribute in the schema: color </para>
@@ -337,6 +359,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "color")]
     [Index(3)]
     public StringValue Color { get; set; }
+	
     /// <summary>
     /// <para> Primary Color Opacity.</para>
     /// <para>Represents the following attribute in the schema: opacity </para>
@@ -344,6 +367,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "opacity")]
     [Index(4)]
     public StringValue Opacity { get; set; }
+	
     /// <summary>
     /// <para> Secondary Color.</para>
     /// <para>Represents the following attribute in the schema: color2 </para>
@@ -351,6 +375,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "color2")]
     [Index(5)]
     public StringValue Color2 { get; set; }
+	
     /// <summary>
     /// <para> Fill Image Source.</para>
     /// <para>Represents the following attribute in the schema: src </para>
@@ -358,6 +383,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "src")]
     [Index(6)]
     public StringValue Source { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: o:href </para>
@@ -367,6 +393,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(27, "href")]
     [Index(7)]
     public StringValue Href { get; set; }
+	
     /// <summary>
     /// <para> Alternate Image Reference Location.</para>
     /// <para>Represents the following attribute in the schema: o:althref </para>
@@ -376,6 +403,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(27, "althref")]
     [Index(8)]
     public StringValue AlternateImageReference { get; set; }
+	
     /// <summary>
     /// <para> Fill Image Size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
@@ -383,6 +411,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "size")]
     [Index(9)]
     public StringValue Size { get; set; }
+	
     /// <summary>
     /// <para> Fill Image Origin.</para>
     /// <para>Represents the following attribute in the schema: origin </para>
@@ -390,6 +419,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "origin")]
     [Index(10)]
     public StringValue Origin { get; set; }
+	
     /// <summary>
     /// <para> Fill Image Position.</para>
     /// <para>Represents the following attribute in the schema: position </para>
@@ -397,6 +427,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "position")]
     [Index(11)]
     public StringValue Position { get; set; }
+	
     /// <summary>
     /// <para> Image Aspect Ratio.</para>
     /// <para>Represents the following attribute in the schema: aspect </para>
@@ -404,6 +435,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "aspect")]
     [Index(12)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> Aspect { get; set; }
+	
     /// <summary>
     /// <para> Intermediate Colors.</para>
     /// <para>Represents the following attribute in the schema: colors </para>
@@ -411,6 +443,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "colors")]
     [Index(13)]
     public StringValue Colors { get; set; }
+	
     /// <summary>
     /// <para> Gradient Angle.</para>
     /// <para>Represents the following attribute in the schema: angle </para>
@@ -418,6 +451,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "angle")]
     [Index(14)]
     public DecimalValue Angle { get; set; }
+	
     /// <summary>
     /// <para> Align Image With Shape.</para>
     /// <para>Represents the following attribute in the schema: alignshape </para>
@@ -425,6 +459,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "alignshape")]
     [Index(15)]
     public TrueFalseValue AlignShape { get; set; }
+	
     /// <summary>
     /// <para> Gradient Center.</para>
     /// <para>Represents the following attribute in the schema: focus </para>
@@ -432,6 +467,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "focus")]
     [Index(16)]
     public StringValue Focus { get; set; }
+	
     /// <summary>
     /// <para> Radial Gradient Size.</para>
     /// <para>Represents the following attribute in the schema: focussize </para>
@@ -439,6 +475,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "focussize")]
     [Index(17)]
     public StringValue FocusSize { get; set; }
+	
     /// <summary>
     /// <para> Radial Gradient Center.</para>
     /// <para>Represents the following attribute in the schema: focusposition </para>
@@ -446,6 +483,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "focusposition")]
     [Index(18)]
     public StringValue FocusPosition { get; set; }
+	
     /// <summary>
     /// <para> Gradient Fill Method.</para>
     /// <para>Represents the following attribute in the schema: method </para>
@@ -453,6 +491,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "method")]
     [Index(19)]
     public EnumValue<DocumentFormat.OpenXml.Vml.FillMethodValues> Method { get; set; }
+	
     /// <summary>
     /// <para> Detect Mouse Click.</para>
     /// <para>Represents the following attribute in the schema: o:detectmouseclick </para>
@@ -462,6 +501,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(27, "detectmouseclick")]
     [Index(20)]
     public TrueFalseValue DetectMouseClick { get; set; }
+	
     /// <summary>
     /// <para> Title.</para>
     /// <para>Represents the following attribute in the schema: o:title </para>
@@ -471,6 +511,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(27, "title")]
     [Index(21)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> Secondary Color Opacity.</para>
     /// <para>Represents the following attribute in the schema: o:opacity2 </para>
@@ -480,6 +521,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(27, "opacity2")]
     [Index(22)]
     public StringValue Opacity2 { get; set; }
+	
     /// <summary>
     /// <para> Recolor Fill as Picture.</para>
     /// <para>Represents the following attribute in the schema: recolor </para>
@@ -487,6 +529,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "recolor")]
     [Index(23)]
     public TrueFalseValue Recolor { get; set; }
+	
     /// <summary>
     /// <para> Rotate Fill with Shape.</para>
     /// <para>Represents the following attribute in the schema: rotate </para>
@@ -494,6 +537,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "rotate")]
     [Index(24)]
     public TrueFalseValue Rotate { get; set; }
+	
     /// <summary>
     /// <para> Relationship to Part.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
@@ -503,6 +547,7 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(19, "id")]
     [Index(25)]
     public StringValue RelationshipId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Fill class.
@@ -582,9 +627,10 @@ public partial class Fill : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.RightStroke))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.BottomStroke))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ColumnStroke))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "stroke")]
+[Id(ElementTypeIdConst)]
 public partial class Stroke : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12581;
@@ -599,6 +645,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
@@ -606,6 +653,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "on")]
     [Index(1)]
     public TrueFalseValue On { get; set; }
+	
     /// <summary>
     /// <para> Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: weight </para>
@@ -613,6 +661,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "weight")]
     [Index(2)]
     public StringValue Weight { get; set; }
+	
     /// <summary>
     /// <para> Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: color </para>
@@ -620,6 +669,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "color")]
     [Index(3)]
     public StringValue Color { get; set; }
+	
     /// <summary>
     /// <para> Stroke Opacity.</para>
     /// <para>Represents the following attribute in the schema: opacity </para>
@@ -627,6 +677,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "opacity")]
     [Index(4)]
     public StringValue Opacity { get; set; }
+	
     /// <summary>
     /// <para> Stroke Line Style.</para>
     /// <para>Represents the following attribute in the schema: linestyle </para>
@@ -634,6 +685,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "linestyle")]
     [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues> LineStyle { get; set; }
+	
     /// <summary>
     /// <para> Miter Joint Limit.</para>
     /// <para>Represents the following attribute in the schema: miterlimit </para>
@@ -641,6 +693,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "miterlimit")]
     [Index(6)]
     public StringValue Miterlimit { get; set; }
+	
     /// <summary>
     /// <para> Line End Join Style.</para>
     /// <para>Represents the following attribute in the schema: joinstyle </para>
@@ -648,6 +701,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "joinstyle")]
     [Index(7)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues> JoinStyle { get; set; }
+	
     /// <summary>
     /// <para> Line End Cap.</para>
     /// <para>Represents the following attribute in the schema: endcap </para>
@@ -655,6 +709,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "endcap")]
     [Index(8)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues> EndCap { get; set; }
+	
     /// <summary>
     /// <para> Stroke Dash Pattern.</para>
     /// <para>Represents the following attribute in the schema: dashstyle </para>
@@ -662,6 +717,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "dashstyle")]
     [Index(9)]
     public StringValue DashStyle { get; set; }
+	
     /// <summary>
     /// <para> Stroke Image Style.</para>
     /// <para>Represents the following attribute in the schema: filltype </para>
@@ -669,6 +725,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "filltype")]
     [Index(10)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeFillTypeValues> FillType { get; set; }
+	
     /// <summary>
     /// <para> Stroke Image Location.</para>
     /// <para>Represents the following attribute in the schema: src </para>
@@ -676,6 +733,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "src")]
     [Index(11)]
     public StringValue Source { get; set; }
+	
     /// <summary>
     /// <para> Stroke Image Aspect Ratio.</para>
     /// <para>Represents the following attribute in the schema: imageaspect </para>
@@ -683,6 +741,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "imageaspect")]
     [Index(12)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> ImageAspect { get; set; }
+	
     /// <summary>
     /// <para> Stroke Image Size.</para>
     /// <para>Represents the following attribute in the schema: imagesize </para>
@@ -690,6 +749,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "imagesize")]
     [Index(13)]
     public StringValue ImageSize { get; set; }
+	
     /// <summary>
     /// <para> Stoke Image Alignment.</para>
     /// <para>Represents the following attribute in the schema: imagealignshape </para>
@@ -697,6 +757,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "imagealignshape")]
     [Index(14)]
     public TrueFalseValue ImageAlignShape { get; set; }
+	
     /// <summary>
     /// <para> Stroke Alternate Pattern Color.</para>
     /// <para>Represents the following attribute in the schema: color2 </para>
@@ -704,6 +765,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "color2")]
     [Index(15)]
     public StringValue Color2 { get; set; }
+	
     /// <summary>
     /// <para> Line Start Arrowhead.</para>
     /// <para>Represents the following attribute in the schema: startarrow </para>
@@ -711,6 +773,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "startarrow")]
     [Index(16)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> StartArrow { get; set; }
+	
     /// <summary>
     /// <para> Line Start Arrowhead Width.</para>
     /// <para>Represents the following attribute in the schema: startarrowwidth </para>
@@ -718,6 +781,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "startarrowwidth")]
     [Index(17)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> StartArrowWidth { get; set; }
+	
     /// <summary>
     /// <para> Line Start Arrowhead Length.</para>
     /// <para>Represents the following attribute in the schema: startarrowlength </para>
@@ -725,6 +789,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "startarrowlength")]
     [Index(18)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> StartArrowLength { get; set; }
+	
     /// <summary>
     /// <para> Line End Arrowhead.</para>
     /// <para>Represents the following attribute in the schema: endarrow </para>
@@ -732,6 +797,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "endarrow")]
     [Index(19)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> EndArrow { get; set; }
+	
     /// <summary>
     /// <para> Line End Arrowhead Width.</para>
     /// <para>Represents the following attribute in the schema: endarrowwidth </para>
@@ -739,6 +805,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "endarrowwidth")]
     [Index(20)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> EndArrowWidth { get; set; }
+	
     /// <summary>
     /// <para> Line End Arrowhead Length.</para>
     /// <para>Represents the following attribute in the schema: endarrowlength </para>
@@ -746,6 +813,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "endarrowlength")]
     [Index(21)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> EndArrowLength { get; set; }
+	
     /// <summary>
     /// <para> Original Image Reference.</para>
     /// <para>Represents the following attribute in the schema: o:href </para>
@@ -755,6 +823,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(27, "href")]
     [Index(22)]
     public StringValue Href { get; set; }
+	
     /// <summary>
     /// <para> Alternate Image Reference.</para>
     /// <para>Represents the following attribute in the schema: o:althref </para>
@@ -764,6 +833,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(27, "althref")]
     [Index(23)]
     public StringValue AlternateImageReference { get; set; }
+	
     /// <summary>
     /// <para> Stroke Title.</para>
     /// <para>Represents the following attribute in the schema: o:title </para>
@@ -773,6 +843,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(27, "title")]
     [Index(24)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> Force Dashed Outline.</para>
     /// <para>Represents the following attribute in the schema: o:forcedash </para>
@@ -782,6 +853,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     [Index(25)]
     public TrueFalseValue ForceDash { get; set; }
+	
     /// <summary>
     /// <para> Relationship.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
@@ -791,6 +863,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(19, "id")]
     [Index(26)]
     public StringValue RelationshipId { get; set; }
+	
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
@@ -798,6 +871,7 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     [Index(27)]
     public TrueFalseValue Insetpen { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Stroke class.
@@ -918,9 +992,10 @@ public partial class Stroke : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is v:shadow.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "shadow")]
+[Id(ElementTypeIdConst)]
 public partial class Shadow : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12582;
@@ -935,6 +1010,7 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Shadow Toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
@@ -942,6 +1018,7 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "on")]
     [Index(1)]
     public TrueFalseValue On { get; set; }
+	
     /// <summary>
     /// <para> Shadow Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -949,6 +1026,7 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "type")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ShadowValues> Type { get; set; }
+	
     /// <summary>
     /// <para> Shadow Transparency.</para>
     /// <para>Represents the following attribute in the schema: obscured </para>
@@ -956,6 +1034,7 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "obscured")]
     [Index(3)]
     public TrueFalseValue Obscured { get; set; }
+	
     /// <summary>
     /// <para> Shadow Primary Color.</para>
     /// <para>Represents the following attribute in the schema: color </para>
@@ -963,6 +1042,7 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "color")]
     [Index(4)]
     public StringValue Color { get; set; }
+	
     /// <summary>
     /// <para> Shadow Opacity.</para>
     /// <para>Represents the following attribute in the schema: opacity </para>
@@ -970,6 +1050,7 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "opacity")]
     [Index(5)]
     public StringValue Opacity { get; set; }
+	
     /// <summary>
     /// <para> Shadow Primary Offset.</para>
     /// <para>Represents the following attribute in the schema: offset </para>
@@ -977,6 +1058,7 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "offset")]
     [Index(6)]
     public StringValue Offset { get; set; }
+	
     /// <summary>
     /// <para> Shadow Secondary Color.</para>
     /// <para>Represents the following attribute in the schema: color2 </para>
@@ -984,6 +1066,7 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "color2")]
     [Index(7)]
     public StringValue Color2 { get; set; }
+	
     /// <summary>
     /// <para> Shadow Secondary Offset.</para>
     /// <para>Represents the following attribute in the schema: offset2 </para>
@@ -991,6 +1074,7 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "offset2")]
     [Index(8)]
     public StringValue Offset2 { get; set; }
+	
     /// <summary>
     /// <para> Shadow Origin.</para>
     /// <para>Represents the following attribute in the schema: origin </para>
@@ -998,6 +1082,7 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "origin")]
     [Index(9)]
     public StringValue Origin { get; set; }
+	
     /// <summary>
     /// <para> Shadow Perspective Matrix.</para>
     /// <para>Represents the following attribute in the schema: matrix </para>
@@ -1005,6 +1090,7 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "matrix")]
     [Index(10)]
     public StringValue Matrix { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Shadow class.
@@ -1033,9 +1119,10 @@ public partial class Shadow : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "textbox")]
+[Id(ElementTypeIdConst)]
 public partial class TextBox : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12583;
@@ -1050,6 +1137,7 @@ public partial class TextBox : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -1057,6 +1145,7 @@ public partial class TextBox : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     [Index(1)]
     public StringValue Style { get; set; }
+	
     /// <summary>
     /// <para> Text Box Inset.</para>
     /// <para>Represents the following attribute in the schema: inset </para>
@@ -1064,6 +1153,7 @@ public partial class TextBox : OpenXmlCompositeElement
     [SchemaAttr(0, "inset")]
     [Index(2)]
     public StringValue Inset { get; set; }
+	
     /// <summary>
     /// <para> Text Box Single-Click Selection Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:singleclick </para>
@@ -1073,6 +1163,7 @@ public partial class TextBox : OpenXmlCompositeElement
     [SchemaAttr(27, "singleclick")]
     [Index(3)]
     public TrueFalseValue SingleClick { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the TextBox class.
@@ -1120,9 +1211,10 @@ public partial class TextBox : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is v:textpath.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "textpath")]
+[Id(ElementTypeIdConst)]
 public partial class TextPath : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12584;
@@ -1137,6 +1229,7 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -1144,6 +1237,7 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "style")]
     [Index(1)]
     public StringValue Style { get; set; }
+	
     /// <summary>
     /// <para> Text Path Toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
@@ -1151,6 +1245,7 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "on")]
     [Index(2)]
     public TrueFalseValue On { get; set; }
+	
     /// <summary>
     /// <para> Shape Fit Toggle.</para>
     /// <para>Represents the following attribute in the schema: fitshape </para>
@@ -1158,6 +1253,7 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "fitshape")]
     [Index(3)]
     public TrueFalseValue FitShape { get; set; }
+	
     /// <summary>
     /// <para> Path Fit Toggle.</para>
     /// <para>Represents the following attribute in the schema: fitpath </para>
@@ -1165,6 +1261,7 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "fitpath")]
     [Index(4)]
     public TrueFalseValue FitPath { get; set; }
+	
     /// <summary>
     /// <para> Text Path Trim Toggle.</para>
     /// <para>Represents the following attribute in the schema: trim </para>
@@ -1172,6 +1269,7 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "trim")]
     [Index(5)]
     public TrueFalseValue Trim { get; set; }
+	
     /// <summary>
     /// <para> Text X-Scaling.</para>
     /// <para>Represents the following attribute in the schema: xscale </para>
@@ -1179,6 +1277,7 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "xscale")]
     [Index(6)]
     public TrueFalseValue XScale { get; set; }
+	
     /// <summary>
     /// <para> Text Path Text.</para>
     /// <para>Represents the following attribute in the schema: string </para>
@@ -1186,6 +1285,7 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "string")]
     [Index(7)]
     public StringValue String { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the TextPath class.
@@ -1207,9 +1307,10 @@ public partial class TextPath : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is v:imagedata.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "imagedata")]
+[Id(ElementTypeIdConst)]
 public partial class ImageData : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12585;
@@ -1224,6 +1325,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Image Transparency Color.</para>
     /// <para>Represents the following attribute in the schema: chromakey </para>
@@ -1231,6 +1333,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "chromakey")]
     [Index(1)]
     public StringValue ChromAKey { get; set; }
+	
     /// <summary>
     /// <para> Image Left Crop.</para>
     /// <para>Represents the following attribute in the schema: cropleft </para>
@@ -1238,6 +1341,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "cropleft")]
     [Index(2)]
     public StringValue CropLeft { get; set; }
+	
     /// <summary>
     /// <para> Image Top Crop.</para>
     /// <para>Represents the following attribute in the schema: croptop </para>
@@ -1245,6 +1349,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "croptop")]
     [Index(3)]
     public StringValue CropTop { get; set; }
+	
     /// <summary>
     /// <para> Image Right Crop.</para>
     /// <para>Represents the following attribute in the schema: cropright </para>
@@ -1252,6 +1357,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "cropright")]
     [Index(4)]
     public StringValue CropRight { get; set; }
+	
     /// <summary>
     /// <para> Image Bottom Crop.</para>
     /// <para>Represents the following attribute in the schema: cropbottom </para>
@@ -1259,6 +1365,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "cropbottom")]
     [Index(5)]
     public StringValue CropBottom { get; set; }
+	
     /// <summary>
     /// <para> Image Intensity.</para>
     /// <para>Represents the following attribute in the schema: gain </para>
@@ -1266,6 +1373,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "gain")]
     [Index(6)]
     public StringValue Gain { get; set; }
+	
     /// <summary>
     /// <para> Image Brightness.</para>
     /// <para>Represents the following attribute in the schema: blacklevel </para>
@@ -1273,6 +1381,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "blacklevel")]
     [Index(7)]
     public StringValue BlackLevel { get; set; }
+	
     /// <summary>
     /// <para> Image Gamma Correction.</para>
     /// <para>Represents the following attribute in the schema: gamma </para>
@@ -1280,6 +1389,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "gamma")]
     [Index(8)]
     public StringValue Gamma { get; set; }
+	
     /// <summary>
     /// <para> Image Grayscale Toggle.</para>
     /// <para>Represents the following attribute in the schema: grayscale </para>
@@ -1287,6 +1397,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "grayscale")]
     [Index(9)]
     public TrueFalseValue Grayscale { get; set; }
+	
     /// <summary>
     /// <para> Image Bilevel Toggle.</para>
     /// <para>Represents the following attribute in the schema: bilevel </para>
@@ -1294,6 +1405,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "bilevel")]
     [Index(10)]
     public TrueFalseValue BiLevel { get; set; }
+	
     /// <summary>
     /// <para> Embossed Color.</para>
     /// <para>Represents the following attribute in the schema: embosscolor </para>
@@ -1301,6 +1413,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "embosscolor")]
     [Index(11)]
     public StringValue EmbossColor { get; set; }
+	
     /// <summary>
     /// <para> Black Recoloring Color.</para>
     /// <para>Represents the following attribute in the schema: recolortarget </para>
@@ -1308,6 +1421,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "recolortarget")]
     [Index(12)]
     public StringValue RecolorTarget { get; set; }
+	
     /// <summary>
     /// <para> Image Data Title.</para>
     /// <para>Represents the following attribute in the schema: o:title </para>
@@ -1317,6 +1431,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(27, "title")]
     [Index(13)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> Detect Mouse Click.</para>
     /// <para>Represents the following attribute in the schema: o:detectmouseclick </para>
@@ -1326,6 +1441,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(27, "detectmouseclick")]
     [Index(14)]
     public TrueFalseValue DetectMouseClick { get; set; }
+	
     /// <summary>
     /// <para> Relationship to Part.</para>
     /// <para>Represents the following attribute in the schema: o:relid </para>
@@ -1335,6 +1451,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(27, "relid")]
     [Index(15)]
     public StringValue RelId { get; set; }
+	
     /// <summary>
     /// <para> Explicit Relationship to Image Data.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
@@ -1344,6 +1461,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     [Index(16)]
     public StringValue RelationshipId { get; set; }
+	
     /// <summary>
     /// <para> Explicit Relationship to Alternate Image Data.</para>
     /// <para>Represents the following attribute in the schema: r:pict </para>
@@ -1353,6 +1471,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(19, "pict")]
     [Index(17)]
     public StringValue Picture { get; set; }
+	
     /// <summary>
     /// <para> Explicit Relationship to Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: r:href </para>
@@ -1362,6 +1481,7 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(19, "href")]
     [Index(18)]
     public StringValue RelHref { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ImageData class.
@@ -1438,9 +1558,10 @@ public partial class ImageData : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Ink))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "shape")]
+[Id(ElementTypeIdConst)]
 public partial class Shape : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12586;
@@ -1455,6 +1576,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -1462,6 +1584,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     [Index(1)]
     public StringValue Style { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
@@ -1469,6 +1592,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     [Index(2)]
     public StringValue Href { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
@@ -1476,6 +1600,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     [Index(3)]
     public StringValue Target { get; set; }
+	
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
@@ -1483,6 +1608,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     [Index(4)]
     public StringValue Class { get; set; }
+	
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -1490,6 +1616,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(5)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
@@ -1497,6 +1624,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     [Index(6)]
     public StringValue Alternate { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
@@ -1504,6 +1632,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     [Index(7)]
     public StringValue CoordinateSize { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
@@ -1511,6 +1640,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
+	
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
@@ -1518,6 +1648,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     [Index(9)]
     public StringValue WrapCoordinates { get; set; }
+	
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
@@ -1525,6 +1656,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     [Index(10)]
     public TrueFalseValue Print { get; set; }
+	
     /// <summary>
     /// <para> Optional String.</para>
     /// <para>Represents the following attribute in the schema: o:spid </para>
@@ -1534,6 +1666,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     [Index(11)]
     public StringValue OptionalString { get; set; }
+	
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oned </para>
@@ -1543,6 +1676,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     [Index(12)]
     public TrueFalseValue Oned { get; set; }
+	
     /// <summary>
     /// <para> Regroup ID.</para>
     /// <para>Represents the following attribute in the schema: o:regroupid </para>
@@ -1552,6 +1686,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     [Index(13)]
     public IntegerValue RegroupId { get; set; }
+	
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:doubleclicknotify </para>
@@ -1561,6 +1696,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
+	
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:button </para>
@@ -1570,6 +1706,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     [Index(15)]
     public TrueFalseValue Button { get; set; }
+	
     /// <summary>
     /// <para> Hide Script Anchors.</para>
     /// <para>Represents the following attribute in the schema: o:userhidden </para>
@@ -1579,6 +1716,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
+	
     /// <summary>
     /// <para> Graphical Bullet.</para>
     /// <para>Represents the following attribute in the schema: o:bullet </para>
@@ -1588,6 +1726,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     [Index(17)]
     public TrueFalseValue Bullet { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hr </para>
@@ -1597,6 +1736,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrstd </para>
@@ -1606,6 +1746,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrnoshade </para>
@@ -1615,6 +1756,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
     /// <para>Represents the following attribute in the schema: o:hrpct </para>
@@ -1624,6 +1766,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
     /// <para>Represents the following attribute in the schema: o:hralign </para>
@@ -1633,6 +1776,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+	
     /// <summary>
     /// <para> Allow in Table Cell.</para>
     /// <para>Represents the following attribute in the schema: o:allowincell </para>
@@ -1642,6 +1786,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
+	
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
     /// <para>Represents the following attribute in the schema: o:allowoverlap </para>
@@ -1651,6 +1796,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
+	
     /// <summary>
     /// <para> Exists In Master Slide.</para>
     /// <para>Represents the following attribute in the schema: o:userdrawn </para>
@@ -1660,6 +1806,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
+	
     /// <summary>
     /// <para> Border Top Color.</para>
     /// <para>Represents the following attribute in the schema: o:bordertopcolor </para>
@@ -1669,6 +1816,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     [Index(26)]
     public StringValue BorderTopColor { get; set; }
+	
     /// <summary>
     /// <para> Border Left Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderleftcolor </para>
@@ -1678,6 +1826,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     [Index(27)]
     public StringValue BorderLeftColor { get; set; }
+	
     /// <summary>
     /// <para> Bottom Border Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderbottomcolor </para>
@@ -1687,6 +1836,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     [Index(28)]
     public StringValue BorderBottomColor { get; set; }
+	
     /// <summary>
     /// <para> Border Right Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderrightcolor </para>
@@ -1696,6 +1846,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     [Index(29)]
     public StringValue BorderRightColor { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayout </para>
@@ -1705,6 +1856,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     [Index(30)]
     public IntegerValue DiagramLayout { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmnodekind </para>
@@ -1714,6 +1866,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     [Index(31)]
     public IntegerValue DiagramNodeKind { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayoutmru </para>
@@ -1723,6 +1876,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     [Index(32)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+	
     /// <summary>
     /// <para> Text Inset Mode.</para>
     /// <para>Represents the following attribute in the schema: o:insetmode </para>
@@ -1732,6 +1886,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+	
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
@@ -1739,6 +1894,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     [Index(34)]
     public TrueFalseValue Filled { get; set; }
+	
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
@@ -1746,6 +1902,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     [Index(35)]
     public StringValue FillColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
@@ -1753,6 +1910,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     [Index(36)]
     public TrueFalseValue Stroked { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
@@ -1760,6 +1918,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     [Index(37)]
     public StringValue StrokeColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
@@ -1767,6 +1926,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     [Index(38)]
     public StringValue StrokeWeight { get; set; }
+	
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
@@ -1774,6 +1934,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     [Index(39)]
     public TrueFalseValue InsetPen { get; set; }
+	
     /// <summary>
     /// <para> Optional Number.</para>
     /// <para>Represents the following attribute in the schema: o:spt </para>
@@ -1783,6 +1944,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     [Index(40)]
     public Int32Value OptionalNumber { get; set; }
+	
     /// <summary>
     /// <para> Shape Connector Type.</para>
     /// <para>Represents the following attribute in the schema: o:connectortype </para>
@@ -1792,6 +1954,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+	
     /// <summary>
     /// <para> Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwmode </para>
@@ -1801,6 +1964,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwpure </para>
@@ -1810,6 +1974,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwnormal </para>
@@ -1819,6 +1984,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     [Index(44)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Force Dashed Outline.</para>
     /// <para>Represents the following attribute in the schema: o:forcedash </para>
@@ -1828,6 +1994,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     [Index(45)]
     public TrueFalseValue ForceDash { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oleicon </para>
@@ -1837,6 +2004,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     [Index(46)]
     public TrueFalseValue OleIcon { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:ole </para>
@@ -1846,6 +2014,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     [Index(47)]
     public TrueFalseBlankValue Ole { get; set; }
+	
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:preferrelative </para>
@@ -1855,6 +2024,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     [Index(48)]
     public TrueFalseValue PreferRelative { get; set; }
+	
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
     /// <para>Represents the following attribute in the schema: o:cliptowrap </para>
@@ -1864,6 +2034,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     [Index(49)]
     public TrueFalseValue ClipToWrap { get; set; }
+	
     /// <summary>
     /// <para> Clipping Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:clip </para>
@@ -1873,6 +2044,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     [Index(50)]
     public TrueFalseValue Clip { get; set; }
+	
     /// <summary>
     /// <para> Shape Type Reference.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -1880,6 +2052,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     [Index(51)]
     public StringValue Type { get; set; }
+	
     /// <summary>
     /// <para> Adjustment Parameters.</para>
     /// <para>Represents the following attribute in the schema: adj </para>
@@ -1887,6 +2060,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "adj")]
     [Index(52)]
     public StringValue Adjustment { get; set; }
+	
     /// <summary>
     /// <para> Edge Path.</para>
     /// <para>Represents the following attribute in the schema: path </para>
@@ -1894,6 +2068,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "path")]
     [Index(53)]
     public StringValue EdgePath { get; set; }
+	
     /// <summary>
     /// <para> Encoded Package.</para>
     /// <para>Represents the following attribute in the schema: o:gfxdata </para>
@@ -1903,6 +2078,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "gfxdata")]
     [Index(54)]
     public Base64BinaryValue EncodedPackage { get; set; }
+	
     /// <summary>
     /// <para> Storage for Alternate Math Content.</para>
     /// <para>Represents the following attribute in the schema: equationxml </para>
@@ -1910,6 +2086,7 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "equationxml")]
     [Index(55)]
     public StringValue EquationXml { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Shape class.
@@ -2010,9 +2187,10 @@ public partial class Shape : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Complex))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "shapetype")]
+[Id(ElementTypeIdConst)]
 public partial class Shapetype : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12587;
@@ -2027,6 +2205,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -2034,6 +2213,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     [Index(1)]
     public StringValue Style { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
@@ -2041,6 +2221,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     [Index(2)]
     public StringValue Href { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
@@ -2048,6 +2229,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     [Index(3)]
     public StringValue Target { get; set; }
+	
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
@@ -2055,6 +2237,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     [Index(4)]
     public StringValue Class { get; set; }
+	
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -2062,6 +2245,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(5)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
@@ -2069,6 +2253,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     [Index(6)]
     public StringValue Alternate { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
@@ -2076,6 +2261,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     [Index(7)]
     public StringValue CoordinateSize { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
@@ -2083,6 +2269,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
+	
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
@@ -2090,6 +2277,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     [Index(9)]
     public StringValue WrapCoordinates { get; set; }
+	
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
@@ -2097,6 +2285,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     [Index(10)]
     public TrueFalseValue Print { get; set; }
+	
     /// <summary>
     /// <para> Optional String.</para>
     /// <para>Represents the following attribute in the schema: o:spid </para>
@@ -2106,6 +2295,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     [Index(11)]
     public StringValue OptionalString { get; set; }
+	
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oned </para>
@@ -2115,6 +2305,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     [Index(12)]
     public TrueFalseValue Oned { get; set; }
+	
     /// <summary>
     /// <para> Regroup ID.</para>
     /// <para>Represents the following attribute in the schema: o:regroupid </para>
@@ -2124,6 +2315,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     [Index(13)]
     public IntegerValue RegroupId { get; set; }
+	
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:doubleclicknotify </para>
@@ -2133,6 +2325,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
+	
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:button </para>
@@ -2142,6 +2335,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     [Index(15)]
     public TrueFalseValue Button { get; set; }
+	
     /// <summary>
     /// <para> Hide Script Anchors.</para>
     /// <para>Represents the following attribute in the schema: o:userhidden </para>
@@ -2151,6 +2345,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
+	
     /// <summary>
     /// <para> Graphical Bullet.</para>
     /// <para>Represents the following attribute in the schema: o:bullet </para>
@@ -2160,6 +2355,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     [Index(17)]
     public TrueFalseValue Bullet { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hr </para>
@@ -2169,6 +2365,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrstd </para>
@@ -2178,6 +2375,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrnoshade </para>
@@ -2187,6 +2385,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
     /// <para>Represents the following attribute in the schema: o:hrpct </para>
@@ -2196,6 +2395,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
     /// <para>Represents the following attribute in the schema: o:hralign </para>
@@ -2205,6 +2405,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+	
     /// <summary>
     /// <para> Allow in Table Cell.</para>
     /// <para>Represents the following attribute in the schema: o:allowincell </para>
@@ -2214,6 +2415,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
+	
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
     /// <para>Represents the following attribute in the schema: o:allowoverlap </para>
@@ -2223,6 +2425,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
+	
     /// <summary>
     /// <para> Exists In Master Slide.</para>
     /// <para>Represents the following attribute in the schema: o:userdrawn </para>
@@ -2232,6 +2435,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
+	
     /// <summary>
     /// <para> Border Top Color.</para>
     /// <para>Represents the following attribute in the schema: o:bordertopcolor </para>
@@ -2241,6 +2445,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     [Index(26)]
     public StringValue BorderTopColor { get; set; }
+	
     /// <summary>
     /// <para> Border Left Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderleftcolor </para>
@@ -2250,6 +2455,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     [Index(27)]
     public StringValue BorderLeftColor { get; set; }
+	
     /// <summary>
     /// <para> Bottom Border Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderbottomcolor </para>
@@ -2259,6 +2465,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     [Index(28)]
     public StringValue BorderBottomColor { get; set; }
+	
     /// <summary>
     /// <para> Border Right Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderrightcolor </para>
@@ -2268,6 +2475,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     [Index(29)]
     public StringValue BorderRightColor { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayout </para>
@@ -2277,6 +2485,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     [Index(30)]
     public IntegerValue DiagramLayout { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmnodekind </para>
@@ -2286,6 +2495,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     [Index(31)]
     public IntegerValue DiagramNodeKind { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayoutmru </para>
@@ -2295,6 +2505,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     [Index(32)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+	
     /// <summary>
     /// <para> Text Inset Mode.</para>
     /// <para>Represents the following attribute in the schema: o:insetmode </para>
@@ -2304,6 +2515,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+	
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
@@ -2311,6 +2523,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     [Index(34)]
     public TrueFalseValue Filled { get; set; }
+	
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
@@ -2318,6 +2531,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     [Index(35)]
     public StringValue FillColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
@@ -2325,6 +2539,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     [Index(36)]
     public TrueFalseValue Stroked { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
@@ -2332,6 +2547,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     [Index(37)]
     public StringValue StrokeColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
@@ -2339,6 +2555,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     [Index(38)]
     public StringValue StrokeWeight { get; set; }
+	
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
@@ -2346,6 +2563,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     [Index(39)]
     public TrueFalseValue InsetPen { get; set; }
+	
     /// <summary>
     /// <para> Optional Number.</para>
     /// <para>Represents the following attribute in the schema: o:spt </para>
@@ -2355,6 +2573,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     [Index(40)]
     public Int32Value OptionalNumber { get; set; }
+	
     /// <summary>
     /// <para> Shape Connector Type.</para>
     /// <para>Represents the following attribute in the schema: o:connectortype </para>
@@ -2364,6 +2583,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+	
     /// <summary>
     /// <para> Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwmode </para>
@@ -2373,6 +2593,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwpure </para>
@@ -2382,6 +2603,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwnormal </para>
@@ -2391,6 +2613,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     [Index(44)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Force Dashed Outline.</para>
     /// <para>Represents the following attribute in the schema: o:forcedash </para>
@@ -2400,6 +2623,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     [Index(45)]
     public TrueFalseValue ForceDash { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oleicon </para>
@@ -2409,6 +2633,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     [Index(46)]
     public TrueFalseValue OleIcon { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:ole </para>
@@ -2418,6 +2643,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     [Index(47)]
     public TrueFalseBlankValue Ole { get; set; }
+	
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:preferrelative </para>
@@ -2427,6 +2653,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     [Index(48)]
     public TrueFalseValue PreferRelative { get; set; }
+	
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
     /// <para>Represents the following attribute in the schema: o:cliptowrap </para>
@@ -2436,6 +2663,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     [Index(49)]
     public TrueFalseValue ClipToWrap { get; set; }
+	
     /// <summary>
     /// <para> Clipping Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:clip </para>
@@ -2445,6 +2673,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     [Index(50)]
     public TrueFalseValue Clip { get; set; }
+	
     /// <summary>
     /// <para> Adjustment Parameters.</para>
     /// <para>Represents the following attribute in the schema: adj </para>
@@ -2452,6 +2681,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "adj")]
     [Index(51)]
     public StringValue Adjustment { get; set; }
+	
     /// <summary>
     /// <para> Edge Path.</para>
     /// <para>Represents the following attribute in the schema: path </para>
@@ -2459,6 +2689,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "path")]
     [Index(52)]
     public StringValue EdgePath { get; set; }
+	
     /// <summary>
     /// <para> Master Element Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:master </para>
@@ -2468,6 +2699,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "master")]
     [Index(53)]
     public StringValue Master { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Shapetype class.
@@ -2554,9 +2786,10 @@ public partial class Shapetype : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "group")]
+[Id(ElementTypeIdConst)]
 public partial class Group : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12588;
@@ -2571,6 +2804,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -2578,6 +2812,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     [Index(1)]
     public StringValue Style { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
@@ -2585,6 +2820,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     [Index(2)]
     public StringValue Href { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
@@ -2592,6 +2828,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     [Index(3)]
     public StringValue Target { get; set; }
+	
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
@@ -2599,6 +2836,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     [Index(4)]
     public StringValue Class { get; set; }
+	
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -2606,6 +2844,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(5)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
@@ -2613,6 +2852,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     [Index(6)]
     public StringValue Alternate { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
@@ -2620,6 +2860,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     [Index(7)]
     public StringValue CoordinateSize { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
@@ -2627,6 +2868,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
+	
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
@@ -2634,6 +2876,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     [Index(9)]
     public StringValue WrapCoordinates { get; set; }
+	
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
@@ -2641,6 +2884,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     [Index(10)]
     public TrueFalseValue Print { get; set; }
+	
     /// <summary>
     /// <para> spid.</para>
     /// <para>Represents the following attribute in the schema: o:spid </para>
@@ -2650,6 +2894,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     [Index(11)]
     public StringValue OptionalString { get; set; }
+	
     /// <summary>
     /// <para> oned.</para>
     /// <para>Represents the following attribute in the schema: o:oned </para>
@@ -2659,6 +2904,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     [Index(12)]
     public TrueFalseValue Oned { get; set; }
+	
     /// <summary>
     /// <para> regroupid.</para>
     /// <para>Represents the following attribute in the schema: o:regroupid </para>
@@ -2668,6 +2914,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     [Index(13)]
     public IntegerValue RegroupId { get; set; }
+	
     /// <summary>
     /// <para> doubleclicknotify.</para>
     /// <para>Represents the following attribute in the schema: o:doubleclicknotify </para>
@@ -2677,6 +2924,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
+	
     /// <summary>
     /// <para> button.</para>
     /// <para>Represents the following attribute in the schema: o:button </para>
@@ -2686,6 +2934,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     [Index(15)]
     public TrueFalseValue Button { get; set; }
+	
     /// <summary>
     /// <para> userhidden.</para>
     /// <para>Represents the following attribute in the schema: o:userhidden </para>
@@ -2695,6 +2944,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
+	
     /// <summary>
     /// <para> bullet.</para>
     /// <para>Represents the following attribute in the schema: o:bullet </para>
@@ -2704,6 +2954,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     [Index(17)]
     public TrueFalseValue Bullet { get; set; }
+	
     /// <summary>
     /// <para> hr.</para>
     /// <para>Represents the following attribute in the schema: o:hr </para>
@@ -2713,6 +2964,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
+	
     /// <summary>
     /// <para> hrstd.</para>
     /// <para>Represents the following attribute in the schema: o:hrstd </para>
@@ -2722,6 +2974,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
+	
     /// <summary>
     /// <para> hrnoshade.</para>
     /// <para>Represents the following attribute in the schema: o:hrnoshade </para>
@@ -2731,6 +2984,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
+	
     /// <summary>
     /// <para> hrpct.</para>
     /// <para>Represents the following attribute in the schema: o:hrpct </para>
@@ -2740,6 +2994,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
+	
     /// <summary>
     /// <para> hralign.</para>
     /// <para>Represents the following attribute in the schema: o:hralign </para>
@@ -2749,6 +3004,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+	
     /// <summary>
     /// <para> allowincell.</para>
     /// <para>Represents the following attribute in the schema: o:allowincell </para>
@@ -2758,6 +3014,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
+	
     /// <summary>
     /// <para> allowoverlap.</para>
     /// <para>Represents the following attribute in the schema: o:allowoverlap </para>
@@ -2767,6 +3024,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
+	
     /// <summary>
     /// <para> userdrawn.</para>
     /// <para>Represents the following attribute in the schema: o:userdrawn </para>
@@ -2776,6 +3034,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
+	
     /// <summary>
     /// <para> dgmlayout.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayout </para>
@@ -2785,6 +3044,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     [Index(26)]
     public IntegerValue DiagramLayout { get; set; }
+	
     /// <summary>
     /// <para> dgmnodekind.</para>
     /// <para>Represents the following attribute in the schema: o:dgmnodekind </para>
@@ -2794,6 +3054,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     [Index(27)]
     public IntegerValue DiagramNodeKind { get; set; }
+	
     /// <summary>
     /// <para> dgmlayoutmru.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayoutmru </para>
@@ -2803,6 +3064,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     [Index(28)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+	
     /// <summary>
     /// <para> insetmode.</para>
     /// <para>Represents the following attribute in the schema: o:insetmode </para>
@@ -2812,6 +3074,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     [Index(29)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+	
     /// <summary>
     /// <para> Group Diagram Type.</para>
     /// <para>Represents the following attribute in the schema: editas </para>
@@ -2819,6 +3082,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "editas")]
     [Index(30)]
     public EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues> EditAs { get; set; }
+	
     /// <summary>
     /// <para> Table Properties.</para>
     /// <para>Represents the following attribute in the schema: o:tableproperties </para>
@@ -2828,6 +3092,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "tableproperties")]
     [Index(31)]
     public StringValue TableProperties { get; set; }
+	
     /// <summary>
     /// <para> Table Row Height Limits.</para>
     /// <para>Represents the following attribute in the schema: o:tablelimits </para>
@@ -2837,6 +3102,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "tablelimits")]
     [Index(32)]
     public StringValue TableLimits { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Group class.
@@ -2891,9 +3157,10 @@ public partial class Group : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(Fill))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "background")]
+[Id(ElementTypeIdConst)]
 public partial class Background : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12589;
@@ -2908,6 +3175,7 @@ public partial class Background : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: fill </para>
@@ -2915,6 +3183,7 @@ public partial class Background : OpenXmlCompositeElement
     [SchemaAttr(0, "fill")]
     [Index(1)]
     public TrueFalseValue Filled { get; set; }
+	
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
@@ -2922,6 +3191,7 @@ public partial class Background : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     [Index(2)]
     public StringValue Fillcolor { get; set; }
+	
     /// <summary>
     /// <para> Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwmode </para>
@@ -2931,6 +3201,7 @@ public partial class Background : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwpure </para>
@@ -2940,6 +3211,7 @@ public partial class Background : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwnormal </para>
@@ -2949,6 +3221,7 @@ public partial class Background : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Target Screen Size.</para>
     /// <para>Represents the following attribute in the schema: o:targetscreensize </para>
@@ -2958,6 +3231,7 @@ public partial class Background : OpenXmlCompositeElement
     [SchemaAttr(27, "targetscreensize")]
     [Index(6)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ScreenSizeValues> TargetScreenSize { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Background class.
@@ -3073,9 +3347,10 @@ public partial class Background : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "arc")]
+[Id(ElementTypeIdConst)]
 public partial class Arc : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12590;
@@ -3092,6 +3367,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     [Index(0)]
     public StringValue OptionalString { get; set; }
+	
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oned </para>
@@ -3101,6 +3377,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     [Index(1)]
     public TrueFalseValue Oned { get; set; }
+	
     /// <summary>
     /// <para> Regroup ID.</para>
     /// <para>Represents the following attribute in the schema: o:regroupid </para>
@@ -3110,6 +3387,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     [Index(2)]
     public IntegerValue RegroupId { get; set; }
+	
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:doubleclicknotify </para>
@@ -3119,6 +3397,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     [Index(3)]
     public TrueFalseValue DoubleClickNotify { get; set; }
+	
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:button </para>
@@ -3128,6 +3407,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     [Index(4)]
     public TrueFalseValue Button { get; set; }
+	
     /// <summary>
     /// <para> Hide Script Anchors.</para>
     /// <para>Represents the following attribute in the schema: o:userhidden </para>
@@ -3137,6 +3417,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     [Index(5)]
     public TrueFalseValue UserHidden { get; set; }
+	
     /// <summary>
     /// <para> Graphical Bullet.</para>
     /// <para>Represents the following attribute in the schema: o:bullet </para>
@@ -3146,6 +3427,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     [Index(6)]
     public TrueFalseValue Bullet { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hr </para>
@@ -3155,6 +3437,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     [Index(7)]
     public TrueFalseValue Horizontal { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrstd </para>
@@ -3164,6 +3447,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     [Index(8)]
     public TrueFalseValue HorizontalStandard { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrnoshade </para>
@@ -3173,6 +3457,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     [Index(9)]
     public TrueFalseValue HorizontalNoShade { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
     /// <para>Represents the following attribute in the schema: o:hrpct </para>
@@ -3182,6 +3467,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     [Index(10)]
     public SingleValue HorizontalPercentage { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
     /// <para>Represents the following attribute in the schema: o:hralign </para>
@@ -3191,6 +3477,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     [Index(11)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+	
     /// <summary>
     /// <para> Allow in Table Cell.</para>
     /// <para>Represents the following attribute in the schema: o:allowincell </para>
@@ -3200,6 +3487,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     [Index(12)]
     public TrueFalseValue AllowInCell { get; set; }
+	
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
     /// <para>Represents the following attribute in the schema: o:allowoverlap </para>
@@ -3209,6 +3497,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     [Index(13)]
     public TrueFalseValue AllowOverlap { get; set; }
+	
     /// <summary>
     /// <para> Exists In Master Slide.</para>
     /// <para>Represents the following attribute in the schema: o:userdrawn </para>
@@ -3218,6 +3507,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     [Index(14)]
     public TrueFalseValue UserDrawn { get; set; }
+	
     /// <summary>
     /// <para> Border Top Color.</para>
     /// <para>Represents the following attribute in the schema: o:bordertopcolor </para>
@@ -3227,6 +3517,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     [Index(15)]
     public StringValue BorderTopColor { get; set; }
+	
     /// <summary>
     /// <para> Border Left Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderleftcolor </para>
@@ -3236,6 +3527,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     [Index(16)]
     public StringValue BorderLeftColor { get; set; }
+	
     /// <summary>
     /// <para> Bottom Border Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderbottomcolor </para>
@@ -3245,6 +3537,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     [Index(17)]
     public StringValue BorderBottomColor { get; set; }
+	
     /// <summary>
     /// <para> Border Right Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderrightcolor </para>
@@ -3254,6 +3547,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     [Index(18)]
     public StringValue BorderRightColor { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayout </para>
@@ -3263,6 +3557,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     [Index(19)]
     public IntegerValue DiagramLayout { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmnodekind </para>
@@ -3272,6 +3567,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     [Index(20)]
     public IntegerValue DiagramNodeKind { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayoutmru </para>
@@ -3281,6 +3577,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     [Index(21)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+	
     /// <summary>
     /// <para> Text Inset Mode.</para>
     /// <para>Represents the following attribute in the schema: o:insetmode </para>
@@ -3290,6 +3587,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+	
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
@@ -3297,6 +3595,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     [Index(23)]
     public TrueFalseValue Filled { get; set; }
+	
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
@@ -3304,6 +3603,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     [Index(24)]
     public StringValue FillColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
@@ -3311,6 +3611,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     [Index(25)]
     public TrueFalseValue Stroked { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
@@ -3318,6 +3619,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     [Index(26)]
     public StringValue StrokeColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
@@ -3325,6 +3627,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     [Index(27)]
     public StringValue StrokeWeight { get; set; }
+	
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
@@ -3332,6 +3635,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     [Index(28)]
     public TrueFalseValue InsetPen { get; set; }
+	
     /// <summary>
     /// <para> Optional Number.</para>
     /// <para>Represents the following attribute in the schema: o:spt </para>
@@ -3341,6 +3645,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     [Index(29)]
     public Int32Value OptionalNumber { get; set; }
+	
     /// <summary>
     /// <para> Shape Connector Type.</para>
     /// <para>Represents the following attribute in the schema: o:connectortype </para>
@@ -3350,6 +3655,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     [Index(30)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+	
     /// <summary>
     /// <para> Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwmode </para>
@@ -3359,6 +3665,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     [Index(31)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwpure </para>
@@ -3368,6 +3675,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     [Index(32)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwnormal </para>
@@ -3377,6 +3685,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Force Dashed Outline.</para>
     /// <para>Represents the following attribute in the schema: o:forcedash </para>
@@ -3386,6 +3695,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     [Index(34)]
     public TrueFalseValue ForceDash { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oleicon </para>
@@ -3395,6 +3705,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     [Index(35)]
     public TrueFalseValue OleIcon { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:ole </para>
@@ -3404,6 +3715,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     [Index(36)]
     public TrueFalseBlankValue Ole { get; set; }
+	
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:preferrelative </para>
@@ -3413,6 +3725,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     [Index(37)]
     public TrueFalseValue PreferRelative { get; set; }
+	
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
     /// <para>Represents the following attribute in the schema: o:cliptowrap </para>
@@ -3422,6 +3735,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     [Index(38)]
     public TrueFalseValue ClipToWrap { get; set; }
+	
     /// <summary>
     /// <para> Clipping Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:clip </para>
@@ -3431,6 +3745,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     [Index(39)]
     public TrueFalseValue Clip { get; set; }
+	
     /// <summary>
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: id </para>
@@ -3438,6 +3753,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(40)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -3445,6 +3761,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     [Index(41)]
     public StringValue Style { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
@@ -3452,6 +3769,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     [Index(42)]
     public StringValue Href { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
@@ -3459,6 +3777,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     [Index(43)]
     public StringValue Target { get; set; }
+	
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -3466,6 +3785,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(44)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
@@ -3473,6 +3793,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     [Index(45)]
     public StringValue Alternate { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
@@ -3480,6 +3801,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     [Index(46)]
     public StringValue CoordinateSize { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
@@ -3487,6 +3809,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     [Index(47)]
     public StringValue CoordinateOrigin { get; set; }
+	
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
@@ -3494,6 +3817,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     [Index(48)]
     public StringValue Wrapcoords { get; set; }
+	
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
@@ -3501,6 +3825,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     [Index(49)]
     public TrueFalseValue Print { get; set; }
+	
     /// <summary>
     /// <para> Starting Angle.</para>
     /// <para>Represents the following attribute in the schema: startangle </para>
@@ -3508,6 +3833,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "startangle")]
     [Index(50)]
     public DecimalValue StartAngle { get; set; }
+	
     /// <summary>
     /// <para> Ending Angle.</para>
     /// <para>Represents the following attribute in the schema: endangle </para>
@@ -3515,6 +3841,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "endangle")]
     [Index(51)]
     public DecimalValue EndAngle { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Arc class.
@@ -3613,9 +3940,10 @@ public partial class Arc : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "curve")]
+[Id(ElementTypeIdConst)]
 public partial class Curve : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12591;
@@ -3630,6 +3958,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -3637,6 +3966,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     [Index(1)]
     public StringValue Style { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
@@ -3644,6 +3974,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     [Index(2)]
     public StringValue Href { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
@@ -3651,6 +3982,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     [Index(3)]
     public StringValue Target { get; set; }
+	
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
@@ -3658,6 +3990,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     [Index(4)]
     public StringValue Class { get; set; }
+	
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -3665,6 +3998,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(5)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
@@ -3672,6 +4006,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     [Index(6)]
     public StringValue Alternate { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
@@ -3679,6 +4014,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     [Index(7)]
     public StringValue CoordinateSize { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
@@ -3686,6 +4022,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
+	
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
@@ -3693,6 +4030,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     [Index(9)]
     public StringValue WrapCoordinates { get; set; }
+	
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
@@ -3700,6 +4038,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     [Index(10)]
     public TrueFalseValue Print { get; set; }
+	
     /// <summary>
     /// <para> Optional String.</para>
     /// <para>Represents the following attribute in the schema: o:spid </para>
@@ -3709,6 +4048,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     [Index(11)]
     public StringValue OptionalString { get; set; }
+	
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oned </para>
@@ -3718,6 +4058,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     [Index(12)]
     public TrueFalseValue Oned { get; set; }
+	
     /// <summary>
     /// <para> Regroup ID.</para>
     /// <para>Represents the following attribute in the schema: o:regroupid </para>
@@ -3727,6 +4068,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     [Index(13)]
     public IntegerValue RegroupId { get; set; }
+	
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:doubleclicknotify </para>
@@ -3736,6 +4078,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
+	
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:button </para>
@@ -3745,6 +4088,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     [Index(15)]
     public TrueFalseValue Button { get; set; }
+	
     /// <summary>
     /// <para> Hide Script Anchors.</para>
     /// <para>Represents the following attribute in the schema: o:userhidden </para>
@@ -3754,6 +4098,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
+	
     /// <summary>
     /// <para> Graphical Bullet.</para>
     /// <para>Represents the following attribute in the schema: o:bullet </para>
@@ -3763,6 +4108,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     [Index(17)]
     public TrueFalseValue Bullet { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hr </para>
@@ -3772,6 +4118,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrstd </para>
@@ -3781,6 +4128,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrnoshade </para>
@@ -3790,6 +4138,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
     /// <para>Represents the following attribute in the schema: o:hrpct </para>
@@ -3799,6 +4148,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
     /// <para>Represents the following attribute in the schema: o:hralign </para>
@@ -3808,6 +4158,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+	
     /// <summary>
     /// <para> Allow in Table Cell.</para>
     /// <para>Represents the following attribute in the schema: o:allowincell </para>
@@ -3817,6 +4168,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
+	
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
     /// <para>Represents the following attribute in the schema: o:allowoverlap </para>
@@ -3826,6 +4178,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
+	
     /// <summary>
     /// <para> Exists In Master Slide.</para>
     /// <para>Represents the following attribute in the schema: o:userdrawn </para>
@@ -3835,6 +4188,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
+	
     /// <summary>
     /// <para> Border Top Color.</para>
     /// <para>Represents the following attribute in the schema: o:bordertopcolor </para>
@@ -3844,6 +4198,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     [Index(26)]
     public StringValue BorderTopColor { get; set; }
+	
     /// <summary>
     /// <para> Border Left Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderleftcolor </para>
@@ -3853,6 +4208,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     [Index(27)]
     public StringValue BorderLeftColor { get; set; }
+	
     /// <summary>
     /// <para> Bottom Border Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderbottomcolor </para>
@@ -3862,6 +4218,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     [Index(28)]
     public StringValue BorderBottomColor { get; set; }
+	
     /// <summary>
     /// <para> Border Right Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderrightcolor </para>
@@ -3871,6 +4228,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     [Index(29)]
     public StringValue BorderRightColor { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayout </para>
@@ -3880,6 +4238,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     [Index(30)]
     public IntegerValue DiagramLayout { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmnodekind </para>
@@ -3889,6 +4248,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     [Index(31)]
     public IntegerValue DiagramNodeKind { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayoutmru </para>
@@ -3898,6 +4258,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     [Index(32)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+	
     /// <summary>
     /// <para> Text Inset Mode.</para>
     /// <para>Represents the following attribute in the schema: o:insetmode </para>
@@ -3907,6 +4268,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+	
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
@@ -3914,6 +4276,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     [Index(34)]
     public TrueFalseValue Filled { get; set; }
+	
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
@@ -3921,6 +4284,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     [Index(35)]
     public StringValue FillColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
@@ -3928,6 +4292,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     [Index(36)]
     public TrueFalseValue Stroked { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
@@ -3935,6 +4300,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     [Index(37)]
     public StringValue StrokeColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
@@ -3942,6 +4308,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     [Index(38)]
     public StringValue StrokeWeight { get; set; }
+	
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
@@ -3949,6 +4316,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     [Index(39)]
     public TrueFalseValue InsetPen { get; set; }
+	
     /// <summary>
     /// <para> Optional Number.</para>
     /// <para>Represents the following attribute in the schema: o:spt </para>
@@ -3958,6 +4326,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     [Index(40)]
     public Int32Value OptionalNumber { get; set; }
+	
     /// <summary>
     /// <para> Shape Connector Type.</para>
     /// <para>Represents the following attribute in the schema: o:connectortype </para>
@@ -3967,6 +4336,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+	
     /// <summary>
     /// <para> Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwmode </para>
@@ -3976,6 +4346,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwpure </para>
@@ -3985,6 +4356,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwnormal </para>
@@ -3994,6 +4366,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     [Index(44)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Force Dashed Outline.</para>
     /// <para>Represents the following attribute in the schema: o:forcedash </para>
@@ -4003,6 +4376,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     [Index(45)]
     public TrueFalseValue ForceDash { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oleicon </para>
@@ -4012,6 +4386,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     [Index(46)]
     public TrueFalseValue OleIcon { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:ole </para>
@@ -4021,6 +4396,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     [Index(47)]
     public TrueFalseBlankValue Ole { get; set; }
+	
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:preferrelative </para>
@@ -4030,6 +4406,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     [Index(48)]
     public TrueFalseValue PreferRelative { get; set; }
+	
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
     /// <para>Represents the following attribute in the schema: o:cliptowrap </para>
@@ -4039,6 +4416,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     [Index(49)]
     public TrueFalseValue ClipToWrap { get; set; }
+	
     /// <summary>
     /// <para> Clipping Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:clip </para>
@@ -4048,6 +4426,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     [Index(50)]
     public TrueFalseValue Clip { get; set; }
+	
     /// <summary>
     /// <para> Curve Starting Point.</para>
     /// <para>Represents the following attribute in the schema: from </para>
@@ -4055,6 +4434,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "from")]
     [Index(51)]
     public StringValue From { get; set; }
+	
     /// <summary>
     /// <para> First Curve Control Point.</para>
     /// <para>Represents the following attribute in the schema: control1 </para>
@@ -4062,6 +4442,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "control1")]
     [Index(52)]
     public StringValue Control1 { get; set; }
+	
     /// <summary>
     /// <para> Second Curve Control Point.</para>
     /// <para>Represents the following attribute in the schema: control2 </para>
@@ -4069,6 +4450,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "control2")]
     [Index(53)]
     public StringValue Control2 { get; set; }
+	
     /// <summary>
     /// <para> Curve Ending Point.</para>
     /// <para>Represents the following attribute in the schema: to </para>
@@ -4076,6 +4458,7 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "to")]
     [Index(54)]
     public StringValue To { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Curve class.
@@ -4174,9 +4557,10 @@ public partial class Curve : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "image")]
+[Id(ElementTypeIdConst)]
 public partial class ImageFile : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12592;
@@ -4191,6 +4575,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> style.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -4198,6 +4583,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     [Index(1)]
     public StringValue Style { get; set; }
+	
     /// <summary>
     /// <para> href.</para>
     /// <para>Represents the following attribute in the schema: href </para>
@@ -4205,6 +4591,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     [Index(2)]
     public StringValue Href { get; set; }
+	
     /// <summary>
     /// <para> target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
@@ -4212,6 +4599,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     [Index(3)]
     public StringValue Target { get; set; }
+	
     /// <summary>
     /// <para> class.</para>
     /// <para>Represents the following attribute in the schema: class </para>
@@ -4219,6 +4607,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     [Index(4)]
     public StringValue Class { get; set; }
+	
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -4226,6 +4615,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(5)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> alt.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
@@ -4233,6 +4623,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     [Index(6)]
     public StringValue Alternate { get; set; }
+	
     /// <summary>
     /// <para> coordsize.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
@@ -4240,6 +4631,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     [Index(7)]
     public StringValue CoordinateSize { get; set; }
+	
     /// <summary>
     /// <para> wrapcoords.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
@@ -4247,6 +4639,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     [Index(8)]
     public StringValue WrapCoordinates { get; set; }
+	
     /// <summary>
     /// <para> print.</para>
     /// <para>Represents the following attribute in the schema: print </para>
@@ -4254,6 +4647,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     [Index(9)]
     public TrueFalseValue Print { get; set; }
+	
     /// <summary>
     /// <para> Optional String.</para>
     /// <para>Represents the following attribute in the schema: o:spid </para>
@@ -4263,6 +4657,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     [Index(10)]
     public StringValue OptionalString { get; set; }
+	
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oned </para>
@@ -4272,6 +4667,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     [Index(11)]
     public TrueFalseValue Oned { get; set; }
+	
     /// <summary>
     /// <para> Regroup ID.</para>
     /// <para>Represents the following attribute in the schema: o:regroupid </para>
@@ -4281,6 +4677,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     [Index(12)]
     public IntegerValue RegroupId { get; set; }
+	
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:doubleclicknotify </para>
@@ -4290,6 +4687,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     [Index(13)]
     public TrueFalseValue DoubleClickNotify { get; set; }
+	
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:button </para>
@@ -4299,6 +4697,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     [Index(14)]
     public TrueFalseValue Button { get; set; }
+	
     /// <summary>
     /// <para> Hide Script Anchors.</para>
     /// <para>Represents the following attribute in the schema: o:userhidden </para>
@@ -4308,6 +4707,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     [Index(15)]
     public TrueFalseValue UserHidden { get; set; }
+	
     /// <summary>
     /// <para> Graphical Bullet.</para>
     /// <para>Represents the following attribute in the schema: o:bullet </para>
@@ -4317,6 +4717,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     [Index(16)]
     public TrueFalseValue Bullet { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hr </para>
@@ -4326,6 +4727,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     [Index(17)]
     public TrueFalseValue Horizontal { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrstd </para>
@@ -4335,6 +4737,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     [Index(18)]
     public TrueFalseValue HorizontalStandard { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrnoshade </para>
@@ -4344,6 +4747,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     [Index(19)]
     public TrueFalseValue HorizontalNoShade { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
     /// <para>Represents the following attribute in the schema: o:hrpct </para>
@@ -4353,6 +4757,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     [Index(20)]
     public SingleValue HorizontalPercentage { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
     /// <para>Represents the following attribute in the schema: o:hralign </para>
@@ -4362,6 +4767,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     [Index(21)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+	
     /// <summary>
     /// <para> Allow in Table Cell.</para>
     /// <para>Represents the following attribute in the schema: o:allowincell </para>
@@ -4371,6 +4777,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     [Index(22)]
     public TrueFalseValue AllowInCell { get; set; }
+	
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
     /// <para>Represents the following attribute in the schema: o:allowoverlap </para>
@@ -4380,6 +4787,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     [Index(23)]
     public TrueFalseValue AllowOverlap { get; set; }
+	
     /// <summary>
     /// <para> Exists In Master Slide.</para>
     /// <para>Represents the following attribute in the schema: o:userdrawn </para>
@@ -4389,6 +4797,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     [Index(24)]
     public TrueFalseValue UserDrawn { get; set; }
+	
     /// <summary>
     /// <para> Border Top Color.</para>
     /// <para>Represents the following attribute in the schema: o:bordertopcolor </para>
@@ -4398,6 +4807,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     [Index(25)]
     public StringValue BorderTopColor { get; set; }
+	
     /// <summary>
     /// <para> Border Left Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderleftcolor </para>
@@ -4407,6 +4817,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     [Index(26)]
     public StringValue BorderLeftColor { get; set; }
+	
     /// <summary>
     /// <para> Bottom Border Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderbottomcolor </para>
@@ -4416,6 +4827,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     [Index(27)]
     public StringValue BorderBottomColor { get; set; }
+	
     /// <summary>
     /// <para> Border Right Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderrightcolor </para>
@@ -4425,6 +4837,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     [Index(28)]
     public StringValue BorderRightColor { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayout </para>
@@ -4434,6 +4847,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     [Index(29)]
     public IntegerValue DiagramLayout { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmnodekind </para>
@@ -4443,6 +4857,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     [Index(30)]
     public IntegerValue DiagramNodeKind { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayoutmru </para>
@@ -4452,6 +4867,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     [Index(31)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+	
     /// <summary>
     /// <para> Text Inset Mode.</para>
     /// <para>Represents the following attribute in the schema: o:insetmode </para>
@@ -4461,6 +4877,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     [Index(32)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+	
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
@@ -4468,6 +4885,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     [Index(33)]
     public TrueFalseValue Filled { get; set; }
+	
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
@@ -4475,6 +4893,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     [Index(34)]
     public StringValue FillColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
@@ -4482,6 +4901,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     [Index(35)]
     public TrueFalseValue Stroked { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
@@ -4489,6 +4909,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     [Index(36)]
     public StringValue StrokeColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
@@ -4496,6 +4917,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     [Index(37)]
     public StringValue StrokeWeight { get; set; }
+	
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
@@ -4503,6 +4925,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     [Index(38)]
     public TrueFalseValue InsetPen { get; set; }
+	
     /// <summary>
     /// <para> Optional Number.</para>
     /// <para>Represents the following attribute in the schema: o:spt </para>
@@ -4512,6 +4935,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     [Index(39)]
     public Int32Value OptionalNumber { get; set; }
+	
     /// <summary>
     /// <para> Shape Connector Type.</para>
     /// <para>Represents the following attribute in the schema: o:connectortype </para>
@@ -4521,6 +4945,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     [Index(40)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+	
     /// <summary>
     /// <para> Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwmode </para>
@@ -4530,6 +4955,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwpure </para>
@@ -4539,6 +4965,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwnormal </para>
@@ -4548,6 +4975,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Force Dashed Outline.</para>
     /// <para>Represents the following attribute in the schema: o:forcedash </para>
@@ -4557,6 +4985,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     [Index(44)]
     public TrueFalseValue ForceDash { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oleicon </para>
@@ -4566,6 +4995,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     [Index(45)]
     public TrueFalseValue OleIcon { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:ole </para>
@@ -4575,6 +5005,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     [Index(46)]
     public TrueFalseBlankValue Ole { get; set; }
+	
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:preferrelative </para>
@@ -4584,6 +5015,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     [Index(47)]
     public TrueFalseValue PreferRelative { get; set; }
+	
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
     /// <para>Represents the following attribute in the schema: o:cliptowrap </para>
@@ -4593,6 +5025,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     [Index(48)]
     public TrueFalseValue ClipToWrap { get; set; }
+	
     /// <summary>
     /// <para> Clipping Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:clip </para>
@@ -4602,6 +5035,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     [Index(49)]
     public TrueFalseValue Clip { get; set; }
+	
     /// <summary>
     /// <para> Image Source.</para>
     /// <para>Represents the following attribute in the schema: src </para>
@@ -4609,6 +5043,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "src")]
     [Index(50)]
     public StringValue Source { get; set; }
+	
     /// <summary>
     /// <para> Image Left Crop.</para>
     /// <para>Represents the following attribute in the schema: cropleft </para>
@@ -4616,6 +5051,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "cropleft")]
     [Index(51)]
     public StringValue CropLeft { get; set; }
+	
     /// <summary>
     /// <para> Image Top Crop.</para>
     /// <para>Represents the following attribute in the schema: croptop </para>
@@ -4623,6 +5059,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "croptop")]
     [Index(52)]
     public StringValue CropTop { get; set; }
+	
     /// <summary>
     /// <para> Image Right Crop.</para>
     /// <para>Represents the following attribute in the schema: cropright </para>
@@ -4630,6 +5067,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "cropright")]
     [Index(53)]
     public StringValue CropRight { get; set; }
+	
     /// <summary>
     /// <para> Image Bottom Crop.</para>
     /// <para>Represents the following attribute in the schema: cropbottom </para>
@@ -4637,6 +5075,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "cropbottom")]
     [Index(54)]
     public StringValue CropBottom { get; set; }
+	
     /// <summary>
     /// <para> Image Intensity.</para>
     /// <para>Represents the following attribute in the schema: gain </para>
@@ -4644,6 +5083,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "gain")]
     [Index(55)]
     public StringValue Gain { get; set; }
+	
     /// <summary>
     /// <para> Image Brightness.</para>
     /// <para>Represents the following attribute in the schema: blacklevel </para>
@@ -4651,6 +5091,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "blacklevel")]
     [Index(56)]
     public StringValue BlackLevel { get; set; }
+	
     /// <summary>
     /// <para> Image Gamma Correction.</para>
     /// <para>Represents the following attribute in the schema: gamma </para>
@@ -4658,6 +5099,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "gamma")]
     [Index(57)]
     public StringValue Gamma { get; set; }
+	
     /// <summary>
     /// <para> Image Grayscale Toggle.</para>
     /// <para>Represents the following attribute in the schema: grayscale </para>
@@ -4665,6 +5107,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "grayscale")]
     [Index(58)]
     public TrueFalseValue GrayScale { get; set; }
+	
     /// <summary>
     /// <para> Image Bilevel Toggle.</para>
     /// <para>Represents the following attribute in the schema: bilevel </para>
@@ -4672,6 +5115,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "bilevel")]
     [Index(59)]
     public TrueFalseValue BiLevel { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ImageFile class.
@@ -4770,9 +5214,10 @@ public partial class ImageFile : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "line")]
+[Id(ElementTypeIdConst)]
 public partial class Line : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12593;
@@ -4787,6 +5232,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -4794,6 +5240,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     [Index(1)]
     public StringValue Style { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
@@ -4801,6 +5248,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     [Index(2)]
     public StringValue Href { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
@@ -4808,6 +5256,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     [Index(3)]
     public StringValue Target { get; set; }
+	
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
@@ -4815,6 +5264,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     [Index(4)]
     public StringValue Class { get; set; }
+	
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -4822,6 +5272,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(5)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
@@ -4829,6 +5280,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     [Index(6)]
     public StringValue Alternate { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
@@ -4836,6 +5288,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     [Index(7)]
     public StringValue CoordinateSize { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
@@ -4843,6 +5296,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
+	
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
@@ -4850,6 +5304,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     [Index(9)]
     public StringValue WrapCoordinates { get; set; }
+	
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
@@ -4857,6 +5312,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     [Index(10)]
     public TrueFalseValue Print { get; set; }
+	
     /// <summary>
     /// <para> Optional String.</para>
     /// <para>Represents the following attribute in the schema: o:spid </para>
@@ -4866,6 +5322,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     [Index(11)]
     public StringValue OptionalString { get; set; }
+	
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oned </para>
@@ -4875,6 +5332,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     [Index(12)]
     public TrueFalseValue Oned { get; set; }
+	
     /// <summary>
     /// <para> Regroup ID.</para>
     /// <para>Represents the following attribute in the schema: o:regroupid </para>
@@ -4884,6 +5342,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     [Index(13)]
     public IntegerValue RegroupId { get; set; }
+	
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:doubleclicknotify </para>
@@ -4893,6 +5352,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
+	
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:button </para>
@@ -4902,6 +5362,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     [Index(15)]
     public TrueFalseValue Button { get; set; }
+	
     /// <summary>
     /// <para> Hide Script Anchors.</para>
     /// <para>Represents the following attribute in the schema: o:userhidden </para>
@@ -4911,6 +5372,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
+	
     /// <summary>
     /// <para> Graphical Bullet.</para>
     /// <para>Represents the following attribute in the schema: o:bullet </para>
@@ -4920,6 +5382,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     [Index(17)]
     public TrueFalseValue Bullet { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hr </para>
@@ -4929,6 +5392,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrstd </para>
@@ -4938,6 +5402,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrnoshade </para>
@@ -4947,6 +5412,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
     /// <para>Represents the following attribute in the schema: o:hrpct </para>
@@ -4956,6 +5422,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
     /// <para>Represents the following attribute in the schema: o:hralign </para>
@@ -4965,6 +5432,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+	
     /// <summary>
     /// <para> Allow in Table Cell.</para>
     /// <para>Represents the following attribute in the schema: o:allowincell </para>
@@ -4974,6 +5442,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
+	
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
     /// <para>Represents the following attribute in the schema: o:allowoverlap </para>
@@ -4983,6 +5452,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
+	
     /// <summary>
     /// <para> Exists In Master Slide.</para>
     /// <para>Represents the following attribute in the schema: o:userdrawn </para>
@@ -4992,6 +5462,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
+	
     /// <summary>
     /// <para> Border Top Color.</para>
     /// <para>Represents the following attribute in the schema: o:bordertopcolor </para>
@@ -5001,6 +5472,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     [Index(26)]
     public StringValue BorderTopColor { get; set; }
+	
     /// <summary>
     /// <para> Border Left Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderleftcolor </para>
@@ -5010,6 +5482,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     [Index(27)]
     public StringValue BorderLeftColor { get; set; }
+	
     /// <summary>
     /// <para> Bottom Border Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderbottomcolor </para>
@@ -5019,6 +5492,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     [Index(28)]
     public StringValue BorderBottomColor { get; set; }
+	
     /// <summary>
     /// <para> Border Right Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderrightcolor </para>
@@ -5028,6 +5502,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     [Index(29)]
     public StringValue BorderRightColor { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayout </para>
@@ -5037,6 +5512,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     [Index(30)]
     public IntegerValue DiagramLayout { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmnodekind </para>
@@ -5046,6 +5522,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     [Index(31)]
     public IntegerValue DiagramNodeKind { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayoutmru </para>
@@ -5055,6 +5532,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     [Index(32)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+	
     /// <summary>
     /// <para> Text Inset Mode.</para>
     /// <para>Represents the following attribute in the schema: o:insetmode </para>
@@ -5064,6 +5542,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+	
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
@@ -5071,6 +5550,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     [Index(34)]
     public TrueFalseValue Filled { get; set; }
+	
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
@@ -5078,6 +5558,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     [Index(35)]
     public StringValue FillColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
@@ -5085,6 +5566,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     [Index(36)]
     public TrueFalseValue Stroked { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
@@ -5092,6 +5574,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     [Index(37)]
     public StringValue StrokeColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
@@ -5099,6 +5582,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     [Index(38)]
     public StringValue StrokeWeight { get; set; }
+	
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
@@ -5106,6 +5590,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     [Index(39)]
     public TrueFalseValue InsetPen { get; set; }
+	
     /// <summary>
     /// <para> Optional Number.</para>
     /// <para>Represents the following attribute in the schema: o:spt </para>
@@ -5115,6 +5600,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     [Index(40)]
     public Int32Value OptionalNumber { get; set; }
+	
     /// <summary>
     /// <para> Shape Connector Type.</para>
     /// <para>Represents the following attribute in the schema: o:connectortype </para>
@@ -5124,6 +5610,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+	
     /// <summary>
     /// <para> Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwmode </para>
@@ -5133,6 +5620,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwpure </para>
@@ -5142,6 +5630,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwnormal </para>
@@ -5151,6 +5640,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     [Index(44)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Force Dashed Outline.</para>
     /// <para>Represents the following attribute in the schema: o:forcedash </para>
@@ -5160,6 +5650,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     [Index(45)]
     public TrueFalseValue ForceDash { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oleicon </para>
@@ -5169,6 +5660,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     [Index(46)]
     public TrueFalseValue OleIcon { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:ole </para>
@@ -5178,6 +5670,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     [Index(47)]
     public TrueFalseBlankValue Ole { get; set; }
+	
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:preferrelative </para>
@@ -5187,6 +5680,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     [Index(48)]
     public TrueFalseValue PreferRelative { get; set; }
+	
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
     /// <para>Represents the following attribute in the schema: o:cliptowrap </para>
@@ -5196,6 +5690,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     [Index(49)]
     public TrueFalseValue ClipToWrap { get; set; }
+	
     /// <summary>
     /// <para> Clipping Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:clip </para>
@@ -5205,6 +5700,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     [Index(50)]
     public TrueFalseValue Clip { get; set; }
+	
     /// <summary>
     /// <para> Line Start.</para>
     /// <para>Represents the following attribute in the schema: from </para>
@@ -5212,6 +5708,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "from")]
     [Index(51)]
     public StringValue From { get; set; }
+	
     /// <summary>
     /// <para> Line End Point.</para>
     /// <para>Represents the following attribute in the schema: to </para>
@@ -5219,6 +5716,7 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "to")]
     [Index(52)]
     public StringValue To { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Line class.
@@ -5317,9 +5815,10 @@ public partial class Line : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "oval")]
+[Id(ElementTypeIdConst)]
 public partial class Oval : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12594;
@@ -5334,6 +5833,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -5341,6 +5841,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     [Index(1)]
     public StringValue Style { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
@@ -5348,6 +5849,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     [Index(2)]
     public StringValue Href { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
@@ -5355,6 +5857,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     [Index(3)]
     public StringValue Target { get; set; }
+	
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
@@ -5362,6 +5865,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     [Index(4)]
     public StringValue Class { get; set; }
+	
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -5369,6 +5873,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(5)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
@@ -5376,6 +5881,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     [Index(6)]
     public StringValue Alternate { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
@@ -5383,6 +5889,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     [Index(7)]
     public StringValue CoordinateSize { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
@@ -5390,6 +5897,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
+	
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
@@ -5397,6 +5905,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     [Index(9)]
     public StringValue WrapCoordinates { get; set; }
+	
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
@@ -5404,6 +5913,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     [Index(10)]
     public TrueFalseValue Print { get; set; }
+	
     /// <summary>
     /// <para> Optional String.</para>
     /// <para>Represents the following attribute in the schema: o:spid </para>
@@ -5413,6 +5923,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     [Index(11)]
     public StringValue OptionalString { get; set; }
+	
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oned </para>
@@ -5422,6 +5933,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     [Index(12)]
     public TrueFalseValue Oned { get; set; }
+	
     /// <summary>
     /// <para> Regroup ID.</para>
     /// <para>Represents the following attribute in the schema: o:regroupid </para>
@@ -5431,6 +5943,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     [Index(13)]
     public IntegerValue RegroupId { get; set; }
+	
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:doubleclicknotify </para>
@@ -5440,6 +5953,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
+	
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:button </para>
@@ -5449,6 +5963,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     [Index(15)]
     public TrueFalseValue Button { get; set; }
+	
     /// <summary>
     /// <para> Hide Script Anchors.</para>
     /// <para>Represents the following attribute in the schema: o:userhidden </para>
@@ -5458,6 +5973,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
+	
     /// <summary>
     /// <para> Graphical Bullet.</para>
     /// <para>Represents the following attribute in the schema: o:bullet </para>
@@ -5467,6 +5983,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     [Index(17)]
     public TrueFalseValue Bullet { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hr </para>
@@ -5476,6 +5993,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrstd </para>
@@ -5485,6 +6003,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrnoshade </para>
@@ -5494,6 +6013,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
     /// <para>Represents the following attribute in the schema: o:hrpct </para>
@@ -5503,6 +6023,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
     /// <para>Represents the following attribute in the schema: o:hralign </para>
@@ -5512,6 +6033,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+	
     /// <summary>
     /// <para> Allow in Table Cell.</para>
     /// <para>Represents the following attribute in the schema: o:allowincell </para>
@@ -5521,6 +6043,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
+	
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
     /// <para>Represents the following attribute in the schema: o:allowoverlap </para>
@@ -5530,6 +6053,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
+	
     /// <summary>
     /// <para> Exists In Master Slide.</para>
     /// <para>Represents the following attribute in the schema: o:userdrawn </para>
@@ -5539,6 +6063,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
+	
     /// <summary>
     /// <para> Border Top Color.</para>
     /// <para>Represents the following attribute in the schema: o:bordertopcolor </para>
@@ -5548,6 +6073,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     [Index(26)]
     public StringValue BorderTopColor { get; set; }
+	
     /// <summary>
     /// <para> Border Left Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderleftcolor </para>
@@ -5557,6 +6083,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     [Index(27)]
     public StringValue BorderLeftColor { get; set; }
+	
     /// <summary>
     /// <para> Bottom Border Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderbottomcolor </para>
@@ -5566,6 +6093,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     [Index(28)]
     public StringValue BorderBottomColor { get; set; }
+	
     /// <summary>
     /// <para> Border Right Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderrightcolor </para>
@@ -5575,6 +6103,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     [Index(29)]
     public StringValue BorderRightColor { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayout </para>
@@ -5584,6 +6113,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     [Index(30)]
     public IntegerValue DiagramLayout { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmnodekind </para>
@@ -5593,6 +6123,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     [Index(31)]
     public IntegerValue DiagramNodeKind { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayoutmru </para>
@@ -5602,6 +6133,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     [Index(32)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+	
     /// <summary>
     /// <para> Text Inset Mode.</para>
     /// <para>Represents the following attribute in the schema: o:insetmode </para>
@@ -5611,6 +6143,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+	
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
@@ -5618,6 +6151,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     [Index(34)]
     public TrueFalseValue Filled { get; set; }
+	
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
@@ -5625,6 +6159,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     [Index(35)]
     public StringValue FillColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
@@ -5632,6 +6167,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     [Index(36)]
     public TrueFalseValue Stroked { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
@@ -5639,6 +6175,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     [Index(37)]
     public StringValue StrokeColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
@@ -5646,6 +6183,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     [Index(38)]
     public StringValue StrokeWeight { get; set; }
+	
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
@@ -5653,6 +6191,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     [Index(39)]
     public TrueFalseValue InsetPen { get; set; }
+	
     /// <summary>
     /// <para> Optional Number.</para>
     /// <para>Represents the following attribute in the schema: o:spt </para>
@@ -5662,6 +6201,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     [Index(40)]
     public Int32Value OptionalNumber { get; set; }
+	
     /// <summary>
     /// <para> Shape Connector Type.</para>
     /// <para>Represents the following attribute in the schema: o:connectortype </para>
@@ -5671,6 +6211,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+	
     /// <summary>
     /// <para> Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwmode </para>
@@ -5680,6 +6221,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwpure </para>
@@ -5689,6 +6231,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwnormal </para>
@@ -5698,6 +6241,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     [Index(44)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Force Dashed Outline.</para>
     /// <para>Represents the following attribute in the schema: o:forcedash </para>
@@ -5707,6 +6251,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     [Index(45)]
     public TrueFalseValue ForceDash { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oleicon </para>
@@ -5716,6 +6261,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     [Index(46)]
     public TrueFalseValue OleIcon { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:ole </para>
@@ -5725,6 +6271,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     [Index(47)]
     public TrueFalseBlankValue Ole { get; set; }
+	
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:preferrelative </para>
@@ -5734,6 +6281,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     [Index(48)]
     public TrueFalseValue PreferRelative { get; set; }
+	
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
     /// <para>Represents the following attribute in the schema: o:cliptowrap </para>
@@ -5743,6 +6291,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     [Index(49)]
     public TrueFalseValue ClipToWrap { get; set; }
+	
     /// <summary>
     /// <para> Clipping Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:clip </para>
@@ -5752,6 +6301,7 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     [Index(50)]
     public TrueFalseValue Clip { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Oval class.
@@ -5852,9 +6402,10 @@ public partial class Oval : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Ink))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "polyline")]
+[Id(ElementTypeIdConst)]
 public partial class PolyLine : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12595;
@@ -5869,6 +6420,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -5876,6 +6428,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     [Index(1)]
     public StringValue Style { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
@@ -5883,6 +6436,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     [Index(2)]
     public StringValue Href { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
@@ -5890,6 +6444,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     [Index(3)]
     public StringValue Target { get; set; }
+	
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
@@ -5897,6 +6452,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     [Index(4)]
     public StringValue Class { get; set; }
+	
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -5904,6 +6460,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(5)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
@@ -5911,6 +6468,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     [Index(6)]
     public StringValue Alternate { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
@@ -5918,6 +6476,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     [Index(7)]
     public StringValue CoordinateSize { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
@@ -5925,6 +6484,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
+	
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
@@ -5932,6 +6492,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     [Index(9)]
     public StringValue WrapCoordinates { get; set; }
+	
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
@@ -5939,6 +6500,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     [Index(10)]
     public TrueFalseValue Print { get; set; }
+	
     /// <summary>
     /// <para> Optional String.</para>
     /// <para>Represents the following attribute in the schema: o:spid </para>
@@ -5948,6 +6510,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     [Index(11)]
     public StringValue OptionalString { get; set; }
+	
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oned </para>
@@ -5957,6 +6520,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     [Index(12)]
     public TrueFalseValue Oned { get; set; }
+	
     /// <summary>
     /// <para> Regroup ID.</para>
     /// <para>Represents the following attribute in the schema: o:regroupid </para>
@@ -5966,6 +6530,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     [Index(13)]
     public IntegerValue RegroupId { get; set; }
+	
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:doubleclicknotify </para>
@@ -5975,6 +6540,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
+	
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:button </para>
@@ -5984,6 +6550,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     [Index(15)]
     public TrueFalseValue Button { get; set; }
+	
     /// <summary>
     /// <para> Hide Script Anchors.</para>
     /// <para>Represents the following attribute in the schema: o:userhidden </para>
@@ -5993,6 +6560,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
+	
     /// <summary>
     /// <para> Graphical Bullet.</para>
     /// <para>Represents the following attribute in the schema: o:bullet </para>
@@ -6002,6 +6570,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     [Index(17)]
     public TrueFalseValue Bullet { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hr </para>
@@ -6011,6 +6580,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrstd </para>
@@ -6020,6 +6590,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrnoshade </para>
@@ -6029,6 +6600,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
     /// <para>Represents the following attribute in the schema: o:hrpct </para>
@@ -6038,6 +6610,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
     /// <para>Represents the following attribute in the schema: o:hralign </para>
@@ -6047,6 +6620,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+	
     /// <summary>
     /// <para> Allow in Table Cell.</para>
     /// <para>Represents the following attribute in the schema: o:allowincell </para>
@@ -6056,6 +6630,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
+	
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
     /// <para>Represents the following attribute in the schema: o:allowoverlap </para>
@@ -6065,6 +6640,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
+	
     /// <summary>
     /// <para> Exists In Master Slide.</para>
     /// <para>Represents the following attribute in the schema: o:userdrawn </para>
@@ -6074,6 +6650,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
+	
     /// <summary>
     /// <para> Border Top Color.</para>
     /// <para>Represents the following attribute in the schema: o:bordertopcolor </para>
@@ -6083,6 +6660,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     [Index(26)]
     public StringValue BorderTopColor { get; set; }
+	
     /// <summary>
     /// <para> Border Left Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderleftcolor </para>
@@ -6092,6 +6670,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     [Index(27)]
     public StringValue BorderLeftColor { get; set; }
+	
     /// <summary>
     /// <para> Bottom Border Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderbottomcolor </para>
@@ -6101,6 +6680,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     [Index(28)]
     public StringValue BorderBottomColor { get; set; }
+	
     /// <summary>
     /// <para> Border Right Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderrightcolor </para>
@@ -6110,6 +6690,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     [Index(29)]
     public StringValue BorderRightColor { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayout </para>
@@ -6119,6 +6700,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     [Index(30)]
     public IntegerValue DiagramLayout { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmnodekind </para>
@@ -6128,6 +6710,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     [Index(31)]
     public IntegerValue DiagramNodeKind { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayoutmru </para>
@@ -6137,6 +6720,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     [Index(32)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+	
     /// <summary>
     /// <para> Text Inset Mode.</para>
     /// <para>Represents the following attribute in the schema: o:insetmode </para>
@@ -6146,6 +6730,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+	
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
@@ -6153,6 +6738,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     [Index(34)]
     public TrueFalseValue Filled { get; set; }
+	
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
@@ -6160,6 +6746,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     [Index(35)]
     public StringValue FillColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
@@ -6167,6 +6754,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     [Index(36)]
     public TrueFalseValue Stroked { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
@@ -6174,6 +6762,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     [Index(37)]
     public StringValue StrokeColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
@@ -6181,6 +6770,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     [Index(38)]
     public StringValue StrokeWeight { get; set; }
+	
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
@@ -6188,6 +6778,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     [Index(39)]
     public TrueFalseValue InsetPen { get; set; }
+	
     /// <summary>
     /// <para> Optional Number.</para>
     /// <para>Represents the following attribute in the schema: o:spt </para>
@@ -6197,6 +6788,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     [Index(40)]
     public Int32Value OptionalNumber { get; set; }
+	
     /// <summary>
     /// <para> Shape Connector Type.</para>
     /// <para>Represents the following attribute in the schema: o:connectortype </para>
@@ -6206,6 +6798,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+	
     /// <summary>
     /// <para> Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwmode </para>
@@ -6215,6 +6808,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwpure </para>
@@ -6224,6 +6818,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwnormal </para>
@@ -6233,6 +6828,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     [Index(44)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Force Dashed Outline.</para>
     /// <para>Represents the following attribute in the schema: o:forcedash </para>
@@ -6242,6 +6838,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     [Index(45)]
     public TrueFalseValue ForceDash { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oleicon </para>
@@ -6251,6 +6848,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     [Index(46)]
     public TrueFalseValue OleIcon { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:ole </para>
@@ -6260,6 +6858,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     [Index(47)]
     public TrueFalseBlankValue Ole { get; set; }
+	
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:preferrelative </para>
@@ -6269,6 +6868,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     [Index(48)]
     public TrueFalseValue PreferRelative { get; set; }
+	
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
     /// <para>Represents the following attribute in the schema: o:cliptowrap </para>
@@ -6278,6 +6878,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     [Index(49)]
     public TrueFalseValue ClipToWrap { get; set; }
+	
     /// <summary>
     /// <para> Clipping Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:clip </para>
@@ -6287,6 +6888,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     [Index(50)]
     public TrueFalseValue Clip { get; set; }
+	
     /// <summary>
     /// <para> Points for Compound Line.</para>
     /// <para>Represents the following attribute in the schema: points </para>
@@ -6294,6 +6896,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "points")]
     [Index(51)]
     public StringValue Points { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the PolyLine class.
@@ -6392,9 +6995,10 @@ public partial class PolyLine : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "rect")]
+[Id(ElementTypeIdConst)]
 public partial class Rectangle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12596;
@@ -6409,6 +7013,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Shape Styling Properties.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -6416,6 +7021,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     [Index(1)]
     public StringValue Style { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Target.</para>
     /// <para>Represents the following attribute in the schema: href </para>
@@ -6423,6 +7029,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     [Index(2)]
     public StringValue Href { get; set; }
+	
     /// <summary>
     /// <para> Hyperlink Display Target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
@@ -6430,6 +7037,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     [Index(3)]
     public StringValue Target { get; set; }
+	
     /// <summary>
     /// <para> CSS Reference.</para>
     /// <para>Represents the following attribute in the schema: class </para>
@@ -6437,6 +7045,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     [Index(4)]
     public StringValue Class { get; set; }
+	
     /// <summary>
     /// <para> Shape Title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -6444,6 +7053,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(5)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> Alternate Text.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
@@ -6451,6 +7061,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     [Index(6)]
     public StringValue Alternate { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Size.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
@@ -6458,6 +7069,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     [Index(7)]
     public StringValue CoordinateSize { get; set; }
+	
     /// <summary>
     /// <para> Coordinate Space Origin.</para>
     /// <para>Represents the following attribute in the schema: coordorigin </para>
@@ -6465,6 +7077,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     [Index(8)]
     public StringValue CoordinateOrigin { get; set; }
+	
     /// <summary>
     /// <para> Shape Bounding Polygon.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
@@ -6472,6 +7085,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     [Index(9)]
     public StringValue WrapCoordinates { get; set; }
+	
     /// <summary>
     /// <para> Print Toggle.</para>
     /// <para>Represents the following attribute in the schema: print </para>
@@ -6479,6 +7093,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     [Index(10)]
     public TrueFalseValue Print { get; set; }
+	
     /// <summary>
     /// <para> Optional String.</para>
     /// <para>Represents the following attribute in the schema: o:spid </para>
@@ -6488,6 +7103,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     [Index(11)]
     public StringValue OptionalString { get; set; }
+	
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oned </para>
@@ -6497,6 +7113,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     [Index(12)]
     public TrueFalseValue Oned { get; set; }
+	
     /// <summary>
     /// <para> Regroup ID.</para>
     /// <para>Represents the following attribute in the schema: o:regroupid </para>
@@ -6506,6 +7123,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     [Index(13)]
     public IntegerValue RegroupId { get; set; }
+	
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:doubleclicknotify </para>
@@ -6515,6 +7133,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     [Index(14)]
     public TrueFalseValue DoubleClickNotify { get; set; }
+	
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:button </para>
@@ -6524,6 +7143,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     [Index(15)]
     public TrueFalseValue Button { get; set; }
+	
     /// <summary>
     /// <para> Hide Script Anchors.</para>
     /// <para>Represents the following attribute in the schema: o:userhidden </para>
@@ -6533,6 +7153,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     [Index(16)]
     public TrueFalseValue UserHidden { get; set; }
+	
     /// <summary>
     /// <para> Graphical Bullet.</para>
     /// <para>Represents the following attribute in the schema: o:bullet </para>
@@ -6542,6 +7163,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     [Index(17)]
     public TrueFalseValue Bullet { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hr </para>
@@ -6551,6 +7173,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     [Index(18)]
     public TrueFalseValue Horizontal { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrstd </para>
@@ -6560,6 +7183,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     [Index(19)]
     public TrueFalseValue HorizontalStandard { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrnoshade </para>
@@ -6569,6 +7193,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     [Index(20)]
     public TrueFalseValue HorizontalNoShade { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
     /// <para>Represents the following attribute in the schema: o:hrpct </para>
@@ -6578,6 +7203,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     [Index(21)]
     public SingleValue HorizontalPercentage { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
     /// <para>Represents the following attribute in the schema: o:hralign </para>
@@ -6587,6 +7213,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+	
     /// <summary>
     /// <para> Allow in Table Cell.</para>
     /// <para>Represents the following attribute in the schema: o:allowincell </para>
@@ -6596,6 +7223,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     [Index(23)]
     public TrueFalseValue AllowInCell { get; set; }
+	
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
     /// <para>Represents the following attribute in the schema: o:allowoverlap </para>
@@ -6605,6 +7233,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     [Index(24)]
     public TrueFalseValue AllowOverlap { get; set; }
+	
     /// <summary>
     /// <para> Exists In Master Slide.</para>
     /// <para>Represents the following attribute in the schema: o:userdrawn </para>
@@ -6614,6 +7243,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     [Index(25)]
     public TrueFalseValue UserDrawn { get; set; }
+	
     /// <summary>
     /// <para> Border Top Color.</para>
     /// <para>Represents the following attribute in the schema: o:bordertopcolor </para>
@@ -6623,6 +7253,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     [Index(26)]
     public StringValue BorderTopColor { get; set; }
+	
     /// <summary>
     /// <para> Border Left Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderleftcolor </para>
@@ -6632,6 +7263,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     [Index(27)]
     public StringValue BorderLeftColor { get; set; }
+	
     /// <summary>
     /// <para> Bottom Border Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderbottomcolor </para>
@@ -6641,6 +7273,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     [Index(28)]
     public StringValue BorderBottomColor { get; set; }
+	
     /// <summary>
     /// <para> Border Right Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderrightcolor </para>
@@ -6650,6 +7283,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     [Index(29)]
     public StringValue BorderRightColor { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayout </para>
@@ -6659,6 +7293,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     [Index(30)]
     public IntegerValue DiagramLayout { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmnodekind </para>
@@ -6668,6 +7303,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     [Index(31)]
     public IntegerValue DiagramNodeKind { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayoutmru </para>
@@ -6677,6 +7313,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     [Index(32)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+	
     /// <summary>
     /// <para> Text Inset Mode.</para>
     /// <para>Represents the following attribute in the schema: o:insetmode </para>
@@ -6686,6 +7323,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     [Index(33)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+	
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
@@ -6693,6 +7331,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     [Index(34)]
     public TrueFalseValue Filled { get; set; }
+	
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
@@ -6700,6 +7339,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     [Index(35)]
     public StringValue FillColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
@@ -6707,6 +7347,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     [Index(36)]
     public TrueFalseValue Stroked { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
@@ -6714,6 +7355,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     [Index(37)]
     public StringValue StrokeColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
@@ -6721,6 +7363,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     [Index(38)]
     public StringValue StrokeWeight { get; set; }
+	
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
@@ -6728,6 +7371,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     [Index(39)]
     public TrueFalseValue InsetPen { get; set; }
+	
     /// <summary>
     /// <para> Optional Number.</para>
     /// <para>Represents the following attribute in the schema: o:spt </para>
@@ -6737,6 +7381,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     [Index(40)]
     public Int32Value OptionalNumber { get; set; }
+	
     /// <summary>
     /// <para> Shape Connector Type.</para>
     /// <para>Represents the following attribute in the schema: o:connectortype </para>
@@ -6746,6 +7391,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+	
     /// <summary>
     /// <para> Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwmode </para>
@@ -6755,6 +7401,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwpure </para>
@@ -6764,6 +7411,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwnormal </para>
@@ -6773,6 +7421,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     [Index(44)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Force Dashed Outline.</para>
     /// <para>Represents the following attribute in the schema: o:forcedash </para>
@@ -6782,6 +7431,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     [Index(45)]
     public TrueFalseValue ForceDash { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oleicon </para>
@@ -6791,6 +7441,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     [Index(46)]
     public TrueFalseValue OleIcon { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:ole </para>
@@ -6800,6 +7451,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     [Index(47)]
     public TrueFalseBlankValue Ole { get; set; }
+	
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:preferrelative </para>
@@ -6809,6 +7461,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     [Index(48)]
     public TrueFalseValue PreferRelative { get; set; }
+	
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
     /// <para>Represents the following attribute in the schema: o:cliptowrap </para>
@@ -6818,6 +7471,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     [Index(49)]
     public TrueFalseValue ClipToWrap { get; set; }
+	
     /// <summary>
     /// <para> Clipping Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:clip </para>
@@ -6827,6 +7481,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     [Index(50)]
     public TrueFalseValue Clip { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Rectangle class.
@@ -6925,9 +7580,10 @@ public partial class Rectangle : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "roundrect")]
+[Id(ElementTypeIdConst)]
 public partial class RoundRectangle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12597;
@@ -6942,6 +7598,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> style.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -6949,6 +7606,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     [Index(1)]
     public StringValue Style { get; set; }
+	
     /// <summary>
     /// <para> href.</para>
     /// <para>Represents the following attribute in the schema: href </para>
@@ -6956,6 +7614,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     [Index(2)]
     public StringValue Href { get; set; }
+	
     /// <summary>
     /// <para> target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
@@ -6963,6 +7622,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     [Index(3)]
     public StringValue Target { get; set; }
+	
     /// <summary>
     /// <para> class.</para>
     /// <para>Represents the following attribute in the schema: class </para>
@@ -6970,6 +7630,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     [Index(4)]
     public StringValue Class { get; set; }
+	
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -6977,6 +7638,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(5)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> alt.</para>
     /// <para>Represents the following attribute in the schema: alt </para>
@@ -6984,6 +7646,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     [Index(6)]
     public StringValue Alternate { get; set; }
+	
     /// <summary>
     /// <para> coordsize.</para>
     /// <para>Represents the following attribute in the schema: coordsize </para>
@@ -6991,6 +7654,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     [Index(7)]
     public StringValue CoordinateSize { get; set; }
+	
     /// <summary>
     /// <para> wrapcoords.</para>
     /// <para>Represents the following attribute in the schema: wrapcoords </para>
@@ -6998,6 +7662,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     [Index(8)]
     public StringValue WrapCoordinates { get; set; }
+	
     /// <summary>
     /// <para> print.</para>
     /// <para>Represents the following attribute in the schema: print </para>
@@ -7005,6 +7670,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     [Index(9)]
     public TrueFalseValue Print { get; set; }
+	
     /// <summary>
     /// <para> Optional String.</para>
     /// <para>Represents the following attribute in the schema: o:spid </para>
@@ -7014,6 +7680,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     [Index(10)]
     public StringValue OptionalString { get; set; }
+	
     /// <summary>
     /// <para> Shape Handle Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oned </para>
@@ -7023,6 +7690,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     [Index(11)]
     public TrueFalseValue Oned { get; set; }
+	
     /// <summary>
     /// <para> Regroup ID.</para>
     /// <para>Represents the following attribute in the schema: o:regroupid </para>
@@ -7032,6 +7700,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     [Index(12)]
     public IntegerValue RegroupId { get; set; }
+	
     /// <summary>
     /// <para> Double-click Notification Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:doubleclicknotify </para>
@@ -7041,6 +7710,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     [Index(13)]
     public TrueFalseValue DoubleClickNotify { get; set; }
+	
     /// <summary>
     /// <para> Button Behavior Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:button </para>
@@ -7050,6 +7720,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     [Index(14)]
     public TrueFalseValue Button { get; set; }
+	
     /// <summary>
     /// <para> Hide Script Anchors.</para>
     /// <para>Represents the following attribute in the schema: o:userhidden </para>
@@ -7059,6 +7730,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     [Index(15)]
     public TrueFalseValue UserHidden { get; set; }
+	
     /// <summary>
     /// <para> Graphical Bullet.</para>
     /// <para>Represents the following attribute in the schema: o:bullet </para>
@@ -7068,6 +7740,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     [Index(16)]
     public TrueFalseValue Bullet { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hr </para>
@@ -7077,6 +7750,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     [Index(17)]
     public TrueFalseValue Horizontal { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Standard Display Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrstd </para>
@@ -7086,6 +7760,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     [Index(18)]
     public TrueFalseValue HorizontalStandard { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule 3D Shading Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:hrnoshade </para>
@@ -7095,6 +7770,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     [Index(19)]
     public TrueFalseValue HorizontalNoShade { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Length Percentage.</para>
     /// <para>Represents the following attribute in the schema: o:hrpct </para>
@@ -7104,6 +7780,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     [Index(20)]
     public SingleValue HorizontalPercentage { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Rule Alignment.</para>
     /// <para>Represents the following attribute in the schema: o:hralign </para>
@@ -7113,6 +7790,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     [Index(21)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment { get; set; }
+	
     /// <summary>
     /// <para> Allow in Table Cell.</para>
     /// <para>Represents the following attribute in the schema: o:allowincell </para>
@@ -7122,6 +7800,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     [Index(22)]
     public TrueFalseValue AllowInCell { get; set; }
+	
     /// <summary>
     /// <para> Allow Shape Overlap.</para>
     /// <para>Represents the following attribute in the schema: o:allowoverlap </para>
@@ -7131,6 +7810,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     [Index(23)]
     public TrueFalseValue AllowOverlap { get; set; }
+	
     /// <summary>
     /// <para> Exists In Master Slide.</para>
     /// <para>Represents the following attribute in the schema: o:userdrawn </para>
@@ -7140,6 +7820,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     [Index(24)]
     public TrueFalseValue UserDrawn { get; set; }
+	
     /// <summary>
     /// <para> Border Top Color.</para>
     /// <para>Represents the following attribute in the schema: o:bordertopcolor </para>
@@ -7149,6 +7830,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     [Index(25)]
     public StringValue BorderTopColor { get; set; }
+	
     /// <summary>
     /// <para> Border Left Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderleftcolor </para>
@@ -7158,6 +7840,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     [Index(26)]
     public StringValue BorderLeftColor { get; set; }
+	
     /// <summary>
     /// <para> Bottom Border Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderbottomcolor </para>
@@ -7167,6 +7850,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     [Index(27)]
     public StringValue BorderBottomColor { get; set; }
+	
     /// <summary>
     /// <para> Border Right Color.</para>
     /// <para>Represents the following attribute in the schema: o:borderrightcolor </para>
@@ -7176,6 +7860,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     [Index(28)]
     public StringValue BorderRightColor { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayout </para>
@@ -7185,6 +7870,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     [Index(29)]
     public IntegerValue DiagramLayout { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmnodekind </para>
@@ -7194,6 +7880,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     [Index(30)]
     public IntegerValue DiagramNodeKind { get; set; }
+	
     /// <summary>
     /// <para> Diagram Node Recent Layout Identifier.</para>
     /// <para>Represents the following attribute in the schema: o:dgmlayoutmru </para>
@@ -7203,6 +7890,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     [Index(31)]
     public IntegerValue DiagramLayoutMostRecentUsed { get; set; }
+	
     /// <summary>
     /// <para> Text Inset Mode.</para>
     /// <para>Represents the following attribute in the schema: o:insetmode </para>
@@ -7212,6 +7900,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     [Index(32)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+	
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: filled </para>
@@ -7219,6 +7908,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     [Index(33)]
     public TrueFalseValue Filled { get; set; }
+	
     /// <summary>
     /// <para> Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
@@ -7226,6 +7916,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     [Index(34)]
     public StringValue FillColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroked </para>
@@ -7233,6 +7924,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     [Index(35)]
     public TrueFalseValue Stroked { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
@@ -7240,6 +7932,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     [Index(36)]
     public StringValue StrokeColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: strokeweight </para>
@@ -7247,6 +7940,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     [Index(37)]
     public StringValue StrokeWeight { get; set; }
+	
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
@@ -7254,6 +7948,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     [Index(38)]
     public TrueFalseValue InsetPen { get; set; }
+	
     /// <summary>
     /// <para> Optional Number.</para>
     /// <para>Represents the following attribute in the schema: o:spt </para>
@@ -7263,6 +7958,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     [Index(39)]
     public Int32Value OptionalNumber { get; set; }
+	
     /// <summary>
     /// <para> Shape Connector Type.</para>
     /// <para>Represents the following attribute in the schema: o:connectortype </para>
@@ -7272,6 +7968,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     [Index(40)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType { get; set; }
+	
     /// <summary>
     /// <para> Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwmode </para>
@@ -7281,6 +7978,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     [Index(41)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Pure Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwpure </para>
@@ -7290,6 +7988,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     [Index(42)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Normal Black-and-White Mode.</para>
     /// <para>Represents the following attribute in the schema: o:bwnormal </para>
@@ -7299,6 +7998,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     [Index(43)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode { get; set; }
+	
     /// <summary>
     /// <para> Force Dashed Outline.</para>
     /// <para>Represents the following attribute in the schema: o:forcedash </para>
@@ -7308,6 +8008,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     [Index(44)]
     public TrueFalseValue ForceDash { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Icon Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:oleicon </para>
@@ -7317,6 +8018,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     [Index(45)]
     public TrueFalseValue OleIcon { get; set; }
+	
     /// <summary>
     /// <para> Embedded Object Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:ole </para>
@@ -7326,6 +8028,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     [Index(46)]
     public TrueFalseBlankValue Ole { get; set; }
+	
     /// <summary>
     /// <para> Relative Resize Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:preferrelative </para>
@@ -7335,6 +8038,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     [Index(47)]
     public TrueFalseValue PreferRelative { get; set; }
+	
     /// <summary>
     /// <para> Clip to Wrapping Polygon.</para>
     /// <para>Represents the following attribute in the schema: o:cliptowrap </para>
@@ -7344,6 +8048,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     [Index(48)]
     public TrueFalseValue ClipToWrap { get; set; }
+	
     /// <summary>
     /// <para> Clipping Toggle.</para>
     /// <para>Represents the following attribute in the schema: o:clip </para>
@@ -7353,6 +8058,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     [Index(49)]
     public TrueFalseValue Clip { get; set; }
+	
     /// <summary>
     /// <para> Rounded Corner Arc Size.</para>
     /// <para>Represents the following attribute in the schema: arcsize </para>
@@ -7360,6 +8066,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "arcsize")]
     [Index(50)]
     public StringValue ArcSize { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RoundRectangle class.
@@ -7407,9 +8114,10 @@ public partial class RoundRectangle : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is v:h.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "h")]
+[Id(ElementTypeIdConst)]
 public partial class ShapeHandle : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12598;
@@ -7424,6 +8132,7 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "position")]
     [Index(0)]
     public StringValue Position { get; set; }
+	
     /// <summary>
     /// <para> Handle Polar Center.</para>
     /// <para>Represents the following attribute in the schema: polar </para>
@@ -7431,6 +8140,7 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "polar")]
     [Index(1)]
     public StringValue Polar { get; set; }
+	
     /// <summary>
     /// <para> Handle Coordinate Mapping.</para>
     /// <para>Represents the following attribute in the schema: map </para>
@@ -7438,6 +8148,7 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "map")]
     [Index(2)]
     public StringValue Map { get; set; }
+	
     /// <summary>
     /// <para> Invert Handle's X Position.</para>
     /// <para>Represents the following attribute in the schema: invx </para>
@@ -7445,6 +8156,7 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "invx")]
     [Index(3)]
     public TrueFalseBlankValue InvertX { get; set; }
+	
     /// <summary>
     /// <para> Invert Handle's Y Position.</para>
     /// <para>Represents the following attribute in the schema: invy </para>
@@ -7452,6 +8164,7 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "invy")]
     [Index(4)]
     public TrueFalseBlankValue InvertY { get; set; }
+	
     /// <summary>
     /// <para> Handle Inversion Toggle.</para>
     /// <para>Represents the following attribute in the schema: switch </para>
@@ -7459,6 +8172,7 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "switch")]
     [Index(5)]
     public TrueFalseBlankValue Switch { get; set; }
+	
     /// <summary>
     /// <para> Handle X Position Range.</para>
     /// <para>Represents the following attribute in the schema: xrange </para>
@@ -7466,6 +8180,7 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "xrange")]
     [Index(6)]
     public StringValue XRange { get; set; }
+	
     /// <summary>
     /// <para> Handle Y Position Range.</para>
     /// <para>Represents the following attribute in the schema: yrange </para>
@@ -7473,6 +8188,7 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "yrange")]
     [Index(7)]
     public StringValue YRange { get; set; }
+	
     /// <summary>
     /// <para> Handle Polar Radius Range.</para>
     /// <para>Represents the following attribute in the schema: radiusrange </para>
@@ -7480,6 +8196,7 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "radiusrange")]
     [Index(8)]
     public StringValue RadiusRange { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ShapeHandle class.
@@ -7501,9 +8218,10 @@ public partial class ShapeHandle : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is v:f.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "f")]
+[Id(ElementTypeIdConst)]
 public partial class Formula : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12599;
@@ -7518,6 +8236,7 @@ public partial class Formula : OpenXmlLeafElement
     [SchemaAttr(0, "eqn")]
     [Index(0)]
     public StringValue Equation { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Formula class.
@@ -7536,7 +8255,6 @@ public partial class Formula : OpenXmlLeafElement
 /// <summary>
 /// VML Extension Handling Behaviors 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ExtensionHandlingBehaviorValues
 {  
 	///<summary>
@@ -7562,7 +8280,6 @@ BackwardCompatible,
 /// <summary>
 /// Shape Fill Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum FillTypeValues
 {  
 	///<summary>
@@ -7606,7 +8323,6 @@ Frame,
 /// <summary>
 /// Gradient Fill Computation Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum FillMethodValues
 {  
 	///<summary>
@@ -7644,7 +8360,6 @@ Linearsigma,
 /// <summary>
 /// Stroke Line Style 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StrokeLineStyleValues
 {  
 	///<summary>
@@ -7682,7 +8397,6 @@ ThickBetweenThin,
 /// <summary>
 /// Line Join Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StrokeJoinStyleValues
 {  
 	///<summary>
@@ -7708,7 +8422,6 @@ Miter,
 /// <summary>
 /// Stroke End Cap Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StrokeEndCapValues
 {  
 	///<summary>
@@ -7734,7 +8447,6 @@ Round,
 /// <summary>
 /// Stroke Arrowhead Length 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StrokeArrowLengthValues
 {  
 	///<summary>
@@ -7760,7 +8472,6 @@ Long,
 /// <summary>
 /// Stroke Arrowhead Width 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StrokeArrowWidthValues
 {  
 	///<summary>
@@ -7786,7 +8497,6 @@ Wide,
 /// <summary>
 /// Stroke Arrowhead Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StrokeArrowValues
 {  
 	///<summary>
@@ -7830,7 +8540,6 @@ Open,
 /// <summary>
 /// Image Scaling Behavior 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ImageAspectValues
 {  
 	///<summary>
@@ -7856,7 +8565,6 @@ AtLeast,
 /// <summary>
 /// Shape Grouping Types 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum EditAsValues
 {  
 	///<summary>
@@ -7906,7 +8614,6 @@ Bullseye,
 /// <summary>
 /// Shadow Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ShadowValues
 {  
 	///<summary>
@@ -7950,7 +8657,6 @@ DrawingRelative,
 /// <summary>
 /// Defines the StrokeFillTypeValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StrokeFillTypeValues
 {  
 	///<summary>

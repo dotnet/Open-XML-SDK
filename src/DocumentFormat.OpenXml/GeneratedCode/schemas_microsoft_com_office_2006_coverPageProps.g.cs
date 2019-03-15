@@ -32,9 +32,10 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     [ChildElementInfo(typeof(CompanyPhoneNumber))]
     [ChildElementInfo(typeof(CompanyFaxNumber))]
     [ChildElementInfo(typeof(CompanyEmailAddress))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(36, "CoverPageProperties")]
+[Id(ElementTypeIdConst)]
 public partial class CoverPageProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12692;
@@ -176,9 +177,10 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is cppr:PublishDate.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(36, "PublishDate")]
+[Id(ElementTypeIdConst)]
 public partial class PublishDate : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12693;
@@ -219,9 +221,10 @@ public partial class PublishDate : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cppr:Abstract.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(36, "Abstract")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocumentAbstract : OpenXmlLeafTextElement
 {
@@ -256,9 +259,10 @@ public partial class DocumentAbstract : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cppr:CompanyAddress.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(36, "CompanyAddress")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CompanyAddress : OpenXmlLeafTextElement
 {
@@ -293,9 +297,10 @@ public partial class CompanyAddress : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cppr:CompanyPhone.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(36, "CompanyPhone")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
 {
@@ -330,9 +335,10 @@ public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cppr:CompanyFax.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(36, "CompanyFax")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CompanyFaxNumber : OpenXmlLeafTextElement
 {
@@ -367,9 +373,10 @@ public partial class CompanyFaxNumber : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cppr:CompanyEmail.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(36, "CompanyEmail")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CompanyEmailAddress : OpenXmlLeafTextElement
 {

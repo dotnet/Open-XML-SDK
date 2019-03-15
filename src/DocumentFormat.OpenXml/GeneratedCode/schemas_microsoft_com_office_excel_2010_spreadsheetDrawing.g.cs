@@ -30,9 +30,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     [ChildElementInfo(typeof(ApplicationNonVisualDrawingProperties), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(Transform2D), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(54, "contentPart")]
+[Id(ElementTypeIdConst)]
 public partial class ContentPart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13076;
@@ -49,6 +50,7 @@ public partial class ContentPart : OpenXmlCompositeElement
     [SchemaAttr(19, "id")]
     [Index(0)]
     public StringValue RelationshipId { get; set; }
+	
     /// <summary>
     /// <para> bwMode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
@@ -56,6 +58,7 @@ public partial class ContentPart : OpenXmlCompositeElement
     [SchemaAttr(0, "bwMode")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ContentPart class.
@@ -173,9 +176,10 @@ public partial class ContentPart : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(54, "cNvPr")]
+[Id(ElementTypeIdConst)]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13077;
@@ -190,6 +194,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public UInt32Value Id { get; set; }
+	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -197,6 +202,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(1)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
@@ -204,6 +210,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "descr")]
     [Index(2)]
     public StringValue Description { get; set; }
+	
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
@@ -211,6 +218,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "hidden")]
     [Index(3)]
     public BooleanValue Hidden { get; set; }
+	
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -218,6 +226,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(4)]
     public StringValue Title { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -319,9 +328,10 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(54, "cNvContentPartPr")]
+[Id(ElementTypeIdConst)]
 public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13078;
@@ -336,6 +346,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "isComment")]
     [Index(0)]
     public BooleanValue IsComment { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualInkContentPartProperties class.
@@ -423,9 +434,10 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(NonVisualDrawingProperties), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(NonVisualInkContentPartProperties), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(54, "nvContentPartPr")]
+[Id(ElementTypeIdConst)]
 public partial class ExcelNonVisualContentPartShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13079;
@@ -511,9 +523,10 @@ public partial class ExcelNonVisualContentPartShapeProperties : OpenXmlComposite
 /// <para> When the object is serialized out as xml, its qualified name is xdr14:nvPr.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(54, "nvPr")]
+[Id(ElementTypeIdConst)]
 public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13080;
@@ -528,6 +541,7 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
     [SchemaAttr(0, "macro")]
     [Index(0)]
     public StringValue Macro { get; set; }
+	
     /// <summary>
     /// <para> fPublished.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
@@ -535,6 +549,7 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
     [SchemaAttr(0, "fPublished")]
     [Index(1)]
     public BooleanValue PublishedFlag { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ApplicationNonVisualDrawingProperties class.
@@ -565,9 +580,10 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(54, "xfrm")]
+[Id(ElementTypeIdConst)]
 public partial class Transform2D : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13081;
@@ -582,6 +598,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     [SchemaAttr(0, "rot")]
     [Index(0)]
     public Int32Value Rotation { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
@@ -589,6 +606,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     [SchemaAttr(0, "flipH")]
     [Index(1)]
     public BooleanValue HorizontalFlip { get; set; }
+	
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
@@ -596,6 +614,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     [SchemaAttr(0, "flipV")]
     [Index(2)]
     public BooleanValue VerticalFlip { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Transform2D class.
@@ -681,9 +700,10 @@ public partial class Transform2D : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(54, "extLst")]
+[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13082;

@@ -43,9 +43,10 @@ namespace DocumentFormat.OpenXml.Vml.Office
     [ChildElementInfo(typeof(Lock))]
     [ChildElementInfo(typeof(ColorMostRecentlyUsed))]
     [ChildElementInfo(typeof(ColorMenu))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "shapedefaults")]
+[Id(ElementTypeIdConst)]
 public partial class ShapeDefaults : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12470;
@@ -62,6 +63,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
     /// <summary>
     /// <para> Shape ID Optional Storage.</para>
     /// <para>Represents the following attribute in the schema: spidmax </para>
@@ -69,6 +71,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     [SchemaAttr(0, "spidmax")]
     [Index(1)]
     public IntegerValue MaxShapeId { get; set; }
+	
     /// <summary>
     /// <para> style.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -76,6 +79,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     [Index(2)]
     public StringValue Style { get; set; }
+	
     /// <summary>
     /// <para> Shape Fill Toggle.</para>
     /// <para>Represents the following attribute in the schema: fill </para>
@@ -83,6 +87,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     [SchemaAttr(0, "fill")]
     [Index(3)]
     public TrueFalseValue BeFilled { get; set; }
+	
     /// <summary>
     /// <para> Default Fill Color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
@@ -90,6 +95,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     [Index(4)]
     public StringValue FillColor { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: stroke </para>
@@ -97,6 +103,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     [SchemaAttr(0, "stroke")]
     [Index(5)]
     public TrueFalseValue IsStroke { get; set; }
+	
     /// <summary>
     /// <para> Shape Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
@@ -104,6 +111,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     [Index(6)]
     public StringValue StrokeColor { get; set; }
+	
     /// <summary>
     /// <para> Allow in Table Cell.</para>
     /// <para>Represents the following attribute in the schema: o:allowincell </para>
@@ -113,6 +121,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     [Index(7)]
     public TrueFalseValue AllowInCell { get; set; }
+	
     /// <summary>
     /// <para> allowoverlap.</para>
     /// <para>Represents the following attribute in the schema: o:allowoverlap </para>
@@ -122,6 +131,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     [Index(8)]
     public TrueFalseValue AllowOverlap { get; set; }
+	
     /// <summary>
     /// <para> insetmode.</para>
     /// <para>Represents the following attribute in the schema: o:insetmode </para>
@@ -131,6 +141,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     [Index(9)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ShapeDefaults class.
@@ -346,9 +357,10 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     [ChildElementInfo(typeof(ShapeIdMap))]
     [ChildElementInfo(typeof(RegroupTable))]
     [ChildElementInfo(typeof(Rules))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "shapelayout")]
+[Id(ElementTypeIdConst)]
 public partial class ShapeLayout : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12471;
@@ -365,6 +377,7 @@ public partial class ShapeLayout : OpenXmlCompositeElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ShapeLayout class.
@@ -457,9 +470,10 @@ public partial class ShapeLayout : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is o:signatureline.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "signatureline")]
+[Id(ElementTypeIdConst)]
 public partial class SignatureLine : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12472;
@@ -476,6 +490,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
     /// <summary>
     /// <para> Signature Line Flag.</para>
     /// <para>Represents the following attribute in the schema: issignatureline </para>
@@ -483,6 +498,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "issignatureline")]
     [Index(1)]
     public TrueFalseValue IsSignatureLine { get; set; }
+	
     /// <summary>
     /// <para> Unique ID.</para>
     /// <para>Represents the following attribute in the schema: id </para>
@@ -490,6 +506,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     [Index(2)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Signature Provider ID.</para>
     /// <para>Represents the following attribute in the schema: provid </para>
@@ -497,6 +514,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "provid")]
     [Index(3)]
     public StringValue ProviderId { get; set; }
+	
     /// <summary>
     /// <para> Use Signing Instructions Flag.</para>
     /// <para>Represents the following attribute in the schema: signinginstructionsset </para>
@@ -504,6 +522,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "signinginstructionsset")]
     [Index(4)]
     public TrueFalseValue SigningInstructionsSet { get; set; }
+	
     /// <summary>
     /// <para> User-specified Comments Flag.</para>
     /// <para>Represents the following attribute in the schema: allowcomments </para>
@@ -511,6 +530,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "allowcomments")]
     [Index(5)]
     public TrueFalseValue AllowComments { get; set; }
+	
     /// <summary>
     /// <para> Show Signed Date Flag.</para>
     /// <para>Represents the following attribute in the schema: showsigndate </para>
@@ -518,6 +538,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "showsigndate")]
     [Index(6)]
     public TrueFalseValue ShowSignDate { get; set; }
+	
     /// <summary>
     /// <para> Suggested Signer Line 1.</para>
     /// <para>Represents the following attribute in the schema: o:suggestedsigner </para>
@@ -527,6 +548,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(27, "suggestedsigner")]
     [Index(7)]
     public StringValue SuggestedSigner { get; set; }
+	
     /// <summary>
     /// <para> Suggested Signer Line 2.</para>
     /// <para>Represents the following attribute in the schema: o:suggestedsigner2 </para>
@@ -536,6 +558,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(27, "suggestedsigner2")]
     [Index(8)]
     public StringValue SuggestedSigner2 { get; set; }
+	
     /// <summary>
     /// <para> Suggested Signer E-mail Address.</para>
     /// <para>Represents the following attribute in the schema: o:suggestedsigneremail </para>
@@ -545,6 +568,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(27, "suggestedsigneremail")]
     [Index(9)]
     public StringValue SuggestedSignerEmail { get; set; }
+	
     /// <summary>
     /// <para> Instructions for Signing.</para>
     /// <para>Represents the following attribute in the schema: signinginstructions </para>
@@ -552,6 +576,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "signinginstructions")]
     [Index(10)]
     public StringValue SigningInstructions { get; set; }
+	
     /// <summary>
     /// <para> Additional Signature Information.</para>
     /// <para>Represents the following attribute in the schema: addlxml </para>
@@ -559,6 +584,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "addlxml")]
     [Index(11)]
     public StringValue AdditionalXml { get; set; }
+	
     /// <summary>
     /// <para> Signature Provider Download URL.</para>
     /// <para>Represents the following attribute in the schema: sigprovurl </para>
@@ -566,6 +592,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "sigprovurl")]
     [Index(12)]
     public StringValue SignatureProviderUrl { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the SignatureLine class.
@@ -587,9 +614,10 @@ public partial class SignatureLine : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is o:ink.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "ink")]
+[Id(ElementTypeIdConst)]
 public partial class Ink : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12473;
@@ -604,6 +632,7 @@ public partial class Ink : OpenXmlLeafElement
     [SchemaAttr(0, "i")]
     [Index(0)]
     public Base64BinaryValue InkData { get; set; }
+	
     /// <summary>
     /// <para> Annotation Flag.</para>
     /// <para>Represents the following attribute in the schema: annotation </para>
@@ -611,6 +640,7 @@ public partial class Ink : OpenXmlLeafElement
     [SchemaAttr(0, "annotation")]
     [Index(1)]
     public TrueFalseValue AnnotationFlag { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Ink class.
@@ -639,9 +669,10 @@ public partial class Ink : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(RelationTable))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "diagram")]
+[Id(ElementTypeIdConst)]
 public partial class Diagram : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12474;
@@ -658,6 +689,7 @@ public partial class Diagram : OpenXmlCompositeElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
     /// <summary>
     /// <para> Diagram Style Options.</para>
     /// <para>Represents the following attribute in the schema: dgmstyle </para>
@@ -665,6 +697,7 @@ public partial class Diagram : OpenXmlCompositeElement
     [SchemaAttr(0, "dgmstyle")]
     [Index(1)]
     public IntegerValue Style { get; set; }
+	
     /// <summary>
     /// <para> Diagram Automatic Format.</para>
     /// <para>Represents the following attribute in the schema: autoformat </para>
@@ -672,6 +705,7 @@ public partial class Diagram : OpenXmlCompositeElement
     [SchemaAttr(0, "autoformat")]
     [Index(2)]
     public TrueFalseValue AutoFormat { get; set; }
+	
     /// <summary>
     /// <para> Diagram Reverse Direction.</para>
     /// <para>Represents the following attribute in the schema: reverse </para>
@@ -679,6 +713,7 @@ public partial class Diagram : OpenXmlCompositeElement
     [SchemaAttr(0, "reverse")]
     [Index(3)]
     public TrueFalseValue Reverse { get; set; }
+	
     /// <summary>
     /// <para> Diagram Automatic Layout.</para>
     /// <para>Represents the following attribute in the schema: autolayout </para>
@@ -686,6 +721,7 @@ public partial class Diagram : OpenXmlCompositeElement
     [SchemaAttr(0, "autolayout")]
     [Index(4)]
     public TrueFalseValue AutoLayout { get; set; }
+	
     /// <summary>
     /// <para> Diagram Layout X Scale.</para>
     /// <para>Represents the following attribute in the schema: dgmscalex </para>
@@ -693,6 +729,7 @@ public partial class Diagram : OpenXmlCompositeElement
     [SchemaAttr(0, "dgmscalex")]
     [Index(5)]
     public IntegerValue ScaleX { get; set; }
+	
     /// <summary>
     /// <para> Diagram Layout Y Scale.</para>
     /// <para>Represents the following attribute in the schema: dgmscaley </para>
@@ -700,6 +737,7 @@ public partial class Diagram : OpenXmlCompositeElement
     [SchemaAttr(0, "dgmscaley")]
     [Index(6)]
     public IntegerValue ScaleY { get; set; }
+	
     /// <summary>
     /// <para> Diagram Font Size.</para>
     /// <para>Represents the following attribute in the schema: dgmfontsize </para>
@@ -707,6 +745,7 @@ public partial class Diagram : OpenXmlCompositeElement
     [SchemaAttr(0, "dgmfontsize")]
     [Index(7)]
     public IntegerValue FontSize { get; set; }
+	
     /// <summary>
     /// <para> Diagram Layout Extents.</para>
     /// <para>Represents the following attribute in the schema: constrainbounds </para>
@@ -714,6 +753,7 @@ public partial class Diagram : OpenXmlCompositeElement
     [SchemaAttr(0, "constrainbounds")]
     [Index(8)]
     public StringValue ConstrainBounds { get; set; }
+	
     /// <summary>
     /// <para> Diagram Base Font Size.</para>
     /// <para>Represents the following attribute in the schema: dgmbasetextscale </para>
@@ -721,6 +761,7 @@ public partial class Diagram : OpenXmlCompositeElement
     [SchemaAttr(0, "dgmbasetextscale")]
     [Index(9)]
     public IntegerValue BaseTextScale { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Diagram class.
@@ -785,9 +826,10 @@ public partial class Diagram : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is o:skew.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "skew")]
+[Id(ElementTypeIdConst)]
 public partial class Skew : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12475;
@@ -804,6 +846,7 @@ public partial class Skew : OpenXmlLeafElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
     /// <summary>
     /// <para> Skew ID.</para>
     /// <para>Represents the following attribute in the schema: id </para>
@@ -811,6 +854,7 @@ public partial class Skew : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     [Index(1)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Skew Toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
@@ -818,6 +862,7 @@ public partial class Skew : OpenXmlLeafElement
     [SchemaAttr(0, "on")]
     [Index(2)]
     public TrueFalseValue On { get; set; }
+	
     /// <summary>
     /// <para> Skew Offset.</para>
     /// <para>Represents the following attribute in the schema: offset </para>
@@ -825,6 +870,7 @@ public partial class Skew : OpenXmlLeafElement
     [SchemaAttr(0, "offset")]
     [Index(3)]
     public StringValue Offset { get; set; }
+	
     /// <summary>
     /// <para> Skew Origin.</para>
     /// <para>Represents the following attribute in the schema: origin </para>
@@ -832,6 +878,7 @@ public partial class Skew : OpenXmlLeafElement
     [SchemaAttr(0, "origin")]
     [Index(4)]
     public StringValue Origin { get; set; }
+	
     /// <summary>
     /// <para> Skew Perspective Matrix.</para>
     /// <para>Represents the following attribute in the schema: matrix </para>
@@ -839,6 +886,7 @@ public partial class Skew : OpenXmlLeafElement
     [SchemaAttr(0, "matrix")]
     [Index(5)]
     public StringValue Matrix { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Skew class.
@@ -860,9 +908,10 @@ public partial class Skew : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is o:extrusion.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "extrusion")]
+[Id(ElementTypeIdConst)]
 public partial class Extrusion : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12476;
@@ -879,6 +928,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
     /// <summary>
     /// <para> Extrusion Toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
@@ -886,6 +936,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "on")]
     [Index(1)]
     public TrueFalseValue On { get; set; }
+	
     /// <summary>
     /// <para> Extrusion Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -893,6 +944,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "type")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionValues> Type { get; set; }
+	
     /// <summary>
     /// <para> Extrusion Render Mode.</para>
     /// <para>Represents the following attribute in the schema: render </para>
@@ -900,6 +952,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "render")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionRenderValues> Render { get; set; }
+	
     /// <summary>
     /// <para> Extrusion Viewpoint Origin.</para>
     /// <para>Represents the following attribute in the schema: viewpointorigin </para>
@@ -907,6 +960,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "viewpointorigin")]
     [Index(4)]
     public StringValue ViewpointOrigin { get; set; }
+	
     /// <summary>
     /// <para> Extrusion Viewpoint.</para>
     /// <para>Represents the following attribute in the schema: viewpoint </para>
@@ -914,6 +968,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "viewpoint")]
     [Index(5)]
     public StringValue Viewpoint { get; set; }
+	
     /// <summary>
     /// <para> Extrusion Skew Angle.</para>
     /// <para>Represents the following attribute in the schema: skewangle </para>
@@ -921,6 +976,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "skewangle")]
     [Index(6)]
     public SingleValue SkewAngle { get; set; }
+	
     /// <summary>
     /// <para> Extrusion Skew.</para>
     /// <para>Represents the following attribute in the schema: skewamt </para>
@@ -928,6 +984,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "skewamt")]
     [Index(7)]
     public StringValue SkewAmount { get; set; }
+	
     /// <summary>
     /// <para> Forward Extrusion.</para>
     /// <para>Represents the following attribute in the schema: foredepth </para>
@@ -935,6 +992,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "foredepth")]
     [Index(8)]
     public StringValue ForceDepth { get; set; }
+	
     /// <summary>
     /// <para> Backward Extrusion Depth.</para>
     /// <para>Represents the following attribute in the schema: backdepth </para>
@@ -942,6 +1000,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "backdepth")]
     [Index(9)]
     public StringValue BackDepth { get; set; }
+	
     /// <summary>
     /// <para> Rotation Axis.</para>
     /// <para>Represents the following attribute in the schema: orientation </para>
@@ -949,6 +1008,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "orientation")]
     [Index(10)]
     public StringValue Orientation { get; set; }
+	
     /// <summary>
     /// <para> Rotation Around Axis.</para>
     /// <para>Represents the following attribute in the schema: orientationangle </para>
@@ -956,6 +1016,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "orientationangle")]
     [Index(11)]
     public SingleValue OrientationAngle { get; set; }
+	
     /// <summary>
     /// <para> Rotation Toggle.</para>
     /// <para>Represents the following attribute in the schema: lockrotationcenter </para>
@@ -963,6 +1024,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "lockrotationcenter")]
     [Index(12)]
     public TrueFalseValue LockRotationCenter { get; set; }
+	
     /// <summary>
     /// <para> Center of Rotation Toggle.</para>
     /// <para>Represents the following attribute in the schema: autorotationcenter </para>
@@ -970,6 +1032,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "autorotationcenter")]
     [Index(13)]
     public TrueFalseValue AutoRotationCenter { get; set; }
+	
     /// <summary>
     /// <para> Rotation Center.</para>
     /// <para>Represents the following attribute in the schema: rotationcenter </para>
@@ -977,6 +1040,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "rotationcenter")]
     [Index(14)]
     public StringValue RotationCenter { get; set; }
+	
     /// <summary>
     /// <para> X-Y Rotation Angle.</para>
     /// <para>Represents the following attribute in the schema: rotationangle </para>
@@ -984,6 +1048,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "rotationangle")]
     [Index(15)]
     public StringValue RotationAngle { get; set; }
+	
     /// <summary>
     /// <para> Extrusion Color.</para>
     /// <para>Represents the following attribute in the schema: color </para>
@@ -991,6 +1056,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "color")]
     [Index(16)]
     public StringValue Color { get; set; }
+	
     /// <summary>
     /// <para> Shininess.</para>
     /// <para>Represents the following attribute in the schema: shininess </para>
@@ -998,6 +1064,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "shininess")]
     [Index(17)]
     public SingleValue Shininess { get; set; }
+	
     /// <summary>
     /// <para> Specularity.</para>
     /// <para>Represents the following attribute in the schema: specularity </para>
@@ -1005,6 +1072,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "specularity")]
     [Index(18)]
     public StringValue Specularity { get; set; }
+	
     /// <summary>
     /// <para> Diffuse Reflection.</para>
     /// <para>Represents the following attribute in the schema: diffusity </para>
@@ -1012,6 +1080,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "diffusity")]
     [Index(19)]
     public StringValue Diffusity { get; set; }
+	
     /// <summary>
     /// <para> Metallic Surface Toggle.</para>
     /// <para>Represents the following attribute in the schema: metal </para>
@@ -1019,6 +1088,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "metal")]
     [Index(20)]
     public TrueFalseValue Metal { get; set; }
+	
     /// <summary>
     /// <para> Simulated Bevel.</para>
     /// <para>Represents the following attribute in the schema: edge </para>
@@ -1026,6 +1096,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "edge")]
     [Index(21)]
     public StringValue Edge { get; set; }
+	
     /// <summary>
     /// <para> Faceting Quality.</para>
     /// <para>Represents the following attribute in the schema: facet </para>
@@ -1033,6 +1104,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "facet")]
     [Index(22)]
     public StringValue Facet { get; set; }
+	
     /// <summary>
     /// <para> Shape Face Lighting Toggle.</para>
     /// <para>Represents the following attribute in the schema: lightface </para>
@@ -1040,6 +1112,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "lightface")]
     [Index(23)]
     public TrueFalseValue LightFace { get; set; }
+	
     /// <summary>
     /// <para> Brightness.</para>
     /// <para>Represents the following attribute in the schema: brightness </para>
@@ -1047,6 +1120,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "brightness")]
     [Index(24)]
     public StringValue Brightness { get; set; }
+	
     /// <summary>
     /// <para> Primary Light Position.</para>
     /// <para>Represents the following attribute in the schema: lightposition </para>
@@ -1054,6 +1128,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "lightposition")]
     [Index(25)]
     public StringValue LightPosition { get; set; }
+	
     /// <summary>
     /// <para> Primary Light Intensity.</para>
     /// <para>Represents the following attribute in the schema: lightlevel </para>
@@ -1061,6 +1136,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "lightlevel")]
     [Index(26)]
     public StringValue LightLevel { get; set; }
+	
     /// <summary>
     /// <para> Primary Light Harshness Toggle.</para>
     /// <para>Represents the following attribute in the schema: lightharsh </para>
@@ -1068,6 +1144,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "lightharsh")]
     [Index(27)]
     public TrueFalseValue LightHarsh { get; set; }
+	
     /// <summary>
     /// <para> Secondary Light Position.</para>
     /// <para>Represents the following attribute in the schema: lightposition2 </para>
@@ -1075,6 +1152,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "lightposition2")]
     [Index(28)]
     public StringValue LightPosition2 { get; set; }
+	
     /// <summary>
     /// <para> Secondary Light Intensity.</para>
     /// <para>Represents the following attribute in the schema: lightlevel2 </para>
@@ -1082,6 +1160,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "lightlevel2")]
     [Index(29)]
     public StringValue LightLevel2 { get; set; }
+	
     /// <summary>
     /// <para> Secondary Light Harshness Toggle.</para>
     /// <para>Represents the following attribute in the schema: lightharsh2 </para>
@@ -1089,6 +1168,7 @@ public partial class Extrusion : OpenXmlLeafElement
     [SchemaAttr(0, "lightharsh2")]
     [Index(30)]
     public TrueFalseValue LightHarsh2 { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Extrusion class.
@@ -1110,9 +1190,10 @@ public partial class Extrusion : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is o:callout.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "callout")]
+[Id(ElementTypeIdConst)]
 public partial class Callout : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12477;
@@ -1129,6 +1210,7 @@ public partial class Callout : OpenXmlLeafElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
     /// <summary>
     /// <para> Callout toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
@@ -1136,6 +1218,7 @@ public partial class Callout : OpenXmlLeafElement
     [SchemaAttr(0, "on")]
     [Index(1)]
     public TrueFalseValue On { get; set; }
+	
     /// <summary>
     /// <para> Callout type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -1143,6 +1226,7 @@ public partial class Callout : OpenXmlLeafElement
     [SchemaAttr(0, "type")]
     [Index(2)]
     public StringValue Type { get; set; }
+	
     /// <summary>
     /// <para> Callout gap.</para>
     /// <para>Represents the following attribute in the schema: gap </para>
@@ -1150,6 +1234,7 @@ public partial class Callout : OpenXmlLeafElement
     [SchemaAttr(0, "gap")]
     [Index(3)]
     public StringValue Gap { get; set; }
+	
     /// <summary>
     /// <para> Callout angle.</para>
     /// <para>Represents the following attribute in the schema: angle </para>
@@ -1157,6 +1242,7 @@ public partial class Callout : OpenXmlLeafElement
     [SchemaAttr(0, "angle")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.AngleValues> Angle { get; set; }
+	
     /// <summary>
     /// <para> Callout automatic drop toggle.</para>
     /// <para>Represents the following attribute in the schema: dropauto </para>
@@ -1164,6 +1250,7 @@ public partial class Callout : OpenXmlLeafElement
     [SchemaAttr(0, "dropauto")]
     [Index(5)]
     public TrueFalseValue DropAuto { get; set; }
+	
     /// <summary>
     /// <para> Callout drop position.</para>
     /// <para>Represents the following attribute in the schema: drop </para>
@@ -1171,6 +1258,7 @@ public partial class Callout : OpenXmlLeafElement
     [SchemaAttr(0, "drop")]
     [Index(6)]
     public StringValue Drop { get; set; }
+	
     /// <summary>
     /// <para> Callout drop distance.</para>
     /// <para>Represents the following attribute in the schema: distance </para>
@@ -1178,6 +1266,7 @@ public partial class Callout : OpenXmlLeafElement
     [SchemaAttr(0, "distance")]
     [Index(7)]
     public StringValue Distance { get; set; }
+	
     /// <summary>
     /// <para> Callout length toggle.</para>
     /// <para>Represents the following attribute in the schema: lengthspecified </para>
@@ -1185,6 +1274,7 @@ public partial class Callout : OpenXmlLeafElement
     [SchemaAttr(0, "lengthspecified")]
     [Index(8)]
     public TrueFalseValue LengthSpecified { get; set; }
+	
     /// <summary>
     /// <para> Callout length.</para>
     /// <para>Represents the following attribute in the schema: length </para>
@@ -1192,6 +1282,7 @@ public partial class Callout : OpenXmlLeafElement
     [SchemaAttr(0, "length")]
     [Index(9)]
     public StringValue Length { get; set; }
+	
     /// <summary>
     /// <para> Callout accent bar toggle.</para>
     /// <para>Represents the following attribute in the schema: accentbar </para>
@@ -1199,6 +1290,7 @@ public partial class Callout : OpenXmlLeafElement
     [SchemaAttr(0, "accentbar")]
     [Index(10)]
     public TrueFalseValue AccentBar { get; set; }
+	
     /// <summary>
     /// <para> Callout text border toggle.</para>
     /// <para>Represents the following attribute in the schema: textborder </para>
@@ -1206,6 +1298,7 @@ public partial class Callout : OpenXmlLeafElement
     [SchemaAttr(0, "textborder")]
     [Index(11)]
     public TrueFalseValue TextBorder { get; set; }
+	
     /// <summary>
     /// <para> Callout flip x.</para>
     /// <para>Represents the following attribute in the schema: minusx </para>
@@ -1213,6 +1306,7 @@ public partial class Callout : OpenXmlLeafElement
     [SchemaAttr(0, "minusx")]
     [Index(12)]
     public TrueFalseValue MinusX { get; set; }
+	
     /// <summary>
     /// <para> Callout flip y.</para>
     /// <para>Represents the following attribute in the schema: minusy </para>
@@ -1220,6 +1314,7 @@ public partial class Callout : OpenXmlLeafElement
     [SchemaAttr(0, "minusy")]
     [Index(13)]
     public TrueFalseValue MinusY { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Callout class.
@@ -1241,9 +1336,10 @@ public partial class Callout : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is o:lock.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "lock")]
+[Id(ElementTypeIdConst)]
 public partial class Lock : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12478;
@@ -1260,6 +1356,7 @@ public partial class Lock : OpenXmlLeafElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
     /// <summary>
     /// <para> Position Lock.</para>
     /// <para>Represents the following attribute in the schema: position </para>
@@ -1267,6 +1364,7 @@ public partial class Lock : OpenXmlLeafElement
     [SchemaAttr(0, "position")]
     [Index(1)]
     public TrueFalseValue Position { get; set; }
+	
     /// <summary>
     /// <para> Selection Lock.</para>
     /// <para>Represents the following attribute in the schema: selection </para>
@@ -1274,6 +1372,7 @@ public partial class Lock : OpenXmlLeafElement
     [SchemaAttr(0, "selection")]
     [Index(2)]
     public TrueFalseValue Selection { get; set; }
+	
     /// <summary>
     /// <para> Grouping Lock.</para>
     /// <para>Represents the following attribute in the schema: grouping </para>
@@ -1281,6 +1380,7 @@ public partial class Lock : OpenXmlLeafElement
     [SchemaAttr(0, "grouping")]
     [Index(3)]
     public TrueFalseValue Grouping { get; set; }
+	
     /// <summary>
     /// <para> Ungrouping Lock.</para>
     /// <para>Represents the following attribute in the schema: ungrouping </para>
@@ -1288,6 +1388,7 @@ public partial class Lock : OpenXmlLeafElement
     [SchemaAttr(0, "ungrouping")]
     [Index(4)]
     public TrueFalseValue Ungrouping { get; set; }
+	
     /// <summary>
     /// <para> Rotation Lock.</para>
     /// <para>Represents the following attribute in the schema: rotation </para>
@@ -1295,6 +1396,7 @@ public partial class Lock : OpenXmlLeafElement
     [SchemaAttr(0, "rotation")]
     [Index(5)]
     public TrueFalseValue Rotation { get; set; }
+	
     /// <summary>
     /// <para> Cropping Lock.</para>
     /// <para>Represents the following attribute in the schema: cropping </para>
@@ -1302,6 +1404,7 @@ public partial class Lock : OpenXmlLeafElement
     [SchemaAttr(0, "cropping")]
     [Index(6)]
     public TrueFalseValue Cropping { get; set; }
+	
     /// <summary>
     /// <para> Vertices Lock.</para>
     /// <para>Represents the following attribute in the schema: verticies </para>
@@ -1309,6 +1412,7 @@ public partial class Lock : OpenXmlLeafElement
     [SchemaAttr(0, "verticies")]
     [Index(7)]
     public TrueFalseValue Verticies { get; set; }
+	
     /// <summary>
     /// <para> Handles Lock.</para>
     /// <para>Represents the following attribute in the schema: adjusthandles </para>
@@ -1316,6 +1420,7 @@ public partial class Lock : OpenXmlLeafElement
     [SchemaAttr(0, "adjusthandles")]
     [Index(8)]
     public TrueFalseValue AdjustHandles { get; set; }
+	
     /// <summary>
     /// <para> Text Lock.</para>
     /// <para>Represents the following attribute in the schema: text </para>
@@ -1323,6 +1428,7 @@ public partial class Lock : OpenXmlLeafElement
     [SchemaAttr(0, "text")]
     [Index(9)]
     public TrueFalseValue TextLock { get; set; }
+	
     /// <summary>
     /// <para> Aspect Ratio Lock.</para>
     /// <para>Represents the following attribute in the schema: aspectratio </para>
@@ -1330,6 +1436,7 @@ public partial class Lock : OpenXmlLeafElement
     [SchemaAttr(0, "aspectratio")]
     [Index(10)]
     public TrueFalseValue AspectRatio { get; set; }
+	
     /// <summary>
     /// <para> AutoShape Type Lock.</para>
     /// <para>Represents the following attribute in the schema: shapetype </para>
@@ -1337,6 +1444,7 @@ public partial class Lock : OpenXmlLeafElement
     [SchemaAttr(0, "shapetype")]
     [Index(11)]
     public TrueFalseValue ShapeType { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Lock class.
@@ -1369,9 +1477,10 @@ public partial class Lock : OpenXmlLeafElement
     [ChildElementInfo(typeof(LinkType))]
     [ChildElementInfo(typeof(LockedField))]
     [ChildElementInfo(typeof(FieldCodes))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "OLEObject")]
+[Id(ElementTypeIdConst)]
 public partial class OleObject : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12479;
@@ -1386,6 +1495,7 @@ public partial class OleObject : OpenXmlCompositeElement
     [SchemaAttr(0, "Type")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleValues> Type { get; set; }
+	
     /// <summary>
     /// <para> OLE Object Application.</para>
     /// <para>Represents the following attribute in the schema: ProgID </para>
@@ -1393,6 +1503,7 @@ public partial class OleObject : OpenXmlCompositeElement
     [SchemaAttr(0, "ProgID")]
     [Index(1)]
     public StringValue ProgId { get; set; }
+	
     /// <summary>
     /// <para> OLE Object Shape.</para>
     /// <para>Represents the following attribute in the schema: ShapeID </para>
@@ -1400,6 +1511,7 @@ public partial class OleObject : OpenXmlCompositeElement
     [SchemaAttr(0, "ShapeID")]
     [Index(2)]
     public StringValue ShapeId { get; set; }
+	
     /// <summary>
     /// <para> OLE Object Representation.</para>
     /// <para>Represents the following attribute in the schema: DrawAspect </para>
@@ -1407,6 +1519,7 @@ public partial class OleObject : OpenXmlCompositeElement
     [SchemaAttr(0, "DrawAspect")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleDrawAspectValues> DrawAspect { get; set; }
+	
     /// <summary>
     /// <para> OLE Object Unique ID.</para>
     /// <para>Represents the following attribute in the schema: ObjectID </para>
@@ -1414,6 +1527,7 @@ public partial class OleObject : OpenXmlCompositeElement
     [SchemaAttr(0, "ObjectID")]
     [Index(4)]
     public StringValue ObjectId { get; set; }
+	
     /// <summary>
     /// <para> Relationship.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
@@ -1423,6 +1537,7 @@ public partial class OleObject : OpenXmlCompositeElement
     [SchemaAttr(19, "id")]
     [Index(5)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> OLE Update Mode.</para>
     /// <para>Represents the following attribute in the schema: UpdateMode </para>
@@ -1430,6 +1545,7 @@ public partial class OleObject : OpenXmlCompositeElement
     [SchemaAttr(0, "UpdateMode")]
     [Index(6)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleUpdateModeValues> UpdateMode { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the OleObject class.
@@ -1522,9 +1638,10 @@ public partial class OleObject : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is o:complex.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "complex")]
+[Id(ElementTypeIdConst)]
 public partial class Complex : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12480;
@@ -1541,6 +1658,7 @@ public partial class Complex : OpenXmlLeafElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Complex class.
@@ -1561,9 +1679,10 @@ public partial class Complex : OpenXmlLeafElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is o:left.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(27, "left")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeftStroke : StrokeChildType
 {
@@ -1585,9 +1704,10 @@ public partial class LeftStroke : StrokeChildType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is o:top.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(27, "top")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopStroke : StrokeChildType
 {
@@ -1609,9 +1729,10 @@ public partial class TopStroke : StrokeChildType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is o:right.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(27, "right")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightStroke : StrokeChildType
 {
@@ -1633,9 +1754,10 @@ public partial class RightStroke : StrokeChildType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is o:bottom.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(27, "bottom")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BottomStroke : StrokeChildType
 {
@@ -1657,9 +1779,10 @@ public partial class BottomStroke : StrokeChildType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is o:column.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(27, "column")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnStroke : StrokeChildType
 {
@@ -1679,8 +1802,8 @@ public partial class ColumnStroke : StrokeChildType
 /// <summary>
 /// Defines the StrokeChildType class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class StrokeChildType : OpenXmlLeafElement
 {
         
@@ -1693,6 +1816,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
     /// <summary>
     /// <para> Stroke Toggle.</para>
     /// <para>Represents the following attribute in the schema: on </para>
@@ -1700,6 +1824,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "on")]
     [Index(1)]
     public TrueFalseValue On { get; set; }
+	
     /// <summary>
     /// <para> Stroke Weight.</para>
     /// <para>Represents the following attribute in the schema: weight </para>
@@ -1707,6 +1832,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "weight")]
     [Index(2)]
     public StringValue Weight { get; set; }
+	
     /// <summary>
     /// <para> Stroke Color.</para>
     /// <para>Represents the following attribute in the schema: color </para>
@@ -1714,6 +1840,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "color")]
     [Index(3)]
     public StringValue Color { get; set; }
+	
     /// <summary>
     /// <para> Stroke Alternate Pattern Color.</para>
     /// <para>Represents the following attribute in the schema: color2 </para>
@@ -1721,6 +1848,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "color2")]
     [Index(4)]
     public StringValue Color2 { get; set; }
+	
     /// <summary>
     /// <para> Stroke Opacity.</para>
     /// <para>Represents the following attribute in the schema: opacity </para>
@@ -1728,6 +1856,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "opacity")]
     [Index(5)]
     public StringValue Opacity { get; set; }
+	
     /// <summary>
     /// <para> Stroke Line Style.</para>
     /// <para>Represents the following attribute in the schema: linestyle </para>
@@ -1735,6 +1864,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "linestyle")]
     [Index(6)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues> LineStyle { get; set; }
+	
     /// <summary>
     /// <para> Miter Joint Limit.</para>
     /// <para>Represents the following attribute in the schema: miterlimit </para>
@@ -1742,6 +1872,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "miterlimit")]
     [Index(7)]
     public DecimalValue MiterLimit { get; set; }
+	
     /// <summary>
     /// <para> Line End Join Style).</para>
     /// <para>Represents the following attribute in the schema: joinstyle </para>
@@ -1749,6 +1880,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "joinstyle")]
     [Index(8)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues> JoinStyle { get; set; }
+	
     /// <summary>
     /// <para> Line End Cap.</para>
     /// <para>Represents the following attribute in the schema: endcap </para>
@@ -1756,6 +1888,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "endcap")]
     [Index(9)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues> EndCap { get; set; }
+	
     /// <summary>
     /// <para> Stroke Dash Pattern.</para>
     /// <para>Represents the following attribute in the schema: dashstyle </para>
@@ -1763,6 +1896,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "dashstyle")]
     [Index(10)]
     public StringValue DashStyle { get; set; }
+	
     /// <summary>
     /// <para> Inset Border From Path.</para>
     /// <para>Represents the following attribute in the schema: insetpen </para>
@@ -1770,6 +1904,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "insetpen")]
     [Index(11)]
     public TrueFalseValue InsetPen { get; set; }
+	
     /// <summary>
     /// <para> Stroke Image Style.</para>
     /// <para>Represents the following attribute in the schema: filltype </para>
@@ -1777,6 +1912,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "filltype")]
     [Index(12)]
     public EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues> FillType { get; set; }
+	
     /// <summary>
     /// <para> Stroke Image Location.</para>
     /// <para>Represents the following attribute in the schema: src </para>
@@ -1784,6 +1920,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "src")]
     [Index(13)]
     public StringValue Source { get; set; }
+	
     /// <summary>
     /// <para> Stroke Image Aspect Ratio.</para>
     /// <para>Represents the following attribute in the schema: imageaspect </para>
@@ -1791,6 +1928,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "imageaspect")]
     [Index(14)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> ImageAspect { get; set; }
+	
     /// <summary>
     /// <para> Stroke Image Size.</para>
     /// <para>Represents the following attribute in the schema: imagesize </para>
@@ -1798,6 +1936,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "imagesize")]
     [Index(15)]
     public StringValue ImageSize { get; set; }
+	
     /// <summary>
     /// <para> Stoke Image Alignment.</para>
     /// <para>Represents the following attribute in the schema: imagealignshape </para>
@@ -1805,6 +1944,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "imagealignshape")]
     [Index(16)]
     public TrueFalseValue ImageAlignShape { get; set; }
+	
     /// <summary>
     /// <para> Line Start Arrowhead.</para>
     /// <para>Represents the following attribute in the schema: startarrow </para>
@@ -1812,6 +1952,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "startarrow")]
     [Index(17)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> StartArrow { get; set; }
+	
     /// <summary>
     /// <para> Line Start Arrowhead Width.</para>
     /// <para>Represents the following attribute in the schema: startarrowwidth </para>
@@ -1819,6 +1960,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "startarrowwidth")]
     [Index(18)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> StartArrowWidth { get; set; }
+	
     /// <summary>
     /// <para> Line Start Arrowhead Length.</para>
     /// <para>Represents the following attribute in the schema: startarrowlength </para>
@@ -1826,6 +1968,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "startarrowlength")]
     [Index(19)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> StartArrowLength { get; set; }
+	
     /// <summary>
     /// <para> Line End Arrowhead.</para>
     /// <para>Represents the following attribute in the schema: endarrow </para>
@@ -1833,6 +1976,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "endarrow")]
     [Index(20)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> EndArrow { get; set; }
+	
     /// <summary>
     /// <para> Line End Arrowhead Width.</para>
     /// <para>Represents the following attribute in the schema: endarrowwidth </para>
@@ -1840,6 +1984,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "endarrowwidth")]
     [Index(21)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> EndArrowWidth { get; set; }
+	
     /// <summary>
     /// <para> Line End Arrowhead Length.</para>
     /// <para>Represents the following attribute in the schema: endarrowlength </para>
@@ -1847,6 +1992,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(0, "endarrowlength")]
     [Index(22)]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> EndArrowLength { get; set; }
+	
     /// <summary>
     /// <para> Original Image Reference.</para>
     /// <para>Represents the following attribute in the schema: o:href </para>
@@ -1856,6 +2002,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(27, "href")]
     [Index(23)]
     public StringValue Href { get; set; }
+	
     /// <summary>
     /// <para> Alternate Image Reference.</para>
     /// <para>Represents the following attribute in the schema: o:althref </para>
@@ -1865,6 +2012,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(27, "althref")]
     [Index(24)]
     public StringValue AlternateImageReference { get; set; }
+	
     /// <summary>
     /// <para> Stroke Title.</para>
     /// <para>Represents the following attribute in the schema: o:title </para>
@@ -1874,6 +2022,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(27, "title")]
     [Index(25)]
     public StringValue Title { get; set; }
+	
     /// <summary>
     /// <para> Force Dashed Outline.</para>
     /// <para>Represents the following attribute in the schema: o:forcedash </para>
@@ -1883,6 +2032,7 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
     [SchemaAttr(27, "forcedash")]
     [Index(26)]
     public TrueFalseValue ForceDash { get; set; }
+	
 
     
     
@@ -1901,9 +2051,10 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is o:clippath.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "clippath")]
+[Id(ElementTypeIdConst)]
 public partial class ClipPath : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12486;
@@ -1920,6 +2071,7 @@ public partial class ClipPath : OpenXmlLeafElement
     [SchemaAttr(27, "v")]
     [Index(0)]
     public StringValue Value { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ClipPath class.
@@ -1941,9 +2093,10 @@ public partial class ClipPath : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is o:fill.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "fill")]
+[Id(ElementTypeIdConst)]
 public partial class FillExtendedProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12487;
@@ -1960,6 +2113,7 @@ public partial class FillExtendedProperties : OpenXmlLeafElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
     /// <summary>
     /// <para> Fill Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -1967,6 +2121,7 @@ public partial class FillExtendedProperties : OpenXmlLeafElement
     [SchemaAttr(0, "type")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.FillValues> Type { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the FillExtendedProperties class.
@@ -1988,9 +2143,10 @@ public partial class FillExtendedProperties : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is o:idmap.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "idmap")]
+[Id(ElementTypeIdConst)]
 public partial class ShapeIdMap : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12488;
@@ -2007,6 +2163,7 @@ public partial class ShapeIdMap : OpenXmlLeafElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
     /// <summary>
     /// <para> Shape IDs.</para>
     /// <para>Represents the following attribute in the schema: data </para>
@@ -2014,6 +2171,7 @@ public partial class ShapeIdMap : OpenXmlLeafElement
     [SchemaAttr(0, "data")]
     [Index(1)]
     public StringValue Data { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ShapeIdMap class.
@@ -2042,9 +2200,10 @@ public partial class ShapeIdMap : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(Entry))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "regrouptable")]
+[Id(ElementTypeIdConst)]
 public partial class RegroupTable : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12489;
@@ -2061,6 +2220,7 @@ public partial class RegroupTable : OpenXmlCompositeElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RegroupTable class.
@@ -2115,9 +2275,10 @@ public partial class RegroupTable : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(Rule))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "rules")]
+[Id(ElementTypeIdConst)]
 public partial class Rules : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12490;
@@ -2134,6 +2295,7 @@ public partial class Rules : OpenXmlCompositeElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Rules class.
@@ -2181,9 +2343,10 @@ public partial class Rules : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is o:entry.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "entry")]
+[Id(ElementTypeIdConst)]
 public partial class Entry : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12491;
@@ -2198,6 +2361,7 @@ public partial class Entry : OpenXmlLeafElement
     [SchemaAttr(0, "new")]
     [Index(0)]
     public Int32Value New { get; set; }
+	
     /// <summary>
     /// <para> Old Group ID.</para>
     /// <para>Represents the following attribute in the schema: old </para>
@@ -2205,6 +2369,7 @@ public partial class Entry : OpenXmlLeafElement
     [SchemaAttr(0, "old")]
     [Index(1)]
     public Int32Value Old { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Entry class.
@@ -2233,9 +2398,10 @@ public partial class Entry : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(Proxy))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "r")]
+[Id(ElementTypeIdConst)]
 public partial class Rule : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12492;
@@ -2250,6 +2416,7 @@ public partial class Rule : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Rule Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -2257,6 +2424,7 @@ public partial class Rule : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.RuleValues> Type { get; set; }
+	
     /// <summary>
     /// <para> Alignment Rule Type.</para>
     /// <para>Represents the following attribute in the schema: how </para>
@@ -2264,6 +2432,7 @@ public partial class Rule : OpenXmlCompositeElement
     [SchemaAttr(0, "how")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.AlignmentValues> How { get; set; }
+	
     /// <summary>
     /// <para> Rule Shape Reference.</para>
     /// <para>Represents the following attribute in the schema: idref </para>
@@ -2271,6 +2440,7 @@ public partial class Rule : OpenXmlCompositeElement
     [SchemaAttr(0, "idref")]
     [Index(3)]
     public StringValue ShapeReference { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Rule class.
@@ -2325,9 +2495,10 @@ public partial class Rule : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(Relation))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "relationtable")]
+[Id(ElementTypeIdConst)]
 public partial class RelationTable : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12493;
@@ -2344,6 +2515,7 @@ public partial class RelationTable : OpenXmlCompositeElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RelationTable class.
@@ -2391,9 +2563,10 @@ public partial class RelationTable : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is o:rel.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "rel")]
+[Id(ElementTypeIdConst)]
 public partial class Relation : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12494;
@@ -2410,6 +2583,7 @@ public partial class Relation : OpenXmlLeafElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
     /// <summary>
     /// <para> Diagram Relationship Source Shape.</para>
     /// <para>Represents the following attribute in the schema: idsrc </para>
@@ -2417,6 +2591,7 @@ public partial class Relation : OpenXmlLeafElement
     [SchemaAttr(0, "idsrc")]
     [Index(1)]
     public StringValue SourceId { get; set; }
+	
     /// <summary>
     /// <para> Diagram Relationship Destination Shape.</para>
     /// <para>Represents the following attribute in the schema: iddest </para>
@@ -2424,6 +2599,7 @@ public partial class Relation : OpenXmlLeafElement
     [SchemaAttr(0, "iddest")]
     [Index(2)]
     public StringValue DestinationId { get; set; }
+	
     /// <summary>
     /// <para> Diagram Relationship Center Shape.</para>
     /// <para>Represents the following attribute in the schema: idcntr </para>
@@ -2431,6 +2607,7 @@ public partial class Relation : OpenXmlLeafElement
     [SchemaAttr(0, "idcntr")]
     [Index(3)]
     public StringValue CenterShapeId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Relation class.
@@ -2452,9 +2629,10 @@ public partial class Relation : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is o:LinkType.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "LinkType")]
+[Id(ElementTypeIdConst)]
 public partial class LinkType : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12495;
@@ -2496,9 +2674,10 @@ public partial class LinkType : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is o:LockedField.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "LockedField")]
+[Id(ElementTypeIdConst)]
 public partial class LockedField : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12496;
@@ -2540,9 +2719,10 @@ public partial class LockedField : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is o:FieldCodes.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "FieldCodes")]
+[Id(ElementTypeIdConst)]
 public partial class FieldCodes : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12497;
@@ -2584,9 +2764,10 @@ public partial class FieldCodes : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is o:proxy.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "proxy")]
+[Id(ElementTypeIdConst)]
 public partial class Proxy : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12498;
@@ -2601,6 +2782,7 @@ public partial class Proxy : OpenXmlLeafElement
     [SchemaAttr(0, "start")]
     [Index(0)]
     public TrueFalseBlankValue Start { get; set; }
+	
     /// <summary>
     /// <para> End Point Connection Flag.</para>
     /// <para>Represents the following attribute in the schema: end </para>
@@ -2608,6 +2790,7 @@ public partial class Proxy : OpenXmlLeafElement
     [SchemaAttr(0, "end")]
     [Index(1)]
     public TrueFalseBlankValue End { get; set; }
+	
     /// <summary>
     /// <para> Proxy Shape Reference.</para>
     /// <para>Represents the following attribute in the schema: idref </para>
@@ -2615,6 +2798,7 @@ public partial class Proxy : OpenXmlLeafElement
     [SchemaAttr(0, "idref")]
     [Index(2)]
     public StringValue ShapeReference { get; set; }
+	
     /// <summary>
     /// <para> Connection Location.</para>
     /// <para>Represents the following attribute in the schema: connectloc </para>
@@ -2622,6 +2806,7 @@ public partial class Proxy : OpenXmlLeafElement
     [SchemaAttr(0, "connectloc")]
     [Index(3)]
     public Int32Value ConnectionLocation { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Proxy class.
@@ -2643,9 +2828,10 @@ public partial class Proxy : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is o:colormru.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "colormru")]
+[Id(ElementTypeIdConst)]
 public partial class ColorMostRecentlyUsed : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12499;
@@ -2662,6 +2848,7 @@ public partial class ColorMostRecentlyUsed : OpenXmlLeafElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
     /// <summary>
     /// <para> Recent colors.</para>
     /// <para>Represents the following attribute in the schema: colors </para>
@@ -2669,6 +2856,7 @@ public partial class ColorMostRecentlyUsed : OpenXmlLeafElement
     [SchemaAttr(0, "colors")]
     [Index(1)]
     public StringValue Colors { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ColorMostRecentlyUsed class.
@@ -2690,9 +2878,10 @@ public partial class ColorMostRecentlyUsed : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is o:colormenu.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "colormenu")]
+[Id(ElementTypeIdConst)]
 public partial class ColorMenu : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12500;
@@ -2709,6 +2898,7 @@ public partial class ColorMenu : OpenXmlLeafElement
     [SchemaAttr(26, "ext")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues> Extension { get; set; }
+	
     /// <summary>
     /// <para> Default stroke color.</para>
     /// <para>Represents the following attribute in the schema: strokecolor </para>
@@ -2716,6 +2906,7 @@ public partial class ColorMenu : OpenXmlLeafElement
     [SchemaAttr(0, "strokecolor")]
     [Index(1)]
     public StringValue StrokeColor { get; set; }
+	
     /// <summary>
     /// <para> Default fill color.</para>
     /// <para>Represents the following attribute in the schema: fillcolor </para>
@@ -2723,6 +2914,7 @@ public partial class ColorMenu : OpenXmlLeafElement
     [SchemaAttr(0, "fillcolor")]
     [Index(2)]
     public StringValue FillColor { get; set; }
+	
     /// <summary>
     /// <para> Default shadow color.</para>
     /// <para>Represents the following attribute in the schema: shadowcolor </para>
@@ -2730,6 +2922,7 @@ public partial class ColorMenu : OpenXmlLeafElement
     [SchemaAttr(0, "shadowcolor")]
     [Index(3)]
     public StringValue ShadowColor { get; set; }
+	
     /// <summary>
     /// <para> Default extrusion color.</para>
     /// <para>Represents the following attribute in the schema: extrusioncolor </para>
@@ -2737,6 +2930,7 @@ public partial class ColorMenu : OpenXmlLeafElement
     [SchemaAttr(0, "extrusioncolor")]
     [Index(4)]
     public StringValue ExtrusionColor { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ColorMenu class.
@@ -2755,7 +2949,6 @@ public partial class ColorMenu : OpenXmlLeafElement
 /// <summary>
 /// Alignment Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum AlignmentValues
 {  
 	///<summary>
@@ -2799,7 +2992,6 @@ Right,
 /// <summary>
 /// Screen Sizes Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ScreenSizeValues
 {  
 	///<summary>
@@ -2843,7 +3035,6 @@ Sz1152x862,
 /// <summary>
 /// Inset Margin Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum InsetMarginValues
 {  
 	///<summary>
@@ -2863,7 +3054,6 @@ Custom,
 /// <summary>
 /// Extrusion Color Types 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ColorModeValues
 {  
 	///<summary>
@@ -2883,7 +3073,6 @@ Custom,
 /// <summary>
 /// Extrusion Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ExtrusionValues
 {  
 	///<summary>
@@ -2903,7 +3092,6 @@ Parallel,
 /// <summary>
 /// Extrusion Rendering Types 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ExtrusionRenderValues
 {  
 	///<summary>
@@ -2929,7 +3117,6 @@ BoundingCube,
 /// <summary>
 /// Extrusion Planes 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ExtrusionPlaneValues
 {  
 	///<summary>
@@ -2955,7 +3142,6 @@ YZ,
 /// <summary>
 /// Callout Angles 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum AngleValues
 {  
 	///<summary>
@@ -2999,7 +3185,6 @@ Auto,
 /// <summary>
 /// Callout Placement 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum CalloutPlacementValues
 {  
 	///<summary>
@@ -3031,7 +3216,6 @@ User,
 /// <summary>
 /// Connector Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ConnectorValues
 {  
 	///<summary>
@@ -3063,7 +3247,6 @@ Curved,
 /// <summary>
 /// Alignment Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum HorizontalRuleAlignmentValues
 {  
 	///<summary>
@@ -3089,7 +3272,6 @@ Center,
 /// <summary>
 /// Connection Locations Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ConnectValues
 {  
 	///<summary>
@@ -3121,7 +3303,6 @@ Custom,
 /// <summary>
 /// Embedded Object Alternate Image Request Types 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum OleLinkValues
 {  
 	///<summary>
@@ -3147,7 +3328,6 @@ EnhancedMetaFile,
 /// <summary>
 /// OLE Connection Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum OleValues
 {  
 	///<summary>
@@ -3167,7 +3347,6 @@ Link,
 /// <summary>
 /// OLE Object Representations 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum OleDrawAspectValues
 {  
 	///<summary>
@@ -3187,7 +3366,6 @@ Icon,
 /// <summary>
 /// OLE Update Method Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum OleUpdateModeValues
 {  
 	///<summary>
@@ -3207,7 +3385,6 @@ OnCall,
 /// <summary>
 /// Shape Fill Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum FillValues
 {  
 	///<summary>
@@ -3269,7 +3446,6 @@ Background,
 /// <summary>
 /// Rule Type 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum RuleValues
 {  
 	///<summary>
@@ -3295,7 +3471,6 @@ Connector,
 /// <summary>
 /// Black And White Modes 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum BlackAndWhiteModeValues
 {  
 	///<summary>

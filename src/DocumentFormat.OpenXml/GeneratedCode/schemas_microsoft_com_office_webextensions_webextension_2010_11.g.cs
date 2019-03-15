@@ -25,15 +25,16 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
 ///<item><description>OfficeArtExtensionList &lt;we:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(WebExtensionStoreReference), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(WebExtensionReferenceList), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(WebExtensionPropertyBag), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(WebExtensionBindingList), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(Snapshot), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(66, "webextension")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtension : OpenXmlPartRootElement
 {
@@ -49,6 +50,7 @@ public partial class WebExtension : OpenXmlPartRootElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> frozen.</para>
     /// <para>Represents the following attribute in the schema: frozen </para>
@@ -56,6 +58,7 @@ public partial class WebExtension : OpenXmlPartRootElement
     [SchemaAttr(0, "frozen")]
     [Index(1)]
     public BooleanValue Frozen { get; set; }
+	
 
     
 	internal WebExtension(WebExtensionPart ownerPart) : base (ownerPart){}
@@ -219,9 +222,10 @@ public partial class WebExtension : OpenXmlPartRootElement
 /// <para> When the object is serialized out as xml, its qualified name is we:webextensionref.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "webextensionref")]
+[Id(ElementTypeIdConst)]
 public partial class WebExtensionReference : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13311;
@@ -238,6 +242,7 @@ public partial class WebExtensionReference : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionReference class.
@@ -259,9 +264,10 @@ public partial class WebExtensionReference : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is we:property.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "property")]
+[Id(ElementTypeIdConst)]
 public partial class WebExtensionProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13312;
@@ -276,6 +282,7 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
@@ -283,6 +290,7 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     [SchemaAttr(0, "value")]
     [Index(1)]
     public StringValue Value { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionProperty class.
@@ -311,9 +319,10 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "extLst")]
+[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13313;
@@ -375,9 +384,10 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "binding")]
+[Id(ElementTypeIdConst)]
 public partial class WebExtensionBinding : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13314;
@@ -392,6 +402,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -399,6 +410,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     [Index(1)]
     public StringValue Type { get; set; }
+	
     /// <summary>
     /// <para> appref.</para>
     /// <para>Represents the following attribute in the schema: appref </para>
@@ -406,6 +418,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     [SchemaAttr(0, "appref")]
     [Index(2)]
     public StringValue AppReference { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionBinding class.
@@ -477,9 +490,10 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "reference")]
+[Id(ElementTypeIdConst)]
 public partial class WebExtensionStoreReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13315;
@@ -494,6 +508,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> version.</para>
     /// <para>Represents the following attribute in the schema: version </para>
@@ -501,6 +516,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     [SchemaAttr(0, "version")]
     [Index(1)]
     public StringValue Version { get; set; }
+	
     /// <summary>
     /// <para> store.</para>
     /// <para>Represents the following attribute in the schema: store </para>
@@ -508,6 +524,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     [SchemaAttr(0, "store")]
     [Index(2)]
     public StringValue Store { get; set; }
+	
     /// <summary>
     /// <para> storeType.</para>
     /// <para>Represents the following attribute in the schema: storeType </para>
@@ -515,6 +532,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     [SchemaAttr(0, "storeType")]
     [Index(3)]
     public StringValue StoreType { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionStoreReference class.
@@ -586,9 +604,10 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(WebExtensionStoreReference), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "alternateReferences")]
+[Id(ElementTypeIdConst)]
 public partial class WebExtensionReferenceList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13316;
@@ -650,9 +669,10 @@ public partial class WebExtensionReferenceList : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(WebExtensionProperty), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "properties")]
+[Id(ElementTypeIdConst)]
 public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13317;
@@ -714,9 +734,10 @@ public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(WebExtensionBinding), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "bindings")]
+[Id(ElementTypeIdConst)]
 public partial class WebExtensionBindingList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13318;
@@ -812,9 +833,10 @@ public partial class WebExtensionBindingList : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.LuminanceEffect))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.TintEffect))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BlipExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "snapshot")]
+[Id(ElementTypeIdConst)]
 public partial class Snapshot : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13319;
@@ -831,6 +853,7 @@ public partial class Snapshot : OpenXmlCompositeElement
     [SchemaAttr(19, "embed")]
     [Index(0)]
     public StringValue Embed { get; set; }
+	
     /// <summary>
     /// <para> Linked Picture Reference.</para>
     /// <para>Represents the following attribute in the schema: r:link </para>
@@ -840,6 +863,7 @@ public partial class Snapshot : OpenXmlCompositeElement
     [SchemaAttr(19, "link")]
     [Index(1)]
     public StringValue Link { get; set; }
+	
     /// <summary>
     /// <para> cstate.</para>
     /// <para>Represents the following attribute in the schema: cstate </para>
@@ -847,6 +871,7 @@ public partial class Snapshot : OpenXmlCompositeElement
     [SchemaAttr(0, "cstate")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues> CompressionState { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Snapshot class.

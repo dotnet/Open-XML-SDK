@@ -17,9 +17,10 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
 /// <para> When the object is serialized out as xml, its qualified name is wp:wrapNone.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "wrapNone")]
+[Id(ElementTypeIdConst)]
 public partial class WrapNone : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10760;
@@ -55,9 +56,10 @@ public partial class WrapNone : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(EffectExtent))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "wrapSquare")]
+[Id(ElementTypeIdConst)]
 public partial class WrapSquare : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10761;
@@ -72,6 +74,7 @@ public partial class WrapSquare : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapText")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText { get; set; }
+	
     /// <summary>
     /// <para> Distance From Text (Top).</para>
     /// <para>Represents the following attribute in the schema: distT </para>
@@ -79,6 +82,7 @@ public partial class WrapSquare : OpenXmlCompositeElement
     [SchemaAttr(0, "distT")]
     [Index(1)]
     public UInt32Value DistanceFromTop { get; set; }
+	
     /// <summary>
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
@@ -86,6 +90,7 @@ public partial class WrapSquare : OpenXmlCompositeElement
     [SchemaAttr(0, "distB")]
     [Index(2)]
     public UInt32Value DistanceFromBottom { get; set; }
+	
     /// <summary>
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
@@ -93,6 +98,7 @@ public partial class WrapSquare : OpenXmlCompositeElement
     [SchemaAttr(0, "distL")]
     [Index(3)]
     public UInt32Value DistanceFromLeft { get; set; }
+	
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
@@ -100,6 +106,7 @@ public partial class WrapSquare : OpenXmlCompositeElement
     [SchemaAttr(0, "distR")]
     [Index(4)]
     public UInt32Value DistanceFromRight { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WrapSquare class.
@@ -171,9 +178,10 @@ public partial class WrapSquare : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(WrapPolygon))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "wrapTight")]
+[Id(ElementTypeIdConst)]
 public partial class WrapTight : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10762;
@@ -188,6 +196,7 @@ public partial class WrapTight : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapText")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText { get; set; }
+	
     /// <summary>
     /// <para> Distance From Test on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
@@ -195,6 +204,7 @@ public partial class WrapTight : OpenXmlCompositeElement
     [SchemaAttr(0, "distL")]
     [Index(1)]
     public UInt32Value DistanceFromLeft { get; set; }
+	
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
@@ -202,6 +212,7 @@ public partial class WrapTight : OpenXmlCompositeElement
     [SchemaAttr(0, "distR")]
     [Index(2)]
     public UInt32Value DistanceFromRight { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WrapTight class.
@@ -273,9 +284,10 @@ public partial class WrapTight : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(WrapPolygon))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "wrapThrough")]
+[Id(ElementTypeIdConst)]
 public partial class WrapThrough : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10763;
@@ -290,6 +302,7 @@ public partial class WrapThrough : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapText")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText { get; set; }
+	
     /// <summary>
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
@@ -297,6 +310,7 @@ public partial class WrapThrough : OpenXmlCompositeElement
     [SchemaAttr(0, "distL")]
     [Index(1)]
     public UInt32Value DistanceFromLeft { get; set; }
+	
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
@@ -304,6 +318,7 @@ public partial class WrapThrough : OpenXmlCompositeElement
     [SchemaAttr(0, "distR")]
     [Index(2)]
     public UInt32Value DistanceFromRight { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WrapThrough class.
@@ -375,9 +390,10 @@ public partial class WrapThrough : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(EffectExtent))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "wrapTopAndBottom")]
+[Id(ElementTypeIdConst)]
 public partial class WrapTopBottom : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10764;
@@ -392,6 +408,7 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
     [SchemaAttr(0, "distT")]
     [Index(0)]
     public UInt32Value DistanceFromTop { get; set; }
+	
     /// <summary>
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
@@ -399,6 +416,7 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
     [SchemaAttr(0, "distB")]
     [Index(1)]
     public UInt32Value DistanceFromBottom { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WrapTopBottom class.
@@ -478,9 +496,10 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocProperties))]
     [ChildElementInfo(typeof(NonVisualGraphicFrameDrawingProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "inline")]
+[Id(ElementTypeIdConst)]
 public partial class Inline : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10765;
@@ -495,6 +514,7 @@ public partial class Inline : OpenXmlCompositeElement
     [SchemaAttr(0, "distT")]
     [Index(0)]
     public UInt32Value DistanceFromTop { get; set; }
+	
     /// <summary>
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
@@ -502,6 +522,7 @@ public partial class Inline : OpenXmlCompositeElement
     [SchemaAttr(0, "distB")]
     [Index(1)]
     public UInt32Value DistanceFromBottom { get; set; }
+	
     /// <summary>
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
@@ -509,6 +530,7 @@ public partial class Inline : OpenXmlCompositeElement
     [SchemaAttr(0, "distL")]
     [Index(2)]
     public UInt32Value DistanceFromLeft { get; set; }
+	
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
@@ -516,6 +538,7 @@ public partial class Inline : OpenXmlCompositeElement
     [SchemaAttr(0, "distR")]
     [Index(3)]
     public UInt32Value DistanceFromRight { get; set; }
+	
     /// <summary>
     /// <para> anchorId.</para>
     /// <para>Represents the following attribute in the schema: wp14:anchorId </para>
@@ -525,6 +548,7 @@ public partial class Inline : OpenXmlCompositeElement
     [SchemaAttr(51, "anchorId")]
     [Index(4)]
     public HexBinaryValue AnchorId { get; set; }
+	
     /// <summary>
     /// <para> editId.</para>
     /// <para>Represents the following attribute in the schema: wp14:editId </para>
@@ -534,6 +558,7 @@ public partial class Inline : OpenXmlCompositeElement
     [SchemaAttr(51, "editId")]
     [Index(5)]
     public HexBinaryValue EditId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Inline class.
@@ -689,9 +714,10 @@ public partial class Inline : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "anchor")]
+[Id(ElementTypeIdConst)]
 public partial class Anchor : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10766;
@@ -706,6 +732,7 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "distT")]
     [Index(0)]
     public UInt32Value DistanceFromTop { get; set; }
+	
     /// <summary>
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
@@ -713,6 +740,7 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "distB")]
     [Index(1)]
     public UInt32Value DistanceFromBottom { get; set; }
+	
     /// <summary>
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
@@ -720,6 +748,7 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "distL")]
     [Index(2)]
     public UInt32Value DistanceFromLeft { get; set; }
+	
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
@@ -727,6 +756,7 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "distR")]
     [Index(3)]
     public UInt32Value DistanceFromRight { get; set; }
+	
     /// <summary>
     /// <para> Page Positioning.</para>
     /// <para>Represents the following attribute in the schema: simplePos </para>
@@ -734,6 +764,7 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "simplePos")]
     [Index(4)]
     public BooleanValue SimplePos { get; set; }
+	
     /// <summary>
     /// <para> Relative Z-Ordering Position.</para>
     /// <para>Represents the following attribute in the schema: relativeHeight </para>
@@ -741,6 +772,7 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "relativeHeight")]
     [Index(5)]
     public UInt32Value RelativeHeight { get; set; }
+	
     /// <summary>
     /// <para> Display Behind Document Text.</para>
     /// <para>Represents the following attribute in the schema: behindDoc </para>
@@ -748,6 +780,7 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "behindDoc")]
     [Index(6)]
     public BooleanValue BehindDoc { get; set; }
+	
     /// <summary>
     /// <para> Lock Anchor.</para>
     /// <para>Represents the following attribute in the schema: locked </para>
@@ -755,6 +788,7 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "locked")]
     [Index(7)]
     public BooleanValue Locked { get; set; }
+	
     /// <summary>
     /// <para> Layout In Table Cell.</para>
     /// <para>Represents the following attribute in the schema: layoutInCell </para>
@@ -762,6 +796,7 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "layoutInCell")]
     [Index(8)]
     public BooleanValue LayoutInCell { get; set; }
+	
     /// <summary>
     /// <para> Hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
@@ -769,6 +804,7 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "hidden")]
     [Index(9)]
     public BooleanValue Hidden { get; set; }
+	
     /// <summary>
     /// <para> Allow Objects to Overlap.</para>
     /// <para>Represents the following attribute in the schema: allowOverlap </para>
@@ -776,6 +812,7 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "allowOverlap")]
     [Index(10)]
     public BooleanValue AllowOverlap { get; set; }
+	
     /// <summary>
     /// <para> editId.</para>
     /// <para>Represents the following attribute in the schema: wp14:editId </para>
@@ -785,6 +822,7 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(51, "editId")]
     [Index(11)]
     public HexBinaryValue EditId { get; set; }
+	
     /// <summary>
     /// <para> anchorId.</para>
     /// <para>Represents the following attribute in the schema: wp14:anchorId </para>
@@ -794,6 +832,7 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(51, "anchorId")]
     [Index(12)]
     public HexBinaryValue AnchorId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Anchor class.
@@ -913,9 +952,10 @@ public partial class Anchor : OpenXmlCompositeElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:start.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(16, "start")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StartPoint : Point2DType
 {
@@ -937,9 +977,10 @@ public partial class StartPoint : Point2DType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:lineTo.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(16, "lineTo")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LineTo : Point2DType
 {
@@ -961,9 +1002,10 @@ public partial class LineTo : Point2DType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:simplePos.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(16, "simplePos")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SimplePosition : Point2DType
 {
@@ -983,8 +1025,8 @@ public partial class SimplePosition : Point2DType
 /// <summary>
 /// Defines the Point2DType class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class Point2DType : OpenXmlLeafElement
 {
         
@@ -995,6 +1037,7 @@ public abstract partial class Point2DType : OpenXmlLeafElement
     [SchemaAttr(0, "x")]
     [Index(0)]
     public Int64Value X { get; set; }
+	
     /// <summary>
     /// <para> Y-Axis Coordinate.</para>
     /// <para>Represents the following attribute in the schema: y </para>
@@ -1002,6 +1045,7 @@ public abstract partial class Point2DType : OpenXmlLeafElement
     [SchemaAttr(0, "y")]
     [Index(1)]
     public Int64Value Y { get; set; }
+	
 
     
     
@@ -1020,9 +1064,10 @@ public abstract partial class Point2DType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is wp:effectExtent.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "effectExtent")]
+[Id(ElementTypeIdConst)]
 public partial class EffectExtent : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10769;
@@ -1037,6 +1082,7 @@ public partial class EffectExtent : OpenXmlLeafElement
     [SchemaAttr(0, "l")]
     [Index(0)]
     public Int64Value LeftEdge { get; set; }
+	
     /// <summary>
     /// <para> Additional Extent on Top Edge.</para>
     /// <para>Represents the following attribute in the schema: t </para>
@@ -1044,6 +1090,7 @@ public partial class EffectExtent : OpenXmlLeafElement
     [SchemaAttr(0, "t")]
     [Index(1)]
     public Int64Value TopEdge { get; set; }
+	
     /// <summary>
     /// <para> Additional Extent on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: r </para>
@@ -1051,6 +1098,7 @@ public partial class EffectExtent : OpenXmlLeafElement
     [SchemaAttr(0, "r")]
     [Index(2)]
     public Int64Value RightEdge { get; set; }
+	
     /// <summary>
     /// <para> Additional Extent on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: b </para>
@@ -1058,6 +1106,7 @@ public partial class EffectExtent : OpenXmlLeafElement
     [SchemaAttr(0, "b")]
     [Index(3)]
     public Int64Value BottomEdge { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the EffectExtent class.
@@ -1088,9 +1137,10 @@ public partial class EffectExtent : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(StartPoint))]
     [ChildElementInfo(typeof(LineTo))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "wrapPolygon")]
+[Id(ElementTypeIdConst)]
 public partial class WrapPolygon : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10770;
@@ -1105,6 +1155,7 @@ public partial class WrapPolygon : OpenXmlCompositeElement
     [SchemaAttr(0, "edited")]
     [Index(0)]
     public BooleanValue Edited { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WrapPolygon class.
@@ -1180,9 +1231,10 @@ public partial class WrapPolygon : OpenXmlCompositeElement
     [ChildElementInfo(typeof(HorizontalAlignment))]
     [ChildElementInfo(typeof(PositionOffset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "positionH")]
+[Id(ElementTypeIdConst)]
 public partial class HorizontalPosition : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10772;
@@ -1197,6 +1249,7 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
     [SchemaAttr(0, "relativeFrom")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues> RelativeFrom { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the HorizontalPosition class.
@@ -1300,9 +1353,10 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
     [ChildElementInfo(typeof(VerticalAlignment))]
     [ChildElementInfo(typeof(PositionOffset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "positionV")]
+[Id(ElementTypeIdConst)]
 public partial class VerticalPosition : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10773;
@@ -1317,6 +1371,7 @@ public partial class VerticalPosition : OpenXmlCompositeElement
     [SchemaAttr(0, "relativeFrom")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues> RelativeFrom { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the VerticalPosition class.
@@ -1409,9 +1464,10 @@ public partial class VerticalPosition : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is wp:extent.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "extent")]
+[Id(ElementTypeIdConst)]
 public partial class Extent : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10774;
@@ -1426,6 +1482,7 @@ public partial class Extent : OpenXmlLeafElement
     [SchemaAttr(0, "cx")]
     [Index(0)]
     public Int64Value Cx { get; set; }
+	
     /// <summary>
     /// <para> Extent Width.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
@@ -1433,6 +1490,7 @@ public partial class Extent : OpenXmlLeafElement
     [SchemaAttr(0, "cy")]
     [Index(1)]
     public Int64Value Cy { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Extent class.
@@ -1465,9 +1523,10 @@ public partial class Extent : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "docPr")]
+[Id(ElementTypeIdConst)]
 public partial class DocProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10775;
@@ -1482,6 +1541,7 @@ public partial class DocProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public UInt32Value Id { get; set; }
+	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -1489,6 +1549,7 @@ public partial class DocProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(1)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
@@ -1496,6 +1557,7 @@ public partial class DocProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "descr")]
     [Index(2)]
     public StringValue Description { get; set; }
+	
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
@@ -1503,6 +1565,7 @@ public partial class DocProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "hidden")]
     [Index(3)]
     public BooleanValue Hidden { get; set; }
+	
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -1510,6 +1573,7 @@ public partial class DocProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(4)]
     public StringValue Title { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the DocProperties class.
@@ -1611,9 +1675,10 @@ public partial class DocProperties : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "cNvGraphicFramePr")]
+[Id(ElementTypeIdConst)]
 public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10776;
@@ -1699,9 +1764,10 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
 /// <para> When the object is serialized out as xml, its qualified name is wp:align.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "align")]
+[Id(ElementTypeIdConst)]
 public partial class VerticalAlignment : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10777;
@@ -1743,9 +1809,10 @@ public partial class VerticalAlignment : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is wp:posOffset.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "posOffset")]
+[Id(ElementTypeIdConst)]
 public partial class PositionOffset : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10778;
@@ -1787,9 +1854,10 @@ public partial class PositionOffset : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is wp:align.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "align")]
+[Id(ElementTypeIdConst)]
 public partial class HorizontalAlignment : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10779;
@@ -1828,7 +1896,6 @@ public partial class HorizontalAlignment : OpenXmlLeafTextElement
 /// <summary>
 /// Text Wrapping Location 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum WrapTextValues
 {  
 	///<summary>
@@ -1860,7 +1927,6 @@ Largest,
 /// <summary>
 /// Relative Horizontal Alignment Positions 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum HorizontalAlignmentValues
 {  
 	///<summary>
@@ -1898,7 +1964,6 @@ Outside,
 /// <summary>
 /// Horizontal Relative Positioning 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum HorizontalRelativePositionValues
 {  
 	///<summary>
@@ -1954,7 +2019,6 @@ OutsideMargin,
 /// <summary>
 /// Vertical Alignment Definition 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum VerticalAlignmentValues
 {  
 	///<summary>
@@ -1992,7 +2056,6 @@ Outside,
 /// <summary>
 /// Vertical Relative Positioning 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum VerticalRelativePositionValues
 {  
 	///<summary>

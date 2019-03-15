@@ -29,10 +29,6 @@ namespace DocumentFormat.OpenXml.Framework
 
         public static PackageCache Cache { get; } = new PackageCache();
 
-        public OpenXmlElement CreateElement(Type type) => GetFactory<OpenXmlElement>(type)();
-
-        public OpenXmlSimpleType CreateSimpleType(Type type) => GetFactory<OpenXmlSimpleType>(type)();
-
         public Func<T> GetFactory<T>(Type type)
         {
             if (typeof(T) == typeof(OpenXmlSimpleType))

@@ -29,9 +29,10 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     [ChildElementInfo(typeof(NonVisualDrawingProperties), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(NonVisualInkContentPartProperties), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ApplicationNonVisualDrawingProperties), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "nvContentPartPr")]
+[Id(ElementTypeIdConst)]
 public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12831;
@@ -140,9 +141,10 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Offset))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "xfrm")]
+[Id(ElementTypeIdConst)]
 public partial class Transform2D : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12832;
@@ -157,6 +159,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     [SchemaAttr(0, "rot")]
     [Index(0)]
     public Int32Value Rotation { get; set; }
+	
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
@@ -164,6 +167,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     [SchemaAttr(0, "flipH")]
     [Index(1)]
     public BooleanValue HorizontalFlip { get; set; }
+	
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
@@ -171,6 +175,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     [SchemaAttr(0, "flipV")]
     [Index(2)]
     public BooleanValue VerticalFlip { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Transform2D class.
@@ -256,9 +261,10 @@ public partial class Transform2D : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "extLst")]
+[Id(ElementTypeIdConst)]
 public partial class ExtensionListModify : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12833;
@@ -273,6 +279,7 @@ public partial class ExtensionListModify : OpenXmlCompositeElement
     [SchemaAttr(0, "mod")]
     [Index(0)]
     public BooleanValue Modify { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ExtensionListModify class.
@@ -333,9 +340,10 @@ public partial class ExtensionListModify : OpenXmlCompositeElement
     [ChildElementInfo(typeof(MediaFade), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(MediaBookmarkList), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "media")]
+[Id(ElementTypeIdConst)]
 public partial class Media : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12834;
@@ -352,6 +360,7 @@ public partial class Media : OpenXmlCompositeElement
     [SchemaAttr(19, "embed")]
     [Index(0)]
     public StringValue Embed { get; set; }
+	
     /// <summary>
     /// <para> Linked Picture Reference.</para>
     /// <para>Represents the following attribute in the schema: r:link </para>
@@ -361,6 +370,7 @@ public partial class Media : OpenXmlCompositeElement
     [SchemaAttr(19, "link")]
     [Index(1)]
     public StringValue Link { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Media class.
@@ -466,9 +476,10 @@ public partial class Media : OpenXmlCompositeElement
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:vortex.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "vortex")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class VortexTransition : SideDirectionTransitionType
 {
@@ -490,9 +501,10 @@ public partial class VortexTransition : SideDirectionTransitionType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:pan.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "pan")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PanTransition : SideDirectionTransitionType
 {
@@ -512,8 +524,8 @@ public partial class PanTransition : SideDirectionTransitionType
 /// <summary>
 /// Defines the SideDirectionTransitionType class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
 {
         
@@ -524,6 +536,7 @@ public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
     [SchemaAttr(0, "dir")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get; set; }
+	
 
     
     
@@ -541,9 +554,10 @@ public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:switch.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "switch")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SwitchTransition : LeftRightDirectionTransitionType
 {
@@ -565,9 +579,10 @@ public partial class SwitchTransition : LeftRightDirectionTransitionType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:flip.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "flip")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class FlipTransition : LeftRightDirectionTransitionType
 {
@@ -589,9 +604,10 @@ public partial class FlipTransition : LeftRightDirectionTransitionType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:ferris.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "ferris")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class FerrisTransition : LeftRightDirectionTransitionType
 {
@@ -613,9 +629,10 @@ public partial class FerrisTransition : LeftRightDirectionTransitionType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:gallery.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "gallery")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class GalleryTransition : LeftRightDirectionTransitionType
 {
@@ -637,9 +654,10 @@ public partial class GalleryTransition : LeftRightDirectionTransitionType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:conveyor.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "conveyor")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ConveyorTransition : LeftRightDirectionTransitionType
 {
@@ -659,8 +677,8 @@ public partial class ConveyorTransition : LeftRightDirectionTransitionType
 /// <summary>
 /// Defines the LeftRightDirectionTransitionType class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class LeftRightDirectionTransitionType : OpenXmlLeafElement
 {
         
@@ -671,6 +689,7 @@ public abstract partial class LeftRightDirectionTransitionType : OpenXmlLeafElem
     [SchemaAttr(0, "dir")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction { get; set; }
+	
 
     
     
@@ -689,9 +708,10 @@ public abstract partial class LeftRightDirectionTransitionType : OpenXmlLeafElem
 /// <para> When the object is serialized out as xml, its qualified name is p14:ripple.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "ripple")]
+[Id(ElementTypeIdConst)]
 public partial class RippleTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12838;
@@ -706,6 +726,7 @@ public partial class RippleTransition : OpenXmlLeafElement
     [SchemaAttr(0, "dir")]
     [Index(0)]
     public StringValue Direction { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RippleTransition class.
@@ -726,9 +747,10 @@ public partial class RippleTransition : OpenXmlLeafElement
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:honeycomb.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "honeycomb")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class HoneycombTransition : EmptyType
 {
@@ -750,9 +772,10 @@ public partial class HoneycombTransition : EmptyType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:flash.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "flash")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class FlashTransition : EmptyType
 {
@@ -772,8 +795,8 @@ public partial class FlashTransition : EmptyType
 /// <summary>
 /// Defines the EmptyType class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class EmptyType : OpenXmlLeafElement
 {
         
@@ -795,9 +818,10 @@ public abstract partial class EmptyType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:prism.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "prism")]
+[Id(ElementTypeIdConst)]
 public partial class PrismTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12840;
@@ -812,6 +836,7 @@ public partial class PrismTransition : OpenXmlLeafElement
     [SchemaAttr(0, "dir")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get; set; }
+	
     /// <summary>
     /// <para> isContent.</para>
     /// <para>Represents the following attribute in the schema: isContent </para>
@@ -819,6 +844,7 @@ public partial class PrismTransition : OpenXmlLeafElement
     [SchemaAttr(0, "isContent")]
     [Index(1)]
     public BooleanValue IsContent { get; set; }
+	
     /// <summary>
     /// <para> isInverted.</para>
     /// <para>Represents the following attribute in the schema: isInverted </para>
@@ -826,6 +852,7 @@ public partial class PrismTransition : OpenXmlLeafElement
     [SchemaAttr(0, "isInverted")]
     [Index(2)]
     public BooleanValue IsInverted { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the PrismTransition class.
@@ -846,9 +873,10 @@ public partial class PrismTransition : OpenXmlLeafElement
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:doors.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "doors")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DoorsTransition : OrientationTransitionType
 {
@@ -870,9 +898,10 @@ public partial class DoorsTransition : OrientationTransitionType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:window.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "window")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class WindowTransition : OrientationTransitionType
 {
@@ -892,8 +921,8 @@ public partial class WindowTransition : OrientationTransitionType
 /// <summary>
 /// Defines the OrientationTransitionType class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class OrientationTransitionType : OpenXmlLeafElement
 {
         
@@ -904,6 +933,7 @@ public abstract partial class OrientationTransitionType : OpenXmlLeafElement
     [SchemaAttr(0, "dir")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Direction { get; set; }
+	
 
     
     
@@ -922,9 +952,10 @@ public abstract partial class OrientationTransitionType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:glitter.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "glitter")]
+[Id(ElementTypeIdConst)]
 public partial class GlitterTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12847;
@@ -939,6 +970,7 @@ public partial class GlitterTransition : OpenXmlLeafElement
     [SchemaAttr(0, "dir")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get; set; }
+	
     /// <summary>
     /// <para> pattern.</para>
     /// <para>Represents the following attribute in the schema: pattern </para>
@@ -946,6 +978,7 @@ public partial class GlitterTransition : OpenXmlLeafElement
     [SchemaAttr(0, "pattern")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues> Pattern { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the GlitterTransition class.
@@ -967,9 +1000,10 @@ public partial class GlitterTransition : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:warp.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "warp")]
+[Id(ElementTypeIdConst)]
 public partial class WarpTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12848;
@@ -984,6 +1018,7 @@ public partial class WarpTransition : OpenXmlLeafElement
     [SchemaAttr(0, "dir")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WarpTransition class.
@@ -1005,9 +1040,10 @@ public partial class WarpTransition : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:flythrough.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "flythrough")]
+[Id(ElementTypeIdConst)]
 public partial class FlythroughTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12849;
@@ -1022,6 +1058,7 @@ public partial class FlythroughTransition : OpenXmlLeafElement
     [SchemaAttr(0, "dir")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get; set; }
+	
     /// <summary>
     /// <para> hasBounce.</para>
     /// <para>Represents the following attribute in the schema: hasBounce </para>
@@ -1029,6 +1066,7 @@ public partial class FlythroughTransition : OpenXmlLeafElement
     [SchemaAttr(0, "hasBounce")]
     [Index(1)]
     public BooleanValue HasBounce { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the FlythroughTransition class.
@@ -1050,9 +1088,10 @@ public partial class FlythroughTransition : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:shred.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "shred")]
+[Id(ElementTypeIdConst)]
 public partial class ShredTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12851;
@@ -1067,6 +1106,7 @@ public partial class ShredTransition : OpenXmlLeafElement
     [SchemaAttr(0, "pattern")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues> Pattern { get; set; }
+	
     /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
@@ -1074,6 +1114,7 @@ public partial class ShredTransition : OpenXmlLeafElement
     [SchemaAttr(0, "dir")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ShredTransition class.
@@ -1095,9 +1136,10 @@ public partial class ShredTransition : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:reveal.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "reveal")]
+[Id(ElementTypeIdConst)]
 public partial class RevealTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12852;
@@ -1112,6 +1154,7 @@ public partial class RevealTransition : OpenXmlLeafElement
     [SchemaAttr(0, "thruBlk")]
     [Index(0)]
     public BooleanValue ThroughBlack { get; set; }
+	
     /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
@@ -1119,6 +1162,7 @@ public partial class RevealTransition : OpenXmlLeafElement
     [SchemaAttr(0, "dir")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevealTransition class.
@@ -1140,9 +1184,10 @@ public partial class RevealTransition : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:wheelReverse.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "wheelReverse")]
+[Id(ElementTypeIdConst)]
 public partial class WheelReverseTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12853;
@@ -1157,6 +1202,7 @@ public partial class WheelReverseTransition : OpenXmlLeafElement
     [SchemaAttr(0, "spokes")]
     [Index(0)]
     public UInt32Value Spokes { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WheelReverseTransition class.
@@ -1178,9 +1224,10 @@ public partial class WheelReverseTransition : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:bmkTgt.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "bmkTgt")]
+[Id(ElementTypeIdConst)]
 public partial class BookmarkTarget : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12854;
@@ -1195,6 +1242,7 @@ public partial class BookmarkTarget : OpenXmlLeafElement
     [SchemaAttr(0, "spid")]
     [Index(0)]
     public UInt32Value ShapeId { get; set; }
+	
     /// <summary>
     /// <para> bmkName.</para>
     /// <para>Represents the following attribute in the schema: bmkName </para>
@@ -1202,6 +1250,7 @@ public partial class BookmarkTarget : OpenXmlLeafElement
     [SchemaAttr(0, "bmkName")]
     [Index(1)]
     public StringValue BookmarkName { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the BookmarkTarget class.
@@ -1230,9 +1279,10 @@ public partial class BookmarkTarget : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(SectionOld), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "sectionPr")]
+[Id(ElementTypeIdConst)]
 public partial class SectionProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12855;
@@ -1294,9 +1344,10 @@ public partial class SectionProperties : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(Section), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "sectionLst")]
+[Id(ElementTypeIdConst)]
 public partial class SectionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12856;
@@ -1351,9 +1402,10 @@ public partial class SectionList : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:browseMode.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "browseMode")]
+[Id(ElementTypeIdConst)]
 public partial class BrowseMode : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12857;
@@ -1368,6 +1420,7 @@ public partial class BrowseMode : OpenXmlLeafElement
     [SchemaAttr(0, "showStatus")]
     [Index(0)]
     public BooleanValue ShowStatus { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the BrowseMode class.
@@ -1406,9 +1459,10 @@ public partial class BrowseMode : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "laserClr")]
+[Id(ElementTypeIdConst)]
 public partial class LaserColor : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12858;
@@ -1550,9 +1604,10 @@ public partial class LaserColor : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:defaultImageDpi.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "defaultImageDpi")]
+[Id(ElementTypeIdConst)]
 public partial class DefaultImageDpi : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12859;
@@ -1567,6 +1622,7 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public UInt32Value Val { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the DefaultImageDpi class.
@@ -1588,9 +1644,10 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:discardImageEditData.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "discardImageEditData")]
+[Id(ElementTypeIdConst)]
 public partial class DiscardImageEditData : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12860;
@@ -1605,6 +1662,7 @@ public partial class DiscardImageEditData : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the DiscardImageEditData class.
@@ -1626,9 +1684,10 @@ public partial class DiscardImageEditData : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:showMediaCtrls.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "showMediaCtrls")]
+[Id(ElementTypeIdConst)]
 public partial class ShowMediaControls : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12861;
@@ -1643,6 +1702,7 @@ public partial class ShowMediaControls : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ShowMediaControls class.
@@ -1671,9 +1731,10 @@ public partial class ShowMediaControls : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(TracePointList), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "laserTraceLst")]
+[Id(ElementTypeIdConst)]
 public partial class LaserTraceList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12862;
@@ -1727,9 +1788,10 @@ public partial class LaserTraceList : OpenXmlCompositeElement
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:creationId.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "creationId")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CreationId : RandomIdType
 {
@@ -1751,9 +1813,10 @@ public partial class CreationId : RandomIdType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:modId.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "modId")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ModificationId : RandomIdType
 {
@@ -1773,8 +1836,8 @@ public partial class ModificationId : RandomIdType
 /// <summary>
 /// Defines the RandomIdType class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class RandomIdType : OpenXmlLeafElement
 {
         
@@ -1785,6 +1848,7 @@ public abstract partial class RandomIdType : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public UInt32Value Val { get; set; }
+	
 
     
     
@@ -1822,9 +1886,10 @@ public abstract partial class RandomIdType : OpenXmlLeafElement
     [ChildElementInfo(typeof(ResumeEventRecord), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(SeekEventRecord), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(NullEventRecord), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "showEvtLst")]
+[Id(ElementTypeIdConst)]
 public partial class ShowEventRecordList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12865;
@@ -1991,9 +2056,10 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "cNvPr")]
+[Id(ElementTypeIdConst)]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12866;
@@ -2008,6 +2074,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public UInt32Value Id { get; set; }
+	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -2015,6 +2082,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(1)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
@@ -2022,6 +2090,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "descr")]
     [Index(2)]
     public StringValue Description { get; set; }
+	
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
@@ -2029,6 +2098,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "hidden")]
     [Index(3)]
     public BooleanValue Hidden { get; set; }
+	
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -2036,6 +2106,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(4)]
     public StringValue Title { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -2137,9 +2208,10 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "cNvContentPartPr")]
+[Id(ElementTypeIdConst)]
 public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12867;
@@ -2154,6 +2226,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "isComment")]
     [Index(0)]
     public BooleanValue IsComment { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualInkContentPartProperties class.
@@ -2253,9 +2326,10 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "nvPr")]
+[Id(ElementTypeIdConst)]
 public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12868;
@@ -2270,6 +2344,7 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
     [SchemaAttr(0, "isPhoto")]
     [Index(0)]
     public BooleanValue IsPhoto { get; set; }
+	
     /// <summary>
     /// <para> Is User Drawn.</para>
     /// <para>Represents the following attribute in the schema: userDrawn </para>
@@ -2277,6 +2352,7 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
     [SchemaAttr(0, "userDrawn")]
     [Index(1)]
     public BooleanValue UserDrawn { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ApplicationNonVisualDrawingProperties class.
@@ -2341,9 +2417,10 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
 /// <para> When the object is serialized out as xml, its qualified name is p14:bmk.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "bmk")]
+[Id(ElementTypeIdConst)]
 public partial class MediaBookmark : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12869;
@@ -2358,6 +2435,7 @@ public partial class MediaBookmark : OpenXmlLeafElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
@@ -2365,6 +2443,7 @@ public partial class MediaBookmark : OpenXmlLeafElement
     [SchemaAttr(0, "time")]
     [Index(1)]
     public StringValue Time { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the MediaBookmark class.
@@ -2386,9 +2465,10 @@ public partial class MediaBookmark : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:trim.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "trim")]
+[Id(ElementTypeIdConst)]
 public partial class MediaTrim : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12870;
@@ -2403,6 +2483,7 @@ public partial class MediaTrim : OpenXmlLeafElement
     [SchemaAttr(0, "st")]
     [Index(0)]
     public StringValue Start { get; set; }
+	
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: end </para>
@@ -2410,6 +2491,7 @@ public partial class MediaTrim : OpenXmlLeafElement
     [SchemaAttr(0, "end")]
     [Index(1)]
     public StringValue End { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the MediaTrim class.
@@ -2431,9 +2513,10 @@ public partial class MediaTrim : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:fade.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "fade")]
+[Id(ElementTypeIdConst)]
 public partial class MediaFade : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12871;
@@ -2448,6 +2531,7 @@ public partial class MediaFade : OpenXmlLeafElement
     [SchemaAttr(0, "in")]
     [Index(0)]
     public StringValue InDuration { get; set; }
+	
     /// <summary>
     /// <para> out.</para>
     /// <para>Represents the following attribute in the schema: out </para>
@@ -2455,6 +2539,7 @@ public partial class MediaFade : OpenXmlLeafElement
     [SchemaAttr(0, "out")]
     [Index(1)]
     public StringValue OutDuration { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the MediaFade class.
@@ -2483,9 +2568,10 @@ public partial class MediaFade : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(MediaBookmark), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "bmkLst")]
+[Id(ElementTypeIdConst)]
 public partial class MediaBookmarkList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12872;
@@ -2547,9 +2633,10 @@ public partial class MediaBookmarkList : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "extLst")]
+[Id(ElementTypeIdConst)]
 public partial class ExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12873;
@@ -2611,9 +2698,10 @@ public partial class ExtensionList : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "section")]
+[Id(ElementTypeIdConst)]
 public partial class SectionOld : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12874;
@@ -2628,6 +2716,7 @@ public partial class SectionOld : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> slideIdLst.</para>
     /// <para>Represents the following attribute in the schema: slideIdLst </para>
@@ -2635,6 +2724,7 @@ public partial class SectionOld : OpenXmlCompositeElement
     [SchemaAttr(0, "slideIdLst")]
     [Index(1)]
     public ListValue<UInt32Value> SlideIdList { get; set; }
+	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
@@ -2642,6 +2732,7 @@ public partial class SectionOld : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(2)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the SectionOld class.
@@ -2706,9 +2797,10 @@ public partial class SectionOld : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:sldId.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "sldId")]
+[Id(ElementTypeIdConst)]
 public partial class SectionSlideIdListEntry : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12875;
@@ -2723,6 +2815,7 @@ public partial class SectionSlideIdListEntry : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public UInt32Value Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the SectionSlideIdListEntry class.
@@ -2751,9 +2844,10 @@ public partial class SectionSlideIdListEntry : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(SectionSlideIdListEntry), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "sldIdLst")]
+[Id(ElementTypeIdConst)]
 public partial class SectionSlideIdList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12876;
@@ -2817,9 +2911,10 @@ public partial class SectionSlideIdList : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(SectionSlideIdList), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "section")]
+[Id(ElementTypeIdConst)]
 public partial class Section : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12877;
@@ -2834,6 +2929,7 @@ public partial class Section : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
@@ -2841,6 +2937,7 @@ public partial class Section : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(1)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Section class.
@@ -2919,9 +3016,10 @@ public partial class Section : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:tracePt.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "tracePt")]
+[Id(ElementTypeIdConst)]
 public partial class TracePoint : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12878;
@@ -2936,6 +3034,7 @@ public partial class TracePoint : OpenXmlLeafElement
     [SchemaAttr(0, "t")]
     [Index(0)]
     public StringValue Time { get; set; }
+	
     /// <summary>
     /// <para> x.</para>
     /// <para>Represents the following attribute in the schema: x </para>
@@ -2943,6 +3042,7 @@ public partial class TracePoint : OpenXmlLeafElement
     [SchemaAttr(0, "x")]
     [Index(1)]
     public Int64Value XCoordinate { get; set; }
+	
     /// <summary>
     /// <para> y.</para>
     /// <para>Represents the following attribute in the schema: y </para>
@@ -2950,6 +3050,7 @@ public partial class TracePoint : OpenXmlLeafElement
     [SchemaAttr(0, "y")]
     [Index(2)]
     public Int64Value YCoordinate { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the TracePoint class.
@@ -2978,9 +3079,10 @@ public partial class TracePoint : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(TracePoint), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "tracePtLst")]
+[Id(ElementTypeIdConst)]
 public partial class TracePointList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12879;
@@ -3035,9 +3137,10 @@ public partial class TracePointList : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:triggerEvt.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "triggerEvt")]
+[Id(ElementTypeIdConst)]
 public partial class TriggerEventRecord : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12880;
@@ -3052,6 +3155,7 @@ public partial class TriggerEventRecord : OpenXmlLeafElement
     [SchemaAttr(0, "type")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues> Type { get; set; }
+	
     /// <summary>
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
@@ -3059,6 +3163,7 @@ public partial class TriggerEventRecord : OpenXmlLeafElement
     [SchemaAttr(0, "time")]
     [Index(1)]
     public StringValue Time { get; set; }
+	
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
@@ -3066,6 +3171,7 @@ public partial class TriggerEventRecord : OpenXmlLeafElement
     [SchemaAttr(0, "objId")]
     [Index(2)]
     public UInt32Value ObjectId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the TriggerEventRecord class.
@@ -3086,9 +3192,10 @@ public partial class TriggerEventRecord : OpenXmlLeafElement
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:playEvt.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "playEvt")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PlayEventRecord : MediaPlaybackEventRecordType
 {
@@ -3110,9 +3217,10 @@ public partial class PlayEventRecord : MediaPlaybackEventRecordType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:stopEvt.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "stopEvt")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class StopEventRecord : MediaPlaybackEventRecordType
 {
@@ -3134,9 +3242,10 @@ public partial class StopEventRecord : MediaPlaybackEventRecordType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:pauseEvt.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "pauseEvt")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PauseEventRecord : MediaPlaybackEventRecordType
 {
@@ -3158,9 +3267,10 @@ public partial class PauseEventRecord : MediaPlaybackEventRecordType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:resumeEvt.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(49, "resumeEvt")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ResumeEventRecord : MediaPlaybackEventRecordType
 {
@@ -3180,8 +3290,8 @@ public partial class ResumeEventRecord : MediaPlaybackEventRecordType
 /// <summary>
 /// Defines the MediaPlaybackEventRecordType class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class MediaPlaybackEventRecordType : OpenXmlLeafElement
 {
         
@@ -3192,6 +3302,7 @@ public abstract partial class MediaPlaybackEventRecordType : OpenXmlLeafElement
     [SchemaAttr(0, "time")]
     [Index(0)]
     public StringValue Time { get; set; }
+	
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
@@ -3199,6 +3310,7 @@ public abstract partial class MediaPlaybackEventRecordType : OpenXmlLeafElement
     [SchemaAttr(0, "objId")]
     [Index(1)]
     public UInt32Value ObjectId { get; set; }
+	
 
     
     
@@ -3217,9 +3329,10 @@ public abstract partial class MediaPlaybackEventRecordType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:seekEvt.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "seekEvt")]
+[Id(ElementTypeIdConst)]
 public partial class SeekEventRecord : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12885;
@@ -3234,6 +3347,7 @@ public partial class SeekEventRecord : OpenXmlLeafElement
     [SchemaAttr(0, "time")]
     [Index(0)]
     public StringValue Time { get; set; }
+	
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
@@ -3241,6 +3355,7 @@ public partial class SeekEventRecord : OpenXmlLeafElement
     [SchemaAttr(0, "objId")]
     [Index(1)]
     public UInt32Value ObjectId { get; set; }
+	
     /// <summary>
     /// <para> seek.</para>
     /// <para>Represents the following attribute in the schema: seek </para>
@@ -3248,6 +3363,7 @@ public partial class SeekEventRecord : OpenXmlLeafElement
     [SchemaAttr(0, "seek")]
     [Index(2)]
     public StringValue Seek { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the SeekEventRecord class.
@@ -3269,9 +3385,10 @@ public partial class SeekEventRecord : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:nullEvt.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "nullEvt")]
+[Id(ElementTypeIdConst)]
 public partial class NullEventRecord : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12886;
@@ -3286,6 +3403,7 @@ public partial class NullEventRecord : OpenXmlLeafElement
     [SchemaAttr(0, "time")]
     [Index(0)]
     public StringValue Time { get; set; }
+	
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
@@ -3293,6 +3411,7 @@ public partial class NullEventRecord : OpenXmlLeafElement
     [SchemaAttr(0, "objId")]
     [Index(1)]
     public UInt32Value ObjectId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the NullEventRecord class.
@@ -3311,7 +3430,6 @@ public partial class NullEventRecord : OpenXmlLeafElement
 /// <summary>
 /// Defines the TransitionPatternValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum TransitionPatternValues
 {  
 	///<summary>
@@ -3331,7 +3449,6 @@ Hexagon,
 /// <summary>
 /// Defines the TransitionCenterDirectionTypeValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum TransitionCenterDirectionTypeValues
 {  
 	///<summary>
@@ -3345,7 +3462,6 @@ Center,
 /// <summary>
 /// Defines the TransitionShredPatternValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum TransitionShredPatternValues
 {  
 	///<summary>
@@ -3365,7 +3481,6 @@ Rectangle,
 /// <summary>
 /// Defines the TransitionLeftRightDirectionTypeValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum TransitionLeftRightDirectionTypeValues
 {  
 	///<summary>

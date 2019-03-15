@@ -23,9 +23,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
 /// </remarks>
 
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(77, "timeslicer")]
+[Id(ElementTypeIdConst)]
 public partial class TimeSlicer : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13442;
@@ -40,6 +41,7 @@ public partial class TimeSlicer : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the TimeSlicer class.
@@ -111,9 +113,10 @@ public partial class TimeSlicer : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(77, "extLst")]
+[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13443;

@@ -15,9 +15,10 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctPosHOffset.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(51, "pctPosHOffset")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
 {
@@ -52,9 +53,10 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctPosVOffset.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(51, "pctPosVOffset")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
 {
@@ -97,9 +99,10 @@ public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
 /// </remarks>
 
     [ChildElementInfo(typeof(PercentageWidth), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(51, "sizeRelH")]
+[Id(ElementTypeIdConst)]
 public partial class RelativeWidth : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12891;
@@ -114,6 +117,7 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     [SchemaAttr(0, "relativeFrom")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RelativeWidth class.
@@ -185,9 +189,10 @@ public partial class RelativeWidth : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(PercentageHeight), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(51, "sizeRelV")]
+[Id(ElementTypeIdConst)]
 public partial class RelativeHeight : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12892;
@@ -202,6 +207,7 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     [SchemaAttr(0, "relativeFrom")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RelativeHeight class.
@@ -265,9 +271,10 @@ public partial class RelativeHeight : OpenXmlCompositeElement
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctWidth.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(51, "pctWidth")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentageWidth : OpenXmlLeafTextElement
 {
@@ -302,9 +309,10 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctHeight.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 [SchemaAttr(51, "pctHeight")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentageHeight : OpenXmlLeafTextElement
 {
@@ -337,7 +345,6 @@ public partial class PercentageHeight : OpenXmlLeafTextElement
 /// <summary>
 /// Defines the SizeRelativeHorizontallyValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum SizeRelativeHorizontallyValues
 {  
 	///<summary>
@@ -381,7 +388,6 @@ OutsideMargin,
 /// <summary>
 /// Defines the SizeRelativeVerticallyValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum SizeRelativeVerticallyValues
 {  
 	///<summary>

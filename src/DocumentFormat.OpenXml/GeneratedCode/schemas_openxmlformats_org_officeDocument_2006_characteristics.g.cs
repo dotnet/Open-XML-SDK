@@ -22,9 +22,10 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
 /// </remarks>
 
     [ChildElementInfo(typeof(Characteristic))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(8, "additionalCharacteristics")]
+[Id(ElementTypeIdConst)]
 public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 10822;
@@ -79,9 +80,10 @@ public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
 /// <para> When the object is serialized out as xml, its qualified name is ac:characteristic.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(8, "characteristic")]
+[Id(ElementTypeIdConst)]
 public partial class Characteristic : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10823;
@@ -96,6 +98,7 @@ public partial class Characteristic : OpenXmlLeafElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> Relationship of Value to Name.</para>
     /// <para>Represents the following attribute in the schema: relation </para>
@@ -103,6 +106,7 @@ public partial class Characteristic : OpenXmlLeafElement
     [SchemaAttr(0, "relation")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation { get; set; }
+	
     /// <summary>
     /// <para> Characteristic Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
@@ -110,6 +114,7 @@ public partial class Characteristic : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(2)]
     public StringValue Val { get; set; }
+	
     /// <summary>
     /// <para> Characteristic Grammar.</para>
     /// <para>Represents the following attribute in the schema: vocabulary </para>
@@ -117,6 +122,7 @@ public partial class Characteristic : OpenXmlLeafElement
     [SchemaAttr(0, "vocabulary")]
     [Index(3)]
     public StringValue Vocabulary { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Characteristic class.
@@ -135,7 +141,6 @@ public partial class Characteristic : OpenXmlLeafElement
 /// <summary>
 /// Characteristic Relationship Types 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum RelationValues
 {  
 	///<summary>
