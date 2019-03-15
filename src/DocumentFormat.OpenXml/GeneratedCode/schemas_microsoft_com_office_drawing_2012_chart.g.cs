@@ -28,9 +28,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatId))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "pivotSource")]
+[Id(ElementTypeIdConst)]
 public partial class PivotSource : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13209;
@@ -130,9 +131,10 @@ public partial class PivotSource : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is c15:numFmt.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "numFmt")]
+[Id(ElementTypeIdConst)]
 public partial class NumberingFormat : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13210;
@@ -147,6 +149,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
     [SchemaAttr(0, "formatCode")]
     [Index(0)]
     public StringValue FormatCode { get; set; }
+	
     /// <summary>
     /// <para> Linked to Source.</para>
     /// <para>Represents the following attribute in the schema: sourceLinked </para>
@@ -154,6 +157,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
     [SchemaAttr(0, "sourceLinked")]
     [Index(1)]
     public BooleanValue SourceLinked { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the NumberingFormat class.
@@ -210,9 +214,10 @@ public partial class NumberingFormat : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "spPr")]
+[Id(ElementTypeIdConst)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13211;
@@ -227,6 +232,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "bwMode")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class.
@@ -300,9 +306,10 @@ public partial class ShapeProperties : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ManualLayout))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "layout")]
+[Id(ElementTypeIdConst)]
 public partial class Layout : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13212;
@@ -395,9 +402,10 @@ public partial class Layout : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(SequenceOfReferences), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "fullRef")]
+[Id(ElementTypeIdConst)]
 public partial class FullReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13213;
@@ -476,9 +484,10 @@ public partial class FullReference : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(SequenceOfReferences), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "levelRef")]
+[Id(ElementTypeIdConst)]
 public partial class LevelReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13214;
@@ -557,9 +566,10 @@ public partial class LevelReference : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(SequenceOfReferences), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "formulaRef")]
+[Id(ElementTypeIdConst)]
 public partial class FormulaReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13215;
@@ -638,9 +648,10 @@ public partial class FormulaReference : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(ChartText), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredSeriesTitle")]
+[Id(ElementTypeIdConst)]
 public partial class FilteredSeriesTitle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13216;
@@ -719,9 +730,10 @@ public partial class FilteredSeriesTitle : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(AxisDataSourceType), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredCategoryTitle")]
+[Id(ElementTypeIdConst)]
 public partial class FilteredCategoryTitle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13217;
@@ -800,9 +812,10 @@ public partial class FilteredCategoryTitle : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(AreaChartSeries), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredAreaSeries")]
+[Id(ElementTypeIdConst)]
 public partial class FilteredAreaSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13218;
@@ -881,9 +894,10 @@ public partial class FilteredAreaSeries : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(BarChartSeries), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredBarSeries")]
+[Id(ElementTypeIdConst)]
 public partial class FilteredBarSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13219;
@@ -962,9 +976,10 @@ public partial class FilteredBarSeries : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(BubbleChartSeries), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredBubbleSeries")]
+[Id(ElementTypeIdConst)]
 public partial class FilteredBubbleSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13220;
@@ -1043,9 +1058,10 @@ public partial class FilteredBubbleSeries : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(LineChartSeries), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredLineSeries")]
+[Id(ElementTypeIdConst)]
 public partial class FilteredLineSeriesExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13221;
@@ -1124,9 +1140,10 @@ public partial class FilteredLineSeriesExtension : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(PieChartSeries), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredPieSeries")]
+[Id(ElementTypeIdConst)]
 public partial class FilteredPieSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13222;
@@ -1205,9 +1222,10 @@ public partial class FilteredPieSeries : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(RadarChartSeries), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredRadarSeries")]
+[Id(ElementTypeIdConst)]
 public partial class FilteredRadarSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13223;
@@ -1286,9 +1304,10 @@ public partial class FilteredRadarSeries : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(ScatterChartSeries), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredScatterSeries")]
+[Id(ElementTypeIdConst)]
 public partial class FilteredScatterSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13224;
@@ -1367,9 +1386,10 @@ public partial class FilteredScatterSeries : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(SurfaceChartSeries), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredSurfaceSeries")]
+[Id(ElementTypeIdConst)]
 public partial class FilteredSurfaceSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13225;
@@ -1450,9 +1470,10 @@ public partial class FilteredSurfaceSeries : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(Formula), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DataLabelsRangeChache), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "datalabelsRange")]
+[Id(ElementTypeIdConst)]
 public partial class DataLabelsRange : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13226;
@@ -1545,9 +1566,10 @@ public partial class DataLabelsRange : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(CategoryFilterException), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "categoryFilterExceptions")]
+[Id(ElementTypeIdConst)]
 public partial class CategoryFilterExceptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13227;
@@ -1609,9 +1631,10 @@ public partial class CategoryFilterExceptions : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DataLabelFieldTableEntry), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "dlblFieldTable")]
+[Id(ElementTypeIdConst)]
 public partial class DataLabelFieldTable : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13228;
@@ -1665,9 +1688,9 @@ public partial class DataLabelFieldTable : OpenXmlCompositeElement
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:xForSave.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(64, "xForSave")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ExceptionForSave : BooleanType
 {
@@ -1689,9 +1712,9 @@ public partial class ExceptionForSave : BooleanType
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:showDataLabelsRange.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(64, "showDataLabelsRange")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ShowDataLabelsRange : BooleanType
 {
@@ -1713,9 +1736,9 @@ public partial class ShowDataLabelsRange : BooleanType
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:showLeaderLines.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(64, "showLeaderLines")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ShowLeaderLines : BooleanType
 {
@@ -1737,9 +1760,9 @@ public partial class ShowLeaderLines : BooleanType
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:autoCat.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(64, "autoCat")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class AutoGeneneratedCategories : BooleanType
 {
@@ -1761,9 +1784,9 @@ public partial class AutoGeneneratedCategories : BooleanType
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:invertIfNegative.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(64, "invertIfNegative")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class InvertIfNegativeBoolean : BooleanType
 {
@@ -1785,9 +1808,9 @@ public partial class InvertIfNegativeBoolean : BooleanType
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:bubble3D.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(64, "bubble3D")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Bubble3D : BooleanType
 {
@@ -1807,8 +1830,8 @@ public partial class Bubble3D : BooleanType
 /// <summary>
 /// Defines the BooleanType class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class BooleanType : OpenXmlLeafElement
 {
         
@@ -1819,6 +1842,7 @@ public abstract partial class BooleanType : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
+	
 
     
     
@@ -1848,9 +1872,10 @@ public abstract partial class BooleanType : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.RichText))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "tx")]
+[Id(ElementTypeIdConst)]
 public partial class ChartText : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13231;
@@ -1957,9 +1982,10 @@ public partial class ChartText : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "leaderLines")]
+[Id(ElementTypeIdConst)]
 public partial class LeaderLines : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13233;
@@ -2030,9 +2056,9 @@ public partial class LeaderLines : OpenXmlCompositeElement
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:sqref.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(64, "sqref")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SequenceOfReferences : OpenXmlLeafTextElement
 {
@@ -2067,9 +2093,9 @@ public partial class SequenceOfReferences : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:f.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(64, "f")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Formula : OpenXmlLeafTextElement
 {
@@ -2104,9 +2130,9 @@ public partial class Formula : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:txfldGUID.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(64, "txfldGUID")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TextFieldGuid : OpenXmlLeafTextElement
 {
@@ -2157,9 +2183,10 @@ public partial class TextFieldGuid : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "cat")]
+[Id(ElementTypeIdConst)]
 public partial class AxisDataSourceType : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13236;
@@ -2320,9 +2347,10 @@ public partial class AxisDataSourceType : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Shape))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
+[Id(ElementTypeIdConst)]
 public partial class BarChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13237;
@@ -2497,9 +2525,10 @@ public partial class BarChartSeries : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Smooth))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
+[Id(ElementTypeIdConst)]
 public partial class LineChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13238;
@@ -2672,9 +2701,10 @@ public partial class LineChartSeries : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.YValues))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Smooth))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
+[Id(ElementTypeIdConst)]
 public partial class ScatterChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13239;
@@ -2831,9 +2861,10 @@ public partial class ScatterChartSeries : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
+[Id(ElementTypeIdConst)]
 public partial class AreaChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13240;
@@ -2988,9 +3019,10 @@ public partial class AreaChartSeries : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
+[Id(ElementTypeIdConst)]
 public partial class PieChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13241;
@@ -3167,9 +3199,10 @@ public partial class PieChartSeries : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSize))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
+[Id(ElementTypeIdConst)]
 public partial class BubbleChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13242;
@@ -3338,9 +3371,10 @@ public partial class BubbleChartSeries : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
+[Id(ElementTypeIdConst)]
 public partial class RadarChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13243;
@@ -3505,9 +3539,10 @@ public partial class RadarChartSeries : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
+[Id(ElementTypeIdConst)]
 public partial class SurfaceChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13244;
@@ -3698,9 +3733,9 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(64, "dlblRangeCache")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataLabelsRangeChache : StringDataType
 {
@@ -3756,9 +3791,9 @@ public partial class DataLabelsRangeChache : StringDataType
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(64, "dlblFieldTableCache")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataLabelFieldTableCache : StringDataType
 {
@@ -3812,11 +3847,11 @@ public partial class DataLabelFieldTableCache : StringDataType
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 public abstract partial class StringDataType : OpenXmlCompositeElement
 {
         
@@ -3881,9 +3916,10 @@ public abstract partial class StringDataType : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is c15:explosion.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "explosion")]
+[Id(ElementTypeIdConst)]
 public partial class Explosion : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13247;
@@ -3898,6 +3934,7 @@ public partial class Explosion : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public UInt32Value Val { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Explosion class.
@@ -3932,9 +3969,10 @@ public partial class Explosion : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Size))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "marker")]
+[Id(ElementTypeIdConst)]
 public partial class Marker : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13250;
@@ -4085,9 +4123,10 @@ public partial class Marker : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Separator))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "dLbl")]
+[Id(ElementTypeIdConst)]
 public partial class DataLabel : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13251;
@@ -4178,9 +4217,10 @@ public partial class DataLabel : OpenXmlCompositeElement
     [ChildElementInfo(typeof(Bubble3D), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(Marker), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DataLabel), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "categoryFilterException")]
+[Id(ElementTypeIdConst)]
 public partial class CategoryFilterException : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13252;
@@ -4347,9 +4387,10 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
     [ChildElementInfo(typeof(TextFieldGuid), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(Formula), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DataLabelFieldTableCache), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "dlblFTEntry")]
+[Id(ElementTypeIdConst)]
 public partial class DataLabelFieldTableEntry : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13255;

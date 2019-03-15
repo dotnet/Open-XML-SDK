@@ -33,9 +33,10 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     [ChildElementInfo(typeof(DropZoneData), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DropZoneSeries), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DropZonesVisible), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(46, "pivotOptions")]
+[Id(ElementTypeIdConst)]
 public partial class PivotOptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12762;
@@ -172,9 +173,10 @@ public partial class PivotOptions : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(InSketchMode), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ShowSketchButton), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(46, "sketchOptions")]
+[Id(ElementTypeIdConst)]
 public partial class SketchOptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12763;
@@ -267,9 +269,10 @@ public partial class SketchOptions : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(46, "invertSolidFillFmt")]
+[Id(ElementTypeIdConst)]
 public partial class InvertSolidFillFormat : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12764;
@@ -341,9 +344,10 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is c14:style.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(46, "style")]
+[Id(ElementTypeIdConst)]
 public partial class Style : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12765;
@@ -358,6 +362,7 @@ public partial class Style : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public ByteValue Val { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Style class.
@@ -414,9 +419,10 @@ public partial class Style : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(46, "spPr")]
+[Id(ElementTypeIdConst)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12766;
@@ -431,6 +437,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "bwMode")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class.
@@ -494,9 +501,9 @@ public partial class ShapeProperties : OpenXmlCompositeElement
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneFilter.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(46, "dropZoneFilter")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZoneFilter : BooleanFalseType
 {
@@ -518,9 +525,9 @@ public partial class DropZoneFilter : BooleanFalseType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneCategories.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(46, "dropZoneCategories")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZoneCategories : BooleanFalseType
 {
@@ -542,9 +549,9 @@ public partial class DropZoneCategories : BooleanFalseType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneData.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(46, "dropZoneData")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZoneData : BooleanFalseType
 {
@@ -566,9 +573,9 @@ public partial class DropZoneData : BooleanFalseType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneSeries.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(46, "dropZoneSeries")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZoneSeries : BooleanFalseType
 {
@@ -590,9 +597,9 @@ public partial class DropZoneSeries : BooleanFalseType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZonesVisible.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(46, "dropZonesVisible")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZonesVisible : BooleanFalseType
 {
@@ -614,9 +621,9 @@ public partial class DropZonesVisible : BooleanFalseType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:inSketchMode.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(46, "inSketchMode")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class InSketchMode : BooleanFalseType
 {
@@ -636,8 +643,8 @@ public partial class InSketchMode : BooleanFalseType
 /// <summary>
 /// Defines the BooleanFalseType class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class BooleanFalseType : OpenXmlLeafElement
 {
         
@@ -648,6 +655,7 @@ public abstract partial class BooleanFalseType : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
+	
 
     
     
@@ -666,9 +674,10 @@ public abstract partial class BooleanFalseType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is c14:showSketchBtn.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(46, "showSketchBtn")]
+[Id(ElementTypeIdConst)]
 public partial class ShowSketchButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12773;
@@ -683,6 +692,7 @@ public partial class ShowSketchButton : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ShowSketchButton class.

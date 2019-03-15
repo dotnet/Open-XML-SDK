@@ -16,9 +16,10 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
 /// <para> When the object is serialized out as xml, its qualified name is comp:legacyDrawing.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(13, "legacyDrawing")]
+[Id(ElementTypeIdConst)]
 public partial class LegacyDrawing : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10681;
@@ -33,6 +34,7 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     [SchemaAttr(0, "spid")]
     [Index(0)]
     public StringValue ShapeId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the LegacyDrawing class.

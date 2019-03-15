@@ -23,9 +23,10 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
 /// </remarks>
 
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(73, "themeFamily")]
+[Id(ElementTypeIdConst)]
 public partial class ThemeFamily : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13430;
@@ -40,6 +41,7 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
@@ -47,6 +49,7 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(1)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> vid.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
@@ -54,6 +57,7 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     [SchemaAttr(0, "vid")]
     [Index(2)]
     public StringValue Vid { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ThemeFamily class.
@@ -125,9 +129,10 @@ public partial class ThemeFamily : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(73, "extLst")]
+[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13431;
@@ -189,9 +194,10 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(73, "themeVariant")]
+[Id(ElementTypeIdConst)]
 public partial class ThemeVariant : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13432;
@@ -206,6 +212,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> vid.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
@@ -213,6 +220,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     [SchemaAttr(0, "vid")]
     [Index(1)]
     public StringValue Vid { get; set; }
+	
     /// <summary>
     /// <para> cx.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
@@ -220,6 +228,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     [SchemaAttr(0, "cx")]
     [Index(2)]
     public Int64Value X { get; set; }
+	
     /// <summary>
     /// <para> cy.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
@@ -227,6 +236,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     [SchemaAttr(0, "cy")]
     [Index(3)]
     public Int64Value Y { get; set; }
+	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
@@ -236,6 +246,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     [SchemaAttr(19, "id")]
     [Index(4)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ThemeVariant class.
@@ -307,9 +318,10 @@ public partial class ThemeVariant : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(ThemeVariant), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(73, "themeVariantLst")]
+[Id(ElementTypeIdConst)]
 public partial class ThemeVariantList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13433;

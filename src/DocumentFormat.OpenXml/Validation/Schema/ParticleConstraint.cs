@@ -82,6 +82,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             set { Debug.Assert(value == SdbData.InvalidId); }
         }
 
+        internal virtual Type ElementType => null;
+
         /// <summary>
         /// Gets or sets the children particles.
         /// </summary>

@@ -41,9 +41,10 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrame))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupShape))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(15, "lockedCanvas")]
+[Id(ElementTypeIdConst)]
 public partial class LockedCanvas : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10759;

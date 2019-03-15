@@ -40,9 +40,10 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     [ChildElementInfo(typeof(TextBoxInfo2), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(LinkedTextBox), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "wsp")]
+[Id(ElementTypeIdConst)]
 public partial class WordprocessingShape : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13196;
@@ -57,6 +58,7 @@ public partial class WordprocessingShape : OpenXmlCompositeElement
     [SchemaAttr(0, "normalEastAsianFlow")]
     [Index(0)]
     public BooleanValue NormalEastAsianFlow { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the WordprocessingShape class.
@@ -128,9 +130,10 @@ public partial class WordprocessingShape : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "extLst")]
+[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13197;
@@ -196,9 +199,10 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "cNvPr")]
+[Id(ElementTypeIdConst)]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13198;
@@ -213,6 +217,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public UInt32Value Id { get; set; }
+	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -220,6 +225,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(1)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
@@ -227,6 +233,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "descr")]
     [Index(2)]
     public StringValue Description { get; set; }
+	
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
@@ -234,6 +241,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "hidden")]
     [Index(3)]
     public BooleanValue Hidden { get; set; }
+	
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -241,6 +249,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(4)]
     public StringValue Title { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -342,9 +351,10 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "cNvSpPr")]
+[Id(ElementTypeIdConst)]
 public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13199;
@@ -359,6 +369,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "txBox")]
     [Index(0)]
     public BooleanValue TextBox { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingShapeProperties class.
@@ -450,9 +461,10 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.StartConnection))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EndConnection))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "cNvCnPr")]
+[Id(ElementTypeIdConst)]
 public partial class NonVisualConnectorProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13200;
@@ -601,9 +613,10 @@ public partial class NonVisualConnectorProperties : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "spPr")]
+[Id(ElementTypeIdConst)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13201;
@@ -618,6 +631,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "bwMode")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class.
@@ -695,9 +709,10 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FillReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectReference))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FontReference))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "style")]
+[Id(ElementTypeIdConst)]
 public partial class ShapeStyle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13202;
@@ -820,9 +835,10 @@ public partial class ShapeStyle : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent))]
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "txbx")]
+[Id(ElementTypeIdConst)]
 public partial class TextBoxInfo2 : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13203;
@@ -837,6 +853,7 @@ public partial class TextBoxInfo2 : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public UInt16Value Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the TextBoxInfo2 class.
@@ -922,9 +939,10 @@ public partial class TextBoxInfo2 : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "linkedTxbx")]
+[Id(ElementTypeIdConst)]
 public partial class LinkedTextBox : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13204;
@@ -939,6 +957,7 @@ public partial class LinkedTextBox : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public UInt16Value Id { get; set; }
+	
     /// <summary>
     /// <para> seq.</para>
     /// <para>Represents the following attribute in the schema: seq </para>
@@ -946,6 +965,7 @@ public partial class LinkedTextBox : OpenXmlCompositeElement
     [SchemaAttr(0, "seq")]
     [Index(1)]
     public UInt16Value Sequence { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the LinkedTextBox class.
@@ -1031,9 +1051,10 @@ public partial class LinkedTextBox : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.FlatText))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "bodyPr")]
+[Id(ElementTypeIdConst)]
 public partial class TextBodyProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13205;
@@ -1048,6 +1069,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "rot")]
     [Index(0)]
     public Int32Value Rotation { get; set; }
+	
     /// <summary>
     /// <para> Paragraph Spacing.</para>
     /// <para>Represents the following attribute in the schema: spcFirstLastPara </para>
@@ -1055,6 +1077,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "spcFirstLastPara")]
     [Index(1)]
     public BooleanValue UseParagraphSpacing { get; set; }
+	
     /// <summary>
     /// <para> Text Vertical Overflow.</para>
     /// <para>Represents the following attribute in the schema: vertOverflow </para>
@@ -1062,6 +1085,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "vertOverflow")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues> VerticalOverflow { get; set; }
+	
     /// <summary>
     /// <para> Text Horizontal Overflow.</para>
     /// <para>Represents the following attribute in the schema: horzOverflow </para>
@@ -1069,6 +1093,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "horzOverflow")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow { get; set; }
+	
     /// <summary>
     /// <para> Vertical Text.</para>
     /// <para>Represents the following attribute in the schema: vert </para>
@@ -1076,6 +1101,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "vert")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical { get; set; }
+	
     /// <summary>
     /// <para> Text Wrapping Type.</para>
     /// <para>Represents the following attribute in the schema: wrap </para>
@@ -1083,6 +1109,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "wrap")]
     [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues> Wrap { get; set; }
+	
     /// <summary>
     /// <para> Left Inset.</para>
     /// <para>Represents the following attribute in the schema: lIns </para>
@@ -1090,6 +1117,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "lIns")]
     [Index(6)]
     public Int32Value LeftInset { get; set; }
+	
     /// <summary>
     /// <para> Top Inset.</para>
     /// <para>Represents the following attribute in the schema: tIns </para>
@@ -1097,6 +1125,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "tIns")]
     [Index(7)]
     public Int32Value TopInset { get; set; }
+	
     /// <summary>
     /// <para> Right Inset.</para>
     /// <para>Represents the following attribute in the schema: rIns </para>
@@ -1104,6 +1133,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "rIns")]
     [Index(8)]
     public Int32Value RightInset { get; set; }
+	
     /// <summary>
     /// <para> Bottom Inset.</para>
     /// <para>Represents the following attribute in the schema: bIns </para>
@@ -1111,6 +1141,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "bIns")]
     [Index(9)]
     public Int32Value BottomInset { get; set; }
+	
     /// <summary>
     /// <para> Number of Columns.</para>
     /// <para>Represents the following attribute in the schema: numCol </para>
@@ -1118,6 +1149,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "numCol")]
     [Index(10)]
     public Int32Value ColumnCount { get; set; }
+	
     /// <summary>
     /// <para> Space Between Columns.</para>
     /// <para>Represents the following attribute in the schema: spcCol </para>
@@ -1125,6 +1157,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "spcCol")]
     [Index(11)]
     public Int32Value ColumnSpacing { get; set; }
+	
     /// <summary>
     /// <para> Columns Right-To-Left.</para>
     /// <para>Represents the following attribute in the schema: rtlCol </para>
@@ -1132,6 +1165,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "rtlCol")]
     [Index(12)]
     public BooleanValue RightToLeftColumns { get; set; }
+	
     /// <summary>
     /// <para> From WordArt.</para>
     /// <para>Represents the following attribute in the schema: fromWordArt </para>
@@ -1139,6 +1173,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "fromWordArt")]
     [Index(13)]
     public BooleanValue FromWordArt { get; set; }
+	
     /// <summary>
     /// <para> Anchor.</para>
     /// <para>Represents the following attribute in the schema: anchor </para>
@@ -1146,6 +1181,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "anchor")]
     [Index(14)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor { get; set; }
+	
     /// <summary>
     /// <para> Anchor Center.</para>
     /// <para>Represents the following attribute in the schema: anchorCtr </para>
@@ -1153,6 +1189,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "anchorCtr")]
     [Index(15)]
     public BooleanValue AnchorCenter { get; set; }
+	
     /// <summary>
     /// <para> Force Anti-Alias.</para>
     /// <para>Represents the following attribute in the schema: forceAA </para>
@@ -1160,6 +1197,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "forceAA")]
     [Index(16)]
     public BooleanValue ForceAntiAlias { get; set; }
+	
     /// <summary>
     /// <para> Text Upright.</para>
     /// <para>Represents the following attribute in the schema: upright </para>
@@ -1167,6 +1205,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "upright")]
     [Index(17)]
     public BooleanValue UpRight { get; set; }
+	
     /// <summary>
     /// <para> Compatible Line Spacing.</para>
     /// <para>Represents the following attribute in the schema: compatLnSpc </para>
@@ -1174,6 +1213,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "compatLnSpc")]
     [Index(18)]
     public BooleanValue CompatibleLineSpacing { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the TextBodyProperties class.

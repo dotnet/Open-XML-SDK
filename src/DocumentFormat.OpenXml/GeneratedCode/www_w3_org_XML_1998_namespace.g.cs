@@ -12,7 +12,6 @@ namespace DocumentFormat.OpenXml
 /// <summary>
 /// Defines the SpaceProcessingModeValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum SpaceProcessingModeValues
 {  
 	///<summary>

@@ -34,9 +34,10 @@ namespace DocumentFormat.OpenXml.InkML
     [ChildElementInfo(typeof(Trace))]
     [ChildElementInfo(typeof(TraceGroup))]
     [ChildElementInfo(typeof(TraceView))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "ink")]
+[Id(ElementTypeIdConst)]
 public partial class Ink : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12714;
@@ -51,6 +52,7 @@ public partial class Ink : OpenXmlPartRootElement
     [SchemaAttr(0, "documentID")]
     [Index(0)]
     public StringValue DocumentId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Ink class.
@@ -98,9 +100,10 @@ public partial class Ink : OpenXmlPartRootElement
 /// <para> When the object is serialized out as xml, its qualified name is inkml:bind.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "bind")]
+[Id(ElementTypeIdConst)]
 public partial class Bind : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12715;
@@ -115,6 +118,7 @@ public partial class Bind : OpenXmlLeafElement
     [SchemaAttr(0, "source")]
     [Index(0)]
     public StringValue Source { get; set; }
+	
     /// <summary>
     /// <para> target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
@@ -122,6 +126,7 @@ public partial class Bind : OpenXmlLeafElement
     [SchemaAttr(0, "target")]
     [Index(1)]
     public StringValue Target { get; set; }
+	
     /// <summary>
     /// <para> column.</para>
     /// <para>Represents the following attribute in the schema: column </para>
@@ -129,6 +134,7 @@ public partial class Bind : OpenXmlLeafElement
     [SchemaAttr(0, "column")]
     [Index(2)]
     public StringValue Column { get; set; }
+	
     /// <summary>
     /// <para> variable.</para>
     /// <para>Represents the following attribute in the schema: variable </para>
@@ -136,6 +142,7 @@ public partial class Bind : OpenXmlLeafElement
     [SchemaAttr(0, "variable")]
     [Index(3)]
     public StringValue Variable { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Bind class.
@@ -157,9 +164,10 @@ public partial class Bind : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is inkml:table.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "table")]
+[Id(ElementTypeIdConst)]
 public partial class Table : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12716;
@@ -176,6 +184,7 @@ public partial class Table : OpenXmlLeafTextElement
     [SchemaAttr(1, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> apply.</para>
     /// <para>Represents the following attribute in the schema: apply </para>
@@ -183,6 +192,7 @@ public partial class Table : OpenXmlLeafTextElement
     [SchemaAttr(0, "apply")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues> Apply { get; set; }
+	
     /// <summary>
     /// <para> interpolation.</para>
     /// <para>Represents the following attribute in the schema: interpolation </para>
@@ -190,6 +200,7 @@ public partial class Table : OpenXmlLeafTextElement
     [SchemaAttr(0, "interpolation")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues> Interpolation { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Table class.
@@ -224,9 +235,10 @@ public partial class Table : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is inkml:matrix.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "matrix")]
+[Id(ElementTypeIdConst)]
 public partial class Matrix : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12717;
@@ -243,6 +255,7 @@ public partial class Matrix : OpenXmlLeafTextElement
     [SchemaAttr(1, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Matrix class.
@@ -290,9 +303,10 @@ public partial class Matrix : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(Table))]
     [ChildElementInfo(typeof(Matrix))]
     [ChildElementInfo(typeof(Mapping))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "mapping")]
+[Id(ElementTypeIdConst)]
 public partial class Mapping : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12718;
@@ -309,6 +323,7 @@ public partial class Mapping : OpenXmlCompositeElement
     [SchemaAttr(1, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -316,6 +331,7 @@ public partial class Mapping : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues> Type { get; set; }
+	
     /// <summary>
     /// <para> mappingRef.</para>
     /// <para>Represents the following attribute in the schema: mappingRef </para>
@@ -323,6 +339,7 @@ public partial class Mapping : OpenXmlCompositeElement
     [SchemaAttr(0, "mappingRef")]
     [Index(2)]
     public StringValue MappingRef { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Mapping class.
@@ -377,9 +394,10 @@ public partial class Mapping : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(Mapping))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "channel")]
+[Id(ElementTypeIdConst)]
 public partial class Channel : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12719;
@@ -396,6 +414,7 @@ public partial class Channel : OpenXmlCompositeElement
     [SchemaAttr(1, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -403,6 +422,7 @@ public partial class Channel : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(1)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -410,6 +430,7 @@ public partial class Channel : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues> Type { get; set; }
+	
     /// <summary>
     /// <para> default.</para>
     /// <para>Represents the following attribute in the schema: default </para>
@@ -417,6 +438,7 @@ public partial class Channel : OpenXmlCompositeElement
     [SchemaAttr(0, "default")]
     [Index(3)]
     public StringValue Default { get; set; }
+	
     /// <summary>
     /// <para> min.</para>
     /// <para>Represents the following attribute in the schema: min </para>
@@ -424,6 +446,7 @@ public partial class Channel : OpenXmlCompositeElement
     [SchemaAttr(0, "min")]
     [Index(4)]
     public DecimalValue Min { get; set; }
+	
     /// <summary>
     /// <para> max.</para>
     /// <para>Represents the following attribute in the schema: max </para>
@@ -431,6 +454,7 @@ public partial class Channel : OpenXmlCompositeElement
     [SchemaAttr(0, "max")]
     [Index(5)]
     public DecimalValue Max { get; set; }
+	
     /// <summary>
     /// <para> orientation.</para>
     /// <para>Represents the following attribute in the schema: orientation </para>
@@ -438,6 +462,7 @@ public partial class Channel : OpenXmlCompositeElement
     [SchemaAttr(0, "orientation")]
     [Index(6)]
     public EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues> Orientation { get; set; }
+	
     /// <summary>
     /// <para> respectTo.</para>
     /// <para>Represents the following attribute in the schema: respectTo </para>
@@ -445,6 +470,7 @@ public partial class Channel : OpenXmlCompositeElement
     [SchemaAttr(0, "respectTo")]
     [Index(7)]
     public StringValue RespectTo { get; set; }
+	
     /// <summary>
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
@@ -452,6 +478,7 @@ public partial class Channel : OpenXmlCompositeElement
     [SchemaAttr(0, "units")]
     [Index(8)]
     public StringValue Units { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Channel class.
@@ -506,9 +533,10 @@ public partial class Channel : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(Channel))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "intermittentChannels")]
+[Id(ElementTypeIdConst)]
 public partial class IntermittentChannels : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12720;
@@ -563,9 +591,10 @@ public partial class IntermittentChannels : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is inkml:channelProperty.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "channelProperty")]
+[Id(ElementTypeIdConst)]
 public partial class ChannelProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12721;
@@ -580,6 +609,7 @@ public partial class ChannelProperty : OpenXmlLeafElement
     [SchemaAttr(0, "channel")]
     [Index(0)]
     public StringValue Channel { get; set; }
+	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -587,6 +617,7 @@ public partial class ChannelProperty : OpenXmlLeafElement
     [SchemaAttr(0, "name")]
     [Index(1)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
@@ -594,6 +625,7 @@ public partial class ChannelProperty : OpenXmlLeafElement
     [SchemaAttr(0, "value")]
     [Index(2)]
     public DecimalValue Value { get; set; }
+	
     /// <summary>
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
@@ -601,6 +633,7 @@ public partial class ChannelProperty : OpenXmlLeafElement
     [SchemaAttr(0, "units")]
     [Index(3)]
     public StringValue Units { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ChannelProperty class.
@@ -631,9 +664,10 @@ public partial class ChannelProperty : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(Channel))]
     [ChildElementInfo(typeof(IntermittentChannels))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "traceFormat")]
+[Id(ElementTypeIdConst)]
 public partial class TraceFormat : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12722;
@@ -650,6 +684,7 @@ public partial class TraceFormat : OpenXmlCompositeElement
     [SchemaAttr(1, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the TraceFormat class.
@@ -697,9 +732,10 @@ public partial class TraceFormat : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is inkml:sampleRate.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "sampleRate")]
+[Id(ElementTypeIdConst)]
 public partial class SampleRate : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12723;
@@ -714,6 +750,7 @@ public partial class SampleRate : OpenXmlLeafElement
     [SchemaAttr(0, "uniform")]
     [Index(0)]
     public BooleanValue Uniform { get; set; }
+	
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
@@ -721,6 +758,7 @@ public partial class SampleRate : OpenXmlLeafElement
     [SchemaAttr(0, "value")]
     [Index(1)]
     public DecimalValue Value { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the SampleRate class.
@@ -742,9 +780,10 @@ public partial class SampleRate : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is inkml:latency.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "latency")]
+[Id(ElementTypeIdConst)]
 public partial class Latency : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12724;
@@ -759,6 +798,7 @@ public partial class Latency : OpenXmlLeafElement
     [SchemaAttr(0, "value")]
     [Index(0)]
     public DecimalValue Value { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Latency class.
@@ -780,9 +820,10 @@ public partial class Latency : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is inkml:activeArea.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "activeArea")]
+[Id(ElementTypeIdConst)]
 public partial class ActiveArea : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12725;
@@ -797,6 +838,7 @@ public partial class ActiveArea : OpenXmlLeafElement
     [SchemaAttr(0, "size")]
     [Index(0)]
     public StringValue Size { get; set; }
+	
     /// <summary>
     /// <para> height.</para>
     /// <para>Represents the following attribute in the schema: height </para>
@@ -804,6 +846,7 @@ public partial class ActiveArea : OpenXmlLeafElement
     [SchemaAttr(0, "height")]
     [Index(1)]
     public DecimalValue Height { get; set; }
+	
     /// <summary>
     /// <para> width.</para>
     /// <para>Represents the following attribute in the schema: width </para>
@@ -811,6 +854,7 @@ public partial class ActiveArea : OpenXmlLeafElement
     [SchemaAttr(0, "width")]
     [Index(2)]
     public DecimalValue Width { get; set; }
+	
     /// <summary>
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
@@ -818,6 +862,7 @@ public partial class ActiveArea : OpenXmlLeafElement
     [SchemaAttr(0, "units")]
     [Index(3)]
     public StringValue Units { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ActiveArea class.
@@ -839,9 +884,10 @@ public partial class ActiveArea : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is inkml:srcProperty.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "srcProperty")]
+[Id(ElementTypeIdConst)]
 public partial class SourceProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12726;
@@ -856,6 +902,7 @@ public partial class SourceProperty : OpenXmlLeafElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
@@ -863,6 +910,7 @@ public partial class SourceProperty : OpenXmlLeafElement
     [SchemaAttr(0, "value")]
     [Index(1)]
     public DecimalValue Value { get; set; }
+	
     /// <summary>
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
@@ -870,6 +918,7 @@ public partial class SourceProperty : OpenXmlLeafElement
     [SchemaAttr(0, "units")]
     [Index(2)]
     public StringValue Units { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the SourceProperty class.
@@ -898,9 +947,10 @@ public partial class SourceProperty : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(ChannelProperty))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "channelProperties")]
+[Id(ElementTypeIdConst)]
 public partial class ChannelProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12727;
@@ -955,9 +1005,10 @@ public partial class ChannelProperties : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is inkml:annotation.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "annotation")]
+[Id(ElementTypeIdConst)]
 public partial class Annotation : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12728;
@@ -972,6 +1023,7 @@ public partial class Annotation : OpenXmlLeafTextElement
     [SchemaAttr(0, "type")]
     [Index(0)]
     public StringValue Type { get; set; }
+	
     /// <summary>
     /// <para> encoding.</para>
     /// <para>Represents the following attribute in the schema: encoding </para>
@@ -979,6 +1031,7 @@ public partial class Annotation : OpenXmlLeafTextElement
     [SchemaAttr(0, "encoding")]
     [Index(1)]
     public StringValue Encoding { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Annotation class.
@@ -1020,9 +1073,10 @@ public partial class Annotation : OpenXmlLeafTextElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.EMMA.Emma))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "annotationXML")]
+[Id(ElementTypeIdConst)]
 public partial class AnnotationXml : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12729;
@@ -1037,6 +1091,7 @@ public partial class AnnotationXml : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     [Index(0)]
     public StringValue Type { get; set; }
+	
     /// <summary>
     /// <para> encoding.</para>
     /// <para>Represents the following attribute in the schema: encoding </para>
@@ -1044,6 +1099,7 @@ public partial class AnnotationXml : OpenXmlCompositeElement
     [SchemaAttr(0, "encoding")]
     [Index(1)]
     public StringValue Encoding { get; set; }
+	
     /// <summary>
     /// <para> href.</para>
     /// <para>Represents the following attribute in the schema: href </para>
@@ -1051,6 +1107,7 @@ public partial class AnnotationXml : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     [Index(2)]
     public StringValue Href { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the AnnotationXml class.
@@ -1124,9 +1181,10 @@ public partial class AnnotationXml : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(Annotation))]
     [ChildElementInfo(typeof(AnnotationXml))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "brushProperty")]
+[Id(ElementTypeIdConst)]
 public partial class BrushProperty : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12730;
@@ -1141,6 +1199,7 @@ public partial class BrushProperty : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
@@ -1148,6 +1207,7 @@ public partial class BrushProperty : OpenXmlCompositeElement
     [SchemaAttr(0, "value")]
     [Index(1)]
     public StringValue Value { get; set; }
+	
     /// <summary>
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
@@ -1155,6 +1215,7 @@ public partial class BrushProperty : OpenXmlCompositeElement
     [SchemaAttr(0, "units")]
     [Index(2)]
     public StringValue Units { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the BrushProperty class.
@@ -1209,9 +1270,10 @@ public partial class BrushProperty : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(TraceFormat))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "canvas")]
+[Id(ElementTypeIdConst)]
 public partial class Canvas : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12731;
@@ -1228,6 +1290,7 @@ public partial class Canvas : OpenXmlCompositeElement
     [SchemaAttr(1, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> traceFormatRef.</para>
     /// <para>Represents the following attribute in the schema: traceFormatRef </para>
@@ -1235,6 +1298,7 @@ public partial class Canvas : OpenXmlCompositeElement
     [SchemaAttr(0, "traceFormatRef")]
     [Index(1)]
     public StringValue TraceFormatRef { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Canvas class.
@@ -1306,9 +1370,10 @@ public partial class Canvas : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(Mapping))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "canvasTransform")]
+[Id(ElementTypeIdConst)]
 public partial class CanvasTransform : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12732;
@@ -1325,6 +1390,7 @@ public partial class CanvasTransform : OpenXmlCompositeElement
     [SchemaAttr(1, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> invertible.</para>
     /// <para>Represents the following attribute in the schema: invertible </para>
@@ -1332,6 +1398,7 @@ public partial class CanvasTransform : OpenXmlCompositeElement
     [SchemaAttr(0, "invertible")]
     [Index(1)]
     public BooleanValue Invertible { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the CanvasTransform class.
@@ -1396,9 +1463,10 @@ public partial class CanvasTransform : OpenXmlCompositeElement
     [ChildElementInfo(typeof(ActiveArea))]
     [ChildElementInfo(typeof(SourceProperty))]
     [ChildElementInfo(typeof(ChannelProperties))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "inkSource")]
+[Id(ElementTypeIdConst)]
 public partial class InkSource : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12733;
@@ -1415,6 +1483,7 @@ public partial class InkSource : OpenXmlCompositeElement
     [SchemaAttr(1, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> manufacturer.</para>
     /// <para>Represents the following attribute in the schema: manufacturer </para>
@@ -1422,6 +1491,7 @@ public partial class InkSource : OpenXmlCompositeElement
     [SchemaAttr(0, "manufacturer")]
     [Index(1)]
     public StringValue Manufacturer { get; set; }
+	
     /// <summary>
     /// <para> model.</para>
     /// <para>Represents the following attribute in the schema: model </para>
@@ -1429,6 +1499,7 @@ public partial class InkSource : OpenXmlCompositeElement
     [SchemaAttr(0, "model")]
     [Index(2)]
     public StringValue Model { get; set; }
+	
     /// <summary>
     /// <para> serialNo.</para>
     /// <para>Represents the following attribute in the schema: serialNo </para>
@@ -1436,6 +1507,7 @@ public partial class InkSource : OpenXmlCompositeElement
     [SchemaAttr(0, "serialNo")]
     [Index(3)]
     public StringValue SerialNo { get; set; }
+	
     /// <summary>
     /// <para> specificationRef.</para>
     /// <para>Represents the following attribute in the schema: specificationRef </para>
@@ -1443,6 +1515,7 @@ public partial class InkSource : OpenXmlCompositeElement
     [SchemaAttr(0, "specificationRef")]
     [Index(4)]
     public StringValue SpecificationRef { get; set; }
+	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
@@ -1450,6 +1523,7 @@ public partial class InkSource : OpenXmlCompositeElement
     [SchemaAttr(0, "description")]
     [Index(5)]
     public StringValue Description { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the InkSource class.
@@ -1567,9 +1641,10 @@ public partial class InkSource : OpenXmlCompositeElement
     [ChildElementInfo(typeof(Annotation))]
     [ChildElementInfo(typeof(AnnotationXml))]
     [ChildElementInfo(typeof(BrushProperty))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "brush")]
+[Id(ElementTypeIdConst)]
 public partial class Brush : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12734;
@@ -1586,6 +1661,7 @@ public partial class Brush : OpenXmlCompositeElement
     [SchemaAttr(1, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> brushRef.</para>
     /// <para>Represents the following attribute in the schema: brushRef </para>
@@ -1593,6 +1669,7 @@ public partial class Brush : OpenXmlCompositeElement
     [SchemaAttr(0, "brushRef")]
     [Index(1)]
     public StringValue BrushRef { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Brush class.
@@ -1640,9 +1717,10 @@ public partial class Brush : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is inkml:timestamp.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "timestamp")]
+[Id(ElementTypeIdConst)]
 public partial class Timestamp : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12735;
@@ -1659,6 +1737,7 @@ public partial class Timestamp : OpenXmlLeafElement
     [SchemaAttr(1, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
@@ -1666,6 +1745,7 @@ public partial class Timestamp : OpenXmlLeafElement
     [SchemaAttr(0, "time")]
     [Index(1)]
     public DecimalValue Time { get; set; }
+	
     /// <summary>
     /// <para> timestampRef.</para>
     /// <para>Represents the following attribute in the schema: timestampRef </para>
@@ -1673,6 +1753,7 @@ public partial class Timestamp : OpenXmlLeafElement
     [SchemaAttr(0, "timestampRef")]
     [Index(2)]
     public StringValue TimestampRef { get; set; }
+	
     /// <summary>
     /// <para> timeString.</para>
     /// <para>Represents the following attribute in the schema: timeString </para>
@@ -1680,6 +1761,7 @@ public partial class Timestamp : OpenXmlLeafElement
     [SchemaAttr(0, "timeString")]
     [Index(3)]
     public DateTimeValue TimeString { get; set; }
+	
     /// <summary>
     /// <para> timeOffset.</para>
     /// <para>Represents the following attribute in the schema: timeOffset </para>
@@ -1687,6 +1769,7 @@ public partial class Timestamp : OpenXmlLeafElement
     [SchemaAttr(0, "timeOffset")]
     [Index(4)]
     public DecimalValue TimeOffset { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Timestamp class.
@@ -1708,9 +1791,10 @@ public partial class Timestamp : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is inkml:trace.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "trace")]
+[Id(ElementTypeIdConst)]
 public partial class Trace : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12736;
@@ -1727,6 +1811,7 @@ public partial class Trace : OpenXmlLeafTextElement
     [SchemaAttr(1, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -1734,6 +1819,7 @@ public partial class Trace : OpenXmlLeafTextElement
     [SchemaAttr(0, "type")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues> Type { get; set; }
+	
     /// <summary>
     /// <para> continuation.</para>
     /// <para>Represents the following attribute in the schema: continuation </para>
@@ -1741,6 +1827,7 @@ public partial class Trace : OpenXmlLeafTextElement
     [SchemaAttr(0, "continuation")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues> Continuation { get; set; }
+	
     /// <summary>
     /// <para> priorRef.</para>
     /// <para>Represents the following attribute in the schema: priorRef </para>
@@ -1748,6 +1835,7 @@ public partial class Trace : OpenXmlLeafTextElement
     [SchemaAttr(0, "priorRef")]
     [Index(3)]
     public StringValue PriorRef { get; set; }
+	
     /// <summary>
     /// <para> contextRef.</para>
     /// <para>Represents the following attribute in the schema: contextRef </para>
@@ -1755,6 +1843,7 @@ public partial class Trace : OpenXmlLeafTextElement
     [SchemaAttr(0, "contextRef")]
     [Index(4)]
     public StringValue ContextRef { get; set; }
+	
     /// <summary>
     /// <para> brushRef.</para>
     /// <para>Represents the following attribute in the schema: brushRef </para>
@@ -1762,6 +1851,7 @@ public partial class Trace : OpenXmlLeafTextElement
     [SchemaAttr(0, "brushRef")]
     [Index(5)]
     public StringValue BrushRef { get; set; }
+	
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: duration </para>
@@ -1769,6 +1859,7 @@ public partial class Trace : OpenXmlLeafTextElement
     [SchemaAttr(0, "duration")]
     [Index(6)]
     public DecimalValue Duration { get; set; }
+	
     /// <summary>
     /// <para> timeOffset.</para>
     /// <para>Represents the following attribute in the schema: timeOffset </para>
@@ -1776,6 +1867,7 @@ public partial class Trace : OpenXmlLeafTextElement
     [SchemaAttr(0, "timeOffset")]
     [Index(7)]
     public DecimalValue TimeOffset { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Trace class.
@@ -1823,9 +1915,10 @@ public partial class Trace : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(AnnotationXml))]
     [ChildElementInfo(typeof(Trace))]
     [ChildElementInfo(typeof(TraceGroup))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "traceGroup")]
+[Id(ElementTypeIdConst)]
 public partial class TraceGroup : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12737;
@@ -1842,6 +1935,7 @@ public partial class TraceGroup : OpenXmlCompositeElement
     [SchemaAttr(1, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> contextRef.</para>
     /// <para>Represents the following attribute in the schema: contextRef </para>
@@ -1849,6 +1943,7 @@ public partial class TraceGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "contextRef")]
     [Index(1)]
     public StringValue ContextRef { get; set; }
+	
     /// <summary>
     /// <para> brushRef.</para>
     /// <para>Represents the following attribute in the schema: brushRef </para>
@@ -1856,6 +1951,7 @@ public partial class TraceGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "brushRef")]
     [Index(2)]
     public StringValue BrushRef { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the TraceGroup class.
@@ -1914,9 +2010,10 @@ public partial class TraceGroup : OpenXmlCompositeElement
     [ChildElementInfo(typeof(Annotation))]
     [ChildElementInfo(typeof(AnnotationXml))]
     [ChildElementInfo(typeof(TraceView))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "traceView")]
+[Id(ElementTypeIdConst)]
 public partial class TraceView : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12738;
@@ -1933,6 +2030,7 @@ public partial class TraceView : OpenXmlCompositeElement
     [SchemaAttr(1, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> contextRef.</para>
     /// <para>Represents the following attribute in the schema: contextRef </para>
@@ -1940,6 +2038,7 @@ public partial class TraceView : OpenXmlCompositeElement
     [SchemaAttr(0, "contextRef")]
     [Index(1)]
     public StringValue ContextRef { get; set; }
+	
     /// <summary>
     /// <para> traceDataRef.</para>
     /// <para>Represents the following attribute in the schema: traceDataRef </para>
@@ -1947,6 +2046,7 @@ public partial class TraceView : OpenXmlCompositeElement
     [SchemaAttr(0, "traceDataRef")]
     [Index(2)]
     public StringValue TraceDataRef { get; set; }
+	
     /// <summary>
     /// <para> from.</para>
     /// <para>Represents the following attribute in the schema: from </para>
@@ -1954,6 +2054,7 @@ public partial class TraceView : OpenXmlCompositeElement
     [SchemaAttr(0, "from")]
     [Index(3)]
     public StringValue From { get; set; }
+	
     /// <summary>
     /// <para> to.</para>
     /// <para>Represents the following attribute in the schema: to </para>
@@ -1961,6 +2062,7 @@ public partial class TraceView : OpenXmlCompositeElement
     [SchemaAttr(0, "to")]
     [Index(4)]
     public StringValue To { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the TraceView class.
@@ -2025,9 +2127,10 @@ public partial class TraceView : OpenXmlCompositeElement
     [ChildElementInfo(typeof(InkSource))]
     [ChildElementInfo(typeof(Brush))]
     [ChildElementInfo(typeof(Timestamp))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "context")]
+[Id(ElementTypeIdConst)]
 public partial class Context : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12739;
@@ -2044,6 +2147,7 @@ public partial class Context : OpenXmlCompositeElement
     [SchemaAttr(1, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> contextRef.</para>
     /// <para>Represents the following attribute in the schema: contextRef </para>
@@ -2051,6 +2155,7 @@ public partial class Context : OpenXmlCompositeElement
     [SchemaAttr(0, "contextRef")]
     [Index(1)]
     public StringValue ContextRef { get; set; }
+	
     /// <summary>
     /// <para> canvasRef.</para>
     /// <para>Represents the following attribute in the schema: canvasRef </para>
@@ -2058,6 +2163,7 @@ public partial class Context : OpenXmlCompositeElement
     [SchemaAttr(0, "canvasRef")]
     [Index(2)]
     public StringValue CanvasRef { get; set; }
+	
     /// <summary>
     /// <para> canvasTransformRef.</para>
     /// <para>Represents the following attribute in the schema: canvasTransformRef </para>
@@ -2065,6 +2171,7 @@ public partial class Context : OpenXmlCompositeElement
     [SchemaAttr(0, "canvasTransformRef")]
     [Index(3)]
     public StringValue CanvasTransformRef { get; set; }
+	
     /// <summary>
     /// <para> traceFormatRef.</para>
     /// <para>Represents the following attribute in the schema: traceFormatRef </para>
@@ -2072,6 +2179,7 @@ public partial class Context : OpenXmlCompositeElement
     [SchemaAttr(0, "traceFormatRef")]
     [Index(4)]
     public StringValue TraceFromatRef { get; set; }
+	
     /// <summary>
     /// <para> inkSourceRef.</para>
     /// <para>Represents the following attribute in the schema: inkSourceRef </para>
@@ -2079,6 +2187,7 @@ public partial class Context : OpenXmlCompositeElement
     [SchemaAttr(0, "inkSourceRef")]
     [Index(5)]
     public StringValue InkSourceRef { get; set; }
+	
     /// <summary>
     /// <para> brushRef.</para>
     /// <para>Represents the following attribute in the schema: brushRef </para>
@@ -2086,6 +2195,7 @@ public partial class Context : OpenXmlCompositeElement
     [SchemaAttr(0, "brushRef")]
     [Index(6)]
     public StringValue BrushRef { get; set; }
+	
     /// <summary>
     /// <para> timestampRef.</para>
     /// <para>Represents the following attribute in the schema: timestampRef </para>
@@ -2093,6 +2203,7 @@ public partial class Context : OpenXmlCompositeElement
     [SchemaAttr(0, "timestampRef")]
     [Index(7)]
     public StringValue TimestampRef { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Context class.
@@ -2254,9 +2365,10 @@ public partial class Context : OpenXmlCompositeElement
     [ChildElementInfo(typeof(TraceFormat))]
     [ChildElementInfo(typeof(TraceGroup))]
     [ChildElementInfo(typeof(TraceView))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "definitions")]
+[Id(ElementTypeIdConst)]
 public partial class Definitions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12740;
@@ -2308,7 +2420,6 @@ public partial class Definitions : OpenXmlCompositeElement
 /// <summary>
 /// Defines the ChannelDataTypeValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ChannelDataTypeValues
 {  
 	///<summary>
@@ -2334,7 +2445,6 @@ Boolean,
 /// <summary>
 /// Defines the ChannelValueOrientationValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ChannelValueOrientationValues
 {  
 	///<summary>
@@ -2354,7 +2464,6 @@ MinusVe,
 /// <summary>
 /// Defines the StandardChannelPropertyNameValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StandardChannelPropertyNameValues
 {  
 	///<summary>
@@ -2422,7 +2531,6 @@ Distortion,
 /// <summary>
 /// Defines the StandardBrushPropertyNameValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StandardBrushPropertyNameValues
 {  
 	///<summary>
@@ -2484,7 +2592,6 @@ IgnorePressure,
 /// <summary>
 /// Defines the StandardChannelNameValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StandardChannelNameValues
 {  
 	///<summary>
@@ -2696,7 +2803,6 @@ FingerTouch,
 /// <summary>
 /// Defines the StandardLengthUnitsValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StandardLengthUnitsValues
 {  
 	///<summary>
@@ -2752,7 +2858,6 @@ Ex,
 /// <summary>
 /// Defines the StandardPerLengthUnitsValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StandardPerLengthUnitsValues
 {  
 	///<summary>
@@ -2808,7 +2913,6 @@ PerEx,
 /// <summary>
 /// Defines the StandardTimeUnitsValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StandardTimeUnitsValues
 {  
 	///<summary>
@@ -2828,7 +2932,6 @@ Millisecond,
 /// <summary>
 /// Defines the StandardPerTimeUnitsValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StandardPerTimeUnitsValues
 {  
 	///<summary>
@@ -2848,7 +2951,6 @@ PerMillisecond,
 /// <summary>
 /// Defines the StandardMassForceUnitsValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StandardMassForceUnitsValues
 {  
 	///<summary>
@@ -2886,7 +2988,6 @@ Pond,
 /// <summary>
 /// Defines the StandardPerMassForceUnitsValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StandardPerMassForceUnitsValues
 {  
 	///<summary>
@@ -2924,7 +3025,6 @@ PerPond,
 /// <summary>
 /// Defines the StandardAngleUnitsValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StandardAngleUnitsValues
 {  
 	///<summary>
@@ -2944,7 +3044,6 @@ Radian,
 /// <summary>
 /// Defines the StandardPerAngleUnitsValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StandardPerAngleUnitsValues
 {  
 	///<summary>
@@ -2964,7 +3063,6 @@ PerRadian,
 /// <summary>
 /// Defines the StandardOtherUnitsValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StandardOtherUnitsValues
 {  
 	///<summary>
@@ -2990,7 +3088,6 @@ None,
 /// <summary>
 /// Defines the StandardPerOtherUnitsValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StandardPerOtherUnitsValues
 {  
 	///<summary>
@@ -3010,7 +3107,6 @@ PerDeviceResolution,
 /// <summary>
 /// Defines the TraceTypeValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum TraceTypeValues
 {  
 	///<summary>
@@ -3036,7 +3132,6 @@ Indeterminate,
 /// <summary>
 /// Defines the TraceContinuationValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum TraceContinuationValues
 {  
 	///<summary>
@@ -3062,7 +3157,6 @@ Middle,
 /// <summary>
 /// Defines the RasterOperationValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum RasterOperationValues
 {  
 	///<summary>
@@ -3166,7 +3260,6 @@ White,
 /// <summary>
 /// Defines the PenTipShapeValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum PenTipShapeValues
 {  
 	///<summary>
@@ -3192,7 +3285,6 @@ Drop,
 /// <summary>
 /// Defines the MappingTypeValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum MappingTypeValues
 {  
 	///<summary>
@@ -3236,7 +3328,6 @@ Unknown,
 /// <summary>
 /// Defines the TableApplyValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum TableApplyValues
 {  
 	///<summary>
@@ -3256,7 +3347,6 @@ Relative,
 /// <summary>
 /// Defines the TableInterpolationValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum TableInterpolationValues
 {  
 	///<summary>

@@ -15,9 +15,10 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
 /// <para> When the object is serialized out as xml, its qualified name is pvml:iscomment.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(30, "iscomment")]
+[Id(ElementTypeIdConst)]
 public partial class InkAnnotationFlag : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12575;
@@ -46,9 +47,10 @@ public partial class InkAnnotationFlag : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is pvml:textdata.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(30, "textdata")]
+[Id(ElementTypeIdConst)]
 public partial class TextData : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12576;
@@ -63,6 +65,7 @@ public partial class TextData : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the TextData class.
