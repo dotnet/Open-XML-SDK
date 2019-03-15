@@ -883,7 +883,6 @@ public partial class VTArray : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:blob.</para>
 /// </summary>
 
-
 [SchemaAttr(5, "blob")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -920,7 +919,6 @@ public partial class VTBlob : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:oblob.</para>
 /// </summary>
-
 
 [SchemaAttr(5, "oblob")]
 [Id(ElementTypeIdConst)]
@@ -959,7 +957,6 @@ public partial class VTOBlob : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:stream.</para>
 /// </summary>
 
-
 [SchemaAttr(5, "stream")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -996,7 +993,6 @@ public partial class VTStreamData : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:ostream.</para>
 /// </summary>
-
 
 [SchemaAttr(5, "ostream")]
 [Id(ElementTypeIdConst)]
@@ -1035,7 +1031,6 @@ public partial class VTOStreamData : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:storage.</para>
 /// </summary>
 
-
 [SchemaAttr(5, "storage")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1072,7 +1067,6 @@ public partial class VTStorage : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:ostorage.</para>
 /// </summary>
-
 
 [SchemaAttr(5, "ostorage")]
 [Id(ElementTypeIdConst)]
@@ -1265,7 +1259,6 @@ public partial class VTShort : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:i4.</para>
 /// </summary>
 
-
 [SchemaAttr(5, "i4")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1302,7 +1295,6 @@ public partial class VTInt32 : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:int.</para>
 /// </summary>
-
 
 [SchemaAttr(5, "int")]
 [Id(ElementTypeIdConst)]
@@ -1476,7 +1468,6 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:ui4.</para>
 /// </summary>
 
-
 [SchemaAttr(5, "ui4")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1513,7 +1504,6 @@ public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:uint.</para>
 /// </summary>
-
 
 [SchemaAttr(5, "uint")]
 [Id(ElementTypeIdConst)]
@@ -1732,7 +1722,6 @@ public partial class VTDecimal : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:lpstr.</para>
 /// </summary>
 
-
 [SchemaAttr(5, "lpstr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1769,7 +1758,6 @@ public partial class VTLPSTR : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:lpwstr.</para>
 /// </summary>
-
 
 [SchemaAttr(5, "lpwstr")]
 [Id(ElementTypeIdConst)]
@@ -1808,7 +1796,6 @@ public partial class VTLPWSTR : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:bstr.</para>
 /// </summary>
 
-
 [SchemaAttr(5, "bstr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1846,7 +1833,6 @@ public partial class VTBString : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:date.</para>
 /// </summary>
 
-
 [SchemaAttr(5, "date")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1883,7 +1869,6 @@ public partial class VTDate : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is vt:filetime.</para>
 /// </summary>
-
 
 [SchemaAttr(5, "filetime")]
 [Id(ElementTypeIdConst)]

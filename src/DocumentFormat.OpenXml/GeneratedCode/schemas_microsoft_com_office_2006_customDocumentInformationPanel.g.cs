@@ -115,7 +115,6 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is cdip:XMLNamespace.</para>
 /// </summary>
 
-
 [SchemaAttr(37, "XMLNamespace")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -152,7 +151,6 @@ public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdip:defaultPropertyEditorNamespace.</para>
 /// </summary>
-
 
 [SchemaAttr(37, "defaultPropertyEditorNamespace")]
 [Id(ElementTypeIdConst)]

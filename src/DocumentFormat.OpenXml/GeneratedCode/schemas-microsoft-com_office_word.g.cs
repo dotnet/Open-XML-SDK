@@ -15,7 +15,6 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 /// <para> When the object is serialized out as xml, its qualified name is w10:bordertop.</para>
 /// </summary>
 
-
 [SchemaAttr(28, "bordertop")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -39,7 +38,6 @@ public partial class TopBorder : BorderType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w10:borderleft.</para>
 /// </summary>
-
 
 [SchemaAttr(28, "borderleft")]
 [Id(ElementTypeIdConst)]
@@ -65,7 +63,6 @@ public partial class LeftBorder : BorderType
 /// <para> When the object is serialized out as xml, its qualified name is w10:borderright.</para>
 /// </summary>
 
-
 [SchemaAttr(28, "borderright")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -89,7 +86,6 @@ public partial class RightBorder : BorderType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w10:borderbottom.</para>
 /// </summary>
-
 
 [SchemaAttr(28, "borderbottom")]
 [Id(ElementTypeIdConst)]

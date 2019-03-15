@@ -1689,7 +1689,6 @@ public partial class DataLabelFieldTable : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is c15:xForSave.</para>
 /// </summary>
 
-
 [SchemaAttr(64, "xForSave")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -1713,7 +1712,6 @@ public partial class ExceptionForSave : BooleanType
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:showDataLabelsRange.</para>
 /// </summary>
-
 
 [SchemaAttr(64, "showDataLabelsRange")]
 [Id(ElementTypeIdConst)]
@@ -1739,7 +1737,6 @@ public partial class ShowDataLabelsRange : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c15:showLeaderLines.</para>
 /// </summary>
 
-
 [SchemaAttr(64, "showLeaderLines")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -1763,7 +1760,6 @@ public partial class ShowLeaderLines : BooleanType
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:autoCat.</para>
 /// </summary>
-
 
 [SchemaAttr(64, "autoCat")]
 [Id(ElementTypeIdConst)]
@@ -1789,7 +1785,6 @@ public partial class AutoGeneneratedCategories : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c15:invertIfNegative.</para>
 /// </summary>
 
-
 [SchemaAttr(64, "invertIfNegative")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -1813,7 +1808,6 @@ public partial class InvertIfNegativeBoolean : BooleanType
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:bubble3D.</para>
 /// </summary>
-
 
 [SchemaAttr(64, "bubble3D")]
 [Id(ElementTypeIdConst)]
@@ -2063,7 +2057,6 @@ public partial class LeaderLines : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is c15:sqref.</para>
 /// </summary>
 
-
 [SchemaAttr(64, "sqref")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -2101,7 +2094,6 @@ public partial class SequenceOfReferences : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is c15:f.</para>
 /// </summary>
 
-
 [SchemaAttr(64, "f")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -2138,7 +2130,6 @@ public partial class Formula : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c15:txfldGUID.</para>
 /// </summary>
-
 
 [SchemaAttr(64, "txfldGUID")]
 [Id(ElementTypeIdConst)]
@@ -3743,10 +3734,6 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList))]
-
 [SchemaAttr(64, "dlblRangeCache")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -3804,10 +3791,6 @@ public partial class DataLabelsRangeChache : StringDataType
 ///<item><description>DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList))]
 
 [SchemaAttr(64, "dlblFieldTableCache")]
 [Id(ElementTypeIdConst)]

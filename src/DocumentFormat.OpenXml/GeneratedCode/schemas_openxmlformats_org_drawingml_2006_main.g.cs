@@ -135,7 +135,6 @@ public partial class AudioFromCD : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is a:wavAudioFile.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "wavAudioFile")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -159,7 +158,6 @@ public partial class WaveAudioFile : EmbeddedWavAudioFileType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:snd.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "snd")]
 [Id(ElementTypeIdConst)]
@@ -507,7 +505,6 @@ public partial class QuickTimeFromFile : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is a:tint.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "tint")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -532,7 +529,6 @@ public partial class Tint : PositiveFixedPercentageType
 /// <para> When the object is serialized out as xml, its qualified name is a:shade.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "shade")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -556,7 +552,6 @@ public partial class Shade : PositiveFixedPercentageType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:alpha.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "alpha")]
 [Id(ElementTypeIdConst)]
@@ -746,7 +741,6 @@ public partial class AlphaOffset : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a:alphaMod.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "alphaMod")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -770,7 +764,6 @@ public partial class AlphaModulation : PositivePercentageType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:hueMod.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "hueMod")]
 [Id(ElementTypeIdConst)]
@@ -904,7 +897,6 @@ public partial class HueOffset : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a:sat.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "sat")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -928,7 +920,6 @@ public partial class Saturation : PercentageType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:satOff.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "satOff")]
 [Id(ElementTypeIdConst)]
@@ -954,7 +945,6 @@ public partial class SaturationOffset : PercentageType
 /// <para> When the object is serialized out as xml, its qualified name is a:satMod.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "satMod")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -978,7 +968,6 @@ public partial class SaturationModulation : PercentageType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:lum.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "lum")]
 [Id(ElementTypeIdConst)]
@@ -1004,7 +993,6 @@ public partial class Luminance : PercentageType
 /// <para> When the object is serialized out as xml, its qualified name is a:lumOff.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "lumOff")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1028,7 +1016,6 @@ public partial class LuminanceOffset : PercentageType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:lumMod.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "lumMod")]
 [Id(ElementTypeIdConst)]
@@ -1054,7 +1041,6 @@ public partial class LuminanceModulation : PercentageType
 /// <para> When the object is serialized out as xml, its qualified name is a:red.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "red")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1078,7 +1064,6 @@ public partial class Red : PercentageType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:redOff.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "redOff")]
 [Id(ElementTypeIdConst)]
@@ -1104,7 +1089,6 @@ public partial class RedOffset : PercentageType
 /// <para> When the object is serialized out as xml, its qualified name is a:redMod.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "redMod")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1128,7 +1112,6 @@ public partial class RedModulation : PercentageType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:green.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "green")]
 [Id(ElementTypeIdConst)]
@@ -1154,7 +1137,6 @@ public partial class Green : PercentageType
 /// <para> When the object is serialized out as xml, its qualified name is a:greenOff.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "greenOff")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1178,7 +1160,6 @@ public partial class GreenOffset : PercentageType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:greenMod.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "greenMod")]
 [Id(ElementTypeIdConst)]
@@ -1204,7 +1185,6 @@ public partial class GreenModulation : PercentageType
 /// <para> When the object is serialized out as xml, its qualified name is a:blue.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "blue")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1229,7 +1209,6 @@ public partial class Blue : PercentageType
 /// <para> When the object is serialized out as xml, its qualified name is a:blueOff.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "blueOff")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1253,7 +1232,6 @@ public partial class BlueOffset : PercentageType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:blueMod.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "blueMod")]
 [Id(ElementTypeIdConst)]
@@ -3361,37 +3339,6 @@ public partial class GroupFill : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(EffectContainer))]
-    [ChildElementInfo(typeof(Effect))]
-    [ChildElementInfo(typeof(AlphaBiLevel))]
-    [ChildElementInfo(typeof(AlphaCeiling))]
-    [ChildElementInfo(typeof(AlphaFloor))]
-    [ChildElementInfo(typeof(AlphaInverse))]
-    [ChildElementInfo(typeof(AlphaModulationEffect))]
-    [ChildElementInfo(typeof(AlphaModulationFixed))]
-    [ChildElementInfo(typeof(AlphaOutset))]
-    [ChildElementInfo(typeof(AlphaReplace))]
-    [ChildElementInfo(typeof(BiLevel))]
-    [ChildElementInfo(typeof(Blend))]
-    [ChildElementInfo(typeof(Blur))]
-    [ChildElementInfo(typeof(ColorChange))]
-    [ChildElementInfo(typeof(ColorReplacement))]
-    [ChildElementInfo(typeof(Duotone))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(FillOverlay))]
-    [ChildElementInfo(typeof(Glow))]
-    [ChildElementInfo(typeof(Grayscale))]
-    [ChildElementInfo(typeof(Hsl))]
-    [ChildElementInfo(typeof(InnerShadow))]
-    [ChildElementInfo(typeof(LuminanceEffect))]
-    [ChildElementInfo(typeof(OuterShadow))]
-    [ChildElementInfo(typeof(PresetShadow))]
-    [ChildElementInfo(typeof(Reflection))]
-    [ChildElementInfo(typeof(RelativeOffset))]
-    [ChildElementInfo(typeof(SoftEdge))]
-    [ChildElementInfo(typeof(TintEffect))]
-    [ChildElementInfo(typeof(TransformEffect))]
-
 [SchemaAttr(10, "cont")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3476,37 +3423,6 @@ public partial class EffectContainer : EffectContainerType
 ///<item><description>TransformEffect &lt;a:xfrm></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(EffectContainer))]
-    [ChildElementInfo(typeof(Effect))]
-    [ChildElementInfo(typeof(AlphaBiLevel))]
-    [ChildElementInfo(typeof(AlphaCeiling))]
-    [ChildElementInfo(typeof(AlphaFloor))]
-    [ChildElementInfo(typeof(AlphaInverse))]
-    [ChildElementInfo(typeof(AlphaModulationEffect))]
-    [ChildElementInfo(typeof(AlphaModulationFixed))]
-    [ChildElementInfo(typeof(AlphaOutset))]
-    [ChildElementInfo(typeof(AlphaReplace))]
-    [ChildElementInfo(typeof(BiLevel))]
-    [ChildElementInfo(typeof(Blend))]
-    [ChildElementInfo(typeof(Blur))]
-    [ChildElementInfo(typeof(ColorChange))]
-    [ChildElementInfo(typeof(ColorReplacement))]
-    [ChildElementInfo(typeof(Duotone))]
-    [ChildElementInfo(typeof(Fill))]
-    [ChildElementInfo(typeof(FillOverlay))]
-    [ChildElementInfo(typeof(Glow))]
-    [ChildElementInfo(typeof(Grayscale))]
-    [ChildElementInfo(typeof(Hsl))]
-    [ChildElementInfo(typeof(InnerShadow))]
-    [ChildElementInfo(typeof(LuminanceEffect))]
-    [ChildElementInfo(typeof(OuterShadow))]
-    [ChildElementInfo(typeof(PresetShadow))]
-    [ChildElementInfo(typeof(Reflection))]
-    [ChildElementInfo(typeof(RelativeOffset))]
-    [ChildElementInfo(typeof(SoftEdge))]
-    [ChildElementInfo(typeof(TintEffect))]
-    [ChildElementInfo(typeof(TransformEffect))]
 
 [SchemaAttr(10, "effectDag")]
 [Id(ElementTypeIdConst)]
@@ -7236,13 +7152,6 @@ public partial class FillProperties : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
-
 [SchemaAttr(10, "fillRef")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7304,13 +7213,6 @@ public partial class FillReference : StyleMatrixReferenceType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
-
 [SchemaAttr(10, "effectRef")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7371,13 +7273,6 @@ public partial class EffectReference : StyleMatrixReferenceType
 ///<item><description>PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
 
 [SchemaAttr(10, "lnRef")]
 [Id(ElementTypeIdConst)]
@@ -7695,12 +7590,6 @@ public partial class EffectPropertiesType : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LatinFont))]
-    [ChildElementInfo(typeof(EastAsianFont))]
-    [ChildElementInfo(typeof(ComplexScriptFont))]
-    [ChildElementInfo(typeof(SupplementalFont))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "font")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7761,12 +7650,6 @@ public partial class Fonts : FontCollectionType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LatinFont))]
-    [ChildElementInfo(typeof(EastAsianFont))]
-    [ChildElementInfo(typeof(ComplexScriptFont))]
-    [ChildElementInfo(typeof(SupplementalFont))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "majorFont")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7826,12 +7709,6 @@ public partial class MajorFont : FontCollectionType
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LatinFont))]
-    [ChildElementInfo(typeof(EastAsianFont))]
-    [ChildElementInfo(typeof(ComplexScriptFont))]
-    [ChildElementInfo(typeof(SupplementalFont))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "minorFont")]
 [Id(ElementTypeIdConst)]
@@ -8314,13 +8191,6 @@ public partial class BulletColorText : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
-
 [SchemaAttr(10, "buClr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8381,13 +8251,6 @@ public partial class BulletColor : ColorType
 ///<item><description>PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
 
 [SchemaAttr(10, "extrusionClr")]
 [Id(ElementTypeIdConst)]
@@ -8450,13 +8313,6 @@ public partial class ExtrusionColor : ColorType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
-
 [SchemaAttr(10, "contourClr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8517,13 +8373,6 @@ public partial class ContourColor : ColorType
 ///<item><description>PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
 
 [SchemaAttr(10, "clrFrom")]
 [Id(ElementTypeIdConst)]
@@ -8586,13 +8435,6 @@ public partial class ColorFrom : ColorType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
-
 [SchemaAttr(10, "clrTo")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8653,13 +8495,6 @@ public partial class ColorTo : ColorType
 ///<item><description>PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
 
 [SchemaAttr(10, "fgClr")]
 [Id(ElementTypeIdConst)]
@@ -8722,13 +8557,6 @@ public partial class ForegroundColor : ColorType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
-
 [SchemaAttr(10, "bgClr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8789,13 +8617,6 @@ public partial class BackgroundColor : ColorType
 ///<item><description>PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(SchemeColor))]
-    [ChildElementInfo(typeof(PresetColor))]
 
 [SchemaAttr(10, "highlight")]
 [Id(ElementTypeIdConst)]
@@ -9141,7 +8962,6 @@ public partial class BulletFontText : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a:buFont.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "buFont")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9165,7 +8985,6 @@ public partial class BulletFont : TextFontType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:latin.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "latin")]
 [Id(ElementTypeIdConst)]
@@ -9191,7 +9010,6 @@ public partial class LatinFont : TextFontType
 /// <para> When the object is serialized out as xml, its qualified name is a:ea.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "ea")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9216,7 +9034,6 @@ public partial class EastAsianFont : TextFontType
 /// <para> When the object is serialized out as xml, its qualified name is a:cs.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "cs")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9240,7 +9057,6 @@ public partial class ComplexScriptFont : TextFontType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:sym.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "sym")]
 [Id(ElementTypeIdConst)]
@@ -9569,19 +9385,6 @@ public partial class UnderlineFollowsText : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(PresetDash))]
-    [ChildElementInfo(typeof(CustomDash))]
-    [ChildElementInfo(typeof(Round))]
-    [ChildElementInfo(typeof(LineJoinBevel))]
-    [ChildElementInfo(typeof(Miter))]
-    [ChildElementInfo(typeof(HeadEnd))]
-    [ChildElementInfo(typeof(TailEnd))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "uLn")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9648,19 +9451,6 @@ public partial class Underline : LinePropertiesType
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(PresetDash))]
-    [ChildElementInfo(typeof(CustomDash))]
-    [ChildElementInfo(typeof(Round))]
-    [ChildElementInfo(typeof(LineJoinBevel))]
-    [ChildElementInfo(typeof(Miter))]
-    [ChildElementInfo(typeof(HeadEnd))]
-    [ChildElementInfo(typeof(TailEnd))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "ln")]
 [Id(ElementTypeIdConst)]
@@ -9729,19 +9519,6 @@ public partial class Outline : LinePropertiesType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(PresetDash))]
-    [ChildElementInfo(typeof(CustomDash))]
-    [ChildElementInfo(typeof(Round))]
-    [ChildElementInfo(typeof(LineJoinBevel))]
-    [ChildElementInfo(typeof(Miter))]
-    [ChildElementInfo(typeof(HeadEnd))]
-    [ChildElementInfo(typeof(TailEnd))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "lnL")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9808,19 +9585,6 @@ public partial class LeftBorderLineProperties : LinePropertiesType
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(PresetDash))]
-    [ChildElementInfo(typeof(CustomDash))]
-    [ChildElementInfo(typeof(Round))]
-    [ChildElementInfo(typeof(LineJoinBevel))]
-    [ChildElementInfo(typeof(Miter))]
-    [ChildElementInfo(typeof(HeadEnd))]
-    [ChildElementInfo(typeof(TailEnd))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "lnR")]
 [Id(ElementTypeIdConst)]
@@ -9889,19 +9653,6 @@ public partial class RightBorderLineProperties : LinePropertiesType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(PresetDash))]
-    [ChildElementInfo(typeof(CustomDash))]
-    [ChildElementInfo(typeof(Round))]
-    [ChildElementInfo(typeof(LineJoinBevel))]
-    [ChildElementInfo(typeof(Miter))]
-    [ChildElementInfo(typeof(HeadEnd))]
-    [ChildElementInfo(typeof(TailEnd))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "lnT")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9968,19 +9719,6 @@ public partial class TopBorderLineProperties : LinePropertiesType
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(PresetDash))]
-    [ChildElementInfo(typeof(CustomDash))]
-    [ChildElementInfo(typeof(Round))]
-    [ChildElementInfo(typeof(LineJoinBevel))]
-    [ChildElementInfo(typeof(Miter))]
-    [ChildElementInfo(typeof(HeadEnd))]
-    [ChildElementInfo(typeof(TailEnd))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "lnB")]
 [Id(ElementTypeIdConst)]
@@ -10049,19 +9787,6 @@ public partial class BottomBorderLineProperties : LinePropertiesType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(PresetDash))]
-    [ChildElementInfo(typeof(CustomDash))]
-    [ChildElementInfo(typeof(Round))]
-    [ChildElementInfo(typeof(LineJoinBevel))]
-    [ChildElementInfo(typeof(Miter))]
-    [ChildElementInfo(typeof(HeadEnd))]
-    [ChildElementInfo(typeof(TailEnd))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "lnTlToBr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -10128,19 +9853,6 @@ public partial class TopLeftToBottomRightBorderLineProperties : LinePropertiesTy
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(PresetDash))]
-    [ChildElementInfo(typeof(CustomDash))]
-    [ChildElementInfo(typeof(Round))]
-    [ChildElementInfo(typeof(LineJoinBevel))]
-    [ChildElementInfo(typeof(Miter))]
-    [ChildElementInfo(typeof(HeadEnd))]
-    [ChildElementInfo(typeof(TailEnd))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "lnBlToTr")]
 [Id(ElementTypeIdConst)]
@@ -11346,7 +11058,6 @@ public partial class ThemeOverride : OpenXmlPartRootElement
 /// <para> When the object is serialized out as xml, its qualified name is a:themeManager.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "themeManager")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -11370,7 +11081,6 @@ public partial class ThemeManager : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:masterClrMapping.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "masterClrMapping")]
 [Id(ElementTypeIdConst)]
@@ -11682,7 +11392,6 @@ public partial class ExtensionList : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is a:st.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "st")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -11706,7 +11415,6 @@ public partial class StartTime : AudioCDTimeType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:end.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "end")]
 [Id(ElementTypeIdConst)]
@@ -13019,12 +12727,6 @@ public partial class FormatScheme : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(PresetColor))]
-
 [SchemaAttr(10, "dk1")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -13084,12 +12786,6 @@ public partial class Dark1Color : Color2Type
 ///<item><description>PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(PresetColor))]
 
 [SchemaAttr(10, "lt1")]
 [Id(ElementTypeIdConst)]
@@ -13151,12 +12847,6 @@ public partial class Light1Color : Color2Type
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(PresetColor))]
-
 [SchemaAttr(10, "dk2")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -13216,12 +12906,6 @@ public partial class Dark2Color : Color2Type
 ///<item><description>PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(PresetColor))]
 
 [SchemaAttr(10, "lt2")]
 [Id(ElementTypeIdConst)]
@@ -13283,12 +12967,6 @@ public partial class Light2Color : Color2Type
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(PresetColor))]
-
 [SchemaAttr(10, "accent1")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -13348,12 +13026,6 @@ public partial class Accent1Color : Color2Type
 ///<item><description>PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(PresetColor))]
 
 [SchemaAttr(10, "accent2")]
 [Id(ElementTypeIdConst)]
@@ -13415,12 +13087,6 @@ public partial class Accent2Color : Color2Type
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(PresetColor))]
-
 [SchemaAttr(10, "accent3")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -13480,12 +13146,6 @@ public partial class Accent3Color : Color2Type
 ///<item><description>PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(PresetColor))]
 
 [SchemaAttr(10, "accent4")]
 [Id(ElementTypeIdConst)]
@@ -13547,12 +13207,6 @@ public partial class Accent4Color : Color2Type
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(PresetColor))]
-
 [SchemaAttr(10, "accent5")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -13612,12 +13266,6 @@ public partial class Accent5Color : Color2Type
 ///<item><description>PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(PresetColor))]
 
 [SchemaAttr(10, "accent6")]
 [Id(ElementTypeIdConst)]
@@ -13679,12 +13327,6 @@ public partial class Accent6Color : Color2Type
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(PresetColor))]
-
 [SchemaAttr(10, "hlink")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -13744,12 +13386,6 @@ public partial class Hyperlink : Color2Type
 ///<item><description>PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(RgbColorModelHex))]
-    [ChildElementInfo(typeof(HslColor))]
-    [ChildElementInfo(typeof(SystemColor))]
-    [ChildElementInfo(typeof(PresetColor))]
 
 [SchemaAttr(10, "folHlink")]
 [Id(ElementTypeIdConst)]
@@ -13935,7 +13571,6 @@ public abstract partial class Color2Type : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is a:sx.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "sx")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -13959,7 +13594,6 @@ public partial class ScaleX : RatioType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:sy.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "sy")]
 [Id(ElementTypeIdConst)]
@@ -14021,7 +13655,6 @@ public abstract partial class RatioType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a:off.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "off")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -14045,7 +13678,6 @@ public partial class Offset : Point2DType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:chOff.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "chOff")]
 [Id(ElementTypeIdConst)]
@@ -14107,7 +13739,6 @@ public abstract partial class Point2DType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a:ext.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "ext")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -14131,7 +13762,6 @@ public partial class Extents : PositiveSize2DType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:chExt.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "chExt")]
 [Id(ElementTypeIdConst)]
@@ -14525,7 +14155,6 @@ public partial class ConnectionShapeLocks : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is a:stCxn.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "stCxn")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -14549,7 +14178,6 @@ public partial class StartConnection : ConnectionType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:endCxn.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "endCxn")]
 [Id(ElementTypeIdConst)]
@@ -17620,7 +17248,6 @@ public partial class Anchor : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a:norm.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "norm")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -17644,7 +17271,6 @@ public partial class Normal : Vector3DType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:up.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "up")]
 [Id(ElementTypeIdConst)]
@@ -17714,7 +17340,6 @@ public abstract partial class Vector3DType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a:bevelT.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "bevelT")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -17739,7 +17364,6 @@ public partial class BevelTop : BevelType
 /// <para> When the object is serialized out as xml, its qualified name is a:bevelB.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "bevelB")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -17763,7 +17387,6 @@ public partial class BevelBottom : BevelType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:bevel.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "bevel")]
 [Id(ElementTypeIdConst)]
@@ -17833,7 +17456,6 @@ public abstract partial class BevelType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a:fillToRect.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "fillToRect")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -17857,7 +17479,6 @@ public partial class FillToRectangle : RelativeRectangleType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:tileRect.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "tileRect")]
 [Id(ElementTypeIdConst)]
@@ -17883,7 +17504,6 @@ public partial class TileRectangle : RelativeRectangleType
 /// <para> When the object is serialized out as xml, its qualified name is a:fillRect.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "fillRect")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -17907,7 +17527,6 @@ public partial class FillRectangle : RelativeRectangleType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:srcRect.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "srcRect")]
 [Id(ElementTypeIdConst)]
@@ -18268,7 +17887,6 @@ public partial class ShapeGuide : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a:pos.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "pos")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18292,7 +17910,6 @@ public partial class Position : AdjustPoint2DType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:pt.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "pt")]
 [Id(ElementTypeIdConst)]
@@ -19215,8 +18832,6 @@ public partial class Path : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ShapeGuide))]
-
 [SchemaAttr(10, "avLst")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -19272,8 +18887,6 @@ public partial class AdjustValueList : GeometryGuideListType
 ///<item><description>ShapeGuide &lt;a:gd></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ShapeGuide))]
 
 [SchemaAttr(10, "gdLst")]
 [Id(ElementTypeIdConst)]
@@ -19687,7 +19300,6 @@ public partial class DashStop : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a:headEnd.</para>
 /// </summary>
 
-
 [SchemaAttr(10, "headEnd")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -19711,7 +19323,6 @@ public partial class HeadEnd : LineEndPropertiesType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a:tailEnd.</para>
 /// </summary>
-
 
 [SchemaAttr(10, "tailEnd")]
 [Id(ElementTypeIdConst)]
@@ -20435,12 +20046,6 @@ public partial class ListStyle : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(BodyProperties))]
-    [ChildElementInfo(typeof(ListStyle))]
-    [ChildElementInfo(typeof(ShapeStyle))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "spDef")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -20501,12 +20106,6 @@ public partial class ShapeDefault : DefaultShapeDefinitionType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(BodyProperties))]
-    [ChildElementInfo(typeof(ListStyle))]
-    [ChildElementInfo(typeof(ShapeStyle))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "lnDef")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -20566,12 +20165,6 @@ public partial class LineDefault : DefaultShapeDefinitionType
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(BodyProperties))]
-    [ChildElementInfo(typeof(ListStyle))]
-    [ChildElementInfo(typeof(ShapeStyle))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "txDef")]
 [Id(ElementTypeIdConst)]
@@ -20763,8 +20356,6 @@ public abstract partial class DefaultShapeDefinitionType : OpenXmlCompositeEleme
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "overrideClrMapping")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -20820,8 +20411,6 @@ public partial class OverrideColorMapping : ColorMappingType
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "clrMap")]
 [Id(ElementTypeIdConst)]
@@ -21811,22 +21400,6 @@ public partial class TableCell : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TableBackground))]
-    [ChildElementInfo(typeof(WholeTable))]
-    [ChildElementInfo(typeof(Band1Horizontal))]
-    [ChildElementInfo(typeof(Band2Horizontal))]
-    [ChildElementInfo(typeof(Band1Vertical))]
-    [ChildElementInfo(typeof(Band2Vertical))]
-    [ChildElementInfo(typeof(LastColumn))]
-    [ChildElementInfo(typeof(FirstColumn))]
-    [ChildElementInfo(typeof(LastRow))]
-    [ChildElementInfo(typeof(SoutheastCell))]
-    [ChildElementInfo(typeof(SouthwestCell))]
-    [ChildElementInfo(typeof(FirstRow))]
-    [ChildElementInfo(typeof(NortheastCell))]
-    [ChildElementInfo(typeof(NorthwestCell))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "tableStyle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -21896,22 +21469,6 @@ public partial class TableStyle : TableStyleType
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(TableBackground))]
-    [ChildElementInfo(typeof(WholeTable))]
-    [ChildElementInfo(typeof(Band1Horizontal))]
-    [ChildElementInfo(typeof(Band2Horizontal))]
-    [ChildElementInfo(typeof(Band1Vertical))]
-    [ChildElementInfo(typeof(Band2Vertical))]
-    [ChildElementInfo(typeof(LastColumn))]
-    [ChildElementInfo(typeof(FirstColumn))]
-    [ChildElementInfo(typeof(LastRow))]
-    [ChildElementInfo(typeof(SoutheastCell))]
-    [ChildElementInfo(typeof(SouthwestCell))]
-    [ChildElementInfo(typeof(FirstRow))]
-    [ChildElementInfo(typeof(NortheastCell))]
-    [ChildElementInfo(typeof(NorthwestCell))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "tblStyle")]
 [Id(ElementTypeIdConst)]
@@ -22696,9 +22253,6 @@ public partial class TableRow : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(LineReference))]
-
 [SchemaAttr(10, "left")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -22755,9 +22309,6 @@ public partial class LeftBorder : ThemeableLineStyleType
 ///<item><description>LineReference &lt;a:lnRef></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(LineReference))]
 
 [SchemaAttr(10, "right")]
 [Id(ElementTypeIdConst)]
@@ -22816,9 +22367,6 @@ public partial class RightBorder : ThemeableLineStyleType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(LineReference))]
-
 [SchemaAttr(10, "top")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -22875,9 +22423,6 @@ public partial class TopBorder : ThemeableLineStyleType
 ///<item><description>LineReference &lt;a:lnRef></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(LineReference))]
 
 [SchemaAttr(10, "bottom")]
 [Id(ElementTypeIdConst)]
@@ -22936,9 +22481,6 @@ public partial class BottomBorder : ThemeableLineStyleType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(LineReference))]
-
 [SchemaAttr(10, "insideH")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -22995,9 +22537,6 @@ public partial class InsideHorizontalBorder : ThemeableLineStyleType
 ///<item><description>LineReference &lt;a:lnRef></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(LineReference))]
 
 [SchemaAttr(10, "insideV")]
 [Id(ElementTypeIdConst)]
@@ -23056,9 +22595,6 @@ public partial class InsideVerticalBorder : ThemeableLineStyleType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(LineReference))]
-
 [SchemaAttr(10, "tl2br")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -23115,9 +22651,6 @@ public partial class TopLeftToBottomRightBorder : ThemeableLineStyleType
 ///<item><description>LineReference &lt;a:lnRef></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(LineReference))]
 
 [SchemaAttr(10, "tr2bl")]
 [Id(ElementTypeIdConst)]
@@ -23728,9 +23261,6 @@ public partial class TableBackground : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TableCellTextStyle))]
-    [ChildElementInfo(typeof(TableCellStyle))]
-
 [SchemaAttr(10, "wholeTbl")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -23787,9 +23317,6 @@ public partial class WholeTable : TablePartStyleType
 ///<item><description>TableCellStyle &lt;a:tcStyle></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(TableCellTextStyle))]
-    [ChildElementInfo(typeof(TableCellStyle))]
 
 [SchemaAttr(10, "band1H")]
 [Id(ElementTypeIdConst)]
@@ -23848,9 +23375,6 @@ public partial class Band1Horizontal : TablePartStyleType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TableCellTextStyle))]
-    [ChildElementInfo(typeof(TableCellStyle))]
-
 [SchemaAttr(10, "band2H")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -23907,9 +23431,6 @@ public partial class Band2Horizontal : TablePartStyleType
 ///<item><description>TableCellStyle &lt;a:tcStyle></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(TableCellTextStyle))]
-    [ChildElementInfo(typeof(TableCellStyle))]
 
 [SchemaAttr(10, "band1V")]
 [Id(ElementTypeIdConst)]
@@ -23968,9 +23489,6 @@ public partial class Band1Vertical : TablePartStyleType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TableCellTextStyle))]
-    [ChildElementInfo(typeof(TableCellStyle))]
-
 [SchemaAttr(10, "band2V")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -24027,9 +23545,6 @@ public partial class Band2Vertical : TablePartStyleType
 ///<item><description>TableCellStyle &lt;a:tcStyle></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(TableCellTextStyle))]
-    [ChildElementInfo(typeof(TableCellStyle))]
 
 [SchemaAttr(10, "lastCol")]
 [Id(ElementTypeIdConst)]
@@ -24088,9 +23603,6 @@ public partial class LastColumn : TablePartStyleType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TableCellTextStyle))]
-    [ChildElementInfo(typeof(TableCellStyle))]
-
 [SchemaAttr(10, "firstCol")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -24147,9 +23659,6 @@ public partial class FirstColumn : TablePartStyleType
 ///<item><description>TableCellStyle &lt;a:tcStyle></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(TableCellTextStyle))]
-    [ChildElementInfo(typeof(TableCellStyle))]
 
 [SchemaAttr(10, "lastRow")]
 [Id(ElementTypeIdConst)]
@@ -24208,9 +23717,6 @@ public partial class LastRow : TablePartStyleType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TableCellTextStyle))]
-    [ChildElementInfo(typeof(TableCellStyle))]
-
 [SchemaAttr(10, "seCell")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -24267,9 +23773,6 @@ public partial class SoutheastCell : TablePartStyleType
 ///<item><description>TableCellStyle &lt;a:tcStyle></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(TableCellTextStyle))]
-    [ChildElementInfo(typeof(TableCellStyle))]
 
 [SchemaAttr(10, "swCell")]
 [Id(ElementTypeIdConst)]
@@ -24328,9 +23831,6 @@ public partial class SouthwestCell : TablePartStyleType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TableCellTextStyle))]
-    [ChildElementInfo(typeof(TableCellStyle))]
-
 [SchemaAttr(10, "firstRow")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -24388,9 +23888,6 @@ public partial class FirstRow : TablePartStyleType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TableCellTextStyle))]
-    [ChildElementInfo(typeof(TableCellStyle))]
-
 [SchemaAttr(10, "neCell")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -24447,9 +23944,6 @@ public partial class NortheastCell : TablePartStyleType
 ///<item><description>TableCellStyle &lt;a:tcStyle></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(TableCellTextStyle))]
-    [ChildElementInfo(typeof(TableCellStyle))]
 
 [SchemaAttr(10, "nwCell")]
 [Id(ElementTypeIdConst)]
@@ -24609,24 +24103,6 @@ public abstract partial class TablePartStyleType : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineSpacing))]
-    [ChildElementInfo(typeof(SpaceBefore))]
-    [ChildElementInfo(typeof(SpaceAfter))]
-    [ChildElementInfo(typeof(BulletColorText))]
-    [ChildElementInfo(typeof(BulletColor))]
-    [ChildElementInfo(typeof(BulletSizeText))]
-    [ChildElementInfo(typeof(BulletSizePercentage))]
-    [ChildElementInfo(typeof(BulletSizePoints))]
-    [ChildElementInfo(typeof(BulletFontText))]
-    [ChildElementInfo(typeof(BulletFont))]
-    [ChildElementInfo(typeof(NoBullet))]
-    [ChildElementInfo(typeof(AutoNumberedBullet))]
-    [ChildElementInfo(typeof(CharacterBullet))]
-    [ChildElementInfo(typeof(PictureBullet))]
-    [ChildElementInfo(typeof(TabStopList))]
-    [ChildElementInfo(typeof(DefaultRunProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "pPr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -24698,24 +24174,6 @@ public partial class ParagraphProperties : TextParagraphPropertiesType
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineSpacing))]
-    [ChildElementInfo(typeof(SpaceBefore))]
-    [ChildElementInfo(typeof(SpaceAfter))]
-    [ChildElementInfo(typeof(BulletColorText))]
-    [ChildElementInfo(typeof(BulletColor))]
-    [ChildElementInfo(typeof(BulletSizeText))]
-    [ChildElementInfo(typeof(BulletSizePercentage))]
-    [ChildElementInfo(typeof(BulletSizePoints))]
-    [ChildElementInfo(typeof(BulletFontText))]
-    [ChildElementInfo(typeof(BulletFont))]
-    [ChildElementInfo(typeof(NoBullet))]
-    [ChildElementInfo(typeof(AutoNumberedBullet))]
-    [ChildElementInfo(typeof(CharacterBullet))]
-    [ChildElementInfo(typeof(PictureBullet))]
-    [ChildElementInfo(typeof(TabStopList))]
-    [ChildElementInfo(typeof(DefaultRunProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "defPPr")]
 [Id(ElementTypeIdConst)]
@@ -24789,24 +24247,6 @@ public partial class DefaultParagraphProperties : TextParagraphPropertiesType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineSpacing))]
-    [ChildElementInfo(typeof(SpaceBefore))]
-    [ChildElementInfo(typeof(SpaceAfter))]
-    [ChildElementInfo(typeof(BulletColorText))]
-    [ChildElementInfo(typeof(BulletColor))]
-    [ChildElementInfo(typeof(BulletSizeText))]
-    [ChildElementInfo(typeof(BulletSizePercentage))]
-    [ChildElementInfo(typeof(BulletSizePoints))]
-    [ChildElementInfo(typeof(BulletFontText))]
-    [ChildElementInfo(typeof(BulletFont))]
-    [ChildElementInfo(typeof(NoBullet))]
-    [ChildElementInfo(typeof(AutoNumberedBullet))]
-    [ChildElementInfo(typeof(CharacterBullet))]
-    [ChildElementInfo(typeof(PictureBullet))]
-    [ChildElementInfo(typeof(TabStopList))]
-    [ChildElementInfo(typeof(DefaultRunProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "lvl1pPr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -24878,24 +24318,6 @@ public partial class Level1ParagraphProperties : TextParagraphPropertiesType
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineSpacing))]
-    [ChildElementInfo(typeof(SpaceBefore))]
-    [ChildElementInfo(typeof(SpaceAfter))]
-    [ChildElementInfo(typeof(BulletColorText))]
-    [ChildElementInfo(typeof(BulletColor))]
-    [ChildElementInfo(typeof(BulletSizeText))]
-    [ChildElementInfo(typeof(BulletSizePercentage))]
-    [ChildElementInfo(typeof(BulletSizePoints))]
-    [ChildElementInfo(typeof(BulletFontText))]
-    [ChildElementInfo(typeof(BulletFont))]
-    [ChildElementInfo(typeof(NoBullet))]
-    [ChildElementInfo(typeof(AutoNumberedBullet))]
-    [ChildElementInfo(typeof(CharacterBullet))]
-    [ChildElementInfo(typeof(PictureBullet))]
-    [ChildElementInfo(typeof(TabStopList))]
-    [ChildElementInfo(typeof(DefaultRunProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "lvl2pPr")]
 [Id(ElementTypeIdConst)]
@@ -24969,24 +24391,6 @@ public partial class Level2ParagraphProperties : TextParagraphPropertiesType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineSpacing))]
-    [ChildElementInfo(typeof(SpaceBefore))]
-    [ChildElementInfo(typeof(SpaceAfter))]
-    [ChildElementInfo(typeof(BulletColorText))]
-    [ChildElementInfo(typeof(BulletColor))]
-    [ChildElementInfo(typeof(BulletSizeText))]
-    [ChildElementInfo(typeof(BulletSizePercentage))]
-    [ChildElementInfo(typeof(BulletSizePoints))]
-    [ChildElementInfo(typeof(BulletFontText))]
-    [ChildElementInfo(typeof(BulletFont))]
-    [ChildElementInfo(typeof(NoBullet))]
-    [ChildElementInfo(typeof(AutoNumberedBullet))]
-    [ChildElementInfo(typeof(CharacterBullet))]
-    [ChildElementInfo(typeof(PictureBullet))]
-    [ChildElementInfo(typeof(TabStopList))]
-    [ChildElementInfo(typeof(DefaultRunProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "lvl3pPr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -25058,24 +24462,6 @@ public partial class Level3ParagraphProperties : TextParagraphPropertiesType
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineSpacing))]
-    [ChildElementInfo(typeof(SpaceBefore))]
-    [ChildElementInfo(typeof(SpaceAfter))]
-    [ChildElementInfo(typeof(BulletColorText))]
-    [ChildElementInfo(typeof(BulletColor))]
-    [ChildElementInfo(typeof(BulletSizeText))]
-    [ChildElementInfo(typeof(BulletSizePercentage))]
-    [ChildElementInfo(typeof(BulletSizePoints))]
-    [ChildElementInfo(typeof(BulletFontText))]
-    [ChildElementInfo(typeof(BulletFont))]
-    [ChildElementInfo(typeof(NoBullet))]
-    [ChildElementInfo(typeof(AutoNumberedBullet))]
-    [ChildElementInfo(typeof(CharacterBullet))]
-    [ChildElementInfo(typeof(PictureBullet))]
-    [ChildElementInfo(typeof(TabStopList))]
-    [ChildElementInfo(typeof(DefaultRunProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "lvl4pPr")]
 [Id(ElementTypeIdConst)]
@@ -25149,24 +24535,6 @@ public partial class Level4ParagraphProperties : TextParagraphPropertiesType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineSpacing))]
-    [ChildElementInfo(typeof(SpaceBefore))]
-    [ChildElementInfo(typeof(SpaceAfter))]
-    [ChildElementInfo(typeof(BulletColorText))]
-    [ChildElementInfo(typeof(BulletColor))]
-    [ChildElementInfo(typeof(BulletSizeText))]
-    [ChildElementInfo(typeof(BulletSizePercentage))]
-    [ChildElementInfo(typeof(BulletSizePoints))]
-    [ChildElementInfo(typeof(BulletFontText))]
-    [ChildElementInfo(typeof(BulletFont))]
-    [ChildElementInfo(typeof(NoBullet))]
-    [ChildElementInfo(typeof(AutoNumberedBullet))]
-    [ChildElementInfo(typeof(CharacterBullet))]
-    [ChildElementInfo(typeof(PictureBullet))]
-    [ChildElementInfo(typeof(TabStopList))]
-    [ChildElementInfo(typeof(DefaultRunProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "lvl5pPr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -25238,24 +24606,6 @@ public partial class Level5ParagraphProperties : TextParagraphPropertiesType
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineSpacing))]
-    [ChildElementInfo(typeof(SpaceBefore))]
-    [ChildElementInfo(typeof(SpaceAfter))]
-    [ChildElementInfo(typeof(BulletColorText))]
-    [ChildElementInfo(typeof(BulletColor))]
-    [ChildElementInfo(typeof(BulletSizeText))]
-    [ChildElementInfo(typeof(BulletSizePercentage))]
-    [ChildElementInfo(typeof(BulletSizePoints))]
-    [ChildElementInfo(typeof(BulletFontText))]
-    [ChildElementInfo(typeof(BulletFont))]
-    [ChildElementInfo(typeof(NoBullet))]
-    [ChildElementInfo(typeof(AutoNumberedBullet))]
-    [ChildElementInfo(typeof(CharacterBullet))]
-    [ChildElementInfo(typeof(PictureBullet))]
-    [ChildElementInfo(typeof(TabStopList))]
-    [ChildElementInfo(typeof(DefaultRunProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "lvl6pPr")]
 [Id(ElementTypeIdConst)]
@@ -25329,24 +24679,6 @@ public partial class Level6ParagraphProperties : TextParagraphPropertiesType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineSpacing))]
-    [ChildElementInfo(typeof(SpaceBefore))]
-    [ChildElementInfo(typeof(SpaceAfter))]
-    [ChildElementInfo(typeof(BulletColorText))]
-    [ChildElementInfo(typeof(BulletColor))]
-    [ChildElementInfo(typeof(BulletSizeText))]
-    [ChildElementInfo(typeof(BulletSizePercentage))]
-    [ChildElementInfo(typeof(BulletSizePoints))]
-    [ChildElementInfo(typeof(BulletFontText))]
-    [ChildElementInfo(typeof(BulletFont))]
-    [ChildElementInfo(typeof(NoBullet))]
-    [ChildElementInfo(typeof(AutoNumberedBullet))]
-    [ChildElementInfo(typeof(CharacterBullet))]
-    [ChildElementInfo(typeof(PictureBullet))]
-    [ChildElementInfo(typeof(TabStopList))]
-    [ChildElementInfo(typeof(DefaultRunProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "lvl7pPr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -25419,24 +24751,6 @@ public partial class Level7ParagraphProperties : TextParagraphPropertiesType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineSpacing))]
-    [ChildElementInfo(typeof(SpaceBefore))]
-    [ChildElementInfo(typeof(SpaceAfter))]
-    [ChildElementInfo(typeof(BulletColorText))]
-    [ChildElementInfo(typeof(BulletColor))]
-    [ChildElementInfo(typeof(BulletSizeText))]
-    [ChildElementInfo(typeof(BulletSizePercentage))]
-    [ChildElementInfo(typeof(BulletSizePoints))]
-    [ChildElementInfo(typeof(BulletFontText))]
-    [ChildElementInfo(typeof(BulletFont))]
-    [ChildElementInfo(typeof(NoBullet))]
-    [ChildElementInfo(typeof(AutoNumberedBullet))]
-    [ChildElementInfo(typeof(CharacterBullet))]
-    [ChildElementInfo(typeof(PictureBullet))]
-    [ChildElementInfo(typeof(TabStopList))]
-    [ChildElementInfo(typeof(DefaultRunProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "lvl8pPr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -25508,24 +24822,6 @@ public partial class Level8ParagraphProperties : TextParagraphPropertiesType
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineSpacing))]
-    [ChildElementInfo(typeof(SpaceBefore))]
-    [ChildElementInfo(typeof(SpaceAfter))]
-    [ChildElementInfo(typeof(BulletColorText))]
-    [ChildElementInfo(typeof(BulletColor))]
-    [ChildElementInfo(typeof(BulletSizeText))]
-    [ChildElementInfo(typeof(BulletSizePercentage))]
-    [ChildElementInfo(typeof(BulletSizePoints))]
-    [ChildElementInfo(typeof(BulletFontText))]
-    [ChildElementInfo(typeof(BulletFont))]
-    [ChildElementInfo(typeof(NoBullet))]
-    [ChildElementInfo(typeof(AutoNumberedBullet))]
-    [ChildElementInfo(typeof(CharacterBullet))]
-    [ChildElementInfo(typeof(PictureBullet))]
-    [ChildElementInfo(typeof(TabStopList))]
-    [ChildElementInfo(typeof(DefaultRunProperties))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "lvl9pPr")]
 [Id(ElementTypeIdConst)]
@@ -25822,29 +25118,6 @@ public abstract partial class TextParagraphPropertiesType : OpenXmlCompositeElem
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(GroupFill))]
-    [ChildElementInfo(typeof(EffectList))]
-    [ChildElementInfo(typeof(EffectDag))]
-    [ChildElementInfo(typeof(Highlight))]
-    [ChildElementInfo(typeof(UnderlineFollowsText))]
-    [ChildElementInfo(typeof(Underline))]
-    [ChildElementInfo(typeof(UnderlineFillText))]
-    [ChildElementInfo(typeof(UnderlineFill))]
-    [ChildElementInfo(typeof(LatinFont))]
-    [ChildElementInfo(typeof(EastAsianFont))]
-    [ChildElementInfo(typeof(ComplexScriptFont))]
-    [ChildElementInfo(typeof(SymbolFont))]
-    [ChildElementInfo(typeof(HyperlinkOnClick))]
-    [ChildElementInfo(typeof(HyperlinkOnMouseOver))]
-    [ChildElementInfo(typeof(RightToLeft))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "endParaRPr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -25922,29 +25195,6 @@ public partial class EndParagraphRunProperties : TextCharacterPropertiesType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(GroupFill))]
-    [ChildElementInfo(typeof(EffectList))]
-    [ChildElementInfo(typeof(EffectDag))]
-    [ChildElementInfo(typeof(Highlight))]
-    [ChildElementInfo(typeof(UnderlineFollowsText))]
-    [ChildElementInfo(typeof(Underline))]
-    [ChildElementInfo(typeof(UnderlineFillText))]
-    [ChildElementInfo(typeof(UnderlineFill))]
-    [ChildElementInfo(typeof(LatinFont))]
-    [ChildElementInfo(typeof(EastAsianFont))]
-    [ChildElementInfo(typeof(ComplexScriptFont))]
-    [ChildElementInfo(typeof(SymbolFont))]
-    [ChildElementInfo(typeof(HyperlinkOnClick))]
-    [ChildElementInfo(typeof(HyperlinkOnMouseOver))]
-    [ChildElementInfo(typeof(RightToLeft))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "rPr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -26021,29 +25271,6 @@ public partial class RunProperties : TextCharacterPropertiesType
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(Outline))]
-    [ChildElementInfo(typeof(NoFill))]
-    [ChildElementInfo(typeof(SolidFill))]
-    [ChildElementInfo(typeof(GradientFill))]
-    [ChildElementInfo(typeof(BlipFill))]
-    [ChildElementInfo(typeof(PatternFill))]
-    [ChildElementInfo(typeof(GroupFill))]
-    [ChildElementInfo(typeof(EffectList))]
-    [ChildElementInfo(typeof(EffectDag))]
-    [ChildElementInfo(typeof(Highlight))]
-    [ChildElementInfo(typeof(UnderlineFollowsText))]
-    [ChildElementInfo(typeof(Underline))]
-    [ChildElementInfo(typeof(UnderlineFillText))]
-    [ChildElementInfo(typeof(UnderlineFill))]
-    [ChildElementInfo(typeof(LatinFont))]
-    [ChildElementInfo(typeof(EastAsianFont))]
-    [ChildElementInfo(typeof(ComplexScriptFont))]
-    [ChildElementInfo(typeof(SymbolFont))]
-    [ChildElementInfo(typeof(HyperlinkOnClick))]
-    [ChildElementInfo(typeof(HyperlinkOnMouseOver))]
-    [ChildElementInfo(typeof(RightToLeft))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "defRPr")]
 [Id(ElementTypeIdConst)]
@@ -26570,9 +25797,6 @@ public partial class SpacingPoints : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(SpacingPercent))]
-    [ChildElementInfo(typeof(SpacingPoints))]
-
 [SchemaAttr(10, "lnSpc")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -26630,9 +25854,6 @@ public partial class LineSpacing : TextSpacingType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(SpacingPercent))]
-    [ChildElementInfo(typeof(SpacingPoints))]
-
 [SchemaAttr(10, "spcBef")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -26689,9 +25910,6 @@ public partial class SpaceBefore : TextSpacingType
 ///<item><description>SpacingPoints &lt;a:spcPts></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(SpacingPercent))]
-    [ChildElementInfo(typeof(SpacingPoints))]
 
 [SchemaAttr(10, "spcAft")]
 [Id(ElementTypeIdConst)]
@@ -28325,9 +27543,6 @@ public partial class ConnectorLockingExtension : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(HyperlinkSound))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "hlinkClick")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -28385,9 +27600,6 @@ public partial class HyperlinkOnClick : HyperlinkType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(HyperlinkSound))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(10, "hlinkHover")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -28444,9 +27656,6 @@ public partial class HyperlinkOnHover : HyperlinkType
 ///<item><description>ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(HyperlinkSound))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(10, "hlinkMouseOver")]
 [Id(ElementTypeIdConst)]

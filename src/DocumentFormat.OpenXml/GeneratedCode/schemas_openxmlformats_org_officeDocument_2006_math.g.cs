@@ -2881,7 +2881,6 @@ public partial class MathProperties : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is m:lit.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "lit")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2905,7 +2904,6 @@ public partial class Literal : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:nor.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "nor")]
 [Id(ElementTypeIdConst)]
@@ -2931,7 +2929,6 @@ public partial class NormalText : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is m:aln.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "aln")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2955,7 +2952,6 @@ public partial class Alignment : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:opEmu.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "opEmu")]
 [Id(ElementTypeIdConst)]
@@ -2981,7 +2977,6 @@ public partial class OperatorEmulator : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is m:noBreak.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "noBreak")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3005,7 +3000,6 @@ public partial class NoBreak : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:diff.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "diff")]
 [Id(ElementTypeIdConst)]
@@ -3031,7 +3025,6 @@ public partial class Differential : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is m:hideTop.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "hideTop")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3055,7 +3048,6 @@ public partial class HideTop : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:hideBot.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "hideBot")]
 [Id(ElementTypeIdConst)]
@@ -3081,7 +3073,6 @@ public partial class HideBottom : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is m:hideLeft.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "hideLeft")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3105,7 +3096,6 @@ public partial class HideLeft : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:hideRight.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "hideRight")]
 [Id(ElementTypeIdConst)]
@@ -3131,7 +3121,6 @@ public partial class HideRight : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is m:strikeH.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "strikeH")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3155,7 +3144,6 @@ public partial class StrikeHorizontal : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:strikeV.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "strikeV")]
 [Id(ElementTypeIdConst)]
@@ -3181,7 +3169,6 @@ public partial class StrikeVertical : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is m:strikeBLTR.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "strikeBLTR")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3205,7 +3192,6 @@ public partial class StrikeBottomLeftToTopRight : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:strikeTLBR.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "strikeTLBR")]
 [Id(ElementTypeIdConst)]
@@ -3231,7 +3217,6 @@ public partial class StrikeTopLeftToBottomRight : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is m:grow.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "grow")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3255,7 +3240,6 @@ public partial class GrowOperators : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:maxDist.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "maxDist")]
 [Id(ElementTypeIdConst)]
@@ -3281,7 +3265,6 @@ public partial class MaxDistribution : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is m:objDist.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "objDist")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3305,7 +3288,6 @@ public partial class ObjectDistribution : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:plcHide.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "plcHide")]
 [Id(ElementTypeIdConst)]
@@ -3331,7 +3313,6 @@ public partial class HidePlaceholder : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is m:subHide.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "subHide")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3355,7 +3336,6 @@ public partial class HideSubArgument : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:supHide.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "supHide")]
 [Id(ElementTypeIdConst)]
@@ -3381,7 +3361,6 @@ public partial class HideSuperArgument : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is m:show.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "show")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3405,7 +3384,6 @@ public partial class ShowPhantom : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:zeroWid.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "zeroWid")]
 [Id(ElementTypeIdConst)]
@@ -3431,7 +3409,6 @@ public partial class ZeroWidth : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is m:zeroAsc.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "zeroAsc")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3455,7 +3432,6 @@ public partial class ZeroAscent : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:zeroDesc.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "zeroDesc")]
 [Id(ElementTypeIdConst)]
@@ -3481,7 +3457,6 @@ public partial class ZeroDescent : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is m:transp.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "transp")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3505,7 +3480,6 @@ public partial class Transparent : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:degHide.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "degHide")]
 [Id(ElementTypeIdConst)]
@@ -3531,7 +3505,6 @@ public partial class HideDegree : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is m:alnScr.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "alnScr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3555,7 +3528,6 @@ public partial class AlignScripts : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:smallFrac.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "smallFrac")]
 [Id(ElementTypeIdConst)]
@@ -3581,7 +3553,6 @@ public partial class SmallFraction : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is m:dispDef.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "dispDef")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3605,7 +3576,6 @@ public partial class DisplayDefaults : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:wrapRight.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "wrapRight")]
 [Id(ElementTypeIdConst)]
@@ -3860,7 +3830,6 @@ public partial class Text : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is m:chr.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "chr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3884,7 +3853,6 @@ public partial class AccentChar : CharType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:begChr.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "begChr")]
 [Id(ElementTypeIdConst)]
@@ -3910,7 +3878,6 @@ public partial class BeginChar : CharType
 /// <para> When the object is serialized out as xml, its qualified name is m:sepChr.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "sepChr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3934,7 +3901,6 @@ public partial class SeparatorChar : CharType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:endChr.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "endChr")]
 [Id(ElementTypeIdConst)]
@@ -4224,65 +4190,6 @@ public partial class AccentProperties : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ArgumentProperties))]
-    [ChildElementInfo(typeof(Accent))]
-    [ChildElementInfo(typeof(Bar))]
-    [ChildElementInfo(typeof(Box))]
-    [ChildElementInfo(typeof(BorderBox))]
-    [ChildElementInfo(typeof(Delimiter))]
-    [ChildElementInfo(typeof(EquationArray))]
-    [ChildElementInfo(typeof(Fraction))]
-    [ChildElementInfo(typeof(MathFunction))]
-    [ChildElementInfo(typeof(GroupChar))]
-    [ChildElementInfo(typeof(LimitLower))]
-    [ChildElementInfo(typeof(LimitUpper))]
-    [ChildElementInfo(typeof(Matrix))]
-    [ChildElementInfo(typeof(Nary))]
-    [ChildElementInfo(typeof(Phantom))]
-    [ChildElementInfo(typeof(Radical))]
-    [ChildElementInfo(typeof(PreSubSuper))]
-    [ChildElementInfo(typeof(Subscript))]
-    [ChildElementInfo(typeof(SubSuperscript))]
-    [ChildElementInfo(typeof(Superscript))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(OfficeMath))]
-    [ChildElementInfo(typeof(ControlProperties))]
-
 [SchemaAttr(21, "e")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4395,65 +4302,6 @@ public partial class Base : OfficeMathArgumentType
 ///<item><description>ControlProperties &lt;m:ctrlPr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ArgumentProperties))]
-    [ChildElementInfo(typeof(Accent))]
-    [ChildElementInfo(typeof(Bar))]
-    [ChildElementInfo(typeof(Box))]
-    [ChildElementInfo(typeof(BorderBox))]
-    [ChildElementInfo(typeof(Delimiter))]
-    [ChildElementInfo(typeof(EquationArray))]
-    [ChildElementInfo(typeof(Fraction))]
-    [ChildElementInfo(typeof(MathFunction))]
-    [ChildElementInfo(typeof(GroupChar))]
-    [ChildElementInfo(typeof(LimitLower))]
-    [ChildElementInfo(typeof(LimitUpper))]
-    [ChildElementInfo(typeof(Matrix))]
-    [ChildElementInfo(typeof(Nary))]
-    [ChildElementInfo(typeof(Phantom))]
-    [ChildElementInfo(typeof(Radical))]
-    [ChildElementInfo(typeof(PreSubSuper))]
-    [ChildElementInfo(typeof(Subscript))]
-    [ChildElementInfo(typeof(SubSuperscript))]
-    [ChildElementInfo(typeof(Superscript))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(OfficeMath))]
-    [ChildElementInfo(typeof(ControlProperties))]
 
 [SchemaAttr(21, "num")]
 [Id(ElementTypeIdConst)]
@@ -4568,65 +4416,6 @@ public partial class Numerator : OfficeMathArgumentType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ArgumentProperties))]
-    [ChildElementInfo(typeof(Accent))]
-    [ChildElementInfo(typeof(Bar))]
-    [ChildElementInfo(typeof(Box))]
-    [ChildElementInfo(typeof(BorderBox))]
-    [ChildElementInfo(typeof(Delimiter))]
-    [ChildElementInfo(typeof(EquationArray))]
-    [ChildElementInfo(typeof(Fraction))]
-    [ChildElementInfo(typeof(MathFunction))]
-    [ChildElementInfo(typeof(GroupChar))]
-    [ChildElementInfo(typeof(LimitLower))]
-    [ChildElementInfo(typeof(LimitUpper))]
-    [ChildElementInfo(typeof(Matrix))]
-    [ChildElementInfo(typeof(Nary))]
-    [ChildElementInfo(typeof(Phantom))]
-    [ChildElementInfo(typeof(Radical))]
-    [ChildElementInfo(typeof(PreSubSuper))]
-    [ChildElementInfo(typeof(Subscript))]
-    [ChildElementInfo(typeof(SubSuperscript))]
-    [ChildElementInfo(typeof(Superscript))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(OfficeMath))]
-    [ChildElementInfo(typeof(ControlProperties))]
-
 [SchemaAttr(21, "den")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4739,65 +4528,6 @@ public partial class Denominator : OfficeMathArgumentType
 ///<item><description>ControlProperties &lt;m:ctrlPr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ArgumentProperties))]
-    [ChildElementInfo(typeof(Accent))]
-    [ChildElementInfo(typeof(Bar))]
-    [ChildElementInfo(typeof(Box))]
-    [ChildElementInfo(typeof(BorderBox))]
-    [ChildElementInfo(typeof(Delimiter))]
-    [ChildElementInfo(typeof(EquationArray))]
-    [ChildElementInfo(typeof(Fraction))]
-    [ChildElementInfo(typeof(MathFunction))]
-    [ChildElementInfo(typeof(GroupChar))]
-    [ChildElementInfo(typeof(LimitLower))]
-    [ChildElementInfo(typeof(LimitUpper))]
-    [ChildElementInfo(typeof(Matrix))]
-    [ChildElementInfo(typeof(Nary))]
-    [ChildElementInfo(typeof(Phantom))]
-    [ChildElementInfo(typeof(Radical))]
-    [ChildElementInfo(typeof(PreSubSuper))]
-    [ChildElementInfo(typeof(Subscript))]
-    [ChildElementInfo(typeof(SubSuperscript))]
-    [ChildElementInfo(typeof(Superscript))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(OfficeMath))]
-    [ChildElementInfo(typeof(ControlProperties))]
 
 [SchemaAttr(21, "fName")]
 [Id(ElementTypeIdConst)]
@@ -4912,65 +4642,6 @@ public partial class FunctionName : OfficeMathArgumentType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ArgumentProperties))]
-    [ChildElementInfo(typeof(Accent))]
-    [ChildElementInfo(typeof(Bar))]
-    [ChildElementInfo(typeof(Box))]
-    [ChildElementInfo(typeof(BorderBox))]
-    [ChildElementInfo(typeof(Delimiter))]
-    [ChildElementInfo(typeof(EquationArray))]
-    [ChildElementInfo(typeof(Fraction))]
-    [ChildElementInfo(typeof(MathFunction))]
-    [ChildElementInfo(typeof(GroupChar))]
-    [ChildElementInfo(typeof(LimitLower))]
-    [ChildElementInfo(typeof(LimitUpper))]
-    [ChildElementInfo(typeof(Matrix))]
-    [ChildElementInfo(typeof(Nary))]
-    [ChildElementInfo(typeof(Phantom))]
-    [ChildElementInfo(typeof(Radical))]
-    [ChildElementInfo(typeof(PreSubSuper))]
-    [ChildElementInfo(typeof(Subscript))]
-    [ChildElementInfo(typeof(SubSuperscript))]
-    [ChildElementInfo(typeof(Superscript))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(OfficeMath))]
-    [ChildElementInfo(typeof(ControlProperties))]
-
 [SchemaAttr(21, "lim")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5083,65 +4754,6 @@ public partial class Limit : OfficeMathArgumentType
 ///<item><description>ControlProperties &lt;m:ctrlPr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ArgumentProperties))]
-    [ChildElementInfo(typeof(Accent))]
-    [ChildElementInfo(typeof(Bar))]
-    [ChildElementInfo(typeof(Box))]
-    [ChildElementInfo(typeof(BorderBox))]
-    [ChildElementInfo(typeof(Delimiter))]
-    [ChildElementInfo(typeof(EquationArray))]
-    [ChildElementInfo(typeof(Fraction))]
-    [ChildElementInfo(typeof(MathFunction))]
-    [ChildElementInfo(typeof(GroupChar))]
-    [ChildElementInfo(typeof(LimitLower))]
-    [ChildElementInfo(typeof(LimitUpper))]
-    [ChildElementInfo(typeof(Matrix))]
-    [ChildElementInfo(typeof(Nary))]
-    [ChildElementInfo(typeof(Phantom))]
-    [ChildElementInfo(typeof(Radical))]
-    [ChildElementInfo(typeof(PreSubSuper))]
-    [ChildElementInfo(typeof(Subscript))]
-    [ChildElementInfo(typeof(SubSuperscript))]
-    [ChildElementInfo(typeof(Superscript))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(OfficeMath))]
-    [ChildElementInfo(typeof(ControlProperties))]
 
 [SchemaAttr(21, "sub")]
 [Id(ElementTypeIdConst)]
@@ -5256,65 +4868,6 @@ public partial class SubArgument : OfficeMathArgumentType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ArgumentProperties))]
-    [ChildElementInfo(typeof(Accent))]
-    [ChildElementInfo(typeof(Bar))]
-    [ChildElementInfo(typeof(Box))]
-    [ChildElementInfo(typeof(BorderBox))]
-    [ChildElementInfo(typeof(Delimiter))]
-    [ChildElementInfo(typeof(EquationArray))]
-    [ChildElementInfo(typeof(Fraction))]
-    [ChildElementInfo(typeof(MathFunction))]
-    [ChildElementInfo(typeof(GroupChar))]
-    [ChildElementInfo(typeof(LimitLower))]
-    [ChildElementInfo(typeof(LimitUpper))]
-    [ChildElementInfo(typeof(Matrix))]
-    [ChildElementInfo(typeof(Nary))]
-    [ChildElementInfo(typeof(Phantom))]
-    [ChildElementInfo(typeof(Radical))]
-    [ChildElementInfo(typeof(PreSubSuper))]
-    [ChildElementInfo(typeof(Subscript))]
-    [ChildElementInfo(typeof(SubSuperscript))]
-    [ChildElementInfo(typeof(Superscript))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(OfficeMath))]
-    [ChildElementInfo(typeof(ControlProperties))]
-
 [SchemaAttr(21, "sup")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5427,65 +4980,6 @@ public partial class SuperArgument : OfficeMathArgumentType
 ///<item><description>ControlProperties &lt;m:ctrlPr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ArgumentProperties))]
-    [ChildElementInfo(typeof(Accent))]
-    [ChildElementInfo(typeof(Bar))]
-    [ChildElementInfo(typeof(Box))]
-    [ChildElementInfo(typeof(BorderBox))]
-    [ChildElementInfo(typeof(Delimiter))]
-    [ChildElementInfo(typeof(EquationArray))]
-    [ChildElementInfo(typeof(Fraction))]
-    [ChildElementInfo(typeof(MathFunction))]
-    [ChildElementInfo(typeof(GroupChar))]
-    [ChildElementInfo(typeof(LimitLower))]
-    [ChildElementInfo(typeof(LimitUpper))]
-    [ChildElementInfo(typeof(Matrix))]
-    [ChildElementInfo(typeof(Nary))]
-    [ChildElementInfo(typeof(Phantom))]
-    [ChildElementInfo(typeof(Radical))]
-    [ChildElementInfo(typeof(PreSubSuper))]
-    [ChildElementInfo(typeof(Subscript))]
-    [ChildElementInfo(typeof(SubSuperscript))]
-    [ChildElementInfo(typeof(Superscript))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(OfficeMath))]
-    [ChildElementInfo(typeof(ControlProperties))]
 
 [SchemaAttr(21, "deg")]
 [Id(ElementTypeIdConst)]
@@ -5721,7 +5215,6 @@ public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is m:pos.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "pos")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5745,7 +5238,6 @@ public partial class Position : TopBottomType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:vertJc.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "vertJc")]
 [Id(ElementTypeIdConst)]
@@ -6517,7 +6009,6 @@ public partial class BaseJustification : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is m:rSpRule.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "rSpRule")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6541,7 +6032,6 @@ public partial class RowSpacingRule : SpacingRuleType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:cGpRule.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "cGpRule")]
 [Id(ElementTypeIdConst)]
@@ -6597,7 +6087,6 @@ public abstract partial class SpacingRuleType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is m:rSp.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "rSp")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6621,7 +6110,6 @@ public partial class RowSpacing : UnsignedShortType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:cGp.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "cGp")]
 [Id(ElementTypeIdConst)]
@@ -7619,7 +7107,6 @@ public partial class MatrixColumn : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is m:cSp.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "cSp")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7643,7 +7130,6 @@ public partial class ColumnSpacing : TwipsMeasureType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:lMargin.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "lMargin")]
 [Id(ElementTypeIdConst)]
@@ -7669,7 +7155,6 @@ public partial class LeftMargin : TwipsMeasureType
 /// <para> When the object is serialized out as xml, its qualified name is m:rMargin.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "rMargin")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7693,7 +7178,6 @@ public partial class RightMargin : TwipsMeasureType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:preSp.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "preSp")]
 [Id(ElementTypeIdConst)]
@@ -7719,7 +7203,6 @@ public partial class PreSpacing : TwipsMeasureType
 /// <para> When the object is serialized out as xml, its qualified name is m:postSp.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "postSp")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7743,7 +7226,6 @@ public partial class PostSpacing : TwipsMeasureType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:interSp.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "interSp")]
 [Id(ElementTypeIdConst)]
@@ -7769,7 +7251,6 @@ public partial class InterSpacing : TwipsMeasureType
 /// <para> When the object is serialized out as xml, its qualified name is m:intraSp.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "intraSp")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7793,7 +7274,6 @@ public partial class IntraSpacing : TwipsMeasureType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:wrapIndent.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "wrapIndent")]
 [Id(ElementTypeIdConst)]
@@ -8189,7 +7669,6 @@ public partial class MatrixRow : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is m:limLoc.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "limLoc")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8214,7 +7693,6 @@ public partial class LimitLocation : LimitLocationType
 /// <para> When the object is serialized out as xml, its qualified name is m:intLim.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "intLim")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8238,7 +7716,6 @@ public partial class IntegralLimitLocation : LimitLocationType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:naryLim.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "naryLim")]
 [Id(ElementTypeIdConst)]
@@ -9184,7 +8661,6 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is m:jc.</para>
 /// </summary>
 
-
 [SchemaAttr(21, "jc")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9208,7 +8684,6 @@ public partial class Justification : OfficeMathJustificationType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is m:defJc.</para>
 /// </summary>
-
 
 [SchemaAttr(21, "defJc")]
 [Id(ElementTypeIdConst)]

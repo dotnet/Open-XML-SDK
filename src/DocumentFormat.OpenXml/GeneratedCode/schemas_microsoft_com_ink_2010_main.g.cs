@@ -305,7 +305,6 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is msink:sourceLink.</para>
 /// </summary>
 
-
 [SchemaAttr(45, "sourceLink")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -329,7 +328,6 @@ public partial class SourceLink : ContextLinkType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is msink:destinationLink.</para>
 /// </summary>
-
 
 [SchemaAttr(45, "destinationLink")]
 [Id(ElementTypeIdConst)]

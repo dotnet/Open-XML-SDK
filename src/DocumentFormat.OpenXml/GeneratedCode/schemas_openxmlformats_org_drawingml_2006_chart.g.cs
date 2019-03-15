@@ -191,10 +191,6 @@ public partial class ChartShapeProperties : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
-
 [SchemaAttr(11, "txPr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -252,10 +248,6 @@ public partial class TextProperties : TextBodyType
 ///<item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ListStyle))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Paragraph))]
 
 [SchemaAttr(11, "rich")]
 [Id(ElementTypeIdConst)]
@@ -435,7 +427,6 @@ public partial class DataLabelPosition : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is c:showLegendKey.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "showLegendKey")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -459,7 +450,6 @@ public partial class ShowLegendKey : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showVal.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "showVal")]
 [Id(ElementTypeIdConst)]
@@ -485,7 +475,6 @@ public partial class ShowValue : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:showCatName.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "showCatName")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -509,7 +498,6 @@ public partial class ShowCategoryName : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showSerName.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "showSerName")]
 [Id(ElementTypeIdConst)]
@@ -535,7 +523,6 @@ public partial class ShowSeriesName : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:showPercent.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "showPercent")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -559,7 +546,6 @@ public partial class ShowPercent : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showBubbleSize.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "showBubbleSize")]
 [Id(ElementTypeIdConst)]
@@ -585,7 +571,6 @@ public partial class ShowBubbleSize : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:showLeaderLines.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "showLeaderLines")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -609,7 +594,6 @@ public partial class ShowLeaderLines : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:varyColors.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "varyColors")]
 [Id(ElementTypeIdConst)]
@@ -635,7 +619,6 @@ public partial class VaryColors : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:wireframe.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "wireframe")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -659,7 +642,6 @@ public partial class Wireframe : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:delete.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "delete")]
 [Id(ElementTypeIdConst)]
@@ -685,7 +667,6 @@ public partial class Delete : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:overlay.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "overlay")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -709,7 +690,6 @@ public partial class Overlay : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:rAngAx.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "rAngAx")]
 [Id(ElementTypeIdConst)]
@@ -735,7 +715,6 @@ public partial class RightAngleAxes : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:showHorzBorder.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "showHorzBorder")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -759,7 +738,6 @@ public partial class ShowHorizontalBorder : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showVertBorder.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "showVertBorder")]
 [Id(ElementTypeIdConst)]
@@ -785,7 +763,6 @@ public partial class ShowVerticalBorder : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:showOutline.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "showOutline")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -809,7 +786,6 @@ public partial class ShowOutlineBorder : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showKeys.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "showKeys")]
 [Id(ElementTypeIdConst)]
@@ -835,7 +811,6 @@ public partial class ShowKeys : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:invertIfNegative.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "invertIfNegative")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -859,7 +834,6 @@ public partial class InvertIfNegative : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:bubble3D.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "bubble3D")]
 [Id(ElementTypeIdConst)]
@@ -885,7 +859,6 @@ public partial class Bubble3D : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:dispRSqr.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "dispRSqr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -909,7 +882,6 @@ public partial class DisplayRSquaredValue : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:dispEq.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "dispEq")]
 [Id(ElementTypeIdConst)]
@@ -935,7 +907,6 @@ public partial class DisplayEquation : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:noEndCap.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "noEndCap")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -959,7 +930,6 @@ public partial class NoEndCap : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:applyToFront.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "applyToFront")]
 [Id(ElementTypeIdConst)]
@@ -985,7 +955,6 @@ public partial class ApplyToFront : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:applyToSides.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "applyToSides")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1009,7 +978,6 @@ public partial class ApplyToSides : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:applyToEnd.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "applyToEnd")]
 [Id(ElementTypeIdConst)]
@@ -1035,7 +1003,6 @@ public partial class ApplyToEnd : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:autoTitleDeleted.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "autoTitleDeleted")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1059,7 +1026,6 @@ public partial class AutoTitleDeleted : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:plotVisOnly.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "plotVisOnly")]
 [Id(ElementTypeIdConst)]
@@ -1085,7 +1051,6 @@ public partial class PlotVisibleOnly : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:showDLblsOverMax.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "showDLblsOverMax")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1109,7 +1074,6 @@ public partial class ShowDataLabelsOverMaximum : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:chartObject.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "chartObject")]
 [Id(ElementTypeIdConst)]
@@ -1135,7 +1099,6 @@ public partial class ChartObject : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:data.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "data")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1159,7 +1122,6 @@ public partial class Data : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:formatting.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "formatting")]
 [Id(ElementTypeIdConst)]
@@ -1185,7 +1147,6 @@ public partial class Formatting : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:selection.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "selection")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1209,7 +1170,6 @@ public partial class Selection : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:userInterface.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "userInterface")]
 [Id(ElementTypeIdConst)]
@@ -1235,7 +1195,6 @@ public partial class UserInterface : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:autoUpdate.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "autoUpdate")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1259,7 +1218,6 @@ public partial class AutoUpdate : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:smooth.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "smooth")]
 [Id(ElementTypeIdConst)]
@@ -1285,7 +1243,6 @@ public partial class Smooth : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:marker.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "marker")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1309,7 +1266,6 @@ public partial class ShowMarker : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:showNegBubbles.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "showNegBubbles")]
 [Id(ElementTypeIdConst)]
@@ -1335,7 +1291,6 @@ public partial class ShowNegativeBubbles : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:auto.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "auto")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1359,7 +1314,6 @@ public partial class AutoLabeled : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:noMultiLvlLbl.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "noMultiLvlLbl")]
 [Id(ElementTypeIdConst)]
@@ -1385,7 +1339,6 @@ public partial class NoMultiLevelLabels : BooleanType
 /// <para> When the object is serialized out as xml, its qualified name is c:date1904.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "date1904")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1409,7 +1362,6 @@ public partial class Date1904 : BooleanType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:roundedCorners.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "roundedCorners")]
 [Id(ElementTypeIdConst)]
@@ -1463,7 +1415,6 @@ public abstract partial class BooleanType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is c:separator.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "separator")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1501,7 +1452,6 @@ public partial class Separator : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is c:name.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "name")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1538,7 +1488,6 @@ public partial class TrendlineName : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:f.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "f")]
 [Id(ElementTypeIdConst)]
@@ -1795,8 +1744,6 @@ public partial class ChartText : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-
 [SchemaAttr(11, "leaderLines")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1852,8 +1799,6 @@ public partial class LeaderLines : ChartLinesType
 ///<item><description>ChartShapeProperties &lt;c:spPr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ChartShapeProperties))]
 
 [SchemaAttr(11, "dropLines")]
 [Id(ElementTypeIdConst)]
@@ -1911,8 +1856,6 @@ public partial class DropLines : ChartLinesType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-
 [SchemaAttr(11, "majorGridlines")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1968,8 +1911,6 @@ public partial class MajorGridlines : ChartLinesType
 ///<item><description>ChartShapeProperties &lt;c:spPr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ChartShapeProperties))]
 
 [SchemaAttr(11, "minorGridlines")]
 [Id(ElementTypeIdConst)]
@@ -2027,8 +1968,6 @@ public partial class MinorGridlines : ChartLinesType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-
 [SchemaAttr(11, "serLines")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2084,8 +2023,6 @@ public partial class SeriesLines : ChartLinesType
 ///<item><description>ChartShapeProperties &lt;c:spPr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ChartShapeProperties))]
 
 [SchemaAttr(11, "hiLowLines")]
 [Id(ElementTypeIdConst)]
@@ -2207,7 +2144,6 @@ public abstract partial class ChartLinesType : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is c:idx.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "idx")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2231,7 +2167,6 @@ public partial class Index : UnsignedIntegerType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:order.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "order")]
 [Id(ElementTypeIdConst)]
@@ -2257,7 +2192,6 @@ public partial class Order : UnsignedIntegerType
 /// <para> When the object is serialized out as xml, its qualified name is c:axId.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "axId")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2281,7 +2215,6 @@ public partial class AxisId : UnsignedIntegerType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:crossAx.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "crossAx")]
 [Id(ElementTypeIdConst)]
@@ -2307,7 +2240,6 @@ public partial class CrossingAxis : UnsignedIntegerType
 /// <para> When the object is serialized out as xml, its qualified name is c:ptCount.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "ptCount")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2331,7 +2263,6 @@ public partial class PointCount : UnsignedIntegerType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:secondPiePt.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "secondPiePt")]
 [Id(ElementTypeIdConst)]
@@ -2357,7 +2288,6 @@ public partial class SecondPiePoint : UnsignedIntegerType
 /// <para> When the object is serialized out as xml, its qualified name is c:explosion.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "explosion")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2381,7 +2311,6 @@ public partial class Explosion : UnsignedIntegerType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:fmtId.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "fmtId")]
 [Id(ElementTypeIdConst)]
@@ -4059,7 +3988,6 @@ public partial class Title : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is c:majorTickMark.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "majorTickMark")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4083,7 +4011,6 @@ public partial class MajorTickMark : TickMarkType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:minorTickMark.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "minorTickMark")]
 [Id(ElementTypeIdConst)]
@@ -4217,7 +4144,6 @@ public partial class Crosses : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is c:crossesAt.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "crossesAt")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4241,7 +4167,6 @@ public partial class CrossesAt : DoubleType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:x.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "x")]
 [Id(ElementTypeIdConst)]
@@ -4267,7 +4192,6 @@ public partial class Left : DoubleType
 /// <para> When the object is serialized out as xml, its qualified name is c:y.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "y")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4291,7 +4215,6 @@ public partial class Top : DoubleType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:w.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "w")]
 [Id(ElementTypeIdConst)]
@@ -4317,7 +4240,6 @@ public partial class Width : DoubleType
 /// <para> When the object is serialized out as xml, its qualified name is c:h.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "h")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4341,7 +4263,6 @@ public partial class Height : DoubleType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:forward.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "forward")]
 [Id(ElementTypeIdConst)]
@@ -4367,7 +4288,6 @@ public partial class Forward : DoubleType
 /// <para> When the object is serialized out as xml, its qualified name is c:backward.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "backward")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4391,7 +4311,6 @@ public partial class Backward : DoubleType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:intercept.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "intercept")]
 [Id(ElementTypeIdConst)]
@@ -4417,7 +4336,6 @@ public partial class Intercept : DoubleType
 /// <para> When the object is serialized out as xml, its qualified name is c:val.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "val")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4441,7 +4359,6 @@ public partial class ErrorBarValue : DoubleType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:splitPos.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "splitPos")]
 [Id(ElementTypeIdConst)]
@@ -4467,7 +4384,6 @@ public partial class SplitPosition : DoubleType
 /// <para> When the object is serialized out as xml, its qualified name is c:custUnit.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "custUnit")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4492,7 +4408,6 @@ public partial class CustomDisplayUnit : DoubleType
 /// <para> When the object is serialized out as xml, its qualified name is c:max.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "max")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4516,7 +4431,6 @@ public partial class MaxAxisValue : DoubleType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:min.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "min")]
 [Id(ElementTypeIdConst)]
@@ -4831,7 +4745,6 @@ public partial class UserShapes : OpenXmlPartRootElement
 /// <para> When the object is serialized out as xml, its qualified name is c:chart.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "chart")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4856,7 +4769,6 @@ public partial class ChartReference : RelationshipIdType
 /// <para> When the object is serialized out as xml, its qualified name is c:legacyDrawingHF.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "legacyDrawingHF")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4880,7 +4792,6 @@ public partial class LegacyDrawingHeaderFooter : RelationshipIdType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:userShapes.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "userShapes")]
 [Id(ElementTypeIdConst)]
@@ -5007,7 +4918,6 @@ public partial class Extension : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is c:v.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "v")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5044,7 +4954,6 @@ public partial class NumericValue : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:formatCode.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "formatCode")]
 [Id(ElementTypeIdConst)]
@@ -5083,7 +4992,6 @@ public partial class FormatCode : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is c:oddHeader.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "oddHeader")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5120,7 +5028,6 @@ public partial class OddHeader : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:oddFooter.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "oddFooter")]
 [Id(ElementTypeIdConst)]
@@ -5159,7 +5066,6 @@ public partial class OddFooter : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is c:evenHeader.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "evenHeader")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5196,7 +5102,6 @@ public partial class EvenHeader : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:evenFooter.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "evenFooter")]
 [Id(ElementTypeIdConst)]
@@ -5235,7 +5140,6 @@ public partial class EvenFooter : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is c:firstHeader.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "firstHeader")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5273,7 +5177,6 @@ public partial class FirstHeader : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is c:firstFooter.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "firstFooter")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5310,7 +5213,6 @@ public partial class FirstFooter : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:name.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "name")]
 [Id(ElementTypeIdConst)]
@@ -5635,11 +5537,6 @@ public partial class NumberReference : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(FormatCode))]
-    [ChildElementInfo(typeof(PointCount))]
-    [ChildElementInfo(typeof(NumericPoint))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(11, "numLit")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5698,11 +5595,6 @@ public partial class NumberLiteral : NumberDataType
 ///<item><description>ExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(FormatCode))]
-    [ChildElementInfo(typeof(PointCount))]
-    [ChildElementInfo(typeof(NumericPoint))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(11, "numCache")]
 [Id(ElementTypeIdConst)]
@@ -6145,10 +6037,6 @@ public partial class StringReference : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(PointCount))]
-    [ChildElementInfo(typeof(StringPoint))]
-    [ChildElementInfo(typeof(StrDataExtensionList))]
-
 [SchemaAttr(11, "strLit")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6206,10 +6094,6 @@ public partial class StringLiteral : StringDataType
 ///<item><description>StrDataExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(PointCount))]
-    [ChildElementInfo(typeof(StringPoint))]
-    [ChildElementInfo(typeof(StrDataExtensionList))]
 
 [SchemaAttr(11, "strCache")]
 [Id(ElementTypeIdConst)]
@@ -6375,7 +6259,6 @@ public partial class LayoutTarget : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is c:xMode.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "xMode")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6399,7 +6282,6 @@ public partial class LeftMode : LayoutModeType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:yMode.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "yMode")]
 [Id(ElementTypeIdConst)]
@@ -6425,7 +6307,6 @@ public partial class TopMode : LayoutModeType
 /// <para> When the object is serialized out as xml, its qualified name is c:wMode.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "wMode")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6449,7 +6330,6 @@ public partial class WidthMode : LayoutModeType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:hMode.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "hMode")]
 [Id(ElementTypeIdConst)]
@@ -7694,9 +7574,6 @@ public partial class ErrorBarValueType : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NumberReference))]
-    [ChildElementInfo(typeof(NumberLiteral))]
-
 [SchemaAttr(11, "plus")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7753,9 +7630,6 @@ public partial class Plus : NumberDataSourceType
 ///<item><description>NumberLiteral &lt;c:numLit></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NumberReference))]
-    [ChildElementInfo(typeof(NumberLiteral))]
 
 [SchemaAttr(11, "minus")]
 [Id(ElementTypeIdConst)]
@@ -7814,9 +7688,6 @@ public partial class Minus : NumberDataSourceType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NumberReference))]
-    [ChildElementInfo(typeof(NumberLiteral))]
-
 [SchemaAttr(11, "val")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7874,9 +7745,6 @@ public partial class Values : NumberDataSourceType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NumberReference))]
-    [ChildElementInfo(typeof(NumberLiteral))]
-
 [SchemaAttr(11, "yVal")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7933,9 +7801,6 @@ public partial class YValues : NumberDataSourceType
 ///<item><description>NumberLiteral &lt;c:numLit></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NumberReference))]
-    [ChildElementInfo(typeof(NumberLiteral))]
 
 [SchemaAttr(11, "bubbleSize")]
 [Id(ElementTypeIdConst)]
@@ -8073,7 +7938,6 @@ public abstract partial class NumberDataSourceType : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is c:gapWidth.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "gapWidth")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8097,7 +7961,6 @@ public partial class GapWidth : GapAmountType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:gapDepth.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "gapDepth")]
 [Id(ElementTypeIdConst)]
@@ -8157,8 +8020,6 @@ public abstract partial class GapAmountType : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ChartShapeProperties))]
-
 [SchemaAttr(11, "upBars")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8214,8 +8075,6 @@ public partial class UpBars : UpDownBarType
 ///<item><description>ChartShapeProperties &lt;c:spPr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ChartShapeProperties))]
 
 [SchemaAttr(11, "downBars")]
 [Id(ElementTypeIdConst)]
@@ -9476,11 +9335,6 @@ public partial class View3D : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Thickness))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(11, "floor")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9540,11 +9394,6 @@ public partial class Floor : SurfaceType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Thickness))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(ExtensionList))]
-
 [SchemaAttr(11, "sideWall")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9603,11 +9452,6 @@ public partial class SideWall : SurfaceType
 ///<item><description>ExtensionList &lt;c:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(Thickness))]
-    [ChildElementInfo(typeof(ShapeProperties))]
-    [ChildElementInfo(typeof(PictureOptions))]
-    [ChildElementInfo(typeof(ExtensionList))]
 
 [SchemaAttr(11, "backWall")]
 [Id(ElementTypeIdConst)]
@@ -17647,12 +17491,6 @@ public partial class ErrorBars : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(MultiLevelStringReference))]
-    [ChildElementInfo(typeof(NumberReference))]
-    [ChildElementInfo(typeof(NumberLiteral))]
-    [ChildElementInfo(typeof(StringReference))]
-    [ChildElementInfo(typeof(StringLiteral))]
-
 [SchemaAttr(11, "cat")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -17712,12 +17550,6 @@ public partial class CategoryAxisData : AxisDataSourceType
 ///<item><description>StringLiteral &lt;c:strLit></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(MultiLevelStringReference))]
-    [ChildElementInfo(typeof(NumberReference))]
-    [ChildElementInfo(typeof(NumberLiteral))]
-    [ChildElementInfo(typeof(StringReference))]
-    [ChildElementInfo(typeof(StringLiteral))]
 
 [SchemaAttr(11, "xVal")]
 [Id(ElementTypeIdConst)]
@@ -20132,7 +19964,6 @@ public partial class LabelOffset : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is c:tickLblSkip.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "tickLblSkip")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -20156,7 +19987,6 @@ public partial class TickLabelSkip : SkipType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:tickMarkSkip.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "tickMarkSkip")]
 [Id(ElementTypeIdConst)]
@@ -20275,7 +20105,6 @@ public partial class CatAxExtensionList : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is c:baseTimeUnit.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "baseTimeUnit")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -20300,7 +20129,6 @@ public partial class BaseTimeUnit : TimeUnitType
 /// <para> When the object is serialized out as xml, its qualified name is c:majorTimeUnit.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "majorTimeUnit")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -20324,7 +20152,6 @@ public partial class MajorTimeUnit : TimeUnitType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:minorTimeUnit.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "minorTimeUnit")]
 [Id(ElementTypeIdConst)]
@@ -20378,7 +20205,6 @@ public abstract partial class TimeUnitType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is c:majorUnit.</para>
 /// </summary>
 
-
 [SchemaAttr(11, "majorUnit")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -20402,7 +20228,6 @@ public partial class MajorUnit : AxisUnitType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c:minorUnit.</para>
 /// </summary>
-
 
 [SchemaAttr(11, "minorUnit")]
 [Id(ElementTypeIdConst)]

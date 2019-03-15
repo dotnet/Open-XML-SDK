@@ -1176,13 +1176,6 @@ public partial class ColorTransformCategory : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-
 [SchemaAttr(14, "fillClrLst")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1243,13 +1236,6 @@ public partial class FillColorList : ColorsType
 ///<item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
 
 [SchemaAttr(14, "linClrLst")]
 [Id(ElementTypeIdConst)]
@@ -1312,13 +1298,6 @@ public partial class LineColorList : ColorsType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-
 [SchemaAttr(14, "effectClrLst")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1379,13 +1358,6 @@ public partial class EffectColorList : ColorsType
 ///<item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
 
 [SchemaAttr(14, "txLinClrLst")]
 [Id(ElementTypeIdConst)]
@@ -1448,13 +1420,6 @@ public partial class TextLineColorList : ColorsType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-
 [SchemaAttr(14, "txFillClrLst")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1515,13 +1480,6 @@ public partial class TextFillColorList : ColorsType
 ///<item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
 
 [SchemaAttr(14, "txEffectClrLst")]
 [Id(ElementTypeIdConst)]
@@ -3354,16 +3312,6 @@ public partial class RuleList : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(OrganizationChart))]
-    [ChildElementInfo(typeof(MaxNumberOfChildren))]
-    [ChildElementInfo(typeof(PreferredNumberOfChildren))]
-    [ChildElementInfo(typeof(BulletEnabled))]
-    [ChildElementInfo(typeof(Direction))]
-    [ChildElementInfo(typeof(HierarchyBranch))]
-    [ChildElementInfo(typeof(AnimateOneByOne))]
-    [ChildElementInfo(typeof(AnimationLevel))]
-    [ChildElementInfo(typeof(ResizeHandles))]
-
 [SchemaAttr(14, "varLst")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3427,16 +3375,6 @@ public partial class VariableList : LayoutVariablePropertySetType
 ///<item><description>ResizeHandles &lt;dgm:resizeHandles></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(OrganizationChart))]
-    [ChildElementInfo(typeof(MaxNumberOfChildren))]
-    [ChildElementInfo(typeof(PreferredNumberOfChildren))]
-    [ChildElementInfo(typeof(BulletEnabled))]
-    [ChildElementInfo(typeof(Direction))]
-    [ChildElementInfo(typeof(HierarchyBranch))]
-    [ChildElementInfo(typeof(AnimateOneByOne))]
-    [ChildElementInfo(typeof(AnimationLevel))]
-    [ChildElementInfo(typeof(ResizeHandles))]
 
 [SchemaAttr(14, "presLayoutVars")]
 [Id(ElementTypeIdConst)]
@@ -4640,8 +4578,6 @@ public partial class CategoryList : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DataModel))]
-
 [SchemaAttr(14, "sampData")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4698,8 +4634,6 @@ public partial class SampleData : SampleDataType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DataModel))]
-
 [SchemaAttr(14, "styleData")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4755,8 +4689,6 @@ public partial class StyleData : SampleDataType
 ///<item><description>DataModel &lt;dgm:dataModel></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DataModel))]
 
 [SchemaAttr(14, "clrData")]
 [Id(ElementTypeIdConst)]

@@ -222,7 +222,6 @@ public partial class PublishDate : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is cppr:Abstract.</para>
 /// </summary>
 
-
 [SchemaAttr(36, "Abstract")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -259,7 +258,6 @@ public partial class DocumentAbstract : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cppr:CompanyAddress.</para>
 /// </summary>
-
 
 [SchemaAttr(36, "CompanyAddress")]
 [Id(ElementTypeIdConst)]
@@ -298,7 +296,6 @@ public partial class CompanyAddress : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is cppr:CompanyPhone.</para>
 /// </summary>
 
-
 [SchemaAttr(36, "CompanyPhone")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -336,7 +333,6 @@ public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is cppr:CompanyFax.</para>
 /// </summary>
 
-
 [SchemaAttr(36, "CompanyFax")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -373,7 +369,6 @@ public partial class CompanyFaxNumber : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cppr:CompanyEmail.</para>
 /// </summary>
-
 
 [SchemaAttr(36, "CompanyEmail")]
 [Id(ElementTypeIdConst)]

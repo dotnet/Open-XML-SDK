@@ -508,7 +508,6 @@ public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w15:chartTrackingRefBased.</para>
 /// </summary>
 
-
 [SchemaAttr(69, "chartTrackingRefBased")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -532,7 +531,6 @@ public partial class ChartTrackingRefBased : OnOffType
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:collapsed.</para>
 /// </summary>
-
 
 [SchemaAttr(69, "collapsed")]
 [Id(ElementTypeIdConst)]
@@ -558,7 +556,6 @@ public partial class DefaultCollapsed : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w15:webExtensionLinked.</para>
 /// </summary>
 
-
 [SchemaAttr(69, "webExtensionLinked")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -583,7 +580,6 @@ public partial class WebExtensionLinked : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w15:webExtensionCreated.</para>
 /// </summary>
 
-
 [SchemaAttr(69, "webExtensionCreated")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -607,7 +603,6 @@ public partial class WebExtensionCreated : OnOffType
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w15:doNotAllowInsertDeleteSection.</para>
 /// </summary>
-
 
 [SchemaAttr(69, "doNotAllowInsertDeleteSection")]
 [Id(ElementTypeIdConst)]

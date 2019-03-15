@@ -8135,10 +8135,6 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(QuickAccessToolbarControlClone))]
-    [ChildElementInfo(typeof(UnsizedButton))]
-    [ChildElementInfo(typeof(VerticalSeparator))]
-
 [SchemaAttr(34, "sharedControls")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8196,10 +8192,6 @@ public partial class SharedQatControls : QatItemsType
 ///<item><description>VerticalSeparator &lt;mso:separator></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(QuickAccessToolbarControlClone))]
-    [ChildElementInfo(typeof(UnsizedButton))]
-    [ChildElementInfo(typeof(VerticalSeparator))]
 
 [SchemaAttr(34, "documentControls")]
 [Id(ElementTypeIdConst)]

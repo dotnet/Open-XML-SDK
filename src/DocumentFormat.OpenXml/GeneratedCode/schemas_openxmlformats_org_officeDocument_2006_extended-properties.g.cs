@@ -542,7 +542,6 @@ public partial class Properties : OpenXmlPartRootElement
 /// <para> When the object is serialized out as xml, its qualified name is ap:Template.</para>
 /// </summary>
 
-
 [SchemaAttr(3, "Template")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -579,7 +578,6 @@ public partial class Template : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Manager.</para>
 /// </summary>
-
 
 [SchemaAttr(3, "Manager")]
 [Id(ElementTypeIdConst)]
@@ -618,7 +616,6 @@ public partial class Manager : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is ap:Company.</para>
 /// </summary>
 
-
 [SchemaAttr(3, "Company")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -655,7 +652,6 @@ public partial class Company : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:PresentationFormat.</para>
 /// </summary>
-
 
 [SchemaAttr(3, "PresentationFormat")]
 [Id(ElementTypeIdConst)]
@@ -694,7 +690,6 @@ public partial class PresentationFormat : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is ap:HyperlinkBase.</para>
 /// </summary>
 
-
 [SchemaAttr(3, "HyperlinkBase")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -731,7 +726,6 @@ public partial class HyperlinkBase : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Application.</para>
 /// </summary>
-
 
 [SchemaAttr(3, "Application")]
 [Id(ElementTypeIdConst)]
@@ -770,7 +764,6 @@ public partial class Application : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is ap:AppVersion.</para>
 /// </summary>
 
-
 [SchemaAttr(3, "AppVersion")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -807,7 +800,6 @@ public partial class ApplicationVersion : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Pages.</para>
 /// </summary>
-
 
 [SchemaAttr(3, "Pages")]
 [Id(ElementTypeIdConst)]
@@ -846,7 +838,6 @@ public partial class Pages : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is ap:Words.</para>
 /// </summary>
 
-
 [SchemaAttr(3, "Words")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -883,7 +874,6 @@ public partial class Words : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Characters.</para>
 /// </summary>
-
 
 [SchemaAttr(3, "Characters")]
 [Id(ElementTypeIdConst)]
@@ -922,7 +912,6 @@ public partial class Characters : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is ap:Lines.</para>
 /// </summary>
 
-
 [SchemaAttr(3, "Lines")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -959,7 +948,6 @@ public partial class Lines : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Paragraphs.</para>
 /// </summary>
-
 
 [SchemaAttr(3, "Paragraphs")]
 [Id(ElementTypeIdConst)]
@@ -998,7 +986,6 @@ public partial class Paragraphs : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is ap:Slides.</para>
 /// </summary>
 
-
 [SchemaAttr(3, "Slides")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1035,7 +1022,6 @@ public partial class Slides : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:Notes.</para>
 /// </summary>
-
 
 [SchemaAttr(3, "Notes")]
 [Id(ElementTypeIdConst)]
@@ -1074,7 +1060,6 @@ public partial class Notes : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is ap:TotalTime.</para>
 /// </summary>
 
-
 [SchemaAttr(3, "TotalTime")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1111,7 +1096,6 @@ public partial class TotalTime : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:HiddenSlides.</para>
 /// </summary>
-
 
 [SchemaAttr(3, "HiddenSlides")]
 [Id(ElementTypeIdConst)]
@@ -1150,7 +1134,6 @@ public partial class HiddenSlides : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is ap:MMClips.</para>
 /// </summary>
 
-
 [SchemaAttr(3, "MMClips")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1187,7 +1170,6 @@ public partial class MultimediaClips : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:CharactersWithSpaces.</para>
 /// </summary>
-
 
 [SchemaAttr(3, "CharactersWithSpaces")]
 [Id(ElementTypeIdConst)]
@@ -1226,7 +1208,6 @@ public partial class CharactersWithSpaces : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is ap:DocSecurity.</para>
 /// </summary>
 
-
 [SchemaAttr(3, "DocSecurity")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1263,7 +1244,6 @@ public partial class DocumentSecurity : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:ScaleCrop.</para>
 /// </summary>
-
 
 [SchemaAttr(3, "ScaleCrop")]
 [Id(ElementTypeIdConst)]
@@ -1302,7 +1282,6 @@ public partial class ScaleCrop : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is ap:LinksUpToDate.</para>
 /// </summary>
 
-
 [SchemaAttr(3, "LinksUpToDate")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1340,7 +1319,6 @@ public partial class LinksUpToDate : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is ap:SharedDoc.</para>
 /// </summary>
 
-
 [SchemaAttr(3, "SharedDoc")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1377,7 +1355,6 @@ public partial class SharedDocument : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ap:HyperlinksChanged.</para>
 /// </summary>
-
 
 [SchemaAttr(3, "HyperlinksChanged")]
 [Id(ElementTypeIdConst)]
@@ -1421,8 +1398,6 @@ public partial class HyperlinksChanged : OpenXmlLeafTextElement
 ///<item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector))]
 
 [SchemaAttr(3, "HeadingPairs")]
 [Id(ElementTypeIdConst)]
@@ -1479,8 +1454,6 @@ public partial class HeadingPairs : VectorVariantType
 ///<item><description>DocumentFormat.OpenXml.VariantTypes.VTVector &lt;vt:vector></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector))]
 
 [SchemaAttr(3, "HLinks")]
 [Id(ElementTypeIdConst)]

@@ -2587,7 +2587,6 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
 /// <para> When the object is serialized out as xml, its qualified name is cdr:x.</para>
 /// </summary>
 
-
 [SchemaAttr(12, "x")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2624,7 +2623,6 @@ public partial class XPosition : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cdr:y.</para>
 /// </summary>
-
 
 [SchemaAttr(12, "y")]
 [Id(ElementTypeIdConst)]
@@ -2669,9 +2667,6 @@ public partial class YPosition : OpenXmlLeafTextElement
 ///<item><description>YPosition &lt;cdr:y></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(XPosition))]
-    [ChildElementInfo(typeof(YPosition))]
 
 [SchemaAttr(12, "from")]
 [Id(ElementTypeIdConst)]
@@ -2729,9 +2724,6 @@ public partial class FromAnchor : MarkerType
 ///<item><description>YPosition &lt;cdr:y></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(XPosition))]
-    [ChildElementInfo(typeof(YPosition))]
 
 [SchemaAttr(12, "to")]
 [Id(ElementTypeIdConst)]

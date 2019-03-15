@@ -3406,8 +3406,6 @@ public partial class DataValidation : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
-
 [SchemaAttr(53, "formula1")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -3463,8 +3461,6 @@ public partial class DataValidationForumla1 : DataValidationFormulaType
 ///<item><description>DocumentFormat.OpenXml.Office.Excel.Formula &lt;xne:f></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
 
 [SchemaAttr(53, "formula2")]
 [Id(ElementTypeIdConst)]
@@ -3948,7 +3944,6 @@ public partial class SparklineGroup : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is x14:colorSeries.</para>
 /// </summary>
 
-
 [SchemaAttr(53, "colorSeries")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -3972,7 +3967,6 @@ public partial class SeriesColor : ColorType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x14:colorNegative.</para>
 /// </summary>
-
 
 [SchemaAttr(53, "colorNegative")]
 [Id(ElementTypeIdConst)]
@@ -3998,7 +3992,6 @@ public partial class NegativeColor : ColorType
 /// <para> When the object is serialized out as xml, its qualified name is x14:colorAxis.</para>
 /// </summary>
 
-
 [SchemaAttr(53, "colorAxis")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -4022,7 +4015,6 @@ public partial class AxisColor : ColorType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x14:colorMarkers.</para>
 /// </summary>
-
 
 [SchemaAttr(53, "colorMarkers")]
 [Id(ElementTypeIdConst)]
@@ -4048,7 +4040,6 @@ public partial class MarkersColor : ColorType
 /// <para> When the object is serialized out as xml, its qualified name is x14:colorFirst.</para>
 /// </summary>
 
-
 [SchemaAttr(53, "colorFirst")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -4072,7 +4063,6 @@ public partial class FirstMarkerColor : ColorType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x14:colorLast.</para>
 /// </summary>
-
 
 [SchemaAttr(53, "colorLast")]
 [Id(ElementTypeIdConst)]
@@ -4098,7 +4088,6 @@ public partial class LastMarkerColor : ColorType
 /// <para> When the object is serialized out as xml, its qualified name is x14:colorHigh.</para>
 /// </summary>
 
-
 [SchemaAttr(53, "colorHigh")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -4122,7 +4111,6 @@ public partial class HighMarkerColor : ColorType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x14:colorLow.</para>
 /// </summary>
-
 
 [SchemaAttr(53, "colorLow")]
 [Id(ElementTypeIdConst)]
@@ -4148,7 +4136,6 @@ public partial class LowMarkerColor : ColorType
 /// <para> When the object is serialized out as xml, its qualified name is x14:color.</para>
 /// </summary>
 
-
 [SchemaAttr(53, "color")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -4172,7 +4159,6 @@ public partial class Color : ColorType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x14:fillColor.</para>
 /// </summary>
-
 
 [SchemaAttr(53, "fillColor")]
 [Id(ElementTypeIdConst)]
@@ -4198,7 +4184,6 @@ public partial class FillColor : ColorType
 /// <para> When the object is serialized out as xml, its qualified name is x14:borderColor.</para>
 /// </summary>
 
-
 [SchemaAttr(53, "borderColor")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -4222,7 +4207,6 @@ public partial class BorderColor : ColorType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x14:negativeFillColor.</para>
 /// </summary>
-
 
 [SchemaAttr(53, "negativeFillColor")]
 [Id(ElementTypeIdConst)]
@@ -4248,7 +4232,6 @@ public partial class NegativeFillColor : ColorType
 /// <para> When the object is serialized out as xml, its qualified name is x14:negativeBorderColor.</para>
 /// </summary>
 
-
 [SchemaAttr(53, "negativeBorderColor")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -4272,7 +4255,6 @@ public partial class NegativeBorderColor : ColorType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x14:axisColor.</para>
 /// </summary>
-
 
 [SchemaAttr(53, "axisColor")]
 [Id(ElementTypeIdConst)]

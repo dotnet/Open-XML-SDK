@@ -24,8 +24,6 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache))]
-
 [SchemaAttr(71, "pivotCaches")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -81,8 +79,6 @@ public partial class PivotCaches : OpenXmlPivotCachesElement
 ///<item><description>DocumentFormat.OpenXml.Spreadsheet.PivotCache &lt;x:pivotCache></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache))]
 
 [SchemaAttr(71, "timelineCachePivotCaches")]
 [Id(ElementTypeIdConst)]
@@ -4247,8 +4243,6 @@ public partial class SlicerCacheOlapLevelName : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(71, "surveyPr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -4304,8 +4298,6 @@ public partial class SurveyPrSurveyElementPr : OpenXmlSurveyElementPrElement
 ///<item><description>ExtensionList &lt;x15:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(71, "titlePr")]
 [Id(ElementTypeIdConst)]
@@ -4363,8 +4355,6 @@ public partial class TitlePrSurveyElementPr : OpenXmlSurveyElementPrElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(71, "descriptionPr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -4421,8 +4411,6 @@ public partial class DescriptionPrSurveyElementPr : OpenXmlSurveyElementPrElemen
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(71, "questionsPr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -4478,8 +4466,6 @@ public partial class QuestionsPrSurveyElementPr : OpenXmlSurveyElementPrElement
 ///<item><description>ExtensionList &lt;x15:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(71, "questionPr")]
 [Id(ElementTypeIdConst)]
@@ -5137,7 +5123,6 @@ public partial class TimelineCachePivotTable : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is x15:selection.</para>
 /// </summary>
 
-
 [SchemaAttr(71, "selection")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -5161,7 +5146,6 @@ public partial class SelectionTimelineRange : TimelineRange
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is x15:bounds.</para>
 /// </summary>
-
 
 [SchemaAttr(71, "bounds")]
 [Id(ElementTypeIdConst)]

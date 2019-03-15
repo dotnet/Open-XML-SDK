@@ -2301,7 +2301,6 @@ public partial class ColumnId : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xdr:colOff.</para>
 /// </summary>
 
-
 [SchemaAttr(18, "colOff")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2338,7 +2337,6 @@ public partial class ColumnOffset : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xdr:rowOff.</para>
 /// </summary>
-
 
 [SchemaAttr(18, "rowOff")]
 [Id(ElementTypeIdConst)]
@@ -2431,11 +2429,6 @@ public partial class RowId : OpenXmlLeafTextElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ColumnId))]
-    [ChildElementInfo(typeof(ColumnOffset))]
-    [ChildElementInfo(typeof(RowId))]
-    [ChildElementInfo(typeof(RowOffset))]
-
 [SchemaAttr(18, "from")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2494,11 +2487,6 @@ public partial class FromMarker : MarkerType
 ///<item><description>RowOffset &lt;xdr:rowOff></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ColumnId))]
-    [ChildElementInfo(typeof(ColumnOffset))]
-    [ChildElementInfo(typeof(RowId))]
-    [ChildElementInfo(typeof(RowOffset))]
 
 [SchemaAttr(18, "to")]
 [Id(ElementTypeIdConst)]

@@ -953,7 +953,6 @@ public partial class Anchor : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is wp:start.</para>
 /// </summary>
 
-
 [SchemaAttr(16, "start")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -978,7 +977,6 @@ public partial class StartPoint : Point2DType
 /// <para> When the object is serialized out as xml, its qualified name is wp:lineTo.</para>
 /// </summary>
 
-
 [SchemaAttr(16, "lineTo")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1002,7 +1000,6 @@ public partial class LineTo : Point2DType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp:simplePos.</para>
 /// </summary>
-
 
 [SchemaAttr(16, "simplePos")]
 [Id(ElementTypeIdConst)]

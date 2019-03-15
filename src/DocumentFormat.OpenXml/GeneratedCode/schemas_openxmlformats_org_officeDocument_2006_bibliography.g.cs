@@ -173,7 +173,6 @@ public partial class Person : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Last.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "Last")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -210,7 +209,6 @@ public partial class Last : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:First.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "First")]
 [Id(ElementTypeIdConst)]
@@ -249,7 +247,6 @@ public partial class First : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Middle.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "Middle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -286,7 +283,6 @@ public partial class Middle : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:Corporate.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "Corporate")]
 [Id(ElementTypeIdConst)]
@@ -325,7 +321,6 @@ public partial class Corporate : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:AbbreviatedCaseNumber.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "AbbreviatedCaseNumber")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -362,7 +357,6 @@ public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:AlbumTitle.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "AlbumTitle")]
 [Id(ElementTypeIdConst)]
@@ -401,7 +395,6 @@ public partial class AlbumTitle : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:BookTitle.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "BookTitle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -438,7 +431,6 @@ public partial class BookTitle : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:Broadcaster.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "Broadcaster")]
 [Id(ElementTypeIdConst)]
@@ -477,7 +469,6 @@ public partial class Broadcaster : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:BroadcastTitle.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "BroadcastTitle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -514,7 +505,6 @@ public partial class BroadcastTitle : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:CaseNumber.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "CaseNumber")]
 [Id(ElementTypeIdConst)]
@@ -553,7 +543,6 @@ public partial class CaseNumber : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:ChapterNumber.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "ChapterNumber")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -590,7 +579,6 @@ public partial class ChapterNumber : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:City.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "City")]
 [Id(ElementTypeIdConst)]
@@ -629,7 +617,6 @@ public partial class City : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Comments.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "Comments")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -666,7 +653,6 @@ public partial class Comments : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:ConferenceName.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "ConferenceName")]
 [Id(ElementTypeIdConst)]
@@ -705,7 +691,6 @@ public partial class ConferenceName : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:CountryRegion.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "CountryRegion")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -742,7 +727,6 @@ public partial class CountryRegion : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:Court.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "Court")]
 [Id(ElementTypeIdConst)]
@@ -781,7 +765,6 @@ public partial class Court : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Day.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "Day")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -818,7 +801,6 @@ public partial class Day : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:DayAccessed.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "DayAccessed")]
 [Id(ElementTypeIdConst)]
@@ -857,7 +839,6 @@ public partial class DayAccessed : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Department.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "Department")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -894,7 +875,6 @@ public partial class Department : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:Distributor.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "Distributor")]
 [Id(ElementTypeIdConst)]
@@ -933,7 +913,6 @@ public partial class Distributor : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Edition.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "Edition")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -970,7 +949,6 @@ public partial class Edition : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:Guid.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "Guid")]
 [Id(ElementTypeIdConst)]
@@ -1009,7 +987,6 @@ public partial class GuidString : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Institution.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "Institution")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1046,7 +1023,6 @@ public partial class Institution : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:InternetSiteTitle.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "InternetSiteTitle")]
 [Id(ElementTypeIdConst)]
@@ -1085,7 +1061,6 @@ public partial class InternetSiteTitle : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Issue.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "Issue")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1122,7 +1097,6 @@ public partial class Issue : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:JournalName.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "JournalName")]
 [Id(ElementTypeIdConst)]
@@ -1161,7 +1135,6 @@ public partial class JournalName : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:LCID.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "LCID")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1198,7 +1171,6 @@ public partial class LcId : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:Medium.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "Medium")]
 [Id(ElementTypeIdConst)]
@@ -1237,7 +1209,6 @@ public partial class Medium : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Month.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "Month")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1274,7 +1245,6 @@ public partial class Month : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:MonthAccessed.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "MonthAccessed")]
 [Id(ElementTypeIdConst)]
@@ -1313,7 +1283,6 @@ public partial class MonthAccessed : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:NumberVolumes.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "NumberVolumes")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1350,7 +1319,6 @@ public partial class NumberVolumes : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:Pages.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "Pages")]
 [Id(ElementTypeIdConst)]
@@ -1389,7 +1357,6 @@ public partial class Pages : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:PatentNumber.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "PatentNumber")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1426,7 +1393,6 @@ public partial class PatentNumber : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:PeriodicalTitle.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "PeriodicalTitle")]
 [Id(ElementTypeIdConst)]
@@ -1465,7 +1431,6 @@ public partial class PeriodicalTitle : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:ProductionCompany.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "ProductionCompany")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1502,7 +1467,6 @@ public partial class ProductionCompany : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:PublicationTitle.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "PublicationTitle")]
 [Id(ElementTypeIdConst)]
@@ -1541,7 +1505,6 @@ public partial class PublicationTitle : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Publisher.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "Publisher")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1578,7 +1541,6 @@ public partial class Publisher : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:RecordingNumber.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "RecordingNumber")]
 [Id(ElementTypeIdConst)]
@@ -1617,7 +1579,6 @@ public partial class RecordingNumber : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:RefOrder.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "RefOrder")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1654,7 +1615,6 @@ public partial class ReferenceOrder : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:Reporter.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "Reporter")]
 [Id(ElementTypeIdConst)]
@@ -1693,7 +1653,6 @@ public partial class Reporter : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:ShortTitle.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "ShortTitle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1730,7 +1689,6 @@ public partial class ShortTitle : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:StandardNumber.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "StandardNumber")]
 [Id(ElementTypeIdConst)]
@@ -1769,7 +1727,6 @@ public partial class StandardNumber : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:StateProvince.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "StateProvince")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1806,7 +1763,6 @@ public partial class StateProvince : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:Station.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "Station")]
 [Id(ElementTypeIdConst)]
@@ -1845,7 +1801,6 @@ public partial class Station : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Tag.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "Tag")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1882,7 +1837,6 @@ public partial class Tag : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:Theater.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "Theater")]
 [Id(ElementTypeIdConst)]
@@ -1921,7 +1875,6 @@ public partial class Theater : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:ThesisType.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "ThesisType")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1958,7 +1911,6 @@ public partial class ThesisType : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:Title.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "Title")]
 [Id(ElementTypeIdConst)]
@@ -1997,7 +1949,6 @@ public partial class Title : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Type.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "Type")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2034,7 +1985,6 @@ public partial class PatentType : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:URL.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "URL")]
 [Id(ElementTypeIdConst)]
@@ -2073,7 +2023,6 @@ public partial class UrlString : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Version.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "Version")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2110,7 +2059,6 @@ public partial class Version : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:Volume.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "Volume")]
 [Id(ElementTypeIdConst)]
@@ -2149,7 +2097,6 @@ public partial class Volume : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Year.</para>
 /// </summary>
 
-
 [SchemaAttr(9, "Year")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2186,7 +2133,6 @@ public partial class Year : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is b:YearAccessed.</para>
 /// </summary>
-
 
 [SchemaAttr(9, "YearAccessed")]
 [Id(ElementTypeIdConst)]
@@ -2296,8 +2242,6 @@ public partial class NameList : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NameList))]
-
 [SchemaAttr(9, "Artist")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2353,8 +2297,6 @@ public partial class Artist : NameType
 ///<item><description>NameList &lt;b:NameList></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NameList))]
 
 [SchemaAttr(9, "BookAuthor")]
 [Id(ElementTypeIdConst)]
@@ -2412,8 +2354,6 @@ public partial class BookAuthor : NameType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NameList))]
-
 [SchemaAttr(9, "Compiler")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2469,8 +2409,6 @@ public partial class Compiler : NameType
 ///<item><description>NameList &lt;b:NameList></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NameList))]
 
 [SchemaAttr(9, "Composer")]
 [Id(ElementTypeIdConst)]
@@ -2528,8 +2466,6 @@ public partial class Composer : NameType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NameList))]
-
 [SchemaAttr(9, "Conductor")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2585,8 +2521,6 @@ public partial class Conductor : NameType
 ///<item><description>NameList &lt;b:NameList></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NameList))]
 
 [SchemaAttr(9, "Counsel")]
 [Id(ElementTypeIdConst)]
@@ -2644,8 +2578,6 @@ public partial class Counsel : NameType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NameList))]
-
 [SchemaAttr(9, "Director")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2701,8 +2633,6 @@ public partial class Director : NameType
 ///<item><description>NameList &lt;b:NameList></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NameList))]
 
 [SchemaAttr(9, "Editor")]
 [Id(ElementTypeIdConst)]
@@ -2760,8 +2690,6 @@ public partial class Editor : NameType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NameList))]
-
 [SchemaAttr(9, "Interviewee")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2817,8 +2745,6 @@ public partial class Interviewee : NameType
 ///<item><description>NameList &lt;b:NameList></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NameList))]
 
 [SchemaAttr(9, "Interviewer")]
 [Id(ElementTypeIdConst)]
@@ -2876,8 +2802,6 @@ public partial class Interviewer : NameType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NameList))]
-
 [SchemaAttr(9, "Inventor")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2933,8 +2857,6 @@ public partial class Inventor : NameType
 ///<item><description>NameList &lt;b:NameList></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NameList))]
 
 [SchemaAttr(9, "ProducerName")]
 [Id(ElementTypeIdConst)]
@@ -2992,8 +2914,6 @@ public partial class ProducerName : NameType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NameList))]
-
 [SchemaAttr(9, "Translator")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3049,8 +2969,6 @@ public partial class Translator : NameType
 ///<item><description>NameList &lt;b:NameList></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NameList))]
 
 [SchemaAttr(9, "Writer")]
 [Id(ElementTypeIdConst)]
@@ -3179,9 +3097,6 @@ public abstract partial class NameType : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NameList))]
-    [ChildElementInfo(typeof(Corporate))]
-
 [SchemaAttr(9, "Author")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3238,9 +3153,6 @@ public partial class Author : NameOrCorporateType
 ///<item><description>Corporate &lt;b:Corporate></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NameList))]
-    [ChildElementInfo(typeof(Corporate))]
 
 [SchemaAttr(9, "Performer")]
 [Id(ElementTypeIdConst)]

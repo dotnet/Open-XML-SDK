@@ -218,9 +218,6 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ExtendedGuide), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(68, "sldGuideLst")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -277,9 +274,6 @@ public partial class SlideGuideList : ExtendedGuideList
 ///<item><description>ExtensionList &lt;p15:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ExtendedGuide), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(68, "notesGuideLst")]
 [Id(ElementTypeIdConst)]

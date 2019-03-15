@@ -145,7 +145,6 @@ public partial class CustomXsn : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is ntns:xsnLocation.</para>
 /// </summary>
 
-
 [SchemaAttr(39, "xsnLocation")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -182,7 +181,6 @@ public partial class XsnLocation : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ntns:cached.</para>
 /// </summary>
-
 
 [SchemaAttr(39, "cached")]
 [Id(ElementTypeIdConst)]
@@ -221,7 +219,6 @@ public partial class CachedView : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is ntns:openByDefault.</para>
 /// </summary>
 
-
 [SchemaAttr(39, "openByDefault")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -258,7 +255,6 @@ public partial class OpenByDefault : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ntns:xsnScope.</para>
 /// </summary>
-
 
 [SchemaAttr(39, "xsnScope")]
 [Id(ElementTypeIdConst)]

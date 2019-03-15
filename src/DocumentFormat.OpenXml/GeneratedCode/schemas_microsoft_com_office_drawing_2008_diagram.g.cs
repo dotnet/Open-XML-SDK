@@ -1554,12 +1554,6 @@ public partial class Shape : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(GroupShapeNonVisualProperties))]
-    [ChildElementInfo(typeof(GroupShapeProperties))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(GroupShape))]
-    [ChildElementInfo(typeof(OfficeArtExtensionList))]
-
 [SchemaAttr(56, "grpSp")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1619,12 +1613,6 @@ public partial class GroupShape : GroupShapeType
 ///<item><description>OfficeArtExtensionList &lt;dsp:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(GroupShapeNonVisualProperties))]
-    [ChildElementInfo(typeof(GroupShapeProperties))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(GroupShape))]
-    [ChildElementInfo(typeof(OfficeArtExtensionList))]
 
 [SchemaAttr(56, "spTree")]
 [Id(ElementTypeIdConst)]

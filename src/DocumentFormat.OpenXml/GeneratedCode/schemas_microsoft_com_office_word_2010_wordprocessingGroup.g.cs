@@ -33,16 +33,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NonVisualDrawingProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(NonVisualGroupDrawingShapeProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GroupShapeProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GroupShape), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GraphicFrame), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Pictures.Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
-
 [SchemaAttr(60, "wgp")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -106,16 +96,6 @@ public partial class WordprocessingGroup : WordprocessingGroupType
 ///<item><description>OfficeArtExtensionList &lt;wpg:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NonVisualDrawingProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(NonVisualGroupDrawingShapeProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GroupShapeProperties), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GroupShape), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GraphicFrame), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Pictures.Picture))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
 
 [SchemaAttr(60, "grpSp")]
 [Id(ElementTypeIdConst)]

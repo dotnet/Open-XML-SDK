@@ -11441,10 +11441,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ControlCloneQat), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Separator), FileFormatVersions.Office2010)]
-
 [SchemaAttr(57, "sharedControls")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -11502,10 +11498,6 @@ public partial class SharedControlsQatItems : QatItemsType
 ///<item><description>Separator &lt;mso14:separator></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ControlCloneQat), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Separator), FileFormatVersions.Office2010)]
 
 [SchemaAttr(57, "documentControls")]
 [Id(ElementTypeIdConst)]
@@ -12261,7 +12253,6 @@ public partial class ContextMenu : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is mso14:item.</para>
 /// </summary>
 
-
 [SchemaAttr(57, "item")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -12285,7 +12276,6 @@ public partial class ItemBackstageItem : BackstageItemType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is mso14:radioButton.</para>
 /// </summary>
-
 
 [SchemaAttr(57, "radioButton")]
 [Id(ElementTypeIdConst)]
@@ -12989,18 +12979,6 @@ public partial class PrimaryItem : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(BackstageGroupButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageCheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageEditBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageDropDown), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(RadioGroup), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageComboBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Hyperlink), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageLabelControl), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GroupBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LayoutContainer), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ImageControl), FileFormatVersions.Office2010)]
-
 [SchemaAttr(57, "topItems")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -13066,18 +13044,6 @@ public partial class TopItemsGroupControls : GroupControlsType
 ///<item><description>ImageControl &lt;mso14:imageControl></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(BackstageGroupButton), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageCheckBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageEditBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageDropDown), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(RadioGroup), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageComboBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(Hyperlink), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BackstageLabelControl), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(GroupBox), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(LayoutContainer), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ImageControl), FileFormatVersions.Office2010)]
 
 [SchemaAttr(57, "bottomItems")]
 [Id(ElementTypeIdConst)]

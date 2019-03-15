@@ -19,7 +19,6 @@ namespace DocumentFormat.OpenXml.Presentation
 /// <para> When the object is serialized out as xml, its qualified name is p:sldAll.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "sldAll")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -43,7 +42,6 @@ public partial class SlideAll : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:present.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "present")]
 [Id(ElementTypeIdConst)]
@@ -69,7 +67,6 @@ public partial class PresenterSlideMode : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is p:endSnd.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "endSnd")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -93,7 +90,6 @@ public partial class EndSoundAction : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:bldAsOne.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "bldAsOne")]
 [Id(ElementTypeIdConst)]
@@ -119,7 +115,6 @@ public partial class BuildAsOne : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is p:sldTgt.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "sldTgt")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -143,7 +138,6 @@ public partial class SlideTarget : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:bg.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "bg")]
 [Id(ElementTypeIdConst)]
@@ -169,7 +163,6 @@ public partial class BackgroundAnimation : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is p:circle.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "circle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -193,7 +186,6 @@ public partial class CircleTransition : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:dissolve.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "dissolve")]
 [Id(ElementTypeIdConst)]
@@ -219,7 +211,6 @@ public partial class DissolveTransition : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is p:diamond.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "diamond")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -243,7 +234,6 @@ public partial class DiamondTransition : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:newsflash.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "newsflash")]
 [Id(ElementTypeIdConst)]
@@ -269,7 +259,6 @@ public partial class NewsflashTransition : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is p:plus.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "plus")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -294,7 +283,6 @@ public partial class PlusTransition : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is p:random.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "random")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -318,7 +306,6 @@ public partial class RandomTransition : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:wedge.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "wedge")]
 [Id(ElementTypeIdConst)]
@@ -364,7 +351,6 @@ public abstract partial class EmptyType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p:sldRg.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "sldRg")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -389,7 +375,6 @@ public partial class SlideRange : IndexRangeType
 /// <para> When the object is serialized out as xml, its qualified name is p:charRg.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "charRg")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -413,7 +398,6 @@ public partial class CharRange : IndexRangeType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:pRg.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "pRg")]
 [Id(ElementTypeIdConst)]
@@ -3871,7 +3855,6 @@ public partial class ContentPart : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is p:snd.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "snd")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3895,7 +3878,6 @@ public partial class Sound : EmbeddedWavAudioFileType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:sndTgt.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "sndTgt")]
 [Id(ElementTypeIdConst)]
@@ -4371,10 +4353,6 @@ public partial class RuntimeNodeTrigger : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(TargetElement))]
-    [ChildElementInfo(typeof(TimeNode))]
-    [ChildElementInfo(typeof(RuntimeNodeTrigger))]
-
 [SchemaAttr(24, "cond")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4432,10 +4410,6 @@ public partial class Condition : TimeListConditionalType
 ///<item><description>RuntimeNodeTrigger &lt;p:rtn></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(TargetElement))]
-    [ChildElementInfo(typeof(TimeNode))]
-    [ChildElementInfo(typeof(RuntimeNodeTrigger))]
 
 [SchemaAttr(24, "endSync")]
 [Id(ElementTypeIdConst)]
@@ -6521,8 +6495,6 @@ public partial class CommonTimeNode : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Condition))]
-
 [SchemaAttr(24, "prevCondLst")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6578,8 +6550,6 @@ public partial class PreviousConditionList : TimeListTimeConditionalListType
 ///<item><description>Condition &lt;p:cond></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(Condition))]
 
 [SchemaAttr(24, "nextCondLst")]
 [Id(ElementTypeIdConst)]
@@ -6637,8 +6607,6 @@ public partial class NextConditionList : TimeListTimeConditionalListType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Condition))]
-
 [SchemaAttr(24, "stCondLst")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6694,8 +6662,6 @@ public partial class StartConditionList : TimeListTimeConditionalListType
 ///<item><description>Condition &lt;p:cond></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(Condition))]
 
 [SchemaAttr(24, "endCondLst")]
 [Id(ElementTypeIdConst)]
@@ -6800,7 +6766,6 @@ public abstract partial class TimeListTimeConditionalListType : OpenXmlComposite
 /// <para> When the object is serialized out as xml, its qualified name is p:attrName.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "attrName")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6837,7 +6802,6 @@ public partial class AttributeName : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:text.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "text")]
 [Id(ElementTypeIdConst)]
@@ -7112,13 +7076,6 @@ public partial class StringVariantValue : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-
 [SchemaAttr(24, "clrVal")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7179,13 +7136,6 @@ public partial class ColorValue : ColorType
 ///<item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
 
 [SchemaAttr(24, "penClr")]
 [Id(ElementTypeIdConst)]
@@ -7867,12 +7817,6 @@ public partial class Progress : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(BooleanVariantValue))]
-    [ChildElementInfo(typeof(IntegerVariantValue))]
-    [ChildElementInfo(typeof(FloatVariantValue))]
-    [ChildElementInfo(typeof(StringVariantValue))]
-    [ChildElementInfo(typeof(ColorValue))]
-
 [SchemaAttr(24, "to")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7932,12 +7876,6 @@ public partial class ToVariantValue : TimeListAnimationVariantType
 ///<item><description>ColorValue &lt;p:clrVal></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(BooleanVariantValue))]
-    [ChildElementInfo(typeof(IntegerVariantValue))]
-    [ChildElementInfo(typeof(FloatVariantValue))]
-    [ChildElementInfo(typeof(StringVariantValue))]
-    [ChildElementInfo(typeof(ColorValue))]
 
 [SchemaAttr(24, "val")]
 [Id(ElementTypeIdConst)]
@@ -9253,13 +9191,6 @@ public partial class ByColor : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), FileFormatVersions.Office2010)]
-
 [SchemaAttr(24, "from")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9320,13 +9251,6 @@ public partial class FromColor : Color3Type
 ///<item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), FileFormatVersions.Office2010)]
 
 [SchemaAttr(24, "to")]
 [Id(ElementTypeIdConst)]
@@ -10575,7 +10499,6 @@ public partial class Font : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p:regular.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "regular")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -10599,7 +10522,6 @@ public partial class RegularFont : EmbeddedFontDataIdType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:bold.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "bold")]
 [Id(ElementTypeIdConst)]
@@ -10625,7 +10547,6 @@ public partial class BoldFont : EmbeddedFontDataIdType
 /// <para> When the object is serialized out as xml, its qualified name is p:italic.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "italic")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -10649,7 +10570,6 @@ public partial class ItalicFont : EmbeddedFontDataIdType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:boldItalic.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "boldItalic")]
 [Id(ElementTypeIdConst)]
@@ -12894,18 +12814,6 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-
 [SchemaAttr(24, "titleStyle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -12971,18 +12879,6 @@ public partial class TitleStyle : TextListStyleType
 ///<item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 
 [SchemaAttr(24, "bodyStyle")]
 [Id(ElementTypeIdConst)]
@@ -13050,18 +12946,6 @@ public partial class BodyStyle : TextListStyleType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-
 [SchemaAttr(24, "otherStyle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -13128,18 +13012,6 @@ public partial class OtherStyle : TextListStyleType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
-
 [SchemaAttr(24, "defaultTextStyle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -13205,18 +13077,6 @@ public partial class DefaultTextStyle : TextListStyleType
 ///<item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 
 [SchemaAttr(24, "notesStyle")]
 [Id(ElementTypeIdConst)]
@@ -13800,7 +13660,6 @@ public partial class Tag : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p:restoredLeft.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "restoredLeft")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -13824,7 +13683,6 @@ public partial class RestoredLeft : NormalViewPortionType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:restoredTop.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "restoredTop")]
 [Id(ElementTypeIdConst)]
@@ -13984,7 +13842,6 @@ public partial class ScaleFactor : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is p:origin.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "origin")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -14008,7 +13865,6 @@ public partial class Origin : Point2DType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:pos.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "pos")]
 [Id(ElementTypeIdConst)]
@@ -15194,7 +15050,6 @@ public partial class NotesViewProperties : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is p:gridSpacing.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "gridSpacing")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -15218,7 +15073,6 @@ public partial class GridSpacing : PositiveSize2DType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:notesSz.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "notesSz")]
 [Id(ElementTypeIdConst)]
@@ -16313,16 +16167,6 @@ public partial class Background : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(NonVisualGroupShapeProperties))]
-    [ChildElementInfo(typeof(GroupShapeProperties))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(GroupShape))]
-    [ChildElementInfo(typeof(GraphicFrame))]
-    [ChildElementInfo(typeof(ConnectionShape))]
-    [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ExtensionListWithModification))]
-
 [SchemaAttr(24, "spTree")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -16386,16 +16230,6 @@ public partial class ShapeTree : GroupShapeType
 ///<item><description>ExtensionListWithModification &lt;p:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(NonVisualGroupShapeProperties))]
-    [ChildElementInfo(typeof(GroupShapeProperties))]
-    [ChildElementInfo(typeof(Shape))]
-    [ChildElementInfo(typeof(GroupShape))]
-    [ChildElementInfo(typeof(GraphicFrame))]
-    [ChildElementInfo(typeof(ConnectionShape))]
-    [ChildElementInfo(typeof(Picture))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(ExtensionListWithModification))]
 
 [SchemaAttr(24, "grpSp")]
 [Id(ElementTypeIdConst)]
@@ -17601,7 +17435,6 @@ public partial class ShapeTarget : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is p:inkTgt.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "inkTgt")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -17625,7 +17458,6 @@ public partial class InkTarget : TimeListSubShapeIdType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:subSp.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "subSp")]
 [Id(ElementTypeIdConst)]
@@ -18511,20 +18343,6 @@ public partial class Iterate : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(ParallelTimeNode))]
-    [ChildElementInfo(typeof(SequenceTimeNode))]
-    [ChildElementInfo(typeof(ExclusiveTimeNode))]
-    [ChildElementInfo(typeof(Animate))]
-    [ChildElementInfo(typeof(AnimateColor))]
-    [ChildElementInfo(typeof(AnimateEffect))]
-    [ChildElementInfo(typeof(AnimateMotion))]
-    [ChildElementInfo(typeof(AnimateRotation))]
-    [ChildElementInfo(typeof(AnimateScale))]
-    [ChildElementInfo(typeof(Command))]
-    [ChildElementInfo(typeof(SetBehavior))]
-    [ChildElementInfo(typeof(Audio))]
-    [ChildElementInfo(typeof(Video))]
-
 [SchemaAttr(24, "childTnLst")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18592,20 +18410,6 @@ public partial class ChildTimeNodeList : TimeTypeListType
 ///<item><description>Video &lt;p:video></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(ParallelTimeNode))]
-    [ChildElementInfo(typeof(SequenceTimeNode))]
-    [ChildElementInfo(typeof(ExclusiveTimeNode))]
-    [ChildElementInfo(typeof(Animate))]
-    [ChildElementInfo(typeof(AnimateColor))]
-    [ChildElementInfo(typeof(AnimateEffect))]
-    [ChildElementInfo(typeof(AnimateMotion))]
-    [ChildElementInfo(typeof(AnimateRotation))]
-    [ChildElementInfo(typeof(AnimateScale))]
-    [ChildElementInfo(typeof(Command))]
-    [ChildElementInfo(typeof(SetBehavior))]
-    [ChildElementInfo(typeof(Audio))]
-    [ChildElementInfo(typeof(Video))]
 
 [SchemaAttr(24, "subTnLst")]
 [Id(ElementTypeIdConst)]
@@ -18799,7 +18603,6 @@ public partial class TimeAnimateValueList : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is p:by.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "by")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18823,7 +18626,6 @@ public partial class ByPosition : TimeListType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:from.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "from")]
 [Id(ElementTypeIdConst)]
@@ -18849,7 +18651,6 @@ public partial class FromPosition : TimeListType
 /// <para> When the object is serialized out as xml, its qualified name is p:to.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "to")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18873,7 +18674,6 @@ public partial class ToPosition : TimeListType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:rCtr.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "rCtr")]
 [Id(ElementTypeIdConst)]
@@ -21535,7 +21335,6 @@ public partial class GraphicElement : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is p:blinds.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "blinds")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -21559,7 +21358,6 @@ public partial class BlindsTransition : OrientationTransitionType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:checker.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "checker")]
 [Id(ElementTypeIdConst)]
@@ -21585,7 +21383,6 @@ public partial class CheckerTransition : OrientationTransitionType
 /// <para> When the object is serialized out as xml, its qualified name is p:comb.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "comb")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -21609,7 +21406,6 @@ public partial class CombTransition : OrientationTransitionType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:randomBar.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "randomBar")]
 [Id(ElementTypeIdConst)]
@@ -21663,7 +21459,6 @@ public abstract partial class OrientationTransitionType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p:cover.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "cover")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -21687,7 +21482,6 @@ public partial class CoverTransition : EightDirectionTransitionType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:pull.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "pull")]
 [Id(ElementTypeIdConst)]
@@ -21741,7 +21535,6 @@ public abstract partial class EightDirectionTransitionType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p:cut.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "cut")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -21765,7 +21558,6 @@ public partial class CutTransition : OptionalBlackTransitionType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:fade.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "fade")]
 [Id(ElementTypeIdConst)]
@@ -21819,7 +21611,6 @@ public abstract partial class OptionalBlackTransitionType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p:push.</para>
 /// </summary>
 
-
 [SchemaAttr(24, "push")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -21843,7 +21634,6 @@ public partial class PushTransition : SideDirectionTransitionType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:wipe.</para>
 /// </summary>
-
 
 [SchemaAttr(24, "wipe")]
 [Id(ElementTypeIdConst)]

@@ -598,7 +598,6 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is xne:row.</para>
 /// </summary>
 
-
 [SchemaAttr(32, "row")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -622,7 +621,6 @@ public partial class RowSortMapItem : SortMapItemType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xne:col.</para>
 /// </summary>
-
 
 [SchemaAttr(32, "col")]
 [Id(ElementTypeIdConst)]

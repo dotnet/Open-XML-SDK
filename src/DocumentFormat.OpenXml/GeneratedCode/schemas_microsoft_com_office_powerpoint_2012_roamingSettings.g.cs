@@ -15,7 +15,6 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
 /// <para> When the object is serialized out as xml, its qualified name is pRoam:key.</para>
 /// </summary>
 
-
 [SchemaAttr(76, "key")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -52,7 +51,6 @@ public partial class Key : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pRoam:value.</para>
 /// </summary>
-
 
 [SchemaAttr(76, "value")]
 [Id(ElementTypeIdConst)]

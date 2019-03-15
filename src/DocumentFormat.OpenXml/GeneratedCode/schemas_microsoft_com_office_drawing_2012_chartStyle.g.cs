@@ -1076,14 +1076,6 @@ public partial class StyleColor : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-    [ChildElementInfo(typeof(StyleColor), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "lnRef")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -1146,14 +1138,6 @@ public partial class LineReference : StyleReference
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-    [ChildElementInfo(typeof(StyleColor), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "fillRef")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -1215,14 +1199,6 @@ public partial class FillReference : StyleReference
 ///<item><description>StyleColor &lt;cs:styleClr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.HslColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-    [ChildElementInfo(typeof(StyleColor), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "effectRef")]
 [Id(ElementTypeIdConst)]
@@ -2119,7 +2095,6 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is cs:categoryAxis.</para>
 /// </summary>
 
-
 [SchemaAttr(65, "categoryAxis")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -2144,7 +2119,6 @@ public partial class CategoryAxisProperties : AxisProperties
 /// <para> When the object is serialized out as xml, its qualified name is cs:seriesAxis.</para>
 /// </summary>
 
-
 [SchemaAttr(65, "seriesAxis")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -2168,7 +2142,6 @@ public partial class SeriesAxisProperties : AxisProperties
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cs:valueAxis.</para>
 /// </summary>
-
 
 [SchemaAttr(65, "valueAxis")]
 [Id(ElementTypeIdConst)]
@@ -2756,16 +2729,6 @@ public partial class View3DProperties : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "axisTitle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -2829,16 +2792,6 @@ public partial class AxisTitle : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "categoryAxis")]
 [Id(ElementTypeIdConst)]
@@ -2904,16 +2857,6 @@ public partial class CategoryAxis : StyleEntry
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "chartArea")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -2977,16 +2920,6 @@ public partial class ChartArea : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "dataLabel")]
 [Id(ElementTypeIdConst)]
@@ -3052,16 +2985,6 @@ public partial class DataLabel : StyleEntry
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "dataLabelCallout")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -3125,16 +3048,6 @@ public partial class DataLabelCallout : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "dataPoint")]
 [Id(ElementTypeIdConst)]
@@ -3200,16 +3113,6 @@ public partial class DataPoint : StyleEntry
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "dataPoint3D")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -3273,16 +3176,6 @@ public partial class DataPoint3D : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "dataPointLine")]
 [Id(ElementTypeIdConst)]
@@ -3348,16 +3241,6 @@ public partial class DataPointLine : StyleEntry
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "dataPointMarker")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -3421,16 +3304,6 @@ public partial class DataPointMarker : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "dataPointWireframe")]
 [Id(ElementTypeIdConst)]
@@ -3496,16 +3369,6 @@ public partial class DataPointWireframe : StyleEntry
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "dataTable")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -3569,16 +3432,6 @@ public partial class DataTableStyle : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "downBar")]
 [Id(ElementTypeIdConst)]
@@ -3644,16 +3497,6 @@ public partial class DownBar : StyleEntry
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "dropLine")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -3717,16 +3560,6 @@ public partial class DropLine : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "errorBar")]
 [Id(ElementTypeIdConst)]
@@ -3792,16 +3625,6 @@ public partial class ErrorBar : StyleEntry
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "floor")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -3865,16 +3688,6 @@ public partial class Floor : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "gridlineMajor")]
 [Id(ElementTypeIdConst)]
@@ -3940,16 +3753,6 @@ public partial class GridlineMajor : StyleEntry
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "gridlineMinor")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -4013,16 +3816,6 @@ public partial class GridlineMinor : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "hiLoLine")]
 [Id(ElementTypeIdConst)]
@@ -4088,16 +3881,6 @@ public partial class HiLoLine : StyleEntry
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "leaderLine")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -4161,16 +3944,6 @@ public partial class LeaderLine : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "legend")]
 [Id(ElementTypeIdConst)]
@@ -4236,16 +4009,6 @@ public partial class LegendStyle : StyleEntry
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "plotArea")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -4309,16 +4072,6 @@ public partial class PlotArea : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "plotArea3D")]
 [Id(ElementTypeIdConst)]
@@ -4384,16 +4137,6 @@ public partial class PlotArea3D : StyleEntry
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "seriesAxis")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -4457,16 +4200,6 @@ public partial class SeriesAxis : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "seriesLine")]
 [Id(ElementTypeIdConst)]
@@ -4532,16 +4265,6 @@ public partial class SeriesLine : StyleEntry
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "title")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -4605,16 +4328,6 @@ public partial class TitleStyle : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "trendline")]
 [Id(ElementTypeIdConst)]
@@ -4680,16 +4393,6 @@ public partial class TrendlineStyle : StyleEntry
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "trendlineLabel")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -4753,16 +4456,6 @@ public partial class TrendlineLabel : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "upBar")]
 [Id(ElementTypeIdConst)]
@@ -4828,16 +4521,6 @@ public partial class UpBar : StyleEntry
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
-
 [SchemaAttr(65, "valueAxis")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
@@ -4901,16 +4584,6 @@ public partial class ValueAxis : StyleEntry
 ///<item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(LineReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(LineWidthScale), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FillReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(EffectReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(FontReference), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextCharacterPropertiesType), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(TextBodyProperties), FileFormatVersions.Office2013)]
-    [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "wall")]
 [Id(ElementTypeIdConst)]

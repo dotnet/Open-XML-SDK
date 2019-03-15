@@ -1680,7 +1680,6 @@ public partial class Complex : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is o:left.</para>
 /// </summary>
 
-
 [SchemaAttr(27, "left")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1704,7 +1703,6 @@ public partial class LeftStroke : StrokeChildType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is o:top.</para>
 /// </summary>
-
 
 [SchemaAttr(27, "top")]
 [Id(ElementTypeIdConst)]
@@ -1730,7 +1728,6 @@ public partial class TopStroke : StrokeChildType
 /// <para> When the object is serialized out as xml, its qualified name is o:right.</para>
 /// </summary>
 
-
 [SchemaAttr(27, "right")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1755,7 +1752,6 @@ public partial class RightStroke : StrokeChildType
 /// <para> When the object is serialized out as xml, its qualified name is o:bottom.</para>
 /// </summary>
 
-
 [SchemaAttr(27, "bottom")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1779,7 +1775,6 @@ public partial class BottomStroke : StrokeChildType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is o:column.</para>
 /// </summary>
-
 
 [SchemaAttr(27, "column")]
 [Id(ElementTypeIdConst)]

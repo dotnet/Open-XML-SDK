@@ -16,7 +16,6 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctPosHOffset.</para>
 /// </summary>
 
-
 [SchemaAttr(51, "pctPosHOffset")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -53,7 +52,6 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctPosVOffset.</para>
 /// </summary>
-
 
 [SchemaAttr(51, "pctPosVOffset")]
 [Id(ElementTypeIdConst)]
@@ -272,7 +270,6 @@ public partial class RelativeHeight : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctWidth.</para>
 /// </summary>
 
-
 [SchemaAttr(51, "pctWidth")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -309,7 +306,6 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctHeight.</para>
 /// </summary>
-
 
 [SchemaAttr(51, "pctHeight")]
 [Id(ElementTypeIdConst)]

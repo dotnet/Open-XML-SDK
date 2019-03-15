@@ -432,7 +432,6 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is wne:macro.</para>
 /// </summary>
 
-
 [SchemaAttr(33, "macro")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -456,7 +455,6 @@ public partial class MacroKeyboardCustomization : MacroWllType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:wll.</para>
 /// </summary>
-
 
 [SchemaAttr(33, "wll")]
 [Id(ElementTypeIdConst)]
@@ -512,7 +510,6 @@ public abstract partial class MacroWllType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is wne:acd.</para>
 /// </summary>
 
-
 [SchemaAttr(33, "acd")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -536,7 +533,6 @@ public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapTy
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:acdEntry.</para>
 /// </summary>
-
 
 [SchemaAttr(33, "acdEntry")]
 [Id(ElementTypeIdConst)]
@@ -984,7 +980,6 @@ public partial class Mcd : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocNew.</para>
 /// </summary>
 
-
 [SchemaAttr(33, "eventDocNew")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1021,7 +1016,6 @@ public partial class EventDocNewXsdString : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocOpen.</para>
 /// </summary>
-
 
 [SchemaAttr(33, "eventDocOpen")]
 [Id(ElementTypeIdConst)]
@@ -1060,7 +1054,6 @@ public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocClose.</para>
 /// </summary>
 
-
 [SchemaAttr(33, "eventDocClose")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1097,7 +1090,6 @@ public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocSync.</para>
 /// </summary>
-
 
 [SchemaAttr(33, "eventDocSync")]
 [Id(ElementTypeIdConst)]
@@ -1136,7 +1128,6 @@ public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocXmlAfterInsert.</para>
 /// </summary>
 
-
 [SchemaAttr(33, "eventDocXmlAfterInsert")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1173,7 +1164,6 @@ public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocXmlBeforeDelete.</para>
 /// </summary>
-
 
 [SchemaAttr(33, "eventDocXmlBeforeDelete")]
 [Id(ElementTypeIdConst)]
@@ -1212,7 +1202,6 @@ public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocContentControlAfterInsert.</para>
 /// </summary>
 
-
 [SchemaAttr(33, "eventDocContentControlAfterInsert")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1249,7 +1238,6 @@ public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTex
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocContentControlBeforeDelete.</para>
 /// </summary>
-
 
 [SchemaAttr(33, "eventDocContentControlBeforeDelete")]
 [Id(ElementTypeIdConst)]
@@ -1288,7 +1276,6 @@ public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTe
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocContentControlOnExit.</para>
 /// </summary>
 
-
 [SchemaAttr(33, "eventDocContentControlOnExit")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1325,7 +1312,6 @@ public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextEle
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocContentControlOnEnter.</para>
 /// </summary>
-
 
 [SchemaAttr(33, "eventDocContentControlOnEnter")]
 [Id(ElementTypeIdConst)]
@@ -1364,7 +1350,6 @@ public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextEle
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocStoreUpdate.</para>
 /// </summary>
 
-
 [SchemaAttr(33, "eventDocStoreUpdate")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1402,7 +1387,6 @@ public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocContentControlContentUpdate.</para>
 /// </summary>
 
-
 [SchemaAttr(33, "eventDocContentControlContentUpdate")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1439,7 +1423,6 @@ public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElem
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocBuildingBlockAfterInsert.</para>
 /// </summary>
-
 
 [SchemaAttr(33, "eventDocBuildingBlockAfterInsert")]
 [Id(ElementTypeIdConst)]
@@ -1865,8 +1848,6 @@ public partial class ToolbarData : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(KeyMapEntry))]
-
 [SchemaAttr(33, "keymaps")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1922,8 +1903,6 @@ public partial class KeyMapCustomizations : KeymapsType
 ///<item><description>KeyMapEntry &lt;wne:keymap></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(KeyMapEntry))]
 
 [SchemaAttr(33, "keymapsBad")]
 [Id(ElementTypeIdConst)]

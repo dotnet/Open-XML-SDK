@@ -502,7 +502,6 @@ public partial class ShapeProperties : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneFilter.</para>
 /// </summary>
 
-
 [SchemaAttr(46, "dropZoneFilter")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -526,7 +525,6 @@ public partial class DropZoneFilter : BooleanFalseType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneCategories.</para>
 /// </summary>
-
 
 [SchemaAttr(46, "dropZoneCategories")]
 [Id(ElementTypeIdConst)]
@@ -552,7 +550,6 @@ public partial class DropZoneCategories : BooleanFalseType
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneData.</para>
 /// </summary>
 
-
 [SchemaAttr(46, "dropZoneData")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -576,7 +573,6 @@ public partial class DropZoneData : BooleanFalseType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZoneSeries.</para>
 /// </summary>
-
 
 [SchemaAttr(46, "dropZoneSeries")]
 [Id(ElementTypeIdConst)]
@@ -602,7 +598,6 @@ public partial class DropZoneSeries : BooleanFalseType
 /// <para> When the object is serialized out as xml, its qualified name is c14:dropZonesVisible.</para>
 /// </summary>
 
-
 [SchemaAttr(46, "dropZonesVisible")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -626,7 +621,6 @@ public partial class DropZonesVisible : BooleanFalseType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c14:inSketchMode.</para>
 /// </summary>
-
 
 [SchemaAttr(46, "inSketchMode")]
 [Id(ElementTypeIdConst)]

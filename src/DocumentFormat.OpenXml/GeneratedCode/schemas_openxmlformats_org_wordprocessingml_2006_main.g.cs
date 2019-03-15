@@ -22,7 +22,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 /// <para> When the object is serialized out as xml, its qualified name is w:cellIns.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "cellIns")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -46,7 +45,6 @@ public partial class CellInsertion : TrackChangeType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:cellDel.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "cellDel")]
 [Id(ElementTypeIdConst)]
@@ -72,7 +70,6 @@ public partial class CellDeletion : TrackChangeType
 /// <para> When the object is serialized out as xml, its qualified name is w:customXmlInsRangeStart.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "customXmlInsRangeStart")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -96,7 +93,6 @@ public partial class CustomXmlInsRangeStart : TrackChangeType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:customXmlDelRangeStart.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "customXmlDelRangeStart")]
 [Id(ElementTypeIdConst)]
@@ -122,7 +118,6 @@ public partial class CustomXmlDelRangeStart : TrackChangeType
 /// <para> When the object is serialized out as xml, its qualified name is w:customXmlMoveFromRangeStart.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "customXmlMoveFromRangeStart")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -146,7 +141,6 @@ public partial class CustomXmlMoveFromRangeStart : TrackChangeType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:customXmlMoveToRangeStart.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "customXmlMoveToRangeStart")]
 [Id(ElementTypeIdConst)]
@@ -172,7 +166,6 @@ public partial class CustomXmlMoveToRangeStart : TrackChangeType
 /// <para> When the object is serialized out as xml, its qualified name is w:ins.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "ins")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -196,7 +189,6 @@ public partial class Inserted : TrackChangeType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:del.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "del")]
 [Id(ElementTypeIdConst)]
@@ -222,7 +214,6 @@ public partial class Deleted : TrackChangeType
 /// <para> When the object is serialized out as xml, its qualified name is w:moveFrom.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "moveFrom")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -246,7 +237,6 @@ public partial class MoveFrom : TrackChangeType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:moveTo.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "moveTo")]
 [Id(ElementTypeIdConst)]
@@ -486,7 +476,6 @@ public partial class BookmarkStart : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:bookmarkEnd.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "bookmarkEnd")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -510,7 +499,6 @@ public partial class BookmarkEnd : MarkupRangeType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:commentRangeStart.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "commentRangeStart")]
 [Id(ElementTypeIdConst)]
@@ -536,7 +524,6 @@ public partial class CommentRangeStart : MarkupRangeType
 /// <para> When the object is serialized out as xml, its qualified name is w:commentRangeEnd.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "commentRangeEnd")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -561,7 +548,6 @@ public partial class CommentRangeEnd : MarkupRangeType
 /// <para> When the object is serialized out as xml, its qualified name is w:moveFromRangeEnd.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "moveFromRangeEnd")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -585,7 +571,6 @@ public partial class MoveFromRangeEnd : MarkupRangeType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:moveToRangeEnd.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "moveToRangeEnd")]
 [Id(ElementTypeIdConst)]
@@ -651,7 +636,6 @@ public abstract partial class MarkupRangeType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:moveFromRangeStart.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "moveFromRangeStart")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -675,7 +659,6 @@ public partial class MoveFromRangeStart : MoveBookmarkType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:moveToRangeStart.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "moveToRangeStart")]
 [Id(ElementTypeIdConst)]
@@ -791,7 +774,6 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:customXmlInsRangeEnd.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "customXmlInsRangeEnd")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -815,7 +797,6 @@ public partial class CustomXmlInsRangeEnd : MarkupType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:customXmlDelRangeEnd.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "customXmlDelRangeEnd")]
 [Id(ElementTypeIdConst)]
@@ -841,7 +822,6 @@ public partial class CustomXmlDelRangeEnd : MarkupType
 /// <para> When the object is serialized out as xml, its qualified name is w:customXmlMoveFromRangeEnd.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "customXmlMoveFromRangeEnd")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -866,7 +846,6 @@ public partial class CustomXmlMoveFromRangeEnd : MarkupType
 /// <para> When the object is serialized out as xml, its qualified name is w:customXmlMoveToRangeEnd.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "customXmlMoveToRangeEnd")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -890,7 +869,6 @@ public partial class CustomXmlMoveToRangeEnd : MarkupType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:commentReference.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "commentReference")]
 [Id(ElementTypeIdConst)]
@@ -946,7 +924,6 @@ public abstract partial class MarkupType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:pStyle.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "pStyle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -970,7 +947,6 @@ public partial class ParagraphStyleId : StringType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:dateFormat.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "dateFormat")]
 [Id(ElementTypeIdConst)]
@@ -996,7 +972,6 @@ public partial class DateFormat : StringType
 /// <para> When the object is serialized out as xml, its qualified name is w:docPartGallery.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "docPartGallery")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1020,7 +995,6 @@ public partial class DocPartGallery : StringType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:docPartCategory.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "docPartCategory")]
 [Id(ElementTypeIdConst)]
@@ -1046,7 +1020,6 @@ public partial class DocPartCategory : StringType
 /// <para> When the object is serialized out as xml, its qualified name is w:docPart.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "docPart")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1070,7 +1043,6 @@ public partial class DocPartReference : StringType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:placeholder.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "placeholder")]
 [Id(ElementTypeIdConst)]
@@ -1096,7 +1068,6 @@ public partial class CustomXmlPlaceholder : StringType
 /// <para> When the object is serialized out as xml, its qualified name is w:tblCaption.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "tblCaption")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -1120,7 +1091,6 @@ public partial class TableCaption : StringType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:tblDescription.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "tblDescription")]
 [Id(ElementTypeIdConst)]
@@ -1146,7 +1116,6 @@ public partial class TableDescription : StringType
 /// <para> When the object is serialized out as xml, its qualified name is w:name.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "name")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1170,7 +1139,6 @@ public partial class Name : StringType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:mappedName.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "mappedName")]
 [Id(ElementTypeIdConst)]
@@ -1196,7 +1164,6 @@ public partial class MappedName : StringType
 /// <para> When the object is serialized out as xml, its qualified name is w:udl.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "udl")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1220,7 +1187,6 @@ public partial class UdlConnectionString : StringType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:table.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "table")]
 [Id(ElementTypeIdConst)]
@@ -1246,7 +1212,6 @@ public partial class DataSourceTableName : StringType
 /// <para> When the object is serialized out as xml, its qualified name is w:connectString.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "connectString")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1270,7 +1235,6 @@ public partial class ConnectString : StringType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:query.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "query")]
 [Id(ElementTypeIdConst)]
@@ -1296,7 +1260,6 @@ public partial class Query : StringType
 /// <para> When the object is serialized out as xml, its qualified name is w:addressFieldName.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "addressFieldName")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1320,7 +1283,6 @@ public partial class AddressFieldName : StringType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:mailSubject.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "mailSubject")]
 [Id(ElementTypeIdConst)]
@@ -1346,7 +1308,6 @@ public partial class MailSubject : StringType
 /// <para> When the object is serialized out as xml, its qualified name is w:sz.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "sz")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1370,7 +1331,6 @@ public partial class FrameSize : StringType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:style.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "style")]
 [Id(ElementTypeIdConst)]
@@ -1396,7 +1356,6 @@ public partial class StyleId : StringType
 /// <para> When the object is serialized out as xml, its qualified name is w:description.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "description")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1420,7 +1379,6 @@ public partial class Description : StringType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:alias.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "alias")]
 [Id(ElementTypeIdConst)]
@@ -1446,7 +1404,6 @@ public partial class SdtAlias : StringType
 /// <para> When the object is serialized out as xml, its qualified name is w:tag.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "tag")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1470,7 +1427,6 @@ public partial class Tag : StringType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:attachedSchema.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "attachedSchema")]
 [Id(ElementTypeIdConst)]
@@ -1496,7 +1452,6 @@ public partial class AttachedSchema : StringType
 /// <para> When the object is serialized out as xml, its qualified name is w:decimalSymbol.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "decimalSymbol")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1520,7 +1475,6 @@ public partial class DecimalSymbol : StringType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:listSeparator.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "listSeparator")]
 [Id(ElementTypeIdConst)]
@@ -1546,7 +1500,6 @@ public partial class ListSeparator : StringType
 /// <para> When the object is serialized out as xml, its qualified name is w:encoding.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "encoding")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1570,7 +1523,6 @@ public partial class WebPageEncoding : StringType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:altName.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "altName")]
 [Id(ElementTypeIdConst)]
@@ -1626,7 +1578,6 @@ public abstract partial class StringType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:keepNext.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "keepNext")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1650,7 +1601,6 @@ public partial class KeepNext : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:keepLines.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "keepLines")]
 [Id(ElementTypeIdConst)]
@@ -1676,7 +1626,6 @@ public partial class KeepLines : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:pageBreakBefore.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "pageBreakBefore")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1700,7 +1649,6 @@ public partial class PageBreakBefore : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:widowControl.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "widowControl")]
 [Id(ElementTypeIdConst)]
@@ -1726,7 +1674,6 @@ public partial class WidowControl : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:suppressLineNumbers.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "suppressLineNumbers")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1750,7 +1697,6 @@ public partial class SuppressLineNumbers : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:suppressAutoHyphens.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "suppressAutoHyphens")]
 [Id(ElementTypeIdConst)]
@@ -1776,7 +1722,6 @@ public partial class SuppressAutoHyphens : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:kinsoku.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "kinsoku")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1800,7 +1745,6 @@ public partial class Kinsoku : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:wordWrap.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "wordWrap")]
 [Id(ElementTypeIdConst)]
@@ -1826,7 +1770,6 @@ public partial class WordWrap : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:overflowPunct.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "overflowPunct")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1850,7 +1793,6 @@ public partial class OverflowPunctuation : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:topLinePunct.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "topLinePunct")]
 [Id(ElementTypeIdConst)]
@@ -1876,7 +1818,6 @@ public partial class TopLinePunctuation : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:autoSpaceDE.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "autoSpaceDE")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1900,7 +1841,6 @@ public partial class AutoSpaceDE : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:autoSpaceDN.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "autoSpaceDN")]
 [Id(ElementTypeIdConst)]
@@ -1926,7 +1866,6 @@ public partial class AutoSpaceDN : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:bidi.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "bidi")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1950,7 +1889,6 @@ public partial class BiDi : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:adjustRightInd.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "adjustRightInd")]
 [Id(ElementTypeIdConst)]
@@ -1976,7 +1914,6 @@ public partial class AdjustRightIndent : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:snapToGrid.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "snapToGrid")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2000,7 +1937,6 @@ public partial class SnapToGrid : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:contextualSpacing.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "contextualSpacing")]
 [Id(ElementTypeIdConst)]
@@ -2026,7 +1962,6 @@ public partial class ContextualSpacing : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:mirrorIndents.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "mirrorIndents")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2050,7 +1985,6 @@ public partial class MirrorIndents : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:suppressOverlap.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "suppressOverlap")]
 [Id(ElementTypeIdConst)]
@@ -2076,7 +2010,6 @@ public partial class SuppressOverlap : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:b.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "b")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2100,7 +2033,6 @@ public partial class Bold : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:bCs.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "bCs")]
 [Id(ElementTypeIdConst)]
@@ -2126,7 +2058,6 @@ public partial class BoldComplexScript : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:i.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "i")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2150,7 +2081,6 @@ public partial class Italic : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:iCs.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "iCs")]
 [Id(ElementTypeIdConst)]
@@ -2176,7 +2106,6 @@ public partial class ItalicComplexScript : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:caps.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "caps")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2200,7 +2129,6 @@ public partial class Caps : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:smallCaps.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "smallCaps")]
 [Id(ElementTypeIdConst)]
@@ -2226,7 +2154,6 @@ public partial class SmallCaps : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:strike.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "strike")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2250,7 +2177,6 @@ public partial class Strike : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:dstrike.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "dstrike")]
 [Id(ElementTypeIdConst)]
@@ -2276,7 +2202,6 @@ public partial class DoubleStrike : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:outline.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "outline")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2300,7 +2225,6 @@ public partial class Outline : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:shadow.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "shadow")]
 [Id(ElementTypeIdConst)]
@@ -2326,7 +2250,6 @@ public partial class Shadow : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:emboss.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "emboss")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2350,7 +2273,6 @@ public partial class Emboss : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:imprint.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "imprint")]
 [Id(ElementTypeIdConst)]
@@ -2376,7 +2298,6 @@ public partial class Imprint : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:noProof.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "noProof")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2400,7 +2321,6 @@ public partial class NoProof : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:vanish.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "vanish")]
 [Id(ElementTypeIdConst)]
@@ -2426,7 +2346,6 @@ public partial class Vanish : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:webHidden.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "webHidden")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2450,7 +2369,6 @@ public partial class WebHidden : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:rtl.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "rtl")]
 [Id(ElementTypeIdConst)]
@@ -2476,7 +2394,6 @@ public partial class RightToLeftText : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:cs.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "cs")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2500,7 +2417,6 @@ public partial class ComplexScript : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:specVanish.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "specVanish")]
 [Id(ElementTypeIdConst)]
@@ -2526,7 +2442,6 @@ public partial class SpecVanish : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:oMath.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "oMath")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2550,7 +2465,6 @@ public partial class OfficeMath : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:hidden.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "hidden")]
 [Id(ElementTypeIdConst)]
@@ -2576,7 +2490,6 @@ public partial class Hidden : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:formProt.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "formProt")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2600,7 +2513,6 @@ public partial class FormProtection : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:noEndnote.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "noEndnote")]
 [Id(ElementTypeIdConst)]
@@ -2626,7 +2538,6 @@ public partial class NoEndnote : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:titlePg.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "titlePg")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2650,7 +2561,6 @@ public partial class TitlePage : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:rtlGutter.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "rtlGutter")]
 [Id(ElementTypeIdConst)]
@@ -2676,7 +2586,6 @@ public partial class GutterOnRight : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:enabled.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "enabled")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2700,7 +2609,6 @@ public partial class Enabled : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:calcOnExit.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "calcOnExit")]
 [Id(ElementTypeIdConst)]
@@ -2726,7 +2634,6 @@ public partial class CalculateOnExit : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:sizeAuto.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "sizeAuto")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2750,7 +2657,6 @@ public partial class AutomaticallySizeFormField : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:default.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "default")]
 [Id(ElementTypeIdConst)]
@@ -2776,7 +2682,6 @@ public partial class DefaultCheckBoxFormFieldState : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:checked.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "checked")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2800,7 +2705,6 @@ public partial class Checked : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:matchSrc.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "matchSrc")]
 [Id(ElementTypeIdConst)]
@@ -2826,7 +2730,6 @@ public partial class MatchSource : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:dirty.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "dirty")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2850,7 +2753,6 @@ public partial class Dirty : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:docPartUnique.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "docPartUnique")]
 [Id(ElementTypeIdConst)]
@@ -2876,7 +2778,6 @@ public partial class DocPartUnique : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:active.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "active")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2900,7 +2801,6 @@ public partial class Active : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:dynamicAddress.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "dynamicAddress")]
 [Id(ElementTypeIdConst)]
@@ -2926,7 +2826,6 @@ public partial class DynamicAddress : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:fHdr.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "fHdr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2950,7 +2849,6 @@ public partial class FirstRowHeader : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:linkToQuery.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "linkToQuery")]
 [Id(ElementTypeIdConst)]
@@ -2976,7 +2874,6 @@ public partial class LinkToQuery : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotSuppressBlankLines.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotSuppressBlankLines")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3000,7 +2897,6 @@ public partial class DoNotSuppressBlankLines : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:mailAsAttachment.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "mailAsAttachment")]
 [Id(ElementTypeIdConst)]
@@ -3026,7 +2922,6 @@ public partial class MailAsAttachment : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:viewMergedData.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "viewMergedData")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3050,7 +2945,6 @@ public partial class ViewMergedData : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:isLgl.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "isLgl")]
 [Id(ElementTypeIdConst)]
@@ -3076,7 +2970,6 @@ public partial class IsLegalNumberingStyle : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:blockQuote.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "blockQuote")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3100,7 +2993,6 @@ public partial class BlockQuote : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:bodyDiv.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "bodyDiv")]
 [Id(ElementTypeIdConst)]
@@ -3126,7 +3018,6 @@ public partial class BodyDiv : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:useSingleBorderforContiguousCells.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "useSingleBorderforContiguousCells")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3150,7 +3041,6 @@ public partial class UseSingleBorderForContiguousCells : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:wpJustification.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "wpJustification")]
 [Id(ElementTypeIdConst)]
@@ -3176,7 +3066,6 @@ public partial class WordPerfectJustification : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:noTabHangInd.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "noTabHangInd")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3200,7 +3089,6 @@ public partial class NoTabHangIndent : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:noLeading.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "noLeading")]
 [Id(ElementTypeIdConst)]
@@ -3226,7 +3114,6 @@ public partial class NoLeading : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:spaceForUL.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "spaceForUL")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3250,7 +3137,6 @@ public partial class SpaceForUnderline : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:noColumnBalance.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "noColumnBalance")]
 [Id(ElementTypeIdConst)]
@@ -3276,7 +3162,6 @@ public partial class NoColumnBalance : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:balanceSingleByteDoubleByteWidth.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "balanceSingleByteDoubleByteWidth")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3300,7 +3185,6 @@ public partial class BalanceSingleByteDoubleByteWidth : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:noExtraLineSpacing.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "noExtraLineSpacing")]
 [Id(ElementTypeIdConst)]
@@ -3326,7 +3210,6 @@ public partial class NoExtraLineSpacing : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotLeaveBackslashAlone.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotLeaveBackslashAlone")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3350,7 +3233,6 @@ public partial class DoNotLeaveBackslashAlone : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:ulTrailSpace.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "ulTrailSpace")]
 [Id(ElementTypeIdConst)]
@@ -3376,7 +3258,6 @@ public partial class UnderlineTrailingSpaces : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotExpandShiftReturn.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotExpandShiftReturn")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3400,7 +3281,6 @@ public partial class DoNotExpandShiftReturn : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:spacingInWholePoints.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "spacingInWholePoints")]
 [Id(ElementTypeIdConst)]
@@ -3426,7 +3306,6 @@ public partial class SpacingInWholePoints : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:lineWrapLikeWord6.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "lineWrapLikeWord6")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3450,7 +3329,6 @@ public partial class LineWrapLikeWord6 : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:printBodyTextBeforeHeader.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "printBodyTextBeforeHeader")]
 [Id(ElementTypeIdConst)]
@@ -3476,7 +3354,6 @@ public partial class PrintBodyTextBeforeHeader : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:printColBlack.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "printColBlack")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3500,7 +3377,6 @@ public partial class PrintColorBlackWhite : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:wpSpaceWidth.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "wpSpaceWidth")]
 [Id(ElementTypeIdConst)]
@@ -3526,7 +3402,6 @@ public partial class WordPerfectSpaceWidth : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:showBreaksInFrames.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "showBreaksInFrames")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3550,7 +3425,6 @@ public partial class ShowBreaksInFrames : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:subFontBySize.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "subFontBySize")]
 [Id(ElementTypeIdConst)]
@@ -3576,7 +3450,6 @@ public partial class SubFontBySize : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:suppressBottomSpacing.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "suppressBottomSpacing")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3600,7 +3473,6 @@ public partial class SuppressBottomSpacing : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:suppressTopSpacing.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "suppressTopSpacing")]
 [Id(ElementTypeIdConst)]
@@ -3626,7 +3498,6 @@ public partial class SuppressTopSpacing : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:suppressSpacingAtTopOfPage.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "suppressSpacingAtTopOfPage")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3650,7 +3521,6 @@ public partial class SuppressSpacingAtTopOfPage : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:suppressTopSpacingWP.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "suppressTopSpacingWP")]
 [Id(ElementTypeIdConst)]
@@ -3676,7 +3546,6 @@ public partial class SuppressTopSpacingWordPerfect : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:suppressSpBfAfterPgBrk.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "suppressSpBfAfterPgBrk")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3700,7 +3569,6 @@ public partial class SuppressSpacingBeforeAfterPageBreak : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:swapBordersFacingPages.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "swapBordersFacingPages")]
 [Id(ElementTypeIdConst)]
@@ -3726,7 +3594,6 @@ public partial class SwapBordersFacingPages : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:convMailMergeEsc.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "convMailMergeEsc")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3750,7 +3617,6 @@ public partial class ConvertMailMergeEscape : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:truncateFontHeightsLikeWP6.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "truncateFontHeightsLikeWP6")]
 [Id(ElementTypeIdConst)]
@@ -3776,7 +3642,6 @@ public partial class TruncateFontHeightsLikeWordPerfect : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:mwSmallCaps.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "mwSmallCaps")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3800,7 +3665,6 @@ public partial class MacWordSmallCaps : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:usePrinterMetrics.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "usePrinterMetrics")]
 [Id(ElementTypeIdConst)]
@@ -3826,7 +3690,6 @@ public partial class UsePrinterMetrics : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotSuppressParagraphBorders.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotSuppressParagraphBorders")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3850,7 +3713,6 @@ public partial class DoNotSuppressParagraphBorders : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:wrapTrailSpaces.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "wrapTrailSpaces")]
 [Id(ElementTypeIdConst)]
@@ -3876,7 +3738,6 @@ public partial class WrapTrailSpaces : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:footnoteLayoutLikeWW8.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "footnoteLayoutLikeWW8")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3900,7 +3761,6 @@ public partial class FootnoteLayoutLikeWord8 : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:shapeLayoutLikeWW8.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "shapeLayoutLikeWW8")]
 [Id(ElementTypeIdConst)]
@@ -3926,7 +3786,6 @@ public partial class ShapeLayoutLikeWord8 : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:alignTablesRowByRow.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "alignTablesRowByRow")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -3950,7 +3809,6 @@ public partial class AlignTablesRowByRow : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:forgetLastTabAlignment.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "forgetLastTabAlignment")]
 [Id(ElementTypeIdConst)]
@@ -3976,7 +3834,6 @@ public partial class ForgetLastTabAlignment : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:adjustLineHeightInTable.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "adjustLineHeightInTable")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4000,7 +3857,6 @@ public partial class AdjustLineHeightInTable : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:autoSpaceLikeWord95.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "autoSpaceLikeWord95")]
 [Id(ElementTypeIdConst)]
@@ -4026,7 +3882,6 @@ public partial class AutoSpaceLikeWord95 : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:noSpaceRaiseLower.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "noSpaceRaiseLower")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4050,7 +3905,6 @@ public partial class NoSpaceRaiseLower : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotUseHTMLParagraphAutoSpacing.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "doNotUseHTMLParagraphAutoSpacing")]
 [Id(ElementTypeIdConst)]
@@ -4076,7 +3930,6 @@ public partial class DoNotUseHTMLParagraphAutoSpacing : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:layoutRawTableWidth.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "layoutRawTableWidth")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4100,7 +3953,6 @@ public partial class LayoutRawTableWidth : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:layoutTableRowsApart.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "layoutTableRowsApart")]
 [Id(ElementTypeIdConst)]
@@ -4126,7 +3978,6 @@ public partial class LayoutTableRowsApart : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:useWord97LineBreakRules.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "useWord97LineBreakRules")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4150,7 +4001,6 @@ public partial class UseWord97LineBreakRules : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotBreakWrappedTables.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "doNotBreakWrappedTables")]
 [Id(ElementTypeIdConst)]
@@ -4176,7 +4026,6 @@ public partial class DoNotBreakWrappedTables : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotSnapToGridInCell.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotSnapToGridInCell")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4200,7 +4049,6 @@ public partial class DoNotSnapToGridInCell : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:selectFldWithFirstOrLastChar.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "selectFldWithFirstOrLastChar")]
 [Id(ElementTypeIdConst)]
@@ -4226,7 +4074,6 @@ public partial class SelectFieldWithFirstOrLastChar : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:applyBreakingRules.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "applyBreakingRules")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4250,7 +4097,6 @@ public partial class ApplyBreakingRules : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotWrapTextWithPunct.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "doNotWrapTextWithPunct")]
 [Id(ElementTypeIdConst)]
@@ -4276,7 +4122,6 @@ public partial class DoNotWrapTextWithPunctuation : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotUseEastAsianBreakRules.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotUseEastAsianBreakRules")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4300,7 +4145,6 @@ public partial class DoNotUseEastAsianBreakRules : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:useWord2002TableStyleRules.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "useWord2002TableStyleRules")]
 [Id(ElementTypeIdConst)]
@@ -4326,7 +4170,6 @@ public partial class UseWord2002TableStyleRules : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:growAutofit.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "growAutofit")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4350,7 +4193,6 @@ public partial class GrowAutofit : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:useFELayout.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "useFELayout")]
 [Id(ElementTypeIdConst)]
@@ -4376,7 +4218,6 @@ public partial class UseFarEastLayout : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:useNormalStyleForList.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "useNormalStyleForList")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4400,7 +4241,6 @@ public partial class UseNormalStyleForList : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotUseIndentAsNumberingTabStop.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "doNotUseIndentAsNumberingTabStop")]
 [Id(ElementTypeIdConst)]
@@ -4426,7 +4266,6 @@ public partial class DoNotUseIndentAsNumberingTabStop : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:useAltKinsokuLineBreakRules.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "useAltKinsokuLineBreakRules")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4450,7 +4289,6 @@ public partial class UseAltKinsokuLineBreakRules : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:allowSpaceOfSameStyleInTable.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "allowSpaceOfSameStyleInTable")]
 [Id(ElementTypeIdConst)]
@@ -4476,7 +4314,6 @@ public partial class AllowSpaceOfSameStyleInTable : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotSuppressIndentation.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotSuppressIndentation")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4500,7 +4337,6 @@ public partial class DoNotSuppressIndentation : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotAutofitConstrainedTables.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "doNotAutofitConstrainedTables")]
 [Id(ElementTypeIdConst)]
@@ -4526,7 +4362,6 @@ public partial class DoNotAutofitConstrainedTables : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:autofitToFirstFixedWidthCell.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "autofitToFirstFixedWidthCell")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4550,7 +4385,6 @@ public partial class AutofitToFirstFixedWidthCell : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:underlineTabInNumList.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "underlineTabInNumList")]
 [Id(ElementTypeIdConst)]
@@ -4576,7 +4410,6 @@ public partial class UnderlineTabInNumberingList : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:displayHangulFixedWidth.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "displayHangulFixedWidth")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4600,7 +4433,6 @@ public partial class DisplayHangulFixedWidth : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:splitPgBreakAndParaMark.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "splitPgBreakAndParaMark")]
 [Id(ElementTypeIdConst)]
@@ -4626,7 +4458,6 @@ public partial class SplitPageBreakAndParagraphMark : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotVertAlignCellWithSp.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotVertAlignCellWithSp")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4650,7 +4481,6 @@ public partial class DoNotVerticallyAlignCellWithShape : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotBreakConstrainedForcedTable.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "doNotBreakConstrainedForcedTable")]
 [Id(ElementTypeIdConst)]
@@ -4676,7 +4506,6 @@ public partial class DoNotBreakConstrainedForcedTable : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotVertAlignInTxbx.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotVertAlignInTxbx")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4700,7 +4529,6 @@ public partial class DoNotVerticallyAlignInTextBox : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:useAnsiKerningPairs.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "useAnsiKerningPairs")]
 [Id(ElementTypeIdConst)]
@@ -4726,7 +4554,6 @@ public partial class UseAnsiKerningPairs : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:cachedColBalance.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "cachedColBalance")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4750,7 +4577,6 @@ public partial class CachedColumnBalance : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:showingPlcHdr.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "showingPlcHdr")]
 [Id(ElementTypeIdConst)]
@@ -4776,7 +4602,6 @@ public partial class ShowingPlaceholder : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:temporary.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "temporary")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4800,7 +4625,6 @@ public partial class TemporarySdt : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:removePersonalInformation.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "removePersonalInformation")]
 [Id(ElementTypeIdConst)]
@@ -4826,7 +4650,6 @@ public partial class RemovePersonalInformation : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:removeDateAndTime.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "removeDateAndTime")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4850,7 +4673,6 @@ public partial class RemoveDateAndTime : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotDisplayPageBoundaries.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "doNotDisplayPageBoundaries")]
 [Id(ElementTypeIdConst)]
@@ -4876,7 +4698,6 @@ public partial class DoNotDisplayPageBoundaries : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:displayBackgroundShape.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "displayBackgroundShape")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4900,7 +4721,6 @@ public partial class DisplayBackgroundShape : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:printPostScriptOverText.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "printPostScriptOverText")]
 [Id(ElementTypeIdConst)]
@@ -4926,7 +4746,6 @@ public partial class PrintPostScriptOverText : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:printFractionalCharacterWidth.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "printFractionalCharacterWidth")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -4950,7 +4769,6 @@ public partial class PrintFractionalCharacterWidth : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:printFormsData.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "printFormsData")]
 [Id(ElementTypeIdConst)]
@@ -4976,7 +4794,6 @@ public partial class PrintFormsData : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:embedTrueTypeFonts.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "embedTrueTypeFonts")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5000,7 +4817,6 @@ public partial class EmbedTrueTypeFonts : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:embedSystemFonts.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "embedSystemFonts")]
 [Id(ElementTypeIdConst)]
@@ -5026,7 +4842,6 @@ public partial class EmbedSystemFonts : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:saveSubsetFonts.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "saveSubsetFonts")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5050,7 +4865,6 @@ public partial class SaveSubsetFonts : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:saveFormsData.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "saveFormsData")]
 [Id(ElementTypeIdConst)]
@@ -5076,7 +4890,6 @@ public partial class SaveFormsData : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:mirrorMargins.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "mirrorMargins")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5100,7 +4913,6 @@ public partial class MirrorMargins : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:alignBordersAndEdges.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "alignBordersAndEdges")]
 [Id(ElementTypeIdConst)]
@@ -5126,7 +4938,6 @@ public partial class AlignBorderAndEdges : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:bordersDoNotSurroundHeader.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "bordersDoNotSurroundHeader")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5150,7 +4961,6 @@ public partial class BordersDoNotSurroundHeader : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:bordersDoNotSurroundFooter.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "bordersDoNotSurroundFooter")]
 [Id(ElementTypeIdConst)]
@@ -5176,7 +4986,6 @@ public partial class BordersDoNotSurroundFooter : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:gutterAtTop.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "gutterAtTop")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5200,7 +5009,6 @@ public partial class GutterAtTop : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:hideSpellingErrors.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "hideSpellingErrors")]
 [Id(ElementTypeIdConst)]
@@ -5226,7 +5034,6 @@ public partial class HideSpellingErrors : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:hideGrammaticalErrors.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "hideGrammaticalErrors")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5250,7 +5057,6 @@ public partial class HideGrammaticalErrors : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:formsDesign.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "formsDesign")]
 [Id(ElementTypeIdConst)]
@@ -5276,7 +5082,6 @@ public partial class FormsDesign : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:linkStyles.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "linkStyles")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5300,7 +5105,6 @@ public partial class LinkStyles : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:trackRevisions.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "trackRevisions")]
 [Id(ElementTypeIdConst)]
@@ -5326,7 +5130,6 @@ public partial class TrackRevisions : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotTrackMoves.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotTrackMoves")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5350,7 +5153,6 @@ public partial class DoNotTrackMoves : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotTrackFormatting.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "doNotTrackFormatting")]
 [Id(ElementTypeIdConst)]
@@ -5376,7 +5178,6 @@ public partial class DoNotTrackFormatting : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:autoFormatOverride.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "autoFormatOverride")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5400,7 +5201,6 @@ public partial class AutoFormatOverride : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:styleLockTheme.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "styleLockTheme")]
 [Id(ElementTypeIdConst)]
@@ -5426,7 +5226,6 @@ public partial class StyleLockThemesPart : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:styleLockQFSet.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "styleLockQFSet")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5450,7 +5249,6 @@ public partial class StyleLockStylesPart : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:autoHyphenation.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "autoHyphenation")]
 [Id(ElementTypeIdConst)]
@@ -5476,7 +5274,6 @@ public partial class AutoHyphenation : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotHyphenateCaps.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotHyphenateCaps")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5500,7 +5297,6 @@ public partial class DoNotHyphenateCaps : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:showEnvelope.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "showEnvelope")]
 [Id(ElementTypeIdConst)]
@@ -5526,7 +5322,6 @@ public partial class ShowEnvelope : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:evenAndOddHeaders.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "evenAndOddHeaders")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5550,7 +5345,6 @@ public partial class EvenAndOddHeaders : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:bookFoldRevPrinting.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "bookFoldRevPrinting")]
 [Id(ElementTypeIdConst)]
@@ -5576,7 +5370,6 @@ public partial class BookFoldReversePrinting : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:bookFoldPrinting.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "bookFoldPrinting")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5600,7 +5393,6 @@ public partial class BookFoldPrinting : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotUseMarginsForDrawingGridOrigin.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "doNotUseMarginsForDrawingGridOrigin")]
 [Id(ElementTypeIdConst)]
@@ -5626,7 +5418,6 @@ public partial class DoNotUseMarginsForDrawingGridOrigin : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotShadeFormData.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotShadeFormData")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5650,7 +5441,6 @@ public partial class DoNotShadeFormData : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:noPunctuationKerning.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "noPunctuationKerning")]
 [Id(ElementTypeIdConst)]
@@ -5676,7 +5466,6 @@ public partial class NoPunctuationKerning : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:printTwoOnOne.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "printTwoOnOne")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5700,7 +5489,6 @@ public partial class PrintTwoOnOne : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:strictFirstAndLastChars.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "strictFirstAndLastChars")]
 [Id(ElementTypeIdConst)]
@@ -5726,7 +5514,6 @@ public partial class StrictFirstAndLastChars : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:savePreviewPicture.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "savePreviewPicture")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5750,7 +5537,6 @@ public partial class SavePreviewPicture : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotValidateAgainstSchema.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "doNotValidateAgainstSchema")]
 [Id(ElementTypeIdConst)]
@@ -5776,7 +5562,6 @@ public partial class DoNotValidateAgainstSchema : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:saveInvalidXml.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "saveInvalidXml")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5800,7 +5585,6 @@ public partial class SaveInvalidXml : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:ignoreMixedContent.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "ignoreMixedContent")]
 [Id(ElementTypeIdConst)]
@@ -5826,7 +5610,6 @@ public partial class IgnoreMixedContent : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:alwaysShowPlaceholderText.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "alwaysShowPlaceholderText")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5850,7 +5633,6 @@ public partial class AlwaysShowPlaceholderText : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotDemarcateInvalidXml.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "doNotDemarcateInvalidXml")]
 [Id(ElementTypeIdConst)]
@@ -5876,7 +5658,6 @@ public partial class DoNotDemarcateInvalidXml : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:saveXmlDataOnly.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "saveXmlDataOnly")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5900,7 +5681,6 @@ public partial class SaveXmlDataOnly : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:useXSLTWhenSaving.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "useXSLTWhenSaving")]
 [Id(ElementTypeIdConst)]
@@ -5926,7 +5706,6 @@ public partial class UseXsltWhenSaving : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:showXMLTags.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "showXMLTags")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -5950,7 +5729,6 @@ public partial class ShowXmlTags : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:alwaysMergeEmptyNamespace.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "alwaysMergeEmptyNamespace")]
 [Id(ElementTypeIdConst)]
@@ -5976,7 +5754,6 @@ public partial class AlwaysMergeEmptyNamespace : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:updateFields.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "updateFields")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6000,7 +5777,6 @@ public partial class UpdateFieldsOnOpen : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:uiCompat97To2003.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "uiCompat97To2003")]
 [Id(ElementTypeIdConst)]
@@ -6026,7 +5802,6 @@ public partial class UICompatibleWith97To2003 : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotIncludeSubdocsInStats.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotIncludeSubdocsInStats")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6050,7 +5825,6 @@ public partial class DoNotIncludeSubdocsInStats : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotAutoCompressPictures.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "doNotAutoCompressPictures")]
 [Id(ElementTypeIdConst)]
@@ -6076,7 +5850,6 @@ public partial class DoNotAutoCompressPictures : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:optimizeForBrowser.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "optimizeForBrowser")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6100,7 +5873,6 @@ public partial class OptimizeForBrowser : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:relyOnVML.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "relyOnVML")]
 [Id(ElementTypeIdConst)]
@@ -6126,7 +5898,6 @@ public partial class RelyOnVML : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:allowPNG.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "allowPNG")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6150,7 +5921,6 @@ public partial class AllowPNG : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotRelyOnCSS.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "doNotRelyOnCSS")]
 [Id(ElementTypeIdConst)]
@@ -6176,7 +5946,6 @@ public partial class DoNotRelyOnCSS : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotSaveAsSingleFile.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotSaveAsSingleFile")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6200,7 +5969,6 @@ public partial class DoNotSaveAsSingleFile : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotOrganizeInFolder.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "doNotOrganizeInFolder")]
 [Id(ElementTypeIdConst)]
@@ -6226,7 +5994,6 @@ public partial class DoNotOrganizeInFolder : OnOffType
 /// <para> When the object is serialized out as xml, its qualified name is w:doNotUseLongFileNames.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "doNotUseLongFileNames")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6250,7 +6017,6 @@ public partial class DoNotUseLongFileNames : OnOffType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:notTrueType.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "notTrueType")]
 [Id(ElementTypeIdConst)]
@@ -7399,7 +7165,6 @@ public partial class TextBoxTightWrap : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:outlineLvl.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "outlineLvl")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7423,7 +7188,6 @@ public partial class OutlineLevel : DecimalNumberType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:gridSpan.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "gridSpan")]
 [Id(ElementTypeIdConst)]
@@ -7449,7 +7213,6 @@ public partial class GridSpan : DecimalNumberType
 /// <para> When the object is serialized out as xml, its qualified name is w:gridBefore.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "gridBefore")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7473,7 +7236,6 @@ public partial class GridBefore : DecimalNumberType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:gridAfter.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "gridAfter")]
 [Id(ElementTypeIdConst)]
@@ -7499,7 +7261,6 @@ public partial class GridAfter : DecimalNumberType
 /// <para> When the object is serialized out as xml, its qualified name is w:result.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "result")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7523,7 +7284,6 @@ public partial class DropDownListSelection : DecimalNumberType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:activeRecord.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "activeRecord")]
 [Id(ElementTypeIdConst)]
@@ -7549,7 +7309,6 @@ public partial class ActiveRecord : DecimalNumberType
 /// <para> When the object is serialized out as xml, its qualified name is w:checkErrors.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "checkErrors")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7573,7 +7332,6 @@ public partial class CheckErrors : DecimalNumberType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:lvlRestart.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "lvlRestart")]
 [Id(ElementTypeIdConst)]
@@ -7599,7 +7357,6 @@ public partial class LevelRestart : DecimalNumberType
 /// <para> When the object is serialized out as xml, its qualified name is w:lvlPicBulletId.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "lvlPicBulletId")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7623,7 +7380,6 @@ public partial class LevelPictureBulletId : DecimalNumberType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:startOverride.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "startOverride")]
 [Id(ElementTypeIdConst)]
@@ -7649,7 +7405,6 @@ public partial class StartOverrideNumberingValue : DecimalNumberType
 /// <para> When the object is serialized out as xml, its qualified name is w:numIdMacAtCleanup.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "numIdMacAtCleanup")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7674,7 +7429,6 @@ public partial class NumberingIdMacAtCleanup : DecimalNumberType
 /// <para> When the object is serialized out as xml, its qualified name is w:id.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "id")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7698,7 +7452,6 @@ public partial class SdtId : DecimalNumberType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:pixelsPerInch.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "pixelsPerInch")]
 [Id(ElementTypeIdConst)]
@@ -7866,7 +7619,6 @@ public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is w:headerReference.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "headerReference")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -7890,7 +7642,6 @@ public partial class HeaderReference : HeaderFooterReferenceType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:footerReference.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "footerReference")]
 [Id(ElementTypeIdConst)]
@@ -8008,7 +7759,6 @@ public partial class Break : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:t.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "t")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8045,7 +7795,6 @@ public partial class Text : TextType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:delText.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "delText")]
 [Id(ElementTypeIdConst)]
@@ -8084,7 +7833,6 @@ public partial class DeletedText : TextType
 /// <para> When the object is serialized out as xml, its qualified name is w:instrText.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "instrText")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8121,7 +7869,6 @@ public partial class FieldCode : TextType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:delInstrText.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "delInstrText")]
 [Id(ElementTypeIdConst)]
@@ -8203,7 +7950,6 @@ public abstract partial class TextType : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is w:noBreakHyphen.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "noBreakHyphen")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8227,7 +7973,6 @@ public partial class NoBreakHyphen : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:softHyphen.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "softHyphen")]
 [Id(ElementTypeIdConst)]
@@ -8253,7 +7998,6 @@ public partial class SoftHyphen : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is w:dayShort.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "dayShort")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8277,7 +8021,6 @@ public partial class DayShort : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:monthShort.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "monthShort")]
 [Id(ElementTypeIdConst)]
@@ -8303,7 +8046,6 @@ public partial class MonthShort : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is w:yearShort.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "yearShort")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8327,7 +8069,6 @@ public partial class YearShort : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:dayLong.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "dayLong")]
 [Id(ElementTypeIdConst)]
@@ -8353,7 +8094,6 @@ public partial class DayLong : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is w:monthLong.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "monthLong")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8377,7 +8117,6 @@ public partial class MonthLong : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:yearLong.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "yearLong")]
 [Id(ElementTypeIdConst)]
@@ -8403,7 +8142,6 @@ public partial class YearLong : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is w:annotationRef.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "annotationRef")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8427,7 +8165,6 @@ public partial class AnnotationReferenceMark : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:footnoteRef.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "footnoteRef")]
 [Id(ElementTypeIdConst)]
@@ -8453,7 +8190,6 @@ public partial class FootnoteReferenceMark : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is w:endnoteRef.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "endnoteRef")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8477,7 +8213,6 @@ public partial class EndnoteReferenceMark : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:separator.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "separator")]
 [Id(ElementTypeIdConst)]
@@ -8503,7 +8238,6 @@ public partial class SeparatorMark : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is w:continuationSeparator.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "continuationSeparator")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8527,7 +8261,6 @@ public partial class ContinuationSeparatorMark : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:pgNum.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "pgNum")]
 [Id(ElementTypeIdConst)]
@@ -8553,7 +8286,6 @@ public partial class PageNumber : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is w:cr.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "cr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8577,7 +8309,6 @@ public partial class CarriageReturn : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:tab.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "tab")]
 [Id(ElementTypeIdConst)]
@@ -8603,7 +8334,6 @@ public partial class TabChar : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is w:lastRenderedPageBreak.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "lastRenderedPageBreak")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8627,7 +8357,6 @@ public partial class LastRenderedPageBreak : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:equation.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "equation")]
 [Id(ElementTypeIdConst)]
@@ -8653,7 +8382,6 @@ public partial class SdtContentEquation : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is w:picture.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "picture")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8677,7 +8405,6 @@ public partial class SdtContentPicture : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:richText.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "richText")]
 [Id(ElementTypeIdConst)]
@@ -8703,7 +8430,6 @@ public partial class SdtContentRichText : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is w:citation.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "citation")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8727,7 +8453,6 @@ public partial class SdtContentCitation : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:group.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "group")]
 [Id(ElementTypeIdConst)]
@@ -8753,7 +8478,6 @@ public partial class SdtContentGroup : EmptyType
 /// <para> When the object is serialized out as xml, its qualified name is w:bibliography.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "bibliography")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -8777,7 +8501,6 @@ public partial class SdtContentBibliography : EmptyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:forceUpgrade.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "forceUpgrade")]
 [Id(ElementTypeIdConst)]
@@ -9359,7 +9082,6 @@ public partial class Ruby : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is w:footnoteReference.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "footnoteReference")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9383,7 +9105,6 @@ public partial class FootnoteReference : FootnoteEndnoteReferenceType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:endnoteReference.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "endnoteReference")]
 [Id(ElementTypeIdConst)]
@@ -9609,7 +9330,6 @@ public partial class PositionalTab : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:rStyle.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "rStyle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9633,7 +9353,6 @@ public partial class RunStyle : String253Type
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:tblStyle.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "tblStyle")]
 [Id(ElementTypeIdConst)]
@@ -9659,7 +9378,6 @@ public partial class TableStyle : String253Type
 /// <para> When the object is serialized out as xml, its qualified name is w:pStyle.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "pStyle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9683,7 +9401,6 @@ public partial class ParagraphStyleIdInLevel : String253Type
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:name.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "name")]
 [Id(ElementTypeIdConst)]
@@ -9709,7 +9426,6 @@ public partial class AbstractNumDefinitionName : String253Type
 /// <para> When the object is serialized out as xml, its qualified name is w:styleLink.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "styleLink")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9733,7 +9449,6 @@ public partial class StyleLink : String253Type
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:numStyleLink.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "numStyleLink")]
 [Id(ElementTypeIdConst)]
@@ -9759,7 +9474,6 @@ public partial class NumberingStyleLink : String253Type
 /// <para> When the object is serialized out as xml, its qualified name is w:aliases.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "aliases")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9783,7 +9497,6 @@ public partial class Aliases : String253Type
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:basedOn.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "basedOn")]
 [Id(ElementTypeIdConst)]
@@ -9809,7 +9522,6 @@ public partial class BasedOn : String253Type
 /// <para> When the object is serialized out as xml, its qualified name is w:next.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "next")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9833,7 +9545,6 @@ public partial class NextParagraphStyle : String253Type
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:link.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "link")]
 [Id(ElementTypeIdConst)]
@@ -9859,7 +9570,6 @@ public partial class LinkedStyle : String253Type
 /// <para> When the object is serialized out as xml, its qualified name is w:clickAndTypeStyle.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "clickAndTypeStyle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -9883,7 +9593,6 @@ public partial class ClickAndTypeStyle : String253Type
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:defaultTableStyle.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "defaultTableStyle")]
 [Id(ElementTypeIdConst)]
@@ -10301,7 +10010,6 @@ public partial class Position : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:sz.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "sz")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -10325,7 +10033,6 @@ public partial class FontSize : HpsMeasureType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:szCs.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "szCs")]
 [Id(ElementTypeIdConst)]
@@ -10351,7 +10058,6 @@ public partial class FontSizeComplexScript : HpsMeasureType
 /// <para> When the object is serialized out as xml, its qualified name is w:size.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "size")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -10376,7 +10082,6 @@ public partial class FormFieldSize : HpsMeasureType
 /// <para> When the object is serialized out as xml, its qualified name is w:hps.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "hps")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -10400,7 +10105,6 @@ public partial class PhoneticGuideTextFontSize : HpsMeasureType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:hpsBaseText.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "hpsBaseText")]
 [Id(ElementTypeIdConst)]
@@ -10622,7 +10326,6 @@ public partial class TextEffect : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:bdr.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "bdr")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -10646,7 +10349,6 @@ public partial class Border : BorderType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:top.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "top")]
 [Id(ElementTypeIdConst)]
@@ -10672,7 +10374,6 @@ public partial class TopBorder : BorderType
 /// <para> When the object is serialized out as xml, its qualified name is w:left.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "left")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -10696,7 +10397,6 @@ public partial class LeftBorder : BorderType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:bottom.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "bottom")]
 [Id(ElementTypeIdConst)]
@@ -10722,7 +10422,6 @@ public partial class BottomBorder : BorderType
 /// <para> When the object is serialized out as xml, its qualified name is w:right.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "right")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -10746,7 +10445,6 @@ public partial class RightBorder : BorderType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:between.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "between")]
 [Id(ElementTypeIdConst)]
@@ -10772,7 +10470,6 @@ public partial class BetweenBorder : BorderType
 /// <para> When the object is serialized out as xml, its qualified name is w:bar.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "bar")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -10796,7 +10493,6 @@ public partial class BarBorder : BorderType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:start.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "start")]
 [Id(ElementTypeIdConst)]
@@ -10822,7 +10518,6 @@ public partial class StartBorder : BorderType
 /// <para> When the object is serialized out as xml, its qualified name is w:end.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "end")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -10846,7 +10541,6 @@ public partial class EndBorder : BorderType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:insideH.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "insideH")]
 [Id(ElementTypeIdConst)]
@@ -10872,7 +10566,6 @@ public partial class InsideHorizontalBorder : BorderType
 /// <para> When the object is serialized out as xml, its qualified name is w:insideV.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "insideV")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -10897,7 +10590,6 @@ public partial class InsideVerticalBorder : BorderType
 /// <para> When the object is serialized out as xml, its qualified name is w:tl2br.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "tl2br")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -10921,7 +10613,6 @@ public partial class TopLeftToBottomRightCellBorder : BorderType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:tr2bl.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "tr2bl")]
 [Id(ElementTypeIdConst)]
@@ -11193,7 +10884,6 @@ public partial class Emphasis : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:lang.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "lang")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -11217,7 +10907,6 @@ public partial class Languages : LanguageType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:themeFontLang.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "themeFontLang")]
 [Id(ElementTypeIdConst)]
@@ -12569,10 +12258,6 @@ public partial class DeletedMathControl : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(RunProperties))]
-    [ChildElementInfo(typeof(InsertedMathControl))]
-    [ChildElementInfo(typeof(DeletedMathControl))]
-
 [SchemaAttr(23, "moveFrom")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -12630,10 +12315,6 @@ public partial class MoveFromMathControl : MathControlMoveType
 ///<item><description>DeletedMathControl &lt;w:del></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(RunProperties))]
-    [ChildElementInfo(typeof(InsertedMathControl))]
-    [ChildElementInfo(typeof(DeletedMathControl))]
 
 [SchemaAttr(23, "moveTo")]
 [Id(ElementTypeIdConst)]
@@ -13966,63 +13647,6 @@ public partial class PermEnd : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(SdtRun))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding), FileFormatVersions.Office2010)]
-
 [SchemaAttr(23, "ins")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -14133,63 +13757,6 @@ public partial class InsertedRun : RunTrackChangeType
 ///<item><description>BidirectionalEmbedding &lt;w:dir></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(SdtRun))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding), FileFormatVersions.Office2010)]
 
 [SchemaAttr(23, "del")]
 [Id(ElementTypeIdConst)]
@@ -14302,63 +13869,6 @@ public partial class DeletedRun : RunTrackChangeType
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(SdtRun))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding), FileFormatVersions.Office2010)]
-
 [SchemaAttr(23, "moveFrom")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -14469,63 +13979,6 @@ public partial class MoveFromRun : RunTrackChangeType
 ///<item><description>BidirectionalEmbedding &lt;w:dir></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(SdtRun))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(BidirectionalOverride), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(BidirectionalEmbedding), FileFormatVersions.Office2010)]
 
 [SchemaAttr(23, "moveTo")]
 [Id(ElementTypeIdConst)]
@@ -17560,7 +17013,6 @@ public partial class BidirectionalEmbedding : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is w:subDoc.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "subDoc")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -17584,7 +17036,6 @@ public partial class SubDocumentReference : RelationshipType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:printerSettings.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "printerSettings")]
 [Id(ElementTypeIdConst)]
@@ -17610,7 +17061,6 @@ public partial class PrinterSettingsReference : RelationshipType
 /// <para> When the object is serialized out as xml, its qualified name is w:src.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "src")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -17634,7 +17084,6 @@ public partial class SourceReference : RelationshipType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:recipientData.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "recipientData")]
 [Id(ElementTypeIdConst)]
@@ -17660,7 +17109,6 @@ public partial class RecipientDataReference : RelationshipType
 /// <para> When the object is serialized out as xml, its qualified name is w:dataSource.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "dataSource")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -17684,7 +17132,6 @@ public partial class DataSourceReference : RelationshipType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:headerSource.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "headerSource")]
 [Id(ElementTypeIdConst)]
@@ -17710,7 +17157,6 @@ public partial class HeaderSource : RelationshipType
 /// <para> When the object is serialized out as xml, its qualified name is w:sourceFileName.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "sourceFileName")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -17735,7 +17181,6 @@ public partial class SourceFileReference : RelationshipType
 /// <para> When the object is serialized out as xml, its qualified name is w:movie.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "movie")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -17759,7 +17204,6 @@ public partial class MovieReference : RelationshipType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:attachedTemplate.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "attachedTemplate")]
 [Id(ElementTypeIdConst)]
@@ -17977,7 +17421,6 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:tcW.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "tcW")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18001,7 +17444,6 @@ public partial class TableCellWidth : TableWidthType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:wBefore.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "wBefore")]
 [Id(ElementTypeIdConst)]
@@ -18027,7 +17469,6 @@ public partial class WidthBeforeTableRow : TableWidthType
 /// <para> When the object is serialized out as xml, its qualified name is w:wAfter.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "wAfter")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18051,7 +17492,6 @@ public partial class WidthAfterTableRow : TableWidthType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:tblCellSpacing.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "tblCellSpacing")]
 [Id(ElementTypeIdConst)]
@@ -18077,7 +17517,6 @@ public partial class TableCellSpacing : TableWidthType
 /// <para> When the object is serialized out as xml, its qualified name is w:tblW.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "tblW")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18101,7 +17540,6 @@ public partial class TableWidth : TableWidthType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:top.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "top")]
 [Id(ElementTypeIdConst)]
@@ -18127,7 +17565,6 @@ public partial class TopMargin : TableWidthType
 /// <para> When the object is serialized out as xml, its qualified name is w:start.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "start")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -18151,7 +17588,6 @@ public partial class StartMargin : TableWidthType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:bottom.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "bottom")]
 [Id(ElementTypeIdConst)]
@@ -18177,7 +17613,6 @@ public partial class BottomMargin : TableWidthType
 /// <para> When the object is serialized out as xml, its qualified name is w:end.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "end")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -18202,7 +17637,6 @@ public partial class EndMargin : TableWidthType
 /// <para> When the object is serialized out as xml, its qualified name is w:left.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "left")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18226,7 +17660,6 @@ public partial class LeftMargin : TableWidthType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:right.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "right")]
 [Id(ElementTypeIdConst)]
@@ -18602,7 +18035,6 @@ public partial class TableCellBorders : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is w:noWrap.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "noWrap")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18626,7 +18058,6 @@ public partial class NoWrap : OnOffOnlyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:tcFitText.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "tcFitText")]
 [Id(ElementTypeIdConst)]
@@ -18652,7 +18083,6 @@ public partial class TableCellFitText : OnOffOnlyType
 /// <para> When the object is serialized out as xml, its qualified name is w:hideMark.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "hideMark")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18676,7 +18106,6 @@ public partial class HideMark : OnOffOnlyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:cantSplit.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "cantSplit")]
 [Id(ElementTypeIdConst)]
@@ -18702,7 +18131,6 @@ public partial class CantSplit : OnOffOnlyType
 /// <para> When the object is serialized out as xml, its qualified name is w:tblHeader.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "tblHeader")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18726,7 +18154,6 @@ public partial class TableHeader : OnOffOnlyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:bidiVisual.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "bidiVisual")]
 [Id(ElementTypeIdConst)]
@@ -18752,7 +18179,6 @@ public partial class BiDiVisual : OnOffOnlyType
 /// <para> When the object is serialized out as xml, its qualified name is w:noResizeAllowed.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "noResizeAllowed")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18776,7 +18202,6 @@ public partial class NoResizeAllowed : OnOffOnlyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:linkedToFile.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "linkedToFile")]
 [Id(ElementTypeIdConst)]
@@ -18802,7 +18227,6 @@ public partial class LinkedToFile : OnOffOnlyType
 /// <para> When the object is serialized out as xml, its qualified name is w:noBorder.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "noBorder")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18826,7 +18250,6 @@ public partial class NoBorder : OnOffOnlyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:flatBorders.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "flatBorders")]
 [Id(ElementTypeIdConst)]
@@ -18852,7 +18275,6 @@ public partial class FlatBorders : OnOffOnlyType
 /// <para> When the object is serialized out as xml, its qualified name is w:autoRedefine.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "autoRedefine")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18876,7 +18298,6 @@ public partial class AutoRedefine : OnOffOnlyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:hidden.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "hidden")]
 [Id(ElementTypeIdConst)]
@@ -18902,7 +18323,6 @@ public partial class StyleHidden : OnOffOnlyType
 /// <para> When the object is serialized out as xml, its qualified name is w:semiHidden.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "semiHidden")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18926,7 +18346,6 @@ public partial class SemiHidden : OnOffOnlyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:unhideWhenUsed.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "unhideWhenUsed")]
 [Id(ElementTypeIdConst)]
@@ -18952,7 +18371,6 @@ public partial class UnhideWhenUsed : OnOffOnlyType
 /// <para> When the object is serialized out as xml, its qualified name is w:qFormat.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "qFormat")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -18976,7 +18394,6 @@ public partial class PrimaryStyle : OnOffOnlyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:locked.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "locked")]
 [Id(ElementTypeIdConst)]
@@ -19002,7 +18419,6 @@ public partial class Locked : OnOffOnlyType
 /// <para> When the object is serialized out as xml, its qualified name is w:personal.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "personal")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -19027,7 +18443,6 @@ public partial class Personal : OnOffOnlyType
 /// <para> When the object is serialized out as xml, its qualified name is w:personalCompose.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "personalCompose")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -19051,7 +18466,6 @@ public partial class PersonalCompose : OnOffOnlyType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:personalReply.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "personalReply")]
 [Id(ElementTypeIdConst)]
@@ -19621,7 +19035,6 @@ public partial class TableOverlap : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:tblStyleRowBandSize.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "tblStyleRowBandSize")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -19645,7 +19058,6 @@ public partial class TableStyleRowBandSize : UnsignedDecimalNumberMax3Type
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:tblStyleColBandSize.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "tblStyleColBandSize")]
 [Id(ElementTypeIdConst)]
@@ -26169,7 +25581,6 @@ public partial class NumberingLevelReference : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:numId.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "numId")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -26194,7 +25605,6 @@ public partial class NumberingId : NonNegativeDecimalNumberType
 /// <para> When the object is serialized out as xml, its qualified name is w:start.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "start")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -26218,7 +25628,6 @@ public partial class StartNumberingValue : NonNegativeDecimalNumberType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:abstractNumId.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "abstractNumId")]
 [Id(ElementTypeIdConst)]
@@ -26965,7 +26374,6 @@ public partial class FormFieldName : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:entryMacro.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "entryMacro")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -26989,7 +26397,6 @@ public partial class EntryMacro : MacroNameType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:exitMacro.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "exitMacro")]
 [Id(ElementTypeIdConst)]
@@ -27492,7 +26899,6 @@ public partial class DefaultDropDownListItemIndex : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:listEntry.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "listEntry")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -27517,7 +26923,6 @@ public partial class ListEntryFormField : String255Type
 /// <para> When the object is serialized out as xml, its qualified name is w:default.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "default")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -27541,7 +26946,6 @@ public partial class DefaultTextBoxFormFieldString : String255Type
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:name.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "name")]
 [Id(ElementTypeIdConst)]
@@ -28431,64 +27835,6 @@ public partial class RubyProperties : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(CustomXmlRuby))]
-    [ChildElementInfo(typeof(SimpleFieldRuby))]
-    [ChildElementInfo(typeof(HyperlinkRuby))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(SdtRunRuby))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
-
 [SchemaAttr(23, "rt")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -28600,64 +27946,6 @@ public partial class RubyContent : RubyContentType
 ///<item><description>DocumentFormat.OpenXml.Math.Run &lt;m:r></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(CustomXmlRuby))]
-    [ChildElementInfo(typeof(SimpleFieldRuby))]
-    [ChildElementInfo(typeof(HyperlinkRuby))]
-    [ChildElementInfo(typeof(Run))]
-    [ChildElementInfo(typeof(SdtRunRuby))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Paragraph))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.OfficeMath))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Accent))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Bar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Box))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.BorderBox))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Delimiter))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.EquationArray))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Fraction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.MathFunction))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.GroupChar))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitLower))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.LimitUpper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Matrix))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Nary))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Phantom))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Radical))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.PreSubSuper))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Subscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.SubSuperscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Superscript))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
 
 [SchemaAttr(23, "rubyBase")]
 [Id(ElementTypeIdConst)]
@@ -31370,7 +30658,6 @@ public partial class EndnotePosition : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:footnote.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "footnote")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -31394,7 +30681,6 @@ public partial class FootnoteSpecialReference : FootnoteEndnoteSeparatorReferenc
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:endnote.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "endnote")]
 [Id(ElementTypeIdConst)]
@@ -31450,7 +30736,6 @@ public abstract partial class FootnoteEndnoteSeparatorReferenceType : OpenXmlLea
 /// <para> When the object is serialized out as xml, its qualified name is w:column.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "column")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -31474,7 +30759,6 @@ public partial class ColumnIndex : UnsignedDecimalNumberType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:colDelim.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "colDelim")]
 [Id(ElementTypeIdConst)]
@@ -32276,7 +31560,6 @@ public partial class DocumentVariable : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:rsidRoot.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "rsidRoot")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -32300,7 +31583,6 @@ public partial class RsidRoot : LongHexNumberType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:rsid.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "rsid")]
 [Id(ElementTypeIdConst)]
@@ -32326,7 +31608,6 @@ public partial class Rsid : LongHexNumberType
 /// <para> When the object is serialized out as xml, its qualified name is w:nsid.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "nsid")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -32350,7 +31631,6 @@ public partial class Nsid : LongHexNumberType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:tmpl.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "tmpl")]
 [Id(ElementTypeIdConst)]
@@ -33726,7 +33006,6 @@ public partial class ParagraphPropertiesDefault : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is w:marW.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "marW")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -33750,7 +33029,6 @@ public partial class MarginWidth : PixelsMeasureType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:marH.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "marH")]
 [Id(ElementTypeIdConst)]
@@ -33848,7 +33126,6 @@ public partial class ScrollbarVisibility : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:w.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "w")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -33872,7 +33149,6 @@ public partial class Width : TwipsMeasureType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:hyphenationZone.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "hyphenationZone")]
 [Id(ElementTypeIdConst)]
@@ -33898,7 +33174,6 @@ public partial class HyphenationZone : TwipsMeasureType
 /// <para> When the object is serialized out as xml, its qualified name is w:drawingGridHorizontalSpacing.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "drawingGridHorizontalSpacing")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -33922,7 +33197,6 @@ public partial class DrawingGridHorizontalSpacing : TwipsMeasureType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:drawingGridVerticalSpacing.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "drawingGridVerticalSpacing")]
 [Id(ElementTypeIdConst)]
@@ -33948,7 +33222,6 @@ public partial class DrawingGridVerticalSpacing : TwipsMeasureType
 /// <para> When the object is serialized out as xml, its qualified name is w:drawingGridHorizontalOrigin.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "drawingGridHorizontalOrigin")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -33972,7 +33245,6 @@ public partial class DrawingGridHorizontalOrigin : TwipsMeasureType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:drawingGridVerticalOrigin.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "drawingGridVerticalOrigin")]
 [Id(ElementTypeIdConst)]
@@ -39872,7 +39144,6 @@ public partial class Font : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is w:marLeft.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "marLeft")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -39896,7 +39167,6 @@ public partial class LeftMarginDiv : SignedTwipsMeasureType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:marRight.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "marRight")]
 [Id(ElementTypeIdConst)]
@@ -39922,7 +39192,6 @@ public partial class RightMarginDiv : SignedTwipsMeasureType
 /// <para> When the object is serialized out as xml, its qualified name is w:marTop.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "marTop")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -39946,7 +39215,6 @@ public partial class TopMarginDiv : SignedTwipsMeasureType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:marBottom.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "marBottom")]
 [Id(ElementTypeIdConst)]
@@ -40138,8 +39406,6 @@ public partial class DivBorder : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(Div))]
-
 [SchemaAttr(23, "divsChild")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -40195,8 +39461,6 @@ public partial class DivsChild : DivsType
 ///<item><description>Div &lt;w:div></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(Div))]
 
 [SchemaAttr(23, "divs")]
 [Id(ElementTypeIdConst)]
@@ -40658,42 +39922,6 @@ public partial class Comment : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(AltChunk))]
-    [ChildElementInfo(typeof(CustomXmlBlock))]
-    [ChildElementInfo(typeof(SdtBlock))]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-
 [SchemaAttr(23, "footnote")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -40783,42 +40011,6 @@ public partial class Footnote : FootnoteEndnoteType
 ///<item><description>DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion &lt;w14:conflictDel></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(AltChunk))]
-    [ChildElementInfo(typeof(CustomXmlBlock))]
-    [ChildElementInfo(typeof(SdtBlock))]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
 
 [SchemaAttr(23, "endnote")]
 [Id(ElementTypeIdConst)]
@@ -42094,43 +41286,6 @@ public partial class DocPartProperties : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(AltChunk))]
-    [ChildElementInfo(typeof(CustomXmlBlock))]
-    [ChildElementInfo(typeof(SdtBlock))]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SectionProperties))]
-
 [SchemaAttr(23, "docPartBody")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -42221,43 +41376,6 @@ public partial class DocPartBody : BodyType
 ///<item><description>SectionProperties &lt;w:sectPr></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(AltChunk))]
-    [ChildElementInfo(typeof(CustomXmlBlock))]
-    [ChildElementInfo(typeof(SdtBlock))]
-    [ChildElementInfo(typeof(Paragraph))]
-    [ChildElementInfo(typeof(Table))]
-    [ChildElementInfo(typeof(ProofError))]
-    [ChildElementInfo(typeof(PermStart))]
-    [ChildElementInfo(typeof(PermEnd))]
-    [ChildElementInfo(typeof(BookmarkStart))]
-    [ChildElementInfo(typeof(BookmarkEnd))]
-    [ChildElementInfo(typeof(CommentRangeStart))]
-    [ChildElementInfo(typeof(CommentRangeEnd))]
-    [ChildElementInfo(typeof(MoveFromRangeStart))]
-    [ChildElementInfo(typeof(MoveFromRangeEnd))]
-    [ChildElementInfo(typeof(MoveToRangeStart))]
-    [ChildElementInfo(typeof(MoveToRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlInsRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlDelRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveFromRangeEnd))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeStart))]
-    [ChildElementInfo(typeof(CustomXmlMoveToRangeEnd))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(InsertedRun))]
-    [ChildElementInfo(typeof(DeletedRun))]
-    [ChildElementInfo(typeof(MoveFromRun))]
-    [ChildElementInfo(typeof(MoveToRun))]
-    [ChildElementInfo(typeof(ContentPart), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
-    [ChildElementInfo(typeof(SectionProperties))]
 
 [SchemaAttr(23, "body")]
 [Id(ElementTypeIdConst)]
@@ -42592,7 +41710,6 @@ public partial class CompatibilitySetting : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:left.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "left")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -42616,7 +41733,6 @@ public partial class TableCellLeftMargin : TableWidthDxaNilType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:right.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "right")]
 [Id(ElementTypeIdConst)]
@@ -44479,10 +43595,6 @@ public partial class SdtContentDate : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocPartGallery))]
-    [ChildElementInfo(typeof(DocPartCategory))]
-    [ChildElementInfo(typeof(DocPartUnique))]
-
 [SchemaAttr(23, "docPartObj")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -44540,10 +43652,6 @@ public partial class SdtContentDocPartObject : SdtDocPartType
 ///<item><description>DocPartUnique &lt;w:docPartUnique></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocPartGallery))]
-    [ChildElementInfo(typeof(DocPartCategory))]
-    [ChildElementInfo(typeof(DocPartUnique))]
 
 [SchemaAttr(23, "docPartList")]
 [Id(ElementTypeIdConst)]
@@ -46156,7 +45264,6 @@ public partial class DocumentProtection : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:defaultTabStop.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "defaultTabStop")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -46180,7 +45287,6 @@ public partial class DefaultTabStop : NonNegativeShortType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:bookFoldPrintingSheets.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "bookFoldPrintingSheets")]
 [Id(ElementTypeIdConst)]
@@ -46320,7 +45426,6 @@ public partial class SummaryLength : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:displayHorizontalDrawingGridEvery.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "displayHorizontalDrawingGridEvery")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -46344,7 +45449,6 @@ public partial class DisplayHorizontalDrawingGrid : UnsignedInt7Type
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:displayVerticalDrawingGridEvery.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "displayVerticalDrawingGridEvery")]
 [Id(ElementTypeIdConst)]
@@ -46605,9 +45709,6 @@ public partial class SaveThroughXslt : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeDefaults))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeLayout))]
-
 [SchemaAttr(23, "hdrShapeDefaults")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -46664,9 +45765,6 @@ public partial class HeaderShapeDefaults : ShapeDefaultsType
 ///<item><description>DocumentFormat.OpenXml.Vml.Office.ShapeLayout &lt;o:shapelayout></description></item>
 /// </list>
 /// </remarks>
-
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeDefaults))]
-    [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeLayout))]
 
 [SchemaAttr(23, "shapeDefaults")]
 [Id(ElementTypeIdConst)]
@@ -48978,7 +48076,6 @@ public partial class FontSignature : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is w:embedRegular.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "embedRegular")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -49002,7 +48099,6 @@ public partial class EmbedRegularFont : FontRelationshipType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:embedBold.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "embedBold")]
 [Id(ElementTypeIdConst)]
@@ -49028,7 +48124,6 @@ public partial class EmbedBoldFont : FontRelationshipType
 /// <para> When the object is serialized out as xml, its qualified name is w:embedItalic.</para>
 /// </summary>
 
-
 [SchemaAttr(23, "embedItalic")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -49052,7 +48147,6 @@ public partial class EmbedItalicFont : FontRelationshipType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is w:embedBoldItalic.</para>
 /// </summary>
-
 
 [SchemaAttr(23, "embedBoldItalic")]
 [Id(ElementTypeIdConst)]

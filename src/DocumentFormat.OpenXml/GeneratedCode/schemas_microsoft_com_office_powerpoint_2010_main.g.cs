@@ -477,7 +477,6 @@ public partial class Media : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:vortex.</para>
 /// </summary>
 
-
 [SchemaAttr(49, "vortex")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -501,7 +500,6 @@ public partial class VortexTransition : SideDirectionTransitionType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:pan.</para>
 /// </summary>
-
 
 [SchemaAttr(49, "pan")]
 [Id(ElementTypeIdConst)]
@@ -555,7 +553,6 @@ public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:switch.</para>
 /// </summary>
 
-
 [SchemaAttr(49, "switch")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -579,7 +576,6 @@ public partial class SwitchTransition : LeftRightDirectionTransitionType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:flip.</para>
 /// </summary>
-
 
 [SchemaAttr(49, "flip")]
 [Id(ElementTypeIdConst)]
@@ -605,7 +601,6 @@ public partial class FlipTransition : LeftRightDirectionTransitionType
 /// <para> When the object is serialized out as xml, its qualified name is p14:ferris.</para>
 /// </summary>
 
-
 [SchemaAttr(49, "ferris")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -630,7 +625,6 @@ public partial class FerrisTransition : LeftRightDirectionTransitionType
 /// <para> When the object is serialized out as xml, its qualified name is p14:gallery.</para>
 /// </summary>
 
-
 [SchemaAttr(49, "gallery")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -654,7 +648,6 @@ public partial class GalleryTransition : LeftRightDirectionTransitionType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:conveyor.</para>
 /// </summary>
-
 
 [SchemaAttr(49, "conveyor")]
 [Id(ElementTypeIdConst)]
@@ -748,7 +741,6 @@ public partial class RippleTransition : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:honeycomb.</para>
 /// </summary>
 
-
 [SchemaAttr(49, "honeycomb")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -772,7 +764,6 @@ public partial class HoneycombTransition : EmptyType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:flash.</para>
 /// </summary>
-
 
 [SchemaAttr(49, "flash")]
 [Id(ElementTypeIdConst)]
@@ -874,7 +865,6 @@ public partial class PrismTransition : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:doors.</para>
 /// </summary>
 
-
 [SchemaAttr(49, "doors")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -898,7 +888,6 @@ public partial class DoorsTransition : OrientationTransitionType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:window.</para>
 /// </summary>
-
 
 [SchemaAttr(49, "window")]
 [Id(ElementTypeIdConst)]
@@ -1789,7 +1778,6 @@ public partial class LaserTraceList : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:creationId.</para>
 /// </summary>
 
-
 [SchemaAttr(49, "creationId")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -1813,7 +1801,6 @@ public partial class CreationId : RandomIdType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:modId.</para>
 /// </summary>
-
 
 [SchemaAttr(49, "modId")]
 [Id(ElementTypeIdConst)]
@@ -3193,7 +3180,6 @@ public partial class TriggerEventRecord : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p14:playEvt.</para>
 /// </summary>
 
-
 [SchemaAttr(49, "playEvt")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -3217,7 +3203,6 @@ public partial class PlayEventRecord : MediaPlaybackEventRecordType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:stopEvt.</para>
 /// </summary>
-
 
 [SchemaAttr(49, "stopEvt")]
 [Id(ElementTypeIdConst)]
@@ -3243,7 +3228,6 @@ public partial class StopEventRecord : MediaPlaybackEventRecordType
 /// <para> When the object is serialized out as xml, its qualified name is p14:pauseEvt.</para>
 /// </summary>
 
-
 [SchemaAttr(49, "pauseEvt")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -3267,7 +3251,6 @@ public partial class PauseEventRecord : MediaPlaybackEventRecordType
 /// <para>This class is available in Office 2010 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p14:resumeEvt.</para>
 /// </summary>
-
 
 [SchemaAttr(49, "resumeEvt")]
 [Id(ElementTypeIdConst)]
