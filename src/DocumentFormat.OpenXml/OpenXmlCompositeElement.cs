@@ -207,12 +207,11 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="newChild">The OpenXmlElement element to append.</param>
         /// <returns>The OpenXmlElement element that was appended. </returns>
-        /// <remarks>Returns null if newChild equals null.</remarks>
+        /// <remarks>Returns null if <paramref name="newChild"/> equals <c>null</c>.</remarks>
         public override T AppendChild<T>(T newChild)
         {
             if (newChild == null)
             {
-                // throw new ArgumentNullException(nameof(newChild));
                 return null;
             }
 
@@ -249,14 +248,13 @@ namespace DocumentFormat.OpenXml
         /// Inserts the specified element immediately after the specified reference element.
         /// </summary>
         /// <param name="newChild">The OpenXmlElement element to insert.</param>
-        /// <param name="refChild">The OpenXmlElement element that is in the reference node.</param>
+        /// <param name="referenceChild">The OpenXmlElement element after which <paramref name="newChild"/> should be added. Must be a child of this element.</param>
         /// <returns>The OpenXmlElement element that was inserted.</returns>
-        /// <remarks>Returns null if newChild is null. </remarks>
-        public override T InsertAfter<T>(T newChild, OpenXmlElement refChild)
+        /// <remarks>Returns <c>null</c> if <paramref name="newChild"/> is null. Inserted as first child if <paramref name="referenceChild"/> is <c>null</c>.</remarks>
+        public override T InsertAfter<T>(T newChild, OpenXmlElement referenceChild)
         {
             if (newChild == null)
             {
-                // throw new ArgumentNullException(nameof(newChild));
                 return null;
             }
 
@@ -265,20 +263,20 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
 
-            if (refChild == null)
+            if (referenceChild == null)
             {
                 return PrependChild(newChild);
             }
 
-            if (refChild.Parent != this)
+            if (referenceChild.Parent != this)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException(ExceptionMessages.ElementIsNotChild);
             }
 
             ElementInsertingEvent(newChild);
 
             OpenXmlElement nextNode = newChild;
-            OpenXmlElement prevNode = refChild;
+            OpenXmlElement prevNode = referenceChild;
 
             Debug.Assert(nextNode != null);
             Debug.Assert(prevNode != null);
@@ -307,14 +305,13 @@ namespace DocumentFormat.OpenXml
         /// Inserts the specified element immediately before the specified reference element.
         /// </summary>
         /// <param name="newChild">The OpenXmlElement to insert.</param>
-        /// <param name="refChild">The OpenXmlElement that is in the reference node.</param>
+        /// <param name="referenceChild">The OpenXmlElement element before which <paramref name="newChild"/> should be added. Must be a child of this element.</param>
         /// <returns>The OpenXmlElement that was inserted.</returns>
-        /// <remarks>Returns null if newChild equals null.</remarks>
-        public override T InsertBefore<T>(T newChild, OpenXmlElement refChild)
+        /// <remarks>Returns <c>null</c> if <paramref name="newChild"/> is null. Inserted as first child if <paramref name="referenceChild"/> is <c>null</c>.</remarks>
+        public override T InsertBefore<T>(T newChild, OpenXmlElement referenceChild)
         {
             if (newChild == null)
             {
-                // throw new ArgumentNullException(nameof(newChild));
                 return null;
             }
 
@@ -323,20 +320,20 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
 
-            if (refChild == null)
+            if (referenceChild == null)
             {
                 return AppendChild(newChild);
             }
 
-            if (refChild != null && refChild.Parent != this)
+            if (referenceChild.Parent != this)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException(ExceptionMessages.ElementIsNotChild);
             }
 
             ElementInsertingEvent(newChild);
 
             OpenXmlElement prevNode = newChild;
-            OpenXmlElement nextNode = refChild;
+            OpenXmlElement nextNode = referenceChild;
 
             Debug.Assert(nextNode != null);
             Debug.Assert(prevNode != null);
@@ -366,13 +363,12 @@ namespace DocumentFormat.OpenXml
         /// <param name="newChild">The OpenXmlElement element to insert.</param>
         /// <param name="index">The zero-based index to insert the element to.</param>
         /// <returns>The OpenXmlElement element that was inserted.</returns>
-        /// <remarks>Returns null if newChild equals null.</remarks>
-        /// <exception cref="ArgumentOutOfRangeException">Thrown when index is less than 0 or is greater than the count of children.</exception>
+        /// <remarks>Returns <c>null</c> if <paramref name="newChild"/> equals <c>null</c>.</remarks>
+        /// <exception cref="ArgumentOutOfRangeException">Thrown when <paramref name="index"/> is less than 0 or is greater than the count of children.</exception>
         public override T InsertAt<T>(T newChild, int index)
         {
             if (newChild == null)
             {
-                // throw new ArgumentNullException(nameof(newChild));
                 return null;
             }
 
@@ -405,12 +401,11 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="newChild">The OpenXmlElement element to add.</param>
         /// <returns>The OpenXmlElement that was added.</returns>
-        /// <remarks>Returns null if newChild equals null.</remarks>
+        /// <remarks>Returns <c>null</c> if <paramref name="newChild"/> equals <c>null</c>.</remarks>
         public override T PrependChild<T>(T newChild)
         {
             if (newChild == null)
             {
-                //throw new ArgumentNullException(nameof(newChild));
                 return null;
             }
 
@@ -425,23 +420,22 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Removes the specified child element.
         /// </summary>
-        /// <param name="oldChild">The element to remove. </param>
+        /// <param name="child">The element to remove. Must be a child of this element.</param>
         /// <returns>The element that was removed. </returns>
-        /// <remarks>Returns null if newChild equals null. </remarks>
-        public override T RemoveChild<T>(T oldChild)
+        /// <remarks>Returns <c>null</c> if <paramref name="child"/> is <c>null</c>.</remarks>
+        public override T RemoveChild<T>(T child)
         {
-            if (oldChild == null)
+            if (child == null)
             {
-                // throw new ArgumentNullException(nameof(oldChild));
                 return null;
             }
 
-            if (oldChild.Parent != this)
+            if (child.Parent != this)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsNotChild);
             }
 
-            T removedElement = oldChild;
+            T removedElement = child;
             OpenXmlElement last = _lastChild;
 
             ElementRemovingEvent(removedElement);
@@ -503,14 +497,13 @@ namespace DocumentFormat.OpenXml
         /// Replaces one of the current element's child elements with another OpenXmlElement element.
         /// </summary>
         /// <param name="newChild">The new OpenXmlElement to put in the child list.</param>
-        /// <param name="oldChild">The OpenXmlElement to be replaced in the child list.</param>
+        /// <param name="oldChild">The OpenXmlElement to be replaced in the child list. Must be a child of the current element.</param>
         /// <returns>The OpenXmlElement that was replaced.</returns>
-        /// <remarks>Returns null if newChild equals null.</remarks>
+        /// <remarks>Returns <c>null</c> if <paramref name="newChild"/> equals <c>null</c>.</remarks>
         public override T ReplaceChild<T>(OpenXmlElement newChild, T oldChild)
         {
             if (oldChild == null)
             {
-                //throw new ArgumentNullException(nameof(oldChild));
                 return null;
             }
 

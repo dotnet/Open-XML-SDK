@@ -154,7 +154,7 @@
     <value>The document has exceeded the size limit. Its type cannot be changed.</value>
   </data>
   <data name="ElementIsNotChild" xml:space="preserve">
-    <value>The specified oldChild is not a child of this element.</value>
+    <value>The specified argument is not a child of this element.</value>
   </data>
   <data name="ElementIsNotInOfficeVersion" xml:space="preserve">
     <value>The validator is set to validate content based on Microsoft Office {0} rules. The passed in element is not defined in Microsoft Office {0}.</value>
