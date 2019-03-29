@@ -159,9 +159,6 @@
   <data name="ElementIsNotInOfficeVersion" xml:space="preserve">
     <value>The validator is set to validate content based on Microsoft Office {0} rules. The passed in element is not defined in Microsoft Office {0}.</value>
   </data>
-  <data name="ElementIsNotInOffice2016" xml:space="preserve">
-    <value>The validator is set to validate content based on Microsoft Office 2016 rules. The passed in element is not defined in Microsoft Office 2016.</value>
-  </data>
   <data name="ElementIsPartOfTree" xml:space="preserve">
     <value>Cannot insert the OpenXmlElement "newChild" because it is part of a tree. </value>
   </data>
@@ -290,9 +287,6 @@
   </data>
   <data name="PartIsNotInOfficeVersion" xml:space="preserve">
     <value>The validator is set to validate content based on Microsoft Office {0} rules. The passed in part is not defined in Microsoft Office {0}.</value>
-  </data>
-  <data name="PartIsNotInOffice2016" xml:space="preserve">
-    <value>The validator is set to validate content based on Microsoft Office 2016 rules. The passed in part is not defined in Microsoft Office 2016.</value>
   </data>
   <data name="PartNotInSamePackage" xml:space="preserve">
     <value>A relationship can only be created between two parts in a package.</value>
