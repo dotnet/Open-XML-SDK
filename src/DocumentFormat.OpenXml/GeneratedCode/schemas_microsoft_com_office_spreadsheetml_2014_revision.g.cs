@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Spreadsheet;
@@ -26,9 +27,10 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
 /// </remarks>
 
     [ChildElementInfo(typeof(RevExHeader), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "revHdrs")]
+[Id(ElementTypeIdConst)]
 public partial class RevExHeaders : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13539;
@@ -43,6 +45,7 @@ public partial class RevExHeaders : OpenXmlCompositeElement
     [SchemaAttr(0, "minRev")]
     [Index(0)]
     public UInt64Value MinRev { get; set; }
+	
     /// <summary>
     /// <para> maxRev.</para>
     /// <para>Represents the following attribute in the schema: maxRev </para>
@@ -50,6 +53,7 @@ public partial class RevExHeaders : OpenXmlCompositeElement
     [SchemaAttr(0, "maxRev")]
     [Index(1)]
     public UInt64Value MaxRev { get; set; }
+	
     /// <summary>
     /// <para> docId.</para>
     /// <para>Represents the following attribute in the schema: docId </para>
@@ -57,6 +61,7 @@ public partial class RevExHeaders : OpenXmlCompositeElement
     [SchemaAttr(0, "docId")]
     [Index(2)]
     public StringValue DocId { get; set; }
+	
     /// <summary>
     /// <para> endpointId.</para>
     /// <para>Represents the following attribute in the schema: endpointId </para>
@@ -64,6 +69,7 @@ public partial class RevExHeaders : OpenXmlCompositeElement
     [SchemaAttr(0, "endpointId")]
     [Index(3)]
     public StringValue EndpointId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevExHeaders class.
@@ -144,9 +150,10 @@ public partial class RevExHeaders : OpenXmlCompositeElement
     [ChildElementInfo(typeof(RevisionList), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RevListAutoExpandRw), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RevGroup), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "revStream")]
+[Id(ElementTypeIdConst)]
 public partial class RevExStream : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13540;
@@ -220,9 +227,10 @@ public partial class RevExStream : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Border))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "dxf")]
+[Id(ElementTypeIdConst)]
 public partial class DifferentialFormatType : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13541;
@@ -378,9 +386,10 @@ public partial class DifferentialFormatType : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:revisionPtr.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "revisionPtr")]
+[Id(ElementTypeIdConst)]
 public partial class RevisionPtr : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13542;
@@ -395,6 +404,7 @@ public partial class RevisionPtr : OpenXmlLeafElement
     [SchemaAttr(0, "revIDLastSave")]
     [Index(0)]
     public UInt64Value RevIDLastSave { get; set; }
+	
     /// <summary>
     /// <para> documentId.</para>
     /// <para>Represents the following attribute in the schema: documentId </para>
@@ -402,6 +412,7 @@ public partial class RevisionPtr : OpenXmlLeafElement
     [SchemaAttr(0, "documentId")]
     [Index(1)]
     public StringValue DocumentId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevisionPtr class.
@@ -440,9 +451,10 @@ public partial class RevisionPtr : OpenXmlLeafElement
     [ChildElementInfo(typeof(Comments), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(AutoFilter), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(pivotTableDefinition), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "objectState")]
+[Id(ElementTypeIdConst)]
 public partial class StateBasedObject : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13543;
@@ -584,9 +596,10 @@ public partial class StateBasedObject : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:hdr.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "hdr")]
+[Id(ElementTypeIdConst)]
 public partial class RevExHeader : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13544;
@@ -603,6 +616,7 @@ public partial class RevExHeader : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> minRev.</para>
     /// <para>Represents the following attribute in the schema: minRev </para>
@@ -610,6 +624,7 @@ public partial class RevExHeader : OpenXmlLeafElement
     [SchemaAttr(0, "minRev")]
     [Index(1)]
     public UInt64Value MinRev { get; set; }
+	
     /// <summary>
     /// <para> maxRev.</para>
     /// <para>Represents the following attribute in the schema: maxRev </para>
@@ -617,6 +632,7 @@ public partial class RevExHeader : OpenXmlLeafElement
     [SchemaAttr(0, "maxRev")]
     [Index(2)]
     public UInt64Value MaxRev { get; set; }
+	
     /// <summary>
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
@@ -624,6 +640,7 @@ public partial class RevExHeader : OpenXmlLeafElement
     [SchemaAttr(0, "time")]
     [Index(3)]
     public DateTimeValue Time { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevExHeader class.
@@ -652,9 +669,10 @@ public partial class RevExHeader : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(RevExTest), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrftr")]
+[Id(ElementTypeIdConst)]
 public partial class RevExFuture : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13545;
@@ -669,6 +687,7 @@ public partial class RevExFuture : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -676,6 +695,7 @@ public partial class RevExFuture : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> sh.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
@@ -683,6 +703,7 @@ public partial class RevExFuture : OpenXmlCompositeElement
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
+	
     /// <summary>
     /// <para> uidp.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
@@ -690,6 +711,7 @@ public partial class RevExFuture : OpenXmlCompositeElement
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
+	
     /// <summary>
     /// <para> ctx.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
@@ -697,6 +719,7 @@ public partial class RevExFuture : OpenXmlCompositeElement
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+	
     /// <summary>
     /// <para> sti.</para>
     /// <para>Represents the following attribute in the schema: sti </para>
@@ -704,6 +727,7 @@ public partial class RevExFuture : OpenXmlCompositeElement
     [SchemaAttr(0, "sti")]
     [Index(5)]
     public BooleanValue Sti { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevExFuture class.
@@ -751,9 +775,10 @@ public partial class RevExFuture : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:xrrUspt.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrUspt")]
+[Id(ElementTypeIdConst)]
 public partial class RevExUnsupported : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13546;
@@ -768,6 +793,7 @@ public partial class RevExUnsupported : OpenXmlLeafElement
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -775,6 +801,7 @@ public partial class RevExUnsupported : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> sh.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
@@ -782,6 +809,7 @@ public partial class RevExUnsupported : OpenXmlLeafElement
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
+	
     /// <summary>
     /// <para> uidp.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
@@ -789,6 +817,7 @@ public partial class RevExUnsupported : OpenXmlLeafElement
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
+	
     /// <summary>
     /// <para> ctx.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
@@ -796,6 +825,7 @@ public partial class RevExUnsupported : OpenXmlLeafElement
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevExUnsupported class.
@@ -817,9 +847,10 @@ public partial class RevExUnsupported : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:xrrTrim.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrTrim")]
+[Id(ElementTypeIdConst)]
 public partial class RevExTrimmed : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13547;
@@ -834,6 +865,7 @@ public partial class RevExTrimmed : OpenXmlLeafElement
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -841,6 +873,7 @@ public partial class RevExTrimmed : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> sh.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
@@ -848,6 +881,7 @@ public partial class RevExTrimmed : OpenXmlLeafElement
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
+	
     /// <summary>
     /// <para> uidp.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
@@ -855,6 +889,7 @@ public partial class RevExTrimmed : OpenXmlLeafElement
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
+	
     /// <summary>
     /// <para> ctx.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
@@ -862,6 +897,7 @@ public partial class RevExTrimmed : OpenXmlLeafElement
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevExTrimmed class.
@@ -883,9 +919,10 @@ public partial class RevExTrimmed : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:xrrrc.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrrc")]
+[Id(ElementTypeIdConst)]
 public partial class RevExRowColumn : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13548;
@@ -900,6 +937,7 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -907,6 +945,7 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> sh.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
@@ -914,6 +953,7 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
+	
     /// <summary>
     /// <para> uidp.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
@@ -921,6 +961,7 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
+	
     /// <summary>
     /// <para> ctx.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
@@ -928,6 +969,7 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+	
     /// <summary>
     /// <para> eol.</para>
     /// <para>Represents the following attribute in the schema: eol </para>
@@ -935,6 +977,7 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "eol")]
     [Index(5)]
     public BooleanValue Eol { get; set; }
+	
     /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
@@ -942,6 +985,7 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "ref")]
     [Index(6)]
     public StringValue Ref { get; set; }
+	
     /// <summary>
     /// <para> action.</para>
     /// <para>Represents the following attribute in the schema: action </para>
@@ -949,6 +993,7 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "action")]
     [Index(7)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RwColAction> Action { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevExRowColumn class.
@@ -970,9 +1015,10 @@ public partial class RevExRowColumn : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:xrrm.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrm")]
+[Id(ElementTypeIdConst)]
 public partial class RevExMove : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13549;
@@ -987,6 +1033,7 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -994,6 +1041,7 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> sh.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
@@ -1001,6 +1049,7 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
+	
     /// <summary>
     /// <para> uidp.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
@@ -1008,6 +1057,7 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
+	
     /// <summary>
     /// <para> ctx.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
@@ -1015,6 +1065,7 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+	
     /// <summary>
     /// <para> src.</para>
     /// <para>Represents the following attribute in the schema: src </para>
@@ -1022,6 +1073,7 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "src")]
     [Index(5)]
     public StringValue Src { get; set; }
+	
     /// <summary>
     /// <para> dst.</para>
     /// <para>Represents the following attribute in the schema: dst </para>
@@ -1029,6 +1081,7 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "dst")]
     [Index(6)]
     public StringValue Dst { get; set; }
+	
     /// <summary>
     /// <para> srcSh.</para>
     /// <para>Represents the following attribute in the schema: srcSh </para>
@@ -1036,6 +1089,7 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "srcSh")]
     [Index(7)]
     public StringValue SrcSh { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevExMove class.
@@ -1066,9 +1120,10 @@ public partial class RevExMove : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(RevCell), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ChangeCellSubEdit), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrc")]
+[Id(ElementTypeIdConst)]
 public partial class RevExChangeCell : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13550;
@@ -1083,6 +1138,7 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "listUid")]
     [Index(0)]
     public StringValue ListUid { get; set; }
+	
     /// <summary>
     /// <para> rev.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
@@ -1090,6 +1146,7 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     [Index(1)]
     public UInt64Value Rev { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -1097,6 +1154,7 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     [Index(2)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> sh.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
@@ -1104,6 +1162,7 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "sh")]
     [Index(3)]
     public StringValue Sh { get; set; }
+	
     /// <summary>
     /// <para> uidp.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
@@ -1111,6 +1170,7 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "uidp")]
     [Index(4)]
     public StringValue Uidp { get; set; }
+	
     /// <summary>
     /// <para> ctx.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
@@ -1118,6 +1178,7 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "ctx")]
     [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+	
     /// <summary>
     /// <para> r.</para>
     /// <para>Represents the following attribute in the schema: r </para>
@@ -1125,6 +1186,7 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "r")]
     [Index(6)]
     public StringValue R { get; set; }
+	
     /// <summary>
     /// <para> t.</para>
     /// <para>Represents the following attribute in the schema: t </para>
@@ -1132,6 +1194,7 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "t")]
     [Index(7)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType> T { get; set; }
+	
     /// <summary>
     /// <para> x.</para>
     /// <para>Represents the following attribute in the schema: x </para>
@@ -1139,6 +1202,7 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "x")]
     [Index(8)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt> X { get; set; }
+	
     /// <summary>
     /// <para> w.</para>
     /// <para>Represents the following attribute in the schema: w </para>
@@ -1146,6 +1210,7 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "w")]
     [Index(9)]
     public UInt32Value W { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevExChangeCell class.
@@ -1202,9 +1267,10 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(DifferentialFormatType), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrf")]
+[Id(ElementTypeIdConst)]
 public partial class RevExFormatting : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13551;
@@ -1219,6 +1285,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -1226,6 +1293,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> sh.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
@@ -1233,6 +1301,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
+	
     /// <summary>
     /// <para> uidp.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
@@ -1240,6 +1309,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
+	
     /// <summary>
     /// <para> ctx.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
@@ -1247,6 +1317,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+	
     /// <summary>
     /// <para> numFmtId.</para>
     /// <para>Represents the following attribute in the schema: numFmtId </para>
@@ -1254,6 +1325,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "numFmtId")]
     [Index(5)]
     public UInt32Value NumFmtId { get; set; }
+	
     /// <summary>
     /// <para> xfDxf.</para>
     /// <para>Represents the following attribute in the schema: xfDxf </para>
@@ -1261,6 +1333,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "xfDxf")]
     [Index(6)]
     public BooleanValue XfDxf { get; set; }
+	
     /// <summary>
     /// <para> style.</para>
     /// <para>Represents the following attribute in the schema: style </para>
@@ -1268,6 +1341,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     [Index(7)]
     public BooleanValue Style { get; set; }
+	
     /// <summary>
     /// <para> sqref.</para>
     /// <para>Represents the following attribute in the schema: sqref </para>
@@ -1275,6 +1349,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "sqref")]
     [Index(8)]
     public ListValue<StringValue> Sqref { get; set; }
+	
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: start </para>
@@ -1282,6 +1357,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "start")]
     [Index(9)]
     public UInt32Value Start { get; set; }
+	
     /// <summary>
     /// <para> length.</para>
     /// <para>Represents the following attribute in the schema: length </para>
@@ -1289,6 +1365,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "length")]
     [Index(10)]
     public UInt32Value Length { get; set; }
+	
     /// <summary>
     /// <para> styleUid.</para>
     /// <para>Represents the following attribute in the schema: styleUid </para>
@@ -1296,6 +1373,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "styleUid")]
     [Index(11)]
     public StringValue StyleUid { get; set; }
+	
     /// <summary>
     /// <para> fBlankCell.</para>
     /// <para>Represents the following attribute in the schema: fBlankCell </para>
@@ -1303,6 +1381,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "fBlankCell")]
     [Index(12)]
     public BooleanValue FBlankCell { get; set; }
+	
     /// <summary>
     /// <para> applyNumberFormat.</para>
     /// <para>Represents the following attribute in the schema: applyNumberFormat </para>
@@ -1310,6 +1389,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "applyNumberFormat")]
     [Index(13)]
     public BooleanValue ApplyNumberFormat { get; set; }
+	
     /// <summary>
     /// <para> applyFont.</para>
     /// <para>Represents the following attribute in the schema: applyFont </para>
@@ -1317,6 +1397,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "applyFont")]
     [Index(14)]
     public BooleanValue ApplyFont { get; set; }
+	
     /// <summary>
     /// <para> applyFill.</para>
     /// <para>Represents the following attribute in the schema: applyFill </para>
@@ -1324,6 +1405,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "applyFill")]
     [Index(15)]
     public BooleanValue ApplyFill { get; set; }
+	
     /// <summary>
     /// <para> applyBorder.</para>
     /// <para>Represents the following attribute in the schema: applyBorder </para>
@@ -1331,6 +1413,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "applyBorder")]
     [Index(16)]
     public BooleanValue ApplyBorder { get; set; }
+	
     /// <summary>
     /// <para> applyAlignment.</para>
     /// <para>Represents the following attribute in the schema: applyAlignment </para>
@@ -1338,6 +1421,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "applyAlignment")]
     [Index(17)]
     public BooleanValue ApplyAlignment { get; set; }
+	
     /// <summary>
     /// <para> applyProtection.</para>
     /// <para>Represents the following attribute in the schema: applyProtection </para>
@@ -1345,6 +1429,7 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "applyProtection")]
     [Index(18)]
     public BooleanValue ApplyProtection { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevExFormatting class.
@@ -1432,9 +1517,10 @@ public partial class RevExFormatting : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(FormulaFormula), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrDefName")]
+[Id(ElementTypeIdConst)]
 public partial class RevExDefinedName : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13552;
@@ -1449,6 +1535,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -1456,6 +1543,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> sh.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
@@ -1463,6 +1551,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
+	
     /// <summary>
     /// <para> uidp.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
@@ -1470,6 +1559,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
+	
     /// <summary>
     /// <para> ctx.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
@@ -1477,6 +1567,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+	
     /// <summary>
     /// <para> customView.</para>
     /// <para>Represents the following attribute in the schema: customView </para>
@@ -1484,6 +1575,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "customView")]
     [Index(5)]
     public BooleanValue CustomView { get; set; }
+	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -1491,6 +1583,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(6)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> function.</para>
     /// <para>Represents the following attribute in the schema: function </para>
@@ -1498,6 +1591,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "function")]
     [Index(7)]
     public BooleanValue Function { get; set; }
+	
     /// <summary>
     /// <para> functionGroupId.</para>
     /// <para>Represents the following attribute in the schema: functionGroupId </para>
@@ -1505,6 +1599,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "functionGroupId")]
     [Index(8)]
     public ByteValue FunctionGroupId { get; set; }
+	
     /// <summary>
     /// <para> shortcutKey.</para>
     /// <para>Represents the following attribute in the schema: shortcutKey </para>
@@ -1512,6 +1607,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "shortcutKey")]
     [Index(9)]
     public ByteValue ShortcutKey { get; set; }
+	
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
@@ -1519,6 +1615,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "hidden")]
     [Index(10)]
     public BooleanValue Hidden { get; set; }
+	
     /// <summary>
     /// <para> customMenu.</para>
     /// <para>Represents the following attribute in the schema: customMenu </para>
@@ -1526,6 +1623,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "customMenu")]
     [Index(11)]
     public StringValue CustomMenu { get; set; }
+	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
@@ -1533,6 +1631,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "description")]
     [Index(12)]
     public StringValue Description { get; set; }
+	
     /// <summary>
     /// <para> help.</para>
     /// <para>Represents the following attribute in the schema: help </para>
@@ -1540,6 +1639,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "help")]
     [Index(13)]
     public StringValue Help { get; set; }
+	
     /// <summary>
     /// <para> statusBar.</para>
     /// <para>Represents the following attribute in the schema: statusBar </para>
@@ -1547,6 +1647,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "statusBar")]
     [Index(14)]
     public StringValue StatusBar { get; set; }
+	
     /// <summary>
     /// <para> comment.</para>
     /// <para>Represents the following attribute in the schema: comment </para>
@@ -1554,6 +1655,7 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "comment")]
     [Index(15)]
     public StringValue Comment { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevExDefinedName class.
@@ -1639,9 +1741,10 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(StateBasedHeader), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrdo")]
+[Id(ElementTypeIdConst)]
 public partial class RevExDelObj : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13553;
@@ -1656,6 +1759,7 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -1663,6 +1767,7 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> sh.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
@@ -1670,6 +1775,7 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
+	
     /// <summary>
     /// <para> uidp.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
@@ -1677,6 +1783,7 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
+	
     /// <summary>
     /// <para> ctx.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
@@ -1684,6 +1791,7 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevExDelObj class.
@@ -1759,9 +1867,10 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     [ChildElementInfo(typeof(StateBasedHeader), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RevisionStateLink), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RevisionState), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrco")]
+[Id(ElementTypeIdConst)]
 public partial class RevExChgObj : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13554;
@@ -1776,6 +1885,7 @@ public partial class RevExChgObj : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -1783,6 +1893,7 @@ public partial class RevExChgObj : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> sh.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
@@ -1790,6 +1901,7 @@ public partial class RevExChgObj : OpenXmlCompositeElement
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
+	
     /// <summary>
     /// <para> uidp.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
@@ -1797,6 +1909,7 @@ public partial class RevExChgObj : OpenXmlCompositeElement
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
+	
     /// <summary>
     /// <para> ctx.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
@@ -1804,6 +1917,7 @@ public partial class RevExChgObj : OpenXmlCompositeElement
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevExChgObj class.
@@ -1868,9 +1982,10 @@ public partial class RevExChgObj : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:xrrSheet.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrSheet")]
+[Id(ElementTypeIdConst)]
 public partial class RevExSheetOp : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13555;
@@ -1885,6 +2000,7 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -1892,6 +2008,7 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> sh.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
@@ -1899,6 +2016,7 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
+	
     /// <summary>
     /// <para> uidp.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
@@ -1906,6 +2024,7 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
+	
     /// <summary>
     /// <para> ctx.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
@@ -1913,6 +2032,7 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+	
     /// <summary>
     /// <para> op.</para>
     /// <para>Represents the following attribute in the schema: op </para>
@@ -1920,6 +2040,7 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "op")]
     [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SheetOp> Op { get; set; }
+	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -1927,6 +2048,7 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "name")]
     [Index(6)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> idOrig.</para>
     /// <para>Represents the following attribute in the schema: idOrig </para>
@@ -1934,6 +2056,7 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "idOrig")]
     [Index(7)]
     public UInt32Value IdOrig { get; set; }
+	
     /// <summary>
     /// <para> idNew.</para>
     /// <para>Represents the following attribute in the schema: idNew </para>
@@ -1941,6 +2064,7 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "idNew")]
     [Index(8)]
     public UInt32Value IdNew { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevExSheetOp class.
@@ -1962,9 +2086,10 @@ public partial class RevExSheetOp : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:xrrList.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrList")]
+[Id(ElementTypeIdConst)]
 public partial class RevisionList : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13556;
@@ -1979,6 +2104,7 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -1986,6 +2112,7 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> sh.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
@@ -1993,6 +2120,7 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
+	
     /// <summary>
     /// <para> uidp.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
@@ -2000,6 +2128,7 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
+	
     /// <summary>
     /// <para> ctx.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
@@ -2007,6 +2136,7 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+	
     /// <summary>
     /// <para> Data.</para>
     /// <para>Represents the following attribute in the schema: Data </para>
@@ -2014,6 +2144,7 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "Data")]
     [Index(5)]
     public BooleanValue Data { get; set; }
+	
     /// <summary>
     /// <para> Formatting.</para>
     /// <para>Represents the following attribute in the schema: Formatting </para>
@@ -2021,6 +2152,7 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "Formatting")]
     [Index(6)]
     public BooleanValue Formatting { get; set; }
+	
     /// <summary>
     /// <para> RangeBased.</para>
     /// <para>Represents the following attribute in the schema: RangeBased </para>
@@ -2028,6 +2160,7 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "RangeBased")]
     [Index(7)]
     public BooleanValue RangeBased { get; set; }
+	
     /// <summary>
     /// <para> Fake.</para>
     /// <para>Represents the following attribute in the schema: Fake </para>
@@ -2035,6 +2168,7 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "Fake")]
     [Index(8)]
     public BooleanValue Fake { get; set; }
+	
     /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
@@ -2042,6 +2176,7 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "ref")]
     [Index(9)]
     public StringValue Ref { get; set; }
+	
     /// <summary>
     /// <para> Headers.</para>
     /// <para>Represents the following attribute in the schema: Headers </para>
@@ -2049,6 +2184,7 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "Headers")]
     [Index(10)]
     public BooleanValue Headers { get; set; }
+	
     /// <summary>
     /// <para> InsDelHeaders.</para>
     /// <para>Represents the following attribute in the schema: InsDelHeaders </para>
@@ -2056,6 +2192,7 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "InsDelHeaders")]
     [Index(11)]
     public BooleanValue InsDelHeaders { get; set; }
+	
     /// <summary>
     /// <para> rId.</para>
     /// <para>Represents the following attribute in the schema: rId </para>
@@ -2063,6 +2200,7 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "rId")]
     [Index(12)]
     public UInt32Value RId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevisionList class.
@@ -2084,9 +2222,10 @@ public partial class RevisionList : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:xrrListExpR.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrListExpR")]
+[Id(ElementTypeIdConst)]
 public partial class RevListAutoExpandRw : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13557;
@@ -2101,6 +2240,7 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -2108,6 +2248,7 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> sh.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
@@ -2115,6 +2256,7 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
+	
     /// <summary>
     /// <para> uidp.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
@@ -2122,6 +2264,7 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
+	
     /// <summary>
     /// <para> ctx.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
@@ -2129,6 +2272,7 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+	
     /// <summary>
     /// <para> refAdded.</para>
     /// <para>Represents the following attribute in the schema: refAdded </para>
@@ -2136,6 +2280,7 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [SchemaAttr(0, "refAdded")]
     [Index(5)]
     public StringValue RefAdded { get; set; }
+	
     /// <summary>
     /// <para> listGuid.</para>
     /// <para>Represents the following attribute in the schema: listGuid </para>
@@ -2143,6 +2288,7 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [SchemaAttr(0, "listGuid")]
     [Index(6)]
     public StringValue ListGuid { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevListAutoExpandRw class.
@@ -2195,9 +2341,10 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [ChildElementInfo(typeof(RevExSheetOp), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RevisionList), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RevListAutoExpandRw), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrg")]
+[Id(ElementTypeIdConst)]
 public partial class RevGroup : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13558;
@@ -2212,6 +2359,7 @@ public partial class RevGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -2219,6 +2367,7 @@ public partial class RevGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> sh.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
@@ -2226,6 +2375,7 @@ public partial class RevGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
+	
     /// <summary>
     /// <para> uidp.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
@@ -2233,6 +2383,7 @@ public partial class RevGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
+	
     /// <summary>
     /// <para> ctx.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
@@ -2240,6 +2391,7 @@ public partial class RevGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevGroup class.
@@ -2287,9 +2439,10 @@ public partial class RevGroup : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:xrrtest.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrtest")]
+[Id(ElementTypeIdConst)]
 public partial class RevExTest : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13559;
@@ -2329,9 +2482,10 @@ public partial class RevExTest : OpenXmlLeafElement
     [ChildElementInfo(typeof(FFormula), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(Xstring), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RstType), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "c")]
+[Id(ElementTypeIdConst)]
 public partial class RevCell : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13560;
@@ -2346,6 +2500,7 @@ public partial class RevCell : OpenXmlCompositeElement
     [SchemaAttr(0, "t")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues> T { get; set; }
+	
     /// <summary>
     /// <para> nop.</para>
     /// <para>Represents the following attribute in the schema: nop </para>
@@ -2353,6 +2508,7 @@ public partial class RevCell : OpenXmlCompositeElement
     [SchemaAttr(0, "nop")]
     [Index(1)]
     public BooleanValue Nop { get; set; }
+	
     /// <summary>
     /// <para> tick.</para>
     /// <para>Represents the following attribute in the schema: tick </para>
@@ -2360,6 +2516,7 @@ public partial class RevCell : OpenXmlCompositeElement
     [SchemaAttr(0, "tick")]
     [Index(2)]
     public BooleanValue Tick { get; set; }
+	
     /// <summary>
     /// <para> rep.</para>
     /// <para>Represents the following attribute in the schema: rep </para>
@@ -2367,6 +2524,7 @@ public partial class RevCell : OpenXmlCompositeElement
     [SchemaAttr(0, "rep")]
     [Index(3)]
     public UInt32Value Rep { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevCell class.
@@ -2466,9 +2624,10 @@ public partial class RevCell : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(RevCell), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "ccse")]
+[Id(ElementTypeIdConst)]
 public partial class ChangeCellSubEdit : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13561;
@@ -2483,6 +2642,7 @@ public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     [SchemaAttr(0, "r")]
     [Index(0)]
     public StringValue R { get; set; }
+	
     /// <summary>
     /// <para> t.</para>
     /// <para>Represents the following attribute in the schema: t </para>
@@ -2490,6 +2650,7 @@ public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     [SchemaAttr(0, "t")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType> T { get; set; }
+	
     /// <summary>
     /// <para> x.</para>
     /// <para>Represents the following attribute in the schema: x </para>
@@ -2497,6 +2658,7 @@ public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     [SchemaAttr(0, "x")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt> X { get; set; }
+	
     /// <summary>
     /// <para> w.</para>
     /// <para>Represents the following attribute in the schema: w </para>
@@ -2504,6 +2666,7 @@ public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     [SchemaAttr(0, "w")]
     [Index(3)]
     public UInt32Value W { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ChangeCellSubEdit class.
@@ -2558,9 +2721,10 @@ public partial class ChangeCellSubEdit : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "extLst")]
+[Id(ElementTypeIdConst)]
 public partial class ExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13562;
@@ -2614,9 +2778,9 @@ public partial class ExtensionList : OpenXmlCompositeElement
 /// <para>This class is available in Office 2016 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xr:formula.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(83, "formula")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class FormulaFormula : OpenXmlLeafTextElement
 {
@@ -2651,9 +2815,9 @@ public partial class FormulaFormula : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2016 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xr:f.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(83, "f")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class FFormula : OpenXmlLeafTextElement
 {
@@ -2696,9 +2860,10 @@ public partial class FFormula : OpenXmlLeafTextElement
 /// </remarks>
 
     [ChildElementInfo(typeof(RefMap), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "hdr")]
+[Id(ElementTypeIdConst)]
 public partial class StateBasedHeader : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13564;
@@ -2713,6 +2878,7 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     [Index(0)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> eft.</para>
     /// <para>Represents the following attribute in the schema: eft </para>
@@ -2720,6 +2886,7 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "eft")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FeatureType> Eft { get; set; }
+	
     /// <summary>
     /// <para> eftx.</para>
     /// <para>Represents the following attribute in the schema: eftx </para>
@@ -2727,6 +2894,7 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "eftx")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtFeatureType> Eftx { get; set; }
+	
     /// <summary>
     /// <para> seft.</para>
     /// <para>Represents the following attribute in the schema: seft </para>
@@ -2734,6 +2902,7 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "seft")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SubFeatureType> Seft { get; set; }
+	
     /// <summary>
     /// <para> seftx.</para>
     /// <para>Represents the following attribute in the schema: seftx </para>
@@ -2741,6 +2910,7 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "seftx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtSubFeatureType> Seftx { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the StateBasedHeader class.
@@ -2805,9 +2975,10 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:link.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "link")]
+[Id(ElementTypeIdConst)]
 public partial class RevisionStateLink : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13565;
@@ -2824,6 +2995,7 @@ public partial class RevisionStateLink : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RevisionStateLink class.
@@ -2860,9 +3032,10 @@ public partial class RevisionStateLink : OpenXmlLeafElement
     [ChildElementInfo(typeof(ShowGridlinesHeadings), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(FreezePanes), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(Outlines), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "body")]
+[Id(ElementTypeIdConst)]
 public partial class RevisionState : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13566;
@@ -3005,9 +3178,10 @@ public partial class RevisionState : OpenXmlCompositeElement
     [ChildElementInfo(typeof(RefOartAnchor), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RefFuture), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(RefTest), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "refmap")]
+[Id(ElementTypeIdConst)]
 public partial class RefMap : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13567;
@@ -3062,9 +3236,10 @@ public partial class RefMap : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:rowColVisualOps.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "rowColVisualOps")]
+[Id(ElementTypeIdConst)]
 public partial class RowColVisualOps : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13568;
@@ -3079,6 +3254,7 @@ public partial class RowColVisualOps : OpenXmlLeafElement
     [SchemaAttr(0, "action")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOp> Action { get; set; }
+	
     /// <summary>
     /// <para> isRow.</para>
     /// <para>Represents the following attribute in the schema: isRow </para>
@@ -3086,6 +3262,7 @@ public partial class RowColVisualOps : OpenXmlLeafElement
     [SchemaAttr(0, "isRow")]
     [Index(1)]
     public BooleanValue IsRow { get; set; }
+	
     /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
@@ -3093,6 +3270,7 @@ public partial class RowColVisualOps : OpenXmlLeafElement
     [SchemaAttr(0, "size")]
     [Index(2)]
     public UInt32Value Size { get; set; }
+	
     /// <summary>
     /// <para> userSized.</para>
     /// <para>Represents the following attribute in the schema: userSized </para>
@@ -3100,6 +3278,7 @@ public partial class RowColVisualOps : OpenXmlLeafElement
     [SchemaAttr(0, "userSized")]
     [Index(3)]
     public BooleanValue UserSized { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RowColVisualOps class.
@@ -3121,9 +3300,10 @@ public partial class RowColVisualOps : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:hideUnhideSheet.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "hideUnhideSheet")]
+[Id(ElementTypeIdConst)]
 public partial class HideUnhideSheet : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13569;
@@ -3138,6 +3318,7 @@ public partial class HideUnhideSheet : OpenXmlLeafElement
     [SchemaAttr(0, "hide")]
     [Index(0)]
     public BooleanValue Hide { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the HideUnhideSheet class.
@@ -3159,9 +3340,10 @@ public partial class HideUnhideSheet : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:showGridlinesHeadings.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "showGridlinesHeadings")]
+[Id(ElementTypeIdConst)]
 public partial class ShowGridlinesHeadings : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13570;
@@ -3176,6 +3358,7 @@ public partial class ShowGridlinesHeadings : OpenXmlLeafElement
     [SchemaAttr(0, "showGridLines")]
     [Index(0)]
     public BooleanValue ShowGridLines { get; set; }
+	
     /// <summary>
     /// <para> showRowCol.</para>
     /// <para>Represents the following attribute in the schema: showRowCol </para>
@@ -3183,6 +3366,7 @@ public partial class ShowGridlinesHeadings : OpenXmlLeafElement
     [SchemaAttr(0, "showRowCol")]
     [Index(1)]
     public BooleanValue ShowRowCol { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ShowGridlinesHeadings class.
@@ -3204,9 +3388,10 @@ public partial class ShowGridlinesHeadings : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:freezePanes.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "freezePanes")]
+[Id(ElementTypeIdConst)]
 public partial class FreezePanes : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13571;
@@ -3221,6 +3406,7 @@ public partial class FreezePanes : OpenXmlLeafElement
     [SchemaAttr(0, "sheetViewUid")]
     [Index(0)]
     public StringValue SheetViewUid { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the FreezePanes class.
@@ -3249,9 +3435,10 @@ public partial class FreezePanes : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(Outline), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "outlines")]
+[Id(ElementTypeIdConst)]
 public partial class Outlines : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13572;
@@ -3266,6 +3453,7 @@ public partial class Outlines : OpenXmlCompositeElement
     [SchemaAttr(0, "isRow")]
     [Index(0)]
     public BooleanValue IsRow { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Outlines class.
@@ -3313,9 +3501,10 @@ public partial class Outlines : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:outline.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "outline")]
+[Id(ElementTypeIdConst)]
 public partial class Outline : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13573;
@@ -3330,6 +3519,7 @@ public partial class Outline : OpenXmlLeafElement
     [SchemaAttr(0, "isCollapsed")]
     [Index(0)]
     public BooleanValue IsCollapsed { get; set; }
+	
     /// <summary>
     /// <para> level.</para>
     /// <para>Represents the following attribute in the schema: level </para>
@@ -3337,6 +3527,7 @@ public partial class Outline : OpenXmlLeafElement
     [SchemaAttr(0, "level")]
     [Index(1)]
     public ByteValue Level { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Outline class.
@@ -3358,9 +3549,10 @@ public partial class Outline : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:v.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "v")]
+[Id(ElementTypeIdConst)]
 public partial class Xstring : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 13575;
@@ -3415,9 +3607,10 @@ public partial class Xstring : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Run))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticRun))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "is")]
+[Id(ElementTypeIdConst)]
 public partial class RstType : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13576;
@@ -3489,9 +3682,10 @@ public partial class RstType : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:ref.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "ref")]
+[Id(ElementTypeIdConst)]
 public partial class RefCell : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13577;
@@ -3506,6 +3700,7 @@ public partial class RefCell : OpenXmlLeafElement
     [SchemaAttr(0, "n")]
     [Index(0)]
     public StringValue N { get; set; }
+	
     /// <summary>
     /// <para> ajt.</para>
     /// <para>Represents the following attribute in the schema: ajt </para>
@@ -3513,6 +3708,7 @@ public partial class RefCell : OpenXmlLeafElement
     [SchemaAttr(0, "ajt")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get; set; }
+	
     /// <summary>
     /// <para> ajtx.</para>
     /// <para>Represents the following attribute in the schema: ajtx </para>
@@ -3520,6 +3716,7 @@ public partial class RefCell : OpenXmlLeafElement
     [SchemaAttr(0, "ajtx")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get; set; }
+	
     /// <summary>
     /// <para> homeRef.</para>
     /// <para>Represents the following attribute in the schema: homeRef </para>
@@ -3527,6 +3724,7 @@ public partial class RefCell : OpenXmlLeafElement
     [SchemaAttr(0, "homeRef")]
     [Index(3)]
     public BooleanValue HomeRef { get; set; }
+	
     /// <summary>
     /// <para> r.</para>
     /// <para>Represents the following attribute in the schema: r </para>
@@ -3534,6 +3732,7 @@ public partial class RefCell : OpenXmlLeafElement
     [SchemaAttr(0, "r")]
     [Index(4)]
     public ListValue<StringValue> R { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -3541,6 +3740,7 @@ public partial class RefCell : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     [Index(5)]
     public StringValue Uid { get; set; }
+	
     /// <summary>
     /// <para> uidLast.</para>
     /// <para>Represents the following attribute in the schema: uidLast </para>
@@ -3548,6 +3748,7 @@ public partial class RefCell : OpenXmlLeafElement
     [SchemaAttr(0, "uidLast")]
     [Index(6)]
     public StringValue UidLast { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RefCell class.
@@ -3569,9 +3770,10 @@ public partial class RefCell : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:sheetUid.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "sheetUid")]
+[Id(ElementTypeIdConst)]
 public partial class SheetXluid : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13578;
@@ -3586,6 +3788,7 @@ public partial class SheetXluid : OpenXmlLeafElement
     [SchemaAttr(0, "n")]
     [Index(0)]
     public StringValue N { get; set; }
+	
     /// <summary>
     /// <para> ajt.</para>
     /// <para>Represents the following attribute in the schema: ajt </para>
@@ -3593,6 +3796,7 @@ public partial class SheetXluid : OpenXmlLeafElement
     [SchemaAttr(0, "ajt")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get; set; }
+	
     /// <summary>
     /// <para> ajtx.</para>
     /// <para>Represents the following attribute in the schema: ajtx </para>
@@ -3600,6 +3804,7 @@ public partial class SheetXluid : OpenXmlLeafElement
     [SchemaAttr(0, "ajtx")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get; set; }
+	
     /// <summary>
     /// <para> homeRef.</para>
     /// <para>Represents the following attribute in the schema: homeRef </para>
@@ -3607,6 +3812,7 @@ public partial class SheetXluid : OpenXmlLeafElement
     [SchemaAttr(0, "homeRef")]
     [Index(3)]
     public BooleanValue HomeRef { get; set; }
+	
     /// <summary>
     /// <para> uid.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
@@ -3614,6 +3820,7 @@ public partial class SheetXluid : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     [Index(4)]
     public StringValue Uid { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the SheetXluid class.
@@ -3635,9 +3842,10 @@ public partial class SheetXluid : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:oartAnchor.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "oartAnchor")]
+[Id(ElementTypeIdConst)]
 public partial class RefOartAnchor : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13579;
@@ -3652,6 +3860,7 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "n")]
     [Index(0)]
     public StringValue N { get; set; }
+	
     /// <summary>
     /// <para> ajt.</para>
     /// <para>Represents the following attribute in the schema: ajt </para>
@@ -3659,6 +3868,7 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "ajt")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get; set; }
+	
     /// <summary>
     /// <para> ajtx.</para>
     /// <para>Represents the following attribute in the schema: ajtx </para>
@@ -3666,6 +3876,7 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "ajtx")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get; set; }
+	
     /// <summary>
     /// <para> homeRef.</para>
     /// <para>Represents the following attribute in the schema: homeRef </para>
@@ -3673,6 +3884,7 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "homeRef")]
     [Index(3)]
     public BooleanValue HomeRef { get; set; }
+	
     /// <summary>
     /// <para> r.</para>
     /// <para>Represents the following attribute in the schema: r </para>
@@ -3680,6 +3892,7 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "r")]
     [Index(4)]
     public StringValue R { get; set; }
+	
     /// <summary>
     /// <para> fromRowOff.</para>
     /// <para>Represents the following attribute in the schema: fromRowOff </para>
@@ -3687,6 +3900,7 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "fromRowOff")]
     [Index(5)]
     public Int64Value FromRowOff { get; set; }
+	
     /// <summary>
     /// <para> fromColOff.</para>
     /// <para>Represents the following attribute in the schema: fromColOff </para>
@@ -3694,6 +3908,7 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "fromColOff")]
     [Index(6)]
     public Int64Value FromColOff { get; set; }
+	
     /// <summary>
     /// <para> toRowOff.</para>
     /// <para>Represents the following attribute in the schema: toRowOff </para>
@@ -3701,6 +3916,7 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "toRowOff")]
     [Index(7)]
     public Int64Value ToRowOff { get; set; }
+	
     /// <summary>
     /// <para> toColOff.</para>
     /// <para>Represents the following attribute in the schema: toColOff </para>
@@ -3708,6 +3924,7 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "toColOff")]
     [Index(8)]
     public Int64Value ToColOff { get; set; }
+	
     /// <summary>
     /// <para> cx.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
@@ -3715,6 +3932,7 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "cx")]
     [Index(9)]
     public Int64Value Cx { get; set; }
+	
     /// <summary>
     /// <para> cy.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
@@ -3722,6 +3940,7 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "cy")]
     [Index(10)]
     public Int64Value Cy { get; set; }
+	
     /// <summary>
     /// <para> x.</para>
     /// <para>Represents the following attribute in the schema: x </para>
@@ -3729,6 +3948,7 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "x")]
     [Index(11)]
     public Int64Value X { get; set; }
+	
     /// <summary>
     /// <para> y.</para>
     /// <para>Represents the following attribute in the schema: y </para>
@@ -3736,6 +3956,7 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "y")]
     [Index(12)]
     public Int64Value Y { get; set; }
+	
     /// <summary>
     /// <para> oat.</para>
     /// <para>Represents the following attribute in the schema: oat </para>
@@ -3743,6 +3964,7 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "oat")]
     [Index(13)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.OartAnchorType> Oat { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RefOartAnchor class.
@@ -3764,9 +3986,10 @@ public partial class RefOartAnchor : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:future.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "future")]
+[Id(ElementTypeIdConst)]
 public partial class RefFuture : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13580;
@@ -3795,9 +4018,10 @@ public partial class RefFuture : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:test.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "test")]
+[Id(ElementTypeIdConst)]
 public partial class RefTest : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13581;
@@ -3812,6 +4036,7 @@ public partial class RefTest : OpenXmlLeafElement
     [SchemaAttr(0, "n")]
     [Index(0)]
     public StringValue N { get; set; }
+	
     /// <summary>
     /// <para> ajt.</para>
     /// <para>Represents the following attribute in the schema: ajt </para>
@@ -3819,6 +4044,7 @@ public partial class RefTest : OpenXmlLeafElement
     [SchemaAttr(0, "ajt")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get; set; }
+	
     /// <summary>
     /// <para> ajtx.</para>
     /// <para>Represents the following attribute in the schema: ajtx </para>
@@ -3826,6 +4052,7 @@ public partial class RefTest : OpenXmlLeafElement
     [SchemaAttr(0, "ajtx")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get; set; }
+	
     /// <summary>
     /// <para> homeRef.</para>
     /// <para>Represents the following attribute in the schema: homeRef </para>
@@ -3833,6 +4060,7 @@ public partial class RefTest : OpenXmlLeafElement
     [SchemaAttr(0, "homeRef")]
     [Index(3)]
     public BooleanValue HomeRef { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RefTest class.
@@ -3865,9 +4093,10 @@ public partial class RefTest : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.ExcelAc.List), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula1))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula2))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "dataValidation")]
+[Id(ElementTypeIdConst)]
 public partial class DataValidation : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13582;
@@ -3882,6 +4111,7 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues> Type { get; set; }
+	
     /// <summary>
     /// <para> errorStyle.</para>
     /// <para>Represents the following attribute in the schema: errorStyle </para>
@@ -3889,6 +4119,7 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "errorStyle")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues> ErrorStyle { get; set; }
+	
     /// <summary>
     /// <para> imeMode.</para>
     /// <para>Represents the following attribute in the schema: imeMode </para>
@@ -3896,6 +4127,7 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "imeMode")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues> ImeMode { get; set; }
+	
     /// <summary>
     /// <para> operator.</para>
     /// <para>Represents the following attribute in the schema: operator </para>
@@ -3903,6 +4135,7 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "operator")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues> Operator { get; set; }
+	
     /// <summary>
     /// <para> allowBlank.</para>
     /// <para>Represents the following attribute in the schema: allowBlank </para>
@@ -3910,6 +4143,7 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "allowBlank")]
     [Index(4)]
     public BooleanValue AllowBlank { get; set; }
+	
     /// <summary>
     /// <para> showDropDown.</para>
     /// <para>Represents the following attribute in the schema: showDropDown </para>
@@ -3917,6 +4151,7 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "showDropDown")]
     [Index(5)]
     public BooleanValue ShowDropDown { get; set; }
+	
     /// <summary>
     /// <para> showInputMessage.</para>
     /// <para>Represents the following attribute in the schema: showInputMessage </para>
@@ -3924,6 +4159,7 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "showInputMessage")]
     [Index(6)]
     public BooleanValue ShowInputMessage { get; set; }
+	
     /// <summary>
     /// <para> showErrorMessage.</para>
     /// <para>Represents the following attribute in the schema: showErrorMessage </para>
@@ -3931,6 +4167,7 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "showErrorMessage")]
     [Index(7)]
     public BooleanValue ShowErrorMessage { get; set; }
+	
     /// <summary>
     /// <para> errorTitle.</para>
     /// <para>Represents the following attribute in the schema: errorTitle </para>
@@ -3938,6 +4175,7 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "errorTitle")]
     [Index(8)]
     public StringValue ErrorTitle { get; set; }
+	
     /// <summary>
     /// <para> error.</para>
     /// <para>Represents the following attribute in the schema: error </para>
@@ -3945,6 +4183,7 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "error")]
     [Index(9)]
     public StringValue Error { get; set; }
+	
     /// <summary>
     /// <para> promptTitle.</para>
     /// <para>Represents the following attribute in the schema: promptTitle </para>
@@ -3952,6 +4191,7 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "promptTitle")]
     [Index(10)]
     public StringValue PromptTitle { get; set; }
+	
     /// <summary>
     /// <para> prompt.</para>
     /// <para>Represents the following attribute in the schema: prompt </para>
@@ -3959,6 +4199,7 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "prompt")]
     [Index(11)]
     public StringValue Prompt { get; set; }
+	
     /// <summary>
     /// <para> sqref.</para>
     /// <para>Represents the following attribute in the schema: sqref </para>
@@ -3966,6 +4207,7 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "sqref")]
     [Index(12)]
     public ListValue<StringValue> SequenceOfReferences { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the DataValidation class.
@@ -4058,9 +4300,10 @@ public partial class DataValidation : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is xr:hyperlink.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "hyperlink")]
+[Id(ElementTypeIdConst)]
 public partial class Hyperlink : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13583;
@@ -4075,6 +4318,7 @@ public partial class Hyperlink : OpenXmlLeafElement
     [SchemaAttr(0, "ref")]
     [Index(0)]
     public StringValue Reference { get; set; }
+	
     /// <summary>
     /// <para> Relationship Id.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
@@ -4084,6 +4328,7 @@ public partial class Hyperlink : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     [Index(1)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> Location.</para>
     /// <para>Represents the following attribute in the schema: location </para>
@@ -4091,6 +4336,7 @@ public partial class Hyperlink : OpenXmlLeafElement
     [SchemaAttr(0, "location")]
     [Index(2)]
     public StringValue Location { get; set; }
+	
     /// <summary>
     /// <para> Tool Tip.</para>
     /// <para>Represents the following attribute in the schema: tooltip </para>
@@ -4098,6 +4344,7 @@ public partial class Hyperlink : OpenXmlLeafElement
     [SchemaAttr(0, "tooltip")]
     [Index(3)]
     public StringValue Tooltip { get; set; }
+	
     /// <summary>
     /// <para> Display String.</para>
     /// <para>Represents the following attribute in the schema: display </para>
@@ -4105,6 +4352,7 @@ public partial class Hyperlink : OpenXmlLeafElement
     [SchemaAttr(0, "display")]
     [Index(4)]
     public StringValue Display { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Hyperlink class.
@@ -4151,9 +4399,10 @@ public partial class Hyperlink : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office.Excel.Formula))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Sparklines), FileFormatVersions.Office2010)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "sparklineGroup")]
+[Id(ElementTypeIdConst)]
 public partial class SparklineGroup : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13584;
@@ -4168,6 +4417,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "manualMax")]
     [Index(0)]
     public DoubleValue ManualMax { get; set; }
+	
     /// <summary>
     /// <para> manualMin.</para>
     /// <para>Represents the following attribute in the schema: manualMin </para>
@@ -4175,6 +4425,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "manualMin")]
     [Index(1)]
     public DoubleValue ManualMin { get; set; }
+	
     /// <summary>
     /// <para> lineWeight.</para>
     /// <para>Represents the following attribute in the schema: lineWeight </para>
@@ -4182,6 +4433,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "lineWeight")]
     [Index(2)]
     public DoubleValue LineWeight { get; set; }
+	
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -4189,6 +4441,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues> Type { get; set; }
+	
     /// <summary>
     /// <para> dateAxis.</para>
     /// <para>Represents the following attribute in the schema: dateAxis </para>
@@ -4196,6 +4449,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "dateAxis")]
     [Index(4)]
     public BooleanValue DateAxis { get; set; }
+	
     /// <summary>
     /// <para> displayEmptyCellsAs.</para>
     /// <para>Represents the following attribute in the schema: displayEmptyCellsAs </para>
@@ -4203,6 +4457,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "displayEmptyCellsAs")]
     [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues> DisplayEmptyCellsAs { get; set; }
+	
     /// <summary>
     /// <para> markers.</para>
     /// <para>Represents the following attribute in the schema: markers </para>
@@ -4210,6 +4465,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "markers")]
     [Index(6)]
     public BooleanValue Markers { get; set; }
+	
     /// <summary>
     /// <para> high.</para>
     /// <para>Represents the following attribute in the schema: high </para>
@@ -4217,6 +4473,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "high")]
     [Index(7)]
     public BooleanValue High { get; set; }
+	
     /// <summary>
     /// <para> low.</para>
     /// <para>Represents the following attribute in the schema: low </para>
@@ -4224,6 +4481,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "low")]
     [Index(8)]
     public BooleanValue Low { get; set; }
+	
     /// <summary>
     /// <para> first.</para>
     /// <para>Represents the following attribute in the schema: first </para>
@@ -4231,6 +4489,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "first")]
     [Index(9)]
     public BooleanValue First { get; set; }
+	
     /// <summary>
     /// <para> last.</para>
     /// <para>Represents the following attribute in the schema: last </para>
@@ -4238,6 +4497,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "last")]
     [Index(10)]
     public BooleanValue Last { get; set; }
+	
     /// <summary>
     /// <para> negative.</para>
     /// <para>Represents the following attribute in the schema: negative </para>
@@ -4245,6 +4505,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "negative")]
     [Index(11)]
     public BooleanValue Negative { get; set; }
+	
     /// <summary>
     /// <para> displayXAxis.</para>
     /// <para>Represents the following attribute in the schema: displayXAxis </para>
@@ -4252,6 +4513,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "displayXAxis")]
     [Index(12)]
     public BooleanValue DisplayXAxis { get; set; }
+	
     /// <summary>
     /// <para> displayHidden.</para>
     /// <para>Represents the following attribute in the schema: displayHidden </para>
@@ -4259,6 +4521,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "displayHidden")]
     [Index(13)]
     public BooleanValue DisplayHidden { get; set; }
+	
     /// <summary>
     /// <para> minAxisType.</para>
     /// <para>Represents the following attribute in the schema: minAxisType </para>
@@ -4266,6 +4529,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "minAxisType")]
     [Index(14)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MinAxisType { get; set; }
+	
     /// <summary>
     /// <para> maxAxisType.</para>
     /// <para>Represents the following attribute in the schema: maxAxisType </para>
@@ -4273,6 +4537,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "maxAxisType")]
     [Index(15)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MaxAxisType { get; set; }
+	
     /// <summary>
     /// <para> rightToLeft.</para>
     /// <para>Represents the following attribute in the schema: rightToLeft </para>
@@ -4280,6 +4545,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "rightToLeft")]
     [Index(16)]
     public BooleanValue RightToLeft { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the SparklineGroup class.
@@ -4481,9 +4747,10 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.Authors))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentList))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "comments")]
+[Id(ElementTypeIdConst)]
 public partial class Comments : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13585;
@@ -4594,9 +4861,10 @@ public partial class Comments : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.FilterColumn))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "autoFilter")]
+[Id(ElementTypeIdConst)]
 public partial class AutoFilter : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13586;
@@ -4611,6 +4879,7 @@ public partial class AutoFilter : OpenXmlCompositeElement
     [SchemaAttr(0, "ref")]
     [Index(0)]
     public StringValue Reference { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the AutoFilter class.
@@ -4697,9 +4966,10 @@ public partial class AutoFilter : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "pivotTableDefinition")]
+[Id(ElementTypeIdConst)]
 public partial class pivotTableDefinition : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13587;
@@ -4714,6 +4984,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> cacheId.</para>
     /// <para>Represents the following attribute in the schema: cacheId </para>
@@ -4721,6 +4992,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "cacheId")]
     [Index(1)]
     public UInt32Value CacheId { get; set; }
+	
     /// <summary>
     /// <para> dataOnRows.</para>
     /// <para>Represents the following attribute in the schema: dataOnRows </para>
@@ -4728,6 +5000,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "dataOnRows")]
     [Index(2)]
     public BooleanValue DataOnRows { get; set; }
+	
     /// <summary>
     /// <para> dataPosition.</para>
     /// <para>Represents the following attribute in the schema: dataPosition </para>
@@ -4735,6 +5008,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "dataPosition")]
     [Index(3)]
     public UInt32Value DataPosition { get; set; }
+	
     /// <summary>
     /// <para> Auto Format Id.</para>
     /// <para>Represents the following attribute in the schema: autoFormatId </para>
@@ -4742,6 +5016,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "autoFormatId")]
     [Index(4)]
     public UInt32Value AutoFormatId { get; set; }
+	
     /// <summary>
     /// <para> Apply Number Formats.</para>
     /// <para>Represents the following attribute in the schema: applyNumberFormats </para>
@@ -4749,6 +5024,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyNumberFormats")]
     [Index(5)]
     public BooleanValue ApplyNumberFormats { get; set; }
+	
     /// <summary>
     /// <para> Apply Border Formats.</para>
     /// <para>Represents the following attribute in the schema: applyBorderFormats </para>
@@ -4756,6 +5032,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyBorderFormats")]
     [Index(6)]
     public BooleanValue ApplyBorderFormats { get; set; }
+	
     /// <summary>
     /// <para> Apply Font Formats.</para>
     /// <para>Represents the following attribute in the schema: applyFontFormats </para>
@@ -4763,6 +5040,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyFontFormats")]
     [Index(7)]
     public BooleanValue ApplyFontFormats { get; set; }
+	
     /// <summary>
     /// <para> Apply Pattern Formats.</para>
     /// <para>Represents the following attribute in the schema: applyPatternFormats </para>
@@ -4770,6 +5048,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyPatternFormats")]
     [Index(8)]
     public BooleanValue ApplyPatternFormats { get; set; }
+	
     /// <summary>
     /// <para> Apply Alignment Formats.</para>
     /// <para>Represents the following attribute in the schema: applyAlignmentFormats </para>
@@ -4777,6 +5056,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyAlignmentFormats")]
     [Index(9)]
     public BooleanValue ApplyAlignmentFormats { get; set; }
+	
     /// <summary>
     /// <para> Apply Width / Height Formats.</para>
     /// <para>Represents the following attribute in the schema: applyWidthHeightFormats </para>
@@ -4784,6 +5064,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyWidthHeightFormats")]
     [Index(10)]
     public BooleanValue ApplyWidthHeightFormats { get; set; }
+	
     /// <summary>
     /// <para> dataCaption.</para>
     /// <para>Represents the following attribute in the schema: dataCaption </para>
@@ -4791,6 +5072,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "dataCaption")]
     [Index(11)]
     public StringValue DataCaption { get; set; }
+	
     /// <summary>
     /// <para> grandTotalCaption.</para>
     /// <para>Represents the following attribute in the schema: grandTotalCaption </para>
@@ -4798,6 +5080,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "grandTotalCaption")]
     [Index(12)]
     public StringValue GrandTotalCaption { get; set; }
+	
     /// <summary>
     /// <para> errorCaption.</para>
     /// <para>Represents the following attribute in the schema: errorCaption </para>
@@ -4805,6 +5088,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "errorCaption")]
     [Index(13)]
     public StringValue ErrorCaption { get; set; }
+	
     /// <summary>
     /// <para> showError.</para>
     /// <para>Represents the following attribute in the schema: showError </para>
@@ -4812,6 +5096,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showError")]
     [Index(14)]
     public BooleanValue ShowError { get; set; }
+	
     /// <summary>
     /// <para> missingCaption.</para>
     /// <para>Represents the following attribute in the schema: missingCaption </para>
@@ -4819,6 +5104,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "missingCaption")]
     [Index(15)]
     public StringValue MissingCaption { get; set; }
+	
     /// <summary>
     /// <para> showMissing.</para>
     /// <para>Represents the following attribute in the schema: showMissing </para>
@@ -4826,6 +5112,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showMissing")]
     [Index(16)]
     public BooleanValue ShowMissing { get; set; }
+	
     /// <summary>
     /// <para> pageStyle.</para>
     /// <para>Represents the following attribute in the schema: pageStyle </para>
@@ -4833,6 +5120,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "pageStyle")]
     [Index(17)]
     public StringValue PageStyle { get; set; }
+	
     /// <summary>
     /// <para> pivotTableStyle.</para>
     /// <para>Represents the following attribute in the schema: pivotTableStyle </para>
@@ -4840,6 +5128,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "pivotTableStyle")]
     [Index(18)]
     public StringValue PivotTableStyleName { get; set; }
+	
     /// <summary>
     /// <para> vacatedStyle.</para>
     /// <para>Represents the following attribute in the schema: vacatedStyle </para>
@@ -4847,6 +5136,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "vacatedStyle")]
     [Index(19)]
     public StringValue VacatedStyle { get; set; }
+	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
@@ -4854,6 +5144,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     [Index(20)]
     public StringValue Tag { get; set; }
+	
     /// <summary>
     /// <para> updatedVersion.</para>
     /// <para>Represents the following attribute in the schema: updatedVersion </para>
@@ -4861,6 +5152,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "updatedVersion")]
     [Index(21)]
     public ByteValue UpdatedVersion { get; set; }
+	
     /// <summary>
     /// <para> minRefreshableVersion.</para>
     /// <para>Represents the following attribute in the schema: minRefreshableVersion </para>
@@ -4868,6 +5160,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "minRefreshableVersion")]
     [Index(22)]
     public ByteValue MinRefreshableVersion { get; set; }
+	
     /// <summary>
     /// <para> asteriskTotals.</para>
     /// <para>Represents the following attribute in the schema: asteriskTotals </para>
@@ -4875,6 +5168,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "asteriskTotals")]
     [Index(23)]
     public BooleanValue AsteriskTotals { get; set; }
+	
     /// <summary>
     /// <para> showItems.</para>
     /// <para>Represents the following attribute in the schema: showItems </para>
@@ -4882,6 +5176,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showItems")]
     [Index(24)]
     public BooleanValue ShowItems { get; set; }
+	
     /// <summary>
     /// <para> editData.</para>
     /// <para>Represents the following attribute in the schema: editData </para>
@@ -4889,6 +5184,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "editData")]
     [Index(25)]
     public BooleanValue EditData { get; set; }
+	
     /// <summary>
     /// <para> disableFieldList.</para>
     /// <para>Represents the following attribute in the schema: disableFieldList </para>
@@ -4896,6 +5192,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "disableFieldList")]
     [Index(26)]
     public BooleanValue DisableFieldList { get; set; }
+	
     /// <summary>
     /// <para> showCalcMbrs.</para>
     /// <para>Represents the following attribute in the schema: showCalcMbrs </para>
@@ -4903,6 +5200,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showCalcMbrs")]
     [Index(27)]
     public BooleanValue ShowCalculatedMembers { get; set; }
+	
     /// <summary>
     /// <para> visualTotals.</para>
     /// <para>Represents the following attribute in the schema: visualTotals </para>
@@ -4910,6 +5208,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "visualTotals")]
     [Index(28)]
     public BooleanValue VisualTotals { get; set; }
+	
     /// <summary>
     /// <para> showMultipleLabel.</para>
     /// <para>Represents the following attribute in the schema: showMultipleLabel </para>
@@ -4917,6 +5216,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showMultipleLabel")]
     [Index(29)]
     public BooleanValue ShowMultipleLabel { get; set; }
+	
     /// <summary>
     /// <para> showDataDropDown.</para>
     /// <para>Represents the following attribute in the schema: showDataDropDown </para>
@@ -4924,6 +5224,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showDataDropDown")]
     [Index(30)]
     public BooleanValue ShowDataDropDown { get; set; }
+	
     /// <summary>
     /// <para> showDrill.</para>
     /// <para>Represents the following attribute in the schema: showDrill </para>
@@ -4931,6 +5232,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showDrill")]
     [Index(31)]
     public BooleanValue ShowDrill { get; set; }
+	
     /// <summary>
     /// <para> printDrill.</para>
     /// <para>Represents the following attribute in the schema: printDrill </para>
@@ -4938,6 +5240,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "printDrill")]
     [Index(32)]
     public BooleanValue PrintDrill { get; set; }
+	
     /// <summary>
     /// <para> showMemberPropertyTips.</para>
     /// <para>Represents the following attribute in the schema: showMemberPropertyTips </para>
@@ -4945,6 +5248,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showMemberPropertyTips")]
     [Index(33)]
     public BooleanValue ShowMemberPropertyTips { get; set; }
+	
     /// <summary>
     /// <para> showDataTips.</para>
     /// <para>Represents the following attribute in the schema: showDataTips </para>
@@ -4952,6 +5256,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showDataTips")]
     [Index(34)]
     public BooleanValue ShowDataTips { get; set; }
+	
     /// <summary>
     /// <para> enableWizard.</para>
     /// <para>Represents the following attribute in the schema: enableWizard </para>
@@ -4959,6 +5264,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "enableWizard")]
     [Index(35)]
     public BooleanValue EnableWizard { get; set; }
+	
     /// <summary>
     /// <para> enableDrill.</para>
     /// <para>Represents the following attribute in the schema: enableDrill </para>
@@ -4966,6 +5272,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "enableDrill")]
     [Index(36)]
     public BooleanValue EnableDrill { get; set; }
+	
     /// <summary>
     /// <para> enableFieldProperties.</para>
     /// <para>Represents the following attribute in the schema: enableFieldProperties </para>
@@ -4973,6 +5280,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "enableFieldProperties")]
     [Index(37)]
     public BooleanValue EnableFieldProperties { get; set; }
+	
     /// <summary>
     /// <para> preserveFormatting.</para>
     /// <para>Represents the following attribute in the schema: preserveFormatting </para>
@@ -4980,6 +5288,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "preserveFormatting")]
     [Index(38)]
     public BooleanValue PreserveFormatting { get; set; }
+	
     /// <summary>
     /// <para> useAutoFormatting.</para>
     /// <para>Represents the following attribute in the schema: useAutoFormatting </para>
@@ -4987,6 +5296,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "useAutoFormatting")]
     [Index(39)]
     public BooleanValue UseAutoFormatting { get; set; }
+	
     /// <summary>
     /// <para> pageWrap.</para>
     /// <para>Represents the following attribute in the schema: pageWrap </para>
@@ -4994,6 +5304,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "pageWrap")]
     [Index(40)]
     public UInt32Value PageWrap { get; set; }
+	
     /// <summary>
     /// <para> pageOverThenDown.</para>
     /// <para>Represents the following attribute in the schema: pageOverThenDown </para>
@@ -5001,6 +5312,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "pageOverThenDown")]
     [Index(41)]
     public BooleanValue PageOverThenDown { get; set; }
+	
     /// <summary>
     /// <para> subtotalHiddenItems.</para>
     /// <para>Represents the following attribute in the schema: subtotalHiddenItems </para>
@@ -5008,6 +5320,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "subtotalHiddenItems")]
     [Index(42)]
     public BooleanValue SubtotalHiddenItems { get; set; }
+	
     /// <summary>
     /// <para> rowGrandTotals.</para>
     /// <para>Represents the following attribute in the schema: rowGrandTotals </para>
@@ -5015,6 +5328,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "rowGrandTotals")]
     [Index(43)]
     public BooleanValue RowGrandTotals { get; set; }
+	
     /// <summary>
     /// <para> colGrandTotals.</para>
     /// <para>Represents the following attribute in the schema: colGrandTotals </para>
@@ -5022,6 +5336,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "colGrandTotals")]
     [Index(44)]
     public BooleanValue ColumnGrandTotals { get; set; }
+	
     /// <summary>
     /// <para> fieldPrintTitles.</para>
     /// <para>Represents the following attribute in the schema: fieldPrintTitles </para>
@@ -5029,6 +5344,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "fieldPrintTitles")]
     [Index(45)]
     public BooleanValue FieldPrintTitles { get; set; }
+	
     /// <summary>
     /// <para> itemPrintTitles.</para>
     /// <para>Represents the following attribute in the schema: itemPrintTitles </para>
@@ -5036,6 +5352,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "itemPrintTitles")]
     [Index(46)]
     public BooleanValue ItemPrintTitles { get; set; }
+	
     /// <summary>
     /// <para> mergeItem.</para>
     /// <para>Represents the following attribute in the schema: mergeItem </para>
@@ -5043,6 +5360,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "mergeItem")]
     [Index(47)]
     public BooleanValue MergeItem { get; set; }
+	
     /// <summary>
     /// <para> showDropZones.</para>
     /// <para>Represents the following attribute in the schema: showDropZones </para>
@@ -5050,6 +5368,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showDropZones")]
     [Index(48)]
     public BooleanValue ShowDropZones { get; set; }
+	
     /// <summary>
     /// <para> createdVersion.</para>
     /// <para>Represents the following attribute in the schema: createdVersion </para>
@@ -5057,6 +5376,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "createdVersion")]
     [Index(49)]
     public ByteValue CreatedVersion { get; set; }
+	
     /// <summary>
     /// <para> indent.</para>
     /// <para>Represents the following attribute in the schema: indent </para>
@@ -5064,6 +5384,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "indent")]
     [Index(50)]
     public UInt32Value Indent { get; set; }
+	
     /// <summary>
     /// <para> showEmptyRow.</para>
     /// <para>Represents the following attribute in the schema: showEmptyRow </para>
@@ -5071,6 +5392,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showEmptyRow")]
     [Index(51)]
     public BooleanValue ShowEmptyRow { get; set; }
+	
     /// <summary>
     /// <para> showEmptyCol.</para>
     /// <para>Represents the following attribute in the schema: showEmptyCol </para>
@@ -5078,6 +5400,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showEmptyCol")]
     [Index(52)]
     public BooleanValue ShowEmptyColumn { get; set; }
+	
     /// <summary>
     /// <para> showHeaders.</para>
     /// <para>Represents the following attribute in the schema: showHeaders </para>
@@ -5085,6 +5408,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showHeaders")]
     [Index(53)]
     public BooleanValue ShowHeaders { get; set; }
+	
     /// <summary>
     /// <para> compact.</para>
     /// <para>Represents the following attribute in the schema: compact </para>
@@ -5092,6 +5416,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "compact")]
     [Index(54)]
     public BooleanValue Compact { get; set; }
+	
     /// <summary>
     /// <para> outline.</para>
     /// <para>Represents the following attribute in the schema: outline </para>
@@ -5099,6 +5424,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "outline")]
     [Index(55)]
     public BooleanValue Outline { get; set; }
+	
     /// <summary>
     /// <para> outlineData.</para>
     /// <para>Represents the following attribute in the schema: outlineData </para>
@@ -5106,6 +5432,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "outlineData")]
     [Index(56)]
     public BooleanValue OutlineData { get; set; }
+	
     /// <summary>
     /// <para> compactData.</para>
     /// <para>Represents the following attribute in the schema: compactData </para>
@@ -5113,6 +5440,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "compactData")]
     [Index(57)]
     public BooleanValue CompactData { get; set; }
+	
     /// <summary>
     /// <para> published.</para>
     /// <para>Represents the following attribute in the schema: published </para>
@@ -5120,6 +5448,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "published")]
     [Index(58)]
     public BooleanValue Published { get; set; }
+	
     /// <summary>
     /// <para> gridDropZones.</para>
     /// <para>Represents the following attribute in the schema: gridDropZones </para>
@@ -5127,6 +5456,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "gridDropZones")]
     [Index(59)]
     public BooleanValue GridDropZones { get; set; }
+	
     /// <summary>
     /// <para> immersive.</para>
     /// <para>Represents the following attribute in the schema: immersive </para>
@@ -5134,6 +5464,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "immersive")]
     [Index(60)]
     public BooleanValue StopImmersiveUi { get; set; }
+	
     /// <summary>
     /// <para> multipleFieldFilters.</para>
     /// <para>Represents the following attribute in the schema: multipleFieldFilters </para>
@@ -5141,6 +5472,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "multipleFieldFilters")]
     [Index(61)]
     public BooleanValue MultipleFieldFilters { get; set; }
+	
     /// <summary>
     /// <para> chartFormat.</para>
     /// <para>Represents the following attribute in the schema: chartFormat </para>
@@ -5148,6 +5480,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "chartFormat")]
     [Index(62)]
     public UInt32Value ChartFormat { get; set; }
+	
     /// <summary>
     /// <para> rowHeaderCaption.</para>
     /// <para>Represents the following attribute in the schema: rowHeaderCaption </para>
@@ -5155,6 +5488,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "rowHeaderCaption")]
     [Index(63)]
     public StringValue RowHeaderCaption { get; set; }
+	
     /// <summary>
     /// <para> colHeaderCaption.</para>
     /// <para>Represents the following attribute in the schema: colHeaderCaption </para>
@@ -5162,6 +5496,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "colHeaderCaption")]
     [Index(64)]
     public StringValue ColumnHeaderCaption { get; set; }
+	
     /// <summary>
     /// <para> fieldListSortAscending.</para>
     /// <para>Represents the following attribute in the schema: fieldListSortAscending </para>
@@ -5169,6 +5504,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "fieldListSortAscending")]
     [Index(65)]
     public BooleanValue FieldListSortAscending { get; set; }
+	
     /// <summary>
     /// <para> mdxSubqueries.</para>
     /// <para>Represents the following attribute in the schema: mdxSubqueries </para>
@@ -5176,6 +5512,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "mdxSubqueries")]
     [Index(66)]
     public BooleanValue MdxSubqueries { get; set; }
+	
     /// <summary>
     /// <para> customListSort.</para>
     /// <para>Represents the following attribute in the schema: customListSort </para>
@@ -5183,6 +5520,7 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "customListSort")]
     [Index(67)]
     public BooleanValue CustomListSort { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the pivotTableDefinition class.
@@ -5468,7 +5806,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
 /// <summary>
 /// Defines the RevisionContext enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum RevisionContext
 {  
 	///<summary>
@@ -5500,7 +5837,6 @@ Copy,
 /// <summary>
 /// Defines the RwColAction enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum RwColAction
 {  
 	///<summary>
@@ -5532,7 +5868,6 @@ Delc,
 /// <summary>
 /// Defines the FeatureType enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum FeatureType
 {  
 	///<summary>
@@ -5618,7 +5953,6 @@ Future,
 /// <summary>
 /// Defines the ExtFeatureType enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ExtFeatureType
 {  
 	///<summary>
@@ -5632,7 +5966,6 @@ Reserved,
 /// <summary>
 /// Defines the SubFeatureType enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum SubFeatureType
 {  
 	///<summary>
@@ -5652,7 +5985,6 @@ Future,
 /// <summary>
 /// Defines the ExtSubFeatureType enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ExtSubFeatureType
 {  
 	///<summary>
@@ -5666,7 +5998,6 @@ Reserved,
 /// <summary>
 /// Defines the RowColVisualOp enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum RowColVisualOp
 {  
 	///<summary>
@@ -5698,7 +6029,6 @@ Autosize,
 /// <summary>
 /// Defines the SheetOp enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum SheetOp
 {  
 	///<summary>
@@ -5730,7 +6060,6 @@ Rename,
 /// <summary>
 /// Defines the FillType enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum FillType
 {  
 	///<summary>
@@ -5756,7 +6085,6 @@ Future,
 /// <summary>
 /// Defines the FillTypeExt enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum FillTypeExt
 {  
 	///<summary>
@@ -5770,7 +6098,6 @@ Test,
 /// <summary>
 /// Defines the AdjustType enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum AdjustType
 {  
 	///<summary>
@@ -5832,7 +6159,6 @@ Future,
 /// <summary>
 /// Defines the AdjustTypeExt enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum AdjustTypeExt
 {  
 	///<summary>
@@ -5846,7 +6172,6 @@ Test,
 /// <summary>
 /// Defines the OartAnchorType enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum OartAnchorType
 {  
 	///<summary>

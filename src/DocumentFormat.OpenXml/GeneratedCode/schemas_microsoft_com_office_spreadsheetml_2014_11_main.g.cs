@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Spreadsheet;
@@ -22,9 +23,10 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
 /// </remarks>
 
     [ChildElementInfo(typeof(ModelTimeGrouping), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(84, "modelTimeGroupings")]
+[Id(ElementTypeIdConst)]
 public partial class ModelTimeGroupings : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13588;
@@ -86,9 +88,10 @@ public partial class ModelTimeGroupings : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(CalculatedTimeColumn), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(84, "modelTimeGrouping")]
+[Id(ElementTypeIdConst)]
 public partial class ModelTimeGrouping : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13589;
@@ -103,6 +106,7 @@ public partial class ModelTimeGrouping : OpenXmlCompositeElement
     [SchemaAttr(0, "tableName")]
     [Index(0)]
     public StringValue TableName { get; set; }
+	
     /// <summary>
     /// <para> columnName.</para>
     /// <para>Represents the following attribute in the schema: columnName </para>
@@ -110,6 +114,7 @@ public partial class ModelTimeGrouping : OpenXmlCompositeElement
     [SchemaAttr(0, "columnName")]
     [Index(1)]
     public StringValue ColumnName { get; set; }
+	
     /// <summary>
     /// <para> columnId.</para>
     /// <para>Represents the following attribute in the schema: columnId </para>
@@ -117,6 +122,7 @@ public partial class ModelTimeGrouping : OpenXmlCompositeElement
     [SchemaAttr(0, "columnId")]
     [Index(2)]
     public StringValue ColumnId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ModelTimeGrouping class.
@@ -164,9 +170,10 @@ public partial class ModelTimeGrouping : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is x16:calculatedTimeColumn.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(84, "calculatedTimeColumn")]
+[Id(ElementTypeIdConst)]
 public partial class CalculatedTimeColumn : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13590;
@@ -181,6 +188,7 @@ public partial class CalculatedTimeColumn : OpenXmlLeafElement
     [SchemaAttr(0, "columnName")]
     [Index(0)]
     public StringValue ColumnName { get; set; }
+	
     /// <summary>
     /// <para> columnId.</para>
     /// <para>Represents the following attribute in the schema: columnId </para>
@@ -188,6 +196,7 @@ public partial class CalculatedTimeColumn : OpenXmlLeafElement
     [SchemaAttr(0, "columnId")]
     [Index(1)]
     public StringValue ColumnId { get; set; }
+	
     /// <summary>
     /// <para> contentType.</para>
     /// <para>Represents the following attribute in the schema: contentType </para>
@@ -195,6 +204,7 @@ public partial class CalculatedTimeColumn : OpenXmlLeafElement
     [SchemaAttr(0, "contentType")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType> ContentType { get; set; }
+	
     /// <summary>
     /// <para> isSelected.</para>
     /// <para>Represents the following attribute in the schema: isSelected </para>
@@ -202,6 +212,7 @@ public partial class CalculatedTimeColumn : OpenXmlLeafElement
     [SchemaAttr(0, "isSelected")]
     [Index(3)]
     public BooleanValue IsSelected { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the CalculatedTimeColumn class.
@@ -220,7 +231,6 @@ public partial class CalculatedTimeColumn : OpenXmlLeafElement
 /// <summary>
 /// Defines the ModelTimeGroupingContentType enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ModelTimeGroupingContentType
 {  
 	///<summary>

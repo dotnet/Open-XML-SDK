@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing.Charts;
@@ -26,9 +27,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Level))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(81, "multiLvlStrLit")]
+[Id(ElementTypeIdConst)]
 public partial class MultiLvlStrData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13516;

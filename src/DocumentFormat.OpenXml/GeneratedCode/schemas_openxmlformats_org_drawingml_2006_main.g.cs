@@ -25508,6 +25508,7 @@ public abstract partial class TextCharacterPropertiesType : OpenXmlCompositeElem
     [SchemaAttr(0, "smtClean")]
     [Index(16)]
     public BooleanValue SmtClean { get; set; }
+	
     /// <summary>
     /// <para> smtId.</para>
     /// <para>Represents the following attribute in the schema: smtId </para>
@@ -25515,6 +25516,7 @@ public abstract partial class TextCharacterPropertiesType : OpenXmlCompositeElem
     [SchemaAttr(0, "smtId")]
     [Index(17)]
     public UInt32Value SmtId { get; set; }
+	
     /// <summary>
     /// <para> bmk.</para>
     /// <para>Represents the following attribute in the schema: bmk </para>

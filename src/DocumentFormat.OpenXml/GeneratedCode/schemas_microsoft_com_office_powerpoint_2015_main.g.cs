@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -16,9 +17,10 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
 /// <para> When the object is serialized out as xml, its qualified name is p16:designElem.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(78, "designElem")]
+[Id(ElementTypeIdConst)]
 public partial class DesignElement : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13444;
@@ -33,6 +35,7 @@ public partial class DesignElement : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the DesignElement class.

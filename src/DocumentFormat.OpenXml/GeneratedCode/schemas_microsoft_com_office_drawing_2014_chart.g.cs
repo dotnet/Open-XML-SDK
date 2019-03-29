@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -51,9 +52,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "spPr")]
+[Id(ElementTypeIdConst)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13517;
@@ -68,6 +70,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "bwMode")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class.
@@ -132,9 +135,10 @@ public partial class ShapeProperties : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is c16:explosion.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "explosion")]
+[Id(ElementTypeIdConst)]
 public partial class UnsignedIntegerType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13518;
@@ -149,6 +153,7 @@ public partial class UnsignedIntegerType : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public UInt32Value Val { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the UnsignedIntegerType class.
@@ -169,9 +174,9 @@ public partial class UnsignedIntegerType : OpenXmlLeafElement
 /// <para>This class is available in Office 2016 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c16:invertIfNegative.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(82, "invertIfNegative")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class InvertIfNegativeBoolean : BooleanType
 {
@@ -193,9 +198,9 @@ public partial class InvertIfNegativeBoolean : BooleanType
 /// <para>This class is available in Office 2016 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c16:bubble3D.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(82, "bubble3D")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class Bubble3DBoolean : BooleanType
 {
@@ -215,8 +220,8 @@ public partial class Bubble3DBoolean : BooleanType
 /// <summary>
 /// Defines the BooleanType class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class BooleanType : OpenXmlLeafElement
 {
         
@@ -227,6 +232,7 @@ public abstract partial class BooleanType : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
+	
 
     
     
@@ -258,9 +264,10 @@ public abstract partial class BooleanType : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Size))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "marker")]
+[Id(ElementTypeIdConst)]
 public partial class Marker : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13521;
@@ -411,9 +418,10 @@ public partial class Marker : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Separator))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "dLbl")]
+[Id(ElementTypeIdConst)]
 public partial class DLbl : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13522;
@@ -492,9 +500,10 @@ public partial class DLbl : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(CategoryFilterException), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "categoryFilterExceptions")]
+[Id(ElementTypeIdConst)]
 public partial class CategoryFilterExceptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13523;
@@ -556,9 +565,10 @@ public partial class CategoryFilterExceptions : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(BooleanFalse), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "pivotOptions16")]
+[Id(ElementTypeIdConst)]
 public partial class PivotOptions16 : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13524;
@@ -637,9 +647,10 @@ public partial class PivotOptions16 : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(ChartDataPointUniqueIDMapEntry), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "datapointuniqueidmap")]
+[Id(ElementTypeIdConst)]
 public partial class ChartDataPointUniqueIDMap : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13525;
@@ -693,9 +704,9 @@ public partial class ChartDataPointUniqueIDMap : OpenXmlCompositeElement
 /// <para>This class is available in Office 2016 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c16:uniqueId.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(82, "uniqueId")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class UniqueIdChartUniqueID : UniqueIDChart
 {
@@ -717,9 +728,9 @@ public partial class UniqueIdChartUniqueID : UniqueIDChart
 /// <para>This class is available in Office 2016 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is c16:uniqueID.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(82, "uniqueID")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class UniqueID : UniqueIDChart
 {
@@ -739,8 +750,8 @@ public partial class UniqueID : UniqueIDChart
 /// <summary>
 /// Defines the UniqueIDChart class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class UniqueIDChart : OpenXmlLeafElement
 {
         
@@ -751,6 +762,7 @@ public abstract partial class UniqueIDChart : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public StringValue Val { get; set; }
+	
 
     
     
@@ -788,9 +800,10 @@ public abstract partial class UniqueIDChart : OpenXmlLeafElement
     [ChildElementInfo(typeof(Bubble3DBoolean), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(Marker), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(DLbl), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "categoryFilterException")]
+[Id(ElementTypeIdConst)]
 public partial class CategoryFilterException : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13527;
@@ -959,9 +972,10 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericPoint))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "numCache")]
+[Id(ElementTypeIdConst)]
 public partial class NumberDataType : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13528;
@@ -1054,9 +1068,10 @@ public partial class NumberDataType : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(NumberDataType), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "filteredLitCache")]
+[Id(ElementTypeIdConst)]
 public partial class NumFilteredLiteralCache : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13529;
@@ -1139,9 +1154,10 @@ public partial class NumFilteredLiteralCache : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "strCache")]
+[Id(ElementTypeIdConst)]
 public partial class StringDataType : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13530;
@@ -1220,9 +1236,10 @@ public partial class StringDataType : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(StringDataType), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "filteredLitCache")]
+[Id(ElementTypeIdConst)]
 public partial class StrFilteredLiteralCache : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13531;
@@ -1305,9 +1322,10 @@ public partial class StrFilteredLiteralCache : OpenXmlCompositeElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.Level))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "multiLvlStrCache")]
+[Id(ElementTypeIdConst)]
 public partial class MultiLvlStrData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13532;
@@ -1386,9 +1404,10 @@ public partial class MultiLvlStrData : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(MultiLvlStrData), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "filteredLitCache")]
+[Id(ElementTypeIdConst)]
 public partial class MultiLvlStrFilteredLiteralCache : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13533;
@@ -1460,9 +1479,10 @@ public partial class MultiLvlStrFilteredLiteralCache : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is c16:literalDataChart.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "literalDataChart")]
+[Id(ElementTypeIdConst)]
 public partial class LiteralDataChart : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13534;
@@ -1477,6 +1497,7 @@ public partial class LiteralDataChart : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the LiteralDataChart class.
@@ -1498,9 +1519,10 @@ public partial class LiteralDataChart : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is c16:showExpandCollapseFieldButtons.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "showExpandCollapseFieldButtons")]
+[Id(ElementTypeIdConst)]
 public partial class BooleanFalse : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13535;
@@ -1515,6 +1537,7 @@ public partial class BooleanFalse : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the BooleanFalse class.
@@ -1536,9 +1559,10 @@ public partial class BooleanFalse : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is c16:ptidx.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "ptidx")]
+[Id(ElementTypeIdConst)]
 public partial class XsdunsignedInt : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 13536;
@@ -1589,9 +1613,10 @@ public partial class XsdunsignedInt : OpenXmlLeafTextElement
 
     [ChildElementInfo(typeof(XsdunsignedInt), FileFormatVersions.Office2016)]
     [ChildElementInfo(typeof(UniqueID), FileFormatVersions.Office2016)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "ptentry")]
+[Id(ElementTypeIdConst)]
 public partial class ChartDataPointUniqueIDMapEntry : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13538;

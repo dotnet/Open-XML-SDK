@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Wordprocessing;
@@ -15,9 +16,10 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
 /// <para> When the object is serialized out as xml, its qualified name is w16se:symEx.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(86, "symEx")]
+[Id(ElementTypeIdConst)]
 public partial class SymEx : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13591;
@@ -34,6 +36,7 @@ public partial class SymEx : OpenXmlLeafElement
     [SchemaAttr(86, "font")]
     [Index(0)]
     public StringValue Font { get; set; }
+	
     /// <summary>
     /// <para> char.</para>
     /// <para>Represents the following attribute in the schema: w16se:char </para>
@@ -43,6 +46,7 @@ public partial class SymEx : OpenXmlLeafElement
     [SchemaAttr(86, "char")]
     [Index(1)]
     public HexBinaryValue Char { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the SymEx class.

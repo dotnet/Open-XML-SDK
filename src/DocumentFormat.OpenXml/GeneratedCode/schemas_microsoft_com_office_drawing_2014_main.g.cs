@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -15,9 +16,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
 /// <para> When the object is serialized out as xml, its qualified name is a16:creationId.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(79, "creationId")]
+[Id(ElementTypeIdConst)]
 public partial class CreationId : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13445;
@@ -32,6 +34,7 @@ public partial class CreationId : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the CreationId class.
@@ -53,9 +56,10 @@ public partial class CreationId : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a16:predDERef.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(79, "predDERef")]
+[Id(ElementTypeIdConst)]
 public partial class PredecessorDrawingElementReference : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13446;
@@ -70,6 +74,7 @@ public partial class PredecessorDrawingElementReference : OpenXmlLeafElement
     [SchemaAttr(0, "pred")]
     [Index(0)]
     public StringValue Pred { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the PredecessorDrawingElementReference class.
@@ -91,9 +96,10 @@ public partial class PredecessorDrawingElementReference : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a16:cxnDERefs.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(79, "cxnDERefs")]
+[Id(ElementTypeIdConst)]
 public partial class ConnectableReferences : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13447;
@@ -108,6 +114,7 @@ public partial class ConnectableReferences : OpenXmlLeafElement
     [SchemaAttr(0, "st")]
     [Index(0)]
     public StringValue St { get; set; }
+	
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: end </para>
@@ -115,6 +122,7 @@ public partial class ConnectableReferences : OpenXmlLeafElement
     [SchemaAttr(0, "end")]
     [Index(1)]
     public StringValue End { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ConnectableReferences class.
@@ -135,9 +143,9 @@ public partial class ConnectableReferences : OpenXmlLeafElement
 /// <para>This class is available in Office 2016 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a16:rowId.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(79, "rowId")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class RowIdIdentifier : OpenXmlIdentifierElement
 {
@@ -159,9 +167,9 @@ public partial class RowIdIdentifier : OpenXmlIdentifierElement
 /// <para>This class is available in Office 2016 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is a16:colId.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(79, "colId")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class ColIdIdentifier : OpenXmlIdentifierElement
 {
@@ -181,8 +189,8 @@ public partial class ColIdIdentifier : OpenXmlIdentifierElement
 /// <summary>
 /// Defines the OpenXmlIdentifierElement class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class OpenXmlIdentifierElement : OpenXmlLeafElement
 {
         
@@ -193,6 +201,7 @@ public abstract partial class OpenXmlIdentifierElement : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public UInt32Value Val { get; set; }
+	
 
     
     
