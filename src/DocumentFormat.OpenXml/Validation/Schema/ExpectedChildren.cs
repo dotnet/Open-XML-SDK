@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Validation;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -18,7 +19,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         #region private fields
 
-        private ICollection<int> _elementTypeIds;
+        private ICollection<Type> _elementTypes;
 
         private ICollection<string> _xsdanyNamespaces;
 
@@ -30,25 +31,25 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Add ElementTypeId of the child.
+        /// Add a known element of the child.
         /// </summary>
-        /// <param name="elementTypeId"></param>
-        internal void Add(int elementTypeId)
+        /// <param name="elementType"></param>
+        public void Add(Type elementType)
         {
             // No lock, not safe for multi-thread
-            if (_elementTypeIds == null )
+            if (_elementTypes == null)
             {
-                _elementTypeIds = new List<int>();
+                _elementTypes = new List<Type>();
             }
 
-            _elementTypeIds.Add(elementTypeId);
+            _elementTypes.Add(elementType);
         }
 
         /// <summary>
         /// Add namespace string of xsd:any child.
         /// </summary>
         /// <param name="namesapceForXsdany"></param>
-        internal void Add(string namesapceForXsdany)
+        public void Add(string namesapceForXsdany)
         {
             // No lock, not safe for multi-thread
             if (_xsdanyNamespaces == null)
@@ -65,18 +66,18 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="expectedChildren"></param>
         internal void Add(ExpectedChildren expectedChildren)
         {
-            if (expectedChildren._elementTypeIds != null &&
-                expectedChildren._elementTypeIds.Count > 0)
+            if (expectedChildren._elementTypes != null &&
+                expectedChildren._elementTypes.Count > 0)
             {
                 // No lock, not safe for multi-thread
-                if (_elementTypeIds == null)
+                if (_elementTypes == null)
                 {
-                    _elementTypeIds = new List<int>();
+                    _elementTypes = new List<Type>();
                 }
 
-                foreach (var id in expectedChildren._elementTypeIds)
+                foreach (var id in expectedChildren._elementTypes)
                 {
-                    _elementTypeIds.Add(id);
+                    _elementTypes.Add(id);
                 }
             }
 
@@ -104,9 +105,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             get
             {
                 int count = 0;
-                if (_elementTypeIds != null)
+                if (_elementTypes != null)
                 {
-                    count = _elementTypeIds.Count;
+                    count = _elementTypes.Count;
                 }
 
                 if (_xsdanyNamespaces != null)
@@ -127,24 +128,22 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             Debug.Assert(parent != null);
 
-            if (_elementTypeIds != null || _xsdanyNamespaces != null)
+            if (_elementTypes != null || _xsdanyNamespaces != null)
             {
-                Debug.Assert(_elementTypeIds != null && _elementTypeIds.Count > 0 ||
+                Debug.Assert(_elementTypes != null && _elementTypes.Count > 0 ||
                              _xsdanyNamespaces != null && _xsdanyNamespaces.Count > 0);
 
-                StringBuilder childrenNames = new StringBuilder();
-                string separator = string.Empty;
+                var childrenNames = new List<string>();
 
-                if (_elementTypeIds != null)
+                if (_elementTypes != null)
                 {
-                    foreach (var childElement in parent.CreateChildrenElementsByIds(_elementTypeIds))
+                    foreach (var childElement in parent.ElementData.Children.Elements)
                     {
-                        childrenNames.Append(separator);
-
-                        // <namespace:localname>, use InvariantCulture
-                        childrenNames.Append(SR.Format(ValidationResources.Fmt_ElementName, childElement.NamespaceUri, childElement.LocalName));
-
-                        separator = ValidationResources.Fmt_ElementNameSeparator;
+                        if (_elementTypes.Contains(childElement.Type))
+                        {
+                            // <namespace:localname>, use InvariantCulture
+                            childrenNames.Add(SR.Format(ValidationResources.Fmt_ElementName, childElement.Namespace, childElement.Name));
+                        }
                     }
                 }
 
@@ -152,12 +151,17 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     foreach (var namespaceForXsdany in _xsdanyNamespaces)
                     {
-                        childrenNames.Append(separator);
-                        childrenNames.Append(SR.Format(ValidationResources.Fmt_AnyElementInNamespace, namespaceForXsdany));
+                        childrenNames.Add(SR.Format(ValidationResources.Fmt_AnyElementInNamespace, namespaceForXsdany));
                     }
                 }
 
-                return SR.Format(ValidationResources.Fmt_ListOfPossibleElements, childrenNames.ToString());
+#if NET35
+                var final = childrenNames.ToArray();
+#else
+                var final = childrenNames;
+#endif
+
+                return SR.Format(ValidationResources.Fmt_ListOfPossibleElements, string.Join(ValidationResources.Fmt_ElementNameSeparator, final));
             }
 
             return string.Empty;
@@ -165,9 +169,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         internal void Clear()
         {
-            if (_elementTypeIds != null)
+            if (_elementTypes != null)
             {
-                _elementTypeIds.Clear();
+                _elementTypes.Clear();
             }
 
             if (_xsdanyNamespaces != null)

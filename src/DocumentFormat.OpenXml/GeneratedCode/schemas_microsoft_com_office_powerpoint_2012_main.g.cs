@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -16,9 +17,10 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
 /// <para> When the object is serialized out as xml, its qualified name is p15:prstTrans.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "prstTrans")]
+[Id(ElementTypeIdConst)]
 public partial class PresetTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13324;
@@ -33,6 +35,7 @@ public partial class PresetTransition : OpenXmlLeafElement
     [SchemaAttr(0, "prst")]
     [Index(0)]
     public StringValue Preset { get; set; }
+	
     /// <summary>
     /// <para> invX.</para>
     /// <para>Represents the following attribute in the schema: invX </para>
@@ -40,6 +43,7 @@ public partial class PresetTransition : OpenXmlLeafElement
     [SchemaAttr(0, "invX")]
     [Index(1)]
     public BooleanValue InvX { get; set; }
+	
     /// <summary>
     /// <para> invY.</para>
     /// <para>Represents the following attribute in the schema: invY </para>
@@ -47,6 +51,7 @@ public partial class PresetTransition : OpenXmlLeafElement
     [SchemaAttr(0, "invY")]
     [Index(2)]
     public BooleanValue InvY { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the PresetTransition class.
@@ -68,9 +73,10 @@ public partial class PresetTransition : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p15:presenceInfo.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "presenceInfo")]
+[Id(ElementTypeIdConst)]
 public partial class PresenceInfo : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13325;
@@ -85,6 +91,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
     [SchemaAttr(0, "userId")]
     [Index(0)]
     public StringValue UserId { get; set; }
+	
     /// <summary>
     /// <para> providerId.</para>
     /// <para>Represents the following attribute in the schema: providerId </para>
@@ -92,6 +99,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
     [SchemaAttr(0, "providerId")]
     [Index(1)]
     public StringValue ProviderId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the PresenceInfo class.
@@ -120,9 +128,10 @@ public partial class PresenceInfo : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(ParentCommentIdentifier), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "threadingInfo")]
+[Id(ElementTypeIdConst)]
 public partial class ThreadingInfo : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13326;
@@ -137,6 +146,7 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
     [SchemaAttr(0, "timeZoneBias")]
     [Index(0)]
     public Int32Value TimeZoneBias { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ThreadingInfo class.
@@ -207,9 +217,9 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
 ///<item><description>ExtensionList &lt;p15:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(68, "sldGuideLst")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SlideGuideList : ExtendedGuideList
 {
@@ -264,9 +274,9 @@ public partial class SlideGuideList : ExtendedGuideList
 ///<item><description>ExtensionList &lt;p15:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(68, "notesGuideLst")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class NotesGuideList : ExtendedGuideList
 {
@@ -319,10 +329,10 @@ public partial class NotesGuideList : ExtendedGuideList
 ///<item><description>ExtensionList &lt;p15:extLst></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(ExtendedGuide), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 public abstract partial class ExtendedGuideList : OpenXmlCompositeElement
 {
         
@@ -370,9 +380,10 @@ public abstract partial class ExtendedGuideList : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is p15:chartTrackingRefBased.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "chartTrackingRefBased")]
+[Id(ElementTypeIdConst)]
 public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13329;
@@ -387,6 +398,7 @@ public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ChartTrackingReferenceBased class.
@@ -408,9 +420,10 @@ public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is p15:parentCm.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "parentCm")]
+[Id(ElementTypeIdConst)]
 public partial class ParentCommentIdentifier : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13330;
@@ -425,6 +438,7 @@ public partial class ParentCommentIdentifier : OpenXmlLeafElement
     [SchemaAttr(0, "authorId")]
     [Index(0)]
     public UInt32Value AuthorId { get; set; }
+	
     /// <summary>
     /// <para> idx.</para>
     /// <para>Represents the following attribute in the schema: idx </para>
@@ -432,6 +446,7 @@ public partial class ParentCommentIdentifier : OpenXmlLeafElement
     [SchemaAttr(0, "idx")]
     [Index(1)]
     public UInt32Value Index { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ParentCommentIdentifier class.
@@ -470,9 +485,10 @@ public partial class ParentCommentIdentifier : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SystemColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "clr")]
+[Id(ElementTypeIdConst)]
 public partial class ColorType : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13331;
@@ -621,9 +637,10 @@ public partial class ColorType : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Extension))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "extLst")]
+[Id(ElementTypeIdConst)]
 public partial class ExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13332;
@@ -687,9 +704,10 @@ public partial class ExtensionList : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(ColorType), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "guide")]
+[Id(ElementTypeIdConst)]
 public partial class ExtendedGuide : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13333;
@@ -704,6 +722,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public UInt32Value Id { get; set; }
+	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -711,6 +730,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(1)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> orient.</para>
     /// <para>Represents the following attribute in the schema: orient </para>
@@ -718,6 +738,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     [SchemaAttr(0, "orient")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Orientation { get; set; }
+	
     /// <summary>
     /// <para> pos.</para>
     /// <para>Represents the following attribute in the schema: pos </para>
@@ -725,6 +746,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     [SchemaAttr(0, "pos")]
     [Index(3)]
     public Int32Value Position { get; set; }
+	
     /// <summary>
     /// <para> userDrawn.</para>
     /// <para>Represents the following attribute in the schema: userDrawn </para>
@@ -732,6 +754,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     [SchemaAttr(0, "userDrawn")]
     [Index(4)]
     public BooleanValue IsUserDrawn { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ExtendedGuide class.

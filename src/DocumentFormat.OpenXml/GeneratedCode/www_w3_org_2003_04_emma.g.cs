@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Office2010.Ink;
@@ -15,9 +16,10 @@ namespace DocumentFormat.OpenXml.EMMA
 /// <para> When the object is serialized out as xml, its qualified name is emma:derived-from.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "derived-from")]
+[Id(ElementTypeIdConst)]
 public partial class DerivedFrom : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12741;
@@ -32,6 +34,7 @@ public partial class DerivedFrom : OpenXmlLeafElement
     [SchemaAttr(0, "resource")]
     [Index(0)]
     public StringValue Resource { get; set; }
+	
     /// <summary>
     /// <para> composite.</para>
     /// <para>Represents the following attribute in the schema: composite </para>
@@ -39,6 +42,7 @@ public partial class DerivedFrom : OpenXmlLeafElement
     [SchemaAttr(0, "composite")]
     [Index(1)]
     public BooleanValue Composite { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the DerivedFrom class.
@@ -65,9 +69,10 @@ public partial class DerivedFrom : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "info")]
+[Id(ElementTypeIdConst)]
 public partial class Info : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12742;
@@ -82,6 +87,7 @@ public partial class Info : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Info class.
@@ -138,9 +144,10 @@ public partial class Info : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(Arc))]
     [ChildElementInfo(typeof(Node))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "lattice")]
+[Id(ElementTypeIdConst)]
 public partial class Lattice : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12743;
@@ -155,6 +162,7 @@ public partial class Lattice : OpenXmlCompositeElement
     [SchemaAttr(0, "initial")]
     [Index(0)]
     public IntegerValue Initial { get; set; }
+	
     /// <summary>
     /// <para> final.</para>
     /// <para>Represents the following attribute in the schema: final </para>
@@ -162,6 +170,7 @@ public partial class Lattice : OpenXmlCompositeElement
     [SchemaAttr(0, "final")]
     [Index(1)]
     public ListValue<DecimalValue> Final { get; set; }
+	
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
@@ -171,6 +180,7 @@ public partial class Lattice : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-uri")]
     [Index(2)]
     public StringValue TimeReference { get; set; }
+	
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
@@ -180,6 +190,7 @@ public partial class Lattice : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-anchor-point")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Lattice class.
@@ -227,9 +238,10 @@ public partial class Lattice : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is emma:literal.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "literal")]
+[Id(ElementTypeIdConst)]
 public partial class Literal : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12744;
@@ -286,9 +298,10 @@ public partial class Literal : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(Lattice))]
     [ChildElementInfo(typeof(Literal))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNode))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "interpretation")]
+[Id(ElementTypeIdConst)]
 public partial class Interpretation : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12745;
@@ -303,6 +316,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> tokens.</para>
     /// <para>Represents the following attribute in the schema: emma:tokens </para>
@@ -312,6 +326,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "tokens")]
     [Index(1)]
     public StringValue Tokens { get; set; }
+	
     /// <summary>
     /// <para> process.</para>
     /// <para>Represents the following attribute in the schema: emma:process </para>
@@ -321,6 +336,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "process")]
     [Index(2)]
     public StringValue Process { get; set; }
+	
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
@@ -330,6 +346,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "lang")]
     [Index(3)]
     public StringValue Language { get; set; }
+	
     /// <summary>
     /// <para> signal.</para>
     /// <para>Represents the following attribute in the schema: emma:signal </para>
@@ -339,6 +356,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "signal")]
     [Index(4)]
     public StringValue Signal { get; set; }
+	
     /// <summary>
     /// <para> signal-size.</para>
     /// <para>Represents the following attribute in the schema: emma:signal-size </para>
@@ -348,6 +366,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "signal-size")]
     [Index(5)]
     public IntegerValue SignalSize { get; set; }
+	
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
@@ -357,6 +376,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "media-type")]
     [Index(6)]
     public StringValue MediaType { get; set; }
+	
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
@@ -366,6 +386,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "confidence")]
     [Index(7)]
     public DecimalValue Confidence { get; set; }
+	
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
@@ -375,6 +396,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "source")]
     [Index(8)]
     public StringValue Source { get; set; }
+	
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
@@ -384,6 +406,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "start")]
     [Index(9)]
     public UInt64Value Start { get; set; }
+	
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
@@ -393,6 +416,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "end")]
     [Index(10)]
     public UInt64Value End { get; set; }
+	
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
@@ -402,6 +426,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-uri")]
     [Index(11)]
     public StringValue TimeReference { get; set; }
+	
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
@@ -411,6 +436,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-anchor-point")]
     [Index(12)]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
+	
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
@@ -420,6 +446,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "offset-to-start")]
     [Index(13)]
     public IntegerValue OffsetToStart { get; set; }
+	
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
@@ -429,6 +456,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "duration")]
     [Index(14)]
     public IntegerValue Duration { get; set; }
+	
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
@@ -438,6 +466,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "medium")]
     [Index(15)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
+	
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
@@ -447,6 +476,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "mode")]
     [Index(16)]
     public ListValue<StringValue> Mode { get; set; }
+	
     /// <summary>
     /// <para> function.</para>
     /// <para>Represents the following attribute in the schema: emma:function </para>
@@ -456,6 +486,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "function")]
     [Index(17)]
     public StringValue Function { get; set; }
+	
     /// <summary>
     /// <para> verbal.</para>
     /// <para>Represents the following attribute in the schema: emma:verbal </para>
@@ -465,6 +496,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "verbal")]
     [Index(18)]
     public BooleanValue Verbal { get; set; }
+	
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
@@ -474,6 +506,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "cost")]
     [Index(19)]
     public DecimalValue Cost { get; set; }
+	
     /// <summary>
     /// <para> grammar-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:grammar-ref </para>
@@ -483,6 +516,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "grammar-ref")]
     [Index(20)]
     public StringValue GrammarRef { get; set; }
+	
     /// <summary>
     /// <para> endpoint-info-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-info-ref </para>
@@ -492,6 +526,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "endpoint-info-ref")]
     [Index(21)]
     public StringValue EndpointInfoRef { get; set; }
+	
     /// <summary>
     /// <para> model-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:model-ref </para>
@@ -501,6 +536,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "model-ref")]
     [Index(22)]
     public StringValue ModelRef { get; set; }
+	
     /// <summary>
     /// <para> dialog-turn.</para>
     /// <para>Represents the following attribute in the schema: emma:dialog-turn </para>
@@ -510,6 +546,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "dialog-turn")]
     [Index(23)]
     public StringValue DialogTurn { get; set; }
+	
     /// <summary>
     /// <para> no-input.</para>
     /// <para>Represents the following attribute in the schema: emma:no-input </para>
@@ -519,6 +556,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "no-input")]
     [Index(24)]
     public BooleanValue NoInput { get; set; }
+	
     /// <summary>
     /// <para> uninterpreted.</para>
     /// <para>Represents the following attribute in the schema: emma:uninterpreted </para>
@@ -528,6 +566,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "uninterpreted")]
     [Index(25)]
     public BooleanValue Uninterpreted { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Interpretation class.
@@ -592,9 +631,10 @@ public partial class Interpretation : OpenXmlCompositeElement
     [ChildElementInfo(typeof(OneOf))]
     [ChildElementInfo(typeof(Group))]
     [ChildElementInfo(typeof(Sequence))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "one-of")]
+[Id(ElementTypeIdConst)]
 public partial class OneOf : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12746;
@@ -609,6 +649,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(0, "disjunction-type")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues> DisjunctionType { get; set; }
+	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
@@ -616,6 +657,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(1)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> tokens.</para>
     /// <para>Represents the following attribute in the schema: emma:tokens </para>
@@ -625,6 +667,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "tokens")]
     [Index(2)]
     public StringValue Tokens { get; set; }
+	
     /// <summary>
     /// <para> process.</para>
     /// <para>Represents the following attribute in the schema: emma:process </para>
@@ -634,6 +677,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "process")]
     [Index(3)]
     public StringValue Process { get; set; }
+	
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
@@ -643,6 +687,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "lang")]
     [Index(4)]
     public StringValue Language { get; set; }
+	
     /// <summary>
     /// <para> signal.</para>
     /// <para>Represents the following attribute in the schema: emma:signal </para>
@@ -652,6 +697,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "signal")]
     [Index(5)]
     public StringValue Signal { get; set; }
+	
     /// <summary>
     /// <para> signal-size.</para>
     /// <para>Represents the following attribute in the schema: emma:signal-size </para>
@@ -661,6 +707,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "signal-size")]
     [Index(6)]
     public IntegerValue SignalSize { get; set; }
+	
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
@@ -670,6 +717,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "media-type")]
     [Index(7)]
     public StringValue MediaType { get; set; }
+	
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
@@ -679,6 +727,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "confidence")]
     [Index(8)]
     public DecimalValue Confidence { get; set; }
+	
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
@@ -688,6 +737,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "source")]
     [Index(9)]
     public StringValue Source { get; set; }
+	
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
@@ -697,6 +747,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "start")]
     [Index(10)]
     public UInt64Value Start { get; set; }
+	
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
@@ -706,6 +757,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "end")]
     [Index(11)]
     public UInt64Value End { get; set; }
+	
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
@@ -715,6 +767,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-uri")]
     [Index(12)]
     public StringValue TimeReference { get; set; }
+	
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
@@ -724,6 +777,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-anchor-point")]
     [Index(13)]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
+	
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
@@ -733,6 +787,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "offset-to-start")]
     [Index(14)]
     public IntegerValue OffsetToStart { get; set; }
+	
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
@@ -742,6 +797,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "duration")]
     [Index(15)]
     public IntegerValue Duration { get; set; }
+	
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
@@ -751,6 +807,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "medium")]
     [Index(16)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
+	
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
@@ -760,6 +817,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "mode")]
     [Index(17)]
     public ListValue<StringValue> Mode { get; set; }
+	
     /// <summary>
     /// <para> function.</para>
     /// <para>Represents the following attribute in the schema: emma:function </para>
@@ -769,6 +827,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "function")]
     [Index(18)]
     public StringValue Function { get; set; }
+	
     /// <summary>
     /// <para> verbal.</para>
     /// <para>Represents the following attribute in the schema: emma:verbal </para>
@@ -778,6 +837,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "verbal")]
     [Index(19)]
     public BooleanValue Verbal { get; set; }
+	
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
@@ -787,6 +847,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "cost")]
     [Index(20)]
     public DecimalValue Cost { get; set; }
+	
     /// <summary>
     /// <para> grammar-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:grammar-ref </para>
@@ -796,6 +857,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "grammar-ref")]
     [Index(21)]
     public StringValue GrammarRef { get; set; }
+	
     /// <summary>
     /// <para> endpoint-info-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-info-ref </para>
@@ -805,6 +867,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "endpoint-info-ref")]
     [Index(22)]
     public StringValue EndpointInfoRef { get; set; }
+	
     /// <summary>
     /// <para> model-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:model-ref </para>
@@ -814,6 +877,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "model-ref")]
     [Index(23)]
     public StringValue ModelRef { get; set; }
+	
     /// <summary>
     /// <para> dialog-turn.</para>
     /// <para>Represents the following attribute in the schema: emma:dialog-turn </para>
@@ -823,6 +887,7 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "dialog-turn")]
     [Index(24)]
     public StringValue DialogTurn { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the OneOf class.
@@ -889,9 +954,10 @@ public partial class OneOf : OpenXmlCompositeElement
     [ChildElementInfo(typeof(OneOf))]
     [ChildElementInfo(typeof(Group))]
     [ChildElementInfo(typeof(Sequence))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "group")]
+[Id(ElementTypeIdConst)]
 public partial class Group : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12747;
@@ -906,6 +972,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> tokens.</para>
     /// <para>Represents the following attribute in the schema: emma:tokens </para>
@@ -915,6 +982,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "tokens")]
     [Index(1)]
     public StringValue Tokens { get; set; }
+	
     /// <summary>
     /// <para> process.</para>
     /// <para>Represents the following attribute in the schema: emma:process </para>
@@ -924,6 +992,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "process")]
     [Index(2)]
     public StringValue Process { get; set; }
+	
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
@@ -933,6 +1002,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "lang")]
     [Index(3)]
     public StringValue Language { get; set; }
+	
     /// <summary>
     /// <para> signal.</para>
     /// <para>Represents the following attribute in the schema: emma:signal </para>
@@ -942,6 +1012,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "signal")]
     [Index(4)]
     public StringValue Signal { get; set; }
+	
     /// <summary>
     /// <para> signal-size.</para>
     /// <para>Represents the following attribute in the schema: emma:signal-size </para>
@@ -951,6 +1022,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "signal-size")]
     [Index(5)]
     public IntegerValue SignalSize { get; set; }
+	
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
@@ -960,6 +1032,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "media-type")]
     [Index(6)]
     public StringValue MediaType { get; set; }
+	
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
@@ -969,6 +1042,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "confidence")]
     [Index(7)]
     public DecimalValue Confidence { get; set; }
+	
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
@@ -978,6 +1052,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "source")]
     [Index(8)]
     public StringValue Source { get; set; }
+	
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
@@ -987,6 +1062,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "start")]
     [Index(9)]
     public UInt64Value Start { get; set; }
+	
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
@@ -996,6 +1072,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "end")]
     [Index(10)]
     public UInt64Value End { get; set; }
+	
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
@@ -1005,6 +1082,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-uri")]
     [Index(11)]
     public StringValue TimeReference { get; set; }
+	
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
@@ -1014,6 +1092,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-anchor-point")]
     [Index(12)]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
+	
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
@@ -1023,6 +1102,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "offset-to-start")]
     [Index(13)]
     public IntegerValue OffsetToStart { get; set; }
+	
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
@@ -1032,6 +1112,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "duration")]
     [Index(14)]
     public IntegerValue Duration { get; set; }
+	
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
@@ -1041,6 +1122,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "medium")]
     [Index(15)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
+	
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
@@ -1050,6 +1132,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "mode")]
     [Index(16)]
     public ListValue<StringValue> Mode { get; set; }
+	
     /// <summary>
     /// <para> function.</para>
     /// <para>Represents the following attribute in the schema: emma:function </para>
@@ -1059,6 +1142,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "function")]
     [Index(17)]
     public StringValue Function { get; set; }
+	
     /// <summary>
     /// <para> verbal.</para>
     /// <para>Represents the following attribute in the schema: emma:verbal </para>
@@ -1068,6 +1152,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "verbal")]
     [Index(18)]
     public BooleanValue Verbal { get; set; }
+	
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
@@ -1077,6 +1162,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "cost")]
     [Index(19)]
     public DecimalValue Cost { get; set; }
+	
     /// <summary>
     /// <para> grammar-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:grammar-ref </para>
@@ -1086,6 +1172,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "grammar-ref")]
     [Index(20)]
     public StringValue GrammarRef { get; set; }
+	
     /// <summary>
     /// <para> endpoint-info-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-info-ref </para>
@@ -1095,6 +1182,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "endpoint-info-ref")]
     [Index(21)]
     public StringValue EndpointInfoRef { get; set; }
+	
     /// <summary>
     /// <para> model-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:model-ref </para>
@@ -1104,6 +1192,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "model-ref")]
     [Index(22)]
     public StringValue ModelRef { get; set; }
+	
     /// <summary>
     /// <para> dialog-turn.</para>
     /// <para>Represents the following attribute in the schema: emma:dialog-turn </para>
@@ -1113,6 +1202,7 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "dialog-turn")]
     [Index(23)]
     public StringValue DialogTurn { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Group class.
@@ -1177,9 +1267,10 @@ public partial class Group : OpenXmlCompositeElement
     [ChildElementInfo(typeof(OneOf))]
     [ChildElementInfo(typeof(Group))]
     [ChildElementInfo(typeof(Sequence))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "sequence")]
+[Id(ElementTypeIdConst)]
 public partial class Sequence : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12748;
@@ -1194,6 +1285,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> tokens.</para>
     /// <para>Represents the following attribute in the schema: emma:tokens </para>
@@ -1203,6 +1295,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "tokens")]
     [Index(1)]
     public StringValue Tokens { get; set; }
+	
     /// <summary>
     /// <para> process.</para>
     /// <para>Represents the following attribute in the schema: emma:process </para>
@@ -1212,6 +1305,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "process")]
     [Index(2)]
     public StringValue Process { get; set; }
+	
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
@@ -1221,6 +1315,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "lang")]
     [Index(3)]
     public StringValue Language { get; set; }
+	
     /// <summary>
     /// <para> signal.</para>
     /// <para>Represents the following attribute in the schema: emma:signal </para>
@@ -1230,6 +1325,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "signal")]
     [Index(4)]
     public StringValue Signal { get; set; }
+	
     /// <summary>
     /// <para> signal-size.</para>
     /// <para>Represents the following attribute in the schema: emma:signal-size </para>
@@ -1239,6 +1335,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "signal-size")]
     [Index(5)]
     public IntegerValue SignalSize { get; set; }
+	
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
@@ -1248,6 +1345,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "media-type")]
     [Index(6)]
     public StringValue MediaType { get; set; }
+	
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
@@ -1257,6 +1355,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "confidence")]
     [Index(7)]
     public DecimalValue Confidence { get; set; }
+	
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
@@ -1266,6 +1365,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "source")]
     [Index(8)]
     public StringValue Source { get; set; }
+	
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
@@ -1275,6 +1375,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "start")]
     [Index(9)]
     public UInt64Value Start { get; set; }
+	
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
@@ -1284,6 +1385,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "end")]
     [Index(10)]
     public UInt64Value End { get; set; }
+	
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
@@ -1293,6 +1395,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-uri")]
     [Index(11)]
     public StringValue TimeReference { get; set; }
+	
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
@@ -1302,6 +1405,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-anchor-point")]
     [Index(12)]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
+	
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
@@ -1311,6 +1415,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "offset-to-start")]
     [Index(13)]
     public IntegerValue OffsetToStart { get; set; }
+	
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
@@ -1320,6 +1425,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "duration")]
     [Index(14)]
     public IntegerValue Duration { get; set; }
+	
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
@@ -1329,6 +1435,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "medium")]
     [Index(15)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
+	
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
@@ -1338,6 +1445,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "mode")]
     [Index(16)]
     public ListValue<StringValue> Mode { get; set; }
+	
     /// <summary>
     /// <para> function.</para>
     /// <para>Represents the following attribute in the schema: emma:function </para>
@@ -1347,6 +1455,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "function")]
     [Index(17)]
     public StringValue Function { get; set; }
+	
     /// <summary>
     /// <para> verbal.</para>
     /// <para>Represents the following attribute in the schema: emma:verbal </para>
@@ -1356,6 +1465,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "verbal")]
     [Index(18)]
     public BooleanValue Verbal { get; set; }
+	
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
@@ -1365,6 +1475,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "cost")]
     [Index(19)]
     public DecimalValue Cost { get; set; }
+	
     /// <summary>
     /// <para> grammar-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:grammar-ref </para>
@@ -1374,6 +1485,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "grammar-ref")]
     [Index(20)]
     public StringValue GrammarRef { get; set; }
+	
     /// <summary>
     /// <para> endpoint-info-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-info-ref </para>
@@ -1383,6 +1495,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "endpoint-info-ref")]
     [Index(21)]
     public StringValue EndpointInfoRef { get; set; }
+	
     /// <summary>
     /// <para> model-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:model-ref </para>
@@ -1392,6 +1505,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "model-ref")]
     [Index(22)]
     public StringValue ModelRef { get; set; }
+	
     /// <summary>
     /// <para> dialog-turn.</para>
     /// <para>Represents the following attribute in the schema: emma:dialog-turn </para>
@@ -1401,6 +1515,7 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "dialog-turn")]
     [Index(23)]
     public StringValue DialogTurn { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Sequence class.
@@ -1453,9 +1568,10 @@ public partial class Sequence : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "group-info")]
+[Id(ElementTypeIdConst)]
 public partial class GroupInfo : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12749;
@@ -1470,6 +1586,7 @@ public partial class GroupInfo : OpenXmlCompositeElement
     [SchemaAttr(0, "ref")]
     [Index(0)]
     public StringValue Reference { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the GroupInfo class.
@@ -1530,9 +1647,10 @@ public partial class GroupInfo : OpenXmlCompositeElement
     [ChildElementInfo(typeof(OneOf))]
     [ChildElementInfo(typeof(Sequence))]
     [ChildElementInfo(typeof(Group))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "derivation")]
+[Id(ElementTypeIdConst)]
 public partial class Derivation : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12750;
@@ -1587,9 +1705,10 @@ public partial class Derivation : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is emma:grammar.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "grammar")]
+[Id(ElementTypeIdConst)]
 public partial class Grammar : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12751;
@@ -1604,6 +1723,7 @@ public partial class Grammar : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
@@ -1611,6 +1731,7 @@ public partial class Grammar : OpenXmlLeafElement
     [SchemaAttr(0, "ref")]
     [Index(1)]
     public StringValue Reference { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Grammar class.
@@ -1637,9 +1758,10 @@ public partial class Grammar : OpenXmlLeafElement
 /// </list>
 /// </remarks>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "model")]
+[Id(ElementTypeIdConst)]
 public partial class Model : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12752;
@@ -1654,6 +1776,7 @@ public partial class Model : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
@@ -1661,6 +1784,7 @@ public partial class Model : OpenXmlCompositeElement
     [SchemaAttr(0, "ref")]
     [Index(1)]
     public StringValue Reference { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Model class.
@@ -1715,9 +1839,10 @@ public partial class Model : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(EndPoint))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "endpoint-info")]
+[Id(ElementTypeIdConst)]
 public partial class EndPointInfo : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12753;
@@ -1732,6 +1857,7 @@ public partial class EndPointInfo : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the EndPointInfo class.
@@ -1784,9 +1910,10 @@ public partial class EndPointInfo : OpenXmlCompositeElement
 /// </list>
 /// </remarks>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "endpoint")]
+[Id(ElementTypeIdConst)]
 public partial class EndPoint : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12754;
@@ -1801,6 +1928,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> endpoint-role.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-role </para>
@@ -1810,6 +1938,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "endpoint-role")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues> EndpointRole { get; set; }
+	
     /// <summary>
     /// <para> endpoint-address.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-address </para>
@@ -1819,6 +1948,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "endpoint-address")]
     [Index(2)]
     public StringValue EndPointAddress { get; set; }
+	
     /// <summary>
     /// <para> message-id.</para>
     /// <para>Represents the following attribute in the schema: emma:message-id </para>
@@ -1828,6 +1958,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "message-id")]
     [Index(3)]
     public StringValue MessageId { get; set; }
+	
     /// <summary>
     /// <para> port-num.</para>
     /// <para>Represents the following attribute in the schema: emma:port-num </para>
@@ -1837,6 +1968,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "port-num")]
     [Index(4)]
     public IntegerValue PortNumber { get; set; }
+	
     /// <summary>
     /// <para> port-type.</para>
     /// <para>Represents the following attribute in the schema: emma:port-type </para>
@@ -1846,6 +1978,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "port-type")]
     [Index(5)]
     public StringValue PortType { get; set; }
+	
     /// <summary>
     /// <para> endpoint-pair-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-pair-ref </para>
@@ -1855,6 +1988,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "endpoint-pair-ref")]
     [Index(6)]
     public StringValue EndpointPairRef { get; set; }
+	
     /// <summary>
     /// <para> service-name.</para>
     /// <para>Represents the following attribute in the schema: emma:service-name </para>
@@ -1864,6 +1998,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "service-name")]
     [Index(7)]
     public StringValue ServiceName { get; set; }
+	
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
@@ -1873,6 +2008,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "media-type")]
     [Index(8)]
     public StringValue MediaType { get; set; }
+	
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
@@ -1882,6 +2018,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "medium")]
     [Index(9)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
+	
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
@@ -1891,6 +2028,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "mode")]
     [Index(10)]
     public ListValue<StringValue> Mode { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the EndPoint class.
@@ -1945,9 +2083,10 @@ public partial class EndPoint : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(Info))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "node")]
+[Id(ElementTypeIdConst)]
 public partial class Node : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12755;
@@ -1962,6 +2101,7 @@ public partial class Node : OpenXmlCompositeElement
     [SchemaAttr(0, "node-number")]
     [Index(0)]
     public IntegerValue NodeNumber { get; set; }
+	
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
@@ -1971,6 +2111,7 @@ public partial class Node : OpenXmlCompositeElement
     [SchemaAttr(44, "confidence")]
     [Index(1)]
     public DecimalValue Confidence { get; set; }
+	
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
@@ -1980,6 +2121,7 @@ public partial class Node : OpenXmlCompositeElement
     [SchemaAttr(44, "cost")]
     [Index(2)]
     public DecimalValue Cost { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Node class.
@@ -2034,9 +2176,10 @@ public partial class Node : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(Info))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "arc")]
+[Id(ElementTypeIdConst)]
 public partial class Arc : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12756;
@@ -2051,6 +2194,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "from")]
     [Index(0)]
     public IntegerValue From { get; set; }
+	
     /// <summary>
     /// <para> to.</para>
     /// <para>Represents the following attribute in the schema: to </para>
@@ -2058,6 +2202,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "to")]
     [Index(1)]
     public IntegerValue To { get; set; }
+	
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
@@ -2067,6 +2212,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "start")]
     [Index(2)]
     public UInt64Value Start { get; set; }
+	
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
@@ -2076,6 +2222,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "end")]
     [Index(3)]
     public UInt64Value End { get; set; }
+	
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
@@ -2085,6 +2232,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "offset-to-start")]
     [Index(4)]
     public IntegerValue OffsetToStart { get; set; }
+	
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
@@ -2094,6 +2242,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "duration")]
     [Index(5)]
     public IntegerValue Duration { get; set; }
+	
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
@@ -2103,6 +2252,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "confidence")]
     [Index(6)]
     public DecimalValue Confidence { get; set; }
+	
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
@@ -2112,6 +2262,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "cost")]
     [Index(7)]
     public DecimalValue Cost { get; set; }
+	
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
@@ -2121,6 +2272,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "lang")]
     [Index(8)]
     public StringValue Language { get; set; }
+	
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
@@ -2130,6 +2282,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "medium")]
     [Index(9)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
+	
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
@@ -2139,6 +2292,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "mode")]
     [Index(10)]
     public ListValue<StringValue> Mode { get; set; }
+	
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
@@ -2148,6 +2302,7 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "source")]
     [Index(11)]
     public StringValue Source { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Arc class.
@@ -2218,9 +2373,10 @@ public partial class Arc : OpenXmlCompositeElement
     [ChildElementInfo(typeof(OneOf))]
     [ChildElementInfo(typeof(Group))]
     [ChildElementInfo(typeof(Sequence))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(44, "emma")]
+[Id(ElementTypeIdConst)]
 public partial class Emma : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12757;
@@ -2235,6 +2391,7 @@ public partial class Emma : OpenXmlCompositeElement
     [SchemaAttr(0, "version")]
     [Index(0)]
     public StringValue Version { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Emma class.
@@ -2279,7 +2436,6 @@ public partial class Emma : OpenXmlCompositeElement
 /// <summary>
 /// Defines the EndPointRoleValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum EndPointRoleValues
 {  
 	///<summary>
@@ -2311,7 +2467,6 @@ Router,
 /// <summary>
 /// Defines the MediumValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum MediumValues
 {  
 	///<summary>
@@ -2337,7 +2492,6 @@ Visual,
 /// <summary>
 /// Defines the AnchorPointValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum AnchorPointValues
 {  
 	///<summary>
@@ -2357,7 +2511,6 @@ End,
 /// <summary>
 /// Defines the DisjunctionTypeValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum DisjunctionTypeValues
 {  
 	///<summary>

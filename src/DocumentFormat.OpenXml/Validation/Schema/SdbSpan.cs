@@ -5,30 +5,37 @@ using System.Runtime.InteropServices;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
+    /// <remarks>
+    /// We cannot use auto-properties here due to failure in .NET Native to compile them. For further details, https://github.com/OfficeDev/Open-XML-SDK/issues/567.
+    /// </remarks>
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
     internal readonly struct SdbSpan
     {
+        private readonly int _offset;
+        private readonly int _count;
+        private readonly int _size;
+
         public SdbSpan(int start, int count, int size)
         {
-            Offset = start;
-            Count = count;
-            Size = size;
+            _offset = start;
+            _count = count;
+            _size = size;
         }
 
         /// <summary>
         /// Gets the offset from the beginning of the array
         /// </summary>
-        public int Offset { get; }
+        public int Offset => _offset;
 
         /// <summary>
         /// Gets the count of how many items
         /// </summary>
-        public int Count { get; }
+        public int Count => _count;
 
         /// <summary>
         /// Gets the size of an individual item in bytes
         /// </summary>
-        public int Size { get; }
+        public int Size => _size;
 
         /// <summary>
         /// Gets the length of array in bytes

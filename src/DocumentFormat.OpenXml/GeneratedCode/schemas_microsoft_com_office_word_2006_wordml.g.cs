@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 
@@ -21,13 +22,14 @@ namespace DocumentFormat.OpenXml.Office.Word
 ///<item><description>AllocatedCommands &lt;wne:acds></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(KeyMapCustomizations))]
     [ChildElementInfo(typeof(MismatchedKeyMapCustomization))]
     [ChildElementInfo(typeof(Toolbars))]
     [ChildElementInfo(typeof(AllocatedCommands))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "tcg")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TemplateCommandGroup : OpenXmlPartRootElement
 {
@@ -119,9 +121,10 @@ public partial class TemplateCommandGroup : OpenXmlPartRootElement
 /// </remarks>
 
     [ChildElementInfo(typeof(Mcd))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "mcds")]
+[Id(ElementTypeIdConst)]
 public partial class Mcds : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12609;
@@ -181,11 +184,12 @@ public partial class Mcds : OpenXmlCompositeElement
 ///<item><description>Mcds &lt;wne:mcds></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(DocEvents))]
     [ChildElementInfo(typeof(Mcds))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "vbaSuppData")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VbaSuppData : OpenXmlPartRootElement
 {
@@ -308,9 +312,10 @@ public partial class VbaSuppData : OpenXmlPartRootElement
 /// </remarks>
 
     [ChildElementInfo(typeof(SingleDataSourceRecord))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "recipients")]
+[Id(ElementTypeIdConst)]
 public partial class MailMergeRecipients : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12611;
@@ -365,9 +370,10 @@ public partial class MailMergeRecipients : OpenXmlPartRootElement
 /// <para> When the object is serialized out as xml, its qualified name is wne:fci.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "fci")]
+[Id(ElementTypeIdConst)]
 public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12612;
@@ -384,6 +390,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     [SchemaAttr(33, "fciName")]
     [Index(0)]
     public StringValue CommandName { get; set; }
+	
     /// <summary>
     /// <para> fciIndex.</para>
     /// <para>Represents the following attribute in the schema: wne:fciIndex </para>
@@ -393,6 +400,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     [SchemaAttr(33, "fciIndex")]
     [Index(1)]
     public HexBinaryValue CommandIndex { get; set; }
+	
     /// <summary>
     /// <para> swArg.</para>
     /// <para>Represents the following attribute in the schema: wne:swArg </para>
@@ -402,6 +410,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     [SchemaAttr(33, "swArg")]
     [Index(2)]
     public HexBinaryValue Argument { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the FixedCommandKeyboardCustomization class.
@@ -422,9 +431,9 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:macro.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "macro")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MacroKeyboardCustomization : MacroWllType
 {
@@ -446,9 +455,9 @@ public partial class MacroKeyboardCustomization : MacroWllType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:wll.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "wll")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WllMacroKeyboardCustomization : MacroWllType
 {
@@ -468,8 +477,8 @@ public partial class WllMacroKeyboardCustomization : MacroWllType
 /// <summary>
 /// Defines the MacroWllType class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class MacroWllType : OpenXmlLeafElement
 {
         
@@ -482,6 +491,7 @@ public abstract partial class MacroWllType : OpenXmlLeafElement
     [SchemaAttr(33, "macroName")]
     [Index(0)]
     public StringValue MacroName { get; set; }
+	
 
     
     
@@ -499,9 +509,9 @@ public abstract partial class MacroWllType : OpenXmlLeafElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:acd.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "acd")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapType
 {
@@ -523,9 +533,9 @@ public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapTy
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:acdEntry.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "acdEntry")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
 {
@@ -545,8 +555,8 @@ public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
 /// <summary>
 /// Defines the AcceleratorKeymapType class.
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
+
 public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
 {
         
@@ -559,6 +569,7 @@ public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
     [SchemaAttr(33, "acdName")]
     [Index(0)]
     public StringValue AcceleratorName { get; set; }
+	
 
     
     
@@ -577,9 +588,10 @@ public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is wne:wch.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "wch")]
+[Id(ElementTypeIdConst)]
 public partial class CharacterInsertion : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12616;
@@ -596,6 +608,7 @@ public partial class CharacterInsertion : OpenXmlLeafElement
     [SchemaAttr(33, "val")]
     [Index(0)]
     public HexBinaryValue Val { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the CharacterInsertion class.
@@ -632,9 +645,10 @@ public partial class CharacterInsertion : OpenXmlLeafElement
     [ChildElementInfo(typeof(AllocatedCommandKeyboardCustomization))]
     [ChildElementInfo(typeof(WllMacroKeyboardCustomization))]
     [ChildElementInfo(typeof(CharacterInsertion))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "keymap")]
+[Id(ElementTypeIdConst)]
 public partial class KeyMapEntry : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12617;
@@ -651,6 +665,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     [SchemaAttr(33, "chmPrimary")]
     [Index(0)]
     public HexBinaryValue CharacterMapPrimary { get; set; }
+	
     /// <summary>
     /// <para> chmSecondary.</para>
     /// <para>Represents the following attribute in the schema: wne:chmSecondary </para>
@@ -660,6 +675,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     [SchemaAttr(33, "chmSecondary")]
     [Index(1)]
     public HexBinaryValue CharacterMapSecondary { get; set; }
+	
     /// <summary>
     /// <para> kcmPrimary.</para>
     /// <para>Represents the following attribute in the schema: wne:kcmPrimary </para>
@@ -669,6 +685,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     [SchemaAttr(33, "kcmPrimary")]
     [Index(2)]
     public HexBinaryValue KeyCodePrimary { get; set; }
+	
     /// <summary>
     /// <para> kcmSecondary.</para>
     /// <para>Represents the following attribute in the schema: wne:kcmSecondary </para>
@@ -678,6 +695,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     [SchemaAttr(33, "kcmSecondary")]
     [Index(3)]
     public HexBinaryValue KeyCodeSecondary { get; set; }
+	
     /// <summary>
     /// <para> mask.</para>
     /// <para>Represents the following attribute in the schema: wne:mask </para>
@@ -687,6 +705,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     [SchemaAttr(33, "mask")]
     [Index(4)]
     public OnOffValue Mask { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the KeyMapEntry class.
@@ -807,9 +826,10 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is wne:acd.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "acd")]
+[Id(ElementTypeIdConst)]
 public partial class AllocatedCommand : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12618;
@@ -826,6 +846,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     [SchemaAttr(33, "argValue")]
     [Index(0)]
     public StringValue ArgumentValue { get; set; }
+	
     /// <summary>
     /// <para> fciBasedOn.</para>
     /// <para>Represents the following attribute in the schema: wne:fciBasedOn </para>
@@ -835,6 +856,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     [SchemaAttr(33, "fciBasedOn")]
     [Index(1)]
     public StringValue CommandBasedOn { get; set; }
+	
     /// <summary>
     /// <para> fciIndexBasedOn.</para>
     /// <para>Represents the following attribute in the schema: wne:fciIndexBasedOn </para>
@@ -844,6 +866,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     [SchemaAttr(33, "fciIndexBasedOn")]
     [Index(2)]
     public HexBinaryValue CommandIndexBasedOn { get; set; }
+	
     /// <summary>
     /// <para> acdName.</para>
     /// <para>Represents the following attribute in the schema: wne:acdName </para>
@@ -853,6 +876,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     [SchemaAttr(33, "acdName")]
     [Index(3)]
     public StringValue AcceleratorName { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the AllocatedCommand class.
@@ -874,9 +898,10 @@ public partial class AllocatedCommand : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is wne:mcd.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "mcd")]
+[Id(ElementTypeIdConst)]
 public partial class Mcd : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12619;
@@ -893,6 +918,7 @@ public partial class Mcd : OpenXmlLeafElement
     [SchemaAttr(33, "macroName")]
     [Index(0)]
     public StringValue MacroName { get; set; }
+	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: wne:name </para>
@@ -902,6 +928,7 @@ public partial class Mcd : OpenXmlLeafElement
     [SchemaAttr(33, "name")]
     [Index(1)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> menuHelp.</para>
     /// <para>Represents the following attribute in the schema: wne:menuHelp </para>
@@ -911,6 +938,7 @@ public partial class Mcd : OpenXmlLeafElement
     [SchemaAttr(33, "menuHelp")]
     [Index(2)]
     public StringValue MenuHelp { get; set; }
+	
     /// <summary>
     /// <para> bEncrypt.</para>
     /// <para>Represents the following attribute in the schema: wne:bEncrypt </para>
@@ -920,6 +948,7 @@ public partial class Mcd : OpenXmlLeafElement
     [SchemaAttr(33, "bEncrypt")]
     [Index(3)]
     public HexBinaryValue BEncrypt { get; set; }
+	
     /// <summary>
     /// <para> cmg.</para>
     /// <para>Represents the following attribute in the schema: wne:cmg </para>
@@ -929,6 +958,7 @@ public partial class Mcd : OpenXmlLeafElement
     [SchemaAttr(33, "cmg")]
     [Index(4)]
     public HexBinaryValue Cmg { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Mcd class.
@@ -949,9 +979,9 @@ public partial class Mcd : OpenXmlLeafElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocNew.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "eventDocNew")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocNewXsdString : OpenXmlLeafTextElement
 {
@@ -986,9 +1016,9 @@ public partial class EventDocNewXsdString : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocOpen.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "eventDocOpen")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
 {
@@ -1023,9 +1053,9 @@ public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocClose.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "eventDocClose")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
 {
@@ -1060,9 +1090,9 @@ public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocSync.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "eventDocSync")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
 {
@@ -1097,9 +1127,9 @@ public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocXmlAfterInsert.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "eventDocXmlAfterInsert")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
 {
@@ -1134,9 +1164,9 @@ public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocXmlBeforeDelete.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "eventDocXmlBeforeDelete")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
 {
@@ -1171,9 +1201,9 @@ public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocContentControlAfterInsert.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "eventDocContentControlAfterInsert")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTextElement
 {
@@ -1208,9 +1238,9 @@ public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTex
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocContentControlBeforeDelete.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "eventDocContentControlBeforeDelete")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTextElement
 {
@@ -1245,9 +1275,9 @@ public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTe
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocContentControlOnExit.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "eventDocContentControlOnExit")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextElement
 {
@@ -1282,9 +1312,9 @@ public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextEle
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocContentControlOnEnter.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "eventDocContentControlOnEnter")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextElement
 {
@@ -1319,9 +1349,9 @@ public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextEle
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocStoreUpdate.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "eventDocStoreUpdate")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
 {
@@ -1356,9 +1386,9 @@ public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocContentControlContentUpdate.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "eventDocContentControlContentUpdate")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElement
 {
@@ -1393,9 +1423,9 @@ public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElem
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is wne:eventDocBuildingBlockAfterInsert.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "eventDocBuildingBlockAfterInsert")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafTextElement
 {
@@ -1462,9 +1492,10 @@ public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafText
     [ChildElementInfo(typeof(EventDocStoreUpdateXsdString))]
     [ChildElementInfo(typeof(EventDocContentControlUpdateXsdString))]
     [ChildElementInfo(typeof(EventDocBuildingBlockAfterInsertXsdString))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "docEvents")]
+[Id(ElementTypeIdConst)]
 public partial class DocEvents : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12633;
@@ -1711,9 +1742,10 @@ public partial class DocEvents : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(AllocatedCommandManifestEntry))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "acdManifest")]
+[Id(ElementTypeIdConst)]
 public partial class AllocatedCommandManifest : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12635;
@@ -1768,9 +1800,10 @@ public partial class AllocatedCommandManifest : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is wne:toolbarData.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "toolbarData")]
+[Id(ElementTypeIdConst)]
 public partial class ToolbarData : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12636;
@@ -1787,6 +1820,7 @@ public partial class ToolbarData : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ToolbarData class.
@@ -1813,9 +1847,9 @@ public partial class ToolbarData : OpenXmlLeafElement
 ///<item><description>KeyMapEntry &lt;wne:keymap></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "keymaps")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class KeyMapCustomizations : KeymapsType
 {
@@ -1869,9 +1903,9 @@ public partial class KeyMapCustomizations : KeymapsType
 ///<item><description>KeyMapEntry &lt;wne:keymap></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(33, "keymapsBad")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MismatchedKeyMapCustomization : KeymapsType
 {
@@ -1923,9 +1957,9 @@ public partial class MismatchedKeyMapCustomization : KeymapsType
 ///<item><description>KeyMapEntry &lt;wne:keymap></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(KeyMapEntry))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 public abstract partial class KeymapsType : OpenXmlCompositeElement
 {
         
@@ -1982,9 +2016,10 @@ public abstract partial class KeymapsType : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(AllocatedCommandManifest))]
     [ChildElementInfo(typeof(ToolbarData))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "toolbars")]
+[Id(ElementTypeIdConst)]
 public partial class Toolbars : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12639;
@@ -2046,9 +2081,10 @@ public partial class Toolbars : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(AllocatedCommand))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "acds")]
+[Id(ElementTypeIdConst)]
 public partial class AllocatedCommands : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12640;
@@ -2103,9 +2139,10 @@ public partial class AllocatedCommands : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is wne:active.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "active")]
+[Id(ElementTypeIdConst)]
 public partial class RecordIncluded : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12641;
@@ -2122,6 +2159,7 @@ public partial class RecordIncluded : OpenXmlLeafElement
     [SchemaAttr(33, "val")]
     [Index(0)]
     public OnOffValue Val { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RecordIncluded class.
@@ -2143,9 +2181,10 @@ public partial class RecordIncluded : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is wne:hash.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "hash")]
+[Id(ElementTypeIdConst)]
 public partial class RecordHashCode : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12642;
@@ -2162,6 +2201,7 @@ public partial class RecordHashCode : OpenXmlLeafElement
     [SchemaAttr(33, "val")]
     [Index(0)]
     public IntegerValue Val { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the RecordHashCode class.
@@ -2192,9 +2232,10 @@ public partial class RecordHashCode : OpenXmlLeafElement
 
     [ChildElementInfo(typeof(RecordIncluded))]
     [ChildElementInfo(typeof(RecordHashCode))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "recipientData")]
+[Id(ElementTypeIdConst)]
 public partial class SingleDataSourceRecord : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12643;

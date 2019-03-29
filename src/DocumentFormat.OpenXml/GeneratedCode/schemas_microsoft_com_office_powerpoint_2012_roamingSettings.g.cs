@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 
@@ -13,9 +14,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pRoam:key.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(76, "key")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Key : OpenXmlLeafTextElement
 {
@@ -50,9 +51,9 @@ public partial class Key : OpenXmlLeafTextElement
 /// <para>This class is available in Office 2013 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is pRoam:value.</para>
 /// </summary>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(76, "value")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Value : OpenXmlLeafTextElement
 {
@@ -97,9 +98,10 @@ public partial class Value : OpenXmlLeafTextElement
 
     [ChildElementInfo(typeof(Key), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(Value), FileFormatVersions.Office2013)]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(76, "props")]
+[Id(ElementTypeIdConst)]
 public partial class RoamingProperty : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13438;

@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -15,9 +16,10 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
 /// <para> When the object is serialized out as xml, its qualified name is com14:compatSp.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(63, "compatSp")]
+[Id(ElementTypeIdConst)]
 public partial class CompatibilityShape : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13208;
@@ -32,6 +34,7 @@ public partial class CompatibilityShape : OpenXmlLeafElement
     [SchemaAttr(0, "spid")]
     [Index(0)]
     public StringValue ShapeId { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the CompatibilityShape class.

@@ -6,12 +6,67 @@
     <!-- Because of the size of the project, to facilitate  quick development, by default only single
          frameworks will be build. This is customizable with the following possible values:
 
-         - DevFramework40: Will only build for .NET 4.0
-         - DevFramework46: Will only build for .NET 4.6
-         - DevCore10: Will only build for .NET Core 1.0
-         - All: Will build for all platforms -->
-    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore10</ProjectLoadStyle>
+         - DevFramework40: .NET Framework 4.0
+         - DevFramework46: .NET Framework 4.6
+         - DevCore10:      .NET Core 1.0
+         - DevCore21:      .NET Core 2.1
+         - All: Will build for all platforms
+         -->
+    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore21</ProjectLoadStyle>
   </PropertyGroup>
+
+  <Choose>
+    <When Condition=" '$(ProjectLoadStyle)' == 'DevFramework40' ">
+      <PropertyGroup>
+        <ProductTargetFrameworks>net40</ProductTargetFrameworks>
+        <TestTargetFrameworks>net452</TestTargetFrameworks>
+        <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
+        <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
+        <BenchmarkTargetFrameworks>net461</BenchmarkTargetFrameworks>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(ProjectLoadStyle)' == 'DevFramework46' ">
+      <PropertyGroup>
+        <ProductTargetFrameworks>net46</ProductTargetFrameworks>
+        <TestTargetFrameworks>net46</TestTargetFrameworks>
+        <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
+        <BenchmarkTargetFrameworks>net461</BenchmarkTargetFrameworks>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(ProjectLoadStyle)' == 'DevCore10' ">
+      <PropertyGroup>
+        <ProductTargetFrameworks>netstandard1.3</ProductTargetFrameworks>
+        <TestTargetFrameworks>netcoreapp1.0</TestTargetFrameworks>
+        <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
+        <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
+        <BenchmarkTargetFrameworks>netcoreapp2.1</BenchmarkTargetFrameworks>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(ProjectLoadStyle)' == 'DevCore21' ">
+      <PropertyGroup>
+        <ProductTargetFrameworks>netstandard1.3</ProductTargetFrameworks>
+        <TestTargetFrameworks>netcoreapp2.1</TestTargetFrameworks>
+        <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
+        <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
+        <BenchmarkTargetFrameworks>netcoreapp2.1</BenchmarkTargetFrameworks>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(ProjectLoadStyle)' == 'All' ">
+      <PropertyGroup>
+        <!--
+        .NET Standard target must be first to avoid a ResXFileCodeGenerator issue
+        (tracked at https://github.com/dotnet/project-system/issues/1519)
+        -->
+        <ProductTargetFrameworks>netstandard1.3;net35;net40;net46</ProductTargetFrameworks>
+        <AssetsTargetFrameworks>net452;netstandard1.3</AssetsTargetFrameworks>
+        <TestTargetFrameworks>net452;net46;netcoreapp1.0;netcoreapp1.1;netcoreapp2.1</TestTargetFrameworks>
+        <BenchmarkTargetFrameworks>net461;netcoreapp2.1</BenchmarkTargetFrameworks>
+
+        <!-- Must disable this due to https://github.com/NuGet/Home/issues/7414 so .NET Core 1.x will build -->
+        <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
+      </PropertyGroup>
+    </When>
+  </Choose>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>

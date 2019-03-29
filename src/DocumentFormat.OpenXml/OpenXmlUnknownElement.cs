@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -12,6 +13,7 @@ namespace DocumentFormat.OpenXml
     /// Represents elements that are not defined in the Office Open XML ECMA standard.
     /// </summary>
     [OfficeAvailability(FileFormatVersions.None)]
+    [Id(ReservedElementTypeIds.OpenXmlUnknownElementId)]
     public class OpenXmlUnknownElement : OpenXmlCompositeElement
     {
         private string _namespaceUri;

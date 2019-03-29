@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 
@@ -21,9 +22,10 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
 /// </remarks>
 
     [ChildElementInfo(typeof(Schema))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(25, "schemaLibrary")]
+[Id(ElementTypeIdConst)]
 public partial class SchemaLibrary : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12468;
@@ -78,9 +80,10 @@ public partial class SchemaLibrary : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is sl:schema.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(25, "schema")]
+[Id(ElementTypeIdConst)]
 public partial class Schema : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12469;
@@ -97,6 +100,7 @@ public partial class Schema : OpenXmlLeafElement
     [SchemaAttr(25, "uri")]
     [Index(0)]
     public StringValue Uri { get; set; }
+	
     /// <summary>
     /// <para> Resource File Location.</para>
     /// <para>Represents the following attribute in the schema: sl:manifestLocation </para>
@@ -106,6 +110,7 @@ public partial class Schema : OpenXmlLeafElement
     [SchemaAttr(25, "manifestLocation")]
     [Index(1)]
     public StringValue ManifestLocation { get; set; }
+	
     /// <summary>
     /// <para> Custom XML Schema Location.</para>
     /// <para>Represents the following attribute in the schema: sl:schemaLocation </para>
@@ -115,6 +120,7 @@ public partial class Schema : OpenXmlLeafElement
     [SchemaAttr(25, "schemaLocation")]
     [Index(2)]
     public StringValue SchemaLocation { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the Schema class.

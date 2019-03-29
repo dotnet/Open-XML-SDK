@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net452;netstandard1.3</TargetFrameworks>
+    <TargetFrameworks>$(AssetsTargetFrameworks)</TargetFrameworks>
     <NoWarn>$(NoWarn);CA1822;CA1034</NoWarn>
     <IsTestProject>false</IsTestProject>
     <IsPackable>false</IsPackable>

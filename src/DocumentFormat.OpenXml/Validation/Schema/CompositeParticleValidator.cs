@@ -314,7 +314,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     break;
             }
 
-            if (validationContext.Element.CanContainsChild(child))
+            if (validationContext.Element.CanContainChild(child))
             {
                 // The child can be contained in the parent, but not follow the schema.
                 errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_UnexpectedElementContentExpectingComplex", child.XmlQualifiedName.ToString(), expectedChildren);

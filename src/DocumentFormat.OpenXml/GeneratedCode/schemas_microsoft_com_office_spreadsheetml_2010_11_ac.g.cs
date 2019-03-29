@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Spreadsheet;
@@ -15,9 +16,10 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
 /// <para> When the object is serialized out as xml, its qualified name is x15ac:absPath.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(74, "absPath")]
+[Id(ElementTypeIdConst)]
 public partial class AbsolutePath : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13434;
@@ -32,6 +34,7 @@ public partial class AbsolutePath : OpenXmlLeafElement
     [SchemaAttr(0, "url")]
     [Index(0)]
     public StringValue Url { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the AbsolutePath class.

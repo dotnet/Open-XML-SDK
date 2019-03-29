@@ -3,7 +3,7 @@
 
 using System;
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml.Framework
 {
     [AttributeUsage(AttributeTargets.Property, Inherited = true, AllowMultiple = false)]
     internal sealed class IndexAttribute : Attribute

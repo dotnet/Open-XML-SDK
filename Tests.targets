@@ -9,18 +9,50 @@
         <TestLogger Condition=" '$(TestLogger)' == '' ">trx</TestLogger>
       </PropertyGroup>
 
-      <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
-        <TestExe>dotnet.exe</TestExe>
-        <TestArgs>vstest /Framework:FrameworkCore10</TestArgs>
-      </PropertyGroup>
-
-      <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'net452' ">
-        <TestExe>vstest.console.exe</TestExe>
-        <TestArgs>/Framework:Framework45</TestArgs>
-      </PropertyGroup>
+      <Choose>
+        <When Condition="$(TargetFramework.StartsWith('netcoreapp'))">
+          <PropertyGroup>
+            <TestExe>dotnet.exe</TestExe>
+            <TestArgs>vstest /Framework:FrameworkCore10</TestArgs>
+          </PropertyGroup>
+        </When>
+        <Otherwise>
+          <PropertyGroup>
+            <TestExe>vstest.console.exe</TestExe>
+            <TestArgs>/Framework:Framework45</TestArgs>
+          </PropertyGroup>
+        </Otherwise>
+      </Choose>
 
       <ItemGroup>
+        <PackageReference Include="System.ValueTuple" Version="4.4.0" />
         <PackageReference Include="OpenCover" Version="4.6.519" Condition="$(EnableCodeCoverage)" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+        <PackageReference Include="NSubstitute" Version="3.1.0" />
+        <PackageReference Include="xunit" Version="2.4.1" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+      </ItemGroup>
+
+      <ItemGroup Condition="$(TargetFramework.StartsWith('netcoreapp1.'))">
+        <PackageReference Include="System.Xml.ReaderWriter" Version="4.3.1" />
+        <PackageReference Include="System.Xml.XmlDocument" Version="4.3.0" />
+        <PackageReference Include="System.Reflection.Extensions" Version="4.3.0" />
+        <PackageReference Include="System.Runtime.Extensions" Version="4.3.0" />
+      </ItemGroup>
+
+      <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+        <Reference Include="System" />
+        <Reference Include="Microsoft.CSharp" />
+      </ItemGroup>
+
+      <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
+        <Reference Include="System" />
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="WindowsBase" />
       </ItemGroup>
     </When>
   </Choose>

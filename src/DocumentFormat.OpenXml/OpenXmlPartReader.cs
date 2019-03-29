@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
@@ -736,7 +737,7 @@ namespace DocumentFormat.OpenXml
             }
 
             // create the root element object
-            OpenXmlElement rootElement = CreateElement(_xmlReader.NamespaceURI, _xmlReader.LocalName);
+            var rootElement = CreateElement(_xmlReader.NamespaceURI, _xmlReader.LocalName);
 
             if (rootElement == null)
             {
@@ -760,7 +761,7 @@ namespace DocumentFormat.OpenXml
             return true;
         }
 
-        private OpenXmlElement CreateElement(string namespaceUri, string name)
+        private static OpenXmlElement CreateElement(string namespaceUri, string name)
         {
             if (string.IsNullOrEmpty(name))
             {
@@ -768,7 +769,7 @@ namespace DocumentFormat.OpenXml
             }
 
             if (NamespaceIdMap.TryGetNamespaceId(namespaceUri, out byte nsId)
-                && PackageCache.Cache.CreateElement(GetType(), nsId, name) is OpenXmlElement element)
+                && PackageCache.Cache.ParseElement(typeof(OpenXmlPartRootElement)).Children.Create(nsId, name) is OpenXmlElement element)
             {
                 return element;
             }
@@ -795,8 +796,7 @@ namespace DocumentFormat.OpenXml
                     }
                     else
                     {
-                        OpenXmlAttribute attribute = new OpenXmlAttribute(_xmlReader.Prefix, _xmlReader.LocalName, _xmlReader.NamespaceURI, _xmlReader.Value);
-                        _attributeList.Add(attribute);
+                        _attributeList.Add(new OpenXmlAttribute(_xmlReader.Prefix, _xmlReader.LocalName, _xmlReader.NamespaceURI, _xmlReader.Value));
                     }
                 }
 

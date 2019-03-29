@@ -3,7 +3,7 @@
 
 using System.Xml;
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml.Framework
 {
     internal readonly struct ElementProperty<T>
     {

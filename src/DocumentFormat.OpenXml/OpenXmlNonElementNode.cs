@@ -1,9 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Diagnostics;
-using System.Globalization;
 using System.IO;
 using System.Xml;
 
@@ -14,6 +14,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents an Open XML non element node (i.e. PT, Comments, Entity, Notation, XmlDeclaration).
     /// </summary>
+    [Id(ReservedElementTypeIds.OpenXmlMiscNodeId)]
     public class OpenXmlMiscNode : OpenXmlElement
     {
         private const string strCDataSectionName = "#cdata-section";

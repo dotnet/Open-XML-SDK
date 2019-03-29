@@ -215,7 +215,7 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The specified oldChild is not a child of this element..
+        ///   Looks up a localized string similar to The specified argument is not a child of this element..
         /// </summary>
         internal static string ElementIsNotChild {
             get {

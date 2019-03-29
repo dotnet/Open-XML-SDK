@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 
@@ -18,10 +19,11 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
 ///<item><description>SchemaReferences &lt;ds:schemaRefs></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(SchemaReferences))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(20, "datastoreItem")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DataStoreItem : OpenXmlPartRootElement
 {
@@ -39,6 +41,7 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     [SchemaAttr(20, "itemID")]
     [Index(0)]
     public StringValue ItemId { get; set; }
+	
 
     
 	internal DataStoreItem(CustomXmlPropertiesPart ownerPart) : base (ownerPart){}
@@ -132,9 +135,10 @@ public partial class DataStoreItem : OpenXmlPartRootElement
 /// <para> When the object is serialized out as xml, its qualified name is ds:schemaRef.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(20, "schemaRef")]
+[Id(ElementTypeIdConst)]
 public partial class SchemaReference : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10901;
@@ -151,6 +155,7 @@ public partial class SchemaReference : OpenXmlLeafElement
     [SchemaAttr(20, "uri")]
     [Index(0)]
     public StringValue Uri { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the SchemaReference class.
@@ -179,9 +184,10 @@ public partial class SchemaReference : OpenXmlLeafElement
 /// </remarks>
 
     [ChildElementInfo(typeof(SchemaReference))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(20, "schemaRefs")]
+[Id(ElementTypeIdConst)]
 public partial class SchemaReferences : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10902;

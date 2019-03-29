@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -15,9 +16,10 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
 /// <para> When the object is serialized out as xml, its qualified name is a15:backgroundPr.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(67, "backgroundPr")]
+[Id(ElementTypeIdConst)]
 public partial class BackgroundProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13320;
@@ -32,6 +34,7 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     [SchemaAttr(0, "bwMode")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Mode { get; set; }
+	
     /// <summary>
     /// <para> bwPure.</para>
     /// <para>Represents the following attribute in the schema: bwPure </para>
@@ -39,6 +42,7 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     [SchemaAttr(0, "bwPure")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Pure { get; set; }
+	
     /// <summary>
     /// <para> bwNormal.</para>
     /// <para>Represents the following attribute in the schema: bwNormal </para>
@@ -46,6 +50,7 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     [SchemaAttr(0, "bwNormal")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Normal { get; set; }
+	
     /// <summary>
     /// <para> targetScreenSize.</para>
     /// <para>Represents the following attribute in the schema: targetScreenSize </para>
@@ -53,6 +58,7 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     [SchemaAttr(0, "targetScreenSize")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize> TargetScreenSize { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the BackgroundProperties class.
@@ -74,9 +80,10 @@ public partial class BackgroundProperties : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a15:nonVisualGroupProps.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(67, "nonVisualGroupProps")]
+[Id(ElementTypeIdConst)]
 public partial class NonVisualGroupProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13321;
@@ -91,6 +98,7 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
     [SchemaAttr(0, "isLegacyGroup")]
     [Index(0)]
     public BooleanValue IsLegacyGroup { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualGroupProperties class.
@@ -112,9 +120,10 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a15:objectPr.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(67, "objectPr")]
+[Id(ElementTypeIdConst)]
 public partial class ObjectProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13322;
@@ -129,6 +138,7 @@ public partial class ObjectProperties : OpenXmlLeafElement
     [SchemaAttr(0, "objectId")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> isActiveX.</para>
     /// <para>Represents the following attribute in the schema: isActiveX </para>
@@ -136,6 +146,7 @@ public partial class ObjectProperties : OpenXmlLeafElement
     [SchemaAttr(0, "isActiveX")]
     [Index(1)]
     public BooleanValue IsActiveX { get; set; }
+	
     /// <summary>
     /// <para> linkType.</para>
     /// <para>Represents the following attribute in the schema: linkType </para>
@@ -143,6 +154,7 @@ public partial class ObjectProperties : OpenXmlLeafElement
     [SchemaAttr(0, "linkType")]
     [Index(2)]
     public StringValue LinkType { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ObjectProperties class.
@@ -164,9 +176,10 @@ public partial class ObjectProperties : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is a15:signatureLine.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(67, "signatureLine")]
+[Id(ElementTypeIdConst)]
 public partial class SignatureLine : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13323;
@@ -181,6 +194,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "isSignatureLine")]
     [Index(0)]
     public BooleanValue IsSignatureLine { get; set; }
+	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
@@ -188,6 +202,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     [Index(1)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> provId.</para>
     /// <para>Represents the following attribute in the schema: provId </para>
@@ -195,6 +210,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "provId")]
     [Index(2)]
     public StringValue ProviderId { get; set; }
+	
     /// <summary>
     /// <para> signingInstructionsSet.</para>
     /// <para>Represents the following attribute in the schema: signingInstructionsSet </para>
@@ -202,6 +218,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "signingInstructionsSet")]
     [Index(3)]
     public BooleanValue SigningInstructionsSet { get; set; }
+	
     /// <summary>
     /// <para> allowComments.</para>
     /// <para>Represents the following attribute in the schema: allowComments </para>
@@ -209,6 +226,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "allowComments")]
     [Index(4)]
     public BooleanValue AllowComments { get; set; }
+	
     /// <summary>
     /// <para> showSignDate.</para>
     /// <para>Represents the following attribute in the schema: showSignDate </para>
@@ -216,6 +234,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "showSignDate")]
     [Index(5)]
     public BooleanValue ShowSignDate { get; set; }
+	
     /// <summary>
     /// <para> suggestedSigner.</para>
     /// <para>Represents the following attribute in the schema: suggestedSigner </para>
@@ -223,6 +242,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "suggestedSigner")]
     [Index(6)]
     public StringValue SuggestedSigner { get; set; }
+	
     /// <summary>
     /// <para> suggestedSigner2.</para>
     /// <para>Represents the following attribute in the schema: suggestedSigner2 </para>
@@ -230,6 +250,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "suggestedSigner2")]
     [Index(7)]
     public StringValue SuggestedSigner2 { get; set; }
+	
     /// <summary>
     /// <para> suggestedSignerEmail.</para>
     /// <para>Represents the following attribute in the schema: suggestedSignerEmail </para>
@@ -237,6 +258,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "suggestedSignerEmail")]
     [Index(8)]
     public StringValue SuggestedSignerEmail { get; set; }
+	
     /// <summary>
     /// <para> signingInstructions.</para>
     /// <para>Represents the following attribute in the schema: signingInstructions </para>
@@ -244,6 +266,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "signingInstructions")]
     [Index(9)]
     public StringValue SigningInstructions { get; set; }
+	
     /// <summary>
     /// <para> addlXml.</para>
     /// <para>Represents the following attribute in the schema: addlXml </para>
@@ -251,6 +274,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "addlXml")]
     [Index(10)]
     public StringValue AdditionalXml { get; set; }
+	
     /// <summary>
     /// <para> sigProvUrl.</para>
     /// <para>Represents the following attribute in the schema: sigProvUrl </para>
@@ -258,6 +282,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "sigProvUrl")]
     [Index(11)]
     public StringValue SignatureProviderUrl { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the SignatureLine class.
@@ -276,7 +301,6 @@ public partial class SignatureLine : OpenXmlLeafElement
 /// <summary>
 /// Defines the TargetScreenSize enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum TargetScreenSize
 {  
 	///<summary>

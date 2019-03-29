@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 
@@ -11,7 +12,6 @@ namespace DocumentFormat.OpenXml
 /// <summary>
 /// Defines the SpaceProcessingModeValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum SpaceProcessingModeValues
 {  
 	///<summary>

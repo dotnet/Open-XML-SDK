@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Collections.Concurrent;
 #endif
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml.Framework
 {
     /// <summary>
     /// A cache to hold elements that are relatively expensive to create. Common items held here are reflection related, including objects that hold data parsed from
@@ -22,30 +22,12 @@ namespace DocumentFormat.OpenXml
     /// </remarks>
     internal class PackageCache
     {
-        private readonly TypeConcurrentDictionary<ElementTypeInfo> _typeConstraintInfoCache = new TypeConcurrentDictionary<ElementTypeInfo>();
-        private readonly TypeConcurrentDictionary<PartConstraintCollection> _partConstraints = new TypeConcurrentDictionary<PartConstraintCollection>();
-        private readonly TypeConcurrentDictionary<PartConstraintCollection> _dataPartConstraints = new TypeConcurrentDictionary<PartConstraintCollection>();
-        private readonly TypeConcurrentDictionary<ReadOnlyArray<ElementProperty<OpenXmlSimpleType>>> _attributes = new TypeConcurrentDictionary<ReadOnlyArray<ElementProperty<OpenXmlSimpleType>>>();
-        private readonly TypeConcurrentDictionary<ReadOnlyArray<ElementProperty<OpenXmlElement>>> _elements = new TypeConcurrentDictionary<ReadOnlyArray<ElementProperty<OpenXmlElement>>>();
         private readonly TypeConcurrentDictionary<Func<OpenXmlSimpleType>> _simpleTypeFactory = new TypeConcurrentDictionary<Func<OpenXmlSimpleType>>();
         private readonly TypeConcurrentDictionary<Func<OpenXmlElement>> _elementFactory = new TypeConcurrentDictionary<Func<OpenXmlElement>>();
-        private readonly TypeConcurrentDictionary<ElementSchemaLookup> _factory = new TypeConcurrentDictionary<ElementSchemaLookup>();
+        private readonly TypeConcurrentDictionary<OpenXmlElementData> _elementData = new TypeConcurrentDictionary<OpenXmlElementData>();
+        private readonly TypeConcurrentDictionary<OpenXmlPartData> _partData = new TypeConcurrentDictionary<OpenXmlPartData>();
 
         public static PackageCache Cache { get; } = new PackageCache();
-
-        public ElementTypeInfo GetElementTypeInfo(Type type) => _typeConstraintInfoCache.GetOrAdd(type, ElementTypeInfo.Create);
-
-        public PartConstraintCollection GetPartConstraints(Type type) => _partConstraints.GetOrAdd(type, CreatePartConstraints);
-
-        public PartConstraintCollection GetDataPartConstraints(Type type) => _dataPartConstraints.GetOrAdd(type, CreateDataPartConstraints);
-
-        public ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> GetAttributes(Type type) => _attributes.GetOrAdd(type, CreateAttributes);
-
-        public ReadOnlyArray<ElementProperty<OpenXmlElement>> GetElements(Type type) => _elements.GetOrAdd(type, CreateElements);
-
-        public OpenXmlElement CreateElement(Type type, byte ns, string name) => _factory.GetOrAdd(type, CreateLookup).Create(ns, name);
-
-        public OpenXmlElement CreateElement(Type type) => GetFactory<OpenXmlElement>(type)();
 
         public Func<T> GetFactory<T>(Type type)
         {
@@ -63,15 +45,17 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private ElementSchemaLookup CreateLookup(Type type) => ElementSchemaLookup.CreateLookup(type, this);
+        public OpenXmlPartData ParsePart(Type type) => _partData.GetOrAdd(type, CreatePartData);
 
-        private ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> CreateAttributes(Type type) => ElementPropertyCollection.GetProperties(this, type);
+        public OpenXmlPartData ParsePart(OpenXmlPartContainer part) => ParsePart(part.GetType());
 
-        private ReadOnlyArray<ElementProperty<OpenXmlElement>> CreateElements(Type type) => ElementPropertyCollection.GetElements(this, type);
+        public OpenXmlElementData ParseElement(Type type) => _elementData.GetOrAdd(type, CreateElementData);
 
-        private PartConstraintCollection CreatePartConstraints(Type type) => PartConstraintCollection.Create<PartConstraintAttribute>(this, type);
+        public OpenXmlElementData ParseElement(OpenXmlElement element) => ParseElement(element.GetType());
 
-        private PartConstraintCollection CreateDataPartConstraints(Type type) => PartConstraintCollection.Create<DataPartConstraintAttribute>(this, type);
+        private OpenXmlPartData CreatePartData(Type type) => new OpenXmlPartData(type, ParseElement);
+
+        private OpenXmlElementData CreateElementData(Type type) => new OpenXmlElementData(type, this);
 
 #if NO_CONCURRENT_COLLECTIONS
         private sealed class TypeConcurrentDictionary<TValue>

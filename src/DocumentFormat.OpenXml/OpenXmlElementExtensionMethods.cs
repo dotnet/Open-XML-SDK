@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
@@ -136,56 +137,13 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Creates a collection of new OpenXmlElement from the element type IDs.
-        /// </summary>
-        /// <param name="parent">The parent element.</param>
-        /// <param name="elementIds">The IDs of the children elements.</param>
-        /// <returns>A collection of new OpenXmlElements.</returns>
-        /// <remarks>
-        /// This method use reflection to create the elements. So be aware the performance tax.
-        /// </remarks>
-        internal static ICollection<OpenXmlElement> CreateChildrenElementsByIds(this OpenXmlElement parent, IEnumerable<int> elementIds)
-        {
-            Debug.Assert(parent is OpenXmlCompositeElement);
-            Debug.Assert(elementIds != null);
-
-            List<OpenXmlElement> childElements = new List<OpenXmlElement>();
-
-            if (elementIds.Count() > 0)
-            {
-                // use reflection
-                var childElementTypeAttributes = parent.GetType().GetTypeInfo().GetCustomAttributes<ChildElementInfoAttribute>();
-
-                foreach (ChildElementInfoAttribute childElementTypeAttribute in childElementTypeAttributes)
-                {
-                    Type childType = childElementTypeAttribute.ElementType;
-
-                    var childElement = PackageCache.Cache.CreateElement(childType);
-
-                    foreach (var id in elementIds)
-                    {
-                        if (childElement.ElementTypeId == id)
-                        {
-                            childElements.Add(childElement);
-                        }
-                    }
-                }
-            }
-
-            return childElements;
-        }
-
-        internal static bool CanContainsChild(this OpenXmlElement parent, OpenXmlElement child)
+        internal static bool CanContainChild(this OpenXmlElement parent, OpenXmlElement child)
         {
             if (parent is OpenXmlCompositeElement)
             {
-                // use reflection
-                var childElementTypeAttributes = parent.GetType().GetTypeInfo().GetCustomAttributes<ChildElementInfoAttribute>();
-
-                foreach (ChildElementInfoAttribute childElementTypeAttribute in childElementTypeAttributes)
+                foreach (var element in parent.ElementData.Children.Elements)
                 {
-                    if (childElementTypeAttribute.ElementType.GetTypeInfo().IsAssignableFrom(child.GetType().GetTypeInfo()))
+                    if (element.Type.GetTypeInfo().IsAssignableFrom(child.GetType().GetTypeInfo()))
                     {
                         return true;
                     }

@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 
@@ -21,9 +22,10 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
 /// </remarks>
 
     [ChildElementInfo(typeof(ActiveXObjectProperty))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(35, "ocx")]
+[Id(ElementTypeIdConst)]
 public partial class ActiveXControlData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12688;
@@ -40,6 +42,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     [SchemaAttr(35, "classid")]
     [Index(0)]
     public StringValue ActiveXControlClassId { get; set; }
+	
     /// <summary>
     /// <para> license.</para>
     /// <para>Represents the following attribute in the schema: ax:license </para>
@@ -49,6 +52,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     [SchemaAttr(35, "license")]
     [Index(1)]
     public StringValue License { get; set; }
+	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
@@ -58,6 +62,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     [SchemaAttr(19, "id")]
     [Index(2)]
     public StringValue Id { get; set; }
+	
     /// <summary>
     /// <para> persistence.</para>
     /// <para>Represents the following attribute in the schema: ax:persistence </para>
@@ -67,6 +72,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     [SchemaAttr(35, "persistence")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ActiveXControlData class.
@@ -123,9 +129,10 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
 
     [ChildElementInfo(typeof(SharedComFont))]
     [ChildElementInfo(typeof(SharedComPicture))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(35, "ocxPr")]
+[Id(ElementTypeIdConst)]
 public partial class ActiveXObjectProperty : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12689;
@@ -142,6 +149,7 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     [SchemaAttr(35, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: ax:value </para>
@@ -151,6 +159,7 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     [SchemaAttr(35, "value")]
     [Index(1)]
     public StringValue Value { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the ActiveXObjectProperty class.
@@ -236,9 +245,10 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
 /// </remarks>
 
     [ChildElementInfo(typeof(ActiveXObjectProperty))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(35, "font")]
+[Id(ElementTypeIdConst)]
 public partial class SharedComFont : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12690;
@@ -255,6 +265,7 @@ public partial class SharedComFont : OpenXmlCompositeElement
     [SchemaAttr(35, "persistence")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence { get; set; }
+	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
@@ -264,6 +275,7 @@ public partial class SharedComFont : OpenXmlCompositeElement
     [SchemaAttr(19, "id")]
     [Index(1)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the SharedComFont class.
@@ -311,9 +323,10 @@ public partial class SharedComFont : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is ax:picture.</para>
 /// </summary>
 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(35, "picture")]
+[Id(ElementTypeIdConst)]
 public partial class SharedComPicture : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12691;
@@ -330,6 +343,7 @@ public partial class SharedComPicture : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the SharedComPicture class.
@@ -348,7 +362,6 @@ public partial class SharedComPicture : OpenXmlLeafElement
 /// <summary>
 /// Defines the PersistenceValues enumeration. 
 /// </summary> 
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum PersistenceValues
 {  
 	///<summary>

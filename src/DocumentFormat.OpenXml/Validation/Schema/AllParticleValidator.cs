@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     Debug.Assert(childParticle is ElementParticle);
 
-                    particleMatchInfo.ExpectedChildren.Add(childParticle.ElementId);
+                    particleMatchInfo.ExpectedChildren.Add(childParticle.ElementType);
                 }
 
                 return;
@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     if (!_childrenParticles[childParticle.ElementId])
                     {
-                        particleMatchInfo.ExpectedChildren.Add(childParticle.ElementId);
+                        particleMatchInfo.ExpectedChildren.Add(childParticle.ElementType);
                     }
                 }
 

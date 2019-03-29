@@ -1,17 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <!-- TargetFrameworks can be set to various combinations as described in Directory.Build.props -->
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevCore10' ">netcoreapp1.1</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework40' ">net46</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework46' ">net46</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'All' ">net46;netcoreapp1.1</TargetFrameworks>
+    <TargetFrameworks>$(BenchmarkTargetFrameworks)</TargetFrameworks>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <RuntimeIdentifiers Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">win7-x86</RuntimeIdentifiers>
-  </PropertyGroup>
-  
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <NoWarn>$(NoWarn);CA1822</NoWarn>

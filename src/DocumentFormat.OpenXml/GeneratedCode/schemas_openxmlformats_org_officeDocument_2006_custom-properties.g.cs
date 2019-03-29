@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.VariantTypes;
@@ -19,10 +20,11 @@ namespace DocumentFormat.OpenXml.CustomProperties
 ///<item><description>CustomDocumentProperty &lt;op:property></description></item>
 /// </list>
 /// </remarks>
-[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
+
     [ChildElementInfo(typeof(CustomDocumentProperty))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+
 [SchemaAttr(4, "Properties")]
+[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Properties : OpenXmlPartRootElement
 {
@@ -180,9 +182,10 @@ public partial class Properties : OpenXmlPartRootElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTVStreamData))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId))]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData))]
-[System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
+
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(4, "property")]
+[Id(ElementTypeIdConst)]
 public partial class CustomDocumentProperty : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10904;
@@ -197,6 +200,7 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     [SchemaAttr(0, "fmtid")]
     [Index(0)]
     public StringValue FormatId { get; set; }
+	
     /// <summary>
     /// <para> Property ID.</para>
     /// <para>Represents the following attribute in the schema: pid </para>
@@ -204,6 +208,7 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     [SchemaAttr(0, "pid")]
     [Index(1)]
     public Int32Value PropertyId { get; set; }
+	
     /// <summary>
     /// <para> Custom File Property Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -211,6 +216,7 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(2)]
     public StringValue Name { get; set; }
+	
     /// <summary>
     /// <para> Bookmark Link Target.</para>
     /// <para>Represents the following attribute in the schema: linkTarget </para>
@@ -218,6 +224,7 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     [SchemaAttr(0, "linkTarget")]
     [Index(3)]
     public StringValue LinkTarget { get; set; }
+	
 
     /// <summary>
     /// Initializes a new instance of the CustomDocumentProperty class.

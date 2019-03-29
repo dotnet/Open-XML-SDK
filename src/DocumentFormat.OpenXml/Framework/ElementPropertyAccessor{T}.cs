@@ -5,84 +5,26 @@ using System;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml.Framework
 {
     internal class ElementPropertyAccessor<T>
     {
-        private PropertyInfo _property;
-        private PackageCache _cache;
-        private Func<OpenXmlElement, T> _getter;
-        private Action<OpenXmlElement, T> _setter;
-        private Func<T> _activator;
+        private readonly Lazy<Func<OpenXmlElement, T>> _getter;
+        private readonly Lazy<Action<OpenXmlElement, T>> _setter;
+        private readonly Lazy<Func<T>> _activator;
 
-        public ElementPropertyAccessor(PackageCache cache, PropertyInfo property)
+        public ElementPropertyAccessor(Func<Type, Func<T>> activatorFactory, PropertyInfo property)
         {
-            _property = property;
-            _cache = cache;
+            _getter = new Lazy<Func<OpenXmlElement, T>>(() => CreateGetter(property), true);
+            _setter = new Lazy<Action<OpenXmlElement, T>>(() => CreateSetter(property), true);
+            _activator = new Lazy<Func<T>>(() => activatorFactory(property.PropertyType), true);
         }
 
-        public T Get(OpenXmlElement instance)
-        {
-            if (_getter is null)
-            {
-                lock (this)
-                {
-                    if (_getter is null)
-                    {
-                        _getter = CreateGetter(_property);
-                        CleanUp();
-                    }
-                }
-            }
+        public T Get(OpenXmlElement instance) => _getter.Value(instance);
 
-            return _getter(instance);
-        }
+        public void Set(OpenXmlElement instance, T value) => _setter.Value(instance, value);
 
-        public void Set(OpenXmlElement instance, T value)
-        {
-            if (_setter is null)
-            {
-                lock (this)
-                {
-                    if (_setter is null)
-                    {
-                        _setter = CreateSetter(_property);
-                        CleanUp();
-                    }
-                }
-            }
-
-            _setter(instance, value);
-        }
-
-        public T Create()
-        {
-            if (_activator is null)
-            {
-                lock (this)
-                {
-                    if (_activator is null)
-                    {
-                        _activator = _cache.GetFactory<T>(_property.PropertyType);
-                        _cache = null;
-                        CleanUp();
-                    }
-                }
-            }
-
-            return _activator();
-        }
-
-        /// <summary>
-        /// Once all delegates are created, we do not need to continue to hold onto <see cref="_property"/>
-        /// </summary>
-        private void CleanUp()
-        {
-            if (_getter is null && _setter is null && _activator is null)
-            {
-                _property = null;
-            }
-        }
+        public T Create() => _activator.Value();
 
         private static Func<OpenXmlElement, T> CreateGetter(PropertyInfo property)
         {

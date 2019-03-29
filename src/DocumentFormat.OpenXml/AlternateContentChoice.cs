@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml
@@ -9,6 +10,7 @@ namespace DocumentFormat.OpenXml
     /// Defines an mc:Choice element in mc:AlternateContent.
     /// </summary>
     [SchemaAttr(AlternateContent.Namespace, Name)]
+    [Id(ReservedElementTypeIds.AlternateContentChoiceId)]
     public class AlternateContentChoice : OpenXmlCompositeElement
     {
         private const string Name = "Choice";

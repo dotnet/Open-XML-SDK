@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace DocumentFormat.OpenXml.Packaging
+namespace DocumentFormat.OpenXml.Framework
 {
     internal class PartConstraintCollection : IReadOnlyDictionary<string, PartConstraintRule>
     {
@@ -20,14 +20,14 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        public static PartConstraintCollection Create<T>(PackageCache cache, Type type)
+        public static PartConstraintCollection Create<T>(Func<Type, OpenXmlElementData> dataFactory, Type type)
             where T : IConstraintAttribute
         {
             var collection = new PartConstraintCollection();
 
             foreach (var constraint in type.GetTypeInfo().GetCustomAttributes(inherit: false).OfType<T>())
             {
-                collection.Add(new PartConstraintRule(cache.GetElementTypeInfo(constraint.ConstraintType), constraint.MinOccursIsNonZero, constraint.MaxOccursGreatThanOne));
+                collection.Add(new PartConstraintRule(dataFactory(constraint.ConstraintType).Info, constraint.MinOccursIsNonZero, constraint.MaxOccursGreatThanOne));
             }
 
             if (collection.Count == 0)
