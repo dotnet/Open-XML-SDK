@@ -20,7 +20,3 @@ test_script:
 
 artifacts:
   - path: 'bin\**\*.nupkg'
-
-on_finish:
-  - ps:  Invoke-WebRequest https://kompat.io/downloads/kompat.exe -o kompat.exe
-  - cmd: kompat.exe -config compat.yml -version %GitVersion_NuGetVersionV2%
