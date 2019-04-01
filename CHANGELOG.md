@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Version 2.10.0
 ### Added
-- Added initial Office 2016 support, including `FileFormatVersion.Office2016`, `ExtendedChartPart` and a few other new schema elements (#583)
+- Added initial Office 2016 support, including `FileFormatVersion.Office2016`, `ExtendedChartPart` and other new schema elements (#583)
 
 ## Version 2.9.1 - 2019-03-13
 ### Changed
