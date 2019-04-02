@@ -33,6 +33,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(WordprocessingPeoplePart), false, false)]
     [PartConstraint(typeof(AlternativeFormatImportPart), false, true)]
     [PartConstraint(typeof(ChartPart), false, true)]
+    [PartConstraint(typeof(ExtendedChartPart), false, true)]
     [PartConstraint(typeof(DiagramColorsPart), false, true)]
     [PartConstraint(typeof(DiagramDataPart), false, true)]
     [PartConstraint(typeof(DiagramPersistLayoutPart), false, true)]
@@ -150,6 +151,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the EndnotesPart of the MainDocumentPart
         /// </summary>
         public EndnotesPart EndnotesPart => GetSubPartOfType<EndnotesPart>();
+
+        /// <summary>
+        /// Gets the ExtendedChartParts of the MainDocumentPart
+        /// </summary>
+        public IEnumerable<ExtendedChartPart> ExtendedChartParts => GetPartsOfType<ExtendedChartPart>();
 
         /// <summary>
         /// Gets the FontTablePart of the MainDocumentPart
@@ -618,6 +624,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new AlternativeFormatImportPart();
                 case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();
+                case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();
                 case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();
                 case DiagramDataPart.RelationshipTypeConstant:

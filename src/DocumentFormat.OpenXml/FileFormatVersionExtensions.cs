@@ -24,7 +24,8 @@ namespace DocumentFormat.OpenXml
         {
             return version == FileFormatVersions.Office2007
                 || version == FileFormatVersions.Office2010
-                || version == FileFormatVersions.Office2013;
+                || version == FileFormatVersions.Office2013
+                || version == FileFormatVersions.Office2016;
         }
 
         /// <summary>
@@ -37,7 +38,8 @@ namespace DocumentFormat.OpenXml
             const FileFormatVersions AllVersions =
                   FileFormatVersions.Office2007
                 | FileFormatVersions.Office2010
-                | FileFormatVersions.Office2013;
+                | FileFormatVersions.Office2013
+                | FileFormatVersions.Office2016;
 
             return version == AllVersions;
         }
@@ -54,12 +56,17 @@ namespace DocumentFormat.OpenXml
                 case FileFormatVersions.Office2007:
                     return FileFormatVersions.Office2007
                          | FileFormatVersions.Office2010
-                         | FileFormatVersions.Office2013;
+                         | FileFormatVersions.Office2013
+                         | FileFormatVersions.Office2016;
                 case FileFormatVersions.Office2010:
                     return FileFormatVersions.Office2010
-                         | FileFormatVersions.Office2013;
+                         | FileFormatVersions.Office2013
+                         | FileFormatVersions.Office2016;
                 case FileFormatVersions.Office2013:
-                    return FileFormatVersions.Office2013;
+                    return FileFormatVersions.Office2013
+                         | FileFormatVersions.Office2016;
+                case FileFormatVersions.Office2016:
+                    return FileFormatVersions.Office2016;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(version));
             }
@@ -123,6 +130,11 @@ namespace DocumentFormat.OpenXml
                 if ((FileFormatVersions.Office2013 & v) == FileFormatVersions.Office2013)
                 {
                     return 3;
+                }
+
+                if ((FileFormatVersions.Office2016 & v) == FileFormatVersions.Office2016)
+                {
+                    return 4;
                 }
 
                 throw new ArgumentOutOfRangeException(name);

@@ -13,6 +13,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
     [PartConstraint(typeof(ChartPart), false, true)]
+    [PartConstraint(typeof(ExtendedChartPart), false, true)]
     [PartConstraint(typeof(DiagramColorsPart), false, true)]
     [PartConstraint(typeof(DiagramDataPart), false, true)]
     [PartConstraint(typeof(DiagramPersistLayoutPart), false, true)]
@@ -71,6 +72,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the DiagramStyleParts of the DrawingsPart
         /// </summary>
         public IEnumerable<DiagramStylePart> DiagramStyleParts => GetPartsOfType<DiagramStylePart>();
+
+        /// <summary>
+        /// Gets the ExtendedChartParts of the DrawingsPart
+        /// </summary>
+        public IEnumerable<ExtendedChartPart> ExtendedChartParts => GetPartsOfType<ExtendedChartPart>();
 
         /// <summary>
         /// Gets the ImageParts of the DrawingsPart
@@ -249,6 +255,8 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();
+                case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();
                 case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();
                 case DiagramDataPart.RelationshipTypeConstant:

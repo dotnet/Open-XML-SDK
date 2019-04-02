@@ -98,6 +98,15 @@ namespace DocumentFormat.OpenXml.Framework
             { "http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing", "wp15", FileFormatVersions.Office2013 },
             { "http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings", "pRoam", FileFormatVersions.Office2013 },
             { "http://schemas.microsoft.com/office/drawing/2012/timeslicer", "tsle", FileFormatVersions.Office2013 },
+            { "http://schemas.microsoft.com/office/powerpoint/2015/main", "p16", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/drawing/2014/main", "a16", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/drawing/2014/chartex", "cx", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/drawing/2014/chart/ac", "c16ac", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/drawing/2014/chart", "c16", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xr", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2014/11/main", "x16", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2015/02/main", "x16r2", FileFormatVersions.Office2016 },
+            { "http://schemas.microsoft.com/office/word/2015/wordml/symex", "w16se", FileFormatVersions.Office2016 },
         };
 
         // This dictionary contains the Strict and Transitional namespaces pairs to be interpreted equivalent.

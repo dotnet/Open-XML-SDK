@@ -1776,11 +1776,27 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     public BooleanValue SpellingError { get; set; }
 	
     /// <summary>
+    /// <para> smtClean.</para>
+    /// <para>Represents the following attribute in the schema: smtClean </para>
+    /// </summary>
+    [SchemaAttr(0, "smtClean")]
+    [Index(16)]
+    public BooleanValue SmtClean { get; set; }
+	
+    /// <summary>
+    /// <para> smtId.</para>
+    /// <para>Represents the following attribute in the schema: smtId </para>
+    /// </summary>
+    [SchemaAttr(0, "smtId")]
+    [Index(17)]
+    public UInt32Value SmtId { get; set; }
+	
+    /// <summary>
     /// <para> bmk.</para>
     /// <para>Represents the following attribute in the schema: bmk </para>
     /// </summary>
     [SchemaAttr(0, "bmk")]
-    [Index(16)]
+    [Index(18)]
     public StringValue Bookmark { get; set; }
 	
 

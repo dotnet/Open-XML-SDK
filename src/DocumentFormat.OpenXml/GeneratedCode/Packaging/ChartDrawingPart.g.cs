@@ -13,6 +13,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
     [PartConstraint(typeof(ChartPart), false, false)]
+    [PartConstraint(typeof(ExtendedChartPart), false, false)]
     [PartConstraint(typeof(ImagePart), false, true)]
     public partial class ChartDrawingPart : OpenXmlPart, IFixedContentTypePart
     {
@@ -34,6 +35,11 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
+
+        /// <summary>
+        /// Gets the ExtendedChartPart of the ChartDrawingPart
+        /// </summary>
+        public ExtendedChartPart ExtendedChartPart => GetSubPartOfType<ExtendedChartPart>();
 
         /// <summary>
         /// Gets the ImageParts of the ChartDrawingPart
@@ -155,6 +161,8 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();
+                case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();
                 case ImagePart.RelationshipTypeConstant:
                     return new ImagePart();
             }

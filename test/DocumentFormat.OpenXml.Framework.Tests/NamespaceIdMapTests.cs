@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void NamespaceCount()
         {
-            Assert.Equal(78, NamespaceIdMap.Count);
+            Assert.Equal(87, NamespaceIdMap.Count);
         }
 
         [InlineData("", "", FileFormatVersions.None, 0)]
@@ -91,6 +91,15 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [InlineData("http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing", "wp15", FileFormatVersions.Office2013, 75)]
         [InlineData("http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings", "pRoam", FileFormatVersions.Office2013, 76)]
         [InlineData("http://schemas.microsoft.com/office/drawing/2012/timeslicer", "tsle", FileFormatVersions.Office2013, 77)]
+        [InlineData("http://schemas.microsoft.com/office/powerpoint/2015/main", "p16", FileFormatVersions.Office2016, 78)]
+        [InlineData("http://schemas.microsoft.com/office/drawing/2014/main", "a16", FileFormatVersions.Office2016, 79)]
+        [InlineData("http://schemas.microsoft.com/office/drawing/2014/chartex", "cx", FileFormatVersions.Office2016, 80)]
+        [InlineData("http://schemas.microsoft.com/office/drawing/2014/chart/ac", "c16ac", FileFormatVersions.Office2016, 81)]
+        [InlineData("http://schemas.microsoft.com/office/drawing/2014/chart", "c16", FileFormatVersions.Office2016, 82)]
+        [InlineData("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xr", FileFormatVersions.Office2016, 83)]
+        [InlineData("http://schemas.microsoft.com/office/spreadsheetml/2014/11/main", "x16", FileFormatVersions.Office2016, 84)]
+        [InlineData("http://schemas.microsoft.com/office/spreadsheetml/2015/02/main", "x16r2", FileFormatVersions.Office2016, 85)]
+        [InlineData("http://schemas.microsoft.com/office/word/2015/wordml/symex", "w16se", FileFormatVersions.Office2016, 86)]
         [Theory]
         public void NamespacePrefixTest(string ns, string prefix, FileFormatVersions version, byte id)
         {

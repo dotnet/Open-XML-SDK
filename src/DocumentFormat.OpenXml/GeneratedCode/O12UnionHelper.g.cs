@@ -279,197 +279,197 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             switch (redirectedRestriction.AttributeId)
             {
                 // property name: Width
-                case 2387:
-                    simpleValue = new UInt32Value();
-                    break;
-
-                // property name: VerticalSpace
                 case 2389:
                     simpleValue = new UInt32Value();
                     break;
 
+                // property name: VerticalSpace
+                case 2391:
+                    simpleValue = new UInt32Value();
+                    break;
+
                 // property name: HorizontalSpace
-                case 2390:
+                case 2392:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: X
-                case 2394:
-                    simpleValue = new Int32Value();
-                    break;
-
-                // property name: Y
                 case 2396:
                     simpleValue = new Int32Value();
                     break;
 
+                // property name: Y
+                case 2398:
+                    simpleValue = new Int32Value();
+                    break;
+
                 // property name: Before
-                case 2409:
+                case 2411:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: After
-                case 2412:
+                case 2414:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: Line
-                case 2415:
-                    simpleValue = new Int32Value();
-                    break;
-
-                // property name: Left
                 case 2417:
                     simpleValue = new Int32Value();
                     break;
 
+                // property name: Left
+                case 2419:
+                    simpleValue = new Int32Value();
+                    break;
+
                 // property name: Start
-                case 2418:
+                case 2420:
                     simpleValue = new Int32Value();
                     break;
 
                 // property name: Right
-                case 2421:
+                case 2423:
                     simpleValue = new Int32Value();
                     break;
 
                 // property name: End
-                case 2422:
+                case 2424:
                     simpleValue = new Int32Value();
                     break;
 
                 // property name: Hanging
-                case 2425:
-                    simpleValue = new UInt32Value();
-                    break;
-
-                // property name: FirstLine
                 case 2427:
                     simpleValue = new UInt32Value();
                     break;
 
+                // property name: FirstLine
+                case 2429:
+                    simpleValue = new UInt32Value();
+                    break;
+
                 // property name: Val
-                case 2473:
+                case 2475:
                     simpleValue = new Int32Value();
                     break;
 
                 // property name: Val
-                case 2474:
+                case 2476:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: Width
-                case 2589:
+                case 2591:
                     simpleValue = new Int32Value();
                     break;
 
                 // property name: Distance
-                case 2643:
+                case 2645:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: Space
-                case 2650:
+                case 2652:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: Val
-                case 2680:
+                case 2682:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Width
-                case 2686:
+                case 2688:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: Space
-                case 2687:
+                case 2689:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: Width
-                case 2704:
+                case 2706:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: Val
-                case 2732:
+                case 2734:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: LegacySpace
-                case 2738:
+                case 2740:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: LegacyIndent
-                case 2739:
+                case 2741:
                     simpleValue = new Int32Value();
                     break;
 
                 // property name: Val
-                case 2769:
+                case 2771:
                     simpleValue = new Int32Value();
                     break;
 
                 // property name: Percent
-                case 2847:
+                case 2849:
                     simpleValue = new Int32Value();
                     break;
 
                 // property name: Val
-                case 2872:
+                case 2874:
                     simpleValue = new HexBinaryValue();
                     break;
 
                 // property name: FontSize
-                case 2924:
+                case 2926:
                     simpleValue = new Int32Value();
                     break;
 
                 // property name: Val
-                case 2986:
+                case 2988:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Delay
-                case 2991:
+                case 2993:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: ShapeId
-                case 3071:
+                case 3073:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: AutoAdvance
-                case 3079:
+                case 3081:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: ShapeId
-                case 3080:
+                case 3082:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: ShapeId
-                case 3084:
+                case 3086:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: ShapeId
-                case 3089:
+                case 3091:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: AdvanceAfterTime
-                case 3150:
+                case 3152:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: ShapeId
-                case 3153:
+                case 3155:
                     simpleValue = new StringValue();
                     break;
 

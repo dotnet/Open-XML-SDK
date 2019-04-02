@@ -17,10 +17,13 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(FileFormatVersions.Office2007, true)]
         [InlineData(FileFormatVersions.Office2010, true)]
         [InlineData(FileFormatVersions.Office2013, true)]
+        [InlineData(FileFormatVersions.Office2016, true)]
         [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010, false)]
         [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2013, false)]
         [InlineData(FileFormatVersions.Office2010 | FileFormatVersions.Office2013, false)]
         [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013, false)]
+        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2016, false)]
+        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016, false)]
         [Theory]
         public void CheckAny(FileFormatVersions version, bool expected)
         {
@@ -31,10 +34,12 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(FileFormatVersions.Office2007, false)]
         [InlineData(FileFormatVersions.Office2010, false)]
         [InlineData(FileFormatVersions.Office2013, false)]
+        [InlineData(FileFormatVersions.Office2016, false)]
         [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010, false)]
         [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2013, false)]
         [InlineData(FileFormatVersions.Office2010 | FileFormatVersions.Office2013, false)]
-        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013, true)]
+        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013, false)]
+        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016, true)]
         [Theory]
         public void CheckAll(FileFormatVersions version, bool expected)
         {
@@ -45,6 +50,8 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010)]
         [InlineData(FileFormatVersions.Office2010 | FileFormatVersions.Office2013)]
         [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013)]
+        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2016)]
+        [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010 | FileFormatVersions.Office2013 | FileFormatVersions.Office2016)]
         [Theory]
         public void AndLaterExceptions(FileFormatVersions version)
         {
@@ -55,13 +62,21 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(FileFormatVersions.Office2007 | FileFormatVersions.Office2010, FileFormatVersions.Office2007, true)]
         [InlineData(FileFormatVersions.Office2010, FileFormatVersions.Office2007, true)]
         [InlineData(FileFormatVersions.Office2013, FileFormatVersions.Office2007, true)]
+        [InlineData(FileFormatVersions.Office2016, FileFormatVersions.Office2007, true)]
         [InlineData(FileFormatVersions.Office2007, FileFormatVersions.Office2010, false)]
         [InlineData(FileFormatVersions.Office2010, FileFormatVersions.Office2010, true)]
         [InlineData(FileFormatVersions.Office2010 | FileFormatVersions.Office2013, FileFormatVersions.Office2010, true)]
         [InlineData(FileFormatVersions.Office2013, FileFormatVersions.Office2010, true)]
+        [InlineData(FileFormatVersions.Office2016, FileFormatVersions.Office2010, true)]
         [InlineData(FileFormatVersions.Office2007, FileFormatVersions.Office2013, false)]
         [InlineData(FileFormatVersions.Office2010, FileFormatVersions.Office2013, false)]
         [InlineData(FileFormatVersions.Office2013, FileFormatVersions.Office2013, true)]
+        [InlineData(FileFormatVersions.Office2016, FileFormatVersions.Office2013, true)]
+        [InlineData(FileFormatVersions.Office2013 | FileFormatVersions.Office2016, FileFormatVersions.Office2013, true)]
+        [InlineData(FileFormatVersions.Office2007, FileFormatVersions.Office2016, false)]
+        [InlineData(FileFormatVersions.Office2010, FileFormatVersions.Office2016, false)]
+        [InlineData(FileFormatVersions.Office2013, FileFormatVersions.Office2016, false)]
+        [InlineData(FileFormatVersions.Office2016, FileFormatVersions.Office2016, true)]
         [Theory]
         public void CheckAtLeast(FileFormatVersions version, FileFormatVersions minimum, bool expected)
         {

@@ -14,6 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
     [PartConstraint(typeof(CustomXmlPart), false, true)]
     [PartConstraint(typeof(ChartPart), false, true)]
+    [PartConstraint(typeof(ExtendedChartPart), false, true)]
     [PartConstraint(typeof(DiagramColorsPart), false, true)]
     [PartConstraint(typeof(DiagramDataPart), false, true)]
     [PartConstraint(typeof(DiagramPersistLayoutPart), false, true)]
@@ -106,6 +107,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the EmbeddedPackageParts of the SlidePart
         /// </summary>
         public IEnumerable<EmbeddedPackagePart> EmbeddedPackageParts => GetPartsOfType<EmbeddedPackagePart>();
+
+        /// <summary>
+        /// Gets the ExtendedChartParts of the SlidePart
+        /// </summary>
+        public IEnumerable<ExtendedChartPart> ExtendedChartParts => GetPartsOfType<ExtendedChartPart>();
 
         /// <summary>
         /// Gets the ImageParts of the SlidePart
@@ -511,6 +517,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new CustomXmlPart();
                 case ChartPart.RelationshipTypeConstant:
                     return new ChartPart();
+                case ExtendedChartPart.RelationshipTypeConstant:
+                    return new ExtendedChartPart();
                 case DiagramColorsPart.RelationshipTypeConstant:
                     return new DiagramColorsPart();
                 case DiagramDataPart.RelationshipTypeConstant:

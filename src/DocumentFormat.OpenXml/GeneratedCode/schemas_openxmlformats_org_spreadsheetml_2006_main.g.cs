@@ -4899,14 +4899,13 @@ public partial class Workbook : OpenXmlPartRootElement
 	}
     
     /// <summary>
-    /// <para> AbsolutePath, this property is only available in Office2013.</para>
+    /// <para> AbsolutePath.</para>
     /// <para> Represents the following element tag in the schema: x15ac:absPath </para>
     /// </summary>
     /// <remark>
     /// xmlns:x15ac = http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac
     /// </remark>
 	[Index(3)]
-[OfficeAvailability(FileFormatVersions.Office2013)]
     public DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath AbsolutePath
 	{
         get => GetElement<DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath>(3);
@@ -21918,14 +21917,13 @@ public partial class DataValidation : OpenXmlCompositeElement
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
         /// <summary>
-    /// <para> List, this property is only available in Office2013.</para>
+    /// <para> List.</para>
     /// <para> Represents the following element tag in the schema: x12ac:list </para>
     /// </summary>
     /// <remark>
     /// xmlns:x12ac = http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac
     /// </remark>
 	[Index(0)]
-[OfficeAvailability(FileFormatVersions.Office2013)]
     public DocumentFormat.OpenXml.Office2010.ExcelAc.List List
 	{
         get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>(0);

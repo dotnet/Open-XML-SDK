@@ -285,197 +285,197 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             switch (redirectedRestriction.AttributeId)
             {
                 // property name: Width
-                case 2389:
-                    simpleValue = new StringValue();
-                    break;
-
-                // property name: VerticalSpace
                 case 2391:
                     simpleValue = new StringValue();
                     break;
 
+                // property name: VerticalSpace
+                case 2393:
+                    simpleValue = new StringValue();
+                    break;
+
                 // property name: HorizontalSpace
-                case 2392:
+                case 2394:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: X
-                case 2396:
-                    simpleValue = new StringValue();
-                    break;
-
-                // property name: Y
                 case 2398:
                     simpleValue = new StringValue();
                     break;
 
+                // property name: Y
+                case 2400:
+                    simpleValue = new StringValue();
+                    break;
+
                 // property name: Before
-                case 2411:
+                case 2413:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: After
-                case 2414:
+                case 2416:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Line
-                case 2417:
-                    simpleValue = new StringValue();
-                    break;
-
-                // property name: Left
                 case 2419:
                     simpleValue = new StringValue();
                     break;
 
+                // property name: Left
+                case 2421:
+                    simpleValue = new StringValue();
+                    break;
+
                 // property name: Start
-                case 2420:
+                case 2422:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Right
-                case 2423:
+                case 2425:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: End
-                case 2424:
+                case 2426:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Hanging
-                case 2427:
-                    simpleValue = new StringValue();
-                    break;
-
-                // property name: FirstLine
                 case 2429:
                     simpleValue = new StringValue();
                     break;
 
-                // property name: Val
-                case 2475:
+                // property name: FirstLine
+                case 2431:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Val
-                case 2476:
+                case 2477:
+                    simpleValue = new StringValue();
+                    break;
+
+                // property name: Val
+                case 2478:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Width
-                case 2591:
+                case 2593:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Distance
-                case 2645:
+                case 2647:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Space
-                case 2652:
+                case 2654:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Val
-                case 2682:
+                case 2684:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Width
-                case 2688:
+                case 2690:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Space
-                case 2689:
+                case 2691:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Width
-                case 2706:
+                case 2708:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Val
-                case 2734:
+                case 2736:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: LegacySpace
-                case 2740:
+                case 2742:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: LegacyIndent
-                case 2741:
+                case 2743:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Val
-                case 2771:
+                case 2773:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Percent
-                case 2849:
+                case 2851:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Val
-                case 2874:
+                case 2876:
                     simpleValue = new EnumValue<DocumentFormat.OpenXml.Wordprocessing.StylePaneSortMethodsValues>();
                     break;
 
                 // property name: FontSize
-                case 2926:
+                case 2928:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Val
-                case 2988:
+                case 2990:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: Delay
-                case 2993:
+                case 2995:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: ShapeId
-                case 3073:
+                case 3075:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: AutoAdvance
-                case 3081:
+                case 3083:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: ShapeId
-                case 3082:
+                case 3084:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: ShapeId
-                case 3086:
+                case 3088:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: ShapeId
-                case 3091:
+                case 3093:
                     simpleValue = new UInt32Value();
                     break;
 
                 // property name: AdvanceAfterTime
-                case 3152:
+                case 3154:
                     simpleValue = new StringValue();
                     break;
 
                 // property name: ShapeId
-                case 3155:
+                case 3157:
                     simpleValue = new UInt32Value();
                     break;
 

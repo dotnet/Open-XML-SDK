@@ -24520,14 +24520,13 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
 	}
     
     /// <summary>
-    /// <para> FootnoteColumns, this property is only available in Office2013.</para>
+    /// <para> FootnoteColumns.</para>
     /// <para> Represents the following element tag in the schema: w15:footnoteColumns </para>
     /// </summary>
     /// <remark>
     /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
     /// </remark>
 	[Index(19)]
-[OfficeAvailability(FileFormatVersions.Office2013)]
     public DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns FootnoteColumns
 	{
         get => GetElement<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>(19);
