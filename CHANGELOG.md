@@ -7,7 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Version 2.10.0
 ### Added
 - Added initial Office 2016 support, including `FileFormatVersion.Office2016`, `ExtendedChartPart` and other new schema elements (#586)
-- Add .NET Standard 2.0 target (#587)
+- Added .NET Standard 2.0 target (#587)
+- Exposed `IXmlNamespaceResolver` from `XmlPath` instead of formatted list of strings to expose namespace/prefix mapping (#536)
+- Implemented `IComparable<T>` and `IEquatable<T>` on `OpenXmlComparableSimpleValue` to allow comparisons without boxing (#550)
+
+### Changes
+- Consolidated data for element children/properties to reduce duplication (#540, #547, #548)
+
+### Fixed
+- Fixed some documentation inconsistencies (#582)
 
 ## Version 2.9.1 - 2019-03-13
 ### Changed
