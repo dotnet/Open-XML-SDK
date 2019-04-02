@@ -44,10 +44,9 @@
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'DevCore21' ">
       <PropertyGroup>
-        <ProductTargetFrameworks>netstandard1.3</ProductTargetFrameworks>
+        <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
         <TestTargetFrameworks>netcoreapp2.1</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
-        <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
         <BenchmarkTargetFrameworks>netcoreapp2.1</BenchmarkTargetFrameworks>
       </PropertyGroup>
     </When>
@@ -57,7 +56,7 @@
         .NET Standard target must be first to avoid a ResXFileCodeGenerator issue
         (tracked at https://github.com/dotnet/project-system/issues/1519)
         -->
-        <ProductTargetFrameworks>netstandard1.3;net35;net40;net46</ProductTargetFrameworks>
+        <ProductTargetFrameworks>netstandard1.3;netstandard2.0;net35;net40;net46</ProductTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard1.3</AssetsTargetFrameworks>
         <TestTargetFrameworks>net452;net46;netcoreapp1.0;netcoreapp1.1;netcoreapp2.1</TestTargetFrameworks>
         <BenchmarkTargetFrameworks>net461;netcoreapp2.1</BenchmarkTargetFrameworks>

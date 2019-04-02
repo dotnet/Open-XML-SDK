@@ -71,6 +71,17 @@
         <Compile Include="System\Reflection\SubclassExtensions.cs" />
       </ItemGroup>
     </When>
+
+    <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+      <ItemGroup>
+        <PackageReference Include="System.IO.Packaging" Version="4.5.0" />
+      </ItemGroup>
+
+      <!-- In order to support .NET Native, we need to include an appropriate .rd.xml -->
+      <ItemGroup>
+        <EmbeddedResource Include="Properties\DocumentFormat.OpenXml.rd.xml" />
+      </ItemGroup>
+    </When>
   </Choose>
 
   <!-- Include the constraint data that are stored in bin files -->
