@@ -42,6 +42,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public virtual bool HasValue => TextValue != null;
 
+        internal abstract bool IsValid { get; }
+
         /// <summary>
         /// Gets or sets the inner XML text.
         /// </summary>
@@ -51,6 +53,8 @@ namespace DocumentFormat.OpenXml
 
             set => TextValue = value;
         }
+
+        internal virtual bool IsEnum => false;
 
         /// <summary>
         /// Returns a String that represents the current value.

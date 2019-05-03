@@ -56,6 +56,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
         [SchemaAttr(23, "element")]
+        [StringValidator(IsNcName = true)]
         [Index(0)]
         public StringValue Element { get; set; }
 

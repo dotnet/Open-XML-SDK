@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Validation;
 using System;
 
 namespace DocumentFormat.OpenXml
@@ -9,7 +11,7 @@ namespace DocumentFormat.OpenXml
     /// Defines an OfficeAvailabilityAttribute class to indicate whether the property is available in a specific version of an Office application.
     /// </summary>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class | AttributeTargets.Field)]
-    public sealed class OfficeAvailabilityAttribute : Attribute
+    public sealed class OfficeAvailabilityAttribute : Attribute, IOpenXmlSimpleTypeValidator
     {
         /// <summary>
         /// Gets the Office version of the available property.
@@ -24,6 +26,17 @@ namespace DocumentFormat.OpenXml
         public OfficeAvailabilityAttribute(FileFormatVersions officeVersion)
         {
             OfficeVersion = officeVersion;
+        }
+
+        void IOpenXmlSimpleTypeValidator.Validate(ValidatorContext context)
+        {
+            if (!context.Version.AtLeast(OfficeVersion) && context.Value?.HasValue == true && !context.McContext.IsIgnorableNs(context.QName.Namespace))
+            {
+                context.CreateError(
+                    id: "Sch_UndeclaredAttribute",
+                    description: SR.Format(ValidationResources.Sch_UndeclaredAttribute, context.QName),
+                    errorType: ValidationErrorType.Schema);
+            }
         }
     }
 }

@@ -37,6 +37,10 @@ namespace DocumentFormat.OpenXml
         {
         }
 
+        internal override bool IsValid => new Validation.Schema.Restrictions.StringRestriction().ValidateValueType(this);
+
+        internal virtual int Length => InnerText?.Length ?? 0;
+
         /// <summary>
         /// Gets or sets the string value.
         /// </summary>

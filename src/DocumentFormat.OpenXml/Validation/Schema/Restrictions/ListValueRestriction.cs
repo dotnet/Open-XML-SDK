@@ -31,8 +31,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             {
                 foreach (var itemValue in value)
                 {
-                    if (!ListItemType.ValidateValueType(itemValue) ||
-                        ListItemType.Validate(itemValue) != RestrictionField.None)
+                    if (itemValue != null && !itemValue.IsValid)
                     {
                         return false;
                     }

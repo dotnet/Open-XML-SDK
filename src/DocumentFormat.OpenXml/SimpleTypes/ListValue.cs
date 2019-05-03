@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Diagnostics;
-using System.Linq;
 using System.Text;
 
 namespace DocumentFormat.OpenXml
@@ -60,6 +59,27 @@ namespace DocumentFormat.OpenXml
         public ListValue(ListValue<T> source)
             : this(source.Items)
         {
+        }
+
+        internal override bool IsValid
+        {
+            get
+            {
+                if (HasValue)
+                {
+                    foreach (var itemValue in this)
+                    {
+                        if (itemValue != null && !itemValue.IsValid)
+                        {
+                            return false;
+                        }
+                    }
+
+                    return true;
+                }
+
+                return false;
+            }
         }
 
         /// <inheritdoc/>

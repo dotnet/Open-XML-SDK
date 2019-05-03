@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml
     /// Represent the xsd:hexBinary value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class HexBinaryValue : OpenXmlComparableSimpleReference<string>
+    public class HexBinaryValue : StringValue
     {
         /// <summary>
         /// Initializes a new instance of the HexBinaryValue class.
@@ -33,9 +33,13 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="source">The source HexBinaryValue class.</param>
         public HexBinaryValue(HexBinaryValue source)
-            : base(source)
+            : base((StringValue)source)
         {
         }
+
+        internal override bool IsValid => new Validation.Schema.Restrictions.HexBinaryRestriction().ValidateValueType(this);
+
+        internal override int Length => (InnerText?.Length ?? 0) / 2;
 
         /// <summary>
         /// Gets or sets the hex binary value
@@ -76,7 +80,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A String value to use to create a new HexBinaryValue object.</param>
         /// <returns>A HexBinaryValue object that corresponds to the value parameter.</returns>
-        public static HexBinaryValue FromString(string value)
+        public static new HexBinaryValue FromString(string value)
         {
             return new HexBinaryValue(value);
         }

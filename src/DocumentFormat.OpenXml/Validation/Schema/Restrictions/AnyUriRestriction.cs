@@ -30,10 +30,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
-            Uri result = null;
             Debug.Assert(attributeValue != null);
-            string uriString = attributeValue.InnerText;
 
+            return Validate(attributeValue.InnerText);
+        }
+
+        public static bool Validate(string uriString)
+        {
             // code copied from XmlConvert.TryToUri()
             if ((uriString != null) && (uriString.Length > 0))
             {
@@ -44,7 +47,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 }
             }
 
-            if (!Uri.TryCreate(uriString, UriHelper.RelativeOrAbsolute, out result))
+            if (!Uri.TryCreate(uriString, UriHelper.RelativeOrAbsolute, out _))
             {
                 return false;
             }

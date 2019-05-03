@@ -99,6 +99,16 @@ namespace DocumentFormat.OpenXml
             return new XmlPath(element);
         }
 
+        internal static XmlPath GetXPath(OpenXmlPart part)
+        {
+            if (part == null)
+            {
+                return null;
+            }
+
+            return new XmlPath(part);
+        }
+
         private static string TryBuildXPath(Stack<OpenXmlElement> elements, out XmlNamespaceManager namespaces)
         {
             if (elements.Count == 0)

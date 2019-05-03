@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System.Collections.Generic;
@@ -84,6 +85,11 @@ namespace DocumentFormat.OpenXml.Validation
         /// When the errors >= MaxNumberOfErrors, errors will not be recorded, and MaxNumberOfErrorsEvent will be fired.
         /// </summary>
         public int MaxNumberOfErrors { get; set; }
+
+        public ValidatorContext ToContext(OpenXmlSimpleType simple, ElementProperty<OpenXmlSimpleType> state, bool isAttribute)
+        {
+            return new ValidatorContext(simple, FileFormat, Part, Element, state, isAttribute, McContext, AddError);
+        }
 
         public void AddError(ValidationErrorInfo error)
         {

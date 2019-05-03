@@ -3,8 +3,8 @@
 
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Validation.Schema.Restrictions;
+using System;
 using System.Diagnostics;
-using System.Globalization;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             SchemaTypeData schemaTypeData = _sdbSchemaDatas.GetSchemaTypeData(theElement);
 
-            ValidateAttributes(validationContext, schemaTypeData);
+            ValidateAttributes(validationContext);
 
             // validate particles
             if (theElement is OpenXmlLeafTextElement)
@@ -95,78 +95,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Validate the attributes constraint.
         /// </summary>
         /// <param name="validationContext">The validation context.</param>
-        /// <param name="schemaTypeData">The constraint data of the schema type.</param>
-        private static void ValidateAttributes(ValidationContext validationContext, SchemaTypeData schemaTypeData)
+        private static void ValidateAttributes(ValidationContext validationContext)
         {
             var element = validationContext.Element;
 
-            Debug.Assert(schemaTypeData.AttributeConstraintsCount == 0 || element.Attributes.Length == schemaTypeData.AttributeConstraintsCount);
-
             ValidationErrorInfo errorInfo;
 
-            // validate xsd:use on attributes
-            for (int i = 0; i < schemaTypeData.AttributeConstraintsCount; i++)
+            foreach (var attribute in element.Attributes)
             {
-                var attributeConstraint = schemaTypeData.AttributeConstraints[i];
-
-                if (attributeConstraint.SupportedVersion.Includes(validationContext.FileFormat))
-                {
-                    // only check the attribute constraints defined in the specified file format version.
-                    switch (attributeConstraint.XsdAttributeUse)
-                    {
-                        case XsdAttributeUse.Required:
-                            var attribute = element.Attributes[i];
-
-                            if (!attribute.HasValue)
-                            {
-                                string attributeQname = attribute.Property.GetQName().ToString();
-
-                                // error: miss required attribute
-                                errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_MissRequiredAttribute", attributeQname);
-                                errorInfo.SetDebugField(attributeQname, "Sch_MissRequiredAttribute");
-                                validationContext.AddError(errorInfo);
-                            }
-
-                            break;
-
-                        case XsdAttributeUse.None: // none, so use default "optional"
-                        case XsdAttributeUse.Optional:
-                            break;
-
-                        case XsdAttributeUse.Prohibited: // no "prohibited" in Ecma at now.
-                        default:
-                            Debug.Assert(false);
-                            break;
-                    }
-
-                    if (element.Attributes[i].HasValue)
-                    {
-                        OpenXmlSimpleType attributeValue = element.Attributes[i].Value;
-
-                        string attributeQname = element.Attributes[i].Property.GetQName().ToString();
-
-                        ValidateValue(validationContext, attributeConstraint.SimpleTypeConstraint, attributeValue, attributeQname, true);
-                    }
-                }
-                else
-                {
-                    if (element.Attributes[i].HasValue)
-                    {
-                        // The attribute is not defined in the specified version, report error.
-                        if (validationContext.McContext.IsIgnorableNs(element.Attributes[i].Property.Namespace))
-                        {
-                            // Ignorable attribute, no error.
-                        }
-                        else
-                        {
-                            // emit error
-                            string attributeQname = element.Attributes[i].Property.GetQName().ToString();
-                            errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_UndeclaredAttribute", attributeQname);
-                            errorInfo.SetDebugField(attributeQname, "Sch_UndeclaredAttribute");
-                            validationContext.AddError(errorInfo);
-                        }
-                    }
-                }
+                ValidateValue(validationContext, attribute.Property.Validators, attribute.Value, attribute.Property.GetQName().ToString(), attribute.Property, true);
             }
 
             // all unknown attributes (attributes not defined in schema) are in ExtendedAttributes.
@@ -193,240 +130,19 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
 
-        /// <summary>
-        /// Validate the value according to the simpleTypeConstraint.
-        /// </summary>
-        /// <param name="validationContext">The validation context.</param>
-        /// <param name="simpleTypeConstraint">The constraint data of the simple type.</param>
-        /// <param name="value">The value to be validated.</param>
-        /// <param name="qname">The QualifiedName to be used in the error message.</param>
-        /// <param name="isAttribute">Error message targeting attribute (or element).</param>
-        internal static void ValidateValue(ValidationContext validationContext, SimpleTypeRestriction simpleTypeConstraint,
-                                                                       OpenXmlSimpleType value, string qname, bool isAttribute)
+        internal static void ValidateValue(ValidationContext validationContext, ValidatorCollection validators, OpenXmlSimpleType value, string qname, ElementProperty<OpenXmlSimpleType> state, bool isAttribute)
         {
             var element = validationContext.Element;
-            string errorMessageResourceId;
-            ValidationErrorInfo errorInfo;
-            string subMessage;
+            var errors = validationContext.Errors.Count;
 
-            // special case, the type is different in Office2007 and Office2010.
-            if (simpleTypeConstraint is RedirectedRestriction redirectRestriction)
+            foreach (var validator in validators)
             {
-                var targetValue = redirectRestriction.ConvertValue(value);
-                ValidateValue(validationContext, redirectRestriction.TargetRestriction, targetValue, qname, isAttribute);
-                return;
-            }
+                validator.Validate(validationContext.ToContext(value, state, isAttribute));
 
-            if (isAttribute)
-            {
-                errorMessageResourceId = "Sch_AttributeValueDataTypeDetailed";
-            }
-            else
-            {
-                errorMessageResourceId = "Sch_ElementValueDataTypeDetailed";
-            }
-
-            // first, check whether the string is valid according the primitive type
-            if (!simpleTypeConstraint.ValidateValueType(value))
-            {
-                if (simpleTypeConstraint.IsEnum)
+                // Break early if validation has hit an error
+                if (errors != validationContext.Errors.Count)
                 {
-                    // enum is wrong
-                    errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, ValidationResources.Sch_EnumerationConstraintFailed);
-                    errorInfo.SetDebugField(isAttribute ? qname : null, "Sch_EnumerationConstraintFailed");
-                }
-                else if (simpleTypeConstraint.XsdType == XsdType.Union)
-                {
-                    errorInfo = validationContext.ComposeSchemaValidationError(element, null, isAttribute ? "Sch_AttributeUnionFailedEx" : "Sch_ElementUnionFailedEx", qname, value.InnerText);
-                    errorInfo.SetDebugField(isAttribute ? qname : null, null);
-                }
-                else if (string.IsNullOrEmpty(value.InnerText))
-                {
-                    errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, isAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue);
-                    errorInfo.SetDebugField(isAttribute ? qname : null, isAttribute ? "Sch_EmptyAttributeValue" : "Sch_EmptyElementValue");
-                }
-                else if (simpleTypeConstraint.XsdType == XsdType.SpecialBoolean)
-                {
-                    // special boolean is ST_OnOff which is enum in the schema.
-                    errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, ValidationResources.Sch_EnumerationConstraintFailed);
-                    errorInfo.SetDebugField(isAttribute ? qname : null, "Sch_EnumerationConstraintFailed");
-                }
-                else if (simpleTypeConstraint.IsList)
-                {
-                    // List
-                    errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, string.Empty);
-                    errorInfo.SetDebugField(isAttribute ? qname : null, null);
-                }
-                else
-                {
-                    subMessage = SR.Format(ValidationResources.Sch_StringIsNotValidValue, value.InnerText, simpleTypeConstraint.ClrTypeName);
-                    errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
-                    errorInfo.SetDebugField(isAttribute ? qname : null, "Sch_StringIsNotValidValue");
-                }
-
-                validationContext.AddError(errorInfo);
-            }
-            else
-            {
-                bool validateConstraints = true;
-
-                switch (simpleTypeConstraint.XsdType)
-                {
-                    case XsdType.Enum:
-                    case XsdType.Boolean:
-                    case XsdType.DateTime:
-                    case XsdType.SpecialBoolean:
-                        Debug.Assert(simpleTypeConstraint.Pattern == null);
-                        Debug.Assert(simpleTypeConstraint.RestrictionField == RestrictionField.None);
-
-                        // no other facets.
-                        validateConstraints = false;
-                        break;
-
-                    case XsdType.NonNegativeInteger:
-                    case XsdType.PositiveInteger:
-                    case XsdType.Byte:
-                    case XsdType.UnsignedByte:
-                    case XsdType.Short:
-                    case XsdType.UnsignedShort:
-                    case XsdType.Int:
-                    case XsdType.UnsignedInt:
-                    case XsdType.Long:
-                    case XsdType.UnsignedLong:
-                    case XsdType.Float:
-                    case XsdType.Double:
-                    case XsdType.Decimal:
-                    case XsdType.Integer: // TODO: integer should be decimal, while in current the CodeGen generate Int32 instead.
-                        Debug.Assert(simpleTypeConstraint.Pattern == null);
-                        Debug.Assert((simpleTypeConstraint.RestrictionField & RestrictionField.LengthRestriction) == RestrictionField.None);
-                        break;
-
-                    case XsdType.String:
-                    case XsdType.Token:
-                    case XsdType.HexBinary:
-                    case XsdType.Base64Binary:
-                    case XsdType.AnyURI:
-                    case XsdType.QName:
-                    case XsdType.ID:                        // no pattern defined for numeric type in Ecma376
-                    case XsdType.NCName:
-                    case XsdType.IDREF:
-                    case XsdType.Language:
-                        Debug.Assert((simpleTypeConstraint.RestrictionField & RestrictionField.MinMaxRestriction) == RestrictionField.None);
-                        break;
-
-                    case XsdType.List:
-                        Debug.Assert(simpleTypeConstraint.Pattern == null);
-                        Debug.Assert(simpleTypeConstraint.RestrictionField == RestrictionField.None);
-
-                        // no other facets in current Ecma376.
-                        validateConstraints = false;
-
-                        break;
-
-                    case XsdType.Union:
-                        Debug.Assert(simpleTypeConstraint.Pattern == null);
-                        Debug.Assert(simpleTypeConstraint.RestrictionField == RestrictionField.None);
-
-                        // no other facets.
-                        validateConstraints = false;
-                        break;
-
-                    default:
-                        Debug.Assert(false);
-                        break;
-                }
-
-                if (validateConstraints)
-                {
-                    var errorRestriction = simpleTypeConstraint.Validate(value);
-                    if (errorRestriction != RestrictionField.None)
-                    {
-                        if ((errorRestriction & RestrictionField.MinInclusive) == RestrictionField.MinInclusive)
-                        {
-                            subMessage = SR.Format(ValidationResources.Sch_MinInclusiveConstraintFailed, simpleTypeConstraint.GetRestrictionValue(RestrictionField.MinInclusive));
-                            errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
-                            errorInfo.SetDebugField(isAttribute ? qname : null, "Sch_MinInclusiveConstraintFailed");
-                            validationContext.AddError(errorInfo);
-                        }
-
-                        if ((errorRestriction & RestrictionField.MinExclusive) == RestrictionField.MinExclusive)
-                        {
-                            subMessage = SR.Format(ValidationResources.Sch_MinExclusiveConstraintFailed, simpleTypeConstraint.GetRestrictionValue(RestrictionField.MinExclusive));
-                            errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
-                            errorInfo.SetDebugField(isAttribute ? qname : null, "Sch_MinExclusiveConstraintFailed");
-                            validationContext.AddError(errorInfo);
-                        }
-
-                        if ((errorRestriction & RestrictionField.MaxInclusive) == RestrictionField.MaxInclusive)
-                        {
-                            subMessage = SR.Format(ValidationResources.Sch_MaxInclusiveConstraintFailed, simpleTypeConstraint.GetRestrictionValue(RestrictionField.MaxInclusive));
-                            errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
-                            errorInfo.SetDebugField(isAttribute ? qname : null, "Sch_MaxInclusiveConstraintFailed");
-                            validationContext.AddError(errorInfo);
-                        }
-
-                        if ((errorRestriction & RestrictionField.MaxExclusive) == RestrictionField.MaxExclusive)
-                        {
-                            subMessage = SR.Format(ValidationResources.Sch_MaxExclusiveConstraintFailed, simpleTypeConstraint.GetRestrictionValue(RestrictionField.MaxExclusive));
-                            errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
-                            errorInfo.SetDebugField(isAttribute ? qname : null, "Sch_MaxExclusiveConstraintFailed");
-                            validationContext.AddError(errorInfo);
-                        }
-
-                        if ((errorRestriction & RestrictionField.Length) == RestrictionField.Length)
-                        {
-                            // length is not ok.
-                            if (string.IsNullOrEmpty(value.InnerText))
-                            {
-                                errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, isAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue);
-                                errorInfo.SetDebugField(isAttribute ? qname : null, isAttribute ? "Sch_EmptyAttributeValue" : "Sch_EmptyElementValue");
-                                validationContext.AddError(errorInfo);
-                            }
-                            else
-                            {
-                                subMessage = SR.Format(ValidationResources.Sch_LengthConstraintFailed, simpleTypeConstraint.XsdType.GetXsdDataTypeName(), simpleTypeConstraint.GetRestrictionValue(RestrictionField.Length));
-                                errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
-                                errorInfo.SetDebugField(isAttribute ? qname : null, "Sch_LengthConstraintFailed");
-                                validationContext.AddError(errorInfo);
-                            }
-                        }
-
-                        if ((errorRestriction & RestrictionField.MinLength) == RestrictionField.MinLength)
-                        {
-                            // min length is not ok.
-                            if (string.IsNullOrEmpty(value.InnerText))
-                            {
-                                errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, isAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue);
-                                errorInfo.SetDebugField(isAttribute ? qname : null, isAttribute ? "Sch_EmptyAttributeValue" : "Sch_EmptyElementValue");
-                                validationContext.AddError(errorInfo);
-                            }
-                            else
-                            {
-                                subMessage = SR.Format(ValidationResources.Sch_MinLengthConstraintFailed, simpleTypeConstraint.XsdType.GetXsdDataTypeName(), simpleTypeConstraint.GetRestrictionValue(RestrictionField.MinLength));
-                                errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
-                                errorInfo.SetDebugField(isAttribute ? qname : null, "Sch_MinLengthConstraintFailed");
-                                validationContext.AddError(errorInfo);
-                            }
-                        }
-
-                        if ((errorRestriction & RestrictionField.MaxLength) == RestrictionField.MaxLength)
-                        {
-                            // max length is not ok.
-                            subMessage = SR.Format(ValidationResources.Sch_MaxLengthConstraintFailed, simpleTypeConstraint.XsdType.GetXsdDataTypeName(), simpleTypeConstraint.GetRestrictionValue(RestrictionField.MaxLength));
-                            errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
-                            errorInfo.SetDebugField(isAttribute ? qname : null, "Sch_MaxLengthConstraintFailed");
-                            validationContext.AddError(errorInfo);
-                        }
-
-                        if ((errorRestriction & RestrictionField.Pattern) == RestrictionField.Pattern)
-                        {
-                            // pattern is not ok.
-                            subMessage = SR.Format(ValidationResources.Sch_PatternConstraintFailed, simpleTypeConstraint.GetRestrictionValue(RestrictionField.Pattern));
-                            errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
-                            errorInfo.SetDebugField(isAttribute ? qname : null, "Sch_PatternConstraintFailed");
-                            validationContext.AddError(errorInfo);
-                        }
-                    }
+                    return;
                 }
             }
         }
@@ -488,11 +204,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 // first check whether there are invalid children under this OpenXmlLeafTextElement.
                 EmptyComplexTypeValidator.Validate(validationContext);
 
-                OpenXmlLeafTextElement element = (OpenXmlLeafTextElement)validationContext.Element;
-                OpenXmlSimpleType value = element.InnerTextToValue(element.Text);
-                string qname = element.XmlQualifiedName.ToString();
+                var element = (OpenXmlLeafTextElement)validationContext.Element;
+                var value = element.InnerTextToValue(element.Text);
+                var qname = element.XmlQualifiedName.ToString();
+                var state = new ElementProperty<OpenXmlSimpleType>(element.NamespaceId, element.LocalName, 0, element.ElementData.Info.Validators, new ElementPropertyAccessor<OpenXmlSimpleType>(_ => value, (_, __) => throw new NotImplementedException(), value.GetType()));
 
-                SchemaTypeValidator.ValidateValue(validationContext, simpleTypeConstraint, value, qname, false);
+                SchemaTypeValidator.ValidateValue(validationContext, element.ElementData.Info.Validators, value, qname, state, false);
             }
         }
 

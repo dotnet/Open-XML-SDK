@@ -13,8 +13,18 @@ namespace DocumentFormat.OpenXml.Framework
         private readonly Lazy<Action<OpenXmlElement, T>> _setter;
         private readonly Lazy<Func<T>> _activator;
 
+        public ElementPropertyAccessor(Func<OpenXmlElement, T> getter, Action<OpenXmlElement, T> setter, Type type)
+        {
+            Type = type;
+
+            _getter = new Lazy<Func<OpenXmlElement, T>>(() => getter, true);
+            _setter = new Lazy<Action<OpenXmlElement, T>>(() => setter, true);
+        }
+
         public ElementPropertyAccessor(Func<Type, Func<T>> activatorFactory, PropertyInfo property)
         {
+            Type = property.PropertyType;
+
             _getter = new Lazy<Func<OpenXmlElement, T>>(() => CreateGetter(property), true);
             _setter = new Lazy<Action<OpenXmlElement, T>>(() => CreateSetter(property), true);
             _activator = new Lazy<Func<T>>(() => activatorFactory(property.PropertyType), true);
@@ -25,6 +35,8 @@ namespace DocumentFormat.OpenXml.Framework
         public void Set(OpenXmlElement instance, T value) => _setter.Value(instance, value);
 
         public T Create() => _activator.Value();
+
+        public Type Type { get; }
 
         private static Func<OpenXmlElement, T> CreateGetter(PropertyInfo property)
         {

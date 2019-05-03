@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml.Wordprocessing
 {
@@ -19,6 +20,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             { "basedOn", "0004" },
             { "type", "0005" },
         };
+
+        internal static IEnumerable<string> Values => s_attributeMap.Values.Concat(s_attributeMap.Keys);
 
         /// <remarks>
         /// See §14.11.5 of ISO/IEC 29500-4 for details on this translation

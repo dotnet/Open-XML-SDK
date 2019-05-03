@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml.Framework
@@ -13,6 +14,7 @@ namespace DocumentFormat.OpenXml.Framework
             byte namespaceId,
             string name,
             int order,
+            ValidatorCollection validators,
             ElementPropertyAccessor<T> accessor)
         {
             _accessor = accessor;
@@ -20,7 +22,10 @@ namespace DocumentFormat.OpenXml.Framework
             Order = order;
             Name = name;
             NamespaceId = namespaceId;
+            Validators = validators;
         }
+
+        public XmlQualifiedName TypeName => Validators.GetSimpleTypeQualifiedName(Type);
 
         public bool IsValid => Name != null;
 
@@ -29,6 +34,8 @@ namespace DocumentFormat.OpenXml.Framework
         public string Name { get; }
 
         public byte NamespaceId { get; }
+
+        public ValidatorCollection Validators { get; }
 
         public string Namespace => NamespaceIdMap.GetNamespaceUri(NamespaceId);
 
@@ -39,6 +46,8 @@ namespace DocumentFormat.OpenXml.Framework
         public void SetValue(OpenXmlElement element, T value) => _accessor.Set(element, value);
 
         public T CreateNew() => _accessor.Create();
+
+        public Type Type => _accessor?.Type;
 
         public XmlQualifiedName GetQName() => new XmlQualifiedName(Name, Namespace);
     }
