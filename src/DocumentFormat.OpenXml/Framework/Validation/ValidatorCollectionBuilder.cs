@@ -4,6 +4,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Framework
 {
@@ -52,9 +53,9 @@ namespace DocumentFormat.OpenXml.Framework
 
         public void AddDefaultValidator(Type type)
         {
-            if (type != null && typeof(OpenXmlSimpleType).IsAssignableFrom(type))
+            if (type != null && typeof(OpenXmlSimpleType).GetTypeInfo().IsAssignableFrom(type.GetTypeInfo()))
             {
-                if (typeof(StringValue).IsAssignableFrom(type))
+                if (typeof(StringValue).GetTypeInfo().IsAssignableFrom(type.GetTypeInfo()))
                 {
                     Add(StringValidator);
                 }
@@ -62,7 +63,7 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     Add(EnumValidator);
                 }
-                else if (typeof(IEnumerable).IsAssignableFrom(type))
+                else if (typeof(IEnumerable).GetTypeInfo().IsAssignableFrom(type.GetTypeInfo()))
                 {
                     Add(ListValidator.Instance);
                 }
@@ -75,7 +76,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         private static bool IsEnum(Type type)
         {
-            return type.IsGenericType && type.GetGenericTypeDefinition() == typeof(EnumValue<>);
+            return type.GetTypeInfo().IsGenericType && type.GetGenericTypeDefinition() == typeof(EnumValue<>);
         }
 
         public IOpenXmlSimpleTypeValidator[] Build()

@@ -14,12 +14,12 @@ namespace DocumentFormat.OpenXml.Framework
 
         public ValidatorCollection(Type type)
         {
-            _validators = Build(type, null);
+            _validators = Build(type.GetTypeInfo().GetCustomAttributes(true), null);
         }
 
         public ValidatorCollection(PropertyInfo property)
         {
-            _validators = Build(property, property.PropertyType);
+            _validators = Build(property.GetCustomAttributes(true), null);
         }
 
         public ReadOnlyArray<IOpenXmlSimpleTypeValidator>.Enumerator GetEnumerator() => _validators.GetEnumerator();
@@ -28,9 +28,8 @@ namespace DocumentFormat.OpenXml.Framework
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        private static IOpenXmlSimpleTypeValidator[] Build(MemberInfo member, Type type)
+        private static IOpenXmlSimpleTypeValidator[] Build(IEnumerable<object> attributes, Type type)
         {
-            var attributes = member.GetCustomAttributes(true);
             var builder = new ValidatorCollectionBuilder();
 
             foreach (var attribute in attributes)
