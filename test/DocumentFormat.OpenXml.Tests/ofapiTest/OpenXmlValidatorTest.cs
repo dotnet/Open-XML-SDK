@@ -593,10 +593,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MaxInclusive constraint failed. The value must be less than or equal to 32767.", actual.First().Description);
-#if DEBUG
-            Assert.Equal("startAt", actual.First().AttributeQualifiedName);
-            Assert.Equal("Sch_MaxInclusiveConstraintFailed", actual.First().ValidationErrorCategory);
-#endif
         }
 
         /// <summary>
@@ -1686,14 +1682,20 @@ namespace DocumentFormat.OpenXml.Tests
             // pattern invalid
             element.Val = "invalid";
             actual = O12Validator.Validate(element);
-            Assert.Equal(2, actual.Count()); // both pattern and length are incorrect.
-            Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
-            Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
-            Assert.EndsWith(" The actual length according to data type 'string' is not equal to the specified length. The expected length is 12.", actual.First().Description);
 
-            Assert.Equal(ValidationErrorType.Schema, actual.Last().ErrorType);
-            Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.Last().Id);
-            Assert.EndsWith(" The Pattern constraint failed. The expected pattern is [01]*.", actual.Last().Description);
+            Assert.Collection(actual.OrderBy(e => e.Description),
+                e =>
+                {
+                    Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:val' has invalid value 'invalid'. The actual length according to data type 'string' is not equal to the specified length. The expected length is 12.", e.Description);
+                    Assert.Equal("/w:cnfStyle[1]", e.Path.XPath);
+                    Assert.Same(element, e.Node);
+                },
+                e =>
+                {
+                    Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:val' has invalid value 'invalid'. The Pattern constraint failed. The expected pattern is [01]*.", e.Description);
+                    Assert.Equal("/w:cnfStyle[1]", e.Path.XPath);
+                    Assert.Same(element, e.Node);
+                });
 
             // minLength. maxLength
             //<xsd:simpleType name="ST_String255">
@@ -2871,7 +2873,7 @@ namespace DocumentFormat.OpenXml.Tests
                 // use stream
                 Assert.Empty(O12Validator.Validate(pDoc));
                 Assert.Empty(O14Validator.Validate(pDoc));
-           }
+            }
         }
 
         /// <summary>
@@ -3748,7 +3750,15 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.NotNull(p.ParagraphId);
 
             var actual = O12Validator.Validate(element);
-            Assert.Single(actual);
+
+            Assert.Collection(actual, e =>
+            {
+                Assert.Same(p, e.Node);
+                Assert.Null(e.RelatedNode);
+                Assert.Equal(ValidationErrorType.Schema, e.ErrorType);
+                Assert.Equal("Sch_UndeclaredAttribute", e.Id);
+                Assert.Equal("/w:document[1]/w:body[1]/w:p[1]", e.Path.XPath);
+            });
 
             actual = O14Validator.Validate(element);
             Assert.Empty(actual);
