@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public ValidatorCollection(PropertyInfo property)
         {
-            _validators = Build(property.GetCustomAttributes(true), null);
+            _validators = Build(property.GetCustomAttributes(true), property.PropertyType);
         }
 
         public ReadOnlyArray<IOpenXmlSimpleTypeValidator>.Enumerator GetEnumerator() => _validators.GetEnumerator();
