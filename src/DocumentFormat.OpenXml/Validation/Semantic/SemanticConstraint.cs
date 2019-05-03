@@ -12,23 +12,18 @@ using System.Xml;
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
-    /// OpenXML API will implement a class for each semantic constraint category.
-    /// "SemanticConstraint" is base class of all these classes.
-    /// A semanticConstraint object will be used to validate a corresponding doc element to see if it meets the constraint or not.
+    /// Base class for each semantic constraint category.
     /// </summary>
     internal abstract partial class SemanticConstraint
     {
-        public readonly SemanticValidationLevel SemanticValidationLevel;
-
-        public virtual SemanticValidationLevel StateScope => SemanticValidationLevel;
-
-        /// <summary>
-        /// Constructor
-        /// </summary>
         public SemanticConstraint(SemanticValidationLevel level)
         {
             SemanticValidationLevel = level;
         }
+
+        public SemanticValidationLevel SemanticValidationLevel { get; }
+
+        public virtual SemanticValidationLevel StateScope => SemanticValidationLevel;
 
         /// <summary>
         /// Some semantic constraint classes will hold state at runtime,
@@ -36,7 +31,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         /// </summary>
         public virtual void ClearState(ValidationContext context)
         {
-            return;
         }
 
         /// <summary>
@@ -179,13 +173,17 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         private static OpenXmlPart GetPartThroughPartPath(IEnumerable<IdPartPair> pairs, string[] path)
         {
             OpenXmlPart temp = null;
-            IEnumerable<IdPartPair> parts = pairs;
+            var parts = pairs;
 
             for (int i = 0; i < path.Length; i++)
             {
-                IEnumerable<OpenXmlPart> s = parts.Where(p => p.OpenXmlPart.GetType().Name == path[i]).Select(t => t.OpenXmlPart);
+                var s = parts.Where(p => p.OpenXmlPart.GetType().Name == path[i]).Select(t => t.OpenXmlPart);
+
                 if (s.Count() > 1)
+                {
                     throw new System.IO.FileFormatException("Invalid document error: more than one part retrieved for one URI.");
+                }
+
                 if (s.Count() == 0)
                 {
                     return null;
@@ -196,6 +194,19 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
 
             return temp;
+        }
+
+        protected readonly struct PartHolder<T>
+        {
+            public PartHolder(T item, OpenXmlPart part)
+            {
+                Item = item;
+                Part = part;
+            }
+
+            public T Item { get; }
+
+            public OpenXmlPart Part { get; }
         }
     }
 }
