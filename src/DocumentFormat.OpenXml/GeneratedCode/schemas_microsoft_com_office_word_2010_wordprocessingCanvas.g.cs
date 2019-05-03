@@ -52,21 +52,18 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the WordprocessingCanvas class.
     /// </summary>
     public WordprocessingCanvas():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the WordprocessingCanvas class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WordprocessingCanvas(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WordprocessingCanvas class with the specified child elements.
     /// </summary>
@@ -74,7 +71,6 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
     public WordprocessingCanvas(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WordprocessingCanvas class from outer XML.
     /// </summary>
@@ -83,13 +79,10 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> BackgroundFormatting.</para>
     /// <para> Represents the following element tag in the schema: wpc:bg </para>
@@ -103,7 +96,6 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
         get => GetElement<BackgroundFormatting>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> WholeFormatting.</para>
     /// <para> Represents the following element tag in the schema: wpc:whole </para>
@@ -117,7 +109,6 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
         get => GetElement<WholeFormatting>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -162,21 +153,18 @@ public partial class BackgroundFormatting : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the BackgroundFormatting class.
     /// </summary>
     public BackgroundFormatting():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the BackgroundFormatting class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public BackgroundFormatting(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BackgroundFormatting class with the specified child elements.
     /// </summary>
@@ -184,7 +172,6 @@ public partial class BackgroundFormatting : OpenXmlCompositeElement
     public BackgroundFormatting(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BackgroundFormatting class from outer XML.
     /// </summary>
@@ -193,9 +180,7 @@ public partial class BackgroundFormatting : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -231,21 +216,18 @@ public partial class WholeFormatting : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the WholeFormatting class.
     /// </summary>
     public WholeFormatting():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the WholeFormatting class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WholeFormatting(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WholeFormatting class with the specified child elements.
     /// </summary>
@@ -253,7 +235,6 @@ public partial class WholeFormatting : OpenXmlCompositeElement
     public WholeFormatting(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WholeFormatting class from outer XML.
     /// </summary>
@@ -262,13 +243,10 @@ public partial class WholeFormatting : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Outline.</para>
     /// <para> Represents the following element tag in the schema: a:ln </para>
@@ -282,7 +260,6 @@ public partial class WholeFormatting : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -321,21 +298,18 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the GraphicFrameType class.
     /// </summary>
     public GraphicFrameType():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the GraphicFrameType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public GraphicFrameType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GraphicFrameType class with the specified child elements.
     /// </summary>
@@ -343,7 +317,6 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
     public GraphicFrameType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GraphicFrameType class from outer XML.
     /// </summary>
@@ -352,13 +325,10 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
     /// <para> Represents the following element tag in the schema: wpg:cNvPr </para>
@@ -372,7 +342,6 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> NonVisualGraphicFrameProperties.</para>
     /// <para> Represents the following element tag in the schema: wpg:cNvFrPr </para>
@@ -386,7 +355,6 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Transform2D.</para>
     /// <para> Represents the following element tag in the schema: wpg:xfrm </para>
@@ -400,7 +368,6 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Graphic.</para>
     /// <para> Represents the following element tag in the schema: a:graphic </para>
@@ -414,7 +381,6 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: wpg:extLst </para>
@@ -428,7 +394,6 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList>(4);
         set => SetElement(4, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -459,21 +424,18 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class.
     /// </summary>
     public OfficeArtExtensionList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public OfficeArtExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
@@ -481,7 +443,6 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     public OfficeArtExtensionList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class from outer XML.
     /// </summary>
@@ -490,9 +451,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -501,5 +460,3 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 
 }
 }
- 
- 

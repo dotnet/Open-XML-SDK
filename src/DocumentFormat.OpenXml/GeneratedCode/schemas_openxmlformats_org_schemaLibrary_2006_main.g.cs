@@ -33,21 +33,18 @@ public partial class SchemaLibrary : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the SchemaLibrary class.
     /// </summary>
     public SchemaLibrary():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SchemaLibrary class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SchemaLibrary(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SchemaLibrary class with the specified child elements.
     /// </summary>
@@ -55,7 +52,6 @@ public partial class SchemaLibrary : OpenXmlCompositeElement
     public SchemaLibrary(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SchemaLibrary class from outer XML.
     /// </summary>
@@ -64,9 +60,7 @@ public partial class SchemaLibrary : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -90,7 +84,6 @@ public partial class Schema : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Custom XML Schema Namespace.</para>
     /// <para>Represents the following attribute in the schema: sl:uri </para>
@@ -100,7 +93,6 @@ public partial class Schema : OpenXmlLeafElement
     [SchemaAttr(25, "uri")]
     [Index(0)]
     public StringValue Uri { get; set; }
-	
     /// <summary>
     /// <para> Resource File Location.</para>
     /// <para>Represents the following attribute in the schema: sl:manifestLocation </para>
@@ -110,7 +102,6 @@ public partial class Schema : OpenXmlLeafElement
     [SchemaAttr(25, "manifestLocation")]
     [Index(1)]
     public StringValue ManifestLocation { get; set; }
-	
     /// <summary>
     /// <para> Custom XML Schema Location.</para>
     /// <para>Represents the following attribute in the schema: sl:schemaLocation </para>
@@ -120,15 +111,12 @@ public partial class Schema : OpenXmlLeafElement
     [SchemaAttr(25, "schemaLocation")]
     [Index(2)]
     public StringValue SchemaLocation { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Schema class.
     /// </summary>
     public Schema():base(){}
     
-      
-     
     
     
     
@@ -137,5 +125,3 @@ public partial class Schema : OpenXmlLeafElement
 
 }
 }
- 
- 

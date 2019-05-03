@@ -62,30 +62,27 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "bwMode")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class.
     /// </summary>
     public ShapeProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ShapeProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class with the specified child elements.
     /// </summary>
@@ -93,7 +90,6 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     public ShapeProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class from outer XML.
     /// </summary>
@@ -102,13 +98,10 @@ public partial class ShapeProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
     /// <para> Represents the following element tag in the schema: a:xfrm </para>
@@ -122,7 +115,6 @@ public partial class ShapeProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -145,23 +137,20 @@ public partial class UnsignedIntegerType : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Integer Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "val")]
     [Index(0)]
     public UInt32Value Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the UnsignedIntegerType class.
     /// </summary>
     public UnsignedIntegerType():base(){}
     
-      
-     
     
     
     
@@ -224,7 +213,7 @@ public partial class Bubble3DBoolean : BooleanType
 
 public abstract partial class BooleanType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
     /// <para> Boolean Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
@@ -232,16 +221,13 @@ public abstract partial class BooleanType : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the BooleanType class.
     /// </summary>
     protected BooleanType(){}
-    
     
     
 }
@@ -275,21 +261,18 @@ public partial class Marker : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Marker class.
     /// </summary>
     public Marker():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Marker class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Marker(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Marker class with the specified child elements.
     /// </summary>
@@ -297,7 +280,6 @@ public partial class Marker : OpenXmlCompositeElement
     public Marker(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Marker class from outer XML.
     /// </summary>
@@ -306,13 +288,10 @@ public partial class Marker : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Symbol.</para>
     /// <para> Represents the following element tag in the schema: c:symbol </para>
@@ -326,7 +305,6 @@ public partial class Marker : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Symbol>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Size.</para>
     /// <para> Represents the following element tag in the schema: c:size </para>
@@ -340,7 +318,6 @@ public partial class Marker : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Size>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> ChartShapeProperties.</para>
     /// <para> Represents the following element tag in the schema: c:spPr </para>
@@ -354,7 +331,6 @@ public partial class Marker : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Chart Extensibility.</para>
     /// <para> Represents the following element tag in the schema: c:extLst </para>
@@ -368,7 +344,6 @@ public partial class Marker : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -429,21 +404,18 @@ public partial class DLbl : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the DLbl class.
     /// </summary>
     public DLbl():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the DLbl class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DLbl(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DLbl class with the specified child elements.
     /// </summary>
@@ -451,7 +423,6 @@ public partial class DLbl : OpenXmlCompositeElement
     public DLbl(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DLbl class from outer XML.
     /// </summary>
@@ -460,13 +431,10 @@ public partial class DLbl : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Index.</para>
     /// <para> Represents the following element tag in the schema: c:idx </para>
@@ -480,7 +448,6 @@ public partial class DLbl : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -511,21 +478,18 @@ public partial class CategoryFilterExceptions : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the CategoryFilterExceptions class.
     /// </summary>
     public CategoryFilterExceptions():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the CategoryFilterExceptions class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public CategoryFilterExceptions(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CategoryFilterExceptions class with the specified child elements.
     /// </summary>
@@ -533,7 +497,6 @@ public partial class CategoryFilterExceptions : OpenXmlCompositeElement
     public CategoryFilterExceptions(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CategoryFilterExceptions class from outer XML.
     /// </summary>
@@ -542,9 +505,7 @@ public partial class CategoryFilterExceptions : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -576,21 +537,18 @@ public partial class PivotOptions16 : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the PivotOptions16 class.
     /// </summary>
     public PivotOptions16():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the PivotOptions16 class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public PivotOptions16(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PivotOptions16 class with the specified child elements.
     /// </summary>
@@ -598,7 +556,6 @@ public partial class PivotOptions16 : OpenXmlCompositeElement
     public PivotOptions16(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PivotOptions16 class from outer XML.
     /// </summary>
@@ -607,13 +564,10 @@ public partial class PivotOptions16 : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> BooleanFalse.</para>
     /// <para> Represents the following element tag in the schema: c16:showExpandCollapseFieldButtons </para>
@@ -627,7 +581,6 @@ public partial class PivotOptions16 : OpenXmlCompositeElement
         get => GetElement<BooleanFalse>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -658,21 +611,18 @@ public partial class ChartDataPointUniqueIDMap : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ChartDataPointUniqueIDMap class.
     /// </summary>
     public ChartDataPointUniqueIDMap():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ChartDataPointUniqueIDMap class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ChartDataPointUniqueIDMap(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ChartDataPointUniqueIDMap class with the specified child elements.
     /// </summary>
@@ -680,7 +630,6 @@ public partial class ChartDataPointUniqueIDMap : OpenXmlCompositeElement
     public ChartDataPointUniqueIDMap(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ChartDataPointUniqueIDMap class from outer XML.
     /// </summary>
@@ -689,9 +638,7 @@ public partial class ChartDataPointUniqueIDMap : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -754,24 +701,22 @@ public partial class UniqueID : UniqueIDChart
 
 public abstract partial class UniqueIDChart : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
-    /// <para> val.</para>
+    /// <para> val, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "val")]
     [Index(0)]
     public StringValue Val { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the UniqueIDChart class.
     /// </summary>
     protected UniqueIDChart(){}
-    
     
     
 }
@@ -811,21 +756,18 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the CategoryFilterException class.
     /// </summary>
     public CategoryFilterException():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the CategoryFilterException class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public CategoryFilterException(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CategoryFilterException class with the specified child elements.
     /// </summary>
@@ -833,7 +775,6 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
     public CategoryFilterException(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CategoryFilterException class from outer XML.
     /// </summary>
@@ -842,13 +783,10 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> UniqueIdChartUniqueID.</para>
     /// <para> Represents the following element tag in the schema: c16:uniqueId </para>
@@ -862,7 +800,6 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
         get => GetElement<UniqueIdChartUniqueID>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> ShapeProperties.</para>
     /// <para> Represents the following element tag in the schema: c16:spPr </para>
@@ -876,7 +813,6 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
         get => GetElement<ShapeProperties>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> UnsignedIntegerType.</para>
     /// <para> Represents the following element tag in the schema: c16:explosion </para>
@@ -890,7 +826,6 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
         get => GetElement<UnsignedIntegerType>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> InvertIfNegativeBoolean.</para>
     /// <para> Represents the following element tag in the schema: c16:invertIfNegative </para>
@@ -904,7 +839,6 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
         get => GetElement<InvertIfNegativeBoolean>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Bubble3DBoolean.</para>
     /// <para> Represents the following element tag in the schema: c16:bubble3D </para>
@@ -918,7 +852,6 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
         get => GetElement<Bubble3DBoolean>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> Marker.</para>
     /// <para> Represents the following element tag in the schema: c16:marker </para>
@@ -932,7 +865,6 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
         get => GetElement<Marker>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> DLbl.</para>
     /// <para> Represents the following element tag in the schema: c16:dLbl </para>
@@ -946,7 +878,6 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
         get => GetElement<DLbl>(6);
         set => SetElement(6, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -983,21 +914,18 @@ public partial class NumberDataType : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the NumberDataType class.
     /// </summary>
     public NumberDataType():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NumberDataType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NumberDataType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NumberDataType class with the specified child elements.
     /// </summary>
@@ -1005,7 +933,6 @@ public partial class NumberDataType : OpenXmlCompositeElement
     public NumberDataType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NumberDataType class from outer XML.
     /// </summary>
@@ -1014,13 +941,10 @@ public partial class NumberDataType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Format Code.</para>
     /// <para> Represents the following element tag in the schema: c:formatCode </para>
@@ -1034,7 +958,6 @@ public partial class NumberDataType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatCode>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Point Count.</para>
     /// <para> Represents the following element tag in the schema: c:ptCount </para>
@@ -1048,7 +971,6 @@ public partial class NumberDataType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1079,21 +1001,18 @@ public partial class NumFilteredLiteralCache : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the NumFilteredLiteralCache class.
     /// </summary>
     public NumFilteredLiteralCache():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NumFilteredLiteralCache class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NumFilteredLiteralCache(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NumFilteredLiteralCache class with the specified child elements.
     /// </summary>
@@ -1101,7 +1020,6 @@ public partial class NumFilteredLiteralCache : OpenXmlCompositeElement
     public NumFilteredLiteralCache(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NumFilteredLiteralCache class from outer XML.
     /// </summary>
@@ -1110,13 +1028,10 @@ public partial class NumFilteredLiteralCache : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> NumberDataType.</para>
     /// <para> Represents the following element tag in the schema: c16:numCache </para>
@@ -1130,7 +1045,6 @@ public partial class NumFilteredLiteralCache : OpenXmlCompositeElement
         get => GetElement<NumberDataType>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1165,21 +1079,18 @@ public partial class StringDataType : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the StringDataType class.
     /// </summary>
     public StringDataType():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the StringDataType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public StringDataType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StringDataType class with the specified child elements.
     /// </summary>
@@ -1187,7 +1098,6 @@ public partial class StringDataType : OpenXmlCompositeElement
     public StringDataType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StringDataType class from outer XML.
     /// </summary>
@@ -1196,13 +1106,10 @@ public partial class StringDataType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> PointCount.</para>
     /// <para> Represents the following element tag in the schema: c:ptCount </para>
@@ -1216,7 +1123,6 @@ public partial class StringDataType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1247,21 +1153,18 @@ public partial class StrFilteredLiteralCache : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the StrFilteredLiteralCache class.
     /// </summary>
     public StrFilteredLiteralCache():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the StrFilteredLiteralCache class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public StrFilteredLiteralCache(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StrFilteredLiteralCache class with the specified child elements.
     /// </summary>
@@ -1269,7 +1172,6 @@ public partial class StrFilteredLiteralCache : OpenXmlCompositeElement
     public StrFilteredLiteralCache(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StrFilteredLiteralCache class from outer XML.
     /// </summary>
@@ -1278,13 +1180,10 @@ public partial class StrFilteredLiteralCache : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> StringDataType.</para>
     /// <para> Represents the following element tag in the schema: c16:strCache </para>
@@ -1298,7 +1197,6 @@ public partial class StrFilteredLiteralCache : OpenXmlCompositeElement
         get => GetElement<StringDataType>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1333,21 +1231,18 @@ public partial class MultiLvlStrData : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the MultiLvlStrData class.
     /// </summary>
     public MultiLvlStrData():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MultiLvlStrData class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MultiLvlStrData(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MultiLvlStrData class with the specified child elements.
     /// </summary>
@@ -1355,7 +1250,6 @@ public partial class MultiLvlStrData : OpenXmlCompositeElement
     public MultiLvlStrData(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MultiLvlStrData class from outer XML.
     /// </summary>
@@ -1364,13 +1258,10 @@ public partial class MultiLvlStrData : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> PointCount.</para>
     /// <para> Represents the following element tag in the schema: c:ptCount </para>
@@ -1384,7 +1275,6 @@ public partial class MultiLvlStrData : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1415,21 +1305,18 @@ public partial class MultiLvlStrFilteredLiteralCache : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the MultiLvlStrFilteredLiteralCache class.
     /// </summary>
     public MultiLvlStrFilteredLiteralCache():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MultiLvlStrFilteredLiteralCache class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MultiLvlStrFilteredLiteralCache(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MultiLvlStrFilteredLiteralCache class with the specified child elements.
     /// </summary>
@@ -1437,7 +1324,6 @@ public partial class MultiLvlStrFilteredLiteralCache : OpenXmlCompositeElement
     public MultiLvlStrFilteredLiteralCache(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MultiLvlStrFilteredLiteralCache class from outer XML.
     /// </summary>
@@ -1446,13 +1332,10 @@ public partial class MultiLvlStrFilteredLiteralCache : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> MultiLvlStrData.</para>
     /// <para> Represents the following element tag in the schema: c16:multiLvlStrCache </para>
@@ -1466,7 +1349,6 @@ public partial class MultiLvlStrFilteredLiteralCache : OpenXmlCompositeElement
         get => GetElement<MultiLvlStrData>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1489,23 +1371,20 @@ public partial class LiteralDataChart : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> val.</para>
+    /// <para> val, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the LiteralDataChart class.
     /// </summary>
     public LiteralDataChart():base(){}
     
-      
-     
     
     
     
@@ -1529,23 +1408,19 @@ public partial class BooleanFalse : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> val.</para>
+    /// <para> val, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the BooleanFalse class.
     /// </summary>
     public BooleanFalse():base(){}
     
-      
-     
     
     
     
@@ -1559,6 +1434,7 @@ public partial class BooleanFalse : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is c16:ptidx.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(UInt32Value))]
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(82, "ptidx")]
@@ -1570,13 +1446,11 @@ public partial class XsdunsignedInt : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the XsdunsignedInt class.
     /// </summary>
     public XsdunsignedInt():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the XsdunsignedInt class with the specified text content.
     /// </summary>
@@ -1584,14 +1458,11 @@ public partial class XsdunsignedInt : OpenXmlLeafTextElement
     public XsdunsignedInt(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new UInt32Value(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1624,21 +1495,18 @@ public partial class ChartDataPointUniqueIDMapEntry : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ChartDataPointUniqueIDMapEntry class.
     /// </summary>
     public ChartDataPointUniqueIDMapEntry():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ChartDataPointUniqueIDMapEntry class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ChartDataPointUniqueIDMapEntry(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ChartDataPointUniqueIDMapEntry class with the specified child elements.
     /// </summary>
@@ -1646,7 +1514,6 @@ public partial class ChartDataPointUniqueIDMapEntry : OpenXmlCompositeElement
     public ChartDataPointUniqueIDMapEntry(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ChartDataPointUniqueIDMapEntry class from outer XML.
     /// </summary>
@@ -1655,13 +1522,10 @@ public partial class ChartDataPointUniqueIDMapEntry : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> XsdunsignedInt.</para>
     /// <para> Represents the following element tag in the schema: c16:ptidx </para>
@@ -1675,7 +1539,6 @@ public partial class ChartDataPointUniqueIDMapEntry : OpenXmlCompositeElement
         get => GetElement<XsdunsignedInt>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> UniqueID.</para>
     /// <para> Represents the following element tag in the schema: c16:uniqueID </para>
@@ -1689,7 +1552,6 @@ public partial class ChartDataPointUniqueIDMapEntry : OpenXmlCompositeElement
         get => GetElement<UniqueID>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1697,5 +1559,3 @@ public partial class ChartDataPointUniqueIDMapEntry : OpenXmlCompositeElement
 
 }
 }
- 
- 

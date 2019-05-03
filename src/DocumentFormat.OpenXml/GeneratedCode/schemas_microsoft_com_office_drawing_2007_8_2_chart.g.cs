@@ -44,21 +44,18 @@ public partial class PivotOptions : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the PivotOptions class.
     /// </summary>
     public PivotOptions():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the PivotOptions class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public PivotOptions(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PivotOptions class with the specified child elements.
     /// </summary>
@@ -66,7 +63,6 @@ public partial class PivotOptions : OpenXmlCompositeElement
     public PivotOptions(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PivotOptions class from outer XML.
     /// </summary>
@@ -75,13 +71,10 @@ public partial class PivotOptions : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> DropZoneFilter.</para>
     /// <para> Represents the following element tag in the schema: c14:dropZoneFilter </para>
@@ -95,7 +88,6 @@ public partial class PivotOptions : OpenXmlCompositeElement
         get => GetElement<DropZoneFilter>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> DropZoneCategories.</para>
     /// <para> Represents the following element tag in the schema: c14:dropZoneCategories </para>
@@ -109,7 +101,6 @@ public partial class PivotOptions : OpenXmlCompositeElement
         get => GetElement<DropZoneCategories>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> DropZoneData.</para>
     /// <para> Represents the following element tag in the schema: c14:dropZoneData </para>
@@ -123,7 +114,6 @@ public partial class PivotOptions : OpenXmlCompositeElement
         get => GetElement<DropZoneData>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> DropZoneSeries.</para>
     /// <para> Represents the following element tag in the schema: c14:dropZoneSeries </para>
@@ -137,7 +127,6 @@ public partial class PivotOptions : OpenXmlCompositeElement
         get => GetElement<DropZoneSeries>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> DropZonesVisible.</para>
     /// <para> Represents the following element tag in the schema: c14:dropZonesVisible </para>
@@ -151,7 +140,6 @@ public partial class PivotOptions : OpenXmlCompositeElement
         get => GetElement<DropZonesVisible>(4);
         set => SetElement(4, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -184,21 +172,18 @@ public partial class SketchOptions : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the SketchOptions class.
     /// </summary>
     public SketchOptions():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SketchOptions class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SketchOptions(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SketchOptions class with the specified child elements.
     /// </summary>
@@ -206,7 +191,6 @@ public partial class SketchOptions : OpenXmlCompositeElement
     public SketchOptions(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SketchOptions class from outer XML.
     /// </summary>
@@ -215,13 +199,10 @@ public partial class SketchOptions : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> InSketchMode.</para>
     /// <para> Represents the following element tag in the schema: c14:inSketchMode </para>
@@ -235,7 +216,6 @@ public partial class SketchOptions : OpenXmlCompositeElement
         get => GetElement<InSketchMode>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> ShowSketchButton.</para>
     /// <para> Represents the following element tag in the schema: c14:showSketchBtn </para>
@@ -249,7 +229,6 @@ public partial class SketchOptions : OpenXmlCompositeElement
         get => GetElement<ShowSketchButton>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -280,21 +259,18 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the InvertSolidFillFormat class.
     /// </summary>
     public InvertSolidFillFormat():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the InvertSolidFillFormat class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public InvertSolidFillFormat(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the InvertSolidFillFormat class with the specified child elements.
     /// </summary>
@@ -302,7 +278,6 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     public InvertSolidFillFormat(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the InvertSolidFillFormat class from outer XML.
     /// </summary>
@@ -311,13 +286,10 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ShapeProperties.</para>
     /// <para> Represents the following element tag in the schema: c14:spPr </para>
@@ -331,7 +303,6 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
         get => GetElement<ShapeProperties>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -354,23 +325,21 @@ public partial class Style : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> val.</para>
+    /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 101, MaxInclusive = 148)]
     [SchemaAttr(0, "val")]
     [Index(0)]
     public ByteValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Style class.
     /// </summary>
     public Style():base(){}
     
-      
-     
     
     
     
@@ -429,30 +398,27 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "bwMode")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class.
     /// </summary>
     public ShapeProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ShapeProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class with the specified child elements.
     /// </summary>
@@ -460,7 +426,6 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     public ShapeProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class from outer XML.
     /// </summary>
@@ -469,13 +434,10 @@ public partial class ShapeProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
     /// <para> Represents the following element tag in the schema: a:xfrm </para>
@@ -489,7 +451,6 @@ public partial class ShapeProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -647,24 +608,21 @@ public partial class InSketchMode : BooleanFalseType
 
 public abstract partial class BooleanFalseType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
-    /// <para> val.</para>
+    /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the BooleanFalseType class.
     /// </summary>
     protected BooleanFalseType(){}
-    
     
     
 }
@@ -684,23 +642,19 @@ public partial class ShowSketchButton : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> val.</para>
+    /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ShowSketchButton class.
     /// </summary>
     public ShowSketchButton():base(){}
     
-      
-     
     
     
     
@@ -709,5 +663,3 @@ public partial class ShowSketchButton : OpenXmlLeafElement
 
 }
 }
- 
- 

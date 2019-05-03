@@ -39,21 +39,18 @@ public partial class CustomXsn : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the CustomXsn class.
     /// </summary>
     public CustomXsn():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the CustomXsn class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public CustomXsn(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CustomXsn class with the specified child elements.
     /// </summary>
@@ -61,7 +58,6 @@ public partial class CustomXsn : OpenXmlCompositeElement
     public CustomXsn(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CustomXsn class from outer XML.
     /// </summary>
@@ -70,13 +66,10 @@ public partial class CustomXsn : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> XsnLocation.</para>
     /// <para> Represents the following element tag in the schema: ntns:xsnLocation </para>
@@ -90,7 +83,6 @@ public partial class CustomXsn : OpenXmlCompositeElement
         get => GetElement<XsnLocation>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> CachedView.</para>
     /// <para> Represents the following element tag in the schema: ntns:cached </para>
@@ -104,7 +96,6 @@ public partial class CustomXsn : OpenXmlCompositeElement
         get => GetElement<CachedView>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> OpenByDefault.</para>
     /// <para> Represents the following element tag in the schema: ntns:openByDefault </para>
@@ -118,7 +109,6 @@ public partial class CustomXsn : OpenXmlCompositeElement
         get => GetElement<OpenByDefault>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Scope.</para>
     /// <para> Represents the following element tag in the schema: ntns:xsnScope </para>
@@ -132,7 +122,6 @@ public partial class CustomXsn : OpenXmlCompositeElement
         get => GetElement<Scope>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -165,12 +154,10 @@ public partial class XsnLocation : OpenXmlLeafTextElement
     public XsnLocation(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsnLocation>(deep);
@@ -202,12 +189,10 @@ public partial class CachedView : OpenXmlLeafTextElement
     public CachedView(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CachedView>(deep);
@@ -239,12 +224,10 @@ public partial class OpenByDefault : OpenXmlLeafTextElement
     public OpenByDefault(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OpenByDefault>(deep);
@@ -276,17 +259,13 @@ public partial class Scope : OpenXmlLeafTextElement
     public Scope(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Scope>(deep);
 
 }
 }
- 
- 

@@ -43,21 +43,18 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the CoverPageProperties class.
     /// </summary>
     public CoverPageProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the CoverPageProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public CoverPageProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CoverPageProperties class with the specified child elements.
     /// </summary>
@@ -65,7 +62,6 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     public CoverPageProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CoverPageProperties class from outer XML.
     /// </summary>
@@ -74,13 +70,10 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> PublishDate.</para>
     /// <para> Represents the following element tag in the schema: cppr:PublishDate </para>
@@ -94,7 +87,6 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
         get => GetElement<PublishDate>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> DocumentAbstract.</para>
     /// <para> Represents the following element tag in the schema: cppr:Abstract </para>
@@ -108,7 +100,6 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
         get => GetElement<DocumentAbstract>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> CompanyAddress.</para>
     /// <para> Represents the following element tag in the schema: cppr:CompanyAddress </para>
@@ -122,7 +113,6 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
         get => GetElement<CompanyAddress>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> CompanyPhoneNumber.</para>
     /// <para> Represents the following element tag in the schema: cppr:CompanyPhone </para>
@@ -136,7 +126,6 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
         get => GetElement<CompanyPhoneNumber>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> CompanyFaxNumber.</para>
     /// <para> Represents the following element tag in the schema: cppr:CompanyFax </para>
@@ -150,7 +139,6 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
         get => GetElement<CompanyFaxNumber>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> CompanyEmailAddress.</para>
     /// <para> Represents the following element tag in the schema: cppr:CompanyEmail </para>
@@ -164,7 +152,6 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
         get => GetElement<CompanyEmailAddress>(5);
         set => SetElement(5, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -188,13 +175,11 @@ public partial class PublishDate : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the PublishDate class.
     /// </summary>
     public PublishDate():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the PublishDate class with the specified text content.
     /// </summary>
@@ -202,14 +187,11 @@ public partial class PublishDate : OpenXmlLeafTextElement
     public PublishDate(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -242,12 +224,10 @@ public partial class DocumentAbstract : OpenXmlLeafTextElement
     public DocumentAbstract(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentAbstract>(deep);
@@ -279,12 +259,10 @@ public partial class CompanyAddress : OpenXmlLeafTextElement
     public CompanyAddress(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyAddress>(deep);
@@ -316,12 +294,10 @@ public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
     public CompanyPhoneNumber(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyPhoneNumber>(deep);
@@ -353,12 +329,10 @@ public partial class CompanyFaxNumber : OpenXmlLeafTextElement
     public CompanyFaxNumber(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyFaxNumber>(deep);
@@ -390,17 +364,13 @@ public partial class CompanyEmailAddress : OpenXmlLeafTextElement
     public CompanyEmailAddress(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyEmailAddress>(deep);
 
 }
 }
- 
- 

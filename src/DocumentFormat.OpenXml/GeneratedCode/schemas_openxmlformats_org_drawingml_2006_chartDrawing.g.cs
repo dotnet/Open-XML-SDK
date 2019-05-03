@@ -49,21 +49,18 @@ public partial class RelativeAnchorSize : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the RelativeAnchorSize class.
     /// </summary>
     public RelativeAnchorSize():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RelativeAnchorSize class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RelativeAnchorSize(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RelativeAnchorSize class with the specified child elements.
     /// </summary>
@@ -71,7 +68,6 @@ public partial class RelativeAnchorSize : OpenXmlCompositeElement
     public RelativeAnchorSize(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RelativeAnchorSize class from outer XML.
     /// </summary>
@@ -80,13 +76,10 @@ public partial class RelativeAnchorSize : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Starting Anchor Point.</para>
     /// <para> Represents the following element tag in the schema: cdr:from </para>
@@ -100,7 +93,6 @@ public partial class RelativeAnchorSize : OpenXmlCompositeElement
         get => GetElement<FromAnchor>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Ending Anchor Point.</para>
     /// <para> Represents the following element tag in the schema: cdr:to </para>
@@ -114,7 +106,6 @@ public partial class RelativeAnchorSize : OpenXmlCompositeElement
         get => GetElement<ToAnchor>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -159,21 +150,18 @@ public partial class AbsoluteAnchorSize : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the AbsoluteAnchorSize class.
     /// </summary>
     public AbsoluteAnchorSize():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the AbsoluteAnchorSize class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public AbsoluteAnchorSize(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AbsoluteAnchorSize class with the specified child elements.
     /// </summary>
@@ -181,7 +169,6 @@ public partial class AbsoluteAnchorSize : OpenXmlCompositeElement
     public AbsoluteAnchorSize(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AbsoluteAnchorSize class from outer XML.
     /// </summary>
@@ -190,13 +177,10 @@ public partial class AbsoluteAnchorSize : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> FromAnchor.</para>
     /// <para> Represents the following element tag in the schema: cdr:from </para>
@@ -210,7 +194,6 @@ public partial class AbsoluteAnchorSize : OpenXmlCompositeElement
         get => GetElement<FromAnchor>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Shape Extent.</para>
     /// <para> Represents the following element tag in the schema: cdr:ext </para>
@@ -224,7 +207,6 @@ public partial class AbsoluteAnchorSize : OpenXmlCompositeElement
         get => GetElement<Extent>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -260,7 +242,6 @@ public partial class Shape : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Reference to Custom Function.</para>
     /// <para>Represents the following attribute in the schema: macro </para>
@@ -268,7 +249,6 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "macro")]
     [Index(0)]
     public StringValue Macro { get; set; }
-	
     /// <summary>
     /// <para> Text Link.</para>
     /// <para>Represents the following attribute in the schema: textlink </para>
@@ -276,7 +256,6 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "textlink")]
     [Index(1)]
     public StringValue TextLink { get; set; }
-	
     /// <summary>
     /// <para> Lock Text.</para>
     /// <para>Represents the following attribute in the schema: fLocksText </para>
@@ -284,7 +263,6 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "fLocksText")]
     [Index(2)]
     public BooleanValue LockText { get; set; }
-	
     /// <summary>
     /// <para> Publish to Server.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
@@ -292,22 +270,19 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "fPublished")]
     [Index(3)]
     public BooleanValue Published { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Shape class.
     /// </summary>
     public Shape():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Shape class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Shape(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Shape class with the specified child elements.
     /// </summary>
@@ -315,7 +290,6 @@ public partial class Shape : OpenXmlCompositeElement
     public Shape(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Shape class from outer XML.
     /// </summary>
@@ -324,13 +298,10 @@ public partial class Shape : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Non-Visual Shape Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:nvSpPr </para>
@@ -344,7 +315,6 @@ public partial class Shape : OpenXmlCompositeElement
         get => GetElement<NonVisualShapeProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Shape Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:spPr </para>
@@ -358,7 +328,6 @@ public partial class Shape : OpenXmlCompositeElement
         get => GetElement<ShapeProperties>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Shape Style.</para>
     /// <para> Represents the following element tag in the schema: cdr:style </para>
@@ -372,7 +341,6 @@ public partial class Shape : OpenXmlCompositeElement
         get => GetElement<Style>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Shape Text Body.</para>
     /// <para> Represents the following element tag in the schema: cdr:txBody </para>
@@ -386,7 +354,6 @@ public partial class Shape : OpenXmlCompositeElement
         get => GetElement<TextBody>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -431,21 +398,18 @@ public partial class GroupShape : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the GroupShape class.
     /// </summary>
     public GroupShape():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the GroupShape class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public GroupShape(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GroupShape class with the specified child elements.
     /// </summary>
@@ -453,7 +417,6 @@ public partial class GroupShape : OpenXmlCompositeElement
     public GroupShape(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GroupShape class from outer XML.
     /// </summary>
@@ -462,13 +425,10 @@ public partial class GroupShape : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Non-Visual Group Shape Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:nvGrpSpPr </para>
@@ -482,7 +442,6 @@ public partial class GroupShape : OpenXmlCompositeElement
         get => GetElement<NonVisualGroupShapeProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Group Shape Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:grpSpPr </para>
@@ -496,7 +455,6 @@ public partial class GroupShape : OpenXmlCompositeElement
         get => GetElement<GroupShapeProperties>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -530,7 +488,6 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Reference to Custom Function.</para>
     /// <para>Represents the following attribute in the schema: macro </para>
@@ -538,7 +495,6 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     [SchemaAttr(0, "macro")]
     [Index(0)]
     public StringValue Macro { get; set; }
-	
     /// <summary>
     /// <para> Publish To Server.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
@@ -546,22 +502,19 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     [SchemaAttr(0, "fPublished")]
     [Index(1)]
     public BooleanValue Published { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the GraphicFrame class.
     /// </summary>
     public GraphicFrame():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the GraphicFrame class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public GraphicFrame(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GraphicFrame class with the specified child elements.
     /// </summary>
@@ -569,7 +522,6 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     public GraphicFrame(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GraphicFrame class from outer XML.
     /// </summary>
@@ -578,13 +530,10 @@ public partial class GraphicFrame : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Non-Visual Graphic Frame Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:nvGraphicFramePr </para>
@@ -598,7 +547,6 @@ public partial class GraphicFrame : OpenXmlCompositeElement
         get => GetElement<NonVisualGraphicFrameProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Graphic Frame Transform.</para>
     /// <para> Represents the following element tag in the schema: cdr:xfrm </para>
@@ -612,7 +560,6 @@ public partial class GraphicFrame : OpenXmlCompositeElement
         get => GetElement<Transform>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Graphical Object.</para>
     /// <para> Represents the following element tag in the schema: a:graphic </para>
@@ -626,7 +573,6 @@ public partial class GraphicFrame : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -660,7 +606,6 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Reference to Custom Function.</para>
     /// <para>Represents the following attribute in the schema: macro </para>
@@ -668,7 +613,6 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     [SchemaAttr(0, "macro")]
     [Index(0)]
     public StringValue Macro { get; set; }
-	
     /// <summary>
     /// <para> Publish to Server.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
@@ -676,22 +620,19 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     [SchemaAttr(0, "fPublished")]
     [Index(1)]
     public BooleanValue Published { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ConnectionShape class.
     /// </summary>
     public ConnectionShape():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ConnectionShape class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ConnectionShape(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ConnectionShape class with the specified child elements.
     /// </summary>
@@ -699,7 +640,6 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     public ConnectionShape(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ConnectionShape class from outer XML.
     /// </summary>
@@ -708,13 +648,10 @@ public partial class ConnectionShape : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Connector Non Visual Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:nvCxnSpPr </para>
@@ -728,7 +665,6 @@ public partial class ConnectionShape : OpenXmlCompositeElement
         get => GetElement<NonVisualConnectorShapeDrawingProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Shape Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:spPr </para>
@@ -742,7 +678,6 @@ public partial class ConnectionShape : OpenXmlCompositeElement
         get => GetElement<ShapeProperties>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Connection Shape Style.</para>
     /// <para> Represents the following element tag in the schema: cdr:style </para>
@@ -756,7 +691,6 @@ public partial class ConnectionShape : OpenXmlCompositeElement
         get => GetElement<Style>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -792,7 +726,6 @@ public partial class Picture : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Reference to Custom Function.</para>
     /// <para>Represents the following attribute in the schema: macro </para>
@@ -800,7 +733,6 @@ public partial class Picture : OpenXmlCompositeElement
     [SchemaAttr(0, "macro")]
     [Index(0)]
     public StringValue Macro { get; set; }
-	
     /// <summary>
     /// <para> Publish to Server.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
@@ -808,22 +740,19 @@ public partial class Picture : OpenXmlCompositeElement
     [SchemaAttr(0, "fPublished")]
     [Index(1)]
     public BooleanValue Published { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Picture class.
     /// </summary>
     public Picture():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Picture class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Picture(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Picture class with the specified child elements.
     /// </summary>
@@ -831,7 +760,6 @@ public partial class Picture : OpenXmlCompositeElement
     public Picture(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Picture class from outer XML.
     /// </summary>
@@ -840,13 +768,10 @@ public partial class Picture : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Non-Visual Picture Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:nvPicPr </para>
@@ -860,7 +785,6 @@ public partial class Picture : OpenXmlCompositeElement
         get => GetElement<NonVisualPictureProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Picture Fill.</para>
     /// <para> Represents the following element tag in the schema: cdr:blipFill </para>
@@ -874,7 +798,6 @@ public partial class Picture : OpenXmlCompositeElement
         get => GetElement<BlipFill>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> ShapeProperties.</para>
     /// <para> Represents the following element tag in the schema: cdr:spPr </para>
@@ -888,7 +811,6 @@ public partial class Picture : OpenXmlCompositeElement
         get => GetElement<ShapeProperties>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Style.</para>
     /// <para> Represents the following element tag in the schema: cdr:style </para>
@@ -902,7 +824,6 @@ public partial class Picture : OpenXmlCompositeElement
         get => GetElement<Style>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -936,23 +857,22 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public UInt32Value Id { get; set; }
-	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "name")]
     [Index(1)]
     public StringValue Name { get; set; }
-	
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
@@ -960,7 +880,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "descr")]
     [Index(2)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
@@ -968,7 +887,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "hidden")]
     [Index(3)]
     public BooleanValue Hidden { get; set; }
-	
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -976,22 +894,19 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(4)]
     public StringValue Title { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class.
     /// </summary>
     public NonVisualDrawingProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualDrawingProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class with the specified child elements.
     /// </summary>
@@ -999,7 +914,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     public NonVisualDrawingProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class from outer XML.
     /// </summary>
@@ -1008,13 +922,10 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
     /// <para> Represents the following element tag in the schema: a:hlinkClick </para>
@@ -1028,7 +939,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
     /// <para> Represents the following element tag in the schema: a:hlinkHover </para>
@@ -1042,7 +952,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -1056,7 +965,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1088,7 +996,6 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Text Box.</para>
     /// <para>Represents the following attribute in the schema: txBox </para>
@@ -1096,22 +1003,19 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "txBox")]
     [Index(0)]
     public BooleanValue TextBox { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualShapeDrawingProperties class.
     /// </summary>
     public NonVisualShapeDrawingProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualShapeDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualShapeDrawingProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualShapeDrawingProperties class with the specified child elements.
     /// </summary>
@@ -1119,7 +1023,6 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     public NonVisualShapeDrawingProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualShapeDrawingProperties class from outer XML.
     /// </summary>
@@ -1128,13 +1031,10 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Shape Locks.</para>
     /// <para> Represents the following element tag in the schema: a:spLocks </para>
@@ -1148,7 +1048,6 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -1162,7 +1061,6 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1195,21 +1093,18 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualShapeProperties class.
     /// </summary>
     public NonVisualShapeProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualShapeProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualShapeProperties class with the specified child elements.
     /// </summary>
@@ -1217,7 +1112,6 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     public NonVisualShapeProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualShapeProperties class from outer XML.
     /// </summary>
@@ -1226,13 +1120,10 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Chart Non Visual Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:cNvPr </para>
@@ -1246,7 +1137,6 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
         get => GetElement<NonVisualDrawingProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Non-Visual Shape Drawing Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:cNvSpPr </para>
@@ -1260,7 +1150,6 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
         get => GetElement<NonVisualShapeDrawingProperties>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1318,30 +1207,27 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "bwMode")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class.
     /// </summary>
     public ShapeProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ShapeProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class with the specified child elements.
     /// </summary>
@@ -1349,7 +1235,6 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     public ShapeProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class from outer XML.
     /// </summary>
@@ -1358,13 +1243,10 @@ public partial class ShapeProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
     /// <para> Represents the following element tag in the schema: a:xfrm </para>
@@ -1378,7 +1260,6 @@ public partial class ShapeProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1415,21 +1296,18 @@ public partial class Style : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Style class.
     /// </summary>
     public Style():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Style class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Style(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Style class with the specified child elements.
     /// </summary>
@@ -1437,7 +1315,6 @@ public partial class Style : OpenXmlCompositeElement
     public Style(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Style class from outer XML.
     /// </summary>
@@ -1446,13 +1323,10 @@ public partial class Style : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> LineReference.</para>
     /// <para> Represents the following element tag in the schema: a:lnRef </para>
@@ -1466,7 +1340,6 @@ public partial class Style : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> FillReference.</para>
     /// <para> Represents the following element tag in the schema: a:fillRef </para>
@@ -1480,7 +1353,6 @@ public partial class Style : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> EffectReference.</para>
     /// <para> Represents the following element tag in the schema: a:effectRef </para>
@@ -1494,7 +1366,6 @@ public partial class Style : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Font Reference.</para>
     /// <para> Represents the following element tag in the schema: a:fontRef </para>
@@ -1508,7 +1379,6 @@ public partial class Style : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1543,21 +1413,18 @@ public partial class TextBody : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the TextBody class.
     /// </summary>
     public TextBody():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the TextBody class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public TextBody(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the TextBody class with the specified child elements.
     /// </summary>
@@ -1565,7 +1432,6 @@ public partial class TextBody : OpenXmlCompositeElement
     public TextBody(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the TextBody class from outer XML.
     /// </summary>
@@ -1574,13 +1440,10 @@ public partial class TextBody : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Body Properties.</para>
     /// <para> Represents the following element tag in the schema: a:bodyPr </para>
@@ -1594,7 +1457,6 @@ public partial class TextBody : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Text List Styles.</para>
     /// <para> Represents the following element tag in the schema: a:lstStyle </para>
@@ -1608,7 +1470,6 @@ public partial class TextBody : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1645,21 +1506,18 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualConnectionShapeProperties class.
     /// </summary>
     public NonVisualConnectionShapeProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualConnectionShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualConnectionShapeProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualConnectionShapeProperties class with the specified child elements.
     /// </summary>
@@ -1667,7 +1525,6 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
     public NonVisualConnectionShapeProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualConnectionShapeProperties class from outer XML.
     /// </summary>
@@ -1676,13 +1533,10 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Connection Shape Locks.</para>
     /// <para> Represents the following element tag in the schema: a:cxnSpLocks </para>
@@ -1696,7 +1550,6 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
         get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Connection Start.</para>
     /// <para> Represents the following element tag in the schema: a:stCxn </para>
@@ -1710,7 +1563,6 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
         get => GetElement<DocumentFormat.OpenXml.Drawing.StartConnection>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Connection End.</para>
     /// <para> Represents the following element tag in the schema: a:endCxn </para>
@@ -1724,7 +1576,6 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
         get => GetElement<DocumentFormat.OpenXml.Drawing.EndConnection>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -1738,7 +1589,6 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1771,21 +1621,18 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualConnectorShapeDrawingProperties class.
     /// </summary>
     public NonVisualConnectorShapeDrawingProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualConnectorShapeDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualConnectorShapeDrawingProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualConnectorShapeDrawingProperties class with the specified child elements.
     /// </summary>
@@ -1793,7 +1640,6 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     public NonVisualConnectorShapeDrawingProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualConnectorShapeDrawingProperties class from outer XML.
     /// </summary>
@@ -1802,13 +1648,10 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Chart Non Visual Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:cNvPr </para>
@@ -1822,7 +1665,6 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
         get => GetElement<NonVisualDrawingProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Non-Visual Connection Shape Drawing Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:cNvCxnSpPr </para>
@@ -1836,7 +1678,6 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
         get => GetElement<NonVisualConnectionShapeProperties>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1868,7 +1709,6 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> preferRelativeResize.</para>
     /// <para>Represents the following attribute in the schema: preferRelativeResize </para>
@@ -1876,22 +1716,19 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "preferRelativeResize")]
     [Index(0)]
     public BooleanValue PreferRelativeResize { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualPictureDrawingProperties class.
     /// </summary>
     public NonVisualPictureDrawingProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualPictureDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualPictureDrawingProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualPictureDrawingProperties class with the specified child elements.
     /// </summary>
@@ -1899,7 +1736,6 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     public NonVisualPictureDrawingProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualPictureDrawingProperties class from outer XML.
     /// </summary>
@@ -1908,13 +1744,10 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> PictureLocks.</para>
     /// <para> Represents the following element tag in the schema: a:picLocks </para>
@@ -1928,7 +1761,6 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> NonVisualPicturePropertiesExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -1942,7 +1774,6 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1975,21 +1806,18 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualPictureProperties class.
     /// </summary>
     public NonVisualPictureProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualPictureProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualPictureProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualPictureProperties class with the specified child elements.
     /// </summary>
@@ -1997,7 +1825,6 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     public NonVisualPictureProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualPictureProperties class from outer XML.
     /// </summary>
@@ -2006,13 +1833,10 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
     /// <para> Represents the following element tag in the schema: cdr:cNvPr </para>
@@ -2026,7 +1850,6 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
         get => GetElement<NonVisualDrawingProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Non-Visual Picture Drawing Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:cNvPicPr </para>
@@ -2040,7 +1863,6 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
         get => GetElement<NonVisualPictureDrawingProperties>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2076,7 +1898,6 @@ public partial class BlipFill : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> DPI Setting.</para>
     /// <para>Represents the following attribute in the schema: dpi </para>
@@ -2084,7 +1905,6 @@ public partial class BlipFill : OpenXmlCompositeElement
     [SchemaAttr(0, "dpi")]
     [Index(0)]
     public UInt32Value Dpi { get; set; }
-	
     /// <summary>
     /// <para> Rotate With Shape.</para>
     /// <para>Represents the following attribute in the schema: rotWithShape </para>
@@ -2092,22 +1912,19 @@ public partial class BlipFill : OpenXmlCompositeElement
     [SchemaAttr(0, "rotWithShape")]
     [Index(1)]
     public BooleanValue RotateWithShape { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the BlipFill class.
     /// </summary>
     public BlipFill():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the BlipFill class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public BlipFill(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BlipFill class with the specified child elements.
     /// </summary>
@@ -2115,7 +1932,6 @@ public partial class BlipFill : OpenXmlCompositeElement
     public BlipFill(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BlipFill class from outer XML.
     /// </summary>
@@ -2124,13 +1940,10 @@ public partial class BlipFill : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Blip.</para>
     /// <para> Represents the following element tag in the schema: a:blip </para>
@@ -2144,7 +1957,6 @@ public partial class BlipFill : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Source Rectangle.</para>
     /// <para> Represents the following element tag in the schema: a:srcRect </para>
@@ -2158,7 +1970,6 @@ public partial class BlipFill : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2191,21 +2002,18 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGraphicFrameDrawingProperties class.
     /// </summary>
     public NonVisualGraphicFrameDrawingProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualGraphicFrameDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualGraphicFrameDrawingProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGraphicFrameDrawingProperties class with the specified child elements.
     /// </summary>
@@ -2213,7 +2021,6 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     public NonVisualGraphicFrameDrawingProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGraphicFrameDrawingProperties class from outer XML.
     /// </summary>
@@ -2222,13 +2029,10 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Graphic Frame Locks.</para>
     /// <para> Represents the following element tag in the schema: a:graphicFrameLocks </para>
@@ -2242,7 +2046,6 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
         get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -2256,7 +2059,6 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2289,21 +2091,18 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGraphicFrameProperties class.
     /// </summary>
     public NonVisualGraphicFrameProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualGraphicFrameProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualGraphicFrameProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGraphicFrameProperties class with the specified child elements.
     /// </summary>
@@ -2311,7 +2110,6 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     public NonVisualGraphicFrameProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGraphicFrameProperties class from outer XML.
     /// </summary>
@@ -2320,13 +2118,10 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Non-Visual Drawing Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:cNvPr </para>
@@ -2340,7 +2135,6 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
         get => GetElement<NonVisualDrawingProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Non-Visual Graphic Frame Drawing Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:cNvGraphicFramePr </para>
@@ -2354,7 +2148,6 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
         get => GetElement<NonVisualGraphicFrameDrawingProperties>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2386,7 +2179,6 @@ public partial class Transform : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
@@ -2394,7 +2186,6 @@ public partial class Transform : OpenXmlCompositeElement
     [SchemaAttr(0, "rot")]
     [Index(0)]
     public Int32Value Rotation { get; set; }
-	
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
@@ -2402,7 +2193,6 @@ public partial class Transform : OpenXmlCompositeElement
     [SchemaAttr(0, "flipH")]
     [Index(1)]
     public BooleanValue HorizontalFlip { get; set; }
-	
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
@@ -2410,22 +2200,19 @@ public partial class Transform : OpenXmlCompositeElement
     [SchemaAttr(0, "flipV")]
     [Index(2)]
     public BooleanValue VerticalFlip { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Transform class.
     /// </summary>
     public Transform():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Transform class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Transform(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Transform class with the specified child elements.
     /// </summary>
@@ -2433,7 +2220,6 @@ public partial class Transform : OpenXmlCompositeElement
     public Transform(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Transform class from outer XML.
     /// </summary>
@@ -2442,13 +2228,10 @@ public partial class Transform : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Offset.</para>
     /// <para> Represents the following element tag in the schema: a:off </para>
@@ -2462,7 +2245,6 @@ public partial class Transform : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Extents.</para>
     /// <para> Represents the following element tag in the schema: a:ext </para>
@@ -2476,7 +2258,6 @@ public partial class Transform : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2509,21 +2290,18 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGroupShapeDrawingProperties class.
     /// </summary>
     public NonVisualGroupShapeDrawingProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualGroupShapeDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualGroupShapeDrawingProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGroupShapeDrawingProperties class with the specified child elements.
     /// </summary>
@@ -2531,7 +2309,6 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
     public NonVisualGroupShapeDrawingProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGroupShapeDrawingProperties class from outer XML.
     /// </summary>
@@ -2540,13 +2317,10 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> GroupShapeLocks.</para>
     /// <para> Represents the following element tag in the schema: a:grpSpLocks </para>
@@ -2560,7 +2334,6 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
         get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> NonVisualGroupDrawingShapePropsExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -2574,7 +2347,6 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2587,6 +2359,7 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
 /// <para> When the object is serialized out as xml, its qualified name is cdr:x.</para>
 /// </summary>
 
+[NumberValidator(MinInclusive = 0, MaxInclusive = 1, SimpleType = typeof(DoubleValue))]
 [SchemaAttr(12, "x")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2607,12 +2380,10 @@ public partial class XPosition : OpenXmlLeafTextElement
     public XPosition(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new DoubleValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<XPosition>(deep);
@@ -2624,6 +2395,7 @@ public partial class XPosition : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is cdr:y.</para>
 /// </summary>
 
+[NumberValidator(MinInclusive = 0, MaxInclusive = 1, SimpleType = typeof(DoubleValue))]
 [SchemaAttr(12, "y")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2644,12 +2416,10 @@ public partial class YPosition : OpenXmlLeafTextElement
     public YPosition(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new DoubleValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<YPosition>(deep);
@@ -2686,9 +2456,8 @@ public partial class FromAnchor : MarkerType
     /// <param name="childElements">Specifies the child elements.</param>
     public FromAnchor(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FromAnchor class with the specified child elements.
     /// </summary>
@@ -2696,7 +2465,6 @@ public partial class FromAnchor : MarkerType
     public FromAnchor(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FromAnchor class from outer XML.
     /// </summary>
@@ -2705,7 +2473,6 @@ public partial class FromAnchor : MarkerType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2743,9 +2510,8 @@ public partial class ToAnchor : MarkerType
     /// <param name="childElements">Specifies the child elements.</param>
     public ToAnchor(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ToAnchor class with the specified child elements.
     /// </summary>
@@ -2753,7 +2519,6 @@ public partial class ToAnchor : MarkerType
     public ToAnchor(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ToAnchor class from outer XML.
     /// </summary>
@@ -2762,7 +2527,6 @@ public partial class ToAnchor : MarkerType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2785,11 +2549,10 @@ public partial class ToAnchor : MarkerType
 
 public abstract partial class MarkerType : OpenXmlCompositeElement
 {
-        
+    
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Relative X Coordinate.</para>
     /// <para> Represents the following element tag in the schema: cdr:x </para>
@@ -2803,7 +2566,6 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
         get => GetElement<XPosition>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Relative Y Coordinate.</para>
     /// <para> Represents the following element tag in the schema: cdr:y </para>
@@ -2817,24 +2579,20 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
         get => GetElement<YPosition>(1);
         set => SetElement(1, value);
 	}
-    
 
 
-    
     /// <summary>
     /// Initializes a new instance of the MarkerType class.
     /// </summary>
     protected MarkerType(){}
-    
         /// <summary>
     ///Initializes a new instance of the MarkerType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     protected MarkerType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MarkerType class with the specified child elements.
     /// </summary>
@@ -2842,7 +2600,6 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
     protected MarkerType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MarkerType class from outer XML.
     /// </summary>
@@ -2851,7 +2608,6 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
 
     
 }
@@ -2871,31 +2627,30 @@ public partial class Extent : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Extent Length.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 2147483647)]
     [SchemaAttr(0, "cx")]
     [Index(0)]
     public Int64Value Cx { get; set; }
-	
     /// <summary>
     /// <para> Extent Width.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 2147483647)]
     [SchemaAttr(0, "cy")]
     [Index(1)]
     public Int64Value Cy { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Extent class.
     /// </summary>
     public Extent():base(){}
     
-      
-     
     
     
     
@@ -2929,21 +2684,18 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGroupShapeProperties class.
     /// </summary>
     public NonVisualGroupShapeProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualGroupShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualGroupShapeProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGroupShapeProperties class with the specified child elements.
     /// </summary>
@@ -2951,7 +2703,6 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     public NonVisualGroupShapeProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGroupShapeProperties class from outer XML.
     /// </summary>
@@ -2960,13 +2711,10 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Chart Non Visual Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:cNvPr </para>
@@ -2980,7 +2728,6 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
         get => GetElement<NonVisualDrawingProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Non-Visual Group Shape Drawing Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:cNvGrpSpPr </para>
@@ -2994,7 +2741,6 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
         get => GetElement<NonVisualGroupShapeDrawingProperties>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -3044,30 +2790,27 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "bwMode")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the GroupShapeProperties class.
     /// </summary>
     public GroupShapeProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the GroupShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public GroupShapeProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GroupShapeProperties class with the specified child elements.
     /// </summary>
@@ -3075,7 +2818,6 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     public GroupShapeProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GroupShapeProperties class from outer XML.
     /// </summary>
@@ -3084,13 +2826,10 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> 2D Transform for Grouped Objects.</para>
     /// <para> Represents the following element tag in the schema: a:xfrm </para>
@@ -3104,7 +2843,6 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -3112,5 +2850,3 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
 
 }
 }
- 
- 

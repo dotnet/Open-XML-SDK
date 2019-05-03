@@ -40,7 +40,6 @@ public partial class ColorsDefinition : OpenXmlPartRootElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Unique ID.</para>
     /// <para>Represents the following attribute in the schema: uniqueId </para>
@@ -48,7 +47,6 @@ public partial class ColorsDefinition : OpenXmlPartRootElement
     [SchemaAttr(0, "uniqueId")]
     [Index(0)]
     public StringValue UniqueId { get; set; }
-	
     /// <summary>
     /// <para> Minimum Version.</para>
     /// <para>Represents the following attribute in the schema: minVer </para>
@@ -56,11 +54,8 @@ public partial class ColorsDefinition : OpenXmlPartRootElement
     [SchemaAttr(0, "minVer")]
     [Index(1)]
     public StringValue MinVersion { get; set; }
-	
 
-    
 	internal ColorsDefinition(DiagramColorsPart ownerPart) : base (ownerPart){}
-    
     /// <summary>
     /// Loads the DOM from the DiagramColorsPart.
     /// </summary>
@@ -77,16 +72,14 @@ public partial class ColorsDefinition : OpenXmlPartRootElement
 		get => OpenXmlPart as DiagramColorsPart;
 		internal set => OpenXmlPart = value;
     }
-    
         /// <summary>
     ///Initializes a new instance of the ColorsDefinition class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ColorsDefinition(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColorsDefinition class with the specified child elements.
     /// </summary>
@@ -94,7 +87,6 @@ public partial class ColorsDefinition : OpenXmlPartRootElement
     public ColorsDefinition(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColorsDefinition class from outer XML.
     /// </summary>
@@ -103,15 +95,12 @@ public partial class ColorsDefinition : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-    
 
-    
     
     /// <summary>
     /// Initializes a new instance of the ColorsDefinition class.
     /// </summary>
     public ColorsDefinition():base(){}
-    
     /// <summary>
     /// Saves the DOM into the DiagramColorsPart.
     /// </summary>
@@ -120,7 +109,6 @@ public partial class ColorsDefinition : OpenXmlPartRootElement
     {
         base.SaveToPart(openXmlPart);
     }
-    
     
     
     /// <inheritdoc/>
@@ -156,15 +144,14 @@ public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Unique ID.</para>
     /// <para>Represents the following attribute in the schema: uniqueId </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "uniqueId")]
     [Index(0)]
     public StringValue UniqueId { get; set; }
-	
     /// <summary>
     /// <para> Minimum Version.</para>
     /// <para>Represents the following attribute in the schema: minVer </para>
@@ -172,7 +159,6 @@ public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "minVer")]
     [Index(1)]
     public StringValue MinVersion { get; set; }
-	
     /// <summary>
     /// <para> Resource ID.</para>
     /// <para>Represents the following attribute in the schema: resId </para>
@@ -180,22 +166,19 @@ public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "resId")]
     [Index(2)]
     public Int32Value ResourceId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ColorsDefinitionHeader class.
     /// </summary>
     public ColorsDefinitionHeader():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ColorsDefinitionHeader class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ColorsDefinitionHeader(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColorsDefinitionHeader class with the specified child elements.
     /// </summary>
@@ -203,7 +186,6 @@ public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
     public ColorsDefinitionHeader(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColorsDefinitionHeader class from outer XML.
     /// </summary>
@@ -212,9 +194,7 @@ public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -246,21 +226,18 @@ public partial class ColorsDefinitionHeaderList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ColorsDefinitionHeaderList class.
     /// </summary>
     public ColorsDefinitionHeaderList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ColorsDefinitionHeaderList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ColorsDefinitionHeaderList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColorsDefinitionHeaderList class with the specified child elements.
     /// </summary>
@@ -268,7 +245,6 @@ public partial class ColorsDefinitionHeaderList : OpenXmlCompositeElement
     public ColorsDefinitionHeaderList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColorsDefinitionHeaderList class from outer XML.
     /// </summary>
@@ -277,9 +253,7 @@ public partial class ColorsDefinitionHeaderList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -318,10 +292,7 @@ public partial class DataModelRoot : OpenXmlPartRootElement
 
     
     
-    
-    
 	internal DataModelRoot(DiagramDataPart ownerPart) : base (ownerPart){}
-    
     /// <summary>
     /// Loads the DOM from the DiagramDataPart.
     /// </summary>
@@ -338,16 +309,14 @@ public partial class DataModelRoot : OpenXmlPartRootElement
 		get => OpenXmlPart as DiagramDataPart;
 		internal set => OpenXmlPart = value;
     }
-    
         /// <summary>
     ///Initializes a new instance of the DataModelRoot class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DataModelRoot(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DataModelRoot class with the specified child elements.
     /// </summary>
@@ -355,7 +324,6 @@ public partial class DataModelRoot : OpenXmlPartRootElement
     public DataModelRoot(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DataModelRoot class from outer XML.
     /// </summary>
@@ -364,15 +332,12 @@ public partial class DataModelRoot : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-    
 
-    
     
     /// <summary>
     /// Initializes a new instance of the DataModelRoot class.
     /// </summary>
     public DataModelRoot():base(){}
-    
     /// <summary>
     /// Saves the DOM into the DiagramDataPart.
     /// </summary>
@@ -382,9 +347,7 @@ public partial class DataModelRoot : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Point List.</para>
     /// <para> Represents the following element tag in the schema: dgm:ptLst </para>
@@ -398,7 +361,6 @@ public partial class DataModelRoot : OpenXmlPartRootElement
         get => GetElement<PointList>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Connection List.</para>
     /// <para> Represents the following element tag in the schema: dgm:cxnLst </para>
@@ -412,7 +374,6 @@ public partial class DataModelRoot : OpenXmlPartRootElement
         get => GetElement<ConnectionList>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Background Formatting.</para>
     /// <para> Represents the following element tag in the schema: dgm:bg </para>
@@ -426,7 +387,6 @@ public partial class DataModelRoot : OpenXmlPartRootElement
         get => GetElement<Background>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Whole E2O Formatting.</para>
     /// <para> Represents the following element tag in the schema: dgm:whole </para>
@@ -440,7 +400,6 @@ public partial class DataModelRoot : OpenXmlPartRootElement
         get => GetElement<Whole>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> DataModelExtensionList.</para>
     /// <para> Represents the following element tag in the schema: dgm:extLst </para>
@@ -454,7 +413,6 @@ public partial class DataModelRoot : OpenXmlPartRootElement
         get => GetElement<DataModelExtensionList>(4);
         set => SetElement(4, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -497,7 +455,6 @@ public partial class LayoutDefinition : OpenXmlPartRootElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: uniqueId </para>
@@ -505,7 +462,6 @@ public partial class LayoutDefinition : OpenXmlPartRootElement
     [SchemaAttr(0, "uniqueId")]
     [Index(0)]
     public StringValue UniqueId { get; set; }
-	
     /// <summary>
     /// <para> Minimum Version.</para>
     /// <para>Represents the following attribute in the schema: minVer </para>
@@ -513,7 +469,6 @@ public partial class LayoutDefinition : OpenXmlPartRootElement
     [SchemaAttr(0, "minVer")]
     [Index(1)]
     public StringValue MinVersion { get; set; }
-	
     /// <summary>
     /// <para> Default Style.</para>
     /// <para>Represents the following attribute in the schema: defStyle </para>
@@ -521,11 +476,8 @@ public partial class LayoutDefinition : OpenXmlPartRootElement
     [SchemaAttr(0, "defStyle")]
     [Index(2)]
     public StringValue DefaultStyle { get; set; }
-	
 
-    
 	internal LayoutDefinition(DiagramLayoutDefinitionPart ownerPart) : base (ownerPart){}
-    
     /// <summary>
     /// Loads the DOM from the DiagramLayoutDefinitionPart.
     /// </summary>
@@ -542,16 +494,14 @@ public partial class LayoutDefinition : OpenXmlPartRootElement
 		get => OpenXmlPart as DiagramLayoutDefinitionPart;
 		internal set => OpenXmlPart = value;
     }
-    
         /// <summary>
     ///Initializes a new instance of the LayoutDefinition class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public LayoutDefinition(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LayoutDefinition class with the specified child elements.
     /// </summary>
@@ -559,7 +509,6 @@ public partial class LayoutDefinition : OpenXmlPartRootElement
     public LayoutDefinition(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LayoutDefinition class from outer XML.
     /// </summary>
@@ -568,15 +517,12 @@ public partial class LayoutDefinition : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-    
 
-    
     
     /// <summary>
     /// Initializes a new instance of the LayoutDefinition class.
     /// </summary>
     public LayoutDefinition():base(){}
-    
     /// <summary>
     /// Saves the DOM into the DiagramLayoutDefinitionPart.
     /// </summary>
@@ -585,7 +531,6 @@ public partial class LayoutDefinition : OpenXmlPartRootElement
     {
         base.SaveToPart(openXmlPart);
     }
-    
     
     
     /// <inheritdoc/>
@@ -621,15 +566,14 @@ public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Unique Identifier.</para>
     /// <para>Represents the following attribute in the schema: uniqueId </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "uniqueId")]
     [Index(0)]
     public StringValue UniqueId { get; set; }
-	
     /// <summary>
     /// <para> Minimum Version.</para>
     /// <para>Represents the following attribute in the schema: minVer </para>
@@ -637,7 +581,6 @@ public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "minVer")]
     [Index(1)]
     public StringValue MinVersion { get; set; }
-	
     /// <summary>
     /// <para> Default Style.</para>
     /// <para>Represents the following attribute in the schema: defStyle </para>
@@ -645,7 +588,6 @@ public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "defStyle")]
     [Index(2)]
     public StringValue DefaultStyle { get; set; }
-	
     /// <summary>
     /// <para> Resource Identifier.</para>
     /// <para>Represents the following attribute in the schema: resId </para>
@@ -653,22 +595,19 @@ public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "resId")]
     [Index(3)]
     public Int32Value ResourceId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the LayoutDefinitionHeader class.
     /// </summary>
     public LayoutDefinitionHeader():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the LayoutDefinitionHeader class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public LayoutDefinitionHeader(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LayoutDefinitionHeader class with the specified child elements.
     /// </summary>
@@ -676,7 +615,6 @@ public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
     public LayoutDefinitionHeader(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LayoutDefinitionHeader class from outer XML.
     /// </summary>
@@ -685,9 +623,7 @@ public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -719,21 +655,18 @@ public partial class LayoutDefinitionHeaderList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the LayoutDefinitionHeaderList class.
     /// </summary>
     public LayoutDefinitionHeaderList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the LayoutDefinitionHeaderList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public LayoutDefinitionHeaderList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LayoutDefinitionHeaderList class with the specified child elements.
     /// </summary>
@@ -741,7 +674,6 @@ public partial class LayoutDefinitionHeaderList : OpenXmlCompositeElement
     public LayoutDefinitionHeaderList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LayoutDefinitionHeaderList class from outer XML.
     /// </summary>
@@ -750,9 +682,7 @@ public partial class LayoutDefinitionHeaderList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -776,55 +706,52 @@ public partial class RelationshipIds : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Explicit Relationship to Diagram Data Part.</para>
     /// <para>Represents the following attribute in the schema: r:dm </para>
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(19, "dm")]
     [Index(0)]
     public StringValue DataPart { get; set; }
-	
     /// <summary>
     /// <para> Explicit Relationship to Diagram Layout Definition Part.</para>
     /// <para>Represents the following attribute in the schema: r:lo </para>
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(19, "lo")]
     [Index(1)]
     public StringValue LayoutPart { get; set; }
-	
     /// <summary>
     /// <para> Explicit Relationship to Style Definition Part.</para>
     /// <para>Represents the following attribute in the schema: r:qs </para>
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(19, "qs")]
     [Index(2)]
     public StringValue StylePart { get; set; }
-	
     /// <summary>
     /// <para> Explicit Relationship to Diagram Colors Part.</para>
     /// <para>Represents the following attribute in the schema: r:cs </para>
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(19, "cs")]
     [Index(3)]
     public StringValue ColorPart { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RelationshipIds class.
     /// </summary>
     public RelationshipIds():base(){}
     
-      
-     
     
     
     
@@ -864,7 +791,6 @@ public partial class StyleDefinition : OpenXmlPartRootElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Unique Style ID.</para>
     /// <para>Represents the following attribute in the schema: uniqueId </para>
@@ -872,7 +798,6 @@ public partial class StyleDefinition : OpenXmlPartRootElement
     [SchemaAttr(0, "uniqueId")]
     [Index(0)]
     public StringValue UniqueId { get; set; }
-	
     /// <summary>
     /// <para> Minimum Version.</para>
     /// <para>Represents the following attribute in the schema: minVer </para>
@@ -880,11 +805,8 @@ public partial class StyleDefinition : OpenXmlPartRootElement
     [SchemaAttr(0, "minVer")]
     [Index(1)]
     public StringValue MinVersion { get; set; }
-	
 
-    
 	internal StyleDefinition(DiagramStylePart ownerPart) : base (ownerPart){}
-    
     /// <summary>
     /// Loads the DOM from the DiagramStylePart.
     /// </summary>
@@ -901,16 +823,14 @@ public partial class StyleDefinition : OpenXmlPartRootElement
 		get => OpenXmlPart as DiagramStylePart;
 		internal set => OpenXmlPart = value;
     }
-    
         /// <summary>
     ///Initializes a new instance of the StyleDefinition class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public StyleDefinition(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StyleDefinition class with the specified child elements.
     /// </summary>
@@ -918,7 +838,6 @@ public partial class StyleDefinition : OpenXmlPartRootElement
     public StyleDefinition(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StyleDefinition class from outer XML.
     /// </summary>
@@ -927,15 +846,12 @@ public partial class StyleDefinition : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-    
 
-    
     
     /// <summary>
     /// Initializes a new instance of the StyleDefinition class.
     /// </summary>
     public StyleDefinition():base(){}
-    
     /// <summary>
     /// Saves the DOM into the DiagramStylePart.
     /// </summary>
@@ -944,7 +860,6 @@ public partial class StyleDefinition : OpenXmlPartRootElement
     {
         base.SaveToPart(openXmlPart);
     }
-    
     
     
     /// <inheritdoc/>
@@ -980,15 +895,14 @@ public partial class StyleDefinitionHeader : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Unique Style ID.</para>
     /// <para>Represents the following attribute in the schema: uniqueId </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "uniqueId")]
     [Index(0)]
     public StringValue UniqueId { get; set; }
-	
     /// <summary>
     /// <para> Minimum Version.</para>
     /// <para>Represents the following attribute in the schema: minVer </para>
@@ -996,7 +910,6 @@ public partial class StyleDefinitionHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "minVer")]
     [Index(1)]
     public StringValue MinVersion { get; set; }
-	
     /// <summary>
     /// <para> Resource ID.</para>
     /// <para>Represents the following attribute in the schema: resId </para>
@@ -1004,22 +917,19 @@ public partial class StyleDefinitionHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "resId")]
     [Index(2)]
     public Int32Value ResourceId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the StyleDefinitionHeader class.
     /// </summary>
     public StyleDefinitionHeader():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the StyleDefinitionHeader class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public StyleDefinitionHeader(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StyleDefinitionHeader class with the specified child elements.
     /// </summary>
@@ -1027,7 +937,6 @@ public partial class StyleDefinitionHeader : OpenXmlCompositeElement
     public StyleDefinitionHeader(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StyleDefinitionHeader class from outer XML.
     /// </summary>
@@ -1036,9 +945,7 @@ public partial class StyleDefinitionHeader : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -1070,21 +977,18 @@ public partial class StyleDefinitionHeaderList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the StyleDefinitionHeaderList class.
     /// </summary>
     public StyleDefinitionHeaderList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the StyleDefinitionHeaderList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public StyleDefinitionHeaderList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StyleDefinitionHeaderList class with the specified child elements.
     /// </summary>
@@ -1092,7 +996,6 @@ public partial class StyleDefinitionHeaderList : OpenXmlCompositeElement
     public StyleDefinitionHeaderList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StyleDefinitionHeaderList class from outer XML.
     /// </summary>
@@ -1101,9 +1004,7 @@ public partial class StyleDefinitionHeaderList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -1127,31 +1028,29 @@ public partial class ColorTransformCategory : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Category Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsUri = true)]
     [SchemaAttr(0, "type")]
     [Index(0)]
     public StringValue Type { get; set; }
-	
     /// <summary>
     /// <para> Priority.</para>
     /// <para>Represents the following attribute in the schema: pri </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "pri")]
     [Index(1)]
     public UInt32Value Priority { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ColorTransformCategory class.
     /// </summary>
     public ColorTransformCategory():base(){}
     
-      
-     
     
     
     
@@ -1194,9 +1093,8 @@ public partial class FillColorList : ColorsType
     /// <param name="childElements">Specifies the child elements.</param>
     public FillColorList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FillColorList class with the specified child elements.
     /// </summary>
@@ -1204,7 +1102,6 @@ public partial class FillColorList : ColorsType
     public FillColorList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FillColorList class from outer XML.
     /// </summary>
@@ -1213,7 +1110,6 @@ public partial class FillColorList : ColorsType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -1255,9 +1151,8 @@ public partial class LineColorList : ColorsType
     /// <param name="childElements">Specifies the child elements.</param>
     public LineColorList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LineColorList class with the specified child elements.
     /// </summary>
@@ -1265,7 +1160,6 @@ public partial class LineColorList : ColorsType
     public LineColorList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LineColorList class from outer XML.
     /// </summary>
@@ -1274,7 +1168,6 @@ public partial class LineColorList : ColorsType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -1316,9 +1209,8 @@ public partial class EffectColorList : ColorsType
     /// <param name="childElements">Specifies the child elements.</param>
     public EffectColorList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the EffectColorList class with the specified child elements.
     /// </summary>
@@ -1326,7 +1218,6 @@ public partial class EffectColorList : ColorsType
     public EffectColorList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the EffectColorList class from outer XML.
     /// </summary>
@@ -1335,7 +1226,6 @@ public partial class EffectColorList : ColorsType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -1377,9 +1267,8 @@ public partial class TextLineColorList : ColorsType
     /// <param name="childElements">Specifies the child elements.</param>
     public TextLineColorList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the TextLineColorList class with the specified child elements.
     /// </summary>
@@ -1387,7 +1276,6 @@ public partial class TextLineColorList : ColorsType
     public TextLineColorList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the TextLineColorList class from outer XML.
     /// </summary>
@@ -1396,7 +1284,6 @@ public partial class TextLineColorList : ColorsType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -1438,9 +1325,8 @@ public partial class TextFillColorList : ColorsType
     /// <param name="childElements">Specifies the child elements.</param>
     public TextFillColorList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the TextFillColorList class with the specified child elements.
     /// </summary>
@@ -1448,7 +1334,6 @@ public partial class TextFillColorList : ColorsType
     public TextFillColorList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the TextFillColorList class from outer XML.
     /// </summary>
@@ -1457,7 +1342,6 @@ public partial class TextFillColorList : ColorsType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -1499,9 +1383,8 @@ public partial class TextEffectColorList : ColorsType
     /// <param name="childElements">Specifies the child elements.</param>
     public TextEffectColorList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the TextEffectColorList class with the specified child elements.
     /// </summary>
@@ -1509,7 +1392,6 @@ public partial class TextEffectColorList : ColorsType
     public TextEffectColorList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the TextEffectColorList class from outer XML.
     /// </summary>
@@ -1518,7 +1400,6 @@ public partial class TextEffectColorList : ColorsType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -1549,41 +1430,38 @@ public partial class TextEffectColorList : ColorsType
 
 public abstract partial class ColorsType : OpenXmlCompositeElement
 {
-        
+    
         /// <summary>
     /// <para> Color Application Method Type.</para>
     /// <para>Represents the following attribute in the schema: meth </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "meth")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ColorApplicationMethodValues> Method { get; set; }
-	
     /// <summary>
     /// <para> Hue Direction.</para>
     /// <para>Represents the following attribute in the schema: hueDir </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "hueDir")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HueDirectionValues> HueDirection { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the ColorsType class.
     /// </summary>
     protected ColorsType(){}
-    
         /// <summary>
     ///Initializes a new instance of the ColorsType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     protected ColorsType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColorsType class with the specified child elements.
     /// </summary>
@@ -1591,7 +1469,6 @@ public abstract partial class ColorsType : OpenXmlCompositeElement
     protected ColorsType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColorsType class from outer XML.
     /// </summary>
@@ -1600,7 +1477,6 @@ public abstract partial class ColorsType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
 
     
 }
@@ -1628,21 +1504,18 @@ public partial class ExtensionList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ExtensionList class.
     /// </summary>
     public ExtensionList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ExtensionList class with the specified child elements.
     /// </summary>
@@ -1650,7 +1523,6 @@ public partial class ExtensionList : OpenXmlCompositeElement
     public ExtensionList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ExtensionList class from outer XML.
     /// </summary>
@@ -1659,9 +1531,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -1685,7 +1555,6 @@ public partial class ColorDefinitionTitle : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Language.</para>
     /// <para>Represents the following attribute in the schema: lang </para>
@@ -1693,23 +1562,20 @@ public partial class ColorDefinitionTitle : OpenXmlLeafElement
     [SchemaAttr(0, "lang")]
     [Index(0)]
     public StringValue Language { get; set; }
-	
     /// <summary>
     /// <para> Description Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "val")]
     [Index(1)]
     public StringValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ColorDefinitionTitle class.
     /// </summary>
     public ColorDefinitionTitle():base(){}
     
-      
-     
     
     
     
@@ -1733,7 +1599,6 @@ public partial class ColorTransformDescription : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Language.</para>
     /// <para>Represents the following attribute in the schema: lang </para>
@@ -1741,23 +1606,20 @@ public partial class ColorTransformDescription : OpenXmlLeafElement
     [SchemaAttr(0, "lang")]
     [Index(0)]
     public StringValue Language { get; set; }
-	
     /// <summary>
     /// <para> Description Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "val")]
     [Index(1)]
     public StringValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ColorTransformDescription class.
     /// </summary>
     public ColorTransformDescription():base(){}
     
-      
-     
     
     
     
@@ -1789,21 +1651,18 @@ public partial class ColorTransformCategories : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ColorTransformCategories class.
     /// </summary>
     public ColorTransformCategories():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ColorTransformCategories class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ColorTransformCategories(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColorTransformCategories class with the specified child elements.
     /// </summary>
@@ -1811,7 +1670,6 @@ public partial class ColorTransformCategories : OpenXmlCompositeElement
     public ColorTransformCategories(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColorTransformCategories class from outer XML.
     /// </summary>
@@ -1820,9 +1678,7 @@ public partial class ColorTransformCategories : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -1865,30 +1721,27 @@ public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ColorTransformStyleLabel class.
     /// </summary>
     public ColorTransformStyleLabel():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ColorTransformStyleLabel class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ColorTransformStyleLabel(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColorTransformStyleLabel class with the specified child elements.
     /// </summary>
@@ -1896,7 +1749,6 @@ public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
     public ColorTransformStyleLabel(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColorTransformStyleLabel class from outer XML.
     /// </summary>
@@ -1905,13 +1757,10 @@ public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Fill Color List.</para>
     /// <para> Represents the following element tag in the schema: dgm:fillClrLst </para>
@@ -1925,7 +1774,6 @@ public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
         get => GetElement<FillColorList>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Line Color List.</para>
     /// <para> Represents the following element tag in the schema: dgm:linClrLst </para>
@@ -1939,7 +1787,6 @@ public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
         get => GetElement<LineColorList>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Effect Color List.</para>
     /// <para> Represents the following element tag in the schema: dgm:effectClrLst </para>
@@ -1953,7 +1800,6 @@ public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
         get => GetElement<EffectColorList>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Text Line Color List.</para>
     /// <para> Represents the following element tag in the schema: dgm:txLinClrLst </para>
@@ -1967,7 +1813,6 @@ public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
         get => GetElement<TextLineColorList>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Text Fill Color List.</para>
     /// <para> Represents the following element tag in the schema: dgm:txFillClrLst </para>
@@ -1981,7 +1826,6 @@ public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
         get => GetElement<TextFillColorList>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> Text Effect Color List.</para>
     /// <para> Represents the following element tag in the schema: dgm:txEffectClrLst </para>
@@ -1995,7 +1839,6 @@ public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
         get => GetElement<TextEffectColorList>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: dgm:extLst </para>
@@ -2009,7 +1852,6 @@ public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
         get => GetElement<ExtensionList>(6);
         set => SetElement(6, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2045,46 +1887,46 @@ public partial class Point : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Model Identifier.</para>
     /// <para>Represents the following attribute in the schema: modelId </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
     [SchemaAttr(0, "modelId")]
     [Index(0)]
     public StringValue ModelId { get; set; }
-	
     /// <summary>
     /// <para> Point Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "type")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PointValues> Type { get; set; }
-	
     /// <summary>
     /// <para> Connection Identifier.</para>
     /// <para>Represents the following attribute in the schema: cxnId </para>
     /// </summary>
+[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
     [SchemaAttr(0, "cxnId")]
     [Index(2)]
     public StringValue ConnectionId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Point class.
     /// </summary>
     public Point():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Point class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Point(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Point class with the specified child elements.
     /// </summary>
@@ -2092,7 +1934,6 @@ public partial class Point : OpenXmlCompositeElement
     public Point(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Point class from outer XML.
     /// </summary>
@@ -2101,13 +1942,10 @@ public partial class Point : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Property Set.</para>
     /// <para> Represents the following element tag in the schema: dgm:prSet </para>
@@ -2121,7 +1959,6 @@ public partial class Point : OpenXmlCompositeElement
         get => GetElement<PropertySet>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Shape Properties.</para>
     /// <para> Represents the following element tag in the schema: dgm:spPr </para>
@@ -2135,7 +1972,6 @@ public partial class Point : OpenXmlCompositeElement
         get => GetElement<ShapeProperties>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Text Body.</para>
     /// <para> Represents the following element tag in the schema: dgm:t </para>
@@ -2149,7 +1985,6 @@ public partial class Point : OpenXmlCompositeElement
         get => GetElement<TextBody>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> PtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: dgm:extLst </para>
@@ -2163,7 +1998,6 @@ public partial class Point : OpenXmlCompositeElement
         get => GetElement<PtExtensionList>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2193,71 +2027,78 @@ public partial class Connection : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Model Identifier.</para>
     /// <para>Represents the following attribute in the schema: modelId </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
     [SchemaAttr(0, "modelId")]
     [Index(0)]
     public StringValue ModelId { get; set; }
-	
     /// <summary>
     /// <para> Point Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "type")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionValues> Type { get; set; }
-	
     /// <summary>
     /// <para> Source Identifier.</para>
     /// <para>Represents the following attribute in the schema: srcId </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
     [SchemaAttr(0, "srcId")]
     [Index(2)]
     public StringValue SourceId { get; set; }
-	
     /// <summary>
     /// <para> Destination Identifier.</para>
     /// <para>Represents the following attribute in the schema: destId </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
     [SchemaAttr(0, "destId")]
     [Index(3)]
     public StringValue DestinationId { get; set; }
-	
     /// <summary>
     /// <para> Source Position.</para>
     /// <para>Represents the following attribute in the schema: srcOrd </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "srcOrd")]
     [Index(4)]
     public UInt32Value SourcePosition { get; set; }
-	
     /// <summary>
     /// <para> Destination Position.</para>
     /// <para>Represents the following attribute in the schema: destOrd </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "destOrd")]
     [Index(5)]
     public UInt32Value DestinationPosition { get; set; }
-	
     /// <summary>
     /// <para> Parent Transition Identifier.</para>
     /// <para>Represents the following attribute in the schema: parTransId </para>
     /// </summary>
+[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
     [SchemaAttr(0, "parTransId")]
     [Index(6)]
     public StringValue ParentTransitionId { get; set; }
-	
     /// <summary>
     /// <para> Sibling Transition Identifier.</para>
     /// <para>Represents the following attribute in the schema: sibTransId </para>
     /// </summary>
+[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
     [SchemaAttr(0, "sibTransId")]
     [Index(7)]
     public StringValue SiblingTransitionId { get; set; }
-	
     /// <summary>
     /// <para> Presentation Identifier.</para>
     /// <para>Represents the following attribute in the schema: presId </para>
@@ -2265,22 +2106,19 @@ public partial class Connection : OpenXmlCompositeElement
     [SchemaAttr(0, "presId")]
     [Index(8)]
     public StringValue PresentationId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Connection class.
     /// </summary>
     public Connection():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Connection class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Connection(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Connection class with the specified child elements.
     /// </summary>
@@ -2288,7 +2126,6 @@ public partial class Connection : OpenXmlCompositeElement
     public Connection(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Connection class from outer XML.
     /// </summary>
@@ -2297,13 +2134,10 @@ public partial class Connection : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: dgm:extLst </para>
@@ -2317,7 +2151,6 @@ public partial class Connection : OpenXmlCompositeElement
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2347,23 +2180,23 @@ public partial class Constraint : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Constraint Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "type")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> Type { get; set; }
-	
     /// <summary>
     /// <para> For.</para>
     /// <para>Represents the following attribute in the schema: for </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "for")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> For { get; set; }
-	
     /// <summary>
     /// <para> For Name.</para>
     /// <para>Represents the following attribute in the schema: forName </para>
@@ -2371,31 +2204,30 @@ public partial class Constraint : OpenXmlCompositeElement
     [SchemaAttr(0, "forName")]
     [Index(2)]
     public StringValue ForName { get; set; }
-	
     /// <summary>
     /// <para> Data Point Type.</para>
     /// <para>Represents the following attribute in the schema: ptType </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "ptType")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> PointType { get; set; }
-	
     /// <summary>
     /// <para> Reference Type.</para>
     /// <para>Represents the following attribute in the schema: refType </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "refType")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> ReferenceType { get; set; }
-	
     /// <summary>
     /// <para> Reference For.</para>
     /// <para>Represents the following attribute in the schema: refFor </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "refFor")]
     [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> ReferenceFor { get; set; }
-	
     /// <summary>
     /// <para> Reference For Name.</para>
     /// <para>Represents the following attribute in the schema: refForName </para>
@@ -2403,23 +2235,22 @@ public partial class Constraint : OpenXmlCompositeElement
     [SchemaAttr(0, "refForName")]
     [Index(6)]
     public StringValue ReferenceForName { get; set; }
-	
     /// <summary>
     /// <para> Reference Point Type.</para>
     /// <para>Represents the following attribute in the schema: refPtType </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "refPtType")]
     [Index(7)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> ReferencePointType { get; set; }
-	
     /// <summary>
     /// <para> Operator.</para>
     /// <para>Represents the following attribute in the schema: op </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "op")]
     [Index(8)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BoolOperatorValues> Operator { get; set; }
-	
     /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
@@ -2427,7 +2258,6 @@ public partial class Constraint : OpenXmlCompositeElement
     [SchemaAttr(0, "val")]
     [Index(9)]
     public DoubleValue Val { get; set; }
-	
     /// <summary>
     /// <para> Factor.</para>
     /// <para>Represents the following attribute in the schema: fact </para>
@@ -2435,22 +2265,19 @@ public partial class Constraint : OpenXmlCompositeElement
     [SchemaAttr(0, "fact")]
     [Index(10)]
     public DoubleValue Fact { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Constraint class.
     /// </summary>
     public Constraint():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Constraint class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Constraint(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Constraint class with the specified child elements.
     /// </summary>
@@ -2458,7 +2285,6 @@ public partial class Constraint : OpenXmlCompositeElement
     public Constraint(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Constraint class from outer XML.
     /// </summary>
@@ -2467,13 +2293,10 @@ public partial class Constraint : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: dgm:extLst </para>
@@ -2487,7 +2310,6 @@ public partial class Constraint : OpenXmlCompositeElement
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2517,23 +2339,23 @@ public partial class Rule : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Constraint Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "type")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues> Type { get; set; }
-	
     /// <summary>
     /// <para> For.</para>
     /// <para>Represents the following attribute in the schema: for </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "for")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues> For { get; set; }
-	
     /// <summary>
     /// <para> For Name.</para>
     /// <para>Represents the following attribute in the schema: forName </para>
@@ -2541,15 +2363,14 @@ public partial class Rule : OpenXmlCompositeElement
     [SchemaAttr(0, "forName")]
     [Index(2)]
     public StringValue ForName { get; set; }
-	
     /// <summary>
     /// <para> Data Point Type.</para>
     /// <para>Represents the following attribute in the schema: ptType </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "ptType")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues> PointType { get; set; }
-	
     /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
@@ -2557,7 +2378,6 @@ public partial class Rule : OpenXmlCompositeElement
     [SchemaAttr(0, "val")]
     [Index(4)]
     public DoubleValue Val { get; set; }
-	
     /// <summary>
     /// <para> Factor.</para>
     /// <para>Represents the following attribute in the schema: fact </para>
@@ -2565,7 +2385,6 @@ public partial class Rule : OpenXmlCompositeElement
     [SchemaAttr(0, "fact")]
     [Index(5)]
     public DoubleValue Fact { get; set; }
-	
     /// <summary>
     /// <para> Max Value.</para>
     /// <para>Represents the following attribute in the schema: max </para>
@@ -2573,22 +2392,19 @@ public partial class Rule : OpenXmlCompositeElement
     [SchemaAttr(0, "max")]
     [Index(6)]
     public DoubleValue Max { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Rule class.
     /// </summary>
     public Rule():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Rule class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Rule(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Rule class with the specified child elements.
     /// </summary>
@@ -2596,7 +2412,6 @@ public partial class Rule : OpenXmlCompositeElement
     public Rule(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Rule class from outer XML.
     /// </summary>
@@ -2605,13 +2420,10 @@ public partial class Rule : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: dgm:extLst </para>
@@ -2625,7 +2437,6 @@ public partial class Rule : OpenXmlCompositeElement
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2648,31 +2459,29 @@ public partial class Adjust : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Adjust Handle Index.</para>
     /// <para>Represents the following attribute in the schema: idx </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 1)]
     [SchemaAttr(0, "idx")]
     [Index(0)]
     public UInt32Value Index { get; set; }
-	
     /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "val")]
     [Index(1)]
     public DoubleValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Adjust class.
     /// </summary>
     public Adjust():base(){}
     
-      
-     
     
     
     
@@ -2704,21 +2513,18 @@ public partial class AdjustList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the AdjustList class.
     /// </summary>
     public AdjustList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the AdjustList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public AdjustList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AdjustList class with the specified child elements.
     /// </summary>
@@ -2726,7 +2532,6 @@ public partial class AdjustList : OpenXmlCompositeElement
     public AdjustList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AdjustList class from outer XML.
     /// </summary>
@@ -2735,9 +2540,7 @@ public partial class AdjustList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -2761,31 +2564,64 @@ public partial class Parameter : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Parameter Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "type")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ParameterIdValues> Type { get; set; }
-	
     /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HorizontalAlignmentValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VerticalAlignmentValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildDirectionValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildAlignmentValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryChildAlignmentValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.LinearDirectionValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.SecondaryLinearDirectionValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.StartingElementValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BendPointValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorRoutingValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ArrowheadStyleValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorDimensionValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.RotationPathValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.CenterShapeMappingValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeHorizontalAlignmentValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.NodeVerticalAlignmentValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FallbackDimensionValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextDirectionValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentPositionValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PyramidAccentTextMarginValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextBlockDirectionValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorHorizontalValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAnchorVerticalValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.TextAlignmentValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AutoTextRotationValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.GrowDirectionValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FlowDirectionValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ContinueDirectionValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.BreakpointValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OffsetValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyAlignmentValues>), UnionId = 0)]
+[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+[NumberValidator(SimpleType = typeof(DoubleValue), UnionId = 0)]
+[NumberValidator(SimpleType = typeof(BooleanValue), UnionId = 0)]
+[StringValidator(UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectorPointValues>), UnionId = 0)]
     [SchemaAttr(0, "val")]
     [Index(1)]
     public StringValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Parameter class.
     /// </summary>
     public Parameter():base(){}
     
-      
-     
     
     
     
@@ -2818,15 +2654,15 @@ public partial class Algorithm : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Algorithm Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "type")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AlgorithmValues> Type { get; set; }
-	
     /// <summary>
     /// <para> Revision Number.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
@@ -2834,22 +2670,19 @@ public partial class Algorithm : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     [Index(1)]
     public UInt32Value Revision { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Algorithm class.
     /// </summary>
     public Algorithm():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Algorithm class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Algorithm(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Algorithm class with the specified child elements.
     /// </summary>
@@ -2857,7 +2690,6 @@ public partial class Algorithm : OpenXmlCompositeElement
     public Algorithm(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Algorithm class from outer XML.
     /// </summary>
@@ -2866,9 +2698,7 @@ public partial class Algorithm : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -2901,7 +2731,6 @@ public partial class Shape : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
@@ -2909,15 +2738,15 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "rot")]
     [Index(0)]
     public DoubleValue Rotation { get; set; }
-	
     /// <summary>
     /// <para> Shape Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.ShapeTypeValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.OutputShapeValues>), UnionId = 0)]
     [SchemaAttr(0, "type")]
     [Index(1)]
     public StringValue Type { get; set; }
-	
     /// <summary>
     /// <para> Relationship to Image Part.</para>
     /// <para>Represents the following attribute in the schema: r:blip </para>
@@ -2927,7 +2756,6 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(19, "blip")]
     [Index(2)]
     public StringValue Blip { get; set; }
-	
     /// <summary>
     /// <para> Z-Order Offset.</para>
     /// <para>Represents the following attribute in the schema: zOrderOff </para>
@@ -2935,7 +2763,6 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "zOrderOff")]
     [Index(3)]
     public Int32Value ZOrderOffset { get; set; }
-	
     /// <summary>
     /// <para> Hide Geometry.</para>
     /// <para>Represents the following attribute in the schema: hideGeom </para>
@@ -2943,7 +2770,6 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "hideGeom")]
     [Index(4)]
     public BooleanValue HideGeometry { get; set; }
-	
     /// <summary>
     /// <para> Prevent Text Editing.</para>
     /// <para>Represents the following attribute in the schema: lkTxEntry </para>
@@ -2951,7 +2777,6 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "lkTxEntry")]
     [Index(5)]
     public BooleanValue LockedText { get; set; }
-	
     /// <summary>
     /// <para> Image Placeholder.</para>
     /// <para>Represents the following attribute in the schema: blipPhldr </para>
@@ -2959,22 +2784,19 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "blipPhldr")]
     [Index(6)]
     public BooleanValue BlipPlaceholder { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Shape class.
     /// </summary>
     public Shape():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Shape class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Shape(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Shape class with the specified child elements.
     /// </summary>
@@ -2982,7 +2804,6 @@ public partial class Shape : OpenXmlCompositeElement
     public Shape(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Shape class from outer XML.
     /// </summary>
@@ -2991,13 +2812,10 @@ public partial class Shape : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Shape Adjust List.</para>
     /// <para> Represents the following element tag in the schema: dgm:adjLst </para>
@@ -3011,7 +2829,6 @@ public partial class Shape : OpenXmlCompositeElement
         get => GetElement<AdjustList>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: dgm:extLst </para>
@@ -3025,7 +2842,6 @@ public partial class Shape : OpenXmlCompositeElement
         get => GetElement<ExtensionList>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -3055,7 +2871,6 @@ public partial class PresentationOf : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Axis.</para>
     /// <para>Represents the following attribute in the schema: axis </para>
@@ -3063,7 +2878,6 @@ public partial class PresentationOf : OpenXmlCompositeElement
     [SchemaAttr(0, "axis")]
     [Index(0)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis { get; set; }
-	
     /// <summary>
     /// <para> Data Point Type.</para>
     /// <para>Represents the following attribute in the schema: ptType </para>
@@ -3071,7 +2885,6 @@ public partial class PresentationOf : OpenXmlCompositeElement
     [SchemaAttr(0, "ptType")]
     [Index(1)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType { get; set; }
-	
     /// <summary>
     /// <para> Hide Last Transition.</para>
     /// <para>Represents the following attribute in the schema: hideLastTrans </para>
@@ -3079,7 +2892,6 @@ public partial class PresentationOf : OpenXmlCompositeElement
     [SchemaAttr(0, "hideLastTrans")]
     [Index(2)]
     public ListValue<BooleanValue> HideLastTrans { get; set; }
-	
     /// <summary>
     /// <para> Start.</para>
     /// <para>Represents the following attribute in the schema: st </para>
@@ -3087,7 +2899,6 @@ public partial class PresentationOf : OpenXmlCompositeElement
     [SchemaAttr(0, "st")]
     [Index(3)]
     public ListValue<Int32Value> Start { get; set; }
-	
     /// <summary>
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: cnt </para>
@@ -3095,7 +2906,6 @@ public partial class PresentationOf : OpenXmlCompositeElement
     [SchemaAttr(0, "cnt")]
     [Index(4)]
     public ListValue<UInt32Value> Count { get; set; }
-	
     /// <summary>
     /// <para> Step.</para>
     /// <para>Represents the following attribute in the schema: step </para>
@@ -3103,22 +2913,19 @@ public partial class PresentationOf : OpenXmlCompositeElement
     [SchemaAttr(0, "step")]
     [Index(5)]
     public ListValue<Int32Value> Step { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the PresentationOf class.
     /// </summary>
     public PresentationOf():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the PresentationOf class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public PresentationOf(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PresentationOf class with the specified child elements.
     /// </summary>
@@ -3126,7 +2933,6 @@ public partial class PresentationOf : OpenXmlCompositeElement
     public PresentationOf(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PresentationOf class from outer XML.
     /// </summary>
@@ -3135,13 +2941,10 @@ public partial class PresentationOf : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: dgm:extLst </para>
@@ -3155,7 +2958,6 @@ public partial class PresentationOf : OpenXmlCompositeElement
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -3186,21 +2988,18 @@ public partial class Constraints : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Constraints class.
     /// </summary>
     public Constraints():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Constraints class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Constraints(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Constraints class with the specified child elements.
     /// </summary>
@@ -3208,7 +3007,6 @@ public partial class Constraints : OpenXmlCompositeElement
     public Constraints(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Constraints class from outer XML.
     /// </summary>
@@ -3217,9 +3015,7 @@ public partial class Constraints : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -3251,21 +3047,18 @@ public partial class RuleList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the RuleList class.
     /// </summary>
     public RuleList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RuleList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RuleList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RuleList class with the specified child elements.
     /// </summary>
@@ -3273,7 +3066,6 @@ public partial class RuleList : OpenXmlCompositeElement
     public RuleList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RuleList class from outer XML.
     /// </summary>
@@ -3282,9 +3074,7 @@ public partial class RuleList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -3330,9 +3120,8 @@ public partial class VariableList : LayoutVariablePropertySetType
     /// <param name="childElements">Specifies the child elements.</param>
     public VariableList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the VariableList class with the specified child elements.
     /// </summary>
@@ -3340,7 +3129,6 @@ public partial class VariableList : LayoutVariablePropertySetType
     public VariableList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the VariableList class from outer XML.
     /// </summary>
@@ -3349,7 +3137,6 @@ public partial class VariableList : LayoutVariablePropertySetType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -3394,9 +3181,8 @@ public partial class PresentationLayoutVariables : LayoutVariablePropertySetType
     /// <param name="childElements">Specifies the child elements.</param>
     public PresentationLayoutVariables(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PresentationLayoutVariables class with the specified child elements.
     /// </summary>
@@ -3404,7 +3190,6 @@ public partial class PresentationLayoutVariables : LayoutVariablePropertySetType
     public PresentationLayoutVariables(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PresentationLayoutVariables class from outer XML.
     /// </summary>
@@ -3413,7 +3198,6 @@ public partial class PresentationLayoutVariables : LayoutVariablePropertySetType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -3450,11 +3234,10 @@ public partial class PresentationLayoutVariables : LayoutVariablePropertySetType
 
 public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeElement
 {
-        
+    
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Show Organization Chart User Interface.</para>
     /// <para> Represents the following element tag in the schema: dgm:orgChart </para>
@@ -3468,7 +3251,6 @@ public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeEl
         get => GetElement<OrganizationChart>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Maximum Children.</para>
     /// <para> Represents the following element tag in the schema: dgm:chMax </para>
@@ -3482,7 +3264,6 @@ public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeEl
         get => GetElement<MaxNumberOfChildren>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Preferred Number of Children.</para>
     /// <para> Represents the following element tag in the schema: dgm:chPref </para>
@@ -3496,7 +3277,6 @@ public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeEl
         get => GetElement<PreferredNumberOfChildren>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Show Insert Bullet.</para>
     /// <para> Represents the following element tag in the schema: dgm:bulletEnabled </para>
@@ -3510,7 +3290,6 @@ public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeEl
         get => GetElement<BulletEnabled>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Diagram Direction.</para>
     /// <para> Represents the following element tag in the schema: dgm:dir </para>
@@ -3524,7 +3303,6 @@ public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeEl
         get => GetElement<Direction>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> Organization Chart Branch Style.</para>
     /// <para> Represents the following element tag in the schema: dgm:hierBranch </para>
@@ -3538,7 +3316,6 @@ public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeEl
         get => GetElement<HierarchyBranch>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> One by One Animation String.</para>
     /// <para> Represents the following element tag in the schema: dgm:animOne </para>
@@ -3552,7 +3329,6 @@ public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeEl
         get => GetElement<AnimateOneByOne>(6);
         set => SetElement(6, value);
 	}
-    
     /// <summary>
     /// <para> Level Animation.</para>
     /// <para> Represents the following element tag in the schema: dgm:animLvl </para>
@@ -3566,7 +3342,6 @@ public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeEl
         get => GetElement<AnimationLevel>(7);
         set => SetElement(7, value);
 	}
-    
     /// <summary>
     /// <para> Shape Resize Style.</para>
     /// <para> Represents the following element tag in the schema: dgm:resizeHandles </para>
@@ -3580,24 +3355,20 @@ public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeEl
         get => GetElement<ResizeHandles>(8);
         set => SetElement(8, value);
 	}
-    
 
 
-    
     /// <summary>
     /// Initializes a new instance of the LayoutVariablePropertySetType class.
     /// </summary>
     protected LayoutVariablePropertySetType(){}
-    
         /// <summary>
     ///Initializes a new instance of the LayoutVariablePropertySetType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     protected LayoutVariablePropertySetType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LayoutVariablePropertySetType class with the specified child elements.
     /// </summary>
@@ -3605,7 +3376,6 @@ public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeEl
     protected LayoutVariablePropertySetType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LayoutVariablePropertySetType class from outer XML.
     /// </summary>
@@ -3614,7 +3384,6 @@ public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeEl
         : base(outerXml)
     {
     }
-    
 
     
 }
@@ -3657,7 +3426,6 @@ public partial class ForEach : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -3665,7 +3433,6 @@ public partial class ForEach : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
-	
     /// <summary>
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
@@ -3673,7 +3440,6 @@ public partial class ForEach : OpenXmlCompositeElement
     [SchemaAttr(0, "ref")]
     [Index(1)]
     public StringValue Reference { get; set; }
-	
     /// <summary>
     /// <para> Axis.</para>
     /// <para>Represents the following attribute in the schema: axis </para>
@@ -3681,7 +3447,6 @@ public partial class ForEach : OpenXmlCompositeElement
     [SchemaAttr(0, "axis")]
     [Index(2)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis { get; set; }
-	
     /// <summary>
     /// <para> Data Point Type.</para>
     /// <para>Represents the following attribute in the schema: ptType </para>
@@ -3689,7 +3454,6 @@ public partial class ForEach : OpenXmlCompositeElement
     [SchemaAttr(0, "ptType")]
     [Index(3)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType { get; set; }
-	
     /// <summary>
     /// <para> Hide Last Transition.</para>
     /// <para>Represents the following attribute in the schema: hideLastTrans </para>
@@ -3697,7 +3461,6 @@ public partial class ForEach : OpenXmlCompositeElement
     [SchemaAttr(0, "hideLastTrans")]
     [Index(4)]
     public ListValue<BooleanValue> HideLastTrans { get; set; }
-	
     /// <summary>
     /// <para> Start.</para>
     /// <para>Represents the following attribute in the schema: st </para>
@@ -3705,7 +3468,6 @@ public partial class ForEach : OpenXmlCompositeElement
     [SchemaAttr(0, "st")]
     [Index(5)]
     public ListValue<Int32Value> Start { get; set; }
-	
     /// <summary>
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: cnt </para>
@@ -3713,7 +3475,6 @@ public partial class ForEach : OpenXmlCompositeElement
     [SchemaAttr(0, "cnt")]
     [Index(6)]
     public ListValue<UInt32Value> Count { get; set; }
-	
     /// <summary>
     /// <para> Step.</para>
     /// <para>Represents the following attribute in the schema: step </para>
@@ -3721,22 +3482,19 @@ public partial class ForEach : OpenXmlCompositeElement
     [SchemaAttr(0, "step")]
     [Index(7)]
     public ListValue<Int32Value> Step { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ForEach class.
     /// </summary>
     public ForEach():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ForEach class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ForEach(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ForEach class with the specified child elements.
     /// </summary>
@@ -3744,7 +3502,6 @@ public partial class ForEach : OpenXmlCompositeElement
     public ForEach(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ForEach class from outer XML.
     /// </summary>
@@ -3753,9 +3510,7 @@ public partial class ForEach : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -3804,7 +3559,6 @@ public partial class LayoutNode : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -3812,7 +3566,6 @@ public partial class LayoutNode : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
-	
     /// <summary>
     /// <para> Style Label.</para>
     /// <para>Represents the following attribute in the schema: styleLbl </para>
@@ -3820,15 +3573,14 @@ public partial class LayoutNode : OpenXmlCompositeElement
     [SchemaAttr(0, "styleLbl")]
     [Index(1)]
     public StringValue StyleLabel { get; set; }
-	
     /// <summary>
     /// <para> Child Order.</para>
     /// <para>Represents the following attribute in the schema: chOrder </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "chOrder")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildOrderValues> ChildOrder { get; set; }
-	
     /// <summary>
     /// <para> Move With.</para>
     /// <para>Represents the following attribute in the schema: moveWith </para>
@@ -3836,22 +3588,19 @@ public partial class LayoutNode : OpenXmlCompositeElement
     [SchemaAttr(0, "moveWith")]
     [Index(3)]
     public StringValue MoveWith { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the LayoutNode class.
     /// </summary>
     public LayoutNode():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the LayoutNode class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public LayoutNode(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LayoutNode class with the specified child elements.
     /// </summary>
@@ -3859,7 +3608,6 @@ public partial class LayoutNode : OpenXmlCompositeElement
     public LayoutNode(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LayoutNode class from outer XML.
     /// </summary>
@@ -3868,9 +3616,7 @@ public partial class LayoutNode : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -3903,7 +3649,6 @@ public partial class Choose : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -3911,22 +3656,19 @@ public partial class Choose : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Choose class.
     /// </summary>
     public Choose():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Choose class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Choose(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Choose class with the specified child elements.
     /// </summary>
@@ -3934,7 +3676,6 @@ public partial class Choose : OpenXmlCompositeElement
     public Choose(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Choose class from outer XML.
     /// </summary>
@@ -3943,9 +3684,7 @@ public partial class Choose : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -3992,7 +3731,6 @@ public partial class DiagramChooseIf : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -4000,7 +3738,6 @@ public partial class DiagramChooseIf : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
-	
     /// <summary>
     /// <para> Axis.</para>
     /// <para>Represents the following attribute in the schema: axis </para>
@@ -4008,7 +3745,6 @@ public partial class DiagramChooseIf : OpenXmlCompositeElement
     [SchemaAttr(0, "axis")]
     [Index(1)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> Axis { get; set; }
-	
     /// <summary>
     /// <para> Data Point Type.</para>
     /// <para>Represents the following attribute in the schema: ptType </para>
@@ -4016,7 +3752,6 @@ public partial class DiagramChooseIf : OpenXmlCompositeElement
     [SchemaAttr(0, "ptType")]
     [Index(2)]
     public ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> PointType { get; set; }
-	
     /// <summary>
     /// <para> Hide Last Transition.</para>
     /// <para>Represents the following attribute in the schema: hideLastTrans </para>
@@ -4024,7 +3759,6 @@ public partial class DiagramChooseIf : OpenXmlCompositeElement
     [SchemaAttr(0, "hideLastTrans")]
     [Index(3)]
     public ListValue<BooleanValue> HideLastTrans { get; set; }
-	
     /// <summary>
     /// <para> Start.</para>
     /// <para>Represents the following attribute in the schema: st </para>
@@ -4032,7 +3766,6 @@ public partial class DiagramChooseIf : OpenXmlCompositeElement
     [SchemaAttr(0, "st")]
     [Index(4)]
     public ListValue<Int32Value> Start { get; set; }
-	
     /// <summary>
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: cnt </para>
@@ -4040,7 +3773,6 @@ public partial class DiagramChooseIf : OpenXmlCompositeElement
     [SchemaAttr(0, "cnt")]
     [Index(5)]
     public ListValue<UInt32Value> Count { get; set; }
-	
     /// <summary>
     /// <para> Step.</para>
     /// <para>Represents the following attribute in the schema: step </para>
@@ -4048,54 +3780,60 @@ public partial class DiagramChooseIf : OpenXmlCompositeElement
     [SchemaAttr(0, "step")]
     [Index(6)]
     public ListValue<Int32Value> Step { get; set; }
-	
     /// <summary>
     /// <para> Function.</para>
     /// <para>Represents the following attribute in the schema: func </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "func")]
     [Index(7)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionValues> Function { get; set; }
-	
     /// <summary>
     /// <para> Argument.</para>
     /// <para>Represents the following attribute in the schema: arg </para>
     /// </summary>
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.VariableValues>), UnionId = 0)]
     [SchemaAttr(0, "arg")]
     [Index(8)]
     public StringValue Argument { get; set; }
-	
     /// <summary>
     /// <para> Operator.</para>
     /// <para>Represents the following attribute in the schema: op </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "op")]
     [Index(9)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionOperatorValues> Operator { get; set; }
-	
     /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+[NumberValidator(SimpleType = typeof(BooleanValue), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues>), UnionId = 0)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues>), UnionId = 0)]
     [SchemaAttr(0, "val")]
     [Index(10)]
     public StringValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the DiagramChooseIf class.
     /// </summary>
     public DiagramChooseIf():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the DiagramChooseIf class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DiagramChooseIf(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DiagramChooseIf class with the specified child elements.
     /// </summary>
@@ -4103,7 +3841,6 @@ public partial class DiagramChooseIf : OpenXmlCompositeElement
     public DiagramChooseIf(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DiagramChooseIf class from outer XML.
     /// </summary>
@@ -4112,9 +3849,7 @@ public partial class DiagramChooseIf : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -4161,7 +3896,6 @@ public partial class DiagramChooseElse : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -4169,22 +3903,19 @@ public partial class DiagramChooseElse : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the DiagramChooseElse class.
     /// </summary>
     public DiagramChooseElse():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the DiagramChooseElse class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DiagramChooseElse(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DiagramChooseElse class with the specified child elements.
     /// </summary>
@@ -4192,7 +3923,6 @@ public partial class DiagramChooseElse : OpenXmlCompositeElement
     public DiagramChooseElse(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DiagramChooseElse class from outer XML.
     /// </summary>
@@ -4201,9 +3931,7 @@ public partial class DiagramChooseElse : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -4243,21 +3971,18 @@ public partial class DataModel : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the DataModel class.
     /// </summary>
     public DataModel():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the DataModel class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DataModel(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DataModel class with the specified child elements.
     /// </summary>
@@ -4265,7 +3990,6 @@ public partial class DataModel : OpenXmlCompositeElement
     public DataModel(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DataModel class from outer XML.
     /// </summary>
@@ -4274,13 +3998,10 @@ public partial class DataModel : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Point List.</para>
     /// <para> Represents the following element tag in the schema: dgm:ptLst </para>
@@ -4294,7 +4015,6 @@ public partial class DataModel : OpenXmlCompositeElement
         get => GetElement<PointList>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Connection List.</para>
     /// <para> Represents the following element tag in the schema: dgm:cxnLst </para>
@@ -4308,7 +4028,6 @@ public partial class DataModel : OpenXmlCompositeElement
         get => GetElement<ConnectionList>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Background Formatting.</para>
     /// <para> Represents the following element tag in the schema: dgm:bg </para>
@@ -4322,7 +4041,6 @@ public partial class DataModel : OpenXmlCompositeElement
         get => GetElement<Background>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Whole E2O Formatting.</para>
     /// <para> Represents the following element tag in the schema: dgm:whole </para>
@@ -4336,7 +4054,6 @@ public partial class DataModel : OpenXmlCompositeElement
         get => GetElement<Whole>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> DataModelExtensionList.</para>
     /// <para> Represents the following element tag in the schema: dgm:extLst </para>
@@ -4350,7 +4067,6 @@ public partial class DataModel : OpenXmlCompositeElement
         get => GetElement<DataModelExtensionList>(4);
         set => SetElement(4, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -4373,31 +4089,29 @@ public partial class Category : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Category Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsUri = true)]
     [SchemaAttr(0, "type")]
     [Index(0)]
     public StringValue Type { get; set; }
-	
     /// <summary>
     /// <para> Priority.</para>
     /// <para>Represents the following attribute in the schema: pri </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "pri")]
     [Index(1)]
     public UInt32Value Priority { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Category class.
     /// </summary>
     public Category():base(){}
     
-      
-     
     
     
     
@@ -4421,7 +4135,6 @@ public partial class Title : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Language.</para>
     /// <para>Represents the following attribute in the schema: lang </para>
@@ -4429,23 +4142,20 @@ public partial class Title : OpenXmlLeafElement
     [SchemaAttr(0, "lang")]
     [Index(0)]
     public StringValue Language { get; set; }
-	
     /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "val")]
     [Index(1)]
     public StringValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Title class.
     /// </summary>
     public Title():base(){}
     
-      
-     
     
     
     
@@ -4469,7 +4179,6 @@ public partial class Description : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Language.</para>
     /// <para>Represents the following attribute in the schema: lang </para>
@@ -4477,23 +4186,20 @@ public partial class Description : OpenXmlLeafElement
     [SchemaAttr(0, "lang")]
     [Index(0)]
     public StringValue Language { get; set; }
-	
     /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "val")]
     [Index(1)]
     public StringValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Description class.
     /// </summary>
     public Description():base(){}
     
-      
-     
     
     
     
@@ -4525,21 +4231,18 @@ public partial class CategoryList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the CategoryList class.
     /// </summary>
     public CategoryList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the CategoryList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public CategoryList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CategoryList class with the specified child elements.
     /// </summary>
@@ -4547,7 +4250,6 @@ public partial class CategoryList : OpenXmlCompositeElement
     public CategoryList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CategoryList class from outer XML.
     /// </summary>
@@ -4556,9 +4258,7 @@ public partial class CategoryList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -4596,9 +4296,8 @@ public partial class SampleData : SampleDataType
     /// <param name="childElements">Specifies the child elements.</param>
     public SampleData(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SampleData class with the specified child elements.
     /// </summary>
@@ -4606,7 +4305,6 @@ public partial class SampleData : SampleDataType
     public SampleData(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SampleData class from outer XML.
     /// </summary>
@@ -4615,7 +4313,6 @@ public partial class SampleData : SampleDataType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -4652,9 +4349,8 @@ public partial class StyleData : SampleDataType
     /// <param name="childElements">Specifies the child elements.</param>
     public StyleData(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StyleData class with the specified child elements.
     /// </summary>
@@ -4662,7 +4358,6 @@ public partial class StyleData : SampleDataType
     public StyleData(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StyleData class from outer XML.
     /// </summary>
@@ -4671,7 +4366,6 @@ public partial class StyleData : SampleDataType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -4708,9 +4402,8 @@ public partial class ColorData : SampleDataType
     /// <param name="childElements">Specifies the child elements.</param>
     public ColorData(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColorData class with the specified child elements.
     /// </summary>
@@ -4718,7 +4411,6 @@ public partial class ColorData : SampleDataType
     public ColorData(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColorData class from outer XML.
     /// </summary>
@@ -4727,7 +4419,6 @@ public partial class ColorData : SampleDataType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -4748,7 +4439,7 @@ public partial class ColorData : SampleDataType
 
 public abstract partial class SampleDataType : OpenXmlCompositeElement
 {
-        
+    
         /// <summary>
     /// <para> Use Default.</para>
     /// <para>Represents the following attribute in the schema: useDef </para>
@@ -4756,11 +4447,9 @@ public abstract partial class SampleDataType : OpenXmlCompositeElement
     [SchemaAttr(0, "useDef")]
     [Index(0)]
     public BooleanValue UseDefault { get; set; }
-	
 
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Data Model.</para>
     /// <para> Represents the following element tag in the schema: dgm:dataModel </para>
@@ -4774,24 +4463,20 @@ public abstract partial class SampleDataType : OpenXmlCompositeElement
         get => GetElement<DataModel>(0);
         set => SetElement(0, value);
 	}
-    
 
 
-    
     /// <summary>
     /// Initializes a new instance of the SampleDataType class.
     /// </summary>
     protected SampleDataType(){}
-    
         /// <summary>
     ///Initializes a new instance of the SampleDataType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     protected SampleDataType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SampleDataType class with the specified child elements.
     /// </summary>
@@ -4799,7 +4484,6 @@ public abstract partial class SampleDataType : OpenXmlCompositeElement
     protected SampleDataType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SampleDataType class from outer XML.
     /// </summary>
@@ -4808,7 +4492,6 @@ public abstract partial class SampleDataType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
 
     
 }
@@ -4842,21 +4525,18 @@ public partial class Style : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Style class.
     /// </summary>
     public Style():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Style class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Style(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Style class with the specified child elements.
     /// </summary>
@@ -4864,7 +4544,6 @@ public partial class Style : OpenXmlCompositeElement
     public Style(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Style class from outer XML.
     /// </summary>
@@ -4873,13 +4552,10 @@ public partial class Style : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> LineReference.</para>
     /// <para> Represents the following element tag in the schema: a:lnRef </para>
@@ -4893,7 +4569,6 @@ public partial class Style : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> FillReference.</para>
     /// <para> Represents the following element tag in the schema: a:fillRef </para>
@@ -4907,7 +4582,6 @@ public partial class Style : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> EffectReference.</para>
     /// <para> Represents the following element tag in the schema: a:effectRef </para>
@@ -4921,7 +4595,6 @@ public partial class Style : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Font Reference.</para>
     /// <para> Represents the following element tag in the schema: a:fontRef </para>
@@ -4935,7 +4608,6 @@ public partial class Style : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -4958,7 +4630,6 @@ public partial class OrganizationChart : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Show Organization Chart User Interface Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
@@ -4966,15 +4637,12 @@ public partial class OrganizationChart : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the OrganizationChart class.
     /// </summary>
     public OrganizationChart():base(){}
     
-      
-     
     
     
     
@@ -4998,23 +4666,20 @@ public partial class MaxNumberOfChildren : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Maximum Children Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[NumberValidator(MinInclusive = -1)]
     [SchemaAttr(0, "val")]
     [Index(0)]
     public Int32Value Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the MaxNumberOfChildren class.
     /// </summary>
     public MaxNumberOfChildren():base(){}
     
-      
-     
     
     
     
@@ -5038,23 +4703,20 @@ public partial class PreferredNumberOfChildren : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Preferred Number of CHildren Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[NumberValidator(MinInclusive = -1)]
     [SchemaAttr(0, "val")]
     [Index(0)]
     public Int32Value Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the PreferredNumberOfChildren class.
     /// </summary>
     public PreferredNumberOfChildren():base(){}
     
-      
-     
     
     
     
@@ -5078,7 +4740,6 @@ public partial class BulletEnabled : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Show Insert Bullet Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
@@ -5086,15 +4747,12 @@ public partial class BulletEnabled : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the BulletEnabled class.
     /// </summary>
     public BulletEnabled():base(){}
     
-      
-     
     
     
     
@@ -5118,23 +4776,20 @@ public partial class Direction : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Diagram Direction Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues> Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Direction class.
     /// </summary>
     public Direction():base(){}
     
-      
-     
     
     
     
@@ -5158,23 +4813,20 @@ public partial class HierarchyBranch : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Organization Chart Branch Style Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues> Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the HierarchyBranch class.
     /// </summary>
     public HierarchyBranch():base(){}
     
-      
-     
     
     
     
@@ -5198,23 +4850,20 @@ public partial class AnimateOneByOne : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> One By One Animation Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues> Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the AnimateOneByOne class.
     /// </summary>
     public AnimateOneByOne():base(){}
     
-      
-     
     
     
     
@@ -5238,23 +4887,20 @@ public partial class AnimationLevel : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Level Animation Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues> Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the AnimationLevel class.
     /// </summary>
     public AnimationLevel():base(){}
     
-      
-     
     
     
     
@@ -5278,23 +4924,20 @@ public partial class ResizeHandles : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Shape Resize Style Type.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues> Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ResizeHandles class.
     /// </summary>
     public ResizeHandles():base(){}
     
-      
-     
     
     
     
@@ -5318,31 +4961,29 @@ public partial class StyleDisplayCategory : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Category Type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsUri = true)]
     [SchemaAttr(0, "type")]
     [Index(0)]
     public StringValue Type { get; set; }
-	
     /// <summary>
     /// <para> Priority.</para>
     /// <para>Represents the following attribute in the schema: pri </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "pri")]
     [Index(1)]
     public UInt32Value Priority { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the StyleDisplayCategory class.
     /// </summary>
     public StyleDisplayCategory():base(){}
     
-      
-     
     
     
     
@@ -5380,21 +5021,18 @@ public partial class Scene3D : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Scene3D class.
     /// </summary>
     public Scene3D():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Scene3D class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Scene3D(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Scene3D class with the specified child elements.
     /// </summary>
@@ -5402,7 +5040,6 @@ public partial class Scene3D : OpenXmlCompositeElement
     public Scene3D(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Scene3D class from outer XML.
     /// </summary>
@@ -5411,13 +5048,10 @@ public partial class Scene3D : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Camera.</para>
     /// <para> Represents the following element tag in the schema: a:camera </para>
@@ -5431,7 +5065,6 @@ public partial class Scene3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Camera>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Light Rig.</para>
     /// <para> Represents the following element tag in the schema: a:lightRig </para>
@@ -5445,7 +5078,6 @@ public partial class Scene3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.LightRig>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Backdrop Plane.</para>
     /// <para> Represents the following element tag in the schema: a:backdrop </para>
@@ -5459,7 +5091,6 @@ public partial class Scene3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Backdrop>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -5473,7 +5104,6 @@ public partial class Scene3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -5511,54 +5141,51 @@ public partial class Shape3D : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Shape Depth.</para>
     /// <para>Represents the following attribute in the schema: z </para>
     /// </summary>
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "z")]
     [Index(0)]
     public Int64Value Z { get; set; }
-	
     /// <summary>
     /// <para> Extrusion Height.</para>
     /// <para>Represents the following attribute in the schema: extrusionH </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 2147483647)]
     [SchemaAttr(0, "extrusionH")]
     [Index(1)]
     public Int64Value ExtrusionHeight { get; set; }
-	
     /// <summary>
     /// <para> Contour Width.</para>
     /// <para>Represents the following attribute in the schema: contourW </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 2147483647)]
     [SchemaAttr(0, "contourW")]
     [Index(2)]
     public Int64Value ContourWidth { get; set; }
-	
     /// <summary>
     /// <para> Preset Material Type.</para>
     /// <para>Represents the following attribute in the schema: prstMaterial </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "prstMaterial")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Shape3D class.
     /// </summary>
     public Shape3D():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Shape3D class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Shape3D(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Shape3D class with the specified child elements.
     /// </summary>
@@ -5566,7 +5193,6 @@ public partial class Shape3D : OpenXmlCompositeElement
     public Shape3D(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Shape3D class from outer XML.
     /// </summary>
@@ -5575,13 +5201,10 @@ public partial class Shape3D : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Top Bevel.</para>
     /// <para> Represents the following element tag in the schema: a:bevelT </para>
@@ -5595,7 +5218,6 @@ public partial class Shape3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.BevelTop>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Bottom Bevel.</para>
     /// <para> Represents the following element tag in the schema: a:bevelB </para>
@@ -5609,7 +5231,6 @@ public partial class Shape3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.BevelBottom>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Extrusion Color.</para>
     /// <para> Represents the following element tag in the schema: a:extrusionClr </para>
@@ -5623,7 +5244,6 @@ public partial class Shape3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtrusionColor>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Contour Color.</para>
     /// <para> Represents the following element tag in the schema: a:contourClr </para>
@@ -5637,7 +5257,6 @@ public partial class Shape3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.ContourColor>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -5651,7 +5270,6 @@ public partial class Shape3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(4);
         set => SetElement(4, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -5684,21 +5302,18 @@ public partial class TextProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the TextProperties class.
     /// </summary>
     public TextProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the TextProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public TextProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the TextProperties class with the specified child elements.
     /// </summary>
@@ -5706,7 +5321,6 @@ public partial class TextProperties : OpenXmlCompositeElement
     public TextProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the TextProperties class from outer XML.
     /// </summary>
@@ -5715,13 +5329,10 @@ public partial class TextProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-    
         /// <summary>
     /// <para> Apply 3D shape properties.</para>
     /// <para> Represents the following element tag in the schema: a:sp3d </para>
@@ -5735,7 +5346,6 @@ public partial class TextProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Shape3DType>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> No text in 3D scene.</para>
     /// <para> Represents the following element tag in the schema: a:flatTx </para>
@@ -5749,7 +5359,6 @@ public partial class TextProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.FlatText>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -5772,7 +5381,6 @@ public partial class StyleDefinitionTitle : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Natural Language.</para>
     /// <para>Represents the following attribute in the schema: lang </para>
@@ -5780,23 +5388,20 @@ public partial class StyleDefinitionTitle : OpenXmlLeafElement
     [SchemaAttr(0, "lang")]
     [Index(0)]
     public StringValue Language { get; set; }
-	
     /// <summary>
     /// <para> Description Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "val")]
     [Index(1)]
     public StringValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the StyleDefinitionTitle class.
     /// </summary>
     public StyleDefinitionTitle():base(){}
     
-      
-     
     
     
     
@@ -5820,7 +5425,6 @@ public partial class StyleLabelDescription : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Natural Language.</para>
     /// <para>Represents the following attribute in the schema: lang </para>
@@ -5828,23 +5432,20 @@ public partial class StyleLabelDescription : OpenXmlLeafElement
     [SchemaAttr(0, "lang")]
     [Index(0)]
     public StringValue Language { get; set; }
-	
     /// <summary>
     /// <para> Description Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "val")]
     [Index(1)]
     public StringValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the StyleLabelDescription class.
     /// </summary>
     public StyleLabelDescription():base(){}
     
-      
-     
     
     
     
@@ -5876,21 +5477,18 @@ public partial class StyleDisplayCategories : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the StyleDisplayCategories class.
     /// </summary>
     public StyleDisplayCategories():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the StyleDisplayCategories class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public StyleDisplayCategories(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StyleDisplayCategories class with the specified child elements.
     /// </summary>
@@ -5898,7 +5496,6 @@ public partial class StyleDisplayCategories : OpenXmlCompositeElement
     public StyleDisplayCategories(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StyleDisplayCategories class from outer XML.
     /// </summary>
@@ -5907,9 +5504,7 @@ public partial class StyleDisplayCategories : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -5948,30 +5543,27 @@ public partial class StyleLabel : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Style Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the StyleLabel class.
     /// </summary>
     public StyleLabel():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the StyleLabel class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public StyleLabel(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StyleLabel class with the specified child elements.
     /// </summary>
@@ -5979,7 +5571,6 @@ public partial class StyleLabel : OpenXmlCompositeElement
     public StyleLabel(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StyleLabel class from outer XML.
     /// </summary>
@@ -5988,13 +5579,10 @@ public partial class StyleLabel : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> 3-D Scene.</para>
     /// <para> Represents the following element tag in the schema: dgm:scene3d </para>
@@ -6008,7 +5596,6 @@ public partial class StyleLabel : OpenXmlCompositeElement
         get => GetElement<Scene3D>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> 3-D Shape Properties.</para>
     /// <para> Represents the following element tag in the schema: dgm:sp3d </para>
@@ -6022,7 +5609,6 @@ public partial class StyleLabel : OpenXmlCompositeElement
         get => GetElement<Shape3D>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Text Properties.</para>
     /// <para> Represents the following element tag in the schema: dgm:txPr </para>
@@ -6036,7 +5622,6 @@ public partial class StyleLabel : OpenXmlCompositeElement
         get => GetElement<TextProperties>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Shape Style.</para>
     /// <para> Represents the following element tag in the schema: dgm:style </para>
@@ -6050,7 +5635,6 @@ public partial class StyleLabel : OpenXmlCompositeElement
         get => GetElement<Style>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: dgm:extLst </para>
@@ -6064,7 +5648,6 @@ public partial class StyleLabel : OpenXmlCompositeElement
         get => GetElement<ExtensionList>(4);
         set => SetElement(4, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -6095,21 +5678,18 @@ public partial class PointList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the PointList class.
     /// </summary>
     public PointList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the PointList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public PointList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PointList class with the specified child elements.
     /// </summary>
@@ -6117,7 +5697,6 @@ public partial class PointList : OpenXmlCompositeElement
     public PointList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PointList class from outer XML.
     /// </summary>
@@ -6126,9 +5705,7 @@ public partial class PointList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -6160,21 +5737,18 @@ public partial class ConnectionList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ConnectionList class.
     /// </summary>
     public ConnectionList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ConnectionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ConnectionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ConnectionList class with the specified child elements.
     /// </summary>
@@ -6182,7 +5756,6 @@ public partial class ConnectionList : OpenXmlCompositeElement
     public ConnectionList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ConnectionList class from outer XML.
     /// </summary>
@@ -6191,9 +5764,7 @@ public partial class ConnectionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -6239,21 +5810,18 @@ public partial class Background : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Background class.
     /// </summary>
     public Background():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Background class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Background(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Background class with the specified child elements.
     /// </summary>
@@ -6261,7 +5829,6 @@ public partial class Background : OpenXmlCompositeElement
     public Background(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Background class from outer XML.
     /// </summary>
@@ -6270,9 +5837,7 @@ public partial class Background : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -6308,21 +5873,18 @@ public partial class Whole : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Whole class.
     /// </summary>
     public Whole():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Whole class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Whole(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Whole class with the specified child elements.
     /// </summary>
@@ -6330,7 +5892,6 @@ public partial class Whole : OpenXmlCompositeElement
     public Whole(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Whole class from outer XML.
     /// </summary>
@@ -6339,13 +5900,10 @@ public partial class Whole : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Outline.</para>
     /// <para> Represents the following element tag in the schema: a:ln </para>
@@ -6359,7 +5917,6 @@ public partial class Whole : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -6390,21 +5947,18 @@ public partial class DataModelExtensionList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the DataModelExtensionList class.
     /// </summary>
     public DataModelExtensionList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the DataModelExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DataModelExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DataModelExtensionList class with the specified child elements.
     /// </summary>
@@ -6412,7 +5966,6 @@ public partial class DataModelExtensionList : OpenXmlCompositeElement
     public DataModelExtensionList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DataModelExtensionList class from outer XML.
     /// </summary>
@@ -6421,9 +5974,7 @@ public partial class DataModelExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -6456,15 +6007,15 @@ public partial class PropertySet : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Presentation Element Identifier.</para>
     /// <para>Represents the following attribute in the schema: presAssocID </para>
     /// </summary>
+[NumberValidator(SimpleType = typeof(Int32Value), UnionId = 0)]
+[StringValidator(Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}", UnionId = 0)]
     [SchemaAttr(0, "presAssocID")]
     [Index(0)]
     public StringValue PresentationElementId { get; set; }
-	
     /// <summary>
     /// <para> Presentation Name.</para>
     /// <para>Represents the following attribute in the schema: presName </para>
@@ -6472,7 +6023,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "presName")]
     [Index(1)]
     public StringValue PresentationName { get; set; }
-	
     /// <summary>
     /// <para> Presentation Style Label.</para>
     /// <para>Represents the following attribute in the schema: presStyleLbl </para>
@@ -6480,7 +6030,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "presStyleLbl")]
     [Index(2)]
     public StringValue PresentationStyleLabel { get; set; }
-	
     /// <summary>
     /// <para> Presentation Style Index.</para>
     /// <para>Represents the following attribute in the schema: presStyleIdx </para>
@@ -6488,7 +6037,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "presStyleIdx")]
     [Index(3)]
     public Int32Value PresentationStyleIndex { get; set; }
-	
     /// <summary>
     /// <para> Presentation Style Count.</para>
     /// <para>Represents the following attribute in the schema: presStyleCnt </para>
@@ -6496,7 +6044,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "presStyleCnt")]
     [Index(4)]
     public Int32Value PresentationStyleCount { get; set; }
-	
     /// <summary>
     /// <para> Current Diagram Type.</para>
     /// <para>Represents the following attribute in the schema: loTypeId </para>
@@ -6504,7 +6051,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "loTypeId")]
     [Index(5)]
     public StringValue LayoutTypeId { get; set; }
-	
     /// <summary>
     /// <para> Current Diagram Category.</para>
     /// <para>Represents the following attribute in the schema: loCatId </para>
@@ -6512,7 +6058,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "loCatId")]
     [Index(6)]
     public StringValue LayoutCategoryId { get; set; }
-	
     /// <summary>
     /// <para> Current Style Type.</para>
     /// <para>Represents the following attribute in the schema: qsTypeId </para>
@@ -6520,7 +6065,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "qsTypeId")]
     [Index(7)]
     public StringValue QuickStyleTypeId { get; set; }
-	
     /// <summary>
     /// <para> Current Style Category.</para>
     /// <para>Represents the following attribute in the schema: qsCatId </para>
@@ -6528,7 +6072,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "qsCatId")]
     [Index(8)]
     public StringValue QuickStyleCategoryId { get; set; }
-	
     /// <summary>
     /// <para> Color Transform Type Identifier.</para>
     /// <para>Represents the following attribute in the schema: csTypeId </para>
@@ -6536,7 +6079,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "csTypeId")]
     [Index(9)]
     public StringValue ColorType { get; set; }
-	
     /// <summary>
     /// <para> Color Transform Category.</para>
     /// <para>Represents the following attribute in the schema: csCatId </para>
@@ -6544,7 +6086,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "csCatId")]
     [Index(10)]
     public StringValue ColorCategoryId { get; set; }
-	
     /// <summary>
     /// <para> Coherent 3D Behavior.</para>
     /// <para>Represents the following attribute in the schema: coherent3DOff </para>
@@ -6552,7 +6093,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "coherent3DOff")]
     [Index(11)]
     public BooleanValue Coherent3D { get; set; }
-	
     /// <summary>
     /// <para> Placeholder Text.</para>
     /// <para>Represents the following attribute in the schema: phldrT </para>
@@ -6560,7 +6100,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "phldrT")]
     [Index(12)]
     public StringValue PlaceholderText { get; set; }
-	
     /// <summary>
     /// <para> Placeholder.</para>
     /// <para>Represents the following attribute in the schema: phldr </para>
@@ -6568,7 +6107,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "phldr")]
     [Index(13)]
     public BooleanValue Placeholder { get; set; }
-	
     /// <summary>
     /// <para> Custom Rotation.</para>
     /// <para>Represents the following attribute in the schema: custAng </para>
@@ -6576,7 +6114,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "custAng")]
     [Index(14)]
     public Int32Value Rotation { get; set; }
-	
     /// <summary>
     /// <para> Custom Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: custFlipVert </para>
@@ -6584,7 +6121,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "custFlipVert")]
     [Index(15)]
     public BooleanValue VerticalFlip { get; set; }
-	
     /// <summary>
     /// <para> Custom Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: custFlipHor </para>
@@ -6592,7 +6128,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "custFlipHor")]
     [Index(16)]
     public BooleanValue HorizontalFlip { get; set; }
-	
     /// <summary>
     /// <para> Fixed Width Override.</para>
     /// <para>Represents the following attribute in the schema: custSzX </para>
@@ -6600,7 +6135,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "custSzX")]
     [Index(17)]
     public Int32Value FixedWidthOverride { get; set; }
-	
     /// <summary>
     /// <para> Fixed Height Override.</para>
     /// <para>Represents the following attribute in the schema: custSzY </para>
@@ -6608,7 +6142,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "custSzY")]
     [Index(18)]
     public Int32Value FixedHeightOverride { get; set; }
-	
     /// <summary>
     /// <para> Width Scale.</para>
     /// <para>Represents the following attribute in the schema: custScaleX </para>
@@ -6616,7 +6149,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "custScaleX")]
     [Index(19)]
     public Int32Value WidthScale { get; set; }
-	
     /// <summary>
     /// <para> Height Scale.</para>
     /// <para>Represents the following attribute in the schema: custScaleY </para>
@@ -6624,7 +6156,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "custScaleY")]
     [Index(20)]
     public Int32Value HightScale { get; set; }
-	
     /// <summary>
     /// <para> Text Changed.</para>
     /// <para>Represents the following attribute in the schema: custT </para>
@@ -6632,7 +6163,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "custT")]
     [Index(21)]
     public BooleanValue TextChanged { get; set; }
-	
     /// <summary>
     /// <para> Custom Factor Width.</para>
     /// <para>Represents the following attribute in the schema: custLinFactX </para>
@@ -6640,7 +6170,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "custLinFactX")]
     [Index(22)]
     public Int32Value FactorWidth { get; set; }
-	
     /// <summary>
     /// <para> Custom Factor Height.</para>
     /// <para>Represents the following attribute in the schema: custLinFactY </para>
@@ -6648,7 +6177,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "custLinFactY")]
     [Index(23)]
     public Int32Value FactorHeight { get; set; }
-	
     /// <summary>
     /// <para> Neighbor Offset Width.</para>
     /// <para>Represents the following attribute in the schema: custLinFactNeighborX </para>
@@ -6656,7 +6184,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "custLinFactNeighborX")]
     [Index(24)]
     public Int32Value NeighborOffsetWidth { get; set; }
-	
     /// <summary>
     /// <para> Neighbor Offset Height.</para>
     /// <para>Represents the following attribute in the schema: custLinFactNeighborY </para>
@@ -6664,7 +6191,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "custLinFactNeighborY")]
     [Index(25)]
     public Int32Value NeighborOffsetHeight { get; set; }
-	
     /// <summary>
     /// <para> Radius Scale.</para>
     /// <para>Represents the following attribute in the schema: custRadScaleRad </para>
@@ -6672,7 +6198,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "custRadScaleRad")]
     [Index(26)]
     public Int32Value RadiusScale { get; set; }
-	
     /// <summary>
     /// <para> Include Angle Scale.</para>
     /// <para>Represents the following attribute in the schema: custRadScaleInc </para>
@@ -6680,22 +6205,19 @@ public partial class PropertySet : OpenXmlCompositeElement
     [SchemaAttr(0, "custRadScaleInc")]
     [Index(27)]
     public Int32Value IncludeAngleScale { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the PropertySet class.
     /// </summary>
     public PropertySet():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the PropertySet class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public PropertySet(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PropertySet class with the specified child elements.
     /// </summary>
@@ -6703,7 +6225,6 @@ public partial class PropertySet : OpenXmlCompositeElement
     public PropertySet(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PropertySet class from outer XML.
     /// </summary>
@@ -6712,13 +6233,10 @@ public partial class PropertySet : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Presentation Layout Variables.</para>
     /// <para> Represents the following element tag in the schema: dgm:presLayoutVars </para>
@@ -6732,7 +6250,6 @@ public partial class PropertySet : OpenXmlCompositeElement
         get => GetElement<PresentationLayoutVariables>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Shape Style.</para>
     /// <para> Represents the following element tag in the schema: dgm:style </para>
@@ -6746,7 +6263,6 @@ public partial class PropertySet : OpenXmlCompositeElement
         get => GetElement<Style>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -6804,30 +6320,27 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "bwMode")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class.
     /// </summary>
     public ShapeProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ShapeProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class with the specified child elements.
     /// </summary>
@@ -6835,7 +6348,6 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     public ShapeProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class from outer XML.
     /// </summary>
@@ -6844,13 +6356,10 @@ public partial class ShapeProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
     /// <para> Represents the following element tag in the schema: a:xfrm </para>
@@ -6864,7 +6373,6 @@ public partial class ShapeProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -6899,21 +6407,18 @@ public partial class TextBody : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the TextBody class.
     /// </summary>
     public TextBody():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the TextBody class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public TextBody(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the TextBody class with the specified child elements.
     /// </summary>
@@ -6921,7 +6426,6 @@ public partial class TextBody : OpenXmlCompositeElement
     public TextBody(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the TextBody class from outer XML.
     /// </summary>
@@ -6930,13 +6434,10 @@ public partial class TextBody : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Body Properties.</para>
     /// <para> Represents the following element tag in the schema: a:bodyPr </para>
@@ -6950,7 +6451,6 @@ public partial class TextBody : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Text List Styles.</para>
     /// <para> Represents the following element tag in the schema: a:lstStyle </para>
@@ -6964,7 +6464,6 @@ public partial class TextBody : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -6995,21 +6494,18 @@ public partial class PtExtensionList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the PtExtensionList class.
     /// </summary>
     public PtExtensionList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the PtExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public PtExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PtExtensionList class with the specified child elements.
     /// </summary>
@@ -7017,7 +6513,6 @@ public partial class PtExtensionList : OpenXmlCompositeElement
     public PtExtensionList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PtExtensionList class from outer XML.
     /// </summary>
@@ -7026,9 +6521,7 @@ public partial class PtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -7037,10 +6530,10 @@ public partial class PtExtensionList : OpenXmlCompositeElement
 
 }
 /// <summary>
-/// Color Application Method Type 
-/// </summary> 
+/// Color Application Method Type
+/// </summary>
 public enum ColorApplicationMethodValues
-{  
+{
 	///<summary>
 ///Span.
 ///<para>When the item is serialized out as xml, its value is "span".</para>
@@ -7059,13 +6552,13 @@ Cycle,
 ///</summary>
 [EnumString("repeat")]
 Repeat,
- 
+
 }
 /// <summary>
-/// Hue Direction 
-/// </summary> 
+/// Hue Direction
+/// </summary>
 public enum HueDirectionValues
-{  
+{
 	///<summary>
 ///Clockwise Hue Direction.
 ///<para>When the item is serialized out as xml, its value is "cw".</para>
@@ -7078,13 +6571,13 @@ Clockwise,
 ///</summary>
 [EnumString("ccw")]
 Counterclockwise,
- 
+
 }
 /// <summary>
-/// Point Type 
-/// </summary> 
+/// Point Type
+/// </summary>
 public enum PointValues
-{  
+{
 	///<summary>
 ///Node.
 ///<para>When the item is serialized out as xml, its value is "node".</para>
@@ -7121,13 +6614,13 @@ ParentTransition,
 ///</summary>
 [EnumString("sibTrans")]
 SiblingTransition,
- 
+
 }
 /// <summary>
-/// Connection Type 
-/// </summary> 
+/// Connection Type
+/// </summary>
 public enum ConnectionValues
-{  
+{
 	///<summary>
 ///Parent Of.
 ///<para>When the item is serialized out as xml, its value is "parOf".</para>
@@ -7152,13 +6645,13 @@ PresentationParentOf,
 ///</summary>
 [EnumString("unknownRelationship")]
 UnknownRelationship,
- 
+
 }
 /// <summary>
-/// Diagram Direction Definition 
-/// </summary> 
+/// Diagram Direction Definition
+/// </summary>
 public enum DirectionValues
-{  
+{
 	///<summary>
 ///Normal Direction.
 ///<para>When the item is serialized out as xml, its value is "norm".</para>
@@ -7171,13 +6664,13 @@ Normal,
 ///</summary>
 [EnumString("rev")]
 Reversed,
- 
+
 }
 /// <summary>
-/// Hierarchy Branch Style Definition 
-/// </summary> 
+/// Hierarchy Branch Style Definition
+/// </summary>
 public enum HierarchyBranchStyleValues
-{  
+{
 	///<summary>
 ///Left.
 ///<para>When the item is serialized out as xml, its value is "l".</para>
@@ -7208,13 +6701,13 @@ Standard,
 ///</summary>
 [EnumString("init")]
 Initial,
- 
+
 }
 /// <summary>
-/// One by One Animation Value Definition 
-/// </summary> 
+/// One by One Animation Value Definition
+/// </summary>
 public enum AnimateOneByOneValues
-{  
+{
 	///<summary>
 ///Disable One-by-One.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
@@ -7233,13 +6726,13 @@ One,
 ///</summary>
 [EnumString("branch")]
 Branch,
- 
+
 }
 /// <summary>
-/// Animation Level String Definition 
-/// </summary> 
+/// Animation Level String Definition
+/// </summary>
 public enum AnimationLevelStringValues
-{  
+{
 	///<summary>
 ///Disable Level At Once.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
@@ -7258,13 +6751,13 @@ Level,
 ///</summary>
 [EnumString("ctr")]
 Center,
- 
+
 }
 /// <summary>
-/// Resize Handle 
-/// </summary> 
+/// Resize Handle
+/// </summary>
 public enum ResizeHandlesStringValues
-{  
+{
 	///<summary>
 ///Exact.
 ///<para>When the item is serialized out as xml, its value is "exact".</para>
@@ -7277,13 +6770,13 @@ Exact,
 ///</summary>
 [EnumString("rel")]
 Relative,
- 
+
 }
 /// <summary>
-/// Algorithm Types 
-/// </summary> 
+/// Algorithm Types
+/// </summary>
 public enum AlgorithmValues
-{  
+{
 	///<summary>
 ///Composite.
 ///<para>When the item is serialized out as xml, its value is "composite".</para>
@@ -7344,13 +6837,13 @@ Text,
 ///</summary>
 [EnumString("snake")]
 Snake,
- 
+
 }
 /// <summary>
-/// Axis Type 
-/// </summary> 
+/// Axis Type
+/// </summary>
 public enum AxisValues
-{  
+{
 	///<summary>
 ///Self.
 ///<para>When the item is serialized out as xml, its value is "self".</para>
@@ -7429,13 +6922,13 @@ Root,
 ///</summary>
 [EnumString("none")]
 None,
- 
+
 }
 /// <summary>
-/// Boolean Constraint 
-/// </summary> 
+/// Boolean Constraint
+/// </summary>
 public enum BoolOperatorValues
-{  
+{
 	///<summary>
 ///None.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
@@ -7460,13 +6953,13 @@ GreaterThanOrEqualTo,
 ///</summary>
 [EnumString("lte")]
 LessThanOrEqualTo,
- 
+
 }
 /// <summary>
-/// Child Order 
-/// </summary> 
+/// Child Order
+/// </summary>
 public enum ChildOrderValues
-{  
+{
 	///<summary>
 ///Bottom.
 ///<para>When the item is serialized out as xml, its value is "b".</para>
@@ -7479,13 +6972,13 @@ Bottom,
 ///</summary>
 [EnumString("t")]
 Top,
- 
+
 }
 /// <summary>
-/// Constraint Type 
-/// </summary> 
+/// Constraint Type
+/// </summary>
 public enum ConstraintValues
-{  
+{
 	///<summary>
 ///Unknown.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
@@ -7870,13 +7363,13 @@ ArrowheadWidth,
 ///</summary>
 [EnumString("wOff")]
 WidthOffset,
- 
+
 }
 /// <summary>
-/// Constraint Relationship 
-/// </summary> 
+/// Constraint Relationship
+/// </summary>
 public enum ConstraintRelationshipValues
-{  
+{
 	///<summary>
 ///Self.
 ///<para>When the item is serialized out as xml, its value is "self".</para>
@@ -7895,13 +7388,13 @@ Child,
 ///</summary>
 [EnumString("des")]
 Descendant,
- 
+
 }
 /// <summary>
-/// Element Type 
-/// </summary> 
+/// Element Type
+/// </summary>
 public enum ElementValues
-{  
+{
 	///<summary>
 ///All.
 ///<para>When the item is serialized out as xml, its value is "all".</para>
@@ -7962,13 +7455,13 @@ Presentation,
 ///</summary>
 [EnumString("sibTrans")]
 SiblingTransition,
- 
+
 }
 /// <summary>
-/// Parameter Identifier 
-/// </summary> 
+/// Parameter Identifier
+/// </summary>
 public enum ParameterIdValues
-{  
+{
 	///<summary>
 ///Horizontal Alignment.
 ///<para>When the item is serialized out as xml, its value is "horzAlign".</para>
@@ -8299,13 +7792,13 @@ BeginningPoints,
 ///</summary>
 [EnumString("endPts")]
 EndPoints,
- 
+
 }
 /// <summary>
-/// Function Type 
-/// </summary> 
+/// Function Type
+/// </summary>
 public enum FunctionValues
-{  
+{
 	///<summary>
 ///Count.
 ///<para>When the item is serialized out as xml, its value is "cnt".</para>
@@ -8354,13 +7847,13 @@ Depth,
 ///</summary>
 [EnumString("maxDepth")]
 MaxDepth,
- 
+
 }
 /// <summary>
-/// Function Operator 
-/// </summary> 
+/// Function Operator
+/// </summary>
 public enum FunctionOperatorValues
-{  
+{
 	///<summary>
 ///Equal.
 ///<para>When the item is serialized out as xml, its value is "equ".</para>
@@ -8397,13 +7890,13 @@ GreaterThanOrEqualTo,
 ///</summary>
 [EnumString("lte")]
 LessThanOrEqualTo,
- 
+
 }
 /// <summary>
-/// Horizontal Alignment 
-/// </summary> 
+/// Horizontal Alignment
+/// </summary>
 public enum HorizontalAlignmentValues
-{  
+{
 	///<summary>
 ///Left.
 ///<para>When the item is serialized out as xml, its value is "l".</para>
@@ -8428,13 +7921,13 @@ Right,
 ///</summary>
 [EnumString("none")]
 None,
- 
+
 }
 /// <summary>
-/// Child Direction 
-/// </summary> 
+/// Child Direction
+/// </summary>
 public enum ChildDirectionValues
-{  
+{
 	///<summary>
 ///Horizontal.
 ///<para>When the item is serialized out as xml, its value is "horz".</para>
@@ -8447,13 +7940,13 @@ Horizontal,
 ///</summary>
 [EnumString("vert")]
 Vertical,
- 
+
 }
 /// <summary>
-/// Child Alignment 
-/// </summary> 
+/// Child Alignment
+/// </summary>
 public enum ChildAlignmentValues
-{  
+{
 	///<summary>
 ///Top.
 ///<para>When the item is serialized out as xml, its value is "t".</para>
@@ -8478,13 +7971,13 @@ Left,
 ///</summary>
 [EnumString("r")]
 Right,
- 
+
 }
 /// <summary>
-/// Secondary Child Alignment 
-/// </summary> 
+/// Secondary Child Alignment
+/// </summary>
 public enum SecondaryChildAlignmentValues
-{  
+{
 	///<summary>
 ///None.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
@@ -8515,13 +8008,13 @@ Left,
 ///</summary>
 [EnumString("r")]
 Right,
- 
+
 }
 /// <summary>
-/// Linear Direction 
-/// </summary> 
+/// Linear Direction
+/// </summary>
 public enum LinearDirectionValues
-{  
+{
 	///<summary>
 ///From Left.
 ///<para>When the item is serialized out as xml, its value is "fromL".</para>
@@ -8546,13 +8039,13 @@ FromTop,
 ///</summary>
 [EnumString("fromB")]
 FromBottom,
- 
+
 }
 /// <summary>
-/// Secondary Linear Direction 
-/// </summary> 
+/// Secondary Linear Direction
+/// </summary>
 public enum SecondaryLinearDirectionValues
-{  
+{
 	///<summary>
 ///None.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
@@ -8583,13 +8076,13 @@ FromTop,
 ///</summary>
 [EnumString("fromB")]
 FromBottom,
- 
+
 }
 /// <summary>
-/// Starting Element 
-/// </summary> 
+/// Starting Element
+/// </summary>
 public enum StartingElementValues
-{  
+{
 	///<summary>
 ///Node.
 ///<para>When the item is serialized out as xml, its value is "node".</para>
@@ -8602,13 +8095,13 @@ Node,
 ///</summary>
 [EnumString("trans")]
 Transition,
- 
+
 }
 /// <summary>
-/// Rotation Path 
-/// </summary> 
+/// Rotation Path
+/// </summary>
 public enum RotationPathValues
-{  
+{
 	///<summary>
 ///None.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
@@ -8621,13 +8114,13 @@ None,
 ///</summary>
 [EnumString("alongPath")]
 AlongPath,
- 
+
 }
 /// <summary>
-/// Center Shape Mapping 
-/// </summary> 
+/// Center Shape Mapping
+/// </summary>
 public enum CenterShapeMappingValues
-{  
+{
 	///<summary>
 ///None.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
@@ -8640,13 +8133,13 @@ None,
 ///</summary>
 [EnumString("fNode")]
 FirstNode,
- 
+
 }
 /// <summary>
-/// Bend Point 
-/// </summary> 
+/// Bend Point
+/// </summary>
 public enum BendPointValues
-{  
+{
 	///<summary>
 ///Beginning.
 ///<para>When the item is serialized out as xml, its value is "beg".</para>
@@ -8665,13 +8158,13 @@ Default,
 ///</summary>
 [EnumString("end")]
 End,
- 
+
 }
 /// <summary>
-/// Connector Routing 
-/// </summary> 
+/// Connector Routing
+/// </summary>
 public enum ConnectorRoutingValues
-{  
+{
 	///<summary>
 ///Straight.
 ///<para>When the item is serialized out as xml, its value is "stra".</para>
@@ -8696,13 +8189,13 @@ Curve,
 ///</summary>
 [EnumString("longCurve")]
 LongCurve,
- 
+
 }
 /// <summary>
-/// Arrowhead Styles 
-/// </summary> 
+/// Arrowhead Styles
+/// </summary>
 public enum ArrowheadStyleValues
-{  
+{
 	///<summary>
 ///Auto.
 ///<para>When the item is serialized out as xml, its value is "auto".</para>
@@ -8721,13 +8214,13 @@ Arrow,
 ///</summary>
 [EnumString("noArr")]
 NoArrow,
- 
+
 }
 /// <summary>
-/// Connector Dimension 
-/// </summary> 
+/// Connector Dimension
+/// </summary>
 public enum ConnectorDimensionValues
-{  
+{
 	///<summary>
 ///1 Dimension.
 ///<para>When the item is serialized out as xml, its value is "1D".</para>
@@ -8746,13 +8239,13 @@ TwoDimension,
 ///</summary>
 [EnumString("cust")]
 Custom,
- 
+
 }
 /// <summary>
-/// Connector Point 
-/// </summary> 
+/// Connector Point
+/// </summary>
 public enum ConnectorPointValues
-{  
+{
 	///<summary>
 ///Auto.
 ///<para>When the item is serialized out as xml, its value is "auto".</para>
@@ -8819,13 +8312,13 @@ TopRight,
 ///</summary>
 [EnumString("radial")]
 Radial,
- 
+
 }
 /// <summary>
-/// Node Horizontal Alignment 
-/// </summary> 
+/// Node Horizontal Alignment
+/// </summary>
 public enum NodeHorizontalAlignmentValues
-{  
+{
 	///<summary>
 ///Left.
 ///<para>When the item is serialized out as xml, its value is "l".</para>
@@ -8844,13 +8337,13 @@ Center,
 ///</summary>
 [EnumString("r")]
 Right,
- 
+
 }
 /// <summary>
-/// Node Vertical Alignment 
-/// </summary> 
+/// Node Vertical Alignment
+/// </summary>
 public enum NodeVerticalAlignmentValues
-{  
+{
 	///<summary>
 ///Top.
 ///<para>When the item is serialized out as xml, its value is "t".</para>
@@ -8869,13 +8362,13 @@ Middle,
 ///</summary>
 [EnumString("b")]
 Bottom,
- 
+
 }
 /// <summary>
-/// Fallback Dimension 
-/// </summary> 
+/// Fallback Dimension
+/// </summary>
 public enum FallbackDimensionValues
-{  
+{
 	///<summary>
 ///1 Dimension.
 ///<para>When the item is serialized out as xml, its value is "1D".</para>
@@ -8888,13 +8381,13 @@ OneDimension,
 ///</summary>
 [EnumString("2D")]
 TwoDimension,
- 
+
 }
 /// <summary>
-/// Text Direction 
-/// </summary> 
+/// Text Direction
+/// </summary>
 public enum TextDirectionValues
-{  
+{
 	///<summary>
 ///From Top.
 ///<para>When the item is serialized out as xml, its value is "fromT".</para>
@@ -8907,13 +8400,13 @@ FromTop,
 ///</summary>
 [EnumString("fromB")]
 FromBottom,
- 
+
 }
 /// <summary>
-/// Pyramid Accent Position 
-/// </summary> 
+/// Pyramid Accent Position
+/// </summary>
 public enum PyramidAccentPositionValues
-{  
+{
 	///<summary>
 ///Before.
 ///<para>When the item is serialized out as xml, its value is "bef".</para>
@@ -8926,13 +8419,13 @@ Before,
 ///</summary>
 [EnumString("aft")]
 After,
- 
+
 }
 /// <summary>
-/// Pyramid Accent Text Margin 
-/// </summary> 
+/// Pyramid Accent Text Margin
+/// </summary>
 public enum PyramidAccentTextMarginValues
-{  
+{
 	///<summary>
 ///Step.
 ///<para>When the item is serialized out as xml, its value is "step".</para>
@@ -8945,13 +8438,13 @@ Step,
 ///</summary>
 [EnumString("stack")]
 Stack,
- 
+
 }
 /// <summary>
-/// Text Block Direction 
-/// </summary> 
+/// Text Block Direction
+/// </summary>
 public enum TextBlockDirectionValues
-{  
+{
 	///<summary>
 ///Horizontal.
 ///<para>When the item is serialized out as xml, its value is "horz".</para>
@@ -8964,13 +8457,13 @@ Horizontal,
 ///</summary>
 [EnumString("vert")]
 Vertical,
- 
+
 }
 /// <summary>
-/// Text Anchor Horizontal 
-/// </summary> 
+/// Text Anchor Horizontal
+/// </summary>
 public enum TextAnchorHorizontalValues
-{  
+{
 	///<summary>
 ///None.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
@@ -8983,13 +8476,13 @@ None,
 ///</summary>
 [EnumString("ctr")]
 Center,
- 
+
 }
 /// <summary>
-/// Text Anchor Vertical 
-/// </summary> 
+/// Text Anchor Vertical
+/// </summary>
 public enum TextAnchorVerticalValues
-{  
+{
 	///<summary>
 ///Top.
 ///<para>When the item is serialized out as xml, its value is "t".</para>
@@ -9008,13 +8501,13 @@ Middle,
 ///</summary>
 [EnumString("b")]
 Bottom,
- 
+
 }
 /// <summary>
-/// Text Alignment 
-/// </summary> 
+/// Text Alignment
+/// </summary>
 public enum TextAlignmentValues
-{  
+{
 	///<summary>
 ///Left.
 ///<para>When the item is serialized out as xml, its value is "l".</para>
@@ -9033,13 +8526,13 @@ Center,
 ///</summary>
 [EnumString("r")]
 Right,
- 
+
 }
 /// <summary>
-/// Auto Text Rotation 
-/// </summary> 
+/// Auto Text Rotation
+/// </summary>
 public enum AutoTextRotationValues
-{  
+{
 	///<summary>
 ///None.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
@@ -9058,13 +8551,13 @@ Upright,
 ///</summary>
 [EnumString("grav")]
 Gravity,
- 
+
 }
 /// <summary>
-/// Grow Direction 
-/// </summary> 
+/// Grow Direction
+/// </summary>
 public enum GrowDirectionValues
-{  
+{
 	///<summary>
 ///Top Left.
 ///<para>When the item is serialized out as xml, its value is "tL".</para>
@@ -9089,13 +8582,13 @@ BottomLeft,
 ///</summary>
 [EnumString("bR")]
 BottomRight,
- 
+
 }
 /// <summary>
-/// Flow Direction 
-/// </summary> 
+/// Flow Direction
+/// </summary>
 public enum FlowDirectionValues
-{  
+{
 	///<summary>
 ///Row.
 ///<para>When the item is serialized out as xml, its value is "row".</para>
@@ -9108,13 +8601,13 @@ Row,
 ///</summary>
 [EnumString("col")]
 Column,
- 
+
 }
 /// <summary>
-/// Continue Direction 
-/// </summary> 
+/// Continue Direction
+/// </summary>
 public enum ContinueDirectionValues
-{  
+{
 	///<summary>
 ///Reverse Direction.
 ///<para>When the item is serialized out as xml, its value is "revDir".</para>
@@ -9127,13 +8620,13 @@ ReverseDirection,
 ///</summary>
 [EnumString("sameDir")]
 SameDirection,
- 
+
 }
 /// <summary>
-/// Breakpoint 
-/// </summary> 
+/// Breakpoint
+/// </summary>
 public enum BreakpointValues
-{  
+{
 	///<summary>
 ///End of Canvas.
 ///<para>When the item is serialized out as xml, its value is "endCnv".</para>
@@ -9152,13 +8645,13 @@ Balanced,
 ///</summary>
 [EnumString("fixed")]
 Fixed,
- 
+
 }
 /// <summary>
-/// Offset 
-/// </summary> 
+/// Offset
+/// </summary>
 public enum OffsetValues
-{  
+{
 	///<summary>
 ///Center.
 ///<para>When the item is serialized out as xml, its value is "ctr".</para>
@@ -9171,13 +8664,13 @@ Center,
 ///</summary>
 [EnumString("off")]
 Offset,
- 
+
 }
 /// <summary>
-/// Hierarchy Alignment 
-/// </summary> 
+/// Hierarchy Alignment
+/// </summary>
 public enum HierarchyAlignmentValues
-{  
+{
 	///<summary>
 ///Top Left.
 ///<para>When the item is serialized out as xml, its value is "tL".</para>
@@ -9274,13 +8767,13 @@ RightCenterChildren,
 ///</summary>
 [EnumString("rCtrDes")]
 RightCenterDescendants,
- 
+
 }
 /// <summary>
-/// Variable Type 
-/// </summary> 
+/// Variable Type
+/// </summary>
 public enum VariableValues
-{  
+{
 	///<summary>
 ///Unknown.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
@@ -9341,13 +8834,13 @@ AnimationLevel,
 ///</summary>
 [EnumString("resizeHandles")]
 ResizeHandles,
- 
+
 }
 /// <summary>
-/// Output Shape Type 
-/// </summary> 
+/// Output Shape Type
+/// </summary>
 public enum OutputShapeValues
-{  
+{
 	///<summary>
 ///None.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
@@ -9360,13 +8853,13 @@ None,
 ///</summary>
 [EnumString("conn")]
 Connection,
- 
+
 }
 /// <summary>
-/// Vertical Alignment 
-/// </summary> 
+/// Vertical Alignment
+/// </summary>
 public enum VerticalAlignmentValues
-{  
+{
 	///<summary>
 ///Top.
 ///<para>When the item is serialized out as xml, its value is "t".</para>
@@ -9409,8 +8902,6 @@ Middle2010,
 ///</summary>
 [EnumString("bottom")]
 Bottom2010,
- 
+
 }
 }
- 
- 

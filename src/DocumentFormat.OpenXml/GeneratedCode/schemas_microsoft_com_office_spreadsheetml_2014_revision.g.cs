@@ -37,54 +37,51 @@ public partial class RevExHeaders : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> minRev.</para>
+    /// <para> minRev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: minRev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "minRev")]
     [Index(0)]
     public UInt64Value MinRev { get; set; }
-	
     /// <summary>
-    /// <para> maxRev.</para>
+    /// <para> maxRev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: maxRev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "maxRev")]
     [Index(1)]
     public UInt64Value MaxRev { get; set; }
-	
     /// <summary>
-    /// <para> docId.</para>
+    /// <para> docId, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: docId </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "docId")]
     [Index(2)]
     public StringValue DocId { get; set; }
-	
     /// <summary>
-    /// <para> endpointId.</para>
+    /// <para> endpointId, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: endpointId </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "endpointId")]
     [Index(3)]
     public StringValue EndpointId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevExHeaders class.
     /// </summary>
     public RevExHeaders():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RevExHeaders class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RevExHeaders(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExHeaders class with the specified child elements.
     /// </summary>
@@ -92,7 +89,6 @@ public partial class RevExHeaders : OpenXmlCompositeElement
     public RevExHeaders(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExHeaders class from outer XML.
     /// </summary>
@@ -101,9 +97,7 @@ public partial class RevExHeaders : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -161,21 +155,18 @@ public partial class RevExStream : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the RevExStream class.
     /// </summary>
     public RevExStream():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RevExStream class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RevExStream(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExStream class with the specified child elements.
     /// </summary>
@@ -183,7 +174,6 @@ public partial class RevExStream : OpenXmlCompositeElement
     public RevExStream(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExStream class from outer XML.
     /// </summary>
@@ -192,9 +182,7 @@ public partial class RevExStream : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -238,21 +226,18 @@ public partial class DifferentialFormatType : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the DifferentialFormatType class.
     /// </summary>
     public DifferentialFormatType():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the DifferentialFormatType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DifferentialFormatType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DifferentialFormatType class with the specified child elements.
     /// </summary>
@@ -260,7 +245,6 @@ public partial class DifferentialFormatType : OpenXmlCompositeElement
     public DifferentialFormatType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DifferentialFormatType class from outer XML.
     /// </summary>
@@ -269,13 +253,10 @@ public partial class DifferentialFormatType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Font Properties.</para>
     /// <para> Represents the following element tag in the schema: x:font </para>
@@ -289,7 +270,6 @@ public partial class DifferentialFormatType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Number Format.</para>
     /// <para> Represents the following element tag in the schema: x:numFmt </para>
@@ -303,7 +283,6 @@ public partial class DifferentialFormatType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Fill.</para>
     /// <para> Represents the following element tag in the schema: x:fill </para>
@@ -317,7 +296,6 @@ public partial class DifferentialFormatType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Alignment.</para>
     /// <para> Represents the following element tag in the schema: x:alignment </para>
@@ -331,7 +309,6 @@ public partial class DifferentialFormatType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Border Properties.</para>
     /// <para> Represents the following element tag in the schema: x:border </para>
@@ -345,7 +322,6 @@ public partial class DifferentialFormatType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> Protection Properties.</para>
     /// <para> Represents the following element tag in the schema: x:protection </para>
@@ -359,7 +335,6 @@ public partial class DifferentialFormatType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -373,7 +348,6 @@ public partial class DifferentialFormatType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(6);
         set => SetElement(6, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -396,31 +370,28 @@ public partial class RevisionPtr : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> revIDLastSave.</para>
+    /// <para> revIDLastSave, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: revIDLastSave </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "revIDLastSave")]
     [Index(0)]
     public UInt64Value RevIDLastSave { get; set; }
-	
     /// <summary>
-    /// <para> documentId.</para>
+    /// <para> documentId, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: documentId </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "documentId")]
     [Index(1)]
     public StringValue DocumentId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevisionPtr class.
     /// </summary>
     public RevisionPtr():base(){}
     
-      
-     
     
     
     
@@ -462,21 +433,18 @@ public partial class StateBasedObject : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the StateBasedObject class.
     /// </summary>
     public StateBasedObject():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the StateBasedObject class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public StateBasedObject(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StateBasedObject class with the specified child elements.
     /// </summary>
@@ -484,7 +452,6 @@ public partial class StateBasedObject : OpenXmlCompositeElement
     public StateBasedObject(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StateBasedObject class from outer XML.
     /// </summary>
@@ -493,13 +460,10 @@ public partial class StateBasedObject : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-    
         /// <summary>
     /// <para> Represents an external link to another workbook..</para>
     /// <para> Represents the following element tag in the schema: xr:dataValidation </para>
@@ -513,7 +477,6 @@ public partial class StateBasedObject : OpenXmlCompositeElement
         get => GetElement<DataValidation>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Represents a hyperlink within a cell..</para>
     /// <para> Represents the following element tag in the schema: xr:hyperlink </para>
@@ -527,7 +490,6 @@ public partial class StateBasedObject : OpenXmlCompositeElement
         get => GetElement<Hyperlink>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Represents a sparkline group of 1 or more sparklines..</para>
     /// <para> Represents the following element tag in the schema: xr:sparklineGroup </para>
@@ -541,7 +503,6 @@ public partial class StateBasedObject : OpenXmlCompositeElement
         get => GetElement<SparklineGroup>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Represents one comment within a cell..</para>
     /// <para> Represents the following element tag in the schema: xr:comments </para>
@@ -555,7 +516,6 @@ public partial class StateBasedObject : OpenXmlCompositeElement
         get => GetElement<Comments>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Represents an autofilter..</para>
     /// <para> Represents the following element tag in the schema: xr:autoFilter </para>
@@ -569,7 +529,6 @@ public partial class StateBasedObject : OpenXmlCompositeElement
         get => GetElement<AutoFilter>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> Represents a PivotTable View..</para>
     /// <para> Represents the following element tag in the schema: xr:pivotTableDefinition </para>
@@ -583,7 +542,6 @@ public partial class StateBasedObject : OpenXmlCompositeElement
         get => GetElement<pivotTableDefinition>(5);
         set => SetElement(5, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -606,49 +564,44 @@ public partial class RevExHeader : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> id.</para>
+    /// <para> id, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(19, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
-    /// <para> minRev.</para>
+    /// <para> minRev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: minRev </para>
     /// </summary>
     [SchemaAttr(0, "minRev")]
     [Index(1)]
     public UInt64Value MinRev { get; set; }
-	
     /// <summary>
-    /// <para> maxRev.</para>
+    /// <para> maxRev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: maxRev </para>
     /// </summary>
     [SchemaAttr(0, "maxRev")]
     [Index(2)]
     public UInt64Value MaxRev { get; set; }
-	
     /// <summary>
-    /// <para> time.</para>
+    /// <para> time, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "time")]
     [Index(3)]
     public DateTimeValue Time { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevExHeader class.
     /// </summary>
     public RevExHeader():base(){}
     
-      
-     
     
     
     
@@ -679,70 +632,67 @@ public partial class RevExFuture : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> rev.</para>
+    /// <para> rev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> sh.</para>
+    /// <para> sh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
-	
     /// <summary>
-    /// <para> uidp.</para>
+    /// <para> uidp, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
-	
     /// <summary>
-    /// <para> ctx.</para>
+    /// <para> ctx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
     /// </summary>
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
-	
     /// <summary>
-    /// <para> sti.</para>
+    /// <para> sti, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sti </para>
     /// </summary>
     [SchemaAttr(0, "sti")]
     [Index(5)]
     public BooleanValue Sti { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevExFuture class.
     /// </summary>
     public RevExFuture():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RevExFuture class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RevExFuture(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExFuture class with the specified child elements.
     /// </summary>
@@ -750,7 +700,6 @@ public partial class RevExFuture : OpenXmlCompositeElement
     public RevExFuture(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExFuture class from outer XML.
     /// </summary>
@@ -759,9 +708,7 @@ public partial class RevExFuture : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -785,55 +732,53 @@ public partial class RevExUnsupported : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> rev.</para>
+    /// <para> rev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> sh.</para>
+    /// <para> sh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
-	
     /// <summary>
-    /// <para> uidp.</para>
+    /// <para> uidp, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
-	
     /// <summary>
-    /// <para> ctx.</para>
+    /// <para> ctx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
     /// </summary>
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevExUnsupported class.
     /// </summary>
     public RevExUnsupported():base(){}
     
-      
-     
     
     
     
@@ -857,55 +802,53 @@ public partial class RevExTrimmed : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> rev.</para>
+    /// <para> rev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> sh.</para>
+    /// <para> sh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
-	
     /// <summary>
-    /// <para> uidp.</para>
+    /// <para> uidp, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
-	
     /// <summary>
-    /// <para> ctx.</para>
+    /// <para> ctx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
     /// </summary>
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevExTrimmed class.
     /// </summary>
     public RevExTrimmed():base(){}
     
-      
-     
     
     
     
@@ -929,79 +872,76 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> rev.</para>
+    /// <para> rev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> sh.</para>
+    /// <para> sh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
-	
     /// <summary>
-    /// <para> uidp.</para>
+    /// <para> uidp, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
-	
     /// <summary>
-    /// <para> ctx.</para>
+    /// <para> ctx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
     /// </summary>
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
-	
     /// <summary>
-    /// <para> eol.</para>
+    /// <para> eol, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: eol </para>
     /// </summary>
     [SchemaAttr(0, "eol")]
     [Index(5)]
     public BooleanValue Eol { get; set; }
-	
     /// <summary>
-    /// <para> ref.</para>
+    /// <para> ref, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "ref")]
     [Index(6)]
     public StringValue Ref { get; set; }
-	
     /// <summary>
-    /// <para> action.</para>
+    /// <para> action, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: action </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "action")]
     [Index(7)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RwColAction> Action { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevExRowColumn class.
     /// </summary>
     public RevExRowColumn():base(){}
     
-      
-     
     
     
     
@@ -1025,79 +965,77 @@ public partial class RevExMove : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> rev.</para>
+    /// <para> rev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> sh.</para>
+    /// <para> sh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
-	
     /// <summary>
-    /// <para> uidp.</para>
+    /// <para> uidp, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
-	
     /// <summary>
-    /// <para> ctx.</para>
+    /// <para> ctx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
     /// </summary>
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
-	
     /// <summary>
-    /// <para> src.</para>
+    /// <para> src, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: src </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "src")]
     [Index(5)]
     public StringValue Src { get; set; }
-	
     /// <summary>
-    /// <para> dst.</para>
+    /// <para> dst, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: dst </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "dst")]
     [Index(6)]
     public StringValue Dst { get; set; }
-	
     /// <summary>
-    /// <para> srcSh.</para>
+    /// <para> srcSh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: srcSh </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "srcSh")]
     [Index(7)]
     public StringValue SrcSh { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevExMove class.
     /// </summary>
     public RevExMove():base(){}
     
-      
-     
     
     
     
@@ -1130,102 +1068,97 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> listUid.</para>
+    /// <para> listUid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: listUid </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "listUid")]
     [Index(0)]
     public StringValue ListUid { get; set; }
-	
     /// <summary>
-    /// <para> rev.</para>
+    /// <para> rev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rev")]
     [Index(1)]
     public UInt64Value Rev { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(2)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> sh.</para>
+    /// <para> sh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sh")]
     [Index(3)]
     public StringValue Sh { get; set; }
-	
     /// <summary>
-    /// <para> uidp.</para>
+    /// <para> uidp, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidp")]
     [Index(4)]
     public StringValue Uidp { get; set; }
-	
     /// <summary>
-    /// <para> ctx.</para>
+    /// <para> ctx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
     /// </summary>
     [SchemaAttr(0, "ctx")]
     [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
-	
     /// <summary>
-    /// <para> r.</para>
+    /// <para> r, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: r </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "r")]
     [Index(6)]
     public StringValue R { get; set; }
-	
     /// <summary>
-    /// <para> t.</para>
+    /// <para> t, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: t </para>
     /// </summary>
     [SchemaAttr(0, "t")]
     [Index(7)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType> T { get; set; }
-	
     /// <summary>
-    /// <para> x.</para>
+    /// <para> x, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: x </para>
     /// </summary>
     [SchemaAttr(0, "x")]
     [Index(8)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt> X { get; set; }
-	
     /// <summary>
-    /// <para> w.</para>
+    /// <para> w, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: w </para>
     /// </summary>
     [SchemaAttr(0, "w")]
     [Index(9)]
     public UInt32Value W { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevExChangeCell class.
     /// </summary>
     public RevExChangeCell():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RevExChangeCell class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RevExChangeCell(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExChangeCell class with the specified child elements.
     /// </summary>
@@ -1233,7 +1166,6 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     public RevExChangeCell(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExChangeCell class from outer XML.
     /// </summary>
@@ -1242,9 +1174,7 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -1277,174 +1207,160 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> rev.</para>
+    /// <para> rev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> sh.</para>
+    /// <para> sh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
-	
     /// <summary>
-    /// <para> uidp.</para>
+    /// <para> uidp, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
-	
     /// <summary>
-    /// <para> ctx.</para>
+    /// <para> ctx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
     /// </summary>
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
-	
     /// <summary>
-    /// <para> numFmtId.</para>
+    /// <para> numFmtId, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: numFmtId </para>
     /// </summary>
     [SchemaAttr(0, "numFmtId")]
     [Index(5)]
     public UInt32Value NumFmtId { get; set; }
-	
     /// <summary>
-    /// <para> xfDxf.</para>
+    /// <para> xfDxf, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: xfDxf </para>
     /// </summary>
     [SchemaAttr(0, "xfDxf")]
     [Index(6)]
     public BooleanValue XfDxf { get; set; }
-	
     /// <summary>
-    /// <para> style.</para>
+    /// <para> style, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
     [SchemaAttr(0, "style")]
     [Index(7)]
     public BooleanValue Style { get; set; }
-	
     /// <summary>
-    /// <para> sqref.</para>
+    /// <para> sqref, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sqref </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "sqref")]
     [Index(8)]
     public ListValue<StringValue> Sqref { get; set; }
-	
     /// <summary>
-    /// <para> start.</para>
+    /// <para> start, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: start </para>
     /// </summary>
     [SchemaAttr(0, "start")]
     [Index(9)]
     public UInt32Value Start { get; set; }
-	
     /// <summary>
-    /// <para> length.</para>
+    /// <para> length, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: length </para>
     /// </summary>
     [SchemaAttr(0, "length")]
     [Index(10)]
     public UInt32Value Length { get; set; }
-	
     /// <summary>
-    /// <para> styleUid.</para>
+    /// <para> styleUid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: styleUid </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "styleUid")]
     [Index(11)]
     public StringValue StyleUid { get; set; }
-	
     /// <summary>
-    /// <para> fBlankCell.</para>
+    /// <para> fBlankCell, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: fBlankCell </para>
     /// </summary>
     [SchemaAttr(0, "fBlankCell")]
     [Index(12)]
     public BooleanValue FBlankCell { get; set; }
-	
     /// <summary>
-    /// <para> applyNumberFormat.</para>
+    /// <para> applyNumberFormat, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: applyNumberFormat </para>
     /// </summary>
     [SchemaAttr(0, "applyNumberFormat")]
     [Index(13)]
     public BooleanValue ApplyNumberFormat { get; set; }
-	
     /// <summary>
-    /// <para> applyFont.</para>
+    /// <para> applyFont, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: applyFont </para>
     /// </summary>
     [SchemaAttr(0, "applyFont")]
     [Index(14)]
     public BooleanValue ApplyFont { get; set; }
-	
     /// <summary>
-    /// <para> applyFill.</para>
+    /// <para> applyFill, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: applyFill </para>
     /// </summary>
     [SchemaAttr(0, "applyFill")]
     [Index(15)]
     public BooleanValue ApplyFill { get; set; }
-	
     /// <summary>
-    /// <para> applyBorder.</para>
+    /// <para> applyBorder, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: applyBorder </para>
     /// </summary>
     [SchemaAttr(0, "applyBorder")]
     [Index(16)]
     public BooleanValue ApplyBorder { get; set; }
-	
     /// <summary>
-    /// <para> applyAlignment.</para>
+    /// <para> applyAlignment, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: applyAlignment </para>
     /// </summary>
     [SchemaAttr(0, "applyAlignment")]
     [Index(17)]
     public BooleanValue ApplyAlignment { get; set; }
-	
     /// <summary>
-    /// <para> applyProtection.</para>
+    /// <para> applyProtection, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: applyProtection </para>
     /// </summary>
     [SchemaAttr(0, "applyProtection")]
     [Index(18)]
     public BooleanValue ApplyProtection { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevExFormatting class.
     /// </summary>
     public RevExFormatting():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RevExFormatting class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RevExFormatting(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExFormatting class with the specified child elements.
     /// </summary>
@@ -1452,7 +1368,6 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     public RevExFormatting(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExFormatting class from outer XML.
     /// </summary>
@@ -1461,13 +1376,10 @@ public partial class RevExFormatting : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> DifferentialFormatType.</para>
     /// <para> Represents the following element tag in the schema: xr:dxf </para>
@@ -1481,7 +1393,6 @@ public partial class RevExFormatting : OpenXmlCompositeElement
         get => GetElement<DifferentialFormatType>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: xr:extLst </para>
@@ -1495,7 +1406,6 @@ public partial class RevExFormatting : OpenXmlCompositeElement
         get => GetElement<ExtensionList>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1527,150 +1437,138 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> rev.</para>
+    /// <para> rev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> sh.</para>
+    /// <para> sh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
-	
     /// <summary>
-    /// <para> uidp.</para>
+    /// <para> uidp, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
-	
     /// <summary>
-    /// <para> ctx.</para>
+    /// <para> ctx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
     /// </summary>
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
-	
     /// <summary>
-    /// <para> customView.</para>
+    /// <para> customView, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: customView </para>
     /// </summary>
     [SchemaAttr(0, "customView")]
     [Index(5)]
     public BooleanValue CustomView { get; set; }
-	
     /// <summary>
-    /// <para> name.</para>
+    /// <para> name, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "name")]
     [Index(6)]
     public StringValue Name { get; set; }
-	
     /// <summary>
-    /// <para> function.</para>
+    /// <para> function, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: function </para>
     /// </summary>
     [SchemaAttr(0, "function")]
     [Index(7)]
     public BooleanValue Function { get; set; }
-	
     /// <summary>
-    /// <para> functionGroupId.</para>
+    /// <para> functionGroupId, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: functionGroupId </para>
     /// </summary>
     [SchemaAttr(0, "functionGroupId")]
     [Index(8)]
     public ByteValue FunctionGroupId { get; set; }
-	
     /// <summary>
-    /// <para> shortcutKey.</para>
+    /// <para> shortcutKey, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: shortcutKey </para>
     /// </summary>
     [SchemaAttr(0, "shortcutKey")]
     [Index(9)]
     public ByteValue ShortcutKey { get; set; }
-	
     /// <summary>
-    /// <para> hidden.</para>
+    /// <para> hidden, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
     [SchemaAttr(0, "hidden")]
     [Index(10)]
     public BooleanValue Hidden { get; set; }
-	
     /// <summary>
-    /// <para> customMenu.</para>
+    /// <para> customMenu, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: customMenu </para>
     /// </summary>
     [SchemaAttr(0, "customMenu")]
     [Index(11)]
     public StringValue CustomMenu { get; set; }
-	
     /// <summary>
-    /// <para> description.</para>
+    /// <para> description, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
     [Index(12)]
     public StringValue Description { get; set; }
-	
     /// <summary>
-    /// <para> help.</para>
+    /// <para> help, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: help </para>
     /// </summary>
     [SchemaAttr(0, "help")]
     [Index(13)]
     public StringValue Help { get; set; }
-	
     /// <summary>
-    /// <para> statusBar.</para>
+    /// <para> statusBar, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: statusBar </para>
     /// </summary>
     [SchemaAttr(0, "statusBar")]
     [Index(14)]
     public StringValue StatusBar { get; set; }
-	
     /// <summary>
-    /// <para> comment.</para>
+    /// <para> comment, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: comment </para>
     /// </summary>
     [SchemaAttr(0, "comment")]
     [Index(15)]
     public StringValue Comment { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevExDefinedName class.
     /// </summary>
     public RevExDefinedName():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RevExDefinedName class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RevExDefinedName(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExDefinedName class with the specified child elements.
     /// </summary>
@@ -1678,7 +1576,6 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     public RevExDefinedName(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExDefinedName class from outer XML.
     /// </summary>
@@ -1687,13 +1584,10 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> FormulaFormula.</para>
     /// <para> Represents the following element tag in the schema: xr:formula </para>
@@ -1707,7 +1601,6 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
         get => GetElement<FormulaFormula>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: xr:extLst </para>
@@ -1721,7 +1614,6 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
         get => GetElement<ExtensionList>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1751,62 +1643,60 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> rev.</para>
+    /// <para> rev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> sh.</para>
+    /// <para> sh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
-	
     /// <summary>
-    /// <para> uidp.</para>
+    /// <para> uidp, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
-	
     /// <summary>
-    /// <para> ctx.</para>
+    /// <para> ctx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
     /// </summary>
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevExDelObj class.
     /// </summary>
     public RevExDelObj():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RevExDelObj class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RevExDelObj(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExDelObj class with the specified child elements.
     /// </summary>
@@ -1814,7 +1704,6 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     public RevExDelObj(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExDelObj class from outer XML.
     /// </summary>
@@ -1823,13 +1712,10 @@ public partial class RevExDelObj : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> StateBasedHeader.</para>
     /// <para> Represents the following element tag in the schema: xr:hdr </para>
@@ -1843,7 +1729,6 @@ public partial class RevExDelObj : OpenXmlCompositeElement
         get => GetElement<StateBasedHeader>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1877,62 +1762,60 @@ public partial class RevExChgObj : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> rev.</para>
+    /// <para> rev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> sh.</para>
+    /// <para> sh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
-	
     /// <summary>
-    /// <para> uidp.</para>
+    /// <para> uidp, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
-	
     /// <summary>
-    /// <para> ctx.</para>
+    /// <para> ctx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
     /// </summary>
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevExChgObj class.
     /// </summary>
     public RevExChgObj():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RevExChgObj class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RevExChgObj(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExChgObj class with the specified child elements.
     /// </summary>
@@ -1940,7 +1823,6 @@ public partial class RevExChgObj : OpenXmlCompositeElement
     public RevExChgObj(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevExChgObj class from outer XML.
     /// </summary>
@@ -1949,13 +1831,10 @@ public partial class RevExChgObj : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> StateBasedHeader.</para>
     /// <para> Represents the following element tag in the schema: xr:hdr </para>
@@ -1969,7 +1848,6 @@ public partial class RevExChgObj : OpenXmlCompositeElement
         get => GetElement<StateBasedHeader>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1992,87 +1870,82 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> rev.</para>
+    /// <para> rev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> sh.</para>
+    /// <para> sh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
-	
     /// <summary>
-    /// <para> uidp.</para>
+    /// <para> uidp, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
-	
     /// <summary>
-    /// <para> ctx.</para>
+    /// <para> ctx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
     /// </summary>
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
-	
     /// <summary>
-    /// <para> op.</para>
+    /// <para> op, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: op </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "op")]
     [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SheetOp> Op { get; set; }
-	
     /// <summary>
-    /// <para> name.</para>
+    /// <para> name, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
     [Index(6)]
     public StringValue Name { get; set; }
-	
     /// <summary>
-    /// <para> idOrig.</para>
+    /// <para> idOrig, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: idOrig </para>
     /// </summary>
     [SchemaAttr(0, "idOrig")]
     [Index(7)]
     public UInt32Value IdOrig { get; set; }
-	
     /// <summary>
-    /// <para> idNew.</para>
+    /// <para> idNew, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: idNew </para>
     /// </summary>
     [SchemaAttr(0, "idNew")]
     [Index(8)]
     public UInt32Value IdNew { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevExSheetOp class.
     /// </summary>
     public RevExSheetOp():base(){}
     
-      
-     
     
     
     
@@ -2096,119 +1969,111 @@ public partial class RevisionList : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> rev.</para>
+    /// <para> rev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> sh.</para>
+    /// <para> sh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
-	
     /// <summary>
-    /// <para> uidp.</para>
+    /// <para> uidp, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
-	
     /// <summary>
-    /// <para> ctx.</para>
+    /// <para> ctx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
     /// </summary>
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
-	
     /// <summary>
-    /// <para> Data.</para>
+    /// <para> Data, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: Data </para>
     /// </summary>
     [SchemaAttr(0, "Data")]
     [Index(5)]
     public BooleanValue Data { get; set; }
-	
     /// <summary>
-    /// <para> Formatting.</para>
+    /// <para> Formatting, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: Formatting </para>
     /// </summary>
     [SchemaAttr(0, "Formatting")]
     [Index(6)]
     public BooleanValue Formatting { get; set; }
-	
     /// <summary>
-    /// <para> RangeBased.</para>
+    /// <para> RangeBased, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: RangeBased </para>
     /// </summary>
     [SchemaAttr(0, "RangeBased")]
     [Index(7)]
     public BooleanValue RangeBased { get; set; }
-	
     /// <summary>
-    /// <para> Fake.</para>
+    /// <para> Fake, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: Fake </para>
     /// </summary>
     [SchemaAttr(0, "Fake")]
     [Index(8)]
     public BooleanValue Fake { get; set; }
-	
     /// <summary>
-    /// <para> ref.</para>
+    /// <para> ref, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "ref")]
     [Index(9)]
     public StringValue Ref { get; set; }
-	
     /// <summary>
-    /// <para> Headers.</para>
+    /// <para> Headers, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: Headers </para>
     /// </summary>
     [SchemaAttr(0, "Headers")]
     [Index(10)]
     public BooleanValue Headers { get; set; }
-	
     /// <summary>
-    /// <para> InsDelHeaders.</para>
+    /// <para> InsDelHeaders, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: InsDelHeaders </para>
     /// </summary>
     [SchemaAttr(0, "InsDelHeaders")]
     [Index(11)]
     public BooleanValue InsDelHeaders { get; set; }
-	
     /// <summary>
-    /// <para> rId.</para>
+    /// <para> rId, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rId </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rId")]
     [Index(12)]
     public UInt32Value RId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevisionList class.
     /// </summary>
     public RevisionList():base(){}
     
-      
-     
     
     
     
@@ -2232,71 +2097,70 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> rev.</para>
+    /// <para> rev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> sh.</para>
+    /// <para> sh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
-	
     /// <summary>
-    /// <para> uidp.</para>
+    /// <para> uidp, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
-	
     /// <summary>
-    /// <para> ctx.</para>
+    /// <para> ctx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
     /// </summary>
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
-	
     /// <summary>
-    /// <para> refAdded.</para>
+    /// <para> refAdded, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: refAdded </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "refAdded")]
     [Index(5)]
     public StringValue RefAdded { get; set; }
-	
     /// <summary>
-    /// <para> listGuid.</para>
+    /// <para> listGuid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: listGuid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "listGuid")]
     [Index(6)]
     public StringValue ListGuid { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevListAutoExpandRw class.
     /// </summary>
     public RevListAutoExpandRw():base(){}
     
-      
-     
     
     
     
@@ -2351,62 +2215,60 @@ public partial class RevGroup : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> rev.</para>
+    /// <para> rev, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rev </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "rev")]
     [Index(0)]
     public UInt64Value Rev { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(1)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> sh.</para>
+    /// <para> sh, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sh </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sh")]
     [Index(2)]
     public StringValue Sh { get; set; }
-	
     /// <summary>
-    /// <para> uidp.</para>
+    /// <para> uidp, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidp </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidp")]
     [Index(3)]
     public StringValue Uidp { get; set; }
-	
     /// <summary>
-    /// <para> ctx.</para>
+    /// <para> ctx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ctx </para>
     /// </summary>
     [SchemaAttr(0, "ctx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevGroup class.
     /// </summary>
     public RevGroup():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RevGroup class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RevGroup(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevGroup class with the specified child elements.
     /// </summary>
@@ -2414,7 +2276,6 @@ public partial class RevGroup : OpenXmlCompositeElement
     public RevGroup(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevGroup class from outer XML.
     /// </summary>
@@ -2423,9 +2284,7 @@ public partial class RevGroup : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -2450,14 +2309,11 @@ public partial class RevExTest : OpenXmlLeafElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the RevExTest class.
     /// </summary>
     public RevExTest():base(){}
     
-      
-     
     
     
     
@@ -2492,54 +2348,47 @@ public partial class RevCell : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> t.</para>
+    /// <para> t, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: t </para>
     /// </summary>
     [SchemaAttr(0, "t")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues> T { get; set; }
-	
     /// <summary>
-    /// <para> nop.</para>
+    /// <para> nop, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: nop </para>
     /// </summary>
     [SchemaAttr(0, "nop")]
     [Index(1)]
     public BooleanValue Nop { get; set; }
-	
     /// <summary>
-    /// <para> tick.</para>
+    /// <para> tick, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: tick </para>
     /// </summary>
     [SchemaAttr(0, "tick")]
     [Index(2)]
     public BooleanValue Tick { get; set; }
-	
     /// <summary>
-    /// <para> rep.</para>
+    /// <para> rep, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: rep </para>
     /// </summary>
     [SchemaAttr(0, "rep")]
     [Index(3)]
     public UInt32Value Rep { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevCell class.
     /// </summary>
     public RevCell():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RevCell class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RevCell(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevCell class with the specified child elements.
     /// </summary>
@@ -2547,7 +2396,6 @@ public partial class RevCell : OpenXmlCompositeElement
     public RevCell(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevCell class from outer XML.
     /// </summary>
@@ -2556,13 +2404,10 @@ public partial class RevCell : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> FFormula.</para>
     /// <para> Represents the following element tag in the schema: xr:f </para>
@@ -2576,7 +2421,6 @@ public partial class RevCell : OpenXmlCompositeElement
         get => GetElement<FFormula>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Xstring.</para>
     /// <para> Represents the following element tag in the schema: xr:v </para>
@@ -2590,7 +2434,6 @@ public partial class RevCell : OpenXmlCompositeElement
         get => GetElement<Xstring>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> RstType.</para>
     /// <para> Represents the following element tag in the schema: xr:is </para>
@@ -2604,7 +2447,6 @@ public partial class RevCell : OpenXmlCompositeElement
         get => GetElement<RstType>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2634,54 +2476,48 @@ public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> r.</para>
+    /// <para> r, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: r </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "r")]
     [Index(0)]
     public StringValue R { get; set; }
-	
     /// <summary>
-    /// <para> t.</para>
+    /// <para> t, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: t </para>
     /// </summary>
     [SchemaAttr(0, "t")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType> T { get; set; }
-	
     /// <summary>
-    /// <para> x.</para>
+    /// <para> x, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: x </para>
     /// </summary>
     [SchemaAttr(0, "x")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt> X { get; set; }
-	
     /// <summary>
-    /// <para> w.</para>
+    /// <para> w, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: w </para>
     /// </summary>
     [SchemaAttr(0, "w")]
     [Index(3)]
     public UInt32Value W { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ChangeCellSubEdit class.
     /// </summary>
     public ChangeCellSubEdit():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ChangeCellSubEdit class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ChangeCellSubEdit(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ChangeCellSubEdit class with the specified child elements.
     /// </summary>
@@ -2689,7 +2525,6 @@ public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     public ChangeCellSubEdit(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ChangeCellSubEdit class from outer XML.
     /// </summary>
@@ -2698,9 +2533,7 @@ public partial class ChangeCellSubEdit : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -2732,21 +2565,18 @@ public partial class ExtensionList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ExtensionList class.
     /// </summary>
     public ExtensionList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ExtensionList class with the specified child elements.
     /// </summary>
@@ -2754,7 +2584,6 @@ public partial class ExtensionList : OpenXmlCompositeElement
     public ExtensionList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ExtensionList class from outer XML.
     /// </summary>
@@ -2763,9 +2592,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -2799,12 +2626,10 @@ public partial class FormulaFormula : OpenXmlLeafTextElement
     public FormulaFormula(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaFormula>(deep);
@@ -2836,12 +2661,10 @@ public partial class FFormula : OpenXmlLeafTextElement
     public FFormula(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FFormula>(deep);
@@ -2870,62 +2693,57 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(0)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> eft.</para>
+    /// <para> eft, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: eft </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "eft")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FeatureType> Eft { get; set; }
-	
     /// <summary>
-    /// <para> eftx.</para>
+    /// <para> eftx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: eftx </para>
     /// </summary>
     [SchemaAttr(0, "eftx")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtFeatureType> Eftx { get; set; }
-	
     /// <summary>
-    /// <para> seft.</para>
+    /// <para> seft, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: seft </para>
     /// </summary>
     [SchemaAttr(0, "seft")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SubFeatureType> Seft { get; set; }
-	
     /// <summary>
-    /// <para> seftx.</para>
+    /// <para> seftx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: seftx </para>
     /// </summary>
     [SchemaAttr(0, "seftx")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtSubFeatureType> Seftx { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the StateBasedHeader class.
     /// </summary>
     public StateBasedHeader():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the StateBasedHeader class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public StateBasedHeader(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StateBasedHeader class with the specified child elements.
     /// </summary>
@@ -2933,7 +2751,6 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
     public StateBasedHeader(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the StateBasedHeader class from outer XML.
     /// </summary>
@@ -2942,13 +2759,10 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> RefMap.</para>
     /// <para> Represents the following element tag in the schema: xr:refmap </para>
@@ -2962,7 +2776,6 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
         get => GetElement<RefMap>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2985,25 +2798,22 @@ public partial class RevisionStateLink : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> id.</para>
+    /// <para> id, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(19, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RevisionStateLink class.
     /// </summary>
     public RevisionStateLink():base(){}
     
-      
-     
     
     
     
@@ -3043,21 +2853,18 @@ public partial class RevisionState : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the RevisionState class.
     /// </summary>
     public RevisionState():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RevisionState class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RevisionState(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevisionState class with the specified child elements.
     /// </summary>
@@ -3065,7 +2872,6 @@ public partial class RevisionState : OpenXmlCompositeElement
     public RevisionState(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RevisionState class from outer XML.
     /// </summary>
@@ -3074,13 +2880,10 @@ public partial class RevisionState : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-    
         /// <summary>
     /// <para> RowColVisualOps.</para>
     /// <para> Represents the following element tag in the schema: xr:rowColVisualOps </para>
@@ -3094,7 +2897,6 @@ public partial class RevisionState : OpenXmlCompositeElement
         get => GetElement<RowColVisualOps>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> HideUnhideSheet.</para>
     /// <para> Represents the following element tag in the schema: xr:hideUnhideSheet </para>
@@ -3108,7 +2910,6 @@ public partial class RevisionState : OpenXmlCompositeElement
         get => GetElement<HideUnhideSheet>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> ShowGridlinesHeadings.</para>
     /// <para> Represents the following element tag in the schema: xr:showGridlinesHeadings </para>
@@ -3122,7 +2923,6 @@ public partial class RevisionState : OpenXmlCompositeElement
         get => GetElement<ShowGridlinesHeadings>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> FreezePanes.</para>
     /// <para> Represents the following element tag in the schema: xr:freezePanes </para>
@@ -3136,7 +2936,6 @@ public partial class RevisionState : OpenXmlCompositeElement
         get => GetElement<FreezePanes>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Outlines.</para>
     /// <para> Represents the following element tag in the schema: xr:outlines </para>
@@ -3150,7 +2949,6 @@ public partial class RevisionState : OpenXmlCompositeElement
         get => GetElement<Outlines>(4);
         set => SetElement(4, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -3189,21 +2987,18 @@ public partial class RefMap : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the RefMap class.
     /// </summary>
     public RefMap():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RefMap class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RefMap(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RefMap class with the specified child elements.
     /// </summary>
@@ -3211,7 +3006,6 @@ public partial class RefMap : OpenXmlCompositeElement
     public RefMap(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RefMap class from outer XML.
     /// </summary>
@@ -3220,9 +3014,7 @@ public partial class RefMap : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -3246,47 +3038,42 @@ public partial class RowColVisualOps : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> action.</para>
+    /// <para> action, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: action </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "action")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOp> Action { get; set; }
-	
     /// <summary>
-    /// <para> isRow.</para>
+    /// <para> isRow, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: isRow </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "isRow")]
     [Index(1)]
     public BooleanValue IsRow { get; set; }
-	
     /// <summary>
-    /// <para> size.</para>
+    /// <para> size, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
     [SchemaAttr(0, "size")]
     [Index(2)]
     public UInt32Value Size { get; set; }
-	
     /// <summary>
-    /// <para> userSized.</para>
+    /// <para> userSized, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: userSized </para>
     /// </summary>
     [SchemaAttr(0, "userSized")]
     [Index(3)]
     public BooleanValue UserSized { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RowColVisualOps class.
     /// </summary>
     public RowColVisualOps():base(){}
     
-      
-     
     
     
     
@@ -3310,23 +3097,20 @@ public partial class HideUnhideSheet : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> hide.</para>
+    /// <para> hide, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: hide </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "hide")]
     [Index(0)]
     public BooleanValue Hide { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the HideUnhideSheet class.
     /// </summary>
     public HideUnhideSheet():base(){}
     
-      
-     
     
     
     
@@ -3350,31 +3134,28 @@ public partial class ShowGridlinesHeadings : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> showGridLines.</para>
+    /// <para> showGridLines, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: showGridLines </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "showGridLines")]
     [Index(0)]
     public BooleanValue ShowGridLines { get; set; }
-	
     /// <summary>
-    /// <para> showRowCol.</para>
+    /// <para> showRowCol, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: showRowCol </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "showRowCol")]
     [Index(1)]
     public BooleanValue ShowRowCol { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ShowGridlinesHeadings class.
     /// </summary>
     public ShowGridlinesHeadings():base(){}
     
-      
-     
     
     
     
@@ -3398,23 +3179,20 @@ public partial class FreezePanes : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> sheetViewUid.</para>
+    /// <para> sheetViewUid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: sheetViewUid </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "sheetViewUid")]
     [Index(0)]
     public StringValue SheetViewUid { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the FreezePanes class.
     /// </summary>
     public FreezePanes():base(){}
     
-      
-     
     
     
     
@@ -3445,30 +3223,27 @@ public partial class Outlines : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> isRow.</para>
+    /// <para> isRow, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: isRow </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "isRow")]
     [Index(0)]
     public BooleanValue IsRow { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Outlines class.
     /// </summary>
     public Outlines():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Outlines class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Outlines(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Outlines class with the specified child elements.
     /// </summary>
@@ -3476,7 +3251,6 @@ public partial class Outlines : OpenXmlCompositeElement
     public Outlines(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Outlines class from outer XML.
     /// </summary>
@@ -3485,9 +3259,7 @@ public partial class Outlines : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -3511,31 +3283,28 @@ public partial class Outline : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> isCollapsed.</para>
+    /// <para> isCollapsed, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: isCollapsed </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "isCollapsed")]
     [Index(0)]
     public BooleanValue IsCollapsed { get; set; }
-	
     /// <summary>
-    /// <para> level.</para>
+    /// <para> level, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: level </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "level")]
     [Index(1)]
     public ByteValue Level { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Outline class.
     /// </summary>
     public Outline():base(){}
     
-      
-     
     
     
     
@@ -3560,13 +3329,11 @@ public partial class Xstring : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Xstring class.
     /// </summary>
     public Xstring():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the Xstring class with the specified text content.
     /// </summary>
@@ -3574,14 +3341,11 @@ public partial class Xstring : OpenXmlLeafTextElement
     public Xstring(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -3618,21 +3382,18 @@ public partial class RstType : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the RstType class.
     /// </summary>
     public RstType():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RstType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RstType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RstType class with the specified child elements.
     /// </summary>
@@ -3640,7 +3401,6 @@ public partial class RstType : OpenXmlCompositeElement
     public RstType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RstType class from outer XML.
     /// </summary>
@@ -3649,13 +3409,10 @@ public partial class RstType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Text.</para>
     /// <para> Represents the following element tag in the schema: x:t </para>
@@ -3669,7 +3426,6 @@ public partial class RstType : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -3692,71 +3448,66 @@ public partial class RefCell : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> n.</para>
+    /// <para> n, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: n </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "n")]
     [Index(0)]
     public StringValue N { get; set; }
-	
     /// <summary>
-    /// <para> ajt.</para>
+    /// <para> ajt, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ajt </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "ajt")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get; set; }
-	
     /// <summary>
-    /// <para> ajtx.</para>
+    /// <para> ajtx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ajtx </para>
     /// </summary>
     [SchemaAttr(0, "ajtx")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get; set; }
-	
     /// <summary>
-    /// <para> homeRef.</para>
+    /// <para> homeRef, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: homeRef </para>
     /// </summary>
     [SchemaAttr(0, "homeRef")]
     [Index(3)]
     public BooleanValue HomeRef { get; set; }
-	
     /// <summary>
-    /// <para> r.</para>
+    /// <para> r, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: r </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "r")]
     [Index(4)]
     public ListValue<StringValue> R { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(5)]
     public StringValue Uid { get; set; }
-	
     /// <summary>
-    /// <para> uidLast.</para>
+    /// <para> uidLast, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uidLast </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uidLast")]
     [Index(6)]
     public StringValue UidLast { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RefCell class.
     /// </summary>
     public RefCell():base(){}
     
-      
-     
     
     
     
@@ -3780,55 +3531,51 @@ public partial class SheetXluid : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> n.</para>
+    /// <para> n, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: n </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "n")]
     [Index(0)]
     public StringValue N { get; set; }
-	
     /// <summary>
-    /// <para> ajt.</para>
+    /// <para> ajt, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ajt </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "ajt")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get; set; }
-	
     /// <summary>
-    /// <para> ajtx.</para>
+    /// <para> ajtx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ajtx </para>
     /// </summary>
     [SchemaAttr(0, "ajtx")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get; set; }
-	
     /// <summary>
-    /// <para> homeRef.</para>
+    /// <para> homeRef, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: homeRef </para>
     /// </summary>
     [SchemaAttr(0, "homeRef")]
     [Index(3)]
     public BooleanValue HomeRef { get; set; }
-	
     /// <summary>
-    /// <para> uid.</para>
+    /// <para> uid, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: uid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "uid")]
     [Index(4)]
     public StringValue Uid { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the SheetXluid class.
     /// </summary>
     public SheetXluid():base(){}
     
-      
-     
     
     
     
@@ -3852,127 +3599,121 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> n.</para>
+    /// <para> n, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: n </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "n")]
     [Index(0)]
     public StringValue N { get; set; }
-	
     /// <summary>
-    /// <para> ajt.</para>
+    /// <para> ajt, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ajt </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "ajt")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get; set; }
-	
     /// <summary>
-    /// <para> ajtx.</para>
+    /// <para> ajtx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ajtx </para>
     /// </summary>
     [SchemaAttr(0, "ajtx")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get; set; }
-	
     /// <summary>
-    /// <para> homeRef.</para>
+    /// <para> homeRef, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: homeRef </para>
     /// </summary>
     [SchemaAttr(0, "homeRef")]
     [Index(3)]
     public BooleanValue HomeRef { get; set; }
-	
     /// <summary>
-    /// <para> r.</para>
+    /// <para> r, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: r </para>
     /// </summary>
     [SchemaAttr(0, "r")]
     [Index(4)]
     public StringValue R { get; set; }
-	
     /// <summary>
-    /// <para> fromRowOff.</para>
+    /// <para> fromRowOff, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: fromRowOff </para>
     /// </summary>
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "fromRowOff")]
     [Index(5)]
     public Int64Value FromRowOff { get; set; }
-	
     /// <summary>
-    /// <para> fromColOff.</para>
+    /// <para> fromColOff, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: fromColOff </para>
     /// </summary>
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "fromColOff")]
     [Index(6)]
     public Int64Value FromColOff { get; set; }
-	
     /// <summary>
-    /// <para> toRowOff.</para>
+    /// <para> toRowOff, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: toRowOff </para>
     /// </summary>
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "toRowOff")]
     [Index(7)]
     public Int64Value ToRowOff { get; set; }
-	
     /// <summary>
-    /// <para> toColOff.</para>
+    /// <para> toColOff, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: toColOff </para>
     /// </summary>
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "toColOff")]
     [Index(8)]
     public Int64Value ToColOff { get; set; }
-	
     /// <summary>
-    /// <para> cx.</para>
+    /// <para> cx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 2147483647)]
     [SchemaAttr(0, "cx")]
     [Index(9)]
     public Int64Value Cx { get; set; }
-	
     /// <summary>
-    /// <para> cy.</para>
+    /// <para> cy, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 2147483647)]
     [SchemaAttr(0, "cy")]
     [Index(10)]
     public Int64Value Cy { get; set; }
-	
     /// <summary>
-    /// <para> x.</para>
+    /// <para> x, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: x </para>
     /// </summary>
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "x")]
     [Index(11)]
     public Int64Value X { get; set; }
-	
     /// <summary>
-    /// <para> y.</para>
+    /// <para> y, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: y </para>
     /// </summary>
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "y")]
     [Index(12)]
     public Int64Value Y { get; set; }
-	
     /// <summary>
-    /// <para> oat.</para>
+    /// <para> oat, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: oat </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "oat")]
     [Index(13)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.OartAnchorType> Oat { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RefOartAnchor class.
     /// </summary>
     public RefOartAnchor():base(){}
     
-      
-     
     
     
     
@@ -3997,14 +3738,11 @@ public partial class RefFuture : OpenXmlLeafElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the RefFuture class.
     /// </summary>
     public RefFuture():base(){}
     
-      
-     
     
     
     
@@ -4028,47 +3766,42 @@ public partial class RefTest : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> n.</para>
+    /// <para> n, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: n </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "n")]
     [Index(0)]
     public StringValue N { get; set; }
-	
     /// <summary>
-    /// <para> ajt.</para>
+    /// <para> ajt, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ajt </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "ajt")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt { get; set; }
-	
     /// <summary>
-    /// <para> ajtx.</para>
+    /// <para> ajtx, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: ajtx </para>
     /// </summary>
     [SchemaAttr(0, "ajtx")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx { get; set; }
-	
     /// <summary>
-    /// <para> homeRef.</para>
+    /// <para> homeRef, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: homeRef </para>
     /// </summary>
     [SchemaAttr(0, "homeRef")]
     [Index(3)]
     public BooleanValue HomeRef { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RefTest class.
     /// </summary>
     public RefTest():base(){}
     
-      
-     
     
     
     
@@ -4103,7 +3836,6 @@ public partial class DataValidation : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -4111,7 +3843,6 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues> Type { get; set; }
-	
     /// <summary>
     /// <para> errorStyle.</para>
     /// <para>Represents the following attribute in the schema: errorStyle </para>
@@ -4119,7 +3850,6 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "errorStyle")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues> ErrorStyle { get; set; }
-	
     /// <summary>
     /// <para> imeMode.</para>
     /// <para>Represents the following attribute in the schema: imeMode </para>
@@ -4127,7 +3857,6 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "imeMode")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues> ImeMode { get; set; }
-	
     /// <summary>
     /// <para> operator.</para>
     /// <para>Represents the following attribute in the schema: operator </para>
@@ -4135,7 +3864,6 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "operator")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues> Operator { get; set; }
-	
     /// <summary>
     /// <para> allowBlank.</para>
     /// <para>Represents the following attribute in the schema: allowBlank </para>
@@ -4143,7 +3871,6 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "allowBlank")]
     [Index(4)]
     public BooleanValue AllowBlank { get; set; }
-	
     /// <summary>
     /// <para> showDropDown.</para>
     /// <para>Represents the following attribute in the schema: showDropDown </para>
@@ -4151,7 +3878,6 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "showDropDown")]
     [Index(5)]
     public BooleanValue ShowDropDown { get; set; }
-	
     /// <summary>
     /// <para> showInputMessage.</para>
     /// <para>Represents the following attribute in the schema: showInputMessage </para>
@@ -4159,7 +3885,6 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "showInputMessage")]
     [Index(6)]
     public BooleanValue ShowInputMessage { get; set; }
-	
     /// <summary>
     /// <para> showErrorMessage.</para>
     /// <para>Represents the following attribute in the schema: showErrorMessage </para>
@@ -4167,7 +3892,6 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "showErrorMessage")]
     [Index(7)]
     public BooleanValue ShowErrorMessage { get; set; }
-	
     /// <summary>
     /// <para> errorTitle.</para>
     /// <para>Represents the following attribute in the schema: errorTitle </para>
@@ -4175,7 +3899,6 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "errorTitle")]
     [Index(8)]
     public StringValue ErrorTitle { get; set; }
-	
     /// <summary>
     /// <para> error.</para>
     /// <para>Represents the following attribute in the schema: error </para>
@@ -4183,7 +3906,6 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "error")]
     [Index(9)]
     public StringValue Error { get; set; }
-	
     /// <summary>
     /// <para> promptTitle.</para>
     /// <para>Represents the following attribute in the schema: promptTitle </para>
@@ -4191,7 +3913,6 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "promptTitle")]
     [Index(10)]
     public StringValue PromptTitle { get; set; }
-	
     /// <summary>
     /// <para> prompt.</para>
     /// <para>Represents the following attribute in the schema: prompt </para>
@@ -4199,30 +3920,27 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "prompt")]
     [Index(11)]
     public StringValue Prompt { get; set; }
-	
     /// <summary>
     /// <para> sqref.</para>
     /// <para>Represents the following attribute in the schema: sqref </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "sqref")]
     [Index(12)]
     public ListValue<StringValue> SequenceOfReferences { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the DataValidation class.
     /// </summary>
     public DataValidation():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the DataValidation class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DataValidation(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DataValidation class with the specified child elements.
     /// </summary>
@@ -4230,7 +3948,6 @@ public partial class DataValidation : OpenXmlCompositeElement
     public DataValidation(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DataValidation class from outer XML.
     /// </summary>
@@ -4239,13 +3956,10 @@ public partial class DataValidation : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> List.</para>
     /// <para> Represents the following element tag in the schema: x12ac:list </para>
@@ -4259,7 +3973,6 @@ public partial class DataValidation : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Formula1.</para>
     /// <para> Represents the following element tag in the schema: x:formula1 </para>
@@ -4273,7 +3986,6 @@ public partial class DataValidation : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula1>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Formula2.</para>
     /// <para> Represents the following element tag in the schema: x:formula2 </para>
@@ -4287,7 +3999,6 @@ public partial class DataValidation : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula2>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -4310,15 +4021,14 @@ public partial class Hyperlink : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "ref")]
     [Index(0)]
     public StringValue Reference { get; set; }
-	
     /// <summary>
     /// <para> Relationship Id.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
@@ -4328,7 +4038,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     [Index(1)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> Location.</para>
     /// <para>Represents the following attribute in the schema: location </para>
@@ -4336,7 +4045,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     [SchemaAttr(0, "location")]
     [Index(2)]
     public StringValue Location { get; set; }
-	
     /// <summary>
     /// <para> Tool Tip.</para>
     /// <para>Represents the following attribute in the schema: tooltip </para>
@@ -4344,7 +4052,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     [SchemaAttr(0, "tooltip")]
     [Index(3)]
     public StringValue Tooltip { get; set; }
-	
     /// <summary>
     /// <para> Display String.</para>
     /// <para>Represents the following attribute in the schema: display </para>
@@ -4352,15 +4059,12 @@ public partial class Hyperlink : OpenXmlLeafElement
     [SchemaAttr(0, "display")]
     [Index(4)]
     public StringValue Display { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Hyperlink class.
     /// </summary>
     public Hyperlink():base(){}
     
-      
-     
     
     
     
@@ -4409,158 +4113,138 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> manualMax.</para>
+    /// <para> manualMax, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: manualMax </para>
     /// </summary>
     [SchemaAttr(0, "manualMax")]
     [Index(0)]
     public DoubleValue ManualMax { get; set; }
-	
     /// <summary>
-    /// <para> manualMin.</para>
+    /// <para> manualMin, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: manualMin </para>
     /// </summary>
     [SchemaAttr(0, "manualMin")]
     [Index(1)]
     public DoubleValue ManualMin { get; set; }
-	
     /// <summary>
-    /// <para> lineWeight.</para>
+    /// <para> lineWeight, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: lineWeight </para>
     /// </summary>
     [SchemaAttr(0, "lineWeight")]
     [Index(2)]
     public DoubleValue LineWeight { get; set; }
-	
     /// <summary>
-    /// <para> type.</para>
+    /// <para> type, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues> Type { get; set; }
-	
     /// <summary>
-    /// <para> dateAxis.</para>
+    /// <para> dateAxis, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: dateAxis </para>
     /// </summary>
     [SchemaAttr(0, "dateAxis")]
     [Index(4)]
     public BooleanValue DateAxis { get; set; }
-	
     /// <summary>
-    /// <para> displayEmptyCellsAs.</para>
+    /// <para> displayEmptyCellsAs, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: displayEmptyCellsAs </para>
     /// </summary>
     [SchemaAttr(0, "displayEmptyCellsAs")]
     [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues> DisplayEmptyCellsAs { get; set; }
-	
     /// <summary>
-    /// <para> markers.</para>
+    /// <para> markers, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: markers </para>
     /// </summary>
     [SchemaAttr(0, "markers")]
     [Index(6)]
     public BooleanValue Markers { get; set; }
-	
     /// <summary>
-    /// <para> high.</para>
+    /// <para> high, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: high </para>
     /// </summary>
     [SchemaAttr(0, "high")]
     [Index(7)]
     public BooleanValue High { get; set; }
-	
     /// <summary>
-    /// <para> low.</para>
+    /// <para> low, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: low </para>
     /// </summary>
     [SchemaAttr(0, "low")]
     [Index(8)]
     public BooleanValue Low { get; set; }
-	
     /// <summary>
-    /// <para> first.</para>
+    /// <para> first, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: first </para>
     /// </summary>
     [SchemaAttr(0, "first")]
     [Index(9)]
     public BooleanValue First { get; set; }
-	
     /// <summary>
-    /// <para> last.</para>
+    /// <para> last, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: last </para>
     /// </summary>
     [SchemaAttr(0, "last")]
     [Index(10)]
     public BooleanValue Last { get; set; }
-	
     /// <summary>
-    /// <para> negative.</para>
+    /// <para> negative, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: negative </para>
     /// </summary>
     [SchemaAttr(0, "negative")]
     [Index(11)]
     public BooleanValue Negative { get; set; }
-	
     /// <summary>
-    /// <para> displayXAxis.</para>
+    /// <para> displayXAxis, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: displayXAxis </para>
     /// </summary>
     [SchemaAttr(0, "displayXAxis")]
     [Index(12)]
     public BooleanValue DisplayXAxis { get; set; }
-	
     /// <summary>
-    /// <para> displayHidden.</para>
+    /// <para> displayHidden, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: displayHidden </para>
     /// </summary>
     [SchemaAttr(0, "displayHidden")]
     [Index(13)]
     public BooleanValue DisplayHidden { get; set; }
-	
     /// <summary>
-    /// <para> minAxisType.</para>
+    /// <para> minAxisType, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: minAxisType </para>
     /// </summary>
     [SchemaAttr(0, "minAxisType")]
     [Index(14)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MinAxisType { get; set; }
-	
     /// <summary>
-    /// <para> maxAxisType.</para>
+    /// <para> maxAxisType, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: maxAxisType </para>
     /// </summary>
     [SchemaAttr(0, "maxAxisType")]
     [Index(15)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MaxAxisType { get; set; }
-	
     /// <summary>
-    /// <para> rightToLeft.</para>
+    /// <para> rightToLeft, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: rightToLeft </para>
     /// </summary>
     [SchemaAttr(0, "rightToLeft")]
     [Index(16)]
     public BooleanValue RightToLeft { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the SparklineGroup class.
     /// </summary>
     public SparklineGroup():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SparklineGroup class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SparklineGroup(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SparklineGroup class with the specified child elements.
     /// </summary>
@@ -4568,7 +4252,6 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     public SparklineGroup(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SparklineGroup class from outer XML.
     /// </summary>
@@ -4577,13 +4260,10 @@ public partial class SparklineGroup : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> SeriesColor.</para>
     /// <para> Represents the following element tag in the schema: x14:colorSeries </para>
@@ -4597,7 +4277,6 @@ public partial class SparklineGroup : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> NegativeColor.</para>
     /// <para> Represents the following element tag in the schema: x14:colorNegative </para>
@@ -4611,7 +4290,6 @@ public partial class SparklineGroup : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> AxisColor.</para>
     /// <para> Represents the following element tag in the schema: x14:colorAxis </para>
@@ -4625,7 +4303,6 @@ public partial class SparklineGroup : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.AxisColor>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> MarkersColor.</para>
     /// <para> Represents the following element tag in the schema: x14:colorMarkers </para>
@@ -4639,7 +4316,6 @@ public partial class SparklineGroup : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.MarkersColor>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> FirstMarkerColor.</para>
     /// <para> Represents the following element tag in the schema: x14:colorFirst </para>
@@ -4653,7 +4329,6 @@ public partial class SparklineGroup : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> LastMarkerColor.</para>
     /// <para> Represents the following element tag in the schema: x14:colorLast </para>
@@ -4667,7 +4342,6 @@ public partial class SparklineGroup : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> HighMarkerColor.</para>
     /// <para> Represents the following element tag in the schema: x14:colorHigh </para>
@@ -4681,7 +4355,6 @@ public partial class SparklineGroup : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor>(6);
         set => SetElement(6, value);
 	}
-    
     /// <summary>
     /// <para> LowMarkerColor.</para>
     /// <para> Represents the following element tag in the schema: x14:colorLow </para>
@@ -4695,7 +4368,6 @@ public partial class SparklineGroup : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor>(7);
         set => SetElement(7, value);
 	}
-    
     /// <summary>
     /// <para> Formula.</para>
     /// <para> Represents the following element tag in the schema: xne:f </para>
@@ -4709,7 +4381,6 @@ public partial class SparklineGroup : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>(8);
         set => SetElement(8, value);
 	}
-    
     /// <summary>
     /// <para> Sparklines.</para>
     /// <para> Represents the following element tag in the schema: x14:sparklines </para>
@@ -4723,7 +4394,6 @@ public partial class SparklineGroup : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>(9);
         set => SetElement(9, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -4758,21 +4428,18 @@ public partial class Comments : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Comments class.
     /// </summary>
     public Comments():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Comments class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Comments(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Comments class with the specified child elements.
     /// </summary>
@@ -4780,7 +4447,6 @@ public partial class Comments : OpenXmlCompositeElement
     public Comments(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Comments class from outer XML.
     /// </summary>
@@ -4789,13 +4455,10 @@ public partial class Comments : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Authors.</para>
     /// <para> Represents the following element tag in the schema: x:authors </para>
@@ -4809,7 +4472,6 @@ public partial class Comments : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Authors>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> List of Comments.</para>
     /// <para> Represents the following element tag in the schema: x:commentList </para>
@@ -4823,7 +4485,6 @@ public partial class Comments : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentList>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -4837,7 +4498,6 @@ public partial class Comments : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -4871,7 +4531,6 @@ public partial class AutoFilter : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Cell or Range Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
@@ -4879,22 +4538,19 @@ public partial class AutoFilter : OpenXmlCompositeElement
     [SchemaAttr(0, "ref")]
     [Index(0)]
     public StringValue Reference { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the AutoFilter class.
     /// </summary>
     public AutoFilter():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the AutoFilter class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public AutoFilter(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AutoFilter class with the specified child elements.
     /// </summary>
@@ -4902,7 +4558,6 @@ public partial class AutoFilter : OpenXmlCompositeElement
     public AutoFilter(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AutoFilter class from outer XML.
     /// </summary>
@@ -4911,9 +4566,7 @@ public partial class AutoFilter : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -4976,23 +4629,22 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
-	
     /// <summary>
     /// <para> cacheId.</para>
     /// <para>Represents the following attribute in the schema: cacheId </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "cacheId")]
     [Index(1)]
     public UInt32Value CacheId { get; set; }
-	
     /// <summary>
     /// <para> dataOnRows.</para>
     /// <para>Represents the following attribute in the schema: dataOnRows </para>
@@ -5000,7 +4652,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "dataOnRows")]
     [Index(2)]
     public BooleanValue DataOnRows { get; set; }
-	
     /// <summary>
     /// <para> dataPosition.</para>
     /// <para>Represents the following attribute in the schema: dataPosition </para>
@@ -5008,7 +4659,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "dataPosition")]
     [Index(3)]
     public UInt32Value DataPosition { get; set; }
-	
     /// <summary>
     /// <para> Auto Format Id.</para>
     /// <para>Represents the following attribute in the schema: autoFormatId </para>
@@ -5016,7 +4666,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "autoFormatId")]
     [Index(4)]
     public UInt32Value AutoFormatId { get; set; }
-	
     /// <summary>
     /// <para> Apply Number Formats.</para>
     /// <para>Represents the following attribute in the schema: applyNumberFormats </para>
@@ -5024,7 +4673,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyNumberFormats")]
     [Index(5)]
     public BooleanValue ApplyNumberFormats { get; set; }
-	
     /// <summary>
     /// <para> Apply Border Formats.</para>
     /// <para>Represents the following attribute in the schema: applyBorderFormats </para>
@@ -5032,7 +4680,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyBorderFormats")]
     [Index(6)]
     public BooleanValue ApplyBorderFormats { get; set; }
-	
     /// <summary>
     /// <para> Apply Font Formats.</para>
     /// <para>Represents the following attribute in the schema: applyFontFormats </para>
@@ -5040,7 +4687,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyFontFormats")]
     [Index(7)]
     public BooleanValue ApplyFontFormats { get; set; }
-	
     /// <summary>
     /// <para> Apply Pattern Formats.</para>
     /// <para>Represents the following attribute in the schema: applyPatternFormats </para>
@@ -5048,7 +4694,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyPatternFormats")]
     [Index(8)]
     public BooleanValue ApplyPatternFormats { get; set; }
-	
     /// <summary>
     /// <para> Apply Alignment Formats.</para>
     /// <para>Represents the following attribute in the schema: applyAlignmentFormats </para>
@@ -5056,7 +4701,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyAlignmentFormats")]
     [Index(9)]
     public BooleanValue ApplyAlignmentFormats { get; set; }
-	
     /// <summary>
     /// <para> Apply Width / Height Formats.</para>
     /// <para>Represents the following attribute in the schema: applyWidthHeightFormats </para>
@@ -5064,15 +4708,14 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyWidthHeightFormats")]
     [Index(10)]
     public BooleanValue ApplyWidthHeightFormats { get; set; }
-	
     /// <summary>
     /// <para> dataCaption.</para>
     /// <para>Represents the following attribute in the schema: dataCaption </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "dataCaption")]
     [Index(11)]
     public StringValue DataCaption { get; set; }
-	
     /// <summary>
     /// <para> grandTotalCaption.</para>
     /// <para>Represents the following attribute in the schema: grandTotalCaption </para>
@@ -5080,7 +4723,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "grandTotalCaption")]
     [Index(12)]
     public StringValue GrandTotalCaption { get; set; }
-	
     /// <summary>
     /// <para> errorCaption.</para>
     /// <para>Represents the following attribute in the schema: errorCaption </para>
@@ -5088,7 +4730,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "errorCaption")]
     [Index(13)]
     public StringValue ErrorCaption { get; set; }
-	
     /// <summary>
     /// <para> showError.</para>
     /// <para>Represents the following attribute in the schema: showError </para>
@@ -5096,7 +4737,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showError")]
     [Index(14)]
     public BooleanValue ShowError { get; set; }
-	
     /// <summary>
     /// <para> missingCaption.</para>
     /// <para>Represents the following attribute in the schema: missingCaption </para>
@@ -5104,7 +4744,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "missingCaption")]
     [Index(15)]
     public StringValue MissingCaption { get; set; }
-	
     /// <summary>
     /// <para> showMissing.</para>
     /// <para>Represents the following attribute in the schema: showMissing </para>
@@ -5112,7 +4751,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showMissing")]
     [Index(16)]
     public BooleanValue ShowMissing { get; set; }
-	
     /// <summary>
     /// <para> pageStyle.</para>
     /// <para>Represents the following attribute in the schema: pageStyle </para>
@@ -5120,7 +4758,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "pageStyle")]
     [Index(17)]
     public StringValue PageStyle { get; set; }
-	
     /// <summary>
     /// <para> pivotTableStyle.</para>
     /// <para>Represents the following attribute in the schema: pivotTableStyle </para>
@@ -5128,7 +4765,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "pivotTableStyle")]
     [Index(18)]
     public StringValue PivotTableStyleName { get; set; }
-	
     /// <summary>
     /// <para> vacatedStyle.</para>
     /// <para>Represents the following attribute in the schema: vacatedStyle </para>
@@ -5136,7 +4772,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "vacatedStyle")]
     [Index(19)]
     public StringValue VacatedStyle { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
@@ -5144,7 +4779,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     [Index(20)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> updatedVersion.</para>
     /// <para>Represents the following attribute in the schema: updatedVersion </para>
@@ -5152,7 +4786,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "updatedVersion")]
     [Index(21)]
     public ByteValue UpdatedVersion { get; set; }
-	
     /// <summary>
     /// <para> minRefreshableVersion.</para>
     /// <para>Represents the following attribute in the schema: minRefreshableVersion </para>
@@ -5160,7 +4793,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "minRefreshableVersion")]
     [Index(22)]
     public ByteValue MinRefreshableVersion { get; set; }
-	
     /// <summary>
     /// <para> asteriskTotals.</para>
     /// <para>Represents the following attribute in the schema: asteriskTotals </para>
@@ -5168,7 +4800,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "asteriskTotals")]
     [Index(23)]
     public BooleanValue AsteriskTotals { get; set; }
-	
     /// <summary>
     /// <para> showItems.</para>
     /// <para>Represents the following attribute in the schema: showItems </para>
@@ -5176,7 +4807,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showItems")]
     [Index(24)]
     public BooleanValue ShowItems { get; set; }
-	
     /// <summary>
     /// <para> editData.</para>
     /// <para>Represents the following attribute in the schema: editData </para>
@@ -5184,7 +4814,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "editData")]
     [Index(25)]
     public BooleanValue EditData { get; set; }
-	
     /// <summary>
     /// <para> disableFieldList.</para>
     /// <para>Represents the following attribute in the schema: disableFieldList </para>
@@ -5192,7 +4821,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "disableFieldList")]
     [Index(26)]
     public BooleanValue DisableFieldList { get; set; }
-	
     /// <summary>
     /// <para> showCalcMbrs.</para>
     /// <para>Represents the following attribute in the schema: showCalcMbrs </para>
@@ -5200,7 +4828,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showCalcMbrs")]
     [Index(27)]
     public BooleanValue ShowCalculatedMembers { get; set; }
-	
     /// <summary>
     /// <para> visualTotals.</para>
     /// <para>Represents the following attribute in the schema: visualTotals </para>
@@ -5208,7 +4835,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "visualTotals")]
     [Index(28)]
     public BooleanValue VisualTotals { get; set; }
-	
     /// <summary>
     /// <para> showMultipleLabel.</para>
     /// <para>Represents the following attribute in the schema: showMultipleLabel </para>
@@ -5216,7 +4842,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showMultipleLabel")]
     [Index(29)]
     public BooleanValue ShowMultipleLabel { get; set; }
-	
     /// <summary>
     /// <para> showDataDropDown.</para>
     /// <para>Represents the following attribute in the schema: showDataDropDown </para>
@@ -5224,7 +4849,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showDataDropDown")]
     [Index(30)]
     public BooleanValue ShowDataDropDown { get; set; }
-	
     /// <summary>
     /// <para> showDrill.</para>
     /// <para>Represents the following attribute in the schema: showDrill </para>
@@ -5232,7 +4856,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showDrill")]
     [Index(31)]
     public BooleanValue ShowDrill { get; set; }
-	
     /// <summary>
     /// <para> printDrill.</para>
     /// <para>Represents the following attribute in the schema: printDrill </para>
@@ -5240,7 +4863,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "printDrill")]
     [Index(32)]
     public BooleanValue PrintDrill { get; set; }
-	
     /// <summary>
     /// <para> showMemberPropertyTips.</para>
     /// <para>Represents the following attribute in the schema: showMemberPropertyTips </para>
@@ -5248,7 +4870,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showMemberPropertyTips")]
     [Index(33)]
     public BooleanValue ShowMemberPropertyTips { get; set; }
-	
     /// <summary>
     /// <para> showDataTips.</para>
     /// <para>Represents the following attribute in the schema: showDataTips </para>
@@ -5256,7 +4877,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showDataTips")]
     [Index(34)]
     public BooleanValue ShowDataTips { get; set; }
-	
     /// <summary>
     /// <para> enableWizard.</para>
     /// <para>Represents the following attribute in the schema: enableWizard </para>
@@ -5264,7 +4884,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "enableWizard")]
     [Index(35)]
     public BooleanValue EnableWizard { get; set; }
-	
     /// <summary>
     /// <para> enableDrill.</para>
     /// <para>Represents the following attribute in the schema: enableDrill </para>
@@ -5272,7 +4891,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "enableDrill")]
     [Index(36)]
     public BooleanValue EnableDrill { get; set; }
-	
     /// <summary>
     /// <para> enableFieldProperties.</para>
     /// <para>Represents the following attribute in the schema: enableFieldProperties </para>
@@ -5280,7 +4898,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "enableFieldProperties")]
     [Index(37)]
     public BooleanValue EnableFieldProperties { get; set; }
-	
     /// <summary>
     /// <para> preserveFormatting.</para>
     /// <para>Represents the following attribute in the schema: preserveFormatting </para>
@@ -5288,7 +4905,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "preserveFormatting")]
     [Index(38)]
     public BooleanValue PreserveFormatting { get; set; }
-	
     /// <summary>
     /// <para> useAutoFormatting.</para>
     /// <para>Represents the following attribute in the schema: useAutoFormatting </para>
@@ -5296,7 +4912,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "useAutoFormatting")]
     [Index(39)]
     public BooleanValue UseAutoFormatting { get; set; }
-	
     /// <summary>
     /// <para> pageWrap.</para>
     /// <para>Represents the following attribute in the schema: pageWrap </para>
@@ -5304,7 +4919,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "pageWrap")]
     [Index(40)]
     public UInt32Value PageWrap { get; set; }
-	
     /// <summary>
     /// <para> pageOverThenDown.</para>
     /// <para>Represents the following attribute in the schema: pageOverThenDown </para>
@@ -5312,7 +4926,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "pageOverThenDown")]
     [Index(41)]
     public BooleanValue PageOverThenDown { get; set; }
-	
     /// <summary>
     /// <para> subtotalHiddenItems.</para>
     /// <para>Represents the following attribute in the schema: subtotalHiddenItems </para>
@@ -5320,7 +4933,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "subtotalHiddenItems")]
     [Index(42)]
     public BooleanValue SubtotalHiddenItems { get; set; }
-	
     /// <summary>
     /// <para> rowGrandTotals.</para>
     /// <para>Represents the following attribute in the schema: rowGrandTotals </para>
@@ -5328,7 +4940,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "rowGrandTotals")]
     [Index(43)]
     public BooleanValue RowGrandTotals { get; set; }
-	
     /// <summary>
     /// <para> colGrandTotals.</para>
     /// <para>Represents the following attribute in the schema: colGrandTotals </para>
@@ -5336,7 +4947,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "colGrandTotals")]
     [Index(44)]
     public BooleanValue ColumnGrandTotals { get; set; }
-	
     /// <summary>
     /// <para> fieldPrintTitles.</para>
     /// <para>Represents the following attribute in the schema: fieldPrintTitles </para>
@@ -5344,7 +4954,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "fieldPrintTitles")]
     [Index(45)]
     public BooleanValue FieldPrintTitles { get; set; }
-	
     /// <summary>
     /// <para> itemPrintTitles.</para>
     /// <para>Represents the following attribute in the schema: itemPrintTitles </para>
@@ -5352,7 +4961,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "itemPrintTitles")]
     [Index(46)]
     public BooleanValue ItemPrintTitles { get; set; }
-	
     /// <summary>
     /// <para> mergeItem.</para>
     /// <para>Represents the following attribute in the schema: mergeItem </para>
@@ -5360,7 +4968,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "mergeItem")]
     [Index(47)]
     public BooleanValue MergeItem { get; set; }
-	
     /// <summary>
     /// <para> showDropZones.</para>
     /// <para>Represents the following attribute in the schema: showDropZones </para>
@@ -5368,7 +4975,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showDropZones")]
     [Index(48)]
     public BooleanValue ShowDropZones { get; set; }
-	
     /// <summary>
     /// <para> createdVersion.</para>
     /// <para>Represents the following attribute in the schema: createdVersion </para>
@@ -5376,7 +4982,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "createdVersion")]
     [Index(49)]
     public ByteValue CreatedVersion { get; set; }
-	
     /// <summary>
     /// <para> indent.</para>
     /// <para>Represents the following attribute in the schema: indent </para>
@@ -5384,7 +4989,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "indent")]
     [Index(50)]
     public UInt32Value Indent { get; set; }
-	
     /// <summary>
     /// <para> showEmptyRow.</para>
     /// <para>Represents the following attribute in the schema: showEmptyRow </para>
@@ -5392,7 +4996,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showEmptyRow")]
     [Index(51)]
     public BooleanValue ShowEmptyRow { get; set; }
-	
     /// <summary>
     /// <para> showEmptyCol.</para>
     /// <para>Represents the following attribute in the schema: showEmptyCol </para>
@@ -5400,7 +5003,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showEmptyCol")]
     [Index(52)]
     public BooleanValue ShowEmptyColumn { get; set; }
-	
     /// <summary>
     /// <para> showHeaders.</para>
     /// <para>Represents the following attribute in the schema: showHeaders </para>
@@ -5408,7 +5010,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showHeaders")]
     [Index(53)]
     public BooleanValue ShowHeaders { get; set; }
-	
     /// <summary>
     /// <para> compact.</para>
     /// <para>Represents the following attribute in the schema: compact </para>
@@ -5416,7 +5017,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "compact")]
     [Index(54)]
     public BooleanValue Compact { get; set; }
-	
     /// <summary>
     /// <para> outline.</para>
     /// <para>Represents the following attribute in the schema: outline </para>
@@ -5424,7 +5024,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "outline")]
     [Index(55)]
     public BooleanValue Outline { get; set; }
-	
     /// <summary>
     /// <para> outlineData.</para>
     /// <para>Represents the following attribute in the schema: outlineData </para>
@@ -5432,7 +5031,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "outlineData")]
     [Index(56)]
     public BooleanValue OutlineData { get; set; }
-	
     /// <summary>
     /// <para> compactData.</para>
     /// <para>Represents the following attribute in the schema: compactData </para>
@@ -5440,7 +5038,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "compactData")]
     [Index(57)]
     public BooleanValue CompactData { get; set; }
-	
     /// <summary>
     /// <para> published.</para>
     /// <para>Represents the following attribute in the schema: published </para>
@@ -5448,7 +5045,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "published")]
     [Index(58)]
     public BooleanValue Published { get; set; }
-	
     /// <summary>
     /// <para> gridDropZones.</para>
     /// <para>Represents the following attribute in the schema: gridDropZones </para>
@@ -5456,7 +5052,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "gridDropZones")]
     [Index(59)]
     public BooleanValue GridDropZones { get; set; }
-	
     /// <summary>
     /// <para> immersive.</para>
     /// <para>Represents the following attribute in the schema: immersive </para>
@@ -5464,7 +5059,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "immersive")]
     [Index(60)]
     public BooleanValue StopImmersiveUi { get; set; }
-	
     /// <summary>
     /// <para> multipleFieldFilters.</para>
     /// <para>Represents the following attribute in the schema: multipleFieldFilters </para>
@@ -5472,7 +5066,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "multipleFieldFilters")]
     [Index(61)]
     public BooleanValue MultipleFieldFilters { get; set; }
-	
     /// <summary>
     /// <para> chartFormat.</para>
     /// <para>Represents the following attribute in the schema: chartFormat </para>
@@ -5480,7 +5073,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "chartFormat")]
     [Index(62)]
     public UInt32Value ChartFormat { get; set; }
-	
     /// <summary>
     /// <para> rowHeaderCaption.</para>
     /// <para>Represents the following attribute in the schema: rowHeaderCaption </para>
@@ -5488,7 +5080,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "rowHeaderCaption")]
     [Index(63)]
     public StringValue RowHeaderCaption { get; set; }
-	
     /// <summary>
     /// <para> colHeaderCaption.</para>
     /// <para>Represents the following attribute in the schema: colHeaderCaption </para>
@@ -5496,7 +5087,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "colHeaderCaption")]
     [Index(64)]
     public StringValue ColumnHeaderCaption { get; set; }
-	
     /// <summary>
     /// <para> fieldListSortAscending.</para>
     /// <para>Represents the following attribute in the schema: fieldListSortAscending </para>
@@ -5504,7 +5094,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "fieldListSortAscending")]
     [Index(65)]
     public BooleanValue FieldListSortAscending { get; set; }
-	
     /// <summary>
     /// <para> mdxSubqueries.</para>
     /// <para>Represents the following attribute in the schema: mdxSubqueries </para>
@@ -5512,7 +5101,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "mdxSubqueries")]
     [Index(66)]
     public BooleanValue MdxSubqueries { get; set; }
-	
     /// <summary>
     /// <para> customListSort.</para>
     /// <para>Represents the following attribute in the schema: customListSort </para>
@@ -5520,22 +5108,19 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "customListSort")]
     [Index(67)]
     public BooleanValue CustomListSort { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the pivotTableDefinition class.
     /// </summary>
     public pivotTableDefinition():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the pivotTableDefinition class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public pivotTableDefinition(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the pivotTableDefinition class with the specified child elements.
     /// </summary>
@@ -5543,7 +5128,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     public pivotTableDefinition(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the pivotTableDefinition class from outer XML.
     /// </summary>
@@ -5552,13 +5136,10 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Location.</para>
     /// <para> Represents the following element tag in the schema: x:location </para>
@@ -5572,7 +5153,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Location>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> PivotFields.</para>
     /// <para> Represents the following element tag in the schema: x:pivotFields </para>
@@ -5586,7 +5166,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFields>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> RowFields.</para>
     /// <para> Represents the following element tag in the schema: x:rowFields </para>
@@ -5600,7 +5179,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowFields>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> RowItems.</para>
     /// <para> Represents the following element tag in the schema: x:rowItems </para>
@@ -5614,7 +5192,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowItems>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> ColumnFields.</para>
     /// <para> Represents the following element tag in the schema: x:colFields </para>
@@ -5628,7 +5205,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> ColumnItems.</para>
     /// <para> Represents the following element tag in the schema: x:colItems </para>
@@ -5642,7 +5218,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> PageFields.</para>
     /// <para> Represents the following element tag in the schema: x:pageFields </para>
@@ -5656,7 +5231,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageFields>(6);
         set => SetElement(6, value);
 	}
-    
     /// <summary>
     /// <para> DataFields.</para>
     /// <para> Represents the following element tag in the schema: x:dataFields </para>
@@ -5670,7 +5244,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFields>(7);
         set => SetElement(7, value);
 	}
-    
     /// <summary>
     /// <para> Formats.</para>
     /// <para> Represents the following element tag in the schema: x:formats </para>
@@ -5684,7 +5257,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formats>(8);
         set => SetElement(8, value);
 	}
-    
     /// <summary>
     /// <para> ConditionalFormats.</para>
     /// <para> Represents the following element tag in the schema: x:conditionalFormats </para>
@@ -5698,7 +5270,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>(9);
         set => SetElement(9, value);
 	}
-    
     /// <summary>
     /// <para> ChartFormats.</para>
     /// <para> Represents the following element tag in the schema: x:chartFormats </para>
@@ -5712,7 +5283,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>(10);
         set => SetElement(10, value);
 	}
-    
     /// <summary>
     /// <para> PivotHierarchies.</para>
     /// <para> Represents the following element tag in the schema: x:pivotHierarchies </para>
@@ -5726,7 +5296,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>(11);
         set => SetElement(11, value);
 	}
-    
     /// <summary>
     /// <para> PivotTableStyle.</para>
     /// <para> Represents the following element tag in the schema: x:pivotTableStyleInfo </para>
@@ -5740,7 +5309,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>(12);
         set => SetElement(12, value);
 	}
-    
     /// <summary>
     /// <para> PivotFilters.</para>
     /// <para> Represents the following element tag in the schema: x:filters </para>
@@ -5754,7 +5322,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>(13);
         set => SetElement(13, value);
 	}
-    
     /// <summary>
     /// <para> RowHierarchiesUsage.</para>
     /// <para> Represents the following element tag in the schema: x:rowHierarchiesUsage </para>
@@ -5768,7 +5335,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>(14);
         set => SetElement(14, value);
 	}
-    
     /// <summary>
     /// <para> ColumnHierarchiesUsage.</para>
     /// <para> Represents the following element tag in the schema: x:colHierarchiesUsage </para>
@@ -5782,7 +5348,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>(15);
         set => SetElement(15, value);
 	}
-    
     /// <summary>
     /// <para> PivotTableDefinitionExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -5796,7 +5361,6 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>(16);
         set => SetElement(16, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -5804,10 +5368,10 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
 
 }
 /// <summary>
-/// Defines the RevisionContext enumeration. 
-/// </summary> 
+/// Defines the RevisionContext enumeration.
+/// </summary>
 public enum RevisionContext
-{  
+{
 	///<summary>
 ///normal.
 ///<para>When the item is serialized out as xml, its value is "normal".</para>
@@ -5832,13 +5396,13 @@ Redo,
 ///</summary>
 [EnumString("copy")]
 Copy,
- 
+
 }
 /// <summary>
-/// Defines the RwColAction enumeration. 
-/// </summary> 
+/// Defines the RwColAction enumeration.
+/// </summary>
 public enum RwColAction
-{  
+{
 	///<summary>
 ///insr.
 ///<para>When the item is serialized out as xml, its value is "insr".</para>
@@ -5863,13 +5427,13 @@ Insc,
 ///</summary>
 [EnumString("delc")]
 Delc,
- 
+
 }
 /// <summary>
-/// Defines the FeatureType enumeration. 
-/// </summary> 
+/// Defines the FeatureType enumeration.
+/// </summary>
 public enum FeatureType
-{  
+{
 	///<summary>
 ///dataValidation.
 ///<para>When the item is serialized out as xml, its value is "dataValidation".</para>
@@ -5948,26 +5512,26 @@ PivotTable,
 ///</summary>
 [EnumString("future")]
 Future,
- 
+
 }
 /// <summary>
-/// Defines the ExtFeatureType enumeration. 
-/// </summary> 
+/// Defines the ExtFeatureType enumeration.
+/// </summary>
 public enum ExtFeatureType
-{  
+{
 	///<summary>
 ///reserved.
 ///<para>When the item is serialized out as xml, its value is "reserved".</para>
 ///</summary>
 [EnumString("reserved")]
 Reserved,
- 
+
 }
 /// <summary>
-/// Defines the SubFeatureType enumeration. 
-/// </summary> 
+/// Defines the SubFeatureType enumeration.
+/// </summary>
 public enum SubFeatureType
-{  
+{
 	///<summary>
 ///none.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
@@ -5980,26 +5544,26 @@ None,
 ///</summary>
 [EnumString("future")]
 Future,
- 
+
 }
 /// <summary>
-/// Defines the ExtSubFeatureType enumeration. 
-/// </summary> 
+/// Defines the ExtSubFeatureType enumeration.
+/// </summary>
 public enum ExtSubFeatureType
-{  
+{
 	///<summary>
 ///reserved.
 ///<para>When the item is serialized out as xml, its value is "reserved".</para>
 ///</summary>
 [EnumString("reserved")]
 Reserved,
- 
+
 }
 /// <summary>
-/// Defines the RowColVisualOp enumeration. 
-/// </summary> 
+/// Defines the RowColVisualOp enumeration.
+/// </summary>
 public enum RowColVisualOp
-{  
+{
 	///<summary>
 ///hide.
 ///<para>When the item is serialized out as xml, its value is "hide".</para>
@@ -6024,13 +5588,13 @@ Resize,
 ///</summary>
 [EnumString("autosize")]
 Autosize,
- 
+
 }
 /// <summary>
-/// Defines the SheetOp enumeration. 
-/// </summary> 
+/// Defines the SheetOp enumeration.
+/// </summary>
 public enum SheetOp
-{  
+{
 	///<summary>
 ///insert.
 ///<para>When the item is serialized out as xml, its value is "insert".</para>
@@ -6055,13 +5619,13 @@ Reorder,
 ///</summary>
 [EnumString("rename")]
 Rename,
- 
+
 }
 /// <summary>
-/// Defines the FillType enumeration. 
-/// </summary> 
+/// Defines the FillType enumeration.
+/// </summary>
 public enum FillType
-{  
+{
 	///<summary>
 ///fill.
 ///<para>When the item is serialized out as xml, its value is "fill".</para>
@@ -6080,26 +5644,26 @@ Array,
 ///</summary>
 [EnumString("future")]
 Future,
- 
+
 }
 /// <summary>
-/// Defines the FillTypeExt enumeration. 
-/// </summary> 
+/// Defines the FillTypeExt enumeration.
+/// </summary>
 public enum FillTypeExt
-{  
+{
 	///<summary>
 ///test.
 ///<para>When the item is serialized out as xml, its value is "test".</para>
 ///</summary>
 [EnumString("test")]
 Test,
- 
+
 }
 /// <summary>
-/// Defines the AdjustType enumeration. 
-/// </summary> 
+/// Defines the AdjustType enumeration.
+/// </summary>
 public enum AdjustType
-{  
+{
 	///<summary>
 ///fmla.
 ///<para>When the item is serialized out as xml, its value is "fmla".</para>
@@ -6154,26 +5718,26 @@ Fragile,
 ///</summary>
 [EnumString("future")]
 Future,
- 
+
 }
 /// <summary>
-/// Defines the AdjustTypeExt enumeration. 
-/// </summary> 
+/// Defines the AdjustTypeExt enumeration.
+/// </summary>
 public enum AdjustTypeExt
-{  
+{
 	///<summary>
 ///test.
 ///<para>When the item is serialized out as xml, its value is "test".</para>
 ///</summary>
 [EnumString("test")]
 Test,
- 
+
 }
 /// <summary>
-/// Defines the OartAnchorType enumeration. 
-/// </summary> 
+/// Defines the OartAnchorType enumeration.
+/// </summary>
 public enum OartAnchorType
-{  
+{
 	///<summary>
 ///twoCell.
 ///<para>When the item is serialized out as xml, its value is "twoCell".</para>
@@ -6192,8 +5756,6 @@ OneCell,
 ///</summary>
 [EnumString("absolute")]
 Absolute,
- 
+
 }
 }
- 
- 

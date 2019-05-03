@@ -34,21 +34,18 @@ public partial class ModelTimeGroupings : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ModelTimeGroupings class.
     /// </summary>
     public ModelTimeGroupings():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ModelTimeGroupings class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ModelTimeGroupings(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ModelTimeGroupings class with the specified child elements.
     /// </summary>
@@ -56,7 +53,6 @@ public partial class ModelTimeGroupings : OpenXmlCompositeElement
     public ModelTimeGroupings(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ModelTimeGroupings class from outer XML.
     /// </summary>
@@ -65,9 +61,7 @@ public partial class ModelTimeGroupings : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -98,46 +92,43 @@ public partial class ModelTimeGrouping : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> tableName.</para>
+    /// <para> tableName, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: tableName </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "tableName")]
     [Index(0)]
     public StringValue TableName { get; set; }
-	
     /// <summary>
-    /// <para> columnName.</para>
+    /// <para> columnName, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: columnName </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "columnName")]
     [Index(1)]
     public StringValue ColumnName { get; set; }
-	
     /// <summary>
-    /// <para> columnId.</para>
+    /// <para> columnId, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: columnId </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "columnId")]
     [Index(2)]
     public StringValue ColumnId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ModelTimeGrouping class.
     /// </summary>
     public ModelTimeGrouping():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ModelTimeGrouping class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ModelTimeGrouping(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ModelTimeGrouping class with the specified child elements.
     /// </summary>
@@ -145,7 +136,6 @@ public partial class ModelTimeGrouping : OpenXmlCompositeElement
     public ModelTimeGrouping(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ModelTimeGrouping class from outer XML.
     /// </summary>
@@ -154,9 +144,7 @@ public partial class ModelTimeGrouping : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -180,47 +168,44 @@ public partial class CalculatedTimeColumn : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> columnName.</para>
+    /// <para> columnName, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: columnName </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "columnName")]
     [Index(0)]
     public StringValue ColumnName { get; set; }
-	
     /// <summary>
-    /// <para> columnId.</para>
+    /// <para> columnId, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: columnId </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "columnId")]
     [Index(1)]
     public StringValue ColumnId { get; set; }
-	
     /// <summary>
-    /// <para> contentType.</para>
+    /// <para> contentType, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: contentType </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "contentType")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType> ContentType { get; set; }
-	
     /// <summary>
-    /// <para> isSelected.</para>
+    /// <para> isSelected, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: isSelected </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "isSelected")]
     [Index(3)]
     public BooleanValue IsSelected { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the CalculatedTimeColumn class.
     /// </summary>
     public CalculatedTimeColumn():base(){}
     
-      
-     
     
     
     
@@ -229,10 +214,10 @@ public partial class CalculatedTimeColumn : OpenXmlLeafElement
 
 }
 /// <summary>
-/// Defines the ModelTimeGroupingContentType enumeration. 
-/// </summary> 
+/// Defines the ModelTimeGroupingContentType enumeration.
+/// </summary>
 public enum ModelTimeGroupingContentType
-{  
+{
 	///<summary>
 ///years.
 ///<para>When the item is serialized out as xml, its value is "years".</para>
@@ -287,8 +272,6 @@ Minutes,
 ///</summary>
 [EnumString("seconds")]
 Seconds,
- 
+
 }
 }
- 
- 

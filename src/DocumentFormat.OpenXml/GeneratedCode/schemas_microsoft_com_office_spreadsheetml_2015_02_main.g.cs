@@ -11,5 +11,3 @@ using DocumentFormat.OpenXml.Spreadsheet;
 namespace DocumentFormat.OpenXml.Office2016.Excel2
 {
 }
- 
- 

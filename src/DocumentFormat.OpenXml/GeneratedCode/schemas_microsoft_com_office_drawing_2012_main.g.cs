@@ -26,47 +26,44 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> bwMode.</para>
+    /// <para> bwMode, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "bwMode")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Mode { get; set; }
-	
     /// <summary>
-    /// <para> bwPure.</para>
+    /// <para> bwPure, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: bwPure </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "bwPure")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Pure { get; set; }
-	
     /// <summary>
-    /// <para> bwNormal.</para>
+    /// <para> bwNormal, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: bwNormal </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "bwNormal")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Normal { get; set; }
-	
     /// <summary>
-    /// <para> targetScreenSize.</para>
+    /// <para> targetScreenSize, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: targetScreenSize </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "targetScreenSize")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize> TargetScreenSize { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the BackgroundProperties class.
     /// </summary>
     public BackgroundProperties():base(){}
     
-      
-     
     
     
     
@@ -90,23 +87,19 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> isLegacyGroup.</para>
+    /// <para> isLegacyGroup, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: isLegacyGroup </para>
     /// </summary>
     [SchemaAttr(0, "isLegacyGroup")]
     [Index(0)]
     public BooleanValue IsLegacyGroup { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualGroupProperties class.
     /// </summary>
     public NonVisualGroupProperties():base(){}
     
-      
-     
     
     
     
@@ -130,39 +123,33 @@ public partial class ObjectProperties : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> objectId.</para>
+    /// <para> objectId, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: objectId </para>
     /// </summary>
     [SchemaAttr(0, "objectId")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
-    /// <para> isActiveX.</para>
+    /// <para> isActiveX, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: isActiveX </para>
     /// </summary>
     [SchemaAttr(0, "isActiveX")]
     [Index(1)]
     public BooleanValue IsActiveX { get; set; }
-	
     /// <summary>
-    /// <para> linkType.</para>
+    /// <para> linkType, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: linkType </para>
     /// </summary>
     [SchemaAttr(0, "linkType")]
     [Index(2)]
     public StringValue LinkType { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ObjectProperties class.
     /// </summary>
     public ObjectProperties():base(){}
     
-      
-     
     
     
     
@@ -186,111 +173,98 @@ public partial class SignatureLine : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> isSignatureLine.</para>
+    /// <para> isSignatureLine, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: isSignatureLine </para>
     /// </summary>
     [SchemaAttr(0, "isSignatureLine")]
     [Index(0)]
     public BooleanValue IsSignatureLine { get; set; }
-	
     /// <summary>
-    /// <para> id.</para>
+    /// <para> id, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "id")]
     [Index(1)]
     public StringValue Id { get; set; }
-	
     /// <summary>
-    /// <para> provId.</para>
+    /// <para> provId, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: provId </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "provId")]
     [Index(2)]
     public StringValue ProviderId { get; set; }
-	
     /// <summary>
-    /// <para> signingInstructionsSet.</para>
+    /// <para> signingInstructionsSet, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: signingInstructionsSet </para>
     /// </summary>
     [SchemaAttr(0, "signingInstructionsSet")]
     [Index(3)]
     public BooleanValue SigningInstructionsSet { get; set; }
-	
     /// <summary>
-    /// <para> allowComments.</para>
+    /// <para> allowComments, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: allowComments </para>
     /// </summary>
     [SchemaAttr(0, "allowComments")]
     [Index(4)]
     public BooleanValue AllowComments { get; set; }
-	
     /// <summary>
-    /// <para> showSignDate.</para>
+    /// <para> showSignDate, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: showSignDate </para>
     /// </summary>
     [SchemaAttr(0, "showSignDate")]
     [Index(5)]
     public BooleanValue ShowSignDate { get; set; }
-	
     /// <summary>
-    /// <para> suggestedSigner.</para>
+    /// <para> suggestedSigner, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: suggestedSigner </para>
     /// </summary>
     [SchemaAttr(0, "suggestedSigner")]
     [Index(6)]
     public StringValue SuggestedSigner { get; set; }
-	
     /// <summary>
-    /// <para> suggestedSigner2.</para>
+    /// <para> suggestedSigner2, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: suggestedSigner2 </para>
     /// </summary>
     [SchemaAttr(0, "suggestedSigner2")]
     [Index(7)]
     public StringValue SuggestedSigner2 { get; set; }
-	
     /// <summary>
-    /// <para> suggestedSignerEmail.</para>
+    /// <para> suggestedSignerEmail, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: suggestedSignerEmail </para>
     /// </summary>
     [SchemaAttr(0, "suggestedSignerEmail")]
     [Index(8)]
     public StringValue SuggestedSignerEmail { get; set; }
-	
     /// <summary>
-    /// <para> signingInstructions.</para>
+    /// <para> signingInstructions, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: signingInstructions </para>
     /// </summary>
     [SchemaAttr(0, "signingInstructions")]
     [Index(9)]
     public StringValue SigningInstructions { get; set; }
-	
     /// <summary>
-    /// <para> addlXml.</para>
+    /// <para> addlXml, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: addlXml </para>
     /// </summary>
     [SchemaAttr(0, "addlXml")]
     [Index(10)]
     public StringValue AdditionalXml { get; set; }
-	
     /// <summary>
-    /// <para> sigProvUrl.</para>
+    /// <para> sigProvUrl, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: sigProvUrl </para>
     /// </summary>
     [SchemaAttr(0, "sigProvUrl")]
     [Index(11)]
     public StringValue SignatureProviderUrl { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the SignatureLine class.
     /// </summary>
     public SignatureLine():base(){}
     
-      
-     
     
     
     
@@ -299,10 +273,10 @@ public partial class SignatureLine : OpenXmlLeafElement
 
 }
 /// <summary>
-/// Defines the TargetScreenSize enumeration. 
-/// </summary> 
+/// Defines the TargetScreenSize enumeration.
+/// </summary>
 public enum TargetScreenSize
-{  
+{
 	///<summary>
 ///544x376.
 ///<para>When the item is serialized out as xml, its value is "544x376".</para>
@@ -369,8 +343,6 @@ Sz1800x1440,
 ///</summary>
 [EnumString("1920x1200")]
 Sz1920x1200,
- 
+
 }
 }
- 
- 

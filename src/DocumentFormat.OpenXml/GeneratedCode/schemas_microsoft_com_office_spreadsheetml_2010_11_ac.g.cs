@@ -26,23 +26,20 @@ public partial class AbsolutePath : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> url.</para>
+    /// <para> url, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: url </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "url")]
     [Index(0)]
     public StringValue Url { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the AbsolutePath class.
     /// </summary>
     public AbsolutePath():base(){}
     
-      
-     
     
     
     
@@ -51,5 +48,3 @@ public partial class AbsolutePath : OpenXmlLeafElement
 
 }
 }
- 
- 

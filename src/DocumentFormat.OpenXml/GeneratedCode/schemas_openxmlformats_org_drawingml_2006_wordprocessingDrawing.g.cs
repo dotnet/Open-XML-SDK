@@ -28,14 +28,11 @@ public partial class WrapNone : OpenXmlLeafElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the WrapNone class.
     /// </summary>
     public WrapNone():base(){}
     
-      
-     
     
     
     
@@ -66,15 +63,15 @@ public partial class WrapSquare : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Text Wrapping Location.</para>
     /// <para>Represents the following attribute in the schema: wrapText </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "wrapText")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText { get; set; }
-	
     /// <summary>
     /// <para> Distance From Text (Top).</para>
     /// <para>Represents the following attribute in the schema: distT </para>
@@ -82,7 +79,6 @@ public partial class WrapSquare : OpenXmlCompositeElement
     [SchemaAttr(0, "distT")]
     [Index(1)]
     public UInt32Value DistanceFromTop { get; set; }
-	
     /// <summary>
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
@@ -90,7 +86,6 @@ public partial class WrapSquare : OpenXmlCompositeElement
     [SchemaAttr(0, "distB")]
     [Index(2)]
     public UInt32Value DistanceFromBottom { get; set; }
-	
     /// <summary>
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
@@ -98,7 +93,6 @@ public partial class WrapSquare : OpenXmlCompositeElement
     [SchemaAttr(0, "distL")]
     [Index(3)]
     public UInt32Value DistanceFromLeft { get; set; }
-	
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
@@ -106,22 +100,19 @@ public partial class WrapSquare : OpenXmlCompositeElement
     [SchemaAttr(0, "distR")]
     [Index(4)]
     public UInt32Value DistanceFromRight { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the WrapSquare class.
     /// </summary>
     public WrapSquare():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the WrapSquare class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WrapSquare(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WrapSquare class with the specified child elements.
     /// </summary>
@@ -129,7 +120,6 @@ public partial class WrapSquare : OpenXmlCompositeElement
     public WrapSquare(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WrapSquare class from outer XML.
     /// </summary>
@@ -138,13 +128,10 @@ public partial class WrapSquare : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Object Extents Including Effects.</para>
     /// <para> Represents the following element tag in the schema: wp:effectExtent </para>
@@ -158,7 +145,6 @@ public partial class WrapSquare : OpenXmlCompositeElement
         get => GetElement<EffectExtent>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -188,15 +174,15 @@ public partial class WrapTight : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Text Wrapping Location.</para>
     /// <para>Represents the following attribute in the schema: wrapText </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "wrapText")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText { get; set; }
-	
     /// <summary>
     /// <para> Distance From Test on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
@@ -204,7 +190,6 @@ public partial class WrapTight : OpenXmlCompositeElement
     [SchemaAttr(0, "distL")]
     [Index(1)]
     public UInt32Value DistanceFromLeft { get; set; }
-	
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
@@ -212,22 +197,19 @@ public partial class WrapTight : OpenXmlCompositeElement
     [SchemaAttr(0, "distR")]
     [Index(2)]
     public UInt32Value DistanceFromRight { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the WrapTight class.
     /// </summary>
     public WrapTight():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the WrapTight class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WrapTight(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WrapTight class with the specified child elements.
     /// </summary>
@@ -235,7 +217,6 @@ public partial class WrapTight : OpenXmlCompositeElement
     public WrapTight(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WrapTight class from outer XML.
     /// </summary>
@@ -244,13 +225,10 @@ public partial class WrapTight : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Tight Wrapping Extents Polygon.</para>
     /// <para> Represents the following element tag in the schema: wp:wrapPolygon </para>
@@ -264,7 +242,6 @@ public partial class WrapTight : OpenXmlCompositeElement
         get => GetElement<WrapPolygon>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -294,15 +271,15 @@ public partial class WrapThrough : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Text Wrapping Location.</para>
     /// <para>Represents the following attribute in the schema: wrapText </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "wrapText")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText { get; set; }
-	
     /// <summary>
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
@@ -310,7 +287,6 @@ public partial class WrapThrough : OpenXmlCompositeElement
     [SchemaAttr(0, "distL")]
     [Index(1)]
     public UInt32Value DistanceFromLeft { get; set; }
-	
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
@@ -318,22 +294,19 @@ public partial class WrapThrough : OpenXmlCompositeElement
     [SchemaAttr(0, "distR")]
     [Index(2)]
     public UInt32Value DistanceFromRight { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the WrapThrough class.
     /// </summary>
     public WrapThrough():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the WrapThrough class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WrapThrough(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WrapThrough class with the specified child elements.
     /// </summary>
@@ -341,7 +314,6 @@ public partial class WrapThrough : OpenXmlCompositeElement
     public WrapThrough(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WrapThrough class from outer XML.
     /// </summary>
@@ -350,13 +322,10 @@ public partial class WrapThrough : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Wrapping Polygon.</para>
     /// <para> Represents the following element tag in the schema: wp:wrapPolygon </para>
@@ -370,7 +339,6 @@ public partial class WrapThrough : OpenXmlCompositeElement
         get => GetElement<WrapPolygon>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -400,7 +368,6 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Distance From Text on Top Edge.</para>
     /// <para>Represents the following attribute in the schema: distT </para>
@@ -408,7 +375,6 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
     [SchemaAttr(0, "distT")]
     [Index(0)]
     public UInt32Value DistanceFromTop { get; set; }
-	
     /// <summary>
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
@@ -416,22 +382,19 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
     [SchemaAttr(0, "distB")]
     [Index(1)]
     public UInt32Value DistanceFromBottom { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the WrapTopBottom class.
     /// </summary>
     public WrapTopBottom():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the WrapTopBottom class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WrapTopBottom(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WrapTopBottom class with the specified child elements.
     /// </summary>
@@ -439,7 +402,6 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
     public WrapTopBottom(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WrapTopBottom class from outer XML.
     /// </summary>
@@ -448,13 +410,10 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Wrapping Boundaries.</para>
     /// <para> Represents the following element tag in the schema: wp:effectExtent </para>
@@ -468,7 +427,6 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
         get => GetElement<EffectExtent>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -506,7 +464,6 @@ public partial class Inline : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Distance From Text on Top Edge.</para>
     /// <para>Represents the following attribute in the schema: distT </para>
@@ -514,7 +471,6 @@ public partial class Inline : OpenXmlCompositeElement
     [SchemaAttr(0, "distT")]
     [Index(0)]
     public UInt32Value DistanceFromTop { get; set; }
-	
     /// <summary>
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
@@ -522,7 +478,6 @@ public partial class Inline : OpenXmlCompositeElement
     [SchemaAttr(0, "distB")]
     [Index(1)]
     public UInt32Value DistanceFromBottom { get; set; }
-	
     /// <summary>
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
@@ -530,7 +485,6 @@ public partial class Inline : OpenXmlCompositeElement
     [SchemaAttr(0, "distL")]
     [Index(2)]
     public UInt32Value DistanceFromLeft { get; set; }
-	
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
@@ -538,42 +492,41 @@ public partial class Inline : OpenXmlCompositeElement
     [SchemaAttr(0, "distR")]
     [Index(3)]
     public UInt32Value DistanceFromRight { get; set; }
-	
     /// <summary>
-    /// <para> anchorId.</para>
+    /// <para> anchorId, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: wp14:anchorId </para>
     /// </summary>
 ///<remark> xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
 ///</remark>
+[OfficeAvailability(FileFormatVersions.Office2010)]
+[StringValidator(Length = 4)]
     [SchemaAttr(51, "anchorId")]
     [Index(4)]
     public HexBinaryValue AnchorId { get; set; }
-	
     /// <summary>
-    /// <para> editId.</para>
+    /// <para> editId, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: wp14:editId </para>
     /// </summary>
 ///<remark> xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
 ///</remark>
+[OfficeAvailability(FileFormatVersions.Office2010)]
+[StringValidator(Length = 4)]
     [SchemaAttr(51, "editId")]
     [Index(5)]
     public HexBinaryValue EditId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Inline class.
     /// </summary>
     public Inline():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Inline class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Inline(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Inline class with the specified child elements.
     /// </summary>
@@ -581,7 +534,6 @@ public partial class Inline : OpenXmlCompositeElement
     public Inline(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Inline class from outer XML.
     /// </summary>
@@ -590,13 +542,10 @@ public partial class Inline : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Drawing Object Size.</para>
     /// <para> Represents the following element tag in the schema: wp:extent </para>
@@ -610,7 +559,6 @@ public partial class Inline : OpenXmlCompositeElement
         get => GetElement<Extent>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Inline Wrapping Extent.</para>
     /// <para> Represents the following element tag in the schema: wp:effectExtent </para>
@@ -624,7 +572,6 @@ public partial class Inline : OpenXmlCompositeElement
         get => GetElement<EffectExtent>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Drawing Object Non-Visual Properties.</para>
     /// <para> Represents the following element tag in the schema: wp:docPr </para>
@@ -638,7 +585,6 @@ public partial class Inline : OpenXmlCompositeElement
         get => GetElement<DocProperties>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Common DrawingML Non-Visual Properties.</para>
     /// <para> Represents the following element tag in the schema: wp:cNvGraphicFramePr </para>
@@ -652,7 +598,6 @@ public partial class Inline : OpenXmlCompositeElement
         get => GetElement<NonVisualGraphicFrameDrawingProperties>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Graphic.</para>
     /// <para> Represents the following element tag in the schema: a:graphic </para>
@@ -666,7 +611,6 @@ public partial class Inline : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(4);
         set => SetElement(4, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -724,7 +668,6 @@ public partial class Anchor : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Distance From Text on Top Edge.</para>
     /// <para>Represents the following attribute in the schema: distT </para>
@@ -732,7 +675,6 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "distT")]
     [Index(0)]
     public UInt32Value DistanceFromTop { get; set; }
-	
     /// <summary>
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
@@ -740,7 +682,6 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "distB")]
     [Index(1)]
     public UInt32Value DistanceFromBottom { get; set; }
-	
     /// <summary>
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
@@ -748,7 +689,6 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "distL")]
     [Index(2)]
     public UInt32Value DistanceFromLeft { get; set; }
-	
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
@@ -756,7 +696,6 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "distR")]
     [Index(3)]
     public UInt32Value DistanceFromRight { get; set; }
-	
     /// <summary>
     /// <para> Page Positioning.</para>
     /// <para>Represents the following attribute in the schema: simplePos </para>
@@ -764,39 +703,38 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "simplePos")]
     [Index(4)]
     public BooleanValue SimplePos { get; set; }
-	
     /// <summary>
     /// <para> Relative Z-Ordering Position.</para>
     /// <para>Represents the following attribute in the schema: relativeHeight </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "relativeHeight")]
     [Index(5)]
     public UInt32Value RelativeHeight { get; set; }
-	
     /// <summary>
     /// <para> Display Behind Document Text.</para>
     /// <para>Represents the following attribute in the schema: behindDoc </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "behindDoc")]
     [Index(6)]
     public BooleanValue BehindDoc { get; set; }
-	
     /// <summary>
     /// <para> Lock Anchor.</para>
     /// <para>Represents the following attribute in the schema: locked </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "locked")]
     [Index(7)]
     public BooleanValue Locked { get; set; }
-	
     /// <summary>
     /// <para> Layout In Table Cell.</para>
     /// <para>Represents the following attribute in the schema: layoutInCell </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "layoutInCell")]
     [Index(8)]
     public BooleanValue LayoutInCell { get; set; }
-	
     /// <summary>
     /// <para> Hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
@@ -804,50 +742,49 @@ public partial class Anchor : OpenXmlCompositeElement
     [SchemaAttr(0, "hidden")]
     [Index(9)]
     public BooleanValue Hidden { get; set; }
-	
     /// <summary>
     /// <para> Allow Objects to Overlap.</para>
     /// <para>Represents the following attribute in the schema: allowOverlap </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "allowOverlap")]
     [Index(10)]
     public BooleanValue AllowOverlap { get; set; }
-	
     /// <summary>
-    /// <para> editId.</para>
+    /// <para> editId, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: wp14:editId </para>
     /// </summary>
 ///<remark> xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
 ///</remark>
+[OfficeAvailability(FileFormatVersions.Office2010)]
+[StringValidator(Length = 4)]
     [SchemaAttr(51, "editId")]
     [Index(11)]
     public HexBinaryValue EditId { get; set; }
-	
     /// <summary>
-    /// <para> anchorId.</para>
+    /// <para> anchorId, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: wp14:anchorId </para>
     /// </summary>
 ///<remark> xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
 ///</remark>
+[OfficeAvailability(FileFormatVersions.Office2010)]
+[StringValidator(Length = 4)]
     [SchemaAttr(51, "anchorId")]
     [Index(12)]
     public HexBinaryValue AnchorId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Anchor class.
     /// </summary>
     public Anchor():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Anchor class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Anchor(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Anchor class with the specified child elements.
     /// </summary>
@@ -855,7 +792,6 @@ public partial class Anchor : OpenXmlCompositeElement
     public Anchor(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Anchor class from outer XML.
     /// </summary>
@@ -864,13 +800,10 @@ public partial class Anchor : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Simple Positioning Coordinates.</para>
     /// <para> Represents the following element tag in the schema: wp:simplePos </para>
@@ -884,7 +817,6 @@ public partial class Anchor : OpenXmlCompositeElement
         get => GetElement<SimplePosition>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Horizontal Positioning.</para>
     /// <para> Represents the following element tag in the schema: wp:positionH </para>
@@ -898,7 +830,6 @@ public partial class Anchor : OpenXmlCompositeElement
         get => GetElement<HorizontalPosition>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Vertical Positioning.</para>
     /// <para> Represents the following element tag in the schema: wp:positionV </para>
@@ -912,7 +843,6 @@ public partial class Anchor : OpenXmlCompositeElement
         get => GetElement<VerticalPosition>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Inline Drawing Object Extents.</para>
     /// <para> Represents the following element tag in the schema: wp:extent </para>
@@ -926,7 +856,6 @@ public partial class Anchor : OpenXmlCompositeElement
         get => GetElement<Extent>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> EffectExtent.</para>
     /// <para> Represents the following element tag in the schema: wp:effectExtent </para>
@@ -940,7 +869,6 @@ public partial class Anchor : OpenXmlCompositeElement
         get => GetElement<EffectExtent>(4);
         set => SetElement(4, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1026,32 +954,32 @@ public partial class SimplePosition : Point2DType
 
 public abstract partial class Point2DType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
     /// <para> X-Axis Coordinate.</para>
     /// <para>Represents the following attribute in the schema: x </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "x")]
     [Index(0)]
     public Int64Value X { get; set; }
-	
     /// <summary>
     /// <para> Y-Axis Coordinate.</para>
     /// <para>Represents the following attribute in the schema: y </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "y")]
     [Index(1)]
     public Int64Value Y { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the Point2DType class.
     /// </summary>
     protected Point2DType(){}
-    
     
     
 }
@@ -1071,47 +999,48 @@ public partial class EffectExtent : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Additional Extent on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: l </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "l")]
     [Index(0)]
     public Int64Value LeftEdge { get; set; }
-	
     /// <summary>
     /// <para> Additional Extent on Top Edge.</para>
     /// <para>Represents the following attribute in the schema: t </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "t")]
     [Index(1)]
     public Int64Value TopEdge { get; set; }
-	
     /// <summary>
     /// <para> Additional Extent on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: r </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "r")]
     [Index(2)]
     public Int64Value RightEdge { get; set; }
-	
     /// <summary>
     /// <para> Additional Extent on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: b </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "b")]
     [Index(3)]
     public Int64Value BottomEdge { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the EffectExtent class.
     /// </summary>
     public EffectExtent():base(){}
     
-      
-     
     
     
     
@@ -1144,7 +1073,6 @@ public partial class WrapPolygon : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Wrapping Points Modified.</para>
     /// <para>Represents the following attribute in the schema: edited </para>
@@ -1152,22 +1080,19 @@ public partial class WrapPolygon : OpenXmlCompositeElement
     [SchemaAttr(0, "edited")]
     [Index(0)]
     public BooleanValue Edited { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the WrapPolygon class.
     /// </summary>
     public WrapPolygon():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the WrapPolygon class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WrapPolygon(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WrapPolygon class with the specified child elements.
     /// </summary>
@@ -1175,7 +1100,6 @@ public partial class WrapPolygon : OpenXmlCompositeElement
     public WrapPolygon(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WrapPolygon class from outer XML.
     /// </summary>
@@ -1184,13 +1108,10 @@ public partial class WrapPolygon : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Wrapping Polygon Start.</para>
     /// <para> Represents the following element tag in the schema: wp:start </para>
@@ -1204,7 +1125,6 @@ public partial class WrapPolygon : OpenXmlCompositeElement
         get => GetElement<StartPoint>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1238,30 +1158,28 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Horizontal Position Relative Base.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "relativeFrom")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues> RelativeFrom { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the HorizontalPosition class.
     /// </summary>
     public HorizontalPosition():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the HorizontalPosition class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public HorizontalPosition(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the HorizontalPosition class with the specified child elements.
     /// </summary>
@@ -1269,7 +1187,6 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
     public HorizontalPosition(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the HorizontalPosition class from outer XML.
     /// </summary>
@@ -1278,13 +1195,10 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-    
         /// <summary>
     /// <para> Relative Horizontal Alignment.</para>
     /// <para> Represents the following element tag in the schema: wp:align </para>
@@ -1298,7 +1212,6 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
         get => GetElement<HorizontalAlignment>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Absolute Position Offset.</para>
     /// <para> Represents the following element tag in the schema: wp:posOffset </para>
@@ -1312,7 +1225,6 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
         get => GetElement<PositionOffset>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> PercentagePositionHeightOffset.</para>
     /// <para> Represents the following element tag in the schema: wp14:pctPosHOffset </para>
@@ -1326,7 +1238,6 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1360,30 +1271,28 @@ public partial class VerticalPosition : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Vertical Position Relative Base.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "relativeFrom")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues> RelativeFrom { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the VerticalPosition class.
     /// </summary>
     public VerticalPosition():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the VerticalPosition class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public VerticalPosition(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the VerticalPosition class with the specified child elements.
     /// </summary>
@@ -1391,7 +1300,6 @@ public partial class VerticalPosition : OpenXmlCompositeElement
     public VerticalPosition(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the VerticalPosition class from outer XML.
     /// </summary>
@@ -1400,13 +1308,10 @@ public partial class VerticalPosition : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-    
         /// <summary>
     /// <para> Relative Vertical Alignment.</para>
     /// <para> Represents the following element tag in the schema: wp:align </para>
@@ -1420,7 +1325,6 @@ public partial class VerticalPosition : OpenXmlCompositeElement
         get => GetElement<VerticalAlignment>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> PositionOffset.</para>
     /// <para> Represents the following element tag in the schema: wp:posOffset </para>
@@ -1434,7 +1338,6 @@ public partial class VerticalPosition : OpenXmlCompositeElement
         get => GetElement<PositionOffset>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> PercentagePositionVerticalOffset.</para>
     /// <para> Represents the following element tag in the schema: wp14:pctPosVOffset </para>
@@ -1448,7 +1351,6 @@ public partial class VerticalPosition : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1471,31 +1373,30 @@ public partial class Extent : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Extent Length.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 2147483647)]
     [SchemaAttr(0, "cx")]
     [Index(0)]
     public Int64Value Cx { get; set; }
-	
     /// <summary>
     /// <para> Extent Width.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 2147483647)]
     [SchemaAttr(0, "cy")]
     [Index(1)]
     public Int64Value Cy { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Extent class.
     /// </summary>
     public Extent():base(){}
     
-      
-     
     
     
     
@@ -1530,23 +1431,22 @@ public partial class DocProperties : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public UInt32Value Id { get; set; }
-	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "name")]
     [Index(1)]
     public StringValue Name { get; set; }
-	
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
@@ -1554,7 +1454,6 @@ public partial class DocProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "descr")]
     [Index(2)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
@@ -1562,7 +1461,6 @@ public partial class DocProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "hidden")]
     [Index(3)]
     public BooleanValue Hidden { get; set; }
-	
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -1570,22 +1468,19 @@ public partial class DocProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(4)]
     public StringValue Title { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the DocProperties class.
     /// </summary>
     public DocProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the DocProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DocProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DocProperties class with the specified child elements.
     /// </summary>
@@ -1593,7 +1488,6 @@ public partial class DocProperties : OpenXmlCompositeElement
     public DocProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DocProperties class from outer XML.
     /// </summary>
@@ -1602,13 +1496,10 @@ public partial class DocProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
     /// <para> Represents the following element tag in the schema: a:hlinkClick </para>
@@ -1622,7 +1513,6 @@ public partial class DocProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
     /// <para> Represents the following element tag in the schema: a:hlinkHover </para>
@@ -1636,7 +1526,6 @@ public partial class DocProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -1650,7 +1539,6 @@ public partial class DocProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1683,21 +1571,18 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGraphicFrameDrawingProperties class.
     /// </summary>
     public NonVisualGraphicFrameDrawingProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualGraphicFrameDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualGraphicFrameDrawingProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGraphicFrameDrawingProperties class with the specified child elements.
     /// </summary>
@@ -1705,7 +1590,6 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     public NonVisualGraphicFrameDrawingProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualGraphicFrameDrawingProperties class from outer XML.
     /// </summary>
@@ -1714,13 +1598,10 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Graphic Frame Locks.</para>
     /// <para> Represents the following element tag in the schema: a:graphicFrameLocks </para>
@@ -1734,7 +1615,6 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
         get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -1748,7 +1628,6 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1761,6 +1640,8 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
 /// <para> When the object is serialized out as xml, its qualified name is wp:align.</para>
 /// </summary>
 
+[StringValidator(IsToken = true)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignmentValues>))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "align")]
@@ -1772,13 +1653,11 @@ public partial class VerticalAlignment : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VerticalAlignment class.
     /// </summary>
     public VerticalAlignment():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VerticalAlignment class with the specified text content.
     /// </summary>
@@ -1786,14 +1665,11 @@ public partial class VerticalAlignment : OpenXmlLeafTextElement
     public VerticalAlignment(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignmentValues>(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1806,6 +1682,7 @@ public partial class VerticalAlignment : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is wp:posOffset.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(Int32Value))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "posOffset")]
@@ -1817,13 +1694,11 @@ public partial class PositionOffset : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the PositionOffset class.
     /// </summary>
     public PositionOffset():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the PositionOffset class with the specified text content.
     /// </summary>
@@ -1831,14 +1706,11 @@ public partial class PositionOffset : OpenXmlLeafTextElement
     public PositionOffset(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1851,6 +1723,8 @@ public partial class PositionOffset : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is wp:align.</para>
 /// </summary>
 
+[StringValidator(IsToken = true)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignmentValues>))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "align")]
@@ -1862,13 +1736,11 @@ public partial class HorizontalAlignment : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the HorizontalAlignment class.
     /// </summary>
     public HorizontalAlignment():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the HorizontalAlignment class with the specified text content.
     /// </summary>
@@ -1876,14 +1748,11 @@ public partial class HorizontalAlignment : OpenXmlLeafTextElement
     public HorizontalAlignment(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignmentValues>(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1891,10 +1760,10 @@ public partial class HorizontalAlignment : OpenXmlLeafTextElement
 
 }
 /// <summary>
-/// Text Wrapping Location 
-/// </summary> 
+/// Text Wrapping Location
+/// </summary>
 public enum WrapTextValues
-{  
+{
 	///<summary>
 ///Both Sides.
 ///<para>When the item is serialized out as xml, its value is "bothSides".</para>
@@ -1919,13 +1788,13 @@ Right,
 ///</summary>
 [EnumString("largest")]
 Largest,
- 
+
 }
 /// <summary>
-/// Relative Horizontal Alignment Positions 
-/// </summary> 
+/// Relative Horizontal Alignment Positions
+/// </summary>
 public enum HorizontalAlignmentValues
-{  
+{
 	///<summary>
 ///Left Alignment.
 ///<para>When the item is serialized out as xml, its value is "left".</para>
@@ -1956,13 +1825,13 @@ Inside,
 ///</summary>
 [EnumString("outside")]
 Outside,
- 
+
 }
 /// <summary>
-/// Horizontal Relative Positioning 
-/// </summary> 
+/// Horizontal Relative Positioning
+/// </summary>
 public enum HorizontalRelativePositionValues
-{  
+{
 	///<summary>
 ///Page Margin.
 ///<para>When the item is serialized out as xml, its value is "margin".</para>
@@ -2011,13 +1880,13 @@ InsideMargin,
 ///</summary>
 [EnumString("outsideMargin")]
 OutsideMargin,
- 
+
 }
 /// <summary>
-/// Vertical Alignment Definition 
-/// </summary> 
+/// Vertical Alignment Definition
+/// </summary>
 public enum VerticalAlignmentValues
-{  
+{
 	///<summary>
 ///Top.
 ///<para>When the item is serialized out as xml, its value is "top".</para>
@@ -2048,13 +1917,13 @@ Inside,
 ///</summary>
 [EnumString("outside")]
 Outside,
- 
+
 }
 /// <summary>
-/// Vertical Relative Positioning 
-/// </summary> 
+/// Vertical Relative Positioning
+/// </summary>
 public enum VerticalRelativePositionValues
-{  
+{
 	///<summary>
 ///Page Margin.
 ///<para>When the item is serialized out as xml, its value is "margin".</para>
@@ -2103,8 +1972,6 @@ InsideMargin,
 ///</summary>
 [EnumString("outsideMargin")]
 OutsideMargin,
- 
+
 }
 }
- 
- 

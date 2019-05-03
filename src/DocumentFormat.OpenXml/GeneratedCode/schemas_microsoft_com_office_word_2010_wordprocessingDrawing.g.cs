@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctPosHOffset.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(51, "pctPosHOffset")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -36,12 +37,10 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
     public PercentagePositionHeightOffset(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentagePositionHeightOffset>(deep);
@@ -53,6 +52,7 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctPosVOffset.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(51, "pctPosVOffset")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -73,12 +73,10 @@ public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
     public PercentagePositionVerticalOffset(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentagePositionVerticalOffset>(deep);
@@ -107,30 +105,28 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> relativeFrom.</para>
+    /// <para> relativeFrom, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "relativeFrom")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RelativeWidth class.
     /// </summary>
     public RelativeWidth():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RelativeWidth class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RelativeWidth(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RelativeWidth class with the specified child elements.
     /// </summary>
@@ -138,7 +134,6 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     public RelativeWidth(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RelativeWidth class from outer XML.
     /// </summary>
@@ -147,13 +142,10 @@ public partial class RelativeWidth : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> PercentageWidth.</para>
     /// <para> Represents the following element tag in the schema: wp14:pctWidth </para>
@@ -167,7 +159,6 @@ public partial class RelativeWidth : OpenXmlCompositeElement
         get => GetElement<PercentageWidth>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -197,30 +188,28 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> relativeFrom.</para>
+    /// <para> relativeFrom, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "relativeFrom")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RelativeHeight class.
     /// </summary>
     public RelativeHeight():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RelativeHeight class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RelativeHeight(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RelativeHeight class with the specified child elements.
     /// </summary>
@@ -228,7 +217,6 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     public RelativeHeight(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RelativeHeight class from outer XML.
     /// </summary>
@@ -237,13 +225,10 @@ public partial class RelativeHeight : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> PercentageHeight.</para>
     /// <para> Represents the following element tag in the schema: wp14:pctHeight </para>
@@ -257,7 +242,6 @@ public partial class RelativeHeight : OpenXmlCompositeElement
         get => GetElement<PercentageHeight>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -270,6 +254,7 @@ public partial class RelativeHeight : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctWidth.</para>
 /// </summary>
 
+[NumberValidator(MinInclusive = 0, SimpleType = typeof(Int32Value))]
 [SchemaAttr(51, "pctWidth")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -290,12 +275,10 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
     public PercentageWidth(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentageWidth>(deep);
@@ -307,6 +290,7 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is wp14:pctHeight.</para>
 /// </summary>
 
+[NumberValidator(MinInclusive = 0, SimpleType = typeof(Int32Value))]
 [SchemaAttr(51, "pctHeight")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -327,22 +311,20 @@ public partial class PercentageHeight : OpenXmlLeafTextElement
     public PercentageHeight(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentageHeight>(deep);
 
 }
 /// <summary>
-/// Defines the SizeRelativeHorizontallyValues enumeration. 
-/// </summary> 
+/// Defines the SizeRelativeHorizontallyValues enumeration.
+/// </summary>
 public enum SizeRelativeHorizontallyValues
-{  
+{
 	///<summary>
 ///margin.
 ///<para>When the item is serialized out as xml, its value is "margin".</para>
@@ -379,13 +361,13 @@ InsideMargin,
 ///</summary>
 [EnumString("outsideMargin")]
 OutsideMargin,
- 
+
 }
 /// <summary>
-/// Defines the SizeRelativeVerticallyValues enumeration. 
-/// </summary> 
+/// Defines the SizeRelativeVerticallyValues enumeration.
+/// </summary>
 public enum SizeRelativeVerticallyValues
-{  
+{
 	///<summary>
 ///margin.
 ///<para>When the item is serialized out as xml, its value is "margin".</para>
@@ -422,8 +404,6 @@ InsideMargin,
 ///</summary>
 [EnumString("outsideMargin")]
 OutsideMargin,
- 
+
 }
 }
- 
- 

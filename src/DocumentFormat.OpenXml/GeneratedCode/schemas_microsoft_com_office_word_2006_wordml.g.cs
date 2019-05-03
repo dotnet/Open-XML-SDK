@@ -38,10 +38,7 @@ public partial class TemplateCommandGroup : OpenXmlPartRootElement
 
     
     
-    
-    
 	internal TemplateCommandGroup(CustomizationPart ownerPart) : base (ownerPart){}
-    
     /// <summary>
     /// Loads the DOM from the CustomizationPart.
     /// </summary>
@@ -58,16 +55,14 @@ public partial class TemplateCommandGroup : OpenXmlPartRootElement
 		get => OpenXmlPart as CustomizationPart;
 		internal set => OpenXmlPart = value;
     }
-    
         /// <summary>
     ///Initializes a new instance of the TemplateCommandGroup class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public TemplateCommandGroup(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the TemplateCommandGroup class with the specified child elements.
     /// </summary>
@@ -75,7 +70,6 @@ public partial class TemplateCommandGroup : OpenXmlPartRootElement
     public TemplateCommandGroup(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the TemplateCommandGroup class from outer XML.
     /// </summary>
@@ -84,15 +78,12 @@ public partial class TemplateCommandGroup : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-    
 
-    
     
     /// <summary>
     /// Initializes a new instance of the TemplateCommandGroup class.
     /// </summary>
     public TemplateCommandGroup():base(){}
-    
     /// <summary>
     /// Saves the DOM into the CustomizationPart.
     /// </summary>
@@ -101,7 +92,6 @@ public partial class TemplateCommandGroup : OpenXmlPartRootElement
     {
         base.SaveToPart(openXmlPart);
     }
-    
     
     
     /// <inheritdoc/>
@@ -132,21 +122,18 @@ public partial class Mcds : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Mcds class.
     /// </summary>
     public Mcds():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Mcds class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Mcds(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Mcds class with the specified child elements.
     /// </summary>
@@ -154,7 +141,6 @@ public partial class Mcds : OpenXmlCompositeElement
     public Mcds(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Mcds class from outer XML.
     /// </summary>
@@ -163,9 +149,7 @@ public partial class Mcds : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -198,10 +182,7 @@ public partial class VbaSuppData : OpenXmlPartRootElement
 
     
     
-    
-    
 	internal VbaSuppData(VbaDataPart ownerPart) : base (ownerPart){}
-    
     /// <summary>
     /// Loads the DOM from the VbaDataPart.
     /// </summary>
@@ -218,16 +199,14 @@ public partial class VbaSuppData : OpenXmlPartRootElement
 		get => OpenXmlPart as VbaDataPart;
 		internal set => OpenXmlPart = value;
     }
-    
         /// <summary>
     ///Initializes a new instance of the VbaSuppData class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public VbaSuppData(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the VbaSuppData class with the specified child elements.
     /// </summary>
@@ -235,7 +214,6 @@ public partial class VbaSuppData : OpenXmlPartRootElement
     public VbaSuppData(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the VbaSuppData class from outer XML.
     /// </summary>
@@ -244,15 +222,12 @@ public partial class VbaSuppData : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-    
 
-    
     
     /// <summary>
     /// Initializes a new instance of the VbaSuppData class.
     /// </summary>
     public VbaSuppData():base(){}
-    
     /// <summary>
     /// Saves the DOM into the VbaDataPart.
     /// </summary>
@@ -262,9 +237,7 @@ public partial class VbaSuppData : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> DocEvents.</para>
     /// <para> Represents the following element tag in the schema: wne:docEvents </para>
@@ -278,7 +251,6 @@ public partial class VbaSuppData : OpenXmlPartRootElement
         get => GetElement<DocEvents>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Mcds.</para>
     /// <para> Represents the following element tag in the schema: wne:mcds </para>
@@ -292,7 +264,6 @@ public partial class VbaSuppData : OpenXmlPartRootElement
         get => GetElement<Mcds>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -323,21 +294,18 @@ public partial class MailMergeRecipients : OpenXmlPartRootElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the MailMergeRecipients class.
     /// </summary>
     public MailMergeRecipients():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MailMergeRecipients class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MailMergeRecipients(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MailMergeRecipients class with the specified child elements.
     /// </summary>
@@ -345,7 +313,6 @@ public partial class MailMergeRecipients : OpenXmlPartRootElement
     public MailMergeRecipients(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MailMergeRecipients class from outer XML.
     /// </summary>
@@ -354,9 +321,7 @@ public partial class MailMergeRecipients : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -380,7 +345,6 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> fciName.</para>
     /// <para>Represents the following attribute in the schema: wne:fciName </para>
@@ -390,35 +354,32 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     [SchemaAttr(33, "fciName")]
     [Index(0)]
     public StringValue CommandName { get; set; }
-	
     /// <summary>
     /// <para> fciIndex.</para>
     /// <para>Represents the following attribute in the schema: wne:fciIndex </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+[StringValidator(Length = 2)]
     [SchemaAttr(33, "fciIndex")]
     [Index(1)]
     public HexBinaryValue CommandIndex { get; set; }
-	
     /// <summary>
     /// <para> swArg.</para>
     /// <para>Represents the following attribute in the schema: wne:swArg </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+[StringValidator(Length = 2)]
     [SchemaAttr(33, "swArg")]
     [Index(2)]
     public HexBinaryValue Argument { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the FixedCommandKeyboardCustomization class.
     /// </summary>
     public FixedCommandKeyboardCustomization():base(){}
     
-      
-     
     
     
     
@@ -481,7 +442,7 @@ public partial class WllMacroKeyboardCustomization : MacroWllType
 
 public abstract partial class MacroWllType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
     /// <para> macroName.</para>
     /// <para>Represents the following attribute in the schema: wne:macroName </para>
@@ -491,16 +452,13 @@ public abstract partial class MacroWllType : OpenXmlLeafElement
     [SchemaAttr(33, "macroName")]
     [Index(0)]
     public StringValue MacroName { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the MacroWllType class.
     /// </summary>
     protected MacroWllType(){}
-    
     
     
 }
@@ -559,7 +517,7 @@ public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
 
 public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
     /// <para> acdName.</para>
     /// <para>Represents the following attribute in the schema: wne:acdName </para>
@@ -569,16 +527,13 @@ public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
     [SchemaAttr(33, "acdName")]
     [Index(0)]
     public StringValue AcceleratorName { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the AcceleratorKeymapType class.
     /// </summary>
     protected AcceleratorKeymapType(){}
-    
     
     
 }
@@ -598,25 +553,23 @@ public partial class CharacterInsertion : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: wne:val </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+[RequiredValidator]
+[StringValidator(Length = 4)]
     [SchemaAttr(33, "val")]
     [Index(0)]
     public HexBinaryValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the CharacterInsertion class.
     /// </summary>
     public CharacterInsertion():base(){}
     
-      
-     
     
     
     
@@ -655,47 +608,46 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> chmPrimary.</para>
     /// <para>Represents the following attribute in the schema: wne:chmPrimary </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+[StringValidator(Length = 2)]
     [SchemaAttr(33, "chmPrimary")]
     [Index(0)]
     public HexBinaryValue CharacterMapPrimary { get; set; }
-	
     /// <summary>
     /// <para> chmSecondary.</para>
     /// <para>Represents the following attribute in the schema: wne:chmSecondary </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+[StringValidator(Length = 2)]
     [SchemaAttr(33, "chmSecondary")]
     [Index(1)]
     public HexBinaryValue CharacterMapSecondary { get; set; }
-	
     /// <summary>
     /// <para> kcmPrimary.</para>
     /// <para>Represents the following attribute in the schema: wne:kcmPrimary </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+[StringValidator(Length = 2)]
     [SchemaAttr(33, "kcmPrimary")]
     [Index(2)]
     public HexBinaryValue KeyCodePrimary { get; set; }
-	
     /// <summary>
     /// <para> kcmSecondary.</para>
     /// <para>Represents the following attribute in the schema: wne:kcmSecondary </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+[StringValidator(Length = 2)]
     [SchemaAttr(33, "kcmSecondary")]
     [Index(3)]
     public HexBinaryValue KeyCodeSecondary { get; set; }
-	
     /// <summary>
     /// <para> mask.</para>
     /// <para>Represents the following attribute in the schema: wne:mask </para>
@@ -705,22 +657,19 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     [SchemaAttr(33, "mask")]
     [Index(4)]
     public OnOffValue Mask { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the KeyMapEntry class.
     /// </summary>
     public KeyMapEntry():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the KeyMapEntry class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public KeyMapEntry(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the KeyMapEntry class with the specified child elements.
     /// </summary>
@@ -728,7 +677,6 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     public KeyMapEntry(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the KeyMapEntry class from outer XML.
     /// </summary>
@@ -737,13 +685,10 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-    
         /// <summary>
     /// <para> FixedCommandKeyboardCustomization.</para>
     /// <para> Represents the following element tag in the schema: wne:fci </para>
@@ -757,7 +702,6 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
         get => GetElement<FixedCommandKeyboardCustomization>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> MacroKeyboardCustomization.</para>
     /// <para> Represents the following element tag in the schema: wne:macro </para>
@@ -771,7 +715,6 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
         get => GetElement<MacroKeyboardCustomization>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> AllocatedCommandKeyboardCustomization.</para>
     /// <para> Represents the following element tag in the schema: wne:acd </para>
@@ -785,7 +728,6 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
         get => GetElement<AllocatedCommandKeyboardCustomization>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> WllMacroKeyboardCustomization.</para>
     /// <para> Represents the following element tag in the schema: wne:wll </para>
@@ -799,7 +741,6 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
         get => GetElement<WllMacroKeyboardCustomization>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> CharacterInsertion.</para>
     /// <para> Represents the following element tag in the schema: wne:wch </para>
@@ -813,7 +754,6 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
         get => GetElement<CharacterInsertion>(4);
         set => SetElement(4, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -836,7 +776,6 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> argValue.</para>
     /// <para>Represents the following attribute in the schema: wne:argValue </para>
@@ -846,7 +785,6 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     [SchemaAttr(33, "argValue")]
     [Index(0)]
     public StringValue ArgumentValue { get; set; }
-	
     /// <summary>
     /// <para> fciBasedOn.</para>
     /// <para>Represents the following attribute in the schema: wne:fciBasedOn </para>
@@ -856,17 +794,16 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     [SchemaAttr(33, "fciBasedOn")]
     [Index(1)]
     public StringValue CommandBasedOn { get; set; }
-	
     /// <summary>
     /// <para> fciIndexBasedOn.</para>
     /// <para>Represents the following attribute in the schema: wne:fciIndexBasedOn </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+[StringValidator(Length = 2)]
     [SchemaAttr(33, "fciIndexBasedOn")]
     [Index(2)]
     public HexBinaryValue CommandIndexBasedOn { get; set; }
-	
     /// <summary>
     /// <para> acdName.</para>
     /// <para>Represents the following attribute in the schema: wne:acdName </para>
@@ -876,15 +813,12 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     [SchemaAttr(33, "acdName")]
     [Index(3)]
     public StringValue AcceleratorName { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the AllocatedCommand class.
     /// </summary>
     public AllocatedCommand():base(){}
     
-      
-     
     
     
     
@@ -908,7 +842,6 @@ public partial class Mcd : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> macroName.</para>
     /// <para>Represents the following attribute in the schema: wne:macroName </para>
@@ -918,7 +851,6 @@ public partial class Mcd : OpenXmlLeafElement
     [SchemaAttr(33, "macroName")]
     [Index(0)]
     public StringValue MacroName { get; set; }
-	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: wne:name </para>
@@ -928,7 +860,6 @@ public partial class Mcd : OpenXmlLeafElement
     [SchemaAttr(33, "name")]
     [Index(1)]
     public StringValue Name { get; set; }
-	
     /// <summary>
     /// <para> menuHelp.</para>
     /// <para>Represents the following attribute in the schema: wne:menuHelp </para>
@@ -938,35 +869,32 @@ public partial class Mcd : OpenXmlLeafElement
     [SchemaAttr(33, "menuHelp")]
     [Index(2)]
     public StringValue MenuHelp { get; set; }
-	
     /// <summary>
     /// <para> bEncrypt.</para>
     /// <para>Represents the following attribute in the schema: wne:bEncrypt </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+[StringValidator(Length = 1)]
     [SchemaAttr(33, "bEncrypt")]
     [Index(3)]
     public HexBinaryValue BEncrypt { get; set; }
-	
     /// <summary>
     /// <para> cmg.</para>
     /// <para>Represents the following attribute in the schema: wne:cmg </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+[StringValidator(Length = 1)]
     [SchemaAttr(33, "cmg")]
     [Index(4)]
     public HexBinaryValue Cmg { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Mcd class.
     /// </summary>
     public Mcd():base(){}
     
-      
-     
     
     
     
@@ -1000,12 +928,10 @@ public partial class EventDocNewXsdString : OpenXmlLeafTextElement
     public EventDocNewXsdString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocNewXsdString>(deep);
@@ -1037,12 +963,10 @@ public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
     public EventDocOpenXsdString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocOpenXsdString>(deep);
@@ -1074,12 +998,10 @@ public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
     public EventDocCloseXsdString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocCloseXsdString>(deep);
@@ -1111,12 +1033,10 @@ public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
     public EventDocSyncXsdString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocSyncXsdString>(deep);
@@ -1148,12 +1068,10 @@ public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
     public EventDocXmlAfterInsertXsdString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocXmlAfterInsertXsdString>(deep);
@@ -1185,12 +1103,10 @@ public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
     public EventDocXmlBeforeDeleteXsdString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocXmlBeforeDeleteXsdString>(deep);
@@ -1222,12 +1138,10 @@ public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTex
     public EventDocContentControlAfterInsertXsdString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlAfterInsertXsdString>(deep);
@@ -1259,12 +1173,10 @@ public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTe
     public EventDocContentControlBeforeDeleteXsdString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlBeforeDeleteXsdString>(deep);
@@ -1296,12 +1208,10 @@ public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextEle
     public EventDocContentControlOnExistXsdString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlOnExistXsdString>(deep);
@@ -1333,12 +1243,10 @@ public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextEle
     public EventDocContentControlOnEnterXsdString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlOnEnterXsdString>(deep);
@@ -1370,12 +1278,10 @@ public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
     public EventDocStoreUpdateXsdString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocStoreUpdateXsdString>(deep);
@@ -1407,12 +1313,10 @@ public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElem
     public EventDocContentControlUpdateXsdString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlUpdateXsdString>(deep);
@@ -1444,12 +1348,10 @@ public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafText
     public EventDocBuildingBlockAfterInsertXsdString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocBuildingBlockAfterInsertXsdString>(deep);
@@ -1503,21 +1405,18 @@ public partial class DocEvents : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the DocEvents class.
     /// </summary>
     public DocEvents():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the DocEvents class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DocEvents(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DocEvents class with the specified child elements.
     /// </summary>
@@ -1525,7 +1424,6 @@ public partial class DocEvents : OpenXmlCompositeElement
     public DocEvents(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DocEvents class from outer XML.
     /// </summary>
@@ -1534,13 +1432,10 @@ public partial class DocEvents : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> EventDocNewXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocNew </para>
@@ -1554,7 +1449,6 @@ public partial class DocEvents : OpenXmlCompositeElement
         get => GetElement<EventDocNewXsdString>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> EventDocOpenXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocOpen </para>
@@ -1568,7 +1462,6 @@ public partial class DocEvents : OpenXmlCompositeElement
         get => GetElement<EventDocOpenXsdString>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> EventDocCloseXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocClose </para>
@@ -1582,7 +1475,6 @@ public partial class DocEvents : OpenXmlCompositeElement
         get => GetElement<EventDocCloseXsdString>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> EventDocSyncXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocSync </para>
@@ -1596,7 +1488,6 @@ public partial class DocEvents : OpenXmlCompositeElement
         get => GetElement<EventDocSyncXsdString>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> EventDocXmlAfterInsertXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocXmlAfterInsert </para>
@@ -1610,7 +1501,6 @@ public partial class DocEvents : OpenXmlCompositeElement
         get => GetElement<EventDocXmlAfterInsertXsdString>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> EventDocXmlBeforeDeleteXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocXmlBeforeDelete </para>
@@ -1624,7 +1514,6 @@ public partial class DocEvents : OpenXmlCompositeElement
         get => GetElement<EventDocXmlBeforeDeleteXsdString>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> EventDocContentControlAfterInsertXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocContentControlAfterInsert </para>
@@ -1638,7 +1527,6 @@ public partial class DocEvents : OpenXmlCompositeElement
         get => GetElement<EventDocContentControlAfterInsertXsdString>(6);
         set => SetElement(6, value);
 	}
-    
     /// <summary>
     /// <para> EventDocContentControlBeforeDeleteXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocContentControlBeforeDelete </para>
@@ -1652,7 +1540,6 @@ public partial class DocEvents : OpenXmlCompositeElement
         get => GetElement<EventDocContentControlBeforeDeleteXsdString>(7);
         set => SetElement(7, value);
 	}
-    
     /// <summary>
     /// <para> EventDocContentControlOnExistXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocContentControlOnExit </para>
@@ -1666,7 +1553,6 @@ public partial class DocEvents : OpenXmlCompositeElement
         get => GetElement<EventDocContentControlOnExistXsdString>(8);
         set => SetElement(8, value);
 	}
-    
     /// <summary>
     /// <para> EventDocContentControlOnEnterXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocContentControlOnEnter </para>
@@ -1680,7 +1566,6 @@ public partial class DocEvents : OpenXmlCompositeElement
         get => GetElement<EventDocContentControlOnEnterXsdString>(9);
         set => SetElement(9, value);
 	}
-    
     /// <summary>
     /// <para> EventDocStoreUpdateXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocStoreUpdate </para>
@@ -1694,7 +1579,6 @@ public partial class DocEvents : OpenXmlCompositeElement
         get => GetElement<EventDocStoreUpdateXsdString>(10);
         set => SetElement(10, value);
 	}
-    
     /// <summary>
     /// <para> EventDocContentControlUpdateXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocContentControlContentUpdate </para>
@@ -1708,7 +1592,6 @@ public partial class DocEvents : OpenXmlCompositeElement
         get => GetElement<EventDocContentControlUpdateXsdString>(11);
         set => SetElement(11, value);
 	}
-    
     /// <summary>
     /// <para> EventDocBuildingBlockAfterInsertXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocBuildingBlockAfterInsert </para>
@@ -1722,7 +1605,6 @@ public partial class DocEvents : OpenXmlCompositeElement
         get => GetElement<EventDocBuildingBlockAfterInsertXsdString>(12);
         set => SetElement(12, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1753,21 +1635,18 @@ public partial class AllocatedCommandManifest : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the AllocatedCommandManifest class.
     /// </summary>
     public AllocatedCommandManifest():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the AllocatedCommandManifest class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public AllocatedCommandManifest(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AllocatedCommandManifest class with the specified child elements.
     /// </summary>
@@ -1775,7 +1654,6 @@ public partial class AllocatedCommandManifest : OpenXmlCompositeElement
     public AllocatedCommandManifest(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AllocatedCommandManifest class from outer XML.
     /// </summary>
@@ -1784,9 +1662,7 @@ public partial class AllocatedCommandManifest : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -1810,25 +1686,22 @@ public partial class ToolbarData : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(19, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ToolbarData class.
     /// </summary>
     public ToolbarData():base(){}
     
-      
-     
     
     
     
@@ -1866,9 +1739,8 @@ public partial class KeyMapCustomizations : KeymapsType
     /// <param name="childElements">Specifies the child elements.</param>
     public KeyMapCustomizations(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the KeyMapCustomizations class with the specified child elements.
     /// </summary>
@@ -1876,7 +1748,6 @@ public partial class KeyMapCustomizations : KeymapsType
     public KeyMapCustomizations(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the KeyMapCustomizations class from outer XML.
     /// </summary>
@@ -1885,7 +1756,6 @@ public partial class KeyMapCustomizations : KeymapsType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -1922,9 +1792,8 @@ public partial class MismatchedKeyMapCustomization : KeymapsType
     /// <param name="childElements">Specifies the child elements.</param>
     public MismatchedKeyMapCustomization(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MismatchedKeyMapCustomization class with the specified child elements.
     /// </summary>
@@ -1932,7 +1801,6 @@ public partial class MismatchedKeyMapCustomization : KeymapsType
     public MismatchedKeyMapCustomization(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MismatchedKeyMapCustomization class from outer XML.
     /// </summary>
@@ -1941,7 +1809,6 @@ public partial class MismatchedKeyMapCustomization : KeymapsType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -1962,7 +1829,6 @@ public partial class MismatchedKeyMapCustomization : KeymapsType
 
 public abstract partial class KeymapsType : OpenXmlCompositeElement
 {
-        
     
     
     
@@ -1971,16 +1837,14 @@ public abstract partial class KeymapsType : OpenXmlCompositeElement
     /// Initializes a new instance of the KeymapsType class.
     /// </summary>
     protected KeymapsType(){}
-    
         /// <summary>
     ///Initializes a new instance of the KeymapsType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     protected KeymapsType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the KeymapsType class with the specified child elements.
     /// </summary>
@@ -1988,7 +1852,6 @@ public abstract partial class KeymapsType : OpenXmlCompositeElement
     protected KeymapsType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the KeymapsType class from outer XML.
     /// </summary>
@@ -1997,7 +1860,6 @@ public abstract partial class KeymapsType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
 
     
 }
@@ -2027,21 +1889,18 @@ public partial class Toolbars : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Toolbars class.
     /// </summary>
     public Toolbars():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Toolbars class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Toolbars(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Toolbars class with the specified child elements.
     /// </summary>
@@ -2049,7 +1908,6 @@ public partial class Toolbars : OpenXmlCompositeElement
     public Toolbars(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Toolbars class from outer XML.
     /// </summary>
@@ -2058,9 +1916,7 @@ public partial class Toolbars : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -2092,21 +1948,18 @@ public partial class AllocatedCommands : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the AllocatedCommands class.
     /// </summary>
     public AllocatedCommands():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the AllocatedCommands class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public AllocatedCommands(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AllocatedCommands class with the specified child elements.
     /// </summary>
@@ -2114,7 +1967,6 @@ public partial class AllocatedCommands : OpenXmlCompositeElement
     public AllocatedCommands(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AllocatedCommands class from outer XML.
     /// </summary>
@@ -2123,9 +1975,7 @@ public partial class AllocatedCommands : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -2149,7 +1999,6 @@ public partial class RecordIncluded : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: wne:val </para>
@@ -2159,15 +2008,12 @@ public partial class RecordIncluded : OpenXmlLeafElement
     [SchemaAttr(33, "val")]
     [Index(0)]
     public OnOffValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RecordIncluded class.
     /// </summary>
     public RecordIncluded():base(){}
     
-      
-     
     
     
     
@@ -2191,25 +2037,22 @@ public partial class RecordHashCode : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: wne:val </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(33, "val")]
     [Index(0)]
     public IntegerValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RecordHashCode class.
     /// </summary>
     public RecordHashCode():base(){}
     
-      
-     
     
     
     
@@ -2243,21 +2086,18 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the SingleDataSourceRecord class.
     /// </summary>
     public SingleDataSourceRecord():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SingleDataSourceRecord class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SingleDataSourceRecord(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SingleDataSourceRecord class with the specified child elements.
     /// </summary>
@@ -2265,7 +2105,6 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
     public SingleDataSourceRecord(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SingleDataSourceRecord class from outer XML.
     /// </summary>
@@ -2274,13 +2113,10 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> RecordIncluded.</para>
     /// <para> Represents the following element tag in the schema: wne:active </para>
@@ -2294,7 +2130,6 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
         get => GetElement<RecordIncluded>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> RecordHashCode.</para>
     /// <para> Represents the following element tag in the schema: wne:hash </para>
@@ -2308,7 +2143,6 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
         get => GetElement<RecordHashCode>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2316,5 +2150,3 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
 
 }
 }
- 
- 

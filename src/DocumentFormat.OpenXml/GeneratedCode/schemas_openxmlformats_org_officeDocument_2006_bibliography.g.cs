@@ -32,46 +32,43 @@ public partial class Sources : OpenXmlPartRootElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Selected Style.</para>
     /// <para>Represents the following attribute in the schema: SelectedStyle </para>
     /// </summary>
+[StringValidator(MinLength = 0, MaxLength = 255)]
     [SchemaAttr(0, "SelectedStyle")]
     [Index(0)]
     public StringValue SelectedStyle { get; set; }
-	
     /// <summary>
     /// <para> Documentation Style Name.</para>
     /// <para>Represents the following attribute in the schema: StyleName </para>
     /// </summary>
+[StringValidator(MinLength = 0, MaxLength = 255)]
     [SchemaAttr(0, "StyleName")]
     [Index(1)]
     public StringValue StyleName { get; set; }
-	
     /// <summary>
     /// <para> Uniform Resource Identifier.</para>
     /// <para>Represents the following attribute in the schema: URI </para>
     /// </summary>
+[StringValidator(MinLength = 0, MaxLength = 255)]
     [SchemaAttr(0, "URI")]
     [Index(2)]
     public StringValue Uri { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Sources class.
     /// </summary>
     public Sources():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Sources class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Sources(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Sources class with the specified child elements.
     /// </summary>
@@ -79,7 +76,6 @@ public partial class Sources : OpenXmlPartRootElement
     public Sources(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Sources class from outer XML.
     /// </summary>
@@ -88,9 +84,7 @@ public partial class Sources : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -126,21 +120,18 @@ public partial class Person : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Person class.
     /// </summary>
     public Person():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Person class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Person(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Person class with the specified child elements.
     /// </summary>
@@ -148,7 +139,6 @@ public partial class Person : OpenXmlCompositeElement
     public Person(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Person class from outer XML.
     /// </summary>
@@ -157,9 +147,7 @@ public partial class Person : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -173,6 +161,7 @@ public partial class Person : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Last.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Last")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -193,12 +182,10 @@ public partial class Last : OpenXmlLeafTextElement
     public Last(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Last>(deep);
@@ -210,6 +197,7 @@ public partial class Last : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:First.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "First")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -230,12 +218,10 @@ public partial class First : OpenXmlLeafTextElement
     public First(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<First>(deep);
@@ -247,6 +233,7 @@ public partial class First : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Middle.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Middle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -267,12 +254,10 @@ public partial class Middle : OpenXmlLeafTextElement
     public Middle(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Middle>(deep);
@@ -284,6 +269,7 @@ public partial class Middle : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Corporate.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Corporate")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -304,12 +290,10 @@ public partial class Corporate : OpenXmlLeafTextElement
     public Corporate(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Corporate>(deep);
@@ -321,6 +305,7 @@ public partial class Corporate : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:AbbreviatedCaseNumber.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "AbbreviatedCaseNumber")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -341,12 +326,10 @@ public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
     public AbbreviatedCaseNumber(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbbreviatedCaseNumber>(deep);
@@ -358,6 +341,7 @@ public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:AlbumTitle.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "AlbumTitle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -378,12 +362,10 @@ public partial class AlbumTitle : OpenXmlLeafTextElement
     public AlbumTitle(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlbumTitle>(deep);
@@ -395,6 +377,7 @@ public partial class AlbumTitle : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:BookTitle.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "BookTitle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -415,12 +398,10 @@ public partial class BookTitle : OpenXmlLeafTextElement
     public BookTitle(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookTitle>(deep);
@@ -432,6 +413,7 @@ public partial class BookTitle : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Broadcaster.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Broadcaster")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -452,12 +434,10 @@ public partial class Broadcaster : OpenXmlLeafTextElement
     public Broadcaster(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Broadcaster>(deep);
@@ -469,6 +449,7 @@ public partial class Broadcaster : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:BroadcastTitle.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "BroadcastTitle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -489,12 +470,10 @@ public partial class BroadcastTitle : OpenXmlLeafTextElement
     public BroadcastTitle(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BroadcastTitle>(deep);
@@ -506,6 +485,7 @@ public partial class BroadcastTitle : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:CaseNumber.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "CaseNumber")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -526,12 +506,10 @@ public partial class CaseNumber : OpenXmlLeafTextElement
     public CaseNumber(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CaseNumber>(deep);
@@ -543,6 +521,7 @@ public partial class CaseNumber : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:ChapterNumber.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "ChapterNumber")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -563,12 +542,10 @@ public partial class ChapterNumber : OpenXmlLeafTextElement
     public ChapterNumber(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChapterNumber>(deep);
@@ -580,6 +557,7 @@ public partial class ChapterNumber : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:City.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "City")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -600,12 +578,10 @@ public partial class City : OpenXmlLeafTextElement
     public City(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<City>(deep);
@@ -617,6 +593,7 @@ public partial class City : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Comments.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Comments")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -637,12 +614,10 @@ public partial class Comments : OpenXmlLeafTextElement
     public Comments(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Comments>(deep);
@@ -654,6 +629,7 @@ public partial class Comments : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:ConferenceName.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "ConferenceName")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -674,12 +650,10 @@ public partial class ConferenceName : OpenXmlLeafTextElement
     public ConferenceName(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConferenceName>(deep);
@@ -691,6 +665,7 @@ public partial class ConferenceName : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:CountryRegion.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "CountryRegion")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -711,12 +686,10 @@ public partial class CountryRegion : OpenXmlLeafTextElement
     public CountryRegion(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CountryRegion>(deep);
@@ -728,6 +701,7 @@ public partial class CountryRegion : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Court.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Court")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -748,12 +722,10 @@ public partial class Court : OpenXmlLeafTextElement
     public Court(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Court>(deep);
@@ -765,6 +737,7 @@ public partial class Court : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Day.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Day")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -785,12 +758,10 @@ public partial class Day : OpenXmlLeafTextElement
     public Day(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Day>(deep);
@@ -802,6 +773,7 @@ public partial class Day : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:DayAccessed.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "DayAccessed")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -822,12 +794,10 @@ public partial class DayAccessed : OpenXmlLeafTextElement
     public DayAccessed(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DayAccessed>(deep);
@@ -839,6 +809,7 @@ public partial class DayAccessed : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Department.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Department")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -859,12 +830,10 @@ public partial class Department : OpenXmlLeafTextElement
     public Department(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Department>(deep);
@@ -876,6 +845,7 @@ public partial class Department : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Distributor.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Distributor")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -896,12 +866,10 @@ public partial class Distributor : OpenXmlLeafTextElement
     public Distributor(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Distributor>(deep);
@@ -913,6 +881,7 @@ public partial class Distributor : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Edition.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Edition")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -933,12 +902,10 @@ public partial class Edition : OpenXmlLeafTextElement
     public Edition(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Edition>(deep);
@@ -950,6 +917,7 @@ public partial class Edition : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Guid.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Guid")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -970,12 +938,10 @@ public partial class GuidString : OpenXmlLeafTextElement
     public GuidString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GuidString>(deep);
@@ -987,6 +953,7 @@ public partial class GuidString : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Institution.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Institution")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1007,12 +974,10 @@ public partial class Institution : OpenXmlLeafTextElement
     public Institution(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Institution>(deep);
@@ -1024,6 +989,7 @@ public partial class Institution : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:InternetSiteTitle.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "InternetSiteTitle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1044,12 +1010,10 @@ public partial class InternetSiteTitle : OpenXmlLeafTextElement
     public InternetSiteTitle(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InternetSiteTitle>(deep);
@@ -1061,6 +1025,7 @@ public partial class InternetSiteTitle : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Issue.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Issue")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1081,12 +1046,10 @@ public partial class Issue : OpenXmlLeafTextElement
     public Issue(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Issue>(deep);
@@ -1098,6 +1061,7 @@ public partial class Issue : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:JournalName.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "JournalName")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1118,12 +1082,10 @@ public partial class JournalName : OpenXmlLeafTextElement
     public JournalName(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<JournalName>(deep);
@@ -1135,6 +1097,7 @@ public partial class JournalName : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:LCID.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "LCID")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1155,12 +1118,10 @@ public partial class LcId : OpenXmlLeafTextElement
     public LcId(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LcId>(deep);
@@ -1172,6 +1133,7 @@ public partial class LcId : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Medium.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Medium")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1192,12 +1154,10 @@ public partial class Medium : OpenXmlLeafTextElement
     public Medium(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Medium>(deep);
@@ -1209,6 +1169,7 @@ public partial class Medium : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Month.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Month")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1229,12 +1190,10 @@ public partial class Month : OpenXmlLeafTextElement
     public Month(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Month>(deep);
@@ -1246,6 +1205,7 @@ public partial class Month : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:MonthAccessed.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "MonthAccessed")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1266,12 +1226,10 @@ public partial class MonthAccessed : OpenXmlLeafTextElement
     public MonthAccessed(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MonthAccessed>(deep);
@@ -1283,6 +1241,7 @@ public partial class MonthAccessed : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:NumberVolumes.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "NumberVolumes")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1303,12 +1262,10 @@ public partial class NumberVolumes : OpenXmlLeafTextElement
     public NumberVolumes(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberVolumes>(deep);
@@ -1320,6 +1277,7 @@ public partial class NumberVolumes : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Pages.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Pages")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1340,12 +1298,10 @@ public partial class Pages : OpenXmlLeafTextElement
     public Pages(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Pages>(deep);
@@ -1357,6 +1313,7 @@ public partial class Pages : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:PatentNumber.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "PatentNumber")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1377,12 +1334,10 @@ public partial class PatentNumber : OpenXmlLeafTextElement
     public PatentNumber(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PatentNumber>(deep);
@@ -1394,6 +1349,7 @@ public partial class PatentNumber : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:PeriodicalTitle.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "PeriodicalTitle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1414,12 +1370,10 @@ public partial class PeriodicalTitle : OpenXmlLeafTextElement
     public PeriodicalTitle(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PeriodicalTitle>(deep);
@@ -1431,6 +1385,7 @@ public partial class PeriodicalTitle : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:ProductionCompany.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "ProductionCompany")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1451,12 +1406,10 @@ public partial class ProductionCompany : OpenXmlLeafTextElement
     public ProductionCompany(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ProductionCompany>(deep);
@@ -1468,6 +1421,7 @@ public partial class ProductionCompany : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:PublicationTitle.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "PublicationTitle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1488,12 +1442,10 @@ public partial class PublicationTitle : OpenXmlLeafTextElement
     public PublicationTitle(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PublicationTitle>(deep);
@@ -1505,6 +1457,7 @@ public partial class PublicationTitle : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Publisher.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Publisher")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1525,12 +1478,10 @@ public partial class Publisher : OpenXmlLeafTextElement
     public Publisher(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Publisher>(deep);
@@ -1542,6 +1493,7 @@ public partial class Publisher : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:RecordingNumber.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "RecordingNumber")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1562,12 +1514,10 @@ public partial class RecordingNumber : OpenXmlLeafTextElement
     public RecordingNumber(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RecordingNumber>(deep);
@@ -1579,6 +1529,7 @@ public partial class RecordingNumber : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:RefOrder.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "RefOrder")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1599,12 +1550,10 @@ public partial class ReferenceOrder : OpenXmlLeafTextElement
     public ReferenceOrder(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ReferenceOrder>(deep);
@@ -1616,6 +1565,7 @@ public partial class ReferenceOrder : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Reporter.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Reporter")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1636,12 +1586,10 @@ public partial class Reporter : OpenXmlLeafTextElement
     public Reporter(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Reporter>(deep);
@@ -1653,6 +1601,7 @@ public partial class Reporter : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:ShortTitle.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "ShortTitle")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1673,12 +1622,10 @@ public partial class ShortTitle : OpenXmlLeafTextElement
     public ShortTitle(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShortTitle>(deep);
@@ -1690,6 +1637,7 @@ public partial class ShortTitle : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:StandardNumber.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "StandardNumber")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1710,12 +1658,10 @@ public partial class StandardNumber : OpenXmlLeafTextElement
     public StandardNumber(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StandardNumber>(deep);
@@ -1727,6 +1673,7 @@ public partial class StandardNumber : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:StateProvince.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "StateProvince")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1747,12 +1694,10 @@ public partial class StateProvince : OpenXmlLeafTextElement
     public StateProvince(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StateProvince>(deep);
@@ -1764,6 +1709,7 @@ public partial class StateProvince : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Station.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Station")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1784,12 +1730,10 @@ public partial class Station : OpenXmlLeafTextElement
     public Station(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Station>(deep);
@@ -1801,6 +1745,7 @@ public partial class Station : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Tag.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Tag")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1821,12 +1766,10 @@ public partial class Tag : OpenXmlLeafTextElement
     public Tag(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tag>(deep);
@@ -1838,6 +1781,7 @@ public partial class Tag : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Theater.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Theater")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1858,12 +1802,10 @@ public partial class Theater : OpenXmlLeafTextElement
     public Theater(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Theater>(deep);
@@ -1875,6 +1817,7 @@ public partial class Theater : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:ThesisType.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "ThesisType")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1895,12 +1838,10 @@ public partial class ThesisType : OpenXmlLeafTextElement
     public ThesisType(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThesisType>(deep);
@@ -1912,6 +1853,7 @@ public partial class ThesisType : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Title.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Title")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1932,12 +1874,10 @@ public partial class Title : OpenXmlLeafTextElement
     public Title(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Title>(deep);
@@ -1949,6 +1889,7 @@ public partial class Title : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Type.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Type")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1969,12 +1910,10 @@ public partial class PatentType : OpenXmlLeafTextElement
     public PatentType(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PatentType>(deep);
@@ -1986,6 +1925,7 @@ public partial class PatentType : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:URL.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "URL")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2006,12 +1946,10 @@ public partial class UrlString : OpenXmlLeafTextElement
     public UrlString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UrlString>(deep);
@@ -2023,6 +1961,7 @@ public partial class UrlString : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Version.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Version")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2043,12 +1982,10 @@ public partial class Version : OpenXmlLeafTextElement
     public Version(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Version>(deep);
@@ -2060,6 +1997,7 @@ public partial class Version : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Volume.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Volume")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2080,12 +2018,10 @@ public partial class Volume : OpenXmlLeafTextElement
     public Volume(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Volume>(deep);
@@ -2097,6 +2033,7 @@ public partial class Volume : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:Year.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Year")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2117,12 +2054,10 @@ public partial class Year : OpenXmlLeafTextElement
     public Year(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Year>(deep);
@@ -2134,6 +2069,7 @@ public partial class Year : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is b:YearAccessed.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "YearAccessed")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2154,12 +2090,10 @@ public partial class YearAccessed : OpenXmlLeafTextElement
     public YearAccessed(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<YearAccessed>(deep);
@@ -2189,21 +2123,18 @@ public partial class NameList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the NameList class.
     /// </summary>
     public NameList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NameList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NameList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NameList class with the specified child elements.
     /// </summary>
@@ -2211,7 +2142,6 @@ public partial class NameList : OpenXmlCompositeElement
     public NameList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NameList class from outer XML.
     /// </summary>
@@ -2220,9 +2150,7 @@ public partial class NameList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -2260,9 +2188,8 @@ public partial class Artist : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Artist(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Artist class with the specified child elements.
     /// </summary>
@@ -2270,7 +2197,6 @@ public partial class Artist : NameType
     public Artist(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Artist class from outer XML.
     /// </summary>
@@ -2279,7 +2205,6 @@ public partial class Artist : NameType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2316,9 +2241,8 @@ public partial class BookAuthor : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public BookAuthor(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BookAuthor class with the specified child elements.
     /// </summary>
@@ -2326,7 +2250,6 @@ public partial class BookAuthor : NameType
     public BookAuthor(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BookAuthor class from outer XML.
     /// </summary>
@@ -2335,7 +2258,6 @@ public partial class BookAuthor : NameType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2372,9 +2294,8 @@ public partial class Compiler : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Compiler(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Compiler class with the specified child elements.
     /// </summary>
@@ -2382,7 +2303,6 @@ public partial class Compiler : NameType
     public Compiler(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Compiler class from outer XML.
     /// </summary>
@@ -2391,7 +2311,6 @@ public partial class Compiler : NameType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2428,9 +2347,8 @@ public partial class Composer : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Composer(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Composer class with the specified child elements.
     /// </summary>
@@ -2438,7 +2356,6 @@ public partial class Composer : NameType
     public Composer(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Composer class from outer XML.
     /// </summary>
@@ -2447,7 +2364,6 @@ public partial class Composer : NameType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2484,9 +2400,8 @@ public partial class Conductor : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Conductor(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Conductor class with the specified child elements.
     /// </summary>
@@ -2494,7 +2409,6 @@ public partial class Conductor : NameType
     public Conductor(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Conductor class from outer XML.
     /// </summary>
@@ -2503,7 +2417,6 @@ public partial class Conductor : NameType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2540,9 +2453,8 @@ public partial class Counsel : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Counsel(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Counsel class with the specified child elements.
     /// </summary>
@@ -2550,7 +2462,6 @@ public partial class Counsel : NameType
     public Counsel(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Counsel class from outer XML.
     /// </summary>
@@ -2559,7 +2470,6 @@ public partial class Counsel : NameType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2596,9 +2506,8 @@ public partial class Director : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Director(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Director class with the specified child elements.
     /// </summary>
@@ -2606,7 +2515,6 @@ public partial class Director : NameType
     public Director(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Director class from outer XML.
     /// </summary>
@@ -2615,7 +2523,6 @@ public partial class Director : NameType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2652,9 +2559,8 @@ public partial class Editor : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Editor(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Editor class with the specified child elements.
     /// </summary>
@@ -2662,7 +2568,6 @@ public partial class Editor : NameType
     public Editor(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Editor class from outer XML.
     /// </summary>
@@ -2671,7 +2576,6 @@ public partial class Editor : NameType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2708,9 +2612,8 @@ public partial class Interviewee : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Interviewee(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Interviewee class with the specified child elements.
     /// </summary>
@@ -2718,7 +2621,6 @@ public partial class Interviewee : NameType
     public Interviewee(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Interviewee class from outer XML.
     /// </summary>
@@ -2727,7 +2629,6 @@ public partial class Interviewee : NameType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2764,9 +2665,8 @@ public partial class Interviewer : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Interviewer(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Interviewer class with the specified child elements.
     /// </summary>
@@ -2774,7 +2674,6 @@ public partial class Interviewer : NameType
     public Interviewer(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Interviewer class from outer XML.
     /// </summary>
@@ -2783,7 +2682,6 @@ public partial class Interviewer : NameType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2820,9 +2718,8 @@ public partial class Inventor : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Inventor(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Inventor class with the specified child elements.
     /// </summary>
@@ -2830,7 +2727,6 @@ public partial class Inventor : NameType
     public Inventor(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Inventor class from outer XML.
     /// </summary>
@@ -2839,7 +2735,6 @@ public partial class Inventor : NameType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2876,9 +2771,8 @@ public partial class ProducerName : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public ProducerName(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ProducerName class with the specified child elements.
     /// </summary>
@@ -2886,7 +2780,6 @@ public partial class ProducerName : NameType
     public ProducerName(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ProducerName class from outer XML.
     /// </summary>
@@ -2895,7 +2788,6 @@ public partial class ProducerName : NameType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2932,9 +2824,8 @@ public partial class Translator : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Translator(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Translator class with the specified child elements.
     /// </summary>
@@ -2942,7 +2833,6 @@ public partial class Translator : NameType
     public Translator(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Translator class from outer XML.
     /// </summary>
@@ -2951,7 +2841,6 @@ public partial class Translator : NameType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -2988,9 +2877,8 @@ public partial class Writer : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Writer(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Writer class with the specified child elements.
     /// </summary>
@@ -2998,7 +2886,6 @@ public partial class Writer : NameType
     public Writer(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Writer class from outer XML.
     /// </summary>
@@ -3007,7 +2894,6 @@ public partial class Writer : NameType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -3028,11 +2914,10 @@ public partial class Writer : NameType
 
 public abstract partial class NameType : OpenXmlCompositeElement
 {
-        
+    
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Name List.</para>
     /// <para> Represents the following element tag in the schema: b:NameList </para>
@@ -3046,24 +2931,20 @@ public abstract partial class NameType : OpenXmlCompositeElement
         get => GetElement<NameList>(0);
         set => SetElement(0, value);
 	}
-    
 
 
-    
     /// <summary>
     /// Initializes a new instance of the NameType class.
     /// </summary>
     protected NameType(){}
-    
         /// <summary>
     ///Initializes a new instance of the NameType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     protected NameType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NameType class with the specified child elements.
     /// </summary>
@@ -3071,7 +2952,6 @@ public abstract partial class NameType : OpenXmlCompositeElement
     protected NameType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NameType class from outer XML.
     /// </summary>
@@ -3080,7 +2960,6 @@ public abstract partial class NameType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
 
     
 }
@@ -3115,9 +2994,8 @@ public partial class Author : NameOrCorporateType
     /// <param name="childElements">Specifies the child elements.</param>
     public Author(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Author class with the specified child elements.
     /// </summary>
@@ -3125,7 +3003,6 @@ public partial class Author : NameOrCorporateType
     public Author(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Author class from outer XML.
     /// </summary>
@@ -3134,7 +3011,6 @@ public partial class Author : NameOrCorporateType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -3172,9 +3048,8 @@ public partial class Performer : NameOrCorporateType
     /// <param name="childElements">Specifies the child elements.</param>
     public Performer(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Performer class with the specified child elements.
     /// </summary>
@@ -3182,7 +3057,6 @@ public partial class Performer : NameOrCorporateType
     public Performer(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Performer class from outer XML.
     /// </summary>
@@ -3191,7 +3065,6 @@ public partial class Performer : NameOrCorporateType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -3214,11 +3087,10 @@ public partial class Performer : NameOrCorporateType
 
 public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
 {
-        
+    
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-    
         /// <summary>
     /// <para> NameList.</para>
     /// <para> Represents the following element tag in the schema: b:NameList </para>
@@ -3232,7 +3104,6 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
         get => GetElement<NameList>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Corporate Author.</para>
     /// <para> Represents the following element tag in the schema: b:Corporate </para>
@@ -3246,24 +3117,20 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
         get => GetElement<Corporate>(1);
         set => SetElement(1, value);
 	}
-    
 
 
-    
     /// <summary>
     /// Initializes a new instance of the NameOrCorporateType class.
     /// </summary>
     protected NameOrCorporateType(){}
-    
         /// <summary>
     ///Initializes a new instance of the NameOrCorporateType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     protected NameOrCorporateType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NameOrCorporateType class with the specified child elements.
     /// </summary>
@@ -3271,7 +3138,6 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
     protected NameOrCorporateType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NameOrCorporateType class from outer XML.
     /// </summary>
@@ -3280,7 +3146,6 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
 
     
 }
@@ -3338,21 +3203,18 @@ public partial class AuthorList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the AuthorList class.
     /// </summary>
     public AuthorList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the AuthorList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public AuthorList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AuthorList class with the specified child elements.
     /// </summary>
@@ -3360,7 +3222,6 @@ public partial class AuthorList : OpenXmlCompositeElement
     public AuthorList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AuthorList class from outer XML.
     /// </summary>
@@ -3369,13 +3230,10 @@ public partial class AuthorList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
-    
         /// <summary>
     /// <para> Artist.</para>
     /// <para> Represents the following element tag in the schema: b:Artist </para>
@@ -3389,7 +3247,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<Artist>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Author.</para>
     /// <para> Represents the following element tag in the schema: b:Author </para>
@@ -3403,7 +3260,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<Author>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Book Author.</para>
     /// <para> Represents the following element tag in the schema: b:BookAuthor </para>
@@ -3417,7 +3273,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<BookAuthor>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Compiler.</para>
     /// <para> Represents the following element tag in the schema: b:Compiler </para>
@@ -3431,7 +3286,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<Compiler>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Composer.</para>
     /// <para> Represents the following element tag in the schema: b:Composer </para>
@@ -3445,7 +3299,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<Composer>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> Conductor.</para>
     /// <para> Represents the following element tag in the schema: b:Conductor </para>
@@ -3459,7 +3312,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<Conductor>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> Counsel.</para>
     /// <para> Represents the following element tag in the schema: b:Counsel </para>
@@ -3473,7 +3325,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<Counsel>(6);
         set => SetElement(6, value);
 	}
-    
     /// <summary>
     /// <para> Director.</para>
     /// <para> Represents the following element tag in the schema: b:Director </para>
@@ -3487,7 +3338,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<Director>(7);
         set => SetElement(7, value);
 	}
-    
     /// <summary>
     /// <para> Editor.</para>
     /// <para> Represents the following element tag in the schema: b:Editor </para>
@@ -3501,7 +3351,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<Editor>(8);
         set => SetElement(8, value);
 	}
-    
     /// <summary>
     /// <para> Interviewee.</para>
     /// <para> Represents the following element tag in the schema: b:Interviewee </para>
@@ -3515,7 +3364,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<Interviewee>(9);
         set => SetElement(9, value);
 	}
-    
     /// <summary>
     /// <para> Interviewer.</para>
     /// <para> Represents the following element tag in the schema: b:Interviewer </para>
@@ -3529,7 +3377,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<Interviewer>(10);
         set => SetElement(10, value);
 	}
-    
     /// <summary>
     /// <para> Inventor.</para>
     /// <para> Represents the following element tag in the schema: b:Inventor </para>
@@ -3543,7 +3390,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<Inventor>(11);
         set => SetElement(11, value);
 	}
-    
     /// <summary>
     /// <para> Performer.</para>
     /// <para> Represents the following element tag in the schema: b:Performer </para>
@@ -3557,7 +3403,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<Performer>(12);
         set => SetElement(12, value);
 	}
-    
     /// <summary>
     /// <para> Producer Name.</para>
     /// <para> Represents the following element tag in the schema: b:ProducerName </para>
@@ -3571,7 +3416,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<ProducerName>(13);
         set => SetElement(13, value);
 	}
-    
     /// <summary>
     /// <para> Translator.</para>
     /// <para> Represents the following element tag in the schema: b:Translator </para>
@@ -3585,7 +3429,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<Translator>(14);
         set => SetElement(14, value);
 	}
-    
     /// <summary>
     /// <para> Writer.</para>
     /// <para> Represents the following element tag in the schema: b:Writer </para>
@@ -3599,7 +3442,6 @@ public partial class AuthorList : OpenXmlCompositeElement
         get => GetElement<Writer>(15);
         set => SetElement(15, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -3612,6 +3454,7 @@ public partial class AuthorList : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is b:SourceType.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(9, "SourceType")]
@@ -3623,13 +3466,11 @@ public partial class SourceType : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the SourceType class.
     /// </summary>
     public SourceType():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the SourceType class with the specified text content.
     /// </summary>
@@ -3637,14 +3478,11 @@ public partial class SourceType : OpenXmlLeafTextElement
     public SourceType(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -3777,21 +3615,18 @@ public partial class Source : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Source class.
     /// </summary>
     public Source():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Source class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Source(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Source class with the specified child elements.
     /// </summary>
@@ -3799,7 +3634,6 @@ public partial class Source : OpenXmlCompositeElement
     public Source(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Source class from outer XML.
     /// </summary>
@@ -3808,13 +3642,10 @@ public partial class Source : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
-    
         /// <summary>
     /// <para> Abbreviated Case Number.</para>
     /// <para> Represents the following element tag in the schema: b:AbbreviatedCaseNumber </para>
@@ -3828,7 +3659,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<AbbreviatedCaseNumber>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Album Title.</para>
     /// <para> Represents the following element tag in the schema: b:AlbumTitle </para>
@@ -3842,7 +3672,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<AlbumTitle>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Contributors List.</para>
     /// <para> Represents the following element tag in the schema: b:Author </para>
@@ -3856,7 +3685,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<AuthorList>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Book Title.</para>
     /// <para> Represents the following element tag in the schema: b:BookTitle </para>
@@ -3870,7 +3698,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<BookTitle>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Broadcaster.</para>
     /// <para> Represents the following element tag in the schema: b:Broadcaster </para>
@@ -3884,7 +3711,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Broadcaster>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> Broadcast Title.</para>
     /// <para> Represents the following element tag in the schema: b:BroadcastTitle </para>
@@ -3898,7 +3724,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<BroadcastTitle>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> Case Number.</para>
     /// <para> Represents the following element tag in the schema: b:CaseNumber </para>
@@ -3912,7 +3737,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<CaseNumber>(6);
         set => SetElement(6, value);
 	}
-    
     /// <summary>
     /// <para> Chapter Number.</para>
     /// <para> Represents the following element tag in the schema: b:ChapterNumber </para>
@@ -3926,7 +3750,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<ChapterNumber>(7);
         set => SetElement(7, value);
 	}
-    
     /// <summary>
     /// <para> City.</para>
     /// <para> Represents the following element tag in the schema: b:City </para>
@@ -3940,7 +3763,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<City>(8);
         set => SetElement(8, value);
 	}
-    
     /// <summary>
     /// <para> Comments.</para>
     /// <para> Represents the following element tag in the schema: b:Comments </para>
@@ -3954,7 +3776,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Comments>(9);
         set => SetElement(9, value);
 	}
-    
     /// <summary>
     /// <para> Conference or Proceedings Name.</para>
     /// <para> Represents the following element tag in the schema: b:ConferenceName </para>
@@ -3968,7 +3789,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<ConferenceName>(10);
         set => SetElement(10, value);
 	}
-    
     /// <summary>
     /// <para> Country or Region.</para>
     /// <para> Represents the following element tag in the schema: b:CountryRegion </para>
@@ -3982,7 +3802,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<CountryRegion>(11);
         set => SetElement(11, value);
 	}
-    
     /// <summary>
     /// <para> Court.</para>
     /// <para> Represents the following element tag in the schema: b:Court </para>
@@ -3996,7 +3815,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Court>(12);
         set => SetElement(12, value);
 	}
-    
     /// <summary>
     /// <para> Day.</para>
     /// <para> Represents the following element tag in the schema: b:Day </para>
@@ -4010,7 +3828,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Day>(13);
         set => SetElement(13, value);
 	}
-    
     /// <summary>
     /// <para> Day Accessed.</para>
     /// <para> Represents the following element tag in the schema: b:DayAccessed </para>
@@ -4024,7 +3841,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<DayAccessed>(14);
         set => SetElement(14, value);
 	}
-    
     /// <summary>
     /// <para> Department.</para>
     /// <para> Represents the following element tag in the schema: b:Department </para>
@@ -4038,7 +3854,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Department>(15);
         set => SetElement(15, value);
 	}
-    
     /// <summary>
     /// <para> Distributor.</para>
     /// <para> Represents the following element tag in the schema: b:Distributor </para>
@@ -4052,7 +3867,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Distributor>(16);
         set => SetElement(16, value);
 	}
-    
     /// <summary>
     /// <para> Editor.</para>
     /// <para> Represents the following element tag in the schema: b:Edition </para>
@@ -4066,7 +3880,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Edition>(17);
         set => SetElement(17, value);
 	}
-    
     /// <summary>
     /// <para> GUID.</para>
     /// <para> Represents the following element tag in the schema: b:Guid </para>
@@ -4080,7 +3893,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<GuidString>(18);
         set => SetElement(18, value);
 	}
-    
     /// <summary>
     /// <para> Institution.</para>
     /// <para> Represents the following element tag in the schema: b:Institution </para>
@@ -4094,7 +3906,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Institution>(19);
         set => SetElement(19, value);
 	}
-    
     /// <summary>
     /// <para> Internet Site Title.</para>
     /// <para> Represents the following element tag in the schema: b:InternetSiteTitle </para>
@@ -4108,7 +3919,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<InternetSiteTitle>(20);
         set => SetElement(20, value);
 	}
-    
     /// <summary>
     /// <para> Issue.</para>
     /// <para> Represents the following element tag in the schema: b:Issue </para>
@@ -4122,7 +3932,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Issue>(21);
         set => SetElement(21, value);
 	}
-    
     /// <summary>
     /// <para> Journal Name.</para>
     /// <para> Represents the following element tag in the schema: b:JournalName </para>
@@ -4136,7 +3945,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<JournalName>(22);
         set => SetElement(22, value);
 	}
-    
     /// <summary>
     /// <para> Locale ID.</para>
     /// <para> Represents the following element tag in the schema: b:LCID </para>
@@ -4150,7 +3958,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<LcId>(23);
         set => SetElement(23, value);
 	}
-    
     /// <summary>
     /// <para> Medium.</para>
     /// <para> Represents the following element tag in the schema: b:Medium </para>
@@ -4164,7 +3971,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Medium>(24);
         set => SetElement(24, value);
 	}
-    
     /// <summary>
     /// <para> Month.</para>
     /// <para> Represents the following element tag in the schema: b:Month </para>
@@ -4178,7 +3984,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Month>(25);
         set => SetElement(25, value);
 	}
-    
     /// <summary>
     /// <para> Month Accessed.</para>
     /// <para> Represents the following element tag in the schema: b:MonthAccessed </para>
@@ -4192,7 +3997,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<MonthAccessed>(26);
         set => SetElement(26, value);
 	}
-    
     /// <summary>
     /// <para> Number of Volumes.</para>
     /// <para> Represents the following element tag in the schema: b:NumberVolumes </para>
@@ -4206,7 +4010,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<NumberVolumes>(27);
         set => SetElement(27, value);
 	}
-    
     /// <summary>
     /// <para> Pages.</para>
     /// <para> Represents the following element tag in the schema: b:Pages </para>
@@ -4220,7 +4023,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Pages>(28);
         set => SetElement(28, value);
 	}
-    
     /// <summary>
     /// <para> Patent Number.</para>
     /// <para> Represents the following element tag in the schema: b:PatentNumber </para>
@@ -4234,7 +4036,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<PatentNumber>(29);
         set => SetElement(29, value);
 	}
-    
     /// <summary>
     /// <para> Periodical Title.</para>
     /// <para> Represents the following element tag in the schema: b:PeriodicalTitle </para>
@@ -4248,7 +4049,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<PeriodicalTitle>(30);
         set => SetElement(30, value);
 	}
-    
     /// <summary>
     /// <para> Production Company.</para>
     /// <para> Represents the following element tag in the schema: b:ProductionCompany </para>
@@ -4262,7 +4062,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<ProductionCompany>(31);
         set => SetElement(31, value);
 	}
-    
     /// <summary>
     /// <para> Publication Title.</para>
     /// <para> Represents the following element tag in the schema: b:PublicationTitle </para>
@@ -4276,7 +4075,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<PublicationTitle>(32);
         set => SetElement(32, value);
 	}
-    
     /// <summary>
     /// <para> Publisher.</para>
     /// <para> Represents the following element tag in the schema: b:Publisher </para>
@@ -4290,7 +4088,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Publisher>(33);
         set => SetElement(33, value);
 	}
-    
     /// <summary>
     /// <para> Recording Number.</para>
     /// <para> Represents the following element tag in the schema: b:RecordingNumber </para>
@@ -4304,7 +4101,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<RecordingNumber>(34);
         set => SetElement(34, value);
 	}
-    
     /// <summary>
     /// <para> Reference Order.</para>
     /// <para> Represents the following element tag in the schema: b:RefOrder </para>
@@ -4318,7 +4114,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<ReferenceOrder>(35);
         set => SetElement(35, value);
 	}
-    
     /// <summary>
     /// <para> Reporter.</para>
     /// <para> Represents the following element tag in the schema: b:Reporter </para>
@@ -4332,7 +4127,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Reporter>(36);
         set => SetElement(36, value);
 	}
-    
     /// <summary>
     /// <para> Source Type.</para>
     /// <para> Represents the following element tag in the schema: b:SourceType </para>
@@ -4346,7 +4140,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<SourceType>(37);
         set => SetElement(37, value);
 	}
-    
     /// <summary>
     /// <para> Short Title.</para>
     /// <para> Represents the following element tag in the schema: b:ShortTitle </para>
@@ -4360,7 +4153,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<ShortTitle>(38);
         set => SetElement(38, value);
 	}
-    
     /// <summary>
     /// <para> Standard Number.</para>
     /// <para> Represents the following element tag in the schema: b:StandardNumber </para>
@@ -4374,7 +4166,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<StandardNumber>(39);
         set => SetElement(39, value);
 	}
-    
     /// <summary>
     /// <para> State or Province.</para>
     /// <para> Represents the following element tag in the schema: b:StateProvince </para>
@@ -4388,7 +4179,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<StateProvince>(40);
         set => SetElement(40, value);
 	}
-    
     /// <summary>
     /// <para> Station.</para>
     /// <para> Represents the following element tag in the schema: b:Station </para>
@@ -4402,7 +4192,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Station>(41);
         set => SetElement(41, value);
 	}
-    
     /// <summary>
     /// <para> Tag.</para>
     /// <para> Represents the following element tag in the schema: b:Tag </para>
@@ -4416,7 +4205,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Tag>(42);
         set => SetElement(42, value);
 	}
-    
     /// <summary>
     /// <para> Theater.</para>
     /// <para> Represents the following element tag in the schema: b:Theater </para>
@@ -4430,7 +4218,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Theater>(43);
         set => SetElement(43, value);
 	}
-    
     /// <summary>
     /// <para> Thesis Type.</para>
     /// <para> Represents the following element tag in the schema: b:ThesisType </para>
@@ -4444,7 +4231,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<ThesisType>(44);
         set => SetElement(44, value);
 	}
-    
     /// <summary>
     /// <para> Title.</para>
     /// <para> Represents the following element tag in the schema: b:Title </para>
@@ -4458,7 +4244,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Title>(45);
         set => SetElement(45, value);
 	}
-    
     /// <summary>
     /// <para> Type.</para>
     /// <para> Represents the following element tag in the schema: b:Type </para>
@@ -4472,7 +4257,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<PatentType>(46);
         set => SetElement(46, value);
 	}
-    
     /// <summary>
     /// <para> URL.</para>
     /// <para> Represents the following element tag in the schema: b:URL </para>
@@ -4486,7 +4270,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<UrlString>(47);
         set => SetElement(47, value);
 	}
-    
     /// <summary>
     /// <para> Version.</para>
     /// <para> Represents the following element tag in the schema: b:Version </para>
@@ -4500,7 +4283,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Version>(48);
         set => SetElement(48, value);
 	}
-    
     /// <summary>
     /// <para> Volume.</para>
     /// <para> Represents the following element tag in the schema: b:Volume </para>
@@ -4514,7 +4296,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Volume>(49);
         set => SetElement(49, value);
 	}
-    
     /// <summary>
     /// <para> Year.</para>
     /// <para> Represents the following element tag in the schema: b:Year </para>
@@ -4528,7 +4309,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<Year>(50);
         set => SetElement(50, value);
 	}
-    
     /// <summary>
     /// <para> Year Accessed.</para>
     /// <para> Represents the following element tag in the schema: b:YearAccessed </para>
@@ -4542,7 +4322,6 @@ public partial class Source : OpenXmlCompositeElement
         get => GetElement<YearAccessed>(51);
         set => SetElement(51, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -4550,10 +4329,10 @@ public partial class Source : OpenXmlCompositeElement
 
 }
 /// <summary>
-/// Bibliographic Data Source Types 
-/// </summary> 
+/// Bibliographic Data Source Types
+/// </summary>
 public enum DataSourceValues
-{  
+{
 	///<summary>
 ///Article in a Periodical.
 ///<para>When the item is serialized out as xml, its value is "ArticleInAPeriodical".</para>
@@ -4656,8 +4435,6 @@ Case,
 ///</summary>
 [EnumString("Misc")]
 Miscellaneous,
- 
+
 }
 }
- 
- 

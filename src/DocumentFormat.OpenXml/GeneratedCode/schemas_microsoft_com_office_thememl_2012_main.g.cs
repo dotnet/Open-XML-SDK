@@ -33,46 +33,45 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> name.</para>
+    /// <para> name, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
-	
     /// <summary>
-    /// <para> id.</para>
+    /// <para> id, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "id")]
     [Index(1)]
     public StringValue Id { get; set; }
-	
     /// <summary>
-    /// <para> vid.</para>
+    /// <para> vid, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "vid")]
     [Index(2)]
     public StringValue Vid { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ThemeFamily class.
     /// </summary>
     public ThemeFamily():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ThemeFamily class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ThemeFamily(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ThemeFamily class with the specified child elements.
     /// </summary>
@@ -80,7 +79,6 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     public ThemeFamily(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ThemeFamily class from outer XML.
     /// </summary>
@@ -89,13 +87,10 @@ public partial class ThemeFamily : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: thm15:extLst </para>
@@ -109,7 +104,6 @@ public partial class ThemeFamily : OpenXmlCompositeElement
         get => GetElement<OfficeArtExtensionList>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -140,21 +134,18 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class.
     /// </summary>
     public OfficeArtExtensionList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public OfficeArtExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
@@ -162,7 +153,6 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     public OfficeArtExtensionList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class from outer XML.
     /// </summary>
@@ -171,9 +161,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -204,64 +192,64 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> name.</para>
+    /// <para> name, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
-	
     /// <summary>
-    /// <para> vid.</para>
+    /// <para> vid, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "vid")]
     [Index(1)]
     public StringValue Vid { get; set; }
-	
     /// <summary>
-    /// <para> cx.</para>
+    /// <para> cx, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "cx")]
     [Index(2)]
     public Int64Value X { get; set; }
-	
     /// <summary>
-    /// <para> cy.</para>
+    /// <para> cy, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "cy")]
     [Index(3)]
     public Int64Value Y { get; set; }
-	
     /// <summary>
-    /// <para> id.</para>
+    /// <para> id, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(19, "id")]
     [Index(4)]
     public StringValue Id { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ThemeVariant class.
     /// </summary>
     public ThemeVariant():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ThemeVariant class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ThemeVariant(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ThemeVariant class with the specified child elements.
     /// </summary>
@@ -269,7 +257,6 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     public ThemeVariant(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ThemeVariant class from outer XML.
     /// </summary>
@@ -278,13 +265,10 @@ public partial class ThemeVariant : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: thm15:extLst </para>
@@ -298,7 +282,6 @@ public partial class ThemeVariant : OpenXmlCompositeElement
         get => GetElement<OfficeArtExtensionList>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -329,21 +312,18 @@ public partial class ThemeVariantList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ThemeVariantList class.
     /// </summary>
     public ThemeVariantList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ThemeVariantList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ThemeVariantList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ThemeVariantList class with the specified child elements.
     /// </summary>
@@ -351,7 +331,6 @@ public partial class ThemeVariantList : OpenXmlCompositeElement
     public ThemeVariantList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ThemeVariantList class from outer XML.
     /// </summary>
@@ -360,9 +339,7 @@ public partial class ThemeVariantList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -371,5 +348,3 @@ public partial class ThemeVariantList : OpenXmlCompositeElement
 
 }
 }
- 
- 

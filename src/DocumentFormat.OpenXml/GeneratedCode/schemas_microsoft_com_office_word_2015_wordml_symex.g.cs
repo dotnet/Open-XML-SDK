@@ -26,35 +26,33 @@ public partial class SymEx : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> font.</para>
+    /// <para> font, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: w16se:font </para>
     /// </summary>
 ///<remark> xmlns:w16se=http://schemas.microsoft.com/office/word/2015/wordml/symex
 ///</remark>
+[OfficeAvailability(FileFormatVersions.Office2016)]
     [SchemaAttr(86, "font")]
     [Index(0)]
     public StringValue Font { get; set; }
-	
     /// <summary>
-    /// <para> char.</para>
+    /// <para> char, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: w16se:char </para>
     /// </summary>
 ///<remark> xmlns:w16se=http://schemas.microsoft.com/office/word/2015/wordml/symex
 ///</remark>
+[OfficeAvailability(FileFormatVersions.Office2016)]
+[StringValidator(Length = 4)]
     [SchemaAttr(86, "char")]
     [Index(1)]
     public HexBinaryValue Char { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the SymEx class.
     /// </summary>
     public SymEx():base(){}
     
-      
-     
     
     
     
@@ -63,5 +61,3 @@ public partial class SymEx : OpenXmlLeafElement
 
 }
 }
- 
- 

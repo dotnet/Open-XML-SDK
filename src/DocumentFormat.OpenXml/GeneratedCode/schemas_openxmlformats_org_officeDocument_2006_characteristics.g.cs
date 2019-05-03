@@ -33,21 +33,18 @@ public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the AdditionalCharacteristicsInfo class.
     /// </summary>
     public AdditionalCharacteristicsInfo():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the AdditionalCharacteristicsInfo class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public AdditionalCharacteristicsInfo(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AdditionalCharacteristicsInfo class with the specified child elements.
     /// </summary>
@@ -55,7 +52,6 @@ public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
     public AdditionalCharacteristicsInfo(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AdditionalCharacteristicsInfo class from outer XML.
     /// </summary>
@@ -64,9 +60,7 @@ public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -90,47 +84,44 @@ public partial class Characteristic : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Name of Characteristic.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
-	
     /// <summary>
     /// <para> Relationship of Value to Name.</para>
     /// <para>Represents the following attribute in the schema: relation </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "relation")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation { get; set; }
-	
     /// <summary>
     /// <para> Characteristic Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "val")]
     [Index(2)]
     public StringValue Val { get; set; }
-	
     /// <summary>
     /// <para> Characteristic Grammar.</para>
     /// <para>Represents the following attribute in the schema: vocabulary </para>
     /// </summary>
+[StringValidator(IsUri = true)]
     [SchemaAttr(0, "vocabulary")]
     [Index(3)]
     public StringValue Vocabulary { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Characteristic class.
     /// </summary>
     public Characteristic():base(){}
     
-      
-     
     
     
     
@@ -139,10 +130,10 @@ public partial class Characteristic : OpenXmlLeafElement
 
 }
 /// <summary>
-/// Characteristic Relationship Types 
-/// </summary> 
+/// Characteristic Relationship Types
+/// </summary>
 public enum RelationValues
-{  
+{
 	///<summary>
 ///Greater Than or Equal to.
 ///<para>When the item is serialized out as xml, its value is "ge".</para>
@@ -173,8 +164,6 @@ LessThan,
 ///</summary>
 [EnumString("eq")]
 EqualTo,
- 
+
 }
 }
- 
- 

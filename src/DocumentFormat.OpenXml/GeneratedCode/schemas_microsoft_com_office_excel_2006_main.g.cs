@@ -85,10 +85,7 @@ public partial class Macrosheet : OpenXmlPartRootElement
 
     
     
-    
-    
 	internal Macrosheet(MacroSheetPart ownerPart) : base (ownerPart){}
-    
     /// <summary>
     /// Loads the DOM from the MacroSheetPart.
     /// </summary>
@@ -105,16 +102,14 @@ public partial class Macrosheet : OpenXmlPartRootElement
 		get => OpenXmlPart as MacroSheetPart;
 		internal set => OpenXmlPart = value;
     }
-    
         /// <summary>
     ///Initializes a new instance of the Macrosheet class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Macrosheet(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Macrosheet class with the specified child elements.
     /// </summary>
@@ -122,7 +117,6 @@ public partial class Macrosheet : OpenXmlPartRootElement
     public Macrosheet(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Macrosheet class from outer XML.
     /// </summary>
@@ -131,15 +125,12 @@ public partial class Macrosheet : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-    
 
-    
     
     /// <summary>
     /// Initializes a new instance of the Macrosheet class.
     /// </summary>
     public Macrosheet():base(){}
-    
     /// <summary>
     /// Saves the DOM into the MacroSheetPart.
     /// </summary>
@@ -149,9 +140,7 @@ public partial class Macrosheet : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Sheet Properties.</para>
     /// <para> Represents the following element tag in the schema: x:sheetPr </para>
@@ -165,7 +154,6 @@ public partial class Macrosheet : OpenXmlPartRootElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Macro Sheet Dimensions.</para>
     /// <para> Represents the following element tag in the schema: x:dimension </para>
@@ -179,7 +167,6 @@ public partial class Macrosheet : OpenXmlPartRootElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Macro Sheet Views.</para>
     /// <para> Represents the following element tag in the schema: x:sheetViews </para>
@@ -193,7 +180,6 @@ public partial class Macrosheet : OpenXmlPartRootElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Sheet Format Properties.</para>
     /// <para> Represents the following element tag in the schema: x:sheetFormatPr </para>
@@ -207,7 +193,6 @@ public partial class Macrosheet : OpenXmlPartRootElement
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -239,10 +224,7 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
 
     
     
-    
-    
 	internal WorksheetSortMap(WorksheetSortMapPart ownerPart) : base (ownerPart){}
-    
     /// <summary>
     /// Loads the DOM from the WorksheetSortMapPart.
     /// </summary>
@@ -259,16 +241,14 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
 		get => OpenXmlPart as WorksheetSortMapPart;
 		internal set => OpenXmlPart = value;
     }
-    
         /// <summary>
     ///Initializes a new instance of the WorksheetSortMap class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WorksheetSortMap(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WorksheetSortMap class with the specified child elements.
     /// </summary>
@@ -276,7 +256,6 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     public WorksheetSortMap(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WorksheetSortMap class from outer XML.
     /// </summary>
@@ -285,15 +264,12 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-    
 
-    
     
     /// <summary>
     /// Initializes a new instance of the WorksheetSortMap class.
     /// </summary>
     public WorksheetSortMap():base(){}
-    
     /// <summary>
     /// Saves the DOM into the WorksheetSortMapPart.
     /// </summary>
@@ -303,9 +279,7 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Row Sort Map.</para>
     /// <para> Represents the following element tag in the schema: xne:rowSortMap </para>
@@ -319,7 +293,6 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
         get => GetElement<RowSortMap>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Column Sort Map.</para>
     /// <para> Represents the following element tag in the schema: xne:colSortMap </para>
@@ -333,7 +306,6 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
         get => GetElement<ColumnSortMap>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -346,6 +318,7 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
 /// <para> When the object is serialized out as xml, its qualified name is xne:sqref.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(ListValue<StringValue>))]
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(32, "sqref")]
@@ -357,13 +330,11 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ReferenceSequence class.
     /// </summary>
     public ReferenceSequence():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the ReferenceSequence class with the specified text content.
     /// </summary>
@@ -371,14 +342,11 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
     public ReferenceSequence(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new ListValue<StringValue>(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -402,13 +370,11 @@ public partial class Formula : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Formula class.
     /// </summary>
     public Formula():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the Formula class with the specified text content.
     /// </summary>
@@ -416,14 +382,11 @@ public partial class Formula : OpenXmlLeafTextElement
     public Formula(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -453,38 +416,35 @@ public partial class RowSortMap : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "ref")]
     [Index(0)]
     public StringValue Ref { get; set; }
-	
     /// <summary>
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
+[NumberValidator(MaxInclusive = 536870910)]
     [SchemaAttr(0, "count")]
     [Index(1)]
     public UInt32Value Count { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RowSortMap class.
     /// </summary>
     public RowSortMap():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RowSortMap class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RowSortMap(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RowSortMap class with the specified child elements.
     /// </summary>
@@ -492,7 +452,6 @@ public partial class RowSortMap : OpenXmlCompositeElement
     public RowSortMap(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RowSortMap class from outer XML.
     /// </summary>
@@ -501,9 +460,7 @@ public partial class RowSortMap : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -534,38 +491,35 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "ref")]
     [Index(0)]
     public StringValue Ref { get; set; }
-	
     /// <summary>
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
+[NumberValidator(MaxInclusive = 536870910)]
     [SchemaAttr(0, "count")]
     [Index(1)]
     public UInt32Value Count { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ColumnSortMap class.
     /// </summary>
     public ColumnSortMap():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ColumnSortMap class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ColumnSortMap(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColumnSortMap class with the specified child elements.
     /// </summary>
@@ -573,7 +527,6 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     public ColumnSortMap(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ColumnSortMap class from outer XML.
     /// </summary>
@@ -582,9 +535,7 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -647,25 +598,24 @@ public partial class ColumnSortMapItem : SortMapItemType
 
 public abstract partial class SortMapItemType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
     /// <para> New Value.</para>
     /// <para>Represents the following attribute in the schema: newVal </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "newVal")]
     [Index(0)]
     public UInt32Value NewVal { get; set; }
-	
     /// <summary>
     /// <para> Old Value.</para>
     /// <para>Represents the following attribute in the schema: oldVal </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "oldVal")]
     [Index(1)]
     public UInt32Value OldVal { get; set; }
-	
 
-    
     
     
     /// <summary>
@@ -674,8 +624,5 @@ public abstract partial class SortMapItemType : OpenXmlLeafElement
     protected SortMapItemType(){}
     
     
-    
 }
 }
- 
- 

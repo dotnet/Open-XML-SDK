@@ -26,31 +26,26 @@ public partial class CameraTool : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> cellRange.</para>
+    /// <para> cellRange, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: cellRange </para>
     /// </summary>
     [SchemaAttr(0, "cellRange")]
     [Index(0)]
     public StringValue CellRange { get; set; }
-	
     /// <summary>
-    /// <para> spid.</para>
+    /// <para> spid, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: spid </para>
     /// </summary>
     [SchemaAttr(0, "spid")]
     [Index(1)]
     public StringValue ShapeId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the CameraTool class.
     /// </summary>
     public CameraTool():base(){}
     
-      
-     
     
     
     
@@ -74,23 +69,19 @@ public partial class CompatExtension : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> spid.</para>
+    /// <para> spid, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: spid </para>
     /// </summary>
     [SchemaAttr(0, "spid")]
     [Index(0)]
     public StringValue ShapeId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the CompatExtension class.
     /// </summary>
     public CompatExtension():base(){}
     
-      
-     
     
     
     
@@ -114,23 +105,20 @@ public partial class IsCanvas : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> val.</para>
+    /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the IsCanvas class.
     /// </summary>
     public IsCanvas():base(){}
     
-      
-     
     
     
     
@@ -165,40 +153,37 @@ public partial class GvmlContentPart : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> bwMode.</para>
+    /// <para> bwMode, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "bwMode")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
-	
     /// <summary>
-    /// <para> id.</para>
+    /// <para> id, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(19, "id")]
     [Index(1)]
     public StringValue RelationshipId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the GvmlContentPart class.
     /// </summary>
     public GvmlContentPart():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the GvmlContentPart class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public GvmlContentPart(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GvmlContentPart class with the specified child elements.
     /// </summary>
@@ -206,7 +191,6 @@ public partial class GvmlContentPart : OpenXmlCompositeElement
     public GvmlContentPart(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GvmlContentPart class from outer XML.
     /// </summary>
@@ -215,13 +199,10 @@ public partial class GvmlContentPart : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> NonVisualContentPartProperties.</para>
     /// <para> Represents the following element tag in the schema: a14:nvContentPartPr </para>
@@ -235,7 +216,6 @@ public partial class GvmlContentPart : OpenXmlCompositeElement
         get => GetElement<NonVisualContentPartProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Transform2D.</para>
     /// <para> Represents the following element tag in the schema: a14:xfrm </para>
@@ -249,7 +229,6 @@ public partial class GvmlContentPart : OpenXmlCompositeElement
         get => GetElement<Transform2D>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a14:extLst </para>
@@ -263,7 +242,6 @@ public partial class GvmlContentPart : OpenXmlCompositeElement
         get => GetElement<OfficeArtExtensionList>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -286,23 +264,19 @@ public partial class ShadowObscured : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> val.</para>
+    /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ShadowObscured class.
     /// </summary>
     public ShadowObscured():base(){}
     
-      
-     
     
     
     
@@ -344,21 +318,18 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the HiddenFillProperties class.
     /// </summary>
     public HiddenFillProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the HiddenFillProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public HiddenFillProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the HiddenFillProperties class with the specified child elements.
     /// </summary>
@@ -366,7 +337,6 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
     public HiddenFillProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the HiddenFillProperties class from outer XML.
     /// </summary>
@@ -375,13 +345,10 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-    
         /// <summary>
     /// <para> NoFill.</para>
     /// <para> Represents the following element tag in the schema: a:noFill </para>
@@ -395,7 +362,6 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> SolidFill.</para>
     /// <para> Represents the following element tag in the schema: a:solidFill </para>
@@ -409,7 +375,6 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> GradientFill.</para>
     /// <para> Represents the following element tag in the schema: a:gradFill </para>
@@ -423,7 +388,6 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> BlipFill.</para>
     /// <para> Represents the following element tag in the schema: a:blipFill </para>
@@ -437,7 +401,6 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Pattern Fill.</para>
     /// <para> Represents the following element tag in the schema: a:pattFill </para>
@@ -451,7 +414,6 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> Group Fill.</para>
     /// <para> Represents the following element tag in the schema: a:grpFill </para>
@@ -465,7 +427,6 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.GroupFill>(5);
         set => SetElement(5, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -517,54 +478,51 @@ public partial class HiddenLineProperties : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Line Width.</para>
     /// <para>Represents the following attribute in the schema: w </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 20116800)]
     [SchemaAttr(0, "w")]
     [Index(0)]
     public Int32Value Width { get; set; }
-	
     /// <summary>
     /// <para> Line Ending Cap Type.</para>
     /// <para>Represents the following attribute in the schema: cap </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "cap")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues> CapType { get; set; }
-	
     /// <summary>
     /// <para> Compound Line Type.</para>
     /// <para>Represents the following attribute in the schema: cmpd </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "cmpd")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues> CompoundLineType { get; set; }
-	
     /// <summary>
     /// <para> Stroke Alignment.</para>
     /// <para>Represents the following attribute in the schema: algn </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "algn")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues> Alignment { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the HiddenLineProperties class.
     /// </summary>
     public HiddenLineProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the HiddenLineProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public HiddenLineProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the HiddenLineProperties class with the specified child elements.
     /// </summary>
@@ -572,7 +530,6 @@ public partial class HiddenLineProperties : OpenXmlCompositeElement
     public HiddenLineProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the HiddenLineProperties class from outer XML.
     /// </summary>
@@ -581,9 +538,7 @@ public partial class HiddenLineProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -617,21 +572,18 @@ public partial class HiddenEffectsProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the HiddenEffectsProperties class.
     /// </summary>
     public HiddenEffectsProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the HiddenEffectsProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public HiddenEffectsProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the HiddenEffectsProperties class with the specified child elements.
     /// </summary>
@@ -639,7 +591,6 @@ public partial class HiddenEffectsProperties : OpenXmlCompositeElement
     public HiddenEffectsProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the HiddenEffectsProperties class from outer XML.
     /// </summary>
@@ -648,13 +599,10 @@ public partial class HiddenEffectsProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-    
         /// <summary>
     /// <para> Effect Container.</para>
     /// <para> Represents the following element tag in the schema: a:effectLst </para>
@@ -668,7 +616,6 @@ public partial class HiddenEffectsProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.EffectList>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Effect Container.</para>
     /// <para> Represents the following element tag in the schema: a:effectDag </para>
@@ -682,7 +629,6 @@ public partial class HiddenEffectsProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.EffectDag>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -719,21 +665,18 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the HiddenScene3D class.
     /// </summary>
     public HiddenScene3D():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the HiddenScene3D class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public HiddenScene3D(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the HiddenScene3D class with the specified child elements.
     /// </summary>
@@ -741,7 +684,6 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
     public HiddenScene3D(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the HiddenScene3D class from outer XML.
     /// </summary>
@@ -750,13 +692,10 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Camera.</para>
     /// <para> Represents the following element tag in the schema: a:camera </para>
@@ -770,7 +709,6 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Camera>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Light Rig.</para>
     /// <para> Represents the following element tag in the schema: a:lightRig </para>
@@ -784,7 +722,6 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.LightRig>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Backdrop Plane.</para>
     /// <para> Represents the following element tag in the schema: a:backdrop </para>
@@ -798,7 +735,6 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Backdrop>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -812,7 +748,6 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -850,54 +785,51 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Shape Depth.</para>
     /// <para>Represents the following attribute in the schema: z </para>
     /// </summary>
+[NumberValidator(MinInclusive = -27273042329600, MaxInclusive = 27273042316900)]
     [SchemaAttr(0, "z")]
     [Index(0)]
     public Int64Value Z { get; set; }
-	
     /// <summary>
     /// <para> Extrusion Height.</para>
     /// <para>Represents the following attribute in the schema: extrusionH </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 2147483647)]
     [SchemaAttr(0, "extrusionH")]
     [Index(1)]
     public Int64Value ExtrusionHeight { get; set; }
-	
     /// <summary>
     /// <para> Contour Width.</para>
     /// <para>Represents the following attribute in the schema: contourW </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 2147483647)]
     [SchemaAttr(0, "contourW")]
     [Index(2)]
     public Int64Value ContourWidth { get; set; }
-	
     /// <summary>
     /// <para> Preset Material Type.</para>
     /// <para>Represents the following attribute in the schema: prstMaterial </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "prstMaterial")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the HiddenShape3D class.
     /// </summary>
     public HiddenShape3D():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the HiddenShape3D class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public HiddenShape3D(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the HiddenShape3D class with the specified child elements.
     /// </summary>
@@ -905,7 +837,6 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
     public HiddenShape3D(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the HiddenShape3D class from outer XML.
     /// </summary>
@@ -914,13 +845,10 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Top Bevel.</para>
     /// <para> Represents the following element tag in the schema: a:bevelT </para>
@@ -934,7 +862,6 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.BevelTop>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Bottom Bevel.</para>
     /// <para> Represents the following element tag in the schema: a:bevelB </para>
@@ -948,7 +875,6 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.BevelBottom>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Extrusion Color.</para>
     /// <para> Represents the following element tag in the schema: a:extrusionClr </para>
@@ -962,7 +888,6 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtrusionColor>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Contour Color.</para>
     /// <para> Represents the following element tag in the schema: a:contourClr </para>
@@ -976,7 +901,6 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.ContourColor>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -990,7 +914,6 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(4);
         set => SetElement(4, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1021,21 +944,18 @@ public partial class ImageProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ImageProperties class.
     /// </summary>
     public ImageProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ImageProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ImageProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ImageProperties class with the specified child elements.
     /// </summary>
@@ -1043,7 +963,6 @@ public partial class ImageProperties : OpenXmlCompositeElement
     public ImageProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ImageProperties class from outer XML.
     /// </summary>
@@ -1052,13 +971,10 @@ public partial class ImageProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ImageLayer.</para>
     /// <para> Represents the following element tag in the schema: a14:imgLayer </para>
@@ -1072,7 +988,6 @@ public partial class ImageProperties : OpenXmlCompositeElement
         get => GetElement<ImageLayer>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1095,23 +1010,19 @@ public partial class UseLocalDpi : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> val.</para>
+    /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the UseLocalDpi class.
     /// </summary>
     public UseLocalDpi():base(){}
     
-      
-     
     
     
     
@@ -1136,14 +1047,11 @@ public partial class TextMath : OpenXmlLeafElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the TextMath class.
     /// </summary>
     public TextMath():base(){}
     
-      
-     
     
     
     
@@ -1175,21 +1083,18 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class.
     /// </summary>
     public OfficeArtExtensionList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public OfficeArtExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
@@ -1197,7 +1102,6 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     public OfficeArtExtensionList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class from outer XML.
     /// </summary>
@@ -1206,9 +1110,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -1239,7 +1141,6 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Disallow Shape Grouping.</para>
     /// <para>Represents the following attribute in the schema: noGrp </para>
@@ -1247,7 +1148,6 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     [SchemaAttr(0, "noGrp")]
     [Index(0)]
     public BooleanValue NoGrouping { get; set; }
-	
     /// <summary>
     /// <para> Disallow Shape Selection.</para>
     /// <para>Represents the following attribute in the schema: noSelect </para>
@@ -1255,7 +1155,6 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     [SchemaAttr(0, "noSelect")]
     [Index(1)]
     public BooleanValue NoSelection { get; set; }
-	
     /// <summary>
     /// <para> Disallow Shape Rotation.</para>
     /// <para>Represents the following attribute in the schema: noRot </para>
@@ -1263,7 +1162,6 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     [SchemaAttr(0, "noRot")]
     [Index(2)]
     public BooleanValue NoRotation { get; set; }
-	
     /// <summary>
     /// <para> Disallow Aspect Ratio Change.</para>
     /// <para>Represents the following attribute in the schema: noChangeAspect </para>
@@ -1271,7 +1169,6 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     [SchemaAttr(0, "noChangeAspect")]
     [Index(3)]
     public BooleanValue NoChangeAspect { get; set; }
-	
     /// <summary>
     /// <para> Disallow Shape Movement.</para>
     /// <para>Represents the following attribute in the schema: noMove </para>
@@ -1279,7 +1176,6 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     [SchemaAttr(0, "noMove")]
     [Index(4)]
     public BooleanValue NoMove { get; set; }
-	
     /// <summary>
     /// <para> Disallow Shape Resize.</para>
     /// <para>Represents the following attribute in the schema: noResize </para>
@@ -1287,7 +1183,6 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     [SchemaAttr(0, "noResize")]
     [Index(5)]
     public BooleanValue NoResize { get; set; }
-	
     /// <summary>
     /// <para> Disallow Shape Point Editing.</para>
     /// <para>Represents the following attribute in the schema: noEditPoints </para>
@@ -1295,7 +1190,6 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     [SchemaAttr(0, "noEditPoints")]
     [Index(6)]
     public BooleanValue NoEditPoints { get; set; }
-	
     /// <summary>
     /// <para> Disallow Showing Adjust Handles.</para>
     /// <para>Represents the following attribute in the schema: noAdjustHandles </para>
@@ -1303,7 +1197,6 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     [SchemaAttr(0, "noAdjustHandles")]
     [Index(7)]
     public BooleanValue NoAdjustHandles { get; set; }
-	
     /// <summary>
     /// <para> Disallow Arrowhead Changes.</para>
     /// <para>Represents the following attribute in the schema: noChangeArrowheads </para>
@@ -1311,7 +1204,6 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     [SchemaAttr(0, "noChangeArrowheads")]
     [Index(8)]
     public BooleanValue NoChangeArrowheads { get; set; }
-	
     /// <summary>
     /// <para> Disallow Shape Type Change.</para>
     /// <para>Represents the following attribute in the schema: noChangeShapeType </para>
@@ -1319,22 +1211,19 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     [SchemaAttr(0, "noChangeShapeType")]
     [Index(9)]
     public BooleanValue NoChangeShapeType { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ContentPartLocks class.
     /// </summary>
     public ContentPartLocks():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ContentPartLocks class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ContentPartLocks(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ContentPartLocks class with the specified child elements.
     /// </summary>
@@ -1342,7 +1231,6 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     public ContentPartLocks(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ContentPartLocks class from outer XML.
     /// </summary>
@@ -1351,13 +1239,10 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a14:extLst </para>
@@ -1371,7 +1256,6 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
         get => GetElement<OfficeArtExtensionList>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1394,47 +1278,48 @@ public partial class ForegroundMark : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> x1.</para>
+    /// <para> x1, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: x1 </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "x1")]
     [Index(0)]
     public Int32Value FirstXCoordinate { get; set; }
-	
     /// <summary>
-    /// <para> y1.</para>
+    /// <para> y1, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: y1 </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "y1")]
     [Index(1)]
     public Int32Value FirstYCoordinate { get; set; }
-	
     /// <summary>
-    /// <para> x2.</para>
+    /// <para> x2, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: x2 </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "x2")]
     [Index(2)]
     public Int32Value SecondXCoordinate { get; set; }
-	
     /// <summary>
-    /// <para> y2.</para>
+    /// <para> y2, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: y2 </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "y2")]
     [Index(3)]
     public Int32Value SecondYCoordinate { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ForegroundMark class.
     /// </summary>
     public ForegroundMark():base(){}
     
-      
-     
     
     
     
@@ -1458,47 +1343,48 @@ public partial class BackgroundMark : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> x1.</para>
+    /// <para> x1, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: x1 </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "x1")]
     [Index(0)]
     public Int32Value FirstXCoordinate { get; set; }
-	
     /// <summary>
-    /// <para> y1.</para>
+    /// <para> y1, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: y1 </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "y1")]
     [Index(1)]
     public Int32Value FirstYCoordinate { get; set; }
-	
     /// <summary>
-    /// <para> x2.</para>
+    /// <para> x2, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: x2 </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "x2")]
     [Index(2)]
     public Int32Value SecondXCoordinate { get; set; }
-	
     /// <summary>
-    /// <para> y2.</para>
+    /// <para> y2, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: y2 </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "y2")]
     [Index(3)]
     public Int32Value SecondYCoordinate { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the BackgroundMark class.
     /// </summary>
     public BackgroundMark():base(){}
     
-      
-     
     
     
     
@@ -1522,23 +1408,20 @@ public partial class ArtisticBlur : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> radius.</para>
+    /// <para> radius, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: radius </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100)]
     [SchemaAttr(0, "radius")]
     [Index(0)]
     public Int32Value Radius { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticBlur class.
     /// </summary>
     public ArtisticBlur():base(){}
     
-      
-     
     
     
     
@@ -1562,31 +1445,28 @@ public partial class ArtisticCement : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> crackSpacing.</para>
+    /// <para> crackSpacing, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: crackSpacing </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100)]
     [SchemaAttr(0, "crackSpacing")]
     [Index(1)]
     public Int32Value CrackSpacing { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticCement class.
     /// </summary>
     public ArtisticCement():base(){}
     
-      
-     
     
     
     
@@ -1610,31 +1490,28 @@ public partial class ArtisticChalkSketch : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> pressure.</para>
+    /// <para> pressure, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: pressure </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 4)]
     [SchemaAttr(0, "pressure")]
     [Index(1)]
     public Int32Value Pressure { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticChalkSketch class.
     /// </summary>
     public ArtisticChalkSketch():base(){}
     
-      
-     
     
     
     
@@ -1658,31 +1535,28 @@ public partial class ArtisticCrisscrossEtching : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> pressure.</para>
+    /// <para> pressure, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: pressure </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100)]
     [SchemaAttr(0, "pressure")]
     [Index(1)]
     public Int32Value Pressure { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticCrisscrossEtching class.
     /// </summary>
     public ArtisticCrisscrossEtching():base(){}
     
-      
-     
     
     
     
@@ -1706,31 +1580,28 @@ public partial class ArtisticCutout : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> numberOfShades.</para>
+    /// <para> numberOfShades, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: numberOfShades </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 6)]
     [SchemaAttr(0, "numberOfShades")]
     [Index(1)]
     public Int32Value NumberOfShades { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticCutout class.
     /// </summary>
     public ArtisticCutout():base(){}
     
-      
-     
     
     
     
@@ -1754,31 +1625,28 @@ public partial class ArtisticFilmGrain : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> grainSize.</para>
+    /// <para> grainSize, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: grainSize </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100)]
     [SchemaAttr(0, "grainSize")]
     [Index(1)]
     public Int32Value GrainSize { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticFilmGrain class.
     /// </summary>
     public ArtisticFilmGrain():base(){}
     
-      
-     
     
     
     
@@ -1802,31 +1670,28 @@ public partial class ArtisticGlass : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> scaling.</para>
+    /// <para> scaling, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: scaling </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100)]
     [SchemaAttr(0, "scaling")]
     [Index(1)]
     public Int32Value Scaling { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticGlass class.
     /// </summary>
     public ArtisticGlass():base(){}
     
-      
-     
     
     
     
@@ -1850,31 +1715,28 @@ public partial class ArtisticGlowDiffused : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> intensity.</para>
+    /// <para> intensity, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: intensity </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 10)]
     [SchemaAttr(0, "intensity")]
     [Index(1)]
     public Int32Value Intensity { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticGlowDiffused class.
     /// </summary>
     public ArtisticGlowDiffused():base(){}
     
-      
-     
     
     
     
@@ -1898,31 +1760,28 @@ public partial class ArtisticGlowEdges : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> smoothness.</para>
+    /// <para> smoothness, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: smoothness </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 10)]
     [SchemaAttr(0, "smoothness")]
     [Index(1)]
     public Int32Value Smoothness { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticGlowEdges class.
     /// </summary>
     public ArtisticGlowEdges():base(){}
     
-      
-     
     
     
     
@@ -1946,31 +1805,28 @@ public partial class ArtisticLightScreen : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> gridSize.</para>
+    /// <para> gridSize, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: gridSize </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 10)]
     [SchemaAttr(0, "gridSize")]
     [Index(1)]
     public Int32Value GridSize { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticLightScreen class.
     /// </summary>
     public ArtisticLightScreen():base(){}
     
-      
-     
     
     
     
@@ -1994,31 +1850,28 @@ public partial class ArtisticLineDrawing : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> pencilSize.</para>
+    /// <para> pencilSize, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: pencilSize </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100)]
     [SchemaAttr(0, "pencilSize")]
     [Index(1)]
     public Int32Value PencilSize { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticLineDrawing class.
     /// </summary>
     public ArtisticLineDrawing():base(){}
     
-      
-     
     
     
     
@@ -2042,31 +1895,28 @@ public partial class ArtisticMarker : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> size.</para>
+    /// <para> size, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100)]
     [SchemaAttr(0, "size")]
     [Index(1)]
     public Int32Value Size { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticMarker class.
     /// </summary>
     public ArtisticMarker():base(){}
     
-      
-     
     
     
     
@@ -2090,31 +1940,28 @@ public partial class ArtisticMosaicBubbles : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> pressure.</para>
+    /// <para> pressure, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: pressure </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100)]
     [SchemaAttr(0, "pressure")]
     [Index(1)]
     public Int32Value Pressure { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticMosaicBubbles class.
     /// </summary>
     public ArtisticMosaicBubbles():base(){}
     
-      
-     
     
     
     
@@ -2138,31 +1985,28 @@ public partial class ArtisticPaintStrokes : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> intensity.</para>
+    /// <para> intensity, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: intensity </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 10)]
     [SchemaAttr(0, "intensity")]
     [Index(1)]
     public Int32Value Intensity { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticPaintStrokes class.
     /// </summary>
     public ArtisticPaintStrokes():base(){}
     
-      
-     
     
     
     
@@ -2186,31 +2030,28 @@ public partial class ArtisticPaintBrush : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> brushSize.</para>
+    /// <para> brushSize, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: brushSize </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 10)]
     [SchemaAttr(0, "brushSize")]
     [Index(1)]
     public Int32Value BrushSize { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticPaintBrush class.
     /// </summary>
     public ArtisticPaintBrush():base(){}
     
-      
-     
     
     
     
@@ -2234,31 +2075,28 @@ public partial class ArtisticPastelsSmooth : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> scaling.</para>
+    /// <para> scaling, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: scaling </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100)]
     [SchemaAttr(0, "scaling")]
     [Index(1)]
     public Int32Value BrushSize { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticPastelsSmooth class.
     /// </summary>
     public ArtisticPastelsSmooth():base(){}
     
-      
-     
     
     
     
@@ -2282,31 +2120,28 @@ public partial class ArtisticPencilGrayscale : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> pencilSize.</para>
+    /// <para> pencilSize, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: pencilSize </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100)]
     [SchemaAttr(0, "pencilSize")]
     [Index(1)]
     public Int32Value BrushSize { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticPencilGrayscale class.
     /// </summary>
     public ArtisticPencilGrayscale():base(){}
     
-      
-     
     
     
     
@@ -2330,31 +2165,28 @@ public partial class ArtisticPencilSketch : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> pressure.</para>
+    /// <para> pressure, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: pressure </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100)]
     [SchemaAttr(0, "pressure")]
     [Index(1)]
     public Int32Value Pressure { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticPencilSketch class.
     /// </summary>
     public ArtisticPencilSketch():base(){}
     
-      
-     
     
     
     
@@ -2378,31 +2210,28 @@ public partial class ArtisticPhotocopy : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> detail.</para>
+    /// <para> detail, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: detail </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 10)]
     [SchemaAttr(0, "detail")]
     [Index(1)]
     public Int32Value Detail { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticPhotocopy class.
     /// </summary>
     public ArtisticPhotocopy():base(){}
     
-      
-     
     
     
     
@@ -2426,31 +2255,28 @@ public partial class ArtisticPlasticWrap : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> smoothness.</para>
+    /// <para> smoothness, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: smoothness </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 10)]
     [SchemaAttr(0, "smoothness")]
     [Index(1)]
     public Int32Value Smoothness { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticPlasticWrap class.
     /// </summary>
     public ArtisticPlasticWrap():base(){}
     
-      
-     
     
     
     
@@ -2474,31 +2300,28 @@ public partial class ArtisticTexturizer : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> scaling.</para>
+    /// <para> scaling, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: scaling </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100)]
     [SchemaAttr(0, "scaling")]
     [Index(1)]
     public Int32Value Scaling { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticTexturizer class.
     /// </summary>
     public ArtisticTexturizer():base(){}
     
-      
-     
     
     
     
@@ -2522,31 +2345,28 @@ public partial class ArtisticWatercolorSponge : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> trans.</para>
+    /// <para> trans, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: trans </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "trans")]
     [Index(0)]
     public Int32Value Transparancy { get; set; }
-	
     /// <summary>
-    /// <para> brushSize.</para>
+    /// <para> brushSize, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: brushSize </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 10)]
     [SchemaAttr(0, "brushSize")]
     [Index(1)]
     public Int32Value BrushSize { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArtisticWatercolorSponge class.
     /// </summary>
     public ArtisticWatercolorSponge():base(){}
     
-      
-     
     
     
     
@@ -2579,54 +2399,55 @@ public partial class BackgroundRemoval : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> t.</para>
+    /// <para> t, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: t </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "t")]
     [Index(0)]
     public Int32Value MarqueeTop { get; set; }
-	
     /// <summary>
-    /// <para> b.</para>
+    /// <para> b, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: b </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "b")]
     [Index(1)]
     public Int32Value MarqueeBottom { get; set; }
-	
     /// <summary>
-    /// <para> l.</para>
+    /// <para> l, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: l </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "l")]
     [Index(2)]
     public Int32Value MarqueeLeft { get; set; }
-	
     /// <summary>
-    /// <para> r.</para>
+    /// <para> r, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: r </para>
     /// </summary>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 100000)]
     [SchemaAttr(0, "r")]
     [Index(3)]
     public Int32Value MarqueeRight { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the BackgroundRemoval class.
     /// </summary>
     public BackgroundRemoval():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the BackgroundRemoval class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public BackgroundRemoval(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BackgroundRemoval class with the specified child elements.
     /// </summary>
@@ -2634,7 +2455,6 @@ public partial class BackgroundRemoval : OpenXmlCompositeElement
     public BackgroundRemoval(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BackgroundRemoval class from outer XML.
     /// </summary>
@@ -2643,9 +2463,7 @@ public partial class BackgroundRemoval : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -2669,31 +2487,28 @@ public partial class BrightnessContrast : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> bright.</para>
+    /// <para> bright, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: bright </para>
     /// </summary>
+[NumberValidator(MinInclusive = -100000, MaxInclusive = 100000)]
     [SchemaAttr(0, "bright")]
     [Index(0)]
     public Int32Value Bright { get; set; }
-	
     /// <summary>
-    /// <para> contrast.</para>
+    /// <para> contrast, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: contrast </para>
     /// </summary>
+[NumberValidator(MinInclusive = -100000, MaxInclusive = 100000)]
     [SchemaAttr(0, "contrast")]
     [Index(1)]
     public Int32Value Contrast { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the BrightnessContrast class.
     /// </summary>
     public BrightnessContrast():base(){}
     
-      
-     
     
     
     
@@ -2717,23 +2532,20 @@ public partial class ColorTemperature : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> colorTemp.</para>
+    /// <para> colorTemp, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: colorTemp </para>
     /// </summary>
+[NumberValidator(MinInclusive = 1500, MaxInclusive = 11500)]
     [SchemaAttr(0, "colorTemp")]
     [Index(0)]
     public Int32Value ColorTemperatureValue { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ColorTemperature class.
     /// </summary>
     public ColorTemperature():base(){}
     
-      
-     
     
     
     
@@ -2757,23 +2569,20 @@ public partial class Saturation : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> sat.</para>
+    /// <para> sat, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: sat </para>
     /// </summary>
+[NumberValidator(MinInclusive = 0, MaxInclusive = 400000)]
     [SchemaAttr(0, "sat")]
     [Index(0)]
     public Int32Value SaturationAmount { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Saturation class.
     /// </summary>
     public Saturation():base(){}
     
-      
-     
     
     
     
@@ -2797,23 +2606,20 @@ public partial class SharpenSoften : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> amount.</para>
+    /// <para> amount, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: amount </para>
     /// </summary>
+[NumberValidator(MinInclusive = -100000, MaxInclusive = 100000)]
     [SchemaAttr(0, "amount")]
     [Index(0)]
     public Int32Value Amount { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the SharpenSoften class.
     /// </summary>
     public SharpenSoften():base(){}
     
-      
-     
     
     
     
@@ -2896,30 +2702,26 @@ public partial class ImageEffect : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> visible.</para>
+    /// <para> visible, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
     [Index(0)]
     public BooleanValue Visible { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ImageEffect class.
     /// </summary>
     public ImageEffect():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ImageEffect class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ImageEffect(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ImageEffect class with the specified child elements.
     /// </summary>
@@ -2927,7 +2729,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
     public ImageEffect(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ImageEffect class from outer XML.
     /// </summary>
@@ -2936,13 +2737,10 @@ public partial class ImageEffect : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-    
         /// <summary>
     /// <para> ArtisticBlur.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticBlur </para>
@@ -2956,7 +2754,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticBlur>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticCement.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticCement </para>
@@ -2970,7 +2767,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticCement>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticChalkSketch.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticChalkSketch </para>
@@ -2984,7 +2780,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticChalkSketch>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticCrisscrossEtching.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticCrisscrossEtching </para>
@@ -2998,7 +2793,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticCrisscrossEtching>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticCutout.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticCutout </para>
@@ -3012,7 +2806,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticCutout>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticFilmGrain.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticFilmGrain </para>
@@ -3026,7 +2819,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticFilmGrain>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticGlass.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticGlass </para>
@@ -3040,7 +2832,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticGlass>(6);
         set => SetElement(6, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticGlowDiffused.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticGlowDiffused </para>
@@ -3054,7 +2845,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticGlowDiffused>(7);
         set => SetElement(7, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticGlowEdges.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticGlowEdges </para>
@@ -3068,7 +2858,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticGlowEdges>(8);
         set => SetElement(8, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticLightScreen.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticLightScreen </para>
@@ -3082,7 +2871,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticLightScreen>(9);
         set => SetElement(9, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticLineDrawing.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticLineDrawing </para>
@@ -3096,7 +2884,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticLineDrawing>(10);
         set => SetElement(10, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticMarker.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticMarker </para>
@@ -3110,7 +2897,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticMarker>(11);
         set => SetElement(11, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticMosaicBubbles.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticMosiaicBubbles </para>
@@ -3124,7 +2910,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticMosaicBubbles>(12);
         set => SetElement(12, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticPaintStrokes.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticPaintStrokes </para>
@@ -3138,7 +2923,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticPaintStrokes>(13);
         set => SetElement(13, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticPaintBrush.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticPaintBrush </para>
@@ -3152,7 +2936,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticPaintBrush>(14);
         set => SetElement(14, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticPastelsSmooth.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticPastelsSmooth </para>
@@ -3166,7 +2949,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticPastelsSmooth>(15);
         set => SetElement(15, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticPencilGrayscale.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticPencilGrayscale </para>
@@ -3180,7 +2962,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticPencilGrayscale>(16);
         set => SetElement(16, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticPencilSketch.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticPencilSketch </para>
@@ -3194,7 +2975,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticPencilSketch>(17);
         set => SetElement(17, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticPhotocopy.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticPhotocopy </para>
@@ -3208,7 +2988,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticPhotocopy>(18);
         set => SetElement(18, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticPlasticWrap.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticPlasticWrap </para>
@@ -3222,7 +3001,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticPlasticWrap>(19);
         set => SetElement(19, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticTexturizer.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticTexturizer </para>
@@ -3236,7 +3014,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticTexturizer>(20);
         set => SetElement(20, value);
 	}
-    
     /// <summary>
     /// <para> ArtisticWatercolorSponge.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticWatercolorSponge </para>
@@ -3250,7 +3027,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ArtisticWatercolorSponge>(21);
         set => SetElement(21, value);
 	}
-    
     /// <summary>
     /// <para> BackgroundRemoval.</para>
     /// <para> Represents the following element tag in the schema: a14:backgroundRemoval </para>
@@ -3264,7 +3040,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<BackgroundRemoval>(22);
         set => SetElement(22, value);
 	}
-    
     /// <summary>
     /// <para> BrightnessContrast.</para>
     /// <para> Represents the following element tag in the schema: a14:brightnessContrast </para>
@@ -3278,7 +3053,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<BrightnessContrast>(23);
         set => SetElement(23, value);
 	}
-    
     /// <summary>
     /// <para> ColorTemperature.</para>
     /// <para> Represents the following element tag in the schema: a14:colorTemperature </para>
@@ -3292,7 +3066,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<ColorTemperature>(24);
         set => SetElement(24, value);
 	}
-    
     /// <summary>
     /// <para> Saturation.</para>
     /// <para> Represents the following element tag in the schema: a14:saturation </para>
@@ -3306,7 +3079,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<Saturation>(25);
         set => SetElement(25, value);
 	}
-    
     /// <summary>
     /// <para> SharpenSoften.</para>
     /// <para> Represents the following element tag in the schema: a14:sharpenSoften </para>
@@ -3320,7 +3092,6 @@ public partial class ImageEffect : OpenXmlCompositeElement
         get => GetElement<SharpenSoften>(26);
         set => SetElement(26, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -3350,9 +3121,8 @@ public partial class ImageLayer : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> embed.</para>
+    /// <para> embed, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: r:embed </para>
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
@@ -3360,22 +3130,19 @@ public partial class ImageLayer : OpenXmlCompositeElement
     [SchemaAttr(19, "embed")]
     [Index(0)]
     public StringValue Embed { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ImageLayer class.
     /// </summary>
     public ImageLayer():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ImageLayer class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ImageLayer(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ImageLayer class with the specified child elements.
     /// </summary>
@@ -3383,7 +3150,6 @@ public partial class ImageLayer : OpenXmlCompositeElement
     public ImageLayer(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ImageLayer class from outer XML.
     /// </summary>
@@ -3392,9 +3158,7 @@ public partial class ImageLayer : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -3429,23 +3193,22 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public UInt32Value Id { get; set; }
-	
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "name")]
     [Index(1)]
     public StringValue Name { get; set; }
-	
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
@@ -3453,7 +3216,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "descr")]
     [Index(2)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
@@ -3461,7 +3223,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "hidden")]
     [Index(3)]
     public BooleanValue Hidden { get; set; }
-	
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
@@ -3469,22 +3230,19 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     [Index(4)]
     public StringValue Title { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class.
     /// </summary>
     public NonVisualDrawingProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualDrawingProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class with the specified child elements.
     /// </summary>
@@ -3492,7 +3250,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     public NonVisualDrawingProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class from outer XML.
     /// </summary>
@@ -3501,13 +3258,10 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
     /// <para> Represents the following element tag in the schema: a:hlinkClick </para>
@@ -3521,7 +3275,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
     /// <para> Represents the following element tag in the schema: a:hlinkHover </para>
@@ -3535,7 +3288,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -3549,7 +3301,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -3581,30 +3332,26 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> isComment.</para>
+    /// <para> isComment, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: isComment </para>
     /// </summary>
     [SchemaAttr(0, "isComment")]
     [Index(0)]
     public BooleanValue IsComment { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the NonVisualInkContentPartProperties class.
     /// </summary>
     public NonVisualInkContentPartProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualInkContentPartProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualInkContentPartProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualInkContentPartProperties class with the specified child elements.
     /// </summary>
@@ -3612,7 +3359,6 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     public NonVisualInkContentPartProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualInkContentPartProperties class from outer XML.
     /// </summary>
@@ -3621,13 +3367,10 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ContentPartLocks.</para>
     /// <para> Represents the following element tag in the schema: a14:cpLocks </para>
@@ -3641,7 +3384,6 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
         get => GetElement<ContentPartLocks>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a14:extLst </para>
@@ -3655,7 +3397,6 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
         get => GetElement<OfficeArtExtensionList>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -3688,21 +3429,18 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualContentPartProperties class.
     /// </summary>
     public NonVisualContentPartProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NonVisualContentPartProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualContentPartProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualContentPartProperties class with the specified child elements.
     /// </summary>
@@ -3710,7 +3448,6 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     public NonVisualContentPartProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NonVisualContentPartProperties class from outer XML.
     /// </summary>
@@ -3719,13 +3456,10 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
     /// <para> Represents the following element tag in the schema: a14:cNvPr </para>
@@ -3739,7 +3473,6 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
         get => GetElement<NonVisualDrawingProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> NonVisualInkContentPartProperties.</para>
     /// <para> Represents the following element tag in the schema: a14:cNvContentPartPr </para>
@@ -3753,7 +3486,6 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
         get => GetElement<NonVisualInkContentPartProperties>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -3785,7 +3517,6 @@ public partial class Transform2D : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
@@ -3793,7 +3524,6 @@ public partial class Transform2D : OpenXmlCompositeElement
     [SchemaAttr(0, "rot")]
     [Index(0)]
     public Int32Value Rotation { get; set; }
-	
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
@@ -3801,7 +3531,6 @@ public partial class Transform2D : OpenXmlCompositeElement
     [SchemaAttr(0, "flipH")]
     [Index(1)]
     public BooleanValue HorizontalFlip { get; set; }
-	
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
@@ -3809,22 +3538,19 @@ public partial class Transform2D : OpenXmlCompositeElement
     [SchemaAttr(0, "flipV")]
     [Index(2)]
     public BooleanValue VerticalFlip { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Transform2D class.
     /// </summary>
     public Transform2D():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Transform2D class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Transform2D(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Transform2D class with the specified child elements.
     /// </summary>
@@ -3832,7 +3558,6 @@ public partial class Transform2D : OpenXmlCompositeElement
     public Transform2D(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Transform2D class from outer XML.
     /// </summary>
@@ -3841,13 +3566,10 @@ public partial class Transform2D : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Offset.</para>
     /// <para> Represents the following element tag in the schema: a:off </para>
@@ -3861,7 +3583,6 @@ public partial class Transform2D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Extents.</para>
     /// <para> Represents the following element tag in the schema: a:ext </para>
@@ -3875,7 +3596,6 @@ public partial class Transform2D : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -3883,5 +3603,3 @@ public partial class Transform2D : OpenXmlCompositeElement
 
 }
 }
- 
- 

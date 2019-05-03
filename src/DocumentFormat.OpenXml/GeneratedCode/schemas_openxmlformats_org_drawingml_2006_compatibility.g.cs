@@ -26,23 +26,21 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Shape ID.</para>
     /// <para>Represents the following attribute in the schema: spid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "spid")]
     [Index(0)]
     public StringValue ShapeId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the LegacyDrawing class.
     /// </summary>
     public LegacyDrawing():base(){}
     
-      
-     
     
     
     
@@ -51,5 +49,3 @@ public partial class LegacyDrawing : OpenXmlLeafElement
 
 }
 }
- 
- 
