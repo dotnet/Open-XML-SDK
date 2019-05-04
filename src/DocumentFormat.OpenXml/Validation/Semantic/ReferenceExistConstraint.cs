@@ -1,8 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
@@ -13,13 +12,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class ReferenceExistConstraint : SemanticConstraint
     {
-        private byte _refAttribute;
-        private string _partPath;
-        private int _element;
-        private string _elementName;
-        private byte _attribute;
-        private List<string> _referencedAttributes;
-        private OpenXmlPart _relatedPart;
+        private readonly byte _refAttribute;
+        private readonly string _partPath;
+        private readonly int _element;
+        private readonly string _elementName;
+        private readonly byte _attribute;
 
         public ReferenceExistConstraint(byte refAttribute, string part, int element, string elementName, byte attribute)
             : base(SemanticValidationLevel.Package)
@@ -34,13 +31,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _attribute = attribute;
         }
 
-        public override SemanticValidationLevel StateScope
-        {
-            get
-            {
-                return SemanticValidationLevel.Part;
-            }
-        }
+        public override SemanticValidationLevel StateScope => SemanticValidationLevel.Part;
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
@@ -51,7 +42,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            if (GetReferencedAttributes(context).Contains(attribute.Value.InnerText))
+            var result = GetReferencedAttributes(context);
+
+            if (result.Item.Contains(attribute.Value.InnerText))
             {
                 return null;
             }
@@ -61,67 +54,53 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_MissingReferenceElement",
                 ErrorType = ValidationErrorType.Semantic,
                 Node = context.Element,
-                RelatedPart = _relatedPart,
+                RelatedPart = result.Part,
                 RelatedNode = null,
                 Description = SR.Format(
                     ValidationResources.Sem_MissingReferenceElement,
                     _elementName,
                     context.Element.LocalName,
                     GetAttributeQualifiedName(context.Element, _refAttribute),
-                    _relatedPart == null ? _partPath : _relatedPart.PackagePart.Uri.ToString(),
+                    result.Part == null ? _partPath : result.Part.PackagePart.Uri.ToString(),
                     attribute.Value.InnerText),
             };
         }
 
-        public override void ClearState(ValidationContext context)
+        private PartHolder<HashSet<string>> GetReferencedAttributes(ValidationContext context)
         {
-            _referencedAttributes = null;
-        }
+            var referencedAttributes = new HashSet<string>(StringComparer.Ordinal);
+            var part = GetReferencedPart(context, _partPath);
 
-        private List<string> GetReferencedAttributes(ValidationContext context)
-        {
-            if (_referencedAttributes == null)
+            void ElementTraverse(ValidationContext ctx)
             {
-                _referencedAttributes = new List<string>();
+                Debug.Assert(ctx.Element != null);
 
-                OpenXmlPart part = GetReferencedPart(context, _partPath);
-
-                _relatedPart = part;
-
-                if (part != null)
+                if (ctx.Element.ElementTypeId == _element)
                 {
-                    var partContext = new ValidationContext
+                    var attribute = ctx.Element.Attributes[_attribute];
+
+                    //Attributes whose value is empty string or null don't need to be cached.
+                    if (attribute.HasValue && !string.IsNullOrEmpty(attribute.Value.InnerText))
                     {
-                        FileFormat = context.FileFormat,
-                        Package = context.Package,
-                        Part = part,
-                        Element = part.RootElement,
-                    };
-
-                    ValidationTraverser.ValidatingTraverse(partContext, ElementTraverse, null);
+                        referencedAttributes.Add(attribute.Value.InnerText);
+                    }
                 }
             }
 
-            return _referencedAttributes;
-        }
-
-        //This method is for validation traverse.
-        private void ElementTraverse(ValidationContext context)
-        {
-            Debug.Assert(context.Element != null);
-
-            if (context.Element.ElementTypeId == _element)
+            if (part != null)
             {
-                var attribute = context.Element.Attributes[_attribute];
-
-                //Attributes whose value is empty string or null don't need to be cached.
-                if (attribute.HasValue && !string.IsNullOrEmpty(attribute.Value.InnerText))
+                var partContext = new ValidationContext
                 {
-                    Debug.Assert(_referencedAttributes != null);
+                    FileFormat = context.FileFormat,
+                    Package = context.Package,
+                    Part = part,
+                    Element = part.RootElement,
+                };
 
-                    _referencedAttributes.Add(attribute.Value.InnerText);
-                }
+                ValidationTraverser.ValidatingTraverse(partContext, ElementTraverse, null);
             }
+
+            return new PartHolder<HashSet<string>>(referencedAttributes, part);
         }
     }
 }
