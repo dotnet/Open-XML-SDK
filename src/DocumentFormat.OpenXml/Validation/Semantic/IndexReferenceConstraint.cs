@@ -1,9 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation;
-
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
@@ -11,15 +8,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class IndexReferenceConstraint : SemanticConstraint
     {
-        private byte _attribute;
-        private string _refPartType;
-        private int _refElementParent;
-        private int _refElement;
-        private string _refElementName;
-        private int _indexBase;
-        private int _refElementCount = -1;
-        private OpenXmlPart _relatedPart;
-        private bool _startCollect;
+        private readonly byte _attribute;
+        private readonly string _refPartType;
+        private readonly int _refElementParent;
+        private readonly int _refElement;
+        private readonly string _refElementName;
+        private readonly int _indexBase;
 
         public IndexReferenceConstraint(byte attribute, string referencedPart, int referencedElementParent,
                                                     int referencedElement, string referencedElementName, int indexBase)
@@ -33,13 +27,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _indexBase = indexBase;
         }
 
-        public override SemanticValidationLevel StateScope
-        {
-            get
-            {
-                return SemanticValidationLevel.Part;
-            }
-        }
+        public override SemanticValidationLevel StateScope => SemanticValidationLevel.Part;
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
@@ -56,7 +44,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null; //if attribute is not int, schema validation will cover this error.
             }
 
-            if (index < GetRefElementCount(context) + _indexBase)
+            var result = GetRefElementCount(context);
+
+            if (index < result.Item + _indexBase)
             {
                 return null;
             }
@@ -66,83 +56,68 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_MissingIndexedElement",
                 ErrorType = ValidationErrorType.Semantic,
                 Node = context.Element,
-                RelatedPart = _relatedPart,
+                RelatedPart = result.Part,
                 RelatedNode = null,
                 Description = SR.Format(
                     ValidationResources.Sem_MissingIndexedElement,
                     _refElementName, context.Element.LocalName,
                     GetAttributeQualifiedName(context.Element, _attribute),
-                    _relatedPart == null ? _refPartType : _relatedPart.PackagePart.Uri.ToString(),
+                    result.Part == null ? _refPartType : result.Part.PackagePart.Uri.ToString(),
                     index),
             };
         }
 
-        public override void ClearState(ValidationContext context)
+        private PartHolder<int> GetRefElementCount(ValidationContext context)
         {
-            _refElementCount = -1;
-            _startCollect = false;
-        }
+            var count = 0;
+            var startCollect = false;
 
-        private int GetRefElementCount(ValidationContext context)
-        {
-            if (_refElementCount != -1)
+            //On element traverse start.
+            void ElementTraverseStart(ValidationContext ctx)
             {
-                return _refElementCount;
-            }
-
-            _refElementCount = 0;
-
-            OpenXmlPart part = GetReferencedPart(context, _refPartType);
-
-            if (part != null)
-            {
-                _relatedPart = part;
-
-                var validationContext = new ValidationContext
+                if (!startCollect)
                 {
-                    FileFormat = context.FileFormat,
-                    Package = context.Package,
-                    Part = part,
-                    Element = part.RootElement,
-                };
-
-                if (_refElementParent == -1)
-                {
-                    _startCollect = true;
-                    ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, null);
+                    startCollect = ctx.Element.ElementTypeId == _refElementParent;
                 }
                 else
                 {
-                    ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, ElementTraverseEnd);
+                    if (ctx.Element.ElementTypeId == _refElement)
+                    {
+                        ++count;
+                    }
                 }
             }
 
-            return _refElementCount;
-        }
-
-        //On element traverse start.
-        private void ElementTraverseStart(ValidationContext context)
-        {
-            if (!_startCollect)
+            //On element traverse end.
+            void ElementTraverseEnd(ValidationContext ctx)
             {
-                _startCollect = context.Element.ElementTypeId == _refElementParent;
+                if (startCollect && ctx.Element.ElementTypeId == _refElementParent)
+                {
+                    startCollect = false;
+                }
+            }
+
+            var part = GetReferencedPart(context, _refPartType);
+
+            var validationContext = new ValidationContext
+            {
+                FileFormat = context.FileFormat,
+                Package = context.Package,
+                Part = part,
+                Element = part.RootElement,
+            };
+
+            if (_refElementParent == -1)
+            {
+                startCollect = true;
+                ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, null);
             }
             else
             {
-                if (context.Element.ElementTypeId == _refElement)
-                {
-                    ++_refElementCount;
-                }
+                ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, ElementTraverseEnd);
             }
-        }
 
-        //On element traverse end.
-        private void ElementTraverseEnd(ValidationContext context)
-        {
-            if (_startCollect && context.Element.ElementTypeId == _refElementParent)
-            {
-                _startCollect = false;
-            }
+            return new PartHolder<int>(count, part);
         }
     }
 }
