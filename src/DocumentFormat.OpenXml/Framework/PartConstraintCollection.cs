@@ -69,20 +69,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         IEnumerable<PartConstraintRule> IReadOnlyDictionary<string, PartConstraintRule>.Values => _dictionary.Values;
 
-        PartConstraintRule IReadOnlyDictionary<string, PartConstraintRule>.this[string key]
-        {
-            get
-            {
-                try
-                {
-                    return _dictionary[key];
-                }
-                catch (Exception e)
-                {
-                    throw new KeyNotFoundException(key, e);
-                }
-            }
-        }
+        PartConstraintRule IReadOnlyDictionary<string, PartConstraintRule>.this[string key] => _dictionary[key];
 
         IEnumerator<KeyValuePair<string, PartConstraintRule>> IEnumerable<KeyValuePair<string, PartConstraintRule>>.GetEnumerator() => _dictionary.GetEnumerator();
 

@@ -209,7 +209,7 @@ namespace DocumentFormat.OpenXml.Validation
             }
         }
 
-        private IEnumerable<OpenXmlPackageValidationEventArgs> ValidateDataPartReferenceRelationships(OpenXmlPartContainer container, FileFormatVersions version)
+        private static IEnumerable<OpenXmlPackageValidationEventArgs> ValidateDataPartReferenceRelationships(OpenXmlPartContainer container, FileFormatVersions version)
         {
             // At current, only media / audio / video reference. There are all [0, unbounded].
             // So just check whether the reference is allowed.

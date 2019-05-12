@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml.Validation
             }
         }
 
-        private void ValidatePackageStructure(OpenXmlPackage document, ValidationContext context)
+        private static void ValidatePackageStructure(OpenXmlPackage document, ValidationContext context)
         {
             var documentName = document.GetType().Name;
 
