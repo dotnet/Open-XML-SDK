@@ -25,87 +25,86 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(0)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(1)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(2)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(3)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(4)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(5)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(6)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(7)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(8)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(9)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -113,63 +112,62 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(10)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(11)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(12)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(13)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(14)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(15)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(16)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(17)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -177,31 +175,30 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     [Index(18)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(19)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(20)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(21)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -209,15 +206,14 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     [Index(22)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(23)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -225,23 +221,20 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     [Index(24)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(25)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the UnsizedControlClone class.
     /// </summary>
     public UnsizedControlClone():base(){}
     
-      
-     
     
     
     
@@ -265,15 +258,14 @@ public partial class UnsizedButton : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "onAction")]
     [Index(0)]
     public StringValue OnAction { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -281,167 +273,166 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(1)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(2)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(3)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(4)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(5)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(6)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(7)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(8)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(9)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(10)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(11)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(12)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(13)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(14)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(15)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(16)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(17)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(18)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(19)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(20)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(21)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -449,31 +440,30 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     [Index(22)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(23)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(24)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(25)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -481,15 +471,14 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     [Index(26)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(27)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -497,23 +486,20 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     [Index(28)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(29)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the UnsizedButton class.
     /// </summary>
     public UnsizedButton():base(){}
     
-      
-     
     
     
     
@@ -537,23 +523,22 @@ public partial class CheckBox : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getPressed")]
     [Index(0)]
     public StringValue GetPressed { get; set; }
-	
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "onAction")]
     [Index(1)]
     public StringValue OnAction { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -561,143 +546,142 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(2)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(3)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(4)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(5)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(6)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(7)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(8)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(9)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(10)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(11)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(12)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(13)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(14)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(15)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(16)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(17)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(18)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(19)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -705,39 +689,36 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     [Index(20)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(21)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(22)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(23)]
     public StringValue GetKeytip { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the CheckBox class.
     /// </summary>
     public CheckBox():base(){}
     
-      
-     
     
     
     
@@ -770,23 +751,22 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(0)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(1)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
@@ -794,55 +774,54 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "invalidateContentOnDrop")]
     [Index(2)]
     public BooleanValue InvalidateContentOnDrop { get; set; }
-	
     /// <summary>
     /// <para> columns.</para>
     /// <para>Represents the following attribute in the schema: columns </para>
     /// </summary>
+[NumberValidator(MinInclusive = 1, MaxInclusive = 1024, IsPositive = true)]
     [SchemaAttr(0, "columns")]
     [Index(3)]
     public IntegerValue Columns { get; set; }
-	
     /// <summary>
     /// <para> rows.</para>
     /// <para>Represents the following attribute in the schema: rows </para>
     /// </summary>
+[NumberValidator(MinInclusive = 1, MaxInclusive = 1024, IsPositive = true)]
     [SchemaAttr(0, "rows")]
     [Index(4)]
     public IntegerValue Rows { get; set; }
-	
     /// <summary>
     /// <para> itemWidth.</para>
     /// <para>Represents the following attribute in the schema: itemWidth </para>
     /// </summary>
+[NumberValidator(MinInclusive = 1, MaxInclusive = 4096, IsPositive = true)]
     [SchemaAttr(0, "itemWidth")]
     [Index(5)]
     public IntegerValue ItemWidth { get; set; }
-	
     /// <summary>
     /// <para> itemHeight.</para>
     /// <para>Represents the following attribute in the schema: itemHeight </para>
     /// </summary>
+[NumberValidator(MinInclusive = 1, MaxInclusive = 4096, IsPositive = true)]
     [SchemaAttr(0, "itemHeight")]
     [Index(6)]
     public IntegerValue ItemHeight { get; set; }
-	
     /// <summary>
     /// <para> getItemWidth.</para>
     /// <para>Represents the following attribute in the schema: getItemWidth </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemWidth")]
     [Index(7)]
     public StringValue GetItemWidth { get; set; }
-	
     /// <summary>
     /// <para> getItemHeight.</para>
     /// <para>Represents the following attribute in the schema: getItemHeight </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemHeight")]
     [Index(8)]
     public StringValue GetItemHeight { get; set; }
-	
     /// <summary>
     /// <para> showItemLabel.</para>
     /// <para>Represents the following attribute in the schema: showItemLabel </para>
@@ -850,15 +829,14 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showItemLabel")]
     [Index(9)]
     public BooleanValue ShowItemLabel { get; set; }
-	
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "onAction")]
     [Index(10)]
     public StringValue OnAction { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -866,39 +844,38 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     [Index(11)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(12)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(13)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(14)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(15)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> showItemImage.</para>
     /// <para>Represents the following attribute in the schema: showItemImage </para>
@@ -906,191 +883,190 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showItemImage")]
     [Index(16)]
     public BooleanValue ShowItemImage { get; set; }
-	
     /// <summary>
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemCount")]
     [Index(17)]
     public StringValue GetItemCount { get; set; }
-	
     /// <summary>
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemLabel")]
     [Index(18)]
     public StringValue GetItemLabel { get; set; }
-	
     /// <summary>
     /// <para> getItemScreentip.</para>
     /// <para>Represents the following attribute in the schema: getItemScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemScreentip")]
     [Index(19)]
     public StringValue GetItemScreentip { get; set; }
-	
     /// <summary>
     /// <para> getItemSupertip.</para>
     /// <para>Represents the following attribute in the schema: getItemSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemSupertip")]
     [Index(20)]
     public StringValue GetItemSupertip { get; set; }
-	
     /// <summary>
     /// <para> getItemImage.</para>
     /// <para>Represents the following attribute in the schema: getItemImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemImage")]
     [Index(21)]
     public StringValue GetItemImage { get; set; }
-	
     /// <summary>
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemID")]
     [Index(22)]
     public StringValue GetItemID { get; set; }
-	
     /// <summary>
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "sizeString")]
     [Index(23)]
     public StringValue SizeString { get; set; }
-	
     /// <summary>
     /// <para> getSelectedItemID.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemID </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSelectedItemID")]
     [Index(24)]
     public StringValue GetSelectedItemID { get; set; }
-	
     /// <summary>
     /// <para> getSelectedItemIndex.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemIndex </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSelectedItemIndex")]
     [Index(25)]
     public StringValue GetSelectedItemIndex { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(26)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(27)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(28)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(29)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(30)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(31)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(32)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(33)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(34)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(35)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(36)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(37)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(38)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(39)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -1098,31 +1074,30 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(40)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(41)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(42)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(43)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -1130,15 +1105,14 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     [Index(44)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(45)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -1146,30 +1120,27 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showImage")]
     [Index(46)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(47)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the UnsizedGallery class.
     /// </summary>
     public UnsizedGallery():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the UnsizedGallery class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public UnsizedGallery(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the UnsizedGallery class with the specified child elements.
     /// </summary>
@@ -1177,7 +1148,6 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     public UnsizedGallery(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the UnsizedGallery class from outer XML.
     /// </summary>
@@ -1186,9 +1156,7 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -1212,23 +1180,22 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getPressed")]
     [Index(0)]
     public StringValue GetPressed { get; set; }
-	
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "onAction")]
     [Index(1)]
     public StringValue OnAction { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -1236,167 +1203,166 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(2)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(3)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(4)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(5)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(6)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(7)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(8)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(9)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(10)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(11)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(12)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(13)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(14)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(15)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(16)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(17)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(18)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(19)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(20)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(21)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(22)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -1404,31 +1370,30 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     [Index(23)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(24)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(25)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(26)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -1436,15 +1401,14 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     [Index(27)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(28)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -1452,23 +1416,20 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     [Index(29)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(30)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the UnsizedToggleButton class.
     /// </summary>
     public UnsizedToggleButton():base(){}
     
-      
-     
     
     
     
@@ -1492,79 +1453,76 @@ public partial class MenuSeparator : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(1)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(2)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(3)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(4)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(5)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "title")]
     [Index(6)]
     public StringValue Title { get; set; }
-	
     /// <summary>
     /// <para> getTitle.</para>
     /// <para>Represents the following attribute in the schema: getTitle </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getTitle")]
     [Index(7)]
     public StringValue GetTitle { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the MenuSeparator class.
     /// </summary>
     public MenuSeparator():base(){}
     
-      
-     
     
     
     
@@ -1599,7 +1557,6 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -1607,79 +1564,78 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     [Index(0)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(1)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(2)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(3)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(4)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(5)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(6)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(7)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(8)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(9)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -1687,31 +1643,30 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(10)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(11)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(12)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(13)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -1719,30 +1674,27 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     [Index(14)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(15)]
     public StringValue GetShowLabel { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the UnsizedSplitButton class.
     /// </summary>
     public UnsizedSplitButton():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the UnsizedSplitButton class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public UnsizedSplitButton(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the UnsizedSplitButton class with the specified child elements.
     /// </summary>
@@ -1750,7 +1702,6 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     public UnsizedSplitButton(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the UnsizedSplitButton class from outer XML.
     /// </summary>
@@ -1759,9 +1710,7 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -1808,7 +1757,6 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> itemSize.</para>
     /// <para>Represents the following attribute in the schema: itemSize </para>
@@ -1816,111 +1764,110 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "itemSize")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get; set; }
-	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(1)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(2)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(3)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(4)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(5)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(6)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(7)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(8)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(9)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(10)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(11)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(12)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(13)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -1928,63 +1875,62 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     [Index(14)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(15)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(16)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(17)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(18)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(19)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(20)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(21)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -1992,31 +1938,30 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(22)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(23)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(24)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(25)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -2024,15 +1969,14 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     [Index(26)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(27)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -2040,30 +1984,27 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "showImage")]
     [Index(28)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(29)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the UnsizedMenu class.
     /// </summary>
     public UnsizedMenu():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the UnsizedMenu class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public UnsizedMenu(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the UnsizedMenu class with the specified child elements.
     /// </summary>
@@ -2071,7 +2012,6 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     public UnsizedMenu(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the UnsizedMenu class from outer XML.
     /// </summary>
@@ -2080,9 +2020,7 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -2106,63 +2044,63 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(0)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(1)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(2)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(3)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(4)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(5)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> getContent.</para>
     /// <para>Represents the following attribute in the schema: getContent </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getContent")]
     [Index(6)]
     public StringValue GetContent { get; set; }
-	
     /// <summary>
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
@@ -2170,63 +2108,62 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "invalidateContentOnDrop")]
     [Index(7)]
     public BooleanValue InvalidateContentOnDrop { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(8)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(9)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(10)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(11)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(12)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(13)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(14)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -2234,63 +2171,62 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(15)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(16)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(17)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(18)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(19)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(20)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(21)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(22)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -2298,31 +2234,30 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     [Index(23)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(24)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(25)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(26)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -2330,15 +2265,14 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     [Index(27)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(28)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -2346,23 +2280,20 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     [Index(29)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(30)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the UnsizedDynamicMenu class.
     /// </summary>
     public UnsizedDynamicMenu():base(){}
     
-      
-     
     
     
     
@@ -2397,7 +2328,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -2405,79 +2335,78 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     [Index(0)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(1)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(2)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(3)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(4)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(5)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(6)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(7)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(8)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(9)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -2485,31 +2414,30 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(10)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(11)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(12)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(13)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -2517,30 +2445,27 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     [Index(14)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(15)]
     public StringValue GetShowLabel { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the SplitButtonWithTitle class.
     /// </summary>
     public SplitButtonWithTitle():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SplitButtonWithTitle class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SplitButtonWithTitle(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SplitButtonWithTitle class with the specified child elements.
     /// </summary>
@@ -2548,7 +2473,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     public SplitButtonWithTitle(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SplitButtonWithTitle class from outer XML.
     /// </summary>
@@ -2557,9 +2481,7 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -2606,39 +2528,38 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(1)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(2)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(3)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> itemSize.</para>
     /// <para>Represents the following attribute in the schema: itemSize </para>
@@ -2646,79 +2567,78 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "itemSize")]
     [Index(4)]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get; set; }
-	
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "title")]
     [Index(5)]
     public StringValue Title { get; set; }
-	
     /// <summary>
     /// <para> getTitle.</para>
     /// <para>Represents the following attribute in the schema: getTitle </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getTitle")]
     [Index(6)]
     public StringValue GetTitle { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(7)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(8)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(9)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(10)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(11)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(12)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(13)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -2726,63 +2646,62 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     [Index(14)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(15)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(16)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(17)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(18)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(19)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(20)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(21)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -2790,31 +2709,30 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(22)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(23)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(24)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(25)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -2822,15 +2740,14 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     [Index(26)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(27)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -2838,30 +2755,27 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "showImage")]
     [Index(28)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(29)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the MenuWithTitle class.
     /// </summary>
     public MenuWithTitle():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MenuWithTitle class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MenuWithTitle(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MenuWithTitle class with the specified child elements.
     /// </summary>
@@ -2869,7 +2783,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     public MenuWithTitle(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MenuWithTitle class from outer XML.
     /// </summary>
@@ -2878,9 +2791,7 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -2904,7 +2815,6 @@ public partial class ControlClone : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
@@ -2912,15 +2822,14 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "size")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
-	
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSize")]
     [Index(1)]
     public StringValue GetSize { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -2928,159 +2837,158 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(2)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(3)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(4)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(5)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(6)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(7)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(8)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(9)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(10)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(11)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(12)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(13)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(14)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(15)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(16)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(17)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(18)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(19)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(20)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(21)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -3088,31 +2996,30 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     [Index(22)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(23)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(24)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(25)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -3120,15 +3027,14 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     [Index(26)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(27)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -3136,23 +3042,20 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     [Index(28)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(29)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ControlClone class.
     /// </summary>
     public ControlClone():base(){}
     
-      
-     
     
     
     
@@ -3176,71 +3079,70 @@ public partial class TextLabel : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(1)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(2)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(3)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(4)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(5)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(6)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(7)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -3248,63 +3150,62 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(8)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(9)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(10)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(11)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(12)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(13)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(14)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(15)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -3312,15 +3213,14 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     [Index(16)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(17)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -3328,23 +3228,20 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     [Index(18)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(19)]
     public StringValue GetShowLabel { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the TextLabel class.
     /// </summary>
     public TextLabel():base(){}
     
-      
-     
     
     
     
@@ -3368,7 +3265,6 @@ public partial class Button : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
@@ -3376,23 +3272,22 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "size")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
-	
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSize")]
     [Index(1)]
     public StringValue GetSize { get; set; }
-	
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "onAction")]
     [Index(2)]
     public StringValue OnAction { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -3400,167 +3295,166 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(3)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(4)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(5)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(6)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(7)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(8)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(9)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(10)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(11)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(12)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(13)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(14)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(15)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(16)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(17)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(18)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(19)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(20)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(21)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(22)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(23)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -3568,31 +3462,30 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     [Index(24)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(25)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(26)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(27)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -3600,15 +3493,14 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     [Index(28)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(29)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -3616,23 +3508,20 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     [Index(30)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(31)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Button class.
     /// </summary>
     public Button():base(){}
     
-      
-     
     
     
     
@@ -3656,7 +3545,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
@@ -3664,31 +3552,30 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "size")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
-	
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSize")]
     [Index(1)]
     public StringValue GetSize { get; set; }
-	
     /// <summary>
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getPressed")]
     [Index(2)]
     public StringValue GetPressed { get; set; }
-	
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "onAction")]
     [Index(3)]
     public StringValue OnAction { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -3696,167 +3583,166 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(4)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(5)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(6)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(7)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(8)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(9)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(10)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(11)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(12)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(13)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(14)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(15)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(16)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(17)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(18)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(19)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(20)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(21)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(22)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(23)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(24)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -3864,31 +3750,30 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     [Index(25)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(26)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(27)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(28)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -3896,15 +3781,14 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     [Index(29)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(30)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -3912,23 +3796,20 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     [Index(31)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(32)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ToggleButton class.
     /// </summary>
     public ToggleButton():base(){}
     
-      
-     
     
     
     
@@ -3952,7 +3833,6 @@ public partial class EditBox : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -3960,183 +3840,182 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(0)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(1)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(2)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(3)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(4)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> maxLength.</para>
     /// <para>Represents the following attribute in the schema: maxLength </para>
     /// </summary>
+[NumberValidator(MinInclusive = 1, MaxInclusive = 1024, IsPositive = true)]
     [SchemaAttr(0, "maxLength")]
     [Index(5)]
     public IntegerValue MaxLength { get; set; }
-	
     /// <summary>
     /// <para> getText.</para>
     /// <para>Represents the following attribute in the schema: getText </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getText")]
     [Index(6)]
     public StringValue GetText { get; set; }
-	
     /// <summary>
     /// <para> onChange.</para>
     /// <para>Represents the following attribute in the schema: onChange </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "onChange")]
     [Index(7)]
     public StringValue OnChange { get; set; }
-	
     /// <summary>
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "sizeString")]
     [Index(8)]
     public StringValue SizeString { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(9)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(10)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(11)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(12)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(13)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(14)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(15)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(16)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(17)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(18)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(19)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(20)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(21)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(22)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -4144,31 +4023,30 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     [Index(23)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(24)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(25)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(26)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -4176,15 +4054,14 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     [Index(27)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(28)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -4192,23 +4069,20 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     [Index(29)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(30)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the EditBox class.
     /// </summary>
     public EditBox():base(){}
     
-      
-     
     
     
     
@@ -4239,7 +4113,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> showItemImage.</para>
     /// <para>Represents the following attribute in the schema: showItemImage </para>
@@ -4247,63 +4120,62 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "showItemImage")]
     [Index(0)]
     public BooleanValue ShowItemImage { get; set; }
-	
     /// <summary>
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemCount")]
     [Index(1)]
     public StringValue GetItemCount { get; set; }
-	
     /// <summary>
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemLabel")]
     [Index(2)]
     public StringValue GetItemLabel { get; set; }
-	
     /// <summary>
     /// <para> getItemScreentip.</para>
     /// <para>Represents the following attribute in the schema: getItemScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemScreentip")]
     [Index(3)]
     public StringValue GetItemScreentip { get; set; }
-	
     /// <summary>
     /// <para> getItemSupertip.</para>
     /// <para>Represents the following attribute in the schema: getItemSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemSupertip")]
     [Index(4)]
     public StringValue GetItemSupertip { get; set; }
-	
     /// <summary>
     /// <para> getItemImage.</para>
     /// <para>Represents the following attribute in the schema: getItemImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemImage")]
     [Index(5)]
     public StringValue GetItemImage { get; set; }
-	
     /// <summary>
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemID")]
     [Index(6)]
     public StringValue GetItemID { get; set; }
-	
     /// <summary>
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "sizeString")]
     [Index(7)]
     public StringValue SizeString { get; set; }
-	
     /// <summary>
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
@@ -4311,7 +4183,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "invalidateContentOnDrop")]
     [Index(8)]
     public BooleanValue InvalidateContentOnDrop { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -4319,175 +4190,174 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     [Index(9)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(10)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(11)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(12)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(13)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> maxLength.</para>
     /// <para>Represents the following attribute in the schema: maxLength </para>
     /// </summary>
+[NumberValidator(MinInclusive = 1, MaxInclusive = 1024, IsPositive = true)]
     [SchemaAttr(0, "maxLength")]
     [Index(14)]
     public IntegerValue MaxLength { get; set; }
-	
     /// <summary>
     /// <para> getText.</para>
     /// <para>Represents the following attribute in the schema: getText </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getText")]
     [Index(15)]
     public StringValue GetText { get; set; }
-	
     /// <summary>
     /// <para> onChange.</para>
     /// <para>Represents the following attribute in the schema: onChange </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "onChange")]
     [Index(16)]
     public StringValue OnChange { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(17)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(18)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(19)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(20)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(21)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(22)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(23)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(24)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(25)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(26)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(27)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(28)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(29)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(30)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -4495,31 +4365,30 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(31)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(32)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(33)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(34)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -4527,15 +4396,14 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     [Index(35)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(36)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -4543,30 +4411,27 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "showImage")]
     [Index(37)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(38)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ComboBox class.
     /// </summary>
     public ComboBox():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ComboBox class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ComboBox(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ComboBox class with the specified child elements.
     /// </summary>
@@ -4574,7 +4439,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     public ComboBox(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ComboBox class from outer XML.
     /// </summary>
@@ -4583,9 +4447,7 @@ public partial class ComboBox : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -4618,15 +4480,14 @@ public partial class DropDown : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "onAction")]
     [Index(0)]
     public StringValue OnAction { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -4634,39 +4495,38 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     [Index(1)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(2)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(3)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(4)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(5)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> showItemImage.</para>
     /// <para>Represents the following attribute in the schema: showItemImage </para>
@@ -4674,79 +4534,78 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "showItemImage")]
     [Index(6)]
     public BooleanValue ShowItemImage { get; set; }
-	
     /// <summary>
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemCount")]
     [Index(7)]
     public StringValue GetItemCount { get; set; }
-	
     /// <summary>
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemLabel")]
     [Index(8)]
     public StringValue GetItemLabel { get; set; }
-	
     /// <summary>
     /// <para> getItemScreentip.</para>
     /// <para>Represents the following attribute in the schema: getItemScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemScreentip")]
     [Index(9)]
     public StringValue GetItemScreentip { get; set; }
-	
     /// <summary>
     /// <para> getItemSupertip.</para>
     /// <para>Represents the following attribute in the schema: getItemSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemSupertip")]
     [Index(10)]
     public StringValue GetItemSupertip { get; set; }
-	
     /// <summary>
     /// <para> getItemImage.</para>
     /// <para>Represents the following attribute in the schema: getItemImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemImage")]
     [Index(11)]
     public StringValue GetItemImage { get; set; }
-	
     /// <summary>
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemID")]
     [Index(12)]
     public StringValue GetItemID { get; set; }
-	
     /// <summary>
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "sizeString")]
     [Index(13)]
     public StringValue SizeString { get; set; }
-	
     /// <summary>
     /// <para> getSelectedItemID.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemID </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSelectedItemID")]
     [Index(14)]
     public StringValue GetSelectedItemID { get; set; }
-	
     /// <summary>
     /// <para> getSelectedItemIndex.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemIndex </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSelectedItemIndex")]
     [Index(15)]
     public StringValue GetSelectedItemIndex { get; set; }
-	
     /// <summary>
     /// <para> showItemLabel.</para>
     /// <para>Represents the following attribute in the schema: showItemLabel </para>
@@ -4754,119 +4613,118 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "showItemLabel")]
     [Index(16)]
     public BooleanValue ShowItemLabel { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(17)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(18)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(19)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(20)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(21)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(22)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(23)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(24)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(25)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(26)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(27)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(28)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(29)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(30)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -4874,31 +4732,30 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(31)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(32)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(33)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(34)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -4906,15 +4763,14 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     [Index(35)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(36)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -4922,30 +4778,27 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "showImage")]
     [Index(37)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(38)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the DropDown class.
     /// </summary>
     public DropDown():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the DropDown class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DropDown(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DropDown class with the specified child elements.
     /// </summary>
@@ -4953,7 +4806,6 @@ public partial class DropDown : OpenXmlCompositeElement
     public DropDown(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DropDown class from outer XML.
     /// </summary>
@@ -4962,9 +4814,7 @@ public partial class DropDown : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -4997,7 +4847,6 @@ public partial class Gallery : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
@@ -5005,31 +4854,30 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "size")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
-	
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSize")]
     [Index(1)]
     public StringValue GetSize { get; set; }
-	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(2)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(3)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
@@ -5037,55 +4885,54 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "invalidateContentOnDrop")]
     [Index(4)]
     public BooleanValue InvalidateContentOnDrop { get; set; }
-	
     /// <summary>
     /// <para> columns.</para>
     /// <para>Represents the following attribute in the schema: columns </para>
     /// </summary>
+[NumberValidator(MinInclusive = 1, MaxInclusive = 1024, IsPositive = true)]
     [SchemaAttr(0, "columns")]
     [Index(5)]
     public IntegerValue Columns { get; set; }
-	
     /// <summary>
     /// <para> rows.</para>
     /// <para>Represents the following attribute in the schema: rows </para>
     /// </summary>
+[NumberValidator(MinInclusive = 1, MaxInclusive = 1024, IsPositive = true)]
     [SchemaAttr(0, "rows")]
     [Index(6)]
     public IntegerValue Rows { get; set; }
-	
     /// <summary>
     /// <para> itemWidth.</para>
     /// <para>Represents the following attribute in the schema: itemWidth </para>
     /// </summary>
+[NumberValidator(MinInclusive = 1, MaxInclusive = 4096, IsPositive = true)]
     [SchemaAttr(0, "itemWidth")]
     [Index(7)]
     public IntegerValue ItemWidth { get; set; }
-	
     /// <summary>
     /// <para> itemHeight.</para>
     /// <para>Represents the following attribute in the schema: itemHeight </para>
     /// </summary>
+[NumberValidator(MinInclusive = 1, MaxInclusive = 4096, IsPositive = true)]
     [SchemaAttr(0, "itemHeight")]
     [Index(8)]
     public IntegerValue ItemHeight { get; set; }
-	
     /// <summary>
     /// <para> getItemWidth.</para>
     /// <para>Represents the following attribute in the schema: getItemWidth </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemWidth")]
     [Index(9)]
     public StringValue GetItemWidth { get; set; }
-	
     /// <summary>
     /// <para> getItemHeight.</para>
     /// <para>Represents the following attribute in the schema: getItemHeight </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemHeight")]
     [Index(10)]
     public StringValue GetItemHeight { get; set; }
-	
     /// <summary>
     /// <para> showItemLabel.</para>
     /// <para>Represents the following attribute in the schema: showItemLabel </para>
@@ -5093,15 +4940,14 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showItemLabel")]
     [Index(11)]
     public BooleanValue ShowItemLabel { get; set; }
-	
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "onAction")]
     [Index(12)]
     public StringValue OnAction { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -5109,39 +4955,38 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     [Index(13)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(14)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(15)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(16)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(17)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> showItemImage.</para>
     /// <para>Represents the following attribute in the schema: showItemImage </para>
@@ -5149,191 +4994,190 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showItemImage")]
     [Index(18)]
     public BooleanValue ShowItemImage { get; set; }
-	
     /// <summary>
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemCount")]
     [Index(19)]
     public StringValue GetItemCount { get; set; }
-	
     /// <summary>
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemLabel")]
     [Index(20)]
     public StringValue GetItemLabel { get; set; }
-	
     /// <summary>
     /// <para> getItemScreentip.</para>
     /// <para>Represents the following attribute in the schema: getItemScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemScreentip")]
     [Index(21)]
     public StringValue GetItemScreentip { get; set; }
-	
     /// <summary>
     /// <para> getItemSupertip.</para>
     /// <para>Represents the following attribute in the schema: getItemSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemSupertip")]
     [Index(22)]
     public StringValue GetItemSupertip { get; set; }
-	
     /// <summary>
     /// <para> getItemImage.</para>
     /// <para>Represents the following attribute in the schema: getItemImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemImage")]
     [Index(23)]
     public StringValue GetItemImage { get; set; }
-	
     /// <summary>
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getItemID")]
     [Index(24)]
     public StringValue GetItemID { get; set; }
-	
     /// <summary>
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "sizeString")]
     [Index(25)]
     public StringValue SizeString { get; set; }
-	
     /// <summary>
     /// <para> getSelectedItemID.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemID </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSelectedItemID")]
     [Index(26)]
     public StringValue GetSelectedItemID { get; set; }
-	
     /// <summary>
     /// <para> getSelectedItemIndex.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemIndex </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSelectedItemIndex")]
     [Index(27)]
     public StringValue GetSelectedItemIndex { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(28)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(29)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(30)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(31)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(32)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(33)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(34)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(35)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(36)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(37)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(38)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(39)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(40)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(41)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -5341,31 +5185,30 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(42)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(43)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(44)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(45)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -5373,15 +5216,14 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     [Index(46)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(47)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -5389,30 +5231,27 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showImage")]
     [Index(48)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(49)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Gallery class.
     /// </summary>
     public Gallery():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Gallery class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Gallery(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Gallery class with the specified child elements.
     /// </summary>
@@ -5420,7 +5259,6 @@ public partial class Gallery : OpenXmlCompositeElement
     public Gallery(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Gallery class from outer XML.
     /// </summary>
@@ -5429,9 +5267,7 @@ public partial class Gallery : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -5478,7 +5314,6 @@ public partial class Menu : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
@@ -5486,15 +5321,14 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "size")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
-	
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSize")]
     [Index(1)]
     public StringValue GetSize { get; set; }
-	
     /// <summary>
     /// <para> itemSize.</para>
     /// <para>Represents the following attribute in the schema: itemSize </para>
@@ -5502,111 +5336,110 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "itemSize")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get; set; }
-	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(3)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(4)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(5)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(6)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(7)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(8)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(9)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(10)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(11)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(12)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(13)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(14)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(15)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -5614,63 +5447,62 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     [Index(16)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(17)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(18)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(19)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(20)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(21)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(22)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(23)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -5678,31 +5510,30 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(24)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(25)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(26)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(27)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -5710,15 +5541,14 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     [Index(28)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(29)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -5726,30 +5556,27 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "showImage")]
     [Index(30)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(31)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Menu class.
     /// </summary>
     public Menu():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Menu class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Menu(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Menu class with the specified child elements.
     /// </summary>
@@ -5757,7 +5584,6 @@ public partial class Menu : OpenXmlCompositeElement
     public Menu(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Menu class from outer XML.
     /// </summary>
@@ -5766,9 +5592,7 @@ public partial class Menu : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -5792,7 +5616,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
@@ -5800,71 +5623,71 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "size")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
-	
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSize")]
     [Index(1)]
     public StringValue GetSize { get; set; }
-	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(2)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(3)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(4)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(5)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(6)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(7)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> getContent.</para>
     /// <para>Represents the following attribute in the schema: getContent </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getContent")]
     [Index(8)]
     public StringValue GetContent { get; set; }
-	
     /// <summary>
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
@@ -5872,63 +5695,62 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "invalidateContentOnDrop")]
     [Index(9)]
     public BooleanValue InvalidateContentOnDrop { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(10)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(11)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(12)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(13)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(14)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(15)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(16)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -5936,63 +5758,62 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(17)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(18)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(19)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(20)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(21)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(22)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(23)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(24)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -6000,31 +5821,30 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     [Index(25)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(26)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(27)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(28)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -6032,15 +5852,14 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     [Index(29)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(30)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -6048,23 +5867,20 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     [Index(31)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(32)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the DynamicMenu class.
     /// </summary>
     public DynamicMenu():base(){}
     
-      
-     
     
     
     
@@ -6099,7 +5915,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
@@ -6107,15 +5922,14 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "size")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
-	
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSize")]
     [Index(1)]
     public StringValue GetSize { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -6123,79 +5937,78 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     [Index(2)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(3)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(4)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(5)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(6)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(7)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(8)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(9)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(10)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(11)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -6203,31 +6016,30 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(12)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(13)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(14)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(15)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -6235,30 +6047,27 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     [Index(16)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(17)]
     public StringValue GetShowLabel { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the SplitButton class.
     /// </summary>
     public SplitButton():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SplitButton class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SplitButton(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SplitButton class with the specified child elements.
     /// </summary>
@@ -6266,7 +6075,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     public SplitButton(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SplitButton class from outer XML.
     /// </summary>
@@ -6275,9 +6083,7 @@ public partial class SplitButton : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -6334,23 +6140,22 @@ public partial class Box : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(1)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -6358,47 +6163,46 @@ public partial class Box : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(2)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(3)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(4)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(5)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(6)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(7)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> boxStyle.</para>
     /// <para>Represents the following attribute in the schema: boxStyle </para>
@@ -6406,22 +6210,19 @@ public partial class Box : OpenXmlCompositeElement
     [SchemaAttr(0, "boxStyle")]
     [Index(8)]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues> BoxStyle { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Box class.
     /// </summary>
     public Box():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Box class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Box(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Box class with the specified child elements.
     /// </summary>
@@ -6429,7 +6230,6 @@ public partial class Box : OpenXmlCompositeElement
     public Box(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Box class from outer XML.
     /// </summary>
@@ -6438,9 +6238,7 @@ public partial class Box : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -6483,23 +6281,22 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(1)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -6507,62 +6304,59 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(2)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(3)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(4)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(5)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(6)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(7)]
     public StringValue InsertBeforeQ { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ButtonGroup class.
     /// </summary>
     public ButtonGroup():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ButtonGroup class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ButtonGroup(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ButtonGroup class with the specified child elements.
     /// </summary>
@@ -6570,7 +6364,6 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     public ButtonGroup(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ButtonGroup class from outer XML.
     /// </summary>
@@ -6579,9 +6372,7 @@ public partial class ButtonGroup : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -6628,23 +6419,22 @@ public partial class MenuRoot : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "title")]
     [Index(0)]
     public StringValue Title { get; set; }
-	
     /// <summary>
     /// <para> getTitle.</para>
     /// <para>Represents the following attribute in the schema: getTitle </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getTitle")]
     [Index(1)]
     public StringValue GetTitle { get; set; }
-	
     /// <summary>
     /// <para> itemSize.</para>
     /// <para>Represents the following attribute in the schema: itemSize </para>
@@ -6652,22 +6442,19 @@ public partial class MenuRoot : OpenXmlCompositeElement
     [SchemaAttr(0, "itemSize")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the MenuRoot class.
     /// </summary>
     public MenuRoot():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MenuRoot class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MenuRoot(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MenuRoot class with the specified child elements.
     /// </summary>
@@ -6675,7 +6462,6 @@ public partial class MenuRoot : OpenXmlCompositeElement
     public MenuRoot(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MenuRoot class from outer XML.
     /// </summary>
@@ -6684,9 +6470,7 @@ public partial class MenuRoot : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -6719,38 +6503,35 @@ public partial class CustomUI : OpenXmlPartRootElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> onLoad.</para>
     /// <para>Represents the following attribute in the schema: onLoad </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "onLoad")]
     [Index(0)]
     public StringValue OnLoad { get; set; }
-	
     /// <summary>
     /// <para> loadImage.</para>
     /// <para>Represents the following attribute in the schema: loadImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "loadImage")]
     [Index(1)]
     public StringValue LoadImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the CustomUI class.
     /// </summary>
     public CustomUI():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the CustomUI class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public CustomUI(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CustomUI class with the specified child elements.
     /// </summary>
@@ -6758,7 +6539,6 @@ public partial class CustomUI : OpenXmlPartRootElement
     public CustomUI(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CustomUI class from outer XML.
     /// </summary>
@@ -6767,13 +6547,10 @@ public partial class CustomUI : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> RepurposedCommands.</para>
     /// <para> Represents the following element tag in the schema: mso:commands </para>
@@ -6787,7 +6564,6 @@ public partial class CustomUI : OpenXmlPartRootElement
         get => GetElement<RepurposedCommands>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Ribbon.</para>
     /// <para> Represents the following element tag in the schema: mso:ribbon </para>
@@ -6801,7 +6577,6 @@ public partial class CustomUI : OpenXmlPartRootElement
         get => GetElement<Ribbon>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -6824,63 +6599,60 @@ public partial class Item : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(1)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(2)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(3)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(4)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(5)]
     public StringValue Supertip { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Item class.
     /// </summary>
     public Item():base(){}
     
-      
-     
     
     
     
@@ -6904,15 +6676,14 @@ public partial class VisibleButton : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "onAction")]
     [Index(0)]
     public StringValue OnAction { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -6920,183 +6691,182 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(1)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(2)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(3)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(4)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(5)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(6)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(7)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(8)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(9)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(10)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(11)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(12)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(13)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(14)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(15)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(16)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(17)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(18)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(19)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(20)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(21)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(22)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(23)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -7104,15 +6874,14 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     [Index(24)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(25)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -7120,23 +6889,20 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     [Index(26)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(27)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the VisibleButton class.
     /// </summary>
     public VisibleButton():base(){}
     
-      
-     
     
     
     
@@ -7160,23 +6926,22 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getPressed")]
     [Index(0)]
     public StringValue GetPressed { get; set; }
-	
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "onAction")]
     [Index(1)]
     public StringValue OnAction { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -7184,183 +6949,182 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(2)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(3)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(4)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(5)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(6)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(7)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(8)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(9)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(10)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(11)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(12)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(13)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(14)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(15)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(16)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(17)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(18)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(19)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(20)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(21)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(22)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(23)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(24)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -7368,15 +7132,14 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     [Index(25)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(26)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -7384,23 +7147,20 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     [Index(27)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(28)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the VisibleToggleButton class.
     /// </summary>
     public VisibleToggleButton():base(){}
     
-      
-     
     
     
     
@@ -7424,23 +7184,22 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(1)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -7448,55 +7207,52 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     [Index(2)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(3)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(4)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(5)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(6)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(7)]
     public StringValue InsertBeforeQ { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the VerticalSeparator class.
     /// </summary>
     public VerticalSeparator():base(){}
     
-      
-     
     
     
     
@@ -7528,21 +7284,18 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the DialogBoxLauncher class.
     /// </summary>
     public DialogBoxLauncher():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the DialogBoxLauncher class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DialogBoxLauncher(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DialogBoxLauncher class with the specified child elements.
     /// </summary>
@@ -7550,7 +7303,6 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
     public DialogBoxLauncher(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DialogBoxLauncher class from outer XML.
     /// </summary>
@@ -7559,13 +7311,10 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> UnsizedButton.</para>
     /// <para> Represents the following element tag in the schema: mso:button </para>
@@ -7579,7 +7328,6 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
         get => GetElement<UnsizedButton>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -7639,143 +7387,142 @@ public partial class Group : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(1)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(2)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(3)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(4)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(5)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(6)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(7)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(8)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(9)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(10)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(11)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(12)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(13)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(14)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(15)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(16)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -7783,46 +7530,43 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(17)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(18)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(19)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(20)]
     public StringValue GetKeytip { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Group class.
     /// </summary>
     public Group():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Group class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Group(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Group class with the specified child elements.
     /// </summary>
@@ -7830,7 +7574,6 @@ public partial class Group : OpenXmlCompositeElement
     public Group(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Group class from outer XML.
     /// </summary>
@@ -7839,9 +7582,7 @@ public partial class Group : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -7865,47 +7606,46 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(1)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(2)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 4096)]
     [SchemaAttr(0, "description")]
     [Index(3)]
     public StringValue Description { get; set; }
-	
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getDescription")]
     [Index(4)]
     public StringValue GetDescription { get; set; }
-	
     /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
@@ -7913,71 +7653,70 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "size")]
     [Index(5)]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size { get; set; }
-	
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSize")]
     [Index(6)]
     public StringValue GetSize { get; set; }
-	
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "image")]
     [Index(7)]
     public StringValue Image { get; set; }
-	
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "imageMso")]
     [Index(8)]
     public StringValue ImageMso { get; set; }
-	
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getImage")]
     [Index(9)]
     public StringValue GetImage { get; set; }
-	
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "screentip")]
     [Index(10)]
     public StringValue Screentip { get; set; }
-	
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getScreentip")]
     [Index(11)]
     public StringValue GetScreentip { get; set; }
-	
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "supertip")]
     [Index(12)]
     public StringValue Supertip { get; set; }
-	
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getSupertip")]
     [Index(13)]
     public StringValue GetSupertip { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -7985,63 +7724,62 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(14)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(15)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(16)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(17)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(18)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(19)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(20)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(21)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -8049,31 +7787,30 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     [Index(22)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(23)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(24)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(25)]
     public StringValue GetKeytip { get; set; }
-	
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
@@ -8081,15 +7818,14 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     [Index(26)]
     public BooleanValue ShowLabel { get; set; }
-	
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowLabel")]
     [Index(27)]
     public StringValue GetShowLabel { get; set; }
-	
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
@@ -8097,23 +7833,20 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     [Index(28)]
     public BooleanValue ShowImage { get; set; }
-	
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getShowImage")]
     [Index(29)]
     public StringValue GetShowImage { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the QuickAccessToolbarControlClone class.
     /// </summary>
     public QuickAccessToolbarControlClone():base(){}
     
-      
-     
     
     
     
@@ -8153,9 +7886,8 @@ public partial class SharedQatControls : QatItemsType
     /// <param name="childElements">Specifies the child elements.</param>
     public SharedQatControls(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SharedQatControls class with the specified child elements.
     /// </summary>
@@ -8163,7 +7895,6 @@ public partial class SharedQatControls : QatItemsType
     public SharedQatControls(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SharedQatControls class from outer XML.
     /// </summary>
@@ -8172,7 +7903,6 @@ public partial class SharedQatControls : QatItemsType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -8211,9 +7941,8 @@ public partial class DocumentSpecificQuickAccessToolbarControls : QatItemsType
     /// <param name="childElements">Specifies the child elements.</param>
     public DocumentSpecificQuickAccessToolbarControls(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DocumentSpecificQuickAccessToolbarControls class with the specified child elements.
     /// </summary>
@@ -8221,7 +7950,6 @@ public partial class DocumentSpecificQuickAccessToolbarControls : QatItemsType
     public DocumentSpecificQuickAccessToolbarControls(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DocumentSpecificQuickAccessToolbarControls class from outer XML.
     /// </summary>
@@ -8230,7 +7958,6 @@ public partial class DocumentSpecificQuickAccessToolbarControls : QatItemsType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -8255,7 +7982,6 @@ public partial class DocumentSpecificQuickAccessToolbarControls : QatItemsType
 
 public abstract partial class QatItemsType : OpenXmlCompositeElement
 {
-        
     
     
     
@@ -8264,16 +7990,14 @@ public abstract partial class QatItemsType : OpenXmlCompositeElement
     /// Initializes a new instance of the QatItemsType class.
     /// </summary>
     protected QatItemsType(){}
-    
         /// <summary>
     ///Initializes a new instance of the QatItemsType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     protected QatItemsType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the QatItemsType class with the specified child elements.
     /// </summary>
@@ -8281,7 +8005,6 @@ public abstract partial class QatItemsType : OpenXmlCompositeElement
     protected QatItemsType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the QatItemsType class from outer XML.
     /// </summary>
@@ -8290,7 +8013,6 @@ public abstract partial class QatItemsType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
 
     
 }
@@ -8317,87 +8039,86 @@ public partial class Tab : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsId = true, IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idQ")]
     [Index(1)]
     public StringValue IdQ { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(2)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "tag")]
     [Index(3)]
     public StringValue Tag { get; set; }
-	
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "label")]
     [Index(4)]
     public StringValue Label { get; set; }
-	
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getLabel")]
     [Index(5)]
     public StringValue GetLabel { get; set; }
-	
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterMso")]
     [Index(6)]
     public StringValue InsertAfterMso { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeMso")]
     [Index(7)]
     public StringValue InsertBeforeMso { get; set; }
-	
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertAfterQ")]
     [Index(8)]
     public StringValue InsertAfterQ { get; set; }
-	
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
+[StringValidator(IsQName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "insertBeforeQ")]
     [Index(9)]
     public StringValue InsertBeforeQ { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -8405,46 +8126,43 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(10)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(11)]
     public StringValue GetVisible { get; set; }
-	
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
+[StringValidator(IsToken = true, MinLength = 1, MaxLength = 3)]
     [SchemaAttr(0, "keytip")]
     [Index(12)]
     public StringValue Keytip { get; set; }
-	
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getKeytip")]
     [Index(13)]
     public StringValue GetKeytip { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Tab class.
     /// </summary>
     public Tab():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Tab class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Tab(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Tab class with the specified child elements.
     /// </summary>
@@ -8452,7 +8170,6 @@ public partial class Tab : OpenXmlCompositeElement
     public Tab(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Tab class from outer XML.
     /// </summary>
@@ -8461,9 +8178,7 @@ public partial class Tab : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -8494,15 +8209,15 @@ public partial class ContextualTabSet : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(0)]
     public StringValue IdMso { get; set; }
-	
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
@@ -8510,30 +8225,27 @@ public partial class ContextualTabSet : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     [Index(1)]
     public BooleanValue Visible { get; set; }
-	
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getVisible")]
     [Index(2)]
     public StringValue GetVisible { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ContextualTabSet class.
     /// </summary>
     public ContextualTabSet():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ContextualTabSet class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ContextualTabSet(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ContextualTabSet class with the specified child elements.
     /// </summary>
@@ -8541,7 +8253,6 @@ public partial class ContextualTabSet : OpenXmlCompositeElement
     public ContextualTabSet(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ContextualTabSet class from outer XML.
     /// </summary>
@@ -8550,9 +8261,7 @@ public partial class ContextualTabSet : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -8576,15 +8285,14 @@ public partial class RepurposedCommand : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "onAction")]
     [Index(0)]
     public StringValue OnAction { get; set; }
-	
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
@@ -8592,31 +8300,28 @@ public partial class RepurposedCommand : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     [Index(1)]
     public BooleanValue Enabled { get; set; }
-	
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
+[StringValidator(MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "getEnabled")]
     [Index(2)]
     public StringValue GetEnabled { get; set; }
-	
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
+[StringValidator(IsToken = true, IsNcName = true, MinLength = 1, MaxLength = 1024)]
     [SchemaAttr(0, "idMso")]
     [Index(3)]
     public StringValue IdMso { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the RepurposedCommand class.
     /// </summary>
     public RepurposedCommand():base(){}
     
-      
-     
     
     
     
@@ -8664,21 +8369,18 @@ public partial class OfficeMenu : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMenu class.
     /// </summary>
     public OfficeMenu():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the OfficeMenu class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public OfficeMenu(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMenu class with the specified child elements.
     /// </summary>
@@ -8686,7 +8388,6 @@ public partial class OfficeMenu : OpenXmlCompositeElement
     public OfficeMenu(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMenu class from outer XML.
     /// </summary>
@@ -8695,9 +8396,7 @@ public partial class OfficeMenu : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -8731,21 +8430,18 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the QuickAccessToolbar class.
     /// </summary>
     public QuickAccessToolbar():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the QuickAccessToolbar class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public QuickAccessToolbar(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the QuickAccessToolbar class with the specified child elements.
     /// </summary>
@@ -8753,7 +8449,6 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
     public QuickAccessToolbar(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the QuickAccessToolbar class from outer XML.
     /// </summary>
@@ -8762,13 +8457,10 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> SharedQatControls.</para>
     /// <para> Represents the following element tag in the schema: mso:sharedControls </para>
@@ -8782,7 +8474,6 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
         get => GetElement<SharedQatControls>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> DocumentSpecificQuickAccessToolbarControls.</para>
     /// <para> Represents the following element tag in the schema: mso:documentControls </para>
@@ -8796,7 +8487,6 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
         get => GetElement<DocumentSpecificQuickAccessToolbarControls>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -8827,21 +8517,18 @@ public partial class Tabs : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Tabs class.
     /// </summary>
     public Tabs():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Tabs class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Tabs(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Tabs class with the specified child elements.
     /// </summary>
@@ -8849,7 +8536,6 @@ public partial class Tabs : OpenXmlCompositeElement
     public Tabs(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Tabs class from outer XML.
     /// </summary>
@@ -8858,9 +8544,7 @@ public partial class Tabs : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -8892,21 +8576,18 @@ public partial class ContextualTabSets : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ContextualTabSets class.
     /// </summary>
     public ContextualTabSets():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ContextualTabSets class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ContextualTabSets(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ContextualTabSets class with the specified child elements.
     /// </summary>
@@ -8914,7 +8595,6 @@ public partial class ContextualTabSets : OpenXmlCompositeElement
     public ContextualTabSets(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ContextualTabSets class from outer XML.
     /// </summary>
@@ -8923,9 +8603,7 @@ public partial class ContextualTabSets : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -8957,21 +8635,18 @@ public partial class RepurposedCommands : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the RepurposedCommands class.
     /// </summary>
     public RepurposedCommands():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RepurposedCommands class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RepurposedCommands(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RepurposedCommands class with the specified child elements.
     /// </summary>
@@ -8979,7 +8654,6 @@ public partial class RepurposedCommands : OpenXmlCompositeElement
     public RepurposedCommands(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RepurposedCommands class from outer XML.
     /// </summary>
@@ -8988,9 +8662,7 @@ public partial class RepurposedCommands : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -9027,7 +8699,6 @@ public partial class Ribbon : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> startFromScratch.</para>
     /// <para>Represents the following attribute in the schema: startFromScratch </para>
@@ -9035,22 +8706,19 @@ public partial class Ribbon : OpenXmlCompositeElement
     [SchemaAttr(0, "startFromScratch")]
     [Index(0)]
     public BooleanValue StartFromScratch { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Ribbon class.
     /// </summary>
     public Ribbon():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Ribbon class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Ribbon(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Ribbon class with the specified child elements.
     /// </summary>
@@ -9058,7 +8726,6 @@ public partial class Ribbon : OpenXmlCompositeElement
     public Ribbon(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Ribbon class from outer XML.
     /// </summary>
@@ -9067,13 +8734,10 @@ public partial class Ribbon : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
-    
         /// <summary>
     /// <para> OfficeMenu.</para>
     /// <para> Represents the following element tag in the schema: mso:officeMenu </para>
@@ -9087,7 +8751,6 @@ public partial class Ribbon : OpenXmlCompositeElement
         get => GetElement<OfficeMenu>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> QuickAccessToolbar.</para>
     /// <para> Represents the following element tag in the schema: mso:qat </para>
@@ -9101,7 +8764,6 @@ public partial class Ribbon : OpenXmlCompositeElement
         get => GetElement<QuickAccessToolbar>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Tabs.</para>
     /// <para> Represents the following element tag in the schema: mso:tabs </para>
@@ -9115,7 +8777,6 @@ public partial class Ribbon : OpenXmlCompositeElement
         get => GetElement<Tabs>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> ContextualTabSets.</para>
     /// <para> Represents the following element tag in the schema: mso:contextualTabs </para>
@@ -9129,7 +8790,6 @@ public partial class Ribbon : OpenXmlCompositeElement
         get => GetElement<ContextualTabSets>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -9137,10 +8797,10 @@ public partial class Ribbon : OpenXmlCompositeElement
 
 }
 /// <summary>
-/// Defines the SizeValues enumeration. 
-/// </summary> 
+/// Defines the SizeValues enumeration.
+/// </summary>
 public enum SizeValues
-{  
+{
 	///<summary>
 ///normal.
 ///<para>When the item is serialized out as xml, its value is "normal".</para>
@@ -9153,13 +8813,13 @@ Normal,
 ///</summary>
 [EnumString("large")]
 Large,
- 
+
 }
 /// <summary>
-/// Defines the ItemSizeValues enumeration. 
-/// </summary> 
+/// Defines the ItemSizeValues enumeration.
+/// </summary>
 public enum ItemSizeValues
-{  
+{
 	///<summary>
 ///normal.
 ///<para>When the item is serialized out as xml, its value is "normal".</para>
@@ -9172,13 +8832,13 @@ Normal,
 ///</summary>
 [EnumString("large")]
 Large,
- 
+
 }
 /// <summary>
-/// Defines the BoxStyleValues enumeration. 
-/// </summary> 
+/// Defines the BoxStyleValues enumeration.
+/// </summary>
 public enum BoxStyleValues
-{  
+{
 	///<summary>
 ///horizontal.
 ///<para>When the item is serialized out as xml, its value is "horizontal".</para>
@@ -9191,8 +8851,6 @@ Horizontal,
 ///</summary>
 [EnumString("vertical")]
 Vertical,
- 
+
 }
 }
- 
- 

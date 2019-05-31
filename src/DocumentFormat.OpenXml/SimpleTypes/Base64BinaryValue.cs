@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the xsd:base64Binary value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class Base64BinaryValue : OpenXmlComparableSimpleReference<string>
+    public class Base64BinaryValue : StringValue
     {
         /// <summary>
         /// Initializes a new instance of the Base64BinaryValue class.
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml
         /// The source Base64BinaryValue class.
         /// </param>
         public Base64BinaryValue(Base64BinaryValue source)
-            : base(source)
+            : base(source.InnerText)
         {
         }
 
@@ -51,6 +51,8 @@ namespace DocumentFormat.OpenXml
             get => TextValue;
             set => TextValue = value;
         }
+
+        internal override bool IsValid => new Validation.Schema.Restrictions.Base64BinaryRestriction().ValidateValueType(this);
 
         /// <summary>
         /// Implicitly converts the specified value to a String value.
@@ -73,20 +75,14 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified base64Binary value.</param>
         /// <returns>A new Base64BinaryValue instance with the value.</returns>
-        public static implicit operator Base64BinaryValue(string value)
-        {
-            return FromString(value);
-        }
+        public static implicit operator Base64BinaryValue(string value) => FromString(value);
 
         /// <summary>
         /// Returns a new Base64BinaryValue object that was created from a String value.
         /// </summary>
         /// <param name="value">A String value to use to create a new Base64BinaryValue object.</param>
         /// <returns>A Base64BinaryValue that corresponds to the value parameter.</returns>
-        public static Base64BinaryValue FromString(string value)
-        {
-            return new Base64BinaryValue(value);
-        }
+        public new static Base64BinaryValue FromString(string value) => new Base64BinaryValue(value);
 
         /// <summary>
         /// Returns the String value representation of a Base64BinaryValue object.

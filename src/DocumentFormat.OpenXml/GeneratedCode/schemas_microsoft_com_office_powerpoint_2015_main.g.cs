@@ -27,23 +27,19 @@ public partial class DesignElement : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> val.</para>
+    /// <para> val, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
     [Index(0)]
     public BooleanValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the DesignElement class.
     /// </summary>
     public DesignElement():base(){}
     
-      
-     
     
     
     
@@ -52,5 +48,3 @@ public partial class DesignElement : OpenXmlLeafElement
 
 }
 }
- 
- 

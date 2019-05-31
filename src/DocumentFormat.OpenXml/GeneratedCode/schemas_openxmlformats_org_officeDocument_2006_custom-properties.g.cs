@@ -33,10 +33,7 @@ public partial class Properties : OpenXmlPartRootElement
 
     
     
-    
-    
 	internal Properties(CustomFilePropertiesPart ownerPart) : base (ownerPart){}
-    
     /// <summary>
     /// Loads the DOM from the CustomFilePropertiesPart.
     /// </summary>
@@ -53,16 +50,14 @@ public partial class Properties : OpenXmlPartRootElement
 		get => OpenXmlPart as CustomFilePropertiesPart;
 		internal set => OpenXmlPart = value;
     }
-    
         /// <summary>
     ///Initializes a new instance of the Properties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Properties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Properties class with the specified child elements.
     /// </summary>
@@ -70,7 +65,6 @@ public partial class Properties : OpenXmlPartRootElement
     public Properties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Properties class from outer XML.
     /// </summary>
@@ -79,15 +73,12 @@ public partial class Properties : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-    
 
-    
     
     /// <summary>
     /// Initializes a new instance of the Properties class.
     /// </summary>
     public Properties():base(){}
-    
     /// <summary>
     /// Saves the DOM into the CustomFilePropertiesPart.
     /// </summary>
@@ -96,7 +87,6 @@ public partial class Properties : OpenXmlPartRootElement
     {
         base.SaveToPart(openXmlPart);
     }
-    
     
     
     /// <inheritdoc/>
@@ -192,23 +182,23 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Format ID.</para>
     /// <para>Represents the following attribute in the schema: fmtid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(Pattern = @"\s*\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\}\s*")]
     [SchemaAttr(0, "fmtid")]
     [Index(0)]
     public StringValue FormatId { get; set; }
-	
     /// <summary>
     /// <para> Property ID.</para>
     /// <para>Represents the following attribute in the schema: pid </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "pid")]
     [Index(1)]
     public Int32Value PropertyId { get; set; }
-	
     /// <summary>
     /// <para> Custom File Property Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -216,7 +206,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     [Index(2)]
     public StringValue Name { get; set; }
-	
     /// <summary>
     /// <para> Bookmark Link Target.</para>
     /// <para>Represents the following attribute in the schema: linkTarget </para>
@@ -224,22 +213,19 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     [SchemaAttr(0, "linkTarget")]
     [Index(3)]
     public StringValue LinkTarget { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the CustomDocumentProperty class.
     /// </summary>
     public CustomDocumentProperty():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the CustomDocumentProperty class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public CustomDocumentProperty(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CustomDocumentProperty class with the specified child elements.
     /// </summary>
@@ -247,7 +233,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     public CustomDocumentProperty(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CustomDocumentProperty class from outer XML.
     /// </summary>
@@ -256,13 +241,10 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-    
         /// <summary>
     /// <para> Vector.</para>
     /// <para> Represents the following element tag in the schema: vt:vector </para>
@@ -276,7 +258,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Array.</para>
     /// <para> Represents the following element tag in the schema: vt:array </para>
@@ -290,7 +271,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTArray>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Binary Blob.</para>
     /// <para> Represents the following element tag in the schema: vt:blob </para>
@@ -304,7 +284,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Binary Blob Object.</para>
     /// <para> Represents the following element tag in the schema: vt:oblob </para>
@@ -318,7 +297,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOBlob>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Empty.</para>
     /// <para> Represents the following element tag in the schema: vt:empty </para>
@@ -332,7 +310,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTEmpty>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> Null.</para>
     /// <para> Represents the following element tag in the schema: vt:null </para>
@@ -346,7 +323,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTNull>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> 1-Byte Signed Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:i1 </para>
@@ -360,7 +336,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTByte>(6);
         set => SetElement(6, value);
 	}
-    
     /// <summary>
     /// <para> 2-Byte Signed Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:i2 </para>
@@ -374,7 +349,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTShort>(7);
         set => SetElement(7, value);
 	}
-    
     /// <summary>
     /// <para> 4-Byte Signed Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:i4 </para>
@@ -388,7 +362,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt32>(8);
         set => SetElement(8, value);
 	}
-    
     /// <summary>
     /// <para> 8-Byte Signed Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:i8 </para>
@@ -402,7 +375,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt64>(9);
         set => SetElement(9, value);
 	}
-    
     /// <summary>
     /// <para> Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:int </para>
@@ -416,7 +388,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInteger>(10);
         set => SetElement(10, value);
 	}
-    
     /// <summary>
     /// <para> 1-Byte Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:ui1 </para>
@@ -430,7 +401,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>(11);
         set => SetElement(11, value);
 	}
-    
     /// <summary>
     /// <para> 2-Byte Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:ui2 </para>
@@ -444,7 +414,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>(12);
         set => SetElement(12, value);
 	}
-    
     /// <summary>
     /// <para> 4-Byte Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:ui4 </para>
@@ -458,7 +427,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>(13);
         set => SetElement(13, value);
 	}
-    
     /// <summary>
     /// <para> 8-Byte Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:ui8 </para>
@@ -472,7 +440,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>(14);
         set => SetElement(14, value);
 	}
-    
     /// <summary>
     /// <para> Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:uint </para>
@@ -486,7 +453,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>(15);
         set => SetElement(15, value);
 	}
-    
     /// <summary>
     /// <para> 4-Byte Real Number.</para>
     /// <para> Represents the following element tag in the schema: vt:r4 </para>
@@ -500,7 +466,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFloat>(16);
         set => SetElement(16, value);
 	}
-    
     /// <summary>
     /// <para> 8-Byte Real Number.</para>
     /// <para> Represents the following element tag in the schema: vt:r8 </para>
@@ -514,7 +479,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDouble>(17);
         set => SetElement(17, value);
 	}
-    
     /// <summary>
     /// <para> Decimal.</para>
     /// <para> Represents the following element tag in the schema: vt:decimal </para>
@@ -528,7 +492,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDecimal>(18);
         set => SetElement(18, value);
 	}
-    
     /// <summary>
     /// <para> LPSTR.</para>
     /// <para> Represents the following element tag in the schema: vt:lpstr </para>
@@ -542,7 +505,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>(19);
         set => SetElement(19, value);
 	}
-    
     /// <summary>
     /// <para> LPWSTR.</para>
     /// <para> Represents the following element tag in the schema: vt:lpwstr </para>
@@ -556,7 +518,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>(20);
         set => SetElement(20, value);
 	}
-    
     /// <summary>
     /// <para> Basic String.</para>
     /// <para> Represents the following element tag in the schema: vt:bstr </para>
@@ -570,7 +531,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBString>(21);
         set => SetElement(21, value);
 	}
-    
     /// <summary>
     /// <para> Date and Time.</para>
     /// <para> Represents the following element tag in the schema: vt:date </para>
@@ -584,7 +544,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDate>(22);
         set => SetElement(22, value);
 	}
-    
     /// <summary>
     /// <para> File Time.</para>
     /// <para> Represents the following element tag in the schema: vt:filetime </para>
@@ -598,7 +557,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFileTime>(23);
         set => SetElement(23, value);
 	}
-    
     /// <summary>
     /// <para> Boolean.</para>
     /// <para> Represents the following element tag in the schema: vt:bool </para>
@@ -612,7 +570,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBool>(24);
         set => SetElement(24, value);
 	}
-    
     /// <summary>
     /// <para> Currency.</para>
     /// <para> Represents the following element tag in the schema: vt:cy </para>
@@ -626,7 +583,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTCurrency>(25);
         set => SetElement(25, value);
 	}
-    
     /// <summary>
     /// <para> Error Status Code.</para>
     /// <para> Represents the following element tag in the schema: vt:error </para>
@@ -640,7 +596,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTError>(26);
         set => SetElement(26, value);
 	}
-    
     /// <summary>
     /// <para> Binary Stream.</para>
     /// <para> Represents the following element tag in the schema: vt:stream </para>
@@ -654,7 +609,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStreamData>(27);
         set => SetElement(27, value);
 	}
-    
     /// <summary>
     /// <para> Binary Stream Object.</para>
     /// <para> Represents the following element tag in the schema: vt:ostream </para>
@@ -668,7 +622,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStreamData>(28);
         set => SetElement(28, value);
 	}
-    
     /// <summary>
     /// <para> Binary Storage.</para>
     /// <para> Represents the following element tag in the schema: vt:storage </para>
@@ -682,7 +635,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStorage>(29);
         set => SetElement(29, value);
 	}
-    
     /// <summary>
     /// <para> Binary Storage Object.</para>
     /// <para> Represents the following element tag in the schema: vt:ostorage </para>
@@ -696,7 +648,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStorage>(30);
         set => SetElement(30, value);
 	}
-    
     /// <summary>
     /// <para> Binary Versioned Stream.</para>
     /// <para> Represents the following element tag in the schema: vt:vstream </para>
@@ -710,7 +661,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVStreamData>(31);
         set => SetElement(31, value);
 	}
-    
     /// <summary>
     /// <para> Class ID.</para>
     /// <para> Represents the following element tag in the schema: vt:clsid </para>
@@ -724,7 +674,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClassId>(32);
         set => SetElement(32, value);
 	}
-    
     /// <summary>
     /// <para> Clipboard Data.</para>
     /// <para> Represents the following element tag in the schema: vt:cf </para>
@@ -738,7 +687,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>(33);
         set => SetElement(33, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -746,5 +694,3 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
 
 }
 }
- 
- 

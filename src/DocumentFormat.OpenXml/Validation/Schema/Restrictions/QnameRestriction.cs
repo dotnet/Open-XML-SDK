@@ -27,12 +27,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
+            return IsValidQName(attributeValue.InnerText);
+        }
+
+        public static bool IsValidQName(string qname)
+        {
             //Qualified Name
             //[6]  QName ::=  (Prefix ':')? LocalPart
             //[7]  Prefix ::=  NCName
             //[8]  LocalPart ::=  NCName
-            string qname = attributeValue.InnerText;
-
             if (string.IsNullOrEmpty(qname))
             {
                 return false;

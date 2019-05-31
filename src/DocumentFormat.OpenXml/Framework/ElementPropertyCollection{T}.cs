@@ -91,6 +91,7 @@ namespace DocumentFormat.OpenXml.Framework
                         schema.NamespaceId,
                         schema.Tag,
                         schema.Index,
+                        new ValidatorCollection(property),
                         new ElementPropertyAccessor<T>(activator, property));
                 })
                 .Where(tag => tag.IsValid)

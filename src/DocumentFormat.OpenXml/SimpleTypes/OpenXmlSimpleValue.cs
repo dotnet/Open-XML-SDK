@@ -116,6 +116,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         private protected abstract T Parse(string input);
 
+        internal sealed override bool IsValid => TryParse(InnerText, out _);
+
         /// <summary>
         /// Convert the text to meaningful value with no exceptions
         /// </summary>

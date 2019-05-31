@@ -26,23 +26,21 @@ public partial class CompatibilityShape : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> spid.</para>
+    /// <para> spid, this property is only available in Office2010, Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: spid </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "spid")]
     [Index(0)]
     public StringValue ShapeId { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the CompatibilityShape class.
     /// </summary>
     public CompatibilityShape():base(){}
     
-      
-     
     
     
     
@@ -51,5 +49,3 @@ public partial class CompatibilityShape : OpenXmlLeafElement
 
 }
 }
- 
- 

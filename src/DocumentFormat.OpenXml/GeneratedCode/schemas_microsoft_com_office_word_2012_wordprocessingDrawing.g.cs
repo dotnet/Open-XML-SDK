@@ -26,39 +26,33 @@ public partial class WebVideoProperty : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> embeddedHtml.</para>
+    /// <para> embeddedHtml, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: embeddedHtml </para>
     /// </summary>
     [SchemaAttr(0, "embeddedHtml")]
     [Index(0)]
     public StringValue EmbeddedHtml { get; set; }
-	
     /// <summary>
-    /// <para> h.</para>
+    /// <para> h, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: h </para>
     /// </summary>
     [SchemaAttr(0, "h")]
     [Index(1)]
     public UInt32Value Height { get; set; }
-	
     /// <summary>
-    /// <para> w.</para>
+    /// <para> w, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: w </para>
     /// </summary>
     [SchemaAttr(0, "w")]
     [Index(2)]
     public UInt32Value Width { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the WebVideoProperty class.
     /// </summary>
     public WebVideoProperty():base(){}
     
-      
-     
     
     
     
@@ -67,5 +61,3 @@ public partial class WebVideoProperty : OpenXmlLeafElement
 
 }
 }
- 
- 

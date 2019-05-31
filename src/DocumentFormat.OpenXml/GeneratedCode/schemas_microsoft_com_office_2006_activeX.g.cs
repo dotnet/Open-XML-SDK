@@ -32,17 +32,16 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> classid.</para>
     /// <para>Represents the following attribute in the schema: ax:classid </para>
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(35, "classid")]
     [Index(0)]
     public StringValue ActiveXControlClassId { get; set; }
-	
     /// <summary>
     /// <para> license.</para>
     /// <para>Represents the following attribute in the schema: ax:license </para>
@@ -52,7 +51,6 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     [SchemaAttr(35, "license")]
     [Index(1)]
     public StringValue License { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
@@ -62,32 +60,29 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     [SchemaAttr(19, "id")]
     [Index(2)]
     public StringValue Id { get; set; }
-	
     /// <summary>
     /// <para> persistence.</para>
     /// <para>Represents the following attribute in the schema: ax:persistence </para>
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(35, "persistence")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ActiveXControlData class.
     /// </summary>
     public ActiveXControlData():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ActiveXControlData class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ActiveXControlData(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ActiveXControlData class with the specified child elements.
     /// </summary>
@@ -95,7 +90,6 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     public ActiveXControlData(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ActiveXControlData class from outer XML.
     /// </summary>
@@ -104,9 +98,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -139,17 +131,16 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: ax:name </para>
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(35, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
-	
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: ax:value </para>
@@ -159,22 +150,19 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     [SchemaAttr(35, "value")]
     [Index(1)]
     public StringValue Value { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ActiveXObjectProperty class.
     /// </summary>
     public ActiveXObjectProperty():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ActiveXObjectProperty class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ActiveXObjectProperty(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ActiveXObjectProperty class with the specified child elements.
     /// </summary>
@@ -182,7 +170,6 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     public ActiveXObjectProperty(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ActiveXObjectProperty class from outer XML.
     /// </summary>
@@ -191,13 +178,10 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-    
         /// <summary>
     /// <para> SharedComFont.</para>
     /// <para> Represents the following element tag in the schema: ax:font </para>
@@ -211,7 +195,6 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
         get => GetElement<SharedComFont>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> SharedComPicture.</para>
     /// <para> Represents the following element tag in the schema: ax:picture </para>
@@ -225,7 +208,6 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
         get => GetElement<SharedComPicture>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -255,7 +237,6 @@ public partial class SharedComFont : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> persistence.</para>
     /// <para>Represents the following attribute in the schema: ax:persistence </para>
@@ -265,7 +246,6 @@ public partial class SharedComFont : OpenXmlCompositeElement
     [SchemaAttr(35, "persistence")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence { get; set; }
-	
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
@@ -275,22 +255,19 @@ public partial class SharedComFont : OpenXmlCompositeElement
     [SchemaAttr(19, "id")]
     [Index(1)]
     public StringValue Id { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the SharedComFont class.
     /// </summary>
     public SharedComFont():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SharedComFont class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SharedComFont(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SharedComFont class with the specified child elements.
     /// </summary>
@@ -298,7 +275,6 @@ public partial class SharedComFont : OpenXmlCompositeElement
     public SharedComFont(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SharedComFont class from outer XML.
     /// </summary>
@@ -307,9 +283,7 @@ public partial class SharedComFont : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -333,7 +307,6 @@ public partial class SharedComPicture : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
@@ -343,15 +316,12 @@ public partial class SharedComPicture : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the SharedComPicture class.
     /// </summary>
     public SharedComPicture():base(){}
     
-      
-     
     
     
     
@@ -360,10 +330,10 @@ public partial class SharedComPicture : OpenXmlLeafElement
 
 }
 /// <summary>
-/// Defines the PersistenceValues enumeration. 
-/// </summary> 
+/// Defines the PersistenceValues enumeration.
+/// </summary>
 public enum PersistenceValues
-{  
+{
 	///<summary>
 ///persistPropertyBag.
 ///<para>When the item is serialized out as xml, its value is "persistPropertyBag".</para>
@@ -388,8 +358,6 @@ PersistStreamInit,
 ///</summary>
 [EnumString("persistStorage")]
 PersistStorage,
- 
+
 }
 }
- 
- 

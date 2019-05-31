@@ -112,7 +112,7 @@ public partial class BottomBorder : BorderType
 
 public abstract partial class BorderType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
     /// <para> Border Style.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -120,15 +120,14 @@ public abstract partial class BorderType : OpenXmlLeafElement
     [SchemaAttr(0, "type")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues> Type { get; set; }
-	
     /// <summary>
     /// <para> Border Width.</para>
     /// <para>Represents the following attribute in the schema: width </para>
     /// </summary>
+[NumberValidator(IsPositive = true)]
     [SchemaAttr(0, "width")]
     [Index(1)]
     public IntegerValue Width { get; set; }
-	
     /// <summary>
     /// <para> Border shadow.</para>
     /// <para>Represents the following attribute in the schema: shadow </para>
@@ -136,16 +135,13 @@ public abstract partial class BorderType : OpenXmlLeafElement
     [SchemaAttr(0, "shadow")]
     [Index(2)]
     public TrueFalseValue Shadow { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the BorderType class.
     /// </summary>
     protected BorderType(){}
-    
     
     
 }
@@ -165,7 +161,6 @@ public partial class TextWrap : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Wrapping type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
@@ -173,7 +168,6 @@ public partial class TextWrap : OpenXmlLeafElement
     [SchemaAttr(0, "type")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues> Type { get; set; }
-	
     /// <summary>
     /// <para> Wrapping side.</para>
     /// <para>Represents the following attribute in the schema: side </para>
@@ -181,7 +175,6 @@ public partial class TextWrap : OpenXmlLeafElement
     [SchemaAttr(0, "side")]
     [Index(1)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues> Side { get; set; }
-	
     /// <summary>
     /// <para> Horizontal Positioning Base.</para>
     /// <para>Represents the following attribute in the schema: anchorx </para>
@@ -189,7 +182,6 @@ public partial class TextWrap : OpenXmlLeafElement
     [SchemaAttr(0, "anchorx")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues> AnchorX { get; set; }
-	
     /// <summary>
     /// <para> Vertical Positioning Base.</para>
     /// <para>Represents the following attribute in the schema: anchory </para>
@@ -197,15 +189,12 @@ public partial class TextWrap : OpenXmlLeafElement
     [SchemaAttr(0, "anchory")]
     [Index(3)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues> AnchorY { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the TextWrap class.
     /// </summary>
     public TextWrap():base(){}
     
-      
-     
     
     
     
@@ -230,14 +219,11 @@ public partial class AnchorLock : OpenXmlLeafElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the AnchorLock class.
     /// </summary>
     public AnchorLock():base(){}
     
-      
-     
     
     
     
@@ -246,10 +232,10 @@ public partial class AnchorLock : OpenXmlLeafElement
 
 }
 /// <summary>
-/// Border Type 
-/// </summary> 
+/// Border Type
+/// </summary>
 public enum BorderValues
-{  
+{
 	///<summary>
 ///No Border.
 ///<para>When the item is serialized out as xml, its value is "none".</para>
@@ -412,13 +398,13 @@ HTMLOutset,
 ///</summary>
 [EnumString("HTMLInset")]
 HTMLInset,
- 
+
 }
 /// <summary>
-/// Text Wrapping Type 
-/// </summary> 
+/// Text Wrapping Type
+/// </summary>
 public enum WrapValues
-{  
+{
 	///<summary>
 ///Top and bottom wrapping.
 ///<para>When the item is serialized out as xml, its value is "topAndBottom".</para>
@@ -449,13 +435,13 @@ Tight,
 ///</summary>
 [EnumString("through")]
 Through,
- 
+
 }
 /// <summary>
-/// Text Wrapping Side 
-/// </summary> 
+/// Text Wrapping Side
+/// </summary>
 public enum WrapSideValues
-{  
+{
 	///<summary>
 ///Both sides.
 ///<para>When the item is serialized out as xml, its value is "both".</para>
@@ -480,13 +466,13 @@ Right,
 ///</summary>
 [EnumString("largest")]
 Largest,
- 
+
 }
 /// <summary>
-/// Horizontal Anchor Type 
-/// </summary> 
+/// Horizontal Anchor Type
+/// </summary>
 public enum HorizontalAnchorValues
-{  
+{
 	///<summary>
 ///Margin.
 ///<para>When the item is serialized out as xml, its value is "margin".</para>
@@ -505,13 +491,13 @@ Page,
 ///</summary>
 [EnumString("text")]
 Text,
- 
+
 }
 /// <summary>
-/// Vertical Anchor Type 
-/// </summary> 
+/// Vertical Anchor Type
+/// </summary>
 public enum VerticalAnchorValues
-{  
+{
 	///<summary>
 ///Margin.
 ///<para>When the item is serialized out as xml, its value is "margin".</para>
@@ -530,8 +516,6 @@ Page,
 ///</summary>
 [EnumString("text")]
 Text,
- 
+
 }
 }
- 
- 

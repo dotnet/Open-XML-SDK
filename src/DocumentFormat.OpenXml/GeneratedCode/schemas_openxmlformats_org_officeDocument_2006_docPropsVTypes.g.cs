@@ -101,21 +101,18 @@ public partial class Variant : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Variant class.
     /// </summary>
     public Variant():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Variant class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Variant(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Variant class with the specified child elements.
     /// </summary>
@@ -123,7 +120,6 @@ public partial class Variant : OpenXmlCompositeElement
     public Variant(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Variant class from outer XML.
     /// </summary>
@@ -132,13 +128,10 @@ public partial class Variant : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-    
         /// <summary>
     /// <para> Variant.</para>
     /// <para> Represents the following element tag in the schema: vt:variant </para>
@@ -152,7 +145,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<Variant>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Vector.</para>
     /// <para> Represents the following element tag in the schema: vt:vector </para>
@@ -166,7 +158,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTVector>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Array.</para>
     /// <para> Represents the following element tag in the schema: vt:array </para>
@@ -180,7 +171,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTArray>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Binary Blob.</para>
     /// <para> Represents the following element tag in the schema: vt:blob </para>
@@ -194,7 +184,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTBlob>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Binary Blob Object.</para>
     /// <para> Represents the following element tag in the schema: vt:oblob </para>
@@ -208,7 +197,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTOBlob>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> Empty.</para>
     /// <para> Represents the following element tag in the schema: vt:empty </para>
@@ -222,7 +210,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTEmpty>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> Null.</para>
     /// <para> Represents the following element tag in the schema: vt:null </para>
@@ -236,7 +223,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTNull>(6);
         set => SetElement(6, value);
 	}
-    
     /// <summary>
     /// <para> 1-Byte Signed Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:i1 </para>
@@ -250,7 +236,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTByte>(7);
         set => SetElement(7, value);
 	}
-    
     /// <summary>
     /// <para> 2-Byte Signed Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:i2 </para>
@@ -264,7 +249,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTShort>(8);
         set => SetElement(8, value);
 	}
-    
     /// <summary>
     /// <para> 4-Byte Signed Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:i4 </para>
@@ -278,7 +262,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTInt32>(9);
         set => SetElement(9, value);
 	}
-    
     /// <summary>
     /// <para> 8-Byte Signed Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:i8 </para>
@@ -292,7 +275,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTInt64>(10);
         set => SetElement(10, value);
 	}
-    
     /// <summary>
     /// <para> Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:int </para>
@@ -306,7 +288,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTInteger>(11);
         set => SetElement(11, value);
 	}
-    
     /// <summary>
     /// <para> 1-Byte Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:ui1 </para>
@@ -320,7 +301,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTUnsignedByte>(12);
         set => SetElement(12, value);
 	}
-    
     /// <summary>
     /// <para> 2-Byte Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:ui2 </para>
@@ -334,7 +314,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTUnsignedShort>(13);
         set => SetElement(13, value);
 	}
-    
     /// <summary>
     /// <para> 4-Byte Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:ui4 </para>
@@ -348,7 +327,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTUnsignedInt32>(14);
         set => SetElement(14, value);
 	}
-    
     /// <summary>
     /// <para> 8-Byte Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:ui8 </para>
@@ -362,7 +340,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTUnsignedInt64>(15);
         set => SetElement(15, value);
 	}
-    
     /// <summary>
     /// <para> Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:uint </para>
@@ -376,7 +353,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTUnsignedInteger>(16);
         set => SetElement(16, value);
 	}
-    
     /// <summary>
     /// <para> 4-Byte Real Number.</para>
     /// <para> Represents the following element tag in the schema: vt:r4 </para>
@@ -390,7 +366,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTFloat>(17);
         set => SetElement(17, value);
 	}
-    
     /// <summary>
     /// <para> 8-Byte Real Number.</para>
     /// <para> Represents the following element tag in the schema: vt:r8 </para>
@@ -404,7 +379,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTDouble>(18);
         set => SetElement(18, value);
 	}
-    
     /// <summary>
     /// <para> Decimal.</para>
     /// <para> Represents the following element tag in the schema: vt:decimal </para>
@@ -418,7 +392,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTDecimal>(19);
         set => SetElement(19, value);
 	}
-    
     /// <summary>
     /// <para> LPSTR.</para>
     /// <para> Represents the following element tag in the schema: vt:lpstr </para>
@@ -432,7 +405,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTLPSTR>(20);
         set => SetElement(20, value);
 	}
-    
     /// <summary>
     /// <para> LPWSTR.</para>
     /// <para> Represents the following element tag in the schema: vt:lpwstr </para>
@@ -446,7 +418,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTLPWSTR>(21);
         set => SetElement(21, value);
 	}
-    
     /// <summary>
     /// <para> Basic String.</para>
     /// <para> Represents the following element tag in the schema: vt:bstr </para>
@@ -460,7 +431,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTBString>(22);
         set => SetElement(22, value);
 	}
-    
     /// <summary>
     /// <para> Date and Time.</para>
     /// <para> Represents the following element tag in the schema: vt:date </para>
@@ -474,7 +444,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTDate>(23);
         set => SetElement(23, value);
 	}
-    
     /// <summary>
     /// <para> File Time.</para>
     /// <para> Represents the following element tag in the schema: vt:filetime </para>
@@ -488,7 +457,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTFileTime>(24);
         set => SetElement(24, value);
 	}
-    
     /// <summary>
     /// <para> Boolean.</para>
     /// <para> Represents the following element tag in the schema: vt:bool </para>
@@ -502,7 +470,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTBool>(25);
         set => SetElement(25, value);
 	}
-    
     /// <summary>
     /// <para> Currency.</para>
     /// <para> Represents the following element tag in the schema: vt:cy </para>
@@ -516,7 +483,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTCurrency>(26);
         set => SetElement(26, value);
 	}
-    
     /// <summary>
     /// <para> Error Status Code.</para>
     /// <para> Represents the following element tag in the schema: vt:error </para>
@@ -530,7 +496,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTError>(27);
         set => SetElement(27, value);
 	}
-    
     /// <summary>
     /// <para> Binary Stream.</para>
     /// <para> Represents the following element tag in the schema: vt:stream </para>
@@ -544,7 +509,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTStreamData>(28);
         set => SetElement(28, value);
 	}
-    
     /// <summary>
     /// <para> Binary Stream Object.</para>
     /// <para> Represents the following element tag in the schema: vt:ostream </para>
@@ -558,7 +522,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTOStreamData>(29);
         set => SetElement(29, value);
 	}
-    
     /// <summary>
     /// <para> Binary Storage.</para>
     /// <para> Represents the following element tag in the schema: vt:storage </para>
@@ -572,7 +535,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTStorage>(30);
         set => SetElement(30, value);
 	}
-    
     /// <summary>
     /// <para> Binary Storage Object.</para>
     /// <para> Represents the following element tag in the schema: vt:ostorage </para>
@@ -586,7 +548,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTOStorage>(31);
         set => SetElement(31, value);
 	}
-    
     /// <summary>
     /// <para> Binary Versioned Stream.</para>
     /// <para> Represents the following element tag in the schema: vt:vstream </para>
@@ -600,7 +561,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTVStreamData>(32);
         set => SetElement(32, value);
 	}
-    
     /// <summary>
     /// <para> Class ID.</para>
     /// <para> Represents the following element tag in the schema: vt:clsid </para>
@@ -614,7 +574,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTClassId>(33);
         set => SetElement(33, value);
 	}
-    
     /// <summary>
     /// <para> Clipboard Data.</para>
     /// <para> Represents the following element tag in the schema: vt:cf </para>
@@ -628,7 +587,6 @@ public partial class Variant : OpenXmlCompositeElement
         get => GetElement<VTClipboardData>(34);
         set => SetElement(34, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -698,38 +656,35 @@ public partial class VTVector : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Vector Base Type.</para>
     /// <para>Represents the following attribute in the schema: baseType </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "baseType")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues> BaseType { get; set; }
-	
     /// <summary>
     /// <para> Vector Size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "size")]
     [Index(1)]
     public UInt32Value Size { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the VTVector class.
     /// </summary>
     public VTVector():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the VTVector class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public VTVector(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the VTVector class with the specified child elements.
     /// </summary>
@@ -737,7 +692,6 @@ public partial class VTVector : OpenXmlCompositeElement
     public VTVector(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the VTVector class from outer XML.
     /// </summary>
@@ -746,9 +700,7 @@ public partial class VTVector : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -811,46 +763,43 @@ public partial class VTArray : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Array Lower Bounds Attribute.</para>
     /// <para>Represents the following attribute in the schema: lBound </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "lBound")]
     [Index(0)]
     public Int32Value LowerBounds { get; set; }
-	
     /// <summary>
     /// <para> Array Upper Bounds Attribute.</para>
     /// <para>Represents the following attribute in the schema: uBound </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "uBound")]
     [Index(1)]
     public Int32Value UpperBounds { get; set; }
-	
     /// <summary>
     /// <para> Array Base Type.</para>
     /// <para>Represents the following attribute in the schema: baseType </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "baseType")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues> BaseType { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the VTArray class.
     /// </summary>
     public VTArray():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the VTArray class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public VTArray(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the VTArray class with the specified child elements.
     /// </summary>
@@ -858,7 +807,6 @@ public partial class VTArray : OpenXmlCompositeElement
     public VTArray(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the VTArray class from outer XML.
     /// </summary>
@@ -867,9 +815,7 @@ public partial class VTArray : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -883,6 +829,7 @@ public partial class VTArray : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:blob.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(Base64BinaryValue))]
 [SchemaAttr(5, "blob")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -903,12 +850,10 @@ public partial class VTBlob : OpenXmlLeafTextElement
     public VTBlob(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBlob>(deep);
@@ -920,6 +865,7 @@ public partial class VTBlob : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:oblob.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(Base64BinaryValue))]
 [SchemaAttr(5, "oblob")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -940,12 +886,10 @@ public partial class VTOBlob : OpenXmlLeafTextElement
     public VTOBlob(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOBlob>(deep);
@@ -957,6 +901,7 @@ public partial class VTOBlob : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:stream.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(Base64BinaryValue))]
 [SchemaAttr(5, "stream")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -977,12 +922,10 @@ public partial class VTStreamData : OpenXmlLeafTextElement
     public VTStreamData(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTStreamData>(deep);
@@ -994,6 +937,7 @@ public partial class VTStreamData : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:ostream.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(Base64BinaryValue))]
 [SchemaAttr(5, "ostream")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1014,12 +958,10 @@ public partial class VTOStreamData : OpenXmlLeafTextElement
     public VTOStreamData(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOStreamData>(deep);
@@ -1031,6 +973,7 @@ public partial class VTOStreamData : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:storage.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(Base64BinaryValue))]
 [SchemaAttr(5, "storage")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1051,12 +994,10 @@ public partial class VTStorage : OpenXmlLeafTextElement
     public VTStorage(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTStorage>(deep);
@@ -1068,6 +1009,7 @@ public partial class VTStorage : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:ostorage.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(Base64BinaryValue))]
 [SchemaAttr(5, "ostorage")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1088,12 +1030,10 @@ public partial class VTOStorage : OpenXmlLeafTextElement
     public VTOStorage(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOStorage>(deep);
@@ -1116,14 +1056,11 @@ public partial class VTEmpty : OpenXmlLeafElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTEmpty class.
     /// </summary>
     public VTEmpty():base(){}
     
-      
-     
     
     
     
@@ -1148,14 +1085,11 @@ public partial class VTNull : OpenXmlLeafElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTNull class.
     /// </summary>
     public VTNull():base(){}
     
-      
-     
     
     
     
@@ -1169,6 +1103,7 @@ public partial class VTNull : OpenXmlLeafElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:i1.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(SByteValue))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "i1")]
@@ -1180,13 +1115,11 @@ public partial class VTByte : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTByte class.
     /// </summary>
     public VTByte():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTByte class with the specified text content.
     /// </summary>
@@ -1194,14 +1127,11 @@ public partial class VTByte : OpenXmlLeafTextElement
     public VTByte(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new SByteValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1214,6 +1144,7 @@ public partial class VTByte : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:i2.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(Int16Value))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "i2")]
@@ -1225,13 +1156,11 @@ public partial class VTShort : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTShort class.
     /// </summary>
     public VTShort():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTShort class with the specified text content.
     /// </summary>
@@ -1239,14 +1168,11 @@ public partial class VTShort : OpenXmlLeafTextElement
     public VTShort(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int16Value(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1259,6 +1185,7 @@ public partial class VTShort : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:i4.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(5, "i4")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1279,12 +1206,10 @@ public partial class VTInt32 : OpenXmlLeafTextElement
     public VTInt32(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInt32>(deep);
@@ -1296,6 +1221,7 @@ public partial class VTInt32 : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:int.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(5, "int")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1316,12 +1242,10 @@ public partial class VTInteger : OpenXmlLeafTextElement
     public VTInteger(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInteger>(deep);
@@ -1333,6 +1257,7 @@ public partial class VTInteger : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:i8.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(Int64Value))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "i8")]
@@ -1344,13 +1269,11 @@ public partial class VTInt64 : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTInt64 class.
     /// </summary>
     public VTInt64():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTInt64 class with the specified text content.
     /// </summary>
@@ -1358,14 +1281,11 @@ public partial class VTInt64 : OpenXmlLeafTextElement
     public VTInt64(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int64Value(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1378,6 +1298,7 @@ public partial class VTInt64 : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:ui1.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(ByteValue))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "ui1")]
@@ -1389,13 +1310,11 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTUnsignedByte class.
     /// </summary>
     public VTUnsignedByte():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTUnsignedByte class with the specified text content.
     /// </summary>
@@ -1403,14 +1322,11 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
     public VTUnsignedByte(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new ByteValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1423,6 +1339,7 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:ui2.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(UInt16Value))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "ui2")]
@@ -1434,13 +1351,11 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTUnsignedShort class.
     /// </summary>
     public VTUnsignedShort():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTUnsignedShort class with the specified text content.
     /// </summary>
@@ -1448,14 +1363,11 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
     public VTUnsignedShort(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new UInt16Value(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1468,6 +1380,7 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:ui4.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(UInt32Value))]
 [SchemaAttr(5, "ui4")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1488,12 +1401,10 @@ public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
     public VTUnsignedInt32(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new UInt32Value(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInt32>(deep);
@@ -1505,6 +1416,7 @@ public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:uint.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(UInt32Value))]
 [SchemaAttr(5, "uint")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1525,12 +1437,10 @@ public partial class VTUnsignedInteger : OpenXmlLeafTextElement
     public VTUnsignedInteger(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new UInt32Value(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInteger>(deep);
@@ -1542,6 +1452,7 @@ public partial class VTUnsignedInteger : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:ui8.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(UInt64Value))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "ui8")]
@@ -1553,13 +1464,11 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTUnsignedInt64 class.
     /// </summary>
     public VTUnsignedInt64():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTUnsignedInt64 class with the specified text content.
     /// </summary>
@@ -1567,14 +1476,11 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
     public VTUnsignedInt64(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new UInt64Value(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1587,6 +1493,7 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:r4.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(SingleValue))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "r4")]
@@ -1598,13 +1505,11 @@ public partial class VTFloat : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTFloat class.
     /// </summary>
     public VTFloat():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTFloat class with the specified text content.
     /// </summary>
@@ -1612,14 +1517,11 @@ public partial class VTFloat : OpenXmlLeafTextElement
     public VTFloat(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new SingleValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1632,6 +1534,7 @@ public partial class VTFloat : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:r8.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(DoubleValue))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "r8")]
@@ -1643,13 +1546,11 @@ public partial class VTDouble : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTDouble class.
     /// </summary>
     public VTDouble():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTDouble class with the specified text content.
     /// </summary>
@@ -1657,14 +1558,11 @@ public partial class VTDouble : OpenXmlLeafTextElement
     public VTDouble(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new DoubleValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1677,6 +1575,7 @@ public partial class VTDouble : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:decimal.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(DecimalValue))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "decimal")]
@@ -1688,13 +1587,11 @@ public partial class VTDecimal : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTDecimal class.
     /// </summary>
     public VTDecimal():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTDecimal class with the specified text content.
     /// </summary>
@@ -1702,14 +1599,11 @@ public partial class VTDecimal : OpenXmlLeafTextElement
     public VTDecimal(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new DecimalValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1742,12 +1636,10 @@ public partial class VTLPSTR : OpenXmlLeafTextElement
     public VTLPSTR(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTLPSTR>(deep);
@@ -1779,12 +1671,10 @@ public partial class VTLPWSTR : OpenXmlLeafTextElement
     public VTLPWSTR(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTLPWSTR>(deep);
@@ -1816,12 +1706,10 @@ public partial class VTBString : OpenXmlLeafTextElement
     public VTBString(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBString>(deep);
@@ -1833,6 +1721,7 @@ public partial class VTBString : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:date.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(DateTimeValue))]
 [SchemaAttr(5, "date")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1853,12 +1742,10 @@ public partial class VTDate : OpenXmlLeafTextElement
     public VTDate(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new DateTimeValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTDate>(deep);
@@ -1870,6 +1757,7 @@ public partial class VTDate : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:filetime.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(DateTimeValue))]
 [SchemaAttr(5, "filetime")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1890,12 +1778,10 @@ public partial class VTFileTime : OpenXmlLeafTextElement
     public VTFileTime(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new DateTimeValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTFileTime>(deep);
@@ -1907,6 +1793,7 @@ public partial class VTFileTime : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:bool.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(BooleanValue))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "bool")]
@@ -1918,13 +1805,11 @@ public partial class VTBool : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTBool class.
     /// </summary>
     public VTBool():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTBool class with the specified text content.
     /// </summary>
@@ -1932,14 +1817,11 @@ public partial class VTBool : OpenXmlLeafTextElement
     public VTBool(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new BooleanValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1952,6 +1834,7 @@ public partial class VTBool : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:cy.</para>
 /// </summary>
 
+[StringValidator(Pattern = @"\s*[0-9]*\.[0-9]{4}\s*")]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "cy")]
@@ -1963,13 +1846,11 @@ public partial class VTCurrency : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTCurrency class.
     /// </summary>
     public VTCurrency():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTCurrency class with the specified text content.
     /// </summary>
@@ -1977,14 +1858,11 @@ public partial class VTCurrency : OpenXmlLeafTextElement
     public VTCurrency(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -1997,6 +1875,7 @@ public partial class VTCurrency : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:error.</para>
 /// </summary>
 
+[StringValidator(Pattern = @"0x[0-9A-Fa-f]{8}")]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "error")]
@@ -2008,13 +1887,11 @@ public partial class VTError : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTError class.
     /// </summary>
     public VTError():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTError class with the specified text content.
     /// </summary>
@@ -2022,14 +1899,11 @@ public partial class VTError : OpenXmlLeafTextElement
     public VTError(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -2052,22 +1926,21 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> VSTREAM Version Attribute.</para>
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
+[RequiredValidator]
+[StringValidator(Pattern = @"\s*\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\}\s*")]
     [SchemaAttr(0, "version")]
     [Index(0)]
     public StringValue Version { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the VTVStreamData class.
     /// </summary>
     public VTVStreamData():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTVStreamData class with the specified text content.
     /// </summary>
@@ -2075,14 +1948,11 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     public VTVStreamData(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -2095,6 +1965,7 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is vt:clsid.</para>
 /// </summary>
 
+[StringValidator(Pattern = @"\s*\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\}\s*")]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "clsid")]
@@ -2106,13 +1977,11 @@ public partial class VTClassId : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the VTClassId class.
     /// </summary>
     public VTClassId():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTClassId class with the specified text content.
     /// </summary>
@@ -2120,14 +1989,11 @@ public partial class VTClassId : OpenXmlLeafTextElement
     public VTClassId(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -2150,30 +2016,28 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Format Attribute.</para>
     /// <para>Represents the following attribute in the schema: format </para>
     /// </summary>
+[NumberValidator(MinInclusive = -3)]
     [SchemaAttr(0, "format")]
     [Index(0)]
     public Int32Value Format { get; set; }
-	
     /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "size")]
     [Index(1)]
     public UInt32Value Size { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the VTClipboardData class.
     /// </summary>
     public VTClipboardData():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the VTClipboardData class with the specified text content.
     /// </summary>
@@ -2181,14 +2045,11 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     public VTClipboardData(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -2196,10 +2057,10 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
 
 }
 /// <summary>
-/// Vector Base Type Simple Type 
-/// </summary> 
+/// Vector Base Type Simple Type
+/// </summary>
 public enum VectorBaseValues
-{  
+{
 	///<summary>
 ///Variant Base Type.
 ///<para>When the item is serialized out as xml, its value is "variant".</para>
@@ -2326,13 +2187,13 @@ ClassId,
 ///</summary>
 [EnumString("cf")]
 ClipboardData,
- 
+
 }
 /// <summary>
-/// Array Base Type Simple Type 
-/// </summary> 
+/// Array Base Type Simple Type
+/// </summary>
 public enum ArrayBaseValues
-{  
+{
 	///<summary>
 ///Variant Base Type.
 ///<para>When the item is serialized out as xml, its value is "variant".</para>
@@ -2435,8 +2296,6 @@ Currency,
 ///</summary>
 [EnumString("error")]
 Error,
- 
+
 }
 }
- 
- 

@@ -27,13 +27,11 @@ public partial class List : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the List class.
     /// </summary>
     public List():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the List class with the specified text content.
     /// </summary>
@@ -41,14 +39,11 @@ public partial class List : OpenXmlLeafTextElement
     public List(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -56,5 +51,3 @@ public partial class List : OpenXmlLeafTextElement
 
 }
 }
- 
- 

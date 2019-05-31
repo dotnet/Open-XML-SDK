@@ -26,14 +26,11 @@ public partial class InkAnnotationFlag : OpenXmlLeafElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the InkAnnotationFlag class.
     /// </summary>
     public InkAnnotationFlag():base(){}
     
-      
-     
     
     
     
@@ -57,7 +54,6 @@ public partial class TextData : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Text Reference.</para>
     /// <para>Represents the following attribute in the schema: id </para>
@@ -65,15 +61,12 @@ public partial class TextData : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the TextData class.
     /// </summary>
     public TextData():base(){}
     
-      
-     
     
     
     
@@ -82,5 +75,3 @@ public partial class TextData : OpenXmlLeafElement
 
 }
 }
- 
- 

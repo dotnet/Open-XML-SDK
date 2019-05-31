@@ -26,23 +26,20 @@ public partial class CreationId : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> id.</para>
+    /// <para> id, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the CreationId class.
     /// </summary>
     public CreationId():base(){}
     
-      
-     
     
     
     
@@ -66,23 +63,20 @@ public partial class PredecessorDrawingElementReference : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> pred.</para>
+    /// <para> pred, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: pred </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "pred")]
     [Index(0)]
     public StringValue Pred { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the PredecessorDrawingElementReference class.
     /// </summary>
     public PredecessorDrawingElementReference():base(){}
     
-      
-     
     
     
     
@@ -106,31 +100,28 @@ public partial class ConnectableReferences : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> st.</para>
+    /// <para> st, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: st </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "st")]
     [Index(0)]
     public StringValue St { get; set; }
-	
     /// <summary>
-    /// <para> end.</para>
+    /// <para> end, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: end </para>
     /// </summary>
+[StringValidator(IsToken = true, Pattern = @"\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}")]
     [SchemaAttr(0, "end")]
     [Index(1)]
     public StringValue End { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ConnectableReferences class.
     /// </summary>
     public ConnectableReferences():base(){}
     
-      
-     
     
     
     
@@ -193,17 +184,16 @@ public partial class ColIdIdentifier : OpenXmlIdentifierElement
 
 public abstract partial class OpenXmlIdentifierElement : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
-    /// <para> val.</para>
+    /// <para> val, this property is only available in Office2016.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "val")]
     [Index(0)]
     public UInt32Value Val { get; set; }
-	
 
-    
     
     
     /// <summary>
@@ -212,8 +202,5 @@ public abstract partial class OpenXmlIdentifierElement : OpenXmlLeafElement
     protected OpenXmlIdentifierElement(){}
     
     
-    
 }
 }
- 
- 

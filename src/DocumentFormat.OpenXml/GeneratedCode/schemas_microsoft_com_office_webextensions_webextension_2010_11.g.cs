@@ -42,27 +42,23 @@ public partial class WebExtension : OpenXmlPartRootElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> id.</para>
+    /// <para> id, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
-    /// <para> frozen.</para>
+    /// <para> frozen, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: frozen </para>
     /// </summary>
     [SchemaAttr(0, "frozen")]
     [Index(1)]
     public BooleanValue Frozen { get; set; }
-	
 
-    
 	internal WebExtension(WebExtensionPart ownerPart) : base (ownerPart){}
-    
     /// <summary>
     /// Loads the DOM from the WebExtensionPart.
     /// </summary>
@@ -79,16 +75,14 @@ public partial class WebExtension : OpenXmlPartRootElement
 		get => OpenXmlPart as WebExtensionPart;
 		internal set => OpenXmlPart = value;
     }
-    
         /// <summary>
     ///Initializes a new instance of the WebExtension class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WebExtension(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WebExtension class with the specified child elements.
     /// </summary>
@@ -96,7 +90,6 @@ public partial class WebExtension : OpenXmlPartRootElement
     public WebExtension(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WebExtension class from outer XML.
     /// </summary>
@@ -105,15 +98,12 @@ public partial class WebExtension : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-    
 
-    
     
     /// <summary>
     /// Initializes a new instance of the WebExtension class.
     /// </summary>
     public WebExtension():base(){}
-    
     /// <summary>
     /// Saves the DOM into the WebExtensionPart.
     /// </summary>
@@ -123,9 +113,7 @@ public partial class WebExtension : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> WebExtensionStoreReference.</para>
     /// <para> Represents the following element tag in the schema: we:reference </para>
@@ -139,7 +127,6 @@ public partial class WebExtension : OpenXmlPartRootElement
         get => GetElement<WebExtensionStoreReference>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> WebExtensionReferenceList.</para>
     /// <para> Represents the following element tag in the schema: we:alternateReferences </para>
@@ -153,7 +140,6 @@ public partial class WebExtension : OpenXmlPartRootElement
         get => GetElement<WebExtensionReferenceList>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> WebExtensionPropertyBag.</para>
     /// <para> Represents the following element tag in the schema: we:properties </para>
@@ -167,7 +153,6 @@ public partial class WebExtension : OpenXmlPartRootElement
         get => GetElement<WebExtensionPropertyBag>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> WebExtensionBindingList.</para>
     /// <para> Represents the following element tag in the schema: we:bindings </para>
@@ -181,7 +166,6 @@ public partial class WebExtension : OpenXmlPartRootElement
         get => GetElement<WebExtensionBindingList>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Snapshot.</para>
     /// <para> Represents the following element tag in the schema: we:snapshot </para>
@@ -195,7 +179,6 @@ public partial class WebExtension : OpenXmlPartRootElement
         get => GetElement<Snapshot>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: we:extLst </para>
@@ -209,7 +192,6 @@ public partial class WebExtension : OpenXmlPartRootElement
         get => GetElement<OfficeArtExtensionList>(5);
         set => SetElement(5, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -232,25 +214,22 @@ public partial class WebExtensionReference : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> id.</para>
+    /// <para> id, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(19, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionReference class.
     /// </summary>
     public WebExtensionReference():base(){}
     
-      
-     
     
     
     
@@ -274,31 +253,28 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> name.</para>
+    /// <para> name, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
-	
     /// <summary>
-    /// <para> value.</para>
+    /// <para> value, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "value")]
     [Index(1)]
     public StringValue Value { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionProperty class.
     /// </summary>
     public WebExtensionProperty():base(){}
     
-      
-     
     
     
     
@@ -330,21 +306,18 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class.
     /// </summary>
     public OfficeArtExtensionList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public OfficeArtExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
@@ -352,7 +325,6 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     public OfficeArtExtensionList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class from outer XML.
     /// </summary>
@@ -361,9 +333,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -394,46 +364,43 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> id.</para>
+    /// <para> id, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
-    /// <para> type.</para>
+    /// <para> type, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "type")]
     [Index(1)]
     public StringValue Type { get; set; }
-	
     /// <summary>
-    /// <para> appref.</para>
+    /// <para> appref, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: appref </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "appref")]
     [Index(2)]
     public StringValue AppReference { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionBinding class.
     /// </summary>
     public WebExtensionBinding():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the WebExtensionBinding class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WebExtensionBinding(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionBinding class with the specified child elements.
     /// </summary>
@@ -441,7 +408,6 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     public WebExtensionBinding(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionBinding class from outer XML.
     /// </summary>
@@ -450,13 +416,10 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: we:extLst </para>
@@ -470,7 +433,6 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
         get => GetElement<OfficeArtExtensionList>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -500,54 +462,49 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
-    /// <para> id.</para>
+    /// <para> id, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "id")]
     [Index(0)]
     public StringValue Id { get; set; }
-	
     /// <summary>
-    /// <para> version.</para>
+    /// <para> version, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "version")]
     [Index(1)]
     public StringValue Version { get; set; }
-	
     /// <summary>
-    /// <para> store.</para>
+    /// <para> store, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: store </para>
     /// </summary>
     [SchemaAttr(0, "store")]
     [Index(2)]
     public StringValue Store { get; set; }
-	
     /// <summary>
-    /// <para> storeType.</para>
+    /// <para> storeType, this property is only available in Office2013, Office2016.</para>
     /// <para>Represents the following attribute in the schema: storeType </para>
     /// </summary>
     [SchemaAttr(0, "storeType")]
     [Index(3)]
     public StringValue StoreType { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionStoreReference class.
     /// </summary>
     public WebExtensionStoreReference():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the WebExtensionStoreReference class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WebExtensionStoreReference(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionStoreReference class with the specified child elements.
     /// </summary>
@@ -555,7 +512,6 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     public WebExtensionStoreReference(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionStoreReference class from outer XML.
     /// </summary>
@@ -564,13 +520,10 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: we:extLst </para>
@@ -584,7 +537,6 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
         get => GetElement<OfficeArtExtensionList>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -615,21 +567,18 @@ public partial class WebExtensionReferenceList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionReferenceList class.
     /// </summary>
     public WebExtensionReferenceList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the WebExtensionReferenceList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WebExtensionReferenceList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionReferenceList class with the specified child elements.
     /// </summary>
@@ -637,7 +586,6 @@ public partial class WebExtensionReferenceList : OpenXmlCompositeElement
     public WebExtensionReferenceList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionReferenceList class from outer XML.
     /// </summary>
@@ -646,9 +594,7 @@ public partial class WebExtensionReferenceList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -680,21 +626,18 @@ public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionPropertyBag class.
     /// </summary>
     public WebExtensionPropertyBag():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the WebExtensionPropertyBag class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WebExtensionPropertyBag(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionPropertyBag class with the specified child elements.
     /// </summary>
@@ -702,7 +645,6 @@ public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
     public WebExtensionPropertyBag(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionPropertyBag class from outer XML.
     /// </summary>
@@ -711,9 +653,7 @@ public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -745,21 +685,18 @@ public partial class WebExtensionBindingList : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionBindingList class.
     /// </summary>
     public WebExtensionBindingList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the WebExtensionBindingList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WebExtensionBindingList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionBindingList class with the specified child elements.
     /// </summary>
@@ -767,7 +704,6 @@ public partial class WebExtensionBindingList : OpenXmlCompositeElement
     public WebExtensionBindingList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionBindingList class from outer XML.
     /// </summary>
@@ -776,9 +712,7 @@ public partial class WebExtensionBindingList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -843,7 +777,6 @@ public partial class Snapshot : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Embedded Picture Reference.</para>
     /// <para>Represents the following attribute in the schema: r:embed </para>
@@ -853,7 +786,6 @@ public partial class Snapshot : OpenXmlCompositeElement
     [SchemaAttr(19, "embed")]
     [Index(0)]
     public StringValue Embed { get; set; }
-	
     /// <summary>
     /// <para> Linked Picture Reference.</para>
     /// <para>Represents the following attribute in the schema: r:link </para>
@@ -863,30 +795,27 @@ public partial class Snapshot : OpenXmlCompositeElement
     [SchemaAttr(19, "link")]
     [Index(1)]
     public StringValue Link { get; set; }
-	
     /// <summary>
     /// <para> cstate.</para>
     /// <para>Represents the following attribute in the schema: cstate </para>
     /// </summary>
+[StringValidator(IsToken = true)]
     [SchemaAttr(0, "cstate")]
     [Index(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues> CompressionState { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Snapshot class.
     /// </summary>
     public Snapshot():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Snapshot class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Snapshot(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Snapshot class with the specified child elements.
     /// </summary>
@@ -894,7 +823,6 @@ public partial class Snapshot : OpenXmlCompositeElement
     public Snapshot(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Snapshot class from outer XML.
     /// </summary>
@@ -903,9 +831,7 @@ public partial class Snapshot : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -914,5 +840,3 @@ public partial class Snapshot : OpenXmlCompositeElement
 
 }
 }
- 
- 

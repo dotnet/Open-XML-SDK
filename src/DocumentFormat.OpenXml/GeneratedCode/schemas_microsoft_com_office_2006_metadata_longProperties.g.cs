@@ -33,21 +33,18 @@ public partial class LongProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the LongProperties class.
     /// </summary>
     public LongProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the LongProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public LongProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LongProperties class with the specified child elements.
     /// </summary>
@@ -55,7 +52,6 @@ public partial class LongProperties : OpenXmlCompositeElement
     public LongProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LongProperties class from outer XML.
     /// </summary>
@@ -64,9 +60,7 @@ public partial class LongProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -90,7 +84,6 @@ public partial class LongProperty : OpenXmlLeafTextElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
@@ -98,14 +91,12 @@ public partial class LongProperty : OpenXmlLeafTextElement
     [SchemaAttr(0, "name")]
     [Index(0)]
     public StringValue Name { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the LongProperty class.
     /// </summary>
     public LongProperty():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the LongProperty class with the specified text content.
     /// </summary>
@@ -113,14 +104,11 @@ public partial class LongProperty : OpenXmlLeafTextElement
     public LongProperty(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -128,5 +116,3 @@ public partial class LongProperty : OpenXmlLeafTextElement
 
 }
 }
- 
- 

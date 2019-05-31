@@ -35,12 +35,10 @@ public partial class Key : OpenXmlLeafTextElement
     public Key(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Key>(deep);
@@ -72,12 +70,10 @@ public partial class Value : OpenXmlLeafTextElement
     public Value(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Value>(deep);
@@ -109,21 +105,18 @@ public partial class RoamingProperty : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the RoamingProperty class.
     /// </summary>
     public RoamingProperty():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RoamingProperty class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RoamingProperty(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RoamingProperty class with the specified child elements.
     /// </summary>
@@ -131,7 +124,6 @@ public partial class RoamingProperty : OpenXmlCompositeElement
     public RoamingProperty(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RoamingProperty class from outer XML.
     /// </summary>
@@ -140,13 +132,10 @@ public partial class RoamingProperty : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Key.</para>
     /// <para> Represents the following element tag in the schema: pRoam:key </para>
@@ -160,7 +149,6 @@ public partial class RoamingProperty : OpenXmlCompositeElement
         get => GetElement<Key>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Value.</para>
     /// <para> Represents the following element tag in the schema: pRoam:value </para>
@@ -174,7 +162,6 @@ public partial class RoamingProperty : OpenXmlCompositeElement
         get => GetElement<Value>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -182,5 +169,3 @@ public partial class RoamingProperty : OpenXmlCompositeElement
 
 }
 }
- 
- 

@@ -52,21 +52,18 @@ public partial class LockedCanvas : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the LockedCanvas class.
     /// </summary>
     public LockedCanvas():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the LockedCanvas class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public LockedCanvas(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LockedCanvas class with the specified child elements.
     /// </summary>
@@ -74,7 +71,6 @@ public partial class LockedCanvas : OpenXmlCompositeElement
     public LockedCanvas(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LockedCanvas class from outer XML.
     /// </summary>
@@ -83,13 +79,10 @@ public partial class LockedCanvas : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Non-Visual Properties for a Group Shape.</para>
     /// <para> Represents the following element tag in the schema: a:nvGrpSpPr </para>
@@ -103,7 +96,6 @@ public partial class LockedCanvas : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Visual Group Shape Properties.</para>
     /// <para> Represents the following element tag in the schema: a:grpSpPr </para>
@@ -117,7 +109,6 @@ public partial class LockedCanvas : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -125,5 +116,3 @@ public partial class LockedCanvas : OpenXmlCompositeElement
 
 }
 }
- 
- 

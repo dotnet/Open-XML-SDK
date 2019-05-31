@@ -164,30 +164,27 @@ public partial class ClientData : OpenXmlCompositeElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Object type.</para>
     /// <para>Represents the following attribute in the schema: ObjectType </para>
     /// </summary>
+[RequiredValidator]
     [SchemaAttr(0, "ObjectType")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues> ObjectType { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ClientData class.
     /// </summary>
     public ClientData():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ClientData class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ClientData(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ClientData class with the specified child elements.
     /// </summary>
@@ -195,7 +192,6 @@ public partial class ClientData : OpenXmlCompositeElement
     public ClientData(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ClientData class from outer XML.
     /// </summary>
@@ -204,9 +200,7 @@ public partial class ClientData : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -220,6 +214,7 @@ public partial class ClientData : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:MoveWithCells.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "MoveWithCells")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -240,12 +235,10 @@ public partial class MoveWithCells : OpenXmlLeafTextElement
     public MoveWithCells(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveWithCells>(deep);
@@ -257,6 +250,7 @@ public partial class MoveWithCells : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:SizeWithCells.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "SizeWithCells")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -277,12 +271,10 @@ public partial class ResizeWithCells : OpenXmlLeafTextElement
     public ResizeWithCells(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ResizeWithCells>(deep);
@@ -294,6 +286,7 @@ public partial class ResizeWithCells : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Locked.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Locked")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -314,12 +307,10 @@ public partial class Locked : OpenXmlLeafTextElement
     public Locked(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Locked>(deep);
@@ -331,6 +322,7 @@ public partial class Locked : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:DefaultSize.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "DefaultSize")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -351,12 +343,10 @@ public partial class DefaultSize : OpenXmlLeafTextElement
     public DefaultSize(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultSize>(deep);
@@ -368,6 +358,7 @@ public partial class DefaultSize : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:PrintObject.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "PrintObject")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -388,12 +379,10 @@ public partial class PrintObject : OpenXmlLeafTextElement
     public PrintObject(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintObject>(deep);
@@ -405,6 +394,7 @@ public partial class PrintObject : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Disabled.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Disabled")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -425,12 +415,10 @@ public partial class Disabled : OpenXmlLeafTextElement
     public Disabled(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disabled>(deep);
@@ -442,6 +430,7 @@ public partial class Disabled : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:AutoFill.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "AutoFill")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -462,12 +451,10 @@ public partial class AutoFill : OpenXmlLeafTextElement
     public AutoFill(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoFill>(deep);
@@ -479,6 +466,7 @@ public partial class AutoFill : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:AutoLine.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "AutoLine")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -499,12 +487,10 @@ public partial class AutoLine : OpenXmlLeafTextElement
     public AutoLine(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoLine>(deep);
@@ -516,6 +502,7 @@ public partial class AutoLine : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:AutoPict.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "AutoPict")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -536,12 +523,10 @@ public partial class AutoSizePicture : OpenXmlLeafTextElement
     public AutoSizePicture(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoSizePicture>(deep);
@@ -553,6 +538,7 @@ public partial class AutoSizePicture : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:LockText.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "LockText")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -573,12 +559,10 @@ public partial class LockText : OpenXmlLeafTextElement
     public LockText(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LockText>(deep);
@@ -590,6 +574,7 @@ public partial class LockText : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:JustLastX.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "JustLastX")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -610,12 +595,10 @@ public partial class JustifyLastLine : OpenXmlLeafTextElement
     public JustifyLastLine(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<JustifyLastLine>(deep);
@@ -627,6 +610,7 @@ public partial class JustifyLastLine : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:SecretEdit.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "SecretEdit")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -647,12 +631,10 @@ public partial class SecretEdit : OpenXmlLeafTextElement
     public SecretEdit(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SecretEdit>(deep);
@@ -664,6 +646,7 @@ public partial class SecretEdit : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Default.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Default")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -684,12 +667,10 @@ public partial class DefaultButton : OpenXmlLeafTextElement
     public DefaultButton(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultButton>(deep);
@@ -701,6 +682,7 @@ public partial class DefaultButton : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Help.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Help")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -721,12 +703,10 @@ public partial class HelpButton : OpenXmlLeafTextElement
     public HelpButton(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HelpButton>(deep);
@@ -738,6 +718,7 @@ public partial class HelpButton : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Cancel.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Cancel")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -758,12 +739,10 @@ public partial class CancelButton : OpenXmlLeafTextElement
     public CancelButton(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CancelButton>(deep);
@@ -775,6 +754,7 @@ public partial class CancelButton : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Dismiss.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Dismiss")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -795,12 +775,10 @@ public partial class DismissButton : OpenXmlLeafTextElement
     public DismissButton(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DismissButton>(deep);
@@ -812,6 +790,7 @@ public partial class DismissButton : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Visible.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Visible")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -832,12 +811,10 @@ public partial class Visible : OpenXmlLeafTextElement
     public Visible(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Visible>(deep);
@@ -849,6 +826,7 @@ public partial class Visible : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:RowHidden.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "RowHidden")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -869,12 +847,10 @@ public partial class RowHidden : OpenXmlLeafTextElement
     public RowHidden(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowHidden>(deep);
@@ -886,6 +862,7 @@ public partial class RowHidden : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:ColHidden.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "ColHidden")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -906,12 +883,10 @@ public partial class ColumnHidden : OpenXmlLeafTextElement
     public ColumnHidden(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnHidden>(deep);
@@ -923,6 +898,7 @@ public partial class ColumnHidden : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:MultiLine.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "MultiLine")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -943,12 +919,10 @@ public partial class MultiLine : OpenXmlLeafTextElement
     public MultiLine(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultiLine>(deep);
@@ -960,6 +934,7 @@ public partial class MultiLine : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:VScroll.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "VScroll")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -980,12 +955,10 @@ public partial class VerticalScrollBar : OpenXmlLeafTextElement
     public VerticalScrollBar(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalScrollBar>(deep);
@@ -997,6 +970,7 @@ public partial class VerticalScrollBar : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:ValidIds.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "ValidIds")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1017,12 +991,10 @@ public partial class ValidIds : OpenXmlLeafTextElement
     public ValidIds(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ValidIds>(deep);
@@ -1034,6 +1006,7 @@ public partial class ValidIds : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:NoThreeD2.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "NoThreeD2")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1054,12 +1027,10 @@ public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
     public Disable3DForListBoxAndDropDown(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disable3DForListBoxAndDropDown>(deep);
@@ -1071,6 +1042,7 @@ public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Colored.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Colored")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1091,12 +1063,10 @@ public partial class Colored : OpenXmlLeafTextElement
     public Colored(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Colored>(deep);
@@ -1108,6 +1078,7 @@ public partial class Colored : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:NoThreeD.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "NoThreeD")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1128,12 +1099,10 @@ public partial class Disable3D : OpenXmlLeafTextElement
     public Disable3D(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disable3D>(deep);
@@ -1145,6 +1114,7 @@ public partial class Disable3D : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:FirstButton.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "FirstButton")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1165,12 +1135,10 @@ public partial class FirstButton : OpenXmlLeafTextElement
     public FirstButton(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstButton>(deep);
@@ -1182,6 +1150,7 @@ public partial class FirstButton : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Horiz.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Horiz")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1202,12 +1171,10 @@ public partial class HorizontalScrollBar : OpenXmlLeafTextElement
     public HorizontalScrollBar(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalScrollBar>(deep);
@@ -1219,6 +1186,7 @@ public partial class HorizontalScrollBar : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:MapOCX.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "MapOCX")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1239,12 +1207,10 @@ public partial class MapOcxControl : OpenXmlLeafTextElement
     public MapOcxControl(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MapOcxControl>(deep);
@@ -1256,6 +1222,7 @@ public partial class MapOcxControl : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Camera.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Camera")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1276,12 +1243,10 @@ public partial class CameraObject : OpenXmlLeafTextElement
     public CameraObject(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CameraObject>(deep);
@@ -1293,6 +1258,7 @@ public partial class CameraObject : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:RecalcAlways.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "RecalcAlways")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1313,12 +1279,10 @@ public partial class RecalculateAlways : OpenXmlLeafTextElement
     public RecalculateAlways(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RecalculateAlways>(deep);
@@ -1330,6 +1294,7 @@ public partial class RecalculateAlways : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:AutoScale.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "AutoScale")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1350,12 +1315,10 @@ public partial class AutoScaleFont : OpenXmlLeafTextElement
     public AutoScaleFont(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoScaleFont>(deep);
@@ -1367,6 +1330,7 @@ public partial class AutoScaleFont : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:DDE.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "DDE")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1387,12 +1351,10 @@ public partial class DdeObject : OpenXmlLeafTextElement
     public DdeObject(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DdeObject>(deep);
@@ -1404,6 +1366,7 @@ public partial class DdeObject : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:UIObj.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "UIObj")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -1424,12 +1387,10 @@ public partial class UIObject : OpenXmlLeafTextElement
     public UIObject(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UIObject>(deep);
@@ -1461,12 +1422,10 @@ public partial class Anchor : OpenXmlLeafTextElement
     public Anchor(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Anchor>(deep);
@@ -1498,12 +1457,10 @@ public partial class HorizontalTextAlignment : OpenXmlLeafTextElement
     public HorizontalTextAlignment(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalTextAlignment>(deep);
@@ -1535,12 +1492,10 @@ public partial class VerticalTextAlignment : OpenXmlLeafTextElement
     public VerticalTextAlignment(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalTextAlignment>(deep);
@@ -1572,12 +1527,10 @@ public partial class FormulaRange : OpenXmlLeafTextElement
     public FormulaRange(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaRange>(deep);
@@ -1609,12 +1562,10 @@ public partial class SelectionType : OpenXmlLeafTextElement
     public SelectionType(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SelectionType>(deep);
@@ -1646,12 +1597,10 @@ public partial class MultiSelections : OpenXmlLeafTextElement
     public MultiSelections(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultiSelections>(deep);
@@ -1683,12 +1632,10 @@ public partial class ListBoxCallbackType : OpenXmlLeafTextElement
     public ListBoxCallbackType(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListBoxCallbackType>(deep);
@@ -1720,12 +1667,10 @@ public partial class ListItem : OpenXmlLeafTextElement
     public ListItem(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListItem>(deep);
@@ -1757,12 +1702,10 @@ public partial class DropStyle : OpenXmlLeafTextElement
     public DropStyle(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropStyle>(deep);
@@ -1794,12 +1737,10 @@ public partial class FormulaLink : OpenXmlLeafTextElement
     public FormulaLink(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaLink>(deep);
@@ -1831,12 +1772,10 @@ public partial class FormulaPicture : OpenXmlLeafTextElement
     public FormulaPicture(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaPicture>(deep);
@@ -1868,12 +1807,10 @@ public partial class FormulaGroup : OpenXmlLeafTextElement
     public FormulaGroup(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaGroup>(deep);
@@ -1905,12 +1842,10 @@ public partial class ScriptText : OpenXmlLeafTextElement
     public ScriptText(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptText>(deep);
@@ -1942,12 +1877,10 @@ public partial class ScriptExtended : OpenXmlLeafTextElement
     public ScriptExtended(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptExtended>(deep);
@@ -1979,12 +1912,10 @@ public partial class FormulaTextBox : OpenXmlLeafTextElement
     public FormulaTextBox(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaTextBox>(deep);
@@ -1996,6 +1927,7 @@ public partial class FormulaTextBox : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:FmlaMacro.</para>
 /// </summary>
 
+[StringValidator(MinLength = 0, MaxLength = 256)]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(29, "FmlaMacro")]
@@ -2007,13 +1939,11 @@ public partial class FormulaMacro : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the FormulaMacro class.
     /// </summary>
     public FormulaMacro():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the FormulaMacro class with the specified text content.
     /// </summary>
@@ -2021,14 +1951,11 @@ public partial class FormulaMacro : OpenXmlLeafTextElement
     public FormulaMacro(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -2041,6 +1968,7 @@ public partial class FormulaMacro : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Accel.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(ByteValue))]
 [SchemaAttr(29, "Accel")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2061,12 +1989,10 @@ public partial class AcceleratorPrimary : OpenXmlLeafTextElement
     public AcceleratorPrimary(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new ByteValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AcceleratorPrimary>(deep);
@@ -2078,6 +2004,7 @@ public partial class AcceleratorPrimary : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Accel2.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(ByteValue))]
 [SchemaAttr(29, "Accel2")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2098,12 +2025,10 @@ public partial class AcceleratorSecondary : OpenXmlLeafTextElement
     public AcceleratorSecondary(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new ByteValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AcceleratorSecondary>(deep);
@@ -2115,6 +2040,7 @@ public partial class AcceleratorSecondary : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Row.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Row")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2135,12 +2061,10 @@ public partial class CommentRowTarget : OpenXmlLeafTextElement
     public CommentRowTarget(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentRowTarget>(deep);
@@ -2152,6 +2076,7 @@ public partial class CommentRowTarget : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Column.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Column")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2172,12 +2097,10 @@ public partial class CommentColumnTarget : OpenXmlLeafTextElement
     public CommentColumnTarget(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentColumnTarget>(deep);
@@ -2189,6 +2112,7 @@ public partial class CommentColumnTarget : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:VTEdit.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "VTEdit")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2209,12 +2133,10 @@ public partial class InputValidationType : OpenXmlLeafTextElement
     public InputValidationType(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InputValidationType>(deep);
@@ -2226,6 +2148,7 @@ public partial class InputValidationType : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:WidthMin.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "WidthMin")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2246,12 +2169,10 @@ public partial class MinDropDownWidth : OpenXmlLeafTextElement
     public MinDropDownWidth(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinDropDownWidth>(deep);
@@ -2263,6 +2184,7 @@ public partial class MinDropDownWidth : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Sel.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Sel")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2283,12 +2205,10 @@ public partial class SelectionEntry : OpenXmlLeafTextElement
     public SelectionEntry(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SelectionEntry>(deep);
@@ -2300,6 +2220,7 @@ public partial class SelectionEntry : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:DropLines.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "DropLines")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2320,12 +2241,10 @@ public partial class DropLines : OpenXmlLeafTextElement
     public DropLines(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropLines>(deep);
@@ -2337,6 +2256,7 @@ public partial class DropLines : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Checked.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Checked")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2357,12 +2277,10 @@ public partial class Checked : OpenXmlLeafTextElement
     public Checked(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Checked>(deep);
@@ -2374,6 +2292,7 @@ public partial class Checked : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Val.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Val")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2394,12 +2313,10 @@ public partial class ScrollBarPosition : OpenXmlLeafTextElement
     public ScrollBarPosition(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarPosition>(deep);
@@ -2411,6 +2328,7 @@ public partial class ScrollBarPosition : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Min.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Min")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2431,12 +2349,10 @@ public partial class ScrollBarMin : OpenXmlLeafTextElement
     public ScrollBarMin(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarMin>(deep);
@@ -2448,6 +2364,7 @@ public partial class ScrollBarMin : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Max.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Max")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2468,12 +2385,10 @@ public partial class ScrollBarMax : OpenXmlLeafTextElement
     public ScrollBarMax(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarMax>(deep);
@@ -2485,6 +2400,7 @@ public partial class ScrollBarMax : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Inc.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Inc")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2505,12 +2421,10 @@ public partial class ScrollBarIncrement : OpenXmlLeafTextElement
     public ScrollBarIncrement(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarIncrement>(deep);
@@ -2522,6 +2436,7 @@ public partial class ScrollBarIncrement : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Page.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Page")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2542,12 +2457,10 @@ public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
     public ScrollBarPageIncrement(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarPageIncrement>(deep);
@@ -2559,6 +2472,7 @@ public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:Dx.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Dx")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2579,12 +2493,10 @@ public partial class ScrollBarWidth : OpenXmlLeafTextElement
     public ScrollBarWidth(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarWidth>(deep);
@@ -2596,6 +2508,7 @@ public partial class ScrollBarWidth : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:CF.</para>
 /// </summary>
 
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormatValues>))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(29, "CF")]
@@ -2607,13 +2520,11 @@ public partial class ClipboardFormat : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ClipboardFormat class.
     /// </summary>
     public ClipboardFormat():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the ClipboardFormat class with the specified text content.
     /// </summary>
@@ -2621,14 +2532,11 @@ public partial class ClipboardFormat : OpenXmlLeafTextElement
     public ClipboardFormat(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormatValues>(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -2641,6 +2549,7 @@ public partial class ClipboardFormat : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:ScriptLanguage.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue), IsNonNegative = true)]
 [SchemaAttr(29, "ScriptLanguage")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2661,12 +2570,10 @@ public partial class ScriptLanguage : OpenXmlLeafTextElement
     public ScriptLanguage(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptLanguage>(deep);
@@ -2678,6 +2585,7 @@ public partial class ScriptLanguage : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is xvml:ScriptLocation.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(IntegerValue), IsNonNegative = true)]
 [SchemaAttr(29, "ScriptLocation")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -2698,22 +2606,20 @@ public partial class ScriptLocation : OpenXmlLeafTextElement
     public ScriptLocation(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptLocation>(deep);
 
 }
 /// <summary>
-/// Clipboard Format Type 
-/// </summary> 
+/// Clipboard Format Type
+/// </summary>
 public enum ClipboardFormatValues
-{  
+{
 	///<summary>
 ///WMF.
 ///<para>When the item is serialized out as xml, its value is "PictOld".</para>
@@ -2744,13 +2650,13 @@ PicturePrint,
 ///</summary>
 [EnumString("PictScreen")]
 PictureScreen,
- 
+
 }
 /// <summary>
-/// Object Type 
-/// </summary> 
+/// Object Type
+/// </summary>
 public enum ObjectValues
-{  
+{
 	///<summary>
 ///Pushbutton.
 ///<para>When the item is serialized out as xml, its value is "Button".</para>
@@ -2865,13 +2771,13 @@ Group,
 ///</summary>
 [EnumString("Rect")]
 Rectangle,
- 
+
 }
 /// <summary>
-/// Boolean Value with Blank State 
-/// </summary> 
+/// Boolean Value with Blank State
+/// </summary>
 public enum BooleanEntryWithBlankValues
-{  
+{
 	///<summary>
 ///Logical True.
 ///<para>When the item is serialized out as xml, its value is "True".</para>
@@ -2902,8 +2808,6 @@ F,
 ///</summary>
 [EnumString("")]
 Empty,
- 
+
 }
 }
- 
- 

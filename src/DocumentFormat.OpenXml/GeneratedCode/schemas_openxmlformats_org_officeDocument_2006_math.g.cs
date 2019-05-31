@@ -26,25 +26,22 @@ public partial class Script : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Script class.
     /// </summary>
     public Script():base(){}
     
-      
-     
     
     
     
@@ -68,25 +65,22 @@ public partial class Style : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Style class.
     /// </summary>
     public Style():base(){}
     
-      
-     
     
     
     
@@ -186,21 +180,18 @@ public partial class Run : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Run class.
     /// </summary>
     public Run():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Run class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Run(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Run class with the specified child elements.
     /// </summary>
@@ -208,7 +199,6 @@ public partial class Run : OpenXmlCompositeElement
     public Run(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Run class from outer XML.
     /// </summary>
@@ -217,13 +207,10 @@ public partial class Run : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Run Properties.</para>
     /// <para> Represents the following element tag in the schema: m:rPr </para>
@@ -237,7 +224,6 @@ public partial class Run : OpenXmlCompositeElement
         get => GetElement<RunProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Run Properties.</para>
     /// <para> Represents the following element tag in the schema: w:rPr </para>
@@ -251,7 +237,6 @@ public partial class Run : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunProperties>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -284,21 +269,18 @@ public partial class Accent : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Accent class.
     /// </summary>
     public Accent():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Accent class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Accent(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Accent class with the specified child elements.
     /// </summary>
@@ -306,7 +288,6 @@ public partial class Accent : OpenXmlCompositeElement
     public Accent(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Accent class from outer XML.
     /// </summary>
@@ -315,13 +296,10 @@ public partial class Accent : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Accent Properties.</para>
     /// <para> Represents the following element tag in the schema: m:accPr </para>
@@ -335,7 +313,6 @@ public partial class Accent : OpenXmlCompositeElement
         get => GetElement<AccentProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -349,7 +326,6 @@ public partial class Accent : OpenXmlCompositeElement
         get => GetElement<Base>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -382,21 +358,18 @@ public partial class Bar : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Bar class.
     /// </summary>
     public Bar():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Bar class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Bar(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Bar class with the specified child elements.
     /// </summary>
@@ -404,7 +377,6 @@ public partial class Bar : OpenXmlCompositeElement
     public Bar(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Bar class from outer XML.
     /// </summary>
@@ -413,13 +385,10 @@ public partial class Bar : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Bar Properties.</para>
     /// <para> Represents the following element tag in the schema: m:barPr </para>
@@ -433,7 +402,6 @@ public partial class Bar : OpenXmlCompositeElement
         get => GetElement<BarProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -447,7 +415,6 @@ public partial class Bar : OpenXmlCompositeElement
         get => GetElement<Base>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -480,21 +447,18 @@ public partial class Box : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Box class.
     /// </summary>
     public Box():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Box class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Box(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Box class with the specified child elements.
     /// </summary>
@@ -502,7 +466,6 @@ public partial class Box : OpenXmlCompositeElement
     public Box(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Box class from outer XML.
     /// </summary>
@@ -511,13 +474,10 @@ public partial class Box : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Box Properties.</para>
     /// <para> Represents the following element tag in the schema: m:boxPr </para>
@@ -531,7 +491,6 @@ public partial class Box : OpenXmlCompositeElement
         get => GetElement<BoxProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -545,7 +504,6 @@ public partial class Box : OpenXmlCompositeElement
         get => GetElement<Base>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -578,21 +536,18 @@ public partial class BorderBox : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the BorderBox class.
     /// </summary>
     public BorderBox():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the BorderBox class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public BorderBox(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BorderBox class with the specified child elements.
     /// </summary>
@@ -600,7 +555,6 @@ public partial class BorderBox : OpenXmlCompositeElement
     public BorderBox(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BorderBox class from outer XML.
     /// </summary>
@@ -609,13 +563,10 @@ public partial class BorderBox : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Border Box Properties.</para>
     /// <para> Represents the following element tag in the schema: m:borderBoxPr </para>
@@ -629,7 +580,6 @@ public partial class BorderBox : OpenXmlCompositeElement
         get => GetElement<BorderBoxProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -643,7 +593,6 @@ public partial class BorderBox : OpenXmlCompositeElement
         get => GetElement<Base>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -676,21 +625,18 @@ public partial class Delimiter : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Delimiter class.
     /// </summary>
     public Delimiter():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Delimiter class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Delimiter(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Delimiter class with the specified child elements.
     /// </summary>
@@ -698,7 +644,6 @@ public partial class Delimiter : OpenXmlCompositeElement
     public Delimiter(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Delimiter class from outer XML.
     /// </summary>
@@ -707,13 +652,10 @@ public partial class Delimiter : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Delimiter Properties.</para>
     /// <para> Represents the following element tag in the schema: m:dPr </para>
@@ -727,7 +669,6 @@ public partial class Delimiter : OpenXmlCompositeElement
         get => GetElement<DelimiterProperties>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -760,21 +701,18 @@ public partial class EquationArray : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the EquationArray class.
     /// </summary>
     public EquationArray():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the EquationArray class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public EquationArray(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the EquationArray class with the specified child elements.
     /// </summary>
@@ -782,7 +720,6 @@ public partial class EquationArray : OpenXmlCompositeElement
     public EquationArray(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the EquationArray class from outer XML.
     /// </summary>
@@ -791,13 +728,10 @@ public partial class EquationArray : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Equation Array Properties.</para>
     /// <para> Represents the following element tag in the schema: m:eqArrPr </para>
@@ -811,7 +745,6 @@ public partial class EquationArray : OpenXmlCompositeElement
         get => GetElement<EquationArrayProperties>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -846,21 +779,18 @@ public partial class Fraction : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Fraction class.
     /// </summary>
     public Fraction():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Fraction class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Fraction(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Fraction class with the specified child elements.
     /// </summary>
@@ -868,7 +798,6 @@ public partial class Fraction : OpenXmlCompositeElement
     public Fraction(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Fraction class from outer XML.
     /// </summary>
@@ -877,13 +806,10 @@ public partial class Fraction : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Fraction Properties.</para>
     /// <para> Represents the following element tag in the schema: m:fPr </para>
@@ -897,7 +823,6 @@ public partial class Fraction : OpenXmlCompositeElement
         get => GetElement<FractionProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Numerator.</para>
     /// <para> Represents the following element tag in the schema: m:num </para>
@@ -911,7 +836,6 @@ public partial class Fraction : OpenXmlCompositeElement
         get => GetElement<Numerator>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Denominator.</para>
     /// <para> Represents the following element tag in the schema: m:den </para>
@@ -925,7 +849,6 @@ public partial class Fraction : OpenXmlCompositeElement
         get => GetElement<Denominator>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -960,21 +883,18 @@ public partial class MathFunction : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the MathFunction class.
     /// </summary>
     public MathFunction():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MathFunction class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MathFunction(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MathFunction class with the specified child elements.
     /// </summary>
@@ -982,7 +902,6 @@ public partial class MathFunction : OpenXmlCompositeElement
     public MathFunction(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MathFunction class from outer XML.
     /// </summary>
@@ -991,13 +910,10 @@ public partial class MathFunction : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Function Properties.</para>
     /// <para> Represents the following element tag in the schema: m:funcPr </para>
@@ -1011,7 +927,6 @@ public partial class MathFunction : OpenXmlCompositeElement
         get => GetElement<FunctionProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Function Name.</para>
     /// <para> Represents the following element tag in the schema: m:fName </para>
@@ -1025,7 +940,6 @@ public partial class MathFunction : OpenXmlCompositeElement
         get => GetElement<FunctionName>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Base (Argument).</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -1039,7 +953,6 @@ public partial class MathFunction : OpenXmlCompositeElement
         get => GetElement<Base>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1072,21 +985,18 @@ public partial class GroupChar : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the GroupChar class.
     /// </summary>
     public GroupChar():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the GroupChar class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public GroupChar(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GroupChar class with the specified child elements.
     /// </summary>
@@ -1094,7 +1004,6 @@ public partial class GroupChar : OpenXmlCompositeElement
     public GroupChar(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GroupChar class from outer XML.
     /// </summary>
@@ -1103,13 +1012,10 @@ public partial class GroupChar : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Group-Character Properties.</para>
     /// <para> Represents the following element tag in the schema: m:groupChrPr </para>
@@ -1123,7 +1029,6 @@ public partial class GroupChar : OpenXmlCompositeElement
         get => GetElement<GroupCharProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -1137,7 +1042,6 @@ public partial class GroupChar : OpenXmlCompositeElement
         get => GetElement<Base>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1172,21 +1076,18 @@ public partial class LimitLower : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the LimitLower class.
     /// </summary>
     public LimitLower():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the LimitLower class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public LimitLower(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitLower class with the specified child elements.
     /// </summary>
@@ -1194,7 +1095,6 @@ public partial class LimitLower : OpenXmlCompositeElement
     public LimitLower(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitLower class from outer XML.
     /// </summary>
@@ -1203,13 +1103,10 @@ public partial class LimitLower : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Lower Limit Properties.</para>
     /// <para> Represents the following element tag in the schema: m:limLowPr </para>
@@ -1223,7 +1120,6 @@ public partial class LimitLower : OpenXmlCompositeElement
         get => GetElement<LimitLowerProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -1237,7 +1133,6 @@ public partial class LimitLower : OpenXmlCompositeElement
         get => GetElement<Base>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Limit (Lower).</para>
     /// <para> Represents the following element tag in the schema: m:lim </para>
@@ -1251,7 +1146,6 @@ public partial class LimitLower : OpenXmlCompositeElement
         get => GetElement<Limit>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1286,21 +1180,18 @@ public partial class LimitUpper : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the LimitUpper class.
     /// </summary>
     public LimitUpper():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the LimitUpper class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public LimitUpper(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitUpper class with the specified child elements.
     /// </summary>
@@ -1308,7 +1199,6 @@ public partial class LimitUpper : OpenXmlCompositeElement
     public LimitUpper(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitUpper class from outer XML.
     /// </summary>
@@ -1317,13 +1207,10 @@ public partial class LimitUpper : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Upper Limit Properties.</para>
     /// <para> Represents the following element tag in the schema: m:limUppPr </para>
@@ -1337,7 +1224,6 @@ public partial class LimitUpper : OpenXmlCompositeElement
         get => GetElement<LimitUpperProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -1351,7 +1237,6 @@ public partial class LimitUpper : OpenXmlCompositeElement
         get => GetElement<Base>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Limit (Upper).</para>
     /// <para> Represents the following element tag in the schema: m:lim </para>
@@ -1365,7 +1250,6 @@ public partial class LimitUpper : OpenXmlCompositeElement
         get => GetElement<Limit>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1398,21 +1282,18 @@ public partial class Matrix : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Matrix class.
     /// </summary>
     public Matrix():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Matrix class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Matrix(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Matrix class with the specified child elements.
     /// </summary>
@@ -1420,7 +1301,6 @@ public partial class Matrix : OpenXmlCompositeElement
     public Matrix(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Matrix class from outer XML.
     /// </summary>
@@ -1429,13 +1309,10 @@ public partial class Matrix : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Matrix Properties.</para>
     /// <para> Represents the following element tag in the schema: m:mPr </para>
@@ -1449,7 +1326,6 @@ public partial class Matrix : OpenXmlCompositeElement
         get => GetElement<MatrixProperties>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1486,21 +1362,18 @@ public partial class Nary : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Nary class.
     /// </summary>
     public Nary():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Nary class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Nary(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Nary class with the specified child elements.
     /// </summary>
@@ -1508,7 +1381,6 @@ public partial class Nary : OpenXmlCompositeElement
     public Nary(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Nary class from outer XML.
     /// </summary>
@@ -1517,13 +1389,10 @@ public partial class Nary : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> n-ary Properties.</para>
     /// <para> Represents the following element tag in the schema: m:naryPr </para>
@@ -1537,7 +1406,6 @@ public partial class Nary : OpenXmlCompositeElement
         get => GetElement<NaryProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Lower limit (n-ary) .</para>
     /// <para> Represents the following element tag in the schema: m:sub </para>
@@ -1551,7 +1419,6 @@ public partial class Nary : OpenXmlCompositeElement
         get => GetElement<SubArgument>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Upper limit (n-ary).</para>
     /// <para> Represents the following element tag in the schema: m:sup </para>
@@ -1565,7 +1432,6 @@ public partial class Nary : OpenXmlCompositeElement
         get => GetElement<SuperArgument>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Base (Argument).</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -1579,7 +1445,6 @@ public partial class Nary : OpenXmlCompositeElement
         get => GetElement<Base>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1612,21 +1477,18 @@ public partial class Phantom : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Phantom class.
     /// </summary>
     public Phantom():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Phantom class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Phantom(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Phantom class with the specified child elements.
     /// </summary>
@@ -1634,7 +1496,6 @@ public partial class Phantom : OpenXmlCompositeElement
     public Phantom(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Phantom class from outer XML.
     /// </summary>
@@ -1643,13 +1504,10 @@ public partial class Phantom : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Phantom Properties.</para>
     /// <para> Represents the following element tag in the schema: m:phantPr </para>
@@ -1663,7 +1521,6 @@ public partial class Phantom : OpenXmlCompositeElement
         get => GetElement<PhantomProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -1677,7 +1534,6 @@ public partial class Phantom : OpenXmlCompositeElement
         get => GetElement<Base>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1712,21 +1568,18 @@ public partial class Radical : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Radical class.
     /// </summary>
     public Radical():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Radical class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Radical(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Radical class with the specified child elements.
     /// </summary>
@@ -1734,7 +1587,6 @@ public partial class Radical : OpenXmlCompositeElement
     public Radical(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Radical class from outer XML.
     /// </summary>
@@ -1743,13 +1595,10 @@ public partial class Radical : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Radical Properties.</para>
     /// <para> Represents the following element tag in the schema: m:radPr </para>
@@ -1763,7 +1612,6 @@ public partial class Radical : OpenXmlCompositeElement
         get => GetElement<RadicalProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Degree.</para>
     /// <para> Represents the following element tag in the schema: m:deg </para>
@@ -1777,7 +1625,6 @@ public partial class Radical : OpenXmlCompositeElement
         get => GetElement<Degree>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -1791,7 +1638,6 @@ public partial class Radical : OpenXmlCompositeElement
         get => GetElement<Base>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1828,21 +1674,18 @@ public partial class PreSubSuper : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the PreSubSuper class.
     /// </summary>
     public PreSubSuper():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the PreSubSuper class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public PreSubSuper(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PreSubSuper class with the specified child elements.
     /// </summary>
@@ -1850,7 +1693,6 @@ public partial class PreSubSuper : OpenXmlCompositeElement
     public PreSubSuper(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PreSubSuper class from outer XML.
     /// </summary>
@@ -1859,13 +1701,10 @@ public partial class PreSubSuper : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Pre-Sub-Superscript Properties.</para>
     /// <para> Represents the following element tag in the schema: m:sPrePr </para>
@@ -1879,7 +1718,6 @@ public partial class PreSubSuper : OpenXmlCompositeElement
         get => GetElement<PreSubSuperProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Subscript (Pre-Sub-Superscript).</para>
     /// <para> Represents the following element tag in the schema: m:sub </para>
@@ -1893,7 +1731,6 @@ public partial class PreSubSuper : OpenXmlCompositeElement
         get => GetElement<SubArgument>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Superscript(Pre-Sub-Superscript function).</para>
     /// <para> Represents the following element tag in the schema: m:sup </para>
@@ -1907,7 +1744,6 @@ public partial class PreSubSuper : OpenXmlCompositeElement
         get => GetElement<SuperArgument>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -1921,7 +1757,6 @@ public partial class PreSubSuper : OpenXmlCompositeElement
         get => GetElement<Base>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -1956,21 +1791,18 @@ public partial class Subscript : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Subscript class.
     /// </summary>
     public Subscript():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Subscript class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Subscript(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Subscript class with the specified child elements.
     /// </summary>
@@ -1978,7 +1810,6 @@ public partial class Subscript : OpenXmlCompositeElement
     public Subscript(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Subscript class from outer XML.
     /// </summary>
@@ -1987,13 +1818,10 @@ public partial class Subscript : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Subscript Properties.</para>
     /// <para> Represents the following element tag in the schema: m:sSubPr </para>
@@ -2007,7 +1835,6 @@ public partial class Subscript : OpenXmlCompositeElement
         get => GetElement<SubscriptProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -2021,7 +1848,6 @@ public partial class Subscript : OpenXmlCompositeElement
         get => GetElement<Base>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Subscript (Subscript function).</para>
     /// <para> Represents the following element tag in the schema: m:sub </para>
@@ -2035,7 +1861,6 @@ public partial class Subscript : OpenXmlCompositeElement
         get => GetElement<SubArgument>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2072,21 +1897,18 @@ public partial class SubSuperscript : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the SubSuperscript class.
     /// </summary>
     public SubSuperscript():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SubSuperscript class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SubSuperscript(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubSuperscript class with the specified child elements.
     /// </summary>
@@ -2094,7 +1916,6 @@ public partial class SubSuperscript : OpenXmlCompositeElement
     public SubSuperscript(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubSuperscript class from outer XML.
     /// </summary>
@@ -2103,13 +1924,10 @@ public partial class SubSuperscript : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Sub-Superscript Properties.</para>
     /// <para> Represents the following element tag in the schema: m:sSubSupPr </para>
@@ -2123,7 +1941,6 @@ public partial class SubSuperscript : OpenXmlCompositeElement
         get => GetElement<SubSuperscriptProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -2137,7 +1954,6 @@ public partial class SubSuperscript : OpenXmlCompositeElement
         get => GetElement<Base>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Subscript (Sub-Superscript).</para>
     /// <para> Represents the following element tag in the schema: m:sub </para>
@@ -2151,7 +1967,6 @@ public partial class SubSuperscript : OpenXmlCompositeElement
         get => GetElement<SubArgument>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Superscript (Sub-Superscript function).</para>
     /// <para> Represents the following element tag in the schema: m:sup </para>
@@ -2165,7 +1980,6 @@ public partial class SubSuperscript : OpenXmlCompositeElement
         get => GetElement<SuperArgument>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2200,21 +2014,18 @@ public partial class Superscript : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Superscript class.
     /// </summary>
     public Superscript():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Superscript class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Superscript(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Superscript class with the specified child elements.
     /// </summary>
@@ -2222,7 +2033,6 @@ public partial class Superscript : OpenXmlCompositeElement
     public Superscript(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Superscript class from outer XML.
     /// </summary>
@@ -2231,13 +2041,10 @@ public partial class Superscript : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Superscript Properties.</para>
     /// <para> Represents the following element tag in the schema: m:sSupPr </para>
@@ -2251,7 +2058,6 @@ public partial class Superscript : OpenXmlCompositeElement
         get => GetElement<SuperscriptProperties>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -2265,7 +2071,6 @@ public partial class Superscript : OpenXmlCompositeElement
         get => GetElement<Base>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Superscript (Superscript function).</para>
     /// <para> Represents the following element tag in the schema: m:sup </para>
@@ -2279,7 +2084,6 @@ public partial class Superscript : OpenXmlCompositeElement
         get => GetElement<SuperArgument>(2);
         set => SetElement(2, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2376,21 +2180,18 @@ public partial class Paragraph : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the Paragraph class.
     /// </summary>
     public Paragraph():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Paragraph class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Paragraph(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Paragraph class with the specified child elements.
     /// </summary>
@@ -2398,7 +2199,6 @@ public partial class Paragraph : OpenXmlCompositeElement
     public Paragraph(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Paragraph class from outer XML.
     /// </summary>
@@ -2407,13 +2207,10 @@ public partial class Paragraph : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Office Math Paragraph Properties.</para>
     /// <para> Represents the following element tag in the schema: m:oMathParaPr </para>
@@ -2427,7 +2224,6 @@ public partial class Paragraph : OpenXmlCompositeElement
         get => GetElement<ParagraphProperties>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -2568,21 +2364,18 @@ public partial class OfficeMath : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMath class.
     /// </summary>
     public OfficeMath():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the OfficeMath class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public OfficeMath(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMath class with the specified child elements.
     /// </summary>
@@ -2590,7 +2383,6 @@ public partial class OfficeMath : OpenXmlCompositeElement
     public OfficeMath(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMath class from outer XML.
     /// </summary>
@@ -2599,9 +2391,7 @@ public partial class OfficeMath : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -2663,21 +2453,18 @@ public partial class MathProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the MathProperties class.
     /// </summary>
     public MathProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MathProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MathProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MathProperties class with the specified child elements.
     /// </summary>
@@ -2685,7 +2472,6 @@ public partial class MathProperties : OpenXmlCompositeElement
     public MathProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MathProperties class from outer XML.
     /// </summary>
@@ -2694,13 +2480,10 @@ public partial class MathProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Math Font.</para>
     /// <para> Represents the following element tag in the schema: m:mathFont </para>
@@ -2714,7 +2497,6 @@ public partial class MathProperties : OpenXmlCompositeElement
         get => GetElement<MathFont>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Break on Binary Operators.</para>
     /// <para> Represents the following element tag in the schema: m:brkBin </para>
@@ -2728,7 +2510,6 @@ public partial class MathProperties : OpenXmlCompositeElement
         get => GetElement<BreakBinary>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Break on Binary Subtraction.</para>
     /// <para> Represents the following element tag in the schema: m:brkBinSub </para>
@@ -2742,7 +2523,6 @@ public partial class MathProperties : OpenXmlCompositeElement
         get => GetElement<BreakBinarySubtraction>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Small Fraction.</para>
     /// <para> Represents the following element tag in the schema: m:smallFrac </para>
@@ -2756,7 +2536,6 @@ public partial class MathProperties : OpenXmlCompositeElement
         get => GetElement<SmallFraction>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Use Display Math Defaults.</para>
     /// <para> Represents the following element tag in the schema: m:dispDef </para>
@@ -2770,7 +2549,6 @@ public partial class MathProperties : OpenXmlCompositeElement
         get => GetElement<DisplayDefaults>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> Left Margin.</para>
     /// <para> Represents the following element tag in the schema: m:lMargin </para>
@@ -2784,7 +2562,6 @@ public partial class MathProperties : OpenXmlCompositeElement
         get => GetElement<LeftMargin>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> Right Margin.</para>
     /// <para> Represents the following element tag in the schema: m:rMargin </para>
@@ -2798,7 +2575,6 @@ public partial class MathProperties : OpenXmlCompositeElement
         get => GetElement<RightMargin>(6);
         set => SetElement(6, value);
 	}
-    
     /// <summary>
     /// <para> Default Justification.</para>
     /// <para> Represents the following element tag in the schema: m:defJc </para>
@@ -2812,7 +2588,6 @@ public partial class MathProperties : OpenXmlCompositeElement
         get => GetElement<DefaultJustification>(7);
         set => SetElement(7, value);
 	}
-    
     /// <summary>
     /// <para> Pre-Equation Spacing.</para>
     /// <para> Represents the following element tag in the schema: m:preSp </para>
@@ -2826,7 +2601,6 @@ public partial class MathProperties : OpenXmlCompositeElement
         get => GetElement<PreSpacing>(8);
         set => SetElement(8, value);
 	}
-    
     /// <summary>
     /// <para> Post-Equation Spacing.</para>
     /// <para> Represents the following element tag in the schema: m:postSp </para>
@@ -2840,7 +2614,6 @@ public partial class MathProperties : OpenXmlCompositeElement
         get => GetElement<PostSpacing>(9);
         set => SetElement(9, value);
 	}
-    
     /// <summary>
     /// <para> Inter-Equation Spacing.</para>
     /// <para> Represents the following element tag in the schema: m:interSp </para>
@@ -2854,7 +2627,6 @@ public partial class MathProperties : OpenXmlCompositeElement
         get => GetElement<InterSpacing>(10);
         set => SetElement(10, value);
 	}
-    
     /// <summary>
     /// <para> Intra-Equation Spacing.</para>
     /// <para> Represents the following element tag in the schema: m:intraSp </para>
@@ -2868,7 +2640,6 @@ public partial class MathProperties : OpenXmlCompositeElement
         get => GetElement<IntraSpacing>(11);
         set => SetElement(11, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -3602,7 +3373,7 @@ public partial class WrapRight : OnOffType
 
 public abstract partial class OnOffType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
@@ -3612,16 +3383,13 @@ public abstract partial class OnOffType : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the OnOffType class.
     /// </summary>
     protected OnOffType(){}
-    
     
     
 }
@@ -3641,35 +3409,32 @@ public partial class Break : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Index of Operator to Align To.</para>
     /// <para>Represents the following attribute in the schema: m:alnAt </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[NumberValidator(MinInclusive = 1, MaxInclusive = 255)]
     [SchemaAttr(21, "alnAt")]
     [Index(0)]
     public IntegerValue AlignAt { get; set; }
-	
     /// <summary>
     /// <para> Index of Operator to Align To.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[NumberValidator(MinInclusive = 1, MaxInclusive = 255)]
     [SchemaAttr(21, "val")]
     [Index(1)]
     public IntegerValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Break class.
     /// </summary>
     public Break():base(){}
     
-      
-     
     
     
     
@@ -3711,21 +3476,18 @@ public partial class RunProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the RunProperties class.
     /// </summary>
     public RunProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RunProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RunProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RunProperties class with the specified child elements.
     /// </summary>
@@ -3733,7 +3495,6 @@ public partial class RunProperties : OpenXmlCompositeElement
     public RunProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RunProperties class from outer XML.
     /// </summary>
@@ -3742,13 +3503,10 @@ public partial class RunProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Literal.</para>
     /// <para> Represents the following element tag in the schema: m:lit </para>
@@ -3762,7 +3520,6 @@ public partial class RunProperties : OpenXmlCompositeElement
         get => GetElement<Literal>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -3785,7 +3542,6 @@ public partial class Text : OpenXmlLeafTextElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> space.</para>
     /// <para>Represents the following attribute in the schema: xml:space </para>
@@ -3795,14 +3551,12 @@ public partial class Text : OpenXmlLeafTextElement
     [SchemaAttr(1, "space")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Text class.
     /// </summary>
     public Text():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the Text class with the specified text content.
     /// </summary>
@@ -3810,14 +3564,11 @@ public partial class Text : OpenXmlLeafTextElement
     public Text(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -3927,26 +3678,25 @@ public partial class EndChar : CharType
 
 public abstract partial class CharType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
+[StringValidator(MaxLength = 1)]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public StringValue Val { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the CharType class.
     /// </summary>
     protected CharType(){}
-    
     
     
 }
@@ -3982,21 +3732,18 @@ public partial class ControlProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ControlProperties class.
     /// </summary>
     public ControlProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ControlProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ControlProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ControlProperties class with the specified child elements.
     /// </summary>
@@ -4004,7 +3751,6 @@ public partial class ControlProperties : OpenXmlCompositeElement
     public ControlProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ControlProperties class from outer XML.
     /// </summary>
@@ -4013,9 +3759,7 @@ public partial class ControlProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -4049,21 +3793,18 @@ public partial class AccentProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the AccentProperties class.
     /// </summary>
     public AccentProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the AccentProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public AccentProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AccentProperties class with the specified child elements.
     /// </summary>
@@ -4071,7 +3812,6 @@ public partial class AccentProperties : OpenXmlCompositeElement
     public AccentProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AccentProperties class from outer XML.
     /// </summary>
@@ -4080,13 +3820,10 @@ public partial class AccentProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Accent Character.</para>
     /// <para> Represents the following element tag in the schema: m:chr </para>
@@ -4100,7 +3837,6 @@ public partial class AccentProperties : OpenXmlCompositeElement
         get => GetElement<AccentChar>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Control Properties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -4114,7 +3850,6 @@ public partial class AccentProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -4208,9 +3943,8 @@ public partial class Base : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public Base(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Base class with the specified child elements.
     /// </summary>
@@ -4218,7 +3952,6 @@ public partial class Base : OfficeMathArgumentType
     public Base(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Base class from outer XML.
     /// </summary>
@@ -4227,7 +3960,6 @@ public partial class Base : OfficeMathArgumentType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -4321,9 +4053,8 @@ public partial class Numerator : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public Numerator(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Numerator class with the specified child elements.
     /// </summary>
@@ -4331,7 +4062,6 @@ public partial class Numerator : OfficeMathArgumentType
     public Numerator(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Numerator class from outer XML.
     /// </summary>
@@ -4340,7 +4070,6 @@ public partial class Numerator : OfficeMathArgumentType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -4434,9 +4163,8 @@ public partial class Denominator : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public Denominator(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Denominator class with the specified child elements.
     /// </summary>
@@ -4444,7 +4172,6 @@ public partial class Denominator : OfficeMathArgumentType
     public Denominator(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Denominator class from outer XML.
     /// </summary>
@@ -4453,7 +4180,6 @@ public partial class Denominator : OfficeMathArgumentType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -4547,9 +4273,8 @@ public partial class FunctionName : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public FunctionName(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FunctionName class with the specified child elements.
     /// </summary>
@@ -4557,7 +4282,6 @@ public partial class FunctionName : OfficeMathArgumentType
     public FunctionName(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FunctionName class from outer XML.
     /// </summary>
@@ -4566,7 +4290,6 @@ public partial class FunctionName : OfficeMathArgumentType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -4660,9 +4383,8 @@ public partial class Limit : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public Limit(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Limit class with the specified child elements.
     /// </summary>
@@ -4670,7 +4392,6 @@ public partial class Limit : OfficeMathArgumentType
     public Limit(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Limit class from outer XML.
     /// </summary>
@@ -4679,7 +4400,6 @@ public partial class Limit : OfficeMathArgumentType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -4773,9 +4493,8 @@ public partial class SubArgument : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public SubArgument(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubArgument class with the specified child elements.
     /// </summary>
@@ -4783,7 +4502,6 @@ public partial class SubArgument : OfficeMathArgumentType
     public SubArgument(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubArgument class from outer XML.
     /// </summary>
@@ -4792,7 +4510,6 @@ public partial class SubArgument : OfficeMathArgumentType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -4886,9 +4603,8 @@ public partial class SuperArgument : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public SuperArgument(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SuperArgument class with the specified child elements.
     /// </summary>
@@ -4896,7 +4612,6 @@ public partial class SuperArgument : OfficeMathArgumentType
     public SuperArgument(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SuperArgument class from outer XML.
     /// </summary>
@@ -4905,7 +4620,6 @@ public partial class SuperArgument : OfficeMathArgumentType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -4999,9 +4713,8 @@ public partial class Degree : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public Degree(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Degree class with the specified child elements.
     /// </summary>
@@ -5009,7 +4722,6 @@ public partial class Degree : OfficeMathArgumentType
     public Degree(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Degree class from outer XML.
     /// </summary>
@@ -5018,7 +4730,6 @@ public partial class Degree : OfficeMathArgumentType
         : base(outerXml)
     {
     }
-    
 
     
     /// <inheritdoc/>
@@ -5153,11 +4864,10 @@ public partial class Degree : OfficeMathArgumentType
 
 public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
 {
-        
+    
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Argument Properties.</para>
     /// <para> Represents the following element tag in the schema: m:argPr </para>
@@ -5171,24 +4881,20 @@ public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
         get => GetElement<ArgumentProperties>(0);
         set => SetElement(0, value);
 	}
-    
 
 
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMathArgumentType class.
     /// </summary>
     protected OfficeMathArgumentType(){}
-    
         /// <summary>
     ///Initializes a new instance of the OfficeMathArgumentType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     protected OfficeMathArgumentType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMathArgumentType class with the specified child elements.
     /// </summary>
@@ -5196,7 +4902,6 @@ public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
     protected OfficeMathArgumentType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMathArgumentType class from outer XML.
     /// </summary>
@@ -5205,7 +4910,6 @@ public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
 
     
 }
@@ -5264,26 +4968,24 @@ public partial class VerticalJustification : TopBottomType
 
 public abstract partial class TopBottomType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the TopBottomType class.
     /// </summary>
     protected TopBottomType(){}
-    
     
     
 }
@@ -5313,21 +5015,18 @@ public partial class BarProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the BarProperties class.
     /// </summary>
     public BarProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the BarProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public BarProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BarProperties class with the specified child elements.
     /// </summary>
@@ -5335,7 +5034,6 @@ public partial class BarProperties : OpenXmlCompositeElement
     public BarProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BarProperties class from outer XML.
     /// </summary>
@@ -5344,13 +5042,10 @@ public partial class BarProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Position (Bar).</para>
     /// <para> Represents the following element tag in the schema: m:pos </para>
@@ -5364,7 +5059,6 @@ public partial class BarProperties : OpenXmlCompositeElement
         get => GetElement<Position>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -5378,7 +5072,6 @@ public partial class BarProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -5419,21 +5112,18 @@ public partial class BoxProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the BoxProperties class.
     /// </summary>
     public BoxProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the BoxProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public BoxProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BoxProperties class with the specified child elements.
     /// </summary>
@@ -5441,7 +5131,6 @@ public partial class BoxProperties : OpenXmlCompositeElement
     public BoxProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BoxProperties class from outer XML.
     /// </summary>
@@ -5450,13 +5139,10 @@ public partial class BoxProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Operator Emulator.</para>
     /// <para> Represents the following element tag in the schema: m:opEmu </para>
@@ -5470,7 +5156,6 @@ public partial class BoxProperties : OpenXmlCompositeElement
         get => GetElement<OperatorEmulator>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> No Break.</para>
     /// <para> Represents the following element tag in the schema: m:noBreak </para>
@@ -5484,7 +5169,6 @@ public partial class BoxProperties : OpenXmlCompositeElement
         get => GetElement<NoBreak>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Differential.</para>
     /// <para> Represents the following element tag in the schema: m:diff </para>
@@ -5498,7 +5182,6 @@ public partial class BoxProperties : OpenXmlCompositeElement
         get => GetElement<Differential>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Break.</para>
     /// <para> Represents the following element tag in the schema: m:brk </para>
@@ -5512,7 +5195,6 @@ public partial class BoxProperties : OpenXmlCompositeElement
         get => GetElement<Break>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Alignment.</para>
     /// <para> Represents the following element tag in the schema: m:aln </para>
@@ -5526,7 +5208,6 @@ public partial class BoxProperties : OpenXmlCompositeElement
         get => GetElement<Alignment>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -5540,7 +5221,6 @@ public partial class BoxProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -5587,21 +5267,18 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the BorderBoxProperties class.
     /// </summary>
     public BorderBoxProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the BorderBoxProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public BorderBoxProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BorderBoxProperties class with the specified child elements.
     /// </summary>
@@ -5609,7 +5286,6 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     public BorderBoxProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BorderBoxProperties class from outer XML.
     /// </summary>
@@ -5618,13 +5294,10 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Hide Top Edge.</para>
     /// <para> Represents the following element tag in the schema: m:hideTop </para>
@@ -5638,7 +5311,6 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
         get => GetElement<HideTop>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Hide Bottom Edge.</para>
     /// <para> Represents the following element tag in the schema: m:hideBot </para>
@@ -5652,7 +5324,6 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
         get => GetElement<HideBottom>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Hide Left Edge.</para>
     /// <para> Represents the following element tag in the schema: m:hideLeft </para>
@@ -5666,7 +5337,6 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
         get => GetElement<HideLeft>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Hide Right Edge.</para>
     /// <para> Represents the following element tag in the schema: m:hideRight </para>
@@ -5680,7 +5350,6 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
         get => GetElement<HideRight>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Border Box Strikethrough Horizontal.</para>
     /// <para> Represents the following element tag in the schema: m:strikeH </para>
@@ -5694,7 +5363,6 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
         get => GetElement<StrikeHorizontal>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> Border Box Strikethrough Vertical.</para>
     /// <para> Represents the following element tag in the schema: m:strikeV </para>
@@ -5708,7 +5376,6 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
         get => GetElement<StrikeVertical>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> Border Box Strikethrough Bottom-Left to Top-Right.</para>
     /// <para> Represents the following element tag in the schema: m:strikeBLTR </para>
@@ -5722,7 +5389,6 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
         get => GetElement<StrikeBottomLeftToTopRight>(6);
         set => SetElement(6, value);
 	}
-    
     /// <summary>
     /// <para> Border Box Strikethrough Top-Left to Bottom-Right.</para>
     /// <para> Represents the following element tag in the schema: m:strikeTLBR </para>
@@ -5736,7 +5402,6 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
         get => GetElement<StrikeTopLeftToBottomRight>(7);
         set => SetElement(7, value);
 	}
-    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -5750,7 +5415,6 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(8);
         set => SetElement(8, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -5773,25 +5437,22 @@ public partial class Shape : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the Shape class.
     /// </summary>
     public Shape():base(){}
     
-      
-     
     
     
     
@@ -5833,21 +5494,18 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the DelimiterProperties class.
     /// </summary>
     public DelimiterProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the DelimiterProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DelimiterProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DelimiterProperties class with the specified child elements.
     /// </summary>
@@ -5855,7 +5513,6 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     public DelimiterProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DelimiterProperties class from outer XML.
     /// </summary>
@@ -5864,13 +5521,10 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Delimiter Beginning Character.</para>
     /// <para> Represents the following element tag in the schema: m:begChr </para>
@@ -5884,7 +5538,6 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
         get => GetElement<BeginChar>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Delimiter Separator Character.</para>
     /// <para> Represents the following element tag in the schema: m:sepChr </para>
@@ -5898,7 +5551,6 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
         get => GetElement<SeparatorChar>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Delimiter Ending Character.</para>
     /// <para> Represents the following element tag in the schema: m:endChr </para>
@@ -5912,7 +5564,6 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
         get => GetElement<EndChar>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Delimiter Grow.</para>
     /// <para> Represents the following element tag in the schema: m:grow </para>
@@ -5926,7 +5577,6 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
         get => GetElement<GrowOperators>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Shape (Delimiters).</para>
     /// <para> Represents the following element tag in the schema: m:shp </para>
@@ -5940,7 +5590,6 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
         get => GetElement<Shape>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -5954,7 +5603,6 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -5977,25 +5625,22 @@ public partial class BaseJustification : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the BaseJustification class.
     /// </summary>
     public BaseJustification():base(){}
     
-      
-     
     
     
     
@@ -6058,26 +5703,25 @@ public partial class ColumnGapRule : SpacingRuleType
 
 public abstract partial class SpacingRuleType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 0, MaxInclusive = 4)]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public IntegerValue Val { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the SpacingRuleType class.
     /// </summary>
     protected SpacingRuleType(){}
-    
     
     
 }
@@ -6136,26 +5780,24 @@ public partial class ColumnGap : UnsignedShortType
 
 public abstract partial class UnsignedShortType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public UInt16Value Val { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the UnsignedShortType class.
     /// </summary>
     protected UnsignedShortType(){}
-    
     
     
 }
@@ -6193,21 +5835,18 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the EquationArrayProperties class.
     /// </summary>
     public EquationArrayProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the EquationArrayProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public EquationArrayProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the EquationArrayProperties class with the specified child elements.
     /// </summary>
@@ -6215,7 +5854,6 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     public EquationArrayProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the EquationArrayProperties class from outer XML.
     /// </summary>
@@ -6224,13 +5862,10 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Equation Array Base Justification.</para>
     /// <para> Represents the following element tag in the schema: m:baseJc </para>
@@ -6244,7 +5879,6 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
         get => GetElement<BaseJustification>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Maximum Distribution.</para>
     /// <para> Represents the following element tag in the schema: m:maxDist </para>
@@ -6258,7 +5892,6 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
         get => GetElement<MaxDistribution>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Object Distribution.</para>
     /// <para> Represents the following element tag in the schema: m:objDist </para>
@@ -6272,7 +5905,6 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
         get => GetElement<ObjectDistribution>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Row Spacing Rule.</para>
     /// <para> Represents the following element tag in the schema: m:rSpRule </para>
@@ -6286,7 +5918,6 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
         get => GetElement<RowSpacingRule>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Row Spacing (Equation Array).</para>
     /// <para> Represents the following element tag in the schema: m:rSp </para>
@@ -6300,7 +5931,6 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
         get => GetElement<RowSpacing>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -6314,7 +5944,6 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -6337,25 +5966,22 @@ public partial class FractionType : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the FractionType class.
     /// </summary>
     public FractionType():base(){}
     
-      
-     
     
     
     
@@ -6389,21 +6015,18 @@ public partial class FractionProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the FractionProperties class.
     /// </summary>
     public FractionProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the FractionProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public FractionProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FractionProperties class with the specified child elements.
     /// </summary>
@@ -6411,7 +6034,6 @@ public partial class FractionProperties : OpenXmlCompositeElement
     public FractionProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FractionProperties class from outer XML.
     /// </summary>
@@ -6420,13 +6042,10 @@ public partial class FractionProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Fraction type.</para>
     /// <para> Represents the following element tag in the schema: m:type </para>
@@ -6440,7 +6059,6 @@ public partial class FractionProperties : OpenXmlCompositeElement
         get => GetElement<FractionType>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -6454,7 +6072,6 @@ public partial class FractionProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -6485,21 +6102,18 @@ public partial class FunctionProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the FunctionProperties class.
     /// </summary>
     public FunctionProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the FunctionProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public FunctionProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FunctionProperties class with the specified child elements.
     /// </summary>
@@ -6507,7 +6121,6 @@ public partial class FunctionProperties : OpenXmlCompositeElement
     public FunctionProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FunctionProperties class from outer XML.
     /// </summary>
@@ -6516,13 +6129,10 @@ public partial class FunctionProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -6536,7 +6146,6 @@ public partial class FunctionProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -6573,21 +6182,18 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the GroupCharProperties class.
     /// </summary>
     public GroupCharProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the GroupCharProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public GroupCharProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GroupCharProperties class with the specified child elements.
     /// </summary>
@@ -6595,7 +6201,6 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
     public GroupCharProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GroupCharProperties class from outer XML.
     /// </summary>
@@ -6604,13 +6209,10 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Group Character (Grouping Character).</para>
     /// <para> Represents the following element tag in the schema: m:chr </para>
@@ -6624,7 +6226,6 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
         get => GetElement<AccentChar>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Position (Group Character).</para>
     /// <para> Represents the following element tag in the schema: m:pos </para>
@@ -6638,7 +6239,6 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
         get => GetElement<Position>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Vertical Justification.</para>
     /// <para> Represents the following element tag in the schema: m:vertJc </para>
@@ -6652,7 +6252,6 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
         get => GetElement<VerticalJustification>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -6666,7 +6265,6 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(3);
         set => SetElement(3, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -6697,21 +6295,18 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the LimitLowerProperties class.
     /// </summary>
     public LimitLowerProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the LimitLowerProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public LimitLowerProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitLowerProperties class with the specified child elements.
     /// </summary>
@@ -6719,7 +6314,6 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
     public LimitLowerProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitLowerProperties class from outer XML.
     /// </summary>
@@ -6728,13 +6322,10 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -6748,7 +6339,6 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -6779,21 +6369,18 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the LimitUpperProperties class.
     /// </summary>
     public LimitUpperProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the LimitUpperProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public LimitUpperProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitUpperProperties class with the specified child elements.
     /// </summary>
@@ -6801,7 +6388,6 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
     public LimitUpperProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitUpperProperties class from outer XML.
     /// </summary>
@@ -6810,13 +6396,10 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -6830,7 +6413,6 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -6853,25 +6435,23 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
+[NumberValidator(MinInclusive = 1, MaxInclusive = 64)]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public IntegerValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the MatrixColumnCount class.
     /// </summary>
     public MatrixColumnCount():base(){}
     
-      
-     
     
     
     
@@ -6895,25 +6475,22 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the MatrixColumnJustification class.
     /// </summary>
     public MatrixColumnJustification():base(){}
     
-      
-     
     
     
     
@@ -6947,21 +6524,18 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumnProperties class.
     /// </summary>
     public MatrixColumnProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MatrixColumnProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MatrixColumnProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumnProperties class with the specified child elements.
     /// </summary>
@@ -6969,7 +6543,6 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
     public MatrixColumnProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumnProperties class from outer XML.
     /// </summary>
@@ -6978,13 +6551,10 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Matrix Column Count.</para>
     /// <para> Represents the following element tag in the schema: m:count </para>
@@ -6998,7 +6568,6 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
         get => GetElement<MatrixColumnCount>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Matrix Column Justification.</para>
     /// <para> Represents the following element tag in the schema: m:mcJc </para>
@@ -7012,7 +6581,6 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
         get => GetElement<MatrixColumnJustification>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -7043,21 +6611,18 @@ public partial class MatrixColumn : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumn class.
     /// </summary>
     public MatrixColumn():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MatrixColumn class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MatrixColumn(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumn class with the specified child elements.
     /// </summary>
@@ -7065,7 +6630,6 @@ public partial class MatrixColumn : OpenXmlCompositeElement
     public MatrixColumn(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumn class from outer XML.
     /// </summary>
@@ -7074,13 +6638,10 @@ public partial class MatrixColumn : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Matrix Column Properties.</para>
     /// <para> Represents the following element tag in the schema: m:mcPr </para>
@@ -7094,7 +6655,6 @@ public partial class MatrixColumn : OpenXmlCompositeElement
         get => GetElement<MatrixColumnProperties>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -7300,26 +6860,25 @@ public partial class WrapIndent : TwipsMeasureType
 
 public abstract partial class TwipsMeasureType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
+[NumberValidator(MaxInclusive = 31680)]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public UInt32Value Val { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the TwipsMeasureType class.
     /// </summary>
     protected TwipsMeasureType(){}
-    
     
     
 }
@@ -7347,21 +6906,18 @@ public partial class MatrixColumns : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumns class.
     /// </summary>
     public MatrixColumns():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MatrixColumns class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MatrixColumns(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumns class with the specified child elements.
     /// </summary>
@@ -7369,7 +6925,6 @@ public partial class MatrixColumns : OpenXmlCompositeElement
     public MatrixColumns(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumns class from outer XML.
     /// </summary>
@@ -7378,9 +6933,7 @@ public partial class MatrixColumns : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -7428,21 +6981,18 @@ public partial class MatrixProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the MatrixProperties class.
     /// </summary>
     public MatrixProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MatrixProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MatrixProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixProperties class with the specified child elements.
     /// </summary>
@@ -7450,7 +7000,6 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     public MatrixProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixProperties class from outer XML.
     /// </summary>
@@ -7459,13 +7008,10 @@ public partial class MatrixProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Matrix Base Justification.</para>
     /// <para> Represents the following element tag in the schema: m:baseJc </para>
@@ -7479,7 +7025,6 @@ public partial class MatrixProperties : OpenXmlCompositeElement
         get => GetElement<BaseJustification>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Hide Placeholders (Matrix).</para>
     /// <para> Represents the following element tag in the schema: m:plcHide </para>
@@ -7493,7 +7038,6 @@ public partial class MatrixProperties : OpenXmlCompositeElement
         get => GetElement<HidePlaceholder>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Row Spacing Rule.</para>
     /// <para> Represents the following element tag in the schema: m:rSpRule </para>
@@ -7507,7 +7051,6 @@ public partial class MatrixProperties : OpenXmlCompositeElement
         get => GetElement<RowSpacingRule>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Matrix Column Gap Rule.</para>
     /// <para> Represents the following element tag in the schema: m:cGpRule </para>
@@ -7521,7 +7064,6 @@ public partial class MatrixProperties : OpenXmlCompositeElement
         get => GetElement<ColumnGapRule>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Row Spacing (Matrix).</para>
     /// <para> Represents the following element tag in the schema: m:rSp </para>
@@ -7535,7 +7077,6 @@ public partial class MatrixProperties : OpenXmlCompositeElement
         get => GetElement<RowSpacing>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> Matrix Column Spacing.</para>
     /// <para> Represents the following element tag in the schema: m:cSp </para>
@@ -7549,7 +7090,6 @@ public partial class MatrixProperties : OpenXmlCompositeElement
         get => GetElement<ColumnSpacing>(5);
         set => SetElement(5, value);
 	}
-    
     /// <summary>
     /// <para> Matrix Column Gap.</para>
     /// <para> Represents the following element tag in the schema: m:cGp </para>
@@ -7563,7 +7103,6 @@ public partial class MatrixProperties : OpenXmlCompositeElement
         get => GetElement<ColumnGap>(6);
         set => SetElement(6, value);
 	}
-    
     /// <summary>
     /// <para> Matrix Columns.</para>
     /// <para> Represents the following element tag in the schema: m:mcs </para>
@@ -7577,7 +7116,6 @@ public partial class MatrixProperties : OpenXmlCompositeElement
         get => GetElement<MatrixColumns>(7);
         set => SetElement(7, value);
 	}
-    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -7591,7 +7129,6 @@ public partial class MatrixProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(8);
         set => SetElement(8, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -7622,21 +7159,18 @@ public partial class MatrixRow : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the MatrixRow class.
     /// </summary>
     public MatrixRow():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MatrixRow class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MatrixRow(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixRow class with the specified child elements.
     /// </summary>
@@ -7644,7 +7178,6 @@ public partial class MatrixRow : OpenXmlCompositeElement
     public MatrixRow(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixRow class from outer XML.
     /// </summary>
@@ -7653,9 +7186,7 @@ public partial class MatrixRow : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
     
@@ -7742,26 +7273,24 @@ public partial class NaryLimitLocation : LimitLocationType
 
 public abstract partial class LimitLocationType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the LimitLocationType class.
     /// </summary>
     protected LimitLocationType(){}
-    
     
     
 }
@@ -7799,21 +7328,18 @@ public partial class NaryProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the NaryProperties class.
     /// </summary>
     public NaryProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NaryProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NaryProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NaryProperties class with the specified child elements.
     /// </summary>
@@ -7821,7 +7347,6 @@ public partial class NaryProperties : OpenXmlCompositeElement
     public NaryProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NaryProperties class from outer XML.
     /// </summary>
@@ -7830,13 +7355,10 @@ public partial class NaryProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> n-ary Operator Character.</para>
     /// <para> Represents the following element tag in the schema: m:chr </para>
@@ -7850,7 +7372,6 @@ public partial class NaryProperties : OpenXmlCompositeElement
         get => GetElement<AccentChar>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> n-ary Limit Location.</para>
     /// <para> Represents the following element tag in the schema: m:limLoc </para>
@@ -7864,7 +7385,6 @@ public partial class NaryProperties : OpenXmlCompositeElement
         get => GetElement<LimitLocation>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> n-ary Grow.</para>
     /// <para> Represents the following element tag in the schema: m:grow </para>
@@ -7878,7 +7398,6 @@ public partial class NaryProperties : OpenXmlCompositeElement
         get => GetElement<GrowOperators>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Hide Subscript (n-ary).</para>
     /// <para> Represents the following element tag in the schema: m:subHide </para>
@@ -7892,7 +7411,6 @@ public partial class NaryProperties : OpenXmlCompositeElement
         get => GetElement<HideSubArgument>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Hide Superscript (n-ary).</para>
     /// <para> Represents the following element tag in the schema: m:supHide </para>
@@ -7906,7 +7424,6 @@ public partial class NaryProperties : OpenXmlCompositeElement
         get => GetElement<HideSuperArgument>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -7920,7 +7437,6 @@ public partial class NaryProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -7961,21 +7477,18 @@ public partial class PhantomProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the PhantomProperties class.
     /// </summary>
     public PhantomProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the PhantomProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public PhantomProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PhantomProperties class with the specified child elements.
     /// </summary>
@@ -7983,7 +7496,6 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     public PhantomProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PhantomProperties class from outer XML.
     /// </summary>
@@ -7992,13 +7504,10 @@ public partial class PhantomProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Phantom Show.</para>
     /// <para> Represents the following element tag in the schema: m:show </para>
@@ -8012,7 +7521,6 @@ public partial class PhantomProperties : OpenXmlCompositeElement
         get => GetElement<ShowPhantom>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> Phantom Zero Width.</para>
     /// <para> Represents the following element tag in the schema: m:zeroWid </para>
@@ -8026,7 +7534,6 @@ public partial class PhantomProperties : OpenXmlCompositeElement
         get => GetElement<ZeroWidth>(1);
         set => SetElement(1, value);
 	}
-    
     /// <summary>
     /// <para> Phantom Zero Ascent.</para>
     /// <para> Represents the following element tag in the schema: m:zeroAsc </para>
@@ -8040,7 +7547,6 @@ public partial class PhantomProperties : OpenXmlCompositeElement
         get => GetElement<ZeroAscent>(2);
         set => SetElement(2, value);
 	}
-    
     /// <summary>
     /// <para> Phantom Zero Descent.</para>
     /// <para> Represents the following element tag in the schema: m:zeroDesc </para>
@@ -8054,7 +7560,6 @@ public partial class PhantomProperties : OpenXmlCompositeElement
         get => GetElement<ZeroDescent>(3);
         set => SetElement(3, value);
 	}
-    
     /// <summary>
     /// <para> Transparent (Phantom).</para>
     /// <para> Represents the following element tag in the schema: m:transp </para>
@@ -8068,7 +7573,6 @@ public partial class PhantomProperties : OpenXmlCompositeElement
         get => GetElement<Transparent>(4);
         set => SetElement(4, value);
 	}
-    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -8082,7 +7586,6 @@ public partial class PhantomProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -8115,21 +7618,18 @@ public partial class RadicalProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the RadicalProperties class.
     /// </summary>
     public RadicalProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RadicalProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RadicalProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RadicalProperties class with the specified child elements.
     /// </summary>
@@ -8137,7 +7637,6 @@ public partial class RadicalProperties : OpenXmlCompositeElement
     public RadicalProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RadicalProperties class from outer XML.
     /// </summary>
@@ -8146,13 +7645,10 @@ public partial class RadicalProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Hide Degree.</para>
     /// <para> Represents the following element tag in the schema: m:degHide </para>
@@ -8166,7 +7662,6 @@ public partial class RadicalProperties : OpenXmlCompositeElement
         get => GetElement<HideDegree>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -8180,7 +7675,6 @@ public partial class RadicalProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -8211,21 +7705,18 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the PreSubSuperProperties class.
     /// </summary>
     public PreSubSuperProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the PreSubSuperProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public PreSubSuperProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PreSubSuperProperties class with the specified child elements.
     /// </summary>
@@ -8233,7 +7724,6 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
     public PreSubSuperProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PreSubSuperProperties class from outer XML.
     /// </summary>
@@ -8242,13 +7732,10 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -8262,7 +7749,6 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -8293,21 +7779,18 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the SubscriptProperties class.
     /// </summary>
     public SubscriptProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SubscriptProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SubscriptProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubscriptProperties class with the specified child elements.
     /// </summary>
@@ -8315,7 +7798,6 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
     public SubscriptProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubscriptProperties class from outer XML.
     /// </summary>
@@ -8324,13 +7806,10 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -8344,7 +7823,6 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -8377,21 +7855,18 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the SubSuperscriptProperties class.
     /// </summary>
     public SubSuperscriptProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SubSuperscriptProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SubSuperscriptProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubSuperscriptProperties class with the specified child elements.
     /// </summary>
@@ -8399,7 +7874,6 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     public SubSuperscriptProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubSuperscriptProperties class from outer XML.
     /// </summary>
@@ -8408,13 +7882,10 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Align Scripts.</para>
     /// <para> Represents the following element tag in the schema: m:alnScr </para>
@@ -8428,7 +7899,6 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
         get => GetElement<AlignScripts>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -8442,7 +7912,6 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -8473,21 +7942,18 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the SuperscriptProperties class.
     /// </summary>
     public SuperscriptProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SuperscriptProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SuperscriptProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SuperscriptProperties class with the specified child elements.
     /// </summary>
@@ -8495,7 +7961,6 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
     public SuperscriptProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SuperscriptProperties class from outer XML.
     /// </summary>
@@ -8504,13 +7969,10 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -8524,7 +7986,6 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -8547,25 +8008,23 @@ public partial class ArgumentSize : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
+[NumberValidator(MinInclusive = -2, MaxInclusive = 2)]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public IntegerValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the ArgumentSize class.
     /// </summary>
     public ArgumentSize():base(){}
     
-      
-     
     
     
     
@@ -8597,21 +8056,18 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ArgumentProperties class.
     /// </summary>
     public ArgumentProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ArgumentProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ArgumentProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ArgumentProperties class with the specified child elements.
     /// </summary>
@@ -8619,7 +8075,6 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
     public ArgumentProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ArgumentProperties class from outer XML.
     /// </summary>
@@ -8628,13 +8083,10 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Argument Size.</para>
     /// <para> Represents the following element tag in the schema: m:argSz </para>
@@ -8648,7 +8100,6 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
         get => GetElement<ArgumentSize>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -8710,26 +8161,24 @@ public partial class DefaultJustification : OfficeMathJustificationType
 
 public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
 {
-        
+    
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val { get; set; }
-	
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the OfficeMathJustificationType class.
     /// </summary>
     protected OfficeMathJustificationType(){}
-    
     
     
 }
@@ -8749,25 +8198,23 @@ public partial class MathFont : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator]
+[StringValidator(MaxLength = 31)]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public StringValue Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the MathFont class.
     /// </summary>
     public MathFont():base(){}
     
-      
-     
     
     
     
@@ -8791,7 +8238,6 @@ public partial class BreakBinary : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
@@ -8801,15 +8247,12 @@ public partial class BreakBinary : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the BreakBinary class.
     /// </summary>
     public BreakBinary():base(){}
     
-      
-     
     
     
     
@@ -8833,25 +8276,23 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
     internal override int ElementTypeId => ElementTypeIdConst;
 
     
-    
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+[RequiredValidator(Version = FileFormatVersions.Office2007)]
+[RequiredValidator(IsRequired = false, InitialVersion = FileFormatVersions.Office2010)]
     [SchemaAttr(21, "val")]
     [Index(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val { get; set; }
-	
 
     /// <summary>
     /// Initializes a new instance of the BreakBinarySubtraction class.
     /// </summary>
     public BreakBinarySubtraction():base(){}
     
-      
-     
     
     
     
@@ -8883,21 +8324,18 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ParagraphProperties class.
     /// </summary>
     public ParagraphProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ParagraphProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ParagraphProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ParagraphProperties class with the specified child elements.
     /// </summary>
@@ -8905,7 +8343,6 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     public ParagraphProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ParagraphProperties class from outer XML.
     /// </summary>
@@ -8914,13 +8351,10 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Justification.</para>
     /// <para> Represents the following element tag in the schema: m:jc </para>
@@ -8934,7 +8368,6 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
         get => GetElement<Justification>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -8942,10 +8375,10 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
 
 }
 /// <summary>
-/// Defines the HorizontalAlignmentValues enumeration. 
-/// </summary> 
+/// Defines the HorizontalAlignmentValues enumeration.
+/// </summary>
 public enum HorizontalAlignmentValues
-{  
+{
 	///<summary>
 ///Left Justification.
 ///<para>When the item is serialized out as xml, its value is "left".</para>
@@ -8964,13 +8397,13 @@ Center,
 ///</summary>
 [EnumString("right")]
 Right,
- 
+
 }
 /// <summary>
-/// Defines the ShapeDelimiterValues enumeration. 
-/// </summary> 
+/// Defines the ShapeDelimiterValues enumeration.
+/// </summary>
 public enum ShapeDelimiterValues
-{  
+{
 	///<summary>
 ///Centered (Delimiters).
 ///<para>When the item is serialized out as xml, its value is "centered".</para>
@@ -8983,13 +8416,13 @@ Centered,
 ///</summary>
 [EnumString("match")]
 Match,
- 
+
 }
 /// <summary>
-/// Defines the FractionTypeValues enumeration. 
-/// </summary> 
+/// Defines the FractionTypeValues enumeration.
+/// </summary>
 public enum FractionTypeValues
-{  
+{
 	///<summary>
 ///Bar Fraction.
 ///<para>When the item is serialized out as xml, its value is "bar".</para>
@@ -9014,13 +8447,13 @@ Linear,
 ///</summary>
 [EnumString("noBar")]
 NoBar,
- 
+
 }
 /// <summary>
-/// Defines the LimitLocationValues enumeration. 
-/// </summary> 
+/// Defines the LimitLocationValues enumeration.
+/// </summary>
 public enum LimitLocationValues
-{  
+{
 	///<summary>
 ///Under-Over location.
 ///<para>When the item is serialized out as xml, its value is "undOvr".</para>
@@ -9033,13 +8466,13 @@ UnderOver,
 ///</summary>
 [EnumString("subSup")]
 SubscriptSuperscript,
- 
+
 }
 /// <summary>
-/// Defines the VerticalJustificationValues enumeration. 
-/// </summary> 
+/// Defines the VerticalJustificationValues enumeration.
+/// </summary>
 public enum VerticalJustificationValues
-{  
+{
 	///<summary>
 ///Top.
 ///<para>When the item is serialized out as xml, its value is "top".</para>
@@ -9052,13 +8485,13 @@ Top,
 ///</summary>
 [EnumString("bot")]
 Bottom,
- 
+
 }
 /// <summary>
-/// Defines the ScriptValues enumeration. 
-/// </summary> 
+/// Defines the ScriptValues enumeration.
+/// </summary>
 public enum ScriptValues
-{  
+{
 	///<summary>
 ///Roman.
 ///<para>When the item is serialized out as xml, its value is "roman".</para>
@@ -9095,13 +8528,13 @@ SansSerif,
 ///</summary>
 [EnumString("monospace")]
 Monospace,
- 
+
 }
 /// <summary>
-/// Defines the StyleValues enumeration. 
-/// </summary> 
+/// Defines the StyleValues enumeration.
+/// </summary>
 public enum StyleValues
-{  
+{
 	///<summary>
 ///Plain.
 ///<para>When the item is serialized out as xml, its value is "p".</para>
@@ -9126,13 +8559,13 @@ Italic,
 ///</summary>
 [EnumString("bi")]
 BoldItalic,
- 
+
 }
 /// <summary>
-/// Defines the JustificationValues enumeration. 
-/// </summary> 
+/// Defines the JustificationValues enumeration.
+/// </summary>
 public enum JustificationValues
-{  
+{
 	///<summary>
 ///Left Justification.
 ///<para>When the item is serialized out as xml, its value is "left".</para>
@@ -9157,13 +8590,13 @@ Center,
 ///</summary>
 [EnumString("centerGroup")]
 CenterGroup,
- 
+
 }
 /// <summary>
-/// Defines the BreakBinaryOperatorValues enumeration. 
-/// </summary> 
+/// Defines the BreakBinaryOperatorValues enumeration.
+/// </summary>
 public enum BreakBinaryOperatorValues
-{  
+{
 	///<summary>
 ///Before.
 ///<para>When the item is serialized out as xml, its value is "before".</para>
@@ -9182,13 +8615,13 @@ After,
 ///</summary>
 [EnumString("repeat")]
 Repeat,
- 
+
 }
 /// <summary>
-/// Defines the BreakBinarySubtractionValues enumeration. 
-/// </summary> 
+/// Defines the BreakBinarySubtractionValues enumeration.
+/// </summary>
 public enum BreakBinarySubtractionValues
-{  
+{
 	///<summary>
 ///Minus Minus.
 ///<para>When the item is serialized out as xml, its value is "--".</para>
@@ -9207,13 +8640,13 @@ MinusPlus,
 ///</summary>
 [EnumString("+-")]
 PlusMinus,
- 
+
 }
 /// <summary>
-/// Defines the VerticalAlignmentValues enumeration. 
-/// </summary> 
+/// Defines the VerticalAlignmentValues enumeration.
+/// </summary>
 public enum VerticalAlignmentValues
-{  
+{
 	///<summary>
 ///Top.
 ///<para>When the item is serialized out as xml, its value is "top".</para>
@@ -9238,13 +8671,13 @@ Bottom,
 ///</summary>
 [EnumString("bot")]
 Bot,
- 
+
 }
 /// <summary>
-/// Defines the BooleanValues enumeration. 
-/// </summary> 
+/// Defines the BooleanValues enumeration.
+/// </summary>
 public enum BooleanValues
-{  
+{
 	///<summary>
 ///true.
 ///<para>When the item is serialized out as xml, its value is "true".</para>
@@ -9281,8 +8714,6 @@ Zero,
 ///</summary>
 [EnumString("1")]
 One,
- 
+
 }
 }
- 
- 

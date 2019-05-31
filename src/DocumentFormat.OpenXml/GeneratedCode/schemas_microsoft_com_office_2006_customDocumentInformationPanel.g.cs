@@ -37,21 +37,18 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the CustomPropertyEditors class.
     /// </summary>
     public CustomPropertyEditors():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the CustomPropertyEditors class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public CustomPropertyEditors(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CustomPropertyEditors class with the specified child elements.
     /// </summary>
@@ -59,7 +56,6 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
     public CustomPropertyEditors(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CustomPropertyEditors class from outer XML.
     /// </summary>
@@ -68,13 +64,10 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ShowOnOpen.</para>
     /// <para> Represents the following element tag in the schema: cdip:showOnOpen </para>
@@ -88,7 +81,6 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
         get => GetElement<ShowOnOpen>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> DefaultPropertyEditorNamespace.</para>
     /// <para> Represents the following element tag in the schema: cdip:defaultPropertyEditorNamespace </para>
@@ -102,7 +94,6 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
         get => GetElement<DefaultPropertyEditorNamespace>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -115,6 +106,7 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
 /// <para> When the object is serialized out as xml, its qualified name is cdip:XMLNamespace.</para>
 /// </summary>
 
+[StringValidator(IsUri = true)]
 [SchemaAttr(37, "XMLNamespace")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -135,12 +127,10 @@ public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
     public PropertyEditorNamespace(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PropertyEditorNamespace>(deep);
@@ -152,6 +142,7 @@ public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is cdip:defaultPropertyEditorNamespace.</para>
 /// </summary>
 
+[StringValidator(IsUri = true)]
 [SchemaAttr(37, "defaultPropertyEditorNamespace")]
 [Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -172,12 +163,10 @@ public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
     public DefaultPropertyEditorNamespace(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultPropertyEditorNamespace>(deep);
@@ -200,13 +189,11 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the XsnFileLocation class.
     /// </summary>
     public XsnFileLocation():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the XsnFileLocation class with the specified text content.
     /// </summary>
@@ -214,14 +201,11 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
     public XsnFileLocation(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -234,6 +218,7 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
 /// <para> When the object is serialized out as xml, its qualified name is cdip:showOnOpen.</para>
 /// </summary>
 
+[NumberValidator(SimpleType = typeof(BooleanValue))]
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(37, "showOnOpen")]
@@ -245,13 +230,11 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the ShowOnOpen class.
     /// </summary>
     public ShowOnOpen():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the ShowOnOpen class with the specified text content.
     /// </summary>
@@ -259,14 +242,11 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
     public ShowOnOpen(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new BooleanValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -299,21 +279,18 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the CustomPropertyEditor class.
     /// </summary>
     public CustomPropertyEditor():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the CustomPropertyEditor class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public CustomPropertyEditor(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CustomPropertyEditor class with the specified child elements.
     /// </summary>
@@ -321,7 +298,6 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
     public CustomPropertyEditor(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the CustomPropertyEditor class from outer XML.
     /// </summary>
@@ -330,13 +306,10 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> PropertyEditorNamespace.</para>
     /// <para> Represents the following element tag in the schema: cdip:XMLNamespace </para>
@@ -350,7 +323,6 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
         get => GetElement<PropertyEditorNamespace>(0);
         set => SetElement(0, value);
 	}
-    
     /// <summary>
     /// <para> XsnFileLocation.</para>
     /// <para> Represents the following element tag in the schema: cdip:XSNLocation </para>
@@ -364,7 +336,6 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
         get => GetElement<XsnFileLocation>(1);
         set => SetElement(1, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -372,5 +343,3 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
 
 }
 }
- 
- 

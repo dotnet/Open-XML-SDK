@@ -38,21 +38,18 @@ public partial class MultiLvlStrData : OpenXmlCompositeElement
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the MultiLvlStrData class.
     /// </summary>
     public MultiLvlStrData():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MultiLvlStrData class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MultiLvlStrData(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MultiLvlStrData class with the specified child elements.
     /// </summary>
@@ -60,7 +57,6 @@ public partial class MultiLvlStrData : OpenXmlCompositeElement
     public MultiLvlStrData(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MultiLvlStrData class from outer XML.
     /// </summary>
@@ -69,13 +65,10 @@ public partial class MultiLvlStrData : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-    
-  
-     
+
     
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> PointCount.</para>
     /// <para> Represents the following element tag in the schema: c:ptCount </para>
@@ -89,7 +82,6 @@ public partial class MultiLvlStrData : OpenXmlCompositeElement
         get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>(0);
         set => SetElement(0, value);
 	}
-    
 
 
     /// <inheritdoc/>
@@ -97,5 +89,3 @@ public partial class MultiLvlStrData : OpenXmlCompositeElement
 
 }
 }
- 
- 
