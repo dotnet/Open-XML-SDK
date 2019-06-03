@@ -29,11 +29,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             ValidationTraverser.ValidatingTraverse(validationContext, ValidateElement, OnContextValidationFinished);
         }
 
-        public void ClearConstraintState(SemanticValidationLevel level)
-        {
-            _curReg.ClearConstraintState(level);
-        }
-
         private void OnContextValidationFinished(ValidationContext context)
         {
             _curReg.ActCallBack(context.Element.ElementTypeId);

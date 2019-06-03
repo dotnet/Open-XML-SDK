@@ -103,19 +103,5 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 }
             }
         }
-
-        /// <summary>
-        /// Clean state of all registered constraints
-        /// </summary>
-        public void ClearConstraintState(SemanticValidationLevel level)
-        {
-            foreach (var constraint in _semConstraintMap.GetValues())
-            {
-                if ((constraint.StateScope & level) != 0)
-                {
-                    constraint.ClearState(null);
-                }
-            }
-        }
     }
 }

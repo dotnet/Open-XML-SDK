@@ -34,5 +34,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             return result;
         }
+
+        public void Clear() => _state = null;
     }
 }

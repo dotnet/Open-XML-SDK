@@ -13,12 +13,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     internal class UniqueAttributeValueConstraint : SemanticConstraint
     {
         private readonly byte _attribute;
-        private readonly Stack<HashSet<string>> _stateStack = new Stack<HashSet<string>>();
         private readonly SemanticConstraintRegistry _reg;
         private readonly bool _partLevel;
         private readonly StringComparer _comparer;
-
-        private HashSet<string> _values;
 
         public UniqueAttributeValueConstraint(byte attribute, bool caseSensitive, bool partLevel, SemanticConstraintRegistry reg)
             : base(SemanticValidationLevel.Part)
@@ -27,12 +24,15 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _reg = reg;
             _partLevel = partLevel;
             _comparer = caseSensitive ? StringComparer.Ordinal : StringComparer.OrdinalIgnoreCase;
-            _values = new HashSet<string>(_comparer);
         }
+
+        private State GetState(ValidationContext context) => context.State.Get(this, () => new State(_comparer, _reg));
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            if (_values == null || !_partLevel)
+            var state = GetState(context);
+
+            if (state.Values is null || !_partLevel)
             {
                 return null;
             }
@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            if (_values.Add(attribute.Value.InnerText))
+            if (state.Values.Add(attribute.Value.InnerText))
             {
                 return null;
             }
@@ -64,32 +64,45 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override void ClearState(ValidationContext context)
         {
-            if (context == null) //initialize before validating
+            if (context is null)
             {
-                _stateStack.Clear();
-                _values = _partLevel ? new HashSet<string>(_comparer) : null;
+                return;
             }
-            else //unique scope element reached
+
+            GetState(context).Clear(context);
+        }
+
+        private class State
+        {
+            private readonly Stack<HashSet<string>> _stateStack;
+            private readonly StringComparer _comparer;
+            private readonly SemanticConstraintRegistry _reg;
+
+            public State(StringComparer comparer, SemanticConstraintRegistry reg)
             {
-                if (_values != null)
-                {
-                    _stateStack.Push(_values);
-                }
+                _stateStack = new Stack<HashSet<string>>();
+                _comparer = comparer;
+                _reg = reg;
+
+                Push();
+            }
+
+            public void Push() => _stateStack.Push(new HashSet<string>(_comparer));
+
+            public void Clear(ValidationContext context)
+            {
+                Push();
 
                 _reg.AddCallBackMethod(context.Element, () =>
                 {
                     if (_stateStack.Any())
                     {
-                        _values = _stateStack.Pop();
-                    }
-                    else
-                    {
-                        _values = null;
+                        _stateStack.Pop();
                     }
                 });
-
-                _values = new HashSet<string>(_comparer);
             }
+
+            public HashSet<string> Values => _stateStack.Count > 0 ? _stateStack.Peek() : null;
         }
     }
 }

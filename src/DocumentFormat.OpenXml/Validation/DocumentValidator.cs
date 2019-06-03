@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Validation
                     _schemaValidator.Validate(context);
 
                     context.Element = part.PartRootElement;
-                    _semanticValidator.ClearConstraintState(SemanticValidationLevel.PartOnly);
+                    context.State.Clear();
                     _semanticValidator.Validate(context);
                 }
 
@@ -129,15 +129,11 @@ namespace DocumentFormat.OpenXml.Validation
 
         private ValidationContext CreateValidationContext()
         {
-            var context = new ValidationContext
+            return new ValidationContext
             {
                 FileFormat = _validationSettings.FileFormat,
                 MaxNumberOfErrors = _validationSettings.MaxNumberOfErrors,
             };
-
-            _semanticValidator.ClearConstraintState(SemanticValidationLevel.PackageOnly);
-
-            return context;
         }
 
         private static OpenXmlPart GetMainPart(OpenXmlPackage package)
