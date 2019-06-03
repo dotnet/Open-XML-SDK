@@ -10,8 +10,10 @@ namespace DocumentFormat.OpenXml.Validation
     {
         private Dictionary<object, object> _state;
 
-        public T Get<T>(object key, Func<T> factory)
+        public T Get<T>(Type type, int attributeIdx, Func<T> factory)
         {
+            var key = new Key(type, attributeIdx);
+
             if (_state is null)
             {
                 _state = new Dictionary<object, object>();
@@ -36,5 +38,18 @@ namespace DocumentFormat.OpenXml.Validation
         }
 
         public void Clear() => _state = null;
+
+        private readonly struct Key
+        {
+            public Key(Type type, int attribute)
+            {
+                Type = type;
+                Attribute = attribute;
+            }
+
+            public int Attribute { get; }
+
+            public Type Type { get; }
+        }
     }
 }

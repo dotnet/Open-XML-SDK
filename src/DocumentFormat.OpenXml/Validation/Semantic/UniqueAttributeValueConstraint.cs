@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _comparer = caseSensitive ? StringComparer.Ordinal : StringComparer.OrdinalIgnoreCase;
         }
 
-        private State GetState(ValidationContext context) => context.State.Get(this, () => new State(_comparer, _reg));
+        private State GetState(ValidationContext context) => context.State.Get(context.Element.GetType(), _attribute, () => new State(_comparer, _reg));
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
