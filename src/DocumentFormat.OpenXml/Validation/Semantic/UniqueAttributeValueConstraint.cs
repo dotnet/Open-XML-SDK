@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _comparer = caseSensitive ? StringComparer.Ordinal : StringComparer.OrdinalIgnoreCase;
         }
 
-        private State GetState(ValidationContext context) => context.State.Get(context.Element.GetType(), _attribute, () => new State(_comparer, _reg));
+        private State GetState(ValidationContext context) => context.State.Get(context.Element.GetType(), _attribute, () => new State(_comparer));
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
@@ -72,19 +72,17 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             GetState(context).Clear(context);
         }
 
-        private class State
+        private class State : IValidationContextEvents
         {
             private readonly Stack<HashSet<string>> _stateStack;
             private readonly StringComparer _comparer;
-            private readonly SemanticConstraintRegistry _reg;
 
-            public State(StringComparer comparer, SemanticConstraintRegistry reg)
+            public State(StringComparer comparer)
             {
                 _stateStack = new Stack<HashSet<string>>();
                 _comparer = comparer;
-                _reg = reg;
 
-                Push();
+                //Push();
             }
 
             public void Push() => _stateStack.Push(new HashSet<string>(_comparer));
@@ -92,14 +90,14 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             public void Clear(ValidationContext context)
             {
                 Push();
+            }
 
-                _reg.AddCallBackMethod(context.Element, () =>
+            public void OnContextValidationFinished(ValidationContext context)
+            {
+                if (_stateStack.Any())
                 {
-                    if (_stateStack.Any())
-                    {
-                        _stateStack.Pop();
-                    }
-                });
+                    _stateStack.Pop();
+                }
             }
 
             public HashSet<string> Values => _stateStack.Count > 0 ? _stateStack.Peek() : null;

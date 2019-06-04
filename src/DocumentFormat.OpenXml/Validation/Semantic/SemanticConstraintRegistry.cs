@@ -17,7 +17,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     {
         protected readonly IntegerMultivalueCollection<SemanticConstraint> _semConstraintMap = new IntegerMultivalueCollection<SemanticConstraint>();
         protected readonly IntegerMultivalueCollection<SemanticConstraint> _cleanList = new IntegerMultivalueCollection<SemanticConstraint>();
-        protected readonly IntegerMultivalueCollection<CallBackMethod> _callBackMethods = new IntegerMultivalueCollection<CallBackMethod>();
 
         private readonly FileFormatVersions _format;
         private readonly ApplicationType _appType;
@@ -40,11 +39,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 _cleanList.Add(ancestorTypeID, constraint);
                 _semConstraintMap.Add(elementTypeID, constraint);
             }
-        }
-
-        public void AddCallBackMethod(OpenXmlElement element, CallBackMethod method)
-        {
-            _callBackMethods.Add(element.ElementTypeId, method);
         }
 
         /// <summary>
@@ -89,17 +83,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                             yield return err;
                         }
                     }
-                }
-            }
-        }
-
-        public void ActCallBack(int elementId)
-        {
-            if (_callBackMethods.TryGetValue(elementId, out var callbacks))
-            {
-                foreach (var method in callbacks)
-                {
-                    method();
                 }
             }
         }

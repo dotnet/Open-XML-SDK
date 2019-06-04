@@ -6,9 +6,9 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation
 {
-    internal class StateManager
+    internal class StateManager : IValidationContextEvents
     {
-        private Dictionary<object, object> _state;
+        private Dictionary<Key, object> _state;
 
         public T Get<T>(Type type, int attributeIdx, Func<T> factory)
         {
@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             if (_state is null)
             {
-                _state = new Dictionary<object, object>();
+                _state = new Dictionary<Key, object>();
             }
             else if (_state.TryGetValue(key, out var value))
             {
@@ -38,6 +38,24 @@ namespace DocumentFormat.OpenXml.Validation
         }
 
         public void Clear() => _state = null;
+
+        void IValidationContextEvents.OnContextValidationFinished(ValidationContext context)
+        {
+            if (_state is null)
+            {
+                return;
+            }
+
+            var type = context.Element.GetType();
+
+            foreach (var state in _state)
+            {
+                if (state.Key.Type == type && state.Value is IValidationContextEvents events)
+                {
+                    events.OnContextValidationFinished(context);
+                }
+            }
+        }
 
         private readonly struct Key
         {
