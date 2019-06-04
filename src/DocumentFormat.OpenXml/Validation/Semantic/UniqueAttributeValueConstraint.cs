@@ -28,9 +28,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            var state = GetState(context);
-
-            if (state.Values is null || !_partLevel)
+            if (!_partLevel)
             {
                 return null;
             }
@@ -43,7 +41,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            if (state.Values.Add(attribute.Value.InnerText))
+            if (GetState(context).Add(attribute.Value.InnerText))
             {
                 return null;
             }
@@ -104,7 +102,17 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 }
             }
 
-            public HashSet<string> Values => _stateStack.Count > 0 ? _stateStack.Peek() : null;
+            public bool Add(string str)
+            {
+                if(_stateStack.Count == 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return _stateStack.Peek().Add(str);
+                }
+            }
         }
     }
 }
