@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
-using System;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation
@@ -36,6 +35,8 @@ namespace DocumentFormat.OpenXml.Validation
         public void Clear() => Errors.Clear();
 
         internal StateManager State { get; } = new StateManager();
+
+        internal IValidationContextEvents Events => State;
 
         /// <summary>
         /// Gets or sets the target OpenXmlPackage.

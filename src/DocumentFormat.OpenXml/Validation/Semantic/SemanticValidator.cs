@@ -26,12 +26,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             Debug.Assert(validationContext != null);
             Debug.Assert(validationContext.Element != null);
 
-            ValidationTraverser.ValidatingTraverse(validationContext, ValidateElement, OnContextValidationFinished);
-        }
-
-        private void OnContextValidationFinished(ValidationContext context)
-        {
-            _curReg.ActCallBack(context.Element.ElementTypeId);
+            ValidationTraverser.ValidatingTraverse(validationContext, ValidateElement, validationContext.Events.OnContextValidationFinished);
         }
 
         private void ValidateElement(ValidationContext context)

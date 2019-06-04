@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _comparer = caseSensitive ? StringComparer.Ordinal : StringComparer.OrdinalIgnoreCase;
         }
 
-        private State GetState(ValidationContext context) => context.State.Get(context.Element.GetType(), _attribute, () => new State(_comparer, _reg));
+        private State GetState(ValidationContext context) => context.State.Get(context.Element.GetType(), _attribute, () => new State(_comparer));
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
@@ -72,17 +72,17 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             GetState(context).Clear(context);
         }
 
-        private class State
+        private class State : IValidationContextEvents
         {
             private readonly Stack<HashSet<string>> _stateStack;
             private readonly StringComparer _comparer;
-            private readonly SemanticConstraintRegistry _reg;
 
-            public State(StringComparer comparer, SemanticConstraintRegistry reg)
+            private int count = 0;
+
+            public State(StringComparer comparer)
             {
                 _stateStack = new Stack<HashSet<string>>();
                 _comparer = comparer;
-                _reg = reg;
 
                 Push();
             }
@@ -91,15 +91,19 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             public void Clear(ValidationContext context)
             {
+                count++;
                 Push();
+            }
 
-                _reg.AddCallBackMethod(context.Element, () =>
+            public void OnContextValidationFinished(ValidationContext context)
+            {
+                while (count-- > 0)
                 {
                     if (_stateStack.Any())
                     {
                         _stateStack.Pop();
                     }
-                });
+                }
             }
 
             public HashSet<string> Values => _stateStack.Count > 0 ? _stateStack.Peek() : null;
