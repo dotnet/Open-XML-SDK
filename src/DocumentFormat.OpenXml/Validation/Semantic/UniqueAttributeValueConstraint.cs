@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
@@ -72,8 +73,22 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             GetState(context).Clear(context);
         }
 
+        private static class Logger
+        {
+            private static TextWriter writer;
+            static Logger()
+            {
+                var fs = File.OpenWrite(@"c:\generated\log.txt");
+                fs.SetLength(0);
+                writer = new StreamWriter(fs) { AutoFlush = true };
+            }
+            public static void WriteLine(string str) => writer.WriteLine(str);
+        }
+
         private class State
         {
+            static int i = 0;
+            private readonly int Count;
             private readonly Stack<HashSet<string>> _stateStack;
             private readonly StringComparer _comparer;
             private readonly SemanticConstraintRegistry _reg;
@@ -83,6 +98,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 _stateStack = new Stack<HashSet<string>>();
                 _comparer = comparer;
                 _reg = reg;
+                Count = i++;
 
                 Push();
             }
@@ -91,10 +107,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             public void Clear(ValidationContext context)
             {
+                Logger.WriteLine($"{Count}: Clear");
                 Push();
 
                 _reg.AddCallBackMethod(context.Element, () =>
                 {
+                    Logger.WriteLine($"{Count}: Finished");
                     if (_stateStack.Any())
                     {
                         _stateStack.Pop();
