@@ -1,10 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Bibliography;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
@@ -74,33 +72,17 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             GetState(context).Clear(context);
         }
 
-        private static class Logger
-        {
-            private static TextWriter writer;
-
-            static Logger()
-            {
-                var fs = File.OpenWrite(@"c:\generated\log.txt");
-                fs.SetLength(0);
-
-                writer = new StreamWriter(fs) { AutoFlush = true };
-            }
-
-            public static void WriteLine(string str) => writer.WriteLine(str);
-        }
-
         private class State : IValidationContextEvents
         {
-            static int i = 0;
-            private readonly int Count;
             private readonly Stack<HashSet<string>> _stateStack;
             private readonly StringComparer _comparer;
+
+            private int count = 0;
 
             public State(StringComparer comparer)
             {
                 _stateStack = new Stack<HashSet<string>>();
                 _comparer = comparer;
-                Count = i++;
 
                 Push();
             }
@@ -109,16 +91,18 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             public void Clear(ValidationContext context)
             {
-                Logger.WriteLine($"{Count}: Clear");
+                count++;
                 Push();
             }
 
             public void OnContextValidationFinished(ValidationContext context)
             {
-                Logger.WriteLine($"{Count}: Finished");
-                if (_stateStack.Any())
+                while (count-- > 0)
                 {
-                    _stateStack.Pop();
+                    if (_stateStack.Any())
+                    {
+                        _stateStack.Pop();
+                    }
                 }
             }
 
