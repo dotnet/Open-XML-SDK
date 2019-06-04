@@ -13,15 +13,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     internal class UniqueAttributeValueConstraint : SemanticConstraint
     {
         private readonly byte _attribute;
-        private readonly SemanticConstraintRegistry _reg;
         private readonly bool _partLevel;
         private readonly StringComparer _comparer;
 
-        public UniqueAttributeValueConstraint(byte attribute, bool caseSensitive, bool partLevel, SemanticConstraintRegistry reg)
+        public UniqueAttributeValueConstraint(byte attribute, bool caseSensitive, bool partLevel, SemanticConstraintRegistry _)
             : base(SemanticValidationLevel.Part)
         {
             _attribute = attribute;
-            _reg = reg;
             _partLevel = partLevel;
             _comparer = caseSensitive ? StringComparer.Ordinal : StringComparer.OrdinalIgnoreCase;
         }
