@@ -32,6 +32,17 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         /// <summary>
         /// Register a constraint to this registry.
         /// </summary>
+        public void RegisterConstraint(int elementTypeID, FileFormatVersions fileFormat, ApplicationType appType, SemanticConstraint constraint)
+        {
+            if ((fileFormat & _format) == _format && (appType & _appType) == _appType)
+            {
+                _semConstraintMap.Add(elementTypeID, constraint);
+            }
+        }
+
+        /// <summary>
+        /// Register a constraint to this registry.
+        /// </summary>
         public void RegisterConstraint(int elementTypeID, int ancestorTypeID, FileFormatVersions fileFormat, ApplicationType appType, SemanticConstraint constraint)
         {
             if ((fileFormat & _format) == _format && (appType & _appType) == _appType)
