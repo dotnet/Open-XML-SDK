@@ -10,9 +10,9 @@ namespace DocumentFormat.OpenXml.Validation
     {
         private Dictionary<Key, object> _state;
 
-        public T Get<T>(Type type, int attributeIdx, Func<T> factory)
+        public T Get<T>(Type type, int attributeIdx, Type parent, Func<T> factory)
         {
-            var key = new Key(type, attributeIdx);
+            var key = new Key(type, attributeIdx, parent);
 
             if (_state is null)
             {
@@ -39,6 +39,24 @@ namespace DocumentFormat.OpenXml.Validation
 
         public void Clear() => _state = null;
 
+        void IValidationContextEvents.OnContextValidationStarted(ValidationContext context)
+        {
+            if (_state is null)
+            {
+                return;
+            }
+
+            var type = context.Element.GetType();
+
+            foreach (var state in _state)
+            {
+                if (state.Key.Parent == type && state.Value is IValidationContextEvents events)
+                {
+                    events.OnContextValidationStarted(context);
+                }
+            }
+        }
+
         void IValidationContextEvents.OnContextValidationFinished(ValidationContext context)
         {
             if (_state is null)
@@ -59,15 +77,18 @@ namespace DocumentFormat.OpenXml.Validation
 
         private readonly struct Key
         {
-            public Key(Type type, int attribute)
+            public Key(Type type, int attribute, Type parent)
             {
                 Type = type;
                 Attribute = attribute;
+                Parent = parent;
             }
 
             public int Attribute { get; }
 
             public Type Type { get; }
+
+            public Type Parent { get; }
         }
     }
 }

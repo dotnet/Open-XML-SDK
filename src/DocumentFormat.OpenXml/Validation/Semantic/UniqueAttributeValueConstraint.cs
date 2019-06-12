@@ -13,22 +13,22 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     internal class UniqueAttributeValueConstraint : SemanticConstraint
     {
         private readonly byte _attribute;
-        private readonly bool _partLevel;
+        private readonly Type _parent;
         private readonly StringComparer _comparer;
 
-        public UniqueAttributeValueConstraint(byte attribute, bool caseSensitive, bool partLevel, SemanticConstraintRegistry _)
+        public UniqueAttributeValueConstraint(byte attribute, bool caseSensitive, Type parent)
             : base(SemanticValidationLevel.Part)
         {
             _attribute = attribute;
-            _partLevel = partLevel;
+            _parent = parent;
             _comparer = caseSensitive ? StringComparer.Ordinal : StringComparer.OrdinalIgnoreCase;
         }
 
-        private State GetState(ValidationContext context) => context.State.Get(context.Element.GetType(), _attribute, () => new State(_comparer));
+        private State GetState(ValidationContext context) => context.State.Get(context.Element.GetType(), _attribute, _parent, () => new State(_comparer));
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            if (!_partLevel)
+            if (_parent != null)
             {
                 return null;
             }
@@ -58,16 +58,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             };
         }
 
-        public override void ClearState(ValidationContext context)
-        {
-            if (context is null)
-            {
-                return;
-            }
-
-            GetState(context).Clear(context);
-        }
-
         private class State : IValidationContextEvents
         {
             private readonly Stack<HashSet<string>> _stateStack;
@@ -85,7 +75,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             public void Push() => _stateStack.Push(new HashSet<string>(_comparer));
 
-            public void Clear(ValidationContext context)
+            public void OnContextValidationStarted(ValidationContext context)
             {
                 count++;
                 Push();
@@ -104,7 +94,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             public bool Add(string str)
             {
-                if(_stateStack.Count == 0)
+                if (_stateStack.Count == 0)
                 {
                     return false;
                 }

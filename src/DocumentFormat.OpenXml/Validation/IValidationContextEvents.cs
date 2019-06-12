@@ -6,5 +6,7 @@ namespace DocumentFormat.OpenXml.Validation
     internal interface IValidationContextEvents
     {
         void OnContextValidationFinished(ValidationContext context);
+
+        void OnContextValidationStarted(ValidationContext context);
     }
 }

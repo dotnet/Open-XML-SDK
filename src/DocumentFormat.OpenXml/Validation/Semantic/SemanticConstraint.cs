@@ -26,14 +26,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         public virtual SemanticValidationLevel StateScope => SemanticValidationLevel;
 
         /// <summary>
-        /// Some semantic constraint classes will hold state at runtime,
-        /// and this method is to remove the state
-        /// </summary>
-        public virtual void ClearState(ValidationContext context)
-        {
-        }
-
-        /// <summary>
         /// Semantic validation logic
         /// </summary>
         /// <param name="context">return null if validation succeed</param>
