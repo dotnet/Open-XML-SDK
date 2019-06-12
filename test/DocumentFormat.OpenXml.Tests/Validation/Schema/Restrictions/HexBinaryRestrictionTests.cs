@@ -24,12 +24,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions.Tests
         [Theory]
         public void ValidateValue(string innerText, bool expected)
         {
-            var restriction = new HexBinaryRestriction();
             var type = Substitute.ForPartsOf<OpenXmlSimpleType>();
 
             type.InnerText.Returns(innerText);
 
-            Assert.Equal(expected, restriction.ValidateValueType(type));
+            Assert.Equal(expected, HexBinaryRestriction.ValidateValueType(type));
         }
     }
 }

@@ -16,20 +16,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// The ·lexical space· of QName is the set of strings that ·match· the QName production of [Namespaces in XML].
     /// </remarks>
     [DataContract(Name = "qn")]
-    internal class QnameRestriction : StringRestriction
+    internal class QnameRestriction
     {
-        /// <inheritdoc />
-        public override XsdType XsdType => XsdType.QName;
-
-        /// <inheritdoc />
-        public override string ClrTypeName => ValidationResources.TypeName_QName;
-
-        /// <inheritdoc />
-        public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
-        {
-            return IsValidQName(attributeValue.InnerText);
-        }
-
         public static bool IsValidQName(string qname)
         {
             //Qualified Name
@@ -68,13 +56,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             try
             {
                 XmlConvert.VerifyNCName(qname.Substring(colonIndex + 1));
+                return true;
             }
             catch (XmlException)
             {
                 return false;
             }
-
-            return true;
         }
     }
 }

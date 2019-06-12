@@ -56,14 +56,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // validate Inorable, ProcessContent, etc. compatibility-rule attributes
             CompatibilityRuleAttributesValidator.ValidateMcAttributes(validationContext);
 
-            SchemaTypeData schemaTypeData = _sdbSchemaDatas.GetSchemaTypeData(theElement);
-
             ValidateAttributes(validationContext);
 
             // validate particles
             if (theElement is OpenXmlLeafTextElement)
             {
-                SimpleContentComplexTypeValidator.Validate(validationContext, schemaTypeData.SimpleTypeConstraint);
+                SimpleContentComplexTypeValidator.Validate(validationContext);
             }
             else if (theElement is OpenXmlLeafElement)
             {
@@ -76,7 +74,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Debug.Assert(!(theElement is AlternateContentChoice));
                 Debug.Assert(!(theElement is AlternateContentFallback));
 
-                if (schemaTypeData.ParticleConstraint != null)
+                var schemaTypeData = _sdbSchemaDatas.GetSchemaTypeData(theElement);
+
+                if (schemaTypeData?.ParticleConstraint != null)
                 {
                     // composite element
                     CompositeComplexTypeValidator.Validate(validationContext, schemaTypeData.ParticleConstraint);
@@ -199,7 +199,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         private static class SimpleContentComplexTypeValidator
         {
-            internal static void Validate(ValidationContext validationContext, SimpleTypeRestriction simpleTypeConstraint)
+            internal static void Validate(ValidationContext validationContext)
             {
                 // first check whether there are invalid children under this OpenXmlLeafTextElement.
                 EmptyComplexTypeValidator.Validate(validationContext);

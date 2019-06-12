@@ -14,16 +14,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// For example, "0FB7" is a hex encoding for the 16-bit integer 4023 (whose binary representation is 111110110111).
     /// </remarks>
     [DataContract(Name = "h")]
-    internal class HexBinaryRestriction : StringRestriction
+    internal static class HexBinaryRestriction
     {
-        /// <inheritdoc />
-        public override XsdType XsdType => XsdType.HexBinary;
-
-        /// <inheritdoc />
-        public override string ClrTypeName => ValidationResources.TypeName_hexBinary;
-
-        /// <inheritdoc />
-        public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
+        public static bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
             if (attributeValue.InnerText == null)
             {
@@ -56,17 +49,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         private static bool IsLetterBetween(char check, char lower, char upper)
         {
             return check >= lower && check <= upper;
-        }
-
-        /// <inheritdoc />
-        internal override int GetValueLength(OpenXmlSimpleType attributeValue)
-        {
-            // so, the data length is the number of octets
-            // then the data length is string length / 2
-            var stringLength = attributeValue.InnerText.Length;
-
-            //Debug.Assert(stringLength % 2 == 0);
-            return (stringLength + 1) / 2;
         }
     }
 }

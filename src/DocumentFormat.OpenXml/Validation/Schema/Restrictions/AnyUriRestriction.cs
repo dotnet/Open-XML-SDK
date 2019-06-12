@@ -3,7 +3,6 @@
 
 using System;
 using System.Diagnostics;
-using System.Runtime.Serialization;
 
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
@@ -15,44 +14,25 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// An anyURI value can be absolute or relative, and may have an optional fragment identifier (i.e., it may be a URI Reference).
     /// This type should be used to specify the intention that the value fulfills the role of a URI as defined by [RFC 2396], as amended by [RFC 2732].
     /// </remarks>
-    [DataContract(Name = "a")]
-    internal class AnyUriRestriction : StringRestriction
+    internal class AnyUriRestriction
     {
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private static char[] WhitespaceChars = new char[] { ' ', '\t', '\n', '\r' };
-
-        /// <inheritdoc />
-        public override XsdType XsdType => XsdType.AnyURI;
-
-        /// <inheritdoc />
-        public override string ClrTypeName => typeof(Uri).Name;
-
-        /// <inheritdoc />
-        public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
-        {
-            Debug.Assert(attributeValue != null);
-
-            return Validate(attributeValue.InnerText);
-        }
+        private static readonly char[] _whitespaceChars = new char[] { ' ', '\t', '\n', '\r' };
 
         public static bool Validate(string uriString)
         {
             // code copied from XmlConvert.TryToUri()
             if ((uriString != null) && (uriString.Length > 0))
             {
-                uriString = uriString.Trim(WhitespaceChars);
+                uriString = uriString.Trim(_whitespaceChars);
+
                 if ((uriString.Length == 0) || (uriString.IndexOf("##", StringComparison.Ordinal) != -1))
                 {
                     return false;
                 }
             }
 
-            if (!Uri.TryCreate(uriString, UriHelper.RelativeOrAbsolute, out _))
-            {
-                return false;
-            }
-
-            return true;
+            return Uri.TryCreate(uriString, UriHelper.RelativeOrAbsolute, out _);
         }
     }
 }
