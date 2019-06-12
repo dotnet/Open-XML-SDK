@@ -63,6 +63,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             private readonly Stack<HashSet<string>> _stateStack;
             private readonly StringComparer _comparer;
 
+            /// <summary>
+            /// We must track the count because there are more calls to <see cref="OnContextValidationFinished(ValidationContext)"/>
+            /// than there are to <see cref="OnContextValidationStarted(ValidationContext)"/>
+            /// </summary>
             private int count = 0;
 
             public State(StringComparer comparer)
