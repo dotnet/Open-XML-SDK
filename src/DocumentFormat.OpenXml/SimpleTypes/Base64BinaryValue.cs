@@ -52,7 +52,9 @@ namespace DocumentFormat.OpenXml
             set => TextValue = value;
         }
 
-        internal override bool IsValid => new Validation.Schema.Restrictions.Base64BinaryRestriction().ValidateValueType(this);
+        internal override bool IsValid => Validation.Schema.Restrictions.Base64BinaryRestriction.ValidateValueType(this);
+
+        internal override int Length => Validation.Schema.Restrictions.Base64BinaryRestriction.GetValueLength(this);
 
         /// <summary>
         /// Implicitly converts the specified value to a String value.

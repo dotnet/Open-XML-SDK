@@ -2,8 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Runtime.Serialization;
-using System.Xml;
 
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
@@ -21,22 +19,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     ///
     /// In Ecma376, most token are enumerations.
     /// </remarks>
-    [DataContract(Name = "tkn")]
-    internal class TokenRestriction : StringRestriction
+    internal static class TokenRestriction
     {
-        private static char[] crt = { '\n', '\r', '\t' };
-
-        /// <inheritdoc />
-        public override XsdType XsdType => XsdType.Token;
-
-        /// <inheritdoc />
-        public override string ClrTypeName => ValidationResources.TypeName_token;
-
-        /// <inheritdoc />
-        public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
-        {
-            return VerifyTOKEN(attributeValue.InnerText);
-        }
+        private static readonly char[] _crt = { '\n', '\r', '\t' };
 
         /// <summary>
         /// An implementation of XmlConvert.VerifyTOKEN(string) as it is not available cross platform and throws if fails
@@ -48,7 +33,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 return true;
             }
 
-            if (token[0] == ' ' || token[token.Length - 1] == ' ' || token.IndexOfAny(crt) != -1 || token.IndexOf("  ", StringComparison.Ordinal) != -1)
+            if (token[0] == ' ' || token[token.Length - 1] == ' ' || token.IndexOfAny(_crt) != -1 || token.IndexOf("  ", StringComparison.Ordinal) != -1)
             {
                 return false;
             }

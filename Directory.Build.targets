@@ -8,7 +8,6 @@
     FEATURE_ABSTRACT_XML_CLOSE       : XmlWriter.Close is defined as abstract
     FEATURE_ARRAY_EMPTY              : Array.Empty exists
     FEATURE_CLOSE                    : Stream.Close is available in the platform
-    FEATURE_DCS_SETTINGS             : DataContractSerializer settings class exists
     FEATURE_PACKAGE_FLUSH            : System.IO.Package.Flush will correctly flush all data
     NO_CONCURRENT_COLLECTIONS        : Concurrent collections are not available
     FEATURE_SERIALIZATION            : Serialization using ISerializable is in the platform
@@ -29,7 +28,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' OR '$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net46' ">
-    <DefineConstants> $(DefineConstants);FEATURE_DCS_SETTINGS;FEATURE_ARRAY_EMPTY</DefineConstants>
+    <DefineConstants> $(DefineConstants);FEATURE_ARRAY_EMPTY</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net46' ">

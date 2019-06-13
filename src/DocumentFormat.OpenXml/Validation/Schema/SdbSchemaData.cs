@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Validation.Schema.Restrictions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -17,7 +16,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     internal sealed partial class SdbSchemaData
     {
         public const string Constraints = "constraints";
-        public const string SimpleTypes = "restrictions.xml";
 
         private readonly FileFormatVersions _fileFormat;
         private readonly Dictionary<ushort, SchemaTypeData> _cache = new Dictionary<ushort, SchemaTypeData>();
@@ -32,8 +30,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         private SdbAttributeConstraint[] Attributes { get; }
 
-        public SimpleTypeRestrictions Restrictions { get; }
-
         public static SdbSchemaData GetSchemaData(FileFormatVersions fileFormat)
         {
             return new SdbSchemaData(fileFormat);
@@ -45,8 +41,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             SdbSchemaType[] schemaTypes,
             SdbParticleConstraint[] particles,
             SdbParticleChildrenIndex[] particleIndexes,
-            SdbAttributeConstraint[] attributes,
-            SimpleTypeRestrictions restrictions)
+            SdbAttributeConstraint[] attributes)
         {
             _fileFormat = fileFormat;
             ClassIdMap = classIdMap;
@@ -54,7 +49,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Particles = particles;
             ParticleIndexes = particleIndexes;
             Attributes = attributes;
-            Restrictions = restrictions;
         }
 
         /// <summary>
@@ -70,8 +64,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Since the size of the arrays are different for different <paramref name="fileFormat"/>, these are all marshalled separately, with the information
         /// of offsets contained in <see cref="SdbDataHead"/>. These items are deserialized in this method, while <see cref="SerializeSdbData(Stream)"/> provides
         /// the infrastructure to serialize them back to a binary file in the correct order
-        ///
-        /// Simple type data is contained in an XML file that is deserialized with <see cref="GetSimpleTypeRestrictions(FileFormatVersions)"/>
         /// </remarks>
         /// <param name="fileFormat">The version to load</param>
         private SdbSchemaData(FileFormatVersions fileFormat)
@@ -82,7 +74,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
 
             _fileFormat = fileFormat;
-            Restrictions = GetSimpleTypeRestrictions(fileFormat);
 
             using (var schema = GetStream(fileFormat, Constraints))
             {
@@ -102,14 +93,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Particles = SdbData.Deserialize<SdbParticleConstraint>(schema, dataHead.Particles);
                 ParticleIndexes = SdbData.Deserialize<SdbParticleChildrenIndex>(schema, dataHead.ParticleChildren);
                 Attributes = SdbData.Deserialize<SdbAttributeConstraint>(schema, dataHead.Attributes);
-            }
-        }
-
-        private static SimpleTypeRestrictions GetSimpleTypeRestrictions(FileFormatVersions fileFormat)
-        {
-            using (var simpleTypes = GetStream(fileFormat, SimpleTypes))
-            {
-                return SimpleTypeRestrictions.Deserialize(simpleTypes, fileFormat);
             }
         }
 
@@ -189,7 +172,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         /// <param name="openxmlTypeId"></param>
         /// <returns>The constraint data of the schema type.</returns>
-        public SchemaTypeData GetSchemaTypeData(int openxmlTypeId)
+        private SchemaTypeData GetSchemaTypeData(int openxmlTypeId)
         {
             Debug.Assert(openxmlTypeId >= SdbClassIdToSchemaTypeIndex.StartClassId);
             Debug.Assert(openxmlTypeId < SdbClassIdToSchemaTypeIndex.StartClassId + ClassIdMap.Length);
@@ -277,35 +260,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Load the attribute constraints and simple type constraint for attributes for the schema type.
-        /// </summary>
-        /// <param name="sdbSchemaTpye"></param>
-        /// <returns></returns>
-        private AttributeConstraint[] BuildAttributeConstraint(SdbSchemaType sdbSchemaTpye)
-        {
-            if (sdbSchemaTpye.AttributesCount > 0)
-            {
-                int count = sdbSchemaTpye.AttributesCount;
-                var attributeConstraints = new AttributeConstraint[count];
-
-                ushort sdbIndex = sdbSchemaTpye.StartIndexOfAttributes;
-                for (int i = 0; i < count; i++)
-                {
-                    var sdbAttributeData = Attributes[sdbIndex + i];
-
-                    // then load the simple type constraint for this attribute
-                    var simpleTypeIndex = sdbAttributeData.SimpleTypeIndex;
-                    var simpleTypeConstraint = Restrictions[simpleTypeIndex];
-                    attributeConstraints[i] = new AttributeConstraint(sdbAttributeData.AttributeUse, simpleTypeConstraint, (FileFormatVersions)sdbAttributeData.FileFormatVersion);
-                }
-
-                return attributeConstraints;
-            }
-
-            return null;
-        }
-
-        /// <summary>
         /// Load the data in the binary database into SchemaTypeData object.
         /// </summary>
         /// <param name="openxmlTypeId">The id of the type (the OpenXmlElement class).</param>
@@ -317,27 +271,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             ushort index = (ushort)(openxmlTypeId - SdbClassIdToSchemaTypeIndex.StartClassId);
             var sdbSchemaType = SchemaTypes[ClassIdMap[index].SchemaTypeIndex];
-            var attributeConstraints = BuildAttributeConstraint(sdbSchemaType);
 
             var particleConstraint = BuildParticleConstraint(sdbSchemaType);
-            if (particleConstraint != null)
-            {
-                return new SchemaTypeData(openxmlTypeId, attributeConstraints, particleConstraint);
-            }
-            else if (sdbSchemaType.IsSimpleContent)
-            {
-                Debug.Assert(sdbSchemaType.SimpleTypeIndex != SdbData.InvalidId);
 
-                // simple content
-                var simpleTypeConstraint = Restrictions[sdbSchemaType.SimpleTypeIndex];
-                return new SchemaTypeData(openxmlTypeId, attributeConstraints, simpleTypeConstraint);
-            }
-            else
+            if (particleConstraint is null)
             {
-                // leaf element
-                Debug.Assert(sdbSchemaType.SimpleTypeIndex == SdbData.InvalidId);
-                return new SchemaTypeData(openxmlTypeId, attributeConstraints);
+                return null;
             }
+
+            return new SchemaTypeData(openxmlTypeId, particleConstraint);
         }
     }
 }

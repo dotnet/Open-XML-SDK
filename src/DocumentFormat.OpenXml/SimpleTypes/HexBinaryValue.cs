@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml
         {
         }
 
-        internal override bool IsValid => new Validation.Schema.Restrictions.HexBinaryRestriction().ValidateValueType(this);
+        internal override bool IsValid => Validation.Schema.Restrictions.HexBinaryRestriction.ValidateValueType(this);
 
         internal override int Length => (InnerText?.Length ?? 0) / 2;
 
