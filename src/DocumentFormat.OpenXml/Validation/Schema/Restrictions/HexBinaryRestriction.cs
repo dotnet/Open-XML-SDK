@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System.Runtime.Serialization;
-
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
@@ -13,7 +11,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// consisting of two hexadecimal digits ([0-9a-fA-F]) representing the octet code.
     /// For example, "0FB7" is a hex encoding for the 16-bit integer 4023 (whose binary representation is 111110110111).
     /// </remarks>
-    [DataContract(Name = "h")]
     internal static class HexBinaryRestriction
     {
         public static bool ValidateValueType(OpenXmlSimpleType attributeValue)

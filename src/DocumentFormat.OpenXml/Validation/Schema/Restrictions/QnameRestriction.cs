@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Runtime.Serialization;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
@@ -15,7 +14,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// The ·value space· of QName is the set of tuples {namespace name, local part}, where namespace name is an anyURI and local part is an NCName.
     /// The ·lexical space· of QName is the set of strings that ·match· the QName production of [Namespaces in XML].
     /// </remarks>
-    [DataContract(Name = "qn")]
     internal class QnameRestriction
     {
         public static bool IsValidQName(string qname)
