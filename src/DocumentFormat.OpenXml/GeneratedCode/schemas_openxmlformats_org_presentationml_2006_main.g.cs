@@ -3755,8 +3755,8 @@ public partial class TimeAbsolute : OpenXmlLeafElement
 [RequiredValidator]
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007, UnionId = 0)]
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), Version = FileFormatVersions.Office2007, UnionId = 0)]
-[StringValidator(Version = FileFormatVersions.Office2010, UnionId = 1)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), Version = FileFormatVersions.Office2010, UnionId = 1)]
+[StringValidator(InitialVersion = FileFormatVersions.Office2010, UnionId = 1)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), InitialVersion = FileFormatVersions.Office2010, UnionId = 1)]
     [SchemaAttr(0, "val")]
     [Index(0)]
     public StringValue Val { get; set; }
@@ -4163,8 +4163,8 @@ public abstract partial class TimeListConditionalType : OpenXmlCompositeElement
     /// </summary>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007, UnionId = 0)]
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), Version = FileFormatVersions.Office2007, UnionId = 0)]
-[StringValidator(Version = FileFormatVersions.Office2010, UnionId = 1)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), Version = FileFormatVersions.Office2010, UnionId = 1)]
+[StringValidator(InitialVersion = FileFormatVersions.Office2010, UnionId = 1)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), InitialVersion = FileFormatVersions.Office2010, UnionId = 1)]
     [SchemaAttr(0, "delay")]
     [Index(1)]
     public StringValue Delay { get; set; }
@@ -7912,7 +7912,7 @@ public partial class BuildParagraph : OpenXmlCompositeElement
 [RequiredValidator]
 [StringValidator(Version = FileFormatVersions.Office2007)]
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2013)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2013)]
     [SchemaAttr(0, "spid")]
     [Index(0)]
     public StringValue ShapeId { get; set; }
@@ -7973,8 +7973,8 @@ public partial class BuildParagraph : OpenXmlCompositeElement
     /// </summary>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007, UnionId = 0)]
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), Version = FileFormatVersions.Office2007, UnionId = 0)]
-[StringValidator(Version = FileFormatVersions.Office2010, UnionId = 1)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), Version = FileFormatVersions.Office2010, UnionId = 1)]
+[StringValidator(InitialVersion = FileFormatVersions.Office2010, UnionId = 1)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>), InitialVersion = FileFormatVersions.Office2010, UnionId = 1)]
     [SchemaAttr(0, "advAuto")]
     [Index(8)]
     public StringValue AutoAdvance { get; set; }
@@ -8052,7 +8052,7 @@ public partial class BuildDiagram : OpenXmlLeafElement
 [RequiredValidator]
 [StringValidator(Version = FileFormatVersions.Office2007)]
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2013)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2013)]
     [SchemaAttr(0, "spid")]
     [Index(0)]
     public StringValue ShapeId { get; set; }
@@ -8115,7 +8115,7 @@ public partial class BuildOleChart : OpenXmlLeafElement
 [RequiredValidator]
 [StringValidator(Version = FileFormatVersions.Office2007)]
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2013)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2013)]
     [SchemaAttr(0, "spid")]
     [Index(0)]
     public StringValue ShapeId { get; set; }
@@ -8194,7 +8194,7 @@ public partial class BuildGraphics : OpenXmlCompositeElement
 [RequiredValidator]
 [StringValidator(Version = FileFormatVersions.Office2007)]
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2013)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2013)]
     [SchemaAttr(0, "spid")]
     [Index(0)]
     public StringValue ShapeId { get; set; }
@@ -14634,7 +14634,7 @@ public partial class Transition : OpenXmlCompositeElement
     /// </summary>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
 [StringValidator(Version = FileFormatVersions.Office2010)]
-[StringValidator(Version = FileFormatVersions.Office2013)]
+[StringValidator(InitialVersion = FileFormatVersions.Office2013)]
     [SchemaAttr(0, "advTm")]
     [Index(3)]
     public StringValue AdvanceAfterTime { get; set; }
@@ -16009,7 +16009,7 @@ public partial class ShapeTarget : OpenXmlCompositeElement
 [RequiredValidator]
 [StringValidator(Version = FileFormatVersions.Office2007)]
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2013)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2013)]
     [SchemaAttr(0, "spid")]
     [Index(0)]
     public StringValue ShapeId { get; set; }
