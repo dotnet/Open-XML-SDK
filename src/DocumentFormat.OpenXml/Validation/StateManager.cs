@@ -37,7 +37,10 @@ namespace DocumentFormat.OpenXml.Validation
             return result;
         }
 
-        public void Clear() => _state = null;
+        void IValidationContextEvents.OnPartValidationStarted(ValidationContext context)
+        {
+            _state = null;
+        }
 
         void IValidationContextEvents.OnContextValidationStarted(ValidationContext context)
         {

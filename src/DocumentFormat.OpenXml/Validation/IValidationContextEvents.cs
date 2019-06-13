@@ -8,5 +8,7 @@ namespace DocumentFormat.OpenXml.Validation
         void OnContextValidationFinished(ValidationContext context);
 
         void OnContextValidationStarted(ValidationContext context);
+
+        void OnPartValidationStarted(ValidationContext context);
     }
 }

@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Validation
                     _schemaValidator.Validate(context);
 
                     context.Element = part.PartRootElement;
-                    context.State.Clear();
+                    context.Events.OnPartValidationStarted(context);
                     _semanticValidator.Validate(context);
                 }
 

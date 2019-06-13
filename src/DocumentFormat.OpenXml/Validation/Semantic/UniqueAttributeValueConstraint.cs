@@ -64,8 +64,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             private readonly StringComparer _comparer;
 
             /// <summary>
-            /// We must track the count because there are more calls to <see cref="OnContextValidationFinished(ValidationContext)"/>
-            /// than there are to <see cref="OnContextValidationStarted(ValidationContext)"/>
+            /// We must track the count because there are more calls to <see cref="IValidationContextEvents.OnContextValidationFinished(ValidationContext)"/>
+            /// than there are to <see cref="IValidationContextEvents.OnContextValidationStarted(ValidationContext)"/>
             /// </summary>
             private int count = 0;
 
@@ -79,23 +79,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             public void Push() => _stateStack.Push(new HashSet<string>(_comparer));
 
-            public void OnContextValidationStarted(ValidationContext context)
-            {
-                count++;
-                Push();
-            }
-
-            public void OnContextValidationFinished(ValidationContext context)
-            {
-                while (count-- > 0)
-                {
-                    if (_stateStack.Any())
-                    {
-                        _stateStack.Pop();
-                    }
-                }
-            }
-
             public bool Add(string str)
             {
                 if (_stateStack.Count == 0)
@@ -106,6 +89,27 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 {
                     return _stateStack.Peek().Add(str);
                 }
+            }
+
+            void IValidationContextEvents.OnContextValidationStarted(ValidationContext context)
+            {
+                count++;
+                Push();
+            }
+
+            void IValidationContextEvents.OnContextValidationFinished(ValidationContext context)
+            {
+                while (count-- > 0)
+                {
+                    if (_stateStack.Any())
+                    {
+                        _stateStack.Pop();
+                    }
+                }
+            }
+
+            void IValidationContextEvents.OnPartValidationStarted(ValidationContext context)
+            {
             }
         }
     }
