@@ -302,8 +302,8 @@ namespace DocumentFormat.OpenXml.Tests
 
         [Theory]
         [InlineData(FileFormatVersions.Office2010)]
-        [InlineData(FileFormatVersions.Office2013, Skip = "Hardcoded to work for 2010, but not later")]
-        [InlineData(FileFormatVersions.Office2016, Skip = "Hardcoded to work for 2010, but not later")]
+        [InlineData(FileFormatVersions.Office2013)]
+        [InlineData(FileFormatVersions.Office2016)]
         public void Bug662650(FileFormatVersions version)
         {
             var validator = new OpenXmlValidator(version);
