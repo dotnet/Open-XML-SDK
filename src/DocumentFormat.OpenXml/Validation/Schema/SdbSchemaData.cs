@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Validation.Schema.Restrictions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -173,7 +172,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         /// <param name="openxmlTypeId"></param>
         /// <returns>The constraint data of the schema type.</returns>
-        public SchemaTypeData GetSchemaTypeData(int openxmlTypeId)
+        private SchemaTypeData GetSchemaTypeData(int openxmlTypeId)
         {
             Debug.Assert(openxmlTypeId >= SdbClassIdToSchemaTypeIndex.StartClassId);
             Debug.Assert(openxmlTypeId < SdbClassIdToSchemaTypeIndex.StartClassId + ClassIdMap.Length);
