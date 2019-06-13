@@ -13,26 +13,22 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     internal class UniqueAttributeValueConstraint : SemanticConstraint
     {
         private readonly byte _attribute;
-        private readonly Stack<HashSet<string>> _stateStack = new Stack<HashSet<string>>();
-        private readonly SemanticConstraintRegistry _reg;
-        private readonly bool _partLevel;
+        private readonly Type _parent;
         private readonly StringComparer _comparer;
 
-        private HashSet<string> _values;
-
-        public UniqueAttributeValueConstraint(byte attribute, bool caseSensitive, bool partLevel, SemanticConstraintRegistry reg)
+        public UniqueAttributeValueConstraint(byte attribute, bool caseSensitive, Type parent)
             : base(SemanticValidationLevel.Part)
         {
             _attribute = attribute;
-            _reg = reg;
-            _partLevel = partLevel;
+            _parent = parent;
             _comparer = caseSensitive ? StringComparer.Ordinal : StringComparer.OrdinalIgnoreCase;
-            _values = new HashSet<string>(_comparer);
         }
+
+        private State GetState(ValidationContext context) => context.State.Get(context.Element.GetType(), _attribute, _parent, () => new State(_comparer));
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            if (_values == null || !_partLevel)
+            if (_parent != null)
             {
                 return null;
             }
@@ -45,7 +41,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            if (_values.Add(attribute.Value.InnerText))
+            if (GetState(context).Add(attribute.Value.InnerText))
             {
                 return null;
             }
@@ -62,33 +58,58 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             };
         }
 
-        public override void ClearState(ValidationContext context)
+        private class State : IValidationContextEvents
         {
-            if (context == null) //initialize before validating
-            {
-                _stateStack.Clear();
-                _values = _partLevel ? new HashSet<string>(_comparer) : null;
-            }
-            else //unique scope element reached
-            {
-                if (_values != null)
-                {
-                    _stateStack.Push(_values);
-                }
+            private readonly Stack<HashSet<string>> _stateStack;
+            private readonly StringComparer _comparer;
 
-                _reg.AddCallBackMethod(context.Element, () =>
+            /// <summary>
+            /// We must track the count because there are more calls to <see cref="IValidationContextEvents.OnElementValidationFinished(ValidationContext)"/>
+            /// than there are to <see cref="IValidationContextEvents.OnElementValidationStarted(ValidationContext)"/>
+            /// </summary>
+            private int count = 0;
+
+            public State(StringComparer comparer)
+            {
+                _stateStack = new Stack<HashSet<string>>();
+                _comparer = comparer;
+
+                Push();
+            }
+
+            public void Push() => _stateStack.Push(new HashSet<string>(_comparer));
+
+            public bool Add(string str)
+            {
+                if (_stateStack.Count == 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return _stateStack.Peek().Add(str);
+                }
+            }
+
+            void IValidationContextEvents.OnElementValidationStarted(ValidationContext context)
+            {
+                count++;
+                Push();
+            }
+
+            void IValidationContextEvents.OnElementValidationFinished(ValidationContext context)
+            {
+                while (count-- > 0)
                 {
                     if (_stateStack.Any())
                     {
-                        _values = _stateStack.Pop();
+                        _stateStack.Pop();
                     }
-                    else
-                    {
-                        _values = null;
-                    }
-                });
+                }
+            }
 
-                _values = new HashSet<string>(_comparer);
+            void IValidationContextEvents.OnPartValidationStarted(ValidationContext context)
+            {
             }
         }
     }

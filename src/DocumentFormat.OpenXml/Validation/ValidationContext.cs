@@ -13,28 +13,30 @@ namespace DocumentFormat.OpenXml.Validation
     /// </summary>
     internal class ValidationContext
     {
-        private readonly List<ValidationErrorInfo> _errors;
-
         public ValidationContext()
         {
-            _errors = new List<ValidationErrorInfo>();
+            Errors = new List<ValidationErrorInfo>();
 
             McContext = new MCContext(false);
             FileFormat = FileFormatVersions.Office2007;
         }
 
-        public List<ValidationErrorInfo> Errors => _errors;
+        public List<ValidationErrorInfo> Errors { get; }
 
         /// <summary>
         /// Gets or sets target file format.
         /// </summary>
         public FileFormatVersions FileFormat { get; set; }
 
-        public bool Valid => _errors.Count == 0;
+        public bool Valid => Errors.Count == 0;
 
         public bool IsCancelled => MaxNumberOfErrors > 0 && Errors.Count >= MaxNumberOfErrors;
 
-        public void Clear() => _errors.Clear();
+        public void Clear() => Errors.Clear();
+
+        internal StateManager State { get; } = new StateManager();
+
+        internal IValidationContextEvents Events => State;
 
         /// <summary>
         /// Gets or sets the target OpenXmlPackage.
@@ -95,7 +97,7 @@ namespace DocumentFormat.OpenXml.Validation
         {
             if (error != null && !IsCancelled)
             {
-                _errors.Add(error);
+                Errors.Add(error);
             }
         }
     }
