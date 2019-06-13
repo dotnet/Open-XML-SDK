@@ -1,23 +1,13 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
-    internal delegate void CallBackMethod();
-
-    /// <summary>
-    /// Semantic constraint registry base class
-    /// </summary>
     internal partial class SemanticConstraintRegistry
     {
         protected readonly IntegerMultivalueCollection<SemanticConstraint> _semConstraintMap = new IntegerMultivalueCollection<SemanticConstraint>();
-        protected readonly IntegerMultivalueCollection<SemanticConstraint> _cleanList = new IntegerMultivalueCollection<SemanticConstraint>();
-        protected readonly IntegerMultivalueCollection<CallBackMethod> _callBackMethods = new IntegerMultivalueCollection<CallBackMethod>();
 
         private readonly FileFormatVersions _format;
         private readonly ApplicationType _appType;
@@ -33,18 +23,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         /// <summary>
         /// Register a constraint to this registry.
         /// </summary>
-        public void RegisterConstraint(int elementTypeID, int ancestorTypeID, FileFormatVersions fileFormat, ApplicationType appType, SemanticConstraint constraint)
+        public void RegisterConstraint(int elementTypeID, FileFormatVersions fileFormat, ApplicationType appType, SemanticConstraint constraint)
         {
             if ((fileFormat & _format) == _format && (appType & _appType) == _appType)
             {
-                _cleanList.Add(ancestorTypeID, constraint);
                 _semConstraintMap.Add(elementTypeID, constraint);
             }
-        }
-
-        public void AddCallBackMethod(OpenXmlElement element, CallBackMethod method)
-        {
-            _callBackMethods.Add(element.ElementTypeId, method);
         }
 
         /// <summary>
@@ -68,13 +52,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             int elementTypeID = context.Element.ElementTypeId;
 
-            if (_cleanList.TryGetValue(elementTypeID, out var cleanConstraints))
-            {
-                foreach (var con in cleanConstraints)
-                {
-                    con.ClearState(context);
-                }
-            }
+            context.Events.OnElementValidationStarted(context);
 
             if (_semConstraintMap.TryGetValue(elementTypeID, out var constraints))
             {
@@ -89,31 +67,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                             yield return err;
                         }
                     }
-                }
-            }
-        }
-
-        public void ActCallBack(int elementId)
-        {
-            if (_callBackMethods.TryGetValue(elementId, out var callbacks))
-            {
-                foreach (var method in callbacks)
-                {
-                    method();
-                }
-            }
-        }
-
-        /// <summary>
-        /// Clean state of all registered constraints
-        /// </summary>
-        public void ClearConstraintState(SemanticValidationLevel level)
-        {
-            foreach (var constraint in _semConstraintMap.GetValues())
-            {
-                if ((constraint.StateScope & level) != 0)
-                {
-                    constraint.ClearState(null);
                 }
             }
         }
