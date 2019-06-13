@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Validation
             _state = null;
         }
 
-        void IValidationContextEvents.OnContextValidationStarted(ValidationContext context)
+        void IValidationContextEvents.OnElementValidationStarted(ValidationContext context)
         {
             if (_state is null)
             {
@@ -55,12 +55,12 @@ namespace DocumentFormat.OpenXml.Validation
             {
                 if (state.Key.Parent == type && state.Value is IValidationContextEvents events)
                 {
-                    events.OnContextValidationStarted(context);
+                    events.OnElementValidationStarted(context);
                 }
             }
         }
 
-        void IValidationContextEvents.OnContextValidationFinished(ValidationContext context)
+        void IValidationContextEvents.OnElementValidationFinished(ValidationContext context)
         {
             if (_state is null)
             {
@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Validation
             {
                 if (state.Key.Type == type && state.Value is IValidationContextEvents events)
                 {
-                    events.OnContextValidationFinished(context);
+                    events.OnElementValidationFinished(context);
                 }
             }
         }

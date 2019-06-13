@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             int elementTypeID = context.Element.ElementTypeId;
 
-            context.Events.OnContextValidationStarted(context);
+            context.Events.OnElementValidationStarted(context);
 
             if (_semConstraintMap.TryGetValue(elementTypeID, out var constraints))
             {

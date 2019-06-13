@@ -64,8 +64,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             private readonly StringComparer _comparer;
 
             /// <summary>
-            /// We must track the count because there are more calls to <see cref="IValidationContextEvents.OnContextValidationFinished(ValidationContext)"/>
-            /// than there are to <see cref="IValidationContextEvents.OnContextValidationStarted(ValidationContext)"/>
+            /// We must track the count because there are more calls to <see cref="IValidationContextEvents.OnElementValidationFinished(ValidationContext)"/>
+            /// than there are to <see cref="IValidationContextEvents.OnElementValidationStarted(ValidationContext)"/>
             /// </summary>
             private int count = 0;
 
@@ -91,13 +91,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 }
             }
 
-            void IValidationContextEvents.OnContextValidationStarted(ValidationContext context)
+            void IValidationContextEvents.OnElementValidationStarted(ValidationContext context)
             {
                 count++;
                 Push();
             }
 
-            void IValidationContextEvents.OnContextValidationFinished(ValidationContext context)
+            void IValidationContextEvents.OnElementValidationFinished(ValidationContext context)
             {
                 while (count-- > 0)
                 {
