@@ -6094,8 +6094,8 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "w")]
     [Index(2)]
     public StringValue Width { get; set; }
@@ -6116,8 +6116,8 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "vSpace")]
     [Index(4)]
     public StringValue VerticalSpace { get; set; }
@@ -6128,8 +6128,8 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "hSpace")]
     [Index(5)]
     public StringValue HorizontalSpace { get; set; }
@@ -6167,8 +6167,8 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(IntegerValue), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "x")]
     [Index(9)]
     public StringValue X { get; set; }
@@ -6188,8 +6188,8 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(IntegerValue), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "y")]
     [Index(11)]
     public StringValue Y { get; set; }
@@ -6702,8 +6702,8 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "before")]
     [Index(0)]
     public StringValue Before { get; set; }
@@ -6732,8 +6732,8 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "after")]
     [Index(3)]
     public StringValue After { get; set; }
@@ -6762,8 +6762,8 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(IntegerValue), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "line")]
     [Index(6)]
     public StringValue Line { get; set; }
@@ -6812,8 +6812,8 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(IntegerValue), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "left")]
     [Index(0)]
     public StringValue Left { get; set; }
@@ -6825,8 +6825,8 @@ public partial class Indentation : OpenXmlLeafElement
 ///</remark>
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(IntegerValue), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "start")]
     [Index(1)]
     public StringValue Start { get; set; }
@@ -6856,8 +6856,8 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(IntegerValue), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "right")]
     [Index(4)]
     public StringValue Right { get; set; }
@@ -6869,8 +6869,8 @@ public partial class Indentation : OpenXmlLeafElement
 ///</remark>
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(IntegerValue), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "end")]
     [Index(5)]
     public StringValue End { get; set; }
@@ -6900,8 +6900,8 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "hanging")]
     [Index(8)]
     public StringValue Hanging { get; set; }
@@ -6921,8 +6921,8 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "firstLine")]
     [Index(10)]
     public StringValue FirstLine { get; set; }
@@ -9832,8 +9832,8 @@ public partial class Position : OpenXmlLeafElement
 ///</remark>
 [RequiredValidator]
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(IntegerValue), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "val")]
     [Index(0)]
     public StringValue Val { get; set; }
@@ -9986,8 +9986,8 @@ public abstract partial class HpsMeasureType : OpenXmlLeafElement
 ///</remark>
 [RequiredValidator]
 [NumberValidator(MinInclusive = 2, MaxInclusive = 3277, SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "val")]
     [Index(0)]
     public StringValue Val { get; set; }
@@ -17235,8 +17235,8 @@ public abstract partial class TableWidthType : OpenXmlLeafElement
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
 [StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?%", Version = FileFormatVersions.Office2010, UnionId = 0)]
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?%", Version = FileFormatVersions.Office2013, UnionId = 1)]
-[NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2013, UnionId = 1)]
+[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?%", InitialVersion = FileFormatVersions.Office2013, UnionId = 1)]
+[NumberValidator(SimpleType = typeof(Int32Value), InitialVersion = FileFormatVersions.Office2013, UnionId = 1)]
     [SchemaAttr(23, "w")]
     [Index(0)]
     public StringValue Width { get; set; }
@@ -19936,8 +19936,8 @@ public partial class LineNumberType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "distance")]
     [Index(2)]
     public StringValue Distance { get; set; }
@@ -20068,8 +20068,8 @@ public partial class Columns : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "space")]
     [Index(1)]
     public StringValue Space { get; set; }
@@ -25506,7 +25506,7 @@ public partial class StatusText : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [StringValidator(MaxLength = 138, Version = FileFormatVersions.Office2007)]
-[StringValidator(MaxLength = 140, Version = FileFormatVersions.Office2010)]
+[StringValidator(MaxLength = 140, InitialVersion = FileFormatVersions.Office2010)]
     [SchemaAttr(23, "val")]
     [Index(1)]
     public StringValue Val { get; set; }
@@ -26081,8 +26081,8 @@ public partial class Column : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "w")]
     [Index(0)]
     public StringValue Width { get; set; }
@@ -26093,8 +26093,8 @@ public partial class Column : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "space")]
     [Index(1)]
     public StringValue Space { get; set; }
@@ -28218,8 +28218,8 @@ public partial class GridColumn : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "w")]
     [Index(0)]
     public StringValue Width { get; set; }
@@ -31859,8 +31859,8 @@ public abstract partial class TwipsMeasureType : OpenXmlLeafElement
 ///</remark>
 [RequiredValidator]
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "val")]
     [Index(0)]
     public StringValue Val { get; set; }
@@ -32437,8 +32437,8 @@ public partial class LegacyNumbering : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(UInt32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(UInt32Value), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "legacySpace")]
     [Index(1)]
     public StringValue LegacySpace { get; set; }
@@ -32449,8 +32449,8 @@ public partial class LegacyNumbering : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(IntegerValue), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "legacyIndent")]
     [Index(2)]
     public StringValue LegacyIndent { get; set; }
@@ -37409,8 +37409,8 @@ public abstract partial class SignedTwipsMeasureType : OpenXmlLeafElement
 ///</remark>
 [RequiredValidator]
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
-[NumberValidator(SimpleType = typeof(IntegerValue), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", Version = FileFormatVersions.Office2010, UnionId = 0)]
+[NumberValidator(SimpleType = typeof(IntegerValue), InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
+[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)", InitialVersion = FileFormatVersions.Office2010, UnionId = 0)]
     [SchemaAttr(23, "val")]
     [Index(0)]
     public StringValue Val { get; set; }
@@ -42025,8 +42025,8 @@ public partial class Zoom : OpenXmlLeafElement
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
 [StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?%", Version = FileFormatVersions.Office2010, UnionId = 0)]
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?%", Version = FileFormatVersions.Office2013, UnionId = 1)]
-[NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2013, UnionId = 1)]
+[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?%", InitialVersion = FileFormatVersions.Office2013, UnionId = 1)]
+[NumberValidator(SimpleType = typeof(Int32Value), InitialVersion = FileFormatVersions.Office2013, UnionId = 1)]
     [SchemaAttr(23, "percent")]
     [Index(1)]
     public StringValue Percent { get; set; }
@@ -42393,7 +42393,7 @@ public partial class StylePaneSortMethods : OpenXmlLeafElement
 ///</remark>
 [RequiredValidator]
 [StringValidator(SimpleType = typeof(HexBinaryValue), Length = 2, Version = FileFormatVersions.Office2007)]
-[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.StylePaneSortMethodsValues>), Version = FileFormatVersions.Office2010)]
+[EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Wordprocessing.StylePaneSortMethodsValues>), InitialVersion = FileFormatVersions.Office2010)]
     [SchemaAttr(23, "val")]
     [Index(0)]
     public StringValue Val { get; set; }
@@ -45274,8 +45274,8 @@ public partial class ReadModeInkLockDown : OpenXmlLeafElement
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2007)]
 [StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?%", Version = FileFormatVersions.Office2010, UnionId = 0)]
 [NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2010, UnionId = 0)]
-[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?%", Version = FileFormatVersions.Office2013, UnionId = 1)]
-[NumberValidator(SimpleType = typeof(Int32Value), Version = FileFormatVersions.Office2013, UnionId = 1)]
+[StringValidator(Pattern = @"-?[0-9]+(\.[0-9]+)?%", InitialVersion = FileFormatVersions.Office2013, UnionId = 1)]
+[NumberValidator(SimpleType = typeof(Int32Value), InitialVersion = FileFormatVersions.Office2013, UnionId = 1)]
     [SchemaAttr(23, "fontSz")]
     [Index(3)]
     public StringValue FontSize { get; set; }
