@@ -2,9 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Office2010.ExcelAc;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -80,35 +77,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
 
             _children.Add(constraint);
-        }
-
-        /// <summary>
-        /// Test whether this is a simple particle - the particle contains only elements as children.
-        /// </summary>
-        /// <returns></returns>
-        internal bool IsSimple()
-        {
-            bool isSimple = true;
-
-            foreach (var constraint in ChildrenParticles)
-            {
-                if (constraint.ParticleType == ParticleType.All ||
-                    constraint.ParticleType == ParticleType.Choice ||
-                    constraint.ParticleType == ParticleType.Group ||
-                    constraint.ParticleType == ParticleType.Sequence ||
-                    constraint.ParticleType == ParticleType.Any ||
-                    constraint.ParticleType == ParticleType.AnyWithUri)
-                {
-                    // there are sequence particles without any children.
-                    // Debug.Assert(constraint.ChildrenParticles != null && constraint.ChildrenParticles.Length > 0);
-                    isSimple = false;
-                }
-                else
-                {
-                }
-            }
-
-            return isSimple;
         }
 
         public override bool Equals(object obj)
