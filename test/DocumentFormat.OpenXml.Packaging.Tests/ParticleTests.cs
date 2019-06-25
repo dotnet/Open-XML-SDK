@@ -73,13 +73,20 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 DefaultValueHandling = DefaultValueHandling.Ignore,
             };
 
+            var serializer = JsonSerializer.Create(settings);
+
             using (var fs = File.OpenWrite($@"C:\Users\twsou\Projects\Software\Open-XML-SDK\test\DocumentFormat.OpenXml.Packaging.Tests\data\Particles.json"))
             using (var textWriter = new StreamWriter(fs))
             using (var writer = new JsonTextWriter(textWriter) { Indentation = 1 })
             {
-                var serializer = JsonSerializer.Create(settings);
-
                 serializer.Serialize(writer, set.OrderBy(t => t.Key.FullName));
+            }
+
+            using (var fs = File.OpenRead($@"C:\Users\twsou\Projects\Software\Open-XML-SDK\test\DocumentFormat.OpenXml.Packaging.Tests\data\Particles.json"))
+            using (var textReader = new StreamReader(fs))
+            using (var reader = new JsonTextReader(textReader))
+            {
+                var result = serializer.Deserialize<KeyValuePair<Type, VersionCollection<ParticleConstraint>>[]>(reader);
             }
         }
 
@@ -101,23 +108,48 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             }
         }
 
+        private class ParticleConstraintConverter : JsonConverter<ParticleConstraint>
+        {
+            public override ParticleConstraint ReadJson(JsonReader reader, Type objectType, ParticleConstraint existingValue, bool hasExistingValue, JsonSerializer serializer)
+            {
+                throw new NotImplementedException();
+            }
+
+            public override void WriteJson(JsonWriter writer, ParticleConstraint value, JsonSerializer serializer)
+            {
+                serializer.Serialize(writer, value);
+            }
+        }
+
         private class VersionCollection<T> : IEnumerable<KeyValuePair<FileFormatVersions, T>>
         {
             private readonly List<KeyValuePair<FileFormatVersions, T>> _dic = new List<KeyValuePair<FileFormatVersions, T>>();
 
-            public void Add(FileFormatVersions version, T value)
+            public VersionCollection()
+            {
+            }
+
+            public VersionCollection(IEnumerable<KeyValuePair<FileFormatVersions, T>> items)
+            {
+                foreach (var item in items)
+                {
+                    Add(item.Key, item.Value);
+                }
+            }
+
+            public void Add(FileFormatVersions key, T value)
             {
                 foreach (var entry in _dic)
                 {
                     if (entry.Value.Equals(value))
                     {
                         _dic.Remove(entry);
-                        _dic.Insert(0, new KeyValuePair<FileFormatVersions, T>(entry.Key | version, value));
+                        _dic.Insert(0, new KeyValuePair<FileFormatVersions, T>(entry.Key | key, value));
                         return;
                     }
                 }
 
-                _dic.Add(new KeyValuePair<FileFormatVersions, T>(version, value));
+                _dic.Add(new KeyValuePair<FileFormatVersions, T>(key, value));
             }
 
             public IEnumerator<KeyValuePair<FileFormatVersions, T>> GetEnumerator() => _dic.GetEnumerator();
@@ -129,9 +161,13 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
             public override bool CanWrite => true;
 
+            public override bool CanRead => base.CanRead;
+
             public override Type ReadJson(JsonReader reader, Type objectType, Type existingValue, bool hasExistingValue, JsonSerializer serializer)
             {
-                throw new NotImplementedException();
+                var name = reader.Value.ToString();
+
+                return typeof(OpenXmlElement).Assembly.GetType(name);
             }
 
             public override void WriteJson(JsonWriter writer, Type value, JsonSerializer serializer)
