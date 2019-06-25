@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Validation.Schema;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -92,6 +93,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
             {
                 var properties = base.CreateProperties(type, memberSerialization);
+                var children = default(JsonProperty);
 
                 foreach (var prop in properties)
                 {
@@ -99,6 +101,17 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                     {
                         prop.DefaultValue = 1;
                     }
+                    else if (prop.PropertyName == nameof(ParticleConstraint.ChildrenParticles))
+                    {
+                        children = prop;
+                        prop.DefaultValue = Cached.Array<ParticleConstraint>();
+                    }
+                }
+
+                if (children != null)
+                {
+                    properties.Remove(children);
+                    properties.Insert(0, children);
                 }
 
                 return properties;

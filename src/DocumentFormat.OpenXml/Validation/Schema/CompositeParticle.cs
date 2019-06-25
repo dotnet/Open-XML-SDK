@@ -18,8 +18,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Initializes a new instance of the CompositeParticle.
         /// </summary>
-        internal CompositeParticle(ParticleType particleType)
-            : base(particleType, 1, 1)
+        internal CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs)
+            : base(particleType, minOccurs, maxOccurs)
         {
         }
 

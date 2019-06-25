@@ -281,7 +281,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     return null;
 
                 default:
-                    return new CompositeParticle(sdb.ParticleType);
+                    return new CompositeParticle(sdb.ParticleType, sdb.MinOccurs, sdb.MaxOccurs);
             }
         }
 

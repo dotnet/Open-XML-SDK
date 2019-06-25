@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     /// <remarks>
     /// </remarks>
-    internal abstract class ParticleConstraint : IEnumerable<ParticleConstraint>
+    internal abstract class ParticleConstraint
     {
         private List<ParticleConstraint> _children;
 
@@ -68,14 +68,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <remarks>
         /// TODO: change int to ushort?
         /// </remarks>
-        internal virtual int ElementId { get; }
+        internal virtual int ElementId { get; } = SdbData.InvalidId;
 
         public virtual Type ElementType => null;
 
         /// <summary>
         /// Gets the children particles.
         /// </summary>
-        public ReadOnlyList<ParticleConstraint> ChildrenParticles => _children;
+        public ParticleConstraint[] ChildrenParticles => _children?.ToArray() ?? Cached.Array<ParticleConstraint>();
 
         /// <summary>
         /// Gets a ParticleValidator for this particle constraint.
@@ -171,9 +171,5 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 ChildrenParticles.Length,
             }.GetHashCode();
         }
-
-        IEnumerator<ParticleConstraint> IEnumerable<ParticleConstraint>.GetEnumerator() => ChildrenParticles.GetEnumerator();
-
-        IEnumerator IEnumerable.GetEnumerator() => ChildrenParticles.GetEnumerator();
     }
 }
