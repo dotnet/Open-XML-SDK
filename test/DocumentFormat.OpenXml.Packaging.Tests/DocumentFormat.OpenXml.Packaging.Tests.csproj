@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="data\PartConstraintData.json" />
+    <EmbeddedResource Include="data\*.json" />
   </ItemGroup>
 
   <ItemGroup>

@@ -11,6 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Packaging.Tests
@@ -18,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
     public class ParticleTests
     {
         [Fact]
-        public void Test1()
+        public void ValidateExpectedParticles()
         {
             var exclude = new HashSet<Type>
             {
@@ -30,7 +31,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 .Where(t => !t.IsAbstract && typeof(OpenXmlElement).IsAssignableFrom(t))
                 .Where(t => !exclude.Contains(t));
 
-            var set = new Dictionary<Type, VersionCollection<ParticleConstraint>>();
+            var constraints = new Dictionary<Type, VersionCollection<ParticleConstraint>>();
 
             foreach (var version in FileFormatVersionExtensions.AllVersions)
             {
@@ -47,13 +48,13 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                         {
                             if (data.TryGetSchemaTypeData(element.ElementTypeId, out var typeData) && typeData != null)
                             {
-                                if (set.TryGetValue(type, out var current))
+                                if (constraints.TryGetValue(type, out var current))
                                 {
                                     current.Add(version, typeData.ParticleConstraint);
                                 }
                                 else
                                 {
-                                    set.Add(type, new VersionCollection<ParticleConstraint> { { version, typeData.ParticleConstraint } });
+                                    constraints.Add(type, new VersionCollection<ParticleConstraint> { { version, typeData.ParticleConstraint } });
                                 }
                             }
                         }
@@ -61,6 +62,11 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 }
             }
 
+            AssertEqual(constraints);
+        }
+
+        private static void AssertEqual(Dictionary<Type, VersionCollection<ParticleConstraint>> constraints)
+        {
             var settings = new JsonSerializerSettings
             {
                 Formatting = Formatting.Indented,
@@ -75,16 +81,28 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             };
 
             var serializer = JsonSerializer.Create(settings);
+            var tmp = Path.GetTempFileName();
 
-            using (var fs = File.OpenWrite($@"C:\Users\tasou\Projects\Software\Open-XML-SDK\test\DocumentFormat.OpenXml.Packaging.Tests\data\Particles.json"))
+            using (var fs = File.OpenWrite(tmp))
             {
                 fs.SetLength(0);
 
                 using (var textWriter = new StreamWriter(fs))
                 using (var writer = new JsonTextWriter(textWriter) { Indentation = 1 })
                 {
-                    serializer.Serialize(writer, set.OrderBy(t => t.Key.FullName));
+                    serializer.Serialize(writer, constraints.OrderBy(t => t.Key.FullName));
                 }
+            }
+
+            using (var stream = typeof(ParticleTests).GetTypeInfo().Assembly.GetManifestResourceStream("DocumentFormat.OpenXml.Packaging.Tests.data.Particles.json"))
+            using (var streamReader = new StreamReader(stream))
+            using (var fs = File.OpenRead(tmp))
+            using (var fsReader = new StreamReader(fs))
+            {
+                var expected = streamReader.ReadToEnd();
+                var actual = fsReader.ReadToEnd();
+
+                Assert.Equal(expected, actual);
             }
         }
 
