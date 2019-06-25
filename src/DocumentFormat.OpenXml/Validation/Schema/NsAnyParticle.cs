@@ -23,16 +23,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Initializes a new instance of the NsAnyParticle.
         /// </summary>
         internal NsAnyParticle()
-            : base()
+            : base(ParticleType.AnyWithUri)
         {
             _particleValidator = new NsAnyParticleValidator(this);
-        }
-
-        /// <inheritdoc/>
-        internal override ParticleType ParticleType
-        {
-            get { return ParticleType.AnyWithUri; }
-            set { Debug.Assert(value == ParticleType.AnyWithUri); }
         }
 
         /// <inheritdoc/>
@@ -47,7 +40,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets the namespace ID of the namespace in the xsd:any@namespace.
         /// </summary>
-        internal byte NamespaceId
+        public byte NamespaceId
         {
             get { return _namespaceId; }
         }

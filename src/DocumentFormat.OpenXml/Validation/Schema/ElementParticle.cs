@@ -36,21 +36,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Initializes a new instance of the ElementParticle.
         /// </summary>
         internal ElementParticle()
-            : base()
+            : base(ParticleType.Element)
         {
-        }
-
-        /// <inheritdoc/>
-        internal override ParticleType ParticleType
-        {
-            get { return ParticleType.Element; }
-            set { Debug.Assert(value == ParticleType.Element); }
         }
 
         /// <inheritdoc/>
         internal override int ElementId { get; set; }
 
-        internal override Type ElementType => _elementIdMapper.Value[ElementId];
+        public override Type ElementType => _elementIdMapper.Value[ElementId];
 
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator

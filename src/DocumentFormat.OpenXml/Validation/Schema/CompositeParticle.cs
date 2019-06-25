@@ -24,20 +24,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Initializes a new instance of the CompositeParticle.
         /// </summary>
-        internal CompositeParticle()
-            : base()
+        internal CompositeParticle(ParticleType particleType)
+            : base(particleType)
         {
         }
 
         /// <inheritdoc/>
-        internal override ParticleType ParticleType
-        {
-            get { return _particleType; }
-            set { _particleType = value; }
-        }
-
-        /// <inheritdoc/>
-        internal override ParticleConstraint[] ChildrenParticles
+        public override ParticleConstraint[] ChildrenParticles
         {
             get { return _childrenParticles; }
             set { _childrenParticles = value; }

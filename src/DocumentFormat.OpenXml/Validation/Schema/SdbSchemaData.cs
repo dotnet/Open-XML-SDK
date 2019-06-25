@@ -167,15 +167,31 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return GetSchemaTypeData(openxmlElement.ElementTypeId);
         }
 
+        private SchemaTypeData GetSchemaTypeData(int openxmlTypeId)
+        {
+            Debug.Assert(TryGetSchemaTypeData(openxmlTypeId, out var data));
+
+            return data;
+        }
+
         /// <summary>
         /// Load schema type constraint data for the specified element type ID.
         /// </summary>
         /// <param name="openxmlTypeId"></param>
         /// <returns>The constraint data of the schema type.</returns>
-        private SchemaTypeData GetSchemaTypeData(int openxmlTypeId)
+        public bool TryGetSchemaTypeData(int openxmlTypeId, out SchemaTypeData data)
         {
-            Debug.Assert(openxmlTypeId >= SdbClassIdToSchemaTypeIndex.StartClassId);
-            Debug.Assert(openxmlTypeId < SdbClassIdToSchemaTypeIndex.StartClassId + ClassIdMap.Length);
+            if (openxmlTypeId < SdbClassIdToSchemaTypeIndex.StartClassId)
+            {
+                data = null;
+                return false;
+            }
+
+            if (openxmlTypeId >= SdbClassIdToSchemaTypeIndex.StartClassId + ClassIdMap.Length)
+            {
+                data = null;
+                return false;
+            }
 
             ushort typeId = (ushort)openxmlTypeId;
 
@@ -183,7 +199,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 Debug.Assert(openxmlTypeId == schemaTypeData.OpenXmlTypeId);
 
-                return schemaTypeData;
+                data = schemaTypeData;
             }
             else
             {
@@ -191,8 +207,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 _cache.Add(typeId, schemaTypeData);
 
-                return schemaTypeData;
+                data = schemaTypeData;
             }
+
+            return data != null;
         }
 
         /// <summary>
@@ -230,7 +248,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             SdbParticleConstraint sdbParticleConstraint = Particles[particleIndex];
             var particleConstraint = ParticleConstraint.CreateParticleConstraint(sdbParticleConstraint.ParticleType);
 
-            particleConstraint.ParticleType = sdbParticleConstraint.ParticleType;
             particleConstraint.MaxOccurs = sdbParticleConstraint.MaxOccurs;
             particleConstraint.MinOccurs = sdbParticleConstraint.MinOccurs;
             particleConstraint.ElementId = sdbParticleConstraint.ElementTypeId;

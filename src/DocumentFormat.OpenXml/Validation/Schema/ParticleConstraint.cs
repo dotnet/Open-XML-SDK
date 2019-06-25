@@ -17,32 +17,30 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Initializes a new instance of the ParticleConstraint.
         /// </summary>
-        internal ParticleConstraint()
+        internal ParticleConstraint(ParticleType type)
         {
+            ParticleType = type;
+
             // default minOccurs and maxOccurs are 1.
             //this.MaxOccurs = 1;
             //this.MinOccurs = 1;
         }
 
         /// <summary>
-        /// Gets or sets the type of the particle.
+        /// Gets the type of the particle.
         /// </summary>
-        internal virtual ParticleType ParticleType
-        {
-            get { return ParticleType.Invalid; }
-            set { throw new InvalidOperationException(); }
-        }
+        public ParticleType ParticleType { get; }
 
         /// <summary>
         /// Gets or sets the minOccurs constraint.
         /// </summary>
-        internal int MinOccurs { get; set; }
+        public int MinOccurs { get; set; }
 
         /// <summary>
         /// Gets or sets the maxOccurs constraint.
         /// 0 means "unbounded".
         /// </summary>
-        internal int MaxOccurs { get; set; }
+        public int MaxOccurs { get; set; }
 
         /// <summary>
         /// Gets a value indicating whether the maxOccurs is unbounded.
@@ -82,7 +80,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             set { Debug.Assert(value == SdbData.InvalidId); }
         }
 
-        internal virtual Type ElementType => null;
+        public virtual Type ElementType => null;
 
         /// <summary>
         /// Gets or sets the children particles.
@@ -90,7 +88,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <remarks>
         /// be null if the ParticleType == ParticleType.Element || ParticleType=ParticleType.Any
         /// </remarks>
-        internal virtual ParticleConstraint[] ChildrenParticles
+        public virtual ParticleConstraint[] ChildrenParticles
         {
             get { return null; }
             set { throw new InvalidOperationException(); }
@@ -136,6 +134,60 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return isSimple;
         }
 
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj is ParticleConstraint p)
+            {
+                var parent = ParticleType == p.ParticleType
+                    && MinOccurs == p.MinOccurs
+                    && MaxOccurs == p.MaxOccurs
+                    && ElementId == p.ElementId;
+
+                if (!parent)
+                {
+                    return false;
+                }
+
+                if (ChildrenParticles == null && p.ChildrenParticles == null)
+                {
+                    return true;
+                }
+
+                if (ChildrenParticles?.Length != p.ChildrenParticles?.Length)
+                {
+                    return false;
+                }
+
+                for (int i = 0; i < ChildrenParticles.Length; i++)
+                {
+                    if (!ChildrenParticles[i].Equals(p.ChildrenParticles[i]))
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return new
+            {
+                ParticleType,
+                MinOccurs,
+                MaxOccurs,
+                ElementId
+            }.GetHashCode();
+        }
+
         /// <summary>
         /// Create a ParticleConstraint for the specified ParticleType.
         /// </summary>
@@ -159,7 +211,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     return null;
 
                 default:
-                    return new CompositeParticle();
+                    return new CompositeParticle(particleType);
             }
         }
     }

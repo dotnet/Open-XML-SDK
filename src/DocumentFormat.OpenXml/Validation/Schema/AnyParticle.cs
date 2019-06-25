@@ -23,16 +23,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Initializes a new instance of the AnyParticle.
         /// </summary>
         internal AnyParticle()
-            : base()
+            : base(ParticleType.Any)
         {
             _particleValidator = new AnyParticleValidator(this);
-        }
-
-        /// <inheritdoc/>
-        internal override ParticleType ParticleType
-        {
-            get { return ParticleType.Any; }
-            set { Debug.Assert(value == ParticleType.Any); }
         }
 
         /// <inheritdoc/>
@@ -40,7 +33,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             set
             {
-                Debug.Assert( value == XsdAnyPrefidefinedValue.Any ||
+                Debug.Assert(value == XsdAnyPrefidefinedValue.Any ||
                             value == XsdAnyPrefidefinedValue.Local ||
                             value == XsdAnyPrefidefinedValue.Other ||
                             value == XsdAnyPrefidefinedValue.TargetNamespace);
@@ -52,7 +45,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets the value of the xsd:any@namespace.
         /// </summary>
-        internal ushort NamespaceValue => _xsdAnyValue;
+        public ushort NamespaceValue => _xsdAnyValue;
 
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator => _particleValidator;
