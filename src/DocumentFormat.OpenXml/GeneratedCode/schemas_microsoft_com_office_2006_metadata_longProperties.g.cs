@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Office.LongProperties
@@ -62,6 +63,11 @@ public partial class LongProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.LongProperties.LongProperty), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -108,6 +114,7 @@ public partial class LongProperty : OpenXmlLeafTextElement
     {
 		return new StringValue(){ InnerText = text };
     }
+
 
     
     

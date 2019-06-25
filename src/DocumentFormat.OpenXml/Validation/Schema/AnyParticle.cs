@@ -28,6 +28,17 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             _particleValidator = new AnyParticleValidator(this);
         }
 
+        internal AnyParticle(decimal minOccurs, decimal maxOccurs)
+            : base(ParticleType.Any, minOccurs, maxOccurs)
+        {
+        }
+
+        internal AnyParticle(ushort xsdAnyValue, decimal minOccurs, decimal maxOccurs)
+            : base(ParticleType.Any, minOccurs, maxOccurs)
+        {
+            _xsdAnyValue = xsdAnyValue;
+        }
+
         /// <inheritdoc/>
         internal override int ElementId
         {

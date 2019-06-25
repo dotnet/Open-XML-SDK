@@ -81,11 +81,6 @@
     </When>
   </Choose>
 
-  <!-- Include the constraint data that are stored in bin files -->
-  <ItemGroup>
-    <EmbeddedResource Include="GeneratedCode\*.constraints" />
-  </ItemGroup>
-
   <ItemGroup>
     <Compile Update="Resources\ExceptionMessages.Designer.cs">
       <DesignTime>True</DesignTime>

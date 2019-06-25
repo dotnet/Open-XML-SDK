@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing.Charts;
 
@@ -67,6 +68,13 @@ public partial class MultiLvlStrData : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Level), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
@@ -66,6 +67,11 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -206,6 +212,7 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
 		return new StringValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -246,6 +253,7 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
     {
 		return new BooleanValue(){ InnerText = text };
     }
+
 
     
     
@@ -308,6 +316,8 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence) { };
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>

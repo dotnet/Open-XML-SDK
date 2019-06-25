@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Vml.Presentation
@@ -32,6 +33,7 @@ public partial class InkAnnotationFlag : OpenXmlLeafElement
     public InkAnnotationFlag():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -68,6 +70,7 @@ public partial class TextData : OpenXmlLeafElement
     public TextData():base(){}
     
     
+
     
     
     /// <inheritdoc/>

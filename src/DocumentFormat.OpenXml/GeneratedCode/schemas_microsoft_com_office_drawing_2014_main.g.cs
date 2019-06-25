@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 
@@ -41,6 +42,7 @@ public partial class CreationId : OpenXmlLeafElement
     public CreationId():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -78,6 +80,7 @@ public partial class PredecessorDrawingElementReference : OpenXmlLeafElement
     public PredecessorDrawingElementReference():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -123,6 +126,7 @@ public partial class ConnectableReferences : OpenXmlLeafElement
     public ConnectableReferences():base(){}
     
     
+
     
     
     /// <inheritdoc/>

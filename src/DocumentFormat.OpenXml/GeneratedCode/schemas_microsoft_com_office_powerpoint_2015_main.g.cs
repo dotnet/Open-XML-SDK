@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Presentation;
@@ -41,6 +42,7 @@ public partial class DesignElement : OpenXmlLeafElement
     public DesignElement():base(){}
     
     
+
     
     
     /// <inheritdoc/>

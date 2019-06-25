@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 
@@ -231,6 +232,7 @@ public partial class WebExtensionReference : OpenXmlLeafElement
     public WebExtensionReference():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -276,6 +278,7 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     public WebExtensionProperty():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -335,6 +338,11 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -418,6 +426,11 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -522,6 +535,11 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -596,6 +614,11 @@ public partial class WebExtensionReferenceList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -655,6 +678,11 @@ public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -714,6 +742,11 @@ public partial class WebExtensionBindingList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -833,6 +866,31 @@ public partial class Snapshot : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaBiLevel), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaCeiling), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaFloor), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaInverse), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaModulationEffect), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaModulationFixed), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaReplace), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BiLevel), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blur), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ColorChange), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ColorReplacement), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Duotone), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillOverlay), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Grayscale), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Hsl), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceEffect), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TintEffect), 1M, 1M)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Wordprocessing;
 
@@ -74,6 +75,7 @@ public partial class Color : OpenXmlLeafElement
     public Color():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -132,6 +134,7 @@ public partial class DataBinding : OpenXmlLeafElement
     public DataBinding():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -171,6 +174,7 @@ public partial class Appearance : OpenXmlLeafElement
     public Appearance():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -398,6 +402,12 @@ public partial class SdtRepeatedSection : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.SectionTitle), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -455,6 +465,7 @@ public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
     public SdtRepeatedSectionItem():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -642,6 +653,7 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
     public PersistentDocumentId():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -681,6 +693,7 @@ public partial class FootnoteColumns : OpenXmlLeafElement
     public FootnoteColumns():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -743,6 +756,7 @@ public partial class CommentEx : OpenXmlLeafElement
     public CommentEx():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -824,6 +838,11 @@ public partial class Person : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.PresenceInfo), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -890,6 +909,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
     public PresenceInfo():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -929,6 +949,7 @@ public partial class SectionTitle : OpenXmlLeafElement
     public SectionTitle():base(){}
     
     
+
     
     
     /// <inheritdoc/>

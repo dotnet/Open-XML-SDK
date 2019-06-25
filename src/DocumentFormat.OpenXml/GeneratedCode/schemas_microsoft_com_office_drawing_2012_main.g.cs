@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 
@@ -65,6 +66,7 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     public BackgroundProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -101,6 +103,7 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
     public NonVisualGroupProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -151,6 +154,7 @@ public partial class ObjectProperties : OpenXmlLeafElement
     public ObjectProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -266,6 +270,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     public SignatureLine():base(){}
     
     
+
     
     
     /// <inheritdoc/>

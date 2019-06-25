@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Vml.Spreadsheet
@@ -202,6 +203,45 @@ public partial class ClientData : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MoveWithCells), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ResizeWithCells), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Locked), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultSize), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.PrintObject), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Disabled), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoFill), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoLine), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoSizePicture), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaMacro), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.LockText), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.JustifyLastLine), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.SecretEdit), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultButton), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.HelpButton), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.CancelButton), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DismissButton), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Visible), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.RowHidden), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ColumnHidden), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MultiLine), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalScrollBar), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ValidIds), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3DForListBoxAndDropDown), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Colored), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3D), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FirstButton), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalScrollBar), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MapOcxControl), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormat), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.CameraObject), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.RecalculateAlways), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoScaleFont), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1956,6 +1996,7 @@ public partial class FormulaMacro : OpenXmlLeafTextElement
 		return new StringValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -2536,6 +2577,7 @@ public partial class ClipboardFormat : OpenXmlLeafTextElement
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormatValues>(){ InnerText = text };
     }
+
 
     
     

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Office2013.ExcelAc;
 using DocumentFormat.OpenXml.Office2010.ExcelAc;
@@ -74,6 +75,11 @@ public partial class Extension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -4689,6 +4695,19 @@ public partial class FilterColumn : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Filters), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Top10), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CustomFilters), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomFilters), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DynamicFilter), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColorFilter), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.IconFilter), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IconFilter), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -4900,6 +4919,16 @@ public partial class SortState : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 1M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SortCondition), 0M, 64M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortCondition), 0M, 64M)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -4959,6 +4988,14 @@ public partial class ExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Sequence, 0M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0M, global::System.Decimal.MaxValue)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -5002,6 +5039,7 @@ public partial class CustomFilter : OpenXmlLeafElement
     public CustomFilter():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -5074,6 +5112,7 @@ public partial class CalculationCell : OpenXmlLeafElement
     public CalculationCell():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -5133,6 +5172,11 @@ public partial class Authors : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Author), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -5192,6 +5236,11 @@ public partial class CommentList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Comment), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -5285,6 +5334,12 @@ public partial class Comment : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentText), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentProperties), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -5955,6 +6010,11 @@ public partial class Schema : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -6086,6 +6146,11 @@ public partial class Map : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataBinding), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -6194,6 +6259,11 @@ public partial class DataBinding : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -6405,6 +6475,16 @@ public partial class Connection : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OlapProperties), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TextProperties), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Parameters), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -6555,6 +6635,13 @@ public partial class Tables : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingTable), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldItem), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -6654,6 +6741,7 @@ public partial class Parameter : OpenXmlLeafElement
     public Parameter():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -6683,6 +6771,7 @@ public partial class MissingTable : OpenXmlLeafElement
     public MissingTable():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -6720,6 +6809,7 @@ public partial class CharacterValue : OpenXmlLeafElement
     public CharacterValue():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -6757,6 +6847,7 @@ public partial class FieldItem : OpenXmlLeafElement
     public FieldItem():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -6800,6 +6891,7 @@ public partial class TextField : OpenXmlLeafElement
     public TextField():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -6957,6 +7049,14 @@ public partial class CacheField : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SharedItems), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldGroup), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertiesMap), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -7051,6 +7151,11 @@ public partial class Pages : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Page), 1M, 4M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -7117,6 +7222,11 @@ public partial class RangeSets : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RangeSet), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -7183,6 +7293,11 @@ public partial class Page : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageItem), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -7220,6 +7335,7 @@ public partial class PageItem : OpenXmlLeafElement
     public PageItem():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -7307,6 +7423,7 @@ public partial class RangeSet : OpenXmlLeafElement
     public RangeSet():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -7447,6 +7564,12 @@ public partial class MissingItem : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -7595,6 +7718,12 @@ public partial class NumberItem : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -7690,6 +7819,11 @@ public partial class BooleanItem : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -7838,6 +7972,12 @@ public partial class ErrorItem : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -8001,6 +8141,12 @@ public partial class StringItem : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -8096,6 +8242,11 @@ public partial class DateTimeItem : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -8401,6 +8552,17 @@ public partial class PivotCacheRecord : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.BooleanItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ErrorItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StringItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DateTimeItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldItem), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -8503,6 +8665,7 @@ public partial class Kpi : OpenXmlLeafElement
     public Kpi():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -8540,6 +8703,7 @@ public partial class FieldUsage : OpenXmlLeafElement
     public FieldUsage():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -8631,6 +8795,12 @@ public partial class GroupLevel : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Groups), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -8725,6 +8895,11 @@ public partial class Groups : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Group), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -8822,6 +8997,11 @@ public partial class Group : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupMembers), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -8903,6 +9083,11 @@ public partial class GroupMembers : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupMember), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -8947,6 +9132,7 @@ public partial class GroupMember : OpenXmlLeafElement
     public GroupMember():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -9019,6 +9205,14 @@ public partial class Entries : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ErrorItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StringItem), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -9085,6 +9279,11 @@ public partial class Sets : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TupleSet), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -9151,6 +9350,11 @@ public partial class QueryCache : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Query), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -9217,6 +9421,11 @@ public partial class ServerFormats : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -9260,6 +9469,7 @@ public partial class ServerFormat : OpenXmlLeafElement
     public ServerFormat():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -9311,6 +9521,7 @@ public partial class Tuple : OpenXmlLeafElement
     public Tuple():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -9409,6 +9620,12 @@ public partial class TupleSet : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortByTuple), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -9476,6 +9693,11 @@ public partial class Query : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -9566,6 +9788,12 @@ public partial class CalculatedItem : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -9739,6 +9967,12 @@ public partial class PivotArea : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -9877,6 +10111,11 @@ public partial class CalculatedMember : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -10291,6 +10530,13 @@ public partial class PivotField : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Items), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoSortScope), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -10438,6 +10684,7 @@ public partial class Item : OpenXmlLeafElement
     public Item():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -10547,6 +10794,11 @@ public partial class DataField : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -10642,6 +10894,11 @@ public partial class RowItem : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -10679,6 +10936,7 @@ public partial class Field : OpenXmlLeafElement
     public Field():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -10754,6 +11012,12 @@ public partial class Format : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -10865,6 +11129,12 @@ public partial class ConditionalFormat : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreas), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -10959,6 +11229,11 @@ public partial class PivotAreas : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -11041,6 +11316,11 @@ public partial class ChartFormat : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -11196,6 +11476,13 @@ public partial class PivotHierarchy : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberProperties), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Members), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -11378,6 +11665,7 @@ public partial class MemberProperty : OpenXmlLeafElement
     public MemberProperty():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -11415,6 +11703,7 @@ public partial class Member : OpenXmlLeafElement
     public Member():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -11475,6 +11764,7 @@ public partial class Dimension : OpenXmlLeafElement
     public Dimension():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -11520,6 +11810,7 @@ public partial class MeasureGroup : OpenXmlLeafElement
     public MeasureGroup():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -11565,6 +11856,7 @@ public partial class MeasureDimensionMap : OpenXmlLeafElement
     public MeasureDimensionMap():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -11706,6 +11998,12 @@ public partial class PivotFilter : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -11953,6 +12251,13 @@ public partial class CacheHierarchy : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldsUsage), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupLevels), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -12079,6 +12384,7 @@ public partial class RangeProperties : OpenXmlLeafElement
     public RangeProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -12145,6 +12451,11 @@ public partial class DiscreteProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldItem), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -12221,6 +12532,16 @@ public partial class GroupItems : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.BooleanItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ErrorItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StringItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DateTimeItem), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -12316,6 +12637,11 @@ public partial class PageField : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -12397,6 +12723,11 @@ public partial class PivotAreaReferences : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReference), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -12577,6 +12908,12 @@ public partial class PivotAreaReference : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldItem), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -12643,6 +12980,11 @@ public partial class QueryTableFields : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableField), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -12709,6 +13051,11 @@ public partial class QueryTableDeletedFields : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DeletedField), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -12746,6 +13093,7 @@ public partial class DeletedField : OpenXmlLeafElement
     public DeletedField():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -12855,6 +13203,11 @@ public partial class QueryTableField : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -13336,6 +13689,7 @@ public partial class Underline : OpenXmlLeafElement
     public Underline():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -13373,6 +13727,7 @@ public partial class VerticalTextAlignment : OpenXmlLeafElement
     public VerticalTextAlignment():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -13410,6 +13765,7 @@ public partial class FontSize : OpenXmlLeafElement
     public FontSize():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -13597,6 +13953,7 @@ public partial class RunFont : OpenXmlLeafElement
     public RunFont():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -13708,6 +14065,7 @@ public partial class FontScheme : OpenXmlLeafElement
     public FontScheme():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -13795,6 +14153,25 @@ public partial class RunProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Bold), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Italic), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Strike), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Condense), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extend), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Outline), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Shadow), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Underline), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontSize), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RunFont), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontFamily), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RunPropertyCharSet), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontScheme), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -13856,6 +14233,12 @@ public partial class Run : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RunProperties), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -13959,6 +14342,11 @@ public partial class PhoneticRun : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -14025,6 +14413,7 @@ public partial class PhoneticProperties : OpenXmlLeafElement
     public PhoneticProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -14145,6 +14534,13 @@ public partial class Header : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetIdMap), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ReviewedList), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -14309,6 +14705,13 @@ public partial class RevisionRowColumn : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Undo), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionFormat), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -14425,6 +14828,13 @@ public partial class RevisionMove : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Undo), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionFormat), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -14471,6 +14881,7 @@ public partial class RevisionCustomView : OpenXmlLeafElement
     public RevisionCustomView():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -14576,6 +14987,11 @@ public partial class RevisionSheetName : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -14666,6 +15082,7 @@ public partial class RevisionInsertSheet : OpenXmlLeafElement
     public RevisionInsertSheet():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -14833,6 +15250,15 @@ public partial class RevisionCellChange : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OldCell), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NewCell), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -15005,6 +15431,12 @@ public partial class RevisionFormat : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -15127,6 +15559,7 @@ public partial class RevisionAutoFormat : OpenXmlLeafElement
     public RevisionAutoFormat():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -15360,6 +15793,13 @@ public partial class RevisionDefinedName : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OldFormula), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -15512,6 +15952,7 @@ public partial class RevisionComment : OpenXmlLeafElement
     public RevisionComment():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -15565,6 +16006,7 @@ public partial class RevisionQueryTable : OpenXmlLeafElement
     public RevisionQueryTable():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -15623,6 +16065,7 @@ public partial class RevisionConflict : OpenXmlLeafElement
     public RevisionConflict():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -15689,6 +16132,11 @@ public partial class SheetIdMap : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetId), 1M, 65535M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -15755,6 +16203,11 @@ public partial class ReviewedList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Reviewed), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -15792,6 +16245,7 @@ public partial class Reviewed : OpenXmlLeafElement
     public Reviewed():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -15901,6 +16355,7 @@ public partial class Undo : OpenXmlLeafElement
     public Undo():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -16271,6 +16726,14 @@ public partial class NewCell : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormula), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellValue), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InlineString), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -16692,6 +17155,7 @@ public partial class SheetId : OpenXmlLeafElement
     public SheetId():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -16825,6 +17289,7 @@ public partial class CellFormula : OpenXmlLeafTextElement
 		return new StringValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -16917,6 +17382,11 @@ public partial class UserInfo : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -17087,6 +17557,12 @@ public partial class Row : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Cell), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -17188,6 +17664,7 @@ public partial class Column : OpenXmlLeafElement
     public Column():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -17245,6 +17722,7 @@ public partial class OutlineProperties : OpenXmlLeafElement
     public OutlineProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -17288,6 +17766,7 @@ public partial class PageSetupProperties : OpenXmlLeafElement
     public PageSetupProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -17352,6 +17831,7 @@ public partial class Pane : OpenXmlLeafElement
     public Pane():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -17409,6 +17889,7 @@ public partial class Selection : OpenXmlLeafElement
     public Selection():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -17590,6 +18071,11 @@ public partial class PivotSelection : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -17669,6 +18155,7 @@ public partial class Break : OpenXmlLeafElement
     public Break():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -17728,6 +18215,7 @@ public partial class DataReference : OpenXmlLeafElement
     public DataReference():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -17973,6 +18461,7 @@ public partial class PageMargins : OpenXmlLeafElement
     public PageMargins():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -18037,6 +18526,7 @@ public partial class PrintOptions : OpenXmlLeafElement
     public PrintOptions():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -18187,6 +18677,7 @@ public partial class PageSetup : OpenXmlLeafElement
     public PageSetup():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -18284,6 +18775,16 @@ public partial class HeaderFooter : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OddHeader), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OddFooter), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.EvenHeader), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.EvenFooter), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FirstHeader), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FirstFooter), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -18434,6 +18935,13 @@ public partial class AutoFilter : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FilterColumn), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -18594,6 +19102,15 @@ public partial class ConditionalFormattingRule : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula), 0M, 3M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColorScale), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataBar), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IconSet), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -18661,6 +19178,7 @@ public partial class Hyperlink : OpenXmlLeafElement
     public Hyperlink():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -18742,6 +19260,11 @@ public partial class ConditionalFormatValueObject : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -18859,6 +19382,11 @@ public partial class Scenario : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InputCells), 1M, 32M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -18947,6 +19475,7 @@ public partial class ProtectedRange : OpenXmlLeafElement
     public ProtectedRange():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -18984,6 +19513,7 @@ public partial class CellWatch : OpenXmlLeafElement
     public CellWatch():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -19092,6 +19622,7 @@ public partial class ChartSheetPageSetup : OpenXmlLeafElement
     public ChartSheetPageSetup():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -19139,6 +19670,7 @@ public partial class CustomProperty : OpenXmlLeafElement
     public CustomProperty():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -19228,6 +19760,7 @@ public partial class WebPublishItem : OpenXmlLeafElement
     public WebPublishItem():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -19267,6 +19800,7 @@ public partial class TablePart : OpenXmlLeafElement
     public TablePart():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -19355,6 +19889,11 @@ public partial class ChartSheetView : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -19463,6 +20002,13 @@ public partial class CustomChartsheetView : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -19570,6 +20116,7 @@ public partial class InputCells : OpenXmlLeafElement
     public InputCells():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -19654,6 +20201,11 @@ public partial class Control : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ControlProperties), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -19769,6 +20321,7 @@ public partial class IgnoredError : OpenXmlLeafElement
     public IgnoredError():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -19806,6 +20359,7 @@ public partial class MergeCell : OpenXmlLeafElement
     public MergeCell():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -19961,6 +20515,13 @@ public partial class DataValidation : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.ExcelAc.List), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula1), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula2), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -20201,6 +20762,14 @@ public partial class SheetView : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Pane), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Selection), 0M, 4M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotSelection), 0M, 4M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -20435,6 +21004,20 @@ public partial class CustomSheetView : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Pane), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Selection), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowBreaks), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PrintOptions), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetup), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -20678,6 +21261,11 @@ public partial class OleObject : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -20759,6 +21347,11 @@ public partial class MetadataTypes : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataType), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -20825,6 +21418,11 @@ public partial class MetadataStrings : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -20891,6 +21489,11 @@ public partial class MdxMetadata : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Mdx), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -20967,6 +21570,12 @@ public partial class FutureMetadata : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -21355,6 +21964,7 @@ public partial class MetadataType : OpenXmlLeafElement
     public MetadataType():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -21414,6 +22024,11 @@ public partial class MetadataBlock : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataRecord), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -21459,6 +22074,7 @@ public partial class MetadataRecord : OpenXmlLeafElement
     public MetadataRecord():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -21518,6 +22134,11 @@ public partial class FutureMetadataBlock : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -21614,6 +22235,14 @@ public partial class Mdx : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxTuple), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxSet), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxKpi), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -21799,6 +22428,11 @@ public partial class MdxTuple : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NameIndex), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -21880,6 +22514,11 @@ public partial class MdxSet : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NameIndex), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -21925,6 +22564,7 @@ public partial class MdxMemberProp : OpenXmlLeafElement
     public MdxMemberProp():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -21978,6 +22618,7 @@ public partial class MdxKpi : OpenXmlLeafElement
     public MdxKpi():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -22022,6 +22663,7 @@ public partial class NameIndex : OpenXmlLeafElement
     public NameIndex():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -22107,6 +22749,12 @@ public partial class SingleXmlCell : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -22212,6 +22860,12 @@ public partial class XmlCellProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlProperties), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -22323,6 +22977,11 @@ public partial class XmlProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -22406,6 +23065,12 @@ public partial class PatternFill : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ForegroundColor), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.BackgroundColor), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -22535,6 +23200,11 @@ public partial class GradientFill : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GradientStop), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -22602,6 +23272,11 @@ public partial class GradientStop : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -22662,6 +23337,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
     public NumberingFormat():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -22761,6 +23437,7 @@ public partial class Alignment : OpenXmlLeafElement
     public Alignment():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -22804,6 +23481,7 @@ public partial class Protection : OpenXmlLeafElement
     public Protection():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -22891,6 +23569,25 @@ public partial class Font : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Bold), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Italic), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Strike), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Condense), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extend), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Outline), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Shadow), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Underline), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontSize), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontName), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontCharSet), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontScheme), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -23149,6 +23846,12 @@ public partial class Fill : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PatternFill), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GradientFill), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -23273,6 +23976,19 @@ public partial class Border : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StartBorder), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.EndBorder), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LeftBorder), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RightBorder), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TopBorder), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.BottomBorder), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.VerticalBorder), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -23451,6 +24167,11 @@ public partial class IndexedColors : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RgbColor), 1M, 64M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -23510,6 +24231,11 @@ public partial class MruColors : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1M, 10M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -23598,6 +24324,11 @@ public partial class TableStyle : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyleElement), 0M, 28M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -23635,6 +24366,7 @@ public partial class RgbColor : OpenXmlLeafElement
     public RgbColor():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -23737,6 +24469,11 @@ public partial class CellStyle : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -23906,6 +24643,13 @@ public partial class CellFormat : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -23985,6 +24729,7 @@ public partial class FontName : OpenXmlLeafElement
     public FontName():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -24023,6 +24768,7 @@ public partial class FontFamilyNumbering : OpenXmlLeafElement
     public FontFamilyNumbering():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -24061,6 +24807,7 @@ public partial class FontCharSet : OpenXmlLeafElement
     public FontCharSet():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -24112,6 +24859,7 @@ public partial class TableStyleElement : OpenXmlLeafElement
     public TableStyleElement():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -24171,6 +24919,11 @@ public partial class SheetNames : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetName), 1M, 65534M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -24230,6 +24983,11 @@ public partial class ExternalDefinedNames : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedName), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -24289,6 +25047,11 @@ public partial class SheetDataSet : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -24340,6 +25103,7 @@ public partial class ExternalDefinedName : OpenXmlLeafElement
     public ExternalDefinedName():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -24414,6 +25178,11 @@ public partial class ExternalSheetData : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalRow), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -24481,6 +25250,11 @@ public partial class ExternalRow : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalCell), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -24562,6 +25336,11 @@ public partial class ExternalCell : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Xstring), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -24636,6 +25415,11 @@ public partial class DdeItems : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeItem), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -24723,6 +25507,11 @@ public partial class DdeItem : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Values), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -24811,6 +25600,11 @@ public partial class Values : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Value), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -24877,6 +25671,11 @@ public partial class Value : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -24953,6 +25752,12 @@ public partial class OleItems : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OleItem), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -25026,6 +25831,13 @@ public partial class ExternalBook : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetNames), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetDataSet), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -25142,6 +25954,11 @@ public partial class DdeLink : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeItems), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -25234,6 +26051,11 @@ public partial class OleLink : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleItems), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -25285,6 +26107,7 @@ public partial class SheetName : OpenXmlLeafElement
     public SheetName():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -25324,6 +26147,7 @@ public partial class Xstring : OpenXmlLeafTextElement
     {
 		return new StringValue(){ InnerText = text };
     }
+
 
     
     
@@ -25476,6 +26300,14 @@ public partial class TableColumn : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -25735,6 +26567,11 @@ public partial class XmlColumnProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -25817,6 +26654,11 @@ public partial class VolatileType : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Main), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -25884,6 +26726,11 @@ public partial class Main : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Topic), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -25954,6 +26801,13 @@ public partial class Topic : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Xstring), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Subtopic), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TopicReferences), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -26014,6 +26868,7 @@ public partial class TopicReferences : OpenXmlLeafElement
     public TopicReferences():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -26061,6 +26916,7 @@ public partial class PivotCache : OpenXmlLeafElement
     public PivotCache():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -26135,6 +26991,7 @@ public partial class WebPublishObject : OpenXmlLeafElement
     public WebPublishObject():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -26174,6 +27031,7 @@ public partial class ExternalReference : OpenXmlLeafElement
     public ExternalReference():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -26405,6 +27263,11 @@ public partial class CustomWorkbookView : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -26482,6 +27345,7 @@ public partial class Sheet : OpenXmlLeafElement
     public Sheet():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -26632,6 +27496,11 @@ public partial class WorkbookView : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -26793,6 +27662,7 @@ public partial class DefinedName : OpenXmlLeafTextElement
 		return new StringValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -26830,6 +27700,7 @@ public partial class FunctionGroup : OpenXmlLeafElement
     public FunctionGroup():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -26898,6 +27769,12 @@ public partial class TableExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Table), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -26980,6 +27857,12 @@ public partial class ObjectAnchor : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FromMarker), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ToMarker), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -27296,6 +28179,12 @@ public partial class ConditionalFormattingRuleExtension : OpenXmlCompositeElemen
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Id), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -27364,6 +28253,12 @@ public partial class PivotHierarchyExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -27432,6 +28327,12 @@ public partial class PivotFieldExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotField), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -27500,6 +28401,12 @@ public partial class CacheSourceExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SourceConnection), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -27566,6 +28473,11 @@ public partial class TableColumns : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableColumn), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -27630,6 +28542,7 @@ public partial class TableStyleInfo : OpenXmlLeafElement
     public TableStyleInfo():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -27689,6 +28602,11 @@ public partial class TableExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -27747,6 +28665,7 @@ public partial class OleItem : OpenXmlLeafElement
     public OleItem():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -28460,6 +29379,11 @@ public partial class ControlProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -28620,6 +29544,11 @@ public partial class EmbeddedObjectProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -28708,6 +29637,11 @@ public partial class ChartSheetProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TabColor), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -28784,6 +29718,12 @@ public partial class ChartSheetViews : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetView), 1M, 2147483647M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -28863,6 +29803,7 @@ public partial class ChartSheetProtection : OpenXmlLeafElement
     public ChartSheetProtection():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -28922,6 +29863,11 @@ public partial class CustomChartsheetViews : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView), 0M, 2147483647M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -28961,6 +29907,7 @@ public partial class Drawing : OpenXmlLeafElement
     public Drawing():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -29202,6 +30149,7 @@ public partial class DrawingHeaderFooter : OpenXmlLeafElement
     public DrawingHeaderFooter():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -29241,6 +30189,7 @@ public partial class Picture : OpenXmlLeafElement
     public Picture():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -29307,6 +30256,11 @@ public partial class WebPublishItems : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishItem), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -29368,6 +30322,12 @@ public partial class ColorScale : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2M, 3M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 2M, 3M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -29450,6 +30410,12 @@ public partial class DataBar : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2M, 2M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -29537,6 +30503,11 @@ public partial class IconSet : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -29596,6 +30567,11 @@ public partial class ConditionalFormattingRuleExtensionList : OpenXmlCompositeEl
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -29662,6 +30638,11 @@ public partial class DataReferences : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataReference), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -29788,6 +30769,13 @@ public partial class SheetProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TabColor), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OutlineProperties), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -29890,6 +30878,12 @@ public partial class SheetViews : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetView), 1M, 2147483647M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -29993,6 +30987,7 @@ public partial class SheetFormatProperties : OpenXmlLeafElement
     public SheetFormatProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -30170,6 +31165,7 @@ public partial class SheetProtection : OpenXmlLeafElement
     public SheetProtection():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -30229,6 +31225,11 @@ public partial class CustomSheetViews : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetView), 1M, 2147483647M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -30288,6 +31289,11 @@ public partial class OleObjects : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObject), 1M, 65535M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -30347,6 +31353,11 @@ public partial class Controls : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Control), 1M, 65535M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -30384,6 +31395,7 @@ public partial class SheetDimension : OpenXmlLeafElement
     public SheetDimension():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -30443,6 +31455,11 @@ public partial class Columns : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Column), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -30502,6 +31519,11 @@ public partial class SheetData : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Row), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -30597,6 +31619,11 @@ public partial class DataConsolidate : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataReferences), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -30687,6 +31714,12 @@ public partial class ConditionalFormatting : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRule), 1M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -30746,6 +31779,11 @@ public partial class CustomProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomProperty), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -30812,6 +31850,11 @@ public partial class MemberProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberProperty), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -30885,6 +31928,11 @@ public partial class Members : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Member), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -30944,6 +31992,11 @@ public partial class PivotHierarchyExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -31010,6 +32063,11 @@ public partial class Items : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Item), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -31069,6 +32127,11 @@ public partial class AutoSortScope : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -31143,6 +32206,11 @@ public partial class PivotFieldExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -31202,6 +32270,7 @@ public partial class WorksheetSource : OpenXmlLeafElement
     public WorksheetSource():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -31270,6 +32339,12 @@ public partial class Consolidation : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Pages), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RangeSets), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -31357,6 +32432,11 @@ public partial class CacheSourceExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -31521,6 +32601,11 @@ public partial class CommentProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -31615,6 +32700,7 @@ public partial class SortCondition : OpenXmlLeafElement
     public SortCondition():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -31652,6 +32738,7 @@ public partial class Filter : OpenXmlLeafElement
     public Filter():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -31732,6 +32819,7 @@ public partial class DateGroupItem : OpenXmlLeafElement
     public DateGroupItem():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -31809,6 +32897,13 @@ public partial class Filters : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Filter), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Filter), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DateGroupItem), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -31867,6 +32962,7 @@ public partial class Top10 : OpenXmlLeafElement
     public Top10():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -31933,6 +33029,11 @@ public partial class CustomFilters : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomFilter), 1M, 2M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -32000,6 +33101,7 @@ public partial class DynamicFilter : OpenXmlLeafElement
     public DynamicFilter():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -32044,6 +33146,7 @@ public partial class ColorFilter : OpenXmlLeafElement
     public ColorFilter():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -32088,6 +33191,7 @@ public partial class IconFilter : OpenXmlLeafElement
     public IconFilter():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -32160,6 +33264,14 @@ public partial class SlicerCacheDefinitionExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -32230,6 +33342,13 @@ public partial class PivotFilterExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotFilter), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -32298,6 +33417,12 @@ public partial class QueryTableExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.QueryTable), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -32356,6 +33481,7 @@ public partial class DatabaseProperties : OpenXmlLeafElement
     public DatabaseProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -32448,6 +33574,7 @@ public partial class OlapProperties : OpenXmlLeafElement
     public OlapProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -32598,6 +33725,11 @@ public partial class WebQueryProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tables), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -32784,6 +33916,11 @@ public partial class TextProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TextFields), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -32865,6 +34002,11 @@ public partial class Parameters : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Parameter), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -32924,6 +34066,11 @@ public partial class ConnectionExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -32994,6 +34141,13 @@ public partial class ConnectionExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Connection), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.Connection), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -33060,6 +34214,11 @@ public partial class TextFields : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TextField), 1M, 2001M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -33138,6 +34297,13 @@ public partial class CacheSource : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorksheetSource), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Consolidation), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -33245,6 +34411,11 @@ public partial class CacheFields : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -33311,6 +34482,11 @@ public partial class CacheHierarchies : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -33377,6 +34553,11 @@ public partial class Kpis : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Kpi), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -33444,6 +34625,15 @@ public partial class TupleCache : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Entries), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Sets), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryCache), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormats), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -33577,6 +34767,11 @@ public partial class CalculatedItems : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedItem), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -33643,6 +34838,11 @@ public partial class CalculatedMembers : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMember), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -33709,6 +34909,11 @@ public partial class Dimensions : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Dimension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -33775,6 +34980,11 @@ public partial class MeasureGroups : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MeasureGroup), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -33841,6 +35051,11 @@ public partial class Maps : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MeasureDimensionMap), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -33900,6 +35115,11 @@ public partial class PivotCacheDefinitionExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -33974,6 +35194,15 @@ public partial class PivotCacheDefinitionExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -34141,6 +35370,16 @@ public partial class SharedItems : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.BooleanItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ErrorItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StringItem), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DateTimeItem), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -34218,6 +35457,16 @@ public partial class FieldGroup : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 1M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RangeProperties), 0M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DiscreteProperties), 0M, 1M)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupItems), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -34277,6 +35526,11 @@ public partial class CacheFieldExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -34347,6 +35601,13 @@ public partial class CacheFieldExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheField), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -34413,6 +35674,11 @@ public partial class FieldsUsage : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldUsage), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -34479,6 +35745,11 @@ public partial class GroupLevels : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupLevel), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -34538,6 +35809,11 @@ public partial class CacheHierarchyExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -34608,6 +35884,13 @@ public partial class CacheHierarchyExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -34667,6 +35950,11 @@ public partial class CalculatedMemberExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -34737,6 +36025,13 @@ public partial class CalculatedMemberExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -34812,6 +36107,7 @@ public partial class Location : OpenXmlLeafElement
     public Location():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -34878,6 +36174,11 @@ public partial class PivotFields : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -34944,6 +36245,11 @@ public partial class RowFields : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Field), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35010,6 +36316,11 @@ public partial class RowItems : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowItem), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35076,6 +36387,11 @@ public partial class ColumnFields : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Field), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35142,6 +36458,11 @@ public partial class ColumnItems : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowItem), 1M, 1048576M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35208,6 +36529,11 @@ public partial class PageFields : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageField), 1M, 256M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35274,6 +36600,11 @@ public partial class DataFields : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataField), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35340,6 +36671,11 @@ public partial class Formats : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Format), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35406,6 +36742,11 @@ public partial class ConditionalFormats : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormat), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35472,6 +36813,11 @@ public partial class ChartFormats : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartFormat), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35538,6 +36884,11 @@ public partial class PivotHierarchies : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35609,6 +36960,7 @@ public partial class PivotTableStyle : OpenXmlLeafElement
     public PivotTableStyle():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -35675,6 +37027,11 @@ public partial class PivotFilters : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilter), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35741,6 +37098,11 @@ public partial class RowHierarchiesUsage : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowHierarchyUsage), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35807,6 +37169,11 @@ public partial class ColumnHierarchiesUsage : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchyUsage), 1M, 16384M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35866,6 +37233,11 @@ public partial class PivotTableDefinitionExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35938,6 +37310,14 @@ public partial class PivotTableDefinitionExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableData), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -35997,6 +37377,11 @@ public partial class DataFieldExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -36067,6 +37452,13 @@ public partial class DataFieldExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataField), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataField), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -36126,6 +37518,11 @@ public partial class PivotFilterExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -36240,6 +37637,14 @@ public partial class QueryTableRefresh : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableFields), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -36353,6 +37758,11 @@ public partial class QueryTableExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -36389,6 +37799,7 @@ public partial class SheetCalculationProperties : OpenXmlLeafElement
     public SheetCalculationProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -36448,6 +37859,11 @@ public partial class ProtectedRanges : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ProtectedRange), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -36528,6 +37944,11 @@ public partial class Scenarios : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Scenario), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -36594,6 +38015,11 @@ public partial class MergeCells : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MergeCell), 1M, 4294967294M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -36681,6 +38107,11 @@ public partial class DataValidations : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataValidation), 1M, 65534M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -36740,6 +38171,11 @@ public partial class Hyperlinks : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Hyperlink), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -36799,6 +38235,11 @@ public partial class CellWatches : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellWatch), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -36860,6 +38301,12 @@ public partial class IgnoredErrors : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IgnoredError), 1M, 9M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -36926,6 +38373,11 @@ public partial class TableParts : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TablePart), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -36985,6 +38437,11 @@ public partial class WorksheetExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorksheetExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -37067,6 +38524,19 @@ public partial class WorksheetExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataValidations), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SparklineGroups), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerList), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ProtectedRanges), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.IgnoredErrors), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.WebExtensions), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -37133,6 +38603,11 @@ public partial class NumberingFormats : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -37209,6 +38684,11 @@ public partial class Fonts : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0M, 65491M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -37275,6 +38755,11 @@ public partial class Fills : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 1M, 65430M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -37341,6 +38826,11 @@ public partial class Borders : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0M, 65430M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -37407,6 +38897,11 @@ public partial class CellStyleFormats : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), 1M, 65430M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -37473,6 +38968,11 @@ public partial class CellFormats : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), 1M, 65430M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -37539,6 +39039,11 @@ public partial class CellStyles : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyle), 1M, 65430M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -37605,6 +39110,11 @@ public partial class DifferentialFormats : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0M, 2147483647M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -37685,6 +39195,11 @@ public partial class TableStyles : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyle), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -37746,6 +39261,12 @@ public partial class Colors : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IndexedColors), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MruColors), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -37833,6 +39354,11 @@ public partial class StylesheetExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -37907,6 +39433,15 @@ public partial class StylesheetExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DifferentialFormats), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -37972,6 +39507,7 @@ public partial class FileVersion : OpenXmlLeafElement
     public FileVersion():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -38051,6 +39587,7 @@ public partial class FileSharing : OpenXmlLeafElement
     public FileSharing():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -38214,6 +39751,7 @@ public partial class WorkbookProperties : OpenXmlLeafElement
     public WorkbookProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -38336,6 +39874,7 @@ public partial class WorkbookProtection : OpenXmlLeafElement
     public WorkbookProtection():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -38395,6 +39934,11 @@ public partial class BookViews : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookView), 1M, 2147483647M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -38454,6 +39998,11 @@ public partial class Sheets : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), 1M, 32767M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -38520,6 +40069,11 @@ public partial class FunctionGroups : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FunctionGroup), 0M, 255M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -38579,6 +40133,11 @@ public partial class ExternalReferences : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalReference), 1M, 65534M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -38638,6 +40197,11 @@ public partial class DefinedNames : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DefinedName), 0M, 2147483647M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -38758,6 +40322,7 @@ public partial class CalculationProperties : OpenXmlLeafElement
     public CalculationProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -38795,6 +40360,7 @@ public partial class OleSize : OpenXmlLeafElement
     public OleSize():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -38854,6 +40420,11 @@ public partial class CustomWorkbookViews : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView), 1M, 2147483647M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -38913,6 +40484,11 @@ public partial class PivotCaches : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -39005,6 +40581,7 @@ public partial class WebPublishing : OpenXmlLeafElement
     public WebPublishing():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -39062,6 +40639,7 @@ public partial class FileRecoveryProperties : OpenXmlLeafElement
     public FileRecoveryProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -39128,6 +40706,11 @@ public partial class WebPublishObjects : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishObject), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -39187,6 +40770,11 @@ public partial class WorkbookExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -39275,6 +40863,22 @@ public partial class WorkbookExtension : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCaches), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCaches), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataModel), 1M, 1M),
+    new AnyParticle(0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>

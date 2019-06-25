@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Presentation;
@@ -69,6 +70,13 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -192,6 +200,12 @@ public partial class Transform2D : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -286,6 +300,14 @@ public partial class ExtensionListModify : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Sequence, 0M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0M, global::System.Decimal.MaxValue)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -369,6 +391,14 @@ public partial class Media : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -681,6 +711,7 @@ public partial class RippleTransition : OpenXmlLeafElement
     public RippleTransition():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -798,6 +829,7 @@ public partial class PrismTransition : OpenXmlLeafElement
     public PrismTransition():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -917,6 +949,7 @@ public partial class GlitterTransition : OpenXmlLeafElement
     public GlitterTransition():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -954,6 +987,7 @@ public partial class WarpTransition : OpenXmlLeafElement
     public WarpTransition():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -998,6 +1032,7 @@ public partial class FlythroughTransition : OpenXmlLeafElement
     public FlythroughTransition():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1043,6 +1078,7 @@ public partial class ShredTransition : OpenXmlLeafElement
     public ShredTransition():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1087,6 +1123,7 @@ public partial class RevealTransition : OpenXmlLeafElement
     public RevealTransition():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1123,6 +1160,7 @@ public partial class WheelReverseTransition : OpenXmlLeafElement
     public WheelReverseTransition():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1168,6 +1206,7 @@ public partial class BookmarkTarget : OpenXmlLeafElement
     public BookmarkTarget():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1227,6 +1266,11 @@ public partial class SectionProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1286,6 +1330,11 @@ public partial class SectionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Section), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1322,6 +1371,7 @@ public partial class BrowseMode : OpenXmlLeafElement
     public BrowseMode():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1391,6 +1441,19 @@ public partial class LaserColor : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 1M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -1508,6 +1571,7 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
     public DefaultImageDpi():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1545,6 +1609,7 @@ public partial class DiscardImageEditData : OpenXmlLeafElement
     public DiscardImageEditData():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1582,6 +1647,7 @@ public partial class ShowMediaControls : OpenXmlLeafElement
     public ShowMediaControls():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1641,6 +1707,11 @@ public partial class LaserTraceList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1786,6 +1857,20 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
         /// <summary>
@@ -1979,6 +2064,13 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2088,6 +2180,12 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2203,6 +2301,21 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PlaceholderShape), 0M, 1M),
+    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromCD), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.WaveAudioFile), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromFile), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.VideoFromFile), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile), 1M, 1M)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2261,6 +2374,7 @@ public partial class MediaBookmark : OpenXmlLeafElement
     public MediaBookmark():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2304,6 +2418,7 @@ public partial class MediaTrim : OpenXmlLeafElement
     public MediaTrim():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2347,6 +2462,7 @@ public partial class MediaFade : OpenXmlLeafElement
     public MediaFade():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2406,6 +2522,11 @@ public partial class MediaBookmarkList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2465,6 +2586,14 @@ public partial class ExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Sequence, 0M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0M, global::System.Decimal.MaxValue)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2547,6 +2676,11 @@ public partial class SectionOld : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2600,6 +2734,7 @@ public partial class SectionSlideIdListEntry : OpenXmlLeafElement
     public SectionSlideIdListEntry():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2659,6 +2794,11 @@ public partial class SectionSlideIdList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdListEntry), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2735,6 +2875,12 @@ public partial class Section : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2818,6 +2964,7 @@ public partial class TracePoint : OpenXmlLeafElement
     public TracePoint():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2877,6 +3024,11 @@ public partial class TracePointList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2931,6 +3083,7 @@ public partial class TriggerEventRecord : OpenXmlLeafElement
     public TriggerEventRecord():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -3114,6 +3267,7 @@ public partial class SeekEventRecord : OpenXmlLeafElement
     public SeekEventRecord():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -3159,6 +3313,7 @@ public partial class NullEventRecord : OpenXmlLeafElement
     public NullEventRecord():base(){}
     
     
+
     
     
     /// <inheritdoc/>

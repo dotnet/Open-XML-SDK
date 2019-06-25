@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Office2010.Ink;
 
@@ -49,6 +50,7 @@ public partial class DerivedFrom : OpenXmlLeafElement
     public DerivedFrom():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -114,6 +116,11 @@ public partial class Info : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new AnyParticle(XsdAnyPrefidefinedValue.Other, 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -210,6 +217,12 @@ public partial class Lattice : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Arc), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Node), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -249,6 +262,7 @@ public partial class Literal : OpenXmlLeafTextElement
     {
 		return new StringValue(){ InnerText = text };
     }
+
 
     
     
@@ -553,6 +567,15 @@ public partial class Interpretation : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Lattice), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Literal), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNode), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -847,6 +870,16 @@ public partial class OneOf : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1136,6 +1169,17 @@ public partial class Group : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.GroupInfo), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1423,6 +1467,16 @@ public partial class Sequence : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1488,6 +1542,11 @@ public partial class GroupInfo : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new AnyParticle(XsdAnyPrefidefinedValue.Other, 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1553,6 +1612,14 @@ public partial class Derivation : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1600,6 +1667,7 @@ public partial class Grammar : OpenXmlLeafElement
     public Grammar():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1674,6 +1742,11 @@ public partial class Model : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new AnyParticle(XsdAnyPrefidefinedValue.Other, 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1742,6 +1815,11 @@ public partial class EndPointInfo : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPoint), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1898,6 +1976,11 @@ public partial class EndPoint : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new AnyParticle(XsdAnyPrefidefinedValue.Other, 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1986,6 +2069,11 @@ public partial class Node : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2155,6 +2243,11 @@ public partial class Arc : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2238,6 +2331,19 @@ public partial class Emma : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Derivation), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Grammar), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Model), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPointInfo), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>

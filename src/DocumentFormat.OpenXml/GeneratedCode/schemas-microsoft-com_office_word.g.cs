@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Vml.Wordprocessing
@@ -196,6 +197,7 @@ public partial class TextWrap : OpenXmlLeafElement
     public TextWrap():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -225,6 +227,7 @@ public partial class AnchorLock : OpenXmlLeafElement
     public AnchorLock():base(){}
     
     
+
     
     
     /// <inheritdoc/>

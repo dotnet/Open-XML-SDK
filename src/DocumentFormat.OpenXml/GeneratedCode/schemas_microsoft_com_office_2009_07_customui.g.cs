@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Office2010.CustomUI
@@ -236,6 +237,7 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     public ControlCloneRegular():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -501,6 +503,7 @@ public partial class ButtonRegular : OpenXmlLeafElement
     public ButtonRegular():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -720,6 +723,7 @@ public partial class CheckBox : OpenXmlLeafElement
     public CheckBox():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1165,6 +1169,12 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Item), 0M, 1000M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 0M, 16M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1438,6 +1448,7 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     public ToggleButtonRegular():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1539,6 +1550,7 @@ public partial class MenuSeparator : OpenXmlLeafElement
     public MenuSeparator():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1727,6 +1739,16 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton), 1M, 1M)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2037,6 +2059,22 @@ public partial class MenuRegular : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1000M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2310,6 +2348,7 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     public DynamicMenuRegular():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2498,6 +2537,16 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton), 1M, 1M)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2808,6 +2857,22 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1000M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonWithTitle), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2893,6 +2958,7 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     public MenuSeparatorNoTitle():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -3157,6 +3223,7 @@ public partial class ControlClone : OpenXmlLeafElement
     public ControlClone():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -3343,6 +3410,7 @@ public partial class LabelControl : OpenXmlLeafElement
     public LabelControl():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -3623,6 +3691,7 @@ public partial class Button : OpenXmlLeafElement
     public Button():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -3911,6 +3980,7 @@ public partial class ToggleButton : OpenXmlLeafElement
     public ToggleButton():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -4184,6 +4254,7 @@ public partial class EditBox : OpenXmlLeafElement
     public EditBox():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -4549,6 +4620,11 @@ public partial class ComboBox : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Item), 0M, 1000M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -4916,6 +4992,12 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Item), 0M, 1000M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 0M, 16M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -5376,6 +5458,12 @@ public partial class Gallery : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Item), 0M, 1000M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 0M, 16M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -5701,6 +5789,22 @@ public partial class Menu : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1000M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -5989,6 +6093,7 @@ public partial class DynamicMenu : OpenXmlLeafElement
     public DynamicMenu():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -6192,6 +6297,16 @@ public partial class SplitButton : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton), 1M, 1M)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -6355,6 +6470,24 @@ public partial class Box : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Button), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.EditBox), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Gallery), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Menu), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Box), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonGroup), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -6499,6 +6632,21 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1000M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Separator), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -6669,6 +6817,7 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     public BackstageMenuButton():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -6816,6 +6965,7 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     public BackstageMenuCheckBox():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -7001,6 +7151,14 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1000M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -7172,6 +7330,7 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     public BackstageMenuToggleButton():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -7372,6 +7531,7 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     public BackstageGroupButton():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -7558,6 +7718,7 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     public BackstageCheckBox():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -7719,6 +7880,7 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     public BackstageEditBox():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -7958,6 +8120,11 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem), 0M, 1000M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -8157,6 +8324,11 @@ public partial class RadioGroup : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.RadioButtonBackstageItem), 0M, 1000M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -8364,6 +8536,11 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem), 0M, 1000M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -8573,6 +8750,7 @@ public partial class Hyperlink : OpenXmlLeafElement
     public Hyperlink():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -8693,6 +8871,7 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     public BackstageLabelControl():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -8819,6 +8998,24 @@ public partial class GroupBox : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1000M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -8943,6 +9140,24 @@ public partial class LayoutContainer : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1000M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -9066,6 +9281,7 @@ public partial class ImageControl : OpenXmlLeafElement
     public ImageControl():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -9270,6 +9486,16 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.PrimaryItem), 0M, 1M)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TopItemsGroupControls), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BottomItemsGroupControls), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -9462,6 +9688,11 @@ public partial class TaskGroup : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupCategory), 0M, 100M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -9560,6 +9791,22 @@ public partial class MenuRoot : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1000M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -9796,6 +10043,7 @@ public partial class Item : OpenXmlLeafElement
     public Item():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -10046,6 +10294,7 @@ public partial class VisibleButton : OpenXmlLeafElement
     public VisibleButton():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -10304,6 +10553,7 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     public VisibleToggleButton():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -10404,6 +10654,7 @@ public partial class Separator : OpenXmlLeafElement
     public Separator():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -10463,6 +10714,11 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -10748,6 +11004,29 @@ public partial class Group : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1000M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Button), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.EditBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Gallery), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Menu), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Box), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonGroup), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Separator), 1M, 1M)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DialogBoxLauncher), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -11012,6 +11291,7 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     public ControlCloneQat():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -11344,6 +11624,14 @@ public partial class Tab : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 100M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Group), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -11427,6 +11715,11 @@ public partial class TabSet : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Tab), 0M, 50M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -11487,6 +11780,7 @@ public partial class Command : OpenXmlLeafElement
     public Command():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -11548,6 +11842,12 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -11635,6 +11935,11 @@ public partial class Tabs : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Tab), 1M, 100M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -11694,6 +11999,11 @@ public partial class ContextualTabs : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TabSet), 1M, 100M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -11777,6 +12087,22 @@ public partial class ContextMenu : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1000M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparatorNoTitle), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -12053,6 +12379,7 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     public BackstageRegularButton():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -12254,6 +12581,14 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1000M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -12366,6 +12701,17 @@ public partial class BackstageMenuGroup : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1000M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuButton), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuCheckBox), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageSubMenu), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuToggleButton), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -12427,6 +12773,12 @@ public partial class PrimaryItem : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -12803,6 +13155,11 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupTask), 0M, 1000M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -13013,6 +13370,7 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     public TaskGroupTask():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -13167,6 +13525,11 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupTask), 0M, 1000M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -13392,6 +13755,11 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup), 0M, 1000M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -13552,6 +13920,11 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupCategory), 0M, 100M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -13615,6 +13988,19 @@ public partial class BackstageGroups : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroup), 1M, 1M)
+    },
+    new CompositeParticle(ParticleType.Choice, 0M, 1000M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -13676,6 +14062,12 @@ public partial class SimpleGroups : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -13919,6 +14311,12 @@ public partial class BackstageTab : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroups), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -14141,6 +14539,7 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     public BackstageFastCommandButton():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -14200,6 +14599,11 @@ public partial class Commands : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Command), 1M, 5000M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -14270,6 +14674,13 @@ public partial class Ribbon : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.All)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Tabs), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
         /// <summary>
@@ -14388,6 +14799,15 @@ public partial class Backstage : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 255M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageTab), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageFastCommandButton), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -14447,6 +14867,11 @@ public partial class ContextMenus : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenu), 1M, 1000M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>

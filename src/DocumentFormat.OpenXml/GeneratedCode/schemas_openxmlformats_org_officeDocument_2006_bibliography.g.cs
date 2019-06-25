@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Bibliography
@@ -86,6 +87,11 @@ public partial class Sources : OpenXmlPartRootElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Source), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -149,6 +155,13 @@ public partial class Person : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.First), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Middle), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2152,6 +2165,11 @@ public partial class NameList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -3232,6 +3250,29 @@ public partial class AuthorList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Artist), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Author), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookAuthor), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Compiler), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Composer), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Conductor), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Counsel), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Director), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Editor), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewee), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewer), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Inventor), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Performer), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProducerName), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Translator), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Writer), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
         /// <summary>
@@ -3483,6 +3524,7 @@ public partial class SourceType : OpenXmlLeafTextElement
 		return new EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -3644,6 +3686,65 @@ public partial class Source : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AlbumTitle), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AuthorList), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookTitle), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Broadcaster), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BroadcastTitle), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CaseNumber), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ChapterNumber), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.City), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Comments), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ConferenceName), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CountryRegion), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Court), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Day), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.DayAccessed), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Department), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Distributor), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Edition), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.GuidString), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Institution), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.InternetSiteTitle), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Issue), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.JournalName), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.LcId), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Medium), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Month), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.MonthAccessed), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NumberVolumes), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Pages), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentNumber), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PeriodicalTitle), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProductionCompany), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PublicationTitle), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Publisher), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.RecordingNumber), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ReferenceOrder), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Reporter), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.SourceType), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ShortTitle), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StandardNumber), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StateProvince), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Station), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Tag), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Theater), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ThesisType), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Title), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentType), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.UrlString), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Version), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Volume), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Year), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.YearAccessed), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
         /// <summary>

@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -210,6 +211,8 @@ namespace DocumentFormat.OpenXml
         /// Gets the OpenXmlEementContext from the root element.
         /// </summary>
         internal virtual OpenXmlElementContext RootElementContext => Parent?.RootElementContext;
+
+        internal virtual ParticleConstraint ParticleConstraint { get; }
 
         /// <summary>
         /// Gets the first child of the OpenXmlElement element.

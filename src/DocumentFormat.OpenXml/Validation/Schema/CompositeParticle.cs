@@ -1,6 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -11,13 +14,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// <remarks>
     /// </remarks>
     [DebuggerDisplay("ParticleType={ParticleType}")]
-    internal class CompositeParticle : ParticleConstraint
+    internal class CompositeParticle : ParticleConstraint, IEnumerable<ParticleConstraint>
     {
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private ParticleType _particleType;
-
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private ParticleConstraint[] _childrenParticles;
+        private List<ParticleConstraint> _childrenParticles;
 
         private IParticleValidator _particleValidator;
 
@@ -29,12 +29,30 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
         }
 
-        /// <inheritdoc/>
-        public override ParticleConstraint[] ChildrenParticles
+        /// <summary>
+        /// Initializes a new instance of the CompositeParticle.
+        /// </summary>
+        internal CompositeParticle(ParticleType particleType, decimal minOccurs, decimal maxOccurs)
+            : base(particleType, minOccurs, maxOccurs)
         {
-            get { return _childrenParticles; }
-            set { _childrenParticles = value; }
         }
+
+        public void Add(ParticleConstraint constraint)
+        {
+            if (_childrenParticles is null)
+            {
+                _childrenParticles = new List<ParticleConstraint>();
+            }
+
+            _childrenParticles.Add(constraint);
+        }
+
+        IEnumerator<ParticleConstraint> IEnumerable<ParticleConstraint>.GetEnumerator() => ChildrenParticles.GetEnumerator();
+
+        IEnumerator IEnumerable.GetEnumerator() => ChildrenParticles.GetEnumerator();
+
+        /// <inheritdoc/>
+        public override ReadOnlyList<ParticleConstraint> ChildrenParticles => _childrenParticles;
 
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator

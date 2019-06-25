@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.CustomXmlDataProperties
@@ -151,6 +152,7 @@ public partial class SchemaReference : OpenXmlLeafElement
     public SchemaReference():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -210,6 +212,11 @@ public partial class SchemaReferences : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>

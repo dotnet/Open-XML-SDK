@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.VariantTypes;
 
@@ -243,6 +244,19 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTArray), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTEmpty), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTNull), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTCurrency), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTError), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVStreamData), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>

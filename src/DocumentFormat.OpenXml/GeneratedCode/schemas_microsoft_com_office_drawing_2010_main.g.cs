@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 
@@ -47,6 +48,7 @@ public partial class CameraTool : OpenXmlLeafElement
     public CameraTool():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -83,6 +85,7 @@ public partial class CompatExtension : OpenXmlLeafElement
     public CompatExtension():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -120,6 +123,7 @@ public partial class IsCanvas : OpenXmlLeafElement
     public IsCanvas():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -201,6 +205,13 @@ public partial class GvmlContentPart : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Transform2D), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -278,6 +289,7 @@ public partial class ShadowObscured : OpenXmlLeafElement
     public ShadowObscured():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -347,6 +359,19 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 1M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -540,6 +565,31 @@ public partial class HiddenLineProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1M, 1M)
+    },
+    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetDash), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomDash), 1M, 1M)
+    },
+    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Round), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineJoinBevel), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Miter), 1M, 1M)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -601,6 +651,15 @@ public partial class HiddenEffectsProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new CompositeParticle(ParticleType.Choice, 1M, 1M)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1M, 1M),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1M, 1M)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -694,6 +753,14 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Camera), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LightRig), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Backdrop), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -847,6 +914,15 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BevelTop), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BevelBottom), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtrusionColor), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ContourColor), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -973,6 +1049,11 @@ public partial class ImageProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1024,6 +1105,7 @@ public partial class UseLocalDpi : OpenXmlLeafElement
     public UseLocalDpi():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1053,6 +1135,7 @@ public partial class TextMath : OpenXmlLeafElement
     public TextMath():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1112,6 +1195,11 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1241,6 +1329,11 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1321,6 +1414,7 @@ public partial class ForegroundMark : OpenXmlLeafElement
     public ForegroundMark():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1386,6 +1480,7 @@ public partial class BackgroundMark : OpenXmlLeafElement
     public BackgroundMark():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1423,6 +1518,7 @@ public partial class ArtisticBlur : OpenXmlLeafElement
     public ArtisticBlur():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1468,6 +1564,7 @@ public partial class ArtisticCement : OpenXmlLeafElement
     public ArtisticCement():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1513,6 +1610,7 @@ public partial class ArtisticChalkSketch : OpenXmlLeafElement
     public ArtisticChalkSketch():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1558,6 +1656,7 @@ public partial class ArtisticCrisscrossEtching : OpenXmlLeafElement
     public ArtisticCrisscrossEtching():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1603,6 +1702,7 @@ public partial class ArtisticCutout : OpenXmlLeafElement
     public ArtisticCutout():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1648,6 +1748,7 @@ public partial class ArtisticFilmGrain : OpenXmlLeafElement
     public ArtisticFilmGrain():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1693,6 +1794,7 @@ public partial class ArtisticGlass : OpenXmlLeafElement
     public ArtisticGlass():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1738,6 +1840,7 @@ public partial class ArtisticGlowDiffused : OpenXmlLeafElement
     public ArtisticGlowDiffused():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1783,6 +1886,7 @@ public partial class ArtisticGlowEdges : OpenXmlLeafElement
     public ArtisticGlowEdges():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1828,6 +1932,7 @@ public partial class ArtisticLightScreen : OpenXmlLeafElement
     public ArtisticLightScreen():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1873,6 +1978,7 @@ public partial class ArtisticLineDrawing : OpenXmlLeafElement
     public ArtisticLineDrawing():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1918,6 +2024,7 @@ public partial class ArtisticMarker : OpenXmlLeafElement
     public ArtisticMarker():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1963,6 +2070,7 @@ public partial class ArtisticMosaicBubbles : OpenXmlLeafElement
     public ArtisticMosaicBubbles():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2008,6 +2116,7 @@ public partial class ArtisticPaintStrokes : OpenXmlLeafElement
     public ArtisticPaintStrokes():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2053,6 +2162,7 @@ public partial class ArtisticPaintBrush : OpenXmlLeafElement
     public ArtisticPaintBrush():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2098,6 +2208,7 @@ public partial class ArtisticPastelsSmooth : OpenXmlLeafElement
     public ArtisticPastelsSmooth():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2143,6 +2254,7 @@ public partial class ArtisticPencilGrayscale : OpenXmlLeafElement
     public ArtisticPencilGrayscale():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2188,6 +2300,7 @@ public partial class ArtisticPencilSketch : OpenXmlLeafElement
     public ArtisticPencilSketch():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2233,6 +2346,7 @@ public partial class ArtisticPhotocopy : OpenXmlLeafElement
     public ArtisticPhotocopy():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2278,6 +2392,7 @@ public partial class ArtisticPlasticWrap : OpenXmlLeafElement
     public ArtisticPlasticWrap():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2323,6 +2438,7 @@ public partial class ArtisticTexturizer : OpenXmlLeafElement
     public ArtisticTexturizer():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2368,6 +2484,7 @@ public partial class ArtisticWatercolorSponge : OpenXmlLeafElement
     public ArtisticWatercolorSponge():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2465,6 +2582,12 @@ public partial class BackgroundRemoval : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ForegroundMark), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.BackgroundMark), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2510,6 +2633,7 @@ public partial class BrightnessContrast : OpenXmlLeafElement
     public BrightnessContrast():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2547,6 +2671,7 @@ public partial class ColorTemperature : OpenXmlLeafElement
     public ColorTemperature():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2584,6 +2709,7 @@ public partial class Saturation : OpenXmlLeafElement
     public Saturation():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2621,6 +2747,7 @@ public partial class SharpenSoften : OpenXmlLeafElement
     public SharpenSoften():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2739,6 +2866,37 @@ public partial class ImageEffect : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Saturation), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -3160,6 +3318,11 @@ public partial class ImageLayer : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -3260,6 +3423,13 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -3369,6 +3539,12 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -3458,6 +3634,12 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -3568,6 +3750,12 @@ public partial class Transform2D : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>

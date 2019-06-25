@@ -15,9 +15,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("ElementId={ElementId}")]
     internal class ElementParticle : ParticleConstraint, IParticleValidator
     {
-        private static readonly Lazy<Dictionary<int, Type>> _elementIdMapper = new Lazy<Dictionary<int, Type>>(() =>
+        private static readonly Lazy<Dictionary<Type, int>> _elementIdMapper = new Lazy<Dictionary<Type, int>>(() =>
         {
-            var dictionary = new Dictionary<int, Type>();
+            var dictionary = new Dictionary<Type, int>();
 
             foreach (var element in typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes())
             {
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     var attribute = element.GetTypeInfo().GetCustomAttribute<IdAttribute>();
 
-                    dictionary.Add(attribute.Id, element);
+                    dictionary.Add(element, attribute.Id);
                 }
             }
 
@@ -40,16 +40,20 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
         }
 
+        internal ElementParticle(Type type, decimal minOccurs, decimal maxOccurs)
+            : base(ParticleType.Element, minOccurs, maxOccurs)
+        {
+            ElementType = type;
+            ElementId = _elementIdMapper.Value[type];
+        }
+
         /// <inheritdoc/>
         internal override int ElementId { get; set; }
 
-        public override Type ElementType => _elementIdMapper.Value[ElementId];
+        public override Type ElementType { get; }
 
         /// <inheritdoc/>
-        internal override IParticleValidator ParticleValidator
-        {
-            get { return this; }
-        }
+        internal override IParticleValidator ParticleValidator => this;
 
         /// <inheritdoc/>
         public void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)

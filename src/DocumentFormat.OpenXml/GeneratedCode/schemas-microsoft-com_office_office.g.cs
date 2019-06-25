@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Vml;
 
@@ -161,6 +162,21 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.All)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColorMenu), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
         /// <summary>
@@ -378,6 +394,13 @@ public partial class ShapeLayout : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.All)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeIdMap), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RegroupTable), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Rules), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
         /// <summary>
@@ -549,6 +572,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     public SignatureLine():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -592,6 +616,7 @@ public partial class Ink : OpenXmlLeafElement
     public Ink():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -723,6 +748,11 @@ public partial class Diagram : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RelationTable), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -811,6 +841,7 @@ public partial class Skew : OpenXmlLeafElement
     public Skew():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1059,6 +1090,7 @@ public partial class Extrusion : OpenXmlLeafElement
     public Extrusion():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1188,6 +1220,7 @@ public partial class Callout : OpenXmlLeafElement
     public Callout():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1303,6 +1336,7 @@ public partial class Lock : OpenXmlLeafElement
     public Lock():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1417,6 +1451,12 @@ public partial class OleObject : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LinkType), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LockedField), 0M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1496,6 +1536,7 @@ public partial class Complex : OpenXmlLeafElement
     public Complex():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1872,6 +1913,7 @@ public partial class ClipPath : OpenXmlLeafElement
     public ClipPath():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1917,6 +1959,7 @@ public partial class FillExtendedProperties : OpenXmlLeafElement
     public FillExtendedProperties():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1962,6 +2005,7 @@ public partial class ShapeIdMap : OpenXmlLeafElement
     public ShapeIdMap():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2030,6 +2074,11 @@ public partial class RegroupTable : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Entry), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2098,6 +2147,11 @@ public partial class Rules : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Rule), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2141,6 +2195,7 @@ public partial class Entry : OpenXmlLeafElement
     public Entry():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2230,6 +2285,11 @@ public partial class Rule : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Proxy), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2298,6 +2358,11 @@ public partial class RelationTable : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Relation), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2360,6 +2425,7 @@ public partial class Relation : OpenXmlLeafElement
     public Relation():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2400,6 +2466,7 @@ public partial class LinkType : OpenXmlLeafTextElement
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Office.OleLinkValues>(){ InnerText = text };
     }
+
 
     
     
@@ -2442,6 +2509,7 @@ public partial class LockedField : OpenXmlLeafTextElement
 		return new TrueFalseBlankValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -2481,6 +2549,7 @@ public partial class FieldCodes : OpenXmlLeafTextElement
     {
 		return new StringValue(){ InnerText = text };
     }
+
 
     
     
@@ -2542,6 +2611,7 @@ public partial class Proxy : OpenXmlLeafElement
     public Proxy():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2587,6 +2657,7 @@ public partial class ColorMostRecentlyUsed : OpenXmlLeafElement
     public ColorMostRecentlyUsed():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2653,6 +2724,7 @@ public partial class ColorMenu : OpenXmlLeafElement
     public ColorMenu():base(){}
     
     
+
     
     
     /// <inheritdoc/>

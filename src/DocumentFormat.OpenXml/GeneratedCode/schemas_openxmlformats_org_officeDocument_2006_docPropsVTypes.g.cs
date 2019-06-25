@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.VariantTypes
@@ -130,6 +131,20 @@ public partial class Variant : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTArray), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTEmpty), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTNull), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTCurrency), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTError), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVStreamData), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -702,6 +717,15 @@ public partial class VTVector : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTCurrency), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTError), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -817,6 +841,13 @@ public partial class VTArray : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTError), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTCurrency), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1062,6 +1093,7 @@ public partial class VTEmpty : OpenXmlLeafElement
     public VTEmpty():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1091,6 +1123,7 @@ public partial class VTNull : OpenXmlLeafElement
     public VTNull():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1132,6 +1165,7 @@ public partial class VTByte : OpenXmlLeafTextElement
 		return new SByteValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -1172,6 +1206,7 @@ public partial class VTShort : OpenXmlLeafTextElement
     {
 		return new Int16Value(){ InnerText = text };
     }
+
 
     
     
@@ -1286,6 +1321,7 @@ public partial class VTInt64 : OpenXmlLeafTextElement
 		return new Int64Value(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -1327,6 +1363,7 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
 		return new ByteValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -1367,6 +1404,7 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
     {
 		return new UInt16Value(){ InnerText = text };
     }
+
 
     
     
@@ -1481,6 +1519,7 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
 		return new UInt64Value(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -1521,6 +1560,7 @@ public partial class VTFloat : OpenXmlLeafTextElement
     {
 		return new SingleValue(){ InnerText = text };
     }
+
 
     
     
@@ -1563,6 +1603,7 @@ public partial class VTDouble : OpenXmlLeafTextElement
 		return new DoubleValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -1603,6 +1644,7 @@ public partial class VTDecimal : OpenXmlLeafTextElement
     {
 		return new DecimalValue(){ InnerText = text };
     }
+
 
     
     
@@ -1822,6 +1864,7 @@ public partial class VTBool : OpenXmlLeafTextElement
 		return new BooleanValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -1863,6 +1906,7 @@ public partial class VTCurrency : OpenXmlLeafTextElement
 		return new StringValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -1903,6 +1947,7 @@ public partial class VTError : OpenXmlLeafTextElement
     {
 		return new StringValue(){ InnerText = text };
     }
+
 
     
     
@@ -1953,6 +1998,7 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
 		return new Base64BinaryValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -1993,6 +2039,7 @@ public partial class VTClassId : OpenXmlLeafTextElement
     {
 		return new StringValue(){ InnerText = text };
     }
+
 
     
     
@@ -2049,6 +2096,7 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
+
 
     
     

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Office.Word
@@ -151,6 +152,11 @@ public partial class Mcds : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Mcd), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -323,6 +329,11 @@ public partial class MailMergeRecipients : OpenXmlPartRootElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord), 1M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -381,6 +392,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     public FixedCommandKeyboardCustomization():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -571,6 +583,7 @@ public partial class CharacterInsertion : OpenXmlLeafElement
     public CharacterInsertion():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -687,6 +700,15 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization), 1M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.CharacterInsertion), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -820,6 +842,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     public AllocatedCommand():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -896,6 +919,7 @@ public partial class Mcd : OpenXmlLeafElement
     public Mcd():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1434,6 +1458,8 @@ public partial class DocEvents : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence) { };
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1664,6 +1690,11 @@ public partial class AllocatedCommandManifest : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1703,6 +1734,7 @@ public partial class ToolbarData : OpenXmlLeafElement
     public ToolbarData():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1918,6 +1950,12 @@ public partial class Toolbars : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest), 0M, global::System.Decimal.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.ToolbarData), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1977,6 +2015,11 @@ public partial class AllocatedCommands : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommand), 0M, global::System.Decimal.MaxValue)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2015,6 +2058,7 @@ public partial class RecordIncluded : OpenXmlLeafElement
     public RecordIncluded():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2054,6 +2098,7 @@ public partial class RecordHashCode : OpenXmlLeafElement
     public RecordHashCode():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2115,6 +2160,12 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.RecordIncluded), 0M, 1M),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.RecordHashCode), 1M, 1M)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>

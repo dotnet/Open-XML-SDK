@@ -1,7 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -26,6 +28,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             //this.MinOccurs = 1;
         }
 
+        protected ParticleConstraint(ParticleType type, decimal minOccurs, decimal maxOccurs)
+        {
+            ParticleType = type;
+            MinOccurs = minOccurs > int.MaxValue ? int.MaxValue : (int)minOccurs;
+            MaxOccurs = maxOccurs > int.MaxValue ? int.MaxValue : (int)maxOccurs;
+        }
+
         /// <summary>
         /// Gets the type of the particle.
         /// </summary>
@@ -45,28 +54,19 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets a value indicating whether the maxOccurs is unbounded.
         /// </summary>
-        internal bool UnboundedMaxOccurs
-        {
-            get { return MaxOccurs == 0; }
-        }
+        internal bool UnboundedMaxOccurs => MaxOccurs == 0;
 
         /// <summary>
         /// Gets a value indicating whether maxOccurs is unbounded or maxOccurs > 1
         /// </summary>
-        internal bool CanOccursMoreThanOne
-        {
-            get { return UnboundedMaxOccurs || MaxOccurs > 1; }
-        }
+        internal bool CanOccursMoreThanOne => UnboundedMaxOccurs || MaxOccurs > 1;
 
         /// <summary>
         /// Test whether the count is valid.
         /// </summary>
         /// <param name="count">The count of the occurs.</param>
         /// <returns>Returns true if maxOccurs="unbounded" or this.MaxOccurs>count.</returns>
-        internal bool MaxOccursGreaterThan(int count)
-        {
-            return UnboundedMaxOccurs || MaxOccurs > count;
-        }
+        internal bool MaxOccursGreaterThan(int count) => UnboundedMaxOccurs || MaxOccurs > count;
 
         /// <summary>
         /// Gets or sets the type ID of the OpenXmlElement if the ParticleType == ParticleType.Element.
@@ -83,24 +83,17 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public virtual Type ElementType => null;
 
         /// <summary>
-        /// Gets or sets the children particles.
+        /// Gets the children particles.
         /// </summary>
         /// <remarks>
         /// be null if the ParticleType == ParticleType.Element || ParticleType=ParticleType.Any
         /// </remarks>
-        public virtual ParticleConstraint[] ChildrenParticles
-        {
-            get { return null; }
-            set { throw new InvalidOperationException(); }
-        }
+        public virtual ReadOnlyList<ParticleConstraint> ChildrenParticles => null;
 
         /// <summary>
         /// Gets a ParticleValidator for this particle constraint.
         /// </summary>
-        internal virtual IParticleValidator ParticleValidator
-        {
-            get { return null; }
-        }
+        internal virtual IParticleValidator ParticleValidator => null;
 
         /// <summary>
         /// Test whether this is a simple particle - the particle contains only elements as children.
@@ -110,24 +103,21 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             bool isSimple = true;
 
-            if (ChildrenParticles != null)
+            foreach (var constraint in ChildrenParticles)
             {
-                foreach (var constraint in ChildrenParticles)
+                if (constraint.ParticleType == ParticleType.All ||
+                    constraint.ParticleType == ParticleType.Choice ||
+                    constraint.ParticleType == ParticleType.Group ||
+                    constraint.ParticleType == ParticleType.Sequence ||
+                    constraint.ParticleType == ParticleType.Any ||
+                    constraint.ParticleType == ParticleType.AnyWithUri)
                 {
-                    if (constraint.ParticleType == ParticleType.All ||
-                        constraint.ParticleType == ParticleType.Choice ||
-                        constraint.ParticleType == ParticleType.Group ||
-                        constraint.ParticleType == ParticleType.Sequence ||
-                        constraint.ParticleType == ParticleType.Any ||
-                        constraint.ParticleType == ParticleType.AnyWithUri)
-                    {
-                        // there are sequence particles without any children.
-                        // Debug.Assert(constraint.ChildrenParticles != null && constraint.ChildrenParticles.Length > 0);
-                        isSimple = false;
-                    }
-                    else
-                    {
-                    }
+                    // there are sequence particles without any children.
+                    // Debug.Assert(constraint.ChildrenParticles != null && constraint.ChildrenParticles.Length > 0);
+                    isSimple = false;
+                }
+                else
+                {
                 }
             }
 
@@ -146,19 +136,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 var parent = ParticleType == p.ParticleType
                     && MinOccurs == p.MinOccurs
                     && MaxOccurs == p.MaxOccurs
-                    && ElementId == p.ElementId;
+                    && ElementId == p.ElementId
+                    && ChildrenParticles.Length != p.ChildrenParticles.Length;
 
                 if (!parent)
-                {
-                    return false;
-                }
-
-                if (ChildrenParticles == null && p.ChildrenParticles == null)
-                {
-                    return true;
-                }
-
-                if (ChildrenParticles?.Length != p.ChildrenParticles?.Length)
                 {
                     return false;
                 }
@@ -184,7 +165,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 ParticleType,
                 MinOccurs,
                 MaxOccurs,
-                ElementId
+                ElementId,
+                ChildrenParticles.Length,
             }.GetHashCode();
         }
 
