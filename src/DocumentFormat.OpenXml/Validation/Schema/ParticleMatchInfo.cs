@@ -9,18 +9,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// Information about particle match.
     /// </summary>
     [DebuggerDisplay("Match={Match}")]
-    internal partial class ParticleMatchInfo
+    internal class ParticleMatchInfo
     {
-        static partial void IncressInstanceCount();
-
         /// <summary>
         /// Initializes a new instance of the ParticleMatchInfo.
         /// </summary>
         internal ParticleMatchInfo()
         {
             Match = ParticleMatch.Nomatch;
-
-            IncressInstanceCount();
         }
 
         /// <summary>
@@ -31,8 +27,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             Match = ParticleMatch.Nomatch;
             StartElement = startElement;
-
-            IncressInstanceCount();
         }
 
         /// <summary>

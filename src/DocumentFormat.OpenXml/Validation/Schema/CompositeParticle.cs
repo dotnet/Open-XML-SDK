@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -30,10 +31,34 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 if (_particleValidator == null)
                 {
-                    _particleValidator = Schema.ParticleValidator.CreateParticleValidator(this);
+                    _particleValidator = CreateParticleValidator();
                 }
 
                 return _particleValidator;
+            }
+        }
+
+        private ParticleValidator CreateParticleValidator()
+        {
+            switch (ParticleType)
+            {
+                case ParticleType.All:
+                    return new AllParticleValidator(this);
+
+                case ParticleType.Choice:
+                    return new ChoiceParticleValidator(this);
+
+                case ParticleType.Sequence:
+                    return new SequenceParticleValidator(this);
+
+                case ParticleType.Group:
+                    return new GroupParticleValidator(this);
+
+                //case ParticleType.Any:
+                //    return new AnyParticleValidator(particleConstraint);
+                case ParticleType.Element:
+                default:
+                    throw new InvalidOperationException();
             }
         }
 
