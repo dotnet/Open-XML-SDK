@@ -93,7 +93,6 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
             {
                 var properties = base.CreateProperties(type, memberSerialization);
-                var children = default(JsonProperty);
 
                 foreach (var prop in properties)
                 {
@@ -103,31 +102,11 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                     }
                     else if (prop.PropertyName == nameof(ParticleConstraint.ChildrenParticles))
                     {
-                        children = prop;
                         prop.DefaultValue = Cached.Array<ParticleConstraint>();
                     }
                 }
 
-                if (children != null)
-                {
-                    properties.Remove(children);
-                    properties.Insert(0, children);
-                }
-
                 return properties;
-            }
-        }
-
-        private class ParticleConstraintConverter : JsonConverter<ParticleConstraint>
-        {
-            public override ParticleConstraint ReadJson(JsonReader reader, Type objectType, ParticleConstraint existingValue, bool hasExistingValue, JsonSerializer serializer)
-            {
-                throw new NotImplementedException();
-            }
-
-            public override void WriteJson(JsonWriter writer, ParticleConstraint value, JsonSerializer serializer)
-            {
-                serializer.Serialize(writer, value);
             }
         }
 
@@ -169,10 +148,6 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         private class TypeNameConverter : JsonConverter<Type>
         {
-            public override bool CanWrite => true;
-
-            public override bool CanRead => base.CanRead;
-
             public override Type ReadJson(JsonReader reader, Type objectType, Type existingValue, bool hasExistingValue, JsonSerializer serializer)
             {
                 var name = reader.Value.ToString();
