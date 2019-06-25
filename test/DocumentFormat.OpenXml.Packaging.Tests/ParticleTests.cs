@@ -94,13 +94,13 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 }
             }
 
-            using (var stream = typeof(ParticleTests).GetTypeInfo().Assembly.GetManifestResourceStream("DocumentFormat.OpenXml.Packaging.Tests.data.Particles.json"))
-            using (var streamReader = new StreamReader(stream))
-            using (var fs = File.OpenRead(tmp))
-            using (var fsReader = new StreamReader(fs))
+            using (var expectedStream = typeof(ParticleTests).GetTypeInfo().Assembly.GetManifestResourceStream("DocumentFormat.OpenXml.Packaging.Tests.data.Particles.json"))
+            using (var expectedStreamReader = new StreamReader(expectedStream))
+            using (var actualStream = File.OpenRead(tmp))
+            using (var actualStreamReader = new StreamReader(actualStream))
             {
-                var expected = streamReader.ReadToEnd();
-                var actual = fsReader.ReadToEnd();
+                var expected = expectedStreamReader.ReadToEnd();
+                var actual = actualStreamReader.ReadToEnd();
 
                 Assert.Equal(expected, actual);
             }
@@ -120,7 +120,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                     }
                     else if (prop.PropertyName == nameof(ParticleConstraint.ChildrenParticles))
                     {
-                        prop.DefaultValue = Cached.Array<ParticleConstraint>();
+                        prop.PropertyType = typeof(IEnumerable<ParticleConstraint>);
+                        prop.ShouldSerialize = c => ((ParticleConstraint)c).ChildrenParticles.Any();
                     }
                 }
 

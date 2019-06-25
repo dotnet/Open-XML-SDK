@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Initializes a new instance of the ParticleConstraint.
         /// </summary>
-        internal ParticleConstraint(ParticleType type, int minOccurs, int maxOccurs)
+        protected ParticleConstraint(ParticleType type, int minOccurs, int maxOccurs)
         {
             ParticleType = type;
             MinOccurs = minOccurs;
@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets the children particles.
         /// </summary>
-        public ParticleConstraint[] ChildrenParticles => _children?.ToArray() ?? Cached.Array<ParticleConstraint>();
+        public ReadOnlyList<ParticleConstraint> ChildrenParticles => _children;
 
         /// <summary>
         /// Gets a ParticleValidator for this particle constraint.
