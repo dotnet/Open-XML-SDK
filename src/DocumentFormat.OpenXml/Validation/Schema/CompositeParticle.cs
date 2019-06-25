@@ -13,27 +13,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("ParticleType={ParticleType}")]
     internal class CompositeParticle : ParticleConstraint
     {
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private ParticleType _particleType;
-
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private ParticleConstraint[] _childrenParticles;
-
         private IParticleValidator _particleValidator;
 
         /// <summary>
         /// Initializes a new instance of the CompositeParticle.
         /// </summary>
         internal CompositeParticle(ParticleType particleType)
-            : base(particleType)
+            : base(particleType, 1, 1)
         {
-        }
-
-        /// <inheritdoc/>
-        public override ParticleConstraint[] ChildrenParticles
-        {
-            get { return _childrenParticles; }
-            set { _childrenParticles = value; }
         }
 
         /// <inheritdoc/>

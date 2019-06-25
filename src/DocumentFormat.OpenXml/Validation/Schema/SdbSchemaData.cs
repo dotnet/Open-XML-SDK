@@ -177,8 +177,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Load schema type constraint data for the specified element type ID.
         /// </summary>
-        /// <param name="openxmlTypeId"></param>
-        /// <returns>The constraint data of the schema type.</returns>
         public bool TryGetSchemaTypeData(int openxmlTypeId, out SchemaTypeData data)
         {
             if (openxmlTypeId < SdbClassIdToSchemaTypeIndex.StartClassId)
@@ -245,12 +243,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Debug.Assert(particleIndex >= 0);
             Debug.Assert(particleIndex < Particles.Length);
 
-            SdbParticleConstraint sdbParticleConstraint = Particles[particleIndex];
-            var particleConstraint = ParticleConstraint.CreateParticleConstraint(sdbParticleConstraint.ParticleType);
-
-            particleConstraint.MaxOccurs = sdbParticleConstraint.MaxOccurs;
-            particleConstraint.MinOccurs = sdbParticleConstraint.MinOccurs;
-            particleConstraint.ElementId = sdbParticleConstraint.ElementTypeId;
+            var sdbParticleConstraint = Particles[particleIndex];
+            var particleConstraint = CreateParticleConstraint(sdbParticleConstraint);
 
             if (sdbParticleConstraint.ChildrenCount > 0)
             {
@@ -258,22 +252,37 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                                 sdbParticleConstraint.ParticleType == ParticleType.Choice ||
                                 sdbParticleConstraint.ParticleType == ParticleType.Group ||
                                 sdbParticleConstraint.ParticleType == ParticleType.Sequence);
-                particleConstraint.ChildrenParticles = new ParticleConstraint[sdbParticleConstraint.ChildrenCount];
+
                 for (ushort i = 0; i < sdbParticleConstraint.ChildrenCount; i++)
                 {
                     ushort childIndex = ParticleIndexes[(ushort)(sdbParticleConstraint.ChildrenStartIndex + i)].ParticleIndex;
-                    particleConstraint.ChildrenParticles[i] = BuildParticleConstraint(childIndex);
+                    particleConstraint.Add(BuildParticleConstraint(childIndex));
                 }
-            }
-            else if (sdbParticleConstraint.ParticleType == ParticleType.All ||
-                        sdbParticleConstraint.ParticleType == ParticleType.Choice ||
-                        sdbParticleConstraint.ParticleType == ParticleType.Group ||
-                        sdbParticleConstraint.ParticleType == ParticleType.Sequence)
-            {
-                particleConstraint.ChildrenParticles = Cached.Array<ParticleConstraint>();
             }
 
             return particleConstraint;
+        }
+
+        private static ParticleConstraint CreateParticleConstraint(SdbParticleConstraint sdb)
+        {
+            switch (sdb.ParticleType)
+            {
+                case ParticleType.Element:
+                    return new ElementParticle(sdb.ElementTypeId, sdb.MinOccurs, sdb.MaxOccurs);
+
+                case ParticleType.Any:
+                    return new AnyParticle(sdb.ElementTypeId, sdb.MinOccurs, sdb.MaxOccurs);
+
+                case ParticleType.AnyWithUri:
+                    return new NsAnyParticle(sdb.ElementTypeId, sdb.MinOccurs, sdb.MaxOccurs);
+
+                case ParticleType.Invalid:
+                    Debug.Assert(sdb.ParticleType != ParticleType.Invalid);
+                    return null;
+
+                default:
+                    return new CompositeParticle(sdb.ParticleType);
+            }
         }
 
         /// <summary>

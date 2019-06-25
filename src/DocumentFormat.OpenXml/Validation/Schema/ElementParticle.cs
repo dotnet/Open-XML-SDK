@@ -35,21 +35,18 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Initializes a new instance of the ElementParticle.
         /// </summary>
-        internal ElementParticle()
-            : base(ParticleType.Element)
+        internal ElementParticle(int elementId, int minOccurs, int maxOccurs)
+            : base(ParticleType.Element, minOccurs, maxOccurs)
         {
+            ElementId = elementId;
         }
 
-        /// <inheritdoc/>
-        internal override int ElementId { get; set; }
+        internal override int ElementId { get; }
 
         public override Type ElementType => _elementIdMapper.Value[ElementId];
 
         /// <inheritdoc/>
-        internal override IParticleValidator ParticleValidator
-        {
-            get { return this; }
-        }
+        internal override IParticleValidator ParticleValidator => this;
 
         /// <inheritdoc/>
         public void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
@@ -142,7 +139,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public ExpectedChildren GetRequiredElements()
         {
-            ExpectedChildren requiredElements = new ExpectedChildren();
+            var requiredElements = new ExpectedChildren();
 
             if (MinOccurs > 0)
             {
@@ -162,7 +159,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public ExpectedChildren GetExpectedElements()
         {
-            ExpectedChildren expectedElements = new ExpectedChildren();
+            var expectedElements = new ExpectedChildren();
 
             expectedElements.Add(ElementType);
 

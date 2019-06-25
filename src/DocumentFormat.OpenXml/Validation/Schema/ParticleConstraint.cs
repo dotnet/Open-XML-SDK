@@ -1,8 +1,11 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Office2010.ExcelAc;
 using System;
-using System.Diagnostics;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -12,18 +15,18 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     /// <remarks>
     /// </remarks>
-    internal abstract class ParticleConstraint
+    internal abstract class ParticleConstraint : IEnumerable<ParticleConstraint>
     {
+        private List<ParticleConstraint> _children;
+
         /// <summary>
         /// Initializes a new instance of the ParticleConstraint.
         /// </summary>
-        internal ParticleConstraint(ParticleType type)
+        internal ParticleConstraint(ParticleType type, int minOccurs, int maxOccurs)
         {
             ParticleType = type;
-
-            // default minOccurs and maxOccurs are 1.
-            //this.MaxOccurs = 1;
-            //this.MinOccurs = 1;
+            MinOccurs = minOccurs;
+            MaxOccurs = maxOccurs;
         }
 
         /// <summary>
@@ -32,74 +35,61 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public ParticleType ParticleType { get; }
 
         /// <summary>
-        /// Gets or sets the minOccurs constraint.
+        /// Gets the minOccurs constraint.
         /// </summary>
-        public int MinOccurs { get; set; }
+        public int MinOccurs { get; }
 
         /// <summary>
-        /// Gets or sets the maxOccurs constraint.
+        /// Gets the maxOccurs constraint.
         /// 0 means "unbounded".
         /// </summary>
-        public int MaxOccurs { get; set; }
+        public int MaxOccurs { get; }
 
         /// <summary>
         /// Gets a value indicating whether the maxOccurs is unbounded.
         /// </summary>
-        internal bool UnboundedMaxOccurs
-        {
-            get { return MaxOccurs == 0; }
-        }
+        internal bool UnboundedMaxOccurs => MaxOccurs == 0;
 
         /// <summary>
         /// Gets a value indicating whether maxOccurs is unbounded or maxOccurs > 1
         /// </summary>
-        internal bool CanOccursMoreThanOne
-        {
-            get { return UnboundedMaxOccurs || MaxOccurs > 1; }
-        }
+        internal bool CanOccursMoreThanOne => UnboundedMaxOccurs || MaxOccurs > 1;
 
         /// <summary>
         /// Test whether the count is valid.
         /// </summary>
         /// <param name="count">The count of the occurs.</param>
         /// <returns>Returns true if maxOccurs="unbounded" or this.MaxOccurs>count.</returns>
-        internal bool MaxOccursGreaterThan(int count)
-        {
-            return UnboundedMaxOccurs || MaxOccurs > count;
-        }
+        internal bool MaxOccursGreaterThan(int count) => UnboundedMaxOccurs || MaxOccurs > count;
 
         /// <summary>
-        /// Gets or sets the type ID of the OpenXmlElement if the ParticleType == ParticleType.Element.
+        /// Gets the type ID of the OpenXmlElement if the ParticleType == ParticleType.Element.
         /// </summary>
         /// <remarks>
         /// TODO: change int to ushort?
         /// </remarks>
-        internal virtual int ElementId
-        {
-            get { return SdbData.InvalidId; }
-            set { Debug.Assert(value == SdbData.InvalidId); }
-        }
+        internal virtual int ElementId { get; }
 
         public virtual Type ElementType => null;
 
         /// <summary>
-        /// Gets or sets the children particles.
+        /// Gets the children particles.
         /// </summary>
-        /// <remarks>
-        /// be null if the ParticleType == ParticleType.Element || ParticleType=ParticleType.Any
-        /// </remarks>
-        public virtual ParticleConstraint[] ChildrenParticles
-        {
-            get { return null; }
-            set { throw new InvalidOperationException(); }
-        }
+        public ReadOnlyList<ParticleConstraint> ChildrenParticles => _children;
 
         /// <summary>
         /// Gets a ParticleValidator for this particle constraint.
         /// </summary>
-        internal virtual IParticleValidator ParticleValidator
+        internal virtual IParticleValidator ParticleValidator => null;
+
+        public void Add(ParticleConstraint constraint)
         {
-            get { return null; }
+            if (_children is null)
+            {
+                _children = new List<ParticleConstraint>();
+            }
+
+            _children.Add(constraint);
         }
 
         /// <summary>
@@ -110,24 +100,21 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             bool isSimple = true;
 
-            if (ChildrenParticles != null)
+            foreach (var constraint in ChildrenParticles)
             {
-                foreach (var constraint in ChildrenParticles)
+                if (constraint.ParticleType == ParticleType.All ||
+                    constraint.ParticleType == ParticleType.Choice ||
+                    constraint.ParticleType == ParticleType.Group ||
+                    constraint.ParticleType == ParticleType.Sequence ||
+                    constraint.ParticleType == ParticleType.Any ||
+                    constraint.ParticleType == ParticleType.AnyWithUri)
                 {
-                    if (constraint.ParticleType == ParticleType.All ||
-                        constraint.ParticleType == ParticleType.Choice ||
-                        constraint.ParticleType == ParticleType.Group ||
-                        constraint.ParticleType == ParticleType.Sequence ||
-                        constraint.ParticleType == ParticleType.Any ||
-                        constraint.ParticleType == ParticleType.AnyWithUri)
-                    {
-                        // there are sequence particles without any children.
-                        // Debug.Assert(constraint.ChildrenParticles != null && constraint.ChildrenParticles.Length > 0);
-                        isSimple = false;
-                    }
-                    else
-                    {
-                    }
+                    // there are sequence particles without any children.
+                    // Debug.Assert(constraint.ChildrenParticles != null && constraint.ChildrenParticles.Length > 0);
+                    isSimple = false;
+                }
+                else
+                {
                 }
             }
 
@@ -146,19 +133,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 var parent = ParticleType == p.ParticleType
                     && MinOccurs == p.MinOccurs
                     && MaxOccurs == p.MaxOccurs
-                    && ElementId == p.ElementId;
+                    && ElementId == p.ElementId
+                    && ChildrenParticles.Length == p.ChildrenParticles.Length;
 
                 if (!parent)
                 {
                     return false;
                 }
 
-                if (ChildrenParticles == null && p.ChildrenParticles == null)
-                {
-                    return true;
-                }
-
-                if (ChildrenParticles?.Length != p.ChildrenParticles?.Length)
+                if (ChildrenParticles.Length != p.ChildrenParticles.Length)
                 {
                     return false;
                 }
@@ -184,35 +167,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 ParticleType,
                 MinOccurs,
                 MaxOccurs,
-                ElementId
+                ElementId,
+                ChildrenParticles.Length,
             }.GetHashCode();
         }
 
-        /// <summary>
-        /// Create a ParticleConstraint for the specified ParticleType.
-        /// </summary>
-        /// <param name="particleType"></param>
-        /// <returns></returns>
-        internal static ParticleConstraint CreateParticleConstraint(ParticleType particleType)
-        {
-            switch (particleType)
-            {
-                case ParticleType.Element:
-                    return new ElementParticle();
+        IEnumerator<ParticleConstraint> IEnumerable<ParticleConstraint>.GetEnumerator() => ChildrenParticles.GetEnumerator();
 
-                case ParticleType.Any:
-                    return new AnyParticle();
-
-                case ParticleType.AnyWithUri:
-                    return new NsAnyParticle();
-
-                case ParticleType.Invalid:
-                    Debug.Assert(particleType != ParticleType.Invalid);
-                    return null;
-
-                default:
-                    return new CompositeParticle(particleType);
-            }
-        }
+        IEnumerator IEnumerable.GetEnumerator() => ChildrenParticles.GetEnumerator();
     }
 }
