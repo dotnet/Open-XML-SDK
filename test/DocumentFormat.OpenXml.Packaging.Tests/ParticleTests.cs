@@ -75,18 +75,15 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             var serializer = JsonSerializer.Create(settings);
 
-            using (var fs = File.OpenWrite($@"C:\Users\twsou\Projects\Software\Open-XML-SDK\test\DocumentFormat.OpenXml.Packaging.Tests\data\Particles.json"))
-            using (var textWriter = new StreamWriter(fs))
-            using (var writer = new JsonTextWriter(textWriter) { Indentation = 1 })
+            using (var fs = File.OpenWrite($@"C:\Users\tasou\Projects\Software\Open-XML-SDK\test\DocumentFormat.OpenXml.Packaging.Tests\data\Particles.json"))
             {
-                serializer.Serialize(writer, set.OrderBy(t => t.Key.FullName));
-            }
+                fs.SetLength(0);
 
-            using (var fs = File.OpenRead($@"C:\Users\twsou\Projects\Software\Open-XML-SDK\test\DocumentFormat.OpenXml.Packaging.Tests\data\Particles.json"))
-            using (var textReader = new StreamReader(fs))
-            using (var reader = new JsonTextReader(textReader))
-            {
-                var result = serializer.Deserialize<KeyValuePair<Type, VersionCollection<ParticleConstraint>>[]>(reader);
+                using (var textWriter = new StreamWriter(fs))
+                using (var writer = new JsonTextWriter(textWriter) { Indentation = 1 })
+                {
+                    serializer.Serialize(writer, set.OrderBy(t => t.Key.FullName));
+                }
             }
         }
 
