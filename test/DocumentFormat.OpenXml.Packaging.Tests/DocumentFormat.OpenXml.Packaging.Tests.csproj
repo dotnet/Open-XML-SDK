@@ -5,7 +5,6 @@
     <IsTestProject>true</IsTestProject>
     <NoWarn>$(NoWarn);CA1822</NoWarn>
     <IsPackable>false</IsPackable>
-    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
