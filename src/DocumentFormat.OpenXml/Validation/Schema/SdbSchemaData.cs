@@ -225,7 +225,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Debug.Assert(particleConstraint.ParticleType == ParticleType.All || particleConstraint.ParticleType == ParticleType.Any ||
                               particleConstraint.ParticleType == ParticleType.Choice || particleConstraint.ParticleType == ParticleType.Sequence ||
                               particleConstraint.ParticleType == ParticleType.Group); // <xsd:group ref="..." /> is valid under <xsd:complexType>
-                Debug.Assert(particleConstraint.ElementId == SdbData.InvalidId);
 
                 return particleConstraint;
             }

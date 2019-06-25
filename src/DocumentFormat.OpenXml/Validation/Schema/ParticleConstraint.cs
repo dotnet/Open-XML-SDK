@@ -63,16 +63,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal bool MaxOccursGreaterThan(int count) => UnboundedMaxOccurs || MaxOccurs > count;
 
         /// <summary>
-        /// Gets the type ID of the OpenXmlElement if the ParticleType == ParticleType.Element.
-        /// </summary>
-        /// <remarks>
-        /// TODO: change int to ushort?
-        /// </remarks>
-        internal virtual int ElementId { get; } = SdbData.InvalidId;
-
-        public virtual Type ElementType => null;
-
-        /// <summary>
         /// Gets the children particles.
         /// </summary>
         public ReadOnlyList<ParticleConstraint> ChildrenParticles => _children;
@@ -133,7 +123,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 var parent = ParticleType == p.ParticleType
                     && MinOccurs == p.MinOccurs
                     && MaxOccurs == p.MaxOccurs
-                    && ElementId == p.ElementId
                     && ChildrenParticles.Length == p.ChildrenParticles.Length;
 
                 if (!parent)
@@ -167,7 +156,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 ParticleType,
                 MinOccurs,
                 MaxOccurs,
-                ElementId,
                 ChildrenParticles.Length,
             }.GetHashCode();
         }
