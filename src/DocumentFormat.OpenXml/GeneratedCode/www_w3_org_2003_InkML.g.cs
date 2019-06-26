@@ -83,7 +83,7 @@ public partial class Ink : OpenXmlPartRootElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
@@ -357,10 +357,19 @@ public partial class Mapping : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Bind), 0, 0),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Table), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Matrix), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
+    new CompositeParticle(ParticleType.Sequence, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Bind), 0, 0),
+        new CompositeParticle(ParticleType.Choice, 0, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Table), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Matrix), 1, 1)
+        }
+    },
+    new CompositeParticle(ParticleType.Sequence, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
+    }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1972,7 +1981,7 @@ public partial class TraceGroup : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
@@ -2082,7 +2091,7 @@ public partial class TraceView : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
@@ -2392,7 +2401,7 @@ public partial class Definitions : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),

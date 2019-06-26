@@ -840,11 +840,17 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapNone), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom), 1, 1),
+    new CompositeParticle(ParticleType.Group, 1, 1)
+    {
+        new CompositeParticle(ParticleType.Choice, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapNone), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom), 1, 1)
+        }
+    },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1),
@@ -1259,54 +1265,16 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset), 0, 1)
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset), 0, 1)
+    }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-        /// <summary>
-    /// <para> Relative Horizontal Alignment.</para>
-    /// <para> Represents the following element tag in the schema: wp:align </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
-    /// </remark>
-	[Index(0)]
-    public HorizontalAlignment HorizontalAlignment
-	{
-        get => GetElement<HorizontalAlignment>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> Absolute Position Offset.</para>
-    /// <para> Represents the following element tag in the schema: wp:posOffset </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
-    /// </remark>
-	[Index(1)]
-    public PositionOffset PositionOffset
-	{
-        get => GetElement<PositionOffset>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> PercentagePositionHeightOffset.</para>
-    /// <para> Represents the following element tag in the schema: wp14:pctPosHOffset </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
-    /// </remark>
-	[Index(2)]
-    public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset PercentagePositionHeightOffset
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>(2);
-        set => SetElement(2, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalPosition>(deep);
 
@@ -1379,54 +1347,16 @@ public partial class VerticalPosition : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset), 0, 1)
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset), 0, 1)
+    }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-        /// <summary>
-    /// <para> Relative Vertical Alignment.</para>
-    /// <para> Represents the following element tag in the schema: wp:align </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
-    /// </remark>
-	[Index(0)]
-    public VerticalAlignment VerticalAlignment
-	{
-        get => GetElement<VerticalAlignment>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> PositionOffset.</para>
-    /// <para> Represents the following element tag in the schema: wp:posOffset </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
-    /// </remark>
-	[Index(1)]
-    public PositionOffset PositionOffset
-	{
-        get => GetElement<PositionOffset>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> PercentagePositionVerticalOffset.</para>
-    /// <para> Represents the following element tag in the schema: wp14:pctPosVOffset </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
-    /// </remark>
-	[Index(2)]
-    public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset PercentagePositionVerticalOffset
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>(2);
-        set => SetElement(2, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalPosition>(deep);
 

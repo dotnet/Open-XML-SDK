@@ -162,7 +162,7 @@ public partial class ShapeDefaults : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.All, 0, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 0, 1),
@@ -394,7 +394,7 @@ public partial class ShapeLayout : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.All, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeIdMap), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RegroupTable), 0, 1),

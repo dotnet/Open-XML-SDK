@@ -302,7 +302,10 @@ public partial class ExtensionListModify : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+    new CompositeParticle(ParticleType.Group, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+    }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1451,96 +1454,19 @@ public partial class LaserColor : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    new CompositeParticle(ParticleType.Group, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-        /// <summary>
-    /// <para> RGB Color Model - Percentage Variant.</para>
-    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(0)]
-    public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> RGB Color Model - Hex Variant.</para>
-    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(1)]
-    public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> Hue, Saturation, Luminance Color Model.</para>
-    /// <para> Represents the following element tag in the schema: a:hslClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(2)]
-    public DocumentFormat.OpenXml.Drawing.HslColor HslColor
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> System Color.</para>
-    /// <para> Represents the following element tag in the schema: a:sysClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(3)]
-    public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> Scheme Color.</para>
-    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(4)]
-    public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> Preset Color.</para>
-    /// <para> Represents the following element tag in the schema: a:prstClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(5)]
-    public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(5);
-        set => SetElement(5, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LaserColor>(deep);
 
@@ -1866,110 +1792,20 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord), 1, 1)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord), 1, 1)
+    }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
-        /// <summary>
-    /// <para> TriggerEventRecord.</para>
-    /// <para> Represents the following element tag in the schema: p14:triggerEvt </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-    /// </remark>
-	[Index(0)]
-    public TriggerEventRecord TriggerEventRecord
-	{
-        get => GetElement<TriggerEventRecord>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> PlayEventRecord.</para>
-    /// <para> Represents the following element tag in the schema: p14:playEvt </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-    /// </remark>
-	[Index(1)]
-    public PlayEventRecord PlayEventRecord
-	{
-        get => GetElement<PlayEventRecord>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> StopEventRecord.</para>
-    /// <para> Represents the following element tag in the schema: p14:stopEvt </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-    /// </remark>
-	[Index(2)]
-    public StopEventRecord StopEventRecord
-	{
-        get => GetElement<StopEventRecord>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> PauseEventRecord.</para>
-    /// <para> Represents the following element tag in the schema: p14:pauseEvt </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-    /// </remark>
-	[Index(3)]
-    public PauseEventRecord PauseEventRecord
-	{
-        get => GetElement<PauseEventRecord>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> ResumeEventRecord.</para>
-    /// <para> Represents the following element tag in the schema: p14:resumeEvt </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-    /// </remark>
-	[Index(4)]
-    public ResumeEventRecord ResumeEventRecord
-	{
-        get => GetElement<ResumeEventRecord>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> SeekEventRecord.</para>
-    /// <para> Represents the following element tag in the schema: p14:seekEvt </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-    /// </remark>
-	[Index(5)]
-    public SeekEventRecord SeekEventRecord
-	{
-        get => GetElement<SeekEventRecord>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> NullEventRecord.</para>
-    /// <para> Represents the following element tag in the schema: p14:nullEvt </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-    /// </remark>
-	[Index(6)]
-    public NullEventRecord NullEventRecord
-	{
-        get => GetElement<NullEventRecord>(6);
-        set => SetElement(6, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowEventRecordList>(deep);
 
@@ -2308,11 +2144,14 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PlaceholderShape), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromCD), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.WaveAudioFile), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromFile), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.VideoFromFile), 1, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile), 1, 1),
+    new CompositeParticle(ParticleType.Group, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromCD), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.WaveAudioFile), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromFile), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.VideoFromFile), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile), 1, 1)
+    },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList), 0, 1)
 };
@@ -2331,6 +2170,32 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>(0);
         set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> Customer Data List.</para>
+    /// <para> Represents the following element tag in the schema: p:custDataLst </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Presentation.CustomerDataList CustomerDataList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Presentation.CustomerDataList>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> ApplicationNonVisualDrawingPropertiesExtensionList.</para>
+    /// <para> Represents the following element tag in the schema: p:extLst </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList ApplicationNonVisualDrawingPropertiesExtensionList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList>(2);
+        set => SetElement(2, value);
 	}
 
 
@@ -2589,7 +2454,10 @@ public partial class ExtensionList : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+    new CompositeParticle(ParticleType.Group, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+    }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
