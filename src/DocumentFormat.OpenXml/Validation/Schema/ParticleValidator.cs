@@ -1,48 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
 using System.Diagnostics;
-
-#pragma warning disable SA1402 // File may only contain a single type
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
-#if DEBUG
-    /// <summary>
-    /// InstanceCounter for performance investigation.
-    /// </summary>
-    public static class InstanceCounter
-    {
-        /// <summary>
-        /// Gets or sets count of ParticleMatchInfo instance.
-        /// </summary>
-        public static long ParticleMatchInfo { get; set; }
-
-        /// <summary>
-        /// Gets or sets count of ExpectedChildren instance.
-        /// </summary>
-        public static long ExpectedChildren { get; set; }
-    }
-
-    internal partial class ExpectedChildren
-    {
-        static partial void IncressInstanceCount()
-        {
-            InstanceCounter.ExpectedChildren++;
-        }
-    }
-
-    internal partial class ParticleMatchInfo
-    {
-        static partial void IncressInstanceCount()
-        {
-            InstanceCounter.ParticleMatchInfo++;
-        }
-    }
-
-#endif
-
     /// <summary>
     /// Base class for particle validator.
     /// </summary>
@@ -99,7 +61,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>Required elements in this particle.</returns>
         public ExpectedChildren GetRequiredElements()
         {
-            ExpectedChildren requiredElements = new ExpectedChildren();
+            var requiredElements = new ExpectedChildren();
 
             GetRequiredElements(requiredElements);
 
@@ -122,37 +84,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>Expected elements in this particle.</returns>
         public ExpectedChildren GetExpectedElements()
         {
-            ExpectedChildren expectedElements = new ExpectedChildren();
+            var expectedElements = new ExpectedChildren();
 
             GetExpectedElements(expectedElements);
 
             return expectedElements;
-        }
-
-        internal static ParticleValidator CreateParticleValidator(ParticleConstraint particleConstraint)
-        {
-            var compositeParticle = particleConstraint as CompositeParticle;
-
-            switch (particleConstraint.ParticleType)
-            {
-                case ParticleType.All:
-                    return new AllParticleValidator(compositeParticle);
-
-                case ParticleType.Choice:
-                    return new ChoiceParticleValidator(compositeParticle);
-
-                case ParticleType.Sequence:
-                    return new SequenceParticleValidator(compositeParticle);
-
-                case ParticleType.Group:
-                    return new GroupParticleValidator(compositeParticle);
-
-                //case ParticleType.Any:
-                //    return new AnyParticleValidator(particleConstraint);
-                case ParticleType.Element:
-                default:
-                    throw new InvalidOperationException();
-            }
         }
 
         internal static string GetExpectedChildrenMessage(OpenXmlElement parent, ExpectedChildren expectedChildrenIds)

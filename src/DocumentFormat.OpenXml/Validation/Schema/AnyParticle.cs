@@ -15,16 +15,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("NamespaceValue={NamespaceValue}")]
     internal class AnyParticle : ParticleConstraint
     {
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private ushort _xsdAnyValue;
-        private IParticleValidator _particleValidator;
+        private readonly  IParticleValidator _particleValidator;
 
         /// <summary>
         /// Initializes a new instance of the AnyParticle.
         /// </summary>
-        internal AnyParticle()
-            : base(ParticleType.Any)
+        internal AnyParticle(ushort xsdAnyValue, int minOccurs, int maxOccurs)
+            : base(ParticleType.Any, minOccurs, maxOccurs)
         {
+            NamespaceValue = xsdAnyValue;
             _particleValidator = new AnyParticleValidator(this);
         }
 
@@ -56,7 +55,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets the value of the xsd:any@namespace.
         /// </summary>
-        public ushort NamespaceValue => _xsdAnyValue;
+        public ushort NamespaceValue { get; }
 
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator => _particleValidator;

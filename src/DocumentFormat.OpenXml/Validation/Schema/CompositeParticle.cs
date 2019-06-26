@@ -16,43 +16,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("ParticleType={ParticleType}")]
     internal class CompositeParticle : ParticleConstraint, IEnumerable<ParticleConstraint>
     {
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private List<ParticleConstraint> _childrenParticles;
-
         private IParticleValidator _particleValidator;
 
         /// <summary>
         /// Initializes a new instance of the CompositeParticle.
         /// </summary>
-        internal CompositeParticle(ParticleType particleType)
-            : base(particleType)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the CompositeParticle.
-        /// </summary>
-        internal CompositeParticle(ParticleType particleType, decimal minOccurs, decimal maxOccurs)
+        internal CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs)
             : base(particleType, minOccurs, maxOccurs)
         {
         }
-
-        public void Add(ParticleConstraint constraint)
-        {
-            if (_childrenParticles is null)
-            {
-                _childrenParticles = new List<ParticleConstraint>();
-            }
-
-            _childrenParticles.Add(constraint);
-        }
-
-        IEnumerator<ParticleConstraint> IEnumerable<ParticleConstraint>.GetEnumerator() => ChildrenParticles.GetEnumerator();
-
-        IEnumerator IEnumerable.GetEnumerator() => ChildrenParticles.GetEnumerator();
-
-        /// <inheritdoc/>
-        public override ReadOnlyList<ParticleConstraint> ChildrenParticles => _childrenParticles;
 
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator
@@ -61,10 +33,34 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 if (_particleValidator == null)
                 {
-                    _particleValidator = Schema.ParticleValidator.CreateParticleValidator(this);
+                    _particleValidator = CreateParticleValidator();
                 }
 
                 return _particleValidator;
+            }
+        }
+
+        private ParticleValidator CreateParticleValidator()
+        {
+            switch (ParticleType)
+            {
+                case ParticleType.All:
+                    return new AllParticleValidator(this);
+
+                case ParticleType.Choice:
+                    return new ChoiceParticleValidator(this);
+
+                case ParticleType.Sequence:
+                    return new SequenceParticleValidator(this);
+
+                case ParticleType.Group:
+                    return new GroupParticleValidator(this);
+
+                //case ParticleType.Any:
+                //    return new AnyParticleValidator(particleConstraint);
+                case ParticleType.Element:
+                default:
+                    throw new InvalidOperationException();
             }
         }
 

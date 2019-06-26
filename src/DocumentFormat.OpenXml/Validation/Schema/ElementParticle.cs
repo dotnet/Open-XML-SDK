@@ -35,8 +35,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Initializes a new instance of the ElementParticle.
         /// </summary>
-        internal ElementParticle()
-            : base(ParticleType.Element)
+        public ElementParticle(int elementId, int minOccurs, int maxOccurs)
+            : this(_elementIdMapper.Value[elementId], minOccurs, maxOccurs)
         {
         }
 
@@ -47,10 +47,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             ElementId = _elementIdMapper.Value[type];
         }
 
-        /// <inheritdoc/>
-        internal override int ElementId { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the ElementParticle.
+        /// </summary>
+        public ElementParticle(Type elementType, int minOccurs, int maxOccurs)
+            : base(ParticleType.Element, minOccurs, maxOccurs)
+        {
+            ElementType = elementType;
+        }
 
-        public override Type ElementType { get; }
+        public Type ElementType { get; }
 
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator => this;
@@ -61,7 +67,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Debug.Assert(particleMatchInfo != null);
             Debug.Assert(particleMatchInfo.StartElement != null);
 
-            if (particleMatchInfo.StartElement.ElementTypeId == ElementId)
+            if (particleMatchInfo.StartElement.GetType() == ElementType)
             {
                 particleMatchInfo.Match = ParticleMatch.Matched;
                 particleMatchInfo.LastMatchedElement = particleMatchInfo.StartElement;
@@ -80,7 +86,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Debug.Assert(particleMatchInfo != null);
             Debug.Assert(particleMatchInfo.StartElement != null);
 
-            if (ElementId != particleMatchInfo.StartElement.ElementTypeId)
+            if (ElementType != particleMatchInfo.StartElement.GetType())
             {
                 particleMatchInfo.Match = ParticleMatch.Nomatch;
             }
@@ -96,9 +102,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 var element = particleMatchInfo.StartElement;
                 int count = 0;
 
-                while (element != null &&
-                    MaxOccursGreaterThan(count) &&
-                    element.ElementTypeId == ElementId)
+                while (element != null && MaxOccursGreaterThan(count) && element.GetType() == ElementType)
                 {
                     count++;
                     particleMatchInfo.LastMatchedElement = element;
@@ -146,7 +150,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public ExpectedChildren GetRequiredElements()
         {
-            ExpectedChildren requiredElements = new ExpectedChildren();
+            var requiredElements = new ExpectedChildren();
 
             if (MinOccurs > 0)
             {
@@ -166,7 +170,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public ExpectedChildren GetExpectedElements()
         {
-            ExpectedChildren expectedElements = new ExpectedChildren();
+            var expectedElements = new ExpectedChildren();
 
             expectedElements.Add(ElementType);
 

@@ -61,6 +61,6 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        public static implicit operator ReadOnlyList<T>(List<T> array) => new ReadOnlyList<T>(array);
+        public static implicit operator ReadOnlyList<T>(List<T> list) => new ReadOnlyList<T>(list);
     }
 }

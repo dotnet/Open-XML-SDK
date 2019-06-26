@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
@@ -11,7 +12,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class AllParticleValidator : CompositeParticleValidator
     {
-        private  Dictionary<int, bool> _childrenParticles;
+        private Dictionary<Type, bool> _childrenParticles;
 
         /// <summary>
         /// Initializes a new instance of the AllParticleValidator.
@@ -34,10 +35,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
 #endif
 
-            _childrenParticles = new Dictionary<int, bool>(ParticleConstraint.ChildrenParticles.Length);
+            _childrenParticles = new Dictionary<Type, bool>(ParticleConstraint.ChildrenParticles.Length);
+
             foreach (var childParticle in ParticleConstraint.ChildrenParticles)
             {
-                _childrenParticles.Add(childParticle.ElementId, false);
+                if (childParticle is ElementParticle element)
+                {
+                    _childrenParticles.Add(element.ElementType, false);
+                }
             }
         }
 
@@ -73,12 +78,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             foreach (var childParticle in ParticleConstraint.ChildrenParticles)
             {
-                _childrenParticles[childParticle.ElementId] = false;
+                if (childParticle is ElementParticle element)
+                {
+                    _childrenParticles[element.ElementType] = false;
+                }
             }
 
             while (next != null)
             {
-                if (_childrenParticles.TryGetValue(next.ElementTypeId, out bool visited))
+                if (_childrenParticles.TryGetValue(next.GetType(), out bool visited))
                 {
                     if (visited)
                     {
@@ -87,7 +95,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                     else
                     {
-                        _childrenParticles[next.ElementTypeId] = true;
+                        _childrenParticles[next.GetType()] = true;
                     }
                 }
                 else
@@ -113,9 +121,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 foreach (var childParticle in ParticleConstraint.ChildrenParticles)
                 {
-                    Debug.Assert(childParticle is ElementParticle);
-
-                    particleMatchInfo.ExpectedChildren.Add(childParticle.ElementType);
+                    if (childParticle is ElementParticle element)
+                    {
+                        particleMatchInfo.ExpectedChildren.Add(element.ElementType);
+                    }
                 }
 
                 return;
@@ -127,20 +136,22 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 // check if matched
                 foreach (var childParticle in ParticleConstraint.ChildrenParticles)
                 {
-                    Debug.Assert(childParticle is ElementParticle);
-                    if (!_childrenParticles[childParticle.ElementId] && childParticle.MinOccurs == 1)
+                    if (childParticle is ElementParticle element)
                     {
-                        // one of the required children are missed.
-                        particleMatchInfo.Match = ParticleMatch.Partial;
+                        if (!_childrenParticles[element.ElementType] && childParticle.MinOccurs == 1)
+                        {
+                            // one of the required children are missed.
+                            particleMatchInfo.Match = ParticleMatch.Partial;
+                        }
                     }
                 }
 
                 // find expected child elements.
                 foreach (var childParticle in ParticleConstraint.ChildrenParticles)
                 {
-                    if (!_childrenParticles[childParticle.ElementId])
+                    if (childParticle is ElementParticle element && !_childrenParticles[element.ElementType])
                     {
-                        particleMatchInfo.ExpectedChildren.Add(childParticle.ElementType);
+                        particleMatchInfo.ExpectedChildren.Add(element.ElementType);
                     }
                 }
 
@@ -148,8 +159,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
 
-        protected override void EmitInvalidElementError(ValidationContext validationContext,
-                                               ParticleMatchInfo particleMatchInfo)
+        protected override void EmitInvalidElementError(ValidationContext validationContext, ParticleMatchInfo particleMatchInfo)
         {
             var element = validationContext.Element;
             OpenXmlElement child;
@@ -176,7 +186,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 case ParticleMatch.Partial:
                 case ParticleMatch.Matched:
-                    if (_childrenParticles.ContainsKey(child.ElementTypeId))
+                    if (_childrenParticles.ContainsKey(child.GetType()))
                     {
                         // more than one occurs of a child.
                         errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_AllElement", child.XmlQualifiedName.ToString());
