@@ -118,6 +118,17 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         private class OccursDefaultResolver : DefaultContractResolver
         {
+            protected override JsonContract CreateContract(Type objectType)
+            {
+                // CompositeParticle implements IEnumerable to enable collection initializers, but we want it to serialize as if it were just the object
+                if (objectType == typeof(CompositeParticle))
+                {
+                    return CreateObjectContract(objectType);
+                }
+
+                return base.CreateContract(objectType);
+            }
+
             protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
             {
                 var properties = base.CreateProperties(type, memberSerialization);

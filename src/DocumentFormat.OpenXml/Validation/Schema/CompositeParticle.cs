@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Framework;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 
@@ -11,10 +12,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// <summary>
     /// Particle constraint for sequence, choice, all, and group.
     /// </summary>
-    /// <remarks>
-    /// </remarks>
     [DebuggerDisplay("ParticleType={ParticleType}")]
-    internal class CompositeParticle : ParticleConstraint
+    internal class CompositeParticle : ParticleConstraint, IEnumerable<ParticleConstraint>
     {
         private IParticleValidator _particleValidator;
         private List<ParticleConstraint> _children;
@@ -114,6 +113,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         public override int GetHashCode() => HashCode.Combine(base.GetHashCode(), ChildrenParticles.Length);
+
+        public IEnumerator<ParticleConstraint> GetEnumerator() => ChildrenParticles.GetEnumerator();
+
+        IEnumerator IEnumerable.GetEnumerator() => ChildrenParticles.GetEnumerator();
 
         //internal CompositeParticle NormalizeParticle(CompositeParticle compositeParticle)
         //{
