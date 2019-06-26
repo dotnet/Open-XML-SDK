@@ -101,32 +101,32 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0M, 1M),
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
     },
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0M, 1M),
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -320,12 +320,12 @@ public partial class Marker : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Symbol), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Size), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Symbol), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Size), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -471,29 +471,29 @@ public partial class DLbl : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1M, 1M),
-    new CompositeParticle(ParticleType.Choice, 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
+    new CompositeParticle(ParticleType.Choice, 1, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 1M, 1M),
-        new CompositeParticle(ParticleType.Sequence, 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 1, 1),
+        new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0M, 1M),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText), 0M, 1M),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0M, 1M),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0M, 1M),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0M, 1M),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition), 0M, 1M),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey), 0M, 1M),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowValue), 0M, 1M),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName), 0M, 1M),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName), 0M, 1M),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent), 0M, 1M),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize), 0M, 1M)
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowValue), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize), 0, 1)
         }
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -570,9 +570,9 @@ public partial class CategoryFilterExceptions : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterException), 1M, global::System.Decimal.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterException), 1, global::System.Int32.MaxValue)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -634,9 +634,9 @@ public partial class PivotOptions16 : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.BooleanFalse), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.BooleanFalse), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -713,9 +713,9 @@ public partial class ChartDataPointUniqueIDMap : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMapEntry), 0M, global::System.Decimal.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMapEntry), 0, global::System.Int32.MaxValue)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -863,15 +863,15 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ShapeProperties), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UnsignedIntegerType), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.InvertIfNegativeBoolean), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.Bubble3DBoolean), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.Marker), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.DLbl), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UnsignedIntegerType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.InvertIfNegativeBoolean), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.Bubble3DBoolean), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.Marker), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.DLbl), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1032,12 +1032,12 @@ public partial class NumberDataType : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatCode), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericPoint), 0M, global::System.Decimal.MaxValue),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatCode), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericPoint), 0, global::System.Int32.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1127,9 +1127,9 @@ public partial class NumFilteredLiteralCache : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1210,11 +1210,11 @@ public partial class StringDataType : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0M, global::System.Decimal.MaxValue),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, global::System.Int32.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1291,9 +1291,9 @@ public partial class StrFilteredLiteralCache : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1374,11 +1374,11 @@ public partial class MultiLvlStrData : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Level), 0M, global::System.Decimal.MaxValue),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Level), 0, global::System.Int32.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1455,9 +1455,9 @@ public partial class MultiLvlStrFilteredLiteralCache : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1653,9 +1653,9 @@ public partial class ChartDataPointUniqueIDMapEntry : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueID), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueID), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

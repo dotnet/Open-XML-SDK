@@ -802,38 +802,38 @@ public partial class ColorStyleVariation : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tint), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shade), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Complement), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Inverse), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Gray), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Alpha), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaModulation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Hue), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HueOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HueModulation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Saturation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SaturationOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SaturationModulation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Luminance), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceModulation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Red), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RedOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RedModulation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Green), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GreenOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GreenModulation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blue), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlueOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlueModulation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Gamma), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.InverseGamma), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tint), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shade), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Complement), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Inverse), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Gray), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Alpha), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaModulation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Hue), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HueOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HueModulation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Saturation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SaturationOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SaturationModulation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Luminance), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceModulation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Red), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RedOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RedModulation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Green), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GreenOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GreenModulation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blue), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlueOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlueModulation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Gamma), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.InverseGamma), 1, 1)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -896,9 +896,9 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0M, global::System.Decimal.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, global::System.Int32.MaxValue)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1024,38 +1024,38 @@ public partial class StyleColor : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tint), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shade), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Complement), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Inverse), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Gray), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Alpha), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaModulation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Hue), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HueOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HueModulation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Saturation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SaturationOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SaturationModulation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Luminance), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceModulation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Red), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RedOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RedModulation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Green), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GreenOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GreenModulation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blue), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlueOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlueModulation), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Gamma), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.InverseGamma), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tint), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shade), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Complement), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Inverse), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Gray), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Alpha), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaModulation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Hue), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HueOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HueModulation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Saturation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SaturationOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SaturationModulation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Luminance), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceModulation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Red), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RedOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RedModulation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Green), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GreenOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GreenModulation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blue), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlueOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlueModulation), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Gamma), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.InverseGamma), 1, 1)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -1440,18 +1440,18 @@ public partial class FontReference : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1549,32 +1549,32 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0M, 1M),
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
     },
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0M, 1M),
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1832,42 +1832,42 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0M, 1M),
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
     },
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Highlight), 0M, 1M),
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Highlight), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFollowsText), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Underline), 0M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFollowsText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Underline), 0, 1)
     },
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFillText), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFill), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFillText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFill), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LatinFont), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EastAsianFont), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ComplexScriptFont), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SymbolFont), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RightToLeft), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LatinFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EastAsianFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ComplexScriptFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SymbolFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RightToLeft), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -2098,22 +2098,22 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetTextWrap), 0M, 1M),
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetTextWrap), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoAutoFit), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NormalAutoFit), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeAutoFit), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoAutoFit), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NormalAutoFit), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeAutoFit), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0M, 1M),
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FlatText), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FlatText), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

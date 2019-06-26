@@ -402,10 +402,10 @@ public partial class SdtRepeatedSection : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.SectionTitle), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.SectionTitle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -838,9 +838,9 @@ public partial class Person : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.PresenceInfo), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.PresenceInfo), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

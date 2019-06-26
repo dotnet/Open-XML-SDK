@@ -15,31 +15,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("ElementId={ElementId}")]
     internal class ElementParticle : ParticleConstraint, IParticleValidator
     {
-        private static readonly Lazy<Dictionary<Type, int>> _elementIdMapper = new Lazy<Dictionary<Type, int>>(() =>
-        {
-            var dictionary = new Dictionary<Type, int>();
-
-            foreach (var element in typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes())
-            {
-                if (!element.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).GetTypeInfo().IsAssignableFrom(element.GetTypeInfo()))
-                {
-                    var attribute = element.GetTypeInfo().GetCustomAttribute<IdAttribute>();
-
-                    dictionary.Add(element, attribute.Id);
-                }
-            }
-
-            return dictionary;
-        }, true);
-
-        /// <summary>
-        /// Initializes a new instance of the ElementParticle.
-        /// </summary>
-        public ElementParticle(int elementId, int minOccurs, int maxOccurs)
-            : this(_elementIdMapper.Value[elementId], minOccurs, maxOccurs)
-        {
-        }
-
         /// <summary>
         /// Initializes a new instance of the ElementParticle.
         /// </summary>

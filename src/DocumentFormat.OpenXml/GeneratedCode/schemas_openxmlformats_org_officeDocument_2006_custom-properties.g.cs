@@ -244,17 +244,17 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTArray), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTEmpty), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTNull), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTCurrency), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTError), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVStreamData), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTArray), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTEmpty), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTNull), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTCurrency), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTError), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVStreamData), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

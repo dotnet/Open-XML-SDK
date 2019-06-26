@@ -43,7 +43,6 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             foreach (var version in FileFormatVersionExtensions.AllVersions)
             {
-                var data = SdbSchemaData.GetSchemaData(version);
                 foreach (var type in elements)
                 {
                     var constructor = type.GetConstructor(Cached.Array<Type>());
@@ -54,15 +53,16 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
                         if (version.AtLeast(element.InitialVersion))
                         {
-                            if (data.TryGetSchemaTypeData(element.ElementTypeId, out var typeData) && typeData != null)
+                            var constraint = element.ParticleConstraint;
+                            if (constraint != null)
                             {
                                 if (constraints.TryGetValue(type, out var current))
                                 {
-                                    current.Add(version, typeData.ParticleConstraint);
+                                    current.Add(version, constraint);
                                 }
                                 else
                                 {
-                                    constraints.Add(type, new VersionCollection<ParticleConstraint> { { version, typeData.ParticleConstraint } });
+                                    constraints.Add(type, new VersionCollection<ParticleConstraint> { { version, constraint } });
                                 }
                             }
                         }

@@ -73,9 +73,9 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

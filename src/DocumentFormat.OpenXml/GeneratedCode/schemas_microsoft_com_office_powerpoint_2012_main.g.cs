@@ -169,9 +169,9 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -498,16 +498,16 @@ public partial class ColorType : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 1M, 1M)
+    new CompositeParticle(ParticleType.Choice, 1, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -650,11 +650,11 @@ public partial class ExtensionList : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Sequence, 0M, 1M)
+    new CompositeParticle(ParticleType.Sequence, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0M, global::System.Decimal.MaxValue)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, global::System.Int32.MaxValue)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -756,10 +756,10 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

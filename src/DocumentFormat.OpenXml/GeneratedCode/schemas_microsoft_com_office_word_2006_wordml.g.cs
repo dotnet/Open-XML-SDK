@@ -152,9 +152,9 @@ public partial class Mcds : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Mcd), 0M, global::System.Decimal.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Mcd), 0, global::System.Int32.MaxValue)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -329,9 +329,9 @@ public partial class MailMergeRecipients : OpenXmlPartRootElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord), 1M, global::System.Decimal.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord), 1, global::System.Int32.MaxValue)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -700,13 +700,13 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.CharacterInsertion), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.CharacterInsertion), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1458,7 +1458,7 @@ public partial class DocEvents : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence) { };
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1) { };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
@@ -1690,9 +1690,9 @@ public partial class AllocatedCommandManifest : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry), 0M, global::System.Decimal.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry), 0, global::System.Int32.MaxValue)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1950,10 +1950,10 @@ public partial class Toolbars : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest), 0M, global::System.Decimal.MaxValue),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.ToolbarData), 0M, global::System.Decimal.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest), 0, global::System.Int32.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.ToolbarData), 0, global::System.Int32.MaxValue)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -2015,9 +2015,9 @@ public partial class AllocatedCommands : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommand), 0M, global::System.Decimal.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommand), 0, global::System.Int32.MaxValue)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -2160,10 +2160,10 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.RecordIncluded), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.RecordHashCode), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.RecordIncluded), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.RecordHashCode), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

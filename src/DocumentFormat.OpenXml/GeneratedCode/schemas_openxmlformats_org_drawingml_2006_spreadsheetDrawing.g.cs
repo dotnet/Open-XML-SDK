@@ -89,20 +89,20 @@ public partial class TwoCellAnchor : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker), 1M, 1M),
-    new CompositeParticle(ParticleType.Choice, 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker), 1, 1),
+    new CompositeParticle(ParticleType.Choice, 1, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -208,20 +208,20 @@ public partial class OneCellAnchor : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent), 1M, 1M),
-    new CompositeParticle(ParticleType.Choice, 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent), 1, 1),
+    new CompositeParticle(ParticleType.Choice, 1, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -327,20 +327,20 @@ public partial class AbsoluteAnchor : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Position), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent), 1M, 1M),
-    new CompositeParticle(ParticleType.Choice, 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Position), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent), 1, 1),
+    new CompositeParticle(ParticleType.Choice, 1, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -464,12 +464,12 @@ public partial class Shape : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -599,18 +599,18 @@ public partial class GroupShape : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties), 1M, 1M),
-    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties), 1, 1),
+    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart), 1, 1)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -719,11 +719,11 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -844,11 +844,11 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -971,12 +971,12 @@ public partial class Picture : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1116,12 +1116,12 @@ public partial class ContentPart : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1326,10 +1326,10 @@ public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1455,32 +1455,32 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0M, 1M),
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
     },
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0M, 1M),
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1563,12 +1563,12 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillReference), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectReference), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FontReference), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FontReference), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1688,11 +1688,11 @@ public partial class TextBody : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1M, global::System.Decimal.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, global::System.Int32.MaxValue)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1784,10 +1784,10 @@ public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElemen
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1879,10 +1879,10 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1985,14 +1985,14 @@ public partial class BlipFill : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blip), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle), 0M, 1M),
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blip), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tile), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Stretch), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tile), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Stretch), 1, 1)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -2085,10 +2085,10 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -2201,10 +2201,10 @@ public partial class Transform : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -2851,11 +2851,11 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -2967,10 +2967,10 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -3066,12 +3066,12 @@ public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlComposite
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.StartConnection), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EndConnection), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.StartConnection), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EndConnection), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -3196,10 +3196,10 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -3291,10 +3291,10 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -3386,10 +3386,10 @@ public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElem
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -3481,10 +3481,10 @@ public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -3602,25 +3602,25 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0M, 1M),
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
     },
-    new CompositeParticle(ParticleType.Choice, 0M, 1M)
+    new CompositeParticle(ParticleType.Choice, 0, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

@@ -211,9 +211,9 @@ public partial class Formulas : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formula), 0M, 128M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formula), 0, 128)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -275,9 +275,9 @@ public partial class ShapeHandles : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandle), 0M, 4M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandle), 0, 4)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -533,9 +533,9 @@ public partial class Fill : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -826,13 +826,13 @@ public partial class Stroke : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LeftStroke), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.TopStroke), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RightStroke), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.BottomStroke), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColumnStroke), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LeftStroke), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.TopStroke), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RightStroke), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.BottomStroke), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColumnStroke), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1098,10 +1098,10 @@ public partial class TextBox : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent), 0M, 1M),
-    new AnyParticle(XsdAnyPrefidefinedValue.Local, 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent), 0, 1),
+    new AnyParticle(XsdAnyPrefidefinedValue.Local, 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1935,33 +1935,33 @@ public partial class Shape : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Ink), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Ink), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -2518,35 +2518,35 @@ public partial class Shapetype : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Complex), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Complex), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -2913,25 +2913,25 @@ public partial class Group : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Group), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shape), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shapetype), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Arc), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Curve), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageFile), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Line), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Oval), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.PolyLine), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Rectangle), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.RoundRectangle), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Diagram), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Group), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shape), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shapetype), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Arc), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Curve), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageFile), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Line), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Oval), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.PolyLine), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Rectangle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.RoundRectangle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Diagram), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -3051,9 +3051,9 @@ public partial class Background : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -3608,33 +3608,33 @@ public partial class Arc : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -4195,33 +4195,33 @@ public partial class Curve : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -4817,33 +4817,33 @@ public partial class ImageFile : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -5390,33 +5390,33 @@ public partial class Line : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -5949,33 +5949,33 @@ public partial class Oval : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
 {
-    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -6517,32 +6517,32 @@ public partial class PolyLine : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Ink), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Ink), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -7074,33 +7074,33 @@ public partial class Rectangle : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
 {
-    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -7633,33 +7633,33 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
 {
-    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;

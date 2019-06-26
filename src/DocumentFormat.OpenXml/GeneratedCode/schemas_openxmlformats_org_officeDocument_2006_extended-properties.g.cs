@@ -1542,9 +1542,9 @@ public partial class TitlesOfParts : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1621,7 +1621,7 @@ public partial class DigitalSignature : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence) { };
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1) { };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;

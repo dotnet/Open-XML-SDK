@@ -9,8 +9,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// A constraint data item for complex type.
     /// The ParticleType, MinOccurs, MaxOccurs means the constraint of this particle in the parent.
     /// </summary>
-    /// <remarks>
-    /// </remarks>
     internal abstract class ParticleConstraint
     {
         /// <summary>
@@ -20,7 +18,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             ParticleType = type;
             MinOccurs = minOccurs;
-            MaxOccurs = maxOccurs;
+            MaxOccurs = maxOccurs == int.MaxValue ? 0 : maxOccurs;
         }
 
         /// <summary>

@@ -465,9 +465,9 @@ public partial class RowSortMap : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.RowSortMapItem), 1M, 536870910M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.RowSortMapItem), 1, 536870910)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -545,9 +545,9 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem), 1M, 536870910M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem), 1, 536870910)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

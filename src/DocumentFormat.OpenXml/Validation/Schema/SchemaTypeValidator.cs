@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Only validation whether the children elements are valid according to this type's constraint defined in schema.
         /// </summary>
         /// <param name="validationContext">The validation context.</param>
-        internal void Validate(ValidationContext validationContext)
+        public void Validate(ValidationContext validationContext)
         {
             Debug.Assert(validationContext != null);
             Debug.Assert(validationContext.Element != null);
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 Debug.Assert(!(theElement is AlternateContentChoice));
                 Debug.Assert(!(theElement is AlternateContentFallback));
-                
+
                 if (theElement.ParticleConstraint != null)
                 {
                     // composite element

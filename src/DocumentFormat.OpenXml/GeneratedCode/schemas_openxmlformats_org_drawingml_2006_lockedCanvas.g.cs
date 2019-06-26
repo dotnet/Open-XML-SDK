@@ -82,21 +82,21 @@ public partial class LockedCanvas : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties), 1M, 1M),
-    new CompositeParticle(ParticleType.Choice, 0M, global::System.Decimal.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties), 1, 1),
+    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TextShape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShape), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Picture), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrame), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShape), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TextShape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Picture), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrame), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShape), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

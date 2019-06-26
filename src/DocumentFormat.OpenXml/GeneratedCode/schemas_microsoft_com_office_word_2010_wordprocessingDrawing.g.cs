@@ -145,9 +145,9 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -233,9 +233,9 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

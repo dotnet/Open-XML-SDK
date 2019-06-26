@@ -132,9 +132,9 @@ public partial class WrapSquare : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -234,9 +234,9 @@ public partial class WrapTight : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -336,9 +336,9 @@ public partial class WrapThrough : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -429,9 +429,9 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -566,13 +566,13 @@ public partial class Inline : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -833,26 +833,26 @@ public partial class Anchor : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0M, 1M),
-    new CompositeParticle(ParticleType.Choice, 1M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 1, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapNone), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom), 1M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapNone), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1164,10 +1164,10 @@ public partial class WrapPolygon : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint), 1M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.LineTo), 2M, global::System.Decimal.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.LineTo), 2, global::System.Int32.MaxValue)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1257,13 +1257,13 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 1M, 1M)
+    new CompositeParticle(ParticleType.Choice, 1, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset), 0M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset), 0, 1)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -1380,13 +1380,13 @@ public partial class VerticalPosition : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 1M, 1M)
+    new CompositeParticle(ParticleType.Choice, 1, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1M, 1M),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset), 0M, 1M)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset), 0, 1)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -1579,11 +1579,11 @@ public partial class DocProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1688,10 +1688,10 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0M, 1M),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0M, 1M)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
