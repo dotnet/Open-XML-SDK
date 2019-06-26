@@ -5408,6 +5408,7 @@ public partial class Author : XstringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Author>(deep);
 
+
 }
 /// <summary>
 /// <para>Text.</para>
@@ -5442,6 +5443,7 @@ public partial class Text : XstringType
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Text>(deep);
+
 
 }
 /// <summary>
@@ -5478,6 +5480,7 @@ public partial class CellValue : XstringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellValue>(deep);
 
+
 }
 /// <summary>
 /// <para>Formula.</para>
@@ -5512,6 +5515,7 @@ public partial class Formula : XstringType
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
+
 
 }
 /// <summary>
@@ -5548,6 +5552,7 @@ public partial class OldFormula : XstringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OldFormula>(deep);
 
+
 }
 /// <summary>
 /// <para>Odd Header.</para>
@@ -5582,6 +5587,7 @@ public partial class OddHeader : XstringType
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddHeader>(deep);
+
 
 }
 /// <summary>
@@ -5618,6 +5624,7 @@ public partial class OddFooter : XstringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddFooter>(deep);
 
+
 }
 /// <summary>
 /// <para>Even Page Header.</para>
@@ -5652,6 +5659,7 @@ public partial class EvenHeader : XstringType
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenHeader>(deep);
+
 
 }
 /// <summary>
@@ -5688,6 +5696,7 @@ public partial class EvenFooter : XstringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenFooter>(deep);
 
+
 }
 /// <summary>
 /// <para>First Page Header.</para>
@@ -5722,6 +5731,7 @@ public partial class FirstHeader : XstringType
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstHeader>(deep);
+
 
 }
 /// <summary>
@@ -5758,6 +5768,7 @@ public partial class FirstFooter : XstringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstFooter>(deep);
 
+
 }
 /// <summary>
 /// <para>DDE Link Value.</para>
@@ -5792,6 +5803,7 @@ public partial class DdeLinkValue : XstringType
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DdeLinkValue>(deep);
+
 
 }
 /// <summary>
@@ -5828,6 +5840,7 @@ public partial class Subtopic : XstringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Subtopic>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Formula1 Class.</para>
@@ -5863,6 +5876,7 @@ public partial class Formula1 : XstringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula1>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Formula2 Class.</para>
@@ -5897,6 +5911,7 @@ public partial class Formula2 : XstringType
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula2>(deep);
+
 
 }
 /// <summary>
@@ -8305,6 +8320,11 @@ public partial class Tuples : TuplesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tuples>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuple), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Sort By Tuple.</para>
@@ -8358,6 +8378,11 @@ public partial class SortByTuple : TuplesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SortByTuple>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuple), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the TuplesType class.
@@ -8437,6 +8462,7 @@ public partial class MemberPropertyIndex : XType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MemberPropertyIndex>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the MemberPropertiesMap Class.</para>
@@ -8460,6 +8486,7 @@ public partial class MemberPropertiesMap : XType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MemberPropertiesMap>(deep);
+
 
 }
 /// <summary>
@@ -11527,6 +11554,7 @@ public partial class RowHierarchyUsage : HierarchyUsageType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowHierarchyUsage>(deep);
 
+
 }
 /// <summary>
 /// <para>Column OLAP Hierarchies.</para>
@@ -11550,6 +11578,7 @@ public partial class ColumnHierarchyUsage : HierarchyUsageType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnHierarchyUsage>(deep);
+
 
 }
 /// <summary>
@@ -13284,6 +13313,14 @@ public partial class SharedStringItem : RstType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedStringItem>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Run), 0, 32767),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticRun), 0, 32767),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Rich Text Inline.</para>
@@ -13340,6 +13377,14 @@ public partial class InlineString : RstType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InlineString>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Run), 0, 32767),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticRun), 0, 32767),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Comment Text.</para>
@@ -13396,6 +13441,14 @@ public partial class CommentText : RstType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentText>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Run), 0, 32767),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticRun), 0, 32767),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the RstType class.
@@ -13489,6 +13542,7 @@ public partial class Bold : BooleanPropertyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bold>(deep);
 
+
 }
 /// <summary>
 /// <para>Italic.</para>
@@ -13512,6 +13566,7 @@ public partial class Italic : BooleanPropertyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Italic>(deep);
+
 
 }
 /// <summary>
@@ -13537,6 +13592,7 @@ public partial class Strike : BooleanPropertyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Strike>(deep);
 
+
 }
 /// <summary>
 /// <para>Condense.</para>
@@ -13560,6 +13616,7 @@ public partial class Condense : BooleanPropertyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Condense>(deep);
+
 
 }
 /// <summary>
@@ -13585,6 +13642,7 @@ public partial class Extend : BooleanPropertyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Extend>(deep);
 
+
 }
 /// <summary>
 /// <para>Outline.</para>
@@ -13609,6 +13667,7 @@ public partial class Outline : BooleanPropertyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Outline>(deep);
 
+
 }
 /// <summary>
 /// <para>Shadow.</para>
@@ -13632,6 +13691,7 @@ public partial class Shadow : BooleanPropertyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shadow>(deep);
+
 
 }
 /// <summary>
@@ -13795,6 +13855,7 @@ public partial class Color : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Color>(deep);
 
+
 }
 /// <summary>
 /// <para>Sheet Tab Color.</para>
@@ -13818,6 +13879,7 @@ public partial class TabColor : ColorType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TabColor>(deep);
+
 
 }
 /// <summary>
@@ -13843,6 +13905,7 @@ public partial class ForegroundColor : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForegroundColor>(deep);
 
+
 }
 /// <summary>
 /// <para>Background Color.</para>
@@ -13866,6 +13929,7 @@ public partial class BackgroundColor : ColorType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundColor>(deep);
+
 
 }
 /// <summary>
@@ -13983,6 +14047,7 @@ public partial class FontFamily : InternationalPropertyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontFamily>(deep);
 
+
 }
 /// <summary>
 /// <para>Character Set.</para>
@@ -14006,6 +14071,7 @@ public partial class RunPropertyCharSet : InternationalPropertyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RunPropertyCharSet>(deep);
+
 
 }
 /// <summary>
@@ -16417,6 +16483,14 @@ public partial class OldCell : CellType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OldCell>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormula), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellValue), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InlineString), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Cell.</para>
@@ -16473,6 +16547,14 @@ public partial class Cell : CellType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Cell>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormula), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellValue), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InlineString), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the CellType class.
@@ -16852,6 +16934,17 @@ public partial class OldDifferentialFormat : DifferentialFormatType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OldDifferentialFormat>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>New Formatting Information.</para>
@@ -16911,6 +17004,17 @@ public partial class NewDifferentialFormat : DifferentialFormatType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NewDifferentialFormat>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Formatting.</para>
@@ -16970,6 +17074,17 @@ public partial class DifferentialFormat : DifferentialFormatType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DifferentialFormat>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the DifferentialFormatType class.
@@ -18274,6 +18389,11 @@ public partial class RowBreaks : PageBreakType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowBreaks>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Break), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Vertical Page Breaks.</para>
@@ -18327,6 +18447,11 @@ public partial class ColumnBreaks : PageBreakType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnBreaks>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Break), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the PageBreakType class.
@@ -21634,6 +21759,11 @@ public partial class CellMetadata : MetadataBlocksType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellMetadata>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Value Metadata.</para>
@@ -21687,6 +21817,11 @@ public partial class ValueMetadata : MetadataBlocksType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ValueMetadata>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the MetadataBlocksType class.
@@ -26402,6 +26537,7 @@ public partial class CalculatedColumnFormula : TableFormulaType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculatedColumnFormula>(deep);
 
+
 }
 /// <summary>
 /// <para>Totals Row Formula.</para>
@@ -26436,6 +26572,7 @@ public partial class TotalsRowFormula : TableFormulaType
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TotalsRowFormula>(deep);
+
 
 }
 /// <summary>
@@ -27952,6 +28089,14 @@ public partial class FromMarker : MarkerType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FromMarker>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the ToMarker Class.</para>
@@ -28008,6 +28153,14 @@ public partial class ToMarker : MarkerType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToMarker>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the MarkerType class.
@@ -28724,6 +28877,11 @@ public partial class StartBorder : BorderPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the EndBorder Class.</para>
@@ -28777,6 +28935,11 @@ public partial class EndBorder : BorderPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Left Border.</para>
@@ -28830,6 +28993,11 @@ public partial class LeftBorder : BorderPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Right Border.</para>
@@ -28883,6 +29051,11 @@ public partial class RightBorder : BorderPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Top Border.</para>
@@ -28936,6 +29109,11 @@ public partial class TopBorder : BorderPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Bottom Border.</para>
@@ -28989,6 +29167,11 @@ public partial class BottomBorder : BorderPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Diagonal.</para>
@@ -29042,6 +29225,11 @@ public partial class DiagonalBorder : BorderPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DiagonalBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Vertical Inner Border.</para>
@@ -29095,6 +29283,11 @@ public partial class VerticalBorder : BorderPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Horizontal Inner Borders.</para>
@@ -29148,6 +29341,11 @@ public partial class HorizontalBorder : BorderPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the BorderPropertiesType class.
@@ -29937,6 +30135,7 @@ public partial class LegacyDrawing : LegacyDrawingType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LegacyDrawing>(deep);
 
+
 }
 /// <summary>
 /// <para>Legacy Drawing Reference in  Header Footer.</para>
@@ -29960,6 +30159,7 @@ public partial class LegacyDrawingHeaderFooter : LegacyDrawingType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LegacyDrawingHeaderFooter>(deep);
+
 
 }
 /// <summary>

@@ -1566,6 +1566,7 @@ public partial class LeftStroke : StrokeChildType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftStroke>(deep);
 
+
 }
 /// <summary>
 /// <para>Text Box Top Stroke.</para>
@@ -1589,6 +1590,7 @@ public partial class TopStroke : StrokeChildType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopStroke>(deep);
+
 
 }
 /// <summary>
@@ -1614,6 +1616,7 @@ public partial class RightStroke : StrokeChildType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightStroke>(deep);
 
+
 }
 /// <summary>
 /// <para>Text Box Bottom Stroke.</para>
@@ -1638,6 +1641,7 @@ public partial class BottomStroke : StrokeChildType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomStroke>(deep);
 
+
 }
 /// <summary>
 /// <para>Text Box Interior Stroke.</para>
@@ -1661,6 +1665,7 @@ public partial class ColumnStroke : StrokeChildType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnStroke>(deep);
+
 
 }
 /// <summary>

@@ -2318,6 +2318,7 @@ public partial class ColumnOffset : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnOffset>(deep);
 
+
 }
 /// <summary>
 /// <para>Row Offset.</para>
@@ -2353,6 +2354,7 @@ public partial class RowOffset : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowOffset>(deep);
+
 
 }
 /// <summary>
@@ -2452,6 +2454,14 @@ public partial class FromMarker : MarkerType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FromMarker>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Ending Anchor Point.</para>
@@ -2508,6 +2518,14 @@ public partial class ToMarker : MarkerType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToMarker>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the MarkerType class.

@@ -889,6 +889,7 @@ public partial class VTBlob : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBlob>(deep);
 
+
 }
 /// <summary>
 /// <para>Binary Blob Object.</para>
@@ -924,6 +925,7 @@ public partial class VTOBlob : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOBlob>(deep);
+
 
 }
 /// <summary>
@@ -961,6 +963,7 @@ public partial class VTStreamData : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTStreamData>(deep);
 
+
 }
 /// <summary>
 /// <para>Binary Stream Object.</para>
@@ -996,6 +999,7 @@ public partial class VTOStreamData : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOStreamData>(deep);
+
 
 }
 /// <summary>
@@ -1033,6 +1037,7 @@ public partial class VTStorage : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTStorage>(deep);
 
+
 }
 /// <summary>
 /// <para>Binary Storage Object.</para>
@@ -1068,6 +1073,7 @@ public partial class VTOStorage : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOStorage>(deep);
+
 
 }
 /// <summary>
@@ -1249,6 +1255,7 @@ public partial class VTInt32 : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInt32>(deep);
 
+
 }
 /// <summary>
 /// <para>Integer.</para>
@@ -1284,6 +1291,7 @@ public partial class VTInteger : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInteger>(deep);
+
 
 }
 /// <summary>
@@ -1447,6 +1455,7 @@ public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInt32>(deep);
 
+
 }
 /// <summary>
 /// <para>Unsigned Integer.</para>
@@ -1482,6 +1491,7 @@ public partial class VTUnsignedInteger : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInteger>(deep);
+
 
 }
 /// <summary>
@@ -1686,6 +1696,7 @@ public partial class VTLPSTR : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTLPSTR>(deep);
 
+
 }
 /// <summary>
 /// <para>LPWSTR.</para>
@@ -1721,6 +1732,7 @@ public partial class VTLPWSTR : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTLPWSTR>(deep);
 
+
 }
 /// <summary>
 /// <para>Basic String.</para>
@@ -1755,6 +1767,7 @@ public partial class VTBString : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBString>(deep);
+
 
 }
 /// <summary>
@@ -1792,6 +1805,7 @@ public partial class VTDate : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTDate>(deep);
 
+
 }
 /// <summary>
 /// <para>File Time.</para>
@@ -1827,6 +1841,7 @@ public partial class VTFileTime : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTFileTime>(deep);
+
 
 }
 /// <summary>

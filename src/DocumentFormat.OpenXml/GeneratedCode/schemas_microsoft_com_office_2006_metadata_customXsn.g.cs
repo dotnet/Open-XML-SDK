@@ -165,6 +165,7 @@ public partial class XsnLocation : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsnLocation>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CachedView Class.</para>
@@ -199,6 +200,7 @@ public partial class CachedView : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CachedView>(deep);
+
 
 }
 /// <summary>
@@ -235,6 +237,7 @@ public partial class OpenByDefault : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OpenByDefault>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Scope Class.</para>
@@ -269,6 +272,7 @@ public partial class Scope : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Scope>(deep);
+
 
 }
 }

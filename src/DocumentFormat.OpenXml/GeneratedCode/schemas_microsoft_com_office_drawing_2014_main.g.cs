@@ -156,6 +156,7 @@ public partial class RowIdIdentifier : OpenXmlIdentifierElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowIdIdentifier>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the ColIdIdentifier Class.</para>
@@ -179,6 +180,7 @@ public partial class ColIdIdentifier : OpenXmlIdentifierElement
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColIdIdentifier>(deep);
+
 
 }
 /// <summary>

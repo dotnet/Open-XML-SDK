@@ -1123,6 +1123,20 @@ public partial class LineReference : StyleReference
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineReference>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the FillReference Class.</para>
@@ -1182,6 +1196,20 @@ public partial class FillReference : StyleReference
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillReference>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the EffectReference Class.</para>
@@ -1241,6 +1269,20 @@ public partial class EffectReference : StyleReference
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EffectReference>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the StyleReference class.
@@ -2160,6 +2202,7 @@ public partial class CategoryAxisProperties : AxisProperties
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CategoryAxisProperties>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the SeriesAxisProperties Class.</para>
@@ -2184,6 +2227,7 @@ public partial class SeriesAxisProperties : AxisProperties
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeriesAxisProperties>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the ValueAxisProperties Class.</para>
@@ -2207,6 +2251,7 @@ public partial class ValueAxisProperties : AxisProperties
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ValueAxisProperties>(deep);
+
 
 }
 /// <summary>
@@ -2801,6 +2846,18 @@ public partial class AxisTitle : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AxisTitle>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the CategoryAxis Class.</para>
@@ -2862,6 +2919,18 @@ public partial class CategoryAxis : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CategoryAxis>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the ChartArea Class.</para>
@@ -2923,6 +2992,18 @@ public partial class ChartArea : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartArea>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DataLabel Class.</para>
@@ -2984,6 +3065,18 @@ public partial class DataLabel : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabel>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DataLabelCallout Class.</para>
@@ -3045,6 +3138,18 @@ public partial class DataLabelCallout : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabelCallout>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DataPoint Class.</para>
@@ -3106,6 +3211,18 @@ public partial class DataPoint : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataPoint>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DataPoint3D Class.</para>
@@ -3167,6 +3284,18 @@ public partial class DataPoint3D : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataPoint3D>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DataPointLine Class.</para>
@@ -3228,6 +3357,18 @@ public partial class DataPointLine : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataPointLine>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DataPointMarker Class.</para>
@@ -3289,6 +3430,18 @@ public partial class DataPointMarker : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataPointMarker>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DataPointWireframe Class.</para>
@@ -3350,6 +3503,18 @@ public partial class DataPointWireframe : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataPointWireframe>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DataTableStyle Class.</para>
@@ -3411,6 +3576,18 @@ public partial class DataTableStyle : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataTableStyle>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DownBar Class.</para>
@@ -3472,6 +3649,18 @@ public partial class DownBar : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DownBar>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DropLine Class.</para>
@@ -3533,6 +3722,18 @@ public partial class DropLine : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropLine>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the ErrorBar Class.</para>
@@ -3594,6 +3795,18 @@ public partial class ErrorBar : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ErrorBar>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the Floor Class.</para>
@@ -3655,6 +3868,18 @@ public partial class Floor : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Floor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the GridlineMajor Class.</para>
@@ -3716,6 +3941,18 @@ public partial class GridlineMajor : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GridlineMajor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the GridlineMinor Class.</para>
@@ -3777,6 +4014,18 @@ public partial class GridlineMinor : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GridlineMinor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the HiLoLine Class.</para>
@@ -3838,6 +4087,18 @@ public partial class HiLoLine : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HiLoLine>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the LeaderLine Class.</para>
@@ -3899,6 +4160,18 @@ public partial class LeaderLine : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeaderLine>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the LegendStyle Class.</para>
@@ -3960,6 +4233,18 @@ public partial class LegendStyle : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LegendStyle>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the PlotArea Class.</para>
@@ -4021,6 +4306,18 @@ public partial class PlotArea : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PlotArea>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the PlotArea3D Class.</para>
@@ -4082,6 +4379,18 @@ public partial class PlotArea3D : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PlotArea3D>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the SeriesAxis Class.</para>
@@ -4143,6 +4452,18 @@ public partial class SeriesAxis : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeriesAxis>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the SeriesLine Class.</para>
@@ -4204,6 +4525,18 @@ public partial class SeriesLine : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeriesLine>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the TitleStyle Class.</para>
@@ -4265,6 +4598,18 @@ public partial class TitleStyle : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TitleStyle>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the TrendlineStyle Class.</para>
@@ -4326,6 +4671,18 @@ public partial class TrendlineStyle : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TrendlineStyle>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the TrendlineLabel Class.</para>
@@ -4387,6 +4744,18 @@ public partial class TrendlineLabel : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TrendlineLabel>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the UpBar Class.</para>
@@ -4448,6 +4817,18 @@ public partial class UpBar : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UpBar>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the ValueAxis Class.</para>
@@ -4509,6 +4890,18 @@ public partial class ValueAxis : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ValueAxis>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the Wall Class.</para>
@@ -4570,6 +4963,18 @@ public partial class Wall : StyleEntry
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Wall>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the StyleEntry class.

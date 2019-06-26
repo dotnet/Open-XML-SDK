@@ -33,6 +33,7 @@ public partial class TopBorder : BorderType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopBorder>(deep);
 
+
 }
 /// <summary>
 /// <para>Left Border.</para>
@@ -56,6 +57,7 @@ public partial class LeftBorder : BorderType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftBorder>(deep);
+
 
 }
 /// <summary>
@@ -81,6 +83,7 @@ public partial class RightBorder : BorderType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightBorder>(deep);
 
+
 }
 /// <summary>
 /// <para>Bottom Border.</para>
@@ -104,6 +107,7 @@ public partial class BottomBorder : BorderType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomBorder>(deep);
+
 
 }
 /// <summary>

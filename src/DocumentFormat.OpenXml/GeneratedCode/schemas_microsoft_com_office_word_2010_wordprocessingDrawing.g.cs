@@ -46,6 +46,7 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentagePositionHeightOffset>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the PercentagePositionVerticalOffset Class.</para>
@@ -81,6 +82,7 @@ public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentagePositionVerticalOffset>(deep);
+
 
 }
 /// <summary>
@@ -294,6 +296,7 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentageWidth>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the PercentageHeight Class.</para>
@@ -329,6 +332,7 @@ public partial class PercentageHeight : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentageHeight>(deep);
+
 
 }
 /// <summary>

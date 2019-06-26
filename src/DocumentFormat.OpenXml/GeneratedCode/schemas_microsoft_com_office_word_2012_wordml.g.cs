@@ -495,6 +495,7 @@ public partial class ChartTrackingRefBased : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartTrackingRefBased>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the DefaultCollapsed Class.</para>
@@ -518,6 +519,7 @@ public partial class DefaultCollapsed : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultCollapsed>(deep);
+
 
 }
 /// <summary>
@@ -543,6 +545,7 @@ public partial class WebExtensionLinked : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionLinked>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the WebExtensionCreated Class.</para>
@@ -567,6 +570,7 @@ public partial class WebExtensionCreated : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionCreated>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the DoNotAllowInsertDeleteSection Class.</para>
@@ -590,6 +594,7 @@ public partial class DoNotAllowInsertDeleteSection : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotAllowInsertDeleteSection>(deep);
+
 
 }
 /// <summary>

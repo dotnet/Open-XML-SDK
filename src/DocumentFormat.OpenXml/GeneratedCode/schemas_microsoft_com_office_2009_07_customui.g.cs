@@ -11352,6 +11352,16 @@ public partial class SharedControlsQatItems : QatItemsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedControlsQatItems>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1000)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Separator), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DocumentControlsQatItems Class.</para>
@@ -11407,6 +11417,16 @@ public partial class DocumentControlsQatItems : QatItemsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentControlsQatItems>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1000)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Separator), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the QatItemsType class.
@@ -12132,6 +12152,7 @@ public partial class ItemBackstageItem : BackstageItemType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ItemBackstageItem>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the RadioButtonBackstageItem Class.</para>
@@ -12155,6 +12176,7 @@ public partial class RadioButtonBackstageItem : BackstageItemType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RadioButtonBackstageItem>(deep);
+
 
 }
 /// <summary>
@@ -12875,6 +12897,24 @@ public partial class TopItemsGroupControls : GroupControlsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopItemsGroupControls>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 1000)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1000)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the BottomItemsGroupControls Class.</para>
@@ -12938,6 +12978,24 @@ public partial class BottomItemsGroupControls : GroupControlsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomItemsGroupControls>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 1000)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1000)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the GroupControlsType class.

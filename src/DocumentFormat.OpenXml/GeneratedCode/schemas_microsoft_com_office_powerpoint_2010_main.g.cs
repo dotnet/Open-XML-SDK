@@ -482,6 +482,7 @@ public partial class VortexTransition : SideDirectionTransitionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VortexTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the PanTransition Class.</para>
@@ -505,6 +506,7 @@ public partial class PanTransition : SideDirectionTransitionType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PanTransition>(deep);
+
 
 }
 /// <summary>
@@ -556,6 +558,7 @@ public partial class SwitchTransition : LeftRightDirectionTransitionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SwitchTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the FlipTransition Class.</para>
@@ -579,6 +582,7 @@ public partial class FlipTransition : LeftRightDirectionTransitionType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FlipTransition>(deep);
+
 
 }
 /// <summary>
@@ -604,6 +608,7 @@ public partial class FerrisTransition : LeftRightDirectionTransitionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FerrisTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the GalleryTransition Class.</para>
@@ -628,6 +633,7 @@ public partial class GalleryTransition : LeftRightDirectionTransitionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GalleryTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the ConveyorTransition Class.</para>
@@ -651,6 +657,7 @@ public partial class ConveyorTransition : LeftRightDirectionTransitionType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConveyorTransition>(deep);
+
 
 }
 /// <summary>
@@ -741,6 +748,7 @@ public partial class HoneycombTransition : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HoneycombTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the FlashTransition Class.</para>
@@ -764,6 +772,7 @@ public partial class FlashTransition : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FlashTransition>(deep);
+
 
 }
 /// <summary>
@@ -859,6 +868,7 @@ public partial class DoorsTransition : OrientationTransitionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoorsTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the WindowTransition Class.</para>
@@ -882,6 +892,7 @@ public partial class WindowTransition : OrientationTransitionType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WindowTransition>(deep);
+
 
 }
 /// <summary>
@@ -1741,6 +1752,7 @@ public partial class CreationId : RandomIdType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CreationId>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the ModificationId Class.</para>
@@ -1764,6 +1776,7 @@ public partial class ModificationId : RandomIdType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ModificationId>(deep);
+
 
 }
 /// <summary>
@@ -3113,6 +3126,7 @@ public partial class PlayEventRecord : MediaPlaybackEventRecordType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PlayEventRecord>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the StopEventRecord Class.</para>
@@ -3136,6 +3150,7 @@ public partial class StopEventRecord : MediaPlaybackEventRecordType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StopEventRecord>(deep);
+
 
 }
 /// <summary>
@@ -3161,6 +3176,7 @@ public partial class PauseEventRecord : MediaPlaybackEventRecordType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PauseEventRecord>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the ResumeEventRecord Class.</para>
@@ -3184,6 +3200,7 @@ public partial class ResumeEventRecord : MediaPlaybackEventRecordType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ResumeEventRecord>(deep);
+
 
 }
 /// <summary>

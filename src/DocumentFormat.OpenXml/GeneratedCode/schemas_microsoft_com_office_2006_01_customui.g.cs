@@ -8109,6 +8109,16 @@ public partial class SharedQatControls : QatItemsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedQatControls>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1000)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DocumentSpecificQuickAccessToolbarControls Class.</para>
@@ -8164,6 +8174,16 @@ public partial class DocumentSpecificQuickAccessToolbarControls : QatItemsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentSpecificQuickAccessToolbarControls>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1000)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the QatItemsType class.

@@ -44,6 +44,7 @@ public partial class Key : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Key>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Value Class.</para>
@@ -78,6 +79,7 @@ public partial class Value : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Value>(deep);
+
 
 }
 /// <summary>

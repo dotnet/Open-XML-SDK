@@ -951,6 +951,7 @@ public partial class StartPoint : Point2DType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartPoint>(deep);
 
+
 }
 /// <summary>
 /// <para>Wrapping Polygon Line End Position.</para>
@@ -975,6 +976,7 @@ public partial class LineTo : Point2DType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineTo>(deep);
 
+
 }
 /// <summary>
 /// <para>Simple Positioning Coordinates.</para>
@@ -998,6 +1000,7 @@ public partial class SimplePosition : Point2DType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SimplePosition>(deep);
+
 
 }
 /// <summary>

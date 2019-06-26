@@ -579,6 +579,7 @@ public partial class RowSortMapItem : SortMapItemType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowSortMapItem>(deep);
 
+
 }
 /// <summary>
 /// <para>Column.</para>
@@ -602,6 +603,7 @@ public partial class ColumnSortMapItem : SortMapItemType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnSortMapItem>(deep);
+
 
 }
 /// <summary>

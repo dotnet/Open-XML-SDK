@@ -3245,6 +3245,11 @@ public partial class DataValidationForumla1 : DataValidationFormulaType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataValidationForumla1>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DataValidationForumla2 Class.</para>
@@ -3298,6 +3303,11 @@ public partial class DataValidationForumla2 : DataValidationFormulaType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataValidationForumla2>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the DataValidationFormulaType class.
@@ -3727,6 +3737,7 @@ public partial class SeriesColor : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeriesColor>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the NegativeColor Class.</para>
@@ -3750,6 +3761,7 @@ public partial class NegativeColor : ColorType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NegativeColor>(deep);
+
 
 }
 /// <summary>
@@ -3775,6 +3787,7 @@ public partial class AxisColor : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AxisColor>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the MarkersColor Class.</para>
@@ -3798,6 +3811,7 @@ public partial class MarkersColor : ColorType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MarkersColor>(deep);
+
 
 }
 /// <summary>
@@ -3823,6 +3837,7 @@ public partial class FirstMarkerColor : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstMarkerColor>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the LastMarkerColor Class.</para>
@@ -3846,6 +3861,7 @@ public partial class LastMarkerColor : ColorType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LastMarkerColor>(deep);
+
 
 }
 /// <summary>
@@ -3871,6 +3887,7 @@ public partial class HighMarkerColor : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HighMarkerColor>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the LowMarkerColor Class.</para>
@@ -3894,6 +3911,7 @@ public partial class LowMarkerColor : ColorType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LowMarkerColor>(deep);
+
 
 }
 /// <summary>
@@ -3919,6 +3937,7 @@ public partial class Color : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Color>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the FillColor Class.</para>
@@ -3942,6 +3961,7 @@ public partial class FillColor : ColorType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillColor>(deep);
+
 
 }
 /// <summary>
@@ -3967,6 +3987,7 @@ public partial class BorderColor : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BorderColor>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the NegativeFillColor Class.</para>
@@ -3990,6 +4011,7 @@ public partial class NegativeFillColor : ColorType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NegativeFillColor>(deep);
+
 
 }
 /// <summary>
@@ -4015,6 +4037,7 @@ public partial class NegativeBorderColor : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NegativeBorderColor>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the BarAxisColor Class.</para>
@@ -4038,6 +4061,7 @@ public partial class BarAxisColor : ColorType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarAxisColor>(deep);
+
 
 }
 /// <summary>

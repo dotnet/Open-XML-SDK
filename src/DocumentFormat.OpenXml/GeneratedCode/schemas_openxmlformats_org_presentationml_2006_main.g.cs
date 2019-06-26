@@ -37,6 +37,7 @@ public partial class SlideAll : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideAll>(deep);
 
+
 }
 /// <summary>
 /// <para>Presenter Slide Show Mode.</para>
@@ -60,6 +61,7 @@ public partial class PresenterSlideMode : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresenterSlideMode>(deep);
+
 
 }
 /// <summary>
@@ -85,6 +87,7 @@ public partial class EndSoundAction : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndSoundAction>(deep);
 
+
 }
 /// <summary>
 /// <para>Build As One.</para>
@@ -108,6 +111,7 @@ public partial class BuildAsOne : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BuildAsOne>(deep);
+
 
 }
 /// <summary>
@@ -133,6 +137,7 @@ public partial class SlideTarget : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideTarget>(deep);
 
+
 }
 /// <summary>
 /// <para>Background.</para>
@@ -156,6 +161,7 @@ public partial class BackgroundAnimation : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundAnimation>(deep);
+
 
 }
 /// <summary>
@@ -181,6 +187,7 @@ public partial class CircleTransition : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CircleTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the DissolveTransition Class.</para>
@@ -204,6 +211,7 @@ public partial class DissolveTransition : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DissolveTransition>(deep);
+
 
 }
 /// <summary>
@@ -229,6 +237,7 @@ public partial class DiamondTransition : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DiamondTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the NewsflashTransition Class.</para>
@@ -252,6 +261,7 @@ public partial class NewsflashTransition : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NewsflashTransition>(deep);
+
 
 }
 /// <summary>
@@ -277,6 +287,7 @@ public partial class PlusTransition : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PlusTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the RandomTransition Class.</para>
@@ -301,6 +312,7 @@ public partial class RandomTransition : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RandomTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the WedgeTransition Class.</para>
@@ -324,6 +336,7 @@ public partial class WedgeTransition : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WedgeTransition>(deep);
+
 
 }
 /// <summary>
@@ -367,6 +380,7 @@ public partial class SlideRange : IndexRangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideRange>(deep);
 
+
 }
 /// <summary>
 /// <para>Character Range.</para>
@@ -391,6 +405,7 @@ public partial class CharRange : IndexRangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CharRange>(deep);
 
+
 }
 /// <summary>
 /// <para>Paragraph Text Range.</para>
@@ -414,6 +429,7 @@ public partial class ParagraphIndexRange : IndexRangeType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ParagraphIndexRange>(deep);
+
 
 }
 /// <summary>
@@ -3655,6 +3671,7 @@ public partial class Sound : EmbeddedWavAudioFileType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Sound>(deep);
 
+
 }
 /// <summary>
 /// <para>Sound Target.</para>
@@ -3678,6 +3695,7 @@ public partial class SoundTarget : EmbeddedWavAudioFileType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SoundTarget>(deep);
+
 
 }
 /// <summary>
@@ -4163,6 +4181,13 @@ public partial class Condition : TimeListConditionalType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Condition>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNode), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the EndSync Class.</para>
@@ -4218,6 +4243,13 @@ public partial class EndSync : TimeListConditionalType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndSync>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNode), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the TimeListConditionalType class.
@@ -6225,6 +6257,11 @@ public partial class PreviousConditionList : TimeListTimeConditionalListType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PreviousConditionList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Next Conditions List.</para>
@@ -6278,6 +6315,11 @@ public partial class NextConditionList : TimeListTimeConditionalListType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NextConditionList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the StartConditionList Class.</para>
@@ -6331,6 +6373,11 @@ public partial class StartConditionList : TimeListTimeConditionalListType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartConditionList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the EndConditionList Class.</para>
@@ -6384,6 +6431,11 @@ public partial class EndConditionList : TimeListTimeConditionalListType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndConditionList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the TimeListTimeConditionalListType class.
@@ -6467,6 +6519,7 @@ public partial class AttributeName : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AttributeName>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Text Class.</para>
@@ -6501,6 +6554,7 @@ public partial class Text : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Text>(deep);
+
 
 }
 /// <summary>
@@ -6773,6 +6827,19 @@ public partial class ColorValue : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorValue>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Pen Color for Slide Show.</para>
@@ -6831,6 +6898,19 @@ public partial class PenColor : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PenColor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the ColorType class.
@@ -7484,6 +7564,15 @@ public partial class ToVariantValue : TimeListAnimationVariantType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToVariantValue>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BooleanVariantValue), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.IntegerVariantValue), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FloatVariantValue), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StringVariantValue), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorValue), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Value.</para>
@@ -7541,6 +7630,15 @@ public partial class VariantValue : TimeListAnimationVariantType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VariantValue>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BooleanVariantValue), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.IntegerVariantValue), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FloatVariantValue), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StringVariantValue), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorValue), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the TimeListAnimationVariantType class.
@@ -8820,6 +8918,16 @@ public partial class FromColor : Color3Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FromColor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>To.</para>
@@ -8878,6 +8986,16 @@ public partial class ToColor : Color3Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToColor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the Color3Type class.
@@ -10053,6 +10171,7 @@ public partial class RegularFont : EmbeddedFontDataIdType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RegularFont>(deep);
 
+
 }
 /// <summary>
 /// <para>Bold Embedded Font.</para>
@@ -10076,6 +10195,7 @@ public partial class BoldFont : EmbeddedFontDataIdType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BoldFont>(deep);
+
 
 }
 /// <summary>
@@ -10101,6 +10221,7 @@ public partial class ItalicFont : EmbeddedFontDataIdType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ItalicFont>(deep);
 
+
 }
 /// <summary>
 /// <para>Bold Italic Embedded Font.</para>
@@ -10124,6 +10245,7 @@ public partial class BoldItalicFont : EmbeddedFontDataIdType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BoldItalicFont>(deep);
+
 
 }
 /// <summary>
@@ -12361,6 +12483,21 @@ public partial class TitleStyle : TextListStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TitleStyle>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Slide Master Body Text Style.</para>
@@ -12424,6 +12561,21 @@ public partial class BodyStyle : TextListStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BodyStyle>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Slide Master Other Text Style.</para>
@@ -12487,6 +12639,21 @@ public partial class OtherStyle : TextListStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OtherStyle>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DefaultTextStyle Class.</para>
@@ -12550,6 +12717,21 @@ public partial class DefaultTextStyle : TextListStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultTextStyle>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the NotesStyle Class.</para>
@@ -12613,6 +12795,21 @@ public partial class NotesStyle : TextListStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesStyle>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the TextListStyleType class.
@@ -13143,6 +13340,7 @@ public partial class RestoredLeft : NormalViewPortionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RestoredLeft>(deep);
 
+
 }
 /// <summary>
 /// <para>Normal View Restored Top Properties.</para>
@@ -13166,6 +13364,7 @@ public partial class RestoredTop : NormalViewPortionType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RestoredTop>(deep);
+
 
 }
 /// <summary>
@@ -13320,6 +13519,7 @@ public partial class Origin : Point2DType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Origin>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Position Class.</para>
@@ -13343,6 +13543,7 @@ public partial class Position : Point2DType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Position>(deep);
+
 
 }
 /// <summary>
@@ -14488,6 +14689,7 @@ public partial class GridSpacing : PositiveSize2DType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GridSpacing>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the NotesSize Class.</para>
@@ -14511,6 +14713,7 @@ public partial class NotesSize : PositiveSize2DType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesSize>(deep);
+
 
 }
 /// <summary>
@@ -15665,6 +15868,22 @@ public partial class ShapeTree : GroupShapeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeTree>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShapeProperties), 1, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Shape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GraphicFrame), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ConnectionShape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ContentPart), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Group Shape.</para>
@@ -15726,6 +15945,22 @@ public partial class GroupShape : GroupShapeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupShape>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShapeProperties), 1, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Shape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GraphicFrame), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ConnectionShape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ContentPart), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the GroupShapeType class.
@@ -16893,6 +17128,7 @@ public partial class InkTarget : TimeListSubShapeIdType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InkTarget>(deep);
 
+
 }
 /// <summary>
 /// <para>Subshape.</para>
@@ -16916,6 +17152,7 @@ public partial class SubShape : TimeListSubShapeIdType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubShape>(deep);
+
 
 }
 /// <summary>
@@ -17821,6 +18058,23 @@ public partial class ChildTimeNodeList : TimeTypeListType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChildTimeNodeList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParallelTimeNode), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SequenceTimeNode), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Animate), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateEffect), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateMotion), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateRotation), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateScale), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Command), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SetBehavior), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Audio), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Video), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the SubTimeNodeList Class.</para>
@@ -17886,6 +18140,23 @@ public partial class SubTimeNodeList : TimeTypeListType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubTimeNodeList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParallelTimeNode), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SequenceTimeNode), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Animate), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateEffect), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateMotion), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateRotation), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateScale), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Command), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SetBehavior), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Audio), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Video), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the TimeTypeListType class.
@@ -18046,6 +18317,7 @@ public partial class ByPosition : TimeListType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ByPosition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the FromPosition Class.</para>
@@ -18069,6 +18341,7 @@ public partial class FromPosition : TimeListType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FromPosition>(deep);
+
 
 }
 /// <summary>
@@ -18094,6 +18367,7 @@ public partial class ToPosition : TimeListType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToPosition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the RotationCenter Class.</para>
@@ -18117,6 +18391,7 @@ public partial class RotationCenter : TimeListType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RotationCenter>(deep);
+
 
 }
 /// <summary>
@@ -20742,6 +21017,7 @@ public partial class BlindsTransition : OrientationTransitionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlindsTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CheckerTransition Class.</para>
@@ -20765,6 +21041,7 @@ public partial class CheckerTransition : OrientationTransitionType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CheckerTransition>(deep);
+
 
 }
 /// <summary>
@@ -20790,6 +21067,7 @@ public partial class CombTransition : OrientationTransitionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CombTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the RandomBarTransition Class.</para>
@@ -20813,6 +21091,7 @@ public partial class RandomBarTransition : OrientationTransitionType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RandomBarTransition>(deep);
+
 
 }
 /// <summary>
@@ -20864,6 +21143,7 @@ public partial class CoverTransition : EightDirectionTransitionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CoverTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the PullTransition Class.</para>
@@ -20887,6 +21167,7 @@ public partial class PullTransition : EightDirectionTransitionType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PullTransition>(deep);
+
 
 }
 /// <summary>
@@ -20939,6 +21220,7 @@ public partial class CutTransition : OptionalBlackTransitionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CutTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the FadeTransition Class.</para>
@@ -20962,6 +21244,7 @@ public partial class FadeTransition : OptionalBlackTransitionType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FadeTransition>(deep);
+
 
 }
 /// <summary>
@@ -21012,6 +21295,7 @@ public partial class PushTransition : SideDirectionTransitionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PushTransition>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the WipeTransition Class.</para>
@@ -21035,6 +21319,7 @@ public partial class WipeTransition : SideDirectionTransitionType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WipeTransition>(deep);
+
 
 }
 /// <summary>

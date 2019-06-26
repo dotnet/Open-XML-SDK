@@ -2587,6 +2587,7 @@ public partial class XPosition : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<XPosition>(deep);
 
+
 }
 /// <summary>
 /// <para>Relative Y Coordinate.</para>
@@ -2622,6 +2623,7 @@ public partial class YPosition : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<YPosition>(deep);
+
 
 }
 /// <summary>
@@ -2677,6 +2679,12 @@ public partial class FromAnchor : MarkerType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FromAnchor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.XPosition), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.YPosition), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Ending Anchor Point.</para>
@@ -2731,6 +2739,12 @@ public partial class ToAnchor : MarkerType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToAnchor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.XPosition), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.YPosition), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the MarkerType class.

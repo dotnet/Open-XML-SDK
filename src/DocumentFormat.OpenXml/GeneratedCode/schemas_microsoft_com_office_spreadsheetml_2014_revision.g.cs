@@ -2764,6 +2764,7 @@ public partial class FormulaFormula : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaFormula>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the FFormula Class.</para>
@@ -2798,6 +2799,7 @@ public partial class FFormula : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FFormula>(deep);
+
 
 }
 /// <summary>

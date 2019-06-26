@@ -318,6 +318,7 @@ public partial class SourceLink : ContextLinkType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SourceLink>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the DestinationLink Class.</para>
@@ -341,6 +342,7 @@ public partial class DestinationLink : ContextLinkType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DestinationLink>(deep);
+
 
 }
 /// <summary>

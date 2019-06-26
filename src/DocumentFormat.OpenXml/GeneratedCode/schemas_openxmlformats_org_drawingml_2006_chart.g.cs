@@ -248,6 +248,13 @@ public partial class TextProperties : TextBodyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Rich Text.</para>
@@ -303,6 +310,13 @@ public partial class RichText : TextBodyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RichText>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the TextBodyType class.
@@ -445,6 +459,7 @@ public partial class ShowLegendKey : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowLegendKey>(deep);
 
+
 }
 /// <summary>
 /// <para>Show Value.</para>
@@ -468,6 +483,7 @@ public partial class ShowValue : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowValue>(deep);
+
 
 }
 /// <summary>
@@ -493,6 +509,7 @@ public partial class ShowCategoryName : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowCategoryName>(deep);
 
+
 }
 /// <summary>
 /// <para>Show Series Name.</para>
@@ -516,6 +533,7 @@ public partial class ShowSeriesName : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowSeriesName>(deep);
+
 
 }
 /// <summary>
@@ -541,6 +559,7 @@ public partial class ShowPercent : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowPercent>(deep);
 
+
 }
 /// <summary>
 /// <para>Show Bubble Size.</para>
@@ -564,6 +583,7 @@ public partial class ShowBubbleSize : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowBubbleSize>(deep);
+
 
 }
 /// <summary>
@@ -589,6 +609,7 @@ public partial class ShowLeaderLines : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowLeaderLines>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the VaryColors Class.</para>
@@ -612,6 +633,7 @@ public partial class VaryColors : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VaryColors>(deep);
+
 
 }
 /// <summary>
@@ -637,6 +659,7 @@ public partial class Wireframe : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Wireframe>(deep);
 
+
 }
 /// <summary>
 /// <para>Delete.</para>
@@ -660,6 +683,7 @@ public partial class Delete : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Delete>(deep);
+
 
 }
 /// <summary>
@@ -685,6 +709,7 @@ public partial class Overlay : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Overlay>(deep);
 
+
 }
 /// <summary>
 /// <para>Right Angle Axes.</para>
@@ -708,6 +733,7 @@ public partial class RightAngleAxes : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightAngleAxes>(deep);
+
 
 }
 /// <summary>
@@ -733,6 +759,7 @@ public partial class ShowHorizontalBorder : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowHorizontalBorder>(deep);
 
+
 }
 /// <summary>
 /// <para>Show Vertical Border.</para>
@@ -756,6 +783,7 @@ public partial class ShowVerticalBorder : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowVerticalBorder>(deep);
+
 
 }
 /// <summary>
@@ -781,6 +809,7 @@ public partial class ShowOutlineBorder : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowOutlineBorder>(deep);
 
+
 }
 /// <summary>
 /// <para>Show Legend Keys.</para>
@@ -804,6 +833,7 @@ public partial class ShowKeys : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowKeys>(deep);
+
 
 }
 /// <summary>
@@ -829,6 +859,7 @@ public partial class InvertIfNegative : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InvertIfNegative>(deep);
 
+
 }
 /// <summary>
 /// <para>3D Bubble.</para>
@@ -852,6 +883,7 @@ public partial class Bubble3D : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bubble3D>(deep);
+
 
 }
 /// <summary>
@@ -877,6 +909,7 @@ public partial class DisplayRSquaredValue : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayRSquaredValue>(deep);
 
+
 }
 /// <summary>
 /// <para>Display Equation.</para>
@@ -900,6 +933,7 @@ public partial class DisplayEquation : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayEquation>(deep);
+
 
 }
 /// <summary>
@@ -925,6 +959,7 @@ public partial class NoEndCap : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoEndCap>(deep);
 
+
 }
 /// <summary>
 /// <para>Apply To Front.</para>
@@ -948,6 +983,7 @@ public partial class ApplyToFront : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplyToFront>(deep);
+
 
 }
 /// <summary>
@@ -973,6 +1009,7 @@ public partial class ApplyToSides : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplyToSides>(deep);
 
+
 }
 /// <summary>
 /// <para>Apply to End.</para>
@@ -996,6 +1033,7 @@ public partial class ApplyToEnd : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplyToEnd>(deep);
+
 
 }
 /// <summary>
@@ -1021,6 +1059,7 @@ public partial class AutoTitleDeleted : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoTitleDeleted>(deep);
 
+
 }
 /// <summary>
 /// <para>Plot Visible Only.</para>
@@ -1044,6 +1083,7 @@ public partial class PlotVisibleOnly : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PlotVisibleOnly>(deep);
+
 
 }
 /// <summary>
@@ -1069,6 +1109,7 @@ public partial class ShowDataLabelsOverMaximum : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowDataLabelsOverMaximum>(deep);
 
+
 }
 /// <summary>
 /// <para>Chart Object.</para>
@@ -1092,6 +1133,7 @@ public partial class ChartObject : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartObject>(deep);
+
 
 }
 /// <summary>
@@ -1117,6 +1159,7 @@ public partial class Data : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Data>(deep);
 
+
 }
 /// <summary>
 /// <para>Formatting.</para>
@@ -1140,6 +1183,7 @@ public partial class Formatting : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formatting>(deep);
+
 
 }
 /// <summary>
@@ -1165,6 +1209,7 @@ public partial class Selection : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Selection>(deep);
 
+
 }
 /// <summary>
 /// <para>User Interface.</para>
@@ -1188,6 +1233,7 @@ public partial class UserInterface : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UserInterface>(deep);
+
 
 }
 /// <summary>
@@ -1213,6 +1259,7 @@ public partial class AutoUpdate : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoUpdate>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Smooth Class.</para>
@@ -1236,6 +1283,7 @@ public partial class Smooth : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Smooth>(deep);
+
 
 }
 /// <summary>
@@ -1261,6 +1309,7 @@ public partial class ShowMarker : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowMarker>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the ShowNegativeBubbles Class.</para>
@@ -1284,6 +1333,7 @@ public partial class ShowNegativeBubbles : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowNegativeBubbles>(deep);
+
 
 }
 /// <summary>
@@ -1309,6 +1359,7 @@ public partial class AutoLabeled : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoLabeled>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the NoMultiLevelLabels Class.</para>
@@ -1332,6 +1383,7 @@ public partial class NoMultiLevelLabels : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoMultiLevelLabels>(deep);
+
 
 }
 /// <summary>
@@ -1357,6 +1409,7 @@ public partial class Date1904 : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Date1904>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the RoundedCorners Class.</para>
@@ -1380,6 +1433,7 @@ public partial class RoundedCorners : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RoundedCorners>(deep);
+
 
 }
 /// <summary>
@@ -1441,6 +1495,7 @@ public partial class Separator : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Separator>(deep);
 
+
 }
 /// <summary>
 /// <para>Trendline Name.</para>
@@ -1476,6 +1531,7 @@ public partial class TrendlineName : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TrendlineName>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Formula Class.</para>
@@ -1510,6 +1566,7 @@ public partial class Formula : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
+
 
 }
 /// <summary>
@@ -1773,6 +1830,11 @@ public partial class LeaderLines : ChartLinesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeaderLines>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Drop Lines.</para>
@@ -1826,6 +1888,11 @@ public partial class DropLines : ChartLinesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropLines>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Major Gridlines.</para>
@@ -1879,6 +1946,11 @@ public partial class MajorGridlines : ChartLinesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MajorGridlines>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Minor Gridlines.</para>
@@ -1932,6 +2004,11 @@ public partial class MinorGridlines : ChartLinesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinorGridlines>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the SeriesLines Class.</para>
@@ -1985,6 +2062,11 @@ public partial class SeriesLines : ChartLinesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeriesLines>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the HighLowLines Class.</para>
@@ -2038,6 +2120,11 @@ public partial class HighLowLines : ChartLinesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HighLowLines>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the ChartLinesType class.
@@ -2125,6 +2212,7 @@ public partial class Index : UnsignedIntegerType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Index>(deep);
 
+
 }
 /// <summary>
 /// <para>Order.</para>
@@ -2148,6 +2236,7 @@ public partial class Order : UnsignedIntegerType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Order>(deep);
+
 
 }
 /// <summary>
@@ -2173,6 +2262,7 @@ public partial class AxisId : UnsignedIntegerType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AxisId>(deep);
 
+
 }
 /// <summary>
 /// <para>Crossing Axis ID.</para>
@@ -2196,6 +2286,7 @@ public partial class CrossingAxis : UnsignedIntegerType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CrossingAxis>(deep);
+
 
 }
 /// <summary>
@@ -2221,6 +2312,7 @@ public partial class PointCount : UnsignedIntegerType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PointCount>(deep);
 
+
 }
 /// <summary>
 /// <para>Second Pie Point.</para>
@@ -2244,6 +2336,7 @@ public partial class SecondPiePoint : UnsignedIntegerType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SecondPiePoint>(deep);
+
 
 }
 /// <summary>
@@ -2269,6 +2362,7 @@ public partial class Explosion : UnsignedIntegerType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Explosion>(deep);
 
+
 }
 /// <summary>
 /// <para>Format ID.</para>
@@ -2292,6 +2386,7 @@ public partial class FormatId : UnsignedIntegerType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormatId>(deep);
+
 
 }
 /// <summary>
@@ -3982,6 +4077,7 @@ public partial class MajorTickMark : TickMarkType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MajorTickMark>(deep);
 
+
 }
 /// <summary>
 /// <para>Minor Tick Mark.</para>
@@ -4005,6 +4101,7 @@ public partial class MinorTickMark : TickMarkType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinorTickMark>(deep);
+
 
 }
 /// <summary>
@@ -4130,6 +4227,7 @@ public partial class CrossesAt : DoubleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CrossesAt>(deep);
 
+
 }
 /// <summary>
 /// <para>Left.</para>
@@ -4153,6 +4251,7 @@ public partial class Left : DoubleType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Left>(deep);
+
 
 }
 /// <summary>
@@ -4178,6 +4277,7 @@ public partial class Top : DoubleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Top>(deep);
 
+
 }
 /// <summary>
 /// <para>Width.</para>
@@ -4201,6 +4301,7 @@ public partial class Width : DoubleType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Width>(deep);
+
 
 }
 /// <summary>
@@ -4226,6 +4327,7 @@ public partial class Height : DoubleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Height>(deep);
 
+
 }
 /// <summary>
 /// <para>Forward.</para>
@@ -4249,6 +4351,7 @@ public partial class Forward : DoubleType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Forward>(deep);
+
 
 }
 /// <summary>
@@ -4274,6 +4377,7 @@ public partial class Backward : DoubleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Backward>(deep);
 
+
 }
 /// <summary>
 /// <para>Intercept.</para>
@@ -4297,6 +4401,7 @@ public partial class Intercept : DoubleType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Intercept>(deep);
+
 
 }
 /// <summary>
@@ -4322,6 +4427,7 @@ public partial class ErrorBarValue : DoubleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ErrorBarValue>(deep);
 
+
 }
 /// <summary>
 /// <para>Split Position.</para>
@@ -4345,6 +4451,7 @@ public partial class SplitPosition : DoubleType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitPosition>(deep);
+
 
 }
 /// <summary>
@@ -4370,6 +4477,7 @@ public partial class CustomDisplayUnit : DoubleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomDisplayUnit>(deep);
 
+
 }
 /// <summary>
 /// <para>Maximum.</para>
@@ -4394,6 +4502,7 @@ public partial class MaxAxisValue : DoubleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MaxAxisValue>(deep);
 
+
 }
 /// <summary>
 /// <para>Minimum.</para>
@@ -4417,6 +4526,7 @@ public partial class MinAxisValue : DoubleType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinAxisValue>(deep);
+
 
 }
 /// <summary>
@@ -4705,6 +4815,7 @@ public partial class ChartReference : RelationshipIdType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartReference>(deep);
 
+
 }
 /// <summary>
 /// <para>Legacy Drawing for Headers and Footers.</para>
@@ -4729,6 +4840,7 @@ public partial class LegacyDrawingHeaderFooter : RelationshipIdType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LegacyDrawingHeaderFooter>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the UserShapesReference Class.</para>
@@ -4752,6 +4864,7 @@ public partial class UserShapesReference : RelationshipIdType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UserShapesReference>(deep);
+
 
 }
 /// <summary>
@@ -4886,6 +4999,7 @@ public partial class NumericValue : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumericValue>(deep);
 
+
 }
 /// <summary>
 /// <para>Format Code.</para>
@@ -4920,6 +5034,7 @@ public partial class FormatCode : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormatCode>(deep);
+
 
 }
 /// <summary>
@@ -4956,6 +5071,7 @@ public partial class OddHeader : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddHeader>(deep);
 
+
 }
 /// <summary>
 /// <para>Odd Footer.</para>
@@ -4990,6 +5106,7 @@ public partial class OddFooter : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OddFooter>(deep);
+
 
 }
 /// <summary>
@@ -5026,6 +5143,7 @@ public partial class EvenHeader : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenHeader>(deep);
 
+
 }
 /// <summary>
 /// <para>Even Footer.</para>
@@ -5060,6 +5178,7 @@ public partial class EvenFooter : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenFooter>(deep);
+
 
 }
 /// <summary>
@@ -5096,6 +5215,7 @@ public partial class FirstHeader : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstHeader>(deep);
 
+
 }
 /// <summary>
 /// <para>First Footer.</para>
@@ -5131,6 +5251,7 @@ public partial class FirstFooter : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstFooter>(deep);
 
+
 }
 /// <summary>
 /// <para>Pivot Name.</para>
@@ -5165,6 +5286,7 @@ public partial class PivotTableName : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotTableName>(deep);
+
 
 }
 /// <summary>
@@ -5490,6 +5612,14 @@ public partial class NumberLiteral : NumberDataType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberLiteral>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatCode), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericPoint), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the NumberingCache Class.</para>
@@ -5546,6 +5676,14 @@ public partial class NumberingCache : NumberDataType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingCache>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatCode), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericPoint), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the NumberDataType class.
@@ -5967,6 +6105,13 @@ public partial class StringLiteral : StringDataType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StringLiteral>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the StringCache Class.</para>
@@ -6022,6 +6167,13 @@ public partial class StringCache : StringDataType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StringCache>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the StringDataType class.
@@ -6150,6 +6302,7 @@ public partial class LeftMode : LayoutModeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftMode>(deep);
 
+
 }
 /// <summary>
 /// <para>Top Mode.</para>
@@ -6173,6 +6326,7 @@ public partial class TopMode : LayoutModeType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopMode>(deep);
+
 
 }
 /// <summary>
@@ -6198,6 +6352,7 @@ public partial class WidthMode : LayoutModeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WidthMode>(deep);
 
+
 }
 /// <summary>
 /// <para>Height Mode.</para>
@@ -6221,6 +6376,7 @@ public partial class HeightMode : LayoutModeType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeightMode>(deep);
+
 
 }
 /// <summary>
@@ -7448,6 +7604,15 @@ public partial class Plus : NumberDataSourceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Plus>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Minus.</para>
@@ -7502,6 +7667,15 @@ public partial class Minus : NumberDataSourceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Minus>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the Values Class.</para>
@@ -7556,6 +7730,15 @@ public partial class Values : NumberDataSourceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Values>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the YValues Class.</para>
@@ -7610,6 +7793,15 @@ public partial class YValues : NumberDataSourceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<YValues>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the BubbleSize Class.</para>
@@ -7664,6 +7856,15 @@ public partial class BubbleSize : NumberDataSourceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BubbleSize>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the NumberDataSourceType class.
@@ -7766,6 +7967,7 @@ public partial class GapWidth : GapAmountType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GapWidth>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the GapDepth Class.</para>
@@ -7789,6 +7991,7 @@ public partial class GapDepth : GapAmountType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GapDepth>(deep);
+
 
 }
 /// <summary>
@@ -7869,6 +8072,11 @@ public partial class UpBars : UpDownBarType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UpBars>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Down Bars.</para>
@@ -7922,6 +8130,11 @@ public partial class DownBars : UpDownBarType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DownBars>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the UpDownBarType class.
@@ -9144,6 +9357,14 @@ public partial class Floor : SurfaceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Floor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Side Wall.</para>
@@ -9200,6 +9421,14 @@ public partial class SideWall : SurfaceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SideWall>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Back Wall.</para>
@@ -9256,6 +9485,14 @@ public partial class BackWall : SurfaceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackWall>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the SurfaceType class.
@@ -17430,6 +17667,18 @@ public partial class CategoryAxisData : AxisDataSourceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CategoryAxisData>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the XValues Class.</para>
@@ -17487,6 +17736,18 @@ public partial class XValues : AxisDataSourceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<XValues>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the AxisDataSourceType class.
@@ -19847,6 +20108,7 @@ public partial class TickLabelSkip : SkipType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TickLabelSkip>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the TickMarkSkip Class.</para>
@@ -19870,6 +20132,7 @@ public partial class TickMarkSkip : SkipType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TickMarkSkip>(deep);
+
 
 }
 /// <summary>
@@ -19986,6 +20249,7 @@ public partial class BaseTimeUnit : TimeUnitType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BaseTimeUnit>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the MajorTimeUnit Class.</para>
@@ -20010,6 +20274,7 @@ public partial class MajorTimeUnit : TimeUnitType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MajorTimeUnit>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the MinorTimeUnit Class.</para>
@@ -20033,6 +20298,7 @@ public partial class MinorTimeUnit : TimeUnitType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinorTimeUnit>(deep);
+
 
 }
 /// <summary>
@@ -20083,6 +20349,7 @@ public partial class MajorUnit : AxisUnitType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MajorUnit>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the MinorUnit Class.</para>
@@ -20106,6 +20373,7 @@ public partial class MinorUnit : AxisUnitType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinorUnit>(deep);
+
 
 }
 /// <summary>

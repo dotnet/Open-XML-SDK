@@ -150,6 +150,7 @@ public partial class WaveAudioFile : EmbeddedWavAudioFileType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WaveAudioFile>(deep);
 
+
 }
 /// <summary>
 /// <para>Hyperlink Sound.</para>
@@ -173,6 +174,7 @@ public partial class HyperlinkSound : EmbeddedWavAudioFileType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkSound>(deep);
+
 
 }
 /// <summary>
@@ -507,6 +509,7 @@ public partial class Tint : PositiveFixedPercentageType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tint>(deep);
 
+
 }
 /// <summary>
 /// <para>Shade.</para>
@@ -531,6 +534,7 @@ public partial class Shade : PositiveFixedPercentageType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shade>(deep);
 
+
 }
 /// <summary>
 /// <para>Alpha.</para>
@@ -554,6 +558,7 @@ public partial class Alpha : PositiveFixedPercentageType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Alpha>(deep);
+
 
 }
 /// <summary>
@@ -735,6 +740,7 @@ public partial class AlphaModulation : PositivePercentageType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlphaModulation>(deep);
 
+
 }
 /// <summary>
 /// <para>Hue Modulate.</para>
@@ -758,6 +764,7 @@ public partial class HueModulation : PositivePercentageType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HueModulation>(deep);
+
 
 }
 /// <summary>
@@ -887,6 +894,7 @@ public partial class Saturation : PercentageType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Saturation>(deep);
 
+
 }
 /// <summary>
 /// <para>Saturation Offset.</para>
@@ -910,6 +918,7 @@ public partial class SaturationOffset : PercentageType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaturationOffset>(deep);
+
 
 }
 /// <summary>
@@ -935,6 +944,7 @@ public partial class SaturationModulation : PercentageType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaturationModulation>(deep);
 
+
 }
 /// <summary>
 /// <para>Luminance.</para>
@@ -958,6 +968,7 @@ public partial class Luminance : PercentageType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Luminance>(deep);
+
 
 }
 /// <summary>
@@ -983,6 +994,7 @@ public partial class LuminanceOffset : PercentageType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LuminanceOffset>(deep);
 
+
 }
 /// <summary>
 /// <para>Luminance Modulation.</para>
@@ -1006,6 +1018,7 @@ public partial class LuminanceModulation : PercentageType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LuminanceModulation>(deep);
+
 
 }
 /// <summary>
@@ -1031,6 +1044,7 @@ public partial class Red : PercentageType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Red>(deep);
 
+
 }
 /// <summary>
 /// <para>Red Offset.</para>
@@ -1054,6 +1068,7 @@ public partial class RedOffset : PercentageType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RedOffset>(deep);
+
 
 }
 /// <summary>
@@ -1079,6 +1094,7 @@ public partial class RedModulation : PercentageType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RedModulation>(deep);
 
+
 }
 /// <summary>
 /// <para>Green.</para>
@@ -1102,6 +1118,7 @@ public partial class Green : PercentageType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Green>(deep);
+
 
 }
 /// <summary>
@@ -1127,6 +1144,7 @@ public partial class GreenOffset : PercentageType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GreenOffset>(deep);
 
+
 }
 /// <summary>
 /// <para>Green Modification.</para>
@@ -1150,6 +1168,7 @@ public partial class GreenModulation : PercentageType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GreenModulation>(deep);
+
 
 }
 /// <summary>
@@ -1175,6 +1194,7 @@ public partial class Blue : PercentageType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Blue>(deep);
 
+
 }
 /// <summary>
 /// <para>Blue Offset.</para>
@@ -1199,6 +1219,7 @@ public partial class BlueOffset : PercentageType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlueOffset>(deep);
 
+
 }
 /// <summary>
 /// <para>Blue Modification.</para>
@@ -1222,6 +1243,7 @@ public partial class BlueModulation : PercentageType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlueModulation>(deep);
+
 
 }
 /// <summary>
@@ -3502,6 +3524,40 @@ public partial class EffectContainer : EffectContainerType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EffectContainer>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectContainer), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Effect), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaBiLevel), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaCeiling), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaFloor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaInverse), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaModulationEffect), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaModulationFixed), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaOutset), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaReplace), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BiLevel), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blend), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blur), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ColorChange), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ColorReplacement), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Duotone), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Fill), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillOverlay), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Glow), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Grayscale), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Hsl), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.InnerShadow), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceEffect), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.OuterShadow), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetShadow), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Reflection), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RelativeOffset), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SoftEdge), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TintEffect), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformEffect), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Effect Container.</para>
@@ -3584,6 +3640,40 @@ public partial class EffectDag : EffectContainerType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EffectDag>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectContainer), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Effect), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaBiLevel), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaCeiling), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaFloor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaInverse), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaModulationEffect), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaModulationFixed), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaOutset), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaReplace), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BiLevel), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blend), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blur), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ColorChange), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ColorReplacement), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Duotone), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Fill), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillOverlay), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Glow), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Grayscale), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Hsl), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.InnerShadow), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceEffect), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.OuterShadow), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetShadow), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Reflection), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RelativeOffset), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SoftEdge), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TintEffect), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformEffect), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the EffectContainerType class.
@@ -7244,6 +7334,19 @@ public partial class FillReference : StyleMatrixReferenceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillReference>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Effect Reference.</para>
@@ -7302,6 +7405,19 @@ public partial class EffectReference : StyleMatrixReferenceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EffectReference>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the LineReference Class.</para>
@@ -7360,6 +7476,19 @@ public partial class LineReference : StyleMatrixReferenceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineReference>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the StyleMatrixReferenceType class.
@@ -7661,6 +7790,15 @@ public partial class Fonts : FontCollectionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Fonts>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LatinFont), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EastAsianFont), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ComplexScriptFont), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SupplementalFont), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Major Font.</para>
@@ -7718,6 +7856,15 @@ public partial class MajorFont : FontCollectionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MajorFont>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LatinFont), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EastAsianFont), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ComplexScriptFont), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SupplementalFont), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Minor fonts.</para>
@@ -7775,6 +7922,15 @@ public partial class MinorFont : FontCollectionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinorFont>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LatinFont), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EastAsianFont), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ComplexScriptFont), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SupplementalFont), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the FontCollectionType class.
@@ -8237,6 +8393,19 @@ public partial class BulletColor : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BulletColor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Extrusion Color.</para>
@@ -8295,6 +8464,19 @@ public partial class ExtrusionColor : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExtrusionColor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Contour Color.</para>
@@ -8353,6 +8535,19 @@ public partial class ContourColor : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContourColor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Change Color From.</para>
@@ -8411,6 +8606,19 @@ public partial class ColorFrom : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorFrom>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Change Color To.</para>
@@ -8469,6 +8677,19 @@ public partial class ColorTo : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorTo>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Foreground color.</para>
@@ -8527,6 +8748,19 @@ public partial class ForegroundColor : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForegroundColor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Background color.</para>
@@ -8585,6 +8819,19 @@ public partial class BackgroundColor : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundColor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the Highlight Class.</para>
@@ -8643,6 +8890,19 @@ public partial class Highlight : ColorType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Highlight>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the ColorType class.
@@ -8943,6 +9203,7 @@ public partial class BulletFont : TextFontType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BulletFont>(deep);
 
+
 }
 /// <summary>
 /// <para>Latin Font.</para>
@@ -8966,6 +9227,7 @@ public partial class LatinFont : TextFontType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LatinFont>(deep);
+
 
 }
 /// <summary>
@@ -8991,6 +9253,7 @@ public partial class EastAsianFont : TextFontType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EastAsianFont>(deep);
 
+
 }
 /// <summary>
 /// <para>Complex Script Font.</para>
@@ -9015,6 +9278,7 @@ public partial class ComplexScriptFont : TextFontType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ComplexScriptFont>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the SymbolFont Class.</para>
@@ -9038,6 +9302,7 @@ public partial class SymbolFont : TextFontType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SymbolFont>(deep);
+
 
 }
 /// <summary>
@@ -9374,6 +9639,31 @@ public partial class Underline : LinePropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Underline>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetDash), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomDash), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Round), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineJoinBevel), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Miter), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the Outline Class.</para>
@@ -9438,6 +9728,31 @@ public partial class Outline : LinePropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Outline>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetDash), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomDash), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Round), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineJoinBevel), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Miter), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Left Border Line Properties.</para>
@@ -9502,6 +9817,31 @@ public partial class LeftBorderLineProperties : LinePropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftBorderLineProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetDash), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomDash), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Round), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineJoinBevel), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Miter), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Right Border Line Properties.</para>
@@ -9566,6 +9906,31 @@ public partial class RightBorderLineProperties : LinePropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightBorderLineProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetDash), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomDash), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Round), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineJoinBevel), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Miter), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Top Border Line Properties.</para>
@@ -9630,6 +9995,31 @@ public partial class TopBorderLineProperties : LinePropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopBorderLineProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetDash), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomDash), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Round), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineJoinBevel), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Miter), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Bottom Border Line Properties.</para>
@@ -9694,6 +10084,31 @@ public partial class BottomBorderLineProperties : LinePropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomBorderLineProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetDash), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomDash), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Round), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineJoinBevel), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Miter), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Top-Left to Bottom-Right Border Line Properties.</para>
@@ -9758,6 +10173,31 @@ public partial class TopLeftToBottomRightBorderLineProperties : LinePropertiesTy
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopLeftToBottomRightBorderLineProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetDash), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomDash), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Round), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineJoinBevel), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Miter), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Bottom-Left to Top-Right Border Line Properties.</para>
@@ -9822,6 +10262,31 @@ public partial class BottomLeftToTopRightBorderLineProperties : LinePropertiesTy
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomLeftToTopRightBorderLineProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetDash), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomDash), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Round), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineJoinBevel), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Miter), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the LinePropertiesType class.
@@ -10963,6 +11428,7 @@ public partial class ThemeManager : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThemeManager>(deep);
 
+
 }
 /// <summary>
 /// <para>Master Color Mapping.</para>
@@ -10986,6 +11452,7 @@ public partial class MasterColorMapping : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MasterColorMapping>(deep);
+
 
 }
 /// <summary>
@@ -11283,6 +11750,7 @@ public partial class StartTime : AudioCDTimeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartTime>(deep);
 
+
 }
 /// <summary>
 /// <para>Audio End Time.</para>
@@ -11306,6 +11774,7 @@ public partial class EndTime : AudioCDTimeType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndTime>(deep);
+
 
 }
 /// <summary>
@@ -12639,6 +13108,15 @@ public partial class Dark1Color : Color2Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Dark1Color>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Light 1.</para>
@@ -12696,6 +13174,15 @@ public partial class Light1Color : Color2Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Light1Color>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Dark 2.</para>
@@ -12753,6 +13240,15 @@ public partial class Dark2Color : Color2Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Dark2Color>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Light 2.</para>
@@ -12810,6 +13306,15 @@ public partial class Light2Color : Color2Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Light2Color>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Accent 1.</para>
@@ -12867,6 +13372,15 @@ public partial class Accent1Color : Color2Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Accent1Color>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Accent 2.</para>
@@ -12924,6 +13438,15 @@ public partial class Accent2Color : Color2Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Accent2Color>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Accent 3.</para>
@@ -12981,6 +13504,15 @@ public partial class Accent3Color : Color2Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Accent3Color>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Accent 4.</para>
@@ -13038,6 +13570,15 @@ public partial class Accent4Color : Color2Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Accent4Color>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Accent 5.</para>
@@ -13095,6 +13636,15 @@ public partial class Accent5Color : Color2Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Accent5Color>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Accent 6.</para>
@@ -13152,6 +13702,15 @@ public partial class Accent6Color : Color2Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Accent6Color>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Hyperlink.</para>
@@ -13209,6 +13768,15 @@ public partial class Hyperlink : Color2Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Hyperlink>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Followed Hyperlink.</para>
@@ -13266,6 +13834,15 @@ public partial class FollowedHyperlinkColor : Color2Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FollowedHyperlinkColor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the Color2Type class.
@@ -13413,6 +13990,7 @@ public partial class ScaleX : RatioType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScaleX>(deep);
 
+
 }
 /// <summary>
 /// <para>Vertical Ratio.</para>
@@ -13436,6 +14014,7 @@ public partial class ScaleY : RatioType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScaleY>(deep);
+
 
 }
 /// <summary>
@@ -13495,6 +14074,7 @@ public partial class Offset : Point2DType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Offset>(deep);
 
+
 }
 /// <summary>
 /// <para>Child Offset.</para>
@@ -13518,6 +14098,7 @@ public partial class ChildOffset : Point2DType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChildOffset>(deep);
+
 
 }
 /// <summary>
@@ -13579,6 +14160,7 @@ public partial class Extents : PositiveSize2DType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Extents>(deep);
 
+
 }
 /// <summary>
 /// <para>Child Extents.</para>
@@ -13602,6 +14184,7 @@ public partial class ChildExtents : PositiveSize2DType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChildExtents>(deep);
+
 
 }
 /// <summary>
@@ -13968,6 +14551,7 @@ public partial class StartConnection : ConnectionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartConnection>(deep);
 
+
 }
 /// <summary>
 /// <para>Connection End.</para>
@@ -13991,6 +14575,7 @@ public partial class EndConnection : ConnectionType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndConnection>(deep);
+
 
 }
 /// <summary>
@@ -17012,6 +17597,7 @@ public partial class Normal : Vector3DType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Normal>(deep);
 
+
 }
 /// <summary>
 /// <para>Up Vector.</para>
@@ -17035,6 +17621,7 @@ public partial class UpVector : Vector3DType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UpVector>(deep);
+
 
 }
 /// <summary>
@@ -17105,6 +17692,7 @@ public partial class BevelTop : BevelType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BevelTop>(deep);
 
+
 }
 /// <summary>
 /// <para>Bottom Bevel.</para>
@@ -17129,6 +17717,7 @@ public partial class BevelBottom : BevelType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BevelBottom>(deep);
 
+
 }
 /// <summary>
 /// <para>Bevel.</para>
@@ -17152,6 +17741,7 @@ public partial class Bevel : BevelType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bevel>(deep);
+
 
 }
 /// <summary>
@@ -17219,6 +17809,7 @@ public partial class FillToRectangle : RelativeRectangleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillToRectangle>(deep);
 
+
 }
 /// <summary>
 /// <para>Tile Rectangle.</para>
@@ -17242,6 +17833,7 @@ public partial class TileRectangle : RelativeRectangleType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TileRectangle>(deep);
+
 
 }
 /// <summary>
@@ -17267,6 +17859,7 @@ public partial class FillRectangle : RelativeRectangleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillRectangle>(deep);
 
+
 }
 /// <summary>
 /// <para>Source Rectangle.</para>
@@ -17290,6 +17883,7 @@ public partial class SourceRectangle : RelativeRectangleType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SourceRectangle>(deep);
+
 
 }
 /// <summary>
@@ -17643,6 +18237,7 @@ public partial class Position : AdjustPoint2DType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Position>(deep);
 
+
 }
 /// <summary>
 /// <para>Move end point.</para>
@@ -17666,6 +18261,7 @@ public partial class Point : AdjustPoint2DType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Point>(deep);
+
 
 }
 /// <summary>
@@ -18612,6 +19208,11 @@ public partial class AdjustValueList : GeometryGuideListType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AdjustValueList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeGuide), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>List of Shape Guides.</para>
@@ -18665,6 +19266,11 @@ public partial class ShapeGuideList : GeometryGuideListType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeGuideList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeGuide), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the GeometryGuideListType class.
@@ -19050,6 +19656,7 @@ public partial class HeadEnd : LineEndPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeadEnd>(deep);
 
+
 }
 /// <summary>
 /// <para>Tail line end style.</para>
@@ -19073,6 +19680,7 @@ public partial class TailEnd : LineEndPropertiesType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TailEnd>(deep);
+
 
 }
 /// <summary>
@@ -19806,6 +20414,15 @@ public partial class ShapeDefault : DefaultShapeDefinitionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeDefault>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Line Default.</para>
@@ -19863,6 +20480,15 @@ public partial class LineDefault : DefaultShapeDefinitionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineDefault>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Text Default.</para>
@@ -19920,6 +20546,15 @@ public partial class TextDefault : DefaultShapeDefinitionType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextDefault>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the DefaultShapeDefinitionType class.
@@ -20096,6 +20731,11 @@ public partial class OverrideColorMapping : ColorMappingType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OverrideColorMapping>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the ColorMap Class.</para>
@@ -20149,6 +20789,11 @@ public partial class ColorMap : ColorMappingType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorMap>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the ColorMappingType class.
@@ -21125,6 +21770,25 @@ public partial class TableStyle : TableStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyle>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableBackground), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.WholeTable), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Band1Horizontal), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Band2Horizontal), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Band1Vertical), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Band2Vertical), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LastColumn), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FirstColumn), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LastRow), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SoutheastCell), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SouthwestCell), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FirstRow), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NortheastCell), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NorthwestCell), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Table Style.</para>
@@ -21192,6 +21856,25 @@ public partial class TableStyleEntry : TableStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleEntry>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableBackground), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.WholeTable), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Band1Horizontal), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Band2Horizontal), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Band1Vertical), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Band2Vertical), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LastColumn), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FirstColumn), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LastRow), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SoutheastCell), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SouthwestCell), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FirstRow), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NortheastCell), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NorthwestCell), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the TableStyleType class.
@@ -21958,6 +22641,12 @@ public partial class LeftBorder : ThemeableLineStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Right Border.</para>
@@ -22012,6 +22701,12 @@ public partial class RightBorder : ThemeableLineStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Top Border.</para>
@@ -22066,6 +22761,12 @@ public partial class TopBorder : ThemeableLineStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Bottom Border.</para>
@@ -22120,6 +22821,12 @@ public partial class BottomBorder : ThemeableLineStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Inside Horizontal Border.</para>
@@ -22174,6 +22881,12 @@ public partial class InsideHorizontalBorder : ThemeableLineStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InsideHorizontalBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Inside Vertical Border.</para>
@@ -22228,6 +22941,12 @@ public partial class InsideVerticalBorder : ThemeableLineStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InsideVerticalBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Top Left to Bottom Right Border.</para>
@@ -22282,6 +23001,12 @@ public partial class TopLeftToBottomRightBorder : ThemeableLineStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopLeftToBottomRightBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Top Right to Bottom Left Border.</para>
@@ -22336,6 +23061,12 @@ public partial class TopRightToBottomLeftBorder : ThemeableLineStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopRightToBottomLeftBorder>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the ThemeableLineStyleType class.
@@ -22955,6 +23686,12 @@ public partial class WholeTable : TablePartStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WholeTable>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellStyle), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Band 1 Horizontal.</para>
@@ -23009,6 +23746,12 @@ public partial class Band1Horizontal : TablePartStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Band1Horizontal>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellStyle), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Band 2 Horizontal.</para>
@@ -23063,6 +23806,12 @@ public partial class Band2Horizontal : TablePartStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Band2Horizontal>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellStyle), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Band 1 Vertical.</para>
@@ -23117,6 +23866,12 @@ public partial class Band1Vertical : TablePartStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Band1Vertical>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellStyle), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Band 2 Vertical.</para>
@@ -23171,6 +23926,12 @@ public partial class Band2Vertical : TablePartStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Band2Vertical>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellStyle), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Last Column.</para>
@@ -23225,6 +23986,12 @@ public partial class LastColumn : TablePartStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LastColumn>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellStyle), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>First Column.</para>
@@ -23279,6 +24046,12 @@ public partial class FirstColumn : TablePartStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstColumn>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellStyle), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Last Row.</para>
@@ -23333,6 +24106,12 @@ public partial class LastRow : TablePartStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LastRow>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellStyle), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Southeast Cell.</para>
@@ -23387,6 +24166,12 @@ public partial class SoutheastCell : TablePartStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SoutheastCell>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellStyle), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Southwest Cell.</para>
@@ -23441,6 +24226,12 @@ public partial class SouthwestCell : TablePartStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SouthwestCell>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellStyle), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>First Row.</para>
@@ -23495,6 +24286,12 @@ public partial class FirstRow : TablePartStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstRow>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellStyle), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Northeast Cell.</para>
@@ -23549,6 +24346,12 @@ public partial class NortheastCell : TablePartStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NortheastCell>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellStyle), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Northwest Cell.</para>
@@ -23603,6 +24406,12 @@ public partial class NorthwestCell : TablePartStyleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NorthwestCell>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellTextStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellStyle), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the TablePartStyleType class.
@@ -23750,6 +24559,39 @@ public partial class ParagraphProperties : TextParagraphPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ParagraphProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceBefore), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceAfter), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColorText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColor), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizeText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePoints), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFontText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFont), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CharacterBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureBullet), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TabStopList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultRunProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Default Paragraph Style.</para>
@@ -23819,6 +24661,39 @@ public partial class DefaultParagraphProperties : TextParagraphPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultParagraphProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceBefore), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceAfter), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColorText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColor), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizeText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePoints), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFontText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFont), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CharacterBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureBullet), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TabStopList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultRunProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>List Level 1 Text Style.</para>
@@ -23888,6 +24763,39 @@ public partial class Level1ParagraphProperties : TextParagraphPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Level1ParagraphProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceBefore), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceAfter), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColorText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColor), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizeText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePoints), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFontText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFont), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CharacterBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureBullet), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TabStopList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultRunProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>List Level 2 Text Style.</para>
@@ -23957,6 +24865,39 @@ public partial class Level2ParagraphProperties : TextParagraphPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Level2ParagraphProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceBefore), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceAfter), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColorText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColor), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizeText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePoints), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFontText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFont), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CharacterBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureBullet), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TabStopList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultRunProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>List Level 3 Text Style.</para>
@@ -24026,6 +24967,39 @@ public partial class Level3ParagraphProperties : TextParagraphPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Level3ParagraphProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceBefore), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceAfter), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColorText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColor), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizeText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePoints), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFontText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFont), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CharacterBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureBullet), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TabStopList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultRunProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>List Level 4 Text Style.</para>
@@ -24095,6 +25069,39 @@ public partial class Level4ParagraphProperties : TextParagraphPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Level4ParagraphProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceBefore), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceAfter), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColorText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColor), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizeText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePoints), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFontText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFont), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CharacterBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureBullet), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TabStopList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultRunProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>List Level 5 Text Style.</para>
@@ -24164,6 +25171,39 @@ public partial class Level5ParagraphProperties : TextParagraphPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Level5ParagraphProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceBefore), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceAfter), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColorText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColor), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizeText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePoints), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFontText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFont), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CharacterBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureBullet), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TabStopList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultRunProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>List Level 6 Text Style.</para>
@@ -24233,6 +25273,39 @@ public partial class Level6ParagraphProperties : TextParagraphPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Level6ParagraphProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceBefore), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceAfter), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColorText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColor), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizeText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePoints), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFontText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFont), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CharacterBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureBullet), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TabStopList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultRunProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>List Level 7 Text Style.</para>
@@ -24302,6 +25375,39 @@ public partial class Level7ParagraphProperties : TextParagraphPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Level7ParagraphProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceBefore), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceAfter), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColorText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColor), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizeText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePoints), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFontText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFont), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CharacterBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureBullet), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TabStopList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultRunProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>List Level 8 Text Style.</para>
@@ -24371,6 +25477,39 @@ public partial class Level8ParagraphProperties : TextParagraphPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Level8ParagraphProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceBefore), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceAfter), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColorText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColor), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizeText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePoints), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFontText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFont), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CharacterBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureBullet), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TabStopList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultRunProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>List Level 9 Text Style.</para>
@@ -24440,6 +25579,39 @@ public partial class Level9ParagraphProperties : TextParagraphPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Level9ParagraphProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceBefore), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceAfter), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColorText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColor), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizeText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePoints), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFontText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFont), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CharacterBullet), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureBullet), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TabStopList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultRunProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the TextParagraphPropertiesType class.
@@ -24718,6 +25890,44 @@ public partial class EndParagraphRunProperties : TextCharacterPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndParagraphRunProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Highlight), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFollowsText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Underline), 0, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFillText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFill), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LatinFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EastAsianFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ComplexScriptFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SymbolFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RightToLeft), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Text Run Properties.</para>
@@ -24792,6 +26002,44 @@ public partial class RunProperties : TextCharacterPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RunProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Highlight), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFollowsText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Underline), 0, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFillText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFill), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LatinFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EastAsianFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ComplexScriptFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SymbolFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RightToLeft), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Default Text Run Properties.</para>
@@ -24866,6 +26114,44 @@ public partial class DefaultRunProperties : TextCharacterPropertiesType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultRunProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Highlight), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFollowsText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Underline), 0, 1)
+    },
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFillText), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFill), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LatinFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EastAsianFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ComplexScriptFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SymbolFont), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RightToLeft), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the TextCharacterPropertiesType class.
@@ -25384,6 +26670,12 @@ public partial class LineSpacing : TextSpacingType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineSpacing>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpacingPercent), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpacingPoints), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Space Before.</para>
@@ -25438,6 +26730,12 @@ public partial class SpaceBefore : TextSpacingType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SpaceBefore>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpacingPercent), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpacingPoints), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Space After.</para>
@@ -25492,6 +26790,12 @@ public partial class SpaceAfter : TextSpacingType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SpaceAfter>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpacingPercent), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpacingPoints), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the TextSpacingType class.
@@ -27122,6 +28426,12 @@ public partial class HyperlinkOnClick : HyperlinkType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkOnClick>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the HyperlinkOnHover Class.</para>
@@ -27176,6 +28486,12 @@ public partial class HyperlinkOnHover : HyperlinkType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkOnHover>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the HyperlinkOnMouseOver Class.</para>
@@ -27230,6 +28546,12 @@ public partial class HyperlinkOnMouseOver : HyperlinkType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkOnMouseOver>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the HyperlinkType class.

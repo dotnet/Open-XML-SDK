@@ -530,6 +530,7 @@ public partial class DropZoneFilter : BooleanFalseType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZoneFilter>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the DropZoneCategories Class.</para>
@@ -553,6 +554,7 @@ public partial class DropZoneCategories : BooleanFalseType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZoneCategories>(deep);
+
 
 }
 /// <summary>
@@ -578,6 +580,7 @@ public partial class DropZoneData : BooleanFalseType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZoneData>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the DropZoneSeries Class.</para>
@@ -601,6 +604,7 @@ public partial class DropZoneSeries : BooleanFalseType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZoneSeries>(deep);
+
 
 }
 /// <summary>
@@ -626,6 +630,7 @@ public partial class DropZonesVisible : BooleanFalseType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropZonesVisible>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the InSketchMode Class.</para>
@@ -649,6 +654,7 @@ public partial class InSketchMode : BooleanFalseType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InSketchMode>(deep);
+
 
 }
 /// <summary>

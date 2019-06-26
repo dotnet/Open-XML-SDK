@@ -3036,6 +3036,7 @@ public partial class Literal : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Literal>(deep);
 
+
 }
 /// <summary>
 /// <para>Normal Text.</para>
@@ -3059,6 +3060,7 @@ public partial class NormalText : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NormalText>(deep);
+
 
 }
 /// <summary>
@@ -3084,6 +3086,7 @@ public partial class Alignment : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Alignment>(deep);
 
+
 }
 /// <summary>
 /// <para>Operator Emulator.</para>
@@ -3107,6 +3110,7 @@ public partial class OperatorEmulator : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OperatorEmulator>(deep);
+
 
 }
 /// <summary>
@@ -3132,6 +3136,7 @@ public partial class NoBreak : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoBreak>(deep);
 
+
 }
 /// <summary>
 /// <para>Differential.</para>
@@ -3155,6 +3160,7 @@ public partial class Differential : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Differential>(deep);
+
 
 }
 /// <summary>
@@ -3180,6 +3186,7 @@ public partial class HideTop : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideTop>(deep);
 
+
 }
 /// <summary>
 /// <para>Hide Bottom Edge.</para>
@@ -3203,6 +3210,7 @@ public partial class HideBottom : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideBottom>(deep);
+
 
 }
 /// <summary>
@@ -3228,6 +3236,7 @@ public partial class HideLeft : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideLeft>(deep);
 
+
 }
 /// <summary>
 /// <para>Hide Right Edge.</para>
@@ -3251,6 +3260,7 @@ public partial class HideRight : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideRight>(deep);
+
 
 }
 /// <summary>
@@ -3276,6 +3286,7 @@ public partial class StrikeHorizontal : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StrikeHorizontal>(deep);
 
+
 }
 /// <summary>
 /// <para>Border Box Strikethrough Vertical.</para>
@@ -3299,6 +3310,7 @@ public partial class StrikeVertical : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StrikeVertical>(deep);
+
 
 }
 /// <summary>
@@ -3324,6 +3336,7 @@ public partial class StrikeBottomLeftToTopRight : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StrikeBottomLeftToTopRight>(deep);
 
+
 }
 /// <summary>
 /// <para>Border Box Strikethrough Top-Left to Bottom-Right.</para>
@@ -3347,6 +3360,7 @@ public partial class StrikeTopLeftToBottomRight : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StrikeTopLeftToBottomRight>(deep);
+
 
 }
 /// <summary>
@@ -3372,6 +3386,7 @@ public partial class GrowOperators : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GrowOperators>(deep);
 
+
 }
 /// <summary>
 /// <para>Maximum Distribution.</para>
@@ -3395,6 +3410,7 @@ public partial class MaxDistribution : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MaxDistribution>(deep);
+
 
 }
 /// <summary>
@@ -3420,6 +3436,7 @@ public partial class ObjectDistribution : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ObjectDistribution>(deep);
 
+
 }
 /// <summary>
 /// <para>Hide Placeholders (Matrix).</para>
@@ -3443,6 +3460,7 @@ public partial class HidePlaceholder : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HidePlaceholder>(deep);
+
 
 }
 /// <summary>
@@ -3468,6 +3486,7 @@ public partial class HideSubArgument : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideSubArgument>(deep);
 
+
 }
 /// <summary>
 /// <para>Hide Superscript (n-ary).</para>
@@ -3491,6 +3510,7 @@ public partial class HideSuperArgument : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideSuperArgument>(deep);
+
 
 }
 /// <summary>
@@ -3516,6 +3536,7 @@ public partial class ShowPhantom : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowPhantom>(deep);
 
+
 }
 /// <summary>
 /// <para>Phantom Zero Width.</para>
@@ -3539,6 +3560,7 @@ public partial class ZeroWidth : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ZeroWidth>(deep);
+
 
 }
 /// <summary>
@@ -3564,6 +3586,7 @@ public partial class ZeroAscent : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ZeroAscent>(deep);
 
+
 }
 /// <summary>
 /// <para>Phantom Zero Descent.</para>
@@ -3587,6 +3610,7 @@ public partial class ZeroDescent : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ZeroDescent>(deep);
+
 
 }
 /// <summary>
@@ -3612,6 +3636,7 @@ public partial class Transparent : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Transparent>(deep);
 
+
 }
 /// <summary>
 /// <para>Hide Degree.</para>
@@ -3635,6 +3660,7 @@ public partial class HideDegree : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideDegree>(deep);
+
 
 }
 /// <summary>
@@ -3660,6 +3686,7 @@ public partial class AlignScripts : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlignScripts>(deep);
 
+
 }
 /// <summary>
 /// <para>Small Fraction.</para>
@@ -3683,6 +3710,7 @@ public partial class SmallFraction : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SmallFraction>(deep);
+
 
 }
 /// <summary>
@@ -3708,6 +3736,7 @@ public partial class DisplayDefaults : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayDefaults>(deep);
 
+
 }
 /// <summary>
 /// <para>Wrap Right.</para>
@@ -3731,6 +3760,7 @@ public partial class WrapRight : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WrapRight>(deep);
+
 
 }
 /// <summary>
@@ -3983,6 +4013,7 @@ public partial class AccentChar : CharType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AccentChar>(deep);
 
+
 }
 /// <summary>
 /// <para>Delimiter Beginning Character.</para>
@@ -4006,6 +4037,7 @@ public partial class BeginChar : CharType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BeginChar>(deep);
+
 
 }
 /// <summary>
@@ -4031,6 +4063,7 @@ public partial class SeparatorChar : CharType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeparatorChar>(deep);
 
+
 }
 /// <summary>
 /// <para>Delimiter Ending Character.</para>
@@ -4054,6 +4087,7 @@ public partial class EndChar : CharType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndChar>(deep);
+
 
 }
 /// <summary>
@@ -4371,6 +4405,121 @@ public partial class Base : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Base>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1),
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
+        },
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                        },
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                        },
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                    new CompositeParticle(ParticleType.Sequence, 0, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                    }
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+                }
+            }
+        }
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Numerator.</para>
@@ -4481,6 +4630,121 @@ public partial class Numerator : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Numerator>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1),
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
+        },
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                        },
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                        },
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                    new CompositeParticle(ParticleType.Sequence, 0, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                    }
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+                }
+            }
+        }
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Denominator.</para>
@@ -4591,6 +4855,121 @@ public partial class Denominator : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Denominator>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1),
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
+        },
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                        },
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                        },
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                    new CompositeParticle(ParticleType.Sequence, 0, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                    }
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+                }
+            }
+        }
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Function Name.</para>
@@ -4701,6 +5080,121 @@ public partial class FunctionName : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FunctionName>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1),
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
+        },
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                        },
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                        },
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                    new CompositeParticle(ParticleType.Sequence, 0, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                    }
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+                }
+            }
+        }
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Limit (Lower).</para>
@@ -4811,6 +5305,121 @@ public partial class Limit : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Limit>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1),
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
+        },
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                        },
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                        },
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                    new CompositeParticle(ParticleType.Sequence, 0, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                    }
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+                }
+            }
+        }
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Lower limit (n-ary) .</para>
@@ -4921,6 +5530,121 @@ public partial class SubArgument : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubArgument>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1),
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
+        },
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                        },
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                        },
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                    new CompositeParticle(ParticleType.Sequence, 0, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                    }
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+                }
+            }
+        }
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Upper limit (n-ary).</para>
@@ -5031,6 +5755,121 @@ public partial class SuperArgument : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuperArgument>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1),
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
+        },
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                        },
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                        },
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                    new CompositeParticle(ParticleType.Sequence, 0, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                    }
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+                }
+            }
+        }
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Degree.</para>
@@ -5141,6 +5980,121 @@ public partial class Degree : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Degree>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1),
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
+        },
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                        },
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                        },
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                    new CompositeParticle(ParticleType.Sequence, 0, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                    }
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+                }
+            }
+        }
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the OfficeMathArgumentType class.
@@ -5342,6 +6296,7 @@ public partial class Position : TopBottomType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Position>(deep);
 
+
 }
 /// <summary>
 /// <para>Vertical Justification.</para>
@@ -5365,6 +6320,7 @@ public partial class VerticalJustification : TopBottomType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalJustification>(deep);
+
 
 }
 /// <summary>
@@ -6118,6 +7074,7 @@ public partial class RowSpacingRule : SpacingRuleType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowSpacingRule>(deep);
 
+
 }
 /// <summary>
 /// <para>Matrix Column Gap Rule.</para>
@@ -6141,6 +7098,7 @@ public partial class ColumnGapRule : SpacingRuleType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnGapRule>(deep);
+
 
 }
 /// <summary>
@@ -6195,6 +7153,7 @@ public partial class RowSpacing : UnsignedShortType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowSpacing>(deep);
 
+
 }
 /// <summary>
 /// <para>Matrix Column Gap.</para>
@@ -6218,6 +7177,7 @@ public partial class ColumnGap : UnsignedShortType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnGap>(deep);
+
 
 }
 /// <summary>
@@ -7184,6 +8144,7 @@ public partial class ColumnSpacing : TwipsMeasureType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnSpacing>(deep);
 
+
 }
 /// <summary>
 /// <para>Left Margin.</para>
@@ -7207,6 +8168,7 @@ public partial class LeftMargin : TwipsMeasureType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftMargin>(deep);
+
 
 }
 /// <summary>
@@ -7232,6 +8194,7 @@ public partial class RightMargin : TwipsMeasureType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightMargin>(deep);
 
+
 }
 /// <summary>
 /// <para>Pre-Equation Spacing.</para>
@@ -7255,6 +8218,7 @@ public partial class PreSpacing : TwipsMeasureType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PreSpacing>(deep);
+
 
 }
 /// <summary>
@@ -7280,6 +8244,7 @@ public partial class PostSpacing : TwipsMeasureType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PostSpacing>(deep);
 
+
 }
 /// <summary>
 /// <para>Inter-Equation Spacing.</para>
@@ -7303,6 +8268,7 @@ public partial class InterSpacing : TwipsMeasureType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InterSpacing>(deep);
+
 
 }
 /// <summary>
@@ -7328,6 +8294,7 @@ public partial class IntraSpacing : TwipsMeasureType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<IntraSpacing>(deep);
 
+
 }
 /// <summary>
 /// <para>Wrap Indent.</para>
@@ -7351,6 +8318,7 @@ public partial class WrapIndent : TwipsMeasureType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WrapIndent>(deep);
+
 
 }
 /// <summary>
@@ -7740,6 +8708,7 @@ public partial class LimitLocation : LimitLocationType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LimitLocation>(deep);
 
+
 }
 /// <summary>
 /// <para>Integral Limit Locations.</para>
@@ -7764,6 +8733,7 @@ public partial class IntegralLimitLocation : LimitLocationType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<IntegralLimitLocation>(deep);
 
+
 }
 /// <summary>
 /// <para>n-ary Limit Location.</para>
@@ -7787,6 +8757,7 @@ public partial class NaryLimitLocation : LimitLocationType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NaryLimitLocation>(deep);
+
 
 }
 /// <summary>
@@ -8705,6 +9676,7 @@ public partial class Justification : OfficeMathJustificationType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Justification>(deep);
 
+
 }
 /// <summary>
 /// <para>Default Justification.</para>
@@ -8728,6 +9700,7 @@ public partial class DefaultJustification : OfficeMathJustificationType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultJustification>(deep);
+
 
 }
 /// <summary>

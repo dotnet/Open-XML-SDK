@@ -40,6 +40,7 @@ public partial class CellInsertion : TrackChangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellInsertion>(deep);
 
+
 }
 /// <summary>
 /// <para>Table Cell Deletion.</para>
@@ -63,6 +64,7 @@ public partial class CellDeletion : TrackChangeType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellDeletion>(deep);
+
 
 }
 /// <summary>
@@ -88,6 +90,7 @@ public partial class CustomXmlInsRangeStart : TrackChangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlInsRangeStart>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CustomXmlDelRangeStart Class.</para>
@@ -111,6 +114,7 @@ public partial class CustomXmlDelRangeStart : TrackChangeType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlDelRangeStart>(deep);
+
 
 }
 /// <summary>
@@ -136,6 +140,7 @@ public partial class CustomXmlMoveFromRangeStart : TrackChangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlMoveFromRangeStart>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CustomXmlMoveToRangeStart Class.</para>
@@ -159,6 +164,7 @@ public partial class CustomXmlMoveToRangeStart : TrackChangeType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlMoveToRangeStart>(deep);
+
 
 }
 /// <summary>
@@ -184,6 +190,7 @@ public partial class Inserted : TrackChangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Inserted>(deep);
 
+
 }
 /// <summary>
 /// <para>Deleted Paragraph.</para>
@@ -207,6 +214,7 @@ public partial class Deleted : TrackChangeType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Deleted>(deep);
+
 
 }
 /// <summary>
@@ -232,6 +240,7 @@ public partial class MoveFrom : TrackChangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveFrom>(deep);
 
+
 }
 /// <summary>
 /// <para>Move Destination Paragraph.</para>
@@ -255,6 +264,7 @@ public partial class MoveTo : TrackChangeType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveTo>(deep);
+
 
 }
 /// <summary>
@@ -490,6 +500,7 @@ public partial class BookmarkEnd : MarkupRangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookmarkEnd>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CommentRangeStart Class.</para>
@@ -513,6 +524,7 @@ public partial class CommentRangeStart : MarkupRangeType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentRangeStart>(deep);
+
 
 }
 /// <summary>
@@ -538,6 +550,7 @@ public partial class CommentRangeEnd : MarkupRangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentRangeEnd>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the MoveFromRangeEnd Class.</para>
@@ -562,6 +575,7 @@ public partial class MoveFromRangeEnd : MarkupRangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveFromRangeEnd>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the MoveToRangeEnd Class.</para>
@@ -585,6 +599,7 @@ public partial class MoveToRangeEnd : MarkupRangeType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveToRangeEnd>(deep);
+
 
 }
 /// <summary>
@@ -649,6 +664,7 @@ public partial class MoveFromRangeStart : MoveBookmarkType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveFromRangeStart>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the MoveToRangeStart Class.</para>
@@ -672,6 +688,7 @@ public partial class MoveToRangeStart : MoveBookmarkType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveToRangeStart>(deep);
+
 
 }
 /// <summary>
@@ -785,6 +802,7 @@ public partial class CustomXmlInsRangeEnd : MarkupType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlInsRangeEnd>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CustomXmlDelRangeEnd Class.</para>
@@ -808,6 +826,7 @@ public partial class CustomXmlDelRangeEnd : MarkupType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlDelRangeEnd>(deep);
+
 
 }
 /// <summary>
@@ -833,6 +852,7 @@ public partial class CustomXmlMoveFromRangeEnd : MarkupType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlMoveFromRangeEnd>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CustomXmlMoveToRangeEnd Class.</para>
@@ -857,6 +877,7 @@ public partial class CustomXmlMoveToRangeEnd : MarkupType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlMoveToRangeEnd>(deep);
 
+
 }
 /// <summary>
 /// <para>Comment Content Reference Mark.</para>
@@ -880,6 +901,7 @@ public partial class CommentReference : MarkupType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentReference>(deep);
+
 
 }
 /// <summary>
@@ -935,6 +957,7 @@ public partial class ParagraphStyleId : StringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ParagraphStyleId>(deep);
 
+
 }
 /// <summary>
 /// <para>Date Display Mask.</para>
@@ -958,6 +981,7 @@ public partial class DateFormat : StringType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DateFormat>(deep);
+
 
 }
 /// <summary>
@@ -983,6 +1007,7 @@ public partial class DocPartGallery : StringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartGallery>(deep);
 
+
 }
 /// <summary>
 /// <para>Document Part Category Filter.</para>
@@ -1006,6 +1031,7 @@ public partial class DocPartCategory : StringType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartCategory>(deep);
+
 
 }
 /// <summary>
@@ -1031,6 +1057,7 @@ public partial class DocPartReference : StringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartReference>(deep);
 
+
 }
 /// <summary>
 /// <para>Custom XML Element Placeholder Text.</para>
@@ -1054,6 +1081,7 @@ public partial class CustomXmlPlaceholder : StringType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlPlaceholder>(deep);
+
 
 }
 /// <summary>
@@ -1079,6 +1107,7 @@ public partial class TableCaption : StringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCaption>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the TableDescription Class.</para>
@@ -1102,6 +1131,7 @@ public partial class TableDescription : StringType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableDescription>(deep);
+
 
 }
 /// <summary>
@@ -1127,6 +1157,7 @@ public partial class Name : StringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Name>(deep);
 
+
 }
 /// <summary>
 /// <para>Predefined Merge Field Name.</para>
@@ -1150,6 +1181,7 @@ public partial class MappedName : StringType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MappedName>(deep);
+
 
 }
 /// <summary>
@@ -1175,6 +1207,7 @@ public partial class UdlConnectionString : StringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UdlConnectionString>(deep);
 
+
 }
 /// <summary>
 /// <para>Data Source Table Name.</para>
@@ -1198,6 +1231,7 @@ public partial class DataSourceTableName : StringType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataSourceTableName>(deep);
+
 
 }
 /// <summary>
@@ -1223,6 +1257,7 @@ public partial class ConnectString : StringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConnectString>(deep);
 
+
 }
 /// <summary>
 /// <para>Query For Data Source Records To Merge.</para>
@@ -1246,6 +1281,7 @@ public partial class Query : StringType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Query>(deep);
+
 
 }
 /// <summary>
@@ -1271,6 +1307,7 @@ public partial class AddressFieldName : StringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AddressFieldName>(deep);
 
+
 }
 /// <summary>
 /// <para>Merged E-mail or Fax Subject Line.</para>
@@ -1294,6 +1331,7 @@ public partial class MailSubject : StringType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MailSubject>(deep);
+
 
 }
 /// <summary>
@@ -1319,6 +1357,7 @@ public partial class FrameSize : StringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FrameSize>(deep);
 
+
 }
 /// <summary>
 /// <para>Associated Paragraph Style Name.</para>
@@ -1342,6 +1381,7 @@ public partial class StyleId : StringType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleId>(deep);
+
 
 }
 /// <summary>
@@ -1367,6 +1407,7 @@ public partial class Description : StringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Description>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the SdtAlias Class.</para>
@@ -1390,6 +1431,7 @@ public partial class SdtAlias : StringType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtAlias>(deep);
+
 
 }
 /// <summary>
@@ -1415,6 +1457,7 @@ public partial class Tag : StringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tag>(deep);
 
+
 }
 /// <summary>
 /// <para>Attached Custom XML Schema.</para>
@@ -1438,6 +1481,7 @@ public partial class AttachedSchema : StringType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AttachedSchema>(deep);
+
 
 }
 /// <summary>
@@ -1463,6 +1507,7 @@ public partial class DecimalSymbol : StringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DecimalSymbol>(deep);
 
+
 }
 /// <summary>
 /// <para>List Separator for Field Code Evaluation.</para>
@@ -1486,6 +1531,7 @@ public partial class ListSeparator : StringType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListSeparator>(deep);
+
 
 }
 /// <summary>
@@ -1511,6 +1557,7 @@ public partial class WebPageEncoding : StringType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebPageEncoding>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the AltName Class.</para>
@@ -1534,6 +1581,7 @@ public partial class AltName : StringType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AltName>(deep);
+
 
 }
 /// <summary>
@@ -1587,6 +1635,7 @@ public partial class KeepNext : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<KeepNext>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the KeepLines Class.</para>
@@ -1610,6 +1659,7 @@ public partial class KeepLines : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<KeepLines>(deep);
+
 
 }
 /// <summary>
@@ -1635,6 +1685,7 @@ public partial class PageBreakBefore : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageBreakBefore>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the WidowControl Class.</para>
@@ -1658,6 +1709,7 @@ public partial class WidowControl : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WidowControl>(deep);
+
 
 }
 /// <summary>
@@ -1683,6 +1735,7 @@ public partial class SuppressLineNumbers : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressLineNumbers>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the SuppressAutoHyphens Class.</para>
@@ -1706,6 +1759,7 @@ public partial class SuppressAutoHyphens : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressAutoHyphens>(deep);
+
 
 }
 /// <summary>
@@ -1731,6 +1785,7 @@ public partial class Kinsoku : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Kinsoku>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the WordWrap Class.</para>
@@ -1754,6 +1809,7 @@ public partial class WordWrap : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WordWrap>(deep);
+
 
 }
 /// <summary>
@@ -1779,6 +1835,7 @@ public partial class OverflowPunctuation : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OverflowPunctuation>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the TopLinePunctuation Class.</para>
@@ -1802,6 +1859,7 @@ public partial class TopLinePunctuation : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopLinePunctuation>(deep);
+
 
 }
 /// <summary>
@@ -1827,6 +1885,7 @@ public partial class AutoSpaceDE : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoSpaceDE>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the AutoSpaceDN Class.</para>
@@ -1850,6 +1909,7 @@ public partial class AutoSpaceDN : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoSpaceDN>(deep);
+
 
 }
 /// <summary>
@@ -1875,6 +1935,7 @@ public partial class BiDi : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BiDi>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the AdjustRightIndent Class.</para>
@@ -1898,6 +1959,7 @@ public partial class AdjustRightIndent : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AdjustRightIndent>(deep);
+
 
 }
 /// <summary>
@@ -1923,6 +1985,7 @@ public partial class SnapToGrid : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SnapToGrid>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the ContextualSpacing Class.</para>
@@ -1946,6 +2009,7 @@ public partial class ContextualSpacing : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextualSpacing>(deep);
+
 
 }
 /// <summary>
@@ -1971,6 +2035,7 @@ public partial class MirrorIndents : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MirrorIndents>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the SuppressOverlap Class.</para>
@@ -1994,6 +2059,7 @@ public partial class SuppressOverlap : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressOverlap>(deep);
+
 
 }
 /// <summary>
@@ -2019,6 +2085,7 @@ public partial class Bold : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bold>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the BoldComplexScript Class.</para>
@@ -2042,6 +2109,7 @@ public partial class BoldComplexScript : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BoldComplexScript>(deep);
+
 
 }
 /// <summary>
@@ -2067,6 +2135,7 @@ public partial class Italic : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Italic>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the ItalicComplexScript Class.</para>
@@ -2090,6 +2159,7 @@ public partial class ItalicComplexScript : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ItalicComplexScript>(deep);
+
 
 }
 /// <summary>
@@ -2115,6 +2185,7 @@ public partial class Caps : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Caps>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the SmallCaps Class.</para>
@@ -2138,6 +2209,7 @@ public partial class SmallCaps : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SmallCaps>(deep);
+
 
 }
 /// <summary>
@@ -2163,6 +2235,7 @@ public partial class Strike : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Strike>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the DoubleStrike Class.</para>
@@ -2186,6 +2259,7 @@ public partial class DoubleStrike : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoubleStrike>(deep);
+
 
 }
 /// <summary>
@@ -2211,6 +2285,7 @@ public partial class Outline : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Outline>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Shadow Class.</para>
@@ -2234,6 +2309,7 @@ public partial class Shadow : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shadow>(deep);
+
 
 }
 /// <summary>
@@ -2259,6 +2335,7 @@ public partial class Emboss : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Emboss>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Imprint Class.</para>
@@ -2282,6 +2359,7 @@ public partial class Imprint : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Imprint>(deep);
+
 
 }
 /// <summary>
@@ -2307,6 +2385,7 @@ public partial class NoProof : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoProof>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Vanish Class.</para>
@@ -2330,6 +2409,7 @@ public partial class Vanish : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Vanish>(deep);
+
 
 }
 /// <summary>
@@ -2355,6 +2435,7 @@ public partial class WebHidden : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebHidden>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the RightToLeftText Class.</para>
@@ -2378,6 +2459,7 @@ public partial class RightToLeftText : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightToLeftText>(deep);
+
 
 }
 /// <summary>
@@ -2403,6 +2485,7 @@ public partial class ComplexScript : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ComplexScript>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the SpecVanish Class.</para>
@@ -2426,6 +2509,7 @@ public partial class SpecVanish : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SpecVanish>(deep);
+
 
 }
 /// <summary>
@@ -2451,6 +2535,7 @@ public partial class OfficeMath : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeMath>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Hidden Class.</para>
@@ -2474,6 +2559,7 @@ public partial class Hidden : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Hidden>(deep);
+
 
 }
 /// <summary>
@@ -2499,6 +2585,7 @@ public partial class FormProtection : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormProtection>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the NoEndnote Class.</para>
@@ -2522,6 +2609,7 @@ public partial class NoEndnote : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoEndnote>(deep);
+
 
 }
 /// <summary>
@@ -2547,6 +2635,7 @@ public partial class TitlePage : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TitlePage>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the GutterOnRight Class.</para>
@@ -2570,6 +2659,7 @@ public partial class GutterOnRight : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GutterOnRight>(deep);
+
 
 }
 /// <summary>
@@ -2595,6 +2685,7 @@ public partial class Enabled : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Enabled>(deep);
 
+
 }
 /// <summary>
 /// <para>Recalculate Fields When Current Field Is Modified.</para>
@@ -2618,6 +2709,7 @@ public partial class CalculateOnExit : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculateOnExit>(deep);
+
 
 }
 /// <summary>
@@ -2643,6 +2735,7 @@ public partial class AutomaticallySizeFormField : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutomaticallySizeFormField>(deep);
 
+
 }
 /// <summary>
 /// <para>Default Checkbox Form Field State.</para>
@@ -2666,6 +2759,7 @@ public partial class DefaultCheckBoxFormFieldState : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultCheckBoxFormFieldState>(deep);
+
 
 }
 /// <summary>
@@ -2691,6 +2785,7 @@ public partial class Checked : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Checked>(deep);
 
+
 }
 /// <summary>
 /// <para>Keep Source Formatting on Import.</para>
@@ -2714,6 +2809,7 @@ public partial class MatchSource : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatchSource>(deep);
+
 
 }
 /// <summary>
@@ -2739,6 +2835,7 @@ public partial class Dirty : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Dirty>(deep);
 
+
 }
 /// <summary>
 /// <para>Built-In Document Part.</para>
@@ -2762,6 +2859,7 @@ public partial class DocPartUnique : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartUnique>(deep);
+
 
 }
 /// <summary>
@@ -2787,6 +2885,7 @@ public partial class Active : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Active>(deep);
 
+
 }
 /// <summary>
 /// <para>Use Country/Region-Based Address Field Ordering.</para>
@@ -2810,6 +2909,7 @@ public partial class DynamicAddress : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DynamicAddress>(deep);
+
 
 }
 /// <summary>
@@ -2835,6 +2935,7 @@ public partial class FirstRowHeader : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstRowHeader>(deep);
 
+
 }
 /// <summary>
 /// <para>Query Contains Link to External Query File.</para>
@@ -2858,6 +2959,7 @@ public partial class LinkToQuery : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinkToQuery>(deep);
+
 
 }
 /// <summary>
@@ -2883,6 +2985,7 @@ public partial class DoNotSuppressBlankLines : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSuppressBlankLines>(deep);
 
+
 }
 /// <summary>
 /// <para>Merged Document To E-Mail Attachment.</para>
@@ -2906,6 +3009,7 @@ public partial class MailAsAttachment : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MailAsAttachment>(deep);
+
 
 }
 /// <summary>
@@ -2931,6 +3035,7 @@ public partial class ViewMergedData : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ViewMergedData>(deep);
 
+
 }
 /// <summary>
 /// <para>Display All Levels Using Arabic Numerals.</para>
@@ -2954,6 +3059,7 @@ public partial class IsLegalNumberingStyle : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<IsLegalNumberingStyle>(deep);
+
 
 }
 /// <summary>
@@ -2979,6 +3085,7 @@ public partial class BlockQuote : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlockQuote>(deep);
 
+
 }
 /// <summary>
 /// <para>Data for HTML body Element.</para>
@@ -3002,6 +3109,7 @@ public partial class BodyDiv : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BodyDiv>(deep);
+
 
 }
 /// <summary>
@@ -3027,6 +3135,7 @@ public partial class UseSingleBorderForContiguousCells : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseSingleBorderForContiguousCells>(deep);
 
+
 }
 /// <summary>
 /// <para>Emulate WordPerfect 6.x Paragraph Justification.</para>
@@ -3050,6 +3159,7 @@ public partial class WordPerfectJustification : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WordPerfectJustification>(deep);
+
 
 }
 /// <summary>
@@ -3075,6 +3185,7 @@ public partial class NoTabHangIndent : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoTabHangIndent>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not Add Leading Between Lines of Text.</para>
@@ -3098,6 +3209,7 @@ public partial class NoLeading : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoLeading>(deep);
+
 
 }
 /// <summary>
@@ -3123,6 +3235,7 @@ public partial class SpaceForUnderline : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SpaceForUnderline>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not Balance Text Columns within a Section.</para>
@@ -3146,6 +3259,7 @@ public partial class NoColumnBalance : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoColumnBalance>(deep);
+
 
 }
 /// <summary>
@@ -3171,6 +3285,7 @@ public partial class BalanceSingleByteDoubleByteWidth : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BalanceSingleByteDoubleByteWidth>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not Center Content on Lines With Exact Line Height.</para>
@@ -3194,6 +3309,7 @@ public partial class NoExtraLineSpacing : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoExtraLineSpacing>(deep);
+
 
 }
 /// <summary>
@@ -3219,6 +3335,7 @@ public partial class DoNotLeaveBackslashAlone : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotLeaveBackslashAlone>(deep);
 
+
 }
 /// <summary>
 /// <para>Underline All Trailing Spaces.</para>
@@ -3242,6 +3359,7 @@ public partial class UnderlineTrailingSpaces : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnderlineTrailingSpaces>(deep);
+
 
 }
 /// <summary>
@@ -3267,6 +3385,7 @@ public partial class DoNotExpandShiftReturn : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotExpandShiftReturn>(deep);
 
+
 }
 /// <summary>
 /// <para>Only Expand/Condense Text By Whole Points.</para>
@@ -3290,6 +3409,7 @@ public partial class SpacingInWholePoints : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SpacingInWholePoints>(deep);
+
 
 }
 /// <summary>
@@ -3315,6 +3435,7 @@ public partial class LineWrapLikeWord6 : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineWrapLikeWord6>(deep);
 
+
 }
 /// <summary>
 /// <para>Print Body Text before Header/Footer Contents.</para>
@@ -3338,6 +3459,7 @@ public partial class PrintBodyTextBeforeHeader : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintBodyTextBeforeHeader>(deep);
+
 
 }
 /// <summary>
@@ -3363,6 +3485,7 @@ public partial class PrintColorBlackWhite : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintColorBlackWhite>(deep);
 
+
 }
 /// <summary>
 /// <para>Space width.</para>
@@ -3386,6 +3509,7 @@ public partial class WordPerfectSpaceWidth : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WordPerfectSpaceWidth>(deep);
+
 
 }
 /// <summary>
@@ -3411,6 +3535,7 @@ public partial class ShowBreaksInFrames : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowBreaksInFrames>(deep);
 
+
 }
 /// <summary>
 /// <para>Increase Priority Of Font Size During Font Substitution.</para>
@@ -3434,6 +3559,7 @@ public partial class SubFontBySize : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubFontBySize>(deep);
+
 
 }
 /// <summary>
@@ -3459,6 +3585,7 @@ public partial class SuppressBottomSpacing : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressBottomSpacing>(deep);
 
+
 }
 /// <summary>
 /// <para>Ignore Minimum and Exact Line Height for First Line on Page.</para>
@@ -3482,6 +3609,7 @@ public partial class SuppressTopSpacing : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressTopSpacing>(deep);
+
 
 }
 /// <summary>
@@ -3507,6 +3635,7 @@ public partial class SuppressSpacingAtTopOfPage : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressSpacingAtTopOfPage>(deep);
 
+
 }
 /// <summary>
 /// <para>Emulate WordPerfect 5.x Line Spacing.</para>
@@ -3530,6 +3659,7 @@ public partial class SuppressTopSpacingWordPerfect : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressTopSpacingWordPerfect>(deep);
+
 
 }
 /// <summary>
@@ -3555,6 +3685,7 @@ public partial class SuppressSpacingBeforeAfterPageBreak : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuppressSpacingBeforeAfterPageBreak>(deep);
 
+
 }
 /// <summary>
 /// <para>Swap Paragraph Borders on Odd Numbered Pages.</para>
@@ -3578,6 +3709,7 @@ public partial class SwapBordersFacingPages : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SwapBordersFacingPages>(deep);
+
 
 }
 /// <summary>
@@ -3603,6 +3735,7 @@ public partial class ConvertMailMergeEscape : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConvertMailMergeEscape>(deep);
 
+
 }
 /// <summary>
 /// <para>Emulate WordPerfect 6.x Font Height Calculation.</para>
@@ -3626,6 +3759,7 @@ public partial class TruncateFontHeightsLikeWordPerfect : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TruncateFontHeightsLikeWordPerfect>(deep);
+
 
 }
 /// <summary>
@@ -3651,6 +3785,7 @@ public partial class MacWordSmallCaps : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MacWordSmallCaps>(deep);
 
+
 }
 /// <summary>
 /// <para>Use Printer Metrics To Display Documents.</para>
@@ -3674,6 +3809,7 @@ public partial class UsePrinterMetrics : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UsePrinterMetrics>(deep);
+
 
 }
 /// <summary>
@@ -3699,6 +3835,7 @@ public partial class DoNotSuppressParagraphBorders : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSuppressParagraphBorders>(deep);
 
+
 }
 /// <summary>
 /// <para>Line Wrap Trailing Spaces.</para>
@@ -3722,6 +3859,7 @@ public partial class WrapTrailSpaces : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WrapTrailSpaces>(deep);
+
 
 }
 /// <summary>
@@ -3747,6 +3885,7 @@ public partial class FootnoteLayoutLikeWord8 : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FootnoteLayoutLikeWord8>(deep);
 
+
 }
 /// <summary>
 /// <para>Emulate Word 97 Text Wrapping Around Floating Objects.</para>
@@ -3770,6 +3909,7 @@ public partial class ShapeLayoutLikeWord8 : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeLayoutLikeWord8>(deep);
+
 
 }
 /// <summary>
@@ -3795,6 +3935,7 @@ public partial class AlignTablesRowByRow : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlignTablesRowByRow>(deep);
 
+
 }
 /// <summary>
 /// <para>Ignore Width of Last Tab Stop When Aligning Paragraph If It Is Not Left Aligned.</para>
@@ -3818,6 +3959,7 @@ public partial class ForgetLastTabAlignment : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForgetLastTabAlignment>(deep);
+
 
 }
 /// <summary>
@@ -3843,6 +3985,7 @@ public partial class AdjustLineHeightInTable : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AdjustLineHeightInTable>(deep);
 
+
 }
 /// <summary>
 /// <para>Emulate Word 95 Full-Width Character Spacing.</para>
@@ -3866,6 +4009,7 @@ public partial class AutoSpaceLikeWord95 : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoSpaceLikeWord95>(deep);
+
 
 }
 /// <summary>
@@ -3891,6 +4035,7 @@ public partial class NoSpaceRaiseLower : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoSpaceRaiseLower>(deep);
 
+
 }
 /// <summary>
 /// <para>Use Fixed Paragraph Spacing for HTML Auto Setting.</para>
@@ -3914,6 +4059,7 @@ public partial class DoNotUseHTMLParagraphAutoSpacing : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseHTMLParagraphAutoSpacing>(deep);
+
 
 }
 /// <summary>
@@ -3939,6 +4085,7 @@ public partial class LayoutRawTableWidth : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutRawTableWidth>(deep);
 
+
 }
 /// <summary>
 /// <para>Allow Table Rows to Wrap Inline Objects Independently.</para>
@@ -3962,6 +4109,7 @@ public partial class LayoutTableRowsApart : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutTableRowsApart>(deep);
+
 
 }
 /// <summary>
@@ -3987,6 +4135,7 @@ public partial class UseWord97LineBreakRules : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseWord97LineBreakRules>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not Allow Floating Tables To Break Across Pages.</para>
@@ -4010,6 +4159,7 @@ public partial class DoNotBreakWrappedTables : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotBreakWrappedTables>(deep);
+
 
 }
 /// <summary>
@@ -4035,6 +4185,7 @@ public partial class DoNotSnapToGridInCell : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSnapToGridInCell>(deep);
 
+
 }
 /// <summary>
 /// <para>Select Field When First or Last Character Is Selected.</para>
@@ -4058,6 +4209,7 @@ public partial class SelectFieldWithFirstOrLastChar : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SelectFieldWithFirstOrLastChar>(deep);
+
 
 }
 /// <summary>
@@ -4083,6 +4235,7 @@ public partial class ApplyBreakingRules : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplyBreakingRules>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not Allow Hanging Punctuation With Character Grid.</para>
@@ -4106,6 +4259,7 @@ public partial class DoNotWrapTextWithPunctuation : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotWrapTextWithPunctuation>(deep);
+
 
 }
 /// <summary>
@@ -4131,6 +4285,7 @@ public partial class DoNotUseEastAsianBreakRules : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseEastAsianBreakRules>(deep);
 
+
 }
 /// <summary>
 /// <para>Emulate Word 2002 Table Style Rules.</para>
@@ -4154,6 +4309,7 @@ public partial class UseWord2002TableStyleRules : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseWord2002TableStyleRules>(deep);
+
 
 }
 /// <summary>
@@ -4179,6 +4335,7 @@ public partial class GrowAutofit : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GrowAutofit>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not Bypass East Asian/Complex Script Layout Code.</para>
@@ -4202,6 +4359,7 @@ public partial class UseFarEastLayout : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseFarEastLayout>(deep);
+
 
 }
 /// <summary>
@@ -4227,6 +4385,7 @@ public partial class UseNormalStyleForList : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseNormalStyleForList>(deep);
 
+
 }
 /// <summary>
 /// <para>Ignore Hanging Indent When Creating Tab Stop After Numbering.</para>
@@ -4250,6 +4409,7 @@ public partial class DoNotUseIndentAsNumberingTabStop : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseIndentAsNumberingTabStop>(deep);
+
 
 }
 /// <summary>
@@ -4275,6 +4435,7 @@ public partial class UseAltKinsokuLineBreakRules : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseAltKinsokuLineBreakRules>(deep);
 
+
 }
 /// <summary>
 /// <para>Allow Contextual Spacing of Paragraphs in Tables.</para>
@@ -4298,6 +4459,7 @@ public partial class AllowSpaceOfSameStyleInTable : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllowSpaceOfSameStyleInTable>(deep);
+
 
 }
 /// <summary>
@@ -4323,6 +4485,7 @@ public partial class DoNotSuppressIndentation : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSuppressIndentation>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not AutoFit Tables To Fit Next To Wrapped Objects.</para>
@@ -4346,6 +4509,7 @@ public partial class DoNotAutofitConstrainedTables : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotAutofitConstrainedTables>(deep);
+
 
 }
 /// <summary>
@@ -4371,6 +4535,7 @@ public partial class AutofitToFirstFixedWidthCell : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutofitToFirstFixedWidthCell>(deep);
 
+
 }
 /// <summary>
 /// <para>Underline Following Character Following Numbering.</para>
@@ -4394,6 +4559,7 @@ public partial class UnderlineTabInNumberingList : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnderlineTabInNumberingList>(deep);
+
 
 }
 /// <summary>
@@ -4419,6 +4585,7 @@ public partial class DisplayHangulFixedWidth : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayHangulFixedWidth>(deep);
 
+
 }
 /// <summary>
 /// <para>Always Move Paragraph Mark to Page after a Page Break.</para>
@@ -4442,6 +4609,7 @@ public partial class SplitPageBreakAndParagraphMark : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitPageBreakAndParagraphMark>(deep);
+
 
 }
 /// <summary>
@@ -4467,6 +4635,7 @@ public partial class DoNotVerticallyAlignCellWithShape : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotVerticallyAlignCellWithShape>(deep);
 
+
 }
 /// <summary>
 /// <para>Don't Break Table Rows Around Floating Tables.</para>
@@ -4490,6 +4659,7 @@ public partial class DoNotBreakConstrainedForcedTable : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotBreakConstrainedForcedTable>(deep);
+
 
 }
 /// <summary>
@@ -4515,6 +4685,7 @@ public partial class DoNotVerticallyAlignInTextBox : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotVerticallyAlignInTextBox>(deep);
 
+
 }
 /// <summary>
 /// <para>Use ANSI Kerning Pairs from Fonts.</para>
@@ -4538,6 +4709,7 @@ public partial class UseAnsiKerningPairs : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseAnsiKerningPairs>(deep);
+
 
 }
 /// <summary>
@@ -4563,6 +4735,7 @@ public partial class CachedColumnBalance : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CachedColumnBalance>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the ShowingPlaceholder Class.</para>
@@ -4586,6 +4759,7 @@ public partial class ShowingPlaceholder : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowingPlaceholder>(deep);
+
 
 }
 /// <summary>
@@ -4611,6 +4785,7 @@ public partial class TemporarySdt : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TemporarySdt>(deep);
 
+
 }
 /// <summary>
 /// <para>Remove Personal Information from Document Properties.</para>
@@ -4634,6 +4809,7 @@ public partial class RemovePersonalInformation : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RemovePersonalInformation>(deep);
+
 
 }
 /// <summary>
@@ -4659,6 +4835,7 @@ public partial class RemoveDateAndTime : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RemoveDateAndTime>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not Display Visual Boundary For Header/Footer or Between Pages.</para>
@@ -4682,6 +4859,7 @@ public partial class DoNotDisplayPageBoundaries : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotDisplayPageBoundaries>(deep);
+
 
 }
 /// <summary>
@@ -4707,6 +4885,7 @@ public partial class DisplayBackgroundShape : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayBackgroundShape>(deep);
 
+
 }
 /// <summary>
 /// <para>Print PostScript Codes With Document Text.</para>
@@ -4730,6 +4909,7 @@ public partial class PrintPostScriptOverText : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintPostScriptOverText>(deep);
+
 
 }
 /// <summary>
@@ -4755,6 +4935,7 @@ public partial class PrintFractionalCharacterWidth : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintFractionalCharacterWidth>(deep);
 
+
 }
 /// <summary>
 /// <para>Only Print Form Field Content.</para>
@@ -4778,6 +4959,7 @@ public partial class PrintFormsData : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintFormsData>(deep);
+
 
 }
 /// <summary>
@@ -4803,6 +4985,7 @@ public partial class EmbedTrueTypeFonts : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbedTrueTypeFonts>(deep);
 
+
 }
 /// <summary>
 /// <para>Embed Common System Fonts.</para>
@@ -4826,6 +5009,7 @@ public partial class EmbedSystemFonts : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbedSystemFonts>(deep);
+
 
 }
 /// <summary>
@@ -4851,6 +5035,7 @@ public partial class SaveSubsetFonts : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaveSubsetFonts>(deep);
 
+
 }
 /// <summary>
 /// <para>Only Save Form Field Content.</para>
@@ -4874,6 +5059,7 @@ public partial class SaveFormsData : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaveFormsData>(deep);
+
 
 }
 /// <summary>
@@ -4899,6 +5085,7 @@ public partial class MirrorMargins : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MirrorMargins>(deep);
 
+
 }
 /// <summary>
 /// <para>Align Paragraph and Table Borders with Page Border.</para>
@@ -4922,6 +5109,7 @@ public partial class AlignBorderAndEdges : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlignBorderAndEdges>(deep);
+
 
 }
 /// <summary>
@@ -4947,6 +5135,7 @@ public partial class BordersDoNotSurroundHeader : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BordersDoNotSurroundHeader>(deep);
 
+
 }
 /// <summary>
 /// <para>Page Border Excludes Footer.</para>
@@ -4970,6 +5159,7 @@ public partial class BordersDoNotSurroundFooter : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BordersDoNotSurroundFooter>(deep);
+
 
 }
 /// <summary>
@@ -4995,6 +5185,7 @@ public partial class GutterAtTop : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GutterAtTop>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not Display Visual Indication of Spelling Errors.</para>
@@ -5018,6 +5209,7 @@ public partial class HideSpellingErrors : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideSpellingErrors>(deep);
+
 
 }
 /// <summary>
@@ -5043,6 +5235,7 @@ public partial class HideGrammaticalErrors : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideGrammaticalErrors>(deep);
 
+
 }
 /// <summary>
 /// <para>Structured Document Tag Placeholder Text Should be Resaved.</para>
@@ -5066,6 +5259,7 @@ public partial class FormsDesign : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormsDesign>(deep);
+
 
 }
 /// <summary>
@@ -5091,6 +5285,7 @@ public partial class LinkStyles : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinkStyles>(deep);
 
+
 }
 /// <summary>
 /// <para>Track Revisions to Document.</para>
@@ -5114,6 +5309,7 @@ public partial class TrackRevisions : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TrackRevisions>(deep);
+
 
 }
 /// <summary>
@@ -5139,6 +5335,7 @@ public partial class DoNotTrackMoves : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotTrackMoves>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not Track Formatting Revisions When Tracking Revisions.</para>
@@ -5162,6 +5359,7 @@ public partial class DoNotTrackFormatting : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotTrackFormatting>(deep);
+
 
 }
 /// <summary>
@@ -5187,6 +5385,7 @@ public partial class AutoFormatOverride : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoFormatOverride>(deep);
 
+
 }
 /// <summary>
 /// <para>Prevent Modification of Themes Part.</para>
@@ -5210,6 +5409,7 @@ public partial class StyleLockThemesPart : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLockThemesPart>(deep);
+
 
 }
 /// <summary>
@@ -5235,6 +5435,7 @@ public partial class StyleLockStylesPart : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLockStylesPart>(deep);
 
+
 }
 /// <summary>
 /// <para>Automatically Hyphenate Document Contents When Displayed.</para>
@@ -5258,6 +5459,7 @@ public partial class AutoHyphenation : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoHyphenation>(deep);
+
 
 }
 /// <summary>
@@ -5283,6 +5485,7 @@ public partial class DoNotHyphenateCaps : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotHyphenateCaps>(deep);
 
+
 }
 /// <summary>
 /// <para>Show E-Mail Message Header.</para>
@@ -5306,6 +5509,7 @@ public partial class ShowEnvelope : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowEnvelope>(deep);
+
 
 }
 /// <summary>
@@ -5331,6 +5535,7 @@ public partial class EvenAndOddHeaders : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EvenAndOddHeaders>(deep);
 
+
 }
 /// <summary>
 /// <para>Reverse Book Fold Printing.</para>
@@ -5354,6 +5559,7 @@ public partial class BookFoldReversePrinting : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookFoldReversePrinting>(deep);
+
 
 }
 /// <summary>
@@ -5379,6 +5585,7 @@ public partial class BookFoldPrinting : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookFoldPrinting>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not Use Margins for Drawing Grid Origin.</para>
@@ -5402,6 +5609,7 @@ public partial class DoNotUseMarginsForDrawingGridOrigin : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseMarginsForDrawingGridOrigin>(deep);
+
 
 }
 /// <summary>
@@ -5427,6 +5635,7 @@ public partial class DoNotShadeFormData : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotShadeFormData>(deep);
 
+
 }
 /// <summary>
 /// <para>Never Kern Punctuation Characters.</para>
@@ -5450,6 +5659,7 @@ public partial class NoPunctuationKerning : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoPunctuationKerning>(deep);
+
 
 }
 /// <summary>
@@ -5475,6 +5685,7 @@ public partial class PrintTwoOnOne : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintTwoOnOne>(deep);
 
+
 }
 /// <summary>
 /// <para>Use Strict Kinsoku Rules for Japanese Text.</para>
@@ -5498,6 +5709,7 @@ public partial class StrictFirstAndLastChars : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StrictFirstAndLastChars>(deep);
+
 
 }
 /// <summary>
@@ -5523,6 +5735,7 @@ public partial class SavePreviewPicture : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SavePreviewPicture>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not Validate Custom XML Markup Against Schemas.</para>
@@ -5546,6 +5759,7 @@ public partial class DoNotValidateAgainstSchema : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotValidateAgainstSchema>(deep);
+
 
 }
 /// <summary>
@@ -5571,6 +5785,7 @@ public partial class SaveInvalidXml : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaveInvalidXml>(deep);
 
+
 }
 /// <summary>
 /// <para>Ignore Mixed Content When Validating Custom XML Markup.</para>
@@ -5594,6 +5809,7 @@ public partial class IgnoreMixedContent : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<IgnoreMixedContent>(deep);
+
 
 }
 /// <summary>
@@ -5619,6 +5835,7 @@ public partial class AlwaysShowPlaceholderText : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlwaysShowPlaceholderText>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not Show Visual Indicator For Invalid Custom XML Markup.</para>
@@ -5642,6 +5859,7 @@ public partial class DoNotDemarcateInvalidXml : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotDemarcateInvalidXml>(deep);
+
 
 }
 /// <summary>
@@ -5667,6 +5885,7 @@ public partial class SaveXmlDataOnly : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SaveXmlDataOnly>(deep);
 
+
 }
 /// <summary>
 /// <para>Save Document as XML File through Custom XSL Transform.</para>
@@ -5690,6 +5909,7 @@ public partial class UseXsltWhenSaving : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UseXsltWhenSaving>(deep);
+
 
 }
 /// <summary>
@@ -5715,6 +5935,7 @@ public partial class ShowXmlTags : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowXmlTags>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not Mark Custom XML Elements With No Namespace As Invalid.</para>
@@ -5738,6 +5959,7 @@ public partial class AlwaysMergeEmptyNamespace : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlwaysMergeEmptyNamespace>(deep);
+
 
 }
 /// <summary>
@@ -5763,6 +5985,7 @@ public partial class UpdateFieldsOnOpen : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UpdateFieldsOnOpen>(deep);
 
+
 }
 /// <summary>
 /// <para>Disable Features Incompatible With Earlier Word Processing Formats.</para>
@@ -5786,6 +6009,7 @@ public partial class UICompatibleWith97To2003 : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UICompatibleWith97To2003>(deep);
+
 
 }
 /// <summary>
@@ -5811,6 +6035,7 @@ public partial class DoNotIncludeSubdocsInStats : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotIncludeSubdocsInStats>(deep);
 
+
 }
 /// <summary>
 /// <para>Do Not Automatically Compress Images.</para>
@@ -5834,6 +6059,7 @@ public partial class DoNotAutoCompressPictures : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotAutoCompressPictures>(deep);
+
 
 }
 /// <summary>
@@ -5859,6 +6085,7 @@ public partial class OptimizeForBrowser : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OptimizeForBrowser>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the RelyOnVML Class.</para>
@@ -5882,6 +6109,7 @@ public partial class RelyOnVML : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelyOnVML>(deep);
+
 
 }
 /// <summary>
@@ -5907,6 +6135,7 @@ public partial class AllowPNG : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllowPNG>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the DoNotRelyOnCSS Class.</para>
@@ -5930,6 +6159,7 @@ public partial class DoNotRelyOnCSS : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotRelyOnCSS>(deep);
+
 
 }
 /// <summary>
@@ -5955,6 +6185,7 @@ public partial class DoNotSaveAsSingleFile : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotSaveAsSingleFile>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the DoNotOrganizeInFolder Class.</para>
@@ -5978,6 +6209,7 @@ public partial class DoNotOrganizeInFolder : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotOrganizeInFolder>(deep);
+
 
 }
 /// <summary>
@@ -6003,6 +6235,7 @@ public partial class DoNotUseLongFileNames : OnOffType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DoNotUseLongFileNames>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the NotTrueType Class.</para>
@@ -6026,6 +6259,7 @@ public partial class NotTrueType : OnOffType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotTrueType>(deep);
+
 
 }
 /// <summary>
@@ -7161,6 +7395,7 @@ public partial class OutlineLevel : DecimalNumberType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OutlineLevel>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the GridSpan Class.</para>
@@ -7184,6 +7419,7 @@ public partial class GridSpan : DecimalNumberType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GridSpan>(deep);
+
 
 }
 /// <summary>
@@ -7209,6 +7445,7 @@ public partial class GridBefore : DecimalNumberType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GridBefore>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the GridAfter Class.</para>
@@ -7232,6 +7469,7 @@ public partial class GridAfter : DecimalNumberType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GridAfter>(deep);
+
 
 }
 /// <summary>
@@ -7257,6 +7495,7 @@ public partial class DropDownListSelection : DecimalNumberType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropDownListSelection>(deep);
 
+
 }
 /// <summary>
 /// <para>Record Currently Displayed In Merged Document.</para>
@@ -7280,6 +7519,7 @@ public partial class ActiveRecord : DecimalNumberType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ActiveRecord>(deep);
+
 
 }
 /// <summary>
@@ -7305,6 +7545,7 @@ public partial class CheckErrors : DecimalNumberType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CheckErrors>(deep);
 
+
 }
 /// <summary>
 /// <para>Restart Numbering Level Symbol.</para>
@@ -7328,6 +7569,7 @@ public partial class LevelRestart : DecimalNumberType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LevelRestart>(deep);
+
 
 }
 /// <summary>
@@ -7353,6 +7595,7 @@ public partial class LevelPictureBulletId : DecimalNumberType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LevelPictureBulletId>(deep);
 
+
 }
 /// <summary>
 /// <para>Numbering Level Starting Value Override.</para>
@@ -7376,6 +7619,7 @@ public partial class StartOverrideNumberingValue : DecimalNumberType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartOverrideNumberingValue>(deep);
+
 
 }
 /// <summary>
@@ -7401,6 +7645,7 @@ public partial class NumberingIdMacAtCleanup : DecimalNumberType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingIdMacAtCleanup>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the SdtId Class.</para>
@@ -7425,6 +7670,7 @@ public partial class SdtId : DecimalNumberType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtId>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the PixelsPerInch Class.</para>
@@ -7448,6 +7694,7 @@ public partial class PixelsPerInch : DecimalNumberType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PixelsPerInch>(deep);
+
 
 }
 /// <summary>
@@ -7612,6 +7859,7 @@ public partial class HeaderReference : HeaderFooterReferenceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeaderReference>(deep);
 
+
 }
 /// <summary>
 /// <para>Footer Reference.</para>
@@ -7635,6 +7883,7 @@ public partial class FooterReference : HeaderFooterReferenceType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FooterReference>(deep);
+
 
 }
 /// <summary>
@@ -7757,6 +8006,7 @@ public partial class Text : TextType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Text>(deep);
 
+
 }
 /// <summary>
 /// <para>Deleted Text.</para>
@@ -7791,6 +8041,7 @@ public partial class DeletedText : TextType
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DeletedText>(deep);
+
 
 }
 /// <summary>
@@ -7827,6 +8078,7 @@ public partial class FieldCode : TextType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FieldCode>(deep);
 
+
 }
 /// <summary>
 /// <para>Deleted Field Code.</para>
@@ -7861,6 +8113,7 @@ public partial class DeletedFieldCode : TextType
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DeletedFieldCode>(deep);
+
 
 }
 /// <summary>
@@ -7924,6 +8177,7 @@ public partial class NoBreakHyphen : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoBreakHyphen>(deep);
 
+
 }
 /// <summary>
 /// <para>Optional Hyphen Character.</para>
@@ -7947,6 +8201,7 @@ public partial class SoftHyphen : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SoftHyphen>(deep);
+
 
 }
 /// <summary>
@@ -7972,6 +8227,7 @@ public partial class DayShort : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DayShort>(deep);
 
+
 }
 /// <summary>
 /// <para>Date Block - Short Month Format.</para>
@@ -7995,6 +8251,7 @@ public partial class MonthShort : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MonthShort>(deep);
+
 
 }
 /// <summary>
@@ -8020,6 +8277,7 @@ public partial class YearShort : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<YearShort>(deep);
 
+
 }
 /// <summary>
 /// <para>Date Block - Long Day Format.</para>
@@ -8043,6 +8301,7 @@ public partial class DayLong : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DayLong>(deep);
+
 
 }
 /// <summary>
@@ -8068,6 +8327,7 @@ public partial class MonthLong : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MonthLong>(deep);
 
+
 }
 /// <summary>
 /// <para>Date Block - Long Year Format.</para>
@@ -8091,6 +8351,7 @@ public partial class YearLong : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<YearLong>(deep);
+
 
 }
 /// <summary>
@@ -8116,6 +8377,7 @@ public partial class AnnotationReferenceMark : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnnotationReferenceMark>(deep);
 
+
 }
 /// <summary>
 /// <para>Footnote Reference Mark.</para>
@@ -8139,6 +8401,7 @@ public partial class FootnoteReferenceMark : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FootnoteReferenceMark>(deep);
+
 
 }
 /// <summary>
@@ -8164,6 +8427,7 @@ public partial class EndnoteReferenceMark : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndnoteReferenceMark>(deep);
 
+
 }
 /// <summary>
 /// <para>Footnote/Endnote Separator Mark.</para>
@@ -8187,6 +8451,7 @@ public partial class SeparatorMark : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SeparatorMark>(deep);
+
 
 }
 /// <summary>
@@ -8212,6 +8477,7 @@ public partial class ContinuationSeparatorMark : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContinuationSeparatorMark>(deep);
 
+
 }
 /// <summary>
 /// <para>Page Number Block.</para>
@@ -8235,6 +8501,7 @@ public partial class PageNumber : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageNumber>(deep);
+
 
 }
 /// <summary>
@@ -8260,6 +8527,7 @@ public partial class CarriageReturn : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CarriageReturn>(deep);
 
+
 }
 /// <summary>
 /// <para>Tab Character.</para>
@@ -8283,6 +8551,7 @@ public partial class TabChar : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TabChar>(deep);
+
 
 }
 /// <summary>
@@ -8308,6 +8577,7 @@ public partial class LastRenderedPageBreak : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LastRenderedPageBreak>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the SdtContentEquation Class.</para>
@@ -8331,6 +8601,7 @@ public partial class SdtContentEquation : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentEquation>(deep);
+
 
 }
 /// <summary>
@@ -8356,6 +8627,7 @@ public partial class SdtContentPicture : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentPicture>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the SdtContentRichText Class.</para>
@@ -8379,6 +8651,7 @@ public partial class SdtContentRichText : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentRichText>(deep);
+
 
 }
 /// <summary>
@@ -8404,6 +8677,7 @@ public partial class SdtContentCitation : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentCitation>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the SdtContentGroup Class.</para>
@@ -8427,6 +8701,7 @@ public partial class SdtContentGroup : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentGroup>(deep);
+
 
 }
 /// <summary>
@@ -8452,6 +8727,7 @@ public partial class SdtContentBibliography : EmptyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentBibliography>(deep);
 
+
 }
 /// <summary>
 /// <para>Upgrade Document on Open.</para>
@@ -8475,6 +8751,7 @@ public partial class ForceUpgrade : EmptyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ForceUpgrade>(deep);
+
 
 }
 /// <summary>
@@ -9079,6 +9356,7 @@ public partial class FootnoteReference : FootnoteEndnoteReferenceType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FootnoteReference>(deep);
 
+
 }
 /// <summary>
 /// <para>Endnote Reference.</para>
@@ -9102,6 +9380,7 @@ public partial class EndnoteReference : FootnoteEndnoteReferenceType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndnoteReference>(deep);
+
 
 }
 /// <summary>
@@ -9320,6 +9599,7 @@ public partial class RunStyle : String253Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RunStyle>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the TableStyle Class.</para>
@@ -9343,6 +9623,7 @@ public partial class TableStyle : String253Type
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyle>(deep);
+
 
 }
 /// <summary>
@@ -9368,6 +9649,7 @@ public partial class ParagraphStyleIdInLevel : String253Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ParagraphStyleIdInLevel>(deep);
 
+
 }
 /// <summary>
 /// <para>Abstract Numbering Definition Name.</para>
@@ -9391,6 +9673,7 @@ public partial class AbstractNumDefinitionName : String253Type
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbstractNumDefinitionName>(deep);
+
 
 }
 /// <summary>
@@ -9416,6 +9699,7 @@ public partial class StyleLink : String253Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleLink>(deep);
 
+
 }
 /// <summary>
 /// <para>Numbering Style Reference.</para>
@@ -9439,6 +9723,7 @@ public partial class NumberingStyleLink : String253Type
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingStyleLink>(deep);
+
 
 }
 /// <summary>
@@ -9464,6 +9749,7 @@ public partial class Aliases : String253Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Aliases>(deep);
 
+
 }
 /// <summary>
 /// <para>Parent Style ID.</para>
@@ -9487,6 +9773,7 @@ public partial class BasedOn : String253Type
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BasedOn>(deep);
+
 
 }
 /// <summary>
@@ -9512,6 +9799,7 @@ public partial class NextParagraphStyle : String253Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NextParagraphStyle>(deep);
 
+
 }
 /// <summary>
 /// <para>Linked Style Reference.</para>
@@ -9535,6 +9823,7 @@ public partial class LinkedStyle : String253Type
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinkedStyle>(deep);
+
 
 }
 /// <summary>
@@ -9560,6 +9849,7 @@ public partial class ClickAndTypeStyle : String253Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ClickAndTypeStyle>(deep);
 
+
 }
 /// <summary>
 /// <para>Default Table Style for Newly Inserted Tables.</para>
@@ -9583,6 +9873,7 @@ public partial class DefaultTableStyle : String253Type
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultTableStyle>(deep);
+
 
 }
 /// <summary>
@@ -9988,6 +10279,7 @@ public partial class FontSize : HpsMeasureType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontSize>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the FontSizeComplexScript Class.</para>
@@ -10011,6 +10303,7 @@ public partial class FontSizeComplexScript : HpsMeasureType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontSizeComplexScript>(deep);
+
 
 }
 /// <summary>
@@ -10036,6 +10329,7 @@ public partial class FormFieldSize : HpsMeasureType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormFieldSize>(deep);
 
+
 }
 /// <summary>
 /// <para>Phonetic Guide Text Font Size.</para>
@@ -10060,6 +10354,7 @@ public partial class PhoneticGuideTextFontSize : HpsMeasureType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PhoneticGuideTextFontSize>(deep);
 
+
 }
 /// <summary>
 /// <para>Phonetic Guide Base Text Font Size.</para>
@@ -10083,6 +10378,7 @@ public partial class PhoneticGuideBaseTextSize : HpsMeasureType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PhoneticGuideBaseTextSize>(deep);
+
 
 }
 /// <summary>
@@ -10298,6 +10594,7 @@ public partial class Border : BorderType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Border>(deep);
 
+
 }
 /// <summary>
 /// <para>Paragraph Border Above Identical Paragraphs.</para>
@@ -10321,6 +10618,7 @@ public partial class TopBorder : BorderType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopBorder>(deep);
+
 
 }
 /// <summary>
@@ -10346,6 +10644,7 @@ public partial class LeftBorder : BorderType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftBorder>(deep);
 
+
 }
 /// <summary>
 /// <para>Paragraph Border Between Identical Paragraphs.</para>
@@ -10369,6 +10668,7 @@ public partial class BottomBorder : BorderType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomBorder>(deep);
+
 
 }
 /// <summary>
@@ -10394,6 +10694,7 @@ public partial class RightBorder : BorderType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightBorder>(deep);
 
+
 }
 /// <summary>
 /// <para>Paragraph Border Between Identical Paragraphs.</para>
@@ -10417,6 +10718,7 @@ public partial class BetweenBorder : BorderType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BetweenBorder>(deep);
+
 
 }
 /// <summary>
@@ -10442,6 +10744,7 @@ public partial class BarBorder : BorderType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarBorder>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the StartBorder Class.</para>
@@ -10465,6 +10768,7 @@ public partial class StartBorder : BorderType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartBorder>(deep);
+
 
 }
 /// <summary>
@@ -10490,6 +10794,7 @@ public partial class EndBorder : BorderType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndBorder>(deep);
 
+
 }
 /// <summary>
 /// <para>Table Inside Horizontal Edges Border.</para>
@@ -10513,6 +10818,7 @@ public partial class InsideHorizontalBorder : BorderType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InsideHorizontalBorder>(deep);
+
 
 }
 /// <summary>
@@ -10538,6 +10844,7 @@ public partial class InsideVerticalBorder : BorderType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InsideVerticalBorder>(deep);
 
+
 }
 /// <summary>
 /// <para>Table Cell Top Left to Bottom Right Diagonal Border.</para>
@@ -10562,6 +10869,7 @@ public partial class TopLeftToBottomRightCellBorder : BorderType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopLeftToBottomRightCellBorder>(deep);
 
+
 }
 /// <summary>
 /// <para>Table Cell Top Right to Bottom Left Diagonal Border.</para>
@@ -10585,6 +10893,7 @@ public partial class TopRightToBottomLeftCellBorder : BorderType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopRightToBottomLeftCellBorder>(deep);
+
 
 }
 /// <summary>
@@ -10845,6 +11154,7 @@ public partial class Languages : LanguageType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Languages>(deep);
 
+
 }
 /// <summary>
 /// <para>Theme Font Languages.</para>
@@ -10868,6 +11178,7 @@ public partial class ThemeFontLanguages : LanguageType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThemeFontLanguages>(deep);
+
 
 }
 /// <summary>
@@ -12265,6 +12576,16 @@ public partial class MoveFromMathControl : MathControlMoveType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveFromMathControl>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
+{
+    new CompositeParticle(ParticleType.Sequence, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunProperties), 0, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the MoveToMathControl Class.</para>
@@ -12320,6 +12641,16 @@ public partial class MoveToMathControl : MathControlMoveType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveToMathControl>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
+{
+    new CompositeParticle(ParticleType.Sequence, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunProperties), 0, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the MathControlMoveType class.
@@ -13936,6 +14267,93 @@ public partial class InsertedRun : RunTrackChangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InsertedRun>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                new CompositeParticle(ParticleType.Sequence, 0, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                }
+            },
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+            }
+        }
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Deleted Run Content.</para>
@@ -14044,6 +14462,93 @@ public partial class DeletedRun : RunTrackChangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DeletedRun>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                new CompositeParticle(ParticleType.Sequence, 0, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                }
+            },
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+            }
+        }
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Move Source Run Content.</para>
@@ -14152,6 +14657,93 @@ public partial class MoveFromRun : RunTrackChangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveFromRun>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                new CompositeParticle(ParticleType.Sequence, 0, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                }
+            },
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+            }
+        }
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Move Destination Run Content.</para>
@@ -14260,6 +14852,93 @@ public partial class MoveToRun : RunTrackChangeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveToRun>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                new CompositeParticle(ParticleType.Sequence, 0, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                }
+            },
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+            }
+        }
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the RunTrackChangeType class.
@@ -18284,6 +18963,7 @@ public partial class SubDocumentReference : RelationshipType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubDocumentReference>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the PrinterSettingsReference Class.</para>
@@ -18307,6 +18987,7 @@ public partial class PrinterSettingsReference : RelationshipType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrinterSettingsReference>(deep);
+
 
 }
 /// <summary>
@@ -18332,6 +19013,7 @@ public partial class SourceReference : RelationshipType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SourceReference>(deep);
 
+
 }
 /// <summary>
 /// <para>Reference to Inclusion/Exclusion Data for Data Source.</para>
@@ -18355,6 +19037,7 @@ public partial class RecipientDataReference : RelationshipType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RecipientDataReference>(deep);
+
 
 }
 /// <summary>
@@ -18380,6 +19063,7 @@ public partial class DataSourceReference : RelationshipType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataSourceReference>(deep);
 
+
 }
 /// <summary>
 /// <para>Header Definition File Path.</para>
@@ -18403,6 +19087,7 @@ public partial class HeaderSource : RelationshipType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeaderSource>(deep);
+
 
 }
 /// <summary>
@@ -18428,6 +19113,7 @@ public partial class SourceFileReference : RelationshipType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SourceFileReference>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the MovieReference Class.</para>
@@ -18452,6 +19138,7 @@ public partial class MovieReference : RelationshipType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MovieReference>(deep);
 
+
 }
 /// <summary>
 /// <para>Attached Document Template.</para>
@@ -18475,6 +19162,7 @@ public partial class AttachedTemplate : RelationshipType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AttachedTemplate>(deep);
+
 
 }
 /// <summary>
@@ -18691,6 +19379,7 @@ public partial class TableCellWidth : TableWidthType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellWidth>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the WidthBeforeTableRow Class.</para>
@@ -18714,6 +19403,7 @@ public partial class WidthBeforeTableRow : TableWidthType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WidthBeforeTableRow>(deep);
+
 
 }
 /// <summary>
@@ -18739,6 +19429,7 @@ public partial class WidthAfterTableRow : TableWidthType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WidthAfterTableRow>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the TableCellSpacing Class.</para>
@@ -18762,6 +19453,7 @@ public partial class TableCellSpacing : TableWidthType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellSpacing>(deep);
+
 
 }
 /// <summary>
@@ -18787,6 +19479,7 @@ public partial class TableWidth : TableWidthType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableWidth>(deep);
 
+
 }
 /// <summary>
 /// <para>Table Cell Top Margin Default.</para>
@@ -18810,6 +19503,7 @@ public partial class TopMargin : TableWidthType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopMargin>(deep);
+
 
 }
 /// <summary>
@@ -18835,6 +19529,7 @@ public partial class StartMargin : TableWidthType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartMargin>(deep);
 
+
 }
 /// <summary>
 /// <para>Table Cell Bottom Margin Default.</para>
@@ -18858,6 +19553,7 @@ public partial class BottomMargin : TableWidthType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomMargin>(deep);
+
 
 }
 /// <summary>
@@ -18883,6 +19579,7 @@ public partial class EndMargin : TableWidthType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndMargin>(deep);
 
+
 }
 /// <summary>
 /// <para>Table Cell Left Margin Exception.</para>
@@ -18907,6 +19604,7 @@ public partial class LeftMargin : TableWidthType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftMargin>(deep);
 
+
 }
 /// <summary>
 /// <para>Table Cell Right Margin Exception.</para>
@@ -18930,6 +19628,7 @@ public partial class RightMargin : TableWidthType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightMargin>(deep);
+
 
 }
 /// <summary>
@@ -19297,6 +19996,7 @@ public partial class NoWrap : OnOffOnlyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoWrap>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the TableCellFitText Class.</para>
@@ -19320,6 +20020,7 @@ public partial class TableCellFitText : OnOffOnlyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellFitText>(deep);
+
 
 }
 /// <summary>
@@ -19345,6 +20046,7 @@ public partial class HideMark : OnOffOnlyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideMark>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CantSplit Class.</para>
@@ -19368,6 +20070,7 @@ public partial class CantSplit : OnOffOnlyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CantSplit>(deep);
+
 
 }
 /// <summary>
@@ -19393,6 +20096,7 @@ public partial class TableHeader : OnOffOnlyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableHeader>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the BiDiVisual Class.</para>
@@ -19416,6 +20120,7 @@ public partial class BiDiVisual : OnOffOnlyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BiDiVisual>(deep);
+
 
 }
 /// <summary>
@@ -19441,6 +20146,7 @@ public partial class NoResizeAllowed : OnOffOnlyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoResizeAllowed>(deep);
 
+
 }
 /// <summary>
 /// <para>Maintain Link to Existing File.</para>
@@ -19464,6 +20170,7 @@ public partial class LinkedToFile : OnOffOnlyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinkedToFile>(deep);
+
 
 }
 /// <summary>
@@ -19489,6 +20196,7 @@ public partial class NoBorder : OnOffOnlyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NoBorder>(deep);
 
+
 }
 /// <summary>
 /// <para>Frameset Splitter Border Style.</para>
@@ -19512,6 +20220,7 @@ public partial class FlatBorders : OnOffOnlyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FlatBorders>(deep);
+
 
 }
 /// <summary>
@@ -19537,6 +20246,7 @@ public partial class AutoRedefine : OnOffOnlyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoRedefine>(deep);
 
+
 }
 /// <summary>
 /// <para>Hide Style From User Interface.</para>
@@ -19560,6 +20270,7 @@ public partial class StyleHidden : OnOffOnlyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleHidden>(deep);
+
 
 }
 /// <summary>
@@ -19585,6 +20296,7 @@ public partial class SemiHidden : OnOffOnlyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SemiHidden>(deep);
 
+
 }
 /// <summary>
 /// <para>Remove Semi-Hidden Property When Style Is Used.</para>
@@ -19608,6 +20320,7 @@ public partial class UnhideWhenUsed : OnOffOnlyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnhideWhenUsed>(deep);
+
 
 }
 /// <summary>
@@ -19633,6 +20346,7 @@ public partial class PrimaryStyle : OnOffOnlyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrimaryStyle>(deep);
 
+
 }
 /// <summary>
 /// <para>Style Cannot Be Applied.</para>
@@ -19656,6 +20370,7 @@ public partial class Locked : OnOffOnlyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Locked>(deep);
+
 
 }
 /// <summary>
@@ -19681,6 +20396,7 @@ public partial class Personal : OnOffOnlyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Personal>(deep);
 
+
 }
 /// <summary>
 /// <para>E-Mail Message Composition Style.</para>
@@ -19705,6 +20421,7 @@ public partial class PersonalCompose : OnOffOnlyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PersonalCompose>(deep);
 
+
 }
 /// <summary>
 /// <para>E-Mail Message Reply Style.</para>
@@ -19728,6 +20445,7 @@ public partial class PersonalReply : OnOffOnlyType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PersonalReply>(deep);
+
 
 }
 /// <summary>
@@ -20276,6 +20994,7 @@ public partial class TableStyleRowBandSize : UnsignedDecimalNumberMax3Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleRowBandSize>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the TableStyleColumnBandSize Class.</para>
@@ -20299,6 +21018,7 @@ public partial class TableStyleColumnBandSize : UnsignedDecimalNumberMax3Type
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleColumnBandSize>(deep);
+
 
 }
 /// <summary>
@@ -26868,6 +27588,7 @@ public partial class NumberingId : NonNegativeDecimalNumberType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingId>(deep);
 
+
 }
 /// <summary>
 /// <para>Starting Value.</para>
@@ -26892,6 +27613,7 @@ public partial class StartNumberingValue : NonNegativeDecimalNumberType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StartNumberingValue>(deep);
 
+
 }
 /// <summary>
 /// <para>Abstract Numbering Definition Reference.</para>
@@ -26915,6 +27637,7 @@ public partial class AbstractNumId : NonNegativeDecimalNumberType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbstractNumId>(deep);
+
 
 }
 /// <summary>
@@ -27767,6 +28490,7 @@ public partial class EntryMacro : MacroNameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EntryMacro>(deep);
 
+
 }
 /// <summary>
 /// <para>Script Function to Execute on Form Field Exit.</para>
@@ -27790,6 +28514,7 @@ public partial class ExitMacro : MacroNameType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExitMacro>(deep);
+
 
 }
 /// <summary>
@@ -28285,6 +29010,7 @@ public partial class ListEntryFormField : String255Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListEntryFormField>(deep);
 
+
 }
 /// <summary>
 /// <para>Default Text Box Form Field String.</para>
@@ -28309,6 +29035,7 @@ public partial class DefaultTextBoxFormFieldString : String255Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultTextBoxFormFieldString>(deep);
 
+
 }
 /// <summary>
 /// <para>Frame Name.</para>
@@ -28332,6 +29059,7 @@ public partial class FrameName : String255Type
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FrameName>(deep);
+
 
 }
 /// <summary>
@@ -29228,6 +29956,91 @@ public partial class RubyContent : RubyContentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RubyContent>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby), 1, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+            },
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+            },
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+            new CompositeParticle(ParticleType.Sequence, 0, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+            }
+        },
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+        }
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Phonetic Guide Base Text.</para>
@@ -29337,6 +30150,91 @@ public partial class RubyBase : RubyContentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RubyBase>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby), 1, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+            },
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                },
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+            },
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+            new CompositeParticle(ParticleType.Sequence, 0, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+            }
+        },
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+        }
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the RubyContentType class.
@@ -32388,6 +33286,7 @@ public partial class FootnoteSpecialReference : FootnoteEndnoteSeparatorReferenc
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FootnoteSpecialReference>(deep);
 
+
 }
 /// <summary>
 /// <para>Special Endnote List.</para>
@@ -32411,6 +33310,7 @@ public partial class EndnoteSpecialReference : FootnoteEndnoteSeparatorReference
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndnoteSpecialReference>(deep);
+
 
 }
 /// <summary>
@@ -32465,6 +33365,7 @@ public partial class ColumnIndex : UnsignedDecimalNumberType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnIndex>(deep);
 
+
 }
 /// <summary>
 /// <para>Column Delimiter for Data Source.</para>
@@ -32488,6 +33389,7 @@ public partial class ColumnDelimiter : UnsignedDecimalNumberType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnDelimiter>(deep);
+
 
 }
 /// <summary>
@@ -33268,6 +34170,7 @@ public partial class RsidRoot : LongHexNumberType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RsidRoot>(deep);
 
+
 }
 /// <summary>
 /// <para>Single Session Revision Save ID.</para>
@@ -33291,6 +34194,7 @@ public partial class Rsid : LongHexNumberType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Rsid>(deep);
+
 
 }
 /// <summary>
@@ -33316,6 +34220,7 @@ public partial class Nsid : LongHexNumberType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Nsid>(deep);
 
+
 }
 /// <summary>
 /// <para>Numbering Template Code.</para>
@@ -33339,6 +34244,7 @@ public partial class TemplateCode : LongHexNumberType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TemplateCode>(deep);
+
 
 }
 /// <summary>
@@ -34716,6 +35622,7 @@ public partial class MarginWidth : PixelsMeasureType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MarginWidth>(deep);
 
+
 }
 /// <summary>
 /// <para>Top and Bottom Margin for Frame.</para>
@@ -34739,6 +35646,7 @@ public partial class MarginHeight : PixelsMeasureType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MarginHeight>(deep);
+
 
 }
 /// <summary>
@@ -34832,6 +35740,7 @@ public partial class Width : TwipsMeasureType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Width>(deep);
 
+
 }
 /// <summary>
 /// <para>Hyphenation Zone.</para>
@@ -34855,6 +35764,7 @@ public partial class HyphenationZone : TwipsMeasureType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyphenationZone>(deep);
+
 
 }
 /// <summary>
@@ -34880,6 +35790,7 @@ public partial class DrawingGridHorizontalSpacing : TwipsMeasureType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DrawingGridHorizontalSpacing>(deep);
 
+
 }
 /// <summary>
 /// <para>Drawing Grid Vertical Grid Unit Size.</para>
@@ -34903,6 +35814,7 @@ public partial class DrawingGridVerticalSpacing : TwipsMeasureType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DrawingGridVerticalSpacing>(deep);
+
 
 }
 /// <summary>
@@ -34928,6 +35840,7 @@ public partial class DrawingGridHorizontalOrigin : TwipsMeasureType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DrawingGridHorizontalOrigin>(deep);
 
+
 }
 /// <summary>
 /// <para>Drawing Grid Vertical Origin Point.</para>
@@ -34951,6 +35864,7 @@ public partial class DrawingGridVerticalOrigin : TwipsMeasureType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DrawingGridVerticalOrigin>(deep);
+
 
 }
 /// <summary>
@@ -40855,6 +41769,7 @@ public partial class LeftMarginDiv : SignedTwipsMeasureType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftMarginDiv>(deep);
 
+
 }
 /// <summary>
 /// <para>Right Margin for HTML div.</para>
@@ -40878,6 +41793,7 @@ public partial class RightMarginDiv : SignedTwipsMeasureType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightMarginDiv>(deep);
+
 
 }
 /// <summary>
@@ -40903,6 +41819,7 @@ public partial class TopMarginDiv : SignedTwipsMeasureType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopMarginDiv>(deep);
 
+
 }
 /// <summary>
 /// <para>Bottom Margin for HTML div.</para>
@@ -40926,6 +41843,7 @@ public partial class BottomMarginDiv : SignedTwipsMeasureType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomMarginDiv>(deep);
+
 
 }
 /// <summary>
@@ -41138,6 +42056,11 @@ public partial class DivsChild : DivsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DivsChild>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Div), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the Divs Class.</para>
@@ -41191,6 +42114,11 @@ public partial class Divs : DivsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Divs>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 0)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Div), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the DivsType class.
@@ -41679,6 +42607,78 @@ public partial class Footnote : FootnoteEndnoteType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Footnote>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 0)
+    {
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltChunk), 0, 0)
+        },
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtBlock), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Paragraph), 0, 0),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Table), 0, 0)
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                        },
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                        },
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                    new CompositeParticle(ParticleType.Sequence, 0, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                    }
+                }
+            }
+        }
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Endnote Content.</para>
@@ -41766,6 +42766,78 @@ public partial class Endnote : FootnoteEndnoteType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Endnote>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 0)
+    {
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltChunk), 0, 0)
+        },
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtBlock), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Paragraph), 0, 0),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Table), 0, 0)
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                        },
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                        },
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                    new CompositeParticle(ParticleType.Sequence, 0, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                    }
+                }
+            }
+        }
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the FootnoteEndnoteType class.
@@ -43000,6 +44072,79 @@ public partial class DocPartBody : BodyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartBody>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltChunk), 0, 0)
+        },
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtBlock), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Paragraph), 0, 0),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Table), 0, 0)
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                        },
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                        },
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                    new CompositeParticle(ParticleType.Sequence, 0, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                    }
+                }
+            }
+        }
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SectionProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the Body Class.</para>
@@ -43088,6 +44233,79 @@ public partial class Body : BodyType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Body>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltChunk), 0, 0)
+        },
+        new CompositeParticle(ParticleType.Choice, 0, 0)
+        {
+            new CompositeParticle(ParticleType.Choice, 0, 0)
+            {
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtBlock), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Paragraph), 0, 0),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Table), 0, 0)
+                },
+                new CompositeParticle(ParticleType.Choice, 0, 0)
+                {
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                    },
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
+                    {
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                        },
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
+                        {
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                        },
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1)
+                    },
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
+                    new CompositeParticle(ParticleType.Sequence, 0, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
+                    }
+                }
+            }
+        }
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SectionProperties), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the BodyType class.
@@ -43385,6 +44603,7 @@ public partial class TableCellLeftMargin : TableWidthDxaNilType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellLeftMargin>(deep);
 
+
 }
 /// <summary>
 /// <para>Table Cell Right Margin Default.</para>
@@ -43408,6 +44627,7 @@ public partial class TableCellRightMargin : TableWidthDxaNilType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCellRightMargin>(deep);
+
 
 }
 /// <summary>
@@ -45288,6 +46508,13 @@ public partial class SdtContentDocPartObject : SdtDocPartType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentDocPartObject>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartGallery), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartCategory), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartUnique), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the SdtContentDocPartList Class.</para>
@@ -45343,6 +46570,13 @@ public partial class SdtContentDocPartList : SdtDocPartType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentDocPartList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartGallery), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartCategory), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartUnique), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the SdtDocPartType class.
@@ -46868,6 +48102,7 @@ public partial class DefaultTabStop : NonNegativeShortType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultTabStop>(deep);
 
+
 }
 /// <summary>
 /// <para>Number of Pages Per Booklet.</para>
@@ -46891,6 +48126,7 @@ public partial class BookFoldPrintingSheets : NonNegativeShortType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookFoldPrintingSheets>(deep);
+
 
 }
 /// <summary>
@@ -47026,6 +48262,7 @@ public partial class DisplayHorizontalDrawingGrid : UnsignedInt7Type
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayHorizontalDrawingGrid>(deep);
 
+
 }
 /// <summary>
 /// <para>Distance between Vertical Gridlines.</para>
@@ -47049,6 +48286,7 @@ public partial class DisplayVerticalDrawingGrid : UnsignedInt7Type
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayVerticalDrawingGrid>(deep);
+
 
 }
 /// <summary>
@@ -47325,6 +48563,12 @@ public partial class HeaderShapeDefaults : ShapeDefaultsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeaderShapeDefaults>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeDefaults), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeLayout), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Default Properties for VML Objects in Main Document.</para>
@@ -47379,6 +48623,12 @@ public partial class ShapeDefaults : ShapeDefaultsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeDefaults>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeDefaults), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeLayout), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the ShapeDefaultsType class.
@@ -49644,6 +50894,7 @@ public partial class EmbedRegularFont : FontRelationshipType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbedRegularFont>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EmbedBoldFont Class.</para>
@@ -49667,6 +50918,7 @@ public partial class EmbedBoldFont : FontRelationshipType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbedBoldFont>(deep);
+
 
 }
 /// <summary>
@@ -49692,6 +50944,7 @@ public partial class EmbedItalicFont : FontRelationshipType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbedItalicFont>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EmbedBoldItalicFont Class.</para>
@@ -49715,6 +50968,7 @@ public partial class EmbedBoldItalicFont : FontRelationshipType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbedBoldItalicFont>(deep);
+
 
 }
 /// <summary>

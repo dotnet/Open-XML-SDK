@@ -422,6 +422,7 @@ public partial class MacroKeyboardCustomization : MacroWllType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MacroKeyboardCustomization>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the WllMacroKeyboardCustomization Class.</para>
@@ -445,6 +446,7 @@ public partial class WllMacroKeyboardCustomization : MacroWllType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WllMacroKeyboardCustomization>(deep);
+
 
 }
 /// <summary>
@@ -497,6 +499,7 @@ public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapTy
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllocatedCommandKeyboardCustomization>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the AllocatedCommandManifestEntry Class.</para>
@@ -520,6 +523,7 @@ public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllocatedCommandManifestEntry>(deep);
+
 
 }
 /// <summary>
@@ -960,6 +964,7 @@ public partial class EventDocNewXsdString : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocNewXsdString>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EventDocOpenXsdString Class.</para>
@@ -994,6 +999,7 @@ public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocOpenXsdString>(deep);
+
 
 }
 /// <summary>
@@ -1030,6 +1036,7 @@ public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocCloseXsdString>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EventDocSyncXsdString Class.</para>
@@ -1064,6 +1071,7 @@ public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocSyncXsdString>(deep);
+
 
 }
 /// <summary>
@@ -1100,6 +1108,7 @@ public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocXmlAfterInsertXsdString>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EventDocXmlBeforeDeleteXsdString Class.</para>
@@ -1134,6 +1143,7 @@ public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocXmlBeforeDeleteXsdString>(deep);
+
 
 }
 /// <summary>
@@ -1170,6 +1180,7 @@ public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTex
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlAfterInsertXsdString>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EventDocContentControlBeforeDeleteXsdString Class.</para>
@@ -1204,6 +1215,7 @@ public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTe
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlBeforeDeleteXsdString>(deep);
+
 
 }
 /// <summary>
@@ -1240,6 +1252,7 @@ public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextEle
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlOnExistXsdString>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EventDocContentControlOnEnterXsdString Class.</para>
@@ -1274,6 +1287,7 @@ public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextEle
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlOnEnterXsdString>(deep);
+
 
 }
 /// <summary>
@@ -1310,6 +1324,7 @@ public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocStoreUpdateXsdString>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EventDocContentControlUpdateXsdString Class.</para>
@@ -1345,6 +1360,7 @@ public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElem
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlUpdateXsdString>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EventDocBuildingBlockAfterInsertXsdString Class.</para>
@@ -1379,6 +1395,7 @@ public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafText
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocBuildingBlockAfterInsertXsdString>(deep);
+
 
 }
 /// <summary>
@@ -1793,6 +1810,11 @@ public partial class KeyMapCustomizations : KeymapsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<KeyMapCustomizations>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the MismatchedKeyMapCustomization Class.</para>
@@ -1846,6 +1868,11 @@ public partial class MismatchedKeyMapCustomization : KeymapsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MismatchedKeyMapCustomization>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the KeymapsType class.

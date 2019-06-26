@@ -141,6 +141,7 @@ public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PropertyEditorNamespace>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the DefaultPropertyEditorNamespace Class.</para>
@@ -176,6 +177,7 @@ public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultPropertyEditorNamespace>(deep);
+
 
 }
 /// <summary>

@@ -211,6 +211,7 @@ public partial class InvertIfNegativeBoolean : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InvertIfNegativeBoolean>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Bubble3DBoolean Class.</para>
@@ -234,6 +235,7 @@ public partial class Bubble3DBoolean : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bubble3DBoolean>(deep);
+
 
 }
 /// <summary>
@@ -747,6 +749,7 @@ public partial class UniqueIdChartUniqueID : UniqueIDChart
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UniqueIdChartUniqueID>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the UniqueID Class.</para>
@@ -770,6 +773,7 @@ public partial class UniqueID : UniqueIDChart
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UniqueID>(deep);
+
 
 }
 /// <summary>

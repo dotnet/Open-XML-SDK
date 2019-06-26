@@ -1664,6 +1664,7 @@ public partial class ExceptionForSave : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExceptionForSave>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the ShowDataLabelsRange Class.</para>
@@ -1687,6 +1688,7 @@ public partial class ShowDataLabelsRange : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowDataLabelsRange>(deep);
+
 
 }
 /// <summary>
@@ -1712,6 +1714,7 @@ public partial class ShowLeaderLines : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowLeaderLines>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the AutoGeneneratedCategories Class.</para>
@@ -1735,6 +1738,7 @@ public partial class AutoGeneneratedCategories : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoGeneneratedCategories>(deep);
+
 
 }
 /// <summary>
@@ -1760,6 +1764,7 @@ public partial class InvertIfNegativeBoolean : BooleanType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InvertIfNegativeBoolean>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Bubble3D Class.</para>
@@ -1783,6 +1788,7 @@ public partial class Bubble3D : BooleanType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bubble3D>(deep);
+
 
 }
 /// <summary>
@@ -2037,6 +2043,7 @@ public partial class SequenceOfReferences : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SequenceOfReferences>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Formula Class.</para>
@@ -2072,6 +2079,7 @@ public partial class Formula : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the TextFieldGuid Class.</para>
@@ -2106,6 +2114,7 @@ public partial class TextFieldGuid : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextFieldGuid>(deep);
+
 
 }
 /// <summary>
@@ -3746,6 +3755,13 @@ public partial class DataLabelsRangeChache : StringDataType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabelsRangeChache>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DataLabelFieldTableCache Class.</para>
@@ -3801,6 +3817,13 @@ public partial class DataLabelFieldTableCache : StringDataType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabelFieldTableCache>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the StringDataType class.

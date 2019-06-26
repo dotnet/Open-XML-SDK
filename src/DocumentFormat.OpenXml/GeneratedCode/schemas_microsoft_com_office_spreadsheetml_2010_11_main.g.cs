@@ -65,6 +65,11 @@ public partial class PivotCaches : OpenXmlPivotCachesElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCaches>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the TimelineCachePivotCaches Class.</para>
@@ -118,6 +123,11 @@ public partial class TimelineCachePivotCaches : OpenXmlPivotCachesElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TimelineCachePivotCaches>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the OpenXmlPivotCachesElement class.
@@ -4097,6 +4107,11 @@ public partial class SurveyPrSurveyElementPr : OpenXmlSurveyElementPrElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SurveyPrSurveyElementPr>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the TitlePrSurveyElementPr Class.</para>
@@ -4150,6 +4165,11 @@ public partial class TitlePrSurveyElementPr : OpenXmlSurveyElementPrElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TitlePrSurveyElementPr>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the DescriptionPrSurveyElementPr Class.</para>
@@ -4203,6 +4223,11 @@ public partial class DescriptionPrSurveyElementPr : OpenXmlSurveyElementPrElemen
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DescriptionPrSurveyElementPr>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the QuestionsPrSurveyElementPr Class.</para>
@@ -4256,6 +4281,11 @@ public partial class QuestionsPrSurveyElementPr : OpenXmlSurveyElementPrElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<QuestionsPrSurveyElementPr>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the QuestionPrSurveyElementPr Class.</para>
@@ -4309,6 +4339,11 @@ public partial class QuestionPrSurveyElementPr : OpenXmlSurveyElementPrElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<QuestionPrSurveyElementPr>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the OpenXmlSurveyElementPrElement class.
@@ -4899,6 +4934,7 @@ public partial class SelectionTimelineRange : TimelineRange
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SelectionTimelineRange>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the BoundsTimelineRange Class.</para>
@@ -4922,6 +4958,7 @@ public partial class BoundsTimelineRange : TimelineRange
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BoundsTimelineRange>(deep);
+
 
 }
 /// <summary>

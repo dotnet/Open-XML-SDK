@@ -248,6 +248,12 @@ public partial class SlideGuideList : ExtendedGuideList
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideGuideList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the NotesGuideList Class.</para>
@@ -302,6 +308,12 @@ public partial class NotesGuideList : ExtendedGuideList
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesGuideList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the ExtendedGuideList class.

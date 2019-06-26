@@ -1581,6 +1581,18 @@ public partial class GroupShape : GroupShapeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupShape>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties), 1, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Shape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.GroupShape), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the ShapeTree Class.</para>
@@ -1638,6 +1650,18 @@ public partial class ShapeTree : GroupShapeType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeTree>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties), 1, 1),
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Shape), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.GroupShape), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the GroupShapeType class.

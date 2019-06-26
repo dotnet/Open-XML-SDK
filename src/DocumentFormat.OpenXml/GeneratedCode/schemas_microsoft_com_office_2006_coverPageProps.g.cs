@@ -239,6 +239,7 @@ public partial class DocumentAbstract : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentAbstract>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CompanyAddress Class.</para>
@@ -273,6 +274,7 @@ public partial class CompanyAddress : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyAddress>(deep);
+
 
 }
 /// <summary>
@@ -309,6 +311,7 @@ public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyPhoneNumber>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CompanyFaxNumber Class.</para>
@@ -344,6 +347,7 @@ public partial class CompanyFaxNumber : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyFaxNumber>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CompanyEmailAddress Class.</para>
@@ -378,6 +382,7 @@ public partial class CompanyEmailAddress : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyEmailAddress>(deep);
+
 
 }
 }
