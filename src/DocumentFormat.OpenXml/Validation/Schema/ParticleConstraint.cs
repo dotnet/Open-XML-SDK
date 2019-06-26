@@ -23,13 +23,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             MaxOccurs = maxOccurs;
         }
 
-        protected ParticleConstraint(ParticleType type, decimal minOccurs, decimal maxOccurs)
-        {
-            ParticleType = type;
-            MinOccurs = minOccurs > int.MaxValue ? int.MaxValue : (int)minOccurs;
-            MaxOccurs = maxOccurs > int.MaxValue ? int.MaxValue : (int)maxOccurs;
-        }
-
         /// <summary>
         /// Gets the type of the particle.
         /// </summary>

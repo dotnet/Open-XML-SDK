@@ -40,13 +40,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
         }
 
-        internal ElementParticle(Type type, decimal minOccurs, decimal maxOccurs)
-            : base(ParticleType.Element, minOccurs, maxOccurs)
-        {
-            ElementType = type;
-            ElementId = _elementIdMapper.Value[type];
-        }
-
         /// <summary>
         /// Initializes a new instance of the ElementParticle.
         /// </summary>
