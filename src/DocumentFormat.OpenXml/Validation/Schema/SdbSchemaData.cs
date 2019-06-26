@@ -169,7 +169,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         private SchemaTypeData GetSchemaTypeData(int openxmlTypeId)
         {
-            Debug.Assert(TryGetSchemaTypeData(openxmlTypeId, out var data));
+            var result = TryGetSchemaTypeData(openxmlTypeId, out var data);
+
+            Debug.Assert(result);
 
             return data;
         }
@@ -245,17 +247,17 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             var sdbParticleConstraint = Particles[particleIndex];
             var particleConstraint = CreateParticleConstraint(sdbParticleConstraint);
 
-            if (sdbParticleConstraint.ChildrenCount > 0)
+            if (particleConstraint is CompositeParticle composite)
             {
-                Debug.Assert(sdbParticleConstraint.ParticleType == ParticleType.All ||
-                                sdbParticleConstraint.ParticleType == ParticleType.Choice ||
-                                sdbParticleConstraint.ParticleType == ParticleType.Group ||
-                                sdbParticleConstraint.ParticleType == ParticleType.Sequence);
+                Debug.Assert(sdbParticleConstraint.ParticleType == ParticleType.All
+                    || sdbParticleConstraint.ParticleType == ParticleType.Choice
+                    || sdbParticleConstraint.ParticleType == ParticleType.Group
+                    || sdbParticleConstraint.ParticleType == ParticleType.Sequence);
 
                 for (ushort i = 0; i < sdbParticleConstraint.ChildrenCount; i++)
                 {
-                    ushort childIndex = ParticleIndexes[(ushort)(sdbParticleConstraint.ChildrenStartIndex + i)].ParticleIndex;
-                    particleConstraint.Add(BuildParticleConstraint(childIndex));
+                    var childIndex = ParticleIndexes[(ushort)(sdbParticleConstraint.ChildrenStartIndex + i)].ParticleIndex;
+                    composite.Add(BuildParticleConstraint(childIndex));
                 }
             }
 

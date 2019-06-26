@@ -1,7 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -15,6 +17,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     internal class CompositeParticle : ParticleConstraint
     {
         private IParticleValidator _particleValidator;
+        private List<ParticleConstraint> _children;
 
         /// <summary>
         /// Initializes a new instance of the CompositeParticle.
@@ -22,6 +25,21 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs)
             : base(particleType, minOccurs, maxOccurs)
         {
+        }
+
+        /// <summary>
+        /// Gets the children particles.
+        /// </summary>
+        public ReadOnlyList<ParticleConstraint> ChildrenParticles => _children;
+
+        public void Add(ParticleConstraint constraint)
+        {
+            if (_children is null)
+            {
+                _children = new List<ParticleConstraint>();
+            }
+
+            _children.Add(constraint);
         }
 
         /// <inheritdoc/>
@@ -61,6 +79,41 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     throw new InvalidOperationException();
             }
         }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj is CompositeParticle other)
+            {
+                if (!base.Equals(obj))
+                {
+                    return false;
+                }
+
+                if (ChildrenParticles.Length != other.ChildrenParticles.Length)
+                {
+                    return false;
+                }
+
+                for (int i = 0; i < ChildrenParticles.Length; i++)
+                {
+                    if (!ChildrenParticles[i].Equals(other.ChildrenParticles[i]))
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public override int GetHashCode() => HashCode.Combine(base.GetHashCode(), ChildrenParticles.Length);
 
         //internal CompositeParticle NormalizeParticle(CompositeParticle compositeParticle)
         //{

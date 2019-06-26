@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -14,8 +13,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </remarks>
     internal abstract class ParticleConstraint
     {
-        private List<ParticleConstraint> _children;
-
         /// <summary>
         /// Initializes a new instance of the ParticleConstraint.
         /// </summary>
@@ -60,24 +57,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal bool MaxOccursGreaterThan(int count) => UnboundedMaxOccurs || MaxOccurs > count;
 
         /// <summary>
-        /// Gets the children particles.
-        /// </summary>
-        public ReadOnlyList<ParticleConstraint> ChildrenParticles => _children;
-
-        /// <summary>
         /// Gets a ParticleValidator for this particle constraint.
         /// </summary>
         internal virtual IParticleValidator ParticleValidator => null;
-
-        public void Add(ParticleConstraint constraint)
-        {
-            if (_children is null)
-            {
-                _children = new List<ParticleConstraint>();
-            }
-
-            _children.Add(constraint);
-        }
 
         public override bool Equals(object obj)
         {
@@ -86,46 +68,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 return true;
             }
 
-            if (obj is ParticleConstraint p)
+            if (obj is ParticleConstraint other)
             {
-                var parent = ParticleType == p.ParticleType
-                    && MinOccurs == p.MinOccurs
-                    && MaxOccurs == p.MaxOccurs
-                    && ChildrenParticles.Length == p.ChildrenParticles.Length;
-
-                if (!parent)
-                {
-                    return false;
-                }
-
-                if (ChildrenParticles.Length != p.ChildrenParticles.Length)
-                {
-                    return false;
-                }
-
-                for (int i = 0; i < ChildrenParticles.Length; i++)
-                {
-                    if (!ChildrenParticles[i].Equals(p.ChildrenParticles[i]))
-                    {
-                        return false;
-                    }
-                }
-
-                return true;
+                return ParticleType == other.ParticleType
+                    && MinOccurs == other.MinOccurs
+                    && MaxOccurs == other.MaxOccurs;
             }
 
             return false;
         }
 
-        public override int GetHashCode()
-        {
-            return new
-            {
-                ParticleType,
-                MinOccurs,
-                MaxOccurs,
-                ChildrenParticles.Length,
-            }.GetHashCode();
-        }
+        public override int GetHashCode() => HashCode.Combine(ParticleType, MinOccurs, MaxOccurs);
     }
 }

@@ -13,11 +13,19 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Packaging.Tests
 {
     public class ParticleTests
     {
+        private readonly ITestOutputHelper _output;
+
+        public ParticleTests(ITestOutputHelper output)
+        {
+            _output = output;
+        }
+
         [Fact]
         public void ValidateExpectedParticles()
         {
@@ -65,7 +73,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             AssertEqual(constraints);
         }
 
-        private static void AssertEqual(Dictionary<Type, VersionCollection<ParticleConstraint>> constraints)
+        private void AssertEqual(Dictionary<Type, VersionCollection<ParticleConstraint>> constraints)
         {
             var settings = new JsonSerializerSettings
             {
@@ -83,6 +91,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             var serializer = JsonSerializer.Create(settings);
             var tmp = Path.GetTempFileName();
 
+            _output.WriteLine($"Writing output to {tmp}");
+
             using (var fs = File.OpenWrite(tmp))
             {
                 fs.SetLength(0);
@@ -99,8 +109,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             using (var actualStream = File.OpenRead(tmp))
             using (var actualStreamReader = new StreamReader(actualStream))
             {
-                var expected = expectedStreamReader.ReadToEnd();
-                var actual = actualStreamReader.ReadToEnd();
+                var expected = expectedStreamReader.ReadToEnd().Replace("\r\n", "\n");
+                var actual = actualStreamReader.ReadToEnd().Replace("\r\n", "\n");
 
                 Assert.Equal(expected, actual);
             }
@@ -118,14 +128,14 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                     {
                         prop.DefaultValue = 1;
                     }
-                    else if (prop.PropertyName == nameof(ParticleConstraint.ChildrenParticles))
+                    else if (prop.PropertyName == nameof(CompositeParticle.ChildrenParticles))
                     {
                         prop.PropertyType = typeof(IEnumerable<ParticleConstraint>);
-                        prop.ShouldSerialize = c => ((ParticleConstraint)c).ChildrenParticles.Any();
+                        prop.ShouldSerialize = c => ((CompositeParticle)c).ChildrenParticles.Any();
                     }
                 }
 
-                return properties;
+                return properties.OrderBy(p => p.PropertyName).ToList();
             }
         }
 
