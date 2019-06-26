@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public ElementParticle(Type elementType, int minOccurs, int maxOccurs)
             : base(ParticleType.Element, minOccurs, maxOccurs)
         {
-            ElementType = elementType;
+            ElementType = elementType ?? throw new ArgumentNullException(nameof(elementType));
         }
 
         public Type ElementType { get; }
@@ -176,5 +176,23 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             return expectedElements;
         }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj is ElementParticle element)
+            {
+                return ElementType == element.ElementType
+                    && base.Equals(element);
+            }
+
+            return false;
+        }
+
+        public override int GetHashCode() => HashCode.Combine(base.GetHashCode(), ElementType);
     }
 }

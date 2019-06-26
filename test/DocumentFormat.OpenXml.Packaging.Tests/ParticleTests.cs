@@ -13,11 +13,19 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Packaging.Tests
 {
     public class ParticleTests
     {
+        private readonly ITestOutputHelper _output;
+
+        public ParticleTests(ITestOutputHelper output)
+        {
+            _output = output;
+        }
+
         [Fact]
         public void ValidateExpectedParticles()
         {
@@ -27,8 +35,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 typeof(OpenXmlMiscNode),
             };
 
-            var elements = typeof(OpenXmlElement).Assembly.GetTypes()
-                .Where(t => !t.IsAbstract && typeof(OpenXmlElement).IsAssignableFrom(t))
+            var elements = typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes()
+                .Where(t => !t.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).IsAssignableFrom(t))
                 .Where(t => !exclude.Contains(t));
 
             var constraints = new Dictionary<Type, VersionCollection<ParticleConstraint>>();
@@ -38,7 +46,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 var data = SdbSchemaData.GetSchemaData(version);
                 foreach (var type in elements)
                 {
-                    var constructor = type.GetConstructor(Array.Empty<Type>());
+                    var constructor = type.GetConstructor(Cached.Array<Type>());
 
                     if (constructor != null)
                     {
@@ -65,7 +73,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             AssertEqual(constraints);
         }
 
-        private static void AssertEqual(Dictionary<Type, VersionCollection<ParticleConstraint>> constraints)
+        private void AssertEqual(Dictionary<Type, VersionCollection<ParticleConstraint>> constraints)
         {
             var settings = new JsonSerializerSettings
             {
@@ -83,6 +91,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             var serializer = JsonSerializer.Create(settings);
             var tmp = Path.GetTempFileName();
 
+            _output.WriteLine($"Writing output to {tmp}");
+
             using (var fs = File.OpenWrite(tmp))
             {
                 fs.SetLength(0);
@@ -99,8 +109,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             using (var actualStream = File.OpenRead(tmp))
             using (var actualStreamReader = new StreamReader(actualStream))
             {
-                var expected = expectedStreamReader.ReadToEnd();
-                var actual = actualStreamReader.ReadToEnd();
+                var expected = expectedStreamReader.ReadToEnd().Replace("\r\n", "\n");
+                var actual = actualStreamReader.ReadToEnd().Replace("\r\n", "\n");
 
                 Assert.Equal(expected, actual);
             }
@@ -108,6 +118,17 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         private class OccursDefaultResolver : DefaultContractResolver
         {
+            protected override JsonContract CreateContract(Type objectType)
+            {
+                // CompositeParticle implements IEnumerable to enable collection initializers, but we want it to serialize as if it were just the object
+                if (objectType == typeof(CompositeParticle))
+                {
+                    return CreateObjectContract(objectType);
+                }
+
+                return base.CreateContract(objectType);
+            }
+
             protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
             {
                 var properties = base.CreateProperties(type, memberSerialization);
@@ -118,14 +139,14 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                     {
                         prop.DefaultValue = 1;
                     }
-                    else if (prop.PropertyName == nameof(ParticleConstraint.ChildrenParticles))
+                    else if (prop.PropertyName == nameof(CompositeParticle.ChildrenParticles))
                     {
                         prop.PropertyType = typeof(IEnumerable<ParticleConstraint>);
-                        prop.ShouldSerialize = c => ((ParticleConstraint)c).ChildrenParticles.Any();
+                        prop.ShouldSerialize = c => ((CompositeParticle)c).ChildrenParticles.Any();
                     }
                 }
 
-                return properties;
+                return properties.OrderBy(p => p.PropertyName).ToList();
             }
         }
 
@@ -168,11 +189,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         private class TypeNameConverter : JsonConverter<Type>
         {
             public override Type ReadJson(JsonReader reader, Type objectType, Type existingValue, bool hasExistingValue, JsonSerializer serializer)
-            {
-                var name = reader.Value.ToString();
-
-                return typeof(OpenXmlElement).Assembly.GetType(name);
-            }
+                => throw new NotImplementedException();
 
             public override void WriteJson(JsonWriter writer, Type value, JsonSerializer serializer)
             {

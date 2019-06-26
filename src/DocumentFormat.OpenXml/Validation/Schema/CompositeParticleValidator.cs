@@ -10,9 +10,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal abstract class CompositeParticleValidator : ParticleValidator
     {
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private ParticleConstraint _particleConstraint;
-
         private ParticleMatchInfo _particleMatchInfo;
 
         /// <summary>
@@ -26,15 +23,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets the constraint to be validated.
         /// </summary>
-        protected ParticleConstraint ParticleConstraint { get { return _particleConstraint; } }
+        protected CompositeParticle ParticleConstraint { get; }
 
         /// <summary>
         /// Initializes a new instance of the CompositeParticleValidator.
         /// </summary>
         /// <param name="particleConstraint"></param>
-        internal CompositeParticleValidator(ParticleConstraint particleConstraint)
+        protected CompositeParticleValidator(CompositeParticle particleConstraint)
         {
-            _particleConstraint = particleConstraint;
+            ParticleConstraint = particleConstraint;
         }
 
         /// <summary>
@@ -46,7 +43,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             Debug.Assert(validationContext != null);
 
-            OpenXmlCompositeElement element = validationContext.Element as OpenXmlCompositeElement;
+            var element = validationContext.Element as OpenXmlCompositeElement;
             Debug.Assert(element != null);
 
             var child = validationContext.GetFirstChildMc();
@@ -211,9 +208,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             bool requiredElements = false;
 
-            if (_particleConstraint.MinOccurs > 0)
+            if (ParticleConstraint.MinOccurs > 0)
             {
-                foreach (var constraint in _particleConstraint.ChildrenParticles)
+                foreach (var constraint in ParticleConstraint.ChildrenParticles)
                 {
                     if (constraint.ParticleValidator.GetRequiredElements(result))
                     {
