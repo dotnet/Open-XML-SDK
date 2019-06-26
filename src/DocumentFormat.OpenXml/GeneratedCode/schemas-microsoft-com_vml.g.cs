@@ -1935,7 +1935,7 @@ public partial class Shape : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -2520,7 +2520,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -2913,7 +2913,7 @@ public partial class Group : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Group), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shape), 1, 1),
@@ -3610,7 +3610,7 @@ public partial class Arc : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -4197,7 +4197,7 @@ public partial class Curve : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -4819,7 +4819,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -5392,7 +5392,7 @@ public partial class Line : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -5949,9 +5949,9 @@ public partial class Oval : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -6517,7 +6517,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -7074,9 +7074,9 @@ public partial class Rectangle : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -7633,9 +7633,9 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),

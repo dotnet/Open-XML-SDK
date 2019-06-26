@@ -6698,7 +6698,7 @@ public partial class Tabs : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TabStop), 1, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TabStop), 1, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -8659,7 +8659,7 @@ public partial class EmbeddedObject : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Group), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageFile), 1, 1),
@@ -8781,7 +8781,7 @@ public partial class Picture : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Group), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageFile), 1, 1),
@@ -12575,33 +12575,33 @@ public partial class CustomXmlRuby : CustomXmlElement
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby), 1, 1),
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                     },
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -12625,14 +12625,14 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
                 new CompositeParticle(ParticleType.Sequence, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
                 }
             },
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
@@ -12867,33 +12867,33 @@ public partial class SimpleFieldRuby : OpenXmlCompositeElement
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FieldData), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby), 1, 1),
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                     },
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -12917,14 +12917,14 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
                 new CompositeParticle(ParticleType.Sequence, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
                 }
             },
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
@@ -13197,33 +13197,33 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby), 1, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
             },
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -13247,14 +13247,14 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
             new CompositeParticle(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
             }
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
@@ -13441,7 +13441,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunProperties), 0, 1)
     },
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Break), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Text), 1, 1),
@@ -13601,16 +13601,16 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtContentRunRuby), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -14593,16 +14593,16 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtContentRun), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -14769,33 +14769,33 @@ public partial class CustomXmlBlock : CustomXmlElement
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtBlock), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Paragraph), 0, global::System.Int32.MaxValue),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Table), 0, global::System.Int32.MaxValue)
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Paragraph), 0, 0),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Table), 0, 0)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
             },
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -14819,7 +14819,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
             new CompositeParticle(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
@@ -14939,16 +14939,16 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtContentBlock), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -15249,39 +15249,39 @@ public partial class Paragraph : OpenXmlCompositeElement
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, global::System.Int32.MaxValue),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                         },
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
-                            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                            new CompositeParticle(ParticleType.Choice, 0, 0)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                             },
-                            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                            new CompositeParticle(ParticleType.Choice, 0, 0)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -15305,14 +15305,14 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
                         new CompositeParticle(ParticleType.Sequence, 0, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
                         }
                     },
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
@@ -15491,16 +15491,16 @@ public partial class Table : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -15522,29 +15522,29 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableGrid), 1, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableRow), 0, global::System.Int32.MaxValue),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableRow), 0, 0),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRow), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRow), 1, 1),
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
             },
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -15568,7 +15568,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
             new CompositeParticle(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
@@ -15771,29 +15771,29 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptions), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableRowProperties), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 1, 0)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCell), 0, global::System.Int32.MaxValue),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCell), 0, 0),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlCell), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtCell), 1, 1),
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
             },
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -15817,7 +15817,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
             new CompositeParticle(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
@@ -15983,29 +15983,29 @@ public partial class CustomXmlRow : CustomXmlElement
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableRow), 0, global::System.Int32.MaxValue),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableRow), 0, 0),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRow), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRow), 1, 1),
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
             },
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -16029,7 +16029,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
             new CompositeParticle(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
@@ -16149,16 +16149,16 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtContentRow), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -16327,41 +16327,41 @@ public partial class TableCell : OpenXmlCompositeElement
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCellProperties), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 1, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltChunk), 0, global::System.Int32.MaxValue)
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltChunk), 0, 0)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtBlock), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Paragraph), 0, global::System.Int32.MaxValue),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Table), 0, global::System.Int32.MaxValue)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Paragraph), 0, 0),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Table), 0, 0)
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                     },
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                         },
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -16385,7 +16385,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
                     new CompositeParticle(ParticleType.Sequence, 0, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
@@ -16540,29 +16540,29 @@ public partial class CustomXmlCell : CustomXmlElement
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCell), 0, global::System.Int32.MaxValue),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCell), 0, 0),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlCell), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtCell), 1, 1),
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
             },
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -16586,7 +16586,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
             new CompositeParticle(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
@@ -16706,16 +16706,16 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtContentCell), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -16934,39 +16934,39 @@ public partial class CustomXmlRun : CustomXmlElement
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, global::System.Int32.MaxValue),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                         },
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
-                            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                            new CompositeParticle(ParticleType.Choice, 0, 0)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                             },
-                            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                            new CompositeParticle(ParticleType.Choice, 0, 0)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -16990,14 +16990,14 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
                         new CompositeParticle(ParticleType.Sequence, 0, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
                         }
                     },
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
@@ -17244,39 +17244,39 @@ public partial class SimpleField : OpenXmlCompositeElement
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FieldData), 0, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, global::System.Int32.MaxValue),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                         },
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
-                            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                            new CompositeParticle(ParticleType.Choice, 0, 0)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                             },
-                            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                            new CompositeParticle(ParticleType.Choice, 0, 0)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -17300,14 +17300,14 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
                         new CompositeParticle(ParticleType.Sequence, 0, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
                         }
                     },
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
@@ -17592,39 +17592,39 @@ public partial class Hyperlink : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, global::System.Int32.MaxValue),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
     },
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                     },
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                         },
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -17648,14 +17648,14 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
                     new CompositeParticle(ParticleType.Sequence, 0, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
@@ -17875,39 +17875,39 @@ public partial class BidirectionalOverride : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, global::System.Int32.MaxValue),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
     },
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                     },
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                         },
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -17931,14 +17931,14 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
                     new CompositeParticle(ParticleType.Sequence, 0, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
@@ -18158,39 +18158,39 @@ public partial class BidirectionalEmbedding : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, global::System.Int32.MaxValue),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
     },
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                     },
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                         },
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -18214,14 +18214,14 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
                     new CompositeParticle(ParticleType.Sequence, 0, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
@@ -22099,7 +22099,7 @@ public partial class Recipients : OpenXmlPartRootElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RecipientData), 1, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RecipientData), 1, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -22229,41 +22229,41 @@ public partial class TextBoxContent : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltChunk), 0, global::System.Int32.MaxValue)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltChunk), 0, 0)
     },
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtBlock), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Paragraph), 0, global::System.Int32.MaxValue),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Table), 0, global::System.Int32.MaxValue)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Paragraph), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Table), 0, 0)
             },
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                     },
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -22287,7 +22287,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
                 new CompositeParticle(ParticleType.Sequence, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
@@ -24029,7 +24029,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocDefaults), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LatentStyles), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Style), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Style), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -24884,9 +24884,9 @@ public partial class PreviousTableRowProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle), 0, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DivId), 0, 1),
@@ -24896,7 +24896,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.WidthAfterTableRow), 0, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableRowHeight), 0, 1)
     },
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hidden), 0, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CantSplit), 0, 1),
@@ -26409,7 +26409,7 @@ public partial class PreviousRunProperties : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Sequence, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Sequence, 0, 0)
     {
         new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
@@ -26667,7 +26667,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion), 0, 1)
         }
     },
-    new CompositeParticle(ParticleType.Sequence, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Sequence, 0, 0)
     {
         new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
@@ -27684,7 +27684,7 @@ public partial class FormFieldData : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FormFieldName), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Enabled), 1, 1),
@@ -29735,7 +29735,7 @@ public partial class SdtProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtAlias), 0, 1),
@@ -29834,7 +29834,7 @@ public partial class SdtEndCharProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunProperties), 0, 1)
 };
@@ -29964,33 +29964,33 @@ public partial class SdtContentBlock : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtBlock), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Paragraph), 0, global::System.Int32.MaxValue),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Table), 0, global::System.Int32.MaxValue)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Paragraph), 0, 0),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Table), 0, 0)
     },
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
             },
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -30014,7 +30014,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
         new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
@@ -30200,42 +30200,42 @@ public partial class SdtContentRun : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, global::System.Int32.MaxValue),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                         },
-                        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                        new CompositeParticle(ParticleType.Choice, 0, 0)
                         {
-                            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                            new CompositeParticle(ParticleType.Choice, 0, 0)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                             },
-                            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                            new CompositeParticle(ParticleType.Choice, 0, 0)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -30259,14 +30259,14 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
                         new CompositeParticle(ParticleType.Sequence, 0, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
                         }
                     },
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
@@ -30472,33 +30472,33 @@ public partial class SdtContentRunRuby : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby), 1, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
             },
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -30522,14 +30522,14 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
             new CompositeParticle(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1)
             }
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
@@ -30680,29 +30680,29 @@ public partial class SdtContentCell : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCell), 0, global::System.Int32.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableCell), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlCell), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtCell), 1, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
             },
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -30726,7 +30726,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
         new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
@@ -30858,29 +30858,29 @@ public partial class SdtContentRow : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableRow), 0, global::System.Int32.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableRow), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRow), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRow), 1, 1),
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
             },
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -30904,7 +30904,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, global::System.Int32.MaxValue),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0),
         new CompositeParticle(ParticleType.Sequence, 0, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1),
@@ -30977,7 +30977,7 @@ public partial class CustomXmlProperties : OpenXmlCompositeElement
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlPlaceholder), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlAttribute), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlAttribute), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -32225,7 +32225,7 @@ public partial class TableGrid : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.GridColumn), 0, global::System.Int32.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.GridColumn), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableGridChange), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -33103,7 +33103,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ColumnDelimiter), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MailMergeSource), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FirstRowHeader), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FieldMapData), 0, global::System.Int32.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FieldMapData), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RecipientDataReference), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -35217,7 +35217,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FrameSize), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FramesetSplitbar), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.FrameLayout), 0, 1),
-    new CompositeParticle(ParticleType.Sequence, 1, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Sequence, 1, 0)
     {
         new CompositeParticle(ParticleType.Choice, 1, 1)
         {
@@ -38465,9 +38465,9 @@ public partial class TableStyleConditionalFormattingTableRowProperties : OpenXml
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hidden), 0, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CantSplit), 0, 1),
@@ -40135,7 +40135,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LatentStyleExceptionInfo), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.LatentStyleExceptionInfo), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -40299,7 +40299,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StyleTableProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.StyleTableCellProperties), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableStyleProperties), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableStyleProperties), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -41328,7 +41328,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TopMarginDiv), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BottomMarginDiv), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DivBorder), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DivsChild), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DivsChild), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -41549,32 +41549,32 @@ public partial class Comment : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltChunk), 0, global::System.Int32.MaxValue)
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AltChunk), 0, 0)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
-            new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+            new CompositeParticle(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtBlock), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Paragraph), 0, global::System.Int32.MaxValue),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Table), 0, global::System.Int32.MaxValue)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Paragraph), 0, 0),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Table), 0, 0)
                 },
-                new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                new CompositeParticle(ParticleType.Choice, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                     },
-                    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+                    new CompositeParticle(ParticleType.Choice, 0, 0)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
@@ -42225,7 +42225,7 @@ public partial class AutoCaptions : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AutoCaption), 1, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AutoCaption), 1, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -42408,7 +42408,7 @@ public partial class DocParts : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPart), 1, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPart), 1, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -42625,7 +42625,7 @@ public partial class DocPartTypes : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartType), 1, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPartType), 1, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -42689,7 +42689,7 @@ public partial class Behaviors : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Behavior), 1, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Behavior), 1, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -43759,9 +43759,9 @@ public partial class TableRowProperties : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 1, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 1, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DivId), 0, 1),
@@ -43771,7 +43771,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.WidthAfterTableRow), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TableRowHeight), 0, 1)
         },
-        new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+        new CompositeParticle(ParticleType.Choice, 0, 0)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hidden), 0, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CantSplit), 0, 1),
@@ -44668,7 +44668,7 @@ public partial class PreviousTableGrid : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.GridColumn), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.GridColumn), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -45089,7 +45089,7 @@ public partial class SdtContentComboBox : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ListItem), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ListItem), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -45501,7 +45501,7 @@ public partial class SdtContentDropDownList : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ListItem), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ListItem), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -47946,7 +47946,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignInTextBox), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.UseAnsiKerningPairs), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CachedColumnBalance), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CompatibilitySetting), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CompatibilitySetting), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -48857,7 +48857,7 @@ public partial class DocumentVariables : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocumentVariable), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocumentVariable), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -48924,7 +48924,7 @@ public partial class Rsids : OpenXmlCompositeElement
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RsidRoot), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Rsid), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Rsid), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -49143,7 +49143,7 @@ public partial class Captions : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Caption), 1, global::System.Int32.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Caption), 1, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.AutoCaptions), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -49336,7 +49336,7 @@ public partial class PictureBulletBase : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Group), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageFile), 1, 1),

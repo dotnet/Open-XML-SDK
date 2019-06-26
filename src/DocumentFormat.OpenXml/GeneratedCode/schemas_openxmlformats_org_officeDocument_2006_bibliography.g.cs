@@ -89,7 +89,7 @@ public partial class Sources : OpenXmlPartRootElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Source), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Source), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -157,9 +157,9 @@ public partial class Person : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, global::System.Int32.MaxValue),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.First), 0, global::System.Int32.MaxValue),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Middle), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.First), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Middle), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -2167,7 +2167,7 @@ public partial class NameList : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -3252,7 +3252,7 @@ public partial class AuthorList : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Artist), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Author), 1, 1),
@@ -3688,7 +3688,7 @@ public partial class Source : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AlbumTitle), 1, 1),

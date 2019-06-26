@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             ParticleType = type;
             MinOccurs = minOccurs;
-            MaxOccurs = maxOccurs == int.MaxValue ? 0 : maxOccurs;
+            MaxOccurs = maxOccurs;
         }
 
         /// <summary>

@@ -83,7 +83,7 @@ public partial class Ink : OpenXmlPartRootElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
@@ -357,13 +357,13 @@ public partial class Mapping : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Bind), 0, global::System.Int32.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Bind), 0, 0),
     new CompositeParticle(ParticleType.Choice, 0, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Table), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Matrix), 1, 1)
     },
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -509,7 +509,7 @@ public partial class Channel : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -573,7 +573,7 @@ public partial class IntermittentChannels : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -724,7 +724,7 @@ public partial class TraceFormat : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, global::System.Int32.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.IntermittentChannels), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -1005,7 +1005,7 @@ public partial class ChannelProperties : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperty), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperty), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1268,8 +1268,8 @@ public partial class BrushProperty : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, global::System.Int32.MaxValue),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1569,7 +1569,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SampleRate), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Latency), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ActiveArea), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SourceProperty), 0, global::System.Int32.MaxValue),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SourceProperty), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperties), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -1709,9 +1709,9 @@ public partial class Brush : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, global::System.Int32.MaxValue),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, global::System.Int32.MaxValue),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.BrushProperty), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.BrushProperty), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1975,7 +1975,7 @@ public partial class TraceGroup : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
@@ -2085,7 +2085,7 @@ public partial class TraceView : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
@@ -2395,7 +2395,7 @@ public partial class Definitions : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),

@@ -2076,7 +2076,7 @@ public partial class RegroupTable : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Entry), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Entry), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -2149,7 +2149,7 @@ public partial class Rules : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Rule), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Rule), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -2287,7 +2287,7 @@ public partial class Rule : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Proxy), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Proxy), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -2360,7 +2360,7 @@ public partial class RelationTable : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Relation), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Relation), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

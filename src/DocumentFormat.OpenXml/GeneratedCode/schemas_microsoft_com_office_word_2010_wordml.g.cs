@@ -967,7 +967,7 @@ public partial class RgbColorModelHex : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Tint), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Shade), 1, 1),
@@ -1072,7 +1072,7 @@ public partial class SchemeColor : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, global::System.Int32.MaxValue)
+    new CompositeParticle(ParticleType.Choice, 0, 0)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Tint), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Shade), 1, 1),
@@ -2755,7 +2755,7 @@ public partial class StylisticSets : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.StyleSet), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.StyleSet), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -4686,7 +4686,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, global::System.Int32.MaxValue)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

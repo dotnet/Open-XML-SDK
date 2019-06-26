@@ -138,7 +138,7 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new AnyParticle(XsdAnyPrefidefinedValue.Any, 1, global::System.Int32.MaxValue)
+    new AnyParticle(XsdAnyPrefidefinedValue.Any, 1, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
