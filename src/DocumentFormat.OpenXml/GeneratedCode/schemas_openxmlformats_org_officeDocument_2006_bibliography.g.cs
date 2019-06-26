@@ -3160,11 +3160,8 @@ public partial class Author : NameOrCorporateType
 
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, 1)
-    {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
-    }
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
 }
@@ -3223,11 +3220,8 @@ public partial class Performer : NameOrCorporateType
 
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, 1)
-    {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
-    }
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
 }
@@ -3394,25 +3388,22 @@ public partial class AuthorList : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, 0)
-    {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Artist), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Author), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookAuthor), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Compiler), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Composer), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Conductor), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Counsel), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Director), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Editor), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewee), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewer), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Inventor), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Performer), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProducerName), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Translator), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Writer), 1, 1)
-    }
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Artist), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Author), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookAuthor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Compiler), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Composer), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Conductor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Counsel), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Director), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Editor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewee), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewer), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Inventor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Performer), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProducerName), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Translator), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Writer), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -3830,61 +3821,58 @@ public partial class Source : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Choice, 0, 0)
-    {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AlbumTitle), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AuthorList), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookTitle), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Broadcaster), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BroadcastTitle), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CaseNumber), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ChapterNumber), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.City), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Comments), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ConferenceName), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CountryRegion), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Court), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Day), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.DayAccessed), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Department), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Distributor), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Edition), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.GuidString), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Institution), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.InternetSiteTitle), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Issue), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.JournalName), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.LcId), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Medium), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Month), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.MonthAccessed), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NumberVolumes), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Pages), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentNumber), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PeriodicalTitle), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProductionCompany), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PublicationTitle), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Publisher), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.RecordingNumber), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ReferenceOrder), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Reporter), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.SourceType), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ShortTitle), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StandardNumber), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StateProvince), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Station), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Tag), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Theater), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ThesisType), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Title), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentType), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.UrlString), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Version), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Volume), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Year), 1, 1),
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.YearAccessed), 1, 1)
-    }
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AlbumTitle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AuthorList), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookTitle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Broadcaster), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BroadcastTitle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CaseNumber), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ChapterNumber), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.City), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Comments), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ConferenceName), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CountryRegion), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Court), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Day), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.DayAccessed), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Department), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Distributor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Edition), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.GuidString), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Institution), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.InternetSiteTitle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Issue), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.JournalName), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.LcId), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Medium), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Month), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.MonthAccessed), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NumberVolumes), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Pages), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentNumber), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PeriodicalTitle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProductionCompany), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PublicationTitle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Publisher), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.RecordingNumber), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ReferenceOrder), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Reporter), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.SourceType), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ShortTitle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StandardNumber), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StateProvince), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Station), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Tag), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Theater), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ThesisType), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Title), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentType), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.UrlString), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Version), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Volume), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Year), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.YearAccessed), 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
