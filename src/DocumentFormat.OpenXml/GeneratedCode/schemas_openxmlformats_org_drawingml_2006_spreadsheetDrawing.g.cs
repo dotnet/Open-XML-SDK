@@ -1270,6 +1270,16 @@ public partial class WorksheetDrawing : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorksheetDrawing>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.OneCellAnchor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.AbsoluteAnchor), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Non-Visual Properties for a Shape.</para>

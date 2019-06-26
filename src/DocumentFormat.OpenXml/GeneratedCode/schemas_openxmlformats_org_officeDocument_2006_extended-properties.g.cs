@@ -498,6 +498,14 @@ public partial class Properties : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Properties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.All, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Name of Document Template.</para>

@@ -9971,6 +9971,14 @@ public partial class CustomUI : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomUI>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Commands), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Backstage), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the Item Class.</para>

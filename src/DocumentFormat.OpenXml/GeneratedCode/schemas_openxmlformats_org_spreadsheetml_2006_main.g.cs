@@ -170,6 +170,12 @@ public partial class CalculationChain : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculationChain>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculationCell), 1, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Comments. The root element of WorksheetCommentsPart.</para>
@@ -298,6 +304,13 @@ public partial class Comments : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Comments>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Authors), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentList), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>XML Mapping. The root element of CustomXmlMappingsPart.</para>
@@ -391,6 +404,12 @@ public partial class MapInfo : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MapInfo>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Schema), 1, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Map), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Connections. The root element of ConnectionsPart.</para>
@@ -474,6 +493,11 @@ public partial class Connections : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Connections>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>PivotCache Definition. The root element of PivotTableCacheDefinitionPart.</para>
@@ -857,6 +881,21 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCacheDefinition>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheSource), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheFields), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchies), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Kpis), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TupleCache), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedItems), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMembers), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Dimensions), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MeasureGroups), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Maps), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>PivotCache Records. The root element of PivotTableCacheRecordsPart.</para>
@@ -949,6 +988,12 @@ public partial class PivotCacheRecords : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCacheRecords>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCacheRecord), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>PivotTable Definition. The root element of PivotTablePart.</para>
@@ -1766,6 +1811,27 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotTableDefinition>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Location), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFields), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowFields), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowItems), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnFields), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnItems), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageFields), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFields), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formats), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartFormats), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilters), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Query Table. The root element of QueryTablePart.</para>
@@ -2035,6 +2101,12 @@ public partial class QueryTable : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<QueryTable>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Shared String Table. The root element of SharedStringTablePart.</para>
@@ -2134,6 +2206,12 @@ public partial class SharedStringTable : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedStringTable>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SharedStringItem), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Revision Headers. The root element of WorkbookRevisionHeaderPart.</para>
@@ -2304,6 +2382,11 @@ public partial class Headers : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Headers>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Header), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Revisions. The root element of WorkbookRevisionLogPart.</para>
@@ -2409,6 +2492,22 @@ public partial class Revisions : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Revisions>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionRowColumn), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionMove), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionCustomView), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionSheetName), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionInsertSheet), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionFormat), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionAutoFormat), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionDefinedName), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionComment), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionQueryTable), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionConflict), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>User List. The root element of WorkbookUserDataPart.</para>
@@ -2499,6 +2598,11 @@ public partial class Users : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Users>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.UserInfo), 0, 256)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Worksheet. The root element of WorksheetPart.</para>
@@ -2710,6 +2814,48 @@ public partial class Worksheet : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Worksheet>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetDimension), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetViews), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Columns), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetData), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetCalculationProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProtection), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ProtectedRanges), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Scenarios), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataConsolidate), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MergeCells), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataValidations), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Hyperlinks), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PrintOptions), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetup), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowBreaks), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellWatches), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IgnoredErrors), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Drawing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Picture), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObjects), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Controls), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishItems), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableParts), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorksheetExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Chart Sheet. The root element of ChartsheetPart.</para>
@@ -3003,6 +3149,24 @@ public partial class Chartsheet : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Chartsheet>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetProtection), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetViews), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Drawing), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Picture), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishItems), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Dialog Sheet. The root element of DialogsheetPart.</para>
@@ -3326,6 +3490,26 @@ public partial class DialogSheet : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DialogSheet>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetViews), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProtection), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PrintOptions), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetup), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Drawing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObjects), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Controls), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Metadata. The root element of CellMetadataPart.</para>
@@ -3462,6 +3646,17 @@ public partial class Metadata : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Metadata>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataTypes), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxMetadata), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FutureMetadata), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellMetadata), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Single Cells. The root element of SingleCellTablePart.</para>
@@ -3545,6 +3740,11 @@ public partial class SingleXmlCells : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SingleXmlCells>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Style Sheet. The root element of WorkbookStylesPart.</para>
@@ -3793,6 +3993,21 @@ public partial class Stylesheet : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Stylesheet>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormats), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fonts), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fills), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Borders), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormats), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyles), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyles), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Colors), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>External Reference. The root element of ExternalWorkbookPart.</para>
@@ -3882,6 +4097,17 @@ public partial class ExternalLink : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalLink>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalBook), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeLink), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleLink), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Table. The root element of TableDefinitionPart.</para>
@@ -4197,6 +4423,15 @@ public partial class Table : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Table>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableColumns), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Volatile Dependency Types. The root element of VolatileDependenciesPart.</para>
@@ -4282,6 +4517,12 @@ public partial class VolatileTypes : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VolatileTypes>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.VolatileType), 1, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Workbook. The root element of WorkbookPart.</para>
@@ -4603,6 +4844,28 @@ public partial class Workbook : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Workbook>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FileVersion), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FileSharing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.BookViews), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Sheets), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FunctionGroups), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalReferences), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DefinedNames), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculationProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleSize), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookViews), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCaches), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FileRecoveryProperties), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishObjects), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>AutoFilter Column.</para>

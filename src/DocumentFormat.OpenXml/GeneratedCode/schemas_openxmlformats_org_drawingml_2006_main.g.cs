@@ -11276,6 +11276,15 @@ public partial class Theme : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Theme>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ThemeElements), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ObjectDefaults), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtraColorSchemeList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomColorList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.OfficeStyleSheetExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Theme Override. The root element of ThemeOverridePart.</para>
@@ -11404,6 +11413,13 @@ public partial class ThemeOverride : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThemeOverride>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ColorScheme), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FontScheme), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FormatScheme), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Theme Manager.</para>
@@ -11662,6 +11678,11 @@ public partial class TableStyleList : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableStyleEntry), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the ExtensionList Class.</para>

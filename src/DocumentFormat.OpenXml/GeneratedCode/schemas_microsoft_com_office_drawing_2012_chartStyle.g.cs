@@ -124,6 +124,21 @@ public partial class ColorStyle : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorStyle>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 1, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleVariation), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the ChartStyle Class. The root element of ChartStylePart.</para>
@@ -694,6 +709,42 @@ public partial class ChartStyle : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartStyle>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the ColorStyleVariation Class.</para>

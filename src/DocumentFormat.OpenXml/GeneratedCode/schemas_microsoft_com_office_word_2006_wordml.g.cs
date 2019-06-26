@@ -98,6 +98,14 @@ public partial class TemplateCommandGroup : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TemplateCommandGroup>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Toolbars), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommands), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the Mcds Class.</para>
@@ -275,6 +283,12 @@ public partial class VbaSuppData : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VbaSuppData>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.DocEvents), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Mcds), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the MailMergeRecipients Class.</para>

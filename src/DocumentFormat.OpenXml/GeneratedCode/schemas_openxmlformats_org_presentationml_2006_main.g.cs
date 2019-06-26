@@ -1284,6 +1284,11 @@ public partial class CommentAuthorList : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentAuthorList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthor), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Comment List. The root element of SlideCommentsPart.</para>
@@ -1367,6 +1372,11 @@ public partial class CommentList : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Comment), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Global Element for OLE Objects and Controls.</para>
@@ -1872,6 +1882,24 @@ public partial class Presentation : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Presentation>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterIdList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterIdList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterIdList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideIdList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideSize), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesSize), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EmbeddedFontList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomShowList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PhotoAlbum), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Kinsoku), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.DefaultTextStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ModificationVerifier), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Presentation-wide Properties. The root element of PresentationPropertiesPart.</para>
@@ -2045,6 +2073,16 @@ public partial class PresentationProperties : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HtmlPublishProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.WebProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PrintingProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShowProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Presentation Slide. The root element of SlidePart.</para>
@@ -2224,6 +2262,18 @@ public partial class Slide : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Slide>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+    new CompositeParticle(ParticleType.Sequence, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMapOverride), 0, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transition), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Timing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Slide Layout. The root element of SlideLayoutPart.</para>
@@ -2440,6 +2490,19 @@ public partial class SlideLayout : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideLayout>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+    new CompositeParticle(ParticleType.Sequence, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMapOverride), 0, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transition), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Timing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Slide Master. The root element of SlideMasterPart.</para>
@@ -2650,6 +2713,18 @@ public partial class SlideMaster : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideMaster>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMap), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutIdList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transition), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Timing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TextStyles), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Handout Master. The root element of HandoutMasterPart.</para>
@@ -2793,6 +2868,14 @@ public partial class HandoutMaster : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HandoutMaster>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMap), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Notes Master. The root element of NotesMasterPart.</para>
@@ -2951,6 +3034,15 @@ public partial class NotesMaster : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesMaster>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMap), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesStyle), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Notes Slide. The root element of NotesSlidePart.</para>
@@ -3093,6 +3185,16 @@ public partial class NotesSlide : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NotesSlide>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+    new CompositeParticle(ParticleType.Sequence, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMapOverride), 0, 1)
+    },
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Slide Synchronization Properties. The root element of SlideSyncDataPart.</para>
@@ -3215,6 +3317,11 @@ public partial class SlideSyncProperties : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlideSyncProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Programmable Tab List. The root element of UserDefinedTagsPart.</para>
@@ -3298,6 +3405,11 @@ public partial class TagList : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TagList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Tag), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Presentation-wide View Properties. The root element of ViewPropertiesPart.</para>
@@ -3516,6 +3628,18 @@ public partial class ViewProperties : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ViewProperties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 0, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NormalViewProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideViewProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OutlineViewProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesTextViewProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SorterViewProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesViewProperties), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GridSpacing), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the ContentPart Class.</para>
