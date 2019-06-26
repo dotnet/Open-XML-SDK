@@ -1,34 +1,19 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Globalization;
-using System.Text;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Hold expected children for error reporting.
     /// </summary>
-    internal partial class ExpectedChildren
+    internal class ExpectedChildren
     {
-        static partial void IncressInstanceCount();
-
-        #region private fields
-
-        private ICollection<Type> _elementTypes;
-
-        private ICollection<string> _xsdanyNamespaces;
-
-        #endregion
-
-        internal ExpectedChildren()
-        {
-            IncressInstanceCount();
-        }
+        private List<Type> _elementTypes;
+        private List<string> _xsdanyNamespaces;
 
         /// <summary>
         /// Add a known element of the child.

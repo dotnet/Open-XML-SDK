@@ -167,15 +167,31 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return GetSchemaTypeData(openxmlElement.ElementTypeId);
         }
 
+        private SchemaTypeData GetSchemaTypeData(int openxmlTypeId)
+        {
+            var result = TryGetSchemaTypeData(openxmlTypeId, out var data);
+
+            Debug.Assert(result);
+
+            return data;
+        }
+
         /// <summary>
         /// Load schema type constraint data for the specified element type ID.
         /// </summary>
-        /// <param name="openxmlTypeId"></param>
-        /// <returns>The constraint data of the schema type.</returns>
-        private SchemaTypeData GetSchemaTypeData(int openxmlTypeId)
+        public bool TryGetSchemaTypeData(int openxmlTypeId, out SchemaTypeData data)
         {
-            Debug.Assert(openxmlTypeId >= SdbClassIdToSchemaTypeIndex.StartClassId);
-            Debug.Assert(openxmlTypeId < SdbClassIdToSchemaTypeIndex.StartClassId + ClassIdMap.Length);
+            if (openxmlTypeId < SdbClassIdToSchemaTypeIndex.StartClassId)
+            {
+                data = null;
+                return false;
+            }
+
+            if (openxmlTypeId >= SdbClassIdToSchemaTypeIndex.StartClassId + ClassIdMap.Length)
+            {
+                data = null;
+                return false;
+            }
 
             ushort typeId = (ushort)openxmlTypeId;
 
@@ -183,7 +199,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 Debug.Assert(openxmlTypeId == schemaTypeData.OpenXmlTypeId);
 
-                return schemaTypeData;
+                data = schemaTypeData;
             }
             else
             {
@@ -191,8 +207,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 _cache.Add(typeId, schemaTypeData);
 
-                return schemaTypeData;
+                data = schemaTypeData;
             }
+
+            return data != null;
         }
 
         /// <summary>
@@ -209,7 +227,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Debug.Assert(particleConstraint.ParticleType == ParticleType.All || particleConstraint.ParticleType == ParticleType.Any ||
                               particleConstraint.ParticleType == ParticleType.Choice || particleConstraint.ParticleType == ParticleType.Sequence ||
                               particleConstraint.ParticleType == ParticleType.Group); // <xsd:group ref="..." /> is valid under <xsd:complexType>
-                Debug.Assert(particleConstraint.ElementId == SdbData.InvalidId);
 
                 return particleConstraint;
             }
@@ -227,36 +244,46 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Debug.Assert(particleIndex >= 0);
             Debug.Assert(particleIndex < Particles.Length);
 
-            SdbParticleConstraint sdbParticleConstraint = Particles[particleIndex];
-            var particleConstraint = ParticleConstraint.CreateParticleConstraint(sdbParticleConstraint.ParticleType);
+            var sdbParticleConstraint = Particles[particleIndex];
+            var particleConstraint = CreateParticleConstraint(sdbParticleConstraint);
 
-            particleConstraint.ParticleType = sdbParticleConstraint.ParticleType;
-            particleConstraint.MaxOccurs = sdbParticleConstraint.MaxOccurs;
-            particleConstraint.MinOccurs = sdbParticleConstraint.MinOccurs;
-            particleConstraint.ElementId = sdbParticleConstraint.ElementTypeId;
-
-            if (sdbParticleConstraint.ChildrenCount > 0)
+            if (particleConstraint is CompositeParticle composite)
             {
-                Debug.Assert(sdbParticleConstraint.ParticleType == ParticleType.All ||
-                                sdbParticleConstraint.ParticleType == ParticleType.Choice ||
-                                sdbParticleConstraint.ParticleType == ParticleType.Group ||
-                                sdbParticleConstraint.ParticleType == ParticleType.Sequence);
-                particleConstraint.ChildrenParticles = new ParticleConstraint[sdbParticleConstraint.ChildrenCount];
+                Debug.Assert(sdbParticleConstraint.ParticleType == ParticleType.All
+                    || sdbParticleConstraint.ParticleType == ParticleType.Choice
+                    || sdbParticleConstraint.ParticleType == ParticleType.Group
+                    || sdbParticleConstraint.ParticleType == ParticleType.Sequence);
+
                 for (ushort i = 0; i < sdbParticleConstraint.ChildrenCount; i++)
                 {
-                    ushort childIndex = ParticleIndexes[(ushort)(sdbParticleConstraint.ChildrenStartIndex + i)].ParticleIndex;
-                    particleConstraint.ChildrenParticles[i] = BuildParticleConstraint(childIndex);
+                    var childIndex = ParticleIndexes[(ushort)(sdbParticleConstraint.ChildrenStartIndex + i)].ParticleIndex;
+                    composite.Add(BuildParticleConstraint(childIndex));
                 }
-            }
-            else if (sdbParticleConstraint.ParticleType == ParticleType.All ||
-                        sdbParticleConstraint.ParticleType == ParticleType.Choice ||
-                        sdbParticleConstraint.ParticleType == ParticleType.Group ||
-                        sdbParticleConstraint.ParticleType == ParticleType.Sequence)
-            {
-                particleConstraint.ChildrenParticles = Cached.Array<ParticleConstraint>();
             }
 
             return particleConstraint;
+        }
+
+        private static ParticleConstraint CreateParticleConstraint(SdbParticleConstraint sdb)
+        {
+            switch (sdb.ParticleType)
+            {
+                case ParticleType.Element:
+                    return new ElementParticle(sdb.ElementTypeId, sdb.MinOccurs, sdb.MaxOccurs);
+
+                case ParticleType.Any:
+                    return new AnyParticle(sdb.ElementTypeId, sdb.MinOccurs, sdb.MaxOccurs);
+
+                case ParticleType.AnyWithUri:
+                    return new NsAnyParticle(sdb.ElementTypeId, sdb.MinOccurs, sdb.MaxOccurs);
+
+                case ParticleType.Invalid:
+                    Debug.Assert(sdb.ParticleType != ParticleType.Invalid);
+                    return null;
+
+                default:
+                    return new CompositeParticle(sdb.ParticleType, sdb.MinOccurs, sdb.MaxOccurs);
+            }
         }
 
         /// <summary>

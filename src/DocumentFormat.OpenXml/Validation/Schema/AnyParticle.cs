@@ -15,44 +15,22 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("NamespaceValue={NamespaceValue}")]
     internal class AnyParticle : ParticleConstraint
     {
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private ushort _xsdAnyValue;
-        private IParticleValidator _particleValidator;
+        private readonly  IParticleValidator _particleValidator;
 
         /// <summary>
         /// Initializes a new instance of the AnyParticle.
         /// </summary>
-        internal AnyParticle()
-            : base()
+        internal AnyParticle(ushort xsdAnyValue, int minOccurs, int maxOccurs)
+            : base(ParticleType.Any, minOccurs, maxOccurs)
         {
+            NamespaceValue = xsdAnyValue;
             _particleValidator = new AnyParticleValidator(this);
-        }
-
-        /// <inheritdoc/>
-        internal override ParticleType ParticleType
-        {
-            get { return ParticleType.Any; }
-            set { Debug.Assert(value == ParticleType.Any); }
-        }
-
-        /// <inheritdoc/>
-        internal override int ElementId
-        {
-            set
-            {
-                Debug.Assert( value == XsdAnyPrefidefinedValue.Any ||
-                            value == XsdAnyPrefidefinedValue.Local ||
-                            value == XsdAnyPrefidefinedValue.Other ||
-                            value == XsdAnyPrefidefinedValue.TargetNamespace);
-
-                _xsdAnyValue = (ushort)value;
-            }
         }
 
         /// <summary>
         /// Gets the value of the xsd:any@namespace.
         /// </summary>
-        internal ushort NamespaceValue => _xsdAnyValue;
+        public ushort NamespaceValue { get; }
 
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator => _particleValidator;

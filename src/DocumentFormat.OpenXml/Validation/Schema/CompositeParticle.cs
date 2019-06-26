@@ -1,6 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -8,39 +12,33 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// <summary>
     /// Particle constraint for sequence, choice, all, and group.
     /// </summary>
-    /// <remarks>
-    /// </remarks>
     [DebuggerDisplay("ParticleType={ParticleType}")]
-    internal class CompositeParticle : ParticleConstraint
+    internal class CompositeParticle : ParticleConstraint, IEnumerable<ParticleConstraint>
     {
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private ParticleType _particleType;
-
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private ParticleConstraint[] _childrenParticles;
-
         private IParticleValidator _particleValidator;
+        private List<ParticleConstraint> _children;
 
         /// <summary>
         /// Initializes a new instance of the CompositeParticle.
         /// </summary>
-        internal CompositeParticle()
-            : base()
+        internal CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs)
+            : base(particleType, minOccurs, maxOccurs)
         {
         }
 
-        /// <inheritdoc/>
-        internal override ParticleType ParticleType
-        {
-            get { return _particleType; }
-            set { _particleType = value; }
-        }
+        /// <summary>
+        /// Gets the children particles.
+        /// </summary>
+        public ReadOnlyList<ParticleConstraint> ChildrenParticles => _children;
 
-        /// <inheritdoc/>
-        internal override ParticleConstraint[] ChildrenParticles
+        public void Add(ParticleConstraint constraint)
         {
-            get { return _childrenParticles; }
-            set { _childrenParticles = value; }
+            if (_children is null)
+            {
+                _children = new List<ParticleConstraint>();
+            }
+
+            _children.Add(constraint);
         }
 
         /// <inheritdoc/>
@@ -50,12 +48,75 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 if (_particleValidator == null)
                 {
-                    _particleValidator = Schema.ParticleValidator.CreateParticleValidator(this);
+                    _particleValidator = CreateParticleValidator();
                 }
 
                 return _particleValidator;
             }
         }
+
+        private ParticleValidator CreateParticleValidator()
+        {
+            switch (ParticleType)
+            {
+                case ParticleType.All:
+                    return new AllParticleValidator(this);
+
+                case ParticleType.Choice:
+                    return new ChoiceParticleValidator(this);
+
+                case ParticleType.Sequence:
+                    return new SequenceParticleValidator(this);
+
+                case ParticleType.Group:
+                    return new GroupParticleValidator(this);
+
+                //case ParticleType.Any:
+                //    return new AnyParticleValidator(particleConstraint);
+                case ParticleType.Element:
+                default:
+                    throw new InvalidOperationException();
+            }
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (obj is CompositeParticle other)
+            {
+                if (!base.Equals(obj))
+                {
+                    return false;
+                }
+
+                if (ChildrenParticles.Length != other.ChildrenParticles.Length)
+                {
+                    return false;
+                }
+
+                for (int i = 0; i < ChildrenParticles.Length; i++)
+                {
+                    if (!ChildrenParticles[i].Equals(other.ChildrenParticles[i]))
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public override int GetHashCode() => HashCode.Combine(base.GetHashCode(), ChildrenParticles.Length);
+
+        public IEnumerator<ParticleConstraint> GetEnumerator() => ChildrenParticles.GetEnumerator();
+
+        IEnumerator IEnumerable.GetEnumerator() => ChildrenParticles.GetEnumerator();
 
         //internal CompositeParticle NormalizeParticle(CompositeParticle compositeParticle)
         //{

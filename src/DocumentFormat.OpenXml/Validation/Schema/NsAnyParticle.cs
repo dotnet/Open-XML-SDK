@@ -15,42 +15,22 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("NamespaceId={NamespaceId}")]
     internal class NsAnyParticle : ParticleConstraint
     {
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private byte _namespaceId;
-        private IParticleValidator _particleValidator;
+        private readonly IParticleValidator _particleValidator;
 
         /// <summary>
         /// Initializes a new instance of the NsAnyParticle.
         /// </summary>
-        internal NsAnyParticle()
-            : base()
+        internal NsAnyParticle(int namespaceId, int minOccurs, int maxOccurs)
+            : base(ParticleType.AnyWithUri, minOccurs, maxOccurs)
         {
             _particleValidator = new NsAnyParticleValidator(this);
-        }
-
-        /// <inheritdoc/>
-        internal override ParticleType ParticleType
-        {
-            get { return ParticleType.AnyWithUri; }
-            set { Debug.Assert(value == ParticleType.AnyWithUri); }
-        }
-
-        /// <inheritdoc/>
-        internal override int ElementId
-        {
-            set
-            {
-                _namespaceId = (byte)value;
-            }
+            NamespaceId = (byte)namespaceId;
         }
 
         /// <summary>
         /// Gets the namespace ID of the namespace in the xsd:any@namespace.
         /// </summary>
-        internal byte NamespaceId
-        {
-            get { return _namespaceId; }
-        }
+        public byte NamespaceId { get; }
 
         /// <summary>
         /// Gets a ParticleValidator for this particle constraint.
