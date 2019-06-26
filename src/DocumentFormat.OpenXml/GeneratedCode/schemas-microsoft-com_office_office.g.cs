@@ -1454,7 +1454,8 @@ public partial class OleObject : OpenXmlCompositeElement
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LinkType), 0, 1),
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LockedField), 0, 1)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LockedField), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FieldCodes), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

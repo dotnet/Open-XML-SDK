@@ -509,11 +509,6 @@ public partial class CustomShowReference : OpenXmlLeafElement
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is p:ext.</para>
 /// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-/// </list>
-/// </remarks>
 
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -6734,7 +6729,10 @@ public partial class AttributeNameList : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1) { };
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AttributeName), 1, 0)
+};
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
@@ -9581,6 +9579,7 @@ public partial class Comment : OpenXmlCompositeElement
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Position), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Text), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentExtensionList), 0, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
