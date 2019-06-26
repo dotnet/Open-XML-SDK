@@ -35,8 +35,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 typeof(OpenXmlMiscNode),
             };
 
-            var elements = typeof(OpenXmlElement).Assembly.GetTypes()
-                .Where(t => !t.IsAbstract && typeof(OpenXmlElement).IsAssignableFrom(t))
+            var elements = typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes()
+                .Where(t => !t.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).IsAssignableFrom(t))
                 .Where(t => !exclude.Contains(t));
 
             var constraints = new Dictionary<Type, VersionCollection<ParticleConstraint>>();
@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 var data = SdbSchemaData.GetSchemaData(version);
                 foreach (var type in elements)
                 {
-                    var constructor = type.GetConstructor(Array.Empty<Type>());
+                    var constructor = type.GetConstructor(Cached.Array<Type>());
 
                     if (constructor != null)
                     {
@@ -189,11 +189,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         private class TypeNameConverter : JsonConverter<Type>
         {
             public override Type ReadJson(JsonReader reader, Type objectType, Type existingValue, bool hasExistingValue, JsonSerializer serializer)
-            {
-                var name = reader.Value.ToString();
-
-                return typeof(OpenXmlElement).Assembly.GetType(name);
-            }
+                => throw new NotImplementedException();
 
             public override void WriteJson(JsonWriter writer, Type value, JsonSerializer serializer)
             {
