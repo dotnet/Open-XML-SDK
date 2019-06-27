@@ -3011,7 +3011,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
-        new CompositeParticle(ParticleType.Sequence, 0, 1)
+        new CompositeParticle(ParticleType.Sequence, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
         }

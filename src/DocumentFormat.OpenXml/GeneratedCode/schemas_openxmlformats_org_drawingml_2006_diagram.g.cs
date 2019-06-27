@@ -1201,7 +1201,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -1275,7 +1275,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -1349,7 +1349,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -1423,7 +1423,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -1497,7 +1497,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -1571,7 +1571,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -5751,7 +5751,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FlatText), 1, 1)
@@ -6269,7 +6269,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
@@ -6281,7 +6281,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     },
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
@@ -6357,7 +6357,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
@@ -6837,7 +6837,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
@@ -6845,7 +6845,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     },
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
@@ -6858,7 +6858,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)

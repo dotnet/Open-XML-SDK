@@ -151,7 +151,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
@@ -168,7 +168,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
@@ -2769,17 +2769,23 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         {
             new CompositeParticle(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Separator), 0, 1),
+                new CompositeParticle(ParticleType.Group, 1, 1)
+                {
+                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowValue), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Separator), 0, 1)
+                    }
+                },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLeaderLines), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LeaderLines), 0, 1)
             }
@@ -4788,7 +4794,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize), 1, 1)
@@ -10313,7 +10319,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
@@ -10321,7 +10327,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     },
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
@@ -10334,7 +10340,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
@@ -10513,17 +10519,23 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Separator), 0, 1)
+                new CompositeParticle(ParticleType.Group, 1, 1)
+                {
+                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowValue), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Separator), 0, 1)
+                    }
+                }
             }
         }
     },

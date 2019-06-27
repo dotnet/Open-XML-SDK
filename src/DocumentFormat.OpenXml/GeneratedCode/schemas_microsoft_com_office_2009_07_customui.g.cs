@@ -6553,7 +6553,7 @@ public partial class Box : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
 {
-    new CompositeParticle(ParticleType.Choice, 0, 1000)
+    new CompositeParticle(ParticleType.Choice, 1, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone), 1, 1, version: FileFormatVersions.Office2010),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl), 1, 1, version: FileFormatVersions.Office2010),
@@ -9089,7 +9089,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1000)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1, 1, version: FileFormatVersions.Office2010),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1, 1, version: FileFormatVersions.Office2010),
@@ -9234,7 +9234,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1000)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1, 1, version: FileFormatVersions.Office2010),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1, 1, version: FileFormatVersions.Office2010),
@@ -13038,7 +13038,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1000)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1, 1, version: FileFormatVersions.Office2010),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1, 1, version: FileFormatVersions.Office2010),
@@ -13122,7 +13122,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 1000)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1, 1, version: FileFormatVersions.Office2010),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1, 1, version: FileFormatVersions.Office2010),

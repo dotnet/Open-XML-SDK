@@ -6437,7 +6437,7 @@ public partial class Box : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 1000)
 {
-    new CompositeParticle(ParticleType.Choice, 0, 1000)
+    new CompositeParticle(ParticleType.Choice, 1, 1)
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ControlClone), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.TextLabel), 1, 1),

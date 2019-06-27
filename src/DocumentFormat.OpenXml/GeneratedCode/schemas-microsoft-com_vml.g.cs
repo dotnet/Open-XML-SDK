@@ -2528,7 +2528,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -3636,7 +3636,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -4226,7 +4226,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -4851,7 +4851,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -5427,7 +5427,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -5989,7 +5989,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -7123,7 +7123,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -7685,7 +7685,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
-        new CompositeParticle(ParticleType.Choice, 0, 0)
+        new CompositeParticle(ParticleType.Choice, 1, 1)
         {
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
