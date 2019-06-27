@@ -92,7 +92,7 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList), 0, 1)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -286,7 +286,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList), 0, 1)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -365,7 +365,7 @@ public partial class ThemeVariantList : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant), 1, 0)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant), 1, 0, version: FileFormatVersions.Office2013)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

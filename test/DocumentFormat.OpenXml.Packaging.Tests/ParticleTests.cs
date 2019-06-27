@@ -53,7 +53,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
                         if (version.AtLeast(element.InitialVersion))
                         {
-                            var constraint = element.ParticleConstraint;
+                            var constraint = element.ParticleConstraint?.Build(version);
+
                             if (constraint != null)
                             {
                                 if (constraints.TryGetValue(type, out var current))
@@ -138,6 +139,10 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                     if (prop.PropertyName == nameof(ParticleConstraint.MinOccurs) || prop.PropertyName == nameof(ParticleConstraint.MaxOccurs))
                     {
                         prop.DefaultValue = 1;
+                    }
+                    else if (prop.PropertyName == nameof(ParticleConstraint.Version))
+                    {
+                        prop.Ignored = true;
                     }
                     else if (prop.PropertyName == nameof(CompositeParticle.ChildrenParticles))
                     {

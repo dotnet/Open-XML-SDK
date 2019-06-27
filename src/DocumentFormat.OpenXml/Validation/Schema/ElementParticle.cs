@@ -18,8 +18,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Initializes a new instance of the ElementParticle.
         /// </summary>
-        public ElementParticle(Type elementType, int minOccurs, int maxOccurs)
-            : base(ParticleType.Element, minOccurs, maxOccurs)
+        public ElementParticle(Type elementType, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
+            : base(ParticleType.Element, minOccurs, maxOccurs, version)
         {
             ElementType = elementType ?? throw new ArgumentNullException(nameof(elementType));
         }
@@ -28,6 +28,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator => this;
+
+        protected override ParticleConstraint Clone(FileFormatVersions version)
+            => new ElementParticle(ElementType, MinOccurs, MaxOccurs, Version);
 
         /// <inheritdoc/>
         public void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)

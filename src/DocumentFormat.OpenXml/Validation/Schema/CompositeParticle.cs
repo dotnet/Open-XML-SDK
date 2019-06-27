@@ -21,8 +21,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Initializes a new instance of the CompositeParticle.
         /// </summary>
-        internal CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs)
-            : base(particleType, minOccurs, maxOccurs)
+        internal CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
+            : base(particleType, minOccurs, maxOccurs, version)
         {
         }
 
@@ -31,8 +31,25 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         public ReadOnlyList<ParticleConstraint> ChildrenParticles => _children;
 
+        protected override ParticleConstraint Clone(FileFormatVersions version)
+        {
+            var clone = new CompositeParticle(ParticleType, MinOccurs, MaxOccurs, version);
+
+            foreach (var child in ChildrenParticles)
+            {
+                clone.Add(child.Build(version));
+            }
+
+            return clone;
+        }
+
         public void Add(ParticleConstraint constraint)
         {
+            if (constraint is null)
+            {
+                return;
+            }
+
             if (_children is null)
             {
                 _children = new List<ParticleConstraint>();
