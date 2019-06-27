@@ -34898,7 +34898,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
-        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid), 0, 1)
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid), 1, 1, version: FileFormatVersions.Office2007),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid), 0, 1, version: FileFormatVersions.Office2010)
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
@@ -46596,7 +46597,8 @@ public partial class DocParts : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
-    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPart), 1, 0)
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPart), 0, 0, version: FileFormatVersions.Office2007),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DocPart), 1, 0, version: FileFormatVersions.Office2010)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Validation.Schema;
+using DocumentFormat.OpenXml.Wordprocessing;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
@@ -24,6 +25,15 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         public ParticleTests(ITestOutputHelper output)
         {
             _output = output;
+        }
+
+        [Fact]
+        public void V()
+        {
+            var p = new DocParts();
+
+            var v7 = p.ParticleConstraint.Build(FileFormatVersions.Office2007);
+            var v10 = p.ParticleConstraint.Build(FileFormatVersions.Office2010);
         }
 
         [Fact]

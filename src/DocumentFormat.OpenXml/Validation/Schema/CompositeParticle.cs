@@ -15,6 +15,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("ParticleType={ParticleType}")]
     internal class CompositeParticle : ParticleConstraint, IEnumerable<ParticleConstraint>
     {
+        private readonly bool _filterVersion;
+
         private IParticleValidator _particleValidator;
         private List<ParticleConstraint> _children;
 
@@ -22,8 +24,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Initializes a new instance of the CompositeParticle.
         /// </summary>
         internal CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
+            : this(particleType, minOccurs, maxOccurs, false, version)
+        {
+        }
+
+        private CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs, bool filterVersion, FileFormatVersions version)
             : base(particleType, minOccurs, maxOccurs, version)
         {
+            _filterVersion = filterVersion;
         }
 
         /// <summary>
@@ -40,7 +48,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             // We can potentially limit creation of a clone to times when it is required; ie, when there
             // is a version specific particle.
-            var clone = new CompositeParticle(ParticleType, MinOccurs, MaxOccurs, version);
+            var clone = new CompositeParticle(ParticleType, MinOccurs, MaxOccurs, filterVersion: true, version);
 
             foreach (var child in ChildrenParticles)
             {
@@ -60,6 +68,17 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             if (_children is null)
             {
                 _children = new List<ParticleConstraint>();
+            }
+            else if (_filterVersion && constraint is ElementParticle element)
+            {
+                for (int i = 0; i < _children.Count; i++)
+                {
+                    if (_children[i] is ElementParticle other && element.ElementType == other.ElementType && element.Version > other.Version)
+                    {
+                        _children.RemoveAt(i);
+                        i--;
+                    }
+                }
             }
 
             _children.Add(constraint);

@@ -20190,7 +20190,7 @@ public partial class ColorMostRecentlyUsed : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new CompositeParticle(ParticleType.Group, 0, 0)
+    new CompositeParticle(ParticleType.Group, 0, 10, version: FileFormatVersions.Office2007)
     {
         new CompositeParticle(ParticleType.Choice, 1, 1)
         {
