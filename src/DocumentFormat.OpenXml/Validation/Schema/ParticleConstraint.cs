@@ -62,17 +62,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         internal virtual IParticleValidator ParticleValidator => null;
 
-        protected abstract ParticleConstraint Clone(FileFormatVersions version);
-
-        public ParticleConstraint Build(FileFormatVersions version)
-        {
-            if (version.AtLeast(Version))
-            {
-                return Clone(version);
-            }
-
-            return null;
-        }
+        public virtual ParticleConstraint Build(FileFormatVersions version)
+            => version.AtLeast(Version) ? this : null;
 
         public override bool Equals(object obj)
         {

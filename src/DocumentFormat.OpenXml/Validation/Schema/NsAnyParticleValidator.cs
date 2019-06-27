@@ -15,12 +15,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </remarks>
     internal class NsAnyParticleValidator : AnyParticleValidator
     {
-        private NsAnyParticle _nsAnyParticleConstraint;
+        private readonly NsAnyParticle _nsAnyParticleConstraint;
 
-        internal override ParticleConstraint ParticleConstraint
-        {
-            get { return _nsAnyParticleConstraint; }
-        }
+        internal override ParticleConstraint ParticleConstraint => _nsAnyParticleConstraint;
 
         /// <summary>
         /// Initializes a new instance of the AnyParticleValidator.

@@ -31,8 +31,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         public ReadOnlyList<ParticleConstraint> ChildrenParticles => _children;
 
-        protected override ParticleConstraint Clone(FileFormatVersions version)
+        public override ParticleConstraint Build(FileFormatVersions version)
         {
+            if (!version.AtLeast(Version))
+            {
+                return null;
+            }
+
+            // We can potentially limit creation of a clone to times when it is required; ie, when there
+            // is a version specific particle.
             var clone = new CompositeParticle(ParticleType, MinOccurs, MaxOccurs, version);
 
             foreach (var child in ChildrenParticles)

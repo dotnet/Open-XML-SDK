@@ -3,9 +3,7 @@
 
 using DocumentFormat.OpenXml.Framework;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -28,9 +26,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator => this;
-
-        protected override ParticleConstraint Clone(FileFormatVersions version)
-            => new ElementParticle(ElementType, MinOccurs, MaxOccurs, Version);
 
         /// <inheritdoc/>
         public void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)

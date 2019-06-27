@@ -38,9 +38,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         public ushort NamespaceValue { get; }
 
-        protected override ParticleConstraint Clone(FileFormatVersions version)
-            => new AnyParticle(NamespaceValue, MinOccurs, MaxOccurs, Version);
-
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator => _particleValidator;
     }
