@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 if (theElement.ParticleConstraint != null)
                 {
                     // composite element
-                    CompositeComplexTypeValidator.Validate(validationContext, theElement.ParticleConstraint);
+                    CompositeComplexTypeValidator.Validate(validationContext, theElement.ParticleConstraint.Build(_version));
                 }
                 else
                 {
