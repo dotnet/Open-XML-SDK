@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Newtonsoft.Json;
@@ -30,7 +31,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         [Fact]
         public void V()
         {
-            var p = new DocParts();
+            var p = new ColorMostRecentlyUsed();
 
             var v7 = p.ParticleConstraint.Build(FileFormatVersions.Office2007);
             var v10 = p.ParticleConstraint.Build(FileFormatVersions.Office2010);

@@ -20201,6 +20201,18 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
         }
+    },
+    new CompositeParticle(ParticleType.Group, 0, 0, version: FileFormatVersions.Office2010)
+    {
+        new CompositeParticle(ParticleType.Choice, 1, 1)
+        {
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
+            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+        }
     }
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;

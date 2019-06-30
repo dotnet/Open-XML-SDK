@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             // We can potentially limit creation of a clone to times when it is required; ie, when there
             // is a version specific particle.
-            var clone = new CompositeParticle(ParticleType, MinOccurs, MaxOccurs, filterVersion: true, version);
+            var clone = new CompositeParticle(ParticleType, MinOccurs, MaxOccurs, filterVersion: true, Version);
 
             foreach (var child in ChildrenParticles)
             {
@@ -69,11 +69,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 _children = new List<ParticleConstraint>();
             }
-            else if (_filterVersion && constraint is ElementParticle element)
+            else if (_filterVersion)
             {
                 for (int i = 0; i < _children.Count; i++)
                 {
-                    if (_children[i] is ElementParticle other && element.ElementType == other.ElementType && element.Version > other.Version)
+                    var other = _children[i];
+
+                    if (Equals(other, constraint) && constraint.Version > other.Version)
                     {
                         _children.RemoveAt(i);
                         i--;
@@ -82,6 +84,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
 
             _children.Add(constraint);
+        }
+
+        private static bool Equals(ParticleConstraint constraint1, ParticleConstraint constraint2)
+        {
+            if (constraint1 is ElementParticle element1 && constraint2 is ElementParticle element2)
+            {
+                return element1.ElementType == element2.ElementType;
+            }
+
+            return false;
         }
 
         /// <inheritdoc/>
