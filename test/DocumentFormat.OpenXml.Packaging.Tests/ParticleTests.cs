@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Math;
 using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Wordprocessing;
@@ -32,7 +33,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         public void V()
         {
             var p = new ColorMostRecentlyUsed();
-
+            var fn = new FunctionName();
+            var j = fn.ParticleConstraint.Build(FileFormatVersions.Office2010);
             var v7 = p.ParticleConstraint.Build(FileFormatVersions.Office2007);
             var v10 = p.ParticleConstraint.Build(FileFormatVersions.Office2010);
         }
@@ -151,7 +153,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                     {
                         prop.DefaultValue = 1;
                     }
-                    else if (prop.PropertyName == nameof(ParticleConstraint.Version))
+                    else if (prop.PropertyName == nameof(ParticleConstraint.Version) || prop.PropertyName == nameof(CompositeParticle.RequireFilter))
                     {
                         prop.Ignored = true;
                     }

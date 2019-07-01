@@ -23,14 +23,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Initializes a new instance of the CompositeParticle.
         /// </summary>
-        internal CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
-            : this(particleType, minOccurs, maxOccurs, false, version)
+        public CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs, bool requireFilter = false, FileFormatVersions version = FileFormatVersions.Office2007)
+            : this(particleType, minOccurs, maxOccurs, requireFilter, false, version)
         {
         }
 
-        private CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs, bool filterVersion, FileFormatVersions version)
+        private CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs, bool requireFilter, bool filterVersion, FileFormatVersions version)
             : base(particleType, minOccurs, maxOccurs, version)
         {
+            RequireFilter = requireFilter;
             _filterVersion = filterVersion;
         }
 
@@ -38,6 +39,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Gets the children particles.
         /// </summary>
         public ReadOnlyList<ParticleConstraint> ChildrenParticles => _children;
+
+        public bool RequireFilter { get; }
 
         public override ParticleConstraint Build(FileFormatVersions version)
         {
@@ -48,7 +51,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             // We can potentially limit creation of a clone to times when it is required; ie, when there
             // is a version specific particle.
-            var clone = new CompositeParticle(ParticleType, MinOccurs, MaxOccurs, filterVersion: true, Version);
+            var clone = new CompositeParticle(ParticleType, MinOccurs, MaxOccurs, requireFilter: RequireFilter, filterVersion: true, Version);
 
             foreach (var child in ChildrenParticles)
             {
@@ -86,11 +89,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             _children.Add(constraint);
         }
 
-        private static bool Equals(ParticleConstraint constraint1, ParticleConstraint constraint2)
+        private bool Equals(ParticleConstraint constraint1, ParticleConstraint constraint2)
         {
             if (constraint1 is ElementParticle element1 && constraint2 is ElementParticle element2)
             {
                 return element1.ElementType == element2.ElementType;
+            }
+            else if (RequireFilter && constraint1.ParticleType == ParticleType.Group && constraint2.ParticleType == ParticleType.Group)
+            {
+                return true;
             }
 
             return false;
