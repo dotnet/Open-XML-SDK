@@ -101,7 +101,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> Starting Anchor Point.</para>
     /// <para> Represents the following element tag in the schema: cdr:from </para>
@@ -127,84 +127,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<ToAnchor>(1);
         set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> Shape Definition.</para>
-    /// <para> Represents the following element tag in the schema: cdr:sp </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
-    /// </remark>
-	[Index(2)]
-    public Shape Shape
-	{
-        get => GetElement<Shape>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> Group Shape.</para>
-    /// <para> Represents the following element tag in the schema: cdr:grpSp </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
-    /// </remark>
-	[Index(3)]
-    public GroupShape GroupShape
-	{
-        get => GetElement<GroupShape>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> Graphic Frame.</para>
-    /// <para> Represents the following element tag in the schema: cdr:graphicFrame </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
-    /// </remark>
-	[Index(4)]
-    public GraphicFrame GraphicFrame
-	{
-        get => GetElement<GraphicFrame>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> Connection Shape.</para>
-    /// <para> Represents the following element tag in the schema: cdr:cxnSp </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
-    /// </remark>
-	[Index(5)]
-    public ConnectionShape ConnectionShape
-	{
-        get => GetElement<ConnectionShape>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> Picture.</para>
-    /// <para> Represents the following element tag in the schema: cdr:pic </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
-    /// </remark>
-	[Index(6)]
-    public Picture Picture
-	{
-        get => GetElement<Picture>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> ContentPart.</para>
-    /// <para> Represents the following element tag in the schema: cdr14:contentPart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
-    /// </remark>
-	[Index(7)]
-    public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart ContentPart
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart>(7);
-        set => SetElement(7, value);
 	}
 
 
@@ -301,7 +223,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> FromAnchor.</para>
     /// <para> Represents the following element tag in the schema: cdr:from </para>
@@ -327,84 +249,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<Extent>(1);
         set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> Shape Definition.</para>
-    /// <para> Represents the following element tag in the schema: cdr:sp </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
-    /// </remark>
-	[Index(2)]
-    public Shape Shape
-	{
-        get => GetElement<Shape>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> Group Shape.</para>
-    /// <para> Represents the following element tag in the schema: cdr:grpSp </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
-    /// </remark>
-	[Index(3)]
-    public GroupShape GroupShape
-	{
-        get => GetElement<GroupShape>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> Graphic Frame.</para>
-    /// <para> Represents the following element tag in the schema: cdr:graphicFrame </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
-    /// </remark>
-	[Index(4)]
-    public GraphicFrame GraphicFrame
-	{
-        get => GetElement<GraphicFrame>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> Connection Shape.</para>
-    /// <para> Represents the following element tag in the schema: cdr:cxnSp </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
-    /// </remark>
-	[Index(5)]
-    public ConnectionShape ConnectionShape
-	{
-        get => GetElement<ConnectionShape>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> Picture.</para>
-    /// <para> Represents the following element tag in the schema: cdr:pic </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
-    /// </remark>
-	[Index(6)]
-    public Picture Picture
-	{
-        get => GetElement<Picture>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> ContentPart.</para>
-    /// <para> Represents the following element tag in the schema: cdr14:contentPart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
-    /// </remark>
-	[Index(7)]
-    public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart ContentPart
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart>(7);
-        set => SetElement(7, value);
 	}
 
 
