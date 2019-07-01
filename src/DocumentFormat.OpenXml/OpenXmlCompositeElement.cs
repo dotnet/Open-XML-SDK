@@ -1019,10 +1019,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal virtual OpenXmlCompositeType OpenXmlCompositeType
-        {
-            get { return OpenXmlCompositeType.Other; }
-        }
+        internal virtual OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.Other;
 
         private void AddANode(OpenXmlElement node)
         {
