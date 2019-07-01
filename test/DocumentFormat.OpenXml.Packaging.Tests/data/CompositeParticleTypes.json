@@ -1,0 +1,4266 @@
+[
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Artist",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Author",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.AuthorList",
+    "Type": "OneAll"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.BookAuthor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Compiler",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Composer",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Conductor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Counsel",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Director",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Editor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Interviewee",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Interviewer",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Inventor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Performer",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.ProducerName",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Source",
+    "Type": "OneAll"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Translator",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Bibliography.Writer",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.CustomProperties.CustomDocumentProperty",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.CustomXmlDataProperties.DataStoreItem",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Accent1Color",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Accent2Color",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Accent3Color",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Accent4Color",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Accent5Color",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Accent6Color",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.AdjustHandlePolar",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.AdjustHandleXY",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.AlphaInverse",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.AlphaModulationEffect",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.AudioFromCD",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.AudioFromFile",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Backdrop",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.BackgroundColor",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Band1Horizontal",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Band1Vertical",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Band2Horizontal",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Band2Vertical",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Blend",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.BlipFill",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.BodyProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.BottomBorder",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Break",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.BulletColor",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Camera",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Cell3DProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.BlipFill",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.ConnectionShape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.FromAnchor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.GraphicFrame",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.GroupShape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.GroupShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualConnectionShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualConnectorShapeDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGraphicFrameDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGraphicFrameProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGroupShapeDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGroupShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualPictureDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualPictureProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualShapeDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.Picture",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.Shape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.ShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.Style",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.TextBody",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.ToAnchor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ChartDrawing.Transform",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Area3DChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.AreaChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.BackWall",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.BandFormat",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Bar3DChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.BarChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.BarChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.BubbleChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.BubbleChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.BubbleSize",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.CategoryAxis",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Chart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.ChartSpace",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.ChartText",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.ColorMapOverride",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.DataLabel",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.DataPoint",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.DataTable",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.DateAxis",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.DisplayUnitsLabel",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.DoughnutChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.DownBars",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.DropLines",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.ErrorBars",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.ExternalData",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Floor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.HighLowLines",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Layout",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.LeaderLines",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Legend",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.LegendEntry",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Line3DChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.LineChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.ManualLayout",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Marker",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Minus",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.NumberingCache",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.NumberReference",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.NumericPoint",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.OfPieChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.PictureOptions",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Pie3DChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.PieChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.PivotFormat",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.PivotSource",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.PlotArea",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Plus",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.PrintSettings",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Protection",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.RadarChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.RadarChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.RichText",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Scaling",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.ScatterChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.ScatterChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.SeriesAxis",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.SeriesLines",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.SeriesText",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.SideWall",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.StringCache",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.StringLiteral",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.StringPoint",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.StringReference",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Surface3DChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.SurfaceChart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.TextProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Title",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Trendline",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.UpBars",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.UpDownBars",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.ValueAxis",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.Values",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.View3D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.XValues",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Charts.YValues",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ColorChange",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ColorFrom",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ColorMap",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ColorReplacement",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ColorScheme",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ColorTo",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ConnectionShape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ConnectionSite",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ContourColor",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.CustomColor",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.CustomGeometry",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Dark1Color",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Dark2Color",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.DefaultRunProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.ColorData",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformStyleLabel",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.Connection",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.Constraint",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.DataModel",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.DataModelRoot",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.Point",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.PresentationLayoutVariables",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.PropertySet",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.Rule",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.SampleData",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.Scene3D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.Shape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.Shape3D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.ShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.Style",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.StyleData",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabel",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.TextBody",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.TextProperties",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.VariableList",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Diagrams.Whole",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.EffectList",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.EffectPropertiesType",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.EffectReference",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.EndParagraphRunProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ExtraColorScheme",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ExtrusionColor",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Field",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Fill",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.FillOverlay",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.FillProperties",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.FillReference",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.FirstColumn",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.FirstRow",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.FollowedHyperlinkColor",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.FontReference",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Fonts",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.FontScheme",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ForegroundColor",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.FormatScheme",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Glow",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.GradientFill",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.GradientStop",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Graphic",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.GraphicFrame",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.GraphicFrameLocks",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.GridColumn",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.GroupShape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.GroupShapeLocks",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Highlight",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Hyperlink",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.HyperlinkOnClick",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.HyperlinkOnHover",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.InnerShadow",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.InsideHorizontalBorder",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.InsideVerticalBorder",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.LastColumn",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.LastRow",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.LeftBorder",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Light1Color",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Light2Color",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.LightRig",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.LineDefault",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.LineReference",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.LineSpacing",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.LineTo",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ListStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.LockedCanvas.LockedCanvas",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.MajorFont",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.MinorFont",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.MoveTo",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.NonVisualConnectionShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.NonVisualConnectorShapeDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.NonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.NonVisualGraphicFrameDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.NonVisualGraphicFrameProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.NonVisualPictureDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.NonVisualPictureProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.NonVisualShapeDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.NonVisualShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.NortheastCell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.NorthwestCell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ObjectDefaults",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.OuterShadow",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.OverrideColorMapping",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Paragraph",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.PathGradientFill",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.PatternFill",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Picture",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.PictureBullet",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.PictureLocks",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Pictures.BlipFill",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Pictures.Picture",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.PresetGeometry",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.PresetShadow",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.PresetTextWrap",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.QuickTimeFromFile",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.RightBorder",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Run",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.RunProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Scene3DType",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Shape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Shape3DType",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ShapeDefault",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ShapeLocks",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ShapeStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.SolidFill",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.SoutheastCell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.SouthwestCell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.SpaceAfter",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.SpaceBefore",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.AbsoluteAnchor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.OneCellAnchor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Stretch",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Table",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.TableCell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.TableCellBorders",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.TableCellProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.TableCellStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.TableStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.TableStyleEntry",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.TextBody",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.TextDefault",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.TextShape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Theme",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ThemeElements",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.ThemeOverride",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.TopBorder",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.TopLeftToBottomRightBorder",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.TopRightToBottomLeftBorder",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Transform2D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.TransformGroup",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.UnderlineFill",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.VideoFromFile",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.WholeTable",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.ExtendedProperties.Properties",
+    "Type": "OneAll"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.InkML.AnnotationXml",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.InkML.Canvas",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.InkML.Context",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.InkML.InkSource",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Accent",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.AccentProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.ArgumentProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Bar",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.BarProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Base",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.BorderBox",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.BorderBoxProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Box",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.BoxProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Degree",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Delimiter",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.DelimiterProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Denominator",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.EquationArray",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.EquationArrayProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Fraction",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.FractionProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.FunctionName",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.FunctionProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.GroupChar",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.GroupCharProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Limit",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.LimitLower",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.LimitLowerProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.LimitUpper",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.LimitUpperProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.MathFunction",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.MathProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Matrix",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.MatrixColumn",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.MatrixColumnProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.MatrixProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Nary",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.NaryProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Numerator",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Paragraph",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.ParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Phantom",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.PhantomProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.PreSubSuper",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.PreSubSuperProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Radical",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.RadicalProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Run",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.RunProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.SubArgument",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Subscript",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.SubscriptProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.SubSuperscript",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.SubSuperscriptProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.SuperArgument",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.Superscript",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Math.SuperscriptProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.CoverPageProps.CoverPageProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditors",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.CustomUI.CustomUI",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.CustomUI.DialogBoxLauncher",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.CustomUI.Ribbon",
+    "Type": "OneAll"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.CustomXsn.CustomXsn",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Drawing.Drawing",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Drawing.GroupShape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Drawing.Shape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Drawing.ShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Drawing.ShapeStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Drawing.ShapeTree",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Drawing.TextBody",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Drawing.Transform2D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Excel.Macrosheet",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Excel.WorksheetSortMap",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Word.DocEvents",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Word.KeyMapEntry",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office.Word.VbaSuppData",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.CustomUI.BackstageTab",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.CustomUI.CustomUI",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.CustomUI.DialogBoxLauncher",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.CustomUI.PrimaryItem",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon",
+    "Type": "OneAll"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualContentPartProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.NonVisualInkContentPartProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.Transform2D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.Diagram.NonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.HiddenEffectsProperties",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.HiddenFillProperties",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.HiddenScene3D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.HiddenShape3D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.Slicer.Slicer",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Drawing.Transform2D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormat",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.Connection",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.DatastoreItem",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.DataValidation",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.DefinedName",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.DifferentialType",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.Drawing.NonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.Drawing.NonVisualInkContentPartProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.IgnoredError",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelData",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.OleItem",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.PivotArea",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.PivotChange",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.PivotEdit",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.ProtectedRange",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.Slicer",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheData",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinition",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.SlicerStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.Sparkline",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.SparklineGroup",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Excel.TupleSet",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.PowerPoint.Media",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.PowerPoint.Section",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList",
+    "Type": "OneAll"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.ContentPart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.ContourColor",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.GraphicFrameType",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WholeFormatting",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WordprocessingCanvas",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GraphicFrame",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingShape.LinkedTextBox",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualConnectorProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBodyProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBoxInfo2",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.ExtrusionColor",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.FillTextEffect",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.Glow",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.GradientStop",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.LightRig",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.NonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.PathShadeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.Properties3D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.Scene3D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.SdtContentCheckBox",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.Shadow",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.Transform2D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.AreaChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.AxisDataSourceType",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.BarChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.BubbleChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterException",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabel",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableCache",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableEntry",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRangeChache",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.LineChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.Marker",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.PieChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.RadarChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.ScatterChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.SurfaceChartSeries",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.TimeSlicer",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.Connection",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.DataFeedProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.DataModel",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.PivotValueCell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.Survey",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestion",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.TextProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.Timeline",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheDefinition",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.TimelineState",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.TimelineStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.TitlePrSurveyElementPr",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Excel.WebExtension",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.RoamingProperty",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.PowerPoint.ThreadingInfo",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Theme.ThemeFamily",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Word.Person",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisTitle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnits",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnitsLabel",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Binning",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Chart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabel",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabels",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataPoint",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Legend",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MajorGridlinesGridlines",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MajorTickMarksTickMarks",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorGridlinesGridlines",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorTickMarksTickMarks",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotArea",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotSurface",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RichTextBody",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Series",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayoutProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickLabels",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterException",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMapEntry",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.DLbl",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.Marker",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrFilteredLiteralCache",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumFilteredLiteralCache",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.PivotOptions16",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.ShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.StrFilteredLiteralCache",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc.MultiLvlStrData",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Excel.Comments",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Excel.DataValidation",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Excel.RevCell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Excel.RevisionState",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Excel.RstType",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Office2016.Excel.StateBasedObject",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Animate",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.AnimateColor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.AnimateEffect",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.AnimateMotion",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.AnimateRotation",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.AnimateScale",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Audio",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Background",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.BackgroundStyleReference",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.BlipFill",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.BodyStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.BuildGraphics",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.BuildParagraph",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.BuildSubElement",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ByColor",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ColorMap",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ColorMapOverride",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ColorValue",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Command",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Comment",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.CommentAuthor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.CommonBehavior",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.CommonMediaNode",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.CommonSlideData",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.CommonTimeNode",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.CommonViewProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Condition",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ConnectionShape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ContentPart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Control",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.CustomShow",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.DefaultTextStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.EmbeddedFont",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.EndSync",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.FromColor",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.GraphicElement",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.GraphicFrame",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.GroupShape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.GroupShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.HandoutMaster",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.HandoutMasterId",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.HandoutMasterIdList",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.HeaderFooter",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Iterate",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NormalViewProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NotesMaster",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NotesMasterId",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NotesMasterIdList",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NotesSlide",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NotesStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NotesTextViewProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.NotesViewProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.OleObjectEmbed",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.OleObjectLink",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.OtherStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.OutlineViewProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ParallelTimeNode",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.PenColor",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.PhotoAlbum",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Picture",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.PlaceholderShape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Presentation",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.PresentationProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.PrintingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Progress",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ScaleFactor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.SequenceTimeNode",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.SetBehavior",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Shape",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ShapeProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ShapeStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ShapeTarget",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ShapeTree",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Slide",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.SlideId",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.SlideLayout",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.SlideLayoutId",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.SlideMaster",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.SlideMasterId",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.SlideSyncProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.SlideViewProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.SorterViewProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.SoundAction",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.StartSoundAction",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.TargetElement",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Template",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.TextBody",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.TextElement",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.TextStyles",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.TimeAnimateValue",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.TimeNodeList",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Timing",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.TitleStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ToColor",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ToVariantValue",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Transform",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.VariantValue",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.Video",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.ViewProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Presentation.WebProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.AutoSortScope",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Border",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.BottomBorder",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.CacheField",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.CacheSource",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.CalculatedItem",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.CalculatedMember",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Cell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.CellFormat",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.CellStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.ChartFormat",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Chartsheet",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.ChartSheetView",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Colors",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Comment",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.CommentProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Comments",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.CommentText",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.ConditionalFormat",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Connection",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Consolidation",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Control",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.ControlProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.CustomSheetView",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.DataConsolidate",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.DataField",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.DataValidation",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.DdeItem",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.DdeLink",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.DialogSheet",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.EndBorder",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.ErrorItem",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.ExternalBook",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.ExternalCell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Fill",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.FilterColumn",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Font",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Format",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.FromMarker",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.GradientStop",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Group",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.GroupLevel",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Header",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.HeaderFooter",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.InlineString",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.LeftBorder",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Map",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Mdx",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Metadata",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.NewCell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.OldCell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.OleLink",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.OleObject",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.PageField",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.PatternFill",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.PhoneticRun",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.PivotArea",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinition",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.PivotField",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.PivotFilter",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.PivotSelection",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinition",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Query",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.QueryTable",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.QueryTableField",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.RevisionDefinedName",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.RevisionFormat",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.RevisionSheetName",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.RightBorder",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Run",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.SharedStringItem",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.SheetProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.SheetView",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.StartBorder",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Stylesheet",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Table",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.TableColumn",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.TextProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.ToMarker",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.TopBorder",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Topic",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.TupleCache",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.UserInfo",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Value",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.VerticalBorder",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Workbook",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.WorkbookView",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.Worksheet",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Spreadsheet.XmlProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.VariantTypes.Variant",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Vml.Background",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Vml.Fill",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Vml.Office.Diagram",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Vml.Office.OleObject",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Vml.Office.ShapeDefaults",
+    "Type": "OneAll"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Vml.Office.ShapeLayout",
+    "Type": "OneAll"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Vml.Stroke",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.AbstractNum",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.AltChunk",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Category",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Compatibility",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.CustomXmlCell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.CustomXmlRow",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.DataSourceObject",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Div",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.DivBorder",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.DocDefaults",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.DocPart",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.DocPartProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Document",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.DocumentBackground",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Drawing",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.DropDownListFormField",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.EndnoteDocumentWideProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.FieldChar",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.FieldMapData",
+    "Type": "OneAll"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Font",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.FootnoteDocumentWideProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Frame",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Frameset",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.FramesetSplitbar",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Level",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.LevelOverride",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.MailMerge",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.NumberingInstance",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.NumberingPictureBullet",
+    "Type": "OneChoice"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.NumberingProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.NumberingSymbolRunProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.PageBorders",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Paragraph",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.ParagraphMarkRunProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.ParagraphMarkRunPropertiesChange",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesBaseStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesDefault",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.RecipientData",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Rsids",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Ruby",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.RubyProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Run",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.RunProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.RunPropertiesDefault",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.SdtBlock",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.SdtCell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.SdtContentDate",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.SdtContentDocPartList",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.SdtContentDocPartObject",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.SdtPlaceholder",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.SdtRow",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.SdtRun",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.SectionPropertiesChange",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Settings",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.SimpleField",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Style",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.StyleRunProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.Styles",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.StyleTableCellProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.StyleTableProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TableBorders",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TableCell",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TableCellBorders",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TableCellMargin",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TableCellProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TableCellPropertiesChange",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TableGridChange",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TableProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TablePropertiesChange",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptions",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptionsChange",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TableRow",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TableRowPropertiesChange",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableCellProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TableStyleProperties",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.TextInput",
+    "Type": "OneSequence"
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Wordprocessing.WebSettings",
+    "Type": "OneSequence"
+  }
+]
