@@ -4088,61 +4088,7 @@ public partial class ExternalLink : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-        /// <summary>
-    /// <para> External Workbook.</para>
-    /// <para> Represents the following element tag in the schema: x:externalBook </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-    /// </remark>
-	[Index(0)]
-    public ExternalBook ExternalBook
-	{
-        get => GetElement<ExternalBook>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> DDE Connection.</para>
-    /// <para> Represents the following element tag in the schema: x:ddeLink </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-    /// </remark>
-	[Index(1)]
-    public DdeLink DdeLink
-	{
-        get => GetElement<DdeLink>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> OLE Link.</para>
-    /// <para> Represents the following element tag in the schema: x:oleLink </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-    /// </remark>
-	[Index(2)]
-    public OleLink OleLink
-	{
-        get => GetElement<OleLink>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> ExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: x:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-    /// </remark>
-	[Index(3)]
-    public ExtensionList ExtensionList
-	{
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalLink>(deep);
 
@@ -35973,48 +35919,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-        /// <summary>
-    /// <para> Range Grouping Properties.</para>
-    /// <para> Represents the following element tag in the schema: x:rangePr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-    /// </remark>
-	[Index(0)]
-    public RangeProperties RangeProperties
-	{
-        get => GetElement<RangeProperties>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> Discrete Grouping Properties.</para>
-    /// <para> Represents the following element tag in the schema: x:discretePr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-    /// </remark>
-	[Index(1)]
-    public DiscreteProperties DiscreteProperties
-	{
-        get => GetElement<DiscreteProperties>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> OLAP Group Items.</para>
-    /// <para> Represents the following element tag in the schema: x:groupItems </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-    /// </remark>
-	[Index(2)]
-    public GroupItems GroupItems
-	{
-        get => GetElement<GroupItems>(2);
-        set => SetElement(2, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FieldGroup>(deep);
 

@@ -1281,139 +1281,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
-        /// <summary>
-    /// <para> Tint.</para>
-    /// <para> Represents the following element tag in the schema: w14:tint </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(0)]
-    public Tint Tint
-	{
-        get => GetElement<Tint>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> Shade.</para>
-    /// <para> Represents the following element tag in the schema: w14:shade </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(1)]
-    public Shade Shade
-	{
-        get => GetElement<Shade>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> Alpha.</para>
-    /// <para> Represents the following element tag in the schema: w14:alpha </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(2)]
-    public Alpha Alpha
-	{
-        get => GetElement<Alpha>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> HueModulation.</para>
-    /// <para> Represents the following element tag in the schema: w14:hueMod </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(3)]
-    public HueModulation HueModulation
-	{
-        get => GetElement<HueModulation>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> Saturation.</para>
-    /// <para> Represents the following element tag in the schema: w14:sat </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(4)]
-    public Saturation Saturation
-	{
-        get => GetElement<Saturation>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> SaturationOffset.</para>
-    /// <para> Represents the following element tag in the schema: w14:satOff </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(5)]
-    public SaturationOffset SaturationOffset
-	{
-        get => GetElement<SaturationOffset>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> SaturationModulation.</para>
-    /// <para> Represents the following element tag in the schema: w14:satMod </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(6)]
-    public SaturationModulation SaturationModulation
-	{
-        get => GetElement<SaturationModulation>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> Luminance.</para>
-    /// <para> Represents the following element tag in the schema: w14:lum </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(7)]
-    public Luminance Luminance
-	{
-        get => GetElement<Luminance>(7);
-        set => SetElement(7, value);
-	}
-    /// <summary>
-    /// <para> LuminanceOffset.</para>
-    /// <para> Represents the following element tag in the schema: w14:lumOff </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(8)]
-    public LuminanceOffset LuminanceOffset
-	{
-        get => GetElement<LuminanceOffset>(8);
-        set => SetElement(8, value);
-	}
-    /// <summary>
-    /// <para> LuminanceModulation.</para>
-    /// <para> Represents the following element tag in the schema: w14:lumMod </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(9)]
-    public LuminanceModulation LuminanceModulation
-	{
-        get => GetElement<LuminanceModulation>(9);
-        set => SetElement(9, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RgbColorModelHex>(deep);
 
@@ -1521,139 +1389,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
-        /// <summary>
-    /// <para> Tint.</para>
-    /// <para> Represents the following element tag in the schema: w14:tint </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(0)]
-    public Tint Tint
-	{
-        get => GetElement<Tint>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> Shade.</para>
-    /// <para> Represents the following element tag in the schema: w14:shade </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(1)]
-    public Shade Shade
-	{
-        get => GetElement<Shade>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> Alpha.</para>
-    /// <para> Represents the following element tag in the schema: w14:alpha </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(2)]
-    public Alpha Alpha
-	{
-        get => GetElement<Alpha>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> HueModulation.</para>
-    /// <para> Represents the following element tag in the schema: w14:hueMod </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(3)]
-    public HueModulation HueModulation
-	{
-        get => GetElement<HueModulation>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> Saturation.</para>
-    /// <para> Represents the following element tag in the schema: w14:sat </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(4)]
-    public Saturation Saturation
-	{
-        get => GetElement<Saturation>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> SaturationOffset.</para>
-    /// <para> Represents the following element tag in the schema: w14:satOff </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(5)]
-    public SaturationOffset SaturationOffset
-	{
-        get => GetElement<SaturationOffset>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> SaturationModulation.</para>
-    /// <para> Represents the following element tag in the schema: w14:satMod </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(6)]
-    public SaturationModulation SaturationModulation
-	{
-        get => GetElement<SaturationModulation>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> Luminance.</para>
-    /// <para> Represents the following element tag in the schema: w14:lum </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(7)]
-    public Luminance Luminance
-	{
-        get => GetElement<Luminance>(7);
-        set => SetElement(7, value);
-	}
-    /// <summary>
-    /// <para> LuminanceOffset.</para>
-    /// <para> Represents the following element tag in the schema: w14:lumOff </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(8)]
-    public LuminanceOffset LuminanceOffset
-	{
-        get => GetElement<LuminanceOffset>(8);
-        set => SetElement(8, value);
-	}
-    /// <summary>
-    /// <para> LuminanceModulation.</para>
-    /// <para> Represents the following element tag in the schema: w14:lumMod </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(9)]
-    public LuminanceModulation LuminanceModulation
-	{
-        get => GetElement<LuminanceModulation>(9);
-        set => SetElement(9, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SchemeColor>(deep);
 
@@ -1984,35 +1720,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-        /// <summary>
-    /// <para> RgbColorModelHex.</para>
-    /// <para> Represents the following element tag in the schema: w14:srgbClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(0)]
-    public RgbColorModelHex RgbColorModelHex
-	{
-        get => GetElement<RgbColorModelHex>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> SchemeColor.</para>
-    /// <para> Represents the following element tag in the schema: w14:schemeClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(1)]
-    public SchemeColor SchemeColor
-	{
-        get => GetElement<SchemeColor>(1);
-        set => SetElement(1, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SolidColorFillProperties>(deep);
 
@@ -2088,7 +1796,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> GradientStopList.</para>
     /// <para> Represents the following element tag in the schema: w14:gsLst </para>
@@ -2101,32 +1809,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<GradientStopList>(0);
         set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> LinearShadeProperties.</para>
-    /// <para> Represents the following element tag in the schema: w14:lin </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(1)]
-    public LinearShadeProperties LinearShadeProperties
-	{
-        get => GetElement<LinearShadeProperties>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> PathShadeProperties.</para>
-    /// <para> Represents the following element tag in the schema: w14:path </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(2)]
-    public PathShadeProperties PathShadeProperties
-	{
-        get => GetElement<PathShadeProperties>(2);
-        set => SetElement(2, value);
 	}
 
 
@@ -2294,35 +1976,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-        /// <summary>
-    /// <para> RgbColorModelHex.</para>
-    /// <para> Represents the following element tag in the schema: w14:srgbClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(0)]
-    public RgbColorModelHex RgbColorModelHex
-	{
-        get => GetElement<RgbColorModelHex>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> SchemeColor.</para>
-    /// <para> Represents the following element tag in the schema: w14:schemeClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(1)]
-    public SchemeColor SchemeColor
-	{
-        get => GetElement<SchemeColor>(1);
-        set => SetElement(1, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Glow>(deep);
 
@@ -2480,35 +2134,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-        /// <summary>
-    /// <para> RgbColorModelHex.</para>
-    /// <para> Represents the following element tag in the schema: w14:srgbClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(0)]
-    public RgbColorModelHex RgbColorModelHex
-	{
-        get => GetElement<RgbColorModelHex>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> SchemeColor.</para>
-    /// <para> Represents the following element tag in the schema: w14:schemeClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(1)]
-    public SchemeColor SchemeColor
-	{
-        get => GetElement<SchemeColor>(1);
-        set => SetElement(1, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shadow>(deep);
 
@@ -2819,100 +2445,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-        /// <summary>
-    /// <para> NoFillEmpty.</para>
-    /// <para> Represents the following element tag in the schema: w14:noFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(0)]
-    public NoFillEmpty NoFillEmpty
-	{
-        get => GetElement<NoFillEmpty>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> SolidColorFillProperties.</para>
-    /// <para> Represents the following element tag in the schema: w14:solidFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(1)]
-    public SolidColorFillProperties SolidColorFillProperties
-	{
-        get => GetElement<SolidColorFillProperties>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> GradientFillProperties.</para>
-    /// <para> Represents the following element tag in the schema: w14:gradFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(2)]
-    public GradientFillProperties GradientFillProperties
-	{
-        get => GetElement<GradientFillProperties>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> PresetLineDashProperties.</para>
-    /// <para> Represents the following element tag in the schema: w14:prstDash </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(3)]
-    public PresetLineDashProperties PresetLineDashProperties
-	{
-        get => GetElement<PresetLineDashProperties>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> RoundEmpty.</para>
-    /// <para> Represents the following element tag in the schema: w14:round </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(4)]
-    public RoundEmpty RoundEmpty
-	{
-        get => GetElement<RoundEmpty>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> BevelEmpty.</para>
-    /// <para> Represents the following element tag in the schema: w14:bevel </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(5)]
-    public BevelEmpty BevelEmpty
-	{
-        get => GetElement<BevelEmpty>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> LineJoinMiterProperties.</para>
-    /// <para> Represents the following element tag in the schema: w14:miter </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(6)]
-    public LineJoinMiterProperties LineJoinMiterProperties
-	{
-        get => GetElement<LineJoinMiterProperties>(6);
-        set => SetElement(6, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextOutlineEffect>(deep);
 
@@ -2988,48 +2521,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-        /// <summary>
-    /// <para> NoFillEmpty.</para>
-    /// <para> Represents the following element tag in the schema: w14:noFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(0)]
-    public NoFillEmpty NoFillEmpty
-	{
-        get => GetElement<NoFillEmpty>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> SolidColorFillProperties.</para>
-    /// <para> Represents the following element tag in the schema: w14:solidFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(1)]
-    public SolidColorFillProperties SolidColorFillProperties
-	{
-        get => GetElement<SolidColorFillProperties>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> GradientFillProperties.</para>
-    /// <para> Represents the following element tag in the schema: w14:gradFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(2)]
-    public GradientFillProperties GradientFillProperties
-	{
-        get => GetElement<GradientFillProperties>(2);
-        set => SetElement(2, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillTextEffect>(deep);
 
@@ -4090,35 +3582,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-        /// <summary>
-    /// <para> RgbColorModelHex.</para>
-    /// <para> Represents the following element tag in the schema: w14:srgbClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(0)]
-    public RgbColorModelHex RgbColorModelHex
-	{
-        get => GetElement<RgbColorModelHex>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> SchemeColor.</para>
-    /// <para> Represents the following element tag in the schema: w14:schemeClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(1)]
-    public SchemeColor SchemeColor
-	{
-        get => GetElement<SchemeColor>(1);
-        set => SetElement(1, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GradientStop>(deep);
 
@@ -4720,35 +4184,7 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     
     
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-        /// <summary>
-    /// <para> RgbColorModelHex.</para>
-    /// <para> Represents the following element tag in the schema: w14:srgbClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(0)]
-    public RgbColorModelHex RgbColorModelHex
-	{
-        get => GetElement<RgbColorModelHex>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> SchemeColor.</para>
-    /// <para> Represents the following element tag in the schema: w14:schemeClr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(1)]
-    public SchemeColor SchemeColor
-	{
-        get => GetElement<SchemeColor>(1);
-        set => SetElement(1, value);
-	}
-
-
+    
     /// <summary>
     /// Initializes a new instance of the ColorType class.
     /// </summary>

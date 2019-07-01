@@ -180,7 +180,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
     /// <para> Represents the following element tag in the schema: a:xfrm </para>
@@ -193,175 +193,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
         set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> Custom geometry.</para>
-    /// <para> Represents the following element tag in the schema: a:custGeom </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(1)]
-    public DocumentFormat.OpenXml.Drawing.CustomGeometry CustomGeometry
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.CustomGeometry>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> Preset geometry.</para>
-    /// <para> Represents the following element tag in the schema: a:prstGeom </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(2)]
-    public DocumentFormat.OpenXml.Drawing.PresetGeometry PresetGeometry
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetGeometry>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> NoFill.</para>
-    /// <para> Represents the following element tag in the schema: a:noFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(3)]
-    public DocumentFormat.OpenXml.Drawing.NoFill NoFill
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> SolidFill.</para>
-    /// <para> Represents the following element tag in the schema: a:solidFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(4)]
-    public DocumentFormat.OpenXml.Drawing.SolidFill SolidFill
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> GradientFill.</para>
-    /// <para> Represents the following element tag in the schema: a:gradFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(5)]
-    public DocumentFormat.OpenXml.Drawing.GradientFill GradientFill
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> BlipFill.</para>
-    /// <para> Represents the following element tag in the schema: a:blipFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(6)]
-    public DocumentFormat.OpenXml.Drawing.BlipFill BlipFill
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> Pattern Fill.</para>
-    /// <para> Represents the following element tag in the schema: a:pattFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(7)]
-    public DocumentFormat.OpenXml.Drawing.PatternFill PatternFill
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>(7);
-        set => SetElement(7, value);
-	}
-    /// <summary>
-    /// <para> Outline.</para>
-    /// <para> Represents the following element tag in the schema: a:ln </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(8)]
-    public DocumentFormat.OpenXml.Drawing.Outline Outline
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>(8);
-        set => SetElement(8, value);
-	}
-    /// <summary>
-    /// <para> Effect Container.</para>
-    /// <para> Represents the following element tag in the schema: a:effectLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(9)]
-    public DocumentFormat.OpenXml.Drawing.EffectList EffectList
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectList>(9);
-        set => SetElement(9, value);
-	}
-    /// <summary>
-    /// <para> Effect Container.</para>
-    /// <para> Represents the following element tag in the schema: a:effectDag </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(10)]
-    public DocumentFormat.OpenXml.Drawing.EffectDag EffectDag
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectDag>(10);
-        set => SetElement(10, value);
-	}
-    /// <summary>
-    /// <para> Scene3DType.</para>
-    /// <para> Represents the following element tag in the schema: a:scene3d </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(11)]
-    public DocumentFormat.OpenXml.Drawing.Scene3DType Scene3DType
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Scene3DType>(11);
-        set => SetElement(11, value);
-	}
-    /// <summary>
-    /// <para> Shape3DType.</para>
-    /// <para> Represents the following element tag in the schema: a:sp3d </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(12)]
-    public DocumentFormat.OpenXml.Drawing.Shape3DType Shape3DType
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Shape3DType>(12);
-        set => SetElement(12, value);
-	}
-    /// <summary>
-    /// <para> ExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: a:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(13)]
-    public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(13);
-        set => SetElement(13, value);
 	}
 
 
@@ -4876,7 +4707,7 @@ public partial class ChartSpace : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> Date1904.</para>
     /// <para> Represents the following element tag in the schema: c:date1904 </para>
@@ -4915,162 +4746,6 @@ public partial class ChartSpace : OpenXmlPartRootElement
 	{
         get => GetElement<RoundedCorners>(2);
         set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> Style.</para>
-    /// <para> Represents the following element tag in the schema: c14:style </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
-    /// </remark>
-	[Index(3)]
-    public DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style Style
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> Style.</para>
-    /// <para> Represents the following element tag in the schema: c:style </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(4)]
-    public Style Style
-	{
-        get => GetElement<Style>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> ColorMapOverride.</para>
-    /// <para> Represents the following element tag in the schema: c:clrMapOvr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(5)]
-    public ColorMapOverride ColorMapOverride
-	{
-        get => GetElement<ColorMapOverride>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> PivotSource.</para>
-    /// <para> Represents the following element tag in the schema: c:pivotSource </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(6)]
-    public PivotSource PivotSource
-	{
-        get => GetElement<PivotSource>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> Protection.</para>
-    /// <para> Represents the following element tag in the schema: c:protection </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(7)]
-    public Protection Protection
-	{
-        get => GetElement<Protection>(7);
-        set => SetElement(7, value);
-	}
-    /// <summary>
-    /// <para> Chart.</para>
-    /// <para> Represents the following element tag in the schema: c:chart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(8)]
-    public Chart Chart
-	{
-        get => GetElement<Chart>(8);
-        set => SetElement(8, value);
-	}
-    /// <summary>
-    /// <para> ShapeProperties.</para>
-    /// <para> Represents the following element tag in the schema: c:spPr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(9)]
-    public ShapeProperties ShapeProperties
-	{
-        get => GetElement<ShapeProperties>(9);
-        set => SetElement(9, value);
-	}
-    /// <summary>
-    /// <para> TextProperties.</para>
-    /// <para> Represents the following element tag in the schema: c:txPr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(10)]
-    public TextProperties TextProperties
-	{
-        get => GetElement<TextProperties>(10);
-        set => SetElement(10, value);
-	}
-    /// <summary>
-    /// <para> ExternalData.</para>
-    /// <para> Represents the following element tag in the schema: c:externalData </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(11)]
-    public ExternalData ExternalData
-	{
-        get => GetElement<ExternalData>(11);
-        set => SetElement(11, value);
-	}
-    /// <summary>
-    /// <para> PrintSettings.</para>
-    /// <para> Represents the following element tag in the schema: c:printSettings </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(12)]
-    public PrintSettings PrintSettings
-	{
-        get => GetElement<PrintSettings>(12);
-        set => SetElement(12, value);
-	}
-    /// <summary>
-    /// <para> UserShapesReference.</para>
-    /// <para> Represents the following element tag in the schema: c:userShapes </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(13)]
-    public UserShapesReference UserShapesReference
-	{
-        get => GetElement<UserShapesReference>(13);
-        set => SetElement(13, value);
-	}
-    /// <summary>
-    /// <para> ChartSpaceExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: c:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(14)]
-    public ChartSpaceExtensionList ChartSpaceExtensionList
-	{
-        get => GetElement<ChartSpaceExtensionList>(14);
-        set => SetElement(14, value);
 	}
 
 
@@ -5180,35 +4855,7 @@ public partial class UserShapes : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
-        /// <summary>
-    /// <para> Relative Anchor Shape Size.</para>
-    /// <para> Represents the following element tag in the schema: cdr:relSizeAnchor </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
-    /// </remark>
-	[Index(0)]
-    public DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize RelativeAnchorSize
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> Absolute Anchor Shape Size.</para>
-    /// <para> Represents the following element tag in the schema: cdr:absSizeAnchor </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
-    /// </remark>
-	[Index(1)]
-    public DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize AbsoluteAnchorSize
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize>(1);
-        set => SetElement(1, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UserShapes>(deep);
 
@@ -9477,7 +9124,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> Index.</para>
     /// <para> Represents the following element tag in the schema: c:idx </para>
@@ -9490,45 +9137,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<Index>(0);
         set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> Delete.</para>
-    /// <para> Represents the following element tag in the schema: c:delete </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(1)]
-    public Delete Delete
-	{
-        get => GetElement<Delete>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> TextProperties.</para>
-    /// <para> Represents the following element tag in the schema: c:txPr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(2)]
-    public TextProperties TextProperties
-	{
-        get => GetElement<TextProperties>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> Chart Extensibility.</para>
-    /// <para> Represents the following element tag in the schema: c:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(3)]
-    public ExtensionList ExtensionList
-	{
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
 	}
 
 
@@ -10209,7 +9817,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> Layout.</para>
     /// <para> Represents the following element tag in the schema: c:layout </para>
@@ -10222,253 +9830,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<Layout>(0);
         set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> Area Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:areaChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(1)]
-    public AreaChart AreaChart
-	{
-        get => GetElement<AreaChart>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> 3D Area Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:area3DChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(2)]
-    public Area3DChart Area3DChart
-	{
-        get => GetElement<Area3DChart>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> Line Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:lineChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(3)]
-    public LineChart LineChart
-	{
-        get => GetElement<LineChart>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> 3D Line Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:line3DChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(4)]
-    public Line3DChart Line3DChart
-	{
-        get => GetElement<Line3DChart>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> Stock Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:stockChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(5)]
-    public StockChart StockChart
-	{
-        get => GetElement<StockChart>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> Radar Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:radarChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(6)]
-    public RadarChart RadarChart
-	{
-        get => GetElement<RadarChart>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> Scatter Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:scatterChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(7)]
-    public ScatterChart ScatterChart
-	{
-        get => GetElement<ScatterChart>(7);
-        set => SetElement(7, value);
-	}
-    /// <summary>
-    /// <para> Pie Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:pieChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(8)]
-    public PieChart PieChart
-	{
-        get => GetElement<PieChart>(8);
-        set => SetElement(8, value);
-	}
-    /// <summary>
-    /// <para> 3D Pie Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:pie3DChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(9)]
-    public Pie3DChart Pie3DChart
-	{
-        get => GetElement<Pie3DChart>(9);
-        set => SetElement(9, value);
-	}
-    /// <summary>
-    /// <para> Doughnut Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:doughnutChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(10)]
-    public DoughnutChart DoughnutChart
-	{
-        get => GetElement<DoughnutChart>(10);
-        set => SetElement(10, value);
-	}
-    /// <summary>
-    /// <para> Bar Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:barChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(11)]
-    public BarChart BarChart
-	{
-        get => GetElement<BarChart>(11);
-        set => SetElement(11, value);
-	}
-    /// <summary>
-    /// <para> 3D Bar Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:bar3DChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(12)]
-    public Bar3DChart Bar3DChart
-	{
-        get => GetElement<Bar3DChart>(12);
-        set => SetElement(12, value);
-	}
-    /// <summary>
-    /// <para> Pie of Pie or Bar of Pie Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:ofPieChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(13)]
-    public OfPieChart OfPieChart
-	{
-        get => GetElement<OfPieChart>(13);
-        set => SetElement(13, value);
-	}
-    /// <summary>
-    /// <para> Surface Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:surfaceChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(14)]
-    public SurfaceChart SurfaceChart
-	{
-        get => GetElement<SurfaceChart>(14);
-        set => SetElement(14, value);
-	}
-    /// <summary>
-    /// <para> 3D Surface Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:surface3DChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(15)]
-    public Surface3DChart Surface3DChart
-	{
-        get => GetElement<Surface3DChart>(15);
-        set => SetElement(15, value);
-	}
-    /// <summary>
-    /// <para> Bubble Charts.</para>
-    /// <para> Represents the following element tag in the schema: c:bubbleChart </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(16)]
-    public BubbleChart BubbleChart
-	{
-        get => GetElement<BubbleChart>(16);
-        set => SetElement(16, value);
-	}
-    /// <summary>
-    /// <para> Data Table.</para>
-    /// <para> Represents the following element tag in the schema: c:dTable </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(17)]
-    public DataTable DataTable
-	{
-        get => GetElement<DataTable>(17);
-        set => SetElement(17, value);
-	}
-    /// <summary>
-    /// <para> ShapeProperties.</para>
-    /// <para> Represents the following element tag in the schema: c:spPr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(18)]
-    public ShapeProperties ShapeProperties
-	{
-        get => GetElement<ShapeProperties>(18);
-        set => SetElement(18, value);
-	}
-    /// <summary>
-    /// <para> Chart Extensibility.</para>
-    /// <para> Represents the following element tag in the schema: c:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(19)]
-    public ExtensionList ExtensionList
-	{
-        get => GetElement<ExtensionList>(19);
-        set => SetElement(19, value);
 	}
 
 
@@ -11088,7 +10449,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
     /// <para> Represents the following element tag in the schema: a:xfrm </para>
@@ -11101,188 +10462,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
         set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> Custom geometry.</para>
-    /// <para> Represents the following element tag in the schema: a:custGeom </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(1)]
-    public DocumentFormat.OpenXml.Drawing.CustomGeometry CustomGeometry
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.CustomGeometry>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> Preset geometry.</para>
-    /// <para> Represents the following element tag in the schema: a:prstGeom </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(2)]
-    public DocumentFormat.OpenXml.Drawing.PresetGeometry PresetGeometry
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetGeometry>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> NoFill.</para>
-    /// <para> Represents the following element tag in the schema: a:noFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(3)]
-    public DocumentFormat.OpenXml.Drawing.NoFill NoFill
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> SolidFill.</para>
-    /// <para> Represents the following element tag in the schema: a:solidFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(4)]
-    public DocumentFormat.OpenXml.Drawing.SolidFill SolidFill
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> GradientFill.</para>
-    /// <para> Represents the following element tag in the schema: a:gradFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(5)]
-    public DocumentFormat.OpenXml.Drawing.GradientFill GradientFill
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> BlipFill.</para>
-    /// <para> Represents the following element tag in the schema: a:blipFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(6)]
-    public DocumentFormat.OpenXml.Drawing.BlipFill BlipFill
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> Pattern Fill.</para>
-    /// <para> Represents the following element tag in the schema: a:pattFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(7)]
-    public DocumentFormat.OpenXml.Drawing.PatternFill PatternFill
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>(7);
-        set => SetElement(7, value);
-	}
-    /// <summary>
-    /// <para> Group Fill.</para>
-    /// <para> Represents the following element tag in the schema: a:grpFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(8)]
-    public DocumentFormat.OpenXml.Drawing.GroupFill GroupFill
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.GroupFill>(8);
-        set => SetElement(8, value);
-	}
-    /// <summary>
-    /// <para> Outline.</para>
-    /// <para> Represents the following element tag in the schema: a:ln </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(9)]
-    public DocumentFormat.OpenXml.Drawing.Outline Outline
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>(9);
-        set => SetElement(9, value);
-	}
-    /// <summary>
-    /// <para> Effect Container.</para>
-    /// <para> Represents the following element tag in the schema: a:effectLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(10)]
-    public DocumentFormat.OpenXml.Drawing.EffectList EffectList
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectList>(10);
-        set => SetElement(10, value);
-	}
-    /// <summary>
-    /// <para> Effect Container.</para>
-    /// <para> Represents the following element tag in the schema: a:effectDag </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(11)]
-    public DocumentFormat.OpenXml.Drawing.EffectDag EffectDag
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectDag>(11);
-        set => SetElement(11, value);
-	}
-    /// <summary>
-    /// <para> Scene3DType.</para>
-    /// <para> Represents the following element tag in the schema: a:scene3d </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(12)]
-    public DocumentFormat.OpenXml.Drawing.Scene3DType Scene3DType
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Scene3DType>(12);
-        set => SetElement(12, value);
-	}
-    /// <summary>
-    /// <para> Shape3DType.</para>
-    /// <para> Represents the following element tag in the schema: a:sp3d </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(13)]
-    public DocumentFormat.OpenXml.Drawing.Shape3DType Shape3DType
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Shape3DType>(13);
-        set => SetElement(13, value);
-	}
-    /// <summary>
-    /// <para> ShapePropertiesExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: a:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-    /// </remark>
-	[Index(14)]
-    public DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList ShapePropertiesExtensionList
-	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>(14);
-        set => SetElement(14, value);
 	}
 
 
@@ -11409,7 +10588,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> Index.</para>
     /// <para> Represents the following element tag in the schema: c:idx </para>
@@ -11422,201 +10601,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<Index>(0);
         set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> Delete.</para>
-    /// <para> Represents the following element tag in the schema: c:delete </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(1)]
-    public Delete Delete
-	{
-        get => GetElement<Delete>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> Layout.</para>
-    /// <para> Represents the following element tag in the schema: c:layout </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(2)]
-    public Layout Layout
-	{
-        get => GetElement<Layout>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> ChartText.</para>
-    /// <para> Represents the following element tag in the schema: c:tx </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(3)]
-    public ChartText ChartText
-	{
-        get => GetElement<ChartText>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> Number Format.</para>
-    /// <para> Represents the following element tag in the schema: c:numFmt </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(4)]
-    public NumberingFormat NumberingFormat
-	{
-        get => GetElement<NumberingFormat>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> ChartShapeProperties.</para>
-    /// <para> Represents the following element tag in the schema: c:spPr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(5)]
-    public ChartShapeProperties ChartShapeProperties
-	{
-        get => GetElement<ChartShapeProperties>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> TextProperties.</para>
-    /// <para> Represents the following element tag in the schema: c:txPr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(6)]
-    public TextProperties TextProperties
-	{
-        get => GetElement<TextProperties>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> Data Label Position.</para>
-    /// <para> Represents the following element tag in the schema: c:dLblPos </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(7)]
-    public DataLabelPosition DataLabelPosition
-	{
-        get => GetElement<DataLabelPosition>(7);
-        set => SetElement(7, value);
-	}
-    /// <summary>
-    /// <para> Show Legend Key.</para>
-    /// <para> Represents the following element tag in the schema: c:showLegendKey </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(8)]
-    public ShowLegendKey ShowLegendKey
-	{
-        get => GetElement<ShowLegendKey>(8);
-        set => SetElement(8, value);
-	}
-    /// <summary>
-    /// <para> Show Value.</para>
-    /// <para> Represents the following element tag in the schema: c:showVal </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(9)]
-    public ShowValue ShowValue
-	{
-        get => GetElement<ShowValue>(9);
-        set => SetElement(9, value);
-	}
-    /// <summary>
-    /// <para> Show Category Name.</para>
-    /// <para> Represents the following element tag in the schema: c:showCatName </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(10)]
-    public ShowCategoryName ShowCategoryName
-	{
-        get => GetElement<ShowCategoryName>(10);
-        set => SetElement(10, value);
-	}
-    /// <summary>
-    /// <para> Show Series Name.</para>
-    /// <para> Represents the following element tag in the schema: c:showSerName </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(11)]
-    public ShowSeriesName ShowSeriesName
-	{
-        get => GetElement<ShowSeriesName>(11);
-        set => SetElement(11, value);
-	}
-    /// <summary>
-    /// <para> Show Percent.</para>
-    /// <para> Represents the following element tag in the schema: c:showPercent </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(12)]
-    public ShowPercent ShowPercent
-	{
-        get => GetElement<ShowPercent>(12);
-        set => SetElement(12, value);
-	}
-    /// <summary>
-    /// <para> Show Bubble Size.</para>
-    /// <para> Represents the following element tag in the schema: c:showBubbleSize </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(13)]
-    public ShowBubbleSize ShowBubbleSize
-	{
-        get => GetElement<ShowBubbleSize>(13);
-        set => SetElement(13, value);
-	}
-    /// <summary>
-    /// <para> Separator.</para>
-    /// <para> Represents the following element tag in the schema: c:separator </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(14)]
-    public Separator Separator
-	{
-        get => GetElement<Separator>(14);
-        set => SetElement(14, value);
-	}
-    /// <summary>
-    /// <para> DLblExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: c:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(15)]
-    public DLblExtensionList DLblExtensionList
-	{
-        get => GetElement<DLblExtensionList>(15);
-        set => SetElement(15, value);
 	}
 
 
@@ -13532,7 +12516,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> Axis ID.</para>
     /// <para> Represents the following element tag in the schema: c:axId </para>
@@ -13714,97 +12698,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<CrossingAxis>(13);
         set => SetElement(13, value);
-	}
-    /// <summary>
-    /// <para> Crosses.</para>
-    /// <para> Represents the following element tag in the schema: c:crosses </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(14)]
-    public Crosses Crosses
-	{
-        get => GetElement<Crosses>(14);
-        set => SetElement(14, value);
-	}
-    /// <summary>
-    /// <para> Crossing Value.</para>
-    /// <para> Represents the following element tag in the schema: c:crossesAt </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(15)]
-    public CrossesAt CrossesAt
-	{
-        get => GetElement<CrossesAt>(15);
-        set => SetElement(15, value);
-	}
-    /// <summary>
-    /// <para> CrossBetween.</para>
-    /// <para> Represents the following element tag in the schema: c:crossBetween </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(16)]
-    public CrossBetween CrossBetween
-	{
-        get => GetElement<CrossBetween>(16);
-        set => SetElement(16, value);
-	}
-    /// <summary>
-    /// <para> MajorUnit.</para>
-    /// <para> Represents the following element tag in the schema: c:majorUnit </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(17)]
-    public MajorUnit MajorUnit
-	{
-        get => GetElement<MajorUnit>(17);
-        set => SetElement(17, value);
-	}
-    /// <summary>
-    /// <para> MinorUnit.</para>
-    /// <para> Represents the following element tag in the schema: c:minorUnit </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(18)]
-    public MinorUnit MinorUnit
-	{
-        get => GetElement<MinorUnit>(18);
-        set => SetElement(18, value);
-	}
-    /// <summary>
-    /// <para> DisplayUnits.</para>
-    /// <para> Represents the following element tag in the schema: c:dispUnits </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(19)]
-    public DisplayUnits DisplayUnits
-	{
-        get => GetElement<DisplayUnits>(19);
-        set => SetElement(19, value);
-	}
-    /// <summary>
-    /// <para> ValAxExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: c:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(20)]
-    public ValAxExtensionList ValAxExtensionList
-	{
-        get => GetElement<ValAxExtensionList>(20);
-        set => SetElement(20, value);
 	}
 
 
@@ -13946,7 +12839,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> Axis ID.</para>
     /// <para> Represents the following element tag in the schema: c:axId </para>
@@ -14128,123 +13021,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<CrossingAxis>(13);
         set => SetElement(13, value);
-	}
-    /// <summary>
-    /// <para> Crosses.</para>
-    /// <para> Represents the following element tag in the schema: c:crosses </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(14)]
-    public Crosses Crosses
-	{
-        get => GetElement<Crosses>(14);
-        set => SetElement(14, value);
-	}
-    /// <summary>
-    /// <para> Crossing Value.</para>
-    /// <para> Represents the following element tag in the schema: c:crossesAt </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(15)]
-    public CrossesAt CrossesAt
-	{
-        get => GetElement<CrossesAt>(15);
-        set => SetElement(15, value);
-	}
-    /// <summary>
-    /// <para> AutoLabeled.</para>
-    /// <para> Represents the following element tag in the schema: c:auto </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(16)]
-    public AutoLabeled AutoLabeled
-	{
-        get => GetElement<AutoLabeled>(16);
-        set => SetElement(16, value);
-	}
-    /// <summary>
-    /// <para> LabelAlignment.</para>
-    /// <para> Represents the following element tag in the schema: c:lblAlgn </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(17)]
-    public LabelAlignment LabelAlignment
-	{
-        get => GetElement<LabelAlignment>(17);
-        set => SetElement(17, value);
-	}
-    /// <summary>
-    /// <para> LabelOffset.</para>
-    /// <para> Represents the following element tag in the schema: c:lblOffset </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(18)]
-    public LabelOffset LabelOffset
-	{
-        get => GetElement<LabelOffset>(18);
-        set => SetElement(18, value);
-	}
-    /// <summary>
-    /// <para> TickLabelSkip.</para>
-    /// <para> Represents the following element tag in the schema: c:tickLblSkip </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(19)]
-    public TickLabelSkip TickLabelSkip
-	{
-        get => GetElement<TickLabelSkip>(19);
-        set => SetElement(19, value);
-	}
-    /// <summary>
-    /// <para> TickMarkSkip.</para>
-    /// <para> Represents the following element tag in the schema: c:tickMarkSkip </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(20)]
-    public TickMarkSkip TickMarkSkip
-	{
-        get => GetElement<TickMarkSkip>(20);
-        set => SetElement(20, value);
-	}
-    /// <summary>
-    /// <para> NoMultiLevelLabels.</para>
-    /// <para> Represents the following element tag in the schema: c:noMultiLvlLbl </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(21)]
-    public NoMultiLevelLabels NoMultiLevelLabels
-	{
-        get => GetElement<NoMultiLevelLabels>(21);
-        set => SetElement(21, value);
-	}
-    /// <summary>
-    /// <para> CatAxExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: c:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(22)]
-    public CatAxExtensionList CatAxExtensionList
-	{
-        get => GetElement<CatAxExtensionList>(22);
-        set => SetElement(22, value);
 	}
 
 
@@ -14389,7 +13165,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> Axis ID.</para>
     /// <para> Represents the following element tag in the schema: c:axId </para>
@@ -14571,136 +13347,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<CrossingAxis>(13);
         set => SetElement(13, value);
-	}
-    /// <summary>
-    /// <para> Crosses.</para>
-    /// <para> Represents the following element tag in the schema: c:crosses </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(14)]
-    public Crosses Crosses
-	{
-        get => GetElement<Crosses>(14);
-        set => SetElement(14, value);
-	}
-    /// <summary>
-    /// <para> Crossing Value.</para>
-    /// <para> Represents the following element tag in the schema: c:crossesAt </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(15)]
-    public CrossesAt CrossesAt
-	{
-        get => GetElement<CrossesAt>(15);
-        set => SetElement(15, value);
-	}
-    /// <summary>
-    /// <para> AutoLabeled.</para>
-    /// <para> Represents the following element tag in the schema: c:auto </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(16)]
-    public AutoLabeled AutoLabeled
-	{
-        get => GetElement<AutoLabeled>(16);
-        set => SetElement(16, value);
-	}
-    /// <summary>
-    /// <para> LabelOffset.</para>
-    /// <para> Represents the following element tag in the schema: c:lblOffset </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(17)]
-    public LabelOffset LabelOffset
-	{
-        get => GetElement<LabelOffset>(17);
-        set => SetElement(17, value);
-	}
-    /// <summary>
-    /// <para> BaseTimeUnit.</para>
-    /// <para> Represents the following element tag in the schema: c:baseTimeUnit </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(18)]
-    public BaseTimeUnit BaseTimeUnit
-	{
-        get => GetElement<BaseTimeUnit>(18);
-        set => SetElement(18, value);
-	}
-    /// <summary>
-    /// <para> MajorUnit.</para>
-    /// <para> Represents the following element tag in the schema: c:majorUnit </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(19)]
-    public MajorUnit MajorUnit
-	{
-        get => GetElement<MajorUnit>(19);
-        set => SetElement(19, value);
-	}
-    /// <summary>
-    /// <para> MajorTimeUnit.</para>
-    /// <para> Represents the following element tag in the schema: c:majorTimeUnit </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(20)]
-    public MajorTimeUnit MajorTimeUnit
-	{
-        get => GetElement<MajorTimeUnit>(20);
-        set => SetElement(20, value);
-	}
-    /// <summary>
-    /// <para> MinorUnit.</para>
-    /// <para> Represents the following element tag in the schema: c:minorUnit </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(21)]
-    public MinorUnit MinorUnit
-	{
-        get => GetElement<MinorUnit>(21);
-        set => SetElement(21, value);
-	}
-    /// <summary>
-    /// <para> MinorTimeUnit.</para>
-    /// <para> Represents the following element tag in the schema: c:minorTimeUnit </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(22)]
-    public MinorTimeUnit MinorTimeUnit
-	{
-        get => GetElement<MinorTimeUnit>(22);
-        set => SetElement(22, value);
-	}
-    /// <summary>
-    /// <para> DateAxExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: c:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(23)]
-    public DateAxExtensionList DateAxExtensionList
-	{
-        get => GetElement<DateAxExtensionList>(23);
-        set => SetElement(23, value);
 	}
 
 
@@ -14830,7 +13476,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> Axis ID.</para>
     /// <para> Represents the following element tag in the schema: c:axId </para>
@@ -15012,71 +13658,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<CrossingAxis>(13);
         set => SetElement(13, value);
-	}
-    /// <summary>
-    /// <para> Crosses.</para>
-    /// <para> Represents the following element tag in the schema: c:crosses </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(14)]
-    public Crosses Crosses
-	{
-        get => GetElement<Crosses>(14);
-        set => SetElement(14, value);
-	}
-    /// <summary>
-    /// <para> Crossing Value.</para>
-    /// <para> Represents the following element tag in the schema: c:crossesAt </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(15)]
-    public CrossesAt CrossesAt
-	{
-        get => GetElement<CrossesAt>(15);
-        set => SetElement(15, value);
-	}
-    /// <summary>
-    /// <para> TickLabelSkip.</para>
-    /// <para> Represents the following element tag in the schema: c:tickLblSkip </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(16)]
-    public TickLabelSkip TickLabelSkip
-	{
-        get => GetElement<TickLabelSkip>(16);
-        set => SetElement(16, value);
-	}
-    /// <summary>
-    /// <para> TickMarkSkip.</para>
-    /// <para> Represents the following element tag in the schema: c:tickMarkSkip </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(17)]
-    public TickMarkSkip TickMarkSkip
-	{
-        get => GetElement<TickMarkSkip>(17);
-        set => SetElement(17, value);
-	}
-    /// <summary>
-    /// <para> SerAxExtensionList.</para>
-    /// <para> Represents the following element tag in the schema: c:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(18)]
-    public SerAxExtensionList SerAxExtensionList
-	{
-        get => GetElement<SerAxExtensionList>(18);
-        set => SetElement(18, value);
 	}
 
 
@@ -22268,61 +20849,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-        /// <summary>
-    /// <para> Custom Display Unit.</para>
-    /// <para> Represents the following element tag in the schema: c:custUnit </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(0)]
-    public CustomDisplayUnit CustomDisplayUnit
-	{
-        get => GetElement<CustomDisplayUnit>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> Built in Display Unit Value.</para>
-    /// <para> Represents the following element tag in the schema: c:builtInUnit </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(1)]
-    public BuiltInUnit BuiltInUnit
-	{
-        get => GetElement<BuiltInUnit>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> Display Units Label.</para>
-    /// <para> Represents the following element tag in the schema: c:dispUnitsLbl </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(2)]
-    public DisplayUnitsLabel DisplayUnitsLabel
-	{
-        get => GetElement<DisplayUnitsLabel>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> Chart Extensibility.</para>
-    /// <para> Represents the following element tag in the schema: c:extLst </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-    /// </remark>
-	[Index(3)]
-    public ExtensionList ExtensionList
-	{
-        get => GetElement<ExtensionList>(3);
-        set => SetElement(3, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DisplayUnits>(deep);
 

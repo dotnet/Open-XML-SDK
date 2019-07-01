@@ -8973,178 +8973,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
-        /// <summary>
-    /// <para> Group.</para>
-    /// <para> Represents the following element tag in the schema: v:group </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(0)]
-    public DocumentFormat.OpenXml.Vml.Group Group
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Group>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> ImageFile.</para>
-    /// <para> Represents the following element tag in the schema: v:image </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(1)]
-    public DocumentFormat.OpenXml.Vml.ImageFile ImageFile
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.ImageFile>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> Line.</para>
-    /// <para> Represents the following element tag in the schema: v:line </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(2)]
-    public DocumentFormat.OpenXml.Vml.Line Line
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Line>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> Oval.</para>
-    /// <para> Represents the following element tag in the schema: v:oval </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(3)]
-    public DocumentFormat.OpenXml.Vml.Oval Oval
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Oval>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> PolyLine.</para>
-    /// <para> Represents the following element tag in the schema: v:polyline </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(4)]
-    public DocumentFormat.OpenXml.Vml.PolyLine PolyLine
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.PolyLine>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> Rectangle.</para>
-    /// <para> Represents the following element tag in the schema: v:rect </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(5)]
-    public DocumentFormat.OpenXml.Vml.Rectangle Rectangle
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Rectangle>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> RoundRectangle.</para>
-    /// <para> Represents the following element tag in the schema: v:roundrect </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(6)]
-    public DocumentFormat.OpenXml.Vml.RoundRectangle RoundRectangle
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.RoundRectangle>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> Shape.</para>
-    /// <para> Represents the following element tag in the schema: v:shape </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(7)]
-    public DocumentFormat.OpenXml.Vml.Shape Shape
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Shape>(7);
-        set => SetElement(7, value);
-	}
-    /// <summary>
-    /// <para> Shapetype.</para>
-    /// <para> Represents the following element tag in the schema: v:shapetype </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(8)]
-    public DocumentFormat.OpenXml.Vml.Shapetype Shapetype
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Shapetype>(8);
-        set => SetElement(8, value);
-	}
-    /// <summary>
-    /// <para> Arc.</para>
-    /// <para> Represents the following element tag in the schema: v:arc </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(9)]
-    public DocumentFormat.OpenXml.Vml.Arc Arc
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Arc>(9);
-        set => SetElement(9, value);
-	}
-    /// <summary>
-    /// <para> Curve.</para>
-    /// <para> Represents the following element tag in the schema: v:curve </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(10)]
-    public DocumentFormat.OpenXml.Vml.Curve Curve
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Curve>(10);
-        set => SetElement(10, value);
-	}
-    /// <summary>
-    /// <para> OleObject.</para>
-    /// <para> Represents the following element tag in the schema: o:OLEObject </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:o = urn:schemas-microsoft-com:office:office
-    /// </remark>
-	[Index(11)]
-    public DocumentFormat.OpenXml.Vml.Office.OleObject OleObject
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Office.OleObject>(11);
-        set => SetElement(11, value);
-	}
-    /// <summary>
-    /// <para> Drawing.</para>
-    /// <para> Represents the following element tag in the schema: w:drawing </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(12)]
-    public Drawing Drawing
-	{
-        get => GetElement<Drawing>(12);
-        set => SetElement(12, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbeddedObject>(deep);
 
@@ -9270,191 +9099,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
-        /// <summary>
-    /// <para> Group.</para>
-    /// <para> Represents the following element tag in the schema: v:group </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(0)]
-    public DocumentFormat.OpenXml.Vml.Group Group
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Group>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> ImageFile.</para>
-    /// <para> Represents the following element tag in the schema: v:image </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(1)]
-    public DocumentFormat.OpenXml.Vml.ImageFile ImageFile
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.ImageFile>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> Line.</para>
-    /// <para> Represents the following element tag in the schema: v:line </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(2)]
-    public DocumentFormat.OpenXml.Vml.Line Line
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Line>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> Oval.</para>
-    /// <para> Represents the following element tag in the schema: v:oval </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(3)]
-    public DocumentFormat.OpenXml.Vml.Oval Oval
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Oval>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> PolyLine.</para>
-    /// <para> Represents the following element tag in the schema: v:polyline </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(4)]
-    public DocumentFormat.OpenXml.Vml.PolyLine PolyLine
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.PolyLine>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> Rectangle.</para>
-    /// <para> Represents the following element tag in the schema: v:rect </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(5)]
-    public DocumentFormat.OpenXml.Vml.Rectangle Rectangle
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Rectangle>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> RoundRectangle.</para>
-    /// <para> Represents the following element tag in the schema: v:roundrect </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(6)]
-    public DocumentFormat.OpenXml.Vml.RoundRectangle RoundRectangle
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.RoundRectangle>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> Shape.</para>
-    /// <para> Represents the following element tag in the schema: v:shape </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(7)]
-    public DocumentFormat.OpenXml.Vml.Shape Shape
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Shape>(7);
-        set => SetElement(7, value);
-	}
-    /// <summary>
-    /// <para> Shapetype.</para>
-    /// <para> Represents the following element tag in the schema: v:shapetype </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(8)]
-    public DocumentFormat.OpenXml.Vml.Shapetype Shapetype
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Shapetype>(8);
-        set => SetElement(8, value);
-	}
-    /// <summary>
-    /// <para> Arc.</para>
-    /// <para> Represents the following element tag in the schema: v:arc </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(9)]
-    public DocumentFormat.OpenXml.Vml.Arc Arc
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Arc>(9);
-        set => SetElement(9, value);
-	}
-    /// <summary>
-    /// <para> Curve.</para>
-    /// <para> Represents the following element tag in the schema: v:curve </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:v = urn:schemas-microsoft-com:vml
-    /// </remark>
-	[Index(10)]
-    public DocumentFormat.OpenXml.Vml.Curve Curve
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Curve>(10);
-        set => SetElement(10, value);
-	}
-    /// <summary>
-    /// <para> OleObject.</para>
-    /// <para> Represents the following element tag in the schema: o:OLEObject </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:o = urn:schemas-microsoft-com:office:office
-    /// </remark>
-	[Index(11)]
-    public DocumentFormat.OpenXml.Vml.Office.OleObject OleObject
-	{
-        get => GetElement<DocumentFormat.OpenXml.Vml.Office.OleObject>(11);
-        set => SetElement(11, value);
-	}
-    /// <summary>
-    /// <para> MovieReference.</para>
-    /// <para> Represents the following element tag in the schema: w:movie </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(12)]
-    public MovieReference MovieReference
-	{
-        get => GetElement<MovieReference>(12);
-        set => SetElement(12, value);
-	}
-    /// <summary>
-    /// <para> Control.</para>
-    /// <para> Represents the following element tag in the schema: w:control </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(13)]
-    public Control Control
-	{
-        get => GetElement<Control>(13);
-        set => SetElement(13, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Picture>(deep);
 
@@ -13588,7 +13233,9 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlRuby>(deep);
 
@@ -13917,7 +13564,22 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        /// <summary>
+    /// <para> FieldData.</para>
+    /// <para> Represents the following element tag in the schema: w:fldData </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public FieldData FieldData
+	{
+        get => GetElement<FieldData>(0);
+        set => SetElement(0, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SimpleFieldRuby>(deep);
 
@@ -14472,7 +14134,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> Run Properties.</para>
     /// <para> Represents the following element tag in the schema: w:rPr </para>
@@ -14485,422 +14147,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<RunProperties>(0);
         set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> Break.</para>
-    /// <para> Represents the following element tag in the schema: w:br </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(1)]
-    public Break Break
-	{
-        get => GetElement<Break>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> Text.</para>
-    /// <para> Represents the following element tag in the schema: w:t </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(2)]
-    public Text Text
-	{
-        get => GetElement<Text>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> Deleted Text.</para>
-    /// <para> Represents the following element tag in the schema: w:delText </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(3)]
-    public DeletedText DeletedText
-	{
-        get => GetElement<DeletedText>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> Field Code.</para>
-    /// <para> Represents the following element tag in the schema: w:instrText </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(4)]
-    public FieldCode FieldCode
-	{
-        get => GetElement<FieldCode>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> Deleted Field Code.</para>
-    /// <para> Represents the following element tag in the schema: w:delInstrText </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(5)]
-    public DeletedFieldCode DeletedFieldCode
-	{
-        get => GetElement<DeletedFieldCode>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> Non Breaking Hyphen Character.</para>
-    /// <para> Represents the following element tag in the schema: w:noBreakHyphen </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(6)]
-    public NoBreakHyphen NoBreakHyphen
-	{
-        get => GetElement<NoBreakHyphen>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> Optional Hyphen Character.</para>
-    /// <para> Represents the following element tag in the schema: w:softHyphen </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(7)]
-    public SoftHyphen SoftHyphen
-	{
-        get => GetElement<SoftHyphen>(7);
-        set => SetElement(7, value);
-	}
-    /// <summary>
-    /// <para> Date Block - Short Day Format.</para>
-    /// <para> Represents the following element tag in the schema: w:dayShort </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(8)]
-    public DayShort DayShort
-	{
-        get => GetElement<DayShort>(8);
-        set => SetElement(8, value);
-	}
-    /// <summary>
-    /// <para> Date Block - Short Month Format.</para>
-    /// <para> Represents the following element tag in the schema: w:monthShort </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(9)]
-    public MonthShort MonthShort
-	{
-        get => GetElement<MonthShort>(9);
-        set => SetElement(9, value);
-	}
-    /// <summary>
-    /// <para> Date Block - Short Year Format.</para>
-    /// <para> Represents the following element tag in the schema: w:yearShort </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(10)]
-    public YearShort YearShort
-	{
-        get => GetElement<YearShort>(10);
-        set => SetElement(10, value);
-	}
-    /// <summary>
-    /// <para> Date Block - Long Day Format.</para>
-    /// <para> Represents the following element tag in the schema: w:dayLong </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(11)]
-    public DayLong DayLong
-	{
-        get => GetElement<DayLong>(11);
-        set => SetElement(11, value);
-	}
-    /// <summary>
-    /// <para> Date Block - Long Month Format.</para>
-    /// <para> Represents the following element tag in the schema: w:monthLong </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(12)]
-    public MonthLong MonthLong
-	{
-        get => GetElement<MonthLong>(12);
-        set => SetElement(12, value);
-	}
-    /// <summary>
-    /// <para> Date Block - Long Year Format.</para>
-    /// <para> Represents the following element tag in the schema: w:yearLong </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(13)]
-    public YearLong YearLong
-	{
-        get => GetElement<YearLong>(13);
-        set => SetElement(13, value);
-	}
-    /// <summary>
-    /// <para> Comment Information Block.</para>
-    /// <para> Represents the following element tag in the schema: w:annotationRef </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(14)]
-    public AnnotationReferenceMark AnnotationReferenceMark
-	{
-        get => GetElement<AnnotationReferenceMark>(14);
-        set => SetElement(14, value);
-	}
-    /// <summary>
-    /// <para> Footnote Reference Mark.</para>
-    /// <para> Represents the following element tag in the schema: w:footnoteRef </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(15)]
-    public FootnoteReferenceMark FootnoteReferenceMark
-	{
-        get => GetElement<FootnoteReferenceMark>(15);
-        set => SetElement(15, value);
-	}
-    /// <summary>
-    /// <para> Endnote Reference Mark.</para>
-    /// <para> Represents the following element tag in the schema: w:endnoteRef </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(16)]
-    public EndnoteReferenceMark EndnoteReferenceMark
-	{
-        get => GetElement<EndnoteReferenceMark>(16);
-        set => SetElement(16, value);
-	}
-    /// <summary>
-    /// <para> Footnote/Endnote Separator Mark.</para>
-    /// <para> Represents the following element tag in the schema: w:separator </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(17)]
-    public SeparatorMark SeparatorMark
-	{
-        get => GetElement<SeparatorMark>(17);
-        set => SetElement(17, value);
-	}
-    /// <summary>
-    /// <para> Continuation Separator Mark.</para>
-    /// <para> Represents the following element tag in the schema: w:continuationSeparator </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(18)]
-    public ContinuationSeparatorMark ContinuationSeparatorMark
-	{
-        get => GetElement<ContinuationSeparatorMark>(18);
-        set => SetElement(18, value);
-	}
-    /// <summary>
-    /// <para> Symbol Character.</para>
-    /// <para> Represents the following element tag in the schema: w:sym </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(19)]
-    public SymbolChar SymbolChar
-	{
-        get => GetElement<SymbolChar>(19);
-        set => SetElement(19, value);
-	}
-    /// <summary>
-    /// <para> Page Number Block.</para>
-    /// <para> Represents the following element tag in the schema: w:pgNum </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(20)]
-    public PageNumber PageNumber
-	{
-        get => GetElement<PageNumber>(20);
-        set => SetElement(20, value);
-	}
-    /// <summary>
-    /// <para> Carriage Return.</para>
-    /// <para> Represents the following element tag in the schema: w:cr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(21)]
-    public CarriageReturn CarriageReturn
-	{
-        get => GetElement<CarriageReturn>(21);
-        set => SetElement(21, value);
-	}
-    /// <summary>
-    /// <para> Tab Character.</para>
-    /// <para> Represents the following element tag in the schema: w:tab </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(22)]
-    public TabChar TabChar
-	{
-        get => GetElement<TabChar>(22);
-        set => SetElement(22, value);
-	}
-    /// <summary>
-    /// <para> Inline Embedded Object.</para>
-    /// <para> Represents the following element tag in the schema: w:object </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(23)]
-    public EmbeddedObject EmbeddedObject
-	{
-        get => GetElement<EmbeddedObject>(23);
-        set => SetElement(23, value);
-	}
-    /// <summary>
-    /// <para> VML Object.</para>
-    /// <para> Represents the following element tag in the schema: w:pict </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(24)]
-    public Picture Picture
-	{
-        get => GetElement<Picture>(24);
-        set => SetElement(24, value);
-	}
-    /// <summary>
-    /// <para> Complex Field Character.</para>
-    /// <para> Represents the following element tag in the schema: w:fldChar </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(25)]
-    public FieldChar FieldChar
-	{
-        get => GetElement<FieldChar>(25);
-        set => SetElement(25, value);
-	}
-    /// <summary>
-    /// <para> Phonetic Guide.</para>
-    /// <para> Represents the following element tag in the schema: w:ruby </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(26)]
-    public Ruby Ruby
-	{
-        get => GetElement<Ruby>(26);
-        set => SetElement(26, value);
-	}
-    /// <summary>
-    /// <para> Footnote Reference.</para>
-    /// <para> Represents the following element tag in the schema: w:footnoteReference </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(27)]
-    public FootnoteReference FootnoteReference
-	{
-        get => GetElement<FootnoteReference>(27);
-        set => SetElement(27, value);
-	}
-    /// <summary>
-    /// <para> Endnote Reference.</para>
-    /// <para> Represents the following element tag in the schema: w:endnoteReference </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(28)]
-    public EndnoteReference EndnoteReference
-	{
-        get => GetElement<EndnoteReference>(28);
-        set => SetElement(28, value);
-	}
-    /// <summary>
-    /// <para> Comment Content Reference Mark.</para>
-    /// <para> Represents the following element tag in the schema: w:commentReference </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(29)]
-    public CommentReference CommentReference
-	{
-        get => GetElement<CommentReference>(29);
-        set => SetElement(29, value);
-	}
-    /// <summary>
-    /// <para> DrawingML Object.</para>
-    /// <para> Represents the following element tag in the schema: w:drawing </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(30)]
-    public Drawing Drawing
-	{
-        get => GetElement<Drawing>(30);
-        set => SetElement(30, value);
-	}
-    /// <summary>
-    /// <para> Absolute Position Tab Character.</para>
-    /// <para> Represents the following element tag in the schema: w:ptab </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(31)]
-    public PositionalTab PositionalTab
-	{
-        get => GetElement<PositionalTab>(31);
-        set => SetElement(31, value);
-	}
-    /// <summary>
-    /// <para> Position of Last Calculated Page Break.</para>
-    /// <para> Represents the following element tag in the schema: w:lastRenderedPageBreak </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(32)]
-    public LastRenderedPageBreak LastRenderedPageBreak
-	{
-        get => GetElement<LastRenderedPageBreak>(32);
-        set => SetElement(32, value);
 	}
 
 
@@ -15051,7 +14297,22 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        /// <summary>
+    /// <para> SdtContentRunRuby.</para>
+    /// <para> Represents the following element tag in the schema: w:sdtContent </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public SdtContentRunRuby SdtContentRunRuby
+	{
+        get => GetElement<SdtContentRunRuby>(2);
+        set => SetElement(2, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtRunRuby>(deep);
 
@@ -16601,7 +15862,22 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        /// <summary>
+    /// <para> Inline-Level Structured Document Tag Content.</para>
+    /// <para> Represents the following element tag in the schema: w:sdtContent </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public SdtContentRun SdtContentRun
+	{
+        get => GetElement<SdtContentRun>(2);
+        set => SetElement(2, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtRun>(deep);
 
@@ -16815,7 +16091,9 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlBlock>(deep);
 
@@ -16963,7 +16241,22 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        /// <summary>
+    /// <para> Block-Level Structured Document Tag Content.</para>
+    /// <para> Represents the following element tag in the schema: w:sdtContent </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public SdtContentBlock SdtContentBlock
+	{
+        get => GetElement<SdtContentBlock>(2);
+        set => SetElement(2, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtBlock>(deep);
 
@@ -17379,7 +16672,22 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        /// <summary>
+    /// <para> Paragraph Properties.</para>
+    /// <para> Represents the following element tag in the schema: w:pPr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public ParagraphProperties ParagraphProperties
+	{
+        get => GetElement<ParagraphProperties>(0);
+        set => SetElement(0, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Paragraph>(deep);
 
@@ -17895,7 +17203,35 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        /// <summary>
+    /// <para> Table-Level Property Exceptions.</para>
+    /// <para> Represents the following element tag in the schema: w:tblPrEx </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public TablePropertyExceptions TablePropertyExceptions
+	{
+        get => GetElement<TablePropertyExceptions>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> Table Row Properties.</para>
+    /// <para> Represents the following element tag in the schema: w:trPr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public TableRowProperties TableRowProperties
+	{
+        get => GetElement<TableRowProperties>(1);
+        set => SetElement(1, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableRow>(deep);
 
@@ -18100,7 +17436,9 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlRow>(deep);
 
@@ -18248,7 +17586,22 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        /// <summary>
+    /// <para> Row-Level Structured Document Tag Content.</para>
+    /// <para> Represents the following element tag in the schema: w:sdtContent </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public SdtContentRow SdtContentRow
+	{
+        get => GetElement<SdtContentRow>(2);
+        set => SetElement(2, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtRow>(deep);
 
@@ -18483,7 +17836,22 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        /// <summary>
+    /// <para> Table Cell Properties.</para>
+    /// <para> Represents the following element tag in the schema: w:tcPr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public TableCellProperties TableCellProperties
+	{
+        get => GetElement<TableCellProperties>(0);
+        set => SetElement(0, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCell>(deep);
 
@@ -18688,7 +18056,9 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlCell>(deep);
 
@@ -18836,7 +18206,22 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        /// <summary>
+    /// <para> Cell-Level Structured Document Tag Content.</para>
+    /// <para> Represents the following element tag in the schema: w:sdtContent </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public SdtContentCell SdtContentCell
+	{
+        get => GetElement<SdtContentCell>(2);
+        set => SetElement(2, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtCell>(deep);
 
@@ -19170,7 +18555,9 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
     
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXmlRun>(deep);
 
@@ -19532,7 +18919,22 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        /// <summary>
+    /// <para> Custom Field Data.</para>
+    /// <para> Represents the following element tag in the schema: w:fldData </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public FieldData FieldData
+	{
+        get => GetElement<FieldData>(0);
+        set => SetElement(0, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SimpleField>(deep);
 
@@ -30372,7 +29774,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> Inserted Paragraph.</para>
     /// <para> Represents the following element tag in the schema: w:ins </para>
@@ -30424,695 +29826,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<MoveTo>(3);
         set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> ConflictInsertion.</para>
-    /// <para> Represents the following element tag in the schema: w14:conflictIns </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(4)]
-    public DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion ConflictInsertion
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> ConflictDeletion.</para>
-    /// <para> Represents the following element tag in the schema: w14:conflictDel </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(5)]
-    public DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion ConflictDeletion
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> RunStyle.</para>
-    /// <para> Represents the following element tag in the schema: w:rStyle </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(6)]
-    public RunStyle RunStyle
-	{
-        get => GetElement<RunStyle>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> RunFonts.</para>
-    /// <para> Represents the following element tag in the schema: w:rFonts </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(7)]
-    public RunFonts RunFonts
-	{
-        get => GetElement<RunFonts>(7);
-        set => SetElement(7, value);
-	}
-    /// <summary>
-    /// <para> Bold.</para>
-    /// <para> Represents the following element tag in the schema: w:b </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(8)]
-    public Bold Bold
-	{
-        get => GetElement<Bold>(8);
-        set => SetElement(8, value);
-	}
-    /// <summary>
-    /// <para> BoldComplexScript.</para>
-    /// <para> Represents the following element tag in the schema: w:bCs </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(9)]
-    public BoldComplexScript BoldComplexScript
-	{
-        get => GetElement<BoldComplexScript>(9);
-        set => SetElement(9, value);
-	}
-    /// <summary>
-    /// <para> Italic.</para>
-    /// <para> Represents the following element tag in the schema: w:i </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(10)]
-    public Italic Italic
-	{
-        get => GetElement<Italic>(10);
-        set => SetElement(10, value);
-	}
-    /// <summary>
-    /// <para> ItalicComplexScript.</para>
-    /// <para> Represents the following element tag in the schema: w:iCs </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(11)]
-    public ItalicComplexScript ItalicComplexScript
-	{
-        get => GetElement<ItalicComplexScript>(11);
-        set => SetElement(11, value);
-	}
-    /// <summary>
-    /// <para> Caps.</para>
-    /// <para> Represents the following element tag in the schema: w:caps </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(12)]
-    public Caps Caps
-	{
-        get => GetElement<Caps>(12);
-        set => SetElement(12, value);
-	}
-    /// <summary>
-    /// <para> SmallCaps.</para>
-    /// <para> Represents the following element tag in the schema: w:smallCaps </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(13)]
-    public SmallCaps SmallCaps
-	{
-        get => GetElement<SmallCaps>(13);
-        set => SetElement(13, value);
-	}
-    /// <summary>
-    /// <para> Strike.</para>
-    /// <para> Represents the following element tag in the schema: w:strike </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(14)]
-    public Strike Strike
-	{
-        get => GetElement<Strike>(14);
-        set => SetElement(14, value);
-	}
-    /// <summary>
-    /// <para> DoubleStrike.</para>
-    /// <para> Represents the following element tag in the schema: w:dstrike </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(15)]
-    public DoubleStrike DoubleStrike
-	{
-        get => GetElement<DoubleStrike>(15);
-        set => SetElement(15, value);
-	}
-    /// <summary>
-    /// <para> Outline.</para>
-    /// <para> Represents the following element tag in the schema: w:outline </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(16)]
-    public Outline Outline
-	{
-        get => GetElement<Outline>(16);
-        set => SetElement(16, value);
-	}
-    /// <summary>
-    /// <para> Shadow.</para>
-    /// <para> Represents the following element tag in the schema: w:shadow </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(17)]
-    public Shadow Shadow
-	{
-        get => GetElement<Shadow>(17);
-        set => SetElement(17, value);
-	}
-    /// <summary>
-    /// <para> Emboss.</para>
-    /// <para> Represents the following element tag in the schema: w:emboss </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(18)]
-    public Emboss Emboss
-	{
-        get => GetElement<Emboss>(18);
-        set => SetElement(18, value);
-	}
-    /// <summary>
-    /// <para> Imprint.</para>
-    /// <para> Represents the following element tag in the schema: w:imprint </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(19)]
-    public Imprint Imprint
-	{
-        get => GetElement<Imprint>(19);
-        set => SetElement(19, value);
-	}
-    /// <summary>
-    /// <para> NoProof.</para>
-    /// <para> Represents the following element tag in the schema: w:noProof </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(20)]
-    public NoProof NoProof
-	{
-        get => GetElement<NoProof>(20);
-        set => SetElement(20, value);
-	}
-    /// <summary>
-    /// <para> SnapToGrid.</para>
-    /// <para> Represents the following element tag in the schema: w:snapToGrid </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(21)]
-    public SnapToGrid SnapToGrid
-	{
-        get => GetElement<SnapToGrid>(21);
-        set => SetElement(21, value);
-	}
-    /// <summary>
-    /// <para> Vanish.</para>
-    /// <para> Represents the following element tag in the schema: w:vanish </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(22)]
-    public Vanish Vanish
-	{
-        get => GetElement<Vanish>(22);
-        set => SetElement(22, value);
-	}
-    /// <summary>
-    /// <para> WebHidden.</para>
-    /// <para> Represents the following element tag in the schema: w:webHidden </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(23)]
-    public WebHidden WebHidden
-	{
-        get => GetElement<WebHidden>(23);
-        set => SetElement(23, value);
-	}
-    /// <summary>
-    /// <para> Color.</para>
-    /// <para> Represents the following element tag in the schema: w:color </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(24)]
-    public Color Color
-	{
-        get => GetElement<Color>(24);
-        set => SetElement(24, value);
-	}
-    /// <summary>
-    /// <para> Spacing.</para>
-    /// <para> Represents the following element tag in the schema: w:spacing </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(25)]
-    public Spacing Spacing
-	{
-        get => GetElement<Spacing>(25);
-        set => SetElement(25, value);
-	}
-    /// <summary>
-    /// <para> CharacterScale.</para>
-    /// <para> Represents the following element tag in the schema: w:w </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(26)]
-    public CharacterScale CharacterScale
-	{
-        get => GetElement<CharacterScale>(26);
-        set => SetElement(26, value);
-	}
-    /// <summary>
-    /// <para> Kern.</para>
-    /// <para> Represents the following element tag in the schema: w:kern </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(27)]
-    public Kern Kern
-	{
-        get => GetElement<Kern>(27);
-        set => SetElement(27, value);
-	}
-    /// <summary>
-    /// <para> Position.</para>
-    /// <para> Represents the following element tag in the schema: w:position </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(28)]
-    public Position Position
-	{
-        get => GetElement<Position>(28);
-        set => SetElement(28, value);
-	}
-    /// <summary>
-    /// <para> FontSize.</para>
-    /// <para> Represents the following element tag in the schema: w:sz </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(29)]
-    public FontSize FontSize
-	{
-        get => GetElement<FontSize>(29);
-        set => SetElement(29, value);
-	}
-    /// <summary>
-    /// <para> FontSizeComplexScript.</para>
-    /// <para> Represents the following element tag in the schema: w:szCs </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(30)]
-    public FontSizeComplexScript FontSizeComplexScript
-	{
-        get => GetElement<FontSizeComplexScript>(30);
-        set => SetElement(30, value);
-	}
-    /// <summary>
-    /// <para> Highlight.</para>
-    /// <para> Represents the following element tag in the schema: w:highlight </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(31)]
-    public Highlight Highlight
-	{
-        get => GetElement<Highlight>(31);
-        set => SetElement(31, value);
-	}
-    /// <summary>
-    /// <para> Underline.</para>
-    /// <para> Represents the following element tag in the schema: w:u </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(32)]
-    public Underline Underline
-	{
-        get => GetElement<Underline>(32);
-        set => SetElement(32, value);
-	}
-    /// <summary>
-    /// <para> TextEffect.</para>
-    /// <para> Represents the following element tag in the schema: w:effect </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(33)]
-    public TextEffect TextEffect
-	{
-        get => GetElement<TextEffect>(33);
-        set => SetElement(33, value);
-	}
-    /// <summary>
-    /// <para> Border.</para>
-    /// <para> Represents the following element tag in the schema: w:bdr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(34)]
-    public Border Border
-	{
-        get => GetElement<Border>(34);
-        set => SetElement(34, value);
-	}
-    /// <summary>
-    /// <para> Shading.</para>
-    /// <para> Represents the following element tag in the schema: w:shd </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(35)]
-    public Shading Shading
-	{
-        get => GetElement<Shading>(35);
-        set => SetElement(35, value);
-	}
-    /// <summary>
-    /// <para> FitText.</para>
-    /// <para> Represents the following element tag in the schema: w:fitText </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(36)]
-    public FitText FitText
-	{
-        get => GetElement<FitText>(36);
-        set => SetElement(36, value);
-	}
-    /// <summary>
-    /// <para> VerticalTextAlignment.</para>
-    /// <para> Represents the following element tag in the schema: w:vertAlign </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(37)]
-    public VerticalTextAlignment VerticalTextAlignment
-	{
-        get => GetElement<VerticalTextAlignment>(37);
-        set => SetElement(37, value);
-	}
-    /// <summary>
-    /// <para> RightToLeftText.</para>
-    /// <para> Represents the following element tag in the schema: w:rtl </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(38)]
-    public RightToLeftText RightToLeftText
-	{
-        get => GetElement<RightToLeftText>(38);
-        set => SetElement(38, value);
-	}
-    /// <summary>
-    /// <para> ComplexScript.</para>
-    /// <para> Represents the following element tag in the schema: w:cs </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(39)]
-    public ComplexScript ComplexScript
-	{
-        get => GetElement<ComplexScript>(39);
-        set => SetElement(39, value);
-	}
-    /// <summary>
-    /// <para> Emphasis.</para>
-    /// <para> Represents the following element tag in the schema: w:em </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(40)]
-    public Emphasis Emphasis
-	{
-        get => GetElement<Emphasis>(40);
-        set => SetElement(40, value);
-	}
-    /// <summary>
-    /// <para> Languages.</para>
-    /// <para> Represents the following element tag in the schema: w:lang </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(41)]
-    public Languages Languages
-	{
-        get => GetElement<Languages>(41);
-        set => SetElement(41, value);
-	}
-    /// <summary>
-    /// <para> EastAsianLayout.</para>
-    /// <para> Represents the following element tag in the schema: w:eastAsianLayout </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(42)]
-    public EastAsianLayout EastAsianLayout
-	{
-        get => GetElement<EastAsianLayout>(42);
-        set => SetElement(42, value);
-	}
-    /// <summary>
-    /// <para> SpecVanish.</para>
-    /// <para> Represents the following element tag in the schema: w:specVanish </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(43)]
-    public SpecVanish SpecVanish
-	{
-        get => GetElement<SpecVanish>(43);
-        set => SetElement(43, value);
-	}
-    /// <summary>
-    /// <para> Glow.</para>
-    /// <para> Represents the following element tag in the schema: w14:glow </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(44)]
-    public DocumentFormat.OpenXml.Office2010.Word.Glow Glow
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Glow>(44);
-        set => SetElement(44, value);
-	}
-    /// <summary>
-    /// <para> Shadow14.</para>
-    /// <para> Represents the following element tag in the schema: w14:shadow </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(45)]
-    public DocumentFormat.OpenXml.Office2010.Word.Shadow Shadow14
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Shadow>(45);
-        set => SetElement(45, value);
-	}
-    /// <summary>
-    /// <para> Reflection.</para>
-    /// <para> Represents the following element tag in the schema: w14:reflection </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(46)]
-    public DocumentFormat.OpenXml.Office2010.Word.Reflection Reflection
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Reflection>(46);
-        set => SetElement(46, value);
-	}
-    /// <summary>
-    /// <para> TextOutlineEffect.</para>
-    /// <para> Represents the following element tag in the schema: w14:textOutline </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(47)]
-    public DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect TextOutlineEffect
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>(47);
-        set => SetElement(47, value);
-	}
-    /// <summary>
-    /// <para> FillTextEffect.</para>
-    /// <para> Represents the following element tag in the schema: w14:textFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(48)]
-    public DocumentFormat.OpenXml.Office2010.Word.FillTextEffect FillTextEffect
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>(48);
-        set => SetElement(48, value);
-	}
-    /// <summary>
-    /// <para> Scene3D.</para>
-    /// <para> Represents the following element tag in the schema: w14:scene3d </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(49)]
-    public DocumentFormat.OpenXml.Office2010.Word.Scene3D Scene3D
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Scene3D>(49);
-        set => SetElement(49, value);
-	}
-    /// <summary>
-    /// <para> Properties3D.</para>
-    /// <para> Represents the following element tag in the schema: w14:props3d </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(50)]
-    public DocumentFormat.OpenXml.Office2010.Word.Properties3D Properties3D
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Properties3D>(50);
-        set => SetElement(50, value);
-	}
-    /// <summary>
-    /// <para> Ligatures.</para>
-    /// <para> Represents the following element tag in the schema: w14:ligatures </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(51)]
-    public DocumentFormat.OpenXml.Office2010.Word.Ligatures Ligatures
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Ligatures>(51);
-        set => SetElement(51, value);
-	}
-    /// <summary>
-    /// <para> NumberingFormat.</para>
-    /// <para> Represents the following element tag in the schema: w14:numForm </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(52)]
-    public DocumentFormat.OpenXml.Office2010.Word.NumberingFormat NumberingFormat
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>(52);
-        set => SetElement(52, value);
-	}
-    /// <summary>
-    /// <para> NumberSpacing.</para>
-    /// <para> Represents the following element tag in the schema: w14:numSpacing </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(53)]
-    public DocumentFormat.OpenXml.Office2010.Word.NumberSpacing NumberSpacing
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>(53);
-        set => SetElement(53, value);
-	}
-    /// <summary>
-    /// <para> StylisticSets.</para>
-    /// <para> Represents the following element tag in the schema: w14:stylisticSets </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(54)]
-    public DocumentFormat.OpenXml.Office2010.Word.StylisticSets StylisticSets
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>(54);
-        set => SetElement(54, value);
-	}
-    /// <summary>
-    /// <para> ContextualAlternatives.</para>
-    /// <para> Represents the following element tag in the schema: w14:cntxtAlts </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(55)]
-    public DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives ContextualAlternatives
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>(55);
-        set => SetElement(55, value);
-	}
-    /// <summary>
-    /// <para> OfficeMath.</para>
-    /// <para> Represents the following element tag in the schema: w:oMath </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(56)]
-    public OfficeMath OfficeMath
-	{
-        get => GetElement<OfficeMath>(56);
-        set => SetElement(56, value);
 	}
 
 
@@ -31698,7 +30411,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
     /// <para> Inserted Paragraph.</para>
     /// <para> Represents the following element tag in the schema: w:ins </para>
@@ -31750,708 +30463,6 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<MoveTo>(3);
         set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> ConflictInsertion.</para>
-    /// <para> Represents the following element tag in the schema: w14:conflictIns </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(4)]
-    public DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion ConflictInsertion
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> ConflictDeletion.</para>
-    /// <para> Represents the following element tag in the schema: w14:conflictDel </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(5)]
-    public DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion ConflictDeletion
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> RunStyle.</para>
-    /// <para> Represents the following element tag in the schema: w:rStyle </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(6)]
-    public RunStyle RunStyle
-	{
-        get => GetElement<RunStyle>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> RunFonts.</para>
-    /// <para> Represents the following element tag in the schema: w:rFonts </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(7)]
-    public RunFonts RunFonts
-	{
-        get => GetElement<RunFonts>(7);
-        set => SetElement(7, value);
-	}
-    /// <summary>
-    /// <para> Bold.</para>
-    /// <para> Represents the following element tag in the schema: w:b </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(8)]
-    public Bold Bold
-	{
-        get => GetElement<Bold>(8);
-        set => SetElement(8, value);
-	}
-    /// <summary>
-    /// <para> BoldComplexScript.</para>
-    /// <para> Represents the following element tag in the schema: w:bCs </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(9)]
-    public BoldComplexScript BoldComplexScript
-	{
-        get => GetElement<BoldComplexScript>(9);
-        set => SetElement(9, value);
-	}
-    /// <summary>
-    /// <para> Italic.</para>
-    /// <para> Represents the following element tag in the schema: w:i </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(10)]
-    public Italic Italic
-	{
-        get => GetElement<Italic>(10);
-        set => SetElement(10, value);
-	}
-    /// <summary>
-    /// <para> ItalicComplexScript.</para>
-    /// <para> Represents the following element tag in the schema: w:iCs </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(11)]
-    public ItalicComplexScript ItalicComplexScript
-	{
-        get => GetElement<ItalicComplexScript>(11);
-        set => SetElement(11, value);
-	}
-    /// <summary>
-    /// <para> Caps.</para>
-    /// <para> Represents the following element tag in the schema: w:caps </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(12)]
-    public Caps Caps
-	{
-        get => GetElement<Caps>(12);
-        set => SetElement(12, value);
-	}
-    /// <summary>
-    /// <para> SmallCaps.</para>
-    /// <para> Represents the following element tag in the schema: w:smallCaps </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(13)]
-    public SmallCaps SmallCaps
-	{
-        get => GetElement<SmallCaps>(13);
-        set => SetElement(13, value);
-	}
-    /// <summary>
-    /// <para> Strike.</para>
-    /// <para> Represents the following element tag in the schema: w:strike </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(14)]
-    public Strike Strike
-	{
-        get => GetElement<Strike>(14);
-        set => SetElement(14, value);
-	}
-    /// <summary>
-    /// <para> DoubleStrike.</para>
-    /// <para> Represents the following element tag in the schema: w:dstrike </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(15)]
-    public DoubleStrike DoubleStrike
-	{
-        get => GetElement<DoubleStrike>(15);
-        set => SetElement(15, value);
-	}
-    /// <summary>
-    /// <para> Outline.</para>
-    /// <para> Represents the following element tag in the schema: w:outline </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(16)]
-    public Outline Outline
-	{
-        get => GetElement<Outline>(16);
-        set => SetElement(16, value);
-	}
-    /// <summary>
-    /// <para> Shadow.</para>
-    /// <para> Represents the following element tag in the schema: w:shadow </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(17)]
-    public Shadow Shadow
-	{
-        get => GetElement<Shadow>(17);
-        set => SetElement(17, value);
-	}
-    /// <summary>
-    /// <para> Emboss.</para>
-    /// <para> Represents the following element tag in the schema: w:emboss </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(18)]
-    public Emboss Emboss
-	{
-        get => GetElement<Emboss>(18);
-        set => SetElement(18, value);
-	}
-    /// <summary>
-    /// <para> Imprint.</para>
-    /// <para> Represents the following element tag in the schema: w:imprint </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(19)]
-    public Imprint Imprint
-	{
-        get => GetElement<Imprint>(19);
-        set => SetElement(19, value);
-	}
-    /// <summary>
-    /// <para> NoProof.</para>
-    /// <para> Represents the following element tag in the schema: w:noProof </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(20)]
-    public NoProof NoProof
-	{
-        get => GetElement<NoProof>(20);
-        set => SetElement(20, value);
-	}
-    /// <summary>
-    /// <para> SnapToGrid.</para>
-    /// <para> Represents the following element tag in the schema: w:snapToGrid </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(21)]
-    public SnapToGrid SnapToGrid
-	{
-        get => GetElement<SnapToGrid>(21);
-        set => SetElement(21, value);
-	}
-    /// <summary>
-    /// <para> Vanish.</para>
-    /// <para> Represents the following element tag in the schema: w:vanish </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(22)]
-    public Vanish Vanish
-	{
-        get => GetElement<Vanish>(22);
-        set => SetElement(22, value);
-	}
-    /// <summary>
-    /// <para> WebHidden.</para>
-    /// <para> Represents the following element tag in the schema: w:webHidden </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(23)]
-    public WebHidden WebHidden
-	{
-        get => GetElement<WebHidden>(23);
-        set => SetElement(23, value);
-	}
-    /// <summary>
-    /// <para> Color.</para>
-    /// <para> Represents the following element tag in the schema: w:color </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(24)]
-    public Color Color
-	{
-        get => GetElement<Color>(24);
-        set => SetElement(24, value);
-	}
-    /// <summary>
-    /// <para> Spacing.</para>
-    /// <para> Represents the following element tag in the schema: w:spacing </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(25)]
-    public Spacing Spacing
-	{
-        get => GetElement<Spacing>(25);
-        set => SetElement(25, value);
-	}
-    /// <summary>
-    /// <para> CharacterScale.</para>
-    /// <para> Represents the following element tag in the schema: w:w </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(26)]
-    public CharacterScale CharacterScale
-	{
-        get => GetElement<CharacterScale>(26);
-        set => SetElement(26, value);
-	}
-    /// <summary>
-    /// <para> Kern.</para>
-    /// <para> Represents the following element tag in the schema: w:kern </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(27)]
-    public Kern Kern
-	{
-        get => GetElement<Kern>(27);
-        set => SetElement(27, value);
-	}
-    /// <summary>
-    /// <para> Position.</para>
-    /// <para> Represents the following element tag in the schema: w:position </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(28)]
-    public Position Position
-	{
-        get => GetElement<Position>(28);
-        set => SetElement(28, value);
-	}
-    /// <summary>
-    /// <para> FontSize.</para>
-    /// <para> Represents the following element tag in the schema: w:sz </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(29)]
-    public FontSize FontSize
-	{
-        get => GetElement<FontSize>(29);
-        set => SetElement(29, value);
-	}
-    /// <summary>
-    /// <para> FontSizeComplexScript.</para>
-    /// <para> Represents the following element tag in the schema: w:szCs </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(30)]
-    public FontSizeComplexScript FontSizeComplexScript
-	{
-        get => GetElement<FontSizeComplexScript>(30);
-        set => SetElement(30, value);
-	}
-    /// <summary>
-    /// <para> Highlight.</para>
-    /// <para> Represents the following element tag in the schema: w:highlight </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(31)]
-    public Highlight Highlight
-	{
-        get => GetElement<Highlight>(31);
-        set => SetElement(31, value);
-	}
-    /// <summary>
-    /// <para> Underline.</para>
-    /// <para> Represents the following element tag in the schema: w:u </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(32)]
-    public Underline Underline
-	{
-        get => GetElement<Underline>(32);
-        set => SetElement(32, value);
-	}
-    /// <summary>
-    /// <para> TextEffect.</para>
-    /// <para> Represents the following element tag in the schema: w:effect </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(33)]
-    public TextEffect TextEffect
-	{
-        get => GetElement<TextEffect>(33);
-        set => SetElement(33, value);
-	}
-    /// <summary>
-    /// <para> Border.</para>
-    /// <para> Represents the following element tag in the schema: w:bdr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(34)]
-    public Border Border
-	{
-        get => GetElement<Border>(34);
-        set => SetElement(34, value);
-	}
-    /// <summary>
-    /// <para> Shading.</para>
-    /// <para> Represents the following element tag in the schema: w:shd </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(35)]
-    public Shading Shading
-	{
-        get => GetElement<Shading>(35);
-        set => SetElement(35, value);
-	}
-    /// <summary>
-    /// <para> FitText.</para>
-    /// <para> Represents the following element tag in the schema: w:fitText </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(36)]
-    public FitText FitText
-	{
-        get => GetElement<FitText>(36);
-        set => SetElement(36, value);
-	}
-    /// <summary>
-    /// <para> VerticalTextAlignment.</para>
-    /// <para> Represents the following element tag in the schema: w:vertAlign </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(37)]
-    public VerticalTextAlignment VerticalTextAlignment
-	{
-        get => GetElement<VerticalTextAlignment>(37);
-        set => SetElement(37, value);
-	}
-    /// <summary>
-    /// <para> RightToLeftText.</para>
-    /// <para> Represents the following element tag in the schema: w:rtl </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(38)]
-    public RightToLeftText RightToLeftText
-	{
-        get => GetElement<RightToLeftText>(38);
-        set => SetElement(38, value);
-	}
-    /// <summary>
-    /// <para> ComplexScript.</para>
-    /// <para> Represents the following element tag in the schema: w:cs </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(39)]
-    public ComplexScript ComplexScript
-	{
-        get => GetElement<ComplexScript>(39);
-        set => SetElement(39, value);
-	}
-    /// <summary>
-    /// <para> Emphasis.</para>
-    /// <para> Represents the following element tag in the schema: w:em </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(40)]
-    public Emphasis Emphasis
-	{
-        get => GetElement<Emphasis>(40);
-        set => SetElement(40, value);
-	}
-    /// <summary>
-    /// <para> Languages.</para>
-    /// <para> Represents the following element tag in the schema: w:lang </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(41)]
-    public Languages Languages
-	{
-        get => GetElement<Languages>(41);
-        set => SetElement(41, value);
-	}
-    /// <summary>
-    /// <para> EastAsianLayout.</para>
-    /// <para> Represents the following element tag in the schema: w:eastAsianLayout </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(42)]
-    public EastAsianLayout EastAsianLayout
-	{
-        get => GetElement<EastAsianLayout>(42);
-        set => SetElement(42, value);
-	}
-    /// <summary>
-    /// <para> SpecVanish.</para>
-    /// <para> Represents the following element tag in the schema: w:specVanish </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(43)]
-    public SpecVanish SpecVanish
-	{
-        get => GetElement<SpecVanish>(43);
-        set => SetElement(43, value);
-	}
-    /// <summary>
-    /// <para> Glow.</para>
-    /// <para> Represents the following element tag in the schema: w14:glow </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(44)]
-    public DocumentFormat.OpenXml.Office2010.Word.Glow Glow
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Glow>(44);
-        set => SetElement(44, value);
-	}
-    /// <summary>
-    /// <para> Shadow14.</para>
-    /// <para> Represents the following element tag in the schema: w14:shadow </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(45)]
-    public DocumentFormat.OpenXml.Office2010.Word.Shadow Shadow14
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Shadow>(45);
-        set => SetElement(45, value);
-	}
-    /// <summary>
-    /// <para> Reflection.</para>
-    /// <para> Represents the following element tag in the schema: w14:reflection </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(46)]
-    public DocumentFormat.OpenXml.Office2010.Word.Reflection Reflection
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Reflection>(46);
-        set => SetElement(46, value);
-	}
-    /// <summary>
-    /// <para> TextOutlineEffect.</para>
-    /// <para> Represents the following element tag in the schema: w14:textOutline </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(47)]
-    public DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect TextOutlineEffect
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>(47);
-        set => SetElement(47, value);
-	}
-    /// <summary>
-    /// <para> FillTextEffect.</para>
-    /// <para> Represents the following element tag in the schema: w14:textFill </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(48)]
-    public DocumentFormat.OpenXml.Office2010.Word.FillTextEffect FillTextEffect
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>(48);
-        set => SetElement(48, value);
-	}
-    /// <summary>
-    /// <para> Scene3D.</para>
-    /// <para> Represents the following element tag in the schema: w14:scene3d </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(49)]
-    public DocumentFormat.OpenXml.Office2010.Word.Scene3D Scene3D
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Scene3D>(49);
-        set => SetElement(49, value);
-	}
-    /// <summary>
-    /// <para> Properties3D.</para>
-    /// <para> Represents the following element tag in the schema: w14:props3d </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(50)]
-    public DocumentFormat.OpenXml.Office2010.Word.Properties3D Properties3D
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Properties3D>(50);
-        set => SetElement(50, value);
-	}
-    /// <summary>
-    /// <para> Ligatures.</para>
-    /// <para> Represents the following element tag in the schema: w14:ligatures </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(51)]
-    public DocumentFormat.OpenXml.Office2010.Word.Ligatures Ligatures
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Ligatures>(51);
-        set => SetElement(51, value);
-	}
-    /// <summary>
-    /// <para> NumberingFormat.</para>
-    /// <para> Represents the following element tag in the schema: w14:numForm </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(52)]
-    public DocumentFormat.OpenXml.Office2010.Word.NumberingFormat NumberingFormat
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>(52);
-        set => SetElement(52, value);
-	}
-    /// <summary>
-    /// <para> NumberSpacing.</para>
-    /// <para> Represents the following element tag in the schema: w14:numSpacing </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(53)]
-    public DocumentFormat.OpenXml.Office2010.Word.NumberSpacing NumberSpacing
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>(53);
-        set => SetElement(53, value);
-	}
-    /// <summary>
-    /// <para> StylisticSets.</para>
-    /// <para> Represents the following element tag in the schema: w14:stylisticSets </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(54)]
-    public DocumentFormat.OpenXml.Office2010.Word.StylisticSets StylisticSets
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>(54);
-        set => SetElement(54, value);
-	}
-    /// <summary>
-    /// <para> ContextualAlternatives.</para>
-    /// <para> Represents the following element tag in the schema: w14:cntxtAlts </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(55)]
-    public DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives ContextualAlternatives
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>(55);
-        set => SetElement(55, value);
-	}
-    /// <summary>
-    /// <para> OfficeMath.</para>
-    /// <para> Represents the following element tag in the schema: w:oMath </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(56)]
-    public OfficeMath OfficeMath
-	{
-        get => GetElement<OfficeMath>(56);
-        set => SetElement(56, value);
-	}
-    /// <summary>
-    /// <para> Revision Information for Run Properties on the Paragraph Mark.</para>
-    /// <para> Represents the following element tag in the schema: w:rPrChange </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(57)]
-    public ParagraphMarkRunPropertiesChange ParagraphMarkRunPropertiesChange
-	{
-        get => GetElement<ParagraphMarkRunPropertiesChange>(57);
-        set => SetElement(57, value);
 	}
 
 
@@ -32636,282 +30647,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-        /// <summary>
-    /// <para> FootnoteProperties.</para>
-    /// <para> Represents the following element tag in the schema: w:footnotePr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(0)]
-    public FootnoteProperties FootnoteProperties
-	{
-        get => GetElement<FootnoteProperties>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> EndnoteProperties.</para>
-    /// <para> Represents the following element tag in the schema: w:endnotePr </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(1)]
-    public EndnoteProperties EndnoteProperties
-	{
-        get => GetElement<EndnoteProperties>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> SectionType.</para>
-    /// <para> Represents the following element tag in the schema: w:type </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(2)]
-    public SectionType SectionType
-	{
-        get => GetElement<SectionType>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> PageSize.</para>
-    /// <para> Represents the following element tag in the schema: w:pgSz </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(3)]
-    public PageSize PageSize
-	{
-        get => GetElement<PageSize>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> PageMargin.</para>
-    /// <para> Represents the following element tag in the schema: w:pgMar </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(4)]
-    public PageMargin PageMargin
-	{
-        get => GetElement<PageMargin>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> PaperSource.</para>
-    /// <para> Represents the following element tag in the schema: w:paperSrc </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(5)]
-    public PaperSource PaperSource
-	{
-        get => GetElement<PaperSource>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> PageBorders.</para>
-    /// <para> Represents the following element tag in the schema: w:pgBorders </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(6)]
-    public PageBorders PageBorders
-	{
-        get => GetElement<PageBorders>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> LineNumberType.</para>
-    /// <para> Represents the following element tag in the schema: w:lnNumType </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(7)]
-    public LineNumberType LineNumberType
-	{
-        get => GetElement<LineNumberType>(7);
-        set => SetElement(7, value);
-	}
-    /// <summary>
-    /// <para> PageNumberType.</para>
-    /// <para> Represents the following element tag in the schema: w:pgNumType </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(8)]
-    public PageNumberType PageNumberType
-	{
-        get => GetElement<PageNumberType>(8);
-        set => SetElement(8, value);
-	}
-    /// <summary>
-    /// <para> Columns.</para>
-    /// <para> Represents the following element tag in the schema: w:cols </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(9)]
-    public Columns Columns
-	{
-        get => GetElement<Columns>(9);
-        set => SetElement(9, value);
-	}
-    /// <summary>
-    /// <para> FormProtection.</para>
-    /// <para> Represents the following element tag in the schema: w:formProt </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(10)]
-    public FormProtection FormProtection
-	{
-        get => GetElement<FormProtection>(10);
-        set => SetElement(10, value);
-	}
-    /// <summary>
-    /// <para> VerticalTextAlignmentOnPage.</para>
-    /// <para> Represents the following element tag in the schema: w:vAlign </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(11)]
-    public VerticalTextAlignmentOnPage VerticalTextAlignmentOnPage
-	{
-        get => GetElement<VerticalTextAlignmentOnPage>(11);
-        set => SetElement(11, value);
-	}
-    /// <summary>
-    /// <para> NoEndnote.</para>
-    /// <para> Represents the following element tag in the schema: w:noEndnote </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(12)]
-    public NoEndnote NoEndnote
-	{
-        get => GetElement<NoEndnote>(12);
-        set => SetElement(12, value);
-	}
-    /// <summary>
-    /// <para> TitlePage.</para>
-    /// <para> Represents the following element tag in the schema: w:titlePg </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(13)]
-    public TitlePage TitlePage
-	{
-        get => GetElement<TitlePage>(13);
-        set => SetElement(13, value);
-	}
-    /// <summary>
-    /// <para> TextDirection.</para>
-    /// <para> Represents the following element tag in the schema: w:textDirection </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(14)]
-    public TextDirection TextDirection
-	{
-        get => GetElement<TextDirection>(14);
-        set => SetElement(14, value);
-	}
-    /// <summary>
-    /// <para> BiDi.</para>
-    /// <para> Represents the following element tag in the schema: w:bidi </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(15)]
-    public BiDi BiDi
-	{
-        get => GetElement<BiDi>(15);
-        set => SetElement(15, value);
-	}
-    /// <summary>
-    /// <para> GutterOnRight.</para>
-    /// <para> Represents the following element tag in the schema: w:rtlGutter </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(16)]
-    public GutterOnRight GutterOnRight
-	{
-        get => GetElement<GutterOnRight>(16);
-        set => SetElement(16, value);
-	}
-    /// <summary>
-    /// <para> DocGrid.</para>
-    /// <para> Represents the following element tag in the schema: w:docGrid </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(17)]
-    public DocGrid DocGrid
-	{
-        get => GetElement<DocGrid>(17);
-        set => SetElement(17, value);
-	}
-    /// <summary>
-    /// <para> PrinterSettingsReference.</para>
-    /// <para> Represents the following element tag in the schema: w:printerSettings </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(18)]
-    public PrinterSettingsReference PrinterSettingsReference
-	{
-        get => GetElement<PrinterSettingsReference>(18);
-        set => SetElement(18, value);
-	}
-    /// <summary>
-    /// <para> FootnoteColumns.</para>
-    /// <para> Represents the following element tag in the schema: w15:footnoteColumns </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
-    /// </remark>
-	[Index(19)]
-    public DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns FootnoteColumns
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>(19);
-        set => SetElement(19, value);
-	}
-    /// <summary>
-    /// <para> Revision Information for Section Properties.</para>
-    /// <para> Represents the following element tag in the schema: w:sectPrChange </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(20)]
-    public SectionPropertiesChange SectionPropertiesChange
-	{
-        get => GetElement<SectionPropertiesChange>(20);
-        set => SetElement(20, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SectionProperties>(deep);
 
@@ -33340,61 +31076,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
-        /// <summary>
-    /// <para> Checkbox Form Field Size.</para>
-    /// <para> Represents the following element tag in the schema: w:size </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(0)]
-    public FormFieldSize FormFieldSize
-	{
-        get => GetElement<FormFieldSize>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> Automatically Size Form Field.</para>
-    /// <para> Represents the following element tag in the schema: w:sizeAuto </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(1)]
-    public AutomaticallySizeFormField AutomaticallySizeFormField
-	{
-        get => GetElement<AutomaticallySizeFormField>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> Default Checkbox Form Field State.</para>
-    /// <para> Represents the following element tag in the schema: w:default </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(2)]
-    public DefaultCheckBoxFormFieldState DefaultCheckBoxFormFieldState
-	{
-        get => GetElement<DefaultCheckBoxFormFieldState>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> Checkbox Form Field State.</para>
-    /// <para> Represents the following element tag in the schema: w:checked </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(3)]
-    public Checked Checked
-	{
-        get => GetElement<Checked>(3);
-        set => SetElement(3, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CheckBox>(deep);
 
@@ -50340,230 +48022,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
-        /// <summary>
-    /// <para> ConditionalFormatStyle.</para>
-    /// <para> Represents the following element tag in the schema: w:cnfStyle </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(0)]
-    public ConditionalFormatStyle ConditionalFormatStyle
-	{
-        get => GetElement<ConditionalFormatStyle>(0);
-        set => SetElement(0, value);
-	}
-    /// <summary>
-    /// <para> DivId.</para>
-    /// <para> Represents the following element tag in the schema: w:divId </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(1)]
-    public DivId DivId
-	{
-        get => GetElement<DivId>(1);
-        set => SetElement(1, value);
-	}
-    /// <summary>
-    /// <para> GridBefore.</para>
-    /// <para> Represents the following element tag in the schema: w:gridBefore </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(2)]
-    public GridBefore GridBefore
-	{
-        get => GetElement<GridBefore>(2);
-        set => SetElement(2, value);
-	}
-    /// <summary>
-    /// <para> GridAfter.</para>
-    /// <para> Represents the following element tag in the schema: w:gridAfter </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(3)]
-    public GridAfter GridAfter
-	{
-        get => GetElement<GridAfter>(3);
-        set => SetElement(3, value);
-	}
-    /// <summary>
-    /// <para> WidthBeforeTableRow.</para>
-    /// <para> Represents the following element tag in the schema: w:wBefore </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(4)]
-    public WidthBeforeTableRow WidthBeforeTableRow
-	{
-        get => GetElement<WidthBeforeTableRow>(4);
-        set => SetElement(4, value);
-	}
-    /// <summary>
-    /// <para> WidthAfterTableRow.</para>
-    /// <para> Represents the following element tag in the schema: w:wAfter </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(5)]
-    public WidthAfterTableRow WidthAfterTableRow
-	{
-        get => GetElement<WidthAfterTableRow>(5);
-        set => SetElement(5, value);
-	}
-    /// <summary>
-    /// <para> TableRowHeight.</para>
-    /// <para> Represents the following element tag in the schema: w:trHeight </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(6)]
-    public TableRowHeight TableRowHeight
-	{
-        get => GetElement<TableRowHeight>(6);
-        set => SetElement(6, value);
-	}
-    /// <summary>
-    /// <para> Hidden.</para>
-    /// <para> Represents the following element tag in the schema: w:hidden </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(7)]
-    public Hidden Hidden
-	{
-        get => GetElement<Hidden>(7);
-        set => SetElement(7, value);
-	}
-    /// <summary>
-    /// <para> CantSplit.</para>
-    /// <para> Represents the following element tag in the schema: w:cantSplit </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(8)]
-    public CantSplit CantSplit
-	{
-        get => GetElement<CantSplit>(8);
-        set => SetElement(8, value);
-	}
-    /// <summary>
-    /// <para> TableHeader.</para>
-    /// <para> Represents the following element tag in the schema: w:tblHeader </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(9)]
-    public TableHeader TableHeader
-	{
-        get => GetElement<TableHeader>(9);
-        set => SetElement(9, value);
-	}
-    /// <summary>
-    /// <para> TableCellSpacing.</para>
-    /// <para> Represents the following element tag in the schema: w:tblCellSpacing </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(10)]
-    public TableCellSpacing TableCellSpacing
-	{
-        get => GetElement<TableCellSpacing>(10);
-        set => SetElement(10, value);
-	}
-    /// <summary>
-    /// <para> TableJustification.</para>
-    /// <para> Represents the following element tag in the schema: w:jc </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(11)]
-    public TableJustification TableJustification
-	{
-        get => GetElement<TableJustification>(11);
-        set => SetElement(11, value);
-	}
-    /// <summary>
-    /// <para> Inserted Table Row.</para>
-    /// <para> Represents the following element tag in the schema: w:ins </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(12)]
-    public Inserted Inserted
-	{
-        get => GetElement<Inserted>(12);
-        set => SetElement(12, value);
-	}
-    /// <summary>
-    /// <para> Deleted Table Row.</para>
-    /// <para> Represents the following element tag in the schema: w:del </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(13)]
-    public Deleted Deleted
-	{
-        get => GetElement<Deleted>(13);
-        set => SetElement(13, value);
-	}
-    /// <summary>
-    /// <para> Revision Information for Table Row Properties.</para>
-    /// <para> Represents the following element tag in the schema: w:trPrChange </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-    /// </remark>
-	[Index(14)]
-    public TableRowPropertiesChange TableRowPropertiesChange
-	{
-        get => GetElement<TableRowPropertiesChange>(14);
-        set => SetElement(14, value);
-	}
-    /// <summary>
-    /// <para> ConflictInsertion.</para>
-    /// <para> Represents the following element tag in the schema: w14:conflictIns </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(15)]
-    public DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion ConflictInsertion
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion>(15);
-        set => SetElement(15, value);
-	}
-    /// <summary>
-    /// <para> ConflictDeletion.</para>
-    /// <para> Represents the following element tag in the schema: w14:conflictDel </para>
-    /// </summary>
-    /// <remark>
-    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-    /// </remark>
-	[Index(16)]
-    public DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion ConflictDeletion
-	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion>(16);
-        set => SetElement(16, value);
-	}
-
-
+    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableRowProperties>(deep);
 
