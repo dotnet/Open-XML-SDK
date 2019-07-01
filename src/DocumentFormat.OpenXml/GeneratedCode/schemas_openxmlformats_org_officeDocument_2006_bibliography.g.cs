@@ -3250,7 +3250,35 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
     
     
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> NameList.</para>
+    /// <para> Represents the following element tag in the schema: b:NameList </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(0)]
+    public NameList NameList
+	{
+        get => GetElement<NameList>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> Corporate Author.</para>
+    /// <para> Represents the following element tag in the schema: b:Corporate </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(1)]
+    public Corporate Corporate
+	{
+        get => GetElement<Corporate>(1);
+        set => SetElement(1, value);
+	}
+
+
     /// <summary>
     /// Initializes a new instance of the NameOrCorporateType class.
     /// </summary>
@@ -3388,7 +3416,217 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        /// <summary>
+    /// <para> Artist.</para>
+    /// <para> Represents the following element tag in the schema: b:Artist </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(0)]
+    public Artist Artist
+	{
+        get => GetElement<Artist>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> Author.</para>
+    /// <para> Represents the following element tag in the schema: b:Author </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(1)]
+    public Author Author
+	{
+        get => GetElement<Author>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Book Author.</para>
+    /// <para> Represents the following element tag in the schema: b:BookAuthor </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(2)]
+    public BookAuthor BookAuthor
+	{
+        get => GetElement<BookAuthor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> Compiler.</para>
+    /// <para> Represents the following element tag in the schema: b:Compiler </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(3)]
+    public Compiler Compiler
+	{
+        get => GetElement<Compiler>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Composer.</para>
+    /// <para> Represents the following element tag in the schema: b:Composer </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(4)]
+    public Composer Composer
+	{
+        get => GetElement<Composer>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Conductor.</para>
+    /// <para> Represents the following element tag in the schema: b:Conductor </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(5)]
+    public Conductor Conductor
+	{
+        get => GetElement<Conductor>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> Counsel.</para>
+    /// <para> Represents the following element tag in the schema: b:Counsel </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(6)]
+    public Counsel Counsel
+	{
+        get => GetElement<Counsel>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> Director.</para>
+    /// <para> Represents the following element tag in the schema: b:Director </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(7)]
+    public Director Director
+	{
+        get => GetElement<Director>(7);
+        set => SetElement(7, value);
+	}
+    /// <summary>
+    /// <para> Editor.</para>
+    /// <para> Represents the following element tag in the schema: b:Editor </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(8)]
+    public Editor Editor
+	{
+        get => GetElement<Editor>(8);
+        set => SetElement(8, value);
+	}
+    /// <summary>
+    /// <para> Interviewee.</para>
+    /// <para> Represents the following element tag in the schema: b:Interviewee </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(9)]
+    public Interviewee Interviewee
+	{
+        get => GetElement<Interviewee>(9);
+        set => SetElement(9, value);
+	}
+    /// <summary>
+    /// <para> Interviewer.</para>
+    /// <para> Represents the following element tag in the schema: b:Interviewer </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(10)]
+    public Interviewer Interviewer
+	{
+        get => GetElement<Interviewer>(10);
+        set => SetElement(10, value);
+	}
+    /// <summary>
+    /// <para> Inventor.</para>
+    /// <para> Represents the following element tag in the schema: b:Inventor </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(11)]
+    public Inventor Inventor
+	{
+        get => GetElement<Inventor>(11);
+        set => SetElement(11, value);
+	}
+    /// <summary>
+    /// <para> Performer.</para>
+    /// <para> Represents the following element tag in the schema: b:Performer </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(12)]
+    public Performer Performer
+	{
+        get => GetElement<Performer>(12);
+        set => SetElement(12, value);
+	}
+    /// <summary>
+    /// <para> Producer Name.</para>
+    /// <para> Represents the following element tag in the schema: b:ProducerName </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(13)]
+    public ProducerName ProducerName
+	{
+        get => GetElement<ProducerName>(13);
+        set => SetElement(13, value);
+	}
+    /// <summary>
+    /// <para> Translator.</para>
+    /// <para> Represents the following element tag in the schema: b:Translator </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(14)]
+    public Translator Translator
+	{
+        get => GetElement<Translator>(14);
+        set => SetElement(14, value);
+	}
+    /// <summary>
+    /// <para> Writer.</para>
+    /// <para> Represents the following element tag in the schema: b:Writer </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(15)]
+    public Writer Writer
+	{
+        get => GetElement<Writer>(15);
+        set => SetElement(15, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AuthorList>(deep);
 
@@ -3650,7 +3888,685 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        /// <summary>
+    /// <para> Abbreviated Case Number.</para>
+    /// <para> Represents the following element tag in the schema: b:AbbreviatedCaseNumber </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(0)]
+    public AbbreviatedCaseNumber AbbreviatedCaseNumber
+	{
+        get => GetElement<AbbreviatedCaseNumber>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> Album Title.</para>
+    /// <para> Represents the following element tag in the schema: b:AlbumTitle </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(1)]
+    public AlbumTitle AlbumTitle
+	{
+        get => GetElement<AlbumTitle>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Contributors List.</para>
+    /// <para> Represents the following element tag in the schema: b:Author </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(2)]
+    public AuthorList AuthorList
+	{
+        get => GetElement<AuthorList>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> Book Title.</para>
+    /// <para> Represents the following element tag in the schema: b:BookTitle </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(3)]
+    public BookTitle BookTitle
+	{
+        get => GetElement<BookTitle>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Broadcaster.</para>
+    /// <para> Represents the following element tag in the schema: b:Broadcaster </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(4)]
+    public Broadcaster Broadcaster
+	{
+        get => GetElement<Broadcaster>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Broadcast Title.</para>
+    /// <para> Represents the following element tag in the schema: b:BroadcastTitle </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(5)]
+    public BroadcastTitle BroadcastTitle
+	{
+        get => GetElement<BroadcastTitle>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> Case Number.</para>
+    /// <para> Represents the following element tag in the schema: b:CaseNumber </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(6)]
+    public CaseNumber CaseNumber
+	{
+        get => GetElement<CaseNumber>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> Chapter Number.</para>
+    /// <para> Represents the following element tag in the schema: b:ChapterNumber </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(7)]
+    public ChapterNumber ChapterNumber
+	{
+        get => GetElement<ChapterNumber>(7);
+        set => SetElement(7, value);
+	}
+    /// <summary>
+    /// <para> City.</para>
+    /// <para> Represents the following element tag in the schema: b:City </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(8)]
+    public City City
+	{
+        get => GetElement<City>(8);
+        set => SetElement(8, value);
+	}
+    /// <summary>
+    /// <para> Comments.</para>
+    /// <para> Represents the following element tag in the schema: b:Comments </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(9)]
+    public Comments Comments
+	{
+        get => GetElement<Comments>(9);
+        set => SetElement(9, value);
+	}
+    /// <summary>
+    /// <para> Conference or Proceedings Name.</para>
+    /// <para> Represents the following element tag in the schema: b:ConferenceName </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(10)]
+    public ConferenceName ConferenceName
+	{
+        get => GetElement<ConferenceName>(10);
+        set => SetElement(10, value);
+	}
+    /// <summary>
+    /// <para> Country or Region.</para>
+    /// <para> Represents the following element tag in the schema: b:CountryRegion </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(11)]
+    public CountryRegion CountryRegion
+	{
+        get => GetElement<CountryRegion>(11);
+        set => SetElement(11, value);
+	}
+    /// <summary>
+    /// <para> Court.</para>
+    /// <para> Represents the following element tag in the schema: b:Court </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(12)]
+    public Court Court
+	{
+        get => GetElement<Court>(12);
+        set => SetElement(12, value);
+	}
+    /// <summary>
+    /// <para> Day.</para>
+    /// <para> Represents the following element tag in the schema: b:Day </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(13)]
+    public Day Day
+	{
+        get => GetElement<Day>(13);
+        set => SetElement(13, value);
+	}
+    /// <summary>
+    /// <para> Day Accessed.</para>
+    /// <para> Represents the following element tag in the schema: b:DayAccessed </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(14)]
+    public DayAccessed DayAccessed
+	{
+        get => GetElement<DayAccessed>(14);
+        set => SetElement(14, value);
+	}
+    /// <summary>
+    /// <para> Department.</para>
+    /// <para> Represents the following element tag in the schema: b:Department </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(15)]
+    public Department Department
+	{
+        get => GetElement<Department>(15);
+        set => SetElement(15, value);
+	}
+    /// <summary>
+    /// <para> Distributor.</para>
+    /// <para> Represents the following element tag in the schema: b:Distributor </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(16)]
+    public Distributor Distributor
+	{
+        get => GetElement<Distributor>(16);
+        set => SetElement(16, value);
+	}
+    /// <summary>
+    /// <para> Editor.</para>
+    /// <para> Represents the following element tag in the schema: b:Edition </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(17)]
+    public Edition Edition
+	{
+        get => GetElement<Edition>(17);
+        set => SetElement(17, value);
+	}
+    /// <summary>
+    /// <para> GUID.</para>
+    /// <para> Represents the following element tag in the schema: b:Guid </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(18)]
+    public GuidString GuidString
+	{
+        get => GetElement<GuidString>(18);
+        set => SetElement(18, value);
+	}
+    /// <summary>
+    /// <para> Institution.</para>
+    /// <para> Represents the following element tag in the schema: b:Institution </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(19)]
+    public Institution Institution
+	{
+        get => GetElement<Institution>(19);
+        set => SetElement(19, value);
+	}
+    /// <summary>
+    /// <para> Internet Site Title.</para>
+    /// <para> Represents the following element tag in the schema: b:InternetSiteTitle </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(20)]
+    public InternetSiteTitle InternetSiteTitle
+	{
+        get => GetElement<InternetSiteTitle>(20);
+        set => SetElement(20, value);
+	}
+    /// <summary>
+    /// <para> Issue.</para>
+    /// <para> Represents the following element tag in the schema: b:Issue </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(21)]
+    public Issue Issue
+	{
+        get => GetElement<Issue>(21);
+        set => SetElement(21, value);
+	}
+    /// <summary>
+    /// <para> Journal Name.</para>
+    /// <para> Represents the following element tag in the schema: b:JournalName </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(22)]
+    public JournalName JournalName
+	{
+        get => GetElement<JournalName>(22);
+        set => SetElement(22, value);
+	}
+    /// <summary>
+    /// <para> Locale ID.</para>
+    /// <para> Represents the following element tag in the schema: b:LCID </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(23)]
+    public LcId LcId
+	{
+        get => GetElement<LcId>(23);
+        set => SetElement(23, value);
+	}
+    /// <summary>
+    /// <para> Medium.</para>
+    /// <para> Represents the following element tag in the schema: b:Medium </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(24)]
+    public Medium Medium
+	{
+        get => GetElement<Medium>(24);
+        set => SetElement(24, value);
+	}
+    /// <summary>
+    /// <para> Month.</para>
+    /// <para> Represents the following element tag in the schema: b:Month </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(25)]
+    public Month Month
+	{
+        get => GetElement<Month>(25);
+        set => SetElement(25, value);
+	}
+    /// <summary>
+    /// <para> Month Accessed.</para>
+    /// <para> Represents the following element tag in the schema: b:MonthAccessed </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(26)]
+    public MonthAccessed MonthAccessed
+	{
+        get => GetElement<MonthAccessed>(26);
+        set => SetElement(26, value);
+	}
+    /// <summary>
+    /// <para> Number of Volumes.</para>
+    /// <para> Represents the following element tag in the schema: b:NumberVolumes </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(27)]
+    public NumberVolumes NumberVolumes
+	{
+        get => GetElement<NumberVolumes>(27);
+        set => SetElement(27, value);
+	}
+    /// <summary>
+    /// <para> Pages.</para>
+    /// <para> Represents the following element tag in the schema: b:Pages </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(28)]
+    public Pages Pages
+	{
+        get => GetElement<Pages>(28);
+        set => SetElement(28, value);
+	}
+    /// <summary>
+    /// <para> Patent Number.</para>
+    /// <para> Represents the following element tag in the schema: b:PatentNumber </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(29)]
+    public PatentNumber PatentNumber
+	{
+        get => GetElement<PatentNumber>(29);
+        set => SetElement(29, value);
+	}
+    /// <summary>
+    /// <para> Periodical Title.</para>
+    /// <para> Represents the following element tag in the schema: b:PeriodicalTitle </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(30)]
+    public PeriodicalTitle PeriodicalTitle
+	{
+        get => GetElement<PeriodicalTitle>(30);
+        set => SetElement(30, value);
+	}
+    /// <summary>
+    /// <para> Production Company.</para>
+    /// <para> Represents the following element tag in the schema: b:ProductionCompany </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(31)]
+    public ProductionCompany ProductionCompany
+	{
+        get => GetElement<ProductionCompany>(31);
+        set => SetElement(31, value);
+	}
+    /// <summary>
+    /// <para> Publication Title.</para>
+    /// <para> Represents the following element tag in the schema: b:PublicationTitle </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(32)]
+    public PublicationTitle PublicationTitle
+	{
+        get => GetElement<PublicationTitle>(32);
+        set => SetElement(32, value);
+	}
+    /// <summary>
+    /// <para> Publisher.</para>
+    /// <para> Represents the following element tag in the schema: b:Publisher </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(33)]
+    public Publisher Publisher
+	{
+        get => GetElement<Publisher>(33);
+        set => SetElement(33, value);
+	}
+    /// <summary>
+    /// <para> Recording Number.</para>
+    /// <para> Represents the following element tag in the schema: b:RecordingNumber </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(34)]
+    public RecordingNumber RecordingNumber
+	{
+        get => GetElement<RecordingNumber>(34);
+        set => SetElement(34, value);
+	}
+    /// <summary>
+    /// <para> Reference Order.</para>
+    /// <para> Represents the following element tag in the schema: b:RefOrder </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(35)]
+    public ReferenceOrder ReferenceOrder
+	{
+        get => GetElement<ReferenceOrder>(35);
+        set => SetElement(35, value);
+	}
+    /// <summary>
+    /// <para> Reporter.</para>
+    /// <para> Represents the following element tag in the schema: b:Reporter </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(36)]
+    public Reporter Reporter
+	{
+        get => GetElement<Reporter>(36);
+        set => SetElement(36, value);
+	}
+    /// <summary>
+    /// <para> Source Type.</para>
+    /// <para> Represents the following element tag in the schema: b:SourceType </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(37)]
+    public SourceType SourceType
+	{
+        get => GetElement<SourceType>(37);
+        set => SetElement(37, value);
+	}
+    /// <summary>
+    /// <para> Short Title.</para>
+    /// <para> Represents the following element tag in the schema: b:ShortTitle </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(38)]
+    public ShortTitle ShortTitle
+	{
+        get => GetElement<ShortTitle>(38);
+        set => SetElement(38, value);
+	}
+    /// <summary>
+    /// <para> Standard Number.</para>
+    /// <para> Represents the following element tag in the schema: b:StandardNumber </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(39)]
+    public StandardNumber StandardNumber
+	{
+        get => GetElement<StandardNumber>(39);
+        set => SetElement(39, value);
+	}
+    /// <summary>
+    /// <para> State or Province.</para>
+    /// <para> Represents the following element tag in the schema: b:StateProvince </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(40)]
+    public StateProvince StateProvince
+	{
+        get => GetElement<StateProvince>(40);
+        set => SetElement(40, value);
+	}
+    /// <summary>
+    /// <para> Station.</para>
+    /// <para> Represents the following element tag in the schema: b:Station </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(41)]
+    public Station Station
+	{
+        get => GetElement<Station>(41);
+        set => SetElement(41, value);
+	}
+    /// <summary>
+    /// <para> Tag.</para>
+    /// <para> Represents the following element tag in the schema: b:Tag </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(42)]
+    public Tag Tag
+	{
+        get => GetElement<Tag>(42);
+        set => SetElement(42, value);
+	}
+    /// <summary>
+    /// <para> Theater.</para>
+    /// <para> Represents the following element tag in the schema: b:Theater </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(43)]
+    public Theater Theater
+	{
+        get => GetElement<Theater>(43);
+        set => SetElement(43, value);
+	}
+    /// <summary>
+    /// <para> Thesis Type.</para>
+    /// <para> Represents the following element tag in the schema: b:ThesisType </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(44)]
+    public ThesisType ThesisType
+	{
+        get => GetElement<ThesisType>(44);
+        set => SetElement(44, value);
+	}
+    /// <summary>
+    /// <para> Title.</para>
+    /// <para> Represents the following element tag in the schema: b:Title </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(45)]
+    public Title Title
+	{
+        get => GetElement<Title>(45);
+        set => SetElement(45, value);
+	}
+    /// <summary>
+    /// <para> Type.</para>
+    /// <para> Represents the following element tag in the schema: b:Type </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(46)]
+    public PatentType PatentType
+	{
+        get => GetElement<PatentType>(46);
+        set => SetElement(46, value);
+	}
+    /// <summary>
+    /// <para> URL.</para>
+    /// <para> Represents the following element tag in the schema: b:URL </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(47)]
+    public UrlString UrlString
+	{
+        get => GetElement<UrlString>(47);
+        set => SetElement(47, value);
+	}
+    /// <summary>
+    /// <para> Version.</para>
+    /// <para> Represents the following element tag in the schema: b:Version </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(48)]
+    public Version Version
+	{
+        get => GetElement<Version>(48);
+        set => SetElement(48, value);
+	}
+    /// <summary>
+    /// <para> Volume.</para>
+    /// <para> Represents the following element tag in the schema: b:Volume </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(49)]
+    public Volume Volume
+	{
+        get => GetElement<Volume>(49);
+        set => SetElement(49, value);
+	}
+    /// <summary>
+    /// <para> Year.</para>
+    /// <para> Represents the following element tag in the schema: b:Year </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(50)]
+    public Year Year
+	{
+        get => GetElement<Year>(50);
+        set => SetElement(50, value);
+	}
+    /// <summary>
+    /// <para> Year Accessed.</para>
+    /// <para> Represents the following element tag in the schema: b:YearAccessed </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
+    /// </remark>
+	[Index(51)]
+    public YearAccessed YearAccessed
+	{
+        get => GetElement<YearAccessed>(51);
+        set => SetElement(51, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Source>(deep);
 

@@ -908,7 +908,243 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        /// <summary>
+    /// <para> AlphaBiLevel.</para>
+    /// <para> Represents the following element tag in the schema: a:alphaBiLevel </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.AlphaBiLevel AlphaBiLevel
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.AlphaBiLevel>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> AlphaCeiling.</para>
+    /// <para> Represents the following element tag in the schema: a:alphaCeiling </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.AlphaCeiling AlphaCeiling
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.AlphaCeiling>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> AlphaFloor.</para>
+    /// <para> Represents the following element tag in the schema: a:alphaFloor </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.AlphaFloor AlphaFloor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.AlphaFloor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> AlphaInverse.</para>
+    /// <para> Represents the following element tag in the schema: a:alphaInv </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.AlphaInverse AlphaInverse
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.AlphaInverse>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> AlphaModulationEffect.</para>
+    /// <para> Represents the following element tag in the schema: a:alphaMod </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.AlphaModulationEffect AlphaModulationEffect
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.AlphaModulationEffect>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> AlphaModulationFixed.</para>
+    /// <para> Represents the following element tag in the schema: a:alphaModFix </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.AlphaModulationFixed AlphaModulationFixed
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.AlphaModulationFixed>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> AlphaReplace.</para>
+    /// <para> Represents the following element tag in the schema: a:alphaRepl </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(6)]
+    public DocumentFormat.OpenXml.Drawing.AlphaReplace AlphaReplace
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.AlphaReplace>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> BiLevel.</para>
+    /// <para> Represents the following element tag in the schema: a:biLevel </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(7)]
+    public DocumentFormat.OpenXml.Drawing.BiLevel BiLevel
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.BiLevel>(7);
+        set => SetElement(7, value);
+	}
+    /// <summary>
+    /// <para> Blur.</para>
+    /// <para> Represents the following element tag in the schema: a:blur </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(8)]
+    public DocumentFormat.OpenXml.Drawing.Blur Blur
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Blur>(8);
+        set => SetElement(8, value);
+	}
+    /// <summary>
+    /// <para> ColorChange.</para>
+    /// <para> Represents the following element tag in the schema: a:clrChange </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(9)]
+    public DocumentFormat.OpenXml.Drawing.ColorChange ColorChange
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ColorChange>(9);
+        set => SetElement(9, value);
+	}
+    /// <summary>
+    /// <para> ColorReplacement.</para>
+    /// <para> Represents the following element tag in the schema: a:clrRepl </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(10)]
+    public DocumentFormat.OpenXml.Drawing.ColorReplacement ColorReplacement
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ColorReplacement>(10);
+        set => SetElement(10, value);
+	}
+    /// <summary>
+    /// <para> Duotone.</para>
+    /// <para> Represents the following element tag in the schema: a:duotone </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(11)]
+    public DocumentFormat.OpenXml.Drawing.Duotone Duotone
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Duotone>(11);
+        set => SetElement(11, value);
+	}
+    /// <summary>
+    /// <para> FillOverlay.</para>
+    /// <para> Represents the following element tag in the schema: a:fillOverlay </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(12)]
+    public DocumentFormat.OpenXml.Drawing.FillOverlay FillOverlay
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FillOverlay>(12);
+        set => SetElement(12, value);
+	}
+    /// <summary>
+    /// <para> Grayscale.</para>
+    /// <para> Represents the following element tag in the schema: a:grayscl </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(13)]
+    public DocumentFormat.OpenXml.Drawing.Grayscale Grayscale
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Grayscale>(13);
+        set => SetElement(13, value);
+	}
+    /// <summary>
+    /// <para> Hsl.</para>
+    /// <para> Represents the following element tag in the schema: a:hsl </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(14)]
+    public DocumentFormat.OpenXml.Drawing.Hsl Hsl
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Hsl>(14);
+        set => SetElement(14, value);
+	}
+    /// <summary>
+    /// <para> LuminanceEffect.</para>
+    /// <para> Represents the following element tag in the schema: a:lum </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(15)]
+    public DocumentFormat.OpenXml.Drawing.LuminanceEffect LuminanceEffect
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.LuminanceEffect>(15);
+        set => SetElement(15, value);
+	}
+    /// <summary>
+    /// <para> TintEffect.</para>
+    /// <para> Represents the following element tag in the schema: a:tint </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(16)]
+    public DocumentFormat.OpenXml.Drawing.TintEffect TintEffect
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.TintEffect>(16);
+        set => SetElement(16, value);
+	}
+    /// <summary>
+    /// <para> BlipExtensionList.</para>
+    /// <para> Represents the following element tag in the schema: a:extLst </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(17)]
+    public DocumentFormat.OpenXml.Drawing.BlipExtensionList BlipExtensionList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.BlipExtensionList>(17);
+        set => SetElement(17, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Snapshot>(deep);
 

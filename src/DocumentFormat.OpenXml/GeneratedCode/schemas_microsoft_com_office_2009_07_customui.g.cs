@@ -9590,7 +9590,48 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> PrimaryItem.</para>
+    /// <para> Represents the following element tag in the schema: mso14:primaryItem </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
+    /// </remark>
+	[Index(0)]
+    public PrimaryItem PrimaryItem
+	{
+        get => GetElement<PrimaryItem>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> TopItemsGroupControls.</para>
+    /// <para> Represents the following element tag in the schema: mso14:topItems </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
+    /// </remark>
+	[Index(1)]
+    public TopItemsGroupControls TopItemsGroupControls
+	{
+        get => GetElement<TopItemsGroupControls>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> BottomItemsGroupControls.</para>
+    /// <para> Represents the following element tag in the schema: mso14:bottomItems </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
+    /// </remark>
+	[Index(2)]
+    public BottomItemsGroupControls BottomItemsGroupControls
+	{
+        get => GetElement<BottomItemsGroupControls>(2);
+        set => SetElement(2, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageGroup>(deep);
 

@@ -896,7 +896,35 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> Master Color Mapping.</para>
+    /// <para> Represents the following element tag in the schema: a:masterClrMapping </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.MasterColorMapping MasterColorMapping
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.MasterColorMapping>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> Override Color Mapping.</para>
+    /// <para> Represents the following element tag in the schema: a:overrideClrMapping </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.OverrideColorMapping OverrideColorMapping
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.OverrideColorMapping>(1);
+        set => SetElement(1, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorMapOverride>(deep);
 
@@ -1000,19 +1028,110 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
+    /// <para> NoFill.</para>
+    /// <para> Represents the following element tag in the schema: a:noFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.NoFill NoFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> SolidFill.</para>
+    /// <para> Represents the following element tag in the schema: a:solidFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.SolidFill SolidFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> GradientFill.</para>
+    /// <para> Represents the following element tag in the schema: a:gradFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.GradientFill GradientFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> BlipFill.</para>
+    /// <para> Represents the following element tag in the schema: a:blipFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.BlipFill BlipFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Pattern Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:pattFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.PatternFill PatternFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Effect Container.</para>
+    /// <para> Represents the following element tag in the schema: a:effectLst </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.EffectList EffectList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectList>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> Effect Container.</para>
+    /// <para> Represents the following element tag in the schema: a:effectDag </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(6)]
+    public DocumentFormat.OpenXml.Drawing.EffectDag EffectDag
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectDag>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: p:extLst </para>
     /// </summary>
     /// <remark>
     /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
     /// </remark>
-	[Index(0)]
+	[Index(7)]
     public ExtensionList ExtensionList
 	{
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
+        get => GetElement<ExtensionList>(7);
+        set => SetElement(7, value);
 	}
 
 
@@ -1108,7 +1227,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.HslColor HslColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundStyleReference>(deep);
 
@@ -1411,7 +1610,48 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> OleObjectEmbed.</para>
+    /// <para> Represents the following element tag in the schema: p:embed </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(0)]
+    public OleObjectEmbed OleObjectEmbed
+	{
+        get => GetElement<OleObjectEmbed>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> OleObjectLink.</para>
+    /// <para> Represents the following element tag in the schema: p:link </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(1)]
+    public OleObjectLink OleObjectLink
+	{
+        get => GetElement<OleObjectLink>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Picture.</para>
+    /// <para> Represents the following element tag in the schema: p:pic </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(2)]
+    public Picture Picture
+	{
+        get => GetElement<Picture>(2);
+        set => SetElement(2, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleObject>(deep);
 
@@ -7010,7 +7250,87 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     
     
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.HslColor HslColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <summary>
     /// Initializes a new instance of the ColorType class.
     /// </summary>
@@ -10942,7 +11262,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
     /// <para> Placeholder Shape.</para>
     /// <para> Represents the following element tag in the schema: p:ph </para>
@@ -10957,17 +11277,82 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
         set => SetElement(0, value);
 	}
     /// <summary>
+    /// <para> Audio from CD.</para>
+    /// <para> Represents the following element tag in the schema: a:audioCd </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.AudioFromCD AudioFromCD
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.AudioFromCD>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Audio from WAV File.</para>
+    /// <para> Represents the following element tag in the schema: a:wavAudioFile </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.WaveAudioFile WaveAudioFile
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.WaveAudioFile>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> Audio from File.</para>
+    /// <para> Represents the following element tag in the schema: a:audioFile </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.AudioFromFile AudioFromFile
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.AudioFromFile>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Video from File.</para>
+    /// <para> Represents the following element tag in the schema: a:videoFile </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.VideoFromFile VideoFromFile
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.VideoFromFile>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> QuickTime from File.</para>
+    /// <para> Represents the following element tag in the schema: a:quickTimeFile </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.QuickTimeFromFile QuickTimeFromFile
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.QuickTimeFromFile>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
     /// <para> Customer Data List.</para>
     /// <para> Represents the following element tag in the schema: p:custDataLst </para>
     /// </summary>
     /// <remark>
     /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
     /// </remark>
-	[Index(1)]
+	[Index(6)]
     public CustomerDataList CustomerDataList
 	{
-        get => GetElement<CustomerDataList>(1);
-        set => SetElement(1, value);
+        get => GetElement<CustomerDataList>(6);
+        set => SetElement(6, value);
 	}
     /// <summary>
     /// <para> ApplicationNonVisualDrawingPropertiesExtensionList.</para>
@@ -10976,11 +11361,11 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
     /// </remark>
-	[Index(2)]
+	[Index(7)]
     public ApplicationNonVisualDrawingPropertiesExtensionList ApplicationNonVisualDrawingPropertiesExtensionList
 	{
-        get => GetElement<ApplicationNonVisualDrawingPropertiesExtensionList>(2);
-        set => SetElement(2, value);
+        get => GetElement<ApplicationNonVisualDrawingPropertiesExtensionList>(7);
+        set => SetElement(7, value);
 	}
 
 
@@ -11226,7 +11611,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
     /// <para> Represents the following element tag in the schema: a:xfrm </para>
@@ -11241,17 +11626,147 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
         set => SetElement(0, value);
 	}
     /// <summary>
+    /// <para> Custom geometry.</para>
+    /// <para> Represents the following element tag in the schema: a:custGeom </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.CustomGeometry CustomGeometry
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.CustomGeometry>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Preset geometry.</para>
+    /// <para> Represents the following element tag in the schema: a:prstGeom </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.PresetGeometry PresetGeometry
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetGeometry>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> NoFill.</para>
+    /// <para> Represents the following element tag in the schema: a:noFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.NoFill NoFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> SolidFill.</para>
+    /// <para> Represents the following element tag in the schema: a:solidFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.SolidFill SolidFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> GradientFill.</para>
+    /// <para> Represents the following element tag in the schema: a:gradFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.GradientFill GradientFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> BlipFill.</para>
+    /// <para> Represents the following element tag in the schema: a:blipFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(6)]
+    public DocumentFormat.OpenXml.Drawing.BlipFill BlipFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> Pattern Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:pattFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(7)]
+    public DocumentFormat.OpenXml.Drawing.PatternFill PatternFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>(7);
+        set => SetElement(7, value);
+	}
+    /// <summary>
+    /// <para> Group Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:grpFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(8)]
+    public DocumentFormat.OpenXml.Drawing.GroupFill GroupFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GroupFill>(8);
+        set => SetElement(8, value);
+	}
+    /// <summary>
     /// <para> Outline.</para>
     /// <para> Represents the following element tag in the schema: a:ln </para>
     /// </summary>
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
+	[Index(9)]
     public DocumentFormat.OpenXml.Drawing.Outline Outline
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>(9);
+        set => SetElement(9, value);
+	}
+    /// <summary>
+    /// <para> Effect Container.</para>
+    /// <para> Represents the following element tag in the schema: a:effectLst </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(10)]
+    public DocumentFormat.OpenXml.Drawing.EffectList EffectList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectList>(10);
+        set => SetElement(10, value);
+	}
+    /// <summary>
+    /// <para> Effect Container.</para>
+    /// <para> Represents the following element tag in the schema: a:effectDag </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(11)]
+    public DocumentFormat.OpenXml.Drawing.EffectDag EffectDag
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectDag>(11);
+        set => SetElement(11, value);
 	}
     /// <summary>
     /// <para> Scene3DType.</para>
@@ -11260,11 +11775,11 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(2)]
+	[Index(12)]
     public DocumentFormat.OpenXml.Drawing.Scene3DType Scene3DType
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Scene3DType>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Scene3DType>(12);
+        set => SetElement(12, value);
 	}
     /// <summary>
     /// <para> Shape3DType.</para>
@@ -11273,11 +11788,11 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(3)]
+	[Index(13)]
     public DocumentFormat.OpenXml.Drawing.Shape3DType Shape3DType
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Shape3DType>(3);
-        set => SetElement(3, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Shape3DType>(13);
+        set => SetElement(13, value);
 	}
     /// <summary>
     /// <para> ShapePropertiesExtensionList.</para>
@@ -11286,11 +11801,11 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(4)]
+	[Index(14)]
     public DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList ShapePropertiesExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>(4);
-        set => SetElement(4, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>(14);
+        set => SetElement(14, value);
 	}
 
 
@@ -12062,7 +12577,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
     /// <para> Blip.</para>
     /// <para> Represents the following element tag in the schema: a:blip </para>
@@ -12088,6 +12603,32 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>(1);
         set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Tile.</para>
+    /// <para> Represents the following element tag in the schema: a:tile </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.Tile Tile
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Tile>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> Stretch.</para>
+    /// <para> Represents the following element tag in the schema: a:stretch </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.Stretch Stretch
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Stretch>(3);
+        set => SetElement(3, value);
 	}
 
 
@@ -15613,7 +16154,568 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> BlindsTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:blinds </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(0)]
+    public BlindsTransition BlindsTransition
+	{
+        get => GetElement<BlindsTransition>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> CheckerTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:checker </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(1)]
+    public CheckerTransition CheckerTransition
+	{
+        get => GetElement<CheckerTransition>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> CircleTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:circle </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(2)]
+    public CircleTransition CircleTransition
+	{
+        get => GetElement<CircleTransition>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> DissolveTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:dissolve </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DissolveTransition DissolveTransition
+	{
+        get => GetElement<DissolveTransition>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> CombTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:comb </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(4)]
+    public CombTransition CombTransition
+	{
+        get => GetElement<CombTransition>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> CoverTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:cover </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(5)]
+    public CoverTransition CoverTransition
+	{
+        get => GetElement<CoverTransition>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> CutTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:cut </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(6)]
+    public CutTransition CutTransition
+	{
+        get => GetElement<CutTransition>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> DiamondTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:diamond </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(7)]
+    public DiamondTransition DiamondTransition
+	{
+        get => GetElement<DiamondTransition>(7);
+        set => SetElement(7, value);
+	}
+    /// <summary>
+    /// <para> FadeTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:fade </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(8)]
+    public FadeTransition FadeTransition
+	{
+        get => GetElement<FadeTransition>(8);
+        set => SetElement(8, value);
+	}
+    /// <summary>
+    /// <para> NewsflashTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:newsflash </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(9)]
+    public NewsflashTransition NewsflashTransition
+	{
+        get => GetElement<NewsflashTransition>(9);
+        set => SetElement(9, value);
+	}
+    /// <summary>
+    /// <para> PlusTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:plus </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(10)]
+    public PlusTransition PlusTransition
+	{
+        get => GetElement<PlusTransition>(10);
+        set => SetElement(10, value);
+	}
+    /// <summary>
+    /// <para> PullTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:pull </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(11)]
+    public PullTransition PullTransition
+	{
+        get => GetElement<PullTransition>(11);
+        set => SetElement(11, value);
+	}
+    /// <summary>
+    /// <para> PushTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:push </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(12)]
+    public PushTransition PushTransition
+	{
+        get => GetElement<PushTransition>(12);
+        set => SetElement(12, value);
+	}
+    /// <summary>
+    /// <para> RandomTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:random </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(13)]
+    public RandomTransition RandomTransition
+	{
+        get => GetElement<RandomTransition>(13);
+        set => SetElement(13, value);
+	}
+    /// <summary>
+    /// <para> RandomBarTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:randomBar </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(14)]
+    public RandomBarTransition RandomBarTransition
+	{
+        get => GetElement<RandomBarTransition>(14);
+        set => SetElement(14, value);
+	}
+    /// <summary>
+    /// <para> SplitTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:split </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(15)]
+    public SplitTransition SplitTransition
+	{
+        get => GetElement<SplitTransition>(15);
+        set => SetElement(15, value);
+	}
+    /// <summary>
+    /// <para> StripsTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:strips </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(16)]
+    public StripsTransition StripsTransition
+	{
+        get => GetElement<StripsTransition>(16);
+        set => SetElement(16, value);
+	}
+    /// <summary>
+    /// <para> WedgeTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:wedge </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(17)]
+    public WedgeTransition WedgeTransition
+	{
+        get => GetElement<WedgeTransition>(17);
+        set => SetElement(17, value);
+	}
+    /// <summary>
+    /// <para> WheelTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:wheel </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(18)]
+    public WheelTransition WheelTransition
+	{
+        get => GetElement<WheelTransition>(18);
+        set => SetElement(18, value);
+	}
+    /// <summary>
+    /// <para> WipeTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:wipe </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(19)]
+    public WipeTransition WipeTransition
+	{
+        get => GetElement<WipeTransition>(19);
+        set => SetElement(19, value);
+	}
+    /// <summary>
+    /// <para> ZoomTransition.</para>
+    /// <para> Represents the following element tag in the schema: p:zoom </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(20)]
+    public ZoomTransition ZoomTransition
+	{
+        get => GetElement<ZoomTransition>(20);
+        set => SetElement(20, value);
+	}
+    /// <summary>
+    /// <para> FlashTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:flash </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(21)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.FlashTransition FlashTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.FlashTransition>(21);
+        set => SetElement(21, value);
+	}
+    /// <summary>
+    /// <para> VortexTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:vortex </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(22)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.VortexTransition VortexTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.VortexTransition>(22);
+        set => SetElement(22, value);
+	}
+    /// <summary>
+    /// <para> SwitchTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:switch </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(23)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.SwitchTransition SwitchTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.SwitchTransition>(23);
+        set => SetElement(23, value);
+	}
+    /// <summary>
+    /// <para> FlipTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:flip </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(24)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.FlipTransition FlipTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.FlipTransition>(24);
+        set => SetElement(24, value);
+	}
+    /// <summary>
+    /// <para> RippleTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:ripple </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(25)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.RippleTransition RippleTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.RippleTransition>(25);
+        set => SetElement(25, value);
+	}
+    /// <summary>
+    /// <para> GlitterTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:glitter </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(26)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.GlitterTransition GlitterTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.GlitterTransition>(26);
+        set => SetElement(26, value);
+	}
+    /// <summary>
+    /// <para> HoneycombTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:honeycomb </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(27)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.HoneycombTransition HoneycombTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.HoneycombTransition>(27);
+        set => SetElement(27, value);
+	}
+    /// <summary>
+    /// <para> PrismTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:prism </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(28)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.PrismTransition PrismTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.PrismTransition>(28);
+        set => SetElement(28, value);
+	}
+    /// <summary>
+    /// <para> DoorsTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:doors </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(29)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.DoorsTransition DoorsTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.DoorsTransition>(29);
+        set => SetElement(29, value);
+	}
+    /// <summary>
+    /// <para> WindowTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:window </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(30)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.WindowTransition WindowTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.WindowTransition>(30);
+        set => SetElement(30, value);
+	}
+    /// <summary>
+    /// <para> ShredTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:shred </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(31)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition ShredTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition>(31);
+        set => SetElement(31, value);
+	}
+    /// <summary>
+    /// <para> FerrisTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:ferris </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(32)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.FerrisTransition FerrisTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.FerrisTransition>(32);
+        set => SetElement(32, value);
+	}
+    /// <summary>
+    /// <para> FlythroughTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:flythrough </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(33)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.FlythroughTransition FlythroughTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.FlythroughTransition>(33);
+        set => SetElement(33, value);
+	}
+    /// <summary>
+    /// <para> WarpTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:warp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(34)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.WarpTransition WarpTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.WarpTransition>(34);
+        set => SetElement(34, value);
+	}
+    /// <summary>
+    /// <para> GalleryTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:gallery </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(35)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.GalleryTransition GalleryTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.GalleryTransition>(35);
+        set => SetElement(35, value);
+	}
+    /// <summary>
+    /// <para> ConveyorTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:conveyor </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(36)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.ConveyorTransition ConveyorTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ConveyorTransition>(36);
+        set => SetElement(36, value);
+	}
+    /// <summary>
+    /// <para> PanTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:pan </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(37)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.PanTransition PanTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.PanTransition>(37);
+        set => SetElement(37, value);
+	}
+    /// <summary>
+    /// <para> RevealTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:reveal </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(38)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.RevealTransition RevealTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.RevealTransition>(38);
+        set => SetElement(38, value);
+	}
+    /// <summary>
+    /// <para> WheelReverseTransition.</para>
+    /// <para> Represents the following element tag in the schema: p14:wheelReverse </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
+    /// </remark>
+	[Index(39)]
+    public DocumentFormat.OpenXml.Office2010.PowerPoint.WheelReverseTransition WheelReverseTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.WheelReverseTransition>(39);
+        set => SetElement(39, value);
+	}
+    /// <summary>
+    /// <para> PresetTransition.</para>
+    /// <para> Represents the following element tag in the schema: p15:prstTrans </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p15 = http://schemas.microsoft.com/office/powerpoint/2012/main
+    /// </remark>
+	[Index(40)]
+    public DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition PresetTransition
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition>(40);
+        set => SetElement(40, value);
+	}
+    /// <summary>
+    /// <para> SoundAction.</para>
+    /// <para> Represents the following element tag in the schema: p:sndAc </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(41)]
+    public SoundAction SoundAction
+	{
+        get => GetElement<SoundAction>(41);
+        set => SetElement(41, value);
+	}
+    /// <summary>
+    /// <para> ExtensionListWithModification.</para>
+    /// <para> Represents the following element tag in the schema: p:extLst </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(42)]
+    public ExtensionListWithModification ExtensionListWithModification
+	{
+        get => GetElement<ExtensionListWithModification>(42);
+        set => SetElement(42, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Transition>(deep);
 
@@ -15869,7 +16971,35 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> Background Properties.</para>
+    /// <para> Represents the following element tag in the schema: p:bgPr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(0)]
+    public BackgroundProperties BackgroundProperties
+	{
+        get => GetElement<BackgroundProperties>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> Background Style Reference.</para>
+    /// <para> Represents the following element tag in the schema: p:bgRef </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(1)]
+    public BackgroundStyleReference BackgroundStyleReference
+	{
+        get => GetElement<BackgroundStyleReference>(1);
+        set => SetElement(1, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Background>(deep);
 
@@ -16061,7 +17191,7 @@ public abstract partial class GroupShapeType : OpenXmlCompositeElement
     
     
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
         /// <summary>
     /// <para> Non-Visual Properties for a Group Shape.</para>
     /// <para> Represents the following element tag in the schema: p:nvGrpSpPr </para>
@@ -16087,6 +17217,97 @@ public abstract partial class GroupShapeType : OpenXmlCompositeElement
 	{
         get => GetElement<GroupShapeProperties>(1);
         set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Shape.</para>
+    /// <para> Represents the following element tag in the schema: p:sp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(2)]
+    public Shape Shape
+	{
+        get => GetElement<Shape>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> Group Shape.</para>
+    /// <para> Represents the following element tag in the schema: p:grpSp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(3)]
+    public GroupShape GroupShape
+	{
+        get => GetElement<GroupShape>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Graphic Frame.</para>
+    /// <para> Represents the following element tag in the schema: p:graphicFrame </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(4)]
+    public GraphicFrame GraphicFrame
+	{
+        get => GetElement<GraphicFrame>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Connection Shape.</para>
+    /// <para> Represents the following element tag in the schema: p:cxnSp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(5)]
+    public ConnectionShape ConnectionShape
+	{
+        get => GetElement<ConnectionShape>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> Picture.</para>
+    /// <para> Represents the following element tag in the schema: p:pic </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(6)]
+    public Picture Picture
+	{
+        get => GetElement<Picture>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> ContentPart.</para>
+    /// <para> Represents the following element tag in the schema: p:contentPart </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(7)]
+    public ContentPart ContentPart
+	{
+        get => GetElement<ContentPart>(7);
+        set => SetElement(7, value);
+	}
+    /// <summary>
+    /// <para> ExtensionListWithModification.</para>
+    /// <para> Represents the following element tag in the schema: p:extLst </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(8)]
+    public ExtensionListWithModification ExtensionListWithModification
+	{
+        get => GetElement<ExtensionListWithModification>(8);
+        set => SetElement(8, value);
 	}
 
 
@@ -16535,7 +17756,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
     /// <para> 2D Transform for Grouped Objects.</para>
     /// <para> Represents the following element tag in the schema: a:xfrm </para>
@@ -16550,17 +17771,121 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
         set => SetElement(0, value);
 	}
     /// <summary>
+    /// <para> NoFill.</para>
+    /// <para> Represents the following element tag in the schema: a:noFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.NoFill NoFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> SolidFill.</para>
+    /// <para> Represents the following element tag in the schema: a:solidFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.SolidFill SolidFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> GradientFill.</para>
+    /// <para> Represents the following element tag in the schema: a:gradFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.GradientFill GradientFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> BlipFill.</para>
+    /// <para> Represents the following element tag in the schema: a:blipFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.BlipFill BlipFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Pattern Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:pattFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.PatternFill PatternFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> Group Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:grpFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(6)]
+    public DocumentFormat.OpenXml.Drawing.GroupFill GroupFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GroupFill>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> Effect Container.</para>
+    /// <para> Represents the following element tag in the schema: a:effectLst </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(7)]
+    public DocumentFormat.OpenXml.Drawing.EffectList EffectList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectList>(7);
+        set => SetElement(7, value);
+	}
+    /// <summary>
+    /// <para> Effect Container.</para>
+    /// <para> Represents the following element tag in the schema: a:effectDag </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(8)]
+    public DocumentFormat.OpenXml.Drawing.EffectDag EffectDag
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectDag>(8);
+        set => SetElement(8, value);
+	}
+    /// <summary>
     /// <para> Scene3DType.</para>
     /// <para> Represents the following element tag in the schema: a:scene3d </para>
     /// </summary>
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
+	[Index(9)]
     public DocumentFormat.OpenXml.Drawing.Scene3DType Scene3DType
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Scene3DType>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Scene3DType>(9);
+        set => SetElement(9, value);
 	}
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -16569,11 +17894,11 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(2)]
+	[Index(10)]
     public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(10);
+        set => SetElement(10, value);
 	}
 
 
@@ -19692,19 +21017,58 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
+    /// <para> All Slides.</para>
+    /// <para> Represents the following element tag in the schema: p:sldAll </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(0)]
+    public SlideAll SlideAll
+	{
+        get => GetElement<SlideAll>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> Slide Range.</para>
+    /// <para> Represents the following element tag in the schema: p:sldRg </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(1)]
+    public SlideRange SlideRange
+	{
+        get => GetElement<SlideRange>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Custom Show.</para>
+    /// <para> Represents the following element tag in the schema: p:custShow </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(2)]
+    public CustomShowReference CustomShowReference
+	{
+        get => GetElement<CustomShowReference>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: p:extLst </para>
     /// </summary>
     /// <remark>
     /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
     /// </remark>
-	[Index(0)]
+	[Index(3)]
     public ExtensionList ExtensionList
 	{
-        get => GetElement<ExtensionList>(0);
-        set => SetElement(0, value);
+        get => GetElement<ExtensionList>(3);
+        set => SetElement(3, value);
 	}
 
 
@@ -20092,19 +21456,97 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
+    /// <para> Presenter Slide Show Mode.</para>
+    /// <para> Represents the following element tag in the schema: p:present </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(0)]
+    public PresenterSlideMode PresenterSlideMode
+	{
+        get => GetElement<PresenterSlideMode>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> Browse Slide Show Mode.</para>
+    /// <para> Represents the following element tag in the schema: p:browse </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(1)]
+    public BrowseSlideMode BrowseSlideMode
+	{
+        get => GetElement<BrowseSlideMode>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Kiosk Slide Show Mode.</para>
+    /// <para> Represents the following element tag in the schema: p:kiosk </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(2)]
+    public KioskSlideMode KioskSlideMode
+	{
+        get => GetElement<KioskSlideMode>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> All Slides.</para>
+    /// <para> Represents the following element tag in the schema: p:sldAll </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(3)]
+    public SlideAll SlideAll
+	{
+        get => GetElement<SlideAll>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Slide Range.</para>
+    /// <para> Represents the following element tag in the schema: p:sldRg </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(4)]
+    public SlideRange SlideRange
+	{
+        get => GetElement<SlideRange>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Custom Show.</para>
+    /// <para> Represents the following element tag in the schema: p:custShow </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
+    /// </remark>
+	[Index(5)]
+    public CustomShowReference CustomShowReference
+	{
+        get => GetElement<CustomShowReference>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
     /// <para> Pen Color for Slide Show.</para>
     /// <para> Represents the following element tag in the schema: p:penClr </para>
     /// </summary>
     /// <remark>
     /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
     /// </remark>
-	[Index(0)]
+	[Index(6)]
     public PenColor PenColor
 	{
-        get => GetElement<PenColor>(0);
-        set => SetElement(0, value);
+        get => GetElement<PenColor>(6);
+        set => SetElement(6, value);
 	}
     /// <summary>
     /// <para> ShowPropertiesExtensionList.</para>
@@ -20113,11 +21555,11 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
     /// </remark>
-	[Index(1)]
+	[Index(7)]
     public ShowPropertiesExtensionList ShowPropertiesExtensionList
 	{
-        get => GetElement<ShowPropertiesExtensionList>(1);
-        set => SetElement(1, value);
+        get => GetElement<ShowPropertiesExtensionList>(7);
+        set => SetElement(7, value);
 	}
 
 
@@ -20217,7 +21659,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.HslColor HslColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorMostRecentlyUsed>(deep);
 

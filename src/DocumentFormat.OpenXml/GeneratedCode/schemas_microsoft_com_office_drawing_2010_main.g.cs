@@ -376,7 +376,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> NoFill.</para>
+    /// <para> Represents the following element tag in the schema: a:noFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.NoFill NoFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> SolidFill.</para>
+    /// <para> Represents the following element tag in the schema: a:solidFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.SolidFill SolidFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> GradientFill.</para>
+    /// <para> Represents the following element tag in the schema: a:gradFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.GradientFill GradientFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> BlipFill.</para>
+    /// <para> Represents the following element tag in the schema: a:blipFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.BlipFill BlipFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Pattern Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:pattFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.PatternFill PatternFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Group Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:grpFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.GroupFill GroupFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GroupFill>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HiddenFillProperties>(deep);
 
@@ -523,19 +603,136 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
+    /// <para> No Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:noFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.NoFill NoFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> Solid Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:solidFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.SolidFill SolidFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Gradient Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:gradFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.GradientFill GradientFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> PatternFill.</para>
+    /// <para> Represents the following element tag in the schema: a:pattFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.PatternFill PatternFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Preset Dash.</para>
+    /// <para> Represents the following element tag in the schema: a:prstDash </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.PresetDash PresetDash
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetDash>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Custom Dash.</para>
+    /// <para> Represents the following element tag in the schema: a:custDash </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.CustomDash CustomDash
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.CustomDash>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> Round Line Join.</para>
+    /// <para> Represents the following element tag in the schema: a:round </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(6)]
+    public DocumentFormat.OpenXml.Drawing.Round Round
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Round>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> Line Join Bevel.</para>
+    /// <para> Represents the following element tag in the schema: a:bevel </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(7)]
+    public DocumentFormat.OpenXml.Drawing.LineJoinBevel LineJoinBevel
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.LineJoinBevel>(7);
+        set => SetElement(7, value);
+	}
+    /// <summary>
+    /// <para> Miter Line Join.</para>
+    /// <para> Represents the following element tag in the schema: a:miter </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(8)]
+    public DocumentFormat.OpenXml.Drawing.Miter Miter
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Miter>(8);
+        set => SetElement(8, value);
+	}
+    /// <summary>
     /// <para> Line Head/End Style.</para>
     /// <para> Represents the following element tag in the schema: a:headEnd </para>
     /// </summary>
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
+	[Index(9)]
     public DocumentFormat.OpenXml.Drawing.HeadEnd HeadEnd
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HeadEnd>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HeadEnd>(9);
+        set => SetElement(9, value);
 	}
     /// <summary>
     /// <para> Tail line end style.</para>
@@ -544,11 +741,11 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
+	[Index(10)]
     public DocumentFormat.OpenXml.Drawing.TailEnd TailEnd
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.TailEnd>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.TailEnd>(10);
+        set => SetElement(10, value);
 	}
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -557,11 +754,11 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(2)]
+	[Index(11)]
     public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(11);
+        set => SetElement(11, value);
 	}
 
 
@@ -637,7 +834,35 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> Effect Container.</para>
+    /// <para> Represents the following element tag in the schema: a:effectLst </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.EffectList EffectList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectList>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> Effect Container.</para>
+    /// <para> Represents the following element tag in the schema: a:effectDag </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.EffectDag EffectDag
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectDag>(1);
+        set => SetElement(1, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HiddenEffectsProperties>(deep);
 

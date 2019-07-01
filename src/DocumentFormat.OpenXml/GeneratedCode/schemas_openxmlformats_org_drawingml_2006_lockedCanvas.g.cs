@@ -100,7 +100,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
         /// <summary>
     /// <para> Non-Visual Properties for a Group Shape.</para>
     /// <para> Represents the following element tag in the schema: a:nvGrpSpPr </para>
@@ -126,6 +126,110 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>(1);
         set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Text shape.</para>
+    /// <para> Represents the following element tag in the schema: a:txSp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.TextShape TextShape
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.TextShape>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> Shape.</para>
+    /// <para> Represents the following element tag in the schema: a:sp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.Shape Shape
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Shape>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Connection Shape.</para>
+    /// <para> Represents the following element tag in the schema: a:cxnSp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.ConnectionShape ConnectionShape
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShape>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Picture.</para>
+    /// <para> Represents the following element tag in the schema: a:pic </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.Picture Picture
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Picture>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> GvmlContentPart.</para>
+    /// <para> Represents the following element tag in the schema: a14:contentPart </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
+    /// </remark>
+	[Index(6)]
+    public DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart GvmlContentPart
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> Graphic Frame.</para>
+    /// <para> Represents the following element tag in the schema: a:graphicFrame </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(7)]
+    public DocumentFormat.OpenXml.Drawing.GraphicFrame GraphicFrame
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrame>(7);
+        set => SetElement(7, value);
+	}
+    /// <summary>
+    /// <para> Group shape.</para>
+    /// <para> Represents the following element tag in the schema: a:grpSp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(8)]
+    public DocumentFormat.OpenXml.Drawing.GroupShape GroupShape
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShape>(8);
+        set => SetElement(8, value);
+	}
+    /// <summary>
+    /// <para> GvmlGroupShapeExtensionList.</para>
+    /// <para> Represents the following element tag in the schema: a:extLst </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(9)]
+    public DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList GvmlGroupShapeExtensionList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList>(9);
+        set => SetElement(9, value);
 	}
 
 

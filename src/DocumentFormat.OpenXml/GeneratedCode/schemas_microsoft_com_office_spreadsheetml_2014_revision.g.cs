@@ -1923,7 +1923,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
     /// <para> StateBasedHeader.</para>
     /// <para> Represents the following element tag in the schema: xr:hdr </para>
@@ -1936,6 +1936,32 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<StateBasedHeader>(0);
         set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RevisionStateLink.</para>
+    /// <para> Represents the following element tag in the schema: xr:link </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
+    /// </remark>
+	[Index(1)]
+    public RevisionStateLink RevisionStateLink
+	{
+        get => GetElement<RevisionStateLink>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> RevisionState.</para>
+    /// <para> Represents the following element tag in the schema: xr:body </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
+    /// </remark>
+	[Index(2)]
+    public RevisionState RevisionState
+	{
+        get => GetElement<RevisionState>(2);
+        set => SetElement(2, value);
 	}
 
 

@@ -862,7 +862,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
     /// <para> Simple Positioning Coordinates.</para>
     /// <para> Represents the following element tag in the schema: wp:simplePos </para>
@@ -927,6 +927,136 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<EffectExtent>(4);
         set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> No Text Wrapping.</para>
+    /// <para> Represents the following element tag in the schema: wp:wrapNone </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
+    /// </remark>
+	[Index(5)]
+    public WrapNone WrapNone
+	{
+        get => GetElement<WrapNone>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> Square Wrapping.</para>
+    /// <para> Represents the following element tag in the schema: wp:wrapSquare </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
+    /// </remark>
+	[Index(6)]
+    public WrapSquare WrapSquare
+	{
+        get => GetElement<WrapSquare>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> Tight Wrapping.</para>
+    /// <para> Represents the following element tag in the schema: wp:wrapTight </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
+    /// </remark>
+	[Index(7)]
+    public WrapTight WrapTight
+	{
+        get => GetElement<WrapTight>(7);
+        set => SetElement(7, value);
+	}
+    /// <summary>
+    /// <para> Through Wrapping.</para>
+    /// <para> Represents the following element tag in the schema: wp:wrapThrough </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
+    /// </remark>
+	[Index(8)]
+    public WrapThrough WrapThrough
+	{
+        get => GetElement<WrapThrough>(8);
+        set => SetElement(8, value);
+	}
+    /// <summary>
+    /// <para> Top and Bottom Wrapping.</para>
+    /// <para> Represents the following element tag in the schema: wp:wrapTopAndBottom </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
+    /// </remark>
+	[Index(9)]
+    public WrapTopBottom WrapTopBottom
+	{
+        get => GetElement<WrapTopBottom>(9);
+        set => SetElement(9, value);
+	}
+    /// <summary>
+    /// <para> Drawing Object Non-Visual Properties.</para>
+    /// <para> Represents the following element tag in the schema: wp:docPr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
+    /// </remark>
+	[Index(10)]
+    public DocProperties DocProperties
+	{
+        get => GetElement<DocProperties>(10);
+        set => SetElement(10, value);
+	}
+    /// <summary>
+    /// <para> NonVisualGraphicFrameDrawingProperties.</para>
+    /// <para> Represents the following element tag in the schema: wp:cNvGraphicFramePr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
+    /// </remark>
+	[Index(11)]
+    public NonVisualGraphicFrameDrawingProperties NonVisualGraphicFrameDrawingProperties
+	{
+        get => GetElement<NonVisualGraphicFrameDrawingProperties>(11);
+        set => SetElement(11, value);
+	}
+    /// <summary>
+    /// <para> Graphic.</para>
+    /// <para> Represents the following element tag in the schema: a:graphic </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(12)]
+    public DocumentFormat.OpenXml.Drawing.Graphic Graphic
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(12);
+        set => SetElement(12, value);
+	}
+    /// <summary>
+    /// <para> RelativeWidth.</para>
+    /// <para> Represents the following element tag in the schema: wp14:sizeRelH </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
+    /// </remark>
+	[Index(13)]
+    public DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth RelativeWidth
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth>(13);
+        set => SetElement(13, value);
+	}
+    /// <summary>
+    /// <para> RelativeHeight.</para>
+    /// <para> Represents the following element tag in the schema: wp14:sizeRelV </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
+    /// </remark>
+	[Index(14)]
+    public DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight RelativeHeight
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight>(14);
+        set => SetElement(14, value);
 	}
 
 
@@ -1277,7 +1407,48 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> Relative Horizontal Alignment.</para>
+    /// <para> Represents the following element tag in the schema: wp:align </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
+    /// </remark>
+	[Index(0)]
+    public HorizontalAlignment HorizontalAlignment
+	{
+        get => GetElement<HorizontalAlignment>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> Absolute Position Offset.</para>
+    /// <para> Represents the following element tag in the schema: wp:posOffset </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
+    /// </remark>
+	[Index(1)]
+    public PositionOffset PositionOffset
+	{
+        get => GetElement<PositionOffset>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> PercentagePositionHeightOffset.</para>
+    /// <para> Represents the following element tag in the schema: wp14:pctPosHOffset </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset PercentagePositionHeightOffset
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>(2);
+        set => SetElement(2, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalPosition>(deep);
 
@@ -1359,7 +1530,48 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> Relative Vertical Alignment.</para>
+    /// <para> Represents the following element tag in the schema: wp:align </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
+    /// </remark>
+	[Index(0)]
+    public VerticalAlignment VerticalAlignment
+	{
+        get => GetElement<VerticalAlignment>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> PositionOffset.</para>
+    /// <para> Represents the following element tag in the schema: wp:posOffset </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
+    /// </remark>
+	[Index(1)]
+    public PositionOffset PositionOffset
+	{
+        get => GetElement<PositionOffset>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> PercentagePositionVerticalOffset.</para>
+    /// <para> Represents the following element tag in the schema: wp14:pctPosVOffset </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset PercentagePositionVerticalOffset
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>(2);
+        set => SetElement(2, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalPosition>(deep);
 

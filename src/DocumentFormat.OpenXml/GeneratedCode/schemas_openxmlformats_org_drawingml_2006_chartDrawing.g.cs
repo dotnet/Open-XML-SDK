@@ -101,7 +101,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
     /// <para> Starting Anchor Point.</para>
     /// <para> Represents the following element tag in the schema: cdr:from </para>
@@ -127,6 +127,84 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<ToAnchor>(1);
         set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Shape Definition.</para>
+    /// <para> Represents the following element tag in the schema: cdr:sp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(2)]
+    public Shape Shape
+	{
+        get => GetElement<Shape>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> Group Shape.</para>
+    /// <para> Represents the following element tag in the schema: cdr:grpSp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(3)]
+    public GroupShape GroupShape
+	{
+        get => GetElement<GroupShape>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Graphic Frame.</para>
+    /// <para> Represents the following element tag in the schema: cdr:graphicFrame </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(4)]
+    public GraphicFrame GraphicFrame
+	{
+        get => GetElement<GraphicFrame>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Connection Shape.</para>
+    /// <para> Represents the following element tag in the schema: cdr:cxnSp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(5)]
+    public ConnectionShape ConnectionShape
+	{
+        get => GetElement<ConnectionShape>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> Picture.</para>
+    /// <para> Represents the following element tag in the schema: cdr:pic </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(6)]
+    public Picture Picture
+	{
+        get => GetElement<Picture>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> ContentPart.</para>
+    /// <para> Represents the following element tag in the schema: cdr14:contentPart </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
+    /// </remark>
+	[Index(7)]
+    public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart ContentPart
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart>(7);
+        set => SetElement(7, value);
 	}
 
 
@@ -223,7 +301,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
     /// <para> FromAnchor.</para>
     /// <para> Represents the following element tag in the schema: cdr:from </para>
@@ -249,6 +327,84 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<Extent>(1);
         set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Shape Definition.</para>
+    /// <para> Represents the following element tag in the schema: cdr:sp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(2)]
+    public Shape Shape
+	{
+        get => GetElement<Shape>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> Group Shape.</para>
+    /// <para> Represents the following element tag in the schema: cdr:grpSp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(3)]
+    public GroupShape GroupShape
+	{
+        get => GetElement<GroupShape>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Graphic Frame.</para>
+    /// <para> Represents the following element tag in the schema: cdr:graphicFrame </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(4)]
+    public GraphicFrame GraphicFrame
+	{
+        get => GetElement<GraphicFrame>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Connection Shape.</para>
+    /// <para> Represents the following element tag in the schema: cdr:cxnSp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(5)]
+    public ConnectionShape ConnectionShape
+	{
+        get => GetElement<ConnectionShape>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> Picture.</para>
+    /// <para> Represents the following element tag in the schema: cdr:pic </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(6)]
+    public Picture Picture
+	{
+        get => GetElement<Picture>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> ContentPart.</para>
+    /// <para> Represents the following element tag in the schema: cdr14:contentPart </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
+    /// </remark>
+	[Index(7)]
+    public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart ContentPart
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart>(7);
+        set => SetElement(7, value);
 	}
 
 
@@ -494,7 +650,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
         /// <summary>
     /// <para> Non-Visual Group Shape Properties.</para>
     /// <para> Represents the following element tag in the schema: cdr:nvGrpSpPr </para>
@@ -520,6 +676,84 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<GroupShapeProperties>(1);
         set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Shape.</para>
+    /// <para> Represents the following element tag in the schema: cdr:sp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(2)]
+    public Shape Shape
+	{
+        get => GetElement<Shape>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> Group Shape.</para>
+    /// <para> Represents the following element tag in the schema: cdr:grpSp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(3)]
+    public GroupShape GroupShape
+	{
+        get => GetElement<GroupShape>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Graphic Frame.</para>
+    /// <para> Represents the following element tag in the schema: cdr:graphicFrame </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(4)]
+    public GraphicFrame GraphicFrame
+	{
+        get => GetElement<GraphicFrame>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Connector Shape.</para>
+    /// <para> Represents the following element tag in the schema: cdr:cxnSp </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(5)]
+    public ConnectionShape ConnectionShape
+	{
+        get => GetElement<ConnectionShape>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> Picture.</para>
+    /// <para> Represents the following element tag in the schema: cdr:pic </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr = http://schemas.openxmlformats.org/drawingml/2006/chartDrawing
+    /// </remark>
+	[Index(6)]
+    public Picture Picture
+	{
+        get => GetElement<Picture>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> ContentPart.</para>
+    /// <para> Represents the following element tag in the schema: cdr14:contentPart </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:cdr14 = http://schemas.microsoft.com/office/drawing/2010/chartDrawing
+    /// </remark>
+	[Index(7)]
+    public DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart ContentPart
+	{
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart>(7);
+        set => SetElement(7, value);
 	}
 
 
@@ -1390,7 +1624,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
     /// <para> 2D Transform for Individual Objects.</para>
     /// <para> Represents the following element tag in the schema: a:xfrm </para>
@@ -1405,17 +1639,147 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
         set => SetElement(0, value);
 	}
     /// <summary>
+    /// <para> Custom geometry.</para>
+    /// <para> Represents the following element tag in the schema: a:custGeom </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.CustomGeometry CustomGeometry
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.CustomGeometry>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Preset geometry.</para>
+    /// <para> Represents the following element tag in the schema: a:prstGeom </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.PresetGeometry PresetGeometry
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PresetGeometry>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> NoFill.</para>
+    /// <para> Represents the following element tag in the schema: a:noFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.NoFill NoFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> SolidFill.</para>
+    /// <para> Represents the following element tag in the schema: a:solidFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.SolidFill SolidFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> GradientFill.</para>
+    /// <para> Represents the following element tag in the schema: a:gradFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.GradientFill GradientFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> BlipFill.</para>
+    /// <para> Represents the following element tag in the schema: a:blipFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(6)]
+    public DocumentFormat.OpenXml.Drawing.BlipFill BlipFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> Pattern Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:pattFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(7)]
+    public DocumentFormat.OpenXml.Drawing.PatternFill PatternFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>(7);
+        set => SetElement(7, value);
+	}
+    /// <summary>
+    /// <para> Group Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:grpFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(8)]
+    public DocumentFormat.OpenXml.Drawing.GroupFill GroupFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GroupFill>(8);
+        set => SetElement(8, value);
+	}
+    /// <summary>
     /// <para> Outline.</para>
     /// <para> Represents the following element tag in the schema: a:ln </para>
     /// </summary>
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
+	[Index(9)]
     public DocumentFormat.OpenXml.Drawing.Outline Outline
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>(9);
+        set => SetElement(9, value);
+	}
+    /// <summary>
+    /// <para> Effect Container.</para>
+    /// <para> Represents the following element tag in the schema: a:effectLst </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(10)]
+    public DocumentFormat.OpenXml.Drawing.EffectList EffectList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectList>(10);
+        set => SetElement(10, value);
+	}
+    /// <summary>
+    /// <para> Effect Container.</para>
+    /// <para> Represents the following element tag in the schema: a:effectDag </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(11)]
+    public DocumentFormat.OpenXml.Drawing.EffectDag EffectDag
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectDag>(11);
+        set => SetElement(11, value);
 	}
     /// <summary>
     /// <para> Scene3DType.</para>
@@ -1424,11 +1788,11 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(2)]
+	[Index(12)]
     public DocumentFormat.OpenXml.Drawing.Scene3DType Scene3DType
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Scene3DType>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Scene3DType>(12);
+        set => SetElement(12, value);
 	}
     /// <summary>
     /// <para> Shape3DType.</para>
@@ -1437,11 +1801,11 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(3)]
+	[Index(13)]
     public DocumentFormat.OpenXml.Drawing.Shape3DType Shape3DType
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Shape3DType>(3);
-        set => SetElement(3, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Shape3DType>(13);
+        set => SetElement(13, value);
 	}
     /// <summary>
     /// <para> ShapePropertiesExtensionList.</para>
@@ -1450,11 +1814,11 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(4)]
+	[Index(14)]
     public DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList ShapePropertiesExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>(4);
-        set => SetElement(4, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>(14);
+        set => SetElement(14, value);
 	}
 
 
@@ -2194,7 +2558,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
     /// <para> Blip.</para>
     /// <para> Represents the following element tag in the schema: a:blip </para>
@@ -2220,6 +2584,32 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 	{
         get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>(1);
         set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Tile.</para>
+    /// <para> Represents the following element tag in the schema: a:tile </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.Tile Tile
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Tile>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> Stretch.</para>
+    /// <para> Represents the following element tag in the schema: a:stretch </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.Stretch Stretch
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Stretch>(3);
+        set => SetElement(3, value);
 	}
 
 
@@ -3152,7 +3542,7 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
     /// <para> 2D Transform for Grouped Objects.</para>
     /// <para> Represents the following element tag in the schema: a:xfrm </para>
@@ -3167,17 +3557,121 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
         set => SetElement(0, value);
 	}
     /// <summary>
+    /// <para> NoFill.</para>
+    /// <para> Represents the following element tag in the schema: a:noFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.NoFill NoFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> SolidFill.</para>
+    /// <para> Represents the following element tag in the schema: a:solidFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public DocumentFormat.OpenXml.Drawing.SolidFill SolidFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> GradientFill.</para>
+    /// <para> Represents the following element tag in the schema: a:gradFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public DocumentFormat.OpenXml.Drawing.GradientFill GradientFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> BlipFill.</para>
+    /// <para> Represents the following element tag in the schema: a:blipFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public DocumentFormat.OpenXml.Drawing.BlipFill BlipFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Pattern Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:pattFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public DocumentFormat.OpenXml.Drawing.PatternFill PatternFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>(5);
+        set => SetElement(5, value);
+	}
+    /// <summary>
+    /// <para> Group Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:grpFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(6)]
+    public DocumentFormat.OpenXml.Drawing.GroupFill GroupFill
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GroupFill>(6);
+        set => SetElement(6, value);
+	}
+    /// <summary>
+    /// <para> Effect Container.</para>
+    /// <para> Represents the following element tag in the schema: a:effectLst </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(7)]
+    public DocumentFormat.OpenXml.Drawing.EffectList EffectList
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectList>(7);
+        set => SetElement(7, value);
+	}
+    /// <summary>
+    /// <para> Effect Container.</para>
+    /// <para> Represents the following element tag in the schema: a:effectDag </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(8)]
+    public DocumentFormat.OpenXml.Drawing.EffectDag EffectDag
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectDag>(8);
+        set => SetElement(8, value);
+	}
+    /// <summary>
     /// <para> Scene3DType.</para>
     /// <para> Represents the following element tag in the schema: a:scene3d </para>
     /// </summary>
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
+	[Index(9)]
     public DocumentFormat.OpenXml.Drawing.Scene3DType Scene3DType
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Scene3DType>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Scene3DType>(9);
+        set => SetElement(9, value);
 	}
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -3186,11 +3680,11 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(2)]
+	[Index(10)]
     public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(10);
+        set => SetElement(10, value);
 	}
 
 

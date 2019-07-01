@@ -196,7 +196,35 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> SharedComFont.</para>
+    /// <para> Represents the following element tag in the schema: ax:font </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
+    /// </remark>
+	[Index(0)]
+    public SharedComFont SharedComFont
+	{
+        get => GetElement<SharedComFont>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> SharedComPicture.</para>
+    /// <para> Represents the following element tag in the schema: ax:picture </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
+    /// </remark>
+	[Index(1)]
+    public SharedComPicture SharedComPicture
+	{
+        get => GetElement<SharedComPicture>(1);
+        set => SetElement(1, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ActiveXObjectProperty>(deep);
 
