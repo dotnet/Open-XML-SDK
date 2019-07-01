@@ -13,6 +13,7 @@ namespace DocumentFormat.OpenXml
             FileFormatVersions.Office2007,
             FileFormatVersions.Office2010,
             FileFormatVersions.Office2013,
+            FileFormatVersions.Office2016,
         };
 
         /// <summary>
