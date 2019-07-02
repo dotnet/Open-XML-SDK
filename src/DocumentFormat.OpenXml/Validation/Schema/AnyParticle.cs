@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Initializes a new instance of the AnyParticle.
         /// </summary>
-        internal AnyParticle(ushort xsdAnyValue, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
+        internal AnyParticle(XsdAny xsdAnyValue, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
             : base(ParticleType.Any, minOccurs, maxOccurs, version)
         {
             NamespaceValue = xsdAnyValue;
@@ -28,15 +28,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         internal AnyParticle(int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
-           : base(ParticleType.Any, minOccurs, maxOccurs, version)
+           : this(XsdAny.Any, minOccurs, maxOccurs, version)
         {
-            _particleValidator = new AnyParticleValidator(this);
         }
 
         /// <summary>
         /// Gets the value of the xsd:any@namespace.
         /// </summary>
-        public ushort NamespaceValue { get; }
+        public XsdAny NamespaceValue { get; }
 
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator => _particleValidator;

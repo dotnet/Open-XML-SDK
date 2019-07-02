@@ -56,13 +56,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             switch (_particleConstraint.NamespaceValue)
             {
-                case XsdAnyPrefidefinedValue.Any:
+                case XsdAny.Any:
                     // Elements from any namespace can be present.
                     particleMatchInfo.Match = ParticleMatch.Matched;
                     particleMatchInfo.LastMatchedElement = element;
                     return;
 
-                case XsdAnyPrefidefinedValue.Local:
+                case XsdAny.Local:
                     // Elements that are not qualified with a namespace can be present.
                     if (string.IsNullOrEmpty(element.NamespaceUri))
                     {
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         return;
                     }
 
-                case XsdAnyPrefidefinedValue.Other:
+                case XsdAny.Other:
                     // Elements from any namespace that is not the target namespace of the parent element containing this element can be present.
                     if (string.IsNullOrEmpty(element.NamespaceUri) ||
                         element.Parent != null && element.NamespaceUri != element.Parent.NamespaceUri)
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         return;
                     }
 
-                case XsdAnyPrefidefinedValue.TargetNamespace:
+                case XsdAny.TargetNamespace:
                     if (element.Parent != null && element.NamespaceUri == element.Parent.NamespaceUri)
                     {
                         particleMatchInfo.Match = ParticleMatch.Matched;
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     else
                     {
                         // never go here
-                        Debug.Assert( nextParticleMatchInfo.Match != ParticleMatch.Partial );
+                        Debug.Assert(nextParticleMatchInfo.Match != ParticleMatch.Partial);
                     }
                 }
 
@@ -182,7 +182,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 if (result != null)
                 {
-                    result.Add(XsdAnyPrefidefinedValue.GetNamespaceString(_particleConstraint.NamespaceValue));
+                    result.Add(_particleConstraint.NamespaceValue.GetNamespaceString());
                 }
 
                 return true;
@@ -213,7 +213,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             if (result != null)
             {
-                result.Add(XsdAnyPrefidefinedValue.GetNamespaceString(_particleConstraint.NamespaceValue));
+                result.Add(_particleConstraint.NamespaceValue.GetNamespaceString());
             }
 
             return true;
