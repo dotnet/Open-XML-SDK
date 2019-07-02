@@ -15,35 +15,24 @@ namespace DocumentFormat.OpenXml.Tests
     ///</summary>
     public class SequenceParticleValidatorTest
     {
-        /// <summary>
-        ///A test for SequenceParticleValidator.Validate
-        ///</summary>
+        private const FileFormatVersions Version = FileFormatVersions.Office2007;
+
         [Fact]
-        public void SequenceParticleValidateTest()
-        {
-            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
-
-            TestSimpleSequence(sdbSchemaDatas);
-            TestSimpleSequence2(sdbSchemaDatas);
-            TestSimpleSequence3(sdbSchemaDatas);
-            TestSimpleSequence4(sdbSchemaDatas);
-        }
-
-        private void TestSimpleSequence4(SdbSchemaData sdbSchemaDatas)
+        public void TestSimpleSequence4()
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
             ColorTransformCategories categories = new ColorTransformCategories();
             var expected = categories;
-            var particleConstraint = sdbSchemaDatas.GetSchemaTypeData(categories).ParticleConstraint;
+            var particleConstraint = categories.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
             validationContext.Element = categories;
 
-              //<xsd:complexType name="CT_CTCategories">
-              //  <xsd:sequence minOccurs="0" maxOccurs="unbounded">
-              //    <xsd:element name="cat" type="CT_CTCategory" minOccurs="0" maxOccurs="unbounded">
-              //  </xsd:sequence>
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_CTCategories">
+            //  <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+            //    <xsd:element name="cat" type="CT_CTCategory" minOccurs="0" maxOccurs="unbounded">
+            //  </xsd:sequence>
+            //</xsd:complexType>
 
             // ***** good case ******
 
@@ -133,22 +122,23 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":cat", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleSequence3(SdbSchemaData sdbSchemaDatas)
+        [Fact]
+        public void TestSimpleSequence3()
         {
             ValidationContext validationContext = new ValidationContext();
             Divs divs = new Divs();
             OpenXmlElement errorChild;
 
-            var particleConstraint = sdbSchemaDatas.GetSchemaTypeData(divs).ParticleConstraint;
+            var particleConstraint = divs.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
             validationContext.Element = divs;
             var expected = divs;
 
-              //<xsd:complexType name="CT_Divs">
-              //  <xsd:sequence minOccurs="1" maxOccurs="unbounded">
-              //    <xsd:element name="div" type="CT_Div">
-              //  </xsd:sequence>
-              //</xsd:complexType
+            //<xsd:complexType name="CT_Divs">
+            //  <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+            //    <xsd:element name="div" type="CT_Div">
+            //  </xsd:sequence>
+            //</xsd:complexType
 
             // ***** good case ******
             divs.AppendChild(new Div());
@@ -244,13 +234,14 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":div", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleSequence2(SdbSchemaData sdbSchemaDatas)
+        [Fact]
+        public void TestSimpleSequence2()
         {
             ValidationContext validationContext = new ValidationContext();
             Ruby ruby = new Ruby();
             OpenXmlElement errorChild;
 
-            var particleConstraint = sdbSchemaDatas.GetSchemaTypeData(ruby).ParticleConstraint;
+            var particleConstraint = ruby.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
             validationContext.Element = ruby;
             var expected = ruby;
@@ -362,7 +353,8 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":rt", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleSequence(SdbSchemaData sdbSchemaDatas)
+        [Fact]
+        public void TestSimpleSequence()
         {
             ValidationContext validationContext = new ValidationContext();
 
@@ -374,7 +366,7 @@ namespace DocumentFormat.OpenXml.Tests
             //  </xsd:sequence>
             //</xsd:complexType>
             DropDownListFormField ddList = new DropDownListFormField();
-            var particleConstraint = sdbSchemaDatas.GetSchemaTypeData(ddList).ParticleConstraint;
+            var particleConstraint = ddList.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
 
             validationContext.Element = ddList;

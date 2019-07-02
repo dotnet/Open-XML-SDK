@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Office2010.Ink
@@ -232,6 +233,13 @@ public partial class ContextNode : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.SourceLink), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.DestinationLink), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -280,6 +288,7 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
 		return new HexBinaryValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -309,6 +318,7 @@ public partial class SourceLink : ContextLinkType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SourceLink>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the DestinationLink Class.</para>
@@ -332,6 +342,7 @@ public partial class DestinationLink : ContextLinkType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DestinationLink>(deep);
+
 
 }
 /// <summary>

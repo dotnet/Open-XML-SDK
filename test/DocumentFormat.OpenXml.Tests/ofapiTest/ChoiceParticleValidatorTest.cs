@@ -16,38 +16,27 @@ namespace DocumentFormat.OpenXml.Tests
     ///</summary>
     public class ChoiceParticleValidatorTest
     {
-        /// <summary>
-        ///A test for ChoiceParticleValidator.Validate()
-        ///</summary>
+        private const FileFormatVersions Version = FileFormatVersions.Office2007;
+
         [Fact]
-        public void ChoiceParticleValidateTest()
-        {
-            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
-
-            TestSimpleChoice(sdbSchemaDatas);
-            TestSimpleChoice2(sdbSchemaDatas);
-            TestSimpleChoice3(sdbSchemaDatas);
-            TestSimpleChoice4(sdbSchemaDatas);
-        }
-
-        private void TestSimpleChoice4(SdbSchemaData sdbSchemaDatas)
+        public void TestSimpleChoice4()
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
 
             RevisionRowColumn rRowColumn = new RevisionRowColumn();
-            var particleConstraint = sdbSchemaDatas.GetSchemaTypeData(rRowColumn).ParticleConstraint;
+            var particleConstraint = rRowColumn.ParticleConstraint.Build(FileFormatVersions.Office2007);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Element = rRowColumn;
             var expected = rRowColumn;
 
-              //<xsd:complexType name="CT_RevisionRowColumn">
-              //  <xsd:choice minOccurs="0" maxOccurs="unbounded">
-              //    <xsd:element name="undo" type="CT_UndoInfo" minOccurs="0" maxOccurs="unbounded">
-              //    <xsd:element name="rcc" type="CT_RevisionCellChange" minOccurs="0" maxOccurs="unbounded">
-              //    <xsd:element name="rfmt" type="CT_RevisionFormatting" minOccurs="0" maxOccurs="unbounded">
-              //  </xsd:choice>
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_RevisionRowColumn">
+            //  <xsd:choice minOccurs="0" maxOccurs="unbounded">
+            //    <xsd:element name="undo" type="CT_UndoInfo" minOccurs="0" maxOccurs="unbounded">
+            //    <xsd:element name="rcc" type="CT_RevisionCellChange" minOccurs="0" maxOccurs="unbounded">
+            //    <xsd:element name="rfmt" type="CT_RevisionFormatting" minOccurs="0" maxOccurs="unbounded">
+            //  </xsd:choice>
+            //</xsd:complexType>
 
             // ***** good case ******
 
@@ -119,13 +108,14 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":rfmt", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleChoice3(SdbSchemaData sdbSchemaDatas)
+        [Fact]
+        public void TestSimpleChoice3()
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
 
             FormFieldData ffData = new FormFieldData();
-            var particleConstraint = sdbSchemaDatas.GetSchemaTypeData(ffData).ParticleConstraint;
+            var particleConstraint = ffData.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Element = ffData;
             var expected = ffData;
@@ -240,23 +230,24 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":textInput", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleChoice2(SdbSchemaData sdbSchemaDatas)
+        [Fact]
+        public void TestSimpleChoice2()
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
 
             BuildSubElement bldSub = new BuildSubElement();
-            var particleConstraint = sdbSchemaDatas.GetSchemaTypeData(bldSub).ParticleConstraint;
+            var particleConstraint = bldSub.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Element = bldSub;
             var expected = bldSub;
 
-              //<xsd:complexType name="CT_AnimationGraphicalObjectBuildProperties">
-              //  <xsd:choice>
-              //    <xsd:element name="bldDgm" type="CT_AnimationDgmBuildProperties">
-              //    <xsd:element name="bldChart" type="CT_AnimationChartBuildProperties">
-              //  </xsd:choice>
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_AnimationGraphicalObjectBuildProperties">
+            //  <xsd:choice>
+            //    <xsd:element name="bldDgm" type="CT_AnimationDgmBuildProperties">
+            //    <xsd:element name="bldChart" type="CT_AnimationChartBuildProperties">
+            //  </xsd:choice>
+            //</xsd:complexType>
 
             // ***** good case ******
             bldSub.AppendChild(new Drawing.BuildChart());
@@ -310,24 +301,25 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":bldChart", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleChoice(SdbSchemaData sdbSchemaDatas)
+        [Fact]
+        public void TestSimpleChoice()
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
 
             FieldChar fldChar = new FieldChar();
-            var particleConstraint = sdbSchemaDatas.GetSchemaTypeData(fldChar).ParticleConstraint;
+            var particleConstraint = fldChar.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Element = fldChar;
             var expected = fldChar;
 
-              //<xsd:complexType name="CT_FldChar">
-              //  <xsd:choice>
-              //    <xsd:element name="fldData" type="CT_Text" minOccurs="0" maxOccurs="1">
-              //    <xsd:element name="ffData" type="CT_FFData" minOccurs="0" maxOccurs="1">
-              //    <xsd:element name="numberingChange" type="CT_TrackChangeNumbering" minOccurs="0">
-              //  </xsd:choice>
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_FldChar">
+            //  <xsd:choice>
+            //    <xsd:element name="fldData" type="CT_Text" minOccurs="0" maxOccurs="1">
+            //    <xsd:element name="ffData" type="CT_FFData" minOccurs="0" maxOccurs="1">
+            //    <xsd:element name="numberingChange" type="CT_TrackChangeNumbering" minOccurs="0">
+            //  </xsd:choice>
+            //</xsd:complexType>
 
             // ***** good case ******
             target.Validate(validationContext);
@@ -343,7 +335,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(validationContext.Valid);
 
             fldChar.RemoveAllChildren();
-            fldChar.AppendChild(new NumberingChange() );
+            fldChar.AppendChild(new NumberingChange());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.VariantTypes;
 
@@ -497,6 +498,37 @@ public partial class Properties : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Properties>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.All, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Template), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Manager), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Company), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Pages), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Words), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Characters), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Lines), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Paragraphs), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Slides), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Notes), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.TotalTime), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.SharedDocument), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Application), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Name of Document Template.</para>
@@ -531,6 +563,7 @@ public partial class Template : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Template>(deep);
+
 
 }
 /// <summary>
@@ -567,6 +600,7 @@ public partial class Manager : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Manager>(deep);
 
+
 }
 /// <summary>
 /// <para>Name of Company.</para>
@@ -601,6 +635,7 @@ public partial class Company : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Company>(deep);
+
 
 }
 /// <summary>
@@ -637,6 +672,7 @@ public partial class PresentationFormat : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationFormat>(deep);
 
+
 }
 /// <summary>
 /// <para>Relative Hyperlink Base.</para>
@@ -671,6 +707,7 @@ public partial class HyperlinkBase : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkBase>(deep);
+
 
 }
 /// <summary>
@@ -707,6 +744,7 @@ public partial class Application : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Application>(deep);
 
+
 }
 /// <summary>
 /// <para>Application Version.</para>
@@ -741,6 +779,7 @@ public partial class ApplicationVersion : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplicationVersion>(deep);
+
 
 }
 /// <summary>
@@ -778,6 +817,7 @@ public partial class Pages : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Pages>(deep);
 
+
 }
 /// <summary>
 /// <para>Word Count.</para>
@@ -813,6 +853,7 @@ public partial class Words : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Words>(deep);
+
 
 }
 /// <summary>
@@ -850,6 +891,7 @@ public partial class Characters : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Characters>(deep);
 
+
 }
 /// <summary>
 /// <para>Number of Lines.</para>
@@ -885,6 +927,7 @@ public partial class Lines : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Lines>(deep);
+
 
 }
 /// <summary>
@@ -922,6 +965,7 @@ public partial class Paragraphs : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Paragraphs>(deep);
 
+
 }
 /// <summary>
 /// <para>Slides Metadata Element.</para>
@@ -957,6 +1001,7 @@ public partial class Slides : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Slides>(deep);
+
 
 }
 /// <summary>
@@ -994,6 +1039,7 @@ public partial class Notes : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Notes>(deep);
 
+
 }
 /// <summary>
 /// <para>Total Edit Time Metadata Element.</para>
@@ -1029,6 +1075,7 @@ public partial class TotalTime : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TotalTime>(deep);
+
 
 }
 /// <summary>
@@ -1066,6 +1113,7 @@ public partial class HiddenSlides : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HiddenSlides>(deep);
 
+
 }
 /// <summary>
 /// <para>Total Number of Multimedia Clips.</para>
@@ -1101,6 +1149,7 @@ public partial class MultimediaClips : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultimediaClips>(deep);
+
 
 }
 /// <summary>
@@ -1138,6 +1187,7 @@ public partial class CharactersWithSpaces : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CharactersWithSpaces>(deep);
 
+
 }
 /// <summary>
 /// <para>Document Security.</para>
@@ -1173,6 +1223,7 @@ public partial class DocumentSecurity : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentSecurity>(deep);
+
 
 }
 /// <summary>
@@ -1210,6 +1261,7 @@ public partial class ScaleCrop : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScaleCrop>(deep);
 
+
 }
 /// <summary>
 /// <para>Links Up-to-Date.</para>
@@ -1245,6 +1297,7 @@ public partial class LinksUpToDate : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinksUpToDate>(deep);
+
 
 }
 /// <summary>
@@ -1282,6 +1335,7 @@ public partial class SharedDocument : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedDocument>(deep);
 
+
 }
 /// <summary>
 /// <para>Hyperlinks Changed.</para>
@@ -1317,6 +1371,7 @@ public partial class HyperlinksChanged : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinksChanged>(deep);
+
 
 }
 /// <summary>
@@ -1371,6 +1426,11 @@ public partial class HeadingPairs : VectorVariantType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeadingPairs>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Hyperlink List.</para>
@@ -1424,6 +1484,11 @@ public partial class HyperlinkList : VectorVariantType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkList>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the VectorVariantType class.
@@ -1541,6 +1606,11 @@ public partial class TitlesOfParts : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1615,6 +1685,11 @@ public partial class DigitalSignature : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTBlob), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>

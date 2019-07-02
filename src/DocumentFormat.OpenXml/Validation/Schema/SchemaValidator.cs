@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the "fileFormat" parameter is not FileFormat.Office2007, FileFormat.Office2010 or FileFormat.O15.</exception>
         public SchemaValidator(FileFormatVersions fileFormat)
         {
-            _schemaTypeValidator = new SchemaTypeValidator(SdbSchemaData.GetSchemaData(fileFormat));
+            _schemaTypeValidator = new SchemaTypeValidator(fileFormat);
         }
 
         /// <summary>

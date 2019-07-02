@@ -14,34 +14,24 @@ namespace DocumentFormat.OpenXml.Tests
     ///</summary>
     public class AnyParticleValidatorTest
     {
-        /// <summary>
-        ///A test for AnyParticleValidator.TryMatch()
-        ///</summary>
         [Fact]
         public void AnyParticleValidateTest()
-        {
-            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
-
-            TestSimpleAny(sdbSchemaDatas);
-        }
-
-        private void TestSimpleAny(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
 
             TextBox textBox = new TextBox();
-            var particleConstraint = sdbSchemaDatas.GetSchemaTypeData(textBox).ParticleConstraint;
+            var particleConstraint = textBox.ParticleConstraint.Build(FileFormatVersions.Office2007);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Element = textBox;
             var expected = textBox;
 
-              //<xsd:complexType name="CT_Textbox">
-              //  <xsd:choice>
-              //    <xsd:element ref="w:txbxContent" minOccurs="0" />
-              //    <xsd:any namespace="##local" processContents="skip" />
-              //  </xsd:choice>
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_Textbox">
+            //  <xsd:choice>
+            //    <xsd:element ref="w:txbxContent" minOccurs="0" />
+            //    <xsd:any namespace="##local" processContents="skip" />
+            //  </xsd:choice>
+            //</xsd:complexType>
 
             // ***** good case ******
 

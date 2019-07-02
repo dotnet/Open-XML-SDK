@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.VariantTypes
@@ -130,6 +131,45 @@ public partial class Variant : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTArray), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTBlob), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTOBlob), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTEmpty), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTNull), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTByte), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTShort), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTInt32), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTInt64), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTInteger), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTFloat), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTDouble), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTDecimal), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTLPSTR), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTLPWSTR), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTBString), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTDate), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTFileTime), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTBool), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTCurrency), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTError), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTStreamData), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTOStreamData), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTStorage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTOStorage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVStreamData), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -702,6 +742,31 @@ public partial class VTVector : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTByte), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTShort), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTInt32), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTInt64), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTFloat), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTDouble), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTLPSTR), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTLPWSTR), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTBString), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTDate), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTFileTime), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTBool), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTCurrency), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTError), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -817,6 +882,27 @@ public partial class VTArray : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTByte), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTShort), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTInt32), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTInteger), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTFloat), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTDouble), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTDecimal), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTBString), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTDate), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTBool), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTError), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTCurrency), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -858,6 +944,7 @@ public partial class VTBlob : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBlob>(deep);
 
+
 }
 /// <summary>
 /// <para>Binary Blob Object.</para>
@@ -893,6 +980,7 @@ public partial class VTOBlob : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOBlob>(deep);
+
 
 }
 /// <summary>
@@ -930,6 +1018,7 @@ public partial class VTStreamData : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTStreamData>(deep);
 
+
 }
 /// <summary>
 /// <para>Binary Stream Object.</para>
@@ -965,6 +1054,7 @@ public partial class VTOStreamData : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOStreamData>(deep);
+
 
 }
 /// <summary>
@@ -1002,6 +1092,7 @@ public partial class VTStorage : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTStorage>(deep);
 
+
 }
 /// <summary>
 /// <para>Binary Storage Object.</para>
@@ -1038,6 +1129,7 @@ public partial class VTOStorage : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOStorage>(deep);
 
+
 }
 /// <summary>
 /// <para>Empty.</para>
@@ -1062,6 +1154,7 @@ public partial class VTEmpty : OpenXmlLeafElement
     public VTEmpty():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1091,6 +1184,7 @@ public partial class VTNull : OpenXmlLeafElement
     public VTNull():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1131,6 +1225,7 @@ public partial class VTByte : OpenXmlLeafTextElement
     {
 		return new SByteValue(){ InnerText = text };
     }
+
 
     
     
@@ -1173,6 +1268,7 @@ public partial class VTShort : OpenXmlLeafTextElement
 		return new Int16Value(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -1214,6 +1310,7 @@ public partial class VTInt32 : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInt32>(deep);
 
+
 }
 /// <summary>
 /// <para>Integer.</para>
@@ -1250,6 +1347,7 @@ public partial class VTInteger : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInteger>(deep);
 
+
 }
 /// <summary>
 /// <para>8-Byte Signed Integer.</para>
@@ -1285,6 +1383,7 @@ public partial class VTInt64 : OpenXmlLeafTextElement
     {
 		return new Int64Value(){ InnerText = text };
     }
+
 
     
     
@@ -1327,6 +1426,7 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
 		return new ByteValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -1367,6 +1467,7 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
     {
 		return new UInt16Value(){ InnerText = text };
     }
+
 
     
     
@@ -1409,6 +1510,7 @@ public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInt32>(deep);
 
+
 }
 /// <summary>
 /// <para>Unsigned Integer.</para>
@@ -1445,6 +1547,7 @@ public partial class VTUnsignedInteger : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInteger>(deep);
 
+
 }
 /// <summary>
 /// <para>8-Byte Unsigned Integer.</para>
@@ -1480,6 +1583,7 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
     {
 		return new UInt64Value(){ InnerText = text };
     }
+
 
     
     
@@ -1522,6 +1626,7 @@ public partial class VTFloat : OpenXmlLeafTextElement
 		return new SingleValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -1562,6 +1667,7 @@ public partial class VTDouble : OpenXmlLeafTextElement
     {
 		return new DoubleValue(){ InnerText = text };
     }
+
 
     
     
@@ -1604,6 +1710,7 @@ public partial class VTDecimal : OpenXmlLeafTextElement
 		return new DecimalValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -1644,6 +1751,7 @@ public partial class VTLPSTR : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTLPSTR>(deep);
 
+
 }
 /// <summary>
 /// <para>LPWSTR.</para>
@@ -1679,6 +1787,7 @@ public partial class VTLPWSTR : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTLPWSTR>(deep);
 
+
 }
 /// <summary>
 /// <para>Basic String.</para>
@@ -1713,6 +1822,7 @@ public partial class VTBString : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBString>(deep);
+
 
 }
 /// <summary>
@@ -1750,6 +1860,7 @@ public partial class VTDate : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTDate>(deep);
 
+
 }
 /// <summary>
 /// <para>File Time.</para>
@@ -1786,6 +1897,7 @@ public partial class VTFileTime : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTFileTime>(deep);
 
+
 }
 /// <summary>
 /// <para>Boolean.</para>
@@ -1821,6 +1933,7 @@ public partial class VTBool : OpenXmlLeafTextElement
     {
 		return new BooleanValue(){ InnerText = text };
     }
+
 
     
     
@@ -1863,6 +1976,7 @@ public partial class VTCurrency : OpenXmlLeafTextElement
 		return new StringValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -1903,6 +2017,7 @@ public partial class VTError : OpenXmlLeafTextElement
     {
 		return new StringValue(){ InnerText = text };
     }
+
 
     
     
@@ -1953,6 +2068,7 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
 		return new Base64BinaryValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -1993,6 +2109,7 @@ public partial class VTClassId : OpenXmlLeafTextElement
     {
 		return new StringValue(){ InnerText = text };
     }
+
 
     
     
@@ -2049,6 +2166,7 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
+
 
     
     

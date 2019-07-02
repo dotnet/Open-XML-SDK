@@ -9,18 +9,17 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// A constraint data item for complex type.
     /// The ParticleType, MinOccurs, MaxOccurs means the constraint of this particle in the parent.
     /// </summary>
-    /// <remarks>
-    /// </remarks>
     internal abstract class ParticleConstraint
     {
         /// <summary>
         /// Initializes a new instance of the ParticleConstraint.
         /// </summary>
-        protected ParticleConstraint(ParticleType type, int minOccurs, int maxOccurs)
+        protected ParticleConstraint(ParticleType type, int minOccurs, int maxOccurs, FileFormatVersions version)
         {
             ParticleType = type;
             MinOccurs = minOccurs;
             MaxOccurs = maxOccurs;
+            Version = version;
         }
 
         /// <summary>
@@ -38,6 +37,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// 0 means "unbounded".
         /// </summary>
         public int MaxOccurs { get; }
+
+        public FileFormatVersions Version { get; }
 
         /// <summary>
         /// Gets a value indicating whether the maxOccurs is unbounded.
@@ -60,6 +61,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Gets a ParticleValidator for this particle constraint.
         /// </summary>
         internal virtual IParticleValidator ParticleValidator => null;
+
+        public virtual ParticleConstraint Build(FileFormatVersions version)
+            => version.AtLeast(Version) ? this : null;
 
         public override bool Equals(object obj)
         {

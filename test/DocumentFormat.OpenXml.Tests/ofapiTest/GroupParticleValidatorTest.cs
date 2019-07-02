@@ -14,69 +14,60 @@ namespace DocumentFormat.OpenXml.Tests
     ///</summary>
     public class GroupParticleValidatorTest
     {
-        /// <summary>
-        ///A test for GroupParticleValidator.TryMatch()
-        ///</summary>
+        private const FileFormatVersions Version = FileFormatVersions.Office2007;
+
         [Fact]
-        public void GroupParticleValidateTest()
-        {
-            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
-
-            TestSimpleGroup(sdbSchemaDatas);
-            TestSimpleGroup2(sdbSchemaDatas);
-        }
-
-        private void TestSimpleGroup(SdbSchemaData sdbSchemaDatas)
+        public void TestSimpleGroup()
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
 
             Header header = new Header();
             var expected = header;
-            var particleConstraint = sdbSchemaDatas.GetSchemaTypeData(header).ParticleConstraint;
+            var particleConstraint = header.ParticleConstraint.Build(Version);
 
             // the complex type contains a <xsd:group .../> as child
             var target = particleConstraint.ParticleValidator as GroupParticleValidator;
             validationContext.Element = header;
 
-              //<xsd:complexType name="CT_HdrFtr">
-              //  <xsd:group ref="EG_BlockLevelElts" minOccurs="1" maxOccurs="unbounded" />
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_HdrFtr">
+            //  <xsd:group ref="EG_BlockLevelElts" minOccurs="1" maxOccurs="unbounded" />
+            //</xsd:complexType>
 
-              //<xs:group name="EG_BlockLevelElts">
-              //  <xs:choice>
-              //    <xs:group ref="EG_BlockLevelEltsBase" minOccurs="0" maxOccurs="unbounded" />
-              //    <xs:group ref="EG_BlockLevelChunkElts" minOccurs="0" maxOccurs="unbounded" />
-              //  </xs:choice>
-              //</xs:group>
+            //<xs:group name="EG_BlockLevelElts">
+            //  <xs:choice>
+            //    <xs:group ref="EG_BlockLevelEltsBase" minOccurs="0" maxOccurs="unbounded" />
+            //    <xs:group ref="EG_BlockLevelChunkElts" minOccurs="0" maxOccurs="unbounded" />
+            //  </xs:choice>
+            //</xs:group>
 
-              //<xs:group name="EG_BlockLevelEltsBase">
-              //  <xs:choice>
-              //    <xs:element name="altChunk" type="CT_AltChunk" minOccurs="0" maxOccurs="unbounded"></xs:element>
-              //  </xs:choice>
-              //</xs:group>
+            //<xs:group name="EG_BlockLevelEltsBase">
+            //  <xs:choice>
+            //    <xs:element name="altChunk" type="CT_AltChunk" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            //  </xs:choice>
+            //</xs:group>
 
-              //<xsd:group name="EG_BlockLevelChunkElts">
-              //  <xsd:choice>
-              //    <xsd:group ref="EG_ContentBlockContent" minOccurs="0" maxOccurs="unbounded" />
-              //  </xsd:choice>
-              //</xsd:group>
+            //<xsd:group name="EG_BlockLevelChunkElts">
+            //  <xsd:choice>
+            //    <xsd:group ref="EG_ContentBlockContent" minOccurs="0" maxOccurs="unbounded" />
+            //  </xsd:choice>
+            //</xsd:group>
 
-              //<xs:group name="EG_ContentBlockContent">
-              //  <xs:choice>
-              //    <xs:group ref="EG_ContentBlockContentBase" minOccurs="0" maxOccurs="unbounded" />
-              //    <xs:group ref="EG_RunLevelElts" minOccurs="0" maxOccurs="unbounded" />
-              //  </xs:choice>
-              //</xs:group>
+            //<xs:group name="EG_ContentBlockContent">
+            //  <xs:choice>
+            //    <xs:group ref="EG_ContentBlockContentBase" minOccurs="0" maxOccurs="unbounded" />
+            //    <xs:group ref="EG_RunLevelElts" minOccurs="0" maxOccurs="unbounded" />
+            //  </xs:choice>
+            //</xs:group>
 
-              //<xs:group name="EG_ContentBlockContentBase">
-              //  <xs:choice>
-              //    <xs:element name="customXml" type="CT_CustomXmlBlock"></xs:element>
-              //    <xs:element name="sdt" type="CT_SdtBlock"></xs:element>
-              //    <xs:element name="p" type="CT_P" minOccurs="0" maxOccurs="unbounded"></xs:element>
-              //    <xs:element name="tbl" type="CT_Tbl" minOccurs="0" maxOccurs="unbounded"></xs:element>
-              //  </xs:choice>
-              //</xs:group>
+            //<xs:group name="EG_ContentBlockContentBase">
+            //  <xs:choice>
+            //    <xs:element name="customXml" type="CT_CustomXmlBlock"></xs:element>
+            //    <xs:element name="sdt" type="CT_SdtBlock"></xs:element>
+            //    <xs:element name="p" type="CT_P" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            //    <xs:element name="tbl" type="CT_Tbl" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            //  </xs:choice>
+            //</xs:group>
 
             // ***** good case ******
             // empty is OK
@@ -148,56 +139,57 @@ namespace DocumentFormat.OpenXml.Tests
             header.RemoveChild(errorChild);
         }
 
-        private void TestSimpleGroup2(SdbSchemaData sdbSchemaDatas)
+        [Fact]
+        public void TestSimpleGroup2()
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
 
             SectionProperties sectPr = new SectionProperties();
             var expected = sectPr;
-            var particleConstraint = sdbSchemaDatas.GetSchemaTypeData(sectPr).ParticleConstraint;
+            var particleConstraint = sectPr.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
             validationContext.Element = sectPr;
 
-              //<xsd:complexType name="CT_SectPr">
-              //  <xsd:sequence>
-              //    <xsd:group ref="EG_HdrFtrReferences" minOccurs="0" maxOccurs="6"></xsd:group>
-              //    <xsd:group ref="EG_SectPrContents" minOccurs="0"></xsd:group>
-              //    <xsd:element name="sectPrChange" type="CT_SectPrChange" minOccurs="0">
-              //  </xsd:sequence>
-              //  <xsd:attributeGroup ref="AG_SectPrAttributes"></xsd:attributeGroup>
-              //</xsd:complexType>
+            //<xsd:complexType name="CT_SectPr">
+            //  <xsd:sequence>
+            //    <xsd:group ref="EG_HdrFtrReferences" minOccurs="0" maxOccurs="6"></xsd:group>
+            //    <xsd:group ref="EG_SectPrContents" minOccurs="0"></xsd:group>
+            //    <xsd:element name="sectPrChange" type="CT_SectPrChange" minOccurs="0">
+            //  </xsd:sequence>
+            //  <xsd:attributeGroup ref="AG_SectPrAttributes"></xsd:attributeGroup>
+            //</xsd:complexType>
 
-              //<xsd:group name="EG_HdrFtrReferences">
-              //  <xsd:choice>
-              //    <xsd:element name="headerReference" type="CT_HdrFtrRef" minOccurs="0">
-              //    <xsd:element name="footerReference" type="CT_HdrFtrRef" minOccurs="0">
-              //  </xsd:choice>
-              //</xsd:group>
+            //<xsd:group name="EG_HdrFtrReferences">
+            //  <xsd:choice>
+            //    <xsd:element name="headerReference" type="CT_HdrFtrRef" minOccurs="0">
+            //    <xsd:element name="footerReference" type="CT_HdrFtrRef" minOccurs="0">
+            //  </xsd:choice>
+            //</xsd:group>
 
-              //<xsd:group name="EG_SectPrContents">
-              //  <xsd:sequence>
-              //    <xsd:element name="footnotePr" type="CT_FtnProps" minOccurs="0">
-              //    <xsd:element name="endnotePr" type="CT_EdnProps" minOccurs="0">
-              //    <xsd:element name="type" type="CT_SectType" minOccurs="0">
-              //    <xsd:element name="pgSz" type="CT_PageSz" minOccurs="0">
-              //    <xsd:element name="pgMar" type="CT_PageMar" minOccurs="0">
-              //    <xsd:element name="paperSrc" type="CT_PaperSource" minOccurs="0">
-              //    <xsd:element name="pgBorders" type="CT_PageBorders" minOccurs="0">
-              //    <xsd:element name="lnNumType" type="CT_LineNumber" minOccurs="0">
-              //    <xsd:element name="pgNumType" type="CT_PageNumber" minOccurs="0">
-              //    <xsd:element name="cols" type="CT_Columns" minOccurs="0">
-              //    <xsd:element name="formProt" type="CT_OnOff" minOccurs="0">
-              //    <xsd:element name="vAlign" type="CT_VerticalJc" minOccurs="0">
-              //    <xsd:element name="noEndnote" type="CT_OnOff" minOccurs="0">
-              //    <xsd:element name="titlePg" type="CT_OnOff" minOccurs="0">
-              //    <xsd:element name="textDirection" type="CT_TextDirection" minOccurs="0">
-              //    <xsd:element name="bidi" type="CT_OnOff" minOccurs="0">
-              //    <xsd:element name="rtlGutter" type="CT_OnOff" minOccurs="0">
-              //    <xsd:element name="docGrid" type="CT_DocGrid" minOccurs="0">
-              //    <xsd:element name="printerSettings" type="CT_Rel" minOccurs="0">
-              //  </xsd:sequence>
-              //</xsd:group>
+            //<xsd:group name="EG_SectPrContents">
+            //  <xsd:sequence>
+            //    <xsd:element name="footnotePr" type="CT_FtnProps" minOccurs="0">
+            //    <xsd:element name="endnotePr" type="CT_EdnProps" minOccurs="0">
+            //    <xsd:element name="type" type="CT_SectType" minOccurs="0">
+            //    <xsd:element name="pgSz" type="CT_PageSz" minOccurs="0">
+            //    <xsd:element name="pgMar" type="CT_PageMar" minOccurs="0">
+            //    <xsd:element name="paperSrc" type="CT_PaperSource" minOccurs="0">
+            //    <xsd:element name="pgBorders" type="CT_PageBorders" minOccurs="0">
+            //    <xsd:element name="lnNumType" type="CT_LineNumber" minOccurs="0">
+            //    <xsd:element name="pgNumType" type="CT_PageNumber" minOccurs="0">
+            //    <xsd:element name="cols" type="CT_Columns" minOccurs="0">
+            //    <xsd:element name="formProt" type="CT_OnOff" minOccurs="0">
+            //    <xsd:element name="vAlign" type="CT_VerticalJc" minOccurs="0">
+            //    <xsd:element name="noEndnote" type="CT_OnOff" minOccurs="0">
+            //    <xsd:element name="titlePg" type="CT_OnOff" minOccurs="0">
+            //    <xsd:element name="textDirection" type="CT_TextDirection" minOccurs="0">
+            //    <xsd:element name="bidi" type="CT_OnOff" minOccurs="0">
+            //    <xsd:element name="rtlGutter" type="CT_OnOff" minOccurs="0">
+            //    <xsd:element name="docGrid" type="CT_DocGrid" minOccurs="0">
+            //    <xsd:element name="printerSettings" type="CT_Rel" minOccurs="0">
+            //  </xsd:sequence>
+            //</xsd:group>
 
             // ***** good case ******
             // empty is ok
@@ -326,7 +318,7 @@ namespace DocumentFormat.OpenXml.Tests
             // dup error
             sectPr.RemoveAllChildren();
             sectPr.Append(new HeaderReference(), new PaperSource());
-            errorChild = sectPr.AppendChild( new PaperSource());
+            errorChild = sectPr.AppendChild(new PaperSource());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
             Assert.Single(validationContext.Errors);

@@ -11,25 +11,16 @@ namespace DocumentFormat.OpenXml.Tests
 {
     public class AllParticleValidatorTest
     {
-        /// <summary>
-        ///A test for AllParticleValidator.Validate()
-        ///</summary>
+        private const FileFormatVersions Version = FileFormatVersions.Office2007;
+
         [Fact]
-        public void AllParticleValidateTest()
-        {
-            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
-
-            TestSimpleAll(sdbSchemaDatas);
-            TestSimpleAll2(sdbSchemaDatas);
-        }
-
-        private void TestSimpleAll(SdbSchemaData sdbSchemaDatas)
+        public void TestSimpleAll()
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
 
             Properties properties = new Properties();
-            var particleConstraint = sdbSchemaDatas.GetSchemaTypeData(properties).ParticleConstraint;
+            var particleConstraint = properties.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as AllParticleValidator;
             validationContext.Element = properties;
             var expected = properties;
@@ -138,13 +129,14 @@ namespace DocumentFormat.OpenXml.Tests
             properties.RemoveChild(errorChild);
         }
 
-        private void TestSimpleAll2(SdbSchemaData sdbSchemaDatas)
+        [Fact]
+        public void TestSimpleAll2()
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
 
             ShapeLayout shapeLayout = new ShapeLayout();
-            var particleConstraint = sdbSchemaDatas.GetSchemaTypeData(shapeLayout).ParticleConstraint;
+            var particleConstraint = shapeLayout.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as AllParticleValidator;
             validationContext.Element = shapeLayout;
             var expected = shapeLayout;

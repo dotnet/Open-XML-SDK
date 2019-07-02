@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Office.CoverPageProps
@@ -72,6 +73,16 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -192,6 +203,7 @@ public partial class PublishDate : OpenXmlLeafTextElement
 		return new StringValue(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -232,6 +244,7 @@ public partial class DocumentAbstract : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentAbstract>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CompanyAddress Class.</para>
@@ -266,6 +279,7 @@ public partial class CompanyAddress : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyAddress>(deep);
+
 
 }
 /// <summary>
@@ -302,6 +316,7 @@ public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyPhoneNumber>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CompanyFaxNumber Class.</para>
@@ -337,6 +352,7 @@ public partial class CompanyFaxNumber : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyFaxNumber>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CompanyEmailAddress Class.</para>
@@ -371,6 +387,7 @@ public partial class CompanyEmailAddress : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyEmailAddress>(deep);
+
 
 }
 }

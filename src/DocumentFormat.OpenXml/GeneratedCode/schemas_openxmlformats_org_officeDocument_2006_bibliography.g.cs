@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Bibliography
@@ -86,6 +87,11 @@ public partial class Sources : OpenXmlPartRootElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Source), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -149,6 +155,13 @@ public partial class Person : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.First), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Middle), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -190,6 +203,7 @@ public partial class Last : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Last>(deep);
 
+
 }
 /// <summary>
 /// <para>Person's First, or Given, Name.</para>
@@ -225,6 +239,7 @@ public partial class First : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<First>(deep);
+
 
 }
 /// <summary>
@@ -262,6 +277,7 @@ public partial class Middle : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Middle>(deep);
 
+
 }
 /// <summary>
 /// <para>Corporate Author.</para>
@@ -297,6 +313,7 @@ public partial class Corporate : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Corporate>(deep);
+
 
 }
 /// <summary>
@@ -334,6 +351,7 @@ public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbbreviatedCaseNumber>(deep);
 
+
 }
 /// <summary>
 /// <para>Album Title.</para>
@@ -369,6 +387,7 @@ public partial class AlbumTitle : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlbumTitle>(deep);
+
 
 }
 /// <summary>
@@ -406,6 +425,7 @@ public partial class BookTitle : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookTitle>(deep);
 
+
 }
 /// <summary>
 /// <para>Broadcaster.</para>
@@ -441,6 +461,7 @@ public partial class Broadcaster : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Broadcaster>(deep);
+
 
 }
 /// <summary>
@@ -478,6 +499,7 @@ public partial class BroadcastTitle : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BroadcastTitle>(deep);
 
+
 }
 /// <summary>
 /// <para>Case Number.</para>
@@ -513,6 +535,7 @@ public partial class CaseNumber : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CaseNumber>(deep);
+
 
 }
 /// <summary>
@@ -550,6 +573,7 @@ public partial class ChapterNumber : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChapterNumber>(deep);
 
+
 }
 /// <summary>
 /// <para>City.</para>
@@ -585,6 +609,7 @@ public partial class City : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<City>(deep);
+
 
 }
 /// <summary>
@@ -622,6 +647,7 @@ public partial class Comments : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Comments>(deep);
 
+
 }
 /// <summary>
 /// <para>Conference or Proceedings Name.</para>
@@ -657,6 +683,7 @@ public partial class ConferenceName : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConferenceName>(deep);
+
 
 }
 /// <summary>
@@ -694,6 +721,7 @@ public partial class CountryRegion : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CountryRegion>(deep);
 
+
 }
 /// <summary>
 /// <para>Court.</para>
@@ -729,6 +757,7 @@ public partial class Court : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Court>(deep);
+
 
 }
 /// <summary>
@@ -766,6 +795,7 @@ public partial class Day : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Day>(deep);
 
+
 }
 /// <summary>
 /// <para>Day Accessed.</para>
@@ -801,6 +831,7 @@ public partial class DayAccessed : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DayAccessed>(deep);
+
 
 }
 /// <summary>
@@ -838,6 +869,7 @@ public partial class Department : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Department>(deep);
 
+
 }
 /// <summary>
 /// <para>Distributor.</para>
@@ -873,6 +905,7 @@ public partial class Distributor : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Distributor>(deep);
+
 
 }
 /// <summary>
@@ -910,6 +943,7 @@ public partial class Edition : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Edition>(deep);
 
+
 }
 /// <summary>
 /// <para>GUID.</para>
@@ -945,6 +979,7 @@ public partial class GuidString : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GuidString>(deep);
+
 
 }
 /// <summary>
@@ -982,6 +1017,7 @@ public partial class Institution : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Institution>(deep);
 
+
 }
 /// <summary>
 /// <para>Internet Site Title.</para>
@@ -1017,6 +1053,7 @@ public partial class InternetSiteTitle : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InternetSiteTitle>(deep);
+
 
 }
 /// <summary>
@@ -1054,6 +1091,7 @@ public partial class Issue : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Issue>(deep);
 
+
 }
 /// <summary>
 /// <para>Journal Name.</para>
@@ -1089,6 +1127,7 @@ public partial class JournalName : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<JournalName>(deep);
+
 
 }
 /// <summary>
@@ -1126,6 +1165,7 @@ public partial class LcId : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LcId>(deep);
 
+
 }
 /// <summary>
 /// <para>Medium.</para>
@@ -1161,6 +1201,7 @@ public partial class Medium : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Medium>(deep);
+
 
 }
 /// <summary>
@@ -1198,6 +1239,7 @@ public partial class Month : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Month>(deep);
 
+
 }
 /// <summary>
 /// <para>Month Accessed.</para>
@@ -1233,6 +1275,7 @@ public partial class MonthAccessed : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MonthAccessed>(deep);
+
 
 }
 /// <summary>
@@ -1270,6 +1313,7 @@ public partial class NumberVolumes : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberVolumes>(deep);
 
+
 }
 /// <summary>
 /// <para>Pages.</para>
@@ -1305,6 +1349,7 @@ public partial class Pages : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Pages>(deep);
+
 
 }
 /// <summary>
@@ -1342,6 +1387,7 @@ public partial class PatentNumber : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PatentNumber>(deep);
 
+
 }
 /// <summary>
 /// <para>Periodical Title.</para>
@@ -1377,6 +1423,7 @@ public partial class PeriodicalTitle : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PeriodicalTitle>(deep);
+
 
 }
 /// <summary>
@@ -1414,6 +1461,7 @@ public partial class ProductionCompany : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ProductionCompany>(deep);
 
+
 }
 /// <summary>
 /// <para>Publication Title.</para>
@@ -1449,6 +1497,7 @@ public partial class PublicationTitle : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PublicationTitle>(deep);
+
 
 }
 /// <summary>
@@ -1486,6 +1535,7 @@ public partial class Publisher : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Publisher>(deep);
 
+
 }
 /// <summary>
 /// <para>Recording Number.</para>
@@ -1521,6 +1571,7 @@ public partial class RecordingNumber : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RecordingNumber>(deep);
+
 
 }
 /// <summary>
@@ -1558,6 +1609,7 @@ public partial class ReferenceOrder : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ReferenceOrder>(deep);
 
+
 }
 /// <summary>
 /// <para>Reporter.</para>
@@ -1593,6 +1645,7 @@ public partial class Reporter : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Reporter>(deep);
+
 
 }
 /// <summary>
@@ -1630,6 +1683,7 @@ public partial class ShortTitle : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShortTitle>(deep);
 
+
 }
 /// <summary>
 /// <para>Standard Number.</para>
@@ -1665,6 +1719,7 @@ public partial class StandardNumber : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StandardNumber>(deep);
+
 
 }
 /// <summary>
@@ -1702,6 +1757,7 @@ public partial class StateProvince : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StateProvince>(deep);
 
+
 }
 /// <summary>
 /// <para>Station.</para>
@@ -1737,6 +1793,7 @@ public partial class Station : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Station>(deep);
+
 
 }
 /// <summary>
@@ -1774,6 +1831,7 @@ public partial class Tag : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tag>(deep);
 
+
 }
 /// <summary>
 /// <para>Theater.</para>
@@ -1809,6 +1867,7 @@ public partial class Theater : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Theater>(deep);
+
 
 }
 /// <summary>
@@ -1846,6 +1905,7 @@ public partial class ThesisType : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThesisType>(deep);
 
+
 }
 /// <summary>
 /// <para>Title.</para>
@@ -1881,6 +1941,7 @@ public partial class Title : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Title>(deep);
+
 
 }
 /// <summary>
@@ -1918,6 +1979,7 @@ public partial class PatentType : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PatentType>(deep);
 
+
 }
 /// <summary>
 /// <para>URL.</para>
@@ -1953,6 +2015,7 @@ public partial class UrlString : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UrlString>(deep);
+
 
 }
 /// <summary>
@@ -1990,6 +2053,7 @@ public partial class Version : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Version>(deep);
 
+
 }
 /// <summary>
 /// <para>Volume.</para>
@@ -2025,6 +2089,7 @@ public partial class Volume : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Volume>(deep);
+
 
 }
 /// <summary>
@@ -2062,6 +2127,7 @@ public partial class Year : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Year>(deep);
 
+
 }
 /// <summary>
 /// <para>Year Accessed.</para>
@@ -2097,6 +2163,7 @@ public partial class YearAccessed : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<YearAccessed>(deep);
+
 
 }
 /// <summary>
@@ -2152,6 +2219,11 @@ public partial class NameList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2210,6 +2282,11 @@ public partial class Artist : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Artist>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Book Author.</para>
@@ -2263,6 +2340,11 @@ public partial class BookAuthor : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookAuthor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Compiler.</para>
@@ -2316,6 +2398,11 @@ public partial class Compiler : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Compiler>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Composer.</para>
@@ -2369,6 +2456,11 @@ public partial class Composer : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Composer>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Conductor.</para>
@@ -2422,6 +2514,11 @@ public partial class Conductor : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Conductor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Counsel.</para>
@@ -2475,6 +2572,11 @@ public partial class Counsel : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Counsel>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Director.</para>
@@ -2528,6 +2630,11 @@ public partial class Director : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Director>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Editor.</para>
@@ -2581,6 +2688,11 @@ public partial class Editor : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Editor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Interviewee.</para>
@@ -2634,6 +2746,11 @@ public partial class Interviewee : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Interviewee>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Interviewer.</para>
@@ -2687,6 +2804,11 @@ public partial class Interviewer : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Interviewer>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Inventor.</para>
@@ -2740,6 +2862,11 @@ public partial class Inventor : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Inventor>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Producer Name.</para>
@@ -2793,6 +2920,11 @@ public partial class ProducerName : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ProducerName>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Translator.</para>
@@ -2846,6 +2978,11 @@ public partial class Translator : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Translator>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Writer.</para>
@@ -2899,6 +3036,11 @@ public partial class Writer : NameType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Writer>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the NameType class.
@@ -3016,6 +3158,15 @@ public partial class Author : NameOrCorporateType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Author>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Performer.</para>
@@ -3070,6 +3221,15 @@ public partial class Performer : NameOrCorporateType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Performer>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 1)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the NameOrCorporateType class.
@@ -3232,6 +3392,29 @@ public partial class AuthorList : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Artist), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Author), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookAuthor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Compiler), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Composer), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Conductor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Counsel), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Director), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Editor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewee), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewer), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Inventor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Performer), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProducerName), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Translator), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Writer), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
         /// <summary>
@@ -3483,6 +3666,7 @@ public partial class SourceType : OpenXmlLeafTextElement
 		return new EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>(){ InnerText = text };
     }
 
+
     
     
     /// <inheritdoc/>
@@ -3644,6 +3828,65 @@ public partial class Source : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new CompositeParticle(ParticleType.Choice, 0, 0)
+    {
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AlbumTitle), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AuthorList), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookTitle), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Broadcaster), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BroadcastTitle), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CaseNumber), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ChapterNumber), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.City), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Comments), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ConferenceName), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CountryRegion), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Court), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Day), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.DayAccessed), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Department), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Distributor), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Edition), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.GuidString), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Institution), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.InternetSiteTitle), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Issue), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.JournalName), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.LcId), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Medium), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Month), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.MonthAccessed), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NumberVolumes), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Pages), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentNumber), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PeriodicalTitle), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProductionCompany), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PublicationTitle), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Publisher), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.RecordingNumber), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ReferenceOrder), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Reporter), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.SourceType), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ShortTitle), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StandardNumber), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StateProvince), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Station), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Tag), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Theater), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ThesisType), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Title), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentType), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.UrlString), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Version), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Volume), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Year), 1, 1),
+        new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.YearAccessed), 1, 1)
+    }
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
         /// <summary>

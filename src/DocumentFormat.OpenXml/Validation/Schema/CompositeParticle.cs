@@ -15,15 +15,24 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("ParticleType={ParticleType}")]
     internal class CompositeParticle : ParticleConstraint, IEnumerable<ParticleConstraint>
     {
+        private readonly bool _filterVersion;
+
         private IParticleValidator _particleValidator;
         private List<ParticleConstraint> _children;
 
         /// <summary>
         /// Initializes a new instance of the CompositeParticle.
         /// </summary>
-        internal CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs)
-            : base(particleType, minOccurs, maxOccurs)
+        public CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs, bool requireFilter = false, FileFormatVersions version = FileFormatVersions.Office2007)
+            : this(particleType, minOccurs, maxOccurs, requireFilter, false, version)
         {
+        }
+
+        private CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs, bool requireFilter, bool filterVersion, FileFormatVersions version)
+            : base(particleType, minOccurs, maxOccurs, version)
+        {
+            RequireFilter = requireFilter;
+            _filterVersion = filterVersion;
         }
 
         /// <summary>
@@ -31,14 +40,67 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         public ReadOnlyList<ParticleConstraint> ChildrenParticles => _children;
 
+        public bool RequireFilter { get; }
+
+        public override ParticleConstraint Build(FileFormatVersions version)
+        {
+            if (!version.AtLeast(Version))
+            {
+                return null;
+            }
+
+            // We can potentially limit creation of a clone to times when it is required; ie, when there
+            // is a version specific particle.
+            var clone = new CompositeParticle(ParticleType, MinOccurs, MaxOccurs, requireFilter: RequireFilter, filterVersion: true, Version);
+
+            foreach (var child in ChildrenParticles)
+            {
+                clone.Add(child.Build(version));
+            }
+
+            return clone;
+        }
+
         public void Add(ParticleConstraint constraint)
         {
+            if (constraint is null)
+            {
+                return;
+            }
+
             if (_children is null)
             {
                 _children = new List<ParticleConstraint>();
             }
+            else if (_filterVersion)
+            {
+                for (int i = 0; i < _children.Count; i++)
+                {
+                    var other = _children[i];
+
+                    if (Equals(other, constraint) && constraint.Version > other.Version)
+                    {
+                        _children.RemoveAt(i);
+                        i--;
+                    }
+                }
+            }
 
             _children.Add(constraint);
+        }
+
+        private bool Equals(ParticleConstraint constraint1, ParticleConstraint constraint2)
+        {
+            if (constraint1 is ElementParticle element1 && constraint2 is ElementParticle element2)
+            {
+                return element1.ElementType == element2.ElementType;
+            }
+            else if (RequireFilter && constraint1.ParticleType == ParticleType.Group && constraint2.ParticleType == ParticleType.Group)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         /// <inheritdoc/>

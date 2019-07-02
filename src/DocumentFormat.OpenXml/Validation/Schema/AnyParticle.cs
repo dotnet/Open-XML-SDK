@@ -15,15 +15,21 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("NamespaceValue={NamespaceValue}")]
     internal class AnyParticle : ParticleConstraint
     {
-        private readonly  IParticleValidator _particleValidator;
+        private readonly IParticleValidator _particleValidator;
 
         /// <summary>
         /// Initializes a new instance of the AnyParticle.
         /// </summary>
-        internal AnyParticle(ushort xsdAnyValue, int minOccurs, int maxOccurs)
-            : base(ParticleType.Any, minOccurs, maxOccurs)
+        internal AnyParticle(ushort xsdAnyValue, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
+            : base(ParticleType.Any, minOccurs, maxOccurs, version)
         {
             NamespaceValue = xsdAnyValue;
+            _particleValidator = new AnyParticleValidator(this);
+        }
+
+        internal AnyParticle(int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
+           : base(ParticleType.Any, minOccurs, maxOccurs, version)
+        {
             _particleValidator = new AnyParticleValidator(this);
         }
 

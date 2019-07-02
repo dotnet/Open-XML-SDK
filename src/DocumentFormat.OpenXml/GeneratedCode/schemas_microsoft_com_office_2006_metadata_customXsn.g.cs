@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Office.CustomXsn
@@ -68,6 +69,14 @@ public partial class CustomXsn : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.CachedView), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.Scope), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -162,6 +171,7 @@ public partial class XsnLocation : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsnLocation>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the CachedView Class.</para>
@@ -196,6 +206,7 @@ public partial class CachedView : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CachedView>(deep);
+
 
 }
 /// <summary>
@@ -232,6 +243,7 @@ public partial class OpenByDefault : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OpenByDefault>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the Scope Class.</para>
@@ -266,6 +278,7 @@ public partial class Scope : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Scope>(deep);
+
 
 }
 }

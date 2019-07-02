@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Office.MetaAttributes;
 
@@ -15,11 +16,6 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is ct:contentTypeSchema.</para>
 /// </summary>
-/// <remarks>
-/// The following table lists the possible child types:
-/// <list type="bullet">
-/// </list>
-/// </remarks>
 
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
@@ -135,6 +131,11 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new AnyParticle(XsdAnyPrefidefinedValue.Any, 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>

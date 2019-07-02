@@ -27,6 +27,139 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             _output = output;
         }
 
+        public static IEnumerable<object[]> Versions => FileFormatVersionExtensions.AllVersions.Select(v => new object[] { v });
+
+        [Fact]
+        public void RequireFilter()
+        {
+            var particle = new CompositeParticle(ParticleType.Sequence, 1, 1, requireFilter: true)
+            {
+                new CompositeParticle(ParticleType.Group,  1, 1),
+                new CompositeParticle(ParticleType.Group,  1, 2, version: FileFormatVersions.Office2010),
+            };
+
+            var built2007 = Assert.IsType<CompositeParticle>(particle.Build(FileFormatVersions.Office2007));
+
+            Assert.NotSame(particle, built2007);
+
+            var result2007 = Assert.Single(built2007.ChildrenParticles);
+
+            Assert.Equal(ParticleType.Group, result2007.ParticleType);
+            Assert.Equal(1, result2007.MaxOccurs);
+
+            var built2010 = Assert.IsType<CompositeParticle>(particle.Build(FileFormatVersions.Office2010));
+
+            Assert.NotSame(particle, built2010);
+
+            var result2010 = Assert.Single(built2010.ChildrenParticles);
+
+            Assert.Equal(ParticleType.Group, result2010.ParticleType);
+            Assert.Equal(2, result2010.MaxOccurs);
+        }
+
+        [Fact]
+        public void CompositeSequenceVersion()
+        {
+            var particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(ParticleTests), 1, 1),
+                new AnyParticle( 1, 1, version: FileFormatVersions.Office2010),
+                new NsAnyParticle(0, 1, 1),
+            };
+
+            var built2007 = Assert.IsType<CompositeParticle>(particle.Build(FileFormatVersions.Office2007));
+
+            Assert.NotSame(particle, built2007);
+
+            Assert.Collection(built2007.ChildrenParticles,
+                p => Assert.Same(p, particle.ChildrenParticles[0]),
+                p => Assert.Same(p, particle.ChildrenParticles[2]));
+
+            var built2010 = Assert.IsType<CompositeParticle>(particle.Build(FileFormatVersions.Office2010));
+
+            Assert.NotSame(particle, built2010);
+
+            Assert.Collection(built2010.ChildrenParticles,
+                p => Assert.Same(p, particle.ChildrenParticles[0]),
+                p => Assert.Same(p, particle.ChildrenParticles[1]),
+                p => Assert.Same(p, particle.ChildrenParticles[2]));
+        }
+
+        [Fact]
+        public void CompositeSequenceMultipleVersion()
+        {
+            var particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(ParticleTests), 1, 1),
+                new ElementParticle(typeof(ParticleTests), 1, 1, version: FileFormatVersions.Office2010),
+                new NsAnyParticle(0, 1, 1),
+            };
+
+            var built2007 = Assert.IsType<CompositeParticle>(particle.Build(FileFormatVersions.Office2007));
+
+            Assert.NotSame(particle, built2007);
+
+            Assert.Collection(built2007.ChildrenParticles,
+                p => Assert.Same(p, particle.ChildrenParticles[0]),
+                p => Assert.Same(p, particle.ChildrenParticles[2]));
+
+            var built2010 = Assert.IsType<CompositeParticle>(particle.Build(FileFormatVersions.Office2010));
+
+            Assert.NotSame(particle, built2010);
+
+            Assert.Collection(built2010.ChildrenParticles,
+                p => Assert.Same(p, particle.ChildrenParticles[1]),
+                p => Assert.Same(p, particle.ChildrenParticles[2]));
+        }
+
+        [MemberData(nameof(Versions))]
+        [Theory]
+        public void CompositeSequenceNoVersion(FileFormatVersions version)
+        {
+            var particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(ParticleTests), 1, 1),
+                new AnyParticle( 1, 1),
+                new NsAnyParticle(0, 1, 1),
+            };
+
+            var built = Assert.IsType<CompositeParticle>(particle.Build(version));
+
+            Assert.NotSame(particle, built);
+
+            Assert.Collection(built.ChildrenParticles,
+                p => Assert.Same(p, particle.ChildrenParticles[0]),
+                p => Assert.Same(p, particle.ChildrenParticles[1]),
+                p => Assert.Same(p, particle.ChildrenParticles[2]));
+        }
+
+        [MemberData(nameof(Versions))]
+        [Theory]
+        public void ElementParticleBuildSame(FileFormatVersions version)
+        {
+            var particle = new ElementParticle(typeof(ParticleTests), 1, 1);
+
+            Assert.Same(particle, particle.Build(version));
+        }
+
+        [MemberData(nameof(Versions))]
+        [Theory]
+        public void AnyParticleBuildSame(FileFormatVersions version)
+        {
+            var particle = new AnyParticle(1, 1);
+
+            Assert.Same(particle, particle.Build(version));
+        }
+
+        [MemberData(nameof(Versions))]
+        [Theory]
+        public void AnyNsParticleBuildSame(FileFormatVersions version)
+        {
+            var particle = new NsAnyParticle(0, 1, 1);
+
+            Assert.Same(particle, particle.Build(version));
+        }
+
         [Fact]
         public void ExpectedKind()
         {
@@ -109,7 +242,6 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             foreach (var version in FileFormatVersionExtensions.AllVersions)
             {
-                var data = SdbSchemaData.GetSchemaData(version);
                 foreach (var type in elements)
                 {
                     var constructor = type.GetConstructor(Cached.Array<Type>());
@@ -120,15 +252,17 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
                         if (version.AtLeast(element.InitialVersion))
                         {
-                            if (data.TryGetSchemaTypeData(element.ElementTypeId, out var typeData) && typeData != null)
+                            var constraint = element.ParticleConstraint?.Build(version);
+
+                            if (constraint != null)
                             {
                                 if (constraints.TryGetValue(type, out var current))
                                 {
-                                    current.Add(version, typeData.ParticleConstraint);
+                                    current.Add(version, constraint);
                                 }
                                 else
                                 {
-                                    constraints.Add(type, new VersionCollection<ParticleConstraint> { { version, typeData.ParticleConstraint } });
+                                    constraints.Add(type, new VersionCollection<ParticleConstraint> { { version, constraint } });
                                 }
                             }
                         }
@@ -216,6 +350,10 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                     if (prop.PropertyName == nameof(ParticleConstraint.MinOccurs) || prop.PropertyName == nameof(ParticleConstraint.MaxOccurs))
                     {
                         prop.DefaultValue = 1;
+                    }
+                    else if (prop.PropertyName == nameof(ParticleConstraint.Version) || prop.PropertyName == nameof(CompositeParticle.RequireFilter))
+                    {
+                        prop.Ignored = true;
                     }
                     else if (prop.PropertyName == nameof(CompositeParticle.ChildrenParticles))
                     {

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Vml.Spreadsheet
@@ -202,6 +203,77 @@ public partial class ClientData : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MoveWithCells), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ResizeWithCells), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Anchor), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Locked), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultSize), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.PrintObject), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Disabled), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoFill), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoLine), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoSizePicture), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaMacro), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalTextAlignment), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalTextAlignment), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.LockText), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.JustifyLastLine), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.SecretEdit), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultButton), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.HelpButton), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.CancelButton), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DismissButton), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorPrimary), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorSecondary), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Visible), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.RowHidden), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ColumnHidden), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MultiLine), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalScrollBar), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ValidIds), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaRange), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MinDropDownWidth), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionEntry), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3DForListBoxAndDropDown), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionType), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MultiSelections), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ListBoxCallbackType), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ListItem), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DropStyle), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Colored), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DropLines), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Checked), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaLink), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaPicture), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3D), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FirstButton), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaGroup), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPosition), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMin), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMax), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarIncrement), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPageIncrement), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalScrollBar), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarWidth), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MapOcxControl), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormat), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.CameraObject), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.RecalculateAlways), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoScaleFont), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptText), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptExtended), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLanguage), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -243,6 +315,7 @@ public partial class MoveWithCells : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveWithCells>(deep);
 
+
 }
 /// <summary>
 /// <para>Resize with Cells.</para>
@@ -278,6 +351,7 @@ public partial class ResizeWithCells : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ResizeWithCells>(deep);
+
 
 }
 /// <summary>
@@ -315,6 +389,7 @@ public partial class Locked : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Locked>(deep);
 
+
 }
 /// <summary>
 /// <para>Default Size Toggle.</para>
@@ -350,6 +425,7 @@ public partial class DefaultSize : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultSize>(deep);
+
 
 }
 /// <summary>
@@ -387,6 +463,7 @@ public partial class PrintObject : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintObject>(deep);
 
+
 }
 /// <summary>
 /// <para>Macro Disable Toggle.</para>
@@ -422,6 +499,7 @@ public partial class Disabled : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disabled>(deep);
+
 
 }
 /// <summary>
@@ -459,6 +537,7 @@ public partial class AutoFill : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoFill>(deep);
 
+
 }
 /// <summary>
 /// <para>AutoLine.</para>
@@ -494,6 +573,7 @@ public partial class AutoLine : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoLine>(deep);
+
 
 }
 /// <summary>
@@ -531,6 +611,7 @@ public partial class AutoSizePicture : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoSizePicture>(deep);
 
+
 }
 /// <summary>
 /// <para>Text Lock.</para>
@@ -566,6 +647,7 @@ public partial class LockText : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LockText>(deep);
+
 
 }
 /// <summary>
@@ -603,6 +685,7 @@ public partial class JustifyLastLine : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<JustifyLastLine>(deep);
 
+
 }
 /// <summary>
 /// <para>Password Edit.</para>
@@ -638,6 +721,7 @@ public partial class SecretEdit : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SecretEdit>(deep);
+
 
 }
 /// <summary>
@@ -675,6 +759,7 @@ public partial class DefaultButton : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultButton>(deep);
 
+
 }
 /// <summary>
 /// <para>Help Button.</para>
@@ -710,6 +795,7 @@ public partial class HelpButton : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HelpButton>(deep);
+
 
 }
 /// <summary>
@@ -747,6 +833,7 @@ public partial class CancelButton : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CancelButton>(deep);
 
+
 }
 /// <summary>
 /// <para>Dismiss Button.</para>
@@ -782,6 +869,7 @@ public partial class DismissButton : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DismissButton>(deep);
+
 
 }
 /// <summary>
@@ -819,6 +907,7 @@ public partial class Visible : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Visible>(deep);
 
+
 }
 /// <summary>
 /// <para>Comment's Row is Hidden.</para>
@@ -854,6 +943,7 @@ public partial class RowHidden : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowHidden>(deep);
+
 
 }
 /// <summary>
@@ -891,6 +981,7 @@ public partial class ColumnHidden : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnHidden>(deep);
 
+
 }
 /// <summary>
 /// <para>Multi-line.</para>
@@ -926,6 +1017,7 @@ public partial class MultiLine : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultiLine>(deep);
+
 
 }
 /// <summary>
@@ -963,6 +1055,7 @@ public partial class VerticalScrollBar : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalScrollBar>(deep);
 
+
 }
 /// <summary>
 /// <para>Valid ID.</para>
@@ -998,6 +1091,7 @@ public partial class ValidIds : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ValidIds>(deep);
+
 
 }
 /// <summary>
@@ -1035,6 +1129,7 @@ public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disable3DForListBoxAndDropDown>(deep);
 
+
 }
 /// <summary>
 /// <para>Dropdown Color Toggle.</para>
@@ -1070,6 +1165,7 @@ public partial class Colored : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Colored>(deep);
+
 
 }
 /// <summary>
@@ -1107,6 +1203,7 @@ public partial class Disable3D : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disable3D>(deep);
 
+
 }
 /// <summary>
 /// <para>First Radio Button.</para>
@@ -1142,6 +1239,7 @@ public partial class FirstButton : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstButton>(deep);
+
 
 }
 /// <summary>
@@ -1179,6 +1277,7 @@ public partial class HorizontalScrollBar : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalScrollBar>(deep);
 
+
 }
 /// <summary>
 /// <para>ActiveX Control.</para>
@@ -1214,6 +1313,7 @@ public partial class MapOcxControl : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MapOcxControl>(deep);
+
 
 }
 /// <summary>
@@ -1251,6 +1351,7 @@ public partial class CameraObject : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CameraObject>(deep);
 
+
 }
 /// <summary>
 /// <para>Recalculation Toggle.</para>
@@ -1286,6 +1387,7 @@ public partial class RecalculateAlways : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RecalculateAlways>(deep);
+
 
 }
 /// <summary>
@@ -1323,6 +1425,7 @@ public partial class AutoScaleFont : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoScaleFont>(deep);
 
+
 }
 /// <summary>
 /// <para>Dynamic Data Exchange.</para>
@@ -1358,6 +1461,7 @@ public partial class DdeObject : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DdeObject>(deep);
+
 
 }
 /// <summary>
@@ -1395,6 +1499,7 @@ public partial class UIObject : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UIObject>(deep);
 
+
 }
 /// <summary>
 /// <para>Anchor.</para>
@@ -1429,6 +1534,7 @@ public partial class Anchor : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Anchor>(deep);
+
 
 }
 /// <summary>
@@ -1465,6 +1571,7 @@ public partial class HorizontalTextAlignment : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalTextAlignment>(deep);
 
+
 }
 /// <summary>
 /// <para>Vertical Text Alignment.</para>
@@ -1499,6 +1606,7 @@ public partial class VerticalTextAlignment : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalTextAlignment>(deep);
+
 
 }
 /// <summary>
@@ -1535,6 +1643,7 @@ public partial class FormulaRange : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaRange>(deep);
 
+
 }
 /// <summary>
 /// <para>Selection Type.</para>
@@ -1569,6 +1678,7 @@ public partial class SelectionType : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SelectionType>(deep);
+
 
 }
 /// <summary>
@@ -1605,6 +1715,7 @@ public partial class MultiSelections : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultiSelections>(deep);
 
+
 }
 /// <summary>
 /// <para>Callback Type.</para>
@@ -1639,6 +1750,7 @@ public partial class ListBoxCallbackType : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListBoxCallbackType>(deep);
+
 
 }
 /// <summary>
@@ -1675,6 +1787,7 @@ public partial class ListItem : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListItem>(deep);
 
+
 }
 /// <summary>
 /// <para>Dropdown Style.</para>
@@ -1709,6 +1822,7 @@ public partial class DropStyle : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropStyle>(deep);
+
 
 }
 /// <summary>
@@ -1745,6 +1859,7 @@ public partial class FormulaLink : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaLink>(deep);
 
+
 }
 /// <summary>
 /// <para>Camera Source Range.</para>
@@ -1779,6 +1894,7 @@ public partial class FormulaPicture : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaPicture>(deep);
+
 
 }
 /// <summary>
@@ -1815,6 +1931,7 @@ public partial class FormulaGroup : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaGroup>(deep);
 
+
 }
 /// <summary>
 /// <para>HTML Script Text.</para>
@@ -1849,6 +1966,7 @@ public partial class ScriptText : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptText>(deep);
+
 
 }
 /// <summary>
@@ -1885,6 +2003,7 @@ public partial class ScriptExtended : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptExtended>(deep);
 
+
 }
 /// <summary>
 /// <para>Text Formula.</para>
@@ -1919,6 +2038,7 @@ public partial class FormulaTextBox : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaTextBox>(deep);
+
 
 }
 /// <summary>
@@ -1955,6 +2075,7 @@ public partial class FormulaMacro : OpenXmlLeafTextElement
     {
 		return new StringValue(){ InnerText = text };
     }
+
 
     
     
@@ -1997,6 +2118,7 @@ public partial class AcceleratorPrimary : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AcceleratorPrimary>(deep);
 
+
 }
 /// <summary>
 /// <para>Secondary Keyboard Accelerator.</para>
@@ -2032,6 +2154,7 @@ public partial class AcceleratorSecondary : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AcceleratorSecondary>(deep);
+
 
 }
 /// <summary>
@@ -2069,6 +2192,7 @@ public partial class CommentRowTarget : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentRowTarget>(deep);
 
+
 }
 /// <summary>
 /// <para>Comment Column Target.</para>
@@ -2104,6 +2228,7 @@ public partial class CommentColumnTarget : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentColumnTarget>(deep);
+
 
 }
 /// <summary>
@@ -2141,6 +2266,7 @@ public partial class InputValidationType : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InputValidationType>(deep);
 
+
 }
 /// <summary>
 /// <para>Minimum Width.</para>
@@ -2176,6 +2302,7 @@ public partial class MinDropDownWidth : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinDropDownWidth>(deep);
+
 
 }
 /// <summary>
@@ -2213,6 +2340,7 @@ public partial class SelectionEntry : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SelectionEntry>(deep);
 
+
 }
 /// <summary>
 /// <para>Dropdown Maximum Lines.</para>
@@ -2248,6 +2376,7 @@ public partial class DropLines : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropLines>(deep);
+
 
 }
 /// <summary>
@@ -2285,6 +2414,7 @@ public partial class Checked : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Checked>(deep);
 
+
 }
 /// <summary>
 /// <para>Scroll bar position.</para>
@@ -2320,6 +2450,7 @@ public partial class ScrollBarPosition : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarPosition>(deep);
+
 
 }
 /// <summary>
@@ -2357,6 +2488,7 @@ public partial class ScrollBarMin : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarMin>(deep);
 
+
 }
 /// <summary>
 /// <para>Scroll Bar Maximum.</para>
@@ -2392,6 +2524,7 @@ public partial class ScrollBarMax : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarMax>(deep);
+
 
 }
 /// <summary>
@@ -2429,6 +2562,7 @@ public partial class ScrollBarIncrement : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarIncrement>(deep);
 
+
 }
 /// <summary>
 /// <para>Scroll Bar Page Increment.</para>
@@ -2464,6 +2598,7 @@ public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarPageIncrement>(deep);
+
 
 }
 /// <summary>
@@ -2501,6 +2636,7 @@ public partial class ScrollBarWidth : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarWidth>(deep);
 
+
 }
 /// <summary>
 /// <para>Clipboard Format.</para>
@@ -2536,6 +2672,7 @@ public partial class ClipboardFormat : OpenXmlLeafTextElement
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormatValues>(){ InnerText = text };
     }
+
 
     
     
@@ -2578,6 +2715,7 @@ public partial class ScriptLanguage : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptLanguage>(deep);
 
+
 }
 /// <summary>
 /// <para>HTML Script Location.</para>
@@ -2613,6 +2751,7 @@ public partial class ScriptLocation : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptLocation>(deep);
+
 
 }
 /// <summary>

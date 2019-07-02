@@ -3,9 +3,7 @@
 
 using DocumentFormat.OpenXml.Framework;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -15,36 +13,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("ElementId={ElementId}")]
     internal class ElementParticle : ParticleConstraint, IParticleValidator
     {
-        private static readonly Lazy<Dictionary<int, Type>> _elementIdMapper = new Lazy<Dictionary<int, Type>>(() =>
-        {
-            var dictionary = new Dictionary<int, Type>();
-
-            foreach (var element in typeof(OpenXmlElement).GetTypeInfo().Assembly.GetTypes())
-            {
-                if (!element.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).GetTypeInfo().IsAssignableFrom(element.GetTypeInfo()))
-                {
-                    var attribute = element.GetTypeInfo().GetCustomAttribute<IdAttribute>();
-
-                    dictionary.Add(attribute.Id, element);
-                }
-            }
-
-            return dictionary;
-        }, true);
-
         /// <summary>
         /// Initializes a new instance of the ElementParticle.
         /// </summary>
-        public ElementParticle(int elementId, int minOccurs, int maxOccurs)
-            : this(_elementIdMapper.Value[elementId], minOccurs, maxOccurs)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ElementParticle.
-        /// </summary>
-        public ElementParticle(Type elementType, int minOccurs, int maxOccurs)
-            : base(ParticleType.Element, minOccurs, maxOccurs)
+        public ElementParticle(Type elementType, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
+            : base(ParticleType.Element, minOccurs, maxOccurs, version)
         {
             ElementType = elementType ?? throw new ArgumentNullException(nameof(elementType));
         }

@@ -15,15 +15,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("NamespaceId={NamespaceId}")]
     internal class NsAnyParticle : ParticleConstraint
     {
-        private readonly IParticleValidator _particleValidator;
-
         /// <summary>
         /// Initializes a new instance of the NsAnyParticle.
         /// </summary>
-        internal NsAnyParticle(int namespaceId, int minOccurs, int maxOccurs)
-            : base(ParticleType.AnyWithUri, minOccurs, maxOccurs)
+        internal NsAnyParticle(int namespaceId, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
+            : base(ParticleType.AnyWithUri, minOccurs, maxOccurs, version)
         {
-            _particleValidator = new NsAnyParticleValidator(this);
+            ParticleValidator = new NsAnyParticleValidator(this);
             NamespaceId = (byte)namespaceId;
         }
 
@@ -35,6 +33,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets a ParticleValidator for this particle constraint.
         /// </summary>
-        internal override IParticleValidator ParticleValidator => _particleValidator;
+        internal override IParticleValidator ParticleValidator { get; }
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Vml.Wordprocessing
@@ -32,6 +33,7 @@ public partial class TopBorder : BorderType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TopBorder>(deep);
 
+
 }
 /// <summary>
 /// <para>Left Border.</para>
@@ -55,6 +57,7 @@ public partial class LeftBorder : BorderType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeftBorder>(deep);
+
 
 }
 /// <summary>
@@ -80,6 +83,7 @@ public partial class RightBorder : BorderType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightBorder>(deep);
 
+
 }
 /// <summary>
 /// <para>Bottom Border.</para>
@@ -103,6 +107,7 @@ public partial class BottomBorder : BorderType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BottomBorder>(deep);
+
 
 }
 /// <summary>
@@ -196,6 +201,7 @@ public partial class TextWrap : OpenXmlLeafElement
     public TextWrap():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -225,6 +231,7 @@ public partial class AnchorLock : OpenXmlLeafElement
     public AnchorLock():base(){}
     
     
+
     
     
     /// <inheritdoc/>

@@ -13,22 +13,18 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class SchemaTypeValidator
     {
-        private readonly SdbSchemaData _sdbSchemaDatas;
+        private readonly FileFormatVersions _version;
 
-        /// <summary>
-        /// Initializes a new instance of the SchemaTypeValidator.
-        /// </summary>
-        /// <param name="sdbSchemaDatas"></param>
-        internal SchemaTypeValidator(SdbSchemaData sdbSchemaDatas)
+        public SchemaTypeValidator(FileFormatVersions version)
         {
-            _sdbSchemaDatas = sdbSchemaDatas;
+            _version = version;
         }
 
         /// <summary>
         /// Only validation whether the children elements are valid according to this type's constraint defined in schema.
         /// </summary>
         /// <param name="validationContext">The validation context.</param>
-        internal void Validate(ValidationContext validationContext)
+        public void Validate(ValidationContext validationContext)
         {
             Debug.Assert(validationContext != null);
             Debug.Assert(validationContext.Element != null);
@@ -74,12 +70,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Debug.Assert(!(theElement is AlternateContentChoice));
                 Debug.Assert(!(theElement is AlternateContentFallback));
 
-                var schemaTypeData = _sdbSchemaDatas.GetSchemaTypeData(theElement);
-
-                if (schemaTypeData?.ParticleConstraint != null)
+                if (theElement.ParticleConstraint != null)
                 {
                     // composite element
-                    CompositeComplexTypeValidator.Validate(validationContext, schemaTypeData.ParticleConstraint);
+                    CompositeComplexTypeValidator.Validate(validationContext, theElement.ParticleConstraint.Build(_version));
                 }
                 else
                 {

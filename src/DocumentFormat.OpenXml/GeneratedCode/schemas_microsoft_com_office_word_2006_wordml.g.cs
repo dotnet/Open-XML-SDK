@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO.Packaging;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml;
 
 namespace DocumentFormat.OpenXml.Office.Word
@@ -97,6 +98,14 @@ public partial class TemplateCommandGroup : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TemplateCommandGroup>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Toolbars), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommands), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the Mcds Class.</para>
@@ -151,6 +160,11 @@ public partial class Mcds : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Mcd), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -269,6 +283,12 @@ public partial class VbaSuppData : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VbaSuppData>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.DocEvents), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Mcds), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the MailMergeRecipients Class.</para>
@@ -323,6 +343,11 @@ public partial class MailMergeRecipients : OpenXmlPartRootElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord), 1, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -381,6 +406,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     public FixedCommandKeyboardCustomization():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -410,6 +436,7 @@ public partial class MacroKeyboardCustomization : MacroWllType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MacroKeyboardCustomization>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the WllMacroKeyboardCustomization Class.</para>
@@ -433,6 +460,7 @@ public partial class WllMacroKeyboardCustomization : MacroWllType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WllMacroKeyboardCustomization>(deep);
+
 
 }
 /// <summary>
@@ -485,6 +513,7 @@ public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapTy
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllocatedCommandKeyboardCustomization>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the AllocatedCommandManifestEntry Class.</para>
@@ -508,6 +537,7 @@ public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllocatedCommandManifestEntry>(deep);
+
 
 }
 /// <summary>
@@ -571,6 +601,7 @@ public partial class CharacterInsertion : OpenXmlLeafElement
     public CharacterInsertion():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -687,6 +718,15 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization), 1, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.CharacterInsertion), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -820,6 +860,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     public AllocatedCommand():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -896,6 +937,7 @@ public partial class Mcd : OpenXmlLeafElement
     public Mcd():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -936,6 +978,7 @@ public partial class EventDocNewXsdString : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocNewXsdString>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EventDocOpenXsdString Class.</para>
@@ -970,6 +1013,7 @@ public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocOpenXsdString>(deep);
+
 
 }
 /// <summary>
@@ -1006,6 +1050,7 @@ public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocCloseXsdString>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EventDocSyncXsdString Class.</para>
@@ -1040,6 +1085,7 @@ public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocSyncXsdString>(deep);
+
 
 }
 /// <summary>
@@ -1076,6 +1122,7 @@ public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocXmlAfterInsertXsdString>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EventDocXmlBeforeDeleteXsdString Class.</para>
@@ -1110,6 +1157,7 @@ public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocXmlBeforeDeleteXsdString>(deep);
+
 
 }
 /// <summary>
@@ -1146,6 +1194,7 @@ public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTex
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlAfterInsertXsdString>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EventDocContentControlBeforeDeleteXsdString Class.</para>
@@ -1180,6 +1229,7 @@ public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTe
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlBeforeDeleteXsdString>(deep);
+
 
 }
 /// <summary>
@@ -1216,6 +1266,7 @@ public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextEle
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlOnExistXsdString>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EventDocContentControlOnEnterXsdString Class.</para>
@@ -1250,6 +1301,7 @@ public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextEle
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlOnEnterXsdString>(deep);
+
 
 }
 /// <summary>
@@ -1286,6 +1338,7 @@ public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocStoreUpdateXsdString>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EventDocContentControlUpdateXsdString Class.</para>
@@ -1321,6 +1374,7 @@ public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElem
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocContentControlUpdateXsdString>(deep);
 
+
 }
 /// <summary>
 /// <para>Defines the EventDocBuildingBlockAfterInsertXsdString Class.</para>
@@ -1355,6 +1409,7 @@ public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafText
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EventDocBuildingBlockAfterInsertXsdString>(deep);
+
 
 }
 /// <summary>
@@ -1434,6 +1489,23 @@ public partial class DocEvents : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocSyncXsdString), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocXmlAfterInsertXsdString), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocXmlBeforeDeleteXsdString), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocContentControlAfterInsertXsdString), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocContentControlBeforeDeleteXsdString), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnExistXsdString), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnEnterXsdString), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString), 0, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1664,6 +1736,11 @@ public partial class AllocatedCommandManifest : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1703,6 +1780,7 @@ public partial class ToolbarData : OpenXmlLeafElement
     public ToolbarData():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -1761,6 +1839,11 @@ public partial class KeyMapCustomizations : KeymapsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<KeyMapCustomizations>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// <para>Defines the MismatchedKeyMapCustomization Class.</para>
@@ -1814,6 +1897,11 @@ public partial class MismatchedKeyMapCustomization : KeymapsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MismatchedKeyMapCustomization>(deep);
 
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
 /// Defines the KeymapsType class.
@@ -1918,6 +2006,12 @@ public partial class Toolbars : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest), 0, 0),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.ToolbarData), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -1977,6 +2071,11 @@ public partial class AllocatedCommands : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommand), 0, 0)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
     
     /// <inheritdoc/>
@@ -2015,6 +2114,7 @@ public partial class RecordIncluded : OpenXmlLeafElement
     public RecordIncluded():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2054,6 +2154,7 @@ public partial class RecordHashCode : OpenXmlLeafElement
     public RecordHashCode():base(){}
     
     
+
     
     
     /// <inheritdoc/>
@@ -2115,6 +2216,12 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
     }
 
     
+private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+{
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.RecordIncluded), 0, 1),
+    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.RecordHashCode), 1, 1)
+};
+internal override ParticleConstraint ParticleConstraint => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
