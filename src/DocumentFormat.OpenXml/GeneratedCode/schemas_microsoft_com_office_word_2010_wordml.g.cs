@@ -1720,7 +1720,35 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RgbColorModelHex.</para>
+    /// <para> Represents the following element tag in the schema: w14:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> SchemeColor.</para>
+    /// <para> Represents the following element tag in the schema: w14:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
+    /// </remark>
+	[Index(1)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(1);
+        set => SetElement(1, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SolidColorFillProperties>(deep);
 
@@ -1976,7 +2004,35 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RgbColorModelHex.</para>
+    /// <para> Represents the following element tag in the schema: w14:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> SchemeColor.</para>
+    /// <para> Represents the following element tag in the schema: w14:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
+    /// </remark>
+	[Index(1)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(1);
+        set => SetElement(1, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Glow>(deep);
 
@@ -2134,7 +2190,35 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RgbColorModelHex.</para>
+    /// <para> Represents the following element tag in the schema: w14:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> SchemeColor.</para>
+    /// <para> Represents the following element tag in the schema: w14:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
+    /// </remark>
+	[Index(1)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(1);
+        set => SetElement(1, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shadow>(deep);
 
@@ -2521,7 +2605,48 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> NoFillEmpty.</para>
+    /// <para> Represents the following element tag in the schema: w14:noFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
+    /// </remark>
+	[Index(0)]
+    public NoFillEmpty NoFillEmpty
+	{
+        get => GetElement<NoFillEmpty>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> SolidColorFillProperties.</para>
+    /// <para> Represents the following element tag in the schema: w14:solidFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
+    /// </remark>
+	[Index(1)]
+    public SolidColorFillProperties SolidColorFillProperties
+	{
+        get => GetElement<SolidColorFillProperties>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> GradientFillProperties.</para>
+    /// <para> Represents the following element tag in the schema: w14:gradFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
+    /// </remark>
+	[Index(2)]
+    public GradientFillProperties GradientFillProperties
+	{
+        get => GetElement<GradientFillProperties>(2);
+        set => SetElement(2, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillTextEffect>(deep);
 
@@ -3582,7 +3707,35 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RgbColorModelHex.</para>
+    /// <para> Represents the following element tag in the schema: w14:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> SchemeColor.</para>
+    /// <para> Represents the following element tag in the schema: w14:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
+    /// </remark>
+	[Index(1)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(1);
+        set => SetElement(1, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GradientStop>(deep);
 
@@ -4184,7 +4337,35 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     
     
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RgbColorModelHex.</para>
+    /// <para> Represents the following element tag in the schema: w14:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> SchemeColor.</para>
+    /// <para> Represents the following element tag in the schema: w14:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
+    /// </remark>
+	[Index(1)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(1);
+        set => SetElement(1, value);
+	}
+
+
     /// <summary>
     /// Initializes a new instance of the ColorType class.
     /// </summary>

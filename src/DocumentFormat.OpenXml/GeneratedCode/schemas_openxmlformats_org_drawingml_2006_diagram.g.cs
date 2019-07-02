@@ -5760,7 +5760,35 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> Apply 3D shape properties.</para>
+    /// <para> Represents the following element tag in the schema: a:sp3d </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public DocumentFormat.OpenXml.Drawing.Shape3DType Shape3DType
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Shape3DType>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> No text in 3D scene.</para>
+    /// <para> Represents the following element tag in the schema: a:flatTx </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public DocumentFormat.OpenXml.Drawing.FlatText FlatText
+	{
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FlatText>(1);
+        set => SetElement(1, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextProperties>(deep);
 

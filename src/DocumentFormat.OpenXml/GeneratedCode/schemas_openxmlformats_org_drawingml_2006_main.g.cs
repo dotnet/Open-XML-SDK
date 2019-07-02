@@ -3017,7 +3017,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SolidFill>(deep);
 
@@ -3962,7 +4042,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlphaInverse>(deep);
 
@@ -4515,7 +4675,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorReplacement>(deep);
 
@@ -4685,7 +4925,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> NoFill.</para>
+    /// <para> Represents the following element tag in the schema: a:noFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public NoFill NoFill
+	{
+        get => GetElement<NoFill>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> SolidFill.</para>
+    /// <para> Represents the following element tag in the schema: a:solidFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public SolidFill SolidFill
+	{
+        get => GetElement<SolidFill>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> GradientFill.</para>
+    /// <para> Represents the following element tag in the schema: a:gradFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public GradientFill GradientFill
+	{
+        get => GetElement<GradientFill>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> BlipFill.</para>
+    /// <para> Represents the following element tag in the schema: a:blipFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public BlipFill BlipFill
+	{
+        get => GetElement<BlipFill>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Pattern Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:pattFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public PatternFill PatternFill
+	{
+        get => GetElement<PatternFill>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Group Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:grpFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public GroupFill GroupFill
+	{
+        get => GetElement<GroupFill>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Fill>(deep);
 
@@ -4779,7 +5099,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> NoFill.</para>
+    /// <para> Represents the following element tag in the schema: a:noFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public NoFill NoFill
+	{
+        get => GetElement<NoFill>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> SolidFill.</para>
+    /// <para> Represents the following element tag in the schema: a:solidFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public SolidFill SolidFill
+	{
+        get => GetElement<SolidFill>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> GradientFill.</para>
+    /// <para> Represents the following element tag in the schema: a:gradFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public GradientFill GradientFill
+	{
+        get => GetElement<GradientFill>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> BlipFill.</para>
+    /// <para> Represents the following element tag in the schema: a:blipFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public BlipFill BlipFill
+	{
+        get => GetElement<BlipFill>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Pattern Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:pattFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public PatternFill PatternFill
+	{
+        get => GetElement<PatternFill>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Group Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:grpFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public GroupFill GroupFill
+	{
+        get => GetElement<GroupFill>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillOverlay>(deep);
 
@@ -4872,7 +5272,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Glow>(deep);
 
@@ -5065,7 +5545,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InnerShadow>(deep);
 
@@ -5265,7 +5825,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OuterShadow>(deep);
 
@@ -5375,7 +6015,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresetShadow>(deep);
 
@@ -6530,7 +7250,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> NoFill.</para>
+    /// <para> Represents the following element tag in the schema: a:noFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public NoFill NoFill
+	{
+        get => GetElement<NoFill>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> SolidFill.</para>
+    /// <para> Represents the following element tag in the schema: a:solidFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public SolidFill SolidFill
+	{
+        get => GetElement<SolidFill>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> GradientFill.</para>
+    /// <para> Represents the following element tag in the schema: a:gradFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public GradientFill GradientFill
+	{
+        get => GetElement<GradientFill>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> BlipFill.</para>
+    /// <para> Represents the following element tag in the schema: a:blipFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public BlipFill BlipFill
+	{
+        get => GetElement<BlipFill>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Pattern Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:pattFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public PatternFill PatternFill
+	{
+        get => GetElement<PatternFill>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Group Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:grpFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public GroupFill GroupFill
+	{
+        get => GetElement<GroupFill>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FillProperties>(deep);
 
@@ -6792,7 +7592,87 @@ public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     public UInt32Value Index { get; set; }
 
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <summary>
     /// Initializes a new instance of the StyleMatrixReferenceType class.
     /// </summary>
@@ -6891,7 +7771,35 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> Effect Container.</para>
+    /// <para> Represents the following element tag in the schema: a:effectLst </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public EffectList EffectList
+	{
+        get => GetElement<EffectList>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> Effect Container.</para>
+    /// <para> Represents the following element tag in the schema: a:effectDag </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public EffectDag EffectDag
+	{
+        get => GetElement<EffectDag>(1);
+        set => SetElement(1, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EffectPropertiesType>(deep);
 
@@ -7280,7 +8188,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontReference>(deep);
 
@@ -8040,7 +9028,87 @@ public abstract partial class ColorType : OpenXmlCompositeElement
     
     
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <summary>
     /// Initializes a new instance of the ColorType class.
     /// </summary>
@@ -9598,7 +10666,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> NoFill.</para>
+    /// <para> Represents the following element tag in the schema: a:noFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public NoFill NoFill
+	{
+        get => GetElement<NoFill>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> SolidFill.</para>
+    /// <para> Represents the following element tag in the schema: a:solidFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public SolidFill SolidFill
+	{
+        get => GetElement<SolidFill>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> GradientFill.</para>
+    /// <para> Represents the following element tag in the schema: a:gradFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public GradientFill GradientFill
+	{
+        get => GetElement<GradientFill>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> BlipFill.</para>
+    /// <para> Represents the following element tag in the schema: a:blipFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public BlipFill BlipFill
+	{
+        get => GetElement<BlipFill>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Pattern Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:pattFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public PatternFill PatternFill
+	{
+        get => GetElement<PatternFill>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Group Fill.</para>
+    /// <para> Represents the following element tag in the schema: a:grpFill </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public GroupFill GroupFill
+	{
+        get => GetElement<GroupFill>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnderlineFill>(deep);
 
@@ -10950,7 +12098,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomColor>(deep);
 
@@ -17015,7 +18243,87 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
-    
+        internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+        /// <summary>
+    /// <para> RGB Color Model - Percentage Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:scrgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(0)]
+    public RgbColorModelPercentage RgbColorModelPercentage
+	{
+        get => GetElement<RgbColorModelPercentage>(0);
+        set => SetElement(0, value);
+	}
+    /// <summary>
+    /// <para> RGB Color Model - Hex Variant.</para>
+    /// <para> Represents the following element tag in the schema: a:srgbClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(1)]
+    public RgbColorModelHex RgbColorModelHex
+	{
+        get => GetElement<RgbColorModelHex>(1);
+        set => SetElement(1, value);
+	}
+    /// <summary>
+    /// <para> Hue, Saturation, Luminance Color Model.</para>
+    /// <para> Represents the following element tag in the schema: a:hslClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(2)]
+    public HslColor HslColor
+	{
+        get => GetElement<HslColor>(2);
+        set => SetElement(2, value);
+	}
+    /// <summary>
+    /// <para> System Color.</para>
+    /// <para> Represents the following element tag in the schema: a:sysClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(3)]
+    public SystemColor SystemColor
+	{
+        get => GetElement<SystemColor>(3);
+        set => SetElement(3, value);
+	}
+    /// <summary>
+    /// <para> Scheme Color.</para>
+    /// <para> Represents the following element tag in the schema: a:schemeClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(4)]
+    public SchemeColor SchemeColor
+	{
+        get => GetElement<SchemeColor>(4);
+        set => SetElement(4, value);
+	}
+    /// <summary>
+    /// <para> Preset Color.</para>
+    /// <para> Represents the following element tag in the schema: a:prstClr </para>
+    /// </summary>
+    /// <remark>
+    /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+    /// </remark>
+	[Index(5)]
+    public PresetColor PresetColor
+	{
+        get => GetElement<PresetColor>(5);
+        set => SetElement(5, value);
+	}
+
+
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GradientStop>(deep);
 
