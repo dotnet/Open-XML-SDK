@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             if (element == null)
                 throw new ArgumentNullException(nameof(element));
-            return XElement.Load(new StringReader(element.OuterXml));
+            return XElement.Parse(element.OuterXml);
         }
 
         public static OpenXmlElement SetIgnorable(this OpenXmlElement element, string prefix)

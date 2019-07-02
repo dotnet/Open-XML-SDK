@@ -765,7 +765,7 @@ namespace DocumentFormat.OpenXml
         {
             if (string.IsNullOrEmpty(name))
             {
-                throw new ArgumentException(nameof(name));
+                throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(name));
             }
 
             if (NamespaceIdMap.TryGetNamespaceId(namespaceUri, out byte nsId)

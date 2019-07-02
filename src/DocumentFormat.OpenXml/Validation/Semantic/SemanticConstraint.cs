@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -173,7 +174,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
                 if (s.Count() > 1)
                 {
-                    throw new System.IO.FileFormatException("Invalid document error: more than one part retrieved for one URI.");
+                    throw new System.IO.FileFormatException(ValidationResources.MoreThanOnePartForOneUri);
                 }
 
                 if (s.Count() == 0)

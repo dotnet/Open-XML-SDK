@@ -908,6 +908,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 // copy the stream back
                 memoryStream.Position = 0;
                 newMainPart.FeedData(memoryStream);
+                memoryStream.Dispose();
 
                 // add back all relationships
                 foreach (KeyValuePair<string, OpenXmlPart> idPartPair in childParts)

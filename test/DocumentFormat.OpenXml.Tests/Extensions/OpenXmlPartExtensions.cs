@@ -254,11 +254,13 @@ namespace DocumentFormat.OpenXml.Tests
                 bool xmlCompareSuccess = false;
                 using (var sourceStm = sourcePart.GetStream())
                 using (var targetStm = targetPart.GetStream())
+                using (var sourceReader = XmlReader.Create(sourceStm))
+                using (var targetReader = XmlReader.Create(targetStm))
                 {
                     try
                     {
-                        var xsource = XElement.Load(XmlReader.Create(sourceStm));
-                        var xtarget = XElement.Load(XmlReader.Create(targetStm));
+                        var xsource = XElement.Load(sourceReader);
+                        var xtarget = XElement.Load(targetReader);
 
                         if (xsource.Compare(xtarget) == false)
                             return false;

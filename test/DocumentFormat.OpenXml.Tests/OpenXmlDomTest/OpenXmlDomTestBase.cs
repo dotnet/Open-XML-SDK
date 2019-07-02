@@ -446,7 +446,7 @@ namespace DocumentFormat.OpenXml.Tests
                     for (int i = 0; i < importElementsCount; i++)
                     {
                         importElementOuterXml = importHost.ChildElements[i].OuterXml;
-                        VerifyEqual(XAfter, XElement.Load(new StringReader(importElementOuterXml)), childPosition++);
+                        VerifyEqual(XAfter, XElement.Parse(importElementOuterXml), childPosition++);
                     }
                 }
                 else
@@ -544,7 +544,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Comment("Checking if children of current element increased by ONE...");
                     Log.VerifyTrue(XBefore.Elements().Count() == XAfter.Elements().Count() - 1, "Children element NOT increased by ONE!");
 
-                    VerifyEqual(XAfter, XElement.Load(new StringReader(importElementOuterXml)), childPosition);
+                    VerifyEqual(XAfter, XElement.Parse(importElementOuterXml), childPosition);
                 }
                 else
                 {
@@ -670,7 +670,7 @@ namespace DocumentFormat.OpenXml.Tests
                         Log.VerifyTrue(Xbefore.Elements().Count() == Xafter.Elements().Count() - 1, "Child element NOT increased by ONE!");
 
                         Log.Comment("Check if specified child inserted as expected...");
-                        VerifyEqual(Xafter, XElement.Load(new StringReader(InsertElement)), expectPos);
+                        VerifyEqual(Xafter, XElement.Parse(InsertElement), expectPos);
                     }
                     else
                     {
@@ -799,7 +799,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.VerifyTrue(Xbefore.Elements().Count() == Xafter.Elements().Count() - 1, "Child element NOT increased by ONE!");
 
                     Log.Comment("Check if specified child inserted as expected...");
-                    VerifyEqual(Xafter, XElement.Load(new StringReader(InsertElement)), expectPos);
+                    VerifyEqual(Xafter, XElement.Parse(InsertElement), expectPos);
                 }
                 else
                 {
@@ -889,7 +889,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.VerifyTrue(xBefore.Elements().Count() == xAfter.Elements().Count() - 1, "Child element NOT increased by ONE!");
 
                     Log.Comment("Check if specified element inserted as expected...");
-                    VerifyEqual(xAfter, XElement.Load(new StringReader(InsertElement)), expectPos);
+                    VerifyEqual(xAfter, XElement.Parse(InsertElement), expectPos);
                 }
                 else
                 {
@@ -1917,7 +1917,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.VerifyTrue(hostElement.ChildElements.Count == xBefore.Elements().Count(),
                     "Children element returned by OpenXmlElement {0} is different from XElement {1}", hostElement.ChildElements.Count, xBefore.Elements().Count());
 
-                var result = xBefore.Compare(XElement.Load(new StringReader(outerXml)));
+                var result = xBefore.Compare(XElement.Parse(outerXml));
                 Log.VerifyTrue(result, "OuterXml is not returned as expected.");
             }
             else
@@ -1962,13 +1962,13 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("Deep Clone ...");
                 var clone = hostElement.Clone() as OpenXmlElement;
                 string outerXml = clone.OuterXml;
-                var xAfter = XElement.Load(new StringReader(outerXml));
+                var xAfter = XElement.Parse(outerXml);
 
                 Log.Comment("Checking if XElement count vs OpenXmlElement Children Count...");
                 Log.VerifyTrue(hostElement.ChildElements.Count == xBefore.Elements().Count(),
                     "Children element returned by OpenXmlElement {0} is different from XElement {1}", hostElement.ChildElements.Count, xBefore.Elements().Count());
 
-                var result = xBefore.Compare(XElement.Load(new StringReader(outerXml)));
+                var result = xBefore.Compare(XElement.Parse(outerXml));
                 Log.VerifyTrue(result, "Pass-in element is not cloned as expected.");
             }
             else
@@ -2150,7 +2150,7 @@ namespace DocumentFormat.OpenXml.Tests
                     for (int i = 0; i < importHost.ChildElements.Count; i++)
                     {
                         var importElementOuterXml = importHost.ChildElements[i].OuterXml;
-                        VerifyEqual(XAfter, XElement.Load(new StringReader(importElementOuterXml)), i);
+                        VerifyEqual(XAfter, XElement.Parse(importElementOuterXml), i);
                     }
                 }
                 else
@@ -2202,7 +2202,7 @@ namespace DocumentFormat.OpenXml.Tests
                     hostElement.WriteTo(writer);
                 string outerXml = sb.ToString();
 
-                XElement xAfter = XElement.Load(new StringReader(outerXml));
+                XElement xAfter = XElement.Parse(outerXml);
                 Log.Comment("Checking if element count not changed...");
                 Log.VerifyTrue(xAfter.Elements().Count() == xBefore.Elements().Count(),
                     "Children element in written out {0} is different from original {1}", xAfter.Elements().Count(), xBefore.Elements().Count());

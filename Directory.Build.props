@@ -75,6 +75,9 @@
     <LangVersion>latest</LangVersion>
     <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)\rules.ruleset</CodeAnalysisRuleSet>
 
+    <!-- TODO: This validates some null checking. Should be enabled if possible. -->
+    <NoWarn>$(NoWarn);CA1062</NoWarn>
+
     <!-- Signing -->
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)DocumentFormat.OpenXml.snk</AssemblyOriginatorKeyFile>

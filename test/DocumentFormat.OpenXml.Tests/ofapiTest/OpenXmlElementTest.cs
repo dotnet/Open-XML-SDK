@@ -814,20 +814,24 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             var xml = "<document xmlns=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><body/></document>";
-            var r1 = OpenXmlDomReader.Create(new Document(xml));
-            r1.Read();
-            Assert.Empty(r1.NamespaceDeclarations);
+            using (var r1 = OpenXmlDomReader.Create(new Document(xml)))
+            {
+                r1.Read();
+                Assert.Empty(r1.NamespaceDeclarations);
+            }
 
             xml = "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body a=\"1\"/></w:document>";
-            r1 = OpenXmlDomReader.Create(new Document(xml));
-            r1.Read();
-            Assert.Single(r1.NamespaceDeclarations);
-            Assert.Empty(r1.Attributes);
-            Assert.False(r1.HasAttributes);
-            r1.Read();
-            Assert.Empty(r1.NamespaceDeclarations);
-            Assert.Single(r1.Attributes);
-            Assert.True(r1.HasAttributes);
+            using (var r1 = OpenXmlDomReader.Create(new Document(xml)))
+            {
+                r1.Read();
+                Assert.Single(r1.NamespaceDeclarations);
+                Assert.Empty(r1.Attributes);
+                Assert.False(r1.HasAttributes);
+                r1.Read();
+                Assert.Empty(r1.NamespaceDeclarations);
+                Assert.Single(r1.Attributes);
+                Assert.True(r1.HasAttributes);
+            }
         }
 
         /// <summary>

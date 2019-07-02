@@ -7,6 +7,9 @@ using System.Linq;
 using System.Reflection;
 using Xunit;
 
+// TODO: This is fixed in 2.9.4 of FxCopAnalyzers
+#pragma warning disable CA2000 // Dispose objects before losing scope
+
 namespace DocumentFormat.OpenXml.Tests
 {
     public static partial class TestAssets

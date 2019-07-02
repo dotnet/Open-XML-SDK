@@ -38,8 +38,8 @@ namespace DocumentFormat.OpenXml.Benchmarks
         public void CreateNoSave()
         {
             using (var stream = new NonwritingStream())
+            using (var doc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
-                var doc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
                 doc.AddMainDocumentPart().Document = new Document();
             }
         }
