@@ -1101,7 +1101,7 @@ public partial class TextBox : OpenXmlCompositeElement
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent), 0, 1),
-    new AnyParticle(XsdAnyPrefidefinedValue.Local, 1, 1)
+    new AnyParticle(XsdAny.Local, 1, 1)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     

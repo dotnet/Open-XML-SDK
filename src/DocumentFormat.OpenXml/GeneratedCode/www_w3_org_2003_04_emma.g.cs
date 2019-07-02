@@ -113,7 +113,7 @@ public partial class Info : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new AnyParticle(XsdAnyPrefidefinedValue.Other, 0, 0)
+    new AnyParticle(XsdAny.Other, 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1546,7 +1546,7 @@ public partial class GroupInfo : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new AnyParticle(XsdAnyPrefidefinedValue.Other, 0, 0)
+    new AnyParticle(XsdAny.Other, 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1741,7 +1741,7 @@ public partial class Model : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new AnyParticle(XsdAnyPrefidefinedValue.Other, 0, 0)
+    new AnyParticle(XsdAny.Other, 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
@@ -1970,7 +1970,7 @@ public partial class EndPoint : OpenXmlCompositeElement
     
 private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
-    new AnyParticle(XsdAnyPrefidefinedValue.Other, 0, 0)
+    new AnyParticle(XsdAny.Other, 0, 0)
 };
 internal override ParticleConstraint ParticleConstraint => _constraint;
     
