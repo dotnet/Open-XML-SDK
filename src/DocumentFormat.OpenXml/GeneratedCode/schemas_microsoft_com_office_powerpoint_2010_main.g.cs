@@ -33,12 +33,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "nvContentPartPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12831;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -142,12 +138,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "xfrm")]
-[Id(ElementTypeIdConst)]
 public partial class Transform2D : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12832;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Rotation.</para>
@@ -256,12 +248,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class ExtensionListModify : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12833;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Modify.</para>
@@ -339,12 +327,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "media")]
-[Id(ElementTypeIdConst)]
 public partial class Media : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12834;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Embedded Picture Reference.</para>
@@ -469,13 +453,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(49, "vortex")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class VortexTransition : SideDirectionTransitionType
 {
-    internal const int ElementTypeIdConst = 12835;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VortexTransition class.
     /// </summary>
@@ -494,13 +474,9 @@ public partial class VortexTransition : SideDirectionTransitionType
 /// </summary>
 
 [SchemaAttr(49, "pan")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PanTransition : SideDirectionTransitionType
 {
-    internal const int ElementTypeIdConst = 12846;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PanTransition class.
     /// </summary>
@@ -545,13 +521,9 @@ public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(49, "switch")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SwitchTransition : LeftRightDirectionTransitionType
 {
-    internal const int ElementTypeIdConst = 12836;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SwitchTransition class.
     /// </summary>
@@ -570,13 +542,9 @@ public partial class SwitchTransition : LeftRightDirectionTransitionType
 /// </summary>
 
 [SchemaAttr(49, "flip")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class FlipTransition : LeftRightDirectionTransitionType
 {
-    internal const int ElementTypeIdConst = 12837;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the FlipTransition class.
     /// </summary>
@@ -595,13 +563,9 @@ public partial class FlipTransition : LeftRightDirectionTransitionType
 /// </summary>
 
 [SchemaAttr(49, "ferris")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class FerrisTransition : LeftRightDirectionTransitionType
 {
-    internal const int ElementTypeIdConst = 12843;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the FerrisTransition class.
     /// </summary>
@@ -620,13 +584,9 @@ public partial class FerrisTransition : LeftRightDirectionTransitionType
 /// </summary>
 
 [SchemaAttr(49, "gallery")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class GalleryTransition : LeftRightDirectionTransitionType
 {
-    internal const int ElementTypeIdConst = 12844;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the GalleryTransition class.
     /// </summary>
@@ -645,13 +605,9 @@ public partial class GalleryTransition : LeftRightDirectionTransitionType
 /// </summary>
 
 [SchemaAttr(49, "conveyor")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ConveyorTransition : LeftRightDirectionTransitionType
 {
-    internal const int ElementTypeIdConst = 12845;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ConveyorTransition class.
     /// </summary>
@@ -698,12 +654,8 @@ public abstract partial class LeftRightDirectionTransitionType : OpenXmlLeafElem
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "ripple")]
-[Id(ElementTypeIdConst)]
 public partial class RippleTransition : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12838;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> dir, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -735,13 +687,9 @@ public partial class RippleTransition : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(49, "honeycomb")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class HoneycombTransition : EmptyType
 {
-    internal const int ElementTypeIdConst = 12839;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HoneycombTransition class.
     /// </summary>
@@ -760,13 +708,9 @@ public partial class HoneycombTransition : EmptyType
 /// </summary>
 
 [SchemaAttr(49, "flash")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class FlashTransition : EmptyType
 {
-    internal const int ElementTypeIdConst = 12850;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the FlashTransition class.
     /// </summary>
@@ -805,12 +749,8 @@ public abstract partial class EmptyType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "prism")]
-[Id(ElementTypeIdConst)]
 public partial class PrismTransition : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12840;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> dir, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -855,13 +795,9 @@ public partial class PrismTransition : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(49, "doors")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DoorsTransition : OrientationTransitionType
 {
-    internal const int ElementTypeIdConst = 12841;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DoorsTransition class.
     /// </summary>
@@ -880,13 +816,9 @@ public partial class DoorsTransition : OrientationTransitionType
 /// </summary>
 
 [SchemaAttr(49, "window")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class WindowTransition : OrientationTransitionType
 {
-    internal const int ElementTypeIdConst = 12842;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the WindowTransition class.
     /// </summary>
@@ -933,12 +865,8 @@ public abstract partial class OrientationTransitionType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "glitter")]
-[Id(ElementTypeIdConst)]
 public partial class GlitterTransition : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12847;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> dir, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -979,12 +907,8 @@ public partial class GlitterTransition : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "warp")]
-[Id(ElementTypeIdConst)]
 public partial class WarpTransition : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12848;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Direction.</para>
@@ -1017,12 +941,8 @@ public partial class WarpTransition : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "flythrough")]
-[Id(ElementTypeIdConst)]
 public partial class FlythroughTransition : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12849;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> dir, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1062,12 +982,8 @@ public partial class FlythroughTransition : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "shred")]
-[Id(ElementTypeIdConst)]
 public partial class ShredTransition : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12851;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> pattern, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1108,12 +1024,8 @@ public partial class ShredTransition : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "reveal")]
-[Id(ElementTypeIdConst)]
 public partial class RevealTransition : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12852;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> thruBlk, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1153,12 +1065,8 @@ public partial class RevealTransition : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "wheelReverse")]
-[Id(ElementTypeIdConst)]
 public partial class WheelReverseTransition : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12853;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Spokes.</para>
@@ -1190,12 +1098,8 @@ public partial class WheelReverseTransition : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "bmkTgt")]
-[Id(ElementTypeIdConst)]
 public partial class BookmarkTarget : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12854;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> spid, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1243,12 +1147,8 @@ public partial class BookmarkTarget : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "sectionPr")]
-[Id(ElementTypeIdConst)]
 public partial class SectionProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12855;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1307,12 +1207,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "sectionLst")]
-[Id(ElementTypeIdConst)]
 public partial class SectionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12856;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1364,12 +1260,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "browseMode")]
-[Id(ElementTypeIdConst)]
 public partial class BrowseMode : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12857;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> showStatus, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1418,12 +1310,8 @@ public partial class BrowseMode : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "laserClr")]
-[Id(ElementTypeIdConst)]
 public partial class LaserColor : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12858;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1566,12 +1454,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "defaultImageDpi")]
-[Id(ElementTypeIdConst)]
 public partial class DefaultImageDpi : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12859;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1604,12 +1488,8 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "discardImageEditData")]
-[Id(ElementTypeIdConst)]
 public partial class DiscardImageEditData : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12860;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1642,12 +1522,8 @@ public partial class DiscardImageEditData : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "showMediaCtrls")]
-[Id(ElementTypeIdConst)]
 public partial class ShowMediaControls : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12861;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1687,12 +1563,8 @@ public partial class ShowMediaControls : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "laserTraceLst")]
-[Id(ElementTypeIdConst)]
 public partial class LaserTraceList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12862;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1742,13 +1614,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(49, "creationId")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CreationId : RandomIdType
 {
-    internal const int ElementTypeIdConst = 12863;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CreationId class.
     /// </summary>
@@ -1767,13 +1635,9 @@ public partial class CreationId : RandomIdType
 /// </summary>
 
 [SchemaAttr(49, "modId")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ModificationId : RandomIdType
 {
-    internal const int ElementTypeIdConst = 12864;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ModificationId class.
     /// </summary>
@@ -1839,12 +1703,8 @@ public abstract partial class RandomIdType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "showEvtLst")]
-[Id(ElementTypeIdConst)]
 public partial class ShowEventRecordList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12865;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2009,12 +1869,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "cNvPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12866;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -2155,12 +2011,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "cNvContentPartPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12867;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> isComment, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -2269,12 +2121,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "nvPr")]
-[Id(ElementTypeIdConst)]
 public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12868;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Is a Photo Album.</para>
@@ -2368,12 +2216,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "bmk")]
-[Id(ElementTypeIdConst)]
 public partial class MediaBookmark : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12869;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -2412,12 +2256,8 @@ public partial class MediaBookmark : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "trim")]
-[Id(ElementTypeIdConst)]
 public partial class MediaTrim : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12870;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> st, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -2456,12 +2296,8 @@ public partial class MediaTrim : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "fade")]
-[Id(ElementTypeIdConst)]
 public partial class MediaFade : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12871;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> in, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -2507,12 +2343,8 @@ public partial class MediaFade : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "bmkLst")]
-[Id(ElementTypeIdConst)]
 public partial class MediaBookmarkList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12872;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2571,12 +2403,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class ExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12873;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2641,12 +2469,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "section")]
-[Id(ElementTypeIdConst)]
 public partial class SectionOld : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12874;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -2736,12 +2560,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "sldId")]
-[Id(ElementTypeIdConst)]
 public partial class SectionSlideIdListEntry : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12875;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -2782,12 +2602,8 @@ public partial class SectionSlideIdListEntry : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "sldIdLst")]
-[Id(ElementTypeIdConst)]
 public partial class SectionSlideIdList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12876;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2848,12 +2664,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "section")]
-[Id(ElementTypeIdConst)]
 public partial class Section : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12877;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -2949,12 +2761,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "tracePt")]
-[Id(ElementTypeIdConst)]
 public partial class TracePoint : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12878;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> t, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -3012,12 +2820,8 @@ public partial class TracePoint : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "tracePtLst")]
-[Id(ElementTypeIdConst)]
 public partial class TracePointList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12879;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3069,12 +2873,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "triggerEvt")]
-[Id(ElementTypeIdConst)]
 public partial class TriggerEventRecord : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12880;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> type, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -3122,13 +2922,9 @@ public partial class TriggerEventRecord : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(49, "playEvt")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PlayEventRecord : MediaPlaybackEventRecordType
 {
-    internal const int ElementTypeIdConst = 12881;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PlayEventRecord class.
     /// </summary>
@@ -3147,13 +2943,9 @@ public partial class PlayEventRecord : MediaPlaybackEventRecordType
 /// </summary>
 
 [SchemaAttr(49, "stopEvt")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class StopEventRecord : MediaPlaybackEventRecordType
 {
-    internal const int ElementTypeIdConst = 12882;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the StopEventRecord class.
     /// </summary>
@@ -3172,13 +2964,9 @@ public partial class StopEventRecord : MediaPlaybackEventRecordType
 /// </summary>
 
 [SchemaAttr(49, "pauseEvt")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PauseEventRecord : MediaPlaybackEventRecordType
 {
-    internal const int ElementTypeIdConst = 12883;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PauseEventRecord class.
     /// </summary>
@@ -3197,13 +2985,9 @@ public partial class PauseEventRecord : MediaPlaybackEventRecordType
 /// </summary>
 
 [SchemaAttr(49, "resumeEvt")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ResumeEventRecord : MediaPlaybackEventRecordType
 {
-    internal const int ElementTypeIdConst = 12884;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ResumeEventRecord class.
     /// </summary>
@@ -3258,12 +3042,8 @@ public abstract partial class MediaPlaybackEventRecordType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "seekEvt")]
-[Id(ElementTypeIdConst)]
 public partial class SeekEventRecord : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12885;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> time, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -3312,12 +3092,8 @@ public partial class SeekEventRecord : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(49, "nullEvt")]
-[Id(ElementTypeIdConst)]
 public partial class NullEventRecord : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12886;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> time, this property is only available in Office2010, Office2013, Office2016.</para>

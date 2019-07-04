@@ -26,13 +26,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
 /// </remarks>
 
 [SchemaAttr(71, "pivotCaches")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class PivotCaches : OpenXmlPivotCachesElement
 {
-    internal const int ElementTypeIdConst = 13356;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PivotCaches class.
     /// </summary>
@@ -84,13 +80,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(71, "timelineCachePivotCaches")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TimelineCachePivotCaches : OpenXmlPivotCachesElement
 {
-    internal const int ElementTypeIdConst = 13362;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the TimelineCachePivotCaches class.
     /// </summary>
@@ -193,12 +185,8 @@ public abstract partial class OpenXmlPivotCachesElement : OpenXmlCompositeElemen
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "pivotTableReferences")]
-[Id(ElementTypeIdConst)]
 public partial class PivotTableReferences : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13357;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -250,12 +238,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "queryTable")]
-[Id(ElementTypeIdConst)]
 public partial class QueryTable : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13358;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> clipped, this property is only available in Office2013, Office2016.</para>
@@ -308,12 +292,8 @@ public partial class QueryTable : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "webExtensions")]
-[Id(ElementTypeIdConst)]
 public partial class WebExtensions : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13359;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -372,12 +352,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "timelineCacheRefs")]
-[Id(ElementTypeIdConst)]
 public partial class TimelineCacheReferences : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13360;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -436,12 +412,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "timelineRefs")]
-[Id(ElementTypeIdConst)]
 public partial class TimelineReferences : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13361;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -493,12 +465,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "workbookPr")]
-[Id(ElementTypeIdConst)]
 public partial class WorkbookProperties : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13363;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> chartTrackingRefBase, this property is only available in Office2013, Office2016.</para>
@@ -537,12 +505,8 @@ public partial class WorkbookProperties : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "timelineStyles")]
-[Id(ElementTypeIdConst)]
 public partial class TimelineStyles : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13364;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> defaultTimelineStyle, this property is only available in Office2013, Office2016.</para>
@@ -609,12 +573,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "dxfs")]
-[Id(ElementTypeIdConst)]
 public partial class DifferentialFormats : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13365;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Format Count.</para>
@@ -688,12 +648,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "connection")]
-[Id(ElementTypeIdConst)]
 public partial class Connection : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13366;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2013, Office2016.</para>
@@ -852,12 +808,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "calculatedMember")]
-[Id(ElementTypeIdConst)]
 public partial class CalculatedMember : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13367;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> measureGroup, this property is only available in Office2013, Office2016.</para>
@@ -912,12 +864,8 @@ public partial class CalculatedMember : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "pivotTableUISettings")]
-[Id(ElementTypeIdConst)]
 public partial class PivotTableUISettings : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13368;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> sourceDataName, this property is only available in Office2013, Office2016.</para>
@@ -984,12 +932,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "pivotFilter")]
-[Id(ElementTypeIdConst)]
 public partial class PivotFilter : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13369;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> useWholeDay, this property is only available in Office2013, Office2016.</para>
@@ -1029,12 +973,8 @@ public partial class PivotFilter : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "cachedUniqueNames")]
-[Id(ElementTypeIdConst)]
 public partial class CachedUniqueNames : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13370;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1086,12 +1026,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "cacheHierarchy")]
-[Id(ElementTypeIdConst)]
 public partial class CacheHierarchy : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13371;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> aggregatedColumn, this property is only available in Office2013, Office2016.</para>
@@ -1124,12 +1060,8 @@ public partial class CacheHierarchy : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "timelinePivotCacheDefinition")]
-[Id(ElementTypeIdConst)]
 public partial class TimelinePivotCacheDefinition : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13372;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> timelineData, this property is only available in Office2013, Office2016.</para>
@@ -1161,12 +1093,8 @@ public partial class TimelinePivotCacheDefinition : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "pivotCacheIdVersion")]
-[Id(ElementTypeIdConst)]
 public partial class PivotCacheIdVersion : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13373;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> cacheIdSupportedVersion, this property is only available in Office2013, Office2016.</para>
@@ -1218,12 +1146,8 @@ public partial class PivotCacheIdVersion : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "dataModel")]
-[Id(ElementTypeIdConst)]
 public partial class DataModel : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13374;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> minVersionLoad, this property is only available in Office2013, Office2016.</para>
@@ -1332,12 +1256,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "pivotTableData")]
-[Id(ElementTypeIdConst)]
 public partial class PivotTableData : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13375;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rowCount, this property is only available in Office2013, Office2016.</para>
@@ -1414,12 +1334,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "pivotCacheDecoupled")]
-[Id(ElementTypeIdConst)]
 public partial class PivotCacheDecoupled : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13376;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> decoupled, this property is only available in Office2013, Office2016.</para>
@@ -1451,12 +1367,8 @@ public partial class PivotCacheDecoupled : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "dataField")]
-[Id(ElementTypeIdConst)]
 public partial class DataField : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13377;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> isCountDistinct, this property is only available in Office2013, Office2016.</para>
@@ -1488,12 +1400,8 @@ public partial class DataField : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "movingPeriodState")]
-[Id(ElementTypeIdConst)]
 public partial class MovingPeriodState : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13378;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> referenceDateBegin, this property is only available in Office2013, Office2016.</para>
@@ -1565,12 +1473,8 @@ public partial class MovingPeriodState : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "slicerCaches")]
-[Id(ElementTypeIdConst)]
 public partial class SlicerCaches : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13379;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1629,12 +1533,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "tableSlicerCache")]
-[Id(ElementTypeIdConst)]
 public partial class TableSlicerCache : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13380;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> tableId, this property is only available in Office2013, Office2016.</para>
@@ -1745,12 +1645,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "slicerCacheHideItemsWithNoData")]
-[Id(ElementTypeIdConst)]
 public partial class SlicerCacheHideItemsWithNoData : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13381;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> count, this property is only available in Office2013, Office2016.</para>
@@ -1816,12 +1712,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "slicerCachePivotTables")]
-[Id(ElementTypeIdConst)]
 public partial class SlicerCachePivotTables : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13382;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1888,12 +1780,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "survey")]
-[Id(ElementTypeIdConst)]
 public partial class Survey : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13383;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2013, Office2016.</para>
@@ -2052,13 +1940,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     [ChildElementInfo(typeof(Timeline), FileFormatVersions.Office2013)]
 
 [SchemaAttr(71, "timelines")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Timelines : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 13384;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
 	internal Timelines(TimeLinePart ownerPart) : base (ownerPart){}
@@ -2144,13 +2028,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(71, "timelineCacheDefinition")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TimelineCacheDefinition : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 13385;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name, this property is only available in Office2013, Office2016.</para>
@@ -2286,12 +2166,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "pivotTableReference")]
-[Id(ElementTypeIdConst)]
 public partial class PivotTableReference : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13386;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2013, Office2016.</para>
@@ -2333,12 +2209,8 @@ public partial class PivotTableReference : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "webExtension")]
-[Id(ElementTypeIdConst)]
 public partial class WebExtension : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13387;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> appRef, this property is only available in Office2013, Office2016.</para>
@@ -2413,12 +2285,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "timelineCacheRef")]
-[Id(ElementTypeIdConst)]
 public partial class TimelineCacheReference : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13388;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2013, Office2016.</para>
@@ -2453,12 +2321,8 @@ public partial class TimelineCacheReference : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "timelineRef")]
-[Id(ElementTypeIdConst)]
 public partial class TimelineReference : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13389;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2013, Office2016.</para>
@@ -2500,12 +2364,8 @@ public partial class TimelineReference : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "timelineStyle")]
-[Id(ElementTypeIdConst)]
 public partial class TimelineStyle : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13390;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name, this property is only available in Office2013, Office2016.</para>
@@ -2580,12 +2440,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "timelineStyleElement")]
-[Id(ElementTypeIdConst)]
 public partial class TimelineStyleElement : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13391;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> type, this property is only available in Office2013, Office2016.</para>
@@ -2632,12 +2488,8 @@ public partial class TimelineStyleElement : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "timelineStyleElements")]
-[Id(ElementTypeIdConst)]
 public partial class TimelineStyleElements : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13392;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2689,12 +2541,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "dbTable")]
-[Id(ElementTypeIdConst)]
 public partial class DbTable : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13393;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name, this property is only available in Office2013, Office2016.</para>
@@ -2734,12 +2582,8 @@ public partial class DbTable : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "dbTables")]
-[Id(ElementTypeIdConst)]
 public partial class DbTables : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13394;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2791,12 +2635,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "dbCommand")]
-[Id(ElementTypeIdConst)]
 public partial class DbCommand : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13395;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> text, this property is only available in Office2013, Office2016.</para>
@@ -2836,12 +2676,8 @@ public partial class DbCommand : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "textPr")]
-[Id(ElementTypeIdConst)]
 public partial class TextProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13396;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> prompt.</para>
@@ -3020,12 +2856,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "modelTextPr")]
-[Id(ElementTypeIdConst)]
 public partial class ModelTextProperties : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13397;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> headers, this property is only available in Office2013, Office2016.</para>
@@ -3057,12 +2889,8 @@ public partial class ModelTextProperties : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "rangePr")]
-[Id(ElementTypeIdConst)]
 public partial class RangeProperties : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13398;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> sourceName, this property is only available in Office2013, Office2016.</para>
@@ -3104,12 +2932,8 @@ public partial class RangeProperties : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "oledbPr")]
-[Id(ElementTypeIdConst)]
 public partial class OleDbPrpoperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13399;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> connection, this property is only available in Office2013, Office2016.</para>
@@ -3204,12 +3028,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "dataFeedPr")]
-[Id(ElementTypeIdConst)]
 public partial class DataFeedProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13400;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> connection, this property is only available in Office2013, Office2016.</para>
@@ -3284,12 +3104,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "activeTabTopLevelEntity")]
-[Id(ElementTypeIdConst)]
 public partial class FieldListActiveTabTopLevelEntity : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13401;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name, this property is only available in Office2013, Office2016.</para>
@@ -3336,12 +3152,8 @@ public partial class FieldListActiveTabTopLevelEntity : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class ExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13402;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3399,12 +3211,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "cachedUniqueName")]
-[Id(ElementTypeIdConst)]
 public partial class CachedUniqueName : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13403;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> index, this property is only available in Office2013, Office2016.</para>
@@ -3445,12 +3253,8 @@ public partial class CachedUniqueName : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "modelTable")]
-[Id(ElementTypeIdConst)]
 public partial class ModelTable : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13404;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2013, Office2016.</para>
@@ -3499,12 +3303,8 @@ public partial class ModelTable : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "modelRelationship")]
-[Id(ElementTypeIdConst)]
 public partial class ModelRelationship : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13405;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> fromTable, this property is only available in Office2013, Office2016.</para>
@@ -3568,12 +3368,8 @@ public partial class ModelRelationship : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "modelTables")]
-[Id(ElementTypeIdConst)]
 public partial class ModelTables : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13406;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3632,12 +3428,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "modelRelationships")]
-[Id(ElementTypeIdConst)]
 public partial class ModelRelationships : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13407;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3698,12 +3490,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "c")]
-[Id(ElementTypeIdConst)]
 public partial class PivotValueCell : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13408;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> i, this property is only available in Office2013, Office2016.</para>
@@ -3798,12 +3586,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "v")]
-[Id(ElementTypeIdConst)]
 public partial class Xstring : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 13409;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3839,12 +3623,8 @@ public partial class Xstring : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "x")]
-[Id(ElementTypeIdConst)]
 public partial class PivotValueCellExtra : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13410;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> in, this property is only available in Office2013, Office2016.</para>
@@ -3927,12 +3707,8 @@ public partial class PivotValueCellExtra : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "pivotTableServerFormats")]
-[Id(ElementTypeIdConst)]
 public partial class PivotTableServerFormats : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13411;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> count, this property is only available in Office2013, Office2016.</para>
@@ -3992,12 +3768,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "serverFormat")]
-[Id(ElementTypeIdConst)]
 public partial class ServerFormat : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13412;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Culture.</para>
@@ -4036,12 +3808,8 @@ public partial class ServerFormat : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "slicerCacheOlapLevelName")]
-[Id(ElementTypeIdConst)]
 public partial class SlicerCacheOlapLevelName : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13413;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> uniqueName, this property is only available in Office2013, Office2016.</para>
@@ -4086,13 +3854,9 @@ public partial class SlicerCacheOlapLevelName : OpenXmlLeafElement
 /// </remarks>
 
 [SchemaAttr(71, "surveyPr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SurveyPrSurveyElementPr : OpenXmlSurveyElementPrElement
 {
-    internal const int ElementTypeIdConst = 13414;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SurveyPrSurveyElementPr class.
     /// </summary>
@@ -4144,13 +3908,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(71, "titlePr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TitlePrSurveyElementPr : OpenXmlSurveyElementPrElement
 {
-    internal const int ElementTypeIdConst = 13415;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the TitlePrSurveyElementPr class.
     /// </summary>
@@ -4202,13 +3962,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(71, "descriptionPr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DescriptionPrSurveyElementPr : OpenXmlSurveyElementPrElement
 {
-    internal const int ElementTypeIdConst = 13416;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DescriptionPrSurveyElementPr class.
     /// </summary>
@@ -4260,13 +4016,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(71, "questionsPr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class QuestionsPrSurveyElementPr : OpenXmlSurveyElementPrElement
 {
-    internal const int ElementTypeIdConst = 13418;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the QuestionsPrSurveyElementPr class.
     /// </summary>
@@ -4318,13 +4070,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(71, "questionPr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class QuestionPrSurveyElementPr : OpenXmlSurveyElementPrElement
 {
-    internal const int ElementTypeIdConst = 13420;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the QuestionPrSurveyElementPr class.
     /// </summary>
@@ -4500,12 +4248,8 @@ public abstract partial class OpenXmlSurveyElementPrElement : OpenXmlCompositeEl
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "questions")]
-[Id(ElementTypeIdConst)]
 public partial class SurveyQuestions : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13417;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -4582,12 +4326,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "question")]
-[Id(ElementTypeIdConst)]
 public partial class SurveyQuestion : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13419;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> binding, this property is only available in Office2013, Office2016.</para>
@@ -4739,12 +4479,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "timeline")]
-[Id(ElementTypeIdConst)]
 public partial class Timeline : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13421;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name, this property is only available in Office2013, Office2016.</para>
@@ -4892,12 +4628,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "pivotTable")]
-[Id(ElementTypeIdConst)]
 public partial class TimelineCachePivotTable : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13422;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> tabId, this property is only available in Office2013, Office2016.</para>
@@ -4936,13 +4668,9 @@ public partial class TimelineCachePivotTable : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(71, "selection")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SelectionTimelineRange : TimelineRange
 {
-    internal const int ElementTypeIdConst = 13423;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SelectionTimelineRange class.
     /// </summary>
@@ -4961,13 +4689,9 @@ public partial class SelectionTimelineRange : TimelineRange
 /// </summary>
 
 [SchemaAttr(71, "bounds")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class BoundsTimelineRange : TimelineRange
 {
-    internal const int ElementTypeIdConst = 13424;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the BoundsTimelineRange class.
     /// </summary>
@@ -5033,12 +4757,8 @@ public abstract partial class TimelineRange : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "autoFilter")]
-[Id(ElementTypeIdConst)]
 public partial class AutoFilter : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13425;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Cell or Range Reference.</para>
@@ -5106,12 +4826,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "pivotTables")]
-[Id(ElementTypeIdConst)]
 public partial class TimelineCachePivotTables : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13426;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -5176,12 +4892,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "state")]
-[Id(ElementTypeIdConst)]
 public partial class TimelineState : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13427;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> singleRangeFilterState, this property is only available in Office2013, Office2016.</para>
@@ -5357,12 +5069,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(71, "pivotRow")]
-[Id(ElementTypeIdConst)]
 public partial class PivotRow : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13428;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> r, this property is only available in Office2013, Office2016.</para>

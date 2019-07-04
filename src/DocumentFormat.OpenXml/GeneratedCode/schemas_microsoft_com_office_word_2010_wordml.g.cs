@@ -81,13 +81,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
 /// </remarks>
 
 [SchemaAttr(52, "conflictIns")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class RunConflictInsertion : RunTrackChangeType
 {
-    internal const int ElementTypeIdConst = 12895;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the RunConflictInsertion class.
     /// </summary>
@@ -330,13 +326,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(52, "conflictDel")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class RunConflictDeletion : RunTrackChangeType
 {
-    internal const int ElementTypeIdConst = 12896;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the RunConflictDeletion class.
     /// </summary>
@@ -708,13 +700,9 @@ public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
 /// </summary>
 
 [SchemaAttr(52, "conflictIns")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ConflictInsertion : TrackChangeType
 {
-    internal const int ElementTypeIdConst = 12897;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ConflictInsertion class.
     /// </summary>
@@ -733,13 +721,9 @@ public partial class ConflictInsertion : TrackChangeType
 /// </summary>
 
 [SchemaAttr(52, "conflictDel")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ConflictDeletion : TrackChangeType
 {
-    internal const int ElementTypeIdConst = 12898;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ConflictDeletion class.
     /// </summary>
@@ -758,13 +742,9 @@ public partial class ConflictDeletion : TrackChangeType
 /// </summary>
 
 [SchemaAttr(52, "customXmlConflictInsRangeStart")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CustomXmlConflictInsertionRangeStart : TrackChangeType
 {
-    internal const int ElementTypeIdConst = 12935;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CustomXmlConflictInsertionRangeStart class.
     /// </summary>
@@ -783,13 +763,9 @@ public partial class CustomXmlConflictInsertionRangeStart : TrackChangeType
 /// </summary>
 
 [SchemaAttr(52, "customXmlConflictDelRangeStart")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CustomXmlConflictDeletionRangeStart : TrackChangeType
 {
-    internal const int ElementTypeIdConst = 12937;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CustomXmlConflictDeletionRangeStart class.
     /// </summary>
@@ -858,13 +834,9 @@ public abstract partial class TrackChangeType : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(52, "tint")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Tint : PositiveFixedPercentageType
 {
-    internal const int ElementTypeIdConst = 12899;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Tint class.
     /// </summary>
@@ -883,13 +855,9 @@ public partial class Tint : PositiveFixedPercentageType
 /// </summary>
 
 [SchemaAttr(52, "shade")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Shade : PositiveFixedPercentageType
 {
-    internal const int ElementTypeIdConst = 12900;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Shade class.
     /// </summary>
@@ -908,13 +876,9 @@ public partial class Shade : PositiveFixedPercentageType
 /// </summary>
 
 [SchemaAttr(52, "alpha")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Alpha : PositiveFixedPercentageType
 {
-    internal const int ElementTypeIdConst = 12901;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Alpha class.
     /// </summary>
@@ -965,12 +929,8 @@ public abstract partial class PositiveFixedPercentageType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "hueMod")]
-[Id(ElementTypeIdConst)]
 public partial class HueModulation : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12902;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1005,13 +965,9 @@ public partial class HueModulation : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(52, "sat")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Saturation : PercentageType
 {
-    internal const int ElementTypeIdConst = 12903;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Saturation class.
     /// </summary>
@@ -1030,13 +986,9 @@ public partial class Saturation : PercentageType
 /// </summary>
 
 [SchemaAttr(52, "satOff")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SaturationOffset : PercentageType
 {
-    internal const int ElementTypeIdConst = 12904;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SaturationOffset class.
     /// </summary>
@@ -1055,13 +1007,9 @@ public partial class SaturationOffset : PercentageType
 /// </summary>
 
 [SchemaAttr(52, "satMod")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SaturationModulation : PercentageType
 {
-    internal const int ElementTypeIdConst = 12905;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SaturationModulation class.
     /// </summary>
@@ -1080,13 +1028,9 @@ public partial class SaturationModulation : PercentageType
 /// </summary>
 
 [SchemaAttr(52, "lum")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Luminance : PercentageType
 {
-    internal const int ElementTypeIdConst = 12906;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Luminance class.
     /// </summary>
@@ -1105,13 +1049,9 @@ public partial class Luminance : PercentageType
 /// </summary>
 
 [SchemaAttr(52, "lumOff")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class LuminanceOffset : PercentageType
 {
-    internal const int ElementTypeIdConst = 12907;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the LuminanceOffset class.
     /// </summary>
@@ -1130,13 +1070,9 @@ public partial class LuminanceOffset : PercentageType
 /// </summary>
 
 [SchemaAttr(52, "lumMod")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class LuminanceModulation : PercentageType
 {
-    internal const int ElementTypeIdConst = 12908;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the LuminanceModulation class.
     /// </summary>
@@ -1211,12 +1147,8 @@ public abstract partial class PercentageType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "srgbClr")]
-[Id(ElementTypeIdConst)]
 public partial class RgbColorModelHex : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12909;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1320,12 +1252,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "schemeClr")]
-[Id(ElementTypeIdConst)]
 public partial class SchemeColor : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12910;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1403,12 +1331,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "lin")]
-[Id(ElementTypeIdConst)]
 public partial class LinearShadeProperties : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12911;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> ang, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1461,12 +1385,8 @@ public partial class LinearShadeProperties : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "path")]
-[Id(ElementTypeIdConst)]
 public partial class PathShadeProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12912;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> path, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1541,13 +1461,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(52, "noFill")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class NoFillEmpty : EmptyType
 {
-    internal const int ElementTypeIdConst = 12913;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the NoFillEmpty class.
     /// </summary>
@@ -1566,13 +1482,9 @@ public partial class NoFillEmpty : EmptyType
 /// </summary>
 
 [SchemaAttr(52, "round")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class RoundEmpty : EmptyType
 {
-    internal const int ElementTypeIdConst = 12917;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the RoundEmpty class.
     /// </summary>
@@ -1591,13 +1503,9 @@ public partial class RoundEmpty : EmptyType
 /// </summary>
 
 [SchemaAttr(52, "bevel")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BevelEmpty : EmptyType
 {
-    internal const int ElementTypeIdConst = 12918;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the BevelEmpty class.
     /// </summary>
@@ -1616,13 +1524,9 @@ public partial class BevelEmpty : EmptyType
 /// </summary>
 
 [SchemaAttr(52, "entityPicker")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class EntityPickerEmpty : EmptyType
 {
-    internal const int ElementTypeIdConst = 12941;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EntityPickerEmpty class.
     /// </summary>
@@ -1670,12 +1574,8 @@ public abstract partial class EmptyType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "solidFill")]
-[Id(ElementTypeIdConst)]
 public partial class SolidColorFillProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12914;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1773,12 +1673,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "gradFill")]
-[Id(ElementTypeIdConst)]
 public partial class GradientFillProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12915;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1853,12 +1749,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "prstDash")]
-[Id(ElementTypeIdConst)]
 public partial class PresetLineDashProperties : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12916;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1893,12 +1785,8 @@ public partial class PresetLineDashProperties : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "miter")]
-[Id(ElementTypeIdConst)]
 public partial class LineJoinMiterProperties : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12919;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> lim, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1943,12 +1831,8 @@ public partial class LineJoinMiterProperties : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "glow")]
-[Id(ElementTypeIdConst)]
 public partial class Glow : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12920;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rad, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -2055,12 +1939,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "shadow")]
-[Id(ElementTypeIdConst)]
 public partial class Shadow : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12921;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> blurRad, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -2232,12 +2112,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "reflection")]
-[Id(ElementTypeIdConst)]
 public partial class Reflection : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12922;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> blurRad, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -2421,12 +2297,8 @@ public partial class Reflection : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "textOutline")]
-[Id(ElementTypeIdConst)]
 public partial class TextOutlineEffect : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12923;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> w, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -2554,12 +2426,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "textFill")]
-[Id(ElementTypeIdConst)]
 public partial class FillTextEffect : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12924;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2669,12 +2537,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "scene3d")]
-[Id(ElementTypeIdConst)]
 public partial class Scene3D : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12925;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2768,12 +2632,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "props3d")]
-[Id(ElementTypeIdConst)]
 public partial class Properties3D : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12926;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> extrusionH, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -2915,12 +2775,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "ligatures")]
-[Id(ElementTypeIdConst)]
 public partial class Ligatures : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12927;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -2956,12 +2812,8 @@ public partial class Ligatures : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "numForm")]
-[Id(ElementTypeIdConst)]
 public partial class NumberingFormat : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12928;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -2997,12 +2849,8 @@ public partial class NumberingFormat : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "numSpacing")]
-[Id(ElementTypeIdConst)]
 public partial class NumberSpacing : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12929;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -3045,12 +2893,8 @@ public partial class NumberSpacing : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "stylisticSets")]
-[Id(ElementTypeIdConst)]
 public partial class StylisticSets : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12930;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3100,13 +2944,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(52, "cntxtAlts")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ContextualAlternatives : OnOffType
 {
-    internal const int ElementTypeIdConst = 12931;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ContextualAlternatives class.
     /// </summary>
@@ -3125,13 +2965,9 @@ public partial class ContextualAlternatives : OnOffType
 /// </summary>
 
 [SchemaAttr(52, "conflictMode")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ConflictMode : OnOffType
 {
-    internal const int ElementTypeIdConst = 12934;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ConflictMode class.
     /// </summary>
@@ -3150,13 +2986,9 @@ public partial class ConflictMode : OnOffType
 /// </summary>
 
 [SchemaAttr(52, "discardImageEditingData")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DiscardImageEditingData : OnOffType
 {
-    internal const int ElementTypeIdConst = 12939;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DiscardImageEditingData class.
     /// </summary>
@@ -3175,13 +3007,9 @@ public partial class DiscardImageEditingData : OnOffType
 /// </summary>
 
 [SchemaAttr(52, "checked")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class Checked : OnOffType
 {
-    internal const int ElementTypeIdConst = 12954;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Checked class.
     /// </summary>
@@ -3241,12 +3069,8 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "contentPart")]
-[Id(ElementTypeIdConst)]
 public partial class ContentPart : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12932;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> bwMode, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -3362,12 +3186,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "docId")]
-[Id(ElementTypeIdConst)]
 public partial class DocumentId : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12933;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -3402,13 +3222,9 @@ public partial class DocumentId : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(52, "customXmlConflictInsRangeEnd")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CustomXmlConflictInsertionRangeEnd : MarkupType
 {
-    internal const int ElementTypeIdConst = 12936;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CustomXmlConflictInsertionRangeEnd class.
     /// </summary>
@@ -3427,13 +3243,9 @@ public partial class CustomXmlConflictInsertionRangeEnd : MarkupType
 /// </summary>
 
 [SchemaAttr(52, "customXmlConflictDelRangeEnd")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CustomXmlConflictDeletionRangeEnd : MarkupType
 {
-    internal const int ElementTypeIdConst = 12938;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CustomXmlConflictDeletionRangeEnd class.
     /// </summary>
@@ -3484,12 +3296,8 @@ public abstract partial class MarkupType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "defaultImageDpi")]
-[Id(ElementTypeIdConst)]
 public partial class DefaultImageDpi : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12940;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -3536,12 +3344,8 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "checkbox")]
-[Id(ElementTypeIdConst)]
 public partial class SdtContentCheckBox : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12942;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3645,12 +3449,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "gs")]
-[Id(ElementTypeIdConst)]
 public partial class GradientStop : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12943;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> pos, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -3749,12 +3549,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "fillToRect")]
-[Id(ElementTypeIdConst)]
 public partial class FillToRectangle : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12944;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> l, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -3826,12 +3622,8 @@ public partial class FillToRectangle : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "gsLst")]
-[Id(ElementTypeIdConst)]
 public partial class GradientStopList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12945;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3883,12 +3675,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "rot")]
-[Id(ElementTypeIdConst)]
 public partial class SphereCoordinates : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12946;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> lat, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -3949,12 +3737,8 @@ public partial class SphereCoordinates : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "camera")]
-[Id(ElementTypeIdConst)]
 public partial class Camera : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12947;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> prst, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -3998,12 +3782,8 @@ public partial class Camera : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "lightRig")]
-[Id(ElementTypeIdConst)]
 public partial class LightRig : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12948;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rig, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -4092,13 +3872,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(52, "bevelT")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BevelTop : BevelType
 {
-    internal const int ElementTypeIdConst = 12949;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the BevelTop class.
     /// </summary>
@@ -4117,13 +3893,9 @@ public partial class BevelTop : BevelType
 /// </summary>
 
 [SchemaAttr(52, "bevelB")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BevelBottom : BevelType
 {
-    internal const int ElementTypeIdConst = 12950;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the BevelBottom class.
     /// </summary>
@@ -4200,13 +3972,9 @@ public abstract partial class BevelType : OpenXmlLeafElement
 /// </remarks>
 
 [SchemaAttr(52, "extrusionClr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ExtrusionColor : ColorType
 {
-    internal const int ElementTypeIdConst = 12951;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ExtrusionColor class.
     /// </summary>
@@ -4266,13 +4034,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(52, "contourClr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ContourColor : ColorType
 {
-    internal const int ElementTypeIdConst = 12952;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ContourColor class.
     /// </summary>
@@ -4405,12 +4169,8 @@ public abstract partial class ColorType : OpenXmlCompositeElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "styleSet")]
-[Id(ElementTypeIdConst)]
 public partial class StyleSet : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12953;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -4454,13 +4214,9 @@ public partial class StyleSet : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(52, "checkedState")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CheckedState : CheckBoxSymbolType
 {
-    internal const int ElementTypeIdConst = 12955;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CheckedState class.
     /// </summary>
@@ -4479,13 +4235,9 @@ public partial class CheckedState : CheckBoxSymbolType
 /// </summary>
 
 [SchemaAttr(52, "uncheckedState")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class UncheckedState : CheckBoxSymbolType
 {
-    internal const int ElementTypeIdConst = 12956;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the UncheckedState class.
     /// </summary>
@@ -4556,12 +4308,8 @@ public abstract partial class CheckBoxSymbolType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "cNvPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12957;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -4702,12 +4450,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "cNvContentPartPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12958;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> isComment, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -4804,12 +4548,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "nvContentPartPr")]
-[Id(ElementTypeIdConst)]
 public partial class WordNonVisualContentPartShapeProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12959;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -4899,12 +4639,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "xfrm")]
-[Id(ElementTypeIdConst)]
 public partial class Transform2D : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12960;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Rotation.</para>
@@ -5013,12 +4749,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(52, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12961;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

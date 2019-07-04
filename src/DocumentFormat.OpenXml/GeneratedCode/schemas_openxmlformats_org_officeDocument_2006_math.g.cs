@@ -20,12 +20,8 @@ namespace DocumentFormat.OpenXml.Math
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "scr")]
-[Id(ElementTypeIdConst)]
 public partial class Script : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 10905;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -60,12 +56,8 @@ public partial class Script : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "sty")]
-[Id(ElementTypeIdConst)]
 public partial class Style : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 10906;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -175,12 +167,8 @@ public partial class Style : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "r")]
-[Id(ElementTypeIdConst)]
 public partial class Run : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10907;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -318,12 +306,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "acc")]
-[Id(ElementTypeIdConst)]
 public partial class Accent : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10908;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -413,12 +397,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "bar")]
-[Id(ElementTypeIdConst)]
 public partial class Bar : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10909;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -508,12 +488,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "box")]
-[Id(ElementTypeIdConst)]
 public partial class Box : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10910;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -603,12 +579,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "borderBox")]
-[Id(ElementTypeIdConst)]
 public partial class BorderBox : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10911;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -698,12 +670,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "d")]
-[Id(ElementTypeIdConst)]
 public partial class Delimiter : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10912;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -780,12 +748,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "eqArr")]
-[Id(ElementTypeIdConst)]
 public partial class EquationArray : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10913;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -864,12 +828,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "f")]
-[Id(ElementTypeIdConst)]
 public partial class Fraction : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10914;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -975,12 +935,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "func")]
-[Id(ElementTypeIdConst)]
 public partial class MathFunction : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10915;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1084,12 +1040,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "groupChr")]
-[Id(ElementTypeIdConst)]
 public partial class GroupChar : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10916;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1181,12 +1133,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "limLow")]
-[Id(ElementTypeIdConst)]
 public partial class LimitLower : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10917;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1292,12 +1240,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "limUpp")]
-[Id(ElementTypeIdConst)]
 public partial class LimitUpper : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10918;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1401,12 +1345,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "m")]
-[Id(ElementTypeIdConst)]
 public partial class Matrix : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10919;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1487,12 +1427,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "nary")]
-[Id(ElementTypeIdConst)]
 public partial class Nary : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10920;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1610,12 +1546,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "phant")]
-[Id(ElementTypeIdConst)]
 public partial class Phantom : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10921;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1707,12 +1639,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "rad")]
-[Id(ElementTypeIdConst)]
 public partial class Radical : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10922;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1820,12 +1748,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "sPre")]
-[Id(ElementTypeIdConst)]
 public partial class PreSubSuper : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10923;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1945,12 +1869,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "sSub")]
-[Id(ElementTypeIdConst)]
 public partial class Subscript : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10924;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2058,12 +1978,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "sSubSup")]
-[Id(ElementTypeIdConst)]
 public partial class SubSuperscript : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10925;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2183,12 +2099,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "sSup")]
-[Id(ElementTypeIdConst)]
 public partial class Superscript : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10926;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2356,12 +2268,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "oMathPara")]
-[Id(ElementTypeIdConst)]
 public partial class Paragraph : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10927;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2635,12 +2543,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "oMath")]
-[Id(ElementTypeIdConst)]
 public partial class OfficeMath : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10928;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2900,12 +2804,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "mathPr")]
-[Id(ElementTypeIdConst)]
 public partial class MathProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10929;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3131,13 +3031,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(21, "lit")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Literal : OnOffType
 {
-    internal const int ElementTypeIdConst = 10930;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Literal class.
     /// </summary>
@@ -3156,13 +3052,9 @@ public partial class Literal : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "nor")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NormalText : OnOffType
 {
-    internal const int ElementTypeIdConst = 10931;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the NormalText class.
     /// </summary>
@@ -3181,13 +3073,9 @@ public partial class NormalText : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "aln")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Alignment : OnOffType
 {
-    internal const int ElementTypeIdConst = 10933;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Alignment class.
     /// </summary>
@@ -3206,13 +3094,9 @@ public partial class Alignment : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "opEmu")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OperatorEmulator : OnOffType
 {
-    internal const int ElementTypeIdConst = 10942;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the OperatorEmulator class.
     /// </summary>
@@ -3231,13 +3115,9 @@ public partial class OperatorEmulator : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "noBreak")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoBreak : OnOffType
 {
-    internal const int ElementTypeIdConst = 10943;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the NoBreak class.
     /// </summary>
@@ -3256,13 +3136,9 @@ public partial class NoBreak : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "diff")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Differential : OnOffType
 {
-    internal const int ElementTypeIdConst = 10944;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Differential class.
     /// </summary>
@@ -3281,13 +3157,9 @@ public partial class Differential : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "hideTop")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideTop : OnOffType
 {
-    internal const int ElementTypeIdConst = 10946;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HideTop class.
     /// </summary>
@@ -3306,13 +3178,9 @@ public partial class HideTop : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "hideBot")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideBottom : OnOffType
 {
-    internal const int ElementTypeIdConst = 10947;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HideBottom class.
     /// </summary>
@@ -3331,13 +3199,9 @@ public partial class HideBottom : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "hideLeft")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideLeft : OnOffType
 {
-    internal const int ElementTypeIdConst = 10948;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HideLeft class.
     /// </summary>
@@ -3356,13 +3220,9 @@ public partial class HideLeft : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "hideRight")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideRight : OnOffType
 {
-    internal const int ElementTypeIdConst = 10949;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HideRight class.
     /// </summary>
@@ -3381,13 +3241,9 @@ public partial class HideRight : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "strikeH")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StrikeHorizontal : OnOffType
 {
-    internal const int ElementTypeIdConst = 10950;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the StrikeHorizontal class.
     /// </summary>
@@ -3406,13 +3262,9 @@ public partial class StrikeHorizontal : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "strikeV")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StrikeVertical : OnOffType
 {
-    internal const int ElementTypeIdConst = 10951;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the StrikeVertical class.
     /// </summary>
@@ -3431,13 +3283,9 @@ public partial class StrikeVertical : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "strikeBLTR")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StrikeBottomLeftToTopRight : OnOffType
 {
-    internal const int ElementTypeIdConst = 10952;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the StrikeBottomLeftToTopRight class.
     /// </summary>
@@ -3456,13 +3304,9 @@ public partial class StrikeBottomLeftToTopRight : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "strikeTLBR")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StrikeTopLeftToBottomRight : OnOffType
 {
-    internal const int ElementTypeIdConst = 10953;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the StrikeTopLeftToBottomRight class.
     /// </summary>
@@ -3481,13 +3325,9 @@ public partial class StrikeTopLeftToBottomRight : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "grow")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GrowOperators : OnOffType
 {
-    internal const int ElementTypeIdConst = 10958;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the GrowOperators class.
     /// </summary>
@@ -3506,13 +3346,9 @@ public partial class GrowOperators : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "maxDist")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MaxDistribution : OnOffType
 {
-    internal const int ElementTypeIdConst = 10962;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the MaxDistribution class.
     /// </summary>
@@ -3531,13 +3367,9 @@ public partial class MaxDistribution : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "objDist")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ObjectDistribution : OnOffType
 {
-    internal const int ElementTypeIdConst = 10963;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ObjectDistribution class.
     /// </summary>
@@ -3556,13 +3388,9 @@ public partial class ObjectDistribution : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "plcHide")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HidePlaceholder : OnOffType
 {
-    internal const int ElementTypeIdConst = 10982;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HidePlaceholder class.
     /// </summary>
@@ -3581,13 +3409,9 @@ public partial class HidePlaceholder : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "subHide")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideSubArgument : OnOffType
 {
-    internal const int ElementTypeIdConst = 10990;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HideSubArgument class.
     /// </summary>
@@ -3606,13 +3430,9 @@ public partial class HideSubArgument : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "supHide")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideSuperArgument : OnOffType
 {
-    internal const int ElementTypeIdConst = 10991;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HideSuperArgument class.
     /// </summary>
@@ -3631,13 +3451,9 @@ public partial class HideSuperArgument : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "show")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowPhantom : OnOffType
 {
-    internal const int ElementTypeIdConst = 10995;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ShowPhantom class.
     /// </summary>
@@ -3656,13 +3472,9 @@ public partial class ShowPhantom : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "zeroWid")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ZeroWidth : OnOffType
 {
-    internal const int ElementTypeIdConst = 10996;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ZeroWidth class.
     /// </summary>
@@ -3681,13 +3493,9 @@ public partial class ZeroWidth : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "zeroAsc")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ZeroAscent : OnOffType
 {
-    internal const int ElementTypeIdConst = 10997;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ZeroAscent class.
     /// </summary>
@@ -3706,13 +3514,9 @@ public partial class ZeroAscent : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "zeroDesc")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ZeroDescent : OnOffType
 {
-    internal const int ElementTypeIdConst = 10998;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ZeroDescent class.
     /// </summary>
@@ -3731,13 +3535,9 @@ public partial class ZeroDescent : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "transp")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Transparent : OnOffType
 {
-    internal const int ElementTypeIdConst = 10999;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Transparent class.
     /// </summary>
@@ -3756,13 +3556,9 @@ public partial class Transparent : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "degHide")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideDegree : OnOffType
 {
-    internal const int ElementTypeIdConst = 11001;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HideDegree class.
     /// </summary>
@@ -3781,13 +3577,9 @@ public partial class HideDegree : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "alnScr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AlignScripts : OnOffType
 {
-    internal const int ElementTypeIdConst = 11006;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the AlignScripts class.
     /// </summary>
@@ -3806,13 +3598,9 @@ public partial class AlignScripts : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "smallFrac")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SmallFraction : OnOffType
 {
-    internal const int ElementTypeIdConst = 11015;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SmallFraction class.
     /// </summary>
@@ -3831,13 +3619,9 @@ public partial class SmallFraction : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "dispDef")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DisplayDefaults : OnOffType
 {
-    internal const int ElementTypeIdConst = 11016;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DisplayDefaults class.
     /// </summary>
@@ -3856,13 +3640,9 @@ public partial class DisplayDefaults : OnOffType
 /// </summary>
 
 [SchemaAttr(21, "wrapRight")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WrapRight : OnOffType
 {
-    internal const int ElementTypeIdConst = 11025;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the WrapRight class.
     /// </summary>
@@ -3910,12 +3690,8 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "brk")]
-[Id(ElementTypeIdConst)]
 public partial class Break : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 10932;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Index of Operator to Align To.</para>
@@ -3977,12 +3753,8 @@ public partial class Break : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "rPr")]
-[Id(ElementTypeIdConst)]
 public partial class RunProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10934;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -4066,12 +3838,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "t")]
-[Id(ElementTypeIdConst)]
 public partial class Text : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10935;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> space.</para>
@@ -4114,13 +3882,9 @@ public partial class Text : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(21, "chr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AccentChar : CharType
 {
-    internal const int ElementTypeIdConst = 10936;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the AccentChar class.
     /// </summary>
@@ -4139,13 +3903,9 @@ public partial class AccentChar : CharType
 /// </summary>
 
 [SchemaAttr(21, "begChr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BeginChar : CharType
 {
-    internal const int ElementTypeIdConst = 10955;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the BeginChar class.
     /// </summary>
@@ -4164,13 +3924,9 @@ public partial class BeginChar : CharType
 /// </summary>
 
 [SchemaAttr(21, "sepChr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SeparatorChar : CharType
 {
-    internal const int ElementTypeIdConst = 10956;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SeparatorChar class.
     /// </summary>
@@ -4189,13 +3945,9 @@ public partial class SeparatorChar : CharType
 /// </summary>
 
 [SchemaAttr(21, "endChr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EndChar : CharType
 {
-    internal const int ElementTypeIdConst = 10957;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EndChar class.
     /// </summary>
@@ -4260,12 +4012,8 @@ public abstract partial class CharType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "ctrlPr")]
-[Id(ElementTypeIdConst)]
 public partial class ControlProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10937;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -4354,12 +4102,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "accPr")]
-[Id(ElementTypeIdConst)]
 public partial class AccentProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10938;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -4501,13 +4245,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(21, "e")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Base : OfficeMathArgumentType
 {
-    internal const int ElementTypeIdConst = 10939;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Base class.
     /// </summary>
@@ -4789,13 +4529,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(21, "num")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Numerator : OfficeMathArgumentType
 {
-    internal const int ElementTypeIdConst = 10969;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Numerator class.
     /// </summary>
@@ -5077,13 +4813,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(21, "den")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Denominator : OfficeMathArgumentType
 {
-    internal const int ElementTypeIdConst = 10970;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Denominator class.
     /// </summary>
@@ -5365,13 +5097,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(21, "fName")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FunctionName : OfficeMathArgumentType
 {
-    internal const int ElementTypeIdConst = 10972;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the FunctionName class.
     /// </summary>
@@ -5653,13 +5381,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(21, "lim")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Limit : OfficeMathArgumentType
 {
-    internal const int ElementTypeIdConst = 10976;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Limit class.
     /// </summary>
@@ -5941,13 +5665,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(21, "sub")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SubArgument : OfficeMathArgumentType
 {
-    internal const int ElementTypeIdConst = 10993;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SubArgument class.
     /// </summary>
@@ -6229,13 +5949,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(21, "sup")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SuperArgument : OfficeMathArgumentType
 {
-    internal const int ElementTypeIdConst = 10994;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SuperArgument class.
     /// </summary>
@@ -6517,13 +6233,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(21, "deg")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Degree : OfficeMathArgumentType
 {
-    internal const int ElementTypeIdConst = 11003;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Degree class.
     /// </summary>
@@ -6919,13 +6631,9 @@ public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
 /// </summary>
 
 [SchemaAttr(21, "pos")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Position : TopBottomType
 {
-    internal const int ElementTypeIdConst = 10940;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Position class.
     /// </summary>
@@ -6944,13 +6652,9 @@ public partial class Position : TopBottomType
 /// </summary>
 
 [SchemaAttr(21, "vertJc")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VerticalJustification : TopBottomType
 {
-    internal const int ElementTypeIdConst = 10973;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VerticalJustification class.
     /// </summary>
@@ -7008,12 +6712,8 @@ public abstract partial class TopBottomType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "barPr")]
-[Id(ElementTypeIdConst)]
 public partial class BarProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10941;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -7111,12 +6811,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "boxPr")]
-[Id(ElementTypeIdConst)]
 public partial class BoxProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10945;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -7276,12 +6972,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "borderBoxPr")]
-[Id(ElementTypeIdConst)]
 public partial class BorderBoxProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10954;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -7460,12 +7152,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "shp")]
-[Id(ElementTypeIdConst)]
 public partial class Shape : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 10959;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -7517,12 +7205,8 @@ public partial class Shape : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "dPr")]
-[Id(ElementTypeIdConst)]
 public partial class DelimiterProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10960;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -7659,12 +7343,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "baseJc")]
-[Id(ElementTypeIdConst)]
 public partial class BaseJustification : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 10961;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -7697,13 +7377,9 @@ public partial class BaseJustification : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(21, "rSpRule")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RowSpacingRule : SpacingRuleType
 {
-    internal const int ElementTypeIdConst = 10964;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the RowSpacingRule class.
     /// </summary>
@@ -7722,13 +7398,9 @@ public partial class RowSpacingRule : SpacingRuleType
 /// </summary>
 
 [SchemaAttr(21, "cGpRule")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnGapRule : SpacingRuleType
 {
-    internal const int ElementTypeIdConst = 10983;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ColumnGapRule class.
     /// </summary>
@@ -7776,13 +7448,9 @@ public abstract partial class SpacingRuleType : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(21, "rSp")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RowSpacing : UnsignedShortType
 {
-    internal const int ElementTypeIdConst = 10965;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the RowSpacing class.
     /// </summary>
@@ -7801,13 +7469,9 @@ public partial class RowSpacing : UnsignedShortType
 /// </summary>
 
 [SchemaAttr(21, "cGp")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnGap : UnsignedShortType
 {
-    internal const int ElementTypeIdConst = 10985;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ColumnGap class.
     /// </summary>
@@ -7873,12 +7537,8 @@ public abstract partial class UnsignedShortType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "eqArrPr")]
-[Id(ElementTypeIdConst)]
 public partial class EquationArrayProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10966;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -8015,12 +7675,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "type")]
-[Id(ElementTypeIdConst)]
 public partial class FractionType : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 10967;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -8064,12 +7720,8 @@ public partial class FractionType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "fPr")]
-[Id(ElementTypeIdConst)]
 public partial class FractionProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10968;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -8157,12 +7809,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "funcPr")]
-[Id(ElementTypeIdConst)]
 public partial class FunctionProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10971;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -8242,12 +7890,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "groupChrPr")]
-[Id(ElementTypeIdConst)]
 public partial class GroupCharProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10974;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -8363,12 +8007,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "limLowPr")]
-[Id(ElementTypeIdConst)]
 public partial class LimitLowerProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10975;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -8442,12 +8082,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "limUppPr")]
-[Id(ElementTypeIdConst)]
 public partial class LimitUpperProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10977;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -8514,12 +8150,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "count")]
-[Id(ElementTypeIdConst)]
 public partial class MatrixColumnCount : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 10978;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val.</para>
@@ -8555,12 +8187,8 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "mcJc")]
-[Id(ElementTypeIdConst)]
 public partial class MatrixColumnJustification : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 10979;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -8604,12 +8232,8 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "mcPr")]
-[Id(ElementTypeIdConst)]
 public partial class MatrixColumnProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10980;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -8697,12 +8321,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "mc")]
-[Id(ElementTypeIdConst)]
 public partial class MatrixColumn : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10981;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -8767,13 +8387,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(21, "cSp")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnSpacing : TwipsMeasureType
 {
-    internal const int ElementTypeIdConst = 10984;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ColumnSpacing class.
     /// </summary>
@@ -8792,13 +8408,9 @@ public partial class ColumnSpacing : TwipsMeasureType
 /// </summary>
 
 [SchemaAttr(21, "lMargin")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeftMargin : TwipsMeasureType
 {
-    internal const int ElementTypeIdConst = 11017;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the LeftMargin class.
     /// </summary>
@@ -8817,13 +8429,9 @@ public partial class LeftMargin : TwipsMeasureType
 /// </summary>
 
 [SchemaAttr(21, "rMargin")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightMargin : TwipsMeasureType
 {
-    internal const int ElementTypeIdConst = 11018;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the RightMargin class.
     /// </summary>
@@ -8842,13 +8450,9 @@ public partial class RightMargin : TwipsMeasureType
 /// </summary>
 
 [SchemaAttr(21, "preSp")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PreSpacing : TwipsMeasureType
 {
-    internal const int ElementTypeIdConst = 11020;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PreSpacing class.
     /// </summary>
@@ -8867,13 +8471,9 @@ public partial class PreSpacing : TwipsMeasureType
 /// </summary>
 
 [SchemaAttr(21, "postSp")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PostSpacing : TwipsMeasureType
 {
-    internal const int ElementTypeIdConst = 11021;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PostSpacing class.
     /// </summary>
@@ -8892,13 +8492,9 @@ public partial class PostSpacing : TwipsMeasureType
 /// </summary>
 
 [SchemaAttr(21, "interSp")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class InterSpacing : TwipsMeasureType
 {
-    internal const int ElementTypeIdConst = 11022;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the InterSpacing class.
     /// </summary>
@@ -8917,13 +8513,9 @@ public partial class InterSpacing : TwipsMeasureType
 /// </summary>
 
 [SchemaAttr(21, "intraSp")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class IntraSpacing : TwipsMeasureType
 {
-    internal const int ElementTypeIdConst = 11023;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the IntraSpacing class.
     /// </summary>
@@ -8942,13 +8534,9 @@ public partial class IntraSpacing : TwipsMeasureType
 /// </summary>
 
 [SchemaAttr(21, "wrapIndent")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WrapIndent : TwipsMeasureType
 {
-    internal const int ElementTypeIdConst = 11024;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the WrapIndent class.
     /// </summary>
@@ -9005,12 +8593,8 @@ public abstract partial class TwipsMeasureType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "mcs")]
-[Id(ElementTypeIdConst)]
 public partial class MatrixColumns : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10986;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -9085,12 +8669,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "mPr")]
-[Id(ElementTypeIdConst)]
 public partial class MatrixProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10987;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -9276,12 +8856,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "mr")]
-[Id(ElementTypeIdConst)]
 public partial class MatrixRow : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10988;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -9331,13 +8907,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(21, "limLoc")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LimitLocation : LimitLocationType
 {
-    internal const int ElementTypeIdConst = 10989;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the LimitLocation class.
     /// </summary>
@@ -9356,13 +8928,9 @@ public partial class LimitLocation : LimitLocationType
 /// </summary>
 
 [SchemaAttr(21, "intLim")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class IntegralLimitLocation : LimitLocationType
 {
-    internal const int ElementTypeIdConst = 11026;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the IntegralLimitLocation class.
     /// </summary>
@@ -9381,13 +8949,9 @@ public partial class IntegralLimitLocation : LimitLocationType
 /// </summary>
 
 [SchemaAttr(21, "naryLim")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NaryLimitLocation : LimitLocationType
 {
-    internal const int ElementTypeIdConst = 11027;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the NaryLimitLocation class.
     /// </summary>
@@ -9453,12 +9017,8 @@ public abstract partial class LimitLocationType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "naryPr")]
-[Id(ElementTypeIdConst)]
 public partial class NaryProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10992;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -9612,12 +9172,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "phantPr")]
-[Id(ElementTypeIdConst)]
 public partial class PhantomProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 11000;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -9763,12 +9319,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "radPr")]
-[Id(ElementTypeIdConst)]
 public partial class RadicalProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 11002;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -9856,12 +9408,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "sPrePr")]
-[Id(ElementTypeIdConst)]
 public partial class PreSubSuperProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 11004;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -9935,12 +9483,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "sSubPr")]
-[Id(ElementTypeIdConst)]
 public partial class SubscriptProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 11005;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -10016,12 +9560,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "sSubSupPr")]
-[Id(ElementTypeIdConst)]
 public partial class SubSuperscriptProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 11007;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -10109,12 +9649,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "sSupPr")]
-[Id(ElementTypeIdConst)]
 public partial class SuperscriptProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 11008;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -10181,12 +9717,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "argSz")]
-[Id(ElementTypeIdConst)]
 public partial class ArgumentSize : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 11009;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -10229,12 +9761,8 @@ public partial class ArgumentSize : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "argPr")]
-[Id(ElementTypeIdConst)]
 public partial class ArgumentProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 11010;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -10299,13 +9827,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(21, "jc")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Justification : OfficeMathJustificationType
 {
-    internal const int ElementTypeIdConst = 11011;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Justification class.
     /// </summary>
@@ -10324,13 +9848,9 @@ public partial class Justification : OfficeMathJustificationType
 /// </summary>
 
 [SchemaAttr(21, "defJc")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultJustification : OfficeMathJustificationType
 {
-    internal const int ElementTypeIdConst = 11019;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DefaultJustification class.
     /// </summary>
@@ -10379,12 +9899,8 @@ public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "mathFont")]
-[Id(ElementTypeIdConst)]
 public partial class MathFont : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 11012;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val.</para>
@@ -10420,12 +9936,8 @@ public partial class MathFont : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "brkBin")]
-[Id(ElementTypeIdConst)]
 public partial class BreakBinary : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 11013;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -10459,12 +9971,8 @@ public partial class BreakBinary : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "brkBinSub")]
-[Id(ElementTypeIdConst)]
 public partial class BreakBinarySubtraction : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 11014;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -10507,12 +10015,8 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(21, "oMathParaPr")]
-[Id(ElementTypeIdConst)]
 public partial class ParagraphProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 11028;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

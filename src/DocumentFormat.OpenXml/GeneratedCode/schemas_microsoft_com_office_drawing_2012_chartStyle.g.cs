@@ -39,13 +39,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "colorStyle")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ColorStyle : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 13256;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> meth, this property is only available in Office2013, Office2016.</para>
@@ -219,13 +215,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(65, "chartStyle")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ChartStyle : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 13257;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2013, Office2016.</para>
@@ -819,12 +811,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "variation")]
-[Id(ElementTypeIdConst)]
 public partial class ColorStyleVariation : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13258;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -916,12 +904,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13259;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1040,12 +1024,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "styleClr")]
-[Id(ElementTypeIdConst)]
 public partial class StyleColor : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13260;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2013, Office2016.</para>
@@ -1150,13 +1130,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "lnRef")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class LineReference : StyleReference
 {
-    internal const int ElementTypeIdConst = 13261;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the LineReference class.
     /// </summary>
@@ -1226,13 +1202,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "fillRef")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FillReference : StyleReference
 {
-    internal const int ElementTypeIdConst = 13263;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the FillReference class.
     /// </summary>
@@ -1302,13 +1274,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "effectRef")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class EffectReference : StyleReference
 {
-    internal const int ElementTypeIdConst = 13264;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EffectReference class.
     /// </summary>
@@ -1444,12 +1412,8 @@ public abstract partial class StyleReference : OpenXmlCompositeElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "lineWidthScale")]
-[Id(ElementTypeIdConst)]
 public partial class LineWidthScale : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 13262;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1504,12 +1468,8 @@ public partial class LineWidthScale : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "fontRef")]
-[Id(ElementTypeIdConst)]
 public partial class FontReference : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13265;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> idx, this property is only available in Office2013, Office2016.</para>
@@ -1624,12 +1584,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "spPr")]
-[Id(ElementTypeIdConst)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13266;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Black and White Mode.</para>
@@ -1785,12 +1741,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "defRPr")]
-[Id(ElementTypeIdConst)]
 public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13267;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> kumimoji.</para>
@@ -2062,12 +2014,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "bodyPr")]
-[Id(ElementTypeIdConst)]
 public partial class TextBodyProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13268;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Rotation.</para>
@@ -2291,13 +2239,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(65, "categoryAxis")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class CategoryAxisProperties : AxisProperties
 {
-    internal const int ElementTypeIdConst = 13269;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CategoryAxisProperties class.
     /// </summary>
@@ -2316,13 +2260,9 @@ public partial class CategoryAxisProperties : AxisProperties
 /// </summary>
 
 [SchemaAttr(65, "seriesAxis")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SeriesAxisProperties : AxisProperties
 {
-    internal const int ElementTypeIdConst = 13274;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SeriesAxisProperties class.
     /// </summary>
@@ -2341,13 +2281,9 @@ public partial class SeriesAxisProperties : AxisProperties
 /// </summary>
 
 [SchemaAttr(65, "valueAxis")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ValueAxisProperties : AxisProperties
 {
-    internal const int ElementTypeIdConst = 13277;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ValueAxisProperties class.
     /// </summary>
@@ -2442,12 +2378,8 @@ public abstract partial class AxisProperties : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "dataSeries")]
-[Id(ElementTypeIdConst)]
 public partial class DataSeries : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13270;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> overlap, this property is only available in Office2013, Office2016.</para>
@@ -2536,12 +2468,8 @@ public partial class DataSeries : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "dataLabels")]
-[Id(ElementTypeIdConst)]
 public partial class DataLabels : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13271;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> position, this property is only available in Office2013, Office2016.</para>
@@ -2614,12 +2542,8 @@ public partial class DataLabels : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "dataTable")]
-[Id(ElementTypeIdConst)]
 public partial class DataTable : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13272;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> legendKeys, this property is only available in Office2013, Office2016.</para>
@@ -2676,12 +2600,8 @@ public partial class DataTable : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "legend")]
-[Id(ElementTypeIdConst)]
 public partial class Legend : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13273;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> visible, this property is only available in Office2013, Office2016.</para>
@@ -2730,12 +2650,8 @@ public partial class Legend : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "title")]
-[Id(ElementTypeIdConst)]
 public partial class Title : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13275;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> position, this property is only available in Office2013, Office2016.</para>
@@ -2768,12 +2684,8 @@ public partial class Title : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "trendline")]
-[Id(ElementTypeIdConst)]
 public partial class Trendline : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13276;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> add, this property is only available in Office2013, Office2016.</para>
@@ -2822,12 +2734,8 @@ public partial class Trendline : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "view3D")]
-[Id(ElementTypeIdConst)]
 public partial class View3DProperties : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13278;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rotX, this property is only available in Office2013, Office2016.</para>
@@ -2912,13 +2820,9 @@ public partial class View3DProperties : OpenXmlLeafElement
 /// </remarks>
 
 [SchemaAttr(65, "axisTitle")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class AxisTitle : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13279;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the AxisTitle class.
     /// </summary>
@@ -2986,13 +2890,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "categoryAxis")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class CategoryAxis : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13280;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CategoryAxis class.
     /// </summary>
@@ -3060,13 +2960,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "chartArea")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ChartArea : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13281;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ChartArea class.
     /// </summary>
@@ -3134,13 +3030,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "dataLabel")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataLabel : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13282;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DataLabel class.
     /// </summary>
@@ -3208,13 +3100,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "dataLabelCallout")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataLabelCallout : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13283;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DataLabelCallout class.
     /// </summary>
@@ -3282,13 +3170,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "dataPoint")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataPoint : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13284;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DataPoint class.
     /// </summary>
@@ -3356,13 +3240,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "dataPoint3D")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataPoint3D : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13285;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DataPoint3D class.
     /// </summary>
@@ -3430,13 +3310,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "dataPointLine")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataPointLine : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13286;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DataPointLine class.
     /// </summary>
@@ -3504,13 +3380,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "dataPointMarker")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataPointMarker : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13287;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DataPointMarker class.
     /// </summary>
@@ -3578,13 +3450,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "dataPointWireframe")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataPointWireframe : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13289;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DataPointWireframe class.
     /// </summary>
@@ -3652,13 +3520,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "dataTable")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataTableStyle : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13290;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DataTableStyle class.
     /// </summary>
@@ -3726,13 +3590,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "downBar")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DownBar : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13291;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DownBar class.
     /// </summary>
@@ -3800,13 +3660,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "dropLine")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DropLine : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13292;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DropLine class.
     /// </summary>
@@ -3874,13 +3730,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "errorBar")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ErrorBar : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13293;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ErrorBar class.
     /// </summary>
@@ -3948,13 +3800,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "floor")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Floor : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13294;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Floor class.
     /// </summary>
@@ -4022,13 +3870,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "gridlineMajor")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class GridlineMajor : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13295;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the GridlineMajor class.
     /// </summary>
@@ -4096,13 +3940,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "gridlineMinor")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class GridlineMinor : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13296;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the GridlineMinor class.
     /// </summary>
@@ -4170,13 +4010,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "hiLoLine")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class HiLoLine : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13297;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HiLoLine class.
     /// </summary>
@@ -4244,13 +4080,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "leaderLine")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class LeaderLine : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13298;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the LeaderLine class.
     /// </summary>
@@ -4318,13 +4150,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "legend")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class LegendStyle : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13299;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the LegendStyle class.
     /// </summary>
@@ -4392,13 +4220,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "plotArea")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class PlotArea : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13300;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PlotArea class.
     /// </summary>
@@ -4466,13 +4290,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "plotArea3D")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class PlotArea3D : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13301;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PlotArea3D class.
     /// </summary>
@@ -4540,13 +4360,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "seriesAxis")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SeriesAxis : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13302;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SeriesAxis class.
     /// </summary>
@@ -4614,13 +4430,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "seriesLine")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SeriesLine : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13303;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SeriesLine class.
     /// </summary>
@@ -4688,13 +4500,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "title")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TitleStyle : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13304;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the TitleStyle class.
     /// </summary>
@@ -4762,13 +4570,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "trendline")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TrendlineStyle : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13305;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the TrendlineStyle class.
     /// </summary>
@@ -4836,13 +4640,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "trendlineLabel")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TrendlineLabel : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13306;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the TrendlineLabel class.
     /// </summary>
@@ -4910,13 +4710,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "upBar")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class UpBar : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13307;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the UpBar class.
     /// </summary>
@@ -4984,13 +4780,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "valueAxis")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ValueAxis : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13308;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ValueAxis class.
     /// </summary>
@@ -5058,13 +4850,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(65, "wall")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Wall : StyleEntry
 {
-    internal const int ElementTypeIdConst = 13309;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Wall class.
     /// </summary>
@@ -5310,12 +5098,8 @@ public abstract partial class StyleEntry : OpenXmlCompositeElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(65, "dataPointMarkerLayout")]
-[Id(ElementTypeIdConst)]
 public partial class MarkerLayoutProperties : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13288;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> symbol, this property is only available in Office2013, Office2016.</para>

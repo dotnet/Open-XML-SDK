@@ -17,13 +17,9 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 /// </summary>
 
 [SchemaAttr(28, "bordertop")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopBorder : BorderType
 {
-    internal const int ElementTypeIdConst = 12501;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the TopBorder class.
     /// </summary>
@@ -42,13 +38,9 @@ public partial class TopBorder : BorderType
 /// </summary>
 
 [SchemaAttr(28, "borderleft")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeftBorder : BorderType
 {
-    internal const int ElementTypeIdConst = 12502;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the LeftBorder class.
     /// </summary>
@@ -67,13 +59,9 @@ public partial class LeftBorder : BorderType
 /// </summary>
 
 [SchemaAttr(28, "borderright")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightBorder : BorderType
 {
-    internal const int ElementTypeIdConst = 12503;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the RightBorder class.
     /// </summary>
@@ -92,13 +80,9 @@ public partial class RightBorder : BorderType
 /// </summary>
 
 [SchemaAttr(28, "borderbottom")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BottomBorder : BorderType
 {
-    internal const int ElementTypeIdConst = 12504;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the BottomBorder class.
     /// </summary>
@@ -159,12 +143,8 @@ public abstract partial class BorderType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(28, "wrap")]
-[Id(ElementTypeIdConst)]
 public partial class TextWrap : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12505;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Wrapping type.</para>
@@ -217,12 +197,8 @@ public partial class TextWrap : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(28, "anchorlock")]
-[Id(ElementTypeIdConst)]
 public partial class AnchorLock : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12506;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

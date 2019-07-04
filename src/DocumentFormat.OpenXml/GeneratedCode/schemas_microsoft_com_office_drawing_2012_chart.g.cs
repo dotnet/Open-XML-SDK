@@ -32,12 +32,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "pivotSource")]
-[Id(ElementTypeIdConst)]
 public partial class PivotSource : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13209;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -132,12 +128,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "numFmt")]
-[Id(ElementTypeIdConst)]
 public partial class NumberingFormat : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13210;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Number Format Code.</para>
@@ -212,12 +204,8 @@ public partial class NumberingFormat : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "spPr")]
-[Id(ElementTypeIdConst)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13211;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Black and White Mode.</para>
@@ -333,12 +321,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "layout")]
-[Id(ElementTypeIdConst)]
 public partial class Layout : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13212;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -426,12 +410,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "fullRef")]
-[Id(ElementTypeIdConst)]
 public partial class FullReference : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13213;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -505,12 +485,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "levelRef")]
-[Id(ElementTypeIdConst)]
 public partial class LevelReference : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13214;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -584,12 +560,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "formulaRef")]
-[Id(ElementTypeIdConst)]
 public partial class FormulaReference : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13215;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -663,12 +635,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredSeriesTitle")]
-[Id(ElementTypeIdConst)]
 public partial class FilteredSeriesTitle : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13216;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -742,12 +710,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredCategoryTitle")]
-[Id(ElementTypeIdConst)]
 public partial class FilteredCategoryTitle : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13217;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -821,12 +785,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredAreaSeries")]
-[Id(ElementTypeIdConst)]
 public partial class FilteredAreaSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13218;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -900,12 +860,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredBarSeries")]
-[Id(ElementTypeIdConst)]
 public partial class FilteredBarSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13219;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -979,12 +935,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredBubbleSeries")]
-[Id(ElementTypeIdConst)]
 public partial class FilteredBubbleSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13220;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1058,12 +1010,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredLineSeries")]
-[Id(ElementTypeIdConst)]
 public partial class FilteredLineSeriesExtension : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13221;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1137,12 +1085,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredPieSeries")]
-[Id(ElementTypeIdConst)]
 public partial class FilteredPieSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13222;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1216,12 +1160,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredRadarSeries")]
-[Id(ElementTypeIdConst)]
 public partial class FilteredRadarSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13223;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1295,12 +1235,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredScatterSeries")]
-[Id(ElementTypeIdConst)]
 public partial class FilteredScatterSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13224;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1374,12 +1310,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "filteredSurfaceSeries")]
-[Id(ElementTypeIdConst)]
 public partial class FilteredSurfaceSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13225;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1455,12 +1387,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "datalabelsRange")]
-[Id(ElementTypeIdConst)]
 public partial class DataLabelsRange : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13226;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1548,12 +1476,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "categoryFilterExceptions")]
-[Id(ElementTypeIdConst)]
 public partial class CategoryFilterExceptions : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13227;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1612,12 +1536,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "dlblFieldTable")]
-[Id(ElementTypeIdConst)]
 public partial class DataLabelFieldTable : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13228;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1667,13 +1587,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(64, "xForSave")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ExceptionForSave : BooleanType
 {
-    internal const int ElementTypeIdConst = 13229;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ExceptionForSave class.
     /// </summary>
@@ -1692,13 +1608,9 @@ public partial class ExceptionForSave : BooleanType
 /// </summary>
 
 [SchemaAttr(64, "showDataLabelsRange")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ShowDataLabelsRange : BooleanType
 {
-    internal const int ElementTypeIdConst = 13230;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ShowDataLabelsRange class.
     /// </summary>
@@ -1717,13 +1629,9 @@ public partial class ShowDataLabelsRange : BooleanType
 /// </summary>
 
 [SchemaAttr(64, "showLeaderLines")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ShowLeaderLines : BooleanType
 {
-    internal const int ElementTypeIdConst = 13232;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ShowLeaderLines class.
     /// </summary>
@@ -1742,13 +1650,9 @@ public partial class ShowLeaderLines : BooleanType
 /// </summary>
 
 [SchemaAttr(64, "autoCat")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class AutoGeneneratedCategories : BooleanType
 {
-    internal const int ElementTypeIdConst = 13234;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the AutoGeneneratedCategories class.
     /// </summary>
@@ -1767,13 +1671,9 @@ public partial class AutoGeneneratedCategories : BooleanType
 /// </summary>
 
 [SchemaAttr(64, "invertIfNegative")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class InvertIfNegativeBoolean : BooleanType
 {
-    internal const int ElementTypeIdConst = 13248;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the InvertIfNegativeBoolean class.
     /// </summary>
@@ -1792,13 +1692,9 @@ public partial class InvertIfNegativeBoolean : BooleanType
 /// </summary>
 
 [SchemaAttr(64, "bubble3D")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Bubble3D : BooleanType
 {
-    internal const int ElementTypeIdConst = 13249;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Bubble3D class.
     /// </summary>
@@ -1855,12 +1751,8 @@ public abstract partial class BooleanType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "tx")]
-[Id(ElementTypeIdConst)]
 public partial class ChartText : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13231;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1965,12 +1857,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "leaderLines")]
-[Id(ElementTypeIdConst)]
 public partial class LeaderLines : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13233;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2035,13 +1923,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(64, "sqref")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SequenceOfReferences : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 13235;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SequenceOfReferences class.
     /// </summary>
@@ -2071,13 +1955,9 @@ public partial class SequenceOfReferences : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(64, "f")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Formula : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 13245;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Formula class.
     /// </summary>
@@ -2107,13 +1987,9 @@ public partial class Formula : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(64, "txfldGUID")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TextFieldGuid : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 13253;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the TextFieldGuid class.
     /// </summary>
@@ -2160,12 +2036,8 @@ public partial class TextFieldGuid : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "cat")]
-[Id(ElementTypeIdConst)]
 public partial class AxisDataSourceType : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13236;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2324,12 +2196,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
-[Id(ElementTypeIdConst)]
 public partial class BarChartSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13237;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2513,12 +2381,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
-[Id(ElementTypeIdConst)]
 public partial class LineChartSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13238;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2700,12 +2564,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
-[Id(ElementTypeIdConst)]
 public partial class ScatterChartSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13239;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2871,12 +2731,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
-[Id(ElementTypeIdConst)]
 public partial class AreaChartSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13240;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3039,12 +2895,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
-[Id(ElementTypeIdConst)]
 public partial class PieChartSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13241;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3227,12 +3079,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
-[Id(ElementTypeIdConst)]
 public partial class BubbleChartSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13242;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3411,12 +3259,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
-[Id(ElementTypeIdConst)]
 public partial class RadarChartSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13243;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3587,12 +3431,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "ser")]
-[Id(ElementTypeIdConst)]
 public partial class SurfaceChartSeries : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13244;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3783,13 +3623,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(64, "dlblRangeCache")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataLabelsRangeChache : StringDataType
 {
-    internal const int ElementTypeIdConst = 13246;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DataLabelsRangeChache class.
     /// </summary>
@@ -3845,13 +3681,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(64, "dlblFieldTableCache")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataLabelFieldTableCache : StringDataType
 {
-    internal const int ElementTypeIdConst = 13254;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DataLabelFieldTableCache class.
     /// </summary>
@@ -3968,12 +3800,8 @@ public abstract partial class StringDataType : OpenXmlCompositeElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "explosion")]
-[Id(ElementTypeIdConst)]
 public partial class Explosion : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13247;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Integer Value.</para>
@@ -4019,12 +3847,8 @@ public partial class Explosion : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "marker")]
-[Id(ElementTypeIdConst)]
 public partial class Marker : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13250;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -4170,12 +3994,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "dLbl")]
-[Id(ElementTypeIdConst)]
 public partial class DataLabel : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13251;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -4291,12 +4111,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "categoryFilterException")]
-[Id(ElementTypeIdConst)]
 public partial class CategoryFilterException : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13252;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -4458,12 +4274,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(64, "dlblFTEntry")]
-[Id(ElementTypeIdConst)]
 public partial class DataLabelFieldTableEntry : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13255;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

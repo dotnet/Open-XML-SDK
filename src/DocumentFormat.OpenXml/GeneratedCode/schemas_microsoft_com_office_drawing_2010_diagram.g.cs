@@ -31,12 +31,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(58, "cNvPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13180;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -168,12 +164,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(58, "recolorImg")]
-[Id(ElementTypeIdConst)]
 public partial class RecolorImages : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13181;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>

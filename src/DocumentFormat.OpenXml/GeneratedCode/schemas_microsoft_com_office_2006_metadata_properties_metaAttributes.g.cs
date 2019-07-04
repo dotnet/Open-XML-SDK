@@ -19,12 +19,8 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(41, "DummyContentTypeElement")]
-[Id(ElementTypeIdConst)]
 public partial class Dummy : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12713;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> decimals.</para>

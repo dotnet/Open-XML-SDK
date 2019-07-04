@@ -14,7 +14,6 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents an Open XML non element node (i.e. PT, Comments, Entity, Notation, XmlDeclaration).
     /// </summary>
-    [Id(ReservedElementTypeIds.OpenXmlMiscNodeId)]
     public class OpenXmlMiscNode : OpenXmlElement
     {
         private const string strCDataSectionName = "#cdata-section";
@@ -104,10 +103,7 @@ namespace DocumentFormat.OpenXml
             get { return _nodeType; }
             internal set { _nodeType = value; }
         }
-
-        /// <inheritdoc/>
-        internal override int ElementTypeId => ReservedElementTypeIds.OpenXmlMiscNodeId;
-
+        
         /// <inheritdoc/>
         public override bool HasChildren => false;
 

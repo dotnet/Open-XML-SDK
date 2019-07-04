@@ -13,7 +13,6 @@ namespace DocumentFormat.OpenXml
     /// Represents elements that are not defined in the Office Open XML ECMA standard.
     /// </summary>
     [OfficeAvailability(FileFormatVersions.None)]
-    [Id(ReservedElementTypeIds.OpenXmlUnknownElementId)]
     public class OpenXmlUnknownElement : OpenXmlCompositeElement
     {
         private string _namespaceUri;
@@ -142,10 +141,7 @@ namespace DocumentFormat.OpenXml
 
         /// <inheritdoc/>
         public override XmlQualifiedName XmlQualifiedName => new XmlQualifiedName(_tagName, _namespaceUri);
-
-        /// <inheritdoc/>
-        internal override int ElementTypeId => ReservedElementTypeIds.OpenXmlUnknownElementId;
-
+        
         /// <inheritdoc/>
         public override string InnerText
         {

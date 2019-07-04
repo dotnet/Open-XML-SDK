@@ -19,12 +19,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "control")]
-[Id(ElementTypeIdConst)]
 public partial class UnsizedControlClone : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12644;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> idQ.</para>
@@ -253,12 +249,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "button")]
-[Id(ElementTypeIdConst)]
 public partial class UnsizedButton : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12645;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> onAction.</para>
@@ -519,12 +511,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "checkBox")]
-[Id(ElementTypeIdConst)]
 public partial class CheckBox : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12646;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> getPressed.</para>
@@ -748,12 +736,8 @@ public partial class CheckBox : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "gallery")]
-[Id(ElementTypeIdConst)]
 public partial class UnsizedGallery : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12647;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> description.</para>
@@ -1189,12 +1173,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "toggleButton")]
-[Id(ElementTypeIdConst)]
 public partial class UnsizedToggleButton : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12648;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> getPressed.</para>
@@ -1463,12 +1443,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "menuSeparator")]
-[Id(ElementTypeIdConst)]
 public partial class MenuSeparator : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12649;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -1568,12 +1544,8 @@ public partial class MenuSeparator : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "splitButton")]
-[Id(ElementTypeIdConst)]
 public partial class UnsizedSplitButton : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12650;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> enabled.</para>
@@ -1781,12 +1753,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "menu")]
-[Id(ElementTypeIdConst)]
 public partial class UnsizedMenu : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12651;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> itemSize.</para>
@@ -2099,12 +2067,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "dynamicMenu")]
-[Id(ElementTypeIdConst)]
 public partial class UnsizedDynamicMenu : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12652;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> description.</para>
@@ -2384,12 +2348,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "splitButton")]
-[Id(ElementTypeIdConst)]
 public partial class SplitButtonWithTitle : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12653;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> enabled.</para>
@@ -2597,12 +2557,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "menu")]
-[Id(ElementTypeIdConst)]
 public partial class MenuWithTitle : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12654;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -2915,12 +2871,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "control")]
-[Id(ElementTypeIdConst)]
 public partial class ControlClone : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12655;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> size.</para>
@@ -3180,12 +3132,8 @@ public partial class ControlClone : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "labelControl")]
-[Id(ElementTypeIdConst)]
 public partial class TextLabel : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12656;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -3367,12 +3315,8 @@ public partial class TextLabel : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "button")]
-[Id(ElementTypeIdConst)]
 public partial class Button : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12657;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> size.</para>
@@ -3648,12 +3592,8 @@ public partial class Button : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "toggleButton")]
-[Id(ElementTypeIdConst)]
 public partial class ToggleButton : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12658;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> size.</para>
@@ -3937,12 +3877,8 @@ public partial class ToggleButton : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "editBox")]
-[Id(ElementTypeIdConst)]
 public partial class EditBox : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12659;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> enabled.</para>
@@ -4218,12 +4154,8 @@ public partial class EditBox : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "comboBox")]
-[Id(ElementTypeIdConst)]
 public partial class ComboBox : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12660;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> showItemImage.</para>
@@ -4593,12 +4525,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "dropDown")]
-[Id(ElementTypeIdConst)]
 public partial class DropDown : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12661;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> onAction.</para>
@@ -4969,12 +4897,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "gallery")]
-[Id(ElementTypeIdConst)]
 public partial class Gallery : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12662;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> size.</para>
@@ -5451,12 +5375,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "menu")]
-[Id(ElementTypeIdConst)]
 public partial class Menu : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12663;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> size.</para>
@@ -5787,12 +5707,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "dynamicMenu")]
-[Id(ElementTypeIdConst)]
 public partial class DynamicMenu : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12664;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> size.</para>
@@ -6087,12 +6003,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "splitButton")]
-[Id(ElementTypeIdConst)]
 public partial class SplitButton : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12665;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> size.</para>
@@ -6328,12 +6240,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "box")]
-[Id(ElementTypeIdConst)]
 public partial class Box : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12666;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -6490,12 +6398,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "buttonGroup")]
-[Id(ElementTypeIdConst)]
 public partial class ButtonGroup : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12667;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -6642,12 +6546,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "menu")]
-[Id(ElementTypeIdConst)]
 public partial class MenuRoot : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12668;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> title.</para>
@@ -6754,12 +6654,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "customUI")]
-[Id(ElementTypeIdConst)]
 public partial class CustomUI : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 12669;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> onLoad.</para>
@@ -6856,12 +6752,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "item")]
-[Id(ElementTypeIdConst)]
 public partial class Item : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12670;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -6934,12 +6826,8 @@ public partial class Item : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "button")]
-[Id(ElementTypeIdConst)]
 public partial class VisibleButton : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12671;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> onAction.</para>
@@ -7185,12 +7073,8 @@ public partial class VisibleButton : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "toggleButton")]
-[Id(ElementTypeIdConst)]
 public partial class VisibleToggleButton : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12672;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> getPressed.</para>
@@ -7444,12 +7328,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "separator")]
-[Id(ElementTypeIdConst)]
 public partial class VerticalSeparator : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12673;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -7544,12 +7424,8 @@ public partial class VerticalSeparator : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "dialogBoxLauncher")]
-[Id(ElementTypeIdConst)]
 public partial class DialogBoxLauncher : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12674;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -7653,12 +7529,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "group")]
-[Id(ElementTypeIdConst)]
 public partial class Group : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12675;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -7904,12 +7776,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "control")]
-[Id(ElementTypeIdConst)]
 public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12676;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -8175,13 +8043,9 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
 /// </remarks>
 
 [SchemaAttr(34, "sharedControls")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SharedQatControls : QatItemsType
 {
-    internal const int ElementTypeIdConst = 12677;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SharedQatControls class.
     /// </summary>
@@ -8240,13 +8104,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(34, "documentControls")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocumentSpecificQuickAccessToolbarControls : QatItemsType
 {
-    internal const int ElementTypeIdConst = 12678;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DocumentSpecificQuickAccessToolbarControls class.
     /// </summary>
@@ -8358,12 +8218,8 @@ public abstract partial class QatItemsType : OpenXmlCompositeElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "tab")]
-[Id(ElementTypeIdConst)]
 public partial class Tab : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12679;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -8536,12 +8392,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "tabSet")]
-[Id(ElementTypeIdConst)]
 public partial class ContextualTabSet : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12680;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> idMso.</para>
@@ -8617,12 +8469,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "command")]
-[Id(ElementTypeIdConst)]
 public partial class RepurposedCommand : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12681;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> onAction.</para>
@@ -8701,12 +8549,8 @@ public partial class RepurposedCommand : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "officeMenu")]
-[Id(ElementTypeIdConst)]
 public partial class OfficeMenu : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12682;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -8790,12 +8634,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "qat")]
-[Id(ElementTypeIdConst)]
 public partial class QuickAccessToolbar : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12683;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -8883,12 +8723,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "tabs")]
-[Id(ElementTypeIdConst)]
 public partial class Tabs : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12684;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -8947,12 +8783,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "contextualTabs")]
-[Id(ElementTypeIdConst)]
 public partial class ContextualTabSets : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12685;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -9011,12 +8843,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "commands")]
-[Id(ElementTypeIdConst)]
 public partial class RepurposedCommands : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12686;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -9081,12 +8909,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(34, "ribbon")]
-[Id(ElementTypeIdConst)]
 public partial class Ribbon : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12687;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> startFromScratch.</para>

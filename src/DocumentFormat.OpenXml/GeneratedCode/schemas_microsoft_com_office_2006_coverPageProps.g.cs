@@ -36,12 +36,8 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(36, "CoverPageProperties")]
-[Id(ElementTypeIdConst)]
 public partial class CoverPageProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12692;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -178,12 +174,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(36, "PublishDate")]
-[Id(ElementTypeIdConst)]
 public partial class PublishDate : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12693;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -217,13 +209,9 @@ public partial class PublishDate : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(36, "Abstract")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocumentAbstract : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12694;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DocumentAbstract class.
     /// </summary>
@@ -253,13 +241,9 @@ public partial class DocumentAbstract : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(36, "CompanyAddress")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CompanyAddress : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12695;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CompanyAddress class.
     /// </summary>
@@ -289,13 +273,9 @@ public partial class CompanyAddress : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(36, "CompanyPhone")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12696;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CompanyPhoneNumber class.
     /// </summary>
@@ -325,13 +305,9 @@ public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(36, "CompanyFax")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CompanyFaxNumber : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12697;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CompanyFaxNumber class.
     /// </summary>
@@ -361,13 +337,9 @@ public partial class CompanyFaxNumber : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(36, "CompanyEmail")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CompanyEmailAddress : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12698;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CompanyEmailAddress class.
     /// </summary>

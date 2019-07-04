@@ -26,12 +26,8 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(25, "schemaLibrary")]
-[Id(ElementTypeIdConst)]
 public partial class SchemaLibrary : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12468;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -83,12 +79,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(25, "schema")]
-[Id(ElementTypeIdConst)]
 public partial class Schema : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12469;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Custom XML Schema Namespace.</para>

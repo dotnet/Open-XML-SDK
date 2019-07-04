@@ -38,12 +38,8 @@ namespace DocumentFormat.OpenXml.InkML
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "ink")]
-[Id(ElementTypeIdConst)]
 public partial class Ink : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 12714;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> documentID.</para>
@@ -109,12 +105,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "bind")]
-[Id(ElementTypeIdConst)]
 public partial class Bind : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12715;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> source.</para>
@@ -167,12 +159,8 @@ public partial class Bind : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "table")]
-[Id(ElementTypeIdConst)]
 public partial class Table : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12716;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -231,12 +219,8 @@ public partial class Table : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "matrix")]
-[Id(ElementTypeIdConst)]
 public partial class Matrix : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12717;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -294,12 +278,8 @@ public partial class Matrix : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "mapping")]
-[Id(ElementTypeIdConst)]
 public partial class Mapping : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12718;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -394,12 +374,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "channel")]
-[Id(ElementTypeIdConst)]
 public partial class Channel : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12719;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -540,12 +516,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "intermittentChannels")]
-[Id(ElementTypeIdConst)]
 public partial class IntermittentChannels : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12720;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -597,12 +569,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "channelProperty")]
-[Id(ElementTypeIdConst)]
 public partial class ChannelProperty : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12721;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> channel.</para>
@@ -682,12 +650,8 @@ public partial class ChannelProperty : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "traceFormat")]
-[Id(ElementTypeIdConst)]
 public partial class TraceFormat : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12722;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -749,12 +713,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "sampleRate")]
-[Id(ElementTypeIdConst)]
 public partial class SampleRate : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12723;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> uniform.</para>
@@ -794,12 +754,8 @@ public partial class SampleRate : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "latency")]
-[Id(ElementTypeIdConst)]
 public partial class Latency : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12724;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> value.</para>
@@ -832,12 +788,8 @@ public partial class Latency : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "activeArea")]
-[Id(ElementTypeIdConst)]
 public partial class ActiveArea : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12725;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> size.</para>
@@ -901,12 +853,8 @@ public partial class ActiveArea : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "srcProperty")]
-[Id(ElementTypeIdConst)]
 public partial class SourceProperty : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12726;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name.</para>
@@ -972,12 +920,8 @@ public partial class SourceProperty : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "channelProperties")]
-[Id(ElementTypeIdConst)]
 public partial class ChannelProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12727;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1029,12 +973,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "annotation")]
-[Id(ElementTypeIdConst)]
 public partial class Annotation : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12728;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> type.</para>
@@ -1091,12 +1031,8 @@ public partial class Annotation : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "annotationXML")]
-[Id(ElementTypeIdConst)]
 public partial class AnnotationXml : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12729;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> type.</para>
@@ -1194,12 +1130,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "brushProperty")]
-[Id(ElementTypeIdConst)]
 public partial class BrushProperty : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12730;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name.</para>
@@ -1300,12 +1232,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "canvas")]
-[Id(ElementTypeIdConst)]
 public partial class Canvas : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12731;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -1396,12 +1324,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "canvasTransform")]
-[Id(ElementTypeIdConst)]
 public partial class CanvasTransform : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12732;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -1486,12 +1410,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "inkSource")]
-[Id(ElementTypeIdConst)]
 public partial class InkSource : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12733;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -1659,12 +1579,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "brush")]
-[Id(ElementTypeIdConst)]
 public partial class Brush : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12734;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -1735,12 +1651,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "timestamp")]
-[Id(ElementTypeIdConst)]
 public partial class Timestamp : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12735;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -1804,12 +1716,8 @@ public partial class Timestamp : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "trace")]
-[Id(ElementTypeIdConst)]
 public partial class Trace : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12736;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -1919,12 +1827,8 @@ public partial class Trace : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "traceGroup")]
-[Id(ElementTypeIdConst)]
 public partial class TraceGroup : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12737;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -2015,12 +1919,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "traceView")]
-[Id(ElementTypeIdConst)]
 public partial class TraceView : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12738;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -2130,12 +2030,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "context")]
-[Id(ElementTypeIdConst)]
 public partial class Context : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12739;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -2364,12 +2260,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(43, "definitions")]
-[Id(ElementTypeIdConst)]
 public partial class Definitions : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12740;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

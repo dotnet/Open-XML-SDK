@@ -20,12 +20,8 @@ namespace DocumentFormat.OpenXml.Office2013.Word
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(69, "color")]
-[Id(ElementTypeIdConst)]
 public partial class Color : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13334;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Run Content Color.</para>
@@ -91,12 +87,8 @@ public partial class Color : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(69, "dataBinding")]
-[Id(ElementTypeIdConst)]
 public partial class DataBinding : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13335;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> XML Namespace Prefix Mappings.</para>
@@ -150,12 +142,8 @@ public partial class DataBinding : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(69, "appearance")]
-[Id(ElementTypeIdConst)]
 public partial class Appearance : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13336;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2013, Office2016.</para>
@@ -195,13 +183,9 @@ public partial class Appearance : OpenXmlLeafElement
     [ChildElementInfo(typeof(CommentEx), FileFormatVersions.Office2013)]
 
 [SchemaAttr(69, "commentsEx")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class CommentsEx : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 13337;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
 	internal CommentsEx(WordprocessingCommentsExPart ownerPart) : base (ownerPart){}
@@ -283,13 +267,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     [ChildElementInfo(typeof(Person), FileFormatVersions.Office2013)]
 
 [SchemaAttr(69, "people")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class People : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 13338;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
 	internal People(WordprocessingPeoplePart ownerPart) : base (ownerPart){}
@@ -375,12 +355,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(69, "repeatingSection")]
-[Id(ElementTypeIdConst)]
 public partial class SdtRepeatedSection : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13339;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -461,12 +437,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(69, "repeatingSectionItem")]
-[Id(ElementTypeIdConst)]
 public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13340;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -489,13 +461,9 @@ public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(69, "chartTrackingRefBased")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ChartTrackingRefBased : OnOffType
 {
-    internal const int ElementTypeIdConst = 13341;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ChartTrackingRefBased class.
     /// </summary>
@@ -514,13 +482,9 @@ public partial class ChartTrackingRefBased : OnOffType
 /// </summary>
 
 [SchemaAttr(69, "collapsed")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DefaultCollapsed : OnOffType
 {
-    internal const int ElementTypeIdConst = 13342;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DefaultCollapsed class.
     /// </summary>
@@ -539,13 +503,9 @@ public partial class DefaultCollapsed : OnOffType
 /// </summary>
 
 [SchemaAttr(69, "webExtensionLinked")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionLinked : OnOffType
 {
-    internal const int ElementTypeIdConst = 13345;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the WebExtensionLinked class.
     /// </summary>
@@ -564,13 +524,9 @@ public partial class WebExtensionLinked : OnOffType
 /// </summary>
 
 [SchemaAttr(69, "webExtensionCreated")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionCreated : OnOffType
 {
-    internal const int ElementTypeIdConst = 13346;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the WebExtensionCreated class.
     /// </summary>
@@ -589,13 +545,9 @@ public partial class WebExtensionCreated : OnOffType
 /// </summary>
 
 [SchemaAttr(69, "doNotAllowInsertDeleteSection")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DoNotAllowInsertDeleteSection : OnOffType
 {
-    internal const int ElementTypeIdConst = 13351;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DoNotAllowInsertDeleteSection class.
     /// </summary>
@@ -643,12 +595,8 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(69, "docId")]
-[Id(ElementTypeIdConst)]
 public partial class PersistentDocumentId : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13343;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2013, Office2016.</para>
@@ -684,12 +632,8 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(69, "footnoteColumns")]
-[Id(ElementTypeIdConst)]
 public partial class FootnoteColumns : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13344;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Decimal Number Value.</para>
@@ -724,12 +668,8 @@ public partial class FootnoteColumns : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(69, "commentEx")]
-[Id(ElementTypeIdConst)]
 public partial class CommentEx : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13347;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> paraId, this property is only available in Office2013, Office2016.</para>
@@ -794,12 +734,8 @@ public partial class CommentEx : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(69, "person")]
-[Id(ElementTypeIdConst)]
 public partial class Person : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13348;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> author, this property is only available in Office2013, Office2016.</para>
@@ -888,12 +824,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(69, "presenceInfo")]
-[Id(ElementTypeIdConst)]
 public partial class PresenceInfo : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13349;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> providerId, this property is only available in Office2013, Office2016.</para>
@@ -940,12 +872,8 @@ public partial class PresenceInfo : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(69, "sectionTitle")]
-[Id(ElementTypeIdConst)]
 public partial class SectionTitle : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13350;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> String Value.</para>

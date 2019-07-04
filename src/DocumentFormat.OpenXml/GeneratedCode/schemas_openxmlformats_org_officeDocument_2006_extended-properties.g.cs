@@ -77,13 +77,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     [ChildElementInfo(typeof(DocumentSecurity))]
 
 [SchemaAttr(3, "Properties")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Properties : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 11064;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
 	internal Properties(ExtendedFilePropertiesPart ownerPart) : base (ownerPart){}
@@ -537,13 +533,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(3, "Template")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Template : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11065;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Template class.
     /// </summary>
@@ -573,13 +565,9 @@ public partial class Template : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(3, "Manager")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Manager : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11066;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Manager class.
     /// </summary>
@@ -609,13 +597,9 @@ public partial class Manager : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(3, "Company")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Company : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11067;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Company class.
     /// </summary>
@@ -645,13 +629,9 @@ public partial class Company : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(3, "PresentationFormat")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PresentationFormat : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11071;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PresentationFormat class.
     /// </summary>
@@ -681,13 +661,9 @@ public partial class PresentationFormat : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(3, "HyperlinkBase")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HyperlinkBase : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11085;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HyperlinkBase class.
     /// </summary>
@@ -717,13 +693,9 @@ public partial class HyperlinkBase : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(3, "Application")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Application : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11089;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Application class.
     /// </summary>
@@ -753,13 +725,9 @@ public partial class Application : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(3, "AppVersion")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ApplicationVersion : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11090;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ApplicationVersion class.
     /// </summary>
@@ -790,13 +758,9 @@ public partial class ApplicationVersion : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(3, "Pages")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Pages : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11068;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Pages class.
     /// </summary>
@@ -827,13 +791,9 @@ public partial class Pages : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(3, "Words")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Words : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11069;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Words class.
     /// </summary>
@@ -864,13 +824,9 @@ public partial class Words : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(3, "Characters")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Characters : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11070;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Characters class.
     /// </summary>
@@ -901,13 +857,9 @@ public partial class Characters : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(3, "Lines")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Lines : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11072;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Lines class.
     /// </summary>
@@ -938,13 +890,9 @@ public partial class Lines : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(3, "Paragraphs")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Paragraphs : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11073;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Paragraphs class.
     /// </summary>
@@ -975,13 +923,9 @@ public partial class Paragraphs : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(3, "Slides")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Slides : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11074;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Slides class.
     /// </summary>
@@ -1012,13 +956,9 @@ public partial class Slides : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(3, "Notes")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Notes : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11075;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Notes class.
     /// </summary>
@@ -1049,13 +989,9 @@ public partial class Notes : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(3, "TotalTime")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TotalTime : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11076;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the TotalTime class.
     /// </summary>
@@ -1086,13 +1022,9 @@ public partial class TotalTime : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(3, "HiddenSlides")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HiddenSlides : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11077;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HiddenSlides class.
     /// </summary>
@@ -1123,13 +1055,9 @@ public partial class HiddenSlides : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(3, "MMClips")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MultimediaClips : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11078;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the MultimediaClips class.
     /// </summary>
@@ -1160,13 +1088,9 @@ public partial class MultimediaClips : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(3, "CharactersWithSpaces")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CharactersWithSpaces : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11083;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CharactersWithSpaces class.
     /// </summary>
@@ -1197,13 +1121,9 @@ public partial class CharactersWithSpaces : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(3, "DocSecurity")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocumentSecurity : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11091;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DocumentSecurity class.
     /// </summary>
@@ -1234,13 +1154,9 @@ public partial class DocumentSecurity : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(BooleanValue))]
 [SchemaAttr(3, "ScaleCrop")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScaleCrop : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11079;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ScaleCrop class.
     /// </summary>
@@ -1271,13 +1187,9 @@ public partial class ScaleCrop : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(BooleanValue))]
 [SchemaAttr(3, "LinksUpToDate")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LinksUpToDate : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11082;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the LinksUpToDate class.
     /// </summary>
@@ -1308,13 +1220,9 @@ public partial class LinksUpToDate : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(BooleanValue))]
 [SchemaAttr(3, "SharedDoc")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SharedDocument : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11084;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SharedDocument class.
     /// </summary>
@@ -1345,13 +1253,9 @@ public partial class SharedDocument : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(BooleanValue))]
 [SchemaAttr(3, "HyperlinksChanged")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HyperlinksChanged : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11087;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HyperlinksChanged class.
     /// </summary>
@@ -1387,13 +1291,9 @@ public partial class HyperlinksChanged : OpenXmlLeafTextElement
 /// </remarks>
 
 [SchemaAttr(3, "HeadingPairs")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HeadingPairs : VectorVariantType
 {
-    internal const int ElementTypeIdConst = 11080;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HeadingPairs class.
     /// </summary>
@@ -1445,13 +1345,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(3, "HLinks")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HyperlinkList : VectorVariantType
 {
-    internal const int ElementTypeIdConst = 11086;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HyperlinkList class.
     /// </summary>
@@ -1569,12 +1465,8 @@ public abstract partial class VectorVariantType : OpenXmlCompositeElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(3, "TitlesOfParts")]
-[Id(ElementTypeIdConst)]
 public partial class TitlesOfParts : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 11081;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1648,12 +1540,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(3, "DigSig")]
-[Id(ElementTypeIdConst)]
 public partial class DigitalSignature : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 11088;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

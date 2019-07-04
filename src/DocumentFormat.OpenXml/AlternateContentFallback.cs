@@ -10,7 +10,6 @@ namespace DocumentFormat.OpenXml
     /// Defines a mc:Fallback element in mc:AlternateContent.
     /// </summary>
     [SchemaAttr(AlternateContent.Namespace, Name)]
-    [Id(ReservedElementTypeIds.AlternateContentFallbackId)]
     public class AlternateContentFallback : OpenXmlCompositeElement
     {
         private const string Name = "Fallback";
@@ -92,10 +91,5 @@ namespace DocumentFormat.OpenXml
         {
             return CloneImp<AlternateContentFallback>(deep);
         }
-
-        /// <summary>
-        /// Gets the type ID of the element.
-        /// </summary>
-        internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentFallbackId;
     }
 }

@@ -44,12 +44,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "wsp")]
-[Id(ElementTypeIdConst)]
 public partial class WordprocessingShape : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13196;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> normalEastAsianFlow, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -144,12 +140,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13197;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -218,12 +210,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "cNvPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13198;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -364,12 +352,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "cNvSpPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13199;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Text Box.</para>
@@ -470,12 +454,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "cNvCnPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualConnectorProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13200;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -619,12 +599,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "spPr")]
-[Id(ElementTypeIdConst)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13201;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Black and White Mode.</para>
@@ -744,12 +720,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "style")]
-[Id(ElementTypeIdConst)]
 public partial class ShapeStyle : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13202;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -867,12 +839,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "txbx")]
-[Id(ElementTypeIdConst)]
 public partial class TextBoxInfo2 : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13203;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -967,12 +935,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "linkedTxbx")]
-[Id(ElementTypeIdConst)]
 public partial class LinkedTextBox : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13204;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -1076,12 +1040,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(61, "bodyPr")]
-[Id(ElementTypeIdConst)]
 public partial class TextBodyProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13205;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Rotation.</para>

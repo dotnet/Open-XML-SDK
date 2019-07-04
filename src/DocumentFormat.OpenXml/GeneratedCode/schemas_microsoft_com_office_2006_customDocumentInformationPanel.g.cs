@@ -30,12 +30,8 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(37, "customPropertyEditors")]
-[Id(ElementTypeIdConst)]
 public partial class CustomPropertyEditors : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12699;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -116,13 +112,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [StringValidator(IsUri = true)]
 [SchemaAttr(37, "XMLNamespace")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12700;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PropertyEditorNamespace class.
     /// </summary>
@@ -153,13 +145,9 @@ public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
 
 [StringValidator(IsUri = true)]
 [SchemaAttr(37, "defaultPropertyEditorNamespace")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12703;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DefaultPropertyEditorNamespace class.
     /// </summary>
@@ -191,12 +179,8 @@ public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(37, "XSNLocation")]
-[Id(ElementTypeIdConst)]
 public partial class XsnFileLocation : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12701;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -233,12 +217,8 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(37, "showOnOpen")]
-[Id(ElementTypeIdConst)]
 public partial class ShowOnOpen : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12702;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -283,12 +263,8 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(37, "customPropertyEditor")]
-[Id(ElementTypeIdConst)]
 public partial class CustomPropertyEditor : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12704;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

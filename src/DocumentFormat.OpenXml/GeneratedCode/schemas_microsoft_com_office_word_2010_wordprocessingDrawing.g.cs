@@ -19,13 +19,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(51, "pctPosHOffset")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12889;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PercentagePositionHeightOffset class.
     /// </summary>
@@ -56,13 +52,9 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(51, "pctPosVOffset")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12890;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PercentagePositionVerticalOffset class.
     /// </summary>
@@ -101,12 +93,8 @@ public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(51, "sizeRelH")]
-[Id(ElementTypeIdConst)]
 public partial class RelativeWidth : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12891;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> relativeFrom, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -189,12 +177,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(51, "sizeRelV")]
-[Id(ElementTypeIdConst)]
 public partial class RelativeHeight : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12892;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> relativeFrom, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -269,13 +253,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [NumberValidator(MinInclusive = 0, SimpleType = typeof(Int32Value))]
 [SchemaAttr(51, "pctWidth")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentageWidth : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12893;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PercentageWidth class.
     /// </summary>
@@ -306,13 +286,9 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
 
 [NumberValidator(MinInclusive = 0, SimpleType = typeof(Int32Value))]
 [SchemaAttr(51, "pctHeight")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PercentageHeight : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12894;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PercentageHeight class.
     /// </summary>

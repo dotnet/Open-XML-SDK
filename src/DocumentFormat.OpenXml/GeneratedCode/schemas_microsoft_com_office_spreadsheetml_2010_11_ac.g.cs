@@ -20,12 +20,8 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(74, "absPath")]
-[Id(ElementTypeIdConst)]
 public partial class AbsolutePath : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13434;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> url, this property is only available in Office2013, Office2016.</para>

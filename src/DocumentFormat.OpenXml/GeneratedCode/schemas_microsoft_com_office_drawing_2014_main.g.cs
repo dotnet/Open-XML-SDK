@@ -20,12 +20,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(79, "creationId")]
-[Id(ElementTypeIdConst)]
 public partial class CreationId : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13445;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2016.</para>
@@ -58,12 +54,8 @@ public partial class CreationId : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(79, "predDERef")]
-[Id(ElementTypeIdConst)]
 public partial class PredecessorDrawingElementReference : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13446;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> pred, this property is only available in Office2016.</para>
@@ -96,12 +88,8 @@ public partial class PredecessorDrawingElementReference : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(79, "cxnDERefs")]
-[Id(ElementTypeIdConst)]
 public partial class ConnectableReferences : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13447;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> st, this property is only available in Office2016.</para>
@@ -140,13 +128,9 @@ public partial class ConnectableReferences : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(79, "rowId")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class RowIdIdentifier : OpenXmlIdentifierElement
 {
-    internal const int ElementTypeIdConst = 13448;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the RowIdIdentifier class.
     /// </summary>
@@ -165,13 +149,9 @@ public partial class RowIdIdentifier : OpenXmlIdentifierElement
 /// </summary>
 
 [SchemaAttr(79, "colId")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class ColIdIdentifier : OpenXmlIdentifierElement
 {
-    internal const int ElementTypeIdConst = 13449;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ColIdIdentifier class.
     /// </summary>
