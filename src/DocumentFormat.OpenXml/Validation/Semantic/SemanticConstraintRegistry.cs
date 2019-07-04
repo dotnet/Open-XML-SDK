@@ -1,13 +1,14 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     internal partial class SemanticConstraintRegistry
     {
-        protected readonly IntegerMultivalueCollection<SemanticConstraint> _semConstraintMap = new IntegerMultivalueCollection<SemanticConstraint>();
+        protected readonly MultivalueCollection<Type, SemanticConstraint> _semConstraintMap = new MultivalueCollection<Type, SemanticConstraint>();
 
         private readonly FileFormatVersions _format;
         private readonly ApplicationType _appType;
@@ -23,11 +24,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         /// <summary>
         /// Register a constraint to this registry.
         /// </summary>
-        public void RegisterConstraint(int elementTypeID, FileFormatVersions fileFormat, ApplicationType appType, SemanticConstraint constraint)
+        public void RegisterConstraint(Type type, FileFormatVersions fileFormat, ApplicationType appType, SemanticConstraint constraint)
         {
-            if ((fileFormat & _format) == _format && (appType & _appType) == _appType)
+            if (_format.AtLeast(fileFormat) && (appType & _appType) == _appType)
             {
-                _semConstraintMap.Add(elementTypeID, constraint);
+                _semConstraintMap.Add(type, constraint);
             }
         }
 
@@ -50,11 +51,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 level = SemanticValidationLevel.Package;
             }
 
-            int elementTypeID = context.Element.ElementTypeId;
-
             context.Events.OnElementValidationStarted(context);
 
-            if (_semConstraintMap.TryGetValue(elementTypeID, out var constraints))
+            if (_semConstraintMap.TryGetValue(context.Element.GetType(), out var constraints))
             {
                 foreach (var constraint in constraints)
                 {
