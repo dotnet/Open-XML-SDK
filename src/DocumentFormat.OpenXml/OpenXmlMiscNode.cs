@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml
             get { return _nodeType; }
             internal set { _nodeType = value; }
         }
-        
+
         /// <inheritdoc/>
         public override bool HasChildren => false;
 

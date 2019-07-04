@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml
 
         /// <inheritdoc/>
         public override XmlQualifiedName XmlQualifiedName => new XmlQualifiedName(_tagName, _namespaceUri);
-        
+
         /// <inheritdoc/>
         public override string InnerText
         {
