@@ -5,17 +5,12 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
-    internal class IntegerMultivalueCollection<TValue>
+    internal class MultivalueCollection<TKey, TValue>
     {
-        private readonly Dictionary<int, HashSet<TValue>> _registry = new Dictionary<int, HashSet<TValue>>();
+        private readonly Dictionary<TKey, HashSet<TValue>> _registry = new Dictionary<TKey, HashSet<TValue>>();
 
-        public void Add(int key, TValue item)
+        public void Add(TKey key, TValue item)
         {
-            if (key < 0)
-            {
-                return;
-            }
-
             if (!_registry.TryGetValue(key, out var value))
             {
                 value = new HashSet<TValue>();
@@ -25,7 +20,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             value.Add(item);
         }
 
-        public bool TryGetValue(int key, out IEnumerable<TValue> values)
+        public bool TryGetValue(TKey key, out IEnumerable<TValue> values)
         {
             var result = _registry.TryGetValue(key, out var hashset);
 

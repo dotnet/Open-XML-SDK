@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
+
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
@@ -10,13 +12,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     {
         private readonly byte _attribute;
         private readonly string _refPartType;
-        private readonly int _refElementParent;
-        private readonly int _refElement;
+        private readonly Type _refElementParent;
+        private readonly Type _refElement;
         private readonly string _refElementName;
         private readonly int _indexBase;
 
-        public IndexReferenceConstraint(byte attribute, string referencedPart, int referencedElementParent,
-                                                    int referencedElement, string referencedElementName, int indexBase)
+        public IndexReferenceConstraint(byte attribute, string referencedPart, Type referencedElementParent, Type referencedElement, string referencedElementName, int indexBase)
             : base(SemanticValidationLevel.Package)
         {
             _attribute = attribute;
@@ -77,11 +78,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 if (!startCollect)
                 {
-                    startCollect = ctx.Element.ElementTypeId == _refElementParent;
+                    startCollect = ctx.Element.GetType() == _refElementParent;
                 }
                 else
                 {
-                    if (ctx.Element.ElementTypeId == _refElement)
+                    if (ctx.Element.GetType() == _refElement)
                     {
                         ++count;
                     }
@@ -91,7 +92,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             //On element traverse end.
             void ElementTraverseEnd(ValidationContext ctx)
             {
-                if (startCollect && ctx.Element.ElementTypeId == _refElementParent)
+                if (startCollect && ctx.Element.GetType() == _refElementParent)
                 {
                     startCollect = false;
                 }
@@ -107,7 +108,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Element = part.RootElement,
             };
 
-            if (_refElementParent == -1)
+            if (_refElementParent is null)
             {
                 startCollect = true;
                 ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, null);

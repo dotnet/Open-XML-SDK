@@ -14,19 +14,18 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     {
         private readonly byte _refAttribute;
         private readonly string _partPath;
-        private readonly int _element;
+        private readonly Type _element;
         private readonly string _elementName;
         private readonly byte _attribute;
 
-        public ReferenceExistConstraint(byte refAttribute, string part, int element, string elementName, byte attribute)
+        public ReferenceExistConstraint(byte refAttribute, string part, Type element, string elementName, byte attribute)
             : base(SemanticValidationLevel.Package)
         {
             Debug.Assert(!string.IsNullOrEmpty(part));
-            Debug.Assert(element > 0);
 
             _refAttribute = refAttribute;
             _partPath = part;
-            _element = element;
+            _element = element ?? throw new ArgumentNullException(nameof(element));
             _elementName = elementName;
             _attribute = attribute;
         }
@@ -75,7 +74,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 Debug.Assert(ctx.Element != null);
 
-                if (ctx.Element.ElementTypeId == _element)
+                if (ctx.Element.GetType() == _element)
                 {
                     var attribute = ctx.Element.Attributes[_attribute];
 
