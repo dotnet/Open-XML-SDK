@@ -20,12 +20,8 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(86, "symEx")]
-[Id(ElementTypeIdConst)]
 public partial class SymEx : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13591;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> font, this property is only available in Office2016.</para>

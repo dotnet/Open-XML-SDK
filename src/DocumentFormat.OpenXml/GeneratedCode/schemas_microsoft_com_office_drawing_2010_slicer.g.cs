@@ -28,12 +28,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(62, "slicer")]
-[Id(ElementTypeIdConst)]
 public partial class Slicer : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13206;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -115,12 +111,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(62, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13207;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

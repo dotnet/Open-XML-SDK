@@ -20,12 +20,8 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(75, "webVideoPr")]
-[Id(ElementTypeIdConst)]
 public partial class WebVideoProperty : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13435;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> embeddedHtml, this property is only available in Office2013, Office2016.</para>

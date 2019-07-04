@@ -94,12 +94,8 @@ namespace DocumentFormat.OpenXml.VariantTypes
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "variant")]
-[Id(ElementTypeIdConst)]
 public partial class Variant : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 11029;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -689,12 +685,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "vector")]
-[Id(ElementTypeIdConst)]
 public partial class VTVector : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 11030;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Vector Base Type.</para>
@@ -821,12 +813,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "array")]
-[Id(ElementTypeIdConst)]
 public partial class VTArray : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 11031;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Array Lower Bounds Attribute.</para>
@@ -917,13 +905,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [NumberValidator(SimpleType = typeof(Base64BinaryValue))]
 [SchemaAttr(5, "blob")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTBlob : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11032;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTBlob class.
     /// </summary>
@@ -954,13 +938,9 @@ public partial class VTBlob : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Base64BinaryValue))]
 [SchemaAttr(5, "oblob")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTOBlob : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11033;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTOBlob class.
     /// </summary>
@@ -991,13 +971,9 @@ public partial class VTOBlob : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Base64BinaryValue))]
 [SchemaAttr(5, "stream")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTStreamData : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11057;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTStreamData class.
     /// </summary>
@@ -1028,13 +1004,9 @@ public partial class VTStreamData : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Base64BinaryValue))]
 [SchemaAttr(5, "ostream")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTOStreamData : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11058;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTOStreamData class.
     /// </summary>
@@ -1065,13 +1037,9 @@ public partial class VTOStreamData : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Base64BinaryValue))]
 [SchemaAttr(5, "storage")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTStorage : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11059;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTStorage class.
     /// </summary>
@@ -1102,13 +1070,9 @@ public partial class VTStorage : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Base64BinaryValue))]
 [SchemaAttr(5, "ostorage")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTOStorage : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11060;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTOStorage class.
     /// </summary>
@@ -1140,12 +1104,8 @@ public partial class VTOStorage : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "empty")]
-[Id(ElementTypeIdConst)]
 public partial class VTEmpty : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 11034;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1170,12 +1130,8 @@ public partial class VTEmpty : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "null")]
-[Id(ElementTypeIdConst)]
 public partial class VTNull : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 11035;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1201,12 +1157,8 @@ public partial class VTNull : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "i1")]
-[Id(ElementTypeIdConst)]
 public partial class VTByte : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11036;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1243,12 +1195,8 @@ public partial class VTByte : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "i2")]
-[Id(ElementTypeIdConst)]
 public partial class VTShort : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11037;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1283,13 +1231,9 @@ public partial class VTShort : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(5, "i4")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTInt32 : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11038;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTInt32 class.
     /// </summary>
@@ -1320,13 +1264,9 @@ public partial class VTInt32 : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(Int32Value))]
 [SchemaAttr(5, "int")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTInteger : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11040;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTInteger class.
     /// </summary>
@@ -1359,12 +1299,8 @@ public partial class VTInteger : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "i8")]
-[Id(ElementTypeIdConst)]
 public partial class VTInt64 : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11039;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1401,12 +1337,8 @@ public partial class VTInt64 : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "ui1")]
-[Id(ElementTypeIdConst)]
 public partial class VTUnsignedByte : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11041;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1443,12 +1375,8 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "ui2")]
-[Id(ElementTypeIdConst)]
 public partial class VTUnsignedShort : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11042;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1483,13 +1411,9 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(UInt32Value))]
 [SchemaAttr(5, "ui4")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11043;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTUnsignedInt32 class.
     /// </summary>
@@ -1520,13 +1444,9 @@ public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(UInt32Value))]
 [SchemaAttr(5, "uint")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTUnsignedInteger : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11045;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTUnsignedInteger class.
     /// </summary>
@@ -1559,12 +1479,8 @@ public partial class VTUnsignedInteger : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "ui8")]
-[Id(ElementTypeIdConst)]
 public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11044;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1601,12 +1517,8 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "r4")]
-[Id(ElementTypeIdConst)]
 public partial class VTFloat : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11046;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1643,12 +1555,8 @@ public partial class VTFloat : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "r8")]
-[Id(ElementTypeIdConst)]
 public partial class VTDouble : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11047;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1685,12 +1593,8 @@ public partial class VTDouble : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "decimal")]
-[Id(ElementTypeIdConst)]
 public partial class VTDecimal : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11048;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1724,13 +1628,9 @@ public partial class VTDecimal : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(5, "lpstr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTLPSTR : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11049;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTLPSTR class.
     /// </summary>
@@ -1760,13 +1660,9 @@ public partial class VTLPSTR : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(5, "lpwstr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTLPWSTR : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11050;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTLPWSTR class.
     /// </summary>
@@ -1796,13 +1692,9 @@ public partial class VTLPWSTR : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(5, "bstr")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTBString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11051;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTBString class.
     /// </summary>
@@ -1833,13 +1725,9 @@ public partial class VTBString : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(DateTimeValue))]
 [SchemaAttr(5, "date")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTDate : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11052;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTDate class.
     /// </summary>
@@ -1870,13 +1758,9 @@ public partial class VTDate : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(DateTimeValue))]
 [SchemaAttr(5, "filetime")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTFileTime : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11053;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VTFileTime class.
     /// </summary>
@@ -1909,12 +1793,8 @@ public partial class VTFileTime : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "bool")]
-[Id(ElementTypeIdConst)]
 public partial class VTBool : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11054;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1951,12 +1831,8 @@ public partial class VTBool : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "cy")]
-[Id(ElementTypeIdConst)]
 public partial class VTCurrency : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11055;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1993,12 +1869,8 @@ public partial class VTCurrency : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "error")]
-[Id(ElementTypeIdConst)]
 public partial class VTError : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11056;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2034,12 +1906,8 @@ public partial class VTError : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "vstream")]
-[Id(ElementTypeIdConst)]
 public partial class VTVStreamData : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11061;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VSTREAM Version Attribute.</para>
@@ -2085,12 +1953,8 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "clsid")]
-[Id(ElementTypeIdConst)]
 public partial class VTClassId : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11062;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2126,12 +1990,8 @@ public partial class VTClassId : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(5, "cf")]
-[Id(ElementTypeIdConst)]
 public partial class VTClipboardData : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 11063;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Format Attribute.</para>

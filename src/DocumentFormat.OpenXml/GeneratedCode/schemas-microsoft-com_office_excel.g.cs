@@ -158,12 +158,8 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(29, "ClientData")]
-[Id(ElementTypeIdConst)]
 public partial class ClientData : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12507;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Object type.</para>
@@ -288,13 +284,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "MoveWithCells")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MoveWithCells : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12508;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the MoveWithCells class.
     /// </summary>
@@ -325,13 +317,9 @@ public partial class MoveWithCells : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "SizeWithCells")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ResizeWithCells : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12509;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ResizeWithCells class.
     /// </summary>
@@ -362,13 +350,9 @@ public partial class ResizeWithCells : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Locked")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Locked : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12511;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Locked class.
     /// </summary>
@@ -399,13 +383,9 @@ public partial class Locked : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "DefaultSize")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultSize : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12512;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DefaultSize class.
     /// </summary>
@@ -436,13 +416,9 @@ public partial class DefaultSize : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "PrintObject")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PrintObject : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12513;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PrintObject class.
     /// </summary>
@@ -473,13 +449,9 @@ public partial class PrintObject : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Disabled")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Disabled : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12514;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Disabled class.
     /// </summary>
@@ -510,13 +482,9 @@ public partial class Disabled : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "AutoFill")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoFill : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12515;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the AutoFill class.
     /// </summary>
@@ -547,13 +515,9 @@ public partial class AutoFill : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "AutoLine")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoLine : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12516;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the AutoLine class.
     /// </summary>
@@ -584,13 +548,9 @@ public partial class AutoLine : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "AutoPict")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoSizePicture : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12517;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the AutoSizePicture class.
     /// </summary>
@@ -621,13 +581,9 @@ public partial class AutoSizePicture : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "LockText")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LockText : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12521;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the LockText class.
     /// </summary>
@@ -658,13 +614,9 @@ public partial class LockText : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "JustLastX")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class JustifyLastLine : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12522;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the JustifyLastLine class.
     /// </summary>
@@ -695,13 +647,9 @@ public partial class JustifyLastLine : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "SecretEdit")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SecretEdit : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12523;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SecretEdit class.
     /// </summary>
@@ -732,13 +680,9 @@ public partial class SecretEdit : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Default")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultButton : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12524;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DefaultButton class.
     /// </summary>
@@ -769,13 +713,9 @@ public partial class DefaultButton : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Help")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HelpButton : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12525;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HelpButton class.
     /// </summary>
@@ -806,13 +746,9 @@ public partial class HelpButton : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Cancel")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CancelButton : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12526;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CancelButton class.
     /// </summary>
@@ -843,13 +779,9 @@ public partial class CancelButton : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Dismiss")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DismissButton : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12527;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DismissButton class.
     /// </summary>
@@ -880,13 +812,9 @@ public partial class DismissButton : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Visible")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Visible : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12532;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Visible class.
     /// </summary>
@@ -917,13 +845,9 @@ public partial class Visible : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "RowHidden")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RowHidden : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12533;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the RowHidden class.
     /// </summary>
@@ -954,13 +878,9 @@ public partial class RowHidden : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "ColHidden")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnHidden : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12534;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ColumnHidden class.
     /// </summary>
@@ -991,13 +911,9 @@ public partial class ColumnHidden : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "MultiLine")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MultiLine : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12536;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the MultiLine class.
     /// </summary>
@@ -1028,13 +944,9 @@ public partial class MultiLine : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "VScroll")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VerticalScrollBar : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12537;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VerticalScrollBar class.
     /// </summary>
@@ -1065,13 +977,9 @@ public partial class VerticalScrollBar : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "ValidIds")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ValidIds : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12538;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ValidIds class.
     /// </summary>
@@ -1102,13 +1010,9 @@ public partial class ValidIds : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "NoThreeD2")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12542;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Disable3DForListBoxAndDropDown class.
     /// </summary>
@@ -1139,13 +1043,9 @@ public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Colored")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Colored : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12548;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Colored class.
     /// </summary>
@@ -1176,13 +1076,9 @@ public partial class Colored : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "NoThreeD")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Disable3D : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12553;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Disable3D class.
     /// </summary>
@@ -1213,13 +1109,9 @@ public partial class Disable3D : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "FirstButton")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FirstButton : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12554;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the FirstButton class.
     /// </summary>
@@ -1250,13 +1142,9 @@ public partial class FirstButton : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Horiz")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HorizontalScrollBar : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12561;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HorizontalScrollBar class.
     /// </summary>
@@ -1287,13 +1175,9 @@ public partial class HorizontalScrollBar : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "MapOCX")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MapOcxControl : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12563;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the MapOcxControl class.
     /// </summary>
@@ -1324,13 +1208,9 @@ public partial class MapOcxControl : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "Camera")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CameraObject : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12565;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CameraObject class.
     /// </summary>
@@ -1361,13 +1241,9 @@ public partial class CameraObject : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "RecalcAlways")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RecalculateAlways : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12566;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the RecalculateAlways class.
     /// </summary>
@@ -1398,13 +1274,9 @@ public partial class RecalculateAlways : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "AutoScale")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoScaleFont : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12567;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the AutoScaleFont class.
     /// </summary>
@@ -1435,13 +1307,9 @@ public partial class AutoScaleFont : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "DDE")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DdeObject : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12568;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DdeObject class.
     /// </summary>
@@ -1472,13 +1340,9 @@ public partial class DdeObject : OpenXmlLeafTextElement
 
 [EnumValidator(SimpleType = typeof(EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>))]
 [SchemaAttr(29, "UIObj")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UIObject : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12569;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the UIObject class.
     /// </summary>
@@ -1508,13 +1372,9 @@ public partial class UIObject : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "Anchor")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Anchor : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12510;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Anchor class.
     /// </summary>
@@ -1544,13 +1404,9 @@ public partial class Anchor : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "TextHAlign")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HorizontalTextAlignment : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12519;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the HorizontalTextAlignment class.
     /// </summary>
@@ -1580,13 +1436,9 @@ public partial class HorizontalTextAlignment : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "TextVAlign")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VerticalTextAlignment : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12520;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the VerticalTextAlignment class.
     /// </summary>
@@ -1616,13 +1468,9 @@ public partial class VerticalTextAlignment : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "FmlaRange")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaRange : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12539;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the FormulaRange class.
     /// </summary>
@@ -1652,13 +1500,9 @@ public partial class FormulaRange : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "SelType")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SelectionType : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12543;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SelectionType class.
     /// </summary>
@@ -1688,13 +1532,9 @@ public partial class SelectionType : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "MultiSel")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MultiSelections : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12544;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the MultiSelections class.
     /// </summary>
@@ -1724,13 +1564,9 @@ public partial class MultiSelections : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "LCT")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ListBoxCallbackType : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12545;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ListBoxCallbackType class.
     /// </summary>
@@ -1760,13 +1596,9 @@ public partial class ListBoxCallbackType : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "ListItem")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ListItem : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12546;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ListItem class.
     /// </summary>
@@ -1796,13 +1628,9 @@ public partial class ListItem : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "DropStyle")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DropStyle : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12547;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DropStyle class.
     /// </summary>
@@ -1832,13 +1660,9 @@ public partial class DropStyle : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "FmlaLink")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaLink : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12551;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the FormulaLink class.
     /// </summary>
@@ -1868,13 +1692,9 @@ public partial class FormulaLink : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "FmlaPict")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaPicture : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12552;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the FormulaPicture class.
     /// </summary>
@@ -1904,13 +1724,9 @@ public partial class FormulaPicture : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "FmlaGroup")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaGroup : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12555;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the FormulaGroup class.
     /// </summary>
@@ -1940,13 +1756,9 @@ public partial class FormulaGroup : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "ScriptText")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScriptText : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12570;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ScriptText class.
     /// </summary>
@@ -1976,13 +1788,9 @@ public partial class ScriptText : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "ScriptExtended")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScriptExtended : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12571;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ScriptExtended class.
     /// </summary>
@@ -2012,13 +1820,9 @@ public partial class ScriptExtended : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(29, "FmlaTxbx")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormulaTextBox : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12574;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the FormulaTextBox class.
     /// </summary>
@@ -2051,12 +1855,8 @@ public partial class FormulaTextBox : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(29, "FmlaMacro")]
-[Id(ElementTypeIdConst)]
 public partial class FormulaMacro : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12518;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2091,13 +1891,9 @@ public partial class FormulaMacro : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(ByteValue))]
 [SchemaAttr(29, "Accel")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AcceleratorPrimary : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12528;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the AcceleratorPrimary class.
     /// </summary>
@@ -2128,13 +1924,9 @@ public partial class AcceleratorPrimary : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(ByteValue))]
 [SchemaAttr(29, "Accel2")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AcceleratorSecondary : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12529;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the AcceleratorSecondary class.
     /// </summary>
@@ -2165,13 +1957,9 @@ public partial class AcceleratorSecondary : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Row")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CommentRowTarget : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12530;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CommentRowTarget class.
     /// </summary>
@@ -2202,13 +1990,9 @@ public partial class CommentRowTarget : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Column")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CommentColumnTarget : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12531;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CommentColumnTarget class.
     /// </summary>
@@ -2239,13 +2023,9 @@ public partial class CommentColumnTarget : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "VTEdit")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class InputValidationType : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12535;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the InputValidationType class.
     /// </summary>
@@ -2276,13 +2056,9 @@ public partial class InputValidationType : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "WidthMin")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MinDropDownWidth : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12540;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the MinDropDownWidth class.
     /// </summary>
@@ -2313,13 +2089,9 @@ public partial class MinDropDownWidth : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Sel")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SelectionEntry : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12541;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SelectionEntry class.
     /// </summary>
@@ -2350,13 +2122,9 @@ public partial class SelectionEntry : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "DropLines")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DropLines : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12549;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DropLines class.
     /// </summary>
@@ -2387,13 +2155,9 @@ public partial class DropLines : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Checked")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Checked : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12550;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Checked class.
     /// </summary>
@@ -2424,13 +2188,9 @@ public partial class Checked : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Val")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarPosition : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12556;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ScrollBarPosition class.
     /// </summary>
@@ -2461,13 +2221,9 @@ public partial class ScrollBarPosition : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Min")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarMin : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12557;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ScrollBarMin class.
     /// </summary>
@@ -2498,13 +2254,9 @@ public partial class ScrollBarMin : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Max")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarMax : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12558;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ScrollBarMax class.
     /// </summary>
@@ -2535,13 +2287,9 @@ public partial class ScrollBarMax : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Inc")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarIncrement : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12559;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ScrollBarIncrement class.
     /// </summary>
@@ -2572,13 +2320,9 @@ public partial class ScrollBarIncrement : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Page")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12560;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ScrollBarPageIncrement class.
     /// </summary>
@@ -2609,13 +2353,9 @@ public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue))]
 [SchemaAttr(29, "Dx")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScrollBarWidth : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12562;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ScrollBarWidth class.
     /// </summary>
@@ -2648,12 +2388,8 @@ public partial class ScrollBarWidth : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(29, "CF")]
-[Id(ElementTypeIdConst)]
 public partial class ClipboardFormat : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12564;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2688,13 +2424,9 @@ public partial class ClipboardFormat : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue), IsNonNegative = true)]
 [SchemaAttr(29, "ScriptLanguage")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScriptLanguage : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12572;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ScriptLanguage class.
     /// </summary>
@@ -2725,13 +2457,9 @@ public partial class ScriptLanguage : OpenXmlLeafTextElement
 
 [NumberValidator(SimpleType = typeof(IntegerValue), IsNonNegative = true)]
 [SchemaAttr(29, "ScriptLocation")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScriptLocation : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12573;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ScriptLocation class.
     /// </summary>

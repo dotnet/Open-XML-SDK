@@ -198,11 +198,6 @@ namespace DocumentFormat.OpenXml
         #region public properties
 
         /// <summary>
-        /// Gets the type ID of the current element.
-        /// </summary>
-        internal virtual int ElementTypeId => ReservedElementTypeIds.OpenXmlElementId;
-
-        /// <summary>
         /// Gets the OpenXmlEementContext of the current element.
         /// </summary>
         public OpenXmlElementContext OpenXmlElementContext => RootElementContext;

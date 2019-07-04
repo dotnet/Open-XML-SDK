@@ -61,8 +61,7 @@ namespace DocumentFormat.OpenXml.Validation
                     ValidatingTraverse(validationContext, validateAction, finishAction);
                 }
             }
-            else if (element.ElementTypeId == ReservedElementTypeIds.OpenXmlUnknownElementId ||
-                  element.ElementTypeId == ReservedElementTypeIds.OpenXmlUnknownElementId)
+            else if (element.IsUnknown())
             {
                 // TODO: Issue: all types are weak types now, need to change the Framework to load strong typed elements!!!
                 if (validationContext.McContext.IsProcessContent(element))
@@ -75,7 +74,7 @@ namespace DocumentFormat.OpenXml.Validation
                     }
                 }
             }
-            else if (element.ElementTypeId == ReservedElementTypeIds.AlternateContentId)
+            else if (element.IsAlternateContent())
             {
                 validateAction(validationContext);
                 validatingActed = true;
@@ -93,7 +92,7 @@ namespace DocumentFormat.OpenXml.Validation
                     }
                 }
             }
-            else if (element.ElementTypeId == ReservedElementTypeIds.OpenXmlMiscNodeId)
+            else if (element.IsMiscNode())
             {
                 // non-element node
                 // just skip

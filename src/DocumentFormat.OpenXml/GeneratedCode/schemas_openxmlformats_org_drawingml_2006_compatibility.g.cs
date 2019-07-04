@@ -20,12 +20,8 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(13, "legacyDrawing")]
-[Id(ElementTypeIdConst)]
 public partial class LegacyDrawing : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 10681;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Shape ID.</para>

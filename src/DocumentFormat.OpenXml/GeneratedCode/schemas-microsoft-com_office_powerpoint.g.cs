@@ -19,12 +19,8 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(30, "iscomment")]
-[Id(ElementTypeIdConst)]
 public partial class InkAnnotationFlag : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12575;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -49,12 +45,8 @@ public partial class InkAnnotationFlag : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(30, "textdata")]
-[Id(ElementTypeIdConst)]
 public partial class TextData : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12576;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Text Reference.</para>

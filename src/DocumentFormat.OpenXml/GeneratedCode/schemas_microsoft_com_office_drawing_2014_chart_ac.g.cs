@@ -31,12 +31,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(81, "multiLvlStrLit")]
-[Id(ElementTypeIdConst)]
 public partial class MultiLvlStrData : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13516;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

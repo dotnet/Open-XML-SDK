@@ -24,12 +24,8 @@ namespace DocumentFormat.OpenXml.Vml
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "path")]
-[Id(ElementTypeIdConst)]
 public partial class Path : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12577;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -174,12 +170,8 @@ public partial class Path : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "formulas")]
-[Id(ElementTypeIdConst)]
 public partial class Formulas : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12578;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -238,12 +230,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "handles")]
-[Id(ElementTypeIdConst)]
 public partial class ShapeHandles : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12579;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -302,12 +290,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "fill")]
-[Id(ElementTypeIdConst)]
 public partial class Fill : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12580;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -583,12 +567,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "stroke")]
-[Id(ElementTypeIdConst)]
 public partial class Stroke : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12581;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -917,12 +897,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "shadow")]
-[Id(ElementTypeIdConst)]
 public partial class Shadow : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12582;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -1031,12 +1007,8 @@ public partial class Shadow : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "textbox")]
-[Id(ElementTypeIdConst)]
 public partial class TextBox : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12583;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -1119,12 +1091,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "textpath")]
-[Id(ElementTypeIdConst)]
 public partial class TextPath : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12584;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -1205,12 +1173,8 @@ public partial class TextPath : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "imagedata")]
-[Id(ElementTypeIdConst)]
 public partial class ImageData : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12585;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -1435,12 +1399,8 @@ public partial class ImageData : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "shape")]
-[Id(ElementTypeIdConst)]
 public partial class Shape : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12586;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -2038,12 +1998,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "shapetype")]
-[Id(ElementTypeIdConst)]
 public partial class Shapetype : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12587;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -2612,12 +2568,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "group")]
-[Id(ElementTypeIdConst)]
 public partial class Group : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12588;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -2965,12 +2917,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "background")]
-[Id(ElementTypeIdConst)]
 public partial class Background : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12589;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -3146,12 +3094,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "arc")]
-[Id(ElementTypeIdConst)]
 public partial class Arc : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12590;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Optional String.</para>
@@ -3716,12 +3660,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "curve")]
-[Id(ElementTypeIdConst)]
 public partial class Curve : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12591;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -4306,12 +4246,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "image")]
-[Id(ElementTypeIdConst)]
 public partial class ImageFile : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12592;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -4931,12 +4867,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "line")]
-[Id(ElementTypeIdConst)]
 public partial class Line : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12593;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -5507,12 +5439,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "oval")]
-[Id(ElementTypeIdConst)]
 public partial class Oval : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12594;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -6071,12 +5999,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "polyline")]
-[Id(ElementTypeIdConst)]
 public partial class PolyLine : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12595;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -6641,12 +6565,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "rect")]
-[Id(ElementTypeIdConst)]
 public partial class Rectangle : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12596;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -7203,12 +7123,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "roundrect")]
-[Id(ElementTypeIdConst)]
 public partial class RoundRectangle : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12597;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Unique Identifier.</para>
@@ -7714,12 +7630,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "h")]
-[Id(ElementTypeIdConst)]
 public partial class ShapeHandle : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12598;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Handle Position.</para>
@@ -7807,12 +7719,8 @@ public partial class ShapeHandle : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(26, "f")]
-[Id(ElementTypeIdConst)]
 public partial class Formula : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12599;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Equation.</para>

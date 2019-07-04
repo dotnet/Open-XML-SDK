@@ -26,12 +26,8 @@ namespace DocumentFormat.OpenXml.Bibliography
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(9, "Sources")]
-[Id(ElementTypeIdConst)]
 public partial class Sources : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 10824;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Selected Style.</para>
@@ -118,12 +114,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(9, "Person")]
-[Id(ElementTypeIdConst)]
 public partial class Person : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10825;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -176,13 +168,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Last")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Last : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10826;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Last class.
     /// </summary>
@@ -213,13 +201,9 @@ public partial class Last : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "First")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class First : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10827;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the First class.
     /// </summary>
@@ -250,13 +234,9 @@ public partial class First : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Middle")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Middle : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10828;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Middle class.
     /// </summary>
@@ -287,13 +267,9 @@ public partial class Middle : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Corporate")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Corporate : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10830;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Corporate class.
     /// </summary>
@@ -324,13 +300,9 @@ public partial class Corporate : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "AbbreviatedCaseNumber")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10847;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the AbbreviatedCaseNumber class.
     /// </summary>
@@ -361,13 +333,9 @@ public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "AlbumTitle")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AlbumTitle : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10848;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the AlbumTitle class.
     /// </summary>
@@ -398,13 +366,9 @@ public partial class AlbumTitle : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "BookTitle")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BookTitle : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10850;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the BookTitle class.
     /// </summary>
@@ -435,13 +399,9 @@ public partial class BookTitle : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Broadcaster")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Broadcaster : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10851;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Broadcaster class.
     /// </summary>
@@ -472,13 +432,9 @@ public partial class Broadcaster : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "BroadcastTitle")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BroadcastTitle : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10852;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the BroadcastTitle class.
     /// </summary>
@@ -509,13 +465,9 @@ public partial class BroadcastTitle : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "CaseNumber")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CaseNumber : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10853;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CaseNumber class.
     /// </summary>
@@ -546,13 +498,9 @@ public partial class CaseNumber : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "ChapterNumber")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ChapterNumber : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10854;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ChapterNumber class.
     /// </summary>
@@ -583,13 +531,9 @@ public partial class ChapterNumber : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "City")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class City : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10855;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the City class.
     /// </summary>
@@ -620,13 +564,9 @@ public partial class City : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Comments")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Comments : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10856;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Comments class.
     /// </summary>
@@ -657,13 +597,9 @@ public partial class Comments : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "ConferenceName")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ConferenceName : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10857;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ConferenceName class.
     /// </summary>
@@ -694,13 +630,9 @@ public partial class ConferenceName : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "CountryRegion")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CountryRegion : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10858;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CountryRegion class.
     /// </summary>
@@ -731,13 +663,9 @@ public partial class CountryRegion : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Court")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Court : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10859;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Court class.
     /// </summary>
@@ -768,13 +696,9 @@ public partial class Court : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Day")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Day : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10860;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Day class.
     /// </summary>
@@ -805,13 +729,9 @@ public partial class Day : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "DayAccessed")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DayAccessed : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10861;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DayAccessed class.
     /// </summary>
@@ -842,13 +762,9 @@ public partial class DayAccessed : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Department")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Department : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10862;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Department class.
     /// </summary>
@@ -879,13 +795,9 @@ public partial class Department : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Distributor")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Distributor : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10863;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Distributor class.
     /// </summary>
@@ -916,13 +828,9 @@ public partial class Distributor : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Edition")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Edition : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10864;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Edition class.
     /// </summary>
@@ -953,13 +861,9 @@ public partial class Edition : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Guid")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GuidString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10865;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the GuidString class.
     /// </summary>
@@ -990,13 +894,9 @@ public partial class GuidString : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Institution")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Institution : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10866;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Institution class.
     /// </summary>
@@ -1027,13 +927,9 @@ public partial class Institution : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "InternetSiteTitle")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class InternetSiteTitle : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10867;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the InternetSiteTitle class.
     /// </summary>
@@ -1064,13 +960,9 @@ public partial class InternetSiteTitle : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Issue")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Issue : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10868;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Issue class.
     /// </summary>
@@ -1101,13 +993,9 @@ public partial class Issue : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "JournalName")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class JournalName : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10869;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the JournalName class.
     /// </summary>
@@ -1138,13 +1026,9 @@ public partial class JournalName : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "LCID")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LcId : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10870;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the LcId class.
     /// </summary>
@@ -1175,13 +1059,9 @@ public partial class LcId : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Medium")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Medium : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10871;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Medium class.
     /// </summary>
@@ -1212,13 +1092,9 @@ public partial class Medium : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Month")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Month : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10872;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Month class.
     /// </summary>
@@ -1249,13 +1125,9 @@ public partial class Month : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "MonthAccessed")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MonthAccessed : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10873;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the MonthAccessed class.
     /// </summary>
@@ -1286,13 +1158,9 @@ public partial class MonthAccessed : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "NumberVolumes")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NumberVolumes : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10874;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the NumberVolumes class.
     /// </summary>
@@ -1323,13 +1191,9 @@ public partial class NumberVolumes : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Pages")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Pages : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10875;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Pages class.
     /// </summary>
@@ -1360,13 +1224,9 @@ public partial class Pages : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "PatentNumber")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PatentNumber : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10876;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PatentNumber class.
     /// </summary>
@@ -1397,13 +1257,9 @@ public partial class PatentNumber : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "PeriodicalTitle")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PeriodicalTitle : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10877;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PeriodicalTitle class.
     /// </summary>
@@ -1434,13 +1290,9 @@ public partial class PeriodicalTitle : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "ProductionCompany")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ProductionCompany : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10878;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ProductionCompany class.
     /// </summary>
@@ -1471,13 +1323,9 @@ public partial class ProductionCompany : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "PublicationTitle")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PublicationTitle : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10879;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PublicationTitle class.
     /// </summary>
@@ -1508,13 +1356,9 @@ public partial class PublicationTitle : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Publisher")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Publisher : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10880;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Publisher class.
     /// </summary>
@@ -1545,13 +1389,9 @@ public partial class Publisher : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "RecordingNumber")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RecordingNumber : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10881;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the RecordingNumber class.
     /// </summary>
@@ -1582,13 +1422,9 @@ public partial class RecordingNumber : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "RefOrder")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ReferenceOrder : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10882;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ReferenceOrder class.
     /// </summary>
@@ -1619,13 +1455,9 @@ public partial class ReferenceOrder : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Reporter")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Reporter : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10883;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Reporter class.
     /// </summary>
@@ -1656,13 +1488,9 @@ public partial class Reporter : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "ShortTitle")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShortTitle : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10885;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ShortTitle class.
     /// </summary>
@@ -1693,13 +1521,9 @@ public partial class ShortTitle : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "StandardNumber")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StandardNumber : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10886;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the StandardNumber class.
     /// </summary>
@@ -1730,13 +1554,9 @@ public partial class StandardNumber : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "StateProvince")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StateProvince : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10887;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the StateProvince class.
     /// </summary>
@@ -1767,13 +1587,9 @@ public partial class StateProvince : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Station")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Station : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10888;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Station class.
     /// </summary>
@@ -1804,13 +1620,9 @@ public partial class Station : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Tag")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Tag : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10889;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Tag class.
     /// </summary>
@@ -1841,13 +1653,9 @@ public partial class Tag : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Theater")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Theater : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10890;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Theater class.
     /// </summary>
@@ -1878,13 +1686,9 @@ public partial class Theater : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "ThesisType")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ThesisType : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10891;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ThesisType class.
     /// </summary>
@@ -1915,13 +1719,9 @@ public partial class ThesisType : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Title")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Title : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10892;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Title class.
     /// </summary>
@@ -1952,13 +1752,9 @@ public partial class Title : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Type")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PatentType : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10893;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the PatentType class.
     /// </summary>
@@ -1989,13 +1785,9 @@ public partial class PatentType : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "URL")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UrlString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10894;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the UrlString class.
     /// </summary>
@@ -2026,13 +1818,9 @@ public partial class UrlString : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Version")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Version : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10895;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Version class.
     /// </summary>
@@ -2063,13 +1851,9 @@ public partial class Version : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Volume")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Volume : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10896;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Volume class.
     /// </summary>
@@ -2100,13 +1884,9 @@ public partial class Volume : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "Year")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Year : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10897;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Year class.
     /// </summary>
@@ -2137,13 +1917,9 @@ public partial class Year : OpenXmlLeafTextElement
 
 [StringValidator(MinLength = 0, MaxLength = 255)]
 [SchemaAttr(9, "YearAccessed")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class YearAccessed : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10898;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the YearAccessed class.
     /// </summary>
@@ -2182,12 +1958,8 @@ public partial class YearAccessed : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(9, "NameList")]
-[Id(ElementTypeIdConst)]
 public partial class NameList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10829;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2243,13 +2015,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "Artist")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Artist : NameType
 {
-    internal const int ElementTypeIdConst = 10831;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Artist class.
     /// </summary>
@@ -2301,13 +2069,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "BookAuthor")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BookAuthor : NameType
 {
-    internal const int ElementTypeIdConst = 10833;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the BookAuthor class.
     /// </summary>
@@ -2359,13 +2123,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "Compiler")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Compiler : NameType
 {
-    internal const int ElementTypeIdConst = 10834;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Compiler class.
     /// </summary>
@@ -2417,13 +2177,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "Composer")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Composer : NameType
 {
-    internal const int ElementTypeIdConst = 10835;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Composer class.
     /// </summary>
@@ -2475,13 +2231,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "Conductor")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Conductor : NameType
 {
-    internal const int ElementTypeIdConst = 10836;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Conductor class.
     /// </summary>
@@ -2533,13 +2285,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "Counsel")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Counsel : NameType
 {
-    internal const int ElementTypeIdConst = 10837;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Counsel class.
     /// </summary>
@@ -2591,13 +2339,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "Director")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Director : NameType
 {
-    internal const int ElementTypeIdConst = 10838;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Director class.
     /// </summary>
@@ -2649,13 +2393,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "Editor")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Editor : NameType
 {
-    internal const int ElementTypeIdConst = 10839;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Editor class.
     /// </summary>
@@ -2707,13 +2447,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "Interviewee")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Interviewee : NameType
 {
-    internal const int ElementTypeIdConst = 10840;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Interviewee class.
     /// </summary>
@@ -2765,13 +2501,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "Interviewer")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Interviewer : NameType
 {
-    internal const int ElementTypeIdConst = 10841;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Interviewer class.
     /// </summary>
@@ -2823,13 +2555,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "Inventor")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Inventor : NameType
 {
-    internal const int ElementTypeIdConst = 10842;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Inventor class.
     /// </summary>
@@ -2881,13 +2609,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "ProducerName")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ProducerName : NameType
 {
-    internal const int ElementTypeIdConst = 10844;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ProducerName class.
     /// </summary>
@@ -2939,13 +2663,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "Translator")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Translator : NameType
 {
-    internal const int ElementTypeIdConst = 10845;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Translator class.
     /// </summary>
@@ -2997,13 +2717,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "Writer")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Writer : NameType
 {
-    internal const int ElementTypeIdConst = 10846;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Writer class.
     /// </summary>
@@ -3119,13 +2835,9 @@ public abstract partial class NameType : OpenXmlCompositeElement
 /// </remarks>
 
 [SchemaAttr(9, "Author")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Author : NameOrCorporateType
 {
-    internal const int ElementTypeIdConst = 10832;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Author class.
     /// </summary>
@@ -3182,13 +2894,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(9, "Performer")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Performer : NameOrCorporateType
 {
-    internal const int ElementTypeIdConst = 10843;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Performer class.
     /// </summary>
@@ -3355,12 +3063,8 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(9, "Author")]
-[Id(ElementTypeIdConst)]
 public partial class AuthorList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10849;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3641,12 +3345,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(9, "SourceType")]
-[Id(ElementTypeIdConst)]
 public partial class SourceType : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10884;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3791,12 +3491,8 @@ public partial class SourceType : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(9, "Source")]
-[Id(ElementTypeIdConst)]
 public partial class Source : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10899;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

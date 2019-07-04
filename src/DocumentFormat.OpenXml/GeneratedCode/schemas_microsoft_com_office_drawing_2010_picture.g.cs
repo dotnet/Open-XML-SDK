@@ -33,12 +33,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(50, "style")]
-[Id(ElementTypeIdConst)]
 public partial class ShapeStyle : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12887;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -154,12 +150,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(50, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12888;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

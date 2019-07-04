@@ -25,13 +25,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
     [ChildElementInfo(typeof(CustomDocumentProperty))]
 
 [SchemaAttr(4, "Properties")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Properties : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 10903;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
 	internal Properties(CustomFilePropertiesPart ownerPart) : base (ownerPart){}
@@ -181,12 +177,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(4, "property")]
-[Id(ElementTypeIdConst)]
 public partial class CustomDocumentProperty : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10904;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Format ID.</para>

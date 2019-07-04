@@ -32,12 +32,8 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(39, "customXsn")]
-[Id(ElementTypeIdConst)]
 public partial class CustomXsn : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12706;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -144,13 +140,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(39, "xsnLocation")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class XsnLocation : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12707;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the XsnLocation class.
     /// </summary>
@@ -180,13 +172,9 @@ public partial class XsnLocation : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(39, "cached")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CachedView : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12708;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the CachedView class.
     /// </summary>
@@ -216,13 +204,9 @@ public partial class CachedView : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(39, "openByDefault")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OpenByDefault : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12709;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the OpenByDefault class.
     /// </summary>
@@ -252,13 +236,9 @@ public partial class OpenByDefault : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(39, "xsnScope")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Scope : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12710;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Scope class.
     /// </summary>

@@ -26,12 +26,8 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(35, "ocx")]
-[Id(ElementTypeIdConst)]
 public partial class ActiveXControlData : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12688;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> classid.</para>
@@ -130,12 +126,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(35, "ocxPr")]
-[Id(ElementTypeIdConst)]
 public partial class ActiveXObjectProperty : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12689;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name.</para>
@@ -245,12 +237,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(35, "font")]
-[Id(ElementTypeIdConst)]
 public partial class SharedComFont : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12690;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> persistence.</para>
@@ -320,12 +308,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(35, "picture")]
-[Id(ElementTypeIdConst)]
 public partial class SharedComPicture : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12691;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>

@@ -36,12 +36,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(17, "pic")]
-[Id(ElementTypeIdConst)]
 public partial class Picture : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10780;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -175,12 +171,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(17, "cNvPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10781;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -321,12 +313,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(17, "cNvPicPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10782;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> preferRelativeResize.</para>
@@ -423,12 +411,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(17, "nvPicPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualPictureProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10783;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -522,12 +506,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(17, "blipFill")]
-[Id(ElementTypeIdConst)]
 public partial class BlipFill : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10784;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> DPI Setting.</para>
@@ -665,12 +645,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(17, "spPr")]
-[Id(ElementTypeIdConst)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10785;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Black and White Mode.</para>

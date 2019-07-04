@@ -21,12 +21,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "wrapNone")]
-[Id(ElementTypeIdConst)]
 public partial class WrapNone : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 10760;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -58,12 +54,8 @@ public partial class WrapNone : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "wrapSquare")]
-[Id(ElementTypeIdConst)]
 public partial class WrapSquare : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10761;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Text Wrapping Location.</para>
@@ -174,12 +166,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "wrapTight")]
-[Id(ElementTypeIdConst)]
 public partial class WrapTight : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10762;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Text Wrapping Location.</para>
@@ -276,12 +264,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "wrapThrough")]
-[Id(ElementTypeIdConst)]
 public partial class WrapThrough : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10763;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Text Wrapping Location.</para>
@@ -378,12 +362,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "wrapTopAndBottom")]
-[Id(ElementTypeIdConst)]
 public partial class WrapTopBottom : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10764;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Distance From Text on Top Edge.</para>
@@ -479,12 +459,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "inline")]
-[Id(ElementTypeIdConst)]
 public partial class Inline : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10765;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Distance From Text on Top Edge.</para>
@@ -692,12 +668,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "anchor")]
-[Id(ElementTypeIdConst)]
 public partial class Anchor : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10766;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Distance From Text on Top Edge.</para>
@@ -941,13 +913,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(16, "start")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StartPoint : Point2DType
 {
-    internal const int ElementTypeIdConst = 10767;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the StartPoint class.
     /// </summary>
@@ -966,13 +934,9 @@ public partial class StartPoint : Point2DType
 /// </summary>
 
 [SchemaAttr(16, "lineTo")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LineTo : Point2DType
 {
-    internal const int ElementTypeIdConst = 10768;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the LineTo class.
     /// </summary>
@@ -991,13 +955,9 @@ public partial class LineTo : Point2DType
 /// </summary>
 
 [SchemaAttr(16, "simplePos")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SimplePosition : Point2DType
 {
-    internal const int ElementTypeIdConst = 10771;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SimplePosition class.
     /// </summary>
@@ -1054,12 +1014,8 @@ public abstract partial class Point2DType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "effectExtent")]
-[Id(ElementTypeIdConst)]
 public partial class EffectExtent : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 10769;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Additional Extent on Left Edge.</para>
@@ -1129,12 +1085,8 @@ public partial class EffectExtent : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "wrapPolygon")]
-[Id(ElementTypeIdConst)]
 public partial class WrapPolygon : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10770;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Wrapping Points Modified.</para>
@@ -1220,12 +1172,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "positionH")]
-[Id(ElementTypeIdConst)]
 public partial class HorizontalPosition : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10772;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Horizontal Position Relative Base.</para>
@@ -1343,12 +1291,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "positionV")]
-[Id(ElementTypeIdConst)]
 public partial class VerticalPosition : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10773;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Vertical Position Relative Base.</para>
@@ -1455,12 +1399,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "extent")]
-[Id(ElementTypeIdConst)]
 public partial class Extent : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 10774;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Extent Length.</para>
@@ -1514,12 +1454,8 @@ public partial class Extent : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "docPr")]
-[Id(ElementTypeIdConst)]
 public partial class DocProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10775;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -1660,12 +1596,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "cNvGraphicFramePr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10776;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1748,12 +1680,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "align")]
-[Id(ElementTypeIdConst)]
 public partial class VerticalAlignment : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10777;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1790,12 +1718,8 @@ public partial class VerticalAlignment : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "posOffset")]
-[Id(ElementTypeIdConst)]
 public partial class PositionOffset : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10778;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1833,12 +1757,8 @@ public partial class PositionOffset : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(16, "align")]
-[Id(ElementTypeIdConst)]
 public partial class HorizontalAlignment : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 10779;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

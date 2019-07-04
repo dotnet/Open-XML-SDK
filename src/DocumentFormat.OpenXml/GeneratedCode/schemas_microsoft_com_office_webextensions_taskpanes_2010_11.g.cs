@@ -26,13 +26,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     [ChildElementInfo(typeof(WebExtensionTaskpane), FileFormatVersions.Office2013)]
 
 [SchemaAttr(70, "taskpanes")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Taskpanes : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 13352;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
 	internal Taskpanes(WebExTaskpanesPart ownerPart) : base (ownerPart){}
@@ -109,12 +105,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(70, "webextensionref")]
-[Id(ElementTypeIdConst)]
 public partial class WebExtensionPartReference : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13353;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2013, Office2016.</para>
@@ -156,12 +148,8 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(70, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13354;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -228,12 +216,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(70, "taskpane")]
-[Id(ElementTypeIdConst)]
 public partial class WebExtensionTaskpane : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13355;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> dockstate, this property is only available in Office2013, Office2016.</para>

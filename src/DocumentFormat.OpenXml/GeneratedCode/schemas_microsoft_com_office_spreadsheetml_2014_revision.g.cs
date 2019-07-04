@@ -31,12 +31,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "revHdrs")]
-[Id(ElementTypeIdConst)]
 public partial class RevExHeaders : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13539;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> minRev, this property is only available in Office2016.</para>
@@ -153,12 +149,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "revStream")]
-[Id(ElementTypeIdConst)]
 public partial class RevExStream : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13540;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -242,12 +234,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "dxf")]
-[Id(ElementTypeIdConst)]
 public partial class DifferentialFormatType : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13541;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -398,12 +386,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "revisionPtr")]
-[Id(ElementTypeIdConst)]
 public partial class RevisionPtr : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13542;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> revIDLastSave, this property is only available in Office2016.</para>
@@ -461,12 +445,8 @@ public partial class RevisionPtr : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "objectState")]
-[Id(ElementTypeIdConst)]
 public partial class StateBasedObject : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13543;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -603,12 +583,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "hdr")]
-[Id(ElementTypeIdConst)]
 public partial class RevExHeader : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13544;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2016.</para>
@@ -672,12 +648,8 @@ public partial class RevExHeader : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrftr")]
-[Id(ElementTypeIdConst)]
 public partial class RevExFuture : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13545;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rev, this property is only available in Office2016.</para>
@@ -777,12 +749,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrUspt")]
-[Id(ElementTypeIdConst)]
 public partial class RevExUnsupported : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13546;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rev, this property is only available in Office2016.</para>
@@ -848,12 +816,8 @@ public partial class RevExUnsupported : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrTrim")]
-[Id(ElementTypeIdConst)]
 public partial class RevExTrimmed : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13547;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rev, this property is only available in Office2016.</para>
@@ -919,12 +883,8 @@ public partial class RevExTrimmed : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrrc")]
-[Id(ElementTypeIdConst)]
 public partial class RevExRowColumn : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13548;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rev, this property is only available in Office2016.</para>
@@ -1013,12 +973,8 @@ public partial class RevExRowColumn : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrm")]
-[Id(ElementTypeIdConst)]
 public partial class RevExMove : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13549;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rev, this property is only available in Office2016.</para>
@@ -1117,12 +1073,8 @@ public partial class RevExMove : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrc")]
-[Id(ElementTypeIdConst)]
 public partial class RevExChangeCell : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13550;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> listUid, this property is only available in Office2016.</para>
@@ -1262,12 +1214,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrf")]
-[Id(ElementTypeIdConst)]
 public partial class RevExFormatting : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13551;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rev, this property is only available in Office2016.</para>
@@ -1498,12 +1446,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrDefName")]
-[Id(ElementTypeIdConst)]
 public partial class RevExDefinedName : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13552;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rev, this property is only available in Office2016.</para>
@@ -1710,12 +1654,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrdo")]
-[Id(ElementTypeIdConst)]
 public partial class RevExDelObj : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13553;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rev, this property is only available in Office2016.</para>
@@ -1834,12 +1774,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrco")]
-[Id(ElementTypeIdConst)]
 public partial class RevExChgObj : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13554;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rev, this property is only available in Office2016.</para>
@@ -1952,12 +1888,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrSheet")]
-[Id(ElementTypeIdConst)]
 public partial class RevExSheetOp : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13555;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rev, this property is only available in Office2016.</para>
@@ -2052,12 +1984,8 @@ public partial class RevExSheetOp : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrList")]
-[Id(ElementTypeIdConst)]
 public partial class RevisionList : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13556;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rev, this property is only available in Office2016.</para>
@@ -2181,12 +2109,8 @@ public partial class RevisionList : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrListExpR")]
-[Id(ElementTypeIdConst)]
 public partial class RevListAutoExpandRw : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13557;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rev, this property is only available in Office2016.</para>
@@ -2300,12 +2224,8 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrg")]
-[Id(ElementTypeIdConst)]
 public partial class RevGroup : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13558;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> rev, this property is only available in Office2016.</para>
@@ -2410,12 +2330,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "xrrtest")]
-[Id(ElementTypeIdConst)]
 public partial class RevExTest : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13559;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2451,12 +2367,8 @@ public partial class RevExTest : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "c")]
-[Id(ElementTypeIdConst)]
 public partial class RevCell : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13560;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> t, this property is only available in Office2016.</para>
@@ -2586,12 +2498,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "ccse")]
-[Id(ElementTypeIdConst)]
 public partial class ChangeCellSubEdit : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13561;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> r, this property is only available in Office2016.</para>
@@ -2679,12 +2587,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class ExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13562;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2740,13 +2644,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(83, "formula")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class FormulaFormula : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 13563;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the FormulaFormula class.
     /// </summary>
@@ -2776,13 +2676,9 @@ public partial class FormulaFormula : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(83, "f")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2016)]
 public partial class FFormula : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 13574;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the FFormula class.
     /// </summary>
@@ -2821,12 +2717,8 @@ public partial class FFormula : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "hdr")]
-[Id(ElementTypeIdConst)]
 public partial class StateBasedHeader : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13564;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> uid, this property is only available in Office2016.</para>
@@ -2931,12 +2823,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "link")]
-[Id(ElementTypeIdConst)]
 public partial class RevisionStateLink : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13565;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2016.</para>
@@ -2986,12 +2874,8 @@ public partial class RevisionStateLink : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "body")]
-[Id(ElementTypeIdConst)]
 public partial class RevisionState : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13566;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3129,12 +3013,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "refmap")]
-[Id(ElementTypeIdConst)]
 public partial class RefMap : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13567;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3190,12 +3070,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "rowColVisualOps")]
-[Id(ElementTypeIdConst)]
 public partial class RowColVisualOps : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13568;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> action, this property is only available in Office2016.</para>
@@ -3250,12 +3126,8 @@ public partial class RowColVisualOps : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "hideUnhideSheet")]
-[Id(ElementTypeIdConst)]
 public partial class HideUnhideSheet : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13569;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> hide, this property is only available in Office2016.</para>
@@ -3288,12 +3160,8 @@ public partial class HideUnhideSheet : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "showGridlinesHeadings")]
-[Id(ElementTypeIdConst)]
 public partial class ShowGridlinesHeadings : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13570;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> showGridLines, this property is only available in Office2016.</para>
@@ -3334,12 +3202,8 @@ public partial class ShowGridlinesHeadings : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "freezePanes")]
-[Id(ElementTypeIdConst)]
 public partial class FreezePanes : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13571;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> sheetViewUid, this property is only available in Office2016.</para>
@@ -3379,12 +3243,8 @@ public partial class FreezePanes : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "outlines")]
-[Id(ElementTypeIdConst)]
 public partial class Outlines : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13572;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> isRow, this property is only available in Office2016.</para>
@@ -3444,12 +3304,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "outline")]
-[Id(ElementTypeIdConst)]
 public partial class Outline : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13573;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> isCollapsed, this property is only available in Office2016.</para>
@@ -3490,12 +3346,8 @@ public partial class Outline : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "v")]
-[Id(ElementTypeIdConst)]
 public partial class Xstring : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 13575;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3544,12 +3396,8 @@ public partial class Xstring : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "is")]
-[Id(ElementTypeIdConst)]
 public partial class RstType : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13576;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3619,12 +3467,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "ref")]
-[Id(ElementTypeIdConst)]
 public partial class RefCell : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13577;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> n, this property is only available in Office2016.</para>
@@ -3703,12 +3547,8 @@ public partial class RefCell : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "sheetUid")]
-[Id(ElementTypeIdConst)]
 public partial class SheetXluid : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13578;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> n, this property is only available in Office2016.</para>
@@ -3772,12 +3612,8 @@ public partial class SheetXluid : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "oartAnchor")]
-[Id(ElementTypeIdConst)]
 public partial class RefOartAnchor : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13579;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> n, this property is only available in Office2016.</para>
@@ -3911,12 +3747,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "future")]
-[Id(ElementTypeIdConst)]
 public partial class RefFuture : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13580;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -3941,12 +3773,8 @@ public partial class RefFuture : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "test")]
-[Id(ElementTypeIdConst)]
 public partial class RefTest : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13581;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> n, this property is only available in Office2016.</para>
@@ -4012,12 +3840,8 @@ public partial class RefTest : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "dataValidation")]
-[Id(ElementTypeIdConst)]
 public partial class DataValidation : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13582;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> type.</para>
@@ -4204,12 +4028,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "hyperlink")]
-[Id(ElementTypeIdConst)]
 public partial class Hyperlink : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13583;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Reference.</para>
@@ -4297,12 +4117,8 @@ public partial class Hyperlink : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "sparklineGroup")]
-[Id(ElementTypeIdConst)]
 public partial class SparklineGroup : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13584;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> manualMax, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -4625,12 +4441,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "comments")]
-[Id(ElementTypeIdConst)]
 public partial class Comments : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13585;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -4736,12 +4548,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "autoFilter")]
-[Id(ElementTypeIdConst)]
 public partial class AutoFilter : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13586;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Cell or Range Reference.</para>
@@ -4841,12 +4649,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(83, "pivotTableDefinition")]
-[Id(ElementTypeIdConst)]
 public partial class pivotTableDefinition : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13587;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name.</para>

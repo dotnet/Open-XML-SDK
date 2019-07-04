@@ -24,13 +24,9 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     [ChildElementInfo(typeof(SchemaReferences))]
 
 [SchemaAttr(20, "datastoreItem")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DataStoreItem : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 10900;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Custom XML Data ID.</para>
@@ -133,12 +129,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(20, "schemaRef")]
-[Id(ElementTypeIdConst)]
 public partial class SchemaReference : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 10901;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Target Namespace of Associated XML Schema.</para>
@@ -180,12 +172,8 @@ public partial class SchemaReference : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(20, "schemaRefs")]
-[Id(ElementTypeIdConst)]
 public partial class SchemaReferences : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 10902;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

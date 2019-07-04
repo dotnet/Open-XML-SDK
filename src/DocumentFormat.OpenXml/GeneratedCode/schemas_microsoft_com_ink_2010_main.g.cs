@@ -30,12 +30,8 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(45, "context")]
-[Id(ElementTypeIdConst)]
 public partial class ContextNode : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12758;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -255,12 +251,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(45, "property")]
-[Id(ElementTypeIdConst)]
 public partial class ContextNodeProperty : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12759;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> type.</para>
@@ -302,13 +294,9 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(45, "sourceLink")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SourceLink : ContextLinkType
 {
-    internal const int ElementTypeIdConst = 12760;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SourceLink class.
     /// </summary>
@@ -327,13 +315,9 @@ public partial class SourceLink : ContextLinkType
 /// </summary>
 
 [SchemaAttr(45, "destinationLink")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DestinationLink : ContextLinkType
 {
-    internal const int ElementTypeIdConst = 12761;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DestinationLink class.
     /// </summary>

@@ -20,12 +20,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(67, "backgroundPr")]
-[Id(ElementTypeIdConst)]
 public partial class BackgroundProperties : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13320;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> bwMode, this property is only available in Office2013, Office2016.</para>
@@ -82,12 +78,8 @@ public partial class BackgroundProperties : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(67, "nonVisualGroupProps")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualGroupProperties : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13321;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> isLegacyGroup, this property is only available in Office2013, Office2016.</para>
@@ -119,12 +111,8 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(67, "objectPr")]
-[Id(ElementTypeIdConst)]
 public partial class ObjectProperties : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13322;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> objectId, this property is only available in Office2013, Office2016.</para>
@@ -170,12 +158,8 @@ public partial class ObjectProperties : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(67, "signatureLine")]
-[Id(ElementTypeIdConst)]
 public partial class SignatureLine : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13323;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> isSignatureLine, this property is only available in Office2013, Office2016.</para>
