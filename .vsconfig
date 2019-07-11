@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "components": [
+    "Microsoft.Component.MSBuild",
+    "Microsoft.Net.Component.3.5.DeveloperTools",
+    "Microsoft.Net.Component.4.TargetingPack",
+    "Microsoft.Net.Component.4.6.TargetingPack",
+    "Microsoft.Net.Core.Component.SDK.1x"
+    "Microsoft.Net.Core.Component.SDK.2.1",
+    "Microsoft.NetCore.ComponentGroup.DevelopmentTools.2.1",
+    "Microsoft.VisualStudio.Component.CoreEditor",
+    "Microsoft.VisualStudio.Component.ManagedDesktop.Core",
+    "Microsoft.VisualStudio.Component.NuGet",
+    "Microsoft.VisualStudio.Workload.CoreEditor",
+    "Microsoft.VisualStudio.Workload.NetCoreTools",
+  ]
+}
