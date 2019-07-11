@@ -12,7 +12,7 @@
          - DevCore21:      .NET Core 2.1
          - All: Will build for all platforms
          -->
-    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">All</ProjectLoadStyle>
+    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore21</ProjectLoadStyle>
   </PropertyGroup>
 
   <Choose>
