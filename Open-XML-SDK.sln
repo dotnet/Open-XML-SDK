@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0B53C729-D408-450D-B755-7A57184CDE93}"
 	ProjectSection(SolutionItems) = preProject
@@ -36,6 +36,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Benc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Framework.Tests", "test\DocumentFormat.OpenXml.Framework.Tests\DocumentFormat.OpenXml.Framework.Tests.csproj", "{65D509D0-46DC-4883-AEB3-FF7E521B1E9F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{7DAF7304-40CC-4180-88A5-9A89DD13C565}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IsolatedStorageExceptionWorkaround", "samples\IsolatedStorageExceptionWorkaround\IsolatedStorageExceptionWorkaround.csproj", "{F38D119D-A5B7-4027-83B1-804432922E55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +70,10 @@ Global
 		{65D509D0-46DC-4883-AEB3-FF7E521B1E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65D509D0-46DC-4883-AEB3-FF7E521B1E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65D509D0-46DC-4883-AEB3-FF7E521B1E9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F38D119D-A5B7-4027-83B1-804432922E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F38D119D-A5B7-4027-83B1-804432922E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F38D119D-A5B7-4027-83B1-804432922E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F38D119D-A5B7-4027-83B1-804432922E55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +85,7 @@ Global
 		{1F680DC8-8D1E-4EC9-84E1-72BCEAA7D458} = {0782A132-968D-4BDD-911A-2C3074EAF886}
 		{B4604C70-721C-42C4-9D29-87E9084E927F} = {0782A132-968D-4BDD-911A-2C3074EAF886}
 		{65D509D0-46DC-4883-AEB3-FF7E521B1E9F} = {0782A132-968D-4BDD-911A-2C3074EAF886}
+		{F38D119D-A5B7-4027-83B1-804432922E55} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F476383-E917-43D1-A1E5-9A61A47DA3F5}
