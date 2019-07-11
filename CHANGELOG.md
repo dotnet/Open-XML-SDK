@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changes
 - Consolidated data for element children/properties to reduce duplication (#540, #547, #548)
+- Replaced opaque binary data for element children constraints with declarative model (#603)
+- A number of performance fixes to minimize allocations where possible
+- 20% size reduction from 5.5mb to 4.3mb
 
 ### Fixed
 - Fixed some documentation inconsistencies (#582)
