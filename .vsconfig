@@ -9,8 +9,8 @@
     "Microsoft.Net.Core.Component.SDK.2.1",
     "Microsoft.NetCore.ComponentGroup.DevelopmentTools.2.1",
     "Microsoft.VisualStudio.Component.CoreEditor",
-    "Microsoft.VisualStudio.Component.NuGet",
     "Microsoft.VisualStudio.Component.ManagedDesktop.Core",
+    "Microsoft.VisualStudio.Component.NuGet",
     "Microsoft.VisualStudio.Workload.CoreEditor",
     "Microsoft.VisualStudio.Workload.NetCoreTools",
   ]
