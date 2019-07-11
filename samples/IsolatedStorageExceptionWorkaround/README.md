@@ -44,7 +44,7 @@ System.IO.IsolatedStorage.IsolatedStorageException: Unable to determine the iden
 
 In scenarios like this, a simple work around is to create your own AppDomain with sufficient evidence:
 
-```
+```csharp
 internal interface IExtension
 {
     void Run();
