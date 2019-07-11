@@ -1,4 +1,4 @@
-﻿IsolateStorage exception
+﻿IsolatedStorage exception
 ========================
 
 In scenarios where the OpenXML SDK is used in a hosted environment (such as add-ins or extensions), the AppDomain may not be set up to allow for IsolatedStorage. This will cause an exception similar to the following:
