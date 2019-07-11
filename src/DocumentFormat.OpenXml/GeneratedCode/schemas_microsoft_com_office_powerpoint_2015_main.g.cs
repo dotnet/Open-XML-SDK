@@ -21,12 +21,8 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(78, "designElem")]
-[Id(ElementTypeIdConst)]
 public partial class DesignElement : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13444;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2016.</para>

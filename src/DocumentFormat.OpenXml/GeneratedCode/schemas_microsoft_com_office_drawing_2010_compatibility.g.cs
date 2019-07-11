@@ -20,12 +20,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(63, "compatSp")]
-[Id(ElementTypeIdConst)]
 public partial class CompatibilityShape : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13208;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> spid, this property is only available in Office2010, Office2013, Office2016.</para>

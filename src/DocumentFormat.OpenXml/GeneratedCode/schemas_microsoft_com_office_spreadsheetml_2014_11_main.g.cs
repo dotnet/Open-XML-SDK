@@ -27,12 +27,8 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(84, "modelTimeGroupings")]
-[Id(ElementTypeIdConst)]
 public partial class ModelTimeGroupings : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13588;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -91,12 +87,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(84, "modelTimeGrouping")]
-[Id(ElementTypeIdConst)]
 public partial class ModelTimeGrouping : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13589;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> tableName, this property is only available in Office2016.</para>
@@ -172,12 +164,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2016)]
 [SchemaAttr(84, "calculatedTimeColumn")]
-[Id(ElementTypeIdConst)]
 public partial class CalculatedTimeColumn : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13590;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> columnName, this property is only available in Office2016.</para>

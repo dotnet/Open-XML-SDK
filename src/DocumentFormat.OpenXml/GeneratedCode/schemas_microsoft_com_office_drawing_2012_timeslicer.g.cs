@@ -27,12 +27,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(77, "timeslicer")]
-[Id(ElementTypeIdConst)]
 public partial class TimeSlicer : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13442;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name, this property is only available in Office2013, Office2016.</para>
@@ -114,12 +110,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(77, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13443;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

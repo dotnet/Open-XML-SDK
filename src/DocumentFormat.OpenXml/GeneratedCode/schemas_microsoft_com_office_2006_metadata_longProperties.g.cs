@@ -26,12 +26,8 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(40, "LongProperties")]
-[Id(ElementTypeIdConst)]
 public partial class LongProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12711;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -83,12 +79,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(40, "LongProp")]
-[Id(ElementTypeIdConst)]
 public partial class LongProperty : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12712;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name.</para>

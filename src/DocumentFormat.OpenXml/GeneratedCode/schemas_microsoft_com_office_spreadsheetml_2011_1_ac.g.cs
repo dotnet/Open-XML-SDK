@@ -20,12 +20,8 @@ namespace DocumentFormat.OpenXml.Office2010.ExcelAc
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(72, "list")]
-[Id(ElementTypeIdConst)]
 public partial class List : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 13429;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

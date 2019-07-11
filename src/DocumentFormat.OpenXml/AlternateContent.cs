@@ -13,7 +13,6 @@ namespace DocumentFormat.OpenXml
     [SchemaAttr(Namespace, Name)]
     [ChildElementInfo(typeof(AlternateContentChoice))]
     [ChildElementInfo(typeof(AlternateContentFallback))]
-    [Id(ReservedElementTypeIds.AlternateContentId)]
     public class AlternateContent : OpenXmlCompositeElement
     {
         internal const string Namespace = @"http://schemas.openxmlformats.org/markup-compatibility/2006";
@@ -127,8 +126,5 @@ namespace DocumentFormat.OpenXml
         {
             return CloneImp<AlternateContent>(deep);
         }
-
-        /// <inheritdoc/>
-        internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentId;
     }
 }

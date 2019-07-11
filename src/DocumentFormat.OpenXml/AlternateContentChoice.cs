@@ -10,7 +10,6 @@ namespace DocumentFormat.OpenXml
     /// Defines an mc:Choice element in mc:AlternateContent.
     /// </summary>
     [SchemaAttr(AlternateContent.Namespace, Name)]
-    [Id(ReservedElementTypeIds.AlternateContentChoiceId)]
     public class AlternateContentChoice : OpenXmlCompositeElement
     {
         private const string Name = "Choice";
@@ -108,10 +107,5 @@ namespace DocumentFormat.OpenXml
         ///  to clone only the node itself.
         /// </param>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlternateContentChoice>(deep);
-
-        /// <summary>
-        /// Gets the type ID of the element.
-        /// </summary>
-        internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentChoiceId;
     }
 }

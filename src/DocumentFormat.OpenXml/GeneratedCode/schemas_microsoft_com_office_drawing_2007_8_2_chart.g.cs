@@ -37,12 +37,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(46, "pivotOptions")]
-[Id(ElementTypeIdConst)]
 public partial class PivotOptions : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12762;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -174,12 +170,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(46, "sketchOptions")]
-[Id(ElementTypeIdConst)]
 public partial class SketchOptions : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12763;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -267,12 +259,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(46, "invertSolidFillFmt")]
-[Id(ElementTypeIdConst)]
 public partial class InvertSolidFillFormat : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12764;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -339,12 +327,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(46, "style")]
-[Id(ElementTypeIdConst)]
 public partial class Style : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12765;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -413,12 +397,8 @@ public partial class Style : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(46, "spPr")]
-[Id(ElementTypeIdConst)]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12766;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Black and White Mode.</para>
@@ -523,13 +503,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(46, "dropZoneFilter")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZoneFilter : BooleanFalseType
 {
-    internal const int ElementTypeIdConst = 12767;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DropZoneFilter class.
     /// </summary>
@@ -548,13 +524,9 @@ public partial class DropZoneFilter : BooleanFalseType
 /// </summary>
 
 [SchemaAttr(46, "dropZoneCategories")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZoneCategories : BooleanFalseType
 {
-    internal const int ElementTypeIdConst = 12768;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DropZoneCategories class.
     /// </summary>
@@ -573,13 +545,9 @@ public partial class DropZoneCategories : BooleanFalseType
 /// </summary>
 
 [SchemaAttr(46, "dropZoneData")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZoneData : BooleanFalseType
 {
-    internal const int ElementTypeIdConst = 12769;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DropZoneData class.
     /// </summary>
@@ -598,13 +566,9 @@ public partial class DropZoneData : BooleanFalseType
 /// </summary>
 
 [SchemaAttr(46, "dropZoneSeries")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZoneSeries : BooleanFalseType
 {
-    internal const int ElementTypeIdConst = 12770;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DropZoneSeries class.
     /// </summary>
@@ -623,13 +587,9 @@ public partial class DropZoneSeries : BooleanFalseType
 /// </summary>
 
 [SchemaAttr(46, "dropZonesVisible")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZonesVisible : BooleanFalseType
 {
-    internal const int ElementTypeIdConst = 12771;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the DropZonesVisible class.
     /// </summary>
@@ -648,13 +608,9 @@ public partial class DropZonesVisible : BooleanFalseType
 /// </summary>
 
 [SchemaAttr(46, "inSketchMode")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class InSketchMode : BooleanFalseType
 {
-    internal const int ElementTypeIdConst = 12772;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the InSketchMode class.
     /// </summary>
@@ -700,12 +656,8 @@ public abstract partial class BooleanFalseType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(46, "showSketchBtn")]
-[Id(ElementTypeIdConst)]
 public partial class ShowSketchButton : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12773;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2010, Office2013, Office2016.</para>

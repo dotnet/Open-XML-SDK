@@ -35,13 +35,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 
 [SchemaAttr(66, "webextension")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtension : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 13310;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2013, Office2016.</para>
@@ -218,12 +214,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "webextensionref")]
-[Id(ElementTypeIdConst)]
 public partial class WebExtensionReference : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13311;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2013, Office2016.</para>
@@ -258,12 +250,8 @@ public partial class WebExtensionReference : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "property")]
-[Id(ElementTypeIdConst)]
 public partial class WebExtensionProperty : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13312;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name, this property is only available in Office2013, Office2016.</para>
@@ -311,12 +299,8 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13313;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -381,12 +365,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "binding")]
-[Id(ElementTypeIdConst)]
 public partial class WebExtensionBinding : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13314;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2013, Office2016.</para>
@@ -484,12 +464,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "reference")]
-[Id(ElementTypeIdConst)]
 public partial class WebExtensionStoreReference : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13315;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2013, Office2016.</para>
@@ -593,12 +569,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "alternateReferences")]
-[Id(ElementTypeIdConst)]
 public partial class WebExtensionReferenceList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13316;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -657,12 +629,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "properties")]
-[Id(ElementTypeIdConst)]
 public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13317;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -721,12 +689,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "bindings")]
-[Id(ElementTypeIdConst)]
 public partial class WebExtensionBindingList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13318;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -819,12 +783,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(66, "snapshot")]
-[Id(ElementTypeIdConst)]
 public partial class Snapshot : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13319;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Embedded Picture Reference.</para>

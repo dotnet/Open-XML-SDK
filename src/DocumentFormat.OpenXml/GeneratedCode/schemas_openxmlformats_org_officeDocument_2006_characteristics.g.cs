@@ -26,12 +26,8 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(8, "additionalCharacteristics")]
-[Id(ElementTypeIdConst)]
 public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 10822;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -83,12 +79,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(8, "characteristic")]
-[Id(ElementTypeIdConst)]
 public partial class Characteristic : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 10823;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Name of Characteristic.</para>

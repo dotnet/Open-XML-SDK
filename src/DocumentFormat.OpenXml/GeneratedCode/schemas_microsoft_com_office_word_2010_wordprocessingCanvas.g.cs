@@ -45,12 +45,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(59, "wpc")]
-[Id(ElementTypeIdConst)]
 public partial class WordprocessingCanvas : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13182;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -161,12 +157,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(59, "bg")]
-[Id(ElementTypeIdConst)]
 public partial class BackgroundFormatting : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13183;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -248,12 +240,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(59, "whole")]
-[Id(ElementTypeIdConst)]
 public partial class WholeFormatting : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13184;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -343,12 +331,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(59, "graphicFrame")]
-[Id(ElementTypeIdConst)]
 public partial class GraphicFrameType : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13185;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -478,12 +462,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(59, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13186;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

@@ -30,13 +30,9 @@ namespace DocumentFormat.OpenXml.Office.Word
     [ChildElementInfo(typeof(AllocatedCommands))]
 
 [SchemaAttr(33, "tcg")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TemplateCommandGroup : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 12608;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
 	internal TemplateCommandGroup(CustomizationPart ownerPart) : base (ownerPart){}
@@ -123,12 +119,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "mcds")]
-[Id(ElementTypeIdConst)]
 public partial class Mcds : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12609;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -187,13 +179,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     [ChildElementInfo(typeof(Mcds))]
 
 [SchemaAttr(33, "vbaSuppData")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VbaSuppData : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 12610;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
 	internal VbaSuppData(VbaDataPart ownerPart) : base (ownerPart){}
@@ -306,12 +294,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "recipients")]
-[Id(ElementTypeIdConst)]
 public partial class MailMergeRecipients : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 12611;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -363,12 +347,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "fci")]
-[Id(ElementTypeIdConst)]
 public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12612;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> fciName.</para>
@@ -420,13 +400,9 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(33, "macro")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MacroKeyboardCustomization : MacroWllType
 {
-    internal const int ElementTypeIdConst = 12613;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the MacroKeyboardCustomization class.
     /// </summary>
@@ -445,13 +421,9 @@ public partial class MacroKeyboardCustomization : MacroWllType
 /// </summary>
 
 [SchemaAttr(33, "wll")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WllMacroKeyboardCustomization : MacroWllType
 {
-    internal const int ElementTypeIdConst = 12615;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the WllMacroKeyboardCustomization class.
     /// </summary>
@@ -497,13 +469,9 @@ public abstract partial class MacroWllType : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(33, "acd")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapType
 {
-    internal const int ElementTypeIdConst = 12614;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the AllocatedCommandKeyboardCustomization class.
     /// </summary>
@@ -522,13 +490,9 @@ public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapTy
 /// </summary>
 
 [SchemaAttr(33, "acdEntry")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
 {
-    internal const int ElementTypeIdConst = 12634;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the AllocatedCommandManifestEntry class.
     /// </summary>
@@ -576,12 +540,8 @@ public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "wch")]
-[Id(ElementTypeIdConst)]
 public partial class CharacterInsertion : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12616;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val.</para>
@@ -632,12 +592,8 @@ public partial class CharacterInsertion : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "keymap")]
-[Id(ElementTypeIdConst)]
 public partial class KeyMapEntry : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12617;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> chmPrimary.</para>
@@ -809,12 +765,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "acd")]
-[Id(ElementTypeIdConst)]
 public partial class AllocatedCommand : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12618;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> argValue.</para>
@@ -876,12 +828,8 @@ public partial class AllocatedCommand : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "mcd")]
-[Id(ElementTypeIdConst)]
 public partial class Mcd : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12619;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> macroName.</para>
@@ -951,13 +899,9 @@ public partial class Mcd : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(33, "eventDocNew")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocNewXsdString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12620;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EventDocNewXsdString class.
     /// </summary>
@@ -987,13 +931,9 @@ public partial class EventDocNewXsdString : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(33, "eventDocOpen")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12621;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EventDocOpenXsdString class.
     /// </summary>
@@ -1023,13 +963,9 @@ public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(33, "eventDocClose")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12622;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EventDocCloseXsdString class.
     /// </summary>
@@ -1059,13 +995,9 @@ public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(33, "eventDocSync")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12623;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EventDocSyncXsdString class.
     /// </summary>
@@ -1095,13 +1027,9 @@ public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(33, "eventDocXmlAfterInsert")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12624;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EventDocXmlAfterInsertXsdString class.
     /// </summary>
@@ -1131,13 +1059,9 @@ public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(33, "eventDocXmlBeforeDelete")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12625;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EventDocXmlBeforeDeleteXsdString class.
     /// </summary>
@@ -1167,13 +1091,9 @@ public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(33, "eventDocContentControlAfterInsert")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12626;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlAfterInsertXsdString class.
     /// </summary>
@@ -1203,13 +1123,9 @@ public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTex
 /// </summary>
 
 [SchemaAttr(33, "eventDocContentControlBeforeDelete")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12627;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlBeforeDeleteXsdString class.
     /// </summary>
@@ -1239,13 +1155,9 @@ public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTe
 /// </summary>
 
 [SchemaAttr(33, "eventDocContentControlOnExit")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12628;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlOnExistXsdString class.
     /// </summary>
@@ -1275,13 +1187,9 @@ public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextEle
 /// </summary>
 
 [SchemaAttr(33, "eventDocContentControlOnEnter")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12629;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlOnEnterXsdString class.
     /// </summary>
@@ -1311,13 +1219,9 @@ public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextEle
 /// </summary>
 
 [SchemaAttr(33, "eventDocStoreUpdate")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12630;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EventDocStoreUpdateXsdString class.
     /// </summary>
@@ -1347,13 +1251,9 @@ public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(33, "eventDocContentControlContentUpdate")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12631;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlUpdateXsdString class.
     /// </summary>
@@ -1383,13 +1283,9 @@ public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElem
 /// </summary>
 
 [SchemaAttr(33, "eventDocBuildingBlockAfterInsert")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12632;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the EventDocBuildingBlockAfterInsertXsdString class.
     /// </summary>
@@ -1452,12 +1348,8 @@ public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafText
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "docEvents")]
-[Id(ElementTypeIdConst)]
 public partial class DocEvents : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12633;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1699,12 +1591,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "acdManifest")]
-[Id(ElementTypeIdConst)]
 public partial class AllocatedCommandManifest : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12635;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -1756,12 +1644,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "toolbarData")]
-[Id(ElementTypeIdConst)]
 public partial class ToolbarData : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12636;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -1800,13 +1684,9 @@ public partial class ToolbarData : OpenXmlLeafElement
 /// </remarks>
 
 [SchemaAttr(33, "keymaps")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class KeyMapCustomizations : KeymapsType
 {
-    internal const int ElementTypeIdConst = 12637;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the KeyMapCustomizations class.
     /// </summary>
@@ -1858,13 +1738,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(33, "keymapsBad")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MismatchedKeyMapCustomization : KeymapsType
 {
-    internal const int ElementTypeIdConst = 12638;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the MismatchedKeyMapCustomization class.
     /// </summary>
@@ -1969,12 +1845,8 @@ public abstract partial class KeymapsType : OpenXmlCompositeElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "toolbars")]
-[Id(ElementTypeIdConst)]
 public partial class Toolbars : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12639;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2034,12 +1906,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "acds")]
-[Id(ElementTypeIdConst)]
 public partial class AllocatedCommands : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12640;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2091,12 +1959,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "active")]
-[Id(ElementTypeIdConst)]
 public partial class RecordIncluded : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12641;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val.</para>
@@ -2130,12 +1994,8 @@ public partial class RecordIncluded : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "hash")]
-[Id(ElementTypeIdConst)]
 public partial class RecordHashCode : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12642;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val.</para>
@@ -2179,12 +2039,8 @@ public partial class RecordHashCode : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(33, "recipientData")]
-[Id(ElementTypeIdConst)]
 public partial class SingleDataSourceRecord : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12643;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

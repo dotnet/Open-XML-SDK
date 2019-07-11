@@ -21,12 +21,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "prstTrans")]
-[Id(ElementTypeIdConst)]
 public partial class PresetTransition : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13324;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> prst, this property is only available in Office2013, Office2016.</para>
@@ -72,12 +68,8 @@ public partial class PresetTransition : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "presenceInfo")]
-[Id(ElementTypeIdConst)]
 public partial class PresenceInfo : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13325;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> userId, this property is only available in Office2013, Office2016.</para>
@@ -125,12 +117,8 @@ public partial class PresenceInfo : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "threadingInfo")]
-[Id(ElementTypeIdConst)]
 public partial class ThreadingInfo : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13326;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> timeZoneBias, this property is only available in Office2013, Office2016.</para>
@@ -209,13 +197,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(68, "sldGuideLst")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SlideGuideList : ExtendedGuideList
 {
-    internal const int ElementTypeIdConst = 13327;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the SlideGuideList class.
     /// </summary>
@@ -269,13 +253,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </remarks>
 
 [SchemaAttr(68, "notesGuideLst")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class NotesGuideList : ExtendedGuideList
 {
-    internal const int ElementTypeIdConst = 13328;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the NotesGuideList class.
     /// </summary>
@@ -374,12 +354,8 @@ public abstract partial class ExtendedGuideList : OpenXmlCompositeElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "chartTrackingRefBased")]
-[Id(ElementTypeIdConst)]
 public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13329;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> val, this property is only available in Office2013, Office2016.</para>
@@ -412,12 +388,8 @@ public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "parentCm")]
-[Id(ElementTypeIdConst)]
 public partial class ParentCommentIdentifier : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 13330;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> authorId, this property is only available in Office2013, Office2016.</para>
@@ -473,12 +445,8 @@ public partial class ParentCommentIdentifier : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "clr")]
-[Id(ElementTypeIdConst)]
 public partial class ColorType : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13331;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -628,12 +596,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class ExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13332;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -700,12 +664,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(68, "guide")]
-[Id(ElementTypeIdConst)]
 public partial class ExtendedGuide : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13333;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2013, Office2016.</para>

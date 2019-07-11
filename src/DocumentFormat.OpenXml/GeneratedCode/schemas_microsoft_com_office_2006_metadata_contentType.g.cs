@@ -20,12 +20,8 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(38, "contentTypeSchema")]
-[Id(ElementTypeIdConst)]
 public partial class ContentTypeSchema : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12705;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> _.</para>

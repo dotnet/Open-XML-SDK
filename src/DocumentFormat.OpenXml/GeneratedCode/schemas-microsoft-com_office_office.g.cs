@@ -47,12 +47,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "shapedefaults")]
-[Id(ElementTypeIdConst)]
 public partial class ShapeDefaults : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12470;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -348,12 +344,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "shapelayout")]
-[Id(ElementTypeIdConst)]
 public partial class ShapeLayout : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12471;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -457,12 +449,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "signatureline")]
-[Id(ElementTypeIdConst)]
 public partial class SignatureLine : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12472;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -588,12 +576,8 @@ public partial class SignatureLine : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "ink")]
-[Id(ElementTypeIdConst)]
 public partial class Ink : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12473;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Ink Data.</para>
@@ -639,12 +623,8 @@ public partial class Ink : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "diagram")]
-[Id(ElementTypeIdConst)]
 public partial class Diagram : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12474;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -783,12 +763,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "skew")]
-[Id(ElementTypeIdConst)]
 public partial class Skew : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12475;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -857,12 +833,8 @@ public partial class Skew : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "extrusion")]
-[Id(ElementTypeIdConst)]
 public partial class Extrusion : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12476;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -1106,12 +1078,8 @@ public partial class Extrusion : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "callout")]
-[Id(ElementTypeIdConst)]
 public partial class Callout : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12477;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -1236,12 +1204,8 @@ public partial class Callout : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "lock")]
-[Id(ElementTypeIdConst)]
 public partial class Lock : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12478;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -1363,12 +1327,8 @@ public partial class Lock : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "OLEObject")]
-[Id(ElementTypeIdConst)]
 public partial class OleObject : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12479;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> OLE Object Type.</para>
@@ -1514,12 +1474,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "complex")]
-[Id(ElementTypeIdConst)]
 public partial class Complex : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12480;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -1551,13 +1507,9 @@ public partial class Complex : OpenXmlLeafElement
 /// </summary>
 
 [SchemaAttr(27, "left")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeftStroke : StrokeChildType
 {
-    internal const int ElementTypeIdConst = 12481;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the LeftStroke class.
     /// </summary>
@@ -1576,13 +1528,9 @@ public partial class LeftStroke : StrokeChildType
 /// </summary>
 
 [SchemaAttr(27, "top")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopStroke : StrokeChildType
 {
-    internal const int ElementTypeIdConst = 12482;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the TopStroke class.
     /// </summary>
@@ -1601,13 +1549,9 @@ public partial class TopStroke : StrokeChildType
 /// </summary>
 
 [SchemaAttr(27, "right")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightStroke : StrokeChildType
 {
-    internal const int ElementTypeIdConst = 12483;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the RightStroke class.
     /// </summary>
@@ -1626,13 +1570,9 @@ public partial class RightStroke : StrokeChildType
 /// </summary>
 
 [SchemaAttr(27, "bottom")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BottomStroke : StrokeChildType
 {
-    internal const int ElementTypeIdConst = 12484;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the BottomStroke class.
     /// </summary>
@@ -1651,13 +1591,9 @@ public partial class BottomStroke : StrokeChildType
 /// </summary>
 
 [SchemaAttr(27, "column")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnStroke : StrokeChildType
 {
-    internal const int ElementTypeIdConst = 12485;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ColumnStroke class.
     /// </summary>
@@ -1895,12 +1831,8 @@ public abstract partial class StrokeChildType : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "clippath")]
-[Id(ElementTypeIdConst)]
 public partial class ClipPath : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12486;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Path Definition.</para>
@@ -1935,12 +1867,8 @@ public partial class ClipPath : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "fill")]
-[Id(ElementTypeIdConst)]
 public partial class FillExtendedProperties : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12487;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -1981,12 +1909,8 @@ public partial class FillExtendedProperties : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "idmap")]
-[Id(ElementTypeIdConst)]
 public partial class ShapeIdMap : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12488;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -2034,12 +1958,8 @@ public partial class ShapeIdMap : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "regrouptable")]
-[Id(ElementTypeIdConst)]
 public partial class RegroupTable : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12489;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -2107,12 +2027,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "rules")]
-[Id(ElementTypeIdConst)]
 public partial class Rules : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12490;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -2173,12 +2089,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "entry")]
-[Id(ElementTypeIdConst)]
 public partial class Entry : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12491;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> New Group ID.</para>
@@ -2224,12 +2136,8 @@ public partial class Entry : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "r")]
-[Id(ElementTypeIdConst)]
 public partial class Rule : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12492;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Rule ID.</para>
@@ -2318,12 +2226,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "relationtable")]
-[Id(ElementTypeIdConst)]
 public partial class RelationTable : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12493;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -2384,12 +2288,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "rel")]
-[Id(ElementTypeIdConst)]
 public partial class Relation : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12494;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -2448,12 +2348,8 @@ public partial class Relation : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "LinkType")]
-[Id(ElementTypeIdConst)]
 public partial class LinkType : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12495;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2490,12 +2386,8 @@ public partial class LinkType : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "LockedField")]
-[Id(ElementTypeIdConst)]
 public partial class LockedField : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12496;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2531,12 +2423,8 @@ public partial class LockedField : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "FieldCodes")]
-[Id(ElementTypeIdConst)]
 public partial class FieldCodes : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12497;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -2572,12 +2460,8 @@ public partial class FieldCodes : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "proxy")]
-[Id(ElementTypeIdConst)]
 public partial class Proxy : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12498;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Start Point Connection Flag.</para>
@@ -2633,12 +2517,8 @@ public partial class Proxy : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "colormru")]
-[Id(ElementTypeIdConst)]
 public partial class ColorMostRecentlyUsed : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12499;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>
@@ -2679,12 +2559,8 @@ public partial class ColorMostRecentlyUsed : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(27, "colormenu")]
-[Id(ElementTypeIdConst)]
 public partial class ColorMenu : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12500;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> VML Extension Handling Behavior.</para>

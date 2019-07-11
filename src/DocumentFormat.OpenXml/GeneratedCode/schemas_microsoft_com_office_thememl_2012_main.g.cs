@@ -27,12 +27,8 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(73, "themeFamily")]
-[Id(ElementTypeIdConst)]
 public partial class ThemeFamily : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13430;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name, this property is only available in Office2013, Office2016.</para>
@@ -132,12 +128,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(73, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13431;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -202,12 +194,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(73, "themeVariant")]
-[Id(ElementTypeIdConst)]
 public partial class ThemeVariant : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13432;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> name, this property is only available in Office2013, Office2016.</para>
@@ -326,12 +314,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(73, "themeVariantLst")]
-[Id(ElementTypeIdConst)]
 public partial class ThemeVariantList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13433;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

@@ -77,13 +77,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
 
 [SchemaAttr(32, "macrosheet")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Macrosheet : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 12600;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
 	internal Macrosheet(MacroSheetPart ownerPart) : base (ownerPart){}
@@ -247,13 +243,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     [ChildElementInfo(typeof(ColumnSortMap))]
 
 [SchemaAttr(32, "worksheetSortMap")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WorksheetSortMap : OpenXmlPartRootElement
 {
-    internal const int ElementTypeIdConst = 12601;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
 	internal WorksheetSortMap(WorksheetSortMapPart ownerPart) : base (ownerPart){}
@@ -360,12 +352,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(32, "sqref")]
-[Id(ElementTypeIdConst)]
 public partial class ReferenceSequence : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12602;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -401,12 +389,8 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(32, "f")]
-[Id(ElementTypeIdConst)]
 public partial class Formula : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 12603;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -449,12 +433,8 @@ public partial class Formula : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(32, "rowSortMap")]
-[Id(ElementTypeIdConst)]
 public partial class RowSortMap : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12604;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Reference.</para>
@@ -529,12 +509,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2007)]
 [SchemaAttr(32, "colSortMap")]
-[Id(ElementTypeIdConst)]
 public partial class ColumnSortMap : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12605;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Reference.</para>
@@ -600,13 +576,9 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 /// </summary>
 
 [SchemaAttr(32, "row")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RowSortMapItem : SortMapItemType
 {
-    internal const int ElementTypeIdConst = 12606;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the RowSortMapItem class.
     /// </summary>
@@ -625,13 +597,9 @@ public partial class RowSortMapItem : SortMapItemType
 /// </summary>
 
 [SchemaAttr(32, "col")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnSortMapItem : SortMapItemType
 {
-    internal const int ElementTypeIdConst = 12607;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the ColumnSortMapItem class.
     /// </summary>

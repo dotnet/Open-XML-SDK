@@ -34,11 +34,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Debug.Assert(!(theElement is OpenXmlUnknownElement));
             Debug.Assert(!(theElement is OpenXmlMiscNode));
 
-            if (theElement.ElementTypeId < ReservedElementTypeIds.MaxReservedId)
+            if (theElement.IsReservedElement())
             {
                 // MiscElement, UnknownElement,
                 // AlternateContent, AlternateContentChoice, AlternateContentFallback
-                if (theElement.ElementTypeId == ReservedElementTypeIds.AlternateContentId)
+                if (theElement.IsAlternateContent())
                 {
                     AlternateContentValidator.Validate(validationContext);
                 }

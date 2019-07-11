@@ -17,13 +17,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
 /// </summary>
 
 [SchemaAttr(76, "key")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Key : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 13436;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Key class.
     /// </summary>
@@ -53,13 +49,9 @@ public partial class Key : OpenXmlLeafTextElement
 /// </summary>
 
 [SchemaAttr(76, "value")]
-[Id(ElementTypeIdConst)]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Value : OpenXmlLeafTextElement
 {
-    internal const int ElementTypeIdConst = 13437;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     /// <summary>
     /// Initializes a new instance of the Value class.
     /// </summary>
@@ -100,12 +92,8 @@ public partial class Value : OpenXmlLeafTextElement
 
 [OfficeAvailability(FileFormatVersions.Office2013)]
 [SchemaAttr(76, "props")]
-[Id(ElementTypeIdConst)]
 public partial class RoamingProperty : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 13438;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>

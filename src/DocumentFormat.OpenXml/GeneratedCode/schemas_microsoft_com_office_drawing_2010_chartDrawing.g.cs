@@ -34,12 +34,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(47, "contentPart")]
-[Id(ElementTypeIdConst)]
 public partial class ContentPart : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12774;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -177,12 +173,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(47, "cNvPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12775;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> id.</para>
@@ -323,12 +315,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(47, "cNvContentPartPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12776;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> isComment, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -425,12 +413,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(47, "nvContentPartPr")]
-[Id(ElementTypeIdConst)]
 public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12777;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
@@ -511,12 +495,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(47, "nvPr")]
-[Id(ElementTypeIdConst)]
 public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
 {
-    internal const int ElementTypeIdConst = 12778;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> macro, this property is only available in Office2010, Office2013, Office2016.</para>
@@ -564,12 +544,8 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(47, "xfrm")]
-[Id(ElementTypeIdConst)]
 public partial class Transform2D : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12779;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
         /// <summary>
     /// <para> Rotation.</para>
@@ -678,12 +654,8 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
 
 [OfficeAvailability(FileFormatVersions.Office2010)]
 [SchemaAttr(47, "extLst")]
-[Id(ElementTypeIdConst)]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
-    internal const int ElementTypeIdConst = 12780;
-    internal override int ElementTypeId => ElementTypeIdConst;
-
     
     
     /// <summary>
