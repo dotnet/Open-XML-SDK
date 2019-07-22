@@ -8,7 +8,7 @@ extensions:
   contentType: sdks
   createdDate: 6/5/2014 9:11:17 AM
 ---
-pen XML SDK
+Open XML SDK
 ============
 
 [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml)
