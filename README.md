@@ -1,4 +1,5 @@
 ---
+page_type: sample
 products:
 - office-365
 languages:
