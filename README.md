@@ -1,5 +1,4 @@
 ---
-topic: sample
 products:
 - office-365
 languages:
