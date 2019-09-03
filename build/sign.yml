@@ -1,0 +1,99 @@
+steps:
+  - checkout: none
+
+  - task: DownloadBuildArtifacts@0
+    displayName: 'Download Build Artifacts'
+    inputs:
+      artifactName: unsigned
+      downloadPath: $(System.DefaultWorkingDirectory)
+
+  - powershell: |
+      $version=gci DocumentFormat.OpenXml.*.nupkg | % { $_ -match 'DocumentFormat.OpenXml.(.*).nupkg' | Out-Null; $matches[1] }
+      Write-Host "##vso[task.setvariable variable=Version]$version"
+      Write-Host "Setting version to $version"
+    workingDirectory: '$(System.DefaultWorkingDirectory)/unsigned'
+
+  - task: ExtractFiles@1
+    inputs:
+      archiveFilePatterns: '$(System.DefaultWorkingDirectory)/unsigned/DocumentFormat.OpenXml.$(Version).nupkg'
+      destinationFolder: '$(System.DefaultWorkingDirectory)/$(Version)'
+
+  - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
+    displayName: 'OpenXML SDK Assembly ESRP CodeSigning'
+    inputs:
+      ConnectedServiceName: 'Open-XML-SDK-ESRP'
+      FolderPath: '$(System.DefaultWorkingDirectory)\$(Version)'
+      Pattern: '**\DocumentFormat.OpenXml.dll'
+      UseMinimatch: true
+      signConfigType: inlineSignParams
+      inlineOperation: |
+        [
+          {
+            "keyCode": "CP-230012",
+            "operationSetCode": "SigntoolSign",
+            "parameters": [
+              {
+                "parameterName": "OpusName",
+                "parameterValue": "Microsoft"
+              },
+              {
+                "parameterName": "OpusInfo",
+                "parameterValue": "http://www.microsoft.com"
+              },
+              {
+                "parameterName": "PageHash",
+                "parameterValue": "/NPH"
+              },
+              {
+                "parameterName": "FileDigest",
+                "parameterValue": "/fd sha256"
+              },
+              {
+                "parameterName": "TimeStamp",
+                "parameterValue": "/tr \"http://rfc3161.gtm.corp.microsoft.com/TSS/HttpTspServer\" /td sha256"
+              }
+            ],
+            "toolName": "signtool.exe",
+            "toolVersion": "6.2.9304.0"
+          }
+        ]
+
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: '$(System.DefaultWorkingDirectory)/$(Version)' 
+      includeRootFolder: false
+      archiveType: 'zip'
+      archiveFile: '$(Build.ArtifactStagingDirectory)/DocumentFormat.OpenXml.$(Version).nupkg' 
+      replaceExistingArchive: true 
+      verbose: true
+
+  - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
+    displayName: 'OpenXML SDK Nuget Pkg ESRP CodeSigning'
+    inputs:
+      ConnectedServiceName: 'Open-XML-SDK-ESRP'
+      FolderPath: '$(Build.ArtifactStagingDirectory)'
+      Pattern: '*.nupkg'
+      signConfigType: inlineSignParams
+      inlineOperation: |
+        [
+            {
+                "keyCode": "CP-401405",
+                "operationSetCode": "NuGetSign",
+                "parameters": [ ],
+                "toolName": "sign",
+                "toolVersion": "1.0"
+            },
+            {
+                "keyCode": "CP-401405",
+                "operationSetCode": "NuGetVerify",
+                "parameters": [ ],
+                "toolName": "sign",
+                "toolVersion": "1.0"
+            }
+        ]
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Signed'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      artifactName: 'signed'

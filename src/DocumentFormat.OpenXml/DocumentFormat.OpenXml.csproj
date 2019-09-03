@@ -3,6 +3,7 @@
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), DocumentFormat.OpenXml.Package.props))\DocumentFormat.OpenXml.Package.props" />
 
   <PropertyGroup>
+    <IsShipped>true</IsShipped>
     <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks> 
     <NoWarn>$(NoWarn);3003</NoWarn>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
   <PropertyGroup>
+    <IsShipped>false</IsShipped>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 
     <!-- Because of the size of the project, to facilitate  quick development, by default only single
