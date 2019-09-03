@@ -1,0 +1,27 @@
+parameters:
+  frameworks: []
+
+jobs:
+- ${{ each framework in parameters.frameworks }}:
+  - job: ${{ framework.name }}
+    displayName: ${{ framework.tfm }}
+    pool:
+      name: Hosted VS2017
+    steps:
+      - checkout: none
+
+      - download: current
+        artifact: build
+        patterns: '*.Tests/${{ framework.tfm }}/publish/**/*'
+
+      - task: VSTest@2
+        inputs:
+          testAssemblyVer2: |
+            **\publish\*Tests.dll
+          runInParallel: true
+          platform: '$(BuildPlatform)'
+          configuration: '$(BuildConfiguration)'
+          ${{ if contains(framework.tfm, 'core')}}:
+            otherConsoleOptions: '/Framework:FrameworkCore10 /platform:x64'
+          diagnosticsEnabled: True
+          searchFolder: '$(Pipeline.Workspace)\build'

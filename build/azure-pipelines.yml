@@ -1,5 +1,4 @@
 variables:
-  SdkSolution: 'Open-XML-SDK.sln'
   BuildPlatform: 'Any CPU'
   BuildConfiguration: 'Release'
   ProjectLoadStyle: 'All'
@@ -13,23 +12,43 @@ pr:
     include:
     - master
 
-jobs:
-  - job: Build
-    displayName: Build SDK
-    pool:
-      name: Hosted VS2017
-      demands:
-      - msbuild
-      - visualstudio
-      - vstest
-    steps:
-      - template: build.yml
+stages:
+  - stage: Build
+    jobs:
+      - job: Build
+        displayName: Build SDK
+        pool:
+          name: Hosted VS2017
+          demands:
+          - msbuild
+          - visualstudio
+          - vstest
+        steps:
+          - template: build.yml
 
-  - job: Sign
-    displayName: Sign assemblies and package
-    pool:
-      name: Hosted VS2017
-    steps:
-      - template: sign.yml
+  - stage: Test
+    jobs:
+    - template: test.yml
+      parameters:
+        frameworks:
+          - tfm: net452
+            name: net452
+          - tfm: net46
+            name: net46
+          - tfm: netcoreapp1.1
+            name: netcoreapp1_1
+          - tfm: netcoreapp2.1
+            name: netcoreapp2_1
+    dependsOn: Build
+    condition: succeeded()
+
+  - stage: Sign
+    jobs:
+    - job: Sign
+      displayName: Sign assemblies and package
+      pool:
+        name: Hosted VS2017
+      steps:
+        - template: sign.yml
     dependsOn: Build
     condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
