@@ -16,6 +16,13 @@
     <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore21</ProjectLoadStyle>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <InformationalVersion>$(GitVersion_InformationalVersion)</InformationalVersion>
+    <FileVersion>$(GitVersion_MajorMinorPatch)</FileVersion>
+    <AssemblyVersion>$(GitVersion_AssemblySemVer)</AssemblyVersion>
+    <Version>$(GitVersion_NuGetVersionV2)</Version>
+  </PropertyGroup>
+
   <Choose>
     <When Condition=" '$(ProjectLoadStyle)' == 'DevFramework40' ">
       <PropertyGroup>

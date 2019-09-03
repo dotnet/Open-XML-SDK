@@ -18,11 +18,7 @@ stages:
       - job: Build
         displayName: Build SDK
         pool:
-          name: Hosted VS2017
-          demands:
-          - msbuild
-          - visualstudio
-          - vstest
+          name: Hosted Windows 2019 with VS2019
         steps:
           - template: build.yml
 
@@ -47,7 +43,7 @@ stages:
     - job: Sign
       displayName: Sign assemblies and package
       pool:
-        name: Hosted VS2017
+        name: Hosted Windows 2019 with VS2019
       steps:
         - template: sign.yml
     dependsOn: Build

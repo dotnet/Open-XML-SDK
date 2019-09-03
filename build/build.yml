@@ -1,10 +1,17 @@
 steps:
-    
+  - task: PowerShell@2
+    displayName: 'Update version'
+    inputs:
+      targetType: 'inline'
+      script: |
+        dotnet tool install --global GitVersion.Tool --version 5.0.1        
+        dotnet gitversion /output buildserver /nofetch
+
   - task: VSBuild@1
     displayName: 'Build SDK'
     inputs:
       solution: 'Open-XML-SDK.sln'
-      msbuildArgs: '/t:restore;build /p:ProjectLoadStyle=$(ProjectLoadStyle)'
+      msbuildArgs: '/m /t:restore;build /p:ProjectLoadStyle=$(ProjectLoadStyle)'
       platform: '$(BuildPlatform)'
       configuration: '$(BuildConfiguration)'
 
