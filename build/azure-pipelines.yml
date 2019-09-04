@@ -22,7 +22,19 @@ stages:
         steps:
           - template: build.yml
 
-  - stage: Test
+  - stage: PerformanceTests
+    jobs:
+    - template: perf.yml
+      parameters:
+        frameworks:
+          - tfm: net461
+            name: net461
+          - tfm: netcoreapp2.1
+            name: netcoreapp2_1
+    dependsOn: Build
+    condition: succeeded()
+
+  - stage: UnitTests
     jobs:
     - template: test.yml
       parameters:

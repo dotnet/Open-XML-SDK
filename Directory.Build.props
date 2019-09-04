@@ -97,5 +97,6 @@
 
   <PropertyGroup>
     <IsTestProject Condition=" '$(IsTestProject)' == '' ">false</IsTestProject>
+    <IsBenchmarkProject Condition=" '$(IsBenchmarkProject)' == '' ">false</IsBenchmarkProject>
   </PropertyGroup>
 </Project>

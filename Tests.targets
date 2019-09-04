@@ -45,6 +45,6 @@
     <MSBuild Projects="$(MSBuildProjectFile)" Targets="Publish" Properties="TargetFramework=%(_PublishFramework.Identity)" />
   </Target>
 
-  <Target Name="PublishAll" Condition="$(IsTestProject)" DependsOnTargets="PublishProjectIfFrameworkSet;PublishProjectForAllFrameworksIfFrameworkUnset" />
+  <Target Name="PublishAll" Condition="$(IsTestProject) OR $(IsBenchmarkProject)" DependsOnTargets="PublishProjectIfFrameworkSet;PublishProjectForAllFrameworksIfFrameworkUnset" />
 
 </Project>

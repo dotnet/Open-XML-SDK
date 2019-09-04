@@ -1,17 +1,13 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Diagnosers;
-using BenchmarkDotNet.Environments;
 using BenchmarkDotNet.Exporters;
 using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Loggers;
 using BenchmarkDotNet.Running;
-using System;
 using System.Linq;
-using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Benchmarks
 {
@@ -19,32 +15,23 @@ namespace DocumentFormat.OpenXml.Benchmarks
     {
         public static void Main(string[] input)
         {
-            var types = GetBenchmarks();
-            var switcher = new BenchmarkSwitcher(types);
-            var (config, args) = GetArtifactsPath(input);
+            var switcher = new BenchmarkSwitcher(typeof(Program).Assembly);
+            var config = GetConfig(input);
 
-            if (args.Length == 0)
-            {
-                args = types.Select(t => t.Name).ToArray();
-            }
-
-            switcher.Run(args, config);
+            switcher.Run(new[] { "--filter", "*" }, config);
         }
 
-        private static (IConfig, string[]) GetArtifactsPath(string[] args)
+        private static IConfig GetConfig(string[] args)
         {
-            const string OutputFlag = "-output:";
+            var config = new CustomConfig();
 
-            if (args.Length > 0 && args[0] is string initial && initial.StartsWith(OutputFlag, StringComparison.Ordinal))
+            if (args.Length > 0)
             {
-                var path = initial.Substring(OutputFlag.Length);
-                var config = new CustomConfig().WithArtifactsPath(path);
-
-                return (config, args.Skip(1).ToArray());
+                return config.WithArtifactsPath(args[0]);
             }
             else
             {
-                return (new CustomConfig(), args);
+                return config;
             }
         }
 
@@ -65,22 +52,8 @@ namespace DocumentFormat.OpenXml.Benchmarks
                 Add(AsciiDocExporter.Default);
                 Add(HtmlExporter.Default);
 
-                // Frameworks to run against
-#if NET46
-                Add(Job.Default.With(Runtime.Clr).WithId("net46"));
-#else
-                Add(Job.Default.With(Runtime.Core));
-#endif
+                Add(Job.InProcess);
             }
-        }
-
-        internal static Type[] GetBenchmarks()
-        {
-            var assembly = typeof(BenchmarkAttribute).GetTypeInfo().Assembly;
-            var extensions = assembly.GetType("BenchmarkDotNet.Extensions.ReflectionExtensions");
-            var method = extensions.GetMethod("GetRunnableBenchmarks", BindingFlags.NonPublic | BindingFlags.Static);
-
-            return (Type[])method.Invoke(null, new object[] { typeof(Program).GetTypeInfo().Assembly });
         }
     }
 }
