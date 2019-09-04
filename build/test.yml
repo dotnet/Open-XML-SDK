@@ -8,10 +8,6 @@ steps:
     artifact: build
     patterns: '*.Tests/${{ parameters.framework }}/publish/**/*'
 
-  - powershell: |
-      gci -r
-    workingDirectory: '$(Pipeline.Workspace)'
-
   - task: VSTest@2
     inputs:
       testAssemblyVer2: |
