@@ -28,38 +28,17 @@ stages:
 
   - stage: Test
     jobs:
-    - job: net452
-      displayName: Test .NET Framework 4.5.2
-      pool:
-        name: Hosted VS2017
-      steps:
-        - template: test.yml
-          parameters:
-            framework: net452
-    - job: net46
-      displayName: Test .NET Framework 4.6
-      pool:
-        name: Hosted VS2017
-      steps:
-        - template: test.yml
-          parameters:
-            framework: net46
-    - job: netcoreapp11
-      displayName: Test .NET Core 1.1
-      pool:
-        name: Hosted VS2017
-      steps:
-        - template: test.yml
-          parameters:
-            framework: netcoreapp1.1
-    - job: netcoreapp21
-      displayName: Test .NET Core 2.1
-      pool:
-        name: Hosted VS2017
-      steps:
-        - template: test.yml
-          parameters:
-            framework: netcoreapp2.1
+    - template: test.yml
+      parameters:
+        frameworks:
+          - tfm: net452
+            name: net452
+          - tfm: net46
+            name: net46
+          - tfm: netcoreapp1.1
+            name: netcoreapp1_1
+          - tfm: netcoreapp2.1
+            name: netcoreapp2_1
     dependsOn: Build
     condition: succeeded()
 
