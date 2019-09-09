@@ -9,11 +9,18 @@
 
          - DevFramework40: .NET Framework 4.0
          - DevFramework46: .NET Framework 4.6
-         - DevCore10:      .NET Core 1.0
+         - DevCore11:      .NET Core 1.1
          - DevCore21:      .NET Core 2.1
          - All: Will build for all platforms
          -->
     <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore21</ProjectLoadStyle>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <InformationalVersion>$(GitVersion_InformationalVersion)</InformationalVersion>
+    <FileVersion>$(GitVersion_MajorMinorPatch)</FileVersion>
+    <AssemblyVersion>$(GitVersion_AssemblySemVer)</AssemblyVersion>
+    <Version>$(GitVersion_NuGetVersionV2)</Version>
   </PropertyGroup>
 
   <Choose>
@@ -34,10 +41,10 @@
         <BenchmarkTargetFrameworks>net461</BenchmarkTargetFrameworks>
       </PropertyGroup>
     </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'DevCore10' ">
+    <When Condition=" '$(ProjectLoadStyle)' == 'DevCore11' ">
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard1.3</ProductTargetFrameworks>
-        <TestTargetFrameworks>netcoreapp1.0</TestTargetFrameworks>
+        <TestTargetFrameworks>netcoreapp1.1</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
         <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
         <BenchmarkTargetFrameworks>netcoreapp2.1</BenchmarkTargetFrameworks>
@@ -59,7 +66,7 @@
         -->
         <ProductTargetFrameworks>netstandard1.3;netstandard2.0;net35;net40;net46</ProductTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard1.3</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net452;net46;netcoreapp1.0;netcoreapp1.1;netcoreapp2.1</TestTargetFrameworks>
+        <TestTargetFrameworks>net452;net46;netcoreapp1.1;netcoreapp2.1</TestTargetFrameworks>
         <BenchmarkTargetFrameworks>net461;netcoreapp2.1</BenchmarkTargetFrameworks>
 
         <!-- Must disable this due to https://github.com/NuGet/Home/issues/7414 so .NET Core 1.x will build -->
@@ -90,7 +97,6 @@
 
   <PropertyGroup>
     <IsTestProject Condition=" '$(IsTestProject)' == '' ">false</IsTestProject>
-    <EnableCodeCoverage Condition=" '$(EnableCodeCoverage)' == '' ">false</EnableCodeCoverage>
-    <DebugType Condition="$(EnableCodeCoverage)">Full</DebugType>
+    <IsBenchmarkProject Condition=" '$(IsBenchmarkProject)' == '' ">false</IsBenchmarkProject>
   </PropertyGroup>
 </Project>

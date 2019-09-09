@@ -8,6 +8,7 @@
     <OutputType>Exe</OutputType>
     <NoWarn>$(NoWarn);CA1822</NoWarn>
     <IsPackable>false</IsPackable>
+    <IsBenchmarkProject>true</IsBenchmarkProject>
 
     <!-- These tests don't use the xunit runner, but as an exe -->
     <IsTestProject>false</IsTestProject>
