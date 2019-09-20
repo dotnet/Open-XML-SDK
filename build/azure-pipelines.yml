@@ -97,4 +97,5 @@ stages:
                     feed: 'OpenXML NuGet Feed'
     dependsOn: 
       - MyGet
-    condition: succeeded()
+    # Only run this on tagged builds on master
+    condition: and(succeeded(), not(contains(variables['Build.BuildNumber'], '-ci.')), eq(variables['Build.SourceBranchName'], 'master'))
