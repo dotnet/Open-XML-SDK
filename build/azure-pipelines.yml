@@ -60,3 +60,19 @@ stages:
         - template: sign.yml
     dependsOn: Build
     condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+  
+  - stage: MyGet
+    jobs:
+      - job: MyGet
+        displayName: Deploy to MyGet
+        pool:
+          name: Hosted Windows 2019 with VS2019
+        steps:
+          - template: nuget.yml
+            parameters:
+              feed: 'OpenXML MyGet Feed'
+    dependsOn: 
+      - Sign
+      - PerformanceTests
+      - UnitTests
+    condition: succeeded()
