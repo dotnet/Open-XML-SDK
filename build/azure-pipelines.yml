@@ -60,3 +60,42 @@ stages:
         - template: sign.yml
     dependsOn: Build
     condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+  
+  - stage: MyGet
+    jobs:
+      - deployment: OpenXmlMyGet
+        displayName: Deploy to MyGet
+        pool:
+          name: Hosted Windows 2019 with VS2019
+        environment: 'openxmlsdk-dotnet-myget'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: nuget.yml
+                  parameters:
+                    feed: 'OpenXML MyGet Feed'
+    dependsOn: 
+      - Sign
+      - PerformanceTests
+      - UnitTests
+    condition: succeeded()
+
+  - stage: NuGet
+    jobs:
+      - deployment: OpenXmlNuGet
+        displayName: Deploy to NuGet
+        pool:
+          name: Hosted Windows 2019 with VS2019
+        environment: 'openxmlsdk-dotnet-nuget'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: nuget.yml
+                  parameters:
+                    feed: 'OpenXML NuGet Feed'
+    dependsOn: 
+      - MyGet
+    # Only run this on tagged builds on master
+    condition: and(succeeded(), not(contains(variables['Build.BuildNumber'], '-ci.')), eq(variables['Build.SourceBranchName'], 'master'))
