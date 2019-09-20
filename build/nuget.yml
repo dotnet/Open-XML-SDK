@@ -1,5 +1,5 @@
 parameters:
-  feed: ""
+  feed: ''
 
 steps:
   - checkout: none

@@ -63,16 +63,38 @@ stages:
   
   - stage: MyGet
     jobs:
-      - job: MyGet
+      - deployment: OpenXmlMyGet
         displayName: Deploy to MyGet
         pool:
           name: Hosted Windows 2019 with VS2019
-        steps:
-          - template: nuget.yml
-            parameters:
-              feed: 'OpenXML MyGet Feed'
+        environment: 'openxmlsdk-dotnet-myget'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: nuget.yml
+                  parameters:
+                    feed: 'OpenXML MyGet Feed'
     dependsOn: 
       - Sign
       - PerformanceTests
       - UnitTests
+    condition: succeeded()
+
+  - stage: NuGet
+    jobs:
+      - deployment: OpenXmlNuGet
+        displayName: Deploy to NuGet
+        pool:
+          name: Hosted Windows 2019 with VS2019
+        environment: 'openxmlsdk-dotnet-nuget'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: nuget.yml
+                  parameters:
+                    feed: 'OpenXML NuGet Feed'
+    dependsOn: 
+      - MyGet
     condition: succeeded()
