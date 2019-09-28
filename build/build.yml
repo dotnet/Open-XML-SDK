@@ -1,34 +1,38 @@
 steps:
-    
+  - task: PowerShell@2
+    displayName: 'Update version'
+    inputs:
+      targetType: 'inline'
+      script: |
+        dotnet tool install --global GitVersion.Tool --version 5.0.1        
+        dotnet gitversion /output buildserver /nofetch
+
   - task: VSBuild@1
     displayName: 'Build SDK'
     inputs:
-      solution: '$(SdkSolution)'
-      msbuildArgs: '/t:restore;build /p:ProjectLoadStyle=$(ProjectLoadStyle)'
+      solution: 'Open-XML-SDK.sln'
+      msbuildArgs: '/m /t:restore;build /p:ProjectLoadStyle=$(ProjectLoadStyle)'
       platform: '$(BuildPlatform)'
       configuration: '$(BuildConfiguration)'
 
-  - task: VSTest@2
-    displayName: 'VsTest - testAssemblies'
+  - task: VSBuild@1
+    displayName: 'Publish tests'
     inputs:
-      testAssemblyVer2: |
-        bin\$(BuildConfiguration)\**\*test*.dll
-      runInParallel: true
-      codeCoverageEnabled: true
-      otherConsoleOptions: '/Platform:x64'
+      solution: 'Open-XML-SDK.sln'
+      msbuildArgs: '/m /t:PublishAll /p:ProjectLoadStyle=$(ProjectLoadStyle)'
       platform: '$(BuildPlatform)'
       configuration: '$(BuildConfiguration)'
-      diagnosticsEnabled: True
+
+  - publish: 'bin/$(BuildConfiguration)'
+    artifact: build
 
   - task: VSBuild@1
     displayName: 'Pack SDK'
     inputs:
-      msbuildArgs: '/t:pack /p:ProjectLoadStyle=$(ProjectLoadStyle) /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)'
+      msbuildArgs: '/t:pack /p:ProjectLoadStyle=$(ProjectLoadStyle) /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)/unsigned'
       platform: '$(BuildPlatform)'
       configuration: '$(BuildConfiguration)'
 
-  - task: PublishBuildArtifacts@1
-    displayName: 'Publish Unsigned'
-    inputs:
-      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-      artifactName: 'unsigned'
+  - publish: '$(Build.ArtifactStagingDirectory)/unsigned'
+    artifact: unsigned
+    displayName: 'Publish Unsigned Packages'

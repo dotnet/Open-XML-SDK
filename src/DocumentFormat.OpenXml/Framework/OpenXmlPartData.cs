@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Packaging;
 using System;
 
 namespace DocumentFormat.OpenXml.Framework
@@ -16,8 +15,6 @@ namespace DocumentFormat.OpenXml.Framework
             _constraints = new Lazy<PartConstraintCollection>(() => PartConstraintCollection.Create<PartConstraintAttribute>(dataFactory, type), true);
             _dataParts = new Lazy<PartConstraintCollection>(() => PartConstraintCollection.Create<DataPartConstraintAttribute>(dataFactory, type), true);
         }
-
-        public static OpenXmlPartData Create(OpenXmlPartContainer part) => PackageCache.Cache.ParsePart(part);
 
         public PartConstraintCollection PartConstraints => _constraints.Value;
 

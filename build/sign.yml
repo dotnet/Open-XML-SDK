@@ -1,28 +1,25 @@
 steps:
   - checkout: none
 
-  - task: DownloadBuildArtifacts@0
-    displayName: 'Download Build Artifacts'
-    inputs:
-      artifactName: unsigned
-      downloadPath: $(System.DefaultWorkingDirectory)
+  - download: current
+    artifact: unsigned
 
   - powershell: |
       $version=gci DocumentFormat.OpenXml.*.nupkg | % { $_ -match 'DocumentFormat.OpenXml.(.*).nupkg' | Out-Null; $matches[1] }
       Write-Host "##vso[task.setvariable variable=Version]$version"
       Write-Host "Setting version to $version"
-    workingDirectory: '$(System.DefaultWorkingDirectory)/unsigned'
+    workingDirectory: '$(Pipeline.Workspace)/unsigned'
 
   - task: ExtractFiles@1
     inputs:
-      archiveFilePatterns: '$(System.DefaultWorkingDirectory)/unsigned/DocumentFormat.OpenXml.$(Version).nupkg'
-      destinationFolder: '$(System.DefaultWorkingDirectory)/$(Version)'
+      archiveFilePatterns: '$(Pipeline.Workspace)/unsigned/DocumentFormat.OpenXml.$(Version).nupkg'
+      destinationFolder: '$(Pipeline.Workspace)/$(Version)'
 
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
     displayName: 'OpenXML SDK Assembly ESRP CodeSigning'
     inputs:
       ConnectedServiceName: 'Open-XML-SDK-ESRP'
-      FolderPath: '$(System.DefaultWorkingDirectory)\$(Version)'
+      FolderPath: '$(Pipeline.Workspace)\$(Version)'
       Pattern: '**\DocumentFormat.OpenXml.dll'
       UseMinimatch: true
       signConfigType: inlineSignParams
@@ -60,7 +57,7 @@ steps:
 
   - task: ArchiveFiles@2
     inputs:
-      rootFolderOrFile: '$(System.DefaultWorkingDirectory)/$(Version)' 
+      rootFolderOrFile: '$(Pipeline.Workspace)/$(Version)' 
       includeRootFolder: false
       archiveType: 'zip'
       archiveFile: '$(Build.ArtifactStagingDirectory)/DocumentFormat.OpenXml.$(Version).nupkg' 

@@ -1,0 +1,15 @@
+parameters:
+  feed: ''
+
+steps:
+  - checkout: none
+
+  - download: current
+    artifact: signed
+
+  - task: NuGetCommand@2
+    inputs:
+      command: 'push'
+      packagesToPush: '$(Pipeline.Workspace)/signed/**/*.nupkg;!$(Pipeline.Workspace)/signed/**/*.symbols.nupkg'
+      nuGetFeedType: 'external'
+      publishFeedCredentials: ${{ parameters.feed }}
