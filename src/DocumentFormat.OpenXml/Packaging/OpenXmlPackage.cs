@@ -845,99 +845,74 @@ namespace DocumentFormat.OpenXml.Packaging
             ThrowIfObjectDisposed();
 
             T mainPart = GetSubPartOfType<T>();
-            MemoryStream memoryStream = null;
-            ExtendedPart tempPart = null;
-            Dictionary<string, OpenXmlPart> childParts = new Dictionary<string, OpenXmlPart>();
-            ReferenceRelationship[] referenceRelationships;
+            Dictionary<string, OpenXmlPart> childParts = new Dictionary<string, OpenXmlPart>(StringComparer.Ordinal);
 
             try
             {
-                // read the content to local string
-                using (Stream mainPartStream = mainPart.GetStream())
+                using (var memoryStream = mainPart.CopyToMemoryStream())
                 {
-                    if (mainPartStream.Length > int.MaxValue)
+                    var tempPart = AddExtendedPart(@"http://temp", MainPartContentType, @".xml");
+
+                    // Make a copy as we will remove old parts and need the originals later
+                    foreach (KeyValuePair<string, OpenXmlPart> idPartPair in mainPart.ChildrenRelationshipParts)
                     {
-                        throw new OpenXmlPackageException(ExceptionMessages.DocumentTooBig);
+                        childParts.Add(idPartPair.Key, idPartPair.Value);
                     }
 
-                    memoryStream = new MemoryStream(Convert.ToInt32(mainPartStream.Length));
-                    mainPartStream.CopyTo(memoryStream);
+                    ReferenceRelationship[] referenceRelationships = mainPart.ReferenceRelationshipList.ToArray();
+
+                    Uri uri = mainPart.Uri;
+                    string id = GetIdOfPart(mainPart);
+
+                    // remove the old part
+                    ChildrenRelationshipParts.Remove(id);
+                    DeleteRelationship(id);
+                    mainPart.Destroy();
+
+                    // create new part
+                    T newMainPart = ClassActivator.CreateInstance<T>();
+
+                    // do not call this.InitPart( ).  copy the code here
+                    newMainPart.CreateInternal2(this, null, MainPartContentType, uri);
+
+                    // add it and get the id
+                    string relationshipId = AttachChild(newMainPart, id);
+
+                    ChildrenRelationshipParts.Add(relationshipId, newMainPart);
+
+                    // copy the stream back
+                    memoryStream.Position = 0;
+                    newMainPart.FeedData(memoryStream);
+
+                    // add back all relationships
+                    foreach (KeyValuePair<string, OpenXmlPart> idPartPair in childParts)
+                    {
+                        // just call AttachChild( ) is OK. No need to call AddPart( ... )
+                        newMainPart.AttachChild(idPartPair.Value, idPartPair.Key);
+                        newMainPart.ChildrenRelationshipParts.Add(idPartPair.Key, idPartPair.Value);
+                    }
+
+                    foreach (ExternalRelationship externalRel in referenceRelationships.OfType<ExternalRelationship>())
+                    {
+                        newMainPart.AddExternalRelationship(externalRel.RelationshipType, externalRel.Uri, externalRel.Id);
+                    }
+
+                    foreach (HyperlinkRelationship hyperlinkRel in referenceRelationships.OfType<HyperlinkRelationship>())
+                    {
+                        newMainPart.AddHyperlinkRelationship(hyperlinkRel.Uri, hyperlinkRel.IsExternal, hyperlinkRel.Id);
+                    }
+
+                    foreach (DataPartReferenceRelationship dataPartReference in referenceRelationships.OfType<DataPartReferenceRelationship>())
+                    {
+                        newMainPart.AddDataPartReferenceRelationship(dataPartReference);
+                    }
+
+                    // delete the temp part
+                    id = GetIdOfPart(tempPart);
+                    ChildrenRelationshipParts.Remove(id);
+                    DeleteRelationship(id);
+                    tempPart.Destroy();
                 }
-
-                tempPart = AddExtendedPart(@"http://temp", MainPartContentType, @".xml");
-
-                foreach (KeyValuePair<string, OpenXmlPart> idPartPair in mainPart.ChildrenRelationshipParts)
-                {
-                    childParts.Add(idPartPair.Key, idPartPair.Value);
-                }
-
-                referenceRelationships = mainPart.ReferenceRelationshipList.ToArray();
-            }
-            catch (OpenXmlPackageException e)
-            {
-                throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentType, e);
-            }
-#if FEATURE_SYSTEMEXCEPTION
-            catch (SystemException e)
-            {
-                throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentType, e);
-            }
-#endif
-
-            try
-            {
-                Uri uri = mainPart.Uri;
-                string id = GetIdOfPart(mainPart);
-
-                // remove the old part
-                ChildrenRelationshipParts.Remove(id);
-                DeleteRelationship(id);
-                mainPart.Destroy();
-
-                // create new part
-                T newMainPart = ClassActivator.CreateInstance<T>();
-
-                // do not call this.InitPart( ).  copy the code here
-                newMainPart.CreateInternal2(this, null, MainPartContentType, uri);
-
-                // add it and get the id
-                string relationshipId = AttachChild(newMainPart, id);
-
-                ChildrenRelationshipParts.Add(relationshipId, newMainPart);
-
-                // copy the stream back
-                memoryStream.Position = 0;
-                newMainPart.FeedData(memoryStream);
-                memoryStream.Dispose();
-
-                // add back all relationships
-                foreach (KeyValuePair<string, OpenXmlPart> idPartPair in childParts)
-                {
-                    // just call AttachChild( ) is OK. No need to call AddPart( ... )
-                    newMainPart.AttachChild(idPartPair.Value, idPartPair.Key);
-                    newMainPart.ChildrenRelationshipParts.Add(idPartPair.Key, idPartPair.Value);
-                }
-
-                foreach (ExternalRelationship externalRel in referenceRelationships.OfType<ExternalRelationship>())
-                {
-                    newMainPart.AddExternalRelationship(externalRel.RelationshipType, externalRel.Uri, externalRel.Id);
-                }
-
-                foreach (HyperlinkRelationship hyperlinkRel in referenceRelationships.OfType<HyperlinkRelationship>())
-                {
-                    newMainPart.AddHyperlinkRelationship(hyperlinkRel.Uri, hyperlinkRel.IsExternal, hyperlinkRel.Id);
-                }
-
-                foreach (DataPartReferenceRelationship dataPartReference in referenceRelationships.OfType<DataPartReferenceRelationship>())
-                {
-                    newMainPart.AddDataPartReferenceRelationship(dataPartReference);
-                }
-
-                // delete the temp part
-                id = GetIdOfPart(tempPart);
-                ChildrenRelationshipParts.Remove(id);
-                DeleteRelationship(id);
-                tempPart.Destroy();
             }
             catch (OpenXmlPackageException e)
             {
