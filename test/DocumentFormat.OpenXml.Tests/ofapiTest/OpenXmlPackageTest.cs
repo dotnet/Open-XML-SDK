@@ -343,7 +343,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     // check first.
                     var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/9/2009");
-                    Assert.True(texts.Count() == 0);
+                    Assert.Empty(texts);
 
                     // change and save.
                     texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/7/2009");
@@ -361,7 +361,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     // check first.
                     var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/9/2009");
-                    Assert.True(texts.Count() > 0);
+                    Assert.Empty(texts);
 
                     // change and save.
                     foreach (var text in texts)
@@ -379,7 +379,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     // check first.
                     var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/10/2009");
-                    Assert.True(texts.Count() > 0);
+                    Assert.NotEmpty(texts);
 
                     // change and save.
                     foreach (var text in texts)
@@ -396,7 +396,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     // check first.
                     var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/11/2009");
-                    Assert.True(texts.Count() > 0);
+                    Assert.NotEmpty(texts);
                 }
             }
         }
@@ -430,7 +430,7 @@ namespace DocumentFormat.OpenXml.Tests
                     // Check first
                     var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
                     var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "微软雅黑");
-                    Assert.True(fonts.Count() == 0);
+                    Assert.Empty(fonts);
 
                     // do changes, and they should be saved.
                     fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "宋体");
@@ -446,7 +446,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
                     var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "微软雅黑");
-                    Assert.True(fonts.Count() > 0);
+                    Assert.NotEmpty(fonts);
                     foreach (var font in fonts)
                     {
                         font.Val = "仿宋";
@@ -460,7 +460,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
                     var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "仿宋");
-                    Assert.True(fonts.Count() > 0);
+                    Assert.NotEmpty(fonts);
                     foreach (var font in fonts)
                     {
                         font.Val = "楷体";
@@ -473,7 +473,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var sharedStringsPart = doc.WorkbookPart.GetPartById("rId7");
                     var fonts = sharedStringsPart.RootElement.Descendants<x.RunFont>().Where(e => e.Val == "楷体");
-                    Assert.True(fonts.Count() > 0);
+                    Assert.NotEmpty(fonts);
                 }
             }
         }

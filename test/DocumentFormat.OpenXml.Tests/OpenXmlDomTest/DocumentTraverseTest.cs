@@ -242,7 +242,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Fail("PreviousSibling doesn't return correctly");
 
             Log.Comment("****** test NextSibling<{0}> ******", typeof(U).Name);
-            while (Xwalker.ElementsAfterSelf().Where(x => x.Name.LocalName == UTagName).Count() != 0 && walker.NextSibling<U>() != null)
+            while (Xwalker.ElementsAfterSelf().Where(x => x.Name.LocalName == UTagName).Any() && walker.NextSibling<U>() != null)
             {
                 Xwalker = Xwalker.ElementsAfterSelf().Where(x => x.Name.LocalName == UTagName).First();
                 walker = walker.NextSibling<U>();
@@ -251,7 +251,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             Log.Comment("****** test PreviousSibling<{0}>() ******", typeof(U).Name);
-            while (Xwalker.ElementsBeforeSelf().Where(x => x.Name.LocalName == UTagName).Count() != 0 && walker.PreviousSibling<U>() != null)
+            while (Xwalker.ElementsBeforeSelf().Where(x => x.Name.LocalName == UTagName).Any() && walker.PreviousSibling<U>() != null)
             {
                 Xwalker = Xwalker.ElementsBeforeSelf().Where(x => x.Name.LocalName == UTagName).Last();
                 walker = walker.PreviousSibling<U>();

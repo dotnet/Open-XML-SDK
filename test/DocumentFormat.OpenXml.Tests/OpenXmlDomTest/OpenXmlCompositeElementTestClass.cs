@@ -640,11 +640,11 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var part = package.DescendantParts().Where(p => p.IsReflectable()).FirstOrDefault();
                 var dom = part.RootElement;
-                var e1 = dom.Descendants().Where(d => d.ExtendedAttributes.Count() == 0).PickSecond();
+                var e1 = dom.Descendants().Where(d => !d.ExtendedAttributes.Any()).PickSecond();
 
                 Assert.NotNull(e1.ExtendedAttributes);
 
-                var e2 = dom.Descendants().Where(d => d.ExtendedAttributes.Count() == 0).PickFirst(d => d != e1);
+                var e2 = dom.Descendants().Where(d => !d.ExtendedAttributes.Any()).PickFirst(d => d != e1);
 
                 Assert.NotNull(e2.ExtendedAttributes);
                 Assert.Equal(e1.ExtendedAttributes, e2.ExtendedAttributes);

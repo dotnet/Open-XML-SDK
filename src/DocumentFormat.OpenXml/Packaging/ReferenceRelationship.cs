@@ -28,7 +28,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="packageRelationship">The source PackageRelationship.</param>
         internal protected ReferenceRelationship(PackageRelationship packageRelationship)
         {
-            Debug.Assert(packageRelationship != null);
+            if (packageRelationship is null)
+            {
+                throw new ArgumentNullException(nameof(packageRelationship));
+            }
 
             RelationshipType = packageRelationship.RelationshipType;
             Uri = packageRelationship.TargetUri;
@@ -50,7 +53,7 @@ namespace DocumentFormat.OpenXml.Packaging
             Debug.Assert(!string.IsNullOrEmpty(id));
 
             RelationshipType = relationshipType;
-            Uri = targetUri;
+            Uri = targetUri ?? throw new ArgumentNullException(nameof(targetUri));
             Id = id;
             IsExternal = isExternal;
         }

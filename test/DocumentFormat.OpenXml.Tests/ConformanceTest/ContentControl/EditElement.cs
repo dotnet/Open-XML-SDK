@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                         case ConstStr.TestTagStrings.TagContent03:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
-                            if (sdtBlock.SdtProperties.Descendants<W15.Appearance>().Count() == 0)
+                            if (!sdtBlock.SdtProperties.Descendants<W15.Appearance>().Any())
                             {
                                 W15.Appearance appearance = new W15.Appearance();
                                 appearance.Val = W15.SdtAppearance.Tags;
@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                         case ConstStr.TestTagStrings.TagContent04:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
-                            if (sdtBlock.SdtProperties.Descendants<W15.Appearance>().Count() == 0)
+                            if (!sdtBlock.SdtProperties.Descendants<W15.Appearance>().Any())
                             {
                                 W15.Appearance appearance = new W15.Appearance();
                                 appearance.Val = W15.SdtAppearance.Hidden;
@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                         case ConstStr.TestTagStrings.TagContent05:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
-                            if (sdtBlock.SdtProperties.Descendants<W15.Appearance>().Count() == 0)
+                            if (!sdtBlock.SdtProperties.Descendants<W15.Appearance>().Any())
                             {
                                 W15.Appearance appearance = new W15.Appearance();
                                 appearance.Val = W15.SdtAppearance.BoundingBox;
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                         case ConstStr.TestTagStrings.TagContent06:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
-                            if (sdtBlock.SdtProperties.Descendants<W15.Color>().Count() == 0)
+                            if (!sdtBlock.SdtProperties.Descendants<W15.Color>().Any())
                             {
                                 W15.Color color = new W15.Color();
                                 color.Val = ConstStr.TestColorValues.TestColor;
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                         case ConstStr.TestTagStrings.TagContent07:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
-                            if (sdtBlock.SdtProperties.Descendants<W15.Color>().Count() != 0)
+                            if (sdtBlock.SdtProperties.Descendants<W15.Color>().Any())
                             {
                                 sdtBlock.SdtProperties.Descendants<W15.Color>().First().Remove();
 
@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                         case ConstStr.TestTagStrings.TagContent10:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
-                            if (sdtBlock.SdtProperties.Descendants<W15.SdtRepeatedSection>().Count() != 0)
+                            if (sdtBlock.SdtProperties.Descendants<W15.SdtRepeatedSection>().Any())
                             {
                                 sdtRepeatedSection = sdtBlock.SdtProperties.Descendants<W15.SdtRepeatedSection>().First();
                                 sdtRepeatedSection.DoNotAllowInsertDeleteSection.Val.Value = false;
@@ -190,7 +190,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
                             var sectionTitles = sdtBlock.Descendants<W15.SectionTitle>();
-                            if (sectionTitles.Count() > 0)
+                            if (sectionTitles.Any())
                             {
                                 sectionTitles.First().Val = "TEST_TEST";
                                 log.Pass("SectionTitle is detected and updated.");

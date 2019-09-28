@@ -15,15 +15,25 @@ namespace DocumentFormat.OpenXml.Tests
 
         public static bool Compare(this XElement left, XElement right)
         {
-            //Verify NameSpace
+            if (left is null)
+            {
+                throw new ArgumentNullException(nameof(left));
+            }
+
+            if (right is null)
+            {
+                throw new ArgumentNullException(nameof(right));
+            }
+
+            // Verify namespace
             if (left.Name.Namespace != right.Name.Namespace || left.Name.LocalName != right.Name.LocalName)
                 return false;
 
-            //Verify Values
+            // Verify values
             if (left.Value != right.Value)
                 return false;
 
-            //verify attributes
+            // Verify attributes
             if (right.Attributes().Count(x => x.IsNamespaceDeclaration == false) != left.Attributes().Count(x => x.IsNamespaceDeclaration == false))
                 return false;
 

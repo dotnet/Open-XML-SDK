@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             foreach (var idPartPair in root.Parts)
             {
-                if (list.Where(i => i.RelationshipId == idPartPair.RelationshipId && object.ReferenceEquals(i.OpenXmlPart, idPartPair.OpenXmlPart)).Count() == 0)
+                if (!list.Where(i => i.RelationshipId == idPartPair.RelationshipId && ReferenceEquals(i.OpenXmlPart, idPartPair.OpenXmlPart)).Any())
                 {
                     list.Add(idPartPair);
                     addChildIdPartPairs(list, idPartPair.OpenXmlPart);
