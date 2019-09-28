@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        private static IOpenXmlSimpleTypeValidator[] Build(IEnumerable<object> attributes, Type type)
+        private static ReadOnlyArray<IOpenXmlSimpleTypeValidator> Build(IEnumerable<object> attributes, Type type)
         {
             var builder = new ValidatorCollectionBuilder();
 
