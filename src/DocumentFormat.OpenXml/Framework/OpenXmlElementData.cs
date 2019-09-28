@@ -15,12 +15,10 @@ namespace DocumentFormat.OpenXml.Framework
         public OpenXmlElementData(Type type, PackageCache cache)
         {
             _rawAttributes = new Lazy<ReadOnlyArray<ElementProperty<OpenXmlSimpleType>>>(() => ElementPropertyCollection.GetProperties(cache.GetFactory<OpenXmlSimpleType>, type), true);
-            _rawElements = new Lazy<ReadOnlyArray<ElementProperty<OpenXmlElement>>>(() => ElementPropertyCollection.GetElements(cache.GetFactory<OpenXmlElement>, t => cache.ParseElement(t).Info.Schema, type), true);
+            _rawElements = new Lazy<ReadOnlyArray<ElementProperty<OpenXmlElement>>>(() => ElementPropertyCollection.GetElements(cache.GetFactory<OpenXmlElement>, t => cache.ParseElementData(t).Info.Schema, type), true);
             _info = new Lazy<ElementTypeInfo>(() => ElementTypeInfo.Create(type), true);
             _children = new Lazy<ElementLookup>(() => ElementLookup.CreateLookup(type, cache.GetFactory<OpenXmlElement>), true);
         }
-
-        public static OpenXmlElementData Create(OpenXmlElement element) => PackageCache.Cache.ParseElement(element);
 
         public ReadOnlyArray<ElementProperty<OpenXmlSimpleType>> RawAttributes => _rawAttributes.Value;
 

@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         protected OpenXmlPartContainer()
         {
-            Data = OpenXmlPartData.Create(this);
+            Data = PackageCache.Cache.ParsePartData(this);
         }
 
         /// <summary>
