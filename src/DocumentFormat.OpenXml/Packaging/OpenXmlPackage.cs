@@ -474,7 +474,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            static void DefaultValidationEventHandler(object sender, OpenXmlPackageValidationEventArgs e)
+            void DefaultValidationEventHandler(object sender, OpenXmlPackageValidationEventArgs e)
             {
                 var exception = new OpenXmlPackageException(ExceptionMessages.ValidationException);
 
