@@ -155,17 +155,10 @@ namespace DocumentFormat.OpenXml.Tests
 
                 document.Save();
 
-                if (OpenXmlPackage.CanSave)
+                string opc = document.ToFlatOpcString();
+                using (var dest = FromFlatOpcString(opc))
                 {
-                    string opc = document.ToFlatOpcString();
-                    using (var dest = FromFlatOpcString(opc))
-                    {
-                        PackageAssert.Equal(document, dest);
-                    }
-                }
-                else
-                {
-                    Assert.Throws<IOException>(() => document.ToFlatOpcString());
+                    PackageAssert.Equal(document, dest);
                 }
             }
         }
