@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Framework
             return type.GetTypeInfo().IsGenericType && type.GetGenericTypeDefinition() == typeof(EnumValue<>);
         }
 
-        public IOpenXmlSimpleTypeValidator[] Build()
+        public ReadOnlyArray<IOpenXmlSimpleTypeValidator> Build()
         {
             var unionCount = _union?.Count ?? 0;
             var validatorCount = _validators?.Count ?? 0;

@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlElement()
             : base()
         {
-            ElementData = OpenXmlElementData.Create(this);
+            ElementData = PackageCache.Cache.ParseElementData(this);
         }
 
         /// <summary>
