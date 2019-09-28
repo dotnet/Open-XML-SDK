@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     public abstract class OpenXmlPartContainer
     {
         private readonly Dictionary<string, OpenXmlPart> _childrenPartsDictionary = new Dictionary<string, OpenXmlPart>(StringComparer.Ordinal);
-        private LinkedList<ReferenceRelationship> _referenceRelationships = new LinkedList<ReferenceRelationship>();
+        private readonly LinkedList<ReferenceRelationship> _referenceRelationships = new LinkedList<ReferenceRelationship>();
         private object _annotations;
 
         /// <summary>
@@ -1954,18 +1954,14 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(relationshipType));
             }
 
-            OpenXmlPart part = null;
-
             if (Data.PartConstraints.ContainsRelationship(relationshipType))
             {
-                part = CreatePartCore(relationshipType);
+                return CreatePartCore(relationshipType);
             }
             else
             {
-                part = GlobalPartFactory.CreateOpenXmlPart(InternalOpenXmlPackage, relationshipType);
+                return GlobalPartFactory.CreateOpenXmlPart(InternalOpenXmlPackage, relationshipType);
             }
-
-            return part;
         }
 
         /// <summary>

@@ -474,7 +474,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            void DefaultValidationEventHandler(object sender, OpenXmlPackageValidationEventArgs e)
+            static void DefaultValidationEventHandler(object sender, OpenXmlPackageValidationEventArgs e)
             {
                 var exception = new OpenXmlPackageException(ExceptionMessages.ValidationException);
 
@@ -542,7 +542,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            Uri partUri = null;
+            Uri partUri;
 
             // fix bug #241492
             // check to avoid name conflict with orphan parts in the packages.
@@ -565,7 +565,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            Uri partUri = null;
+            Uri partUri;
 
             // fix bug #241492
             // check to avoid name conflict with orphan parts in the packages.
@@ -1160,7 +1160,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The cloned OpenXml package.</returns>
         public OpenXmlPackage Clone()
         {
+#pragma warning disable CA2000 // Dispose objects before losing scope
             return Clone(new MemoryStream(), true, new OpenSettings());
+#pragma warning restore CA2000 // Dispose objects before losing scope
         }
 
         #endregion Default clone method
