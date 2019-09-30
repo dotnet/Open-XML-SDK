@@ -361,7 +361,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     // check first.
                     var texts = slideMaster1.RootElement.Descendants<a.Text>().Where(t => t.Text == "5/9/2009");
-                    Assert.Empty(texts);
+                    Assert.NotEmpty(texts);
 
                     // change and save.
                     foreach (var text in texts)
