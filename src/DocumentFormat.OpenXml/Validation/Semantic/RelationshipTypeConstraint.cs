@@ -35,11 +35,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             IEnumerable<ExternalRelationship> rels = context.Part.ExternalRelationships.Where(r => r.Id == attribute.Value.InnerText);
 
-            if (rels.Count() == 0)
+            if (!rels.Any())
             {
                 IEnumerable<IdPartPair> pairs = context.Part.Parts.Where(p => p.RelationshipId == attribute.Value.InnerText);
 
-                if (pairs.Count() != 0)
+                if (pairs.Any())
                 {
                     Debug.Assert(pairs.Count() == 1);
                     actualType = pairs.First().OpenXmlPart.RelationshipType;

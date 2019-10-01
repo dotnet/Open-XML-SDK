@@ -124,6 +124,11 @@ namespace DocumentFormat.OpenXml
         /// <param name="elementReader">The OpenXmlReader to read from. </param>
         public override void WriteStartElement(OpenXmlReader elementReader)
         {
+            if (elementReader is null)
+            {
+                throw new ArgumentNullException(nameof(elementReader));
+            }
+
             WriteStartElement(elementReader, elementReader.Attributes, elementReader.NamespaceDeclarations);
         }
 
@@ -134,6 +139,11 @@ namespace DocumentFormat.OpenXml
         /// <param name="attributes">The attributes to be written, can be null if no attributes.</param>
         public override void WriteStartElement(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes)
         {
+            if (elementReader is null)
+            {
+                throw new ArgumentNullException(nameof(elementReader));
+            }
+
             WriteStartElement(elementReader, attributes, elementReader.NamespaceDeclarations);
         }
 
@@ -238,6 +248,11 @@ namespace DocumentFormat.OpenXml
         /// <param name="attributes">The attributes to be written.</param>
         public override void WriteStartElement(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes)
         {
+            if (elementObject is null)
+            {
+                throw new ArgumentNullException(nameof(elementObject));
+            }
+
             WriteStartElement(elementObject, attributes, elementObject.NamespaceDeclarations);
         }
 

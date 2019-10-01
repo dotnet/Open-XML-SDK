@@ -22,6 +22,11 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         /// <returns>Comment Object</returns>
         public static Comment GetComment(WordprocessingCommentsPart commentsPart, string commentID)
         {
+            if (commentsPart is null)
+            {
+                throw new System.ArgumentNullException(nameof(commentsPart));
+            }
+
             return commentsPart.Comments.Descendants<Comment>().Where(e => e.Id == commentID).Single();
         }
 

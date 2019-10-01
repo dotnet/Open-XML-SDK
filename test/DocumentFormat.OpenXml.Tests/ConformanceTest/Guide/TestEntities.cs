@@ -246,17 +246,17 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
-                log.Verify(package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Count() == 0, "Exist PresentationExtensionList element.");
+                log.Verify(!package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Any(), "Exist PresentationExtensionList element.");
 
-                log.Verify(package.PresentationPart.RootElement.Descendants<PresentationExtension>().Count() == 0, "Exist PresentationExtension element.");
+                log.Verify(!package.PresentationPart.RootElement.Descendants<PresentationExtension>().Any(), "Exist PresentationExtension element.");
 
-                log.Verify(package.PresentationPart.RootElement.Descendants<P15.SlideGuideList>().Count() == 0, "Exist ExtendedGuideList element.");
+                log.Verify(!package.PresentationPart.RootElement.Descendants<P15.SlideGuideList>().Any(), "Exist ExtendedGuideList element.");
 
-                log.Verify(package.PresentationPart.RootElement.Descendants<P15.ExtendedGuide>().Count() == 0, "Exist ExtendedGuide element.");
+                log.Verify(!package.PresentationPart.RootElement.Descendants<P15.ExtendedGuide>().Any(), "Exist ExtendedGuide element.");
 
-                log.Verify(package.PresentationPart.RootElement.Descendants<P15.ColorType>().Count() == 0, "Exist ColorType element.");
+                log.Verify(!package.PresentationPart.RootElement.Descendants<P15.ColorType>().Any(), "Exist ColorType element.");
 
-                log.Verify(package.PresentationPart.RootElement.Descendants<A.RgbColorModelHex>().Count() == 0, "Exist RgbColorModelHex element.");
+                log.Verify(!package.PresentationPart.RootElement.Descendants<A.RgbColorModelHex>().Any(), "Exist RgbColorModelHex element.");
             }
         }
 

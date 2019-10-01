@@ -153,6 +153,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The <see cref="Package"/> containing the OpenXml package.</returns>
         protected static Package FromFlatOpcDocumentCore(XDocument document, Package package)
         {
+            if (document is null)
+            {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if (package is null)
+            {
+                throw new ArgumentNullException(nameof(package));
+            }
+
             // Add all parts (but not relationships).
             foreach (var xmlPart in document.Root
                 .Elements()

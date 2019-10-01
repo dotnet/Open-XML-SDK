@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml
         /// The source Base64BinaryValue class.
         /// </param>
         public Base64BinaryValue(Base64BinaryValue source)
-            : base(source.InnerText)
+            : base(source?.InnerText)
         {
         }
 

@@ -211,6 +211,11 @@ namespace LogUtil
         /// <param name="arguments">List of objects to be formatted</param>
         public void VerifySubString(string actualFullString, string expectedSubString, string message, params object[] arguments)
         {
+            if (actualFullString is null)
+            {
+                throw new ArgumentNullException(nameof(actualFullString));
+            }
+
             VerifyTrue(actualFullString.Contains(expectedSubString), message, arguments);
         }
 

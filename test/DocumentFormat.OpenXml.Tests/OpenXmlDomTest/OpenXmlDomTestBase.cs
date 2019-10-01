@@ -446,7 +446,7 @@ namespace DocumentFormat.OpenXml.Tests
                     for (int i = 0; i < importElementsCount; i++)
                     {
                         importElementOuterXml = importHost.ChildElements[i].OuterXml;
-                        VerifyEqual(XAfter, XElement.Load(new StringReader(importElementOuterXml)), childPosition++);
+                        VerifyEqual(XAfter, XElement.Parse(importElementOuterXml), childPosition++);
                     }
                 }
                 else
@@ -544,7 +544,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Comment("Checking if children of current element increased by ONE...");
                     Log.VerifyTrue(XBefore.Elements().Count() == XAfter.Elements().Count() - 1, "Children element NOT increased by ONE!");
 
-                    VerifyEqual(XAfter, XElement.Load(new StringReader(importElementOuterXml)), childPosition);
+                    VerifyEqual(XAfter, XElement.Parse(importElementOuterXml), childPosition);
                 }
                 else
                 {
@@ -670,7 +670,7 @@ namespace DocumentFormat.OpenXml.Tests
                         Log.VerifyTrue(Xbefore.Elements().Count() == Xafter.Elements().Count() - 1, "Child element NOT increased by ONE!");
 
                         Log.Comment("Check if specified child inserted as expected...");
-                        VerifyEqual(Xafter, XElement.Load(new StringReader(InsertElement)), expectPos);
+                        VerifyEqual(Xafter, XElement.Parse(InsertElement), expectPos);
                     }
                     else
                     {
@@ -799,7 +799,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.VerifyTrue(Xbefore.Elements().Count() == Xafter.Elements().Count() - 1, "Child element NOT increased by ONE!");
 
                     Log.Comment("Check if specified child inserted as expected...");
-                    VerifyEqual(Xafter, XElement.Load(new StringReader(InsertElement)), expectPos);
+                    VerifyEqual(Xafter, XElement.Parse(InsertElement), expectPos);
                 }
                 else
                 {
@@ -889,7 +889,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.VerifyTrue(xBefore.Elements().Count() == xAfter.Elements().Count() - 1, "Child element NOT increased by ONE!");
 
                     Log.Comment("Check if specified element inserted as expected...");
-                    VerifyEqual(xAfter, XElement.Load(new StringReader(InsertElement)), expectPos);
+                    VerifyEqual(xAfter, XElement.Parse(InsertElement), expectPos);
                 }
                 else
                 {
@@ -994,7 +994,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Comment("Verifying host element has no specified children element any more...");
                     var childrenOfTypeAfter = hostElement.ChildElements
                         .Where(c => IsOfType(c.GetType(), deleteType));
-                    Log.VerifyTrue(childrenOfTypeAfter.Count() == 0, "Children of specified {0} still exists.", deleteType);
+                    Log.VerifyTrue(!childrenOfTypeAfter.Any(), "Children of specified {0} still exists.", deleteType);
 
                     Log.Comment("Verifing children of specified type removed...");
                     XElement XAfter = ConvertToXElement(hostPart, hostElement);
@@ -1214,18 +1214,18 @@ namespace DocumentFormat.OpenXml.Tests
 
         internal GetTargetElement getElementWithMixedAttribute =
             e => e.Descendants()
-                .Where(d => d.ExtendedAttributes.Count() > 0)
+                .Where(d => d.ExtendedAttributes.Any())
                 .Where(d => d.GetAttributes().Count > d.ExtendedAttributes.Count())
                 .FirstOrDefault();
 
         internal GetTargetElement getElementWithFixedAttributeOnly =
             e => e.Descendants()
-                .Where(d => d.ExtendedAttributes.Count() == 0 && d.GetAttributes().Count > 0)
+                .Where(d => !d.ExtendedAttributes.Any() && d.GetAttributes().Count > 0)
                 .FirstOrDefault();
 
         internal GetTargetElement getElementWithExtendedAttributeOnly =
             e => e.Descendants()
-                .Where(d => d.ExtendedAttributes.Count() > 0 && d.GetAttributes().Count == 0)
+                .Where(d => d.ExtendedAttributes.Any() && d.GetAttributes().Count == 0)
                 .FirstOrDefault();
 
         internal GetTargetElement getElementWithAttributes =
@@ -1240,12 +1240,12 @@ namespace DocumentFormat.OpenXml.Tests
 
         internal GetTargetElement getElementWithNamespaceDeclarations =
             e => e.Descendants().Union(new OpenXmlElement[] { e })
-                .Where(d => d.NamespaceDeclarations.Count() > 0)
+                .Where(d => d.NamespaceDeclarations.Any())
                 .FirstOrDefault();
 
         internal GetTargetElement getElementWithoutNamespaceDeclarations =
             e => e.Descendants()
-                .Where(d => d.NamespaceDeclarations.Count() == 0)
+                .Where(d => !d.NamespaceDeclarations.Any())
                 .FirstOrDefault();
         #endregion Find Element with condition on attributes
 
@@ -1717,7 +1717,7 @@ namespace DocumentFormat.OpenXml.Tests
                     {
                         Log.Comment("Setting NamespaceDeclaration {0} with value {1}...", newNs.Key, newNs.Value);
 
-                        if (hostElement.NamespaceDeclarations.Where(e => (e.Key == newNs.Key && e.Value == newNs.Value)).Count() == 0)
+                        if (!hostElement.NamespaceDeclarations.Where(e => (e.Key == newNs.Key && e.Value == newNs.Value)).Any())
                         {
                             hostElement.AddNamespaceDeclaration(newNs.Key, newNs.Value);
 
@@ -1804,7 +1804,7 @@ namespace DocumentFormat.OpenXml.Tests
                     foreach (var ns in hostElement.NamespaceDeclarations)
                         Log.Comment("xmlns:{0} = {1}", ns.Key, ns.Value);
 
-                    Log.VerifyTrue(hostElement.NamespaceDeclarations.Where(ns => ns.Key == remove.Key).Count() == 0,
+                    Log.VerifyTrue(!hostElement.NamespaceDeclarations.Where(ns => ns.Key == remove.Key).Any(),
                         "NamespaceDeclaration {0} was NOT removed as expected.", remove.Key);
 
                     Log.Comment("Saving changes...");
@@ -1917,7 +1917,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.VerifyTrue(hostElement.ChildElements.Count == xBefore.Elements().Count(),
                     "Children element returned by OpenXmlElement {0} is different from XElement {1}", hostElement.ChildElements.Count, xBefore.Elements().Count());
 
-                var result = xBefore.Compare(XElement.Load(new StringReader(outerXml)));
+                var result = xBefore.Compare(XElement.Parse(outerXml));
                 Log.VerifyTrue(result, "OuterXml is not returned as expected.");
             }
             else
@@ -1962,13 +1962,13 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("Deep Clone ...");
                 var clone = hostElement.Clone() as OpenXmlElement;
                 string outerXml = clone.OuterXml;
-                var xAfter = XElement.Load(new StringReader(outerXml));
+                var xAfter = XElement.Parse(outerXml);
 
                 Log.Comment("Checking if XElement count vs OpenXmlElement Children Count...");
                 Log.VerifyTrue(hostElement.ChildElements.Count == xBefore.Elements().Count(),
                     "Children element returned by OpenXmlElement {0} is different from XElement {1}", hostElement.ChildElements.Count, xBefore.Elements().Count());
 
-                var result = xBefore.Compare(XElement.Load(new StringReader(outerXml)));
+                var result = xBefore.Compare(XElement.Parse(outerXml));
                 Log.VerifyTrue(result, "Pass-in element is not cloned as expected.");
             }
             else
@@ -2150,7 +2150,7 @@ namespace DocumentFormat.OpenXml.Tests
                     for (int i = 0; i < importHost.ChildElements.Count; i++)
                     {
                         var importElementOuterXml = importHost.ChildElements[i].OuterXml;
-                        VerifyEqual(XAfter, XElement.Load(new StringReader(importElementOuterXml)), i);
+                        VerifyEqual(XAfter, XElement.Parse(importElementOuterXml), i);
                     }
                 }
                 else
@@ -2202,7 +2202,7 @@ namespace DocumentFormat.OpenXml.Tests
                     hostElement.WriteTo(writer);
                 string outerXml = sb.ToString();
 
-                XElement xAfter = XElement.Load(new StringReader(outerXml));
+                XElement xAfter = XElement.Parse(outerXml);
                 Log.Comment("Checking if element count not changed...");
                 Log.VerifyTrue(xAfter.Elements().Count() == xBefore.Elements().Count(),
                     "Children element in written out {0} is different from original {1}", xAfter.Elements().Count(), xBefore.Elements().Count());
@@ -2381,7 +2381,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing all annotations for setup...");
             hostElement.RemoveAnnotations(typeof(object));
             var results = hostElement.Annotations(typeof(object));
-            if (null == results || results.Count() == 0)
+            if (null == results || !results.Any())
                 Log.Pass("Removed all annotations.");
 
             Log.Comment("Adding annotations...");
@@ -2406,7 +2406,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations(annotation.GetType());
             results = hostElement.Annotations(annotation.GetType());
-            if (null == results || results.Count() == 0)
+            if (null == results || !results.Any())
                 Log.Pass("Removed all annotations.");
         }
 
@@ -2421,7 +2421,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing all annotations for setup...");
             hostElement.RemoveAnnotations<object>();
             var results = hostElement.Annotations<object>();
-            if (null == results || results.Count() == 0)
+            if (null == results || !results.Any())
                 Log.Pass("Removed all annotations.");
 
             Log.Comment("Adding annotations...");
@@ -2446,7 +2446,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations<OpenXmlElement>();
             results = hostElement.Annotations(annotation.GetType());
-            if (null == results || results.Count() == 0)
+            if (null == results || !results.Any())
                 Log.Pass("Removed all annotations.");
         }
 
@@ -2461,7 +2461,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing all annotations for setup...");
             hostElement.RemoveAnnotations(typeof(object));
             var results = hostElement.Annotations(typeof(object));
-            if (null == results || results.Count() == 0)
+            if (null == results || !results.Any())
                 Log.Pass("Removed all annotations.");
 
             Log.Comment("Adding first child as annotation...");
@@ -2506,13 +2506,13 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing annotations of OpenXmlElement...");
             hostElement.RemoveAnnotations(typeof(OpenXmlElement));
             results = hostElement.Annotations(typeof(OpenXmlElement));
-            if (null == results || results.Count() == 0)
+            if (null == results || !results.Any())
                 Log.Pass("Removed all annotations.");
 
             Log.Comment("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations(typeof(object));
             results = hostElement.Annotations(typeof(object));
-            if (null == results || results.Count() == 0)
+            if (null == results || !results.Any())
                 Log.Pass("Removed all annotations.");
         }
 
@@ -2527,7 +2527,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing all annotations for setup...");
             hostElement.RemoveAnnotations(typeof(object));
             var results = hostElement.Annotations(typeof(object));
-            if (null == results || results.Count() == 0)
+            if (null == results || !results.Any())
                 Log.Pass("Removed all annotations.");
 
             Log.Comment("Adding collection annotations...");
@@ -2552,7 +2552,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations(annotations.GetType());
             results = hostElement.Annotations(annotations.GetType());
-            if (null == results || results.Count() == 0)
+            if (null == results || !results.Any())
                 Log.Pass("Removed all annotations.");
         }
 
@@ -2620,7 +2620,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Fail("Two List of elements have different count");
                 pass = false;
             }
-            else if (XElement.Count() == 0)
+            else if (!XElement.Any())
                 Log.Warning("0 element is encountered");
 
             if (pass)

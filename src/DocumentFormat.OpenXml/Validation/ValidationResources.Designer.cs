@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Validation {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class ValidationResources {
@@ -211,6 +211,15 @@ namespace DocumentFormat.OpenXml.Validation {
         internal static string MC_ShallNotContainAlternateContent {
             get {
                 return ResourceManager.GetString("MC_ShallNotContainAlternateContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid document error: more than one part retrieved for one URI..
+        /// </summary>
+        internal static string MoreThanOnePartForOneUri {
+            get {
+                return ResourceManager.GetString("MoreThanOnePartForOneUri", resourceCulture);
             }
         }
         

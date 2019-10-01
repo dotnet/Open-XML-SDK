@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
-                X15.Connection connection = connectionsPart.Connections.Descendants<X15.Connection>().Where(e => e.Descendants<X15.OleDbPrpoperties>().Count() > 0).First();
+                X15.Connection connection = connectionsPart.Connections.Descendants<X15.Connection>().Where(e => e.Descendants<X15.OleDbPrpoperties>().Any()).First();
                 log.Verify(connection != null, "Unable to obtain the X15.Connection");
 
                 X15.OleDbPrpoperties oleDbPrpoperties = connection.OleDbPrpoperties;

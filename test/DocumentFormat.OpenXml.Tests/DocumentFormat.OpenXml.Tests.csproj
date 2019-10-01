@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>$(TestTargetFrameworks)</TargetFrameworks>
     <IsTestProject>true</IsTestProject>
-    <NoWarn>$(NoWarn);CA1822</NoWarn>
+    <NoWarn>$(NoWarn);CA1303;CA1822;CA1062</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

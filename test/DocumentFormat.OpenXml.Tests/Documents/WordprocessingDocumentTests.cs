@@ -24,6 +24,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         protected override void DuplicateMainPart(WordprocessingDocument source, WordprocessingDocument result)
         {
+            if (source is null)
+            {
+                throw new System.ArgumentNullException(nameof(source));
+            }
+
             var part = result.AddMainDocumentPart();
             part.Document = (Document)source.MainDocumentPart.Document.CloneNode(true);
         }
