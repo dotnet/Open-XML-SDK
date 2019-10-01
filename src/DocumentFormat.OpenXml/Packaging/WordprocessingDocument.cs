@@ -13,18 +13,10 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines WordprocessingDocument - an OpenXmlPackage represents a Word document.
     /// </summary>
-    [PartConstraint(typeof(MainDocumentPart), true, false)]
-    [PartConstraint(typeof(CoreFilePropertiesPart), false, false)]
-    [PartConstraint(typeof(ExtendedFilePropertiesPart), false, false)]
-    [PartConstraint(typeof(CustomFilePropertiesPart), false, false)]
-    [PartConstraint(typeof(ThumbnailPart), false, false)]
-    [PartConstraint(typeof(DigitalSignatureOriginPart), false, false)]
-    [PartConstraint(typeof(QuickAccessToolbarCustomizationsPart), false, false)]
-    [PartConstraint(typeof(RibbonExtensibilityPart), false, false)]
-    [PartConstraint(typeof(RibbonAndBackstageCustomizationsPart), false, false)]
-    [PartConstraint(typeof(WebExTaskpanesPart), false, false)]
     public partial class WordprocessingDocument : OpenXmlPackage
     {
+        private static PartConstraintCollection _partConstraints;
+
         /// <summary>
         /// Gets the relationship type of the main part.
         /// </summary>
@@ -48,6 +40,31 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
 
                 return _validMainPartContentType;
+            }
+        }
+
+        internal override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        PartConstraintRule.Create<MainDocumentPart>(true, false),
+                        PartConstraintRule.Create<CoreFilePropertiesPart>(false, false),
+                        PartConstraintRule.Create<ExtendedFilePropertiesPart>(false, false),
+                        PartConstraintRule.Create<CustomFilePropertiesPart>(false, false),
+                        PartConstraintRule.Create<ThumbnailPart>(false, false),
+                        PartConstraintRule.Create<DigitalSignatureOriginPart>(false, false),
+                        PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false),
+                        PartConstraintRule.Create<RibbonExtensibilityPart>(false, false),
+                        PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false),
+                        PartConstraintRule.Create<WebExTaskpanesPart>(false, false),
+                    };
+                }
+
+                return _partConstraints;
             }
         }
 
