@@ -11,33 +11,10 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the WorkbookPart
     /// </summary>
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(CustomXmlPart), false, true)]
-    [PartConstraint(typeof(CalculationChainPart), false, false)]
-    [PartConstraint(typeof(CellMetadataPart), false, false)]
-    [PartConstraint(typeof(ConnectionsPart), false, false)]
-    [PartConstraint(typeof(CustomXmlMappingsPart), false, false)]
-    [PartConstraint(typeof(SharedStringTablePart), false, false)]
-    [PartConstraint(typeof(WorkbookRevisionHeaderPart), false, false)]
-    [PartConstraint(typeof(WorkbookUserDataPart), false, false)]
-    [PartConstraint(typeof(WorkbookStylesPart), false, false)]
-    [PartConstraint(typeof(ThemePart), false, false)]
-    [PartConstraint(typeof(ThumbnailPart), false, false)]
-    [PartConstraint(typeof(VolatileDependenciesPart), false, false)]
-    [PartConstraint(typeof(ChartsheetPart), false, true)]
-    [PartConstraint(typeof(DialogsheetPart), false, true)]
-    [PartConstraint(typeof(ExternalWorkbookPart), false, true)]
-    [PartConstraint(typeof(PivotTableCacheDefinitionPart), false, true)]
-    [PartConstraint(typeof(WorksheetPart), false, true)]
-    [PartConstraint(typeof(ExcelAttachedToolbarsPart), false, false)]
-    [PartConstraint(typeof(VbaProjectPart), false, false)]
-    [PartConstraint(typeof(MacroSheetPart), false, true)]
-    [PartConstraint(typeof(InternationalMacroSheetPart), false, true)]
-    [PartConstraint(typeof(CustomDataPropertiesPart), false, true)]
-    [PartConstraint(typeof(SlicerCachePart), false, true)]
-    [PartConstraint(typeof(TimeLineCachePart), false, true)]
     public partial class WorkbookPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
+        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Spreadsheet.Workbook _rootElement;
 
         /// <summary>
@@ -119,6 +96,46 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the MacroSheetParts of the WorkbookPart
         /// </summary>
         public IEnumerable<MacroSheetPart> MacroSheetParts => GetPartsOfType<MacroSheetPart>();
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        PartConstraintRule.Create<CustomXmlPart>(false, true),
+                        PartConstraintRule.Create<CalculationChainPart>(false, false),
+                        PartConstraintRule.Create<CellMetadataPart>(false, false),
+                        PartConstraintRule.Create<ConnectionsPart>(false, false),
+                        PartConstraintRule.Create<CustomXmlMappingsPart>(false, false),
+                        PartConstraintRule.Create<SharedStringTablePart>(false, false),
+                        PartConstraintRule.Create<WorkbookRevisionHeaderPart>(false, false),
+                        PartConstraintRule.Create<WorkbookUserDataPart>(false, false),
+                        PartConstraintRule.Create<WorkbookStylesPart>(false, false),
+                        PartConstraintRule.Create<ThemePart>(false, false),
+                        PartConstraintRule.Create<ThumbnailPart>(false, false),
+                        PartConstraintRule.Create<VolatileDependenciesPart>(false, false),
+                        PartConstraintRule.Create<ChartsheetPart>(false, true),
+                        PartConstraintRule.Create<DialogsheetPart>(false, true),
+                        PartConstraintRule.Create<ExternalWorkbookPart>(false, true),
+                        PartConstraintRule.Create<PivotTableCacheDefinitionPart>(false, true),
+                        PartConstraintRule.Create<WorksheetPart>(false, true),
+                        PartConstraintRule.Create<ExcelAttachedToolbarsPart>(false, false),
+                        PartConstraintRule.Create<VbaProjectPart>(false, false),
+                        PartConstraintRule.Create<MacroSheetPart>(false, true),
+                        PartConstraintRule.Create<InternationalMacroSheetPart>(false, true),
+                        PartConstraintRule.Create<CustomDataPropertiesPart>(false, true),
+                        PartConstraintRule.Create<SlicerCachePart>(false, true),
+                        PartConstraintRule.Create<TimeLineCachePart>(false, true)
+                    };
+                }
+
+                return _partConstraints;
+            }
+        }
 
         internal override OpenXmlPartRootElement PartRootElement => Workbook;
 

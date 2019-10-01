@@ -25,7 +25,6 @@ namespace DocumentFormat.OpenXml.Framework
         private readonly TypeConcurrentDictionary<Func<OpenXmlSimpleType>> _simpleTypeFactory = new TypeConcurrentDictionary<Func<OpenXmlSimpleType>>();
         private readonly TypeConcurrentDictionary<Func<OpenXmlElement>> _elementFactory = new TypeConcurrentDictionary<Func<OpenXmlElement>>();
         private readonly TypeConcurrentDictionary<OpenXmlElementData> _elementData = new TypeConcurrentDictionary<OpenXmlElementData>();
-        private readonly TypeConcurrentDictionary<OpenXmlPartData> _partData = new TypeConcurrentDictionary<OpenXmlPartData>();
 
         public static PackageCache Cache { get; } = new PackageCache();
 
@@ -46,11 +45,6 @@ namespace DocumentFormat.OpenXml.Framework
         }
 
         /// <summary>
-        /// Extract the part constraints from a given container.
-        /// </summary>
-        public OpenXmlPartData ParsePartData(OpenXmlPartContainer part) => _partData.GetOrAdd(part.GetType(), CreatePartData);
-
-        /// <summary>
         /// Extract attribute, child elements, and other metadata from elements. If possible, use <see cref="ParseElementData(OpenXmlElement)"/>.
         /// </summary>
         public OpenXmlElementData ParseElementData(Type type) => _elementData.GetOrAdd(type, CreateElementData);
@@ -59,8 +53,6 @@ namespace DocumentFormat.OpenXml.Framework
         /// Extract attribute, child elements, and other metadata from elements
         /// </summary>
         public OpenXmlElementData ParseElementData(OpenXmlElement element) => ParseElementData(element.GetType());
-
-        private OpenXmlPartData CreatePartData(Type type) => new OpenXmlPartData(type, ParseElementData);
 
         private OpenXmlElementData CreateElementData(Type type) => new OpenXmlElementData(type, this);
 

@@ -12,14 +12,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(SpreadsheetPrinterSettingsPart), false, true)]
-    [PartConstraint(typeof(DrawingsPart), false, false)]
-    [PartConstraint(typeof(VmlDrawingPart), false, true)]
-    [PartConstraint(typeof(ImagePart), false, true)]
     public partial class ChartsheetPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet";
+        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Spreadsheet.Chartsheet _rootElement;
 
         /// <summary>
@@ -78,6 +75,26 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Chartsheet;
+            }
+        }
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        PartConstraintRule.Create<SpreadsheetPrinterSettingsPart>(false, true),
+                        PartConstraintRule.Create<DrawingsPart>(false, false),
+                        PartConstraintRule.Create<VmlDrawingPart>(false, true),
+                        PartConstraintRule.Create<ImagePart>(false, true)
+                    };
+                }
+
+                return _partConstraints;
             }
         }
 

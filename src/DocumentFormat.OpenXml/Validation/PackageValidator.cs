@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Validation
                 }
 
                 if (!(container is ExtendedPart) &&
-                    !container.Data.PartConstraints.ContainsRelationship(part.RelationshipType) &&
+                    !container.PartConstraints.ContainsRelationship(part.RelationshipType) &&
                     part.IsInVersion(version))
                 {
                     yield return new OpenXmlPackageValidationEventArgs(container)
@@ -107,7 +107,7 @@ namespace DocumentFormat.OpenXml.Validation
                 // if the part is not defined in this version, then should not report error, just treat it as ExtendedPart.
             }
 
-            foreach (var constraintRulePair in container.Data.PartConstraints)
+            foreach (var constraintRulePair in container.PartConstraints)
             {
                 var relatinshipType = constraintRulePair.Key;
                 var constraintRule = constraintRulePair.Value;
@@ -160,7 +160,7 @@ namespace DocumentFormat.OpenXml.Validation
                 {
                     if (!(part is ExtendedPart))
                     {
-                        if (container.Data.PartConstraints.TryGetValue(part.RelationshipType, out var rule))
+                        if (container.PartConstraints.TryGetValue(part.RelationshipType, out var rule))
                         {
                             if (version.AtLeast(rule.FileFormat))
                             {
@@ -211,11 +211,11 @@ namespace DocumentFormat.OpenXml.Validation
 
         private static IEnumerable<OpenXmlPackageValidationEventArgs> ValidateDataPartReferenceRelationships(OpenXmlPartContainer container, FileFormatVersions version)
         {
-            // At current, only media / audio / video reference. There are all [0, unbounded].
+            // At current, only media / audio / video reference. These are all [0, unbounded].
             // So just check whether the reference is allowed.
             foreach (var dataPartReference in container.DataPartReferenceRelationships)
             {
-                if (!container.Data.DataPartReferenceConstraints.TryGetValue(dataPartReference.RelationshipType, out var constraintRule))
+                if (!container.DataPartReferenceConstraints.TryGetValue(dataPartReference.RelationshipType, out var constraintRule))
                 {
                     yield return new OpenXmlPackageValidationEventArgs(container)
                     {

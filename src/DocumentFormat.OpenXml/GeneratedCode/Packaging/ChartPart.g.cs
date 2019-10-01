@@ -12,16 +12,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(ChartDrawingPart), false, false)]
-    [PartConstraint(typeof(EmbeddedPackagePart), false, false)]
-    [PartConstraint(typeof(ImagePart), false, true)]
-    [PartConstraint(typeof(ThemeOverridePart), false, false)]
-    [PartConstraint(typeof(ChartStylePart), false, true)]
-    [PartConstraint(typeof(ChartColorStylePart), false, true)]
     public partial class ChartPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.chart+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart";
+        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Drawing.Charts.ChartSpace _rootElement;
 
         /// <summary>
@@ -95,6 +90,28 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Drawing.Charts.ChartSpace;
+            }
+        }
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        PartConstraintRule.Create<ChartDrawingPart>(false, false),
+                        PartConstraintRule.Create<EmbeddedPackagePart>(false, false),
+                        PartConstraintRule.Create<ImagePart>(false, true),
+                        PartConstraintRule.Create<ThemeOverridePart>(false, false),
+                        PartConstraintRule.Create<ChartStylePart>(false, true),
+                        PartConstraintRule.Create<ChartColorStylePart>(false, true)
+                    };
+                }
+
+                return _partConstraints;
             }
         }
 

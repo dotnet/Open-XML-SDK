@@ -12,11 +12,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(ImagePart), false, true)]
     public partial class DiagramLayoutDefinitionPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout";
+        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinition _rootElement;
 
         /// <summary>
@@ -70,6 +70,23 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
 
                 SetDomTree(value);
+            }
+        }
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        PartConstraintRule.Create<ImagePart>(false, true)
+                    };
+                }
+
+                return _partConstraints;
             }
         }
 

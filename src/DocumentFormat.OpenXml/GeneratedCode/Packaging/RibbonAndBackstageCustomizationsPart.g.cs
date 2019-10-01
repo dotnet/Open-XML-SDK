@@ -13,11 +13,11 @@ namespace DocumentFormat.OpenXml.Packaging
     [OfficeAvailability(FileFormatVersions.Office2010)]
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(ImagePart), false, true)]
     public partial class RibbonAndBackstageCustomizationsPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility";
+        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Office2010.CustomUI.CustomUI _rootElement;
 
         /// <summary>
@@ -71,6 +71,23 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Office2010.CustomUI.CustomUI;
+            }
+        }
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        PartConstraintRule.Create<ImagePart>(false, true)
+                    };
+                }
+
+                return _partConstraints;
             }
         }
 

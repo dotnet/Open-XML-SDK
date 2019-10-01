@@ -12,11 +12,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(QueryTablePart), false, true)]
     public partial class TableDefinitionPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.table+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/table";
+        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Spreadsheet.Table _rootElement;
 
         /// <summary>
@@ -39,6 +39,23 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Table;
+            }
+        }
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        PartConstraintRule.Create<QueryTablePart>(false, true)
+                    };
+                }
+
+                return _partConstraints;
             }
         }
 

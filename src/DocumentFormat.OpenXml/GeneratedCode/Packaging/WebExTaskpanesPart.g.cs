@@ -13,11 +13,11 @@ namespace DocumentFormat.OpenXml.Packaging
     [OfficeAvailability(FileFormatVersions.Office2013)]
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(WebExtensionPart), false, true)]
     public partial class WebExTaskpanesPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.webextensiontaskpanes+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes";
+        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Office2013.WebExtentionPane.Taskpanes _rootElement;
 
         /// <summary>
@@ -40,6 +40,23 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Office2013.WebExtentionPane.Taskpanes;
+            }
+        }
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        PartConstraintRule.Create<WebExtensionPart>(false, true)
+                    };
+                }
+
+                return _partConstraints;
             }
         }
 

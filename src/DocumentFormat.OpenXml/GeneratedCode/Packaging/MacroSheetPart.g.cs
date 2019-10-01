@@ -12,18 +12,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(SpreadsheetPrinterSettingsPart), false, true)]
-    [PartConstraint(typeof(DrawingsPart), false, false)]
-    [PartConstraint(typeof(VmlDrawingPart), false, true)]
-    [PartConstraint(typeof(WorksheetCommentsPart), false, false)]
-    [PartConstraint(typeof(CustomPropertyPart), false, true)]
-    [PartConstraint(typeof(EmbeddedObjectPart), false, true)]
-    [PartConstraint(typeof(EmbeddedPackagePart), false, true)]
-    [PartConstraint(typeof(ImagePart), false, true)]
     public partial class MacroSheetPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.macrosheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet";
+        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Office.Excel.Macrosheet _rootElement;
 
         /// <summary>
@@ -97,6 +90,30 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
 
                 SetDomTree(value);
+            }
+        }
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        PartConstraintRule.Create<SpreadsheetPrinterSettingsPart>(false, true),
+                        PartConstraintRule.Create<DrawingsPart>(false, false),
+                        PartConstraintRule.Create<VmlDrawingPart>(false, true),
+                        PartConstraintRule.Create<WorksheetCommentsPart>(false, false),
+                        PartConstraintRule.Create<CustomPropertyPart>(false, true),
+                        PartConstraintRule.Create<EmbeddedObjectPart>(false, true),
+                        PartConstraintRule.Create<EmbeddedPackagePart>(false, true),
+                        PartConstraintRule.Create<ImagePart>(false, true)
+                    };
+                }
+
+                return _partConstraints;
             }
         }
 

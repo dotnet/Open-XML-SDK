@@ -23,14 +23,6 @@ namespace DocumentFormat.OpenXml.Packaging
         private object _annotations;
 
         /// <summary>
-        /// Initializes OpenXmlPartContainer.
-        /// </summary>
-        protected OpenXmlPartContainer()
-        {
-            Data = PackageCache.Cache.ParsePartData(this);
-        }
-
-        /// <summary>
         /// Gets the children parts IDictionary.
         /// </summary>
         internal Dictionary<string, OpenXmlPart> ChildrenRelationshipParts
@@ -1399,7 +1391,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException);
             }
 
-            if (Data.PartConstraints.TryGetValue(newPart.RelationshipType, out var partConstraintRule))
+            if (PartConstraints.TryGetValue(newPart.RelationshipType, out var partConstraintRule))
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
@@ -1478,7 +1470,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
 
-            if (!Data.PartConstraints.TryGetValue(subPart.RelationshipType, out var partConstraintRule))
+            if (!PartConstraints.TryGetValue(subPart.RelationshipType, out var partConstraintRule))
             {
                 if (subPart is ExtendedPart) // || subPart is ExtensionPart)
                 {
@@ -1956,7 +1948,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             OpenXmlPart part = null;
 
-            if (Data.PartConstraints.ContainsRelationship(relationshipType))
+            if (PartConstraints.ContainsRelationship(relationshipType))
             {
                 part = CreatePartCore(relationshipType);
             }
@@ -2059,7 +2051,9 @@ namespace DocumentFormat.OpenXml.Packaging
 
         abstract internal OpenXmlPart ThisOpenXmlPart { get; }
 
-        internal OpenXmlPartData Data { get; }
+        virtual internal PartConstraintCollection PartConstraints { get; } = PartConstraintCollection.Instance;
+
+        virtual internal PartConstraintCollection DataPartReferenceConstraints { get; } = PartConstraintCollection.Instance;
 
         /// <summary>
         /// Test whether the object is already disposed.

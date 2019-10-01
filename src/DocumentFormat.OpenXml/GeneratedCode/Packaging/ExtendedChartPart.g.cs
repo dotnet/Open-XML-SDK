@@ -12,16 +12,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(ChartDrawingPart), false, false)]
-    [PartConstraint(typeof(EmbeddedPackagePart), false, false)]
-    [PartConstraint(typeof(ImagePart), false, true)]
-    [PartConstraint(typeof(ThemeOverridePart), false, false)]
-    [PartConstraint(typeof(ChartStylePart), false, true)]
-    [PartConstraint(typeof(ChartColorStylePart), false, true)]
     public partial class ExtendedChartPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.chartex+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2014/relationships/chartEx";
+        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Creates an instance of the ExtendedChartPart OpenXmlType
@@ -57,6 +52,28 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ImageParts of the ExtendedChartPart
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        PartConstraintRule.Create<ChartDrawingPart>(false, false),
+                        PartConstraintRule.Create<EmbeddedPackagePart>(false, false),
+                        PartConstraintRule.Create<ImagePart>(false, true),
+                        PartConstraintRule.Create<ThemeOverridePart>(false, false),
+                        PartConstraintRule.Create<ChartStylePart>(false, true),
+                        PartConstraintRule.Create<ChartColorStylePart>(false, true)
+                    };
+                }
+
+                return _partConstraints;
+            }
+        }
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

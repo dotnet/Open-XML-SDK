@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Packaging;
 using System;
 
 namespace DocumentFormat.OpenXml.Framework
@@ -18,6 +19,11 @@ namespace DocumentFormat.OpenXml.Framework
 
             MinOccursIsNonZero = minOccursIsNonZero;
             MaxOccursGreatThanOne = maxOccursGreatThanOne;
+        }
+
+        public static PartConstraintRule Create<T>(bool minOccursIsNonZero, bool maxOccursGreatThanOne)
+        {
+            return new PartConstraintRule(ElementTypeInfo.Create(typeof(T)), minOccursIsNonZero, maxOccursGreatThanOne);
         }
 
         /// <summary>

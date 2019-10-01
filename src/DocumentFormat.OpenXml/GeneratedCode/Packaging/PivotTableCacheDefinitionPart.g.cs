@@ -12,11 +12,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(PivotTableCacheRecordsPart), false, false)]
     public partial class PivotTableCacheDefinitionPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition";
+        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinition _rootElement;
 
         /// <summary>
@@ -39,6 +39,23 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinition;
+            }
+        }
+
+        /// <inheritdoc/>
+        internal sealed override PartConstraintCollection PartConstraints
+        {
+            get
+            {
+                if (_partConstraints is null)
+                {
+                    _partConstraints = new PartConstraintCollection
+                    {
+                        PartConstraintRule.Create<PivotTableCacheRecordsPart>(false, false)
+                    };
+                }
+
+                return _partConstraints;
             }
         }
 

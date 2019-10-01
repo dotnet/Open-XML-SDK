@@ -4,8 +4,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Framework
 {
@@ -18,26 +16,6 @@ namespace DocumentFormat.OpenXml.Framework
         public PartConstraintCollection()
             : this(true)
         {
-        }
-
-        public static PartConstraintCollection Create<T>(Func<Type, OpenXmlElementData> dataFactory, Type type)
-            where T : IConstraintAttribute
-        {
-            var collection = new PartConstraintCollection();
-
-            foreach (var constraint in type.GetTypeInfo().GetCustomAttributes(inherit: false).OfType<T>())
-            {
-                collection.Add(new PartConstraintRule(dataFactory(constraint.ConstraintType).Info, constraint.MinOccursIsNonZero, constraint.MaxOccursGreatThanOne));
-            }
-
-            if (collection.Count == 0)
-            {
-                return Instance;
-            }
-
-            collection._writeable = false;
-
-            return collection;
         }
 
         public static PartConstraintCollection Instance { get; } = new PartConstraintCollection(false);

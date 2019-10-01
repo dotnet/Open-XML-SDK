@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (Data.PartConstraints.TryGetValue(relationshipType, out var partConstraintRule))
+            if (PartConstraints.TryGetValue(relationshipType, out var partConstraintRule))
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
