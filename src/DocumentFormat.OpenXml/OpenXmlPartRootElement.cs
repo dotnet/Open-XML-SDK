@@ -83,6 +83,11 @@ namespace DocumentFormat.OpenXml
         /// <exception cref="InvalidDataException">Thrown when the part contains an incorrect root element.</exception>
         internal void LoadFromPart(OpenXmlPart openXmlPart)
         {
+            if (openXmlPart is null)
+            {
+                throw new ArgumentNullException(nameof(openXmlPart));
+            }
+
             using (Stream partStream = openXmlPart.GetStream(FileMode.Open))
             {
                 LoadFromPart(openXmlPart, partStream);

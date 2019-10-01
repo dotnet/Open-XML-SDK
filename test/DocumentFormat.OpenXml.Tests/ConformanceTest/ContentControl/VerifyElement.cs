@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                         case ConstStr.TestTagStrings.TagContent11:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
                             var sectionTitles = sdtBlock.Descendants<W15.SectionTitle>();
-                            if (sectionTitles.Count() > 0)
+                            if (sectionTitles.Any())
                             {
                                 log.VerifySubString(
                                     sectionTitles.First().Val,

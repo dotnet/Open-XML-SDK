@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// </summary>
         /// <param name="e">OpenXmlElement or derived classes that has properties with SchemaAttrAttribute</param>
         /// <returns>IEnumerable<OpenXmlAttribute> for fixed attributes of type of pass-in OpenXmlElement</returns>
-        public static IEnumerable<OpenXmlAttribute> GetFixedAttributes(this OpenXmlElement e) => e.Attributes;
+        public static IEnumerable<OpenXmlAttribute> GetFixedAttributes(this OpenXmlElement e) => e?.Attributes;
 
         /// <summary>
         /// Get XName of pass-in OpenXmlElement.
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             if (element == null)
                 throw new ArgumentNullException(nameof(element));
-            return XElement.Load(new StringReader(element.OuterXml));
+            return XElement.Parse(element.OuterXml);
         }
 
         public static OpenXmlElement SetIgnorable(this OpenXmlElement element, string prefix)

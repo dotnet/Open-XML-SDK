@@ -55,9 +55,9 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Initializes a new instance of the ListValue class by deep copying the supplied ListValue class.
         /// </summary>
-        /// <param name="source">The source ListValue class.</param>
-        public ListValue(ListValue<T> source)
-            : this(source.Items)
+        /// <param name="list">The source ListValue class.</param>
+        public ListValue(ListValue<T> list)
+            : this(list?.Items)
         {
         }
 

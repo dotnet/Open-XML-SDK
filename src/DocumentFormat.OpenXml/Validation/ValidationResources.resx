@@ -336,4 +336,7 @@
   <data name="Pkg_DataPartReferenceIsNotAllowed" xml:space="preserve">
     <value>The package/part '{0}' cannot have a relationship that targets '{1}'.</value>
   </data>
+  <data name="MoreThanOnePartForOneUri" xml:space="preserve">
+    <value>Invalid document error: more than one part retrieved for one URI.</value>
+  </data>
 </root>

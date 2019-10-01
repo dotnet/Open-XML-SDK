@@ -139,38 +139,39 @@ namespace DocumentFormat.OpenXml.Tests
         public void WriteStartElementWithOpenXmlReaderAttr()
         {
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
-            OpenXmlReader reader = OpenXmlReader.Create(p);
-            reader.Read();
 
-            TestWriteStartElement(WConstrWithStream, WriteStartE, reader, GetTestAttributes(), null);
+            using (OpenXmlReader reader = OpenXmlReader.Create(p))
+            {
+                reader.Read();
+
+                TestWriteStartElement(WConstrWithStream, WriteStartE, reader, GetTestAttributes(), null);
+            }
         }
 
         [Fact]
         public void WriteStartElementWithOpenXmlReader()
         {
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
-            OpenXmlReader reader = OpenXmlReader.Create(p);
-            reader.Read();
 
-            TestWriteStartElement(WConstrWithStream, WriteStartE, reader, null, null);
+            using (OpenXmlReader reader = OpenXmlReader.Create(p))
+            {
+                reader.Read();
+
+                TestWriteStartElement(WConstrWithStream, WriteStartE, reader, null, null);
+            }
         }
 
         [Fact]
         public void WriteStartElementWithEndElementReader()
         {
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
-            OpenXmlReader reader = OpenXmlReader.Create(p);
-            reader.Read();
-            reader.LoadCurrentElement();
 
-            try
+            using (OpenXmlReader reader = OpenXmlReader.Create(p))
             {
-                TestWriteStartElement(WConstrWithStream, WriteStartE, reader, null, null);
-                Log.VerifyShouldNotReachHere("expected ArgumentOutOfRangeException is not thrown");
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                Log.Pass("Expected ArgumentOutOfRangeException is thrown");
+                reader.Read();
+                reader.LoadCurrentElement();
+
+                Assert.Throws<ArgumentOutOfRangeException>(() => TestWriteStartElement(WConstrWithStream, WriteStartE, reader, null, null));
             }
         }
 

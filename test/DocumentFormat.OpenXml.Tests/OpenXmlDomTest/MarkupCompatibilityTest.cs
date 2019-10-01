@@ -431,7 +431,7 @@ namespace DocumentFormat.OpenXml.Tests
                         var host = part
                             .RootElement()
                             .Descendants()
-                            .PickFirst(d => d.HasAttributes && d.ExtendedAttributes.Count() == 0);
+                            .PickFirst(d => d.HasAttributes && !d.ExtendedAttributes.Any());
 
                         var knownAttribute = host.GetAttributes().First();
 
@@ -470,7 +470,7 @@ namespace DocumentFormat.OpenXml.Tests
                         var dom = part.RootElement();
                         var host = dom
                             .Descendants()
-                            .PickFirst(d => d.HasAttributes && d.ExtendedAttributes.Count() == 0);
+                            .PickFirst(d => d.HasAttributes && !d.ExtendedAttributes.Any());
 
                         var knownAttribute = host.GetAttributes().First();
                         host.SetIgnorable(knownAttribute.Prefix);
@@ -505,7 +505,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var dom = part.RootElement();
                 var host = dom
                     .Descendants()
-                    .PickFirst(d => d.HasAttributes && d.ExtendedAttributes.Count() == 0);
+                    .PickFirst(d => d.HasAttributes && !d.ExtendedAttributes.Any());
 
                 var knownAttribute2 = host.GetAttributes().First();
                 host.SetIgnorable(knownAttribute2.Prefix);

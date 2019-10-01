@@ -1,4 +1,9 @@
 steps:
+  - task: UseDotNet@2
+    displayName: 'Install SDK'
+    inputs:
+      packageType: 'sdk'
+      useGlobalJson: true
   - task: PowerShell@2
     displayName: 'Update version'
     inputs:

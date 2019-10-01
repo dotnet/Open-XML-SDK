@@ -57,7 +57,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                 using (var reader = XmlReader.Create(new StringReader(xml)))
                 {
                     Assert.True(reader.Read());
-                    element.LoadAttributes(new XmlConvertingReader(reader, true));
+
+                    using (var converting = new XmlConvertingReader(reader, true))
+                    {
+                        element.LoadAttributes(converting);
+                    }
                 }
 
                 var attribute2 = Assert.Single(element.GetAttributes());

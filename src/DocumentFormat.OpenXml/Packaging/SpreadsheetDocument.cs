@@ -255,6 +255,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static SpreadsheetDocument Open(string path, bool isEditable, OpenSettings openSettings)
         {
+            if (openSettings is null)
+            {
+                throw new ArgumentNullException(nameof(openSettings));
+            }
+
             if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess
                 && !openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
             {
@@ -287,8 +292,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="IOException">Thrown when "stream" is not opened with Read (ReadWrite) access.</exception>
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML SpreadsheetDocument.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
-        public static SpreadsheetDocument Open(System.IO.Stream stream, bool isEditable, OpenSettings openSettings)
+        public static SpreadsheetDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
         {
+            if (openSettings is null)
+            {
+                throw new ArgumentNullException(nameof(openSettings));
+            }
+
             if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess
                 && !openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
             {
@@ -322,6 +332,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static SpreadsheetDocument Open(Package package, OpenSettings openSettings)
         {
+            if (openSettings is null)
+            {
+                throw new ArgumentNullException(nameof(openSettings));
+            }
+
             if (openSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess
                 && !openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
             {
