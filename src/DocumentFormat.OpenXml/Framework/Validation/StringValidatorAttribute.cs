@@ -20,6 +20,11 @@ namespace DocumentFormat.OpenXml.Framework
         private static readonly XmlQualifiedName _ncName = new XmlQualifiedName("NCName", "http://www.w3.org/2001/XMLSchema");
         private static readonly XmlQualifiedName _qname = new XmlQualifiedName("QName", "http://www.w3.org/2001/XMLSchema");
 
+        private long? _minLength;
+        private long? _maxLength;
+        private long? _length;
+        private Regex _regex;
+
         public XmlQualifiedName QName
         {
             get
@@ -52,11 +57,6 @@ namespace DocumentFormat.OpenXml.Framework
                 return null;
             }
         }
-
-        private long? _minLength;
-        private long? _maxLength;
-        private long? _length;
-        private Regex _regex;
 
         public Regex Regex
         {
@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml.Framework
             set => _length = value;
         }
 
-        protected override void ValidateVersion(ValidatorContext context)
+        protected override void ValidateVersion(in ValidatorElementContext context)
         {
             if (context.Value is StringValue str)
             {
@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        private void Validate(StringValue str, ValidatorContext context, bool includeDetails)
+        private void Validate(StringValue str, in ValidatorElementContext context, bool includeDetails)
         {
             var id = context.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
             var description = context.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
@@ -137,14 +137,14 @@ namespace DocumentFormat.OpenXml.Framework
             {
                 if (string.IsNullOrEmpty(str.InnerText))
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(description, context.QName, context.Value.InnerText, context.IsAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue),
                         errorType: ValidationErrorType.Schema);
                 }
                 else
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(description, context.QName, context.Value.InnerText, SR.Format(ValidationResources.Sch_StringIsNotValidValue, str.InnerText, context.TypeQName)),
                         errorType: ValidationErrorType.Schema);
@@ -162,7 +162,7 @@ namespace DocumentFormat.OpenXml.Framework
                 }
                 else
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(description, context.QName, context.Value.InnerText, SR.Format(ValidationResources.Sch_StringIsNotValidValue, context.Value.InnerText, _id)),
                         errorType: ValidationErrorType.Schema);
@@ -179,7 +179,7 @@ namespace DocumentFormat.OpenXml.Framework
                     }
                     else
                     {
-                        context.CreateError(
+                        context.AddError(
                             id: id,
                             description: SR.Format(description, context.QName, context.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, context.Value, _ncName)),
                             errorType: ValidationErrorType.Schema);
@@ -187,7 +187,7 @@ namespace DocumentFormat.OpenXml.Framework
                 }
                 else if (context.Value.InnerText.Length > 255)
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(ValidationResources.Sch_MaxLengthConstraintFailed, "NCName", 255),
                         errorType: ValidationErrorType.Schema);
@@ -202,7 +202,7 @@ namespace DocumentFormat.OpenXml.Framework
                 }
                 else
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(description, context.QName, context.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, context.Value, _qname)),
                         errorType: ValidationErrorType.Schema);
@@ -210,7 +210,7 @@ namespace DocumentFormat.OpenXml.Framework
             }
             else if (IsToken && !TokenRestriction.VerifyTOKEN(str.InnerText))
             {
-                context.CreateError(
+                context.AddError(
                     id: id,
                     description: SR.Format(description, context.QName, context.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, context.Value, _token)),
                     errorType: ValidationErrorType.Schema);
@@ -224,7 +224,7 @@ namespace DocumentFormat.OpenXml.Framework
                 }
                 else
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(description, context.QName, str.InnerText, SR.Format(ValidationResources.Sch_StringIsNotValidValue, str.InnerText, "Uri")),
                         errorType: ValidationErrorType.Schema);
@@ -232,7 +232,7 @@ namespace DocumentFormat.OpenXml.Framework
             }
             else if (Regex is Regex regex && !regex.IsMatch(str.Value))
             {
-                context.CreateError(
+                context.AddError(
                     id: id,
                     description: SR.Format(description, context.QName, context.Value.InnerText, includeDetails ? SR.Format(ValidationResources.Sch_PatternConstraintFailed, Pattern) : string.Empty),
                     errorType: ValidationErrorType.Schema);
@@ -242,14 +242,14 @@ namespace DocumentFormat.OpenXml.Framework
             {
                 if (str.Length == 0)
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: context.IsAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue,
                         errorType: ValidationErrorType.Schema);
                 }
                 else
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(description, context.QName, context.Value, SR.Format(ValidationResources.Sch_LengthConstraintFailed, context.TypeQName.Name, Length)),
                         errorType: ValidationErrorType.Schema);
@@ -257,7 +257,7 @@ namespace DocumentFormat.OpenXml.Framework
             }
             else if (_maxLength.HasValue && str.Length > MaxLength)
             {
-                context.CreateError(
+                context.AddError(
                     id: id,
                     description: SR.Format(description, context.QName, context.Value, SR.Format(ValidationResources.Sch_MaxLengthConstraintFailed, context.TypeQName.Name, MaxLength)),
                     errorType: ValidationErrorType.Schema);
@@ -266,14 +266,14 @@ namespace DocumentFormat.OpenXml.Framework
             {
                 if (str.Length == 0)
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(description, context.QName.Name, str.InnerText, ValidationResources.Sch_EmptyAttributeValue),
                         errorType: ValidationErrorType.Schema);
                 }
                 else
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(description, context.QName, context.Value, SR.Format(ValidationResources.Sch_MinLengthConstraintFailed, context.TypeQName.Name, MinLength)),
                         errorType: ValidationErrorType.Schema);
@@ -281,9 +281,9 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        private static void InvalidEmpty(ValidatorContext context, string id, string description)
+        private static void InvalidEmpty(in ValidatorElementContext context, string id, string description)
         {
-            context.CreateError(
+            context.AddError(
                 id: id,
                 description: SR.Format(description, context.QName, context.Value.InnerText, ValidationResources.Sch_EmptyAttributeValue),
                 errorType: ValidationErrorType.Schema);

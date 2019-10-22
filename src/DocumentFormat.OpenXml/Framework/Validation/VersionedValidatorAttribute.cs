@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public Type SimpleType { get; set; }
 
-        public void Validate(ValidatorContext context)
+        public void Validate(in ValidatorElementContext context)
         {
             if (IsValid(context.Version))
             {
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        protected OpenXmlSimpleType GetValue(ValidatorContext context)
+        protected OpenXmlSimpleType GetValue(in ValidatorElementContext context)
         {
             var input = context.Value;
 
@@ -84,6 +84,6 @@ namespace DocumentFormat.OpenXml.Framework
             return output;
         }
 
-        protected abstract void ValidateVersion(ValidatorContext context);
+        protected abstract void ValidateVersion(in ValidatorElementContext context);
     }
 }

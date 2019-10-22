@@ -5,6 +5,6 @@ namespace DocumentFormat.OpenXml.Framework
 {
     internal interface IOpenXmlSimpleTypeValidator
     {
-        void Validate(ValidatorContext context);
+        void Validate(in ValidatorElementContext context);
     }
 }

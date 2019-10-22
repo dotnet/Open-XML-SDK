@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Framework
         {
         }
 
-        public void Validate(ValidatorContext context)
+        public void Validate(in ValidatorElementContext context)
         {
             var value = context.Value;
 
@@ -29,14 +29,14 @@ namespace DocumentFormat.OpenXml.Framework
 
                 if (string.IsNullOrEmpty(value.InnerText))
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(description, context.QName, context.Value.InnerText, context.IsAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue),
                         errorType: ValidationErrorType.Schema);
                 }
                 else
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(description, context.QName, context.Value.InnerText, string.Empty),
                         errorType: ValidationErrorType.Schema);

@@ -28,11 +28,11 @@ namespace DocumentFormat.OpenXml
             OfficeVersion = officeVersion;
         }
 
-        void IOpenXmlSimpleTypeValidator.Validate(ValidatorContext context)
+        void IOpenXmlSimpleTypeValidator.Validate(in ValidatorElementContext context)
         {
             if (!context.Version.AtLeast(OfficeVersion) && context.Value?.HasValue == true && !context.McContext.IsIgnorableNs(context.QName.Namespace))
             {
-                context.CreateError(
+                context.AddError(
                     id: "Sch_UndeclaredAttribute",
                     description: SR.Format(ValidationResources.Sch_UndeclaredAttribute, context.QName),
                     errorType: ValidationErrorType.Schema);

@@ -88,9 +88,9 @@ namespace DocumentFormat.OpenXml.Validation
         /// </summary>
         public int MaxNumberOfErrors { get; set; }
 
-        public ValidatorContext ToContext(OpenXmlSimpleType simple, ElementProperty<OpenXmlSimpleType> state, bool isAttribute)
+        public ValidatorElementContext ToContext(OpenXmlSimpleType simple, ElementProperty<OpenXmlSimpleType> state, bool isAttribute)
         {
-            return new ValidatorContext(simple, FileFormat, Part, Element, state, isAttribute, McContext, AddError);
+            return new ValidatorElementContext(simple, this, state, isAttribute, AddError);
         }
 
         public void AddError(ValidationErrorInfo error)

@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        protected override void ValidateVersion(ValidatorContext context)
+        protected override void ValidateVersion(in ValidatorElementContext context)
         {
             var id = context.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
             var description = context.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
@@ -85,14 +85,14 @@ namespace DocumentFormat.OpenXml.Framework
             {
                 if (string.IsNullOrEmpty(stValue.InnerText))
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(description, context.QName, context.Value.InnerText, context.IsAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue),
                         errorType: ValidationErrorType.Schema);
                 }
                 else
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(description, context.QName, context.Value.InnerText, SR.Format(ValidationResources.Sch_StringIsNotValidValue, stValue.InnerText, context.TypeQName)),
                         errorType: ValidationErrorType.Schema);
@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml.Framework
             {
                 if (IsNonNegative && (value < 0 || !IsValidNumber(value)))
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(description, context.QName, context.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, context.Value, _nonNegativeQname)),
                         errorType: ValidationErrorType.Schema);
@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.Framework
 
                 if (IsPositive && (value <= 0 || !IsValidNumber(value)))
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(description, context.QName, context.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, context.Value, _positiveQname)),
                         errorType: ValidationErrorType.Schema);
@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml.Framework
 
                 if (_maxExclusive.HasValue && (value >= _maxExclusive.Value || !IsValidNumber(value)))
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(ValidationResources.Sch_MaxExclusiveConstraintFailed, MaxExclusive),
                         errorType: ValidationErrorType.Schema);
@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml.Framework
 
                 if (_minExclusive.HasValue && (value <= _minExclusive.Value || !IsValidNumber(value)))
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(ValidationResources.Sch_MinExclusiveConstraintFailed, MinExclusive),
                         errorType: ValidationErrorType.Schema);
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Framework
 
                 if (_minInclusive.HasValue && (value < _minInclusive.Value || !IsValidNumber(value)))
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(ValidationResources.Sch_MinInclusiveConstraintFailed, MinInclusive),
                         errorType: ValidationErrorType.Schema);
@@ -145,7 +145,7 @@ namespace DocumentFormat.OpenXml.Framework
 
                 if (_maxInclusive.HasValue && (value > _maxInclusive.Value || !IsValidNumber(value)))
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: id,
                         description: SR.Format(ValidationResources.Sch_MaxInclusiveConstraintFailed, MaxInclusive),
                         errorType: ValidationErrorType.Schema);

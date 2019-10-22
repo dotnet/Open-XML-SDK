@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
         private class CustomValidator : Attribute, IOpenXmlSimpleTypeValidator
         {
-            public void Validate(ValidatorContext context) => throw new NotImplementedException();
+            public void Validate(in ValidatorElementContext context) => throw new NotImplementedException();
         }
 
         private class BaseElement : OpenXmlElement

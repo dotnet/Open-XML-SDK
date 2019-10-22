@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Framework
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class, AllowMultiple = true, Inherited = true)]
     internal sealed class EnumValidatorAttribute : VersionedValidatorAttribute
     {
-        protected override void ValidateVersion(ValidatorContext context)
+        protected override void ValidateVersion(in ValidatorElementContext context)
         {
             var value = GetValue(context);
 
@@ -20,14 +20,14 @@ namespace DocumentFormat.OpenXml.Framework
 
                 if (!value.IsEnum && string.IsNullOrEmpty(value.InnerText))
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: errorMessageResourceId,
                         description: SR.Format(message, context.QName, context.Value.InnerText, ValidationResources.Sch_EmptyAttributeValue),
                         errorType: ValidationErrorType.Schema);
                 }
                 else
                 {
-                    context.CreateError(
+                    context.AddError(
                         id: errorMessageResourceId,
                         description: SR.Format(message, context.QName, value, ValidationResources.Sch_EnumerationConstraintFailed),
                         errorType: ValidationErrorType.Schema);
