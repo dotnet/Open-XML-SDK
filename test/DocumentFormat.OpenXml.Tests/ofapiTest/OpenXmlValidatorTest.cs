@@ -1033,6 +1033,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value 'abc'. The string 'abc' is not a valid 'Single' value.", actual.First().Description);
 
+#if !NETCOREAPP3_0
             // float overflow
             element.Val.InnerText = "-3.402823e39";
             actual = O12Validator.Validate(element);
@@ -1048,6 +1049,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value '3.402823e39'. The string '3.402823e39' is not a valid 'Single' value.", actual.First().Description);
+#endif
         }
 
         /// <summary>
@@ -1096,6 +1098,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value 'abc'. The string 'abc' is not a valid 'Double' value.", actual.First().Description);
 
+#if !NETCOREAPP3_0 // Fails due to https://github.com/dotnet/coreclr/issues/27898
             // double overflow
             element.Val.InnerText = "-1.79769313486232e309";
             actual = O12Validator.Validate(element);
@@ -1111,6 +1114,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value '1.79769313486232e309'. The string '1.79769313486232e309' is not a valid 'Double' value.", actual.First().Description);
+#endif
 
             element.Val = 0;
             actual = O12Validator.Validate(element);
@@ -2796,9 +2800,9 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("The attribute 'invx' has invalid value 'F'. The Enumeration constraint failed.", actual.First().Description);
         }
 
-        #endregion
+#endregion
 
-        #region unit test with test file data
+#region unit test with test file data
 
         /// <summary>
         ///A test for Validate(Stream) - validating Spreadsheet package.
@@ -3207,9 +3211,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        #endregion
+#endregion
 
-        #region new test regarding O14 support
+#region new test regarding O14 support
 
         /// <summary>
         /// A test for the newly added element.
@@ -3776,7 +3780,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Empty(actual);
         }
 
-        #endregion
+#endregion
 
         /// <summary>
         ///A test for Validate(OpenXmlPackage) - validating a document opened with a different version.

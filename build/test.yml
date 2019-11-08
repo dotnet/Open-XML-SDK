@@ -10,6 +10,12 @@ jobs:
     steps:
       - checkout: none
 
+      - ${{ if framework.runtime }}:
+        - task: UseDotNet@2
+          displayName: 'Install SDK'
+          inputs:
+            version: '${{ framework.runtime }}'
+
       - download: current
         artifact: build
         patterns: '*.Tests/${{ framework.tfm }}/publish/**/*'

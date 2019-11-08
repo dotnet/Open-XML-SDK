@@ -31,6 +31,8 @@ stages:
             name: net461
           - tfm: netcoreapp2.1
             name: netcoreapp2_1
+          - tfm: netcoreapp3.0
+            name: netcoreapp3_0
     dependsOn: Build
     condition: succeeded()
 
@@ -45,8 +47,11 @@ stages:
             name: net46
           - tfm: netcoreapp1.1
             name: netcoreapp1_1
+            runtime: '1.1.14'
           - tfm: netcoreapp2.1
             name: netcoreapp2_1
+          - tfm: netcoreapp3.0
+            name: netcoreapp3_0
     dependsOn: Build
     condition: succeeded()
 
