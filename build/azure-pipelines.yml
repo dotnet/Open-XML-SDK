@@ -2,6 +2,7 @@ variables:
   BuildPlatform: 'Any CPU'
   BuildConfiguration: 'Release'
   ProjectLoadStyle: 'All'
+  ReleaseNuGet: false
 
 trigger:
 - master
@@ -66,11 +67,40 @@ stages:
     dependsOn: Build
     condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
   
-  - stage: Deploy
+  - stage: MyGet
     jobs:
-      - template: deploy.yml
+      - deployment: OpenXmlMyGet
+        displayName: Deploy to MyGet
+        pool:
+          name: Hosted Windows 2019 with VS2019
+        environment: 'openxmlsdk-dotnet-myget'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: nuget.yml
+                  parameters:
+                    feed: 'OpenXML MyGet Feed'
     dependsOn: 
       - Sign
       - PerformanceTests
       - UnitTests
-    condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'master'))
+    condition: succeeded()
+
+  - stage: NuGet
+    jobs:
+      - deployment: OpenXmlNuGet
+        displayName: Deploy to NuGet
+        pool:
+          name: Hosted Windows 2019 with VS2019
+        environment: 'openxmlsdk-dotnet-nuget'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - template: nuget.yml
+                  parameters:
+                    feed: 'OpenXML NuGet Feed'
+    dependsOn: 
+      - MyGet
+    condition: and(succeeded(), variables['ReleaseNuGet'], eq(variables['Build.SourceBranchName'], 'master'))
