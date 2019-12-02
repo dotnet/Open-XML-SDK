@@ -65,7 +65,7 @@ stages:
       steps:
         - template: sign.yml
     dependsOn: Build
-    condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+    condition: succeeded()
   
   - stage: MyGet
     jobs:
