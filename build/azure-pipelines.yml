@@ -66,41 +66,11 @@ stages:
     dependsOn: Build
     condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
   
-  - stage: MyGet
+  - stage: Deploy
     jobs:
-      - deployment: OpenXmlMyGet
-        displayName: Deploy to MyGet
-        pool:
-          name: Hosted Windows 2019 with VS2019
-        environment: 'openxmlsdk-dotnet-myget'
-        strategy:
-          runOnce:
-            deploy:
-              steps:
-                - template: nuget.yml
-                  parameters:
-                    feed: 'OpenXML MyGet Feed'
+      - template: deploy.yml
     dependsOn: 
       - Sign
       - PerformanceTests
       - UnitTests
-    condition: succeeded()
-
-  - stage: NuGet
-    jobs:
-      - deployment: OpenXmlNuGet
-        displayName: Deploy to NuGet
-        pool:
-          name: Hosted Windows 2019 with VS2019
-        environment: 'openxmlsdk-dotnet-nuget'
-        strategy:
-          runOnce:
-            deploy:
-              steps:
-                - template: nuget.yml
-                  parameters:
-                    feed: 'OpenXML NuGet Feed'
-    dependsOn: 
-      - MyGet
-    # Only run this on tagged builds on master
-    condition: and(succeeded(), not(contains(variables['Build.BuildNumber'], '-ci.')), eq(variables['Build.SourceBranchName'], 'master'))
+    condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'master'))

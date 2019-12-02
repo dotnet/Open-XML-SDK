@@ -7,6 +7,7 @@ steps:
 
   - task: PowerShell@2
     displayName: 'Update version'
+    name: updateVersion
     inputs:
       targetType: 'inline'
       script: |
@@ -31,6 +32,7 @@ steps:
 
   - publish: 'bin/$(BuildConfiguration)'
     artifact: build
+    displayName: 'Upload build assets'
 
   - task: VSBuild@1
     displayName: 'Pack SDK'
@@ -41,4 +43,4 @@ steps:
 
   - publish: '$(Build.ArtifactStagingDirectory)/unsigned'
     artifact: unsigned
-    displayName: 'Publish Unsigned Packages'
+    displayName: 'Upload Unsigned Packages'
