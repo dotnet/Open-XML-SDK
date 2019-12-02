@@ -1,0 +1,47 @@
+jobs:
+  - job: CheckDeployment
+    steps:
+    - task: UseDotNet@2
+      displayName: 'Install SDK'
+      inputs:
+        packageType: 'sdk'
+        useGlobalJson: true
+    - task: PowerShell@2
+      displayName: 'Check version'
+      name: checkVersion
+      inputs:
+        targetType: 'inline'
+        script: |
+          dotnet tool install --global GitVersion.Tool --version 5.1.2
+          if ((dotnet gitversion | ConvertFrom-Json).PrereleaseLabel -eq 'ci')
+          {
+            Write-Host "Will release to NuGet"
+            Write-Host '##vso[task.setvariable variable=releaseNuget;isOutput=true]true'
+          }
+  - deployment: OpenXmlMyGet
+    displayName: Deploy to MyGet
+    pool:
+      name: Hosted Windows 2019 with VS2019
+    environment: 'openxmlsdk-dotnet-myget'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+            - template: nuget.yml
+              parameters:
+                feed: 'OpenXML MyGet Feed'
+  - deployment: OpenXmlNuGet
+    displayName: Deploy to NuGet
+    pool:
+      name: Hosted Windows 2019 with VS2019
+    environment: 'openxmlsdk-dotnet-nuget'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+            - template: nuget.yml
+              parameters:
+                feed: 'OpenXML NuGet Feed'
+    dependsOn:
+      - CheckDeployment
+    condition: dependencies.CheckDeployment.outputs['checkVersion.releaseNuGet']
