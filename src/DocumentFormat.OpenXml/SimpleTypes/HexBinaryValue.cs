@@ -37,7 +37,48 @@ namespace DocumentFormat.OpenXml
         {
         }
 
-        internal override bool IsValid => Validation.Schema.Restrictions.HexBinaryRestriction.ValidateValueType(this);
+        /// <remarks>
+        /// hexBinary has a lexical representation where each binary octet is encoded as a character tuple,
+        /// consisting of two hexadecimal digits ([0-9a-fA-F]) representing the octet code.
+        /// For example, "0FB7" is a hex encoding for the 16-bit integer 4023 (whose binary representation is 111110110111).
+        /// </remarks>
+        internal override bool IsValid
+        {
+            get
+            {
+                if (InnerText is null)
+                {
+                    return false;
+                }
+
+                var length = InnerText.Length;
+
+                if (length % 2 == 1)
+                {
+                    return false;
+                }
+
+                for (var i = 0; i < length; i++)
+                {
+                    var current = InnerText[i];
+                    var isDigit = IsLetterBetween(current, '0', '9');
+                    var isLower = IsLetterBetween(current, 'a', 'f');
+                    var isUpper = IsLetterBetween(current, 'A', 'F');
+
+                    if (!isDigit && !isLower && !isUpper)
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+
+                bool IsLetterBetween(char check, char lower, char upper)
+                {
+                    return check >= lower && check <= upper;
+                }
+            }
+        }
 
         internal override int Length => (InnerText?.Length ?? 0) / 2;
 
