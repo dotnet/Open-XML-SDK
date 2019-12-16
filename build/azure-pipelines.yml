@@ -2,7 +2,6 @@ variables:
   BuildPlatform: 'Any CPU'
   BuildConfiguration: 'Release'
   ProjectLoadStyle: 'All'
-  ReleaseNuGet: false
 
 trigger:
 - master
@@ -32,8 +31,8 @@ stages:
             name: net461
           - tfm: netcoreapp2.1
             name: netcoreapp2_1
-          - tfm: netcoreapp3.0
-            name: netcoreapp3_0
+          - tfm: netcoreapp3.1
+            name: netcoreapp3_1
     dependsOn: Build
     condition: succeeded()
 
@@ -51,8 +50,8 @@ stages:
             runtime: '1.1.14'
           - tfm: netcoreapp2.1
             name: netcoreapp2_1
-          - tfm: netcoreapp3.0
-            name: netcoreapp3_0
+          - tfm: netcoreapp3.1
+            name: netcoreapp3_1
     dependsOn: Build
     condition: succeeded()
 

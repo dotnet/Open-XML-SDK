@@ -12,7 +12,7 @@
          - DevFramework46: .NET Framework 4.6
          - DevCore11:      .NET Core 1.1
          - DevCore21:      .NET Core 2.1
-         - DevCore30:      .NET Core 3.0
+         - DevCore31:      .NET Core 3.1
          - All: Will build for all platforms
          -->
     <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore21</ProjectLoadStyle>
@@ -67,10 +67,10 @@
     <When Condition=" '$(ProjectLoadStyle)' == 'DevCore30' ">
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
-        <TestTargetFrameworks>netcoreapp3.0</TestTargetFrameworks>
+        <TestTargetFrameworks>netcoreapp3.1</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
-        <BenchmarkTargetFrameworks>netcoreapp3.0</BenchmarkTargetFrameworks>
-        <SamplesFrameworks>netcoreapp3.0</SamplesFrameworks>
+        <BenchmarkTargetFrameworks>netcoreapp3.1</BenchmarkTargetFrameworks>
+        <SamplesFrameworks>netcoreapp3.1</SamplesFrameworks>
       </PropertyGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'All' ">
@@ -81,9 +81,9 @@
         -->
         <ProductTargetFrameworks>netstandard1.3;netstandard2.0;net35;net40;net46</ProductTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard1.3</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net452;net46;netcoreapp1.1;netcoreapp2.1;netcoreapp3.0</TestTargetFrameworks>
-        <BenchmarkTargetFrameworks>net461;netcoreapp2.1;netcoreapp3.0</BenchmarkTargetFrameworks>
-        <SamplesFrameworks>net46;netcoreapp2.1;netcoreapp3.0</SamplesFrameworks>
+        <TestTargetFrameworks>net452;net46;netcoreapp1.1;netcoreapp2.1;netcoreapp3.1</TestTargetFrameworks>
+        <BenchmarkTargetFrameworks>net461;netcoreapp2.1;netcoreapp3.1</BenchmarkTargetFrameworks>
+        <SamplesFrameworks>net46;netcoreapp2.1;netcoreapp3.1</SamplesFrameworks>
 
         <!-- Must disable this due to https://github.com/NuGet/Home/issues/7414 so .NET Core 1.x will build -->
         <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
