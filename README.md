@@ -76,7 +76,7 @@ There is a known issue in `WindowsBase` that causes crashes when handling large 
 | .NET 4.0          | WindowsBase              | .NET 4.5.2                   |
 | .NET 4.6          | NuGet                    | .NET 4.6                     |
 | .NET Standard 1.3 | NuGet                    | .NET Core 1.1                |
-| .NET Standard 2.0 | NuGet                    | .NET Core 2.1, .NET Core 3.0 |
+| .NET Standard 2.0 | NuGet                    | .NET Core 2.1, .NET Core 3.1 |
 
 Keep in mind, though, that the `System.IO.Packaging` on .NET 4.6+ is simply a facade over WindowsBase, and thus everything running on .NET 4.6 will use WindowsBase instead of the newer implementation.
 
