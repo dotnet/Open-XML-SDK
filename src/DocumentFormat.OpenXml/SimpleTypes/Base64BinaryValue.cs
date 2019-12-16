@@ -52,9 +52,43 @@ namespace DocumentFormat.OpenXml
             set => TextValue = value;
         }
 
-        internal override bool IsValid => Validation.Schema.Restrictions.Base64BinaryRestriction.ValidateValueType(this);
+        /// <remarks>
+        /// The lexical forms of base64Binary values are limited to the 65 characters of the Base64 Alphabet defined in [RFC 2045], i.e., a-z, A-Z, 0-9, the plus sign (+), the forward slash (/) and the equal sign (=), together with the characters defined in [XML 1.0 (Second Edition)] as white space. No other characters are allowed.
+        /// </remarks>
+        internal override bool IsValid
+        {
+            get
+            {
+                if (InnerText is null)
+                {
+                    return false;
+                }
+                else if (InnerText.Length == 0)
+                {
+                    return true;
+                }
 
-        internal override int Length => Validation.Schema.Restrictions.Base64BinaryRestriction.GetValueLength(this);
+                try
+                {
+                    Convert.FromBase64String(InnerText);
+                    return true;
+                }
+                catch (FormatException)
+                {
+                    return false;
+                }
+            }
+        }
+
+        internal override int Length
+        {
+            get
+            {
+                // decoded the data
+                var binaryData = Convert.FromBase64String(InnerText);
+                return binaryData.Length;
+            }
+        }
 
         /// <summary>
         /// Implicitly converts the specified value to a String value.
