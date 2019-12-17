@@ -4,8 +4,10 @@
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -19,6 +21,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         private IParticleValidator _particleValidator;
         private List<ParticleConstraint> _children;
+
+        private ConcurrentDictionary<FileFormatVersions, ParticleConstraint> _versioned;
 
         /// <summary>
         /// Initializes a new instance of the CompositeParticle.
@@ -49,6 +53,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 return null;
             }
 
+            if (_versioned is null)
+            {
+                Interlocked.Exchange(ref _versioned, new ConcurrentDictionary<FileFormatVersions, ParticleConstraint>());
+            }
+
+            if (_versioned.TryGetValue(version, out var calculated))
+            {
+                return calculated;
+            }
+
             // We can potentially limit creation of a clone to times when it is required; ie, when there
             // is a version specific particle.
             var clone = new CompositeParticle(ParticleType, MinOccurs, MaxOccurs, requireFilter: RequireFilter, filterVersion: true, Version);
@@ -57,6 +71,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 clone.Add(child.Build(version));
             }
+
+            _versioned.TryAdd(version, clone);
 
             return clone;
         }
