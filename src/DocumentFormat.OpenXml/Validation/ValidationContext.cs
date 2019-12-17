@@ -13,20 +13,23 @@ namespace DocumentFormat.OpenXml.Validation
     /// </summary>
     internal class ValidationContext
     {
-        public ValidationContext()
+        public ValidationContext(FileFormatVersions version = FileFormatVersions.Office2007, ValidationCache cache = null)
         {
+            Cache = cache ?? new ValidationCache(version);
             Errors = new List<ValidationErrorInfo>();
 
+            FileFormat = version;
             McContext = new MCContext(false);
-            FileFormat = FileFormatVersions.Office2007;
         }
+
+        public ValidationCache Cache { get; }
 
         public List<ValidationErrorInfo> Errors { get; }
 
         /// <summary>
-        /// Gets or sets target file format.
+        /// Gets target file format.
         /// </summary>
-        public FileFormatVersions FileFormat { get; set; }
+        public FileFormatVersions FileFormat { get; }
 
         public bool Valid => Errors.Count == 0;
 
@@ -92,6 +95,8 @@ namespace DocumentFormat.OpenXml.Validation
         {
             return new ValidatorContext(simple, FileFormat, Part, Element, state, isAttribute, McContext, AddError);
         }
+
+        public ParticleConstraint GetParticleConstraint() => Cache.GetConstraint(Element);
 
         public void AddError(ValidationErrorInfo error)
         {

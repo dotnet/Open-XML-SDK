@@ -35,6 +35,7 @@
       </ItemGroup>
 
       <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
+        <Compile Include="System\Collections\Concurrent\ConcurrentDictionary.cs" />
         <Compile Include="System\IO\StreamCopyExtensions.cs" />
         <Compile Include="System\Lazy{T}.cs" />
       </ItemGroup>

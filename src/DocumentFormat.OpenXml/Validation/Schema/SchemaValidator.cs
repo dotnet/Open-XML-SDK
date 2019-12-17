@@ -4,6 +4,8 @@
 using System;
 using System.Diagnostics;
 
+#pragma warning disable CA1822
+
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
@@ -11,18 +13,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class SchemaValidator
     {
-        private readonly SchemaTypeValidator _schemaTypeValidator;
-
-        /// <summary>
-        /// Initializes a new instance of the SchemaValidator.
-        /// </summary>
-        /// <param name="fileFormat">The target Open XML format.</param>
-        /// <exception cref="ArgumentOutOfRangeException">Thrown when the "fileFormat" parameter is not FileFormat.Office2007, FileFormat.Office2010 or FileFormat.O15.</exception>
-        public SchemaValidator(FileFormatVersions fileFormat)
-        {
-            _schemaTypeValidator = new SchemaTypeValidator(fileFormat);
-        }
-
         /// <summary>
         /// Validate the DOM tree under the specified OpenXmlElement in the context.
         /// </summary>
@@ -39,22 +29,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // Debug.Assert(!(openxmlElement is AlternateContent))
             Debug.Assert(!(openxmlElement is AlternateContentChoice || openxmlElement is AlternateContentFallback));
 
-            ValidationTraverser.ValidatingTraverse(validationContext, ValidateElement, null);
+            ValidationTraverser.ValidatingTraverse(validationContext, SchemaTypeValidator.Validate, null);
 
-            // validationContext.Element = openxmlElement;
             return;
-        }
-
-        /// <summary>
-        /// Validate the OpenXmlElement in the context.
-        /// </summary>
-        /// <param name="validationContext"></param>
-        /// <remarks>
-        /// This method validates the OpenXmlElement itself only.
-        /// </remarks>
-        private void ValidateElement(ValidationContext validationContext)
-        {
-            _schemaTypeValidator.Validate(validationContext);
         }
     }
 }

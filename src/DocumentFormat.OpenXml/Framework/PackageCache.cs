@@ -3,12 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using System;
-
-#if NO_CONCURRENT_COLLECTIONS
-using System.Collections.Generic;
-#else
 using System.Collections.Concurrent;
-#endif
 
 namespace DocumentFormat.OpenXml.Framework
 {
@@ -64,29 +59,8 @@ namespace DocumentFormat.OpenXml.Framework
 
         private OpenXmlElementData CreateElementData(Type type) => new OpenXmlElementData(type, this);
 
-#if NO_CONCURRENT_COLLECTIONS
-        private sealed class TypeConcurrentDictionary<TValue>
-        {
-            private readonly Dictionary<Type, TValue> _dictionary = new Dictionary<Type, TValue>();
-
-            public TValue GetOrAdd(Type type, Func<Type, TValue> create)
-            {
-                lock (_dictionary)
-                {
-                    if (!_dictionary.TryGetValue(type, out var result))
-                    {
-                        result = create(type);
-                        _dictionary[type] = result;
-                    }
-
-                    return result;
-                }
-            }
-        }
-#else
         private sealed class TypeConcurrentDictionary<TValue> : ConcurrentDictionary<Type, TValue>
         {
         }
-#endif
     }
 }
