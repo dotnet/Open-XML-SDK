@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Validation
             _settings = new ValidationSettings(fileFormat);
             _cache = new ValidationCache(fileFormat);
 
-            _docSmenaticValidator = new Lazy<SemanticValidator>(() => new SemanticValidator(_settings.FileFormat, ApplicationType.Word));
-            _presentationDocumentValidator = new Lazy<DocumentValidator>(() => new DocumentValidator(_settings, _schemaValidator, _pptSemanticValidator.Value, _cache));
-            _wordprocessingDocumentValidator = new Lazy<DocumentValidator>(() => new DocumentValidator(_settings, _schemaValidator, _docSmenaticValidator.Value, _cache));
-            _xlsSemanticValidator = new Lazy<SemanticValidator>(() => new SemanticValidator(_settings.FileFormat, ApplicationType.Excel));
-            _spreadsheetDocumentValidator = new Lazy<DocumentValidator>(() => new DocumentValidator(_settings, _schemaValidator, _xlsSemanticValidator.Value, _cache));
-            _fullSemanticValidator = new Lazy<SemanticValidator>(() => new SemanticValidator(_settings.FileFormat, ApplicationType.All));
-            _pptSemanticValidator = new Lazy<SemanticValidator>(() => new SemanticValidator(_settings.FileFormat, ApplicationType.PowerPoint));
+            _docSmenaticValidator = new Lazy<SemanticValidator>(() => new SemanticValidator(_settings.FileFormat, ApplicationType.Word), true);
+            _presentationDocumentValidator = new Lazy<DocumentValidator>(() => new DocumentValidator(_settings, _schemaValidator, _pptSemanticValidator.Value, _cache), true);
+            _wordprocessingDocumentValidator = new Lazy<DocumentValidator>(() => new DocumentValidator(_settings, _schemaValidator, _docSmenaticValidator.Value, _cache), true);
+            _xlsSemanticValidator = new Lazy<SemanticValidator>(() => new SemanticValidator(_settings.FileFormat, ApplicationType.Excel), true);
+            _spreadsheetDocumentValidator = new Lazy<DocumentValidator>(() => new DocumentValidator(_settings, _schemaValidator, _xlsSemanticValidator.Value, _cache), true);
+            _fullSemanticValidator = new Lazy<SemanticValidator>(() => new SemanticValidator(_settings.FileFormat, ApplicationType.All), true);
+            _pptSemanticValidator = new Lazy<SemanticValidator>(() => new SemanticValidator(_settings.FileFormat, ApplicationType.PowerPoint), true);
         }
 
         /// <summary>
