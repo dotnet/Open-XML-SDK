@@ -10,6 +10,6 @@ steps:
   - task: NuGetCommand@2
     inputs:
       command: 'push'
-      packagesToPush: '$(Pipeline.Workspace)/signed/**/*.nupkg;!$(Pipeline.Workspace)/signed/**/*.symbols.nupkg'
+      packagesToPush: '$(Pipeline.Workspace)/signed/**/*.nupkg'
       nuGetFeedType: 'external'
       publishFeedCredentials: ${{ parameters.feed }}
