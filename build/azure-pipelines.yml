@@ -64,7 +64,7 @@ stages:
       steps:
         - template: sign.yml
     dependsOn: Build
-    condition: and(succeeded())
+    condition: succeeded()
   
   - stage: MyGet
     jobs:
