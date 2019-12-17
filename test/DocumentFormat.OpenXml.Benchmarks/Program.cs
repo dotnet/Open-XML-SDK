@@ -47,7 +47,6 @@ namespace DocumentFormat.OpenXml.Benchmarks
             {
                 // Diagnosers
                 Add(MemoryDiagnoser.Default);
-                Add(new EtwProfiler());
 
                 // Columns
                 Add(DefaultConfig.Instance.GetColumnProviders().ToArray());
@@ -58,6 +57,8 @@ namespace DocumentFormat.OpenXml.Benchmarks
                 // Exporters
                 Add(AsciiDocExporter.Default);
                 Add(HtmlExporter.Default);
+
+                Add(Job.InProcess);
             }
         }
     }
