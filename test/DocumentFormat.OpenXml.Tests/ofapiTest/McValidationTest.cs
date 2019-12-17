@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AcbSyntaxValidationTest()
         {
-            var validator = new SchemaValidator(FileFormatVersions.Office2007);
+            var validator = new SchemaValidator();
             var element = new Run();
             var acFallback = new AlternateContentFallback();
             var ac = element.AppendChild(new AlternateContent());
@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CompatibilityRuleAttributesValidationTest()
         {
-            var validator = new SchemaValidator(FileFormatVersions.Office2007);
+            var validator = new SchemaValidator();
             var element = new Paragraph();
             var run = new Run();
 

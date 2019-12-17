@@ -13,18 +13,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class SchemaTypeValidator
     {
-        private readonly FileFormatVersions _version;
-
-        public SchemaTypeValidator(FileFormatVersions version)
-        {
-            _version = version;
-        }
-
         /// <summary>
         /// Only validation whether the children elements are valid according to this type's constraint defined in schema.
         /// </summary>
         /// <param name="validationContext">The validation context.</param>
-        public void Validate(ValidationContext validationContext)
+        public static void Validate(ValidationContext validationContext)
         {
             Debug.Assert(validationContext != null);
             Debug.Assert(validationContext.Element != null);
@@ -49,7 +42,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 return;
             }
 
-            // validate Inorable, ProcessContent, etc. compatibility-rule attributes
+            // validate Ignorable, ProcessContent, etc. compatibility-rule attributes
             CompatibilityRuleAttributesValidator.ValidateMcAttributes(validationContext);
 
             ValidateAttributes(validationContext);
@@ -73,7 +66,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 if (theElement.ParticleConstraint != null)
                 {
                     // composite element
-                    CompositeComplexTypeValidator.Validate(validationContext, theElement.ParticleConstraint.Build(_version));
+                    CompositeComplexTypeValidator.Validate(validationContext);
                 }
                 else
                 {
@@ -212,8 +205,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         private static class CompositeComplexTypeValidator
         {
-            internal static void Validate(ValidationContext validationContext, ParticleConstraint particleConstraint)
+            internal static void Validate(ValidationContext validationContext)
             {
+                var particleConstraint = validationContext.GetParticleConstraint();
+
                 switch (particleConstraint.ParticleType)
                 {
                     case ParticleType.All:

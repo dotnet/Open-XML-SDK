@@ -18,6 +18,7 @@ namespace DocumentFormat.OpenXml.Validation
     internal sealed class DocumentValidator
     {
         private readonly SchemaValidator _schemaValidator;
+        private readonly ValidationCache _cache;
         private readonly SemanticValidator _semanticValidator;
         private readonly ValidationSettings _validationSettings;
 
@@ -27,8 +28,10 @@ namespace DocumentFormat.OpenXml.Validation
         /// <param name="settings">The validation settings.</param>
         /// <param name="schemaValidator">The schema validator to be used for schema validation.</param>
         /// <param name="semanticValidator">The semantic validator to be used for semantic validation.</param>
-        public DocumentValidator(ValidationSettings settings, SchemaValidator schemaValidator, SemanticValidator semanticValidator)
+        /// <param name="cache">The shared validation cache.</param>
+        public DocumentValidator(ValidationSettings settings, SchemaValidator schemaValidator, SemanticValidator semanticValidator, ValidationCache cache)
         {
+            _cache = cache;
             _schemaValidator = schemaValidator;
             _semanticValidator = semanticValidator;
             _validationSettings = settings;
@@ -129,9 +132,8 @@ namespace DocumentFormat.OpenXml.Validation
 
         private ValidationContext CreateValidationContext()
         {
-            return new ValidationContext
+            return new ValidationContext(_validationSettings.FileFormat, _cache)
             {
-                FileFormat = _validationSettings.FileFormat,
                 MaxNumberOfErrors = _validationSettings.MaxNumberOfErrors,
             };
         }
