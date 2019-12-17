@@ -18,6 +18,7 @@ namespace DocumentFormat.OpenXml.Validation
             Cache = cache ?? new ValidationCache(version);
             Errors = new List<ValidationErrorInfo>();
 
+            FileFormat = version;
             McContext = new MCContext(false);
         }
 
