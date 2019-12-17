@@ -11,29 +11,27 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     internal class PackageRelationshipPropertyCollection : RelationshipCollection
     {
-        public Package BasePackage { get; set; }
+        private readonly Package _package;
+
+        private protected override PackageRelationshipCollection Relationships
+            => _package.GetRelationships();
 
         public PackageRelationshipPropertyCollection(Package package)
         {
-            BasePackage = package;
-            if (BasePackage == null)
+            if (package is null)
             {
-                throw new ArgumentNullException(nameof(BasePackage));
+                throw new ArgumentNullException(nameof(package));
             }
 
-            BasePackageRelationshipCollection = BasePackage.GetRelationships();
-            Build();
+            _package = package;
         }
 
-        internal override void ReplaceRelationship(Uri targetUri, TargetMode targetMode, string strRelationshipType, string strId)
+        private protected override void ReplaceRelationship(Uri targetUri, TargetMode targetMode, string strRelationshipType, string strId)
         {
-            BasePackage.DeleteRelationship(strId);
-            BasePackage.CreateRelationship(targetUri, targetMode, strRelationshipType, strId);
+            _package.DeleteRelationship(strId);
+            _package.CreateRelationship(targetUri, targetMode, strRelationshipType, strId);
         }
 
-        internal override Package GetPackage()
-        {
-            return BasePackage;
-        }
+        private protected override Package Package => _package;
     }
 }

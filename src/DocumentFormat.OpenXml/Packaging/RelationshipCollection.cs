@@ -12,52 +12,82 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the base class for PackageRelationshipPropertyCollection and PackagePartRelationshipPropertyCollection objects.
     /// </summary>
-    abstract internal class RelationshipCollection : List<RelationshipProperty>
+    abstract internal class RelationshipCollection
     {
-        protected PackageRelationshipCollection BasePackageRelationshipCollection { get; set; }
+        private readonly Lazy<Result> _parsed;
 
-        internal bool StrictTranslation { get; set; }
+        public bool StrictTranslation => _parsed.Value.IsStrictTranslation;
+
+        private protected abstract PackageRelationshipCollection Relationships { get; }
+
+        private protected abstract Package Package { get; }
+
+        public RelationshipCollection()
+        {
+            _parsed = new Lazy<Result>(Build, true);
+        }
 
         /// <summary>
         /// This method fills the collection with PackageRels from the PackageRelationshipCollection that is given in the sub class.
         /// </summary>
-        protected void Build()
+        private Result Build()
         {
-            foreach (PackageRelationship relationship in BasePackageRelationshipCollection)
-            {
-                RelationshipProperty relationshipProperty;
+            var list = new List<RelationshipProperty>();
+            var isStrictTranslation = false;
 
-                relationshipProperty.TargetUri = relationship.TargetUri;
-                relationshipProperty.TargetMode = relationship.TargetMode;
-                relationshipProperty.Id = relationship.Id;
-                relationshipProperty.RelationshipType = relationship.RelationshipType;
+            foreach (var relationship in Relationships)
+            {
+                var relationshipProperty = new RelationshipProperty
+                {
+                    TargetUri = relationship.TargetUri,
+                    TargetMode = relationship.TargetMode,
+                    Id = relationship.Id,
+                    RelationshipType = relationship.RelationshipType,
+                };
 
                 // If packageRel.RelationshipType is something for Strict, it tries to get the equivalent in Transitional.
                 if (NamespaceIdMap.TryGetTransitionalRelationship(relationshipProperty.RelationshipType, out var transitionalNamespace))
                 {
                     relationshipProperty.RelationshipType = transitionalNamespace;
-                    StrictTranslation = true;
+                    isStrictTranslation = true;
                 }
 
-                Add(relationshipProperty);
+                list.Add(relationshipProperty);
             }
+
+            return new Result(list, isStrictTranslation);
         }
 
         internal void UpdateRelationshipTypesInPackage()
         {
             // Update the relationshipTypes when editable.
-            if (GetPackage().FileOpenAccess != FileAccess.Read)
+            if (Package.FileOpenAccess != FileAccess.Read)
             {
-                for (int index = 0; index < Count; index++)
+                var list = _parsed.Value.Value;
+
+                for (int index = 0; index < list.Count; index++)
                 {
-                    RelationshipProperty relationshipProperty = this[index];
+                    var relationshipProperty = list[index];
                     ReplaceRelationship(relationshipProperty.TargetUri, relationshipProperty.TargetMode, relationshipProperty.RelationshipType, relationshipProperty.Id);
                 }
             }
         }
 
-        abstract internal void ReplaceRelationship(Uri targetUri, TargetMode targetMode, string strRelationshipType, string strId);
+        private protected abstract void ReplaceRelationship(Uri targetUri, TargetMode targetMode, string strRelationshipType, string strId);
 
-        abstract internal Package GetPackage();
+        public List<RelationshipProperty>.Enumerator GetEnumerator() => _parsed.Value.Value.GetEnumerator();
+
+        private readonly struct Result
+        {
+            public Result(List<RelationshipProperty> value, bool isStrictTranslation)
+            {
+                Value = value;
+                IsStrictTranslation = isStrictTranslation;
+            }
+
+            public List<RelationshipProperty> Value { get; }
+
+            public bool IsStrictTranslation { get; }
+        }
     }
 }
