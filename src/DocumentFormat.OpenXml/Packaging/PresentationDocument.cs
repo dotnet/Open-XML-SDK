@@ -649,6 +649,9 @@ namespace DocumentFormat.OpenXml.Packaging
             return childPart;
         }
 
+        /// <inheritdoc />
+        public override OpenXmlPart RootPart => PresentationPart;
+
         /// <summary>
         /// Gets the PresentationPart of the PresentationDocument.
         /// </summary>

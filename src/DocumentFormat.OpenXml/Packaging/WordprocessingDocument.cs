@@ -690,6 +690,9 @@ namespace DocumentFormat.OpenXml.Packaging
             return childPart;
         }
 
+        /// <inheritdoc />
+        public override OpenXmlPart RootPart => MainDocumentPart;
+
         /// <summary>
         /// Gets the MainDocumentPart of the WordprocessingDocument.
         /// </summary>
