@@ -544,22 +544,22 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the internal path to be used for the part name.
         /// </summary>
-        internal virtual string TargetPath { get { return null; } }
+        internal virtual string TargetPath => null;
 
         /// <summary>
         /// Gets the internal path (Word specific TargetPath) to be used for the part name.
         /// </summary>
-        internal virtual string TargetPathOfWord { get { return null; } }
+        internal virtual string TargetPathOfWord => null;
 
         /// <summary>
         /// Gets the internal path (Excel specific TargetPath) to be used for the part name.
         /// </summary>
-        internal virtual string TargetPathOfExcel { get { return null; } }
+        internal virtual string TargetPathOfExcel => null;
 
         /// <summary>
         /// Gets the internal path (PPT specific TargetPath) to be used for the part name.
         /// </summary>
-        internal virtual string TargetPathOfPPT { get { return null; } }
+        internal virtual string TargetPathOfPPT => null;
 
         /// <summary>
         /// Gets the file base name to be used for the part name in the package.

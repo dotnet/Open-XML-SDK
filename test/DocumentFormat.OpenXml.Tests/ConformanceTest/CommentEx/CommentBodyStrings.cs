@@ -8,8 +8,8 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
     /// </summary>
     public static class CommentBodyStrings
     {
-        public static string Comment1 { get { return "Test1"; } }
+        public static string Comment1 => "Test1";
 
-        public static string Comment2 { get { return "Test2"; } }
+        public static string Comment2 => "Test2";
     }
 }

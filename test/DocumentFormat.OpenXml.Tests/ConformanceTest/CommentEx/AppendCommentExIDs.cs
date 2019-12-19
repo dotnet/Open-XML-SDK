@@ -8,8 +8,8 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
     /// </summary>
     public static class AppendCommentExIDs
     {
-        public static string AppendCommentID1 { get { return "11111111"; } }
+        public static string AppendCommentID1 => "11111111";
 
-        public static string AppendCommentID2 { get { return "22222222"; } }
+        public static string AppendCommentID2 => "22222222";
     }
 }
