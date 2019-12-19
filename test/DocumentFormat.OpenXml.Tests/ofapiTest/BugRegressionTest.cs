@@ -87,10 +87,9 @@ namespace DocumentFormat.OpenXml.Tests
             AlternateContent acb = p.AppendChild(new AlternateContent());
 
             // one error, w:rPr should before the w:t
-            p.AppendChild(new Run(new DocumentFormat.OpenXml.Wordprocessing.Text() { Text = "Acb" },
-                                  new RunProperties(new RunFonts() { Hint = FontTypeHintValues.EastAsia })
-                                  )
-                          );
+            p.AppendChild(new Run(
+                new DocumentFormat.OpenXml.Wordprocessing.Text() { Text = "Acb" },
+                new RunProperties(new RunFonts() { Hint = FontTypeHintValues.EastAsia })));
 
             // an empty "AlternateContent"
             var errors = validator.Validate(p); // should no hang, no OOM
@@ -148,7 +147,8 @@ namespace DocumentFormat.OpenXml.Tests
 
             var errors = validator.Validate(element);
 
-            Assert.Collection(errors.OrderBy(t => t.Description),
+            Assert.Collection(
+                errors.OrderBy(t => t.Description),
                 e =>
                 {
                     Assert.Equal("The attribute 'saltData' has invalid value '8fkqu/A/6B1OQrRX1Vb3oQ'. The string '8fkqu/A/6B1OQrRX1Vb3oQ' is not a valid 'http://www.w3.org/2001/XMLSchema:base64Binary' value.", e.Description);
@@ -437,7 +437,8 @@ namespace DocumentFormat.OpenXml.Tests
             shape.TextBody = new DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody();
             var errors = validator.Validate(shape);
 
-            Assert.Collection(errors.OrderBy(t => t.Id),
+            Assert.Collection(
+                errors.OrderBy(t => t.Id),
                 e =>
                 {
                     Assert.Same(shape.TextBody, e.Node);

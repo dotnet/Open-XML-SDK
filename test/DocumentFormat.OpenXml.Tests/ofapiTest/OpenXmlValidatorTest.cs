@@ -1687,7 +1687,8 @@ namespace DocumentFormat.OpenXml.Tests
             element.Val = "invalid";
             actual = O12Validator.Validate(element);
 
-            Assert.Collection(actual.OrderBy(e => e.Description),
+            Assert.Collection(
+                actual.OrderBy(e => e.Description),
                 e =>
                 {
                     Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:val' has invalid value 'invalid'. The actual length according to data type 'string' is not equal to the specified length. The expected length is 12.", e.Description);

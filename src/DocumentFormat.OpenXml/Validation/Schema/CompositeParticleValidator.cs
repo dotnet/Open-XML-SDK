@@ -237,8 +237,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return true;
         }
 
-        protected virtual void EmitInvalidElementError(ValidationContext validationContext,
-                                                       ParticleMatchInfo particleMatchInfo)
+        protected virtual void EmitInvalidElementError(
+            ValidationContext validationContext,
+            ParticleMatchInfo particleMatchInfo)
         {
             OpenXmlElement child;
 

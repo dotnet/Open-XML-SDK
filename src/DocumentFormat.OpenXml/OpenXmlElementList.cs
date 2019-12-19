@@ -56,7 +56,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public T First<T>() where T : OpenXmlElement
+        public T First<T>()
+            where T : OpenXmlElement
         {
             foreach (OpenXmlElement item in this)
             {
@@ -74,7 +75,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <typeparam name="T">Type of element</typeparam>
         /// <returns></returns>
-        public IEnumerable<T> OfType<T>() where T : OpenXmlElement
+        public IEnumerable<T> OfType<T>()
+            where T : OpenXmlElement
         {
             foreach (OpenXmlElement item in this)
             {

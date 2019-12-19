@@ -325,7 +325,8 @@ namespace DocumentFormat.OpenXml.Tests
             if (standalone.HasValue)
             {
                 Log.Comment("verify if the standalone is set correctly");
-                Log.VerifyTrue(standaloneValue.Equals(standalone.Value == true ? "yes" : "no", StringComparison.OrdinalIgnoreCase),
+                Log.VerifyTrue(
+                    standaloneValue.Equals(standalone.Value == true ? "yes" : "no", StringComparison.OrdinalIgnoreCase),
                     "expected: {0} <> actual: {1}", standalone.Value == true ? "yes" : "no", standaloneValue);
             }
             else
@@ -553,7 +554,9 @@ namespace DocumentFormat.OpenXml.Tests
 
                 Log.Comment("check if the load is successful");
                 Log.VerifyNotNull(element, "Fail to load OpenXmlElement from OpenXmlReader");
-                Log.VerifyTrue(element.LocalName.Equals(Xreader.Name.Replace(Xreader.Prefix + ":", string.Empty),
+                Log.VerifyTrue(
+                    element.LocalName.Equals(
+                    Xreader.Name.Replace(Xreader.Prefix + ":", string.Empty),
                     StringComparison.OrdinalIgnoreCase), "LocalName test FAIL. Expected: {0} <> Actual: {1}",
                     Xreader.Name.Replace(Xreader.Prefix + ":", string.Empty), element.LocalName);
                 if (!(reader is OpenXmlDomReader))
@@ -658,7 +661,8 @@ namespace DocumentFormat.OpenXml.Tests
             if (reader.Depth > 0)
             {
                 Log.Comment("Test HasAttributes");
-                Log.VerifyTrue(reader.HasAttributes == XTreader.HasAttributes,
+                Log.VerifyTrue(
+                    reader.HasAttributes == XTreader.HasAttributes,
                     "Expect: {0} ({2}) <> actual: {1} ({3})",
                     XTreader.HasAttributes, reader.HasAttributes,
                     XTreader.LocalName, reader.LocalName);
@@ -684,7 +688,8 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else
             {
-                Log.VerifyTrue((Activator.CreateInstance(type) as OpenXmlElement).LocalName.Equals(XTreader.LocalName.Replace(XTreader.Prefix + ":", string.Empty), StringComparison.OrdinalIgnoreCase),
+                Log.VerifyTrue(
+                    (Activator.CreateInstance(type) as OpenXmlElement).LocalName.Equals(XTreader.LocalName.Replace(XTreader.Prefix + ":", string.Empty), StringComparison.OrdinalIgnoreCase),
                     "Expect: {0} <> actual: {1}", XTreader.LocalName, reader.LocalName);
             }
         }
@@ -698,7 +703,8 @@ namespace DocumentFormat.OpenXml.Tests
         {
             //TODO: What is MiscNode? What is the definition?
             Log.Comment("Test IsMiscNode");
-            Log.VerifyTrue(reader.IsMiscNode == IsMisc(XTreader),
+            Log.VerifyTrue(
+                reader.IsMiscNode == IsMisc(XTreader),
                 "Expect:{0} ({2}) <> actual: {1} ({3})",
                 IsMisc(XTreader), reader.IsMiscNode,
                 XTreader.LocalName, reader.LocalName);
@@ -714,12 +720,14 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Test IsStartElement");
             if (IsMisc(XTreader))
             {
-                Log.VerifyTrue(reader.IsStartElement == false,
+                Log.VerifyTrue(
+                    reader.IsStartElement == false,
                     "Expect: FALSE <> actual: {0}", reader.IsStartElement);
             }
             else
             {
-                Log.VerifyTrue(reader.IsStartElement == XTreader.IsStartElement(),
+                Log.VerifyTrue(
+                    reader.IsStartElement == XTreader.IsStartElement(),
                     "Expect: {0} <> actual: {1}", XTreader.IsStartElement(), reader.IsStartElement);
             }
         }
@@ -734,7 +742,8 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Test IsEndElement");
             if (IsMisc(XTreader))
             {
-                Log.VerifyTrue(reader.IsEndElement == false,
+                Log.VerifyTrue(
+                    reader.IsEndElement == false,
                     "Expect: FALSE <> actual: {0}", reader.IsStartElement);
             }
             else
@@ -744,7 +753,8 @@ namespace DocumentFormat.OpenXml.Tests
 
                 //if (isEndElement != xtReaderIsEndElement)
                 //    Console.WriteLine();
-                Log.VerifyTrue(isEndElement == xtReaderIsEndElement,
+                Log.VerifyTrue(
+                    isEndElement == xtReaderIsEndElement,
                     "Expect: {0} <> actual: {1}", XTreader.NodeType == XmlNodeType.EndElement, reader.IsEndElement);
             }
         }
@@ -802,7 +812,8 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             Log.Comment("Test LocalName");
-            Log.VerifyTrue(localName.Equals(reader.LocalName, StringComparison.OrdinalIgnoreCase),
+            Log.VerifyTrue(
+                localName.Equals(reader.LocalName, StringComparison.OrdinalIgnoreCase),
                 "Expect: {0} <> actual: {1}", localName, reader.LocalName);
         }
 
@@ -814,7 +825,8 @@ namespace DocumentFormat.OpenXml.Tests
         private void TestNameSpaceURI(OpenXmlReader reader, XmlReader XTreader)
         {
             Log.Comment("Test NameSpaceURI");
-            Log.VerifyTrue(XTreader.NamespaceURI.Equals(reader.NamespaceUri, StringComparison.OrdinalIgnoreCase),
+            Log.VerifyTrue(
+                XTreader.NamespaceURI.Equals(reader.NamespaceUri, StringComparison.OrdinalIgnoreCase),
                 "Expect: {0} <> actual: {1}", XTreader.NamespaceURI, reader.NamespaceUri);
         }
 
@@ -826,7 +838,8 @@ namespace DocumentFormat.OpenXml.Tests
         private void TestPrefix(OpenXmlReader reader, XmlReader XTreader)
         {
             Log.Comment("Test Prefix");
-            Log.VerifyTrue(reader.Prefix.Equals(XTreader.Prefix, StringComparison.OrdinalIgnoreCase),
+            Log.VerifyTrue(
+                reader.Prefix.Equals(XTreader.Prefix, StringComparison.OrdinalIgnoreCase),
                 "Expect: {0} <> actual: {1}", XTreader.Prefix, reader.Prefix);
         }
 

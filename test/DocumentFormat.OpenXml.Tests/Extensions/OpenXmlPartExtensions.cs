@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>IEnumerable<OpenXmlPart> of parts in the pass-in <paramref name="root"/>.</returns>
         public static IEnumerable<OpenXmlPart> DescendantParts(this OpenXmlPartContainer root)
         {
-            if (null == root)
+            if (root == null)
             {
                 throw new ArgumentNullException(nameof(root));
             }
@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>return true if it has non-null root element, otherwise rturn false.</returns>
         public static bool IsReflectable(this OpenXmlPart part)
         {
-            if (null == part)
+            if (part == null)
             {
                 throw new ArgumentNullException(nameof(part));
             }
@@ -156,7 +156,7 @@ namespace DocumentFormat.OpenXml.Tests
             var property = part.GetType().GetProperties(flag)
                 .Where(p => p.PropertyType.IsSubclassOf(typeof(OpenXmlPartRootElement)))
                 .FirstOrDefault();
-            return null != property;
+            return property != null;
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>Return Root element of the pass-in part</returns>
         public static OpenXmlPartRootElement RootElement(this OpenXmlPart part)
         {
-            if (null == part)
+            if (part == null)
             {
                 throw new ArgumentNullException(nameof(part));
             }
@@ -325,7 +325,8 @@ namespace DocumentFormat.OpenXml.Tests
                             return false;
                         }
 
-                        int i; int j;
+                        int i;
+                        int j;
 
                         do
                         {

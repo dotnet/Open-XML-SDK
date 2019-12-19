@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>current element with event handlers hooked</returns>
         public static OpenXmlElement SetEventHandler(this OpenXmlElement e, Func<OpenXmlElement, OpenXmlElement> attachHandlerTo)
         {
-            if (null == e)
+            if (e == null)
             {
                 return e;
             }
@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>Part root element of current element, null if root element is not of OpenXmlPartRootElement.</returns>
         public static OpenXmlPartRootElement PartRootElement(this OpenXmlElement element)
         {
-            if (null == element)
+            if (element == null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
@@ -53,12 +53,13 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>index of pass-in element, 0 for root/orphan element</returns>
         public static int Index(this OpenXmlElement element)
         {
-            if (null == element)
+            if (element == null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            if (element.Parent == null)   // root/orphan element itself
+            // root/orphan element itself
+            if (element.Parent == null)
             {
                 return 0;
             }
@@ -73,7 +74,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>path to specified element</returns>
         public static string Path(this OpenXmlElement element)
         {
-            if (null == element)
+            if (element == null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
@@ -90,7 +91,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>name of element in <w:p> format</returns>
         public static string GetFullName(this OpenXmlElement element)
         {
-            if (null == element)
+            if (element == null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
@@ -117,7 +118,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>XName of pass-in OpenXmlElement</returns>
         public static XName GetXName(this OpenXmlElement element)
         {
-            if (null == element)
+            if (element == null)
             {
                 throw new ArgumentNullException(nameof(element));
             }

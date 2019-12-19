@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Validation
                     && version.AtLeast(constraintRule.FileFormat))
                 {
                     // must have one
-                    if (null == container.GetSubPart(relatinshipType))
+                    if (container.GetSubPart(relatinshipType) is null)
                     {
                         yield return new OpenXmlPackageValidationEventArgs(container)
                         {

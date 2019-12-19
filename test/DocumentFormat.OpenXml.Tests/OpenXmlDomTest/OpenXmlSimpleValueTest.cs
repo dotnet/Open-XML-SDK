@@ -1192,15 +1192,18 @@ namespace DocumentFormat.OpenXml.Tests
                 "ToString() result {0} does NOT equal to expected {1}.", stringValue, expectedText);
 
             Log.Verify(oxObj.HasValue, "{0} with valid value has NO value.", oxObj.GetType().Name);
-            Log.VerifyTrue(oxObj.Value.Equals(expectedValue),
+            Log.VerifyTrue(
+                oxObj.Value.Equals(expectedValue),
                 "Property Value {0} does NOT equal to expected {1}.", oxObj.Value, expectedValue);
 
             T val = oxObj;
-            Log.VerifyTrue(val.Equals(expectedValue),
+            Log.VerifyTrue(
+                val.Equals(expectedValue),
                 "{0} operator result {1} does NOT equal to expected {2}.", typeof(T).Name, val, expectedValue);
 
             val = oxObj as OpenXmlSimpleValue<T>;
-            Log.VerifyTrue(val.Equals(expectedValue),
+            Log.VerifyTrue(
+                val.Equals(expectedValue),
                 "{0} operator result {1} does NOT equal to expected {2}.", typeof(OpenXmlSimpleValue<T>).Name, val, expectedValue);
 
             Log.Comment("Leaving Generic Test Method...");

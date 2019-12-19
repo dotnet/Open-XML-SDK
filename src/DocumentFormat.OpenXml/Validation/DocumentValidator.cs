@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml.Validation
 
         private static OpenXmlPart GetMainPart(OpenXmlPackage package)
         {
-            if (null == package)
+            if (package is null)
             {
                 throw new ArgumentNullException(nameof(package));
             }

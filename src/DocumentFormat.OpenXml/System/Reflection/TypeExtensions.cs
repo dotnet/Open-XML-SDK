@@ -20,7 +20,8 @@ namespace DocumentFormat.OpenXml
             return Attribute.GetCustomAttribute(element, attributeType);
         }
 
-        public static T GetCustomAttribute<T>(this MemberInfo element) where T : Attribute
+        public static T GetCustomAttribute<T>(this MemberInfo element)
+            where T : Attribute
         {
             return (T)GetCustomAttribute(element, typeof(T));
         }
@@ -30,7 +31,8 @@ namespace DocumentFormat.OpenXml
             return Attribute.GetCustomAttributes(element, attributeType);
         }
 
-        public static IEnumerable<T> GetCustomAttributes<T>(this MemberInfo element) where T : Attribute
+        public static IEnumerable<T> GetCustomAttributes<T>(this MemberInfo element)
+            where T : Attribute
         {
             return (IEnumerable<T>)GetCustomAttributes(element, typeof(T));
         }
@@ -40,7 +42,8 @@ namespace DocumentFormat.OpenXml
             return Attribute.GetCustomAttributes(element, attributeType, inherit);
         }
 
-        public static IEnumerable<T> GetCustomAttributes<T>(this MemberInfo element, bool inherit) where T : Attribute
+        public static IEnumerable<T> GetCustomAttributes<T>(this MemberInfo element, bool inherit)
+            where T : Attribute
         {
             return (IEnumerable<T>)GetCustomAttributes(element, typeof(T), inherit);
         }
