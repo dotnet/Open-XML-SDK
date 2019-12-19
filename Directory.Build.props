@@ -7,7 +7,6 @@
 
     <!-- Because of the size of the project, to facilitate  quick development, by default only single
          frameworks will be build. This is customizable with the following possible values:
-
          - DevFramework40: .NET Framework 4.0
          - DevFramework46: .NET Framework 4.6
          - DevCore11:      .NET Core 1.1
@@ -16,6 +15,7 @@
          - All: Will build for all platforms
          -->
     <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore31</ProjectLoadStyle>
+    <__InvalidProjectLoadStyle>false</__InvalidProjectLoadStyle>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -89,7 +89,21 @@
         <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
       </PropertyGroup>
     </When>
+    <Otherwise>
+      <PropertyGroup>
+        <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
+        <TestTargetFrameworks>netcoreapp3.1</TestTargetFrameworks>
+        <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
+        <BenchmarkTargetFrameworks>netcoreapp3.1</BenchmarkTargetFrameworks>
+        <SamplesFrameworks>netcoreapp3.1</SamplesFrameworks>
+        <__InvalidProjectLoadStyle>true</__InvalidProjectLoadStyle>
+      </PropertyGroup>
+    </Otherwise>
   </Choose>
+
+  <Target Name="UnknownProjectLoadStyle" BeforeTargets="Build" Condition="$(__InvalidProjectLoadStyle)">
+    <Warning Text="Unknown ProjectLoadStyle '$(ProjectLoadStyle)' set. Please verify settings in Directory.Build.props and environment variables to a known value. For now, default values will be used." />
+  </Target>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
