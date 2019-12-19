@@ -30,7 +30,8 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
 
                 var fixedId = $"OSM Test - {Guid.NewGuid()}";
 
-                VerifyWriteRead<WebExtensionPart>(stream,
+                VerifyWriteRead<WebExtensionPart>(
+                    stream,
                     wep =>
                     {
                         wep.WebExtension.WebExtensionStoreReference.Id = fixedId;
@@ -107,7 +108,8 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
                 VerifyValidator(stream);
 
                 // Verify that OOXML SDK can write WebExtension section
-                VerifyWriteRead<WebExtensionPart>(stream,
+                VerifyWriteRead<WebExtensionPart>(
+                    stream,
                     wep =>
                     {
                         WalkWep(wep, StringValueFixer, Int32ValueFixer);
@@ -118,7 +120,8 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
                     });
 
                 // Verify that OOXML SDK can write Taskpanes section
-                VerifyWriteRead<Wetp.Taskpanes>(stream,
+                VerifyWriteRead<Wetp.Taskpanes>(
+                    stream,
                     tps =>
                     {
                         Walker_WebExtentionPane(tps, StringValueFixer, DoubleValueFixer, UInt32ValueFixer, BooleanValueFixer);
@@ -137,9 +140,12 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
         /// <param name="svCallback"></param>
         /// <param name="dblCallback"></param>
         /// <param name="uint32Callback"></param>
-        private void Walker_WebExtentionPane(Wetp.Taskpanes tps,
-                                            Func<StringValue, StringValue> svCallback, Func<DoubleValue, DoubleValue> dblCallback,
-                                            Func<UInt32Value, UInt32Value> uint32Callback, Func<BooleanValue, BooleanValue> boolCallback)
+        private void Walker_WebExtentionPane(
+            Wetp.Taskpanes tps,
+            Func<StringValue, StringValue> svCallback,
+            Func<DoubleValue, DoubleValue> dblCallback,
+            Func<UInt32Value, UInt32Value> uint32Callback,
+            Func<BooleanValue, BooleanValue> boolCallback)
         {
             foreach (Wetp.WebExtensionTaskpane tp in tps.ChildElements)
             {

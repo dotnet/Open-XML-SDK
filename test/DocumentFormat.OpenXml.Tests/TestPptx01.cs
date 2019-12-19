@@ -251,16 +251,19 @@ namespace DocumentFormat.OpenXml.Tests
               new D.SolidFill(new D.SchemeColor() { Val = D.SchemeColorValues.PhColor }),
               new D.GradientFill(
                 new D.GradientStopList(
-                new D.GradientStop(new D.SchemeColor(new D.Tint() { Val = 50000 },
-                  new D.SaturationModulation() { Val = 300000 })
+                new D.GradientStop(new D.SchemeColor(
+                    new D.Tint() { Val = 50000 },
+                    new D.SaturationModulation() { Val = 300000 })
                 { Val = D.SchemeColorValues.PhColor })
                 { Position = 0 },
-                new D.GradientStop(new D.SchemeColor(new D.Tint() { Val = 37000 },
-                 new D.SaturationModulation() { Val = 300000 })
+                new D.GradientStop(new D.SchemeColor(
+                    new D.Tint() { Val = 37000 },
+                    new D.SaturationModulation() { Val = 300000 })
                 { Val = D.SchemeColorValues.PhColor })
                 { Position = 35000 },
-                new D.GradientStop(new D.SchemeColor(new D.Tint() { Val = 15000 },
-                 new D.SaturationModulation() { Val = 350000 })
+                new D.GradientStop(new D.SchemeColor(
+                    new D.Tint() { Val = 15000 },
+                    new D.SaturationModulation() { Val = 350000 })
                 { Val = D.SchemeColorValues.PhColor })
                 { Position = 100000 }
                 ),
@@ -335,31 +338,36 @@ namespace DocumentFormat.OpenXml.Tests
               new D.GradientFill(
                 new D.GradientStopList(
                 new D.GradientStop(
-                  new D.SchemeColor(new D.Tint() { Val = 50000 },
-                    new D.SaturationModulation() { Val = 300000 })
+                  new D.SchemeColor(
+                      new D.Tint() { Val = 50000 },
+                      new D.SaturationModulation() { Val = 300000 })
                   { Val = D.SchemeColorValues.PhColor })
                 { Position = 0 },
                 new D.GradientStop(
-                  new D.SchemeColor(new D.Tint() { Val = 50000 },
-                    new D.SaturationModulation() { Val = 300000 })
+                  new D.SchemeColor(
+                      new D.Tint() { Val = 50000 },
+                      new D.SaturationModulation() { Val = 300000 })
                   { Val = D.SchemeColorValues.PhColor })
                 { Position = 0 },
                 new D.GradientStop(
-                  new D.SchemeColor(new D.Tint() { Val = 50000 },
-                    new D.SaturationModulation() { Val = 300000 })
+                  new D.SchemeColor(
+                      new D.Tint() { Val = 50000 },
+                      new D.SaturationModulation() { Val = 300000 })
                   { Val = D.SchemeColorValues.PhColor })
                 { Position = 0 }),
                 new D.LinearGradientFill() { Angle = 16200000, Scaled = true }),
               new D.GradientFill(
                 new D.GradientStopList(
                 new D.GradientStop(
-                  new D.SchemeColor(new D.Tint() { Val = 50000 },
-                    new D.SaturationModulation() { Val = 300000 })
+                  new D.SchemeColor(
+                      new D.Tint() { Val = 50000 },
+                      new D.SaturationModulation() { Val = 300000 })
                   { Val = D.SchemeColorValues.PhColor })
                 { Position = 0 },
                 new D.GradientStop(
-                  new D.SchemeColor(new D.Tint() { Val = 50000 },
-                    new D.SaturationModulation() { Val = 300000 })
+                  new D.SchemeColor(
+                      new D.Tint() { Val = 50000 },
+                      new D.SaturationModulation() { Val = 300000 })
                   { Val = D.SchemeColorValues.PhColor })
                 { Position = 0 }),
                 new D.LinearGradientFill() { Angle = 16200000, Scaled = true })))

@@ -28,7 +28,8 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var attribute = Assert.Single(Parse(typeof(RequiredValidator)).RawAttributes);
 
-            Assert.Collection(attribute.Validators,
+            Assert.Collection(
+                attribute.Validators,
                 t => Assert.IsType<RequiredValidatorAttribute>(t),
                 t => Assert.IsType<StringValidatorAttribute>(t));
         }
@@ -38,14 +39,16 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var attribute = Assert.Single(Parse(typeof(JustUnionValidator)).RawAttributes);
 
-            Assert.Collection(attribute.Validators,
+            Assert.Collection(
+                attribute.Validators,
                 t => Assert.IsType<StringValidatorAttribute>(t),
                 t =>
                 {
                     var union = Assert.IsType<UnionValidator>(t);
 
                     Assert.Equal(0, union.Id);
-                    Assert.Collection(union.Validators,
+                    Assert.Collection(
+                        union.Validators,
                         v => Assert.IsType<StringValidatorAttribute>(v),
                         v => Assert.IsType<StringValidatorAttribute>(v));
                 });

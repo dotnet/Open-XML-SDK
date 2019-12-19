@@ -74,7 +74,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 using (StreamReader streamReader = new StreamReader(stream))
                 using (XmlReader xmlReader = XmlReader.Create(streamReader))
                 {
-                    return new XElement(pkg + "part",
+                    return new XElement(
+                        pkg + "part",
                         new XAttribute(pkg + "name", part.Uri),
                         new XAttribute(pkg + "contentType", part.ContentType),
                         new XElement(pkg + "xmlData", XElement.Load(xmlReader)));
@@ -103,7 +104,8 @@ namespace DocumentFormat.OpenXml.Packaging
                                         sb => sb.ToString())).Append(Environment.NewLine),
                             s => s.ToString());
 
-                    return new XElement(pkg + "part",
+                    return new XElement(
+                        pkg + "part",
                         new XAttribute(pkg + "name", part.Uri),
                         new XAttribute(pkg + "contentType", part.ContentType),
                         new XAttribute(pkg + "compression", "store"),

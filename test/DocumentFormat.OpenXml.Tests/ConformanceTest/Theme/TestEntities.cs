@@ -38,7 +38,8 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
-                log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == ThemeId2,
+                log.Verify(
+                    package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == ThemeId2,
                     "UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value);
             }
         }
@@ -67,7 +68,8 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
-                log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId == null,
+                log.Verify(
+                    package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId == null,
                     "Theme id attribute is not deleted. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId);
             }
         }
@@ -96,7 +98,8 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
-                log.Verify(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == ThemeId1,
+                log.Verify(
+                    package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == ThemeId1,
                     "UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value);
             }
         }
