@@ -325,7 +325,8 @@ namespace DocumentFormat.OpenXml.Tests
                             return false;
                         }
 
-                        int i; int j;
+                        int i;
+                        int j;
 
                         do
                         {
