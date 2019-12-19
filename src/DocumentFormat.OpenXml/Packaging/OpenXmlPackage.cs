@@ -336,7 +336,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Deletes all the parts with the specified part type from the package recursively.
         /// </summary>
-        public void DeletePartsRecursivelyOfType<T>() where T : OpenXmlPart
+        public void DeletePartsRecursivelyOfType<T>()
+            where T : OpenXmlPart
         {
             ThrowIfObjectDisposed();
             DeletePartsRecursivelyOfTypeBase<T>();
@@ -844,7 +845,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <typeparam name="T">The type of the document's main part.</typeparam>
         /// <remarks>The MainDocumentPart will be changed.</remarks>
-        internal void ChangeDocumentTypeInternal<T>() where T : OpenXmlPart
+        internal void ChangeDocumentTypeInternal<T>()
+            where T : OpenXmlPart
         {
             ThrowIfObjectDisposed();
 

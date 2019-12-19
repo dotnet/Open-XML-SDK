@@ -419,7 +419,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>An new <see cref="DataPartReferenceRelationship"/>. </returns>
         /// <exception cref="ArgumentNullException">Thrown when <paramref name="mediaDataPart"/> is null reference.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the specified <paramref name="mediaDataPart"/> is not in this document.</exception>
-        internal T AddDataPartReferenceRelationship<T>(MediaDataPart mediaDataPart) where T : DataPartReferenceRelationship
+        internal T AddDataPartReferenceRelationship<T>(MediaDataPart mediaDataPart)
+            where T : DataPartReferenceRelationship
         {
             ThrowIfObjectDisposed();
 
@@ -451,7 +452,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when <paramref name="mediaDataPart"/> is null reference.</exception>
         /// <exception cref="ArgumentNullException">Thrown when <paramref name="id"/> is null reference.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the specified <paramref name="mediaDataPart"/> is not in this document.</exception>
-        internal T AddDataPartReferenceRelationship<T>(MediaDataPart mediaDataPart, string id) where T : DataPartReferenceRelationship
+        internal T AddDataPartReferenceRelationship<T>(MediaDataPart mediaDataPart, string id)
+            where T : DataPartReferenceRelationship
         {
             ThrowIfObjectDisposed();
 
@@ -646,7 +648,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "part" is null reference.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the part is not allowed to be added.</exception>
         /// <exception cref="OpenXmlPackageException">Thrown when one instance of the same type part already exists and multiple instances of that type are not allowed.</exception>
-        public virtual T AddPart<T>(T part) where T : OpenXmlPart
+        public virtual T AddPart<T>(T part)
+            where T : OpenXmlPart
         {
             return (T)AddPartFrom(part, null);
         }
@@ -662,7 +665,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "part" or the "id" is null reference.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the part is not allowed to be added.</exception>
         /// <exception cref="OpenXmlPackageException">Thrown when one instance of same type part already exists and multiple instances of that type are not allowed.</exception>
-        public virtual T AddPart<T>(T part, string id) where T : OpenXmlPart
+        public virtual T AddPart<T>(T part, string id)
+            where T : OpenXmlPart
         {
             if (id == null)
             {
@@ -740,7 +744,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <typeparam name="T">The class of the part.</typeparam>
         /// <returns>The added part.</returns>
         /// <exception cref="OpenXmlPackageException">When the part is not allowed to be referenced by this part.</exception>
-        public T AddNewPart<T>() where T : OpenXmlPart, IFixedContentTypePart
+        public T AddNewPart<T>()
+            where T : OpenXmlPart, IFixedContentTypePart
         {
             return AddNewPartInternal<T>();
         }
@@ -752,7 +757,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="id">The relationship id.</param>
         /// <returns>The added part.</returns>
         /// <exception cref="OpenXmlPackageException">When the part is not allowed to be referenced by this part.</exception>
-        public T AddNewPart<T>(string id) where T : OpenXmlPart, IFixedContentTypePart
+        public T AddNewPart<T>(string id)
+            where T : OpenXmlPart, IFixedContentTypePart
         {
             return AddNewPartInternal<T>(null, id);
         }
@@ -768,7 +774,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentOutOfRangeException">When the part is fixed content type and the passed in contentType does not match the defined content type.</exception>
         /// <exception cref="ArgumentNullException">Thrown when "contentType" is null reference.</exception>
         /// <remarks>Mainly used for adding not-fixed content type part - ImagePart, etc</remarks>
-        public virtual T AddNewPart<T>(string contentType, string id) where T : OpenXmlPart
+        public virtual T AddNewPart<T>(string contentType, string id)
+            where T : OpenXmlPart
         {
             if (contentType == null)
             {
@@ -882,7 +889,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="partsToBeDeleted">The parts to be deleted.</param>
         /// <exception cref="ArgumentNullException">Thrown when "partsToBeDeleted" is null reference.</exception>
-        public void DeleteParts<T>(IEnumerable<T> partsToBeDeleted) where T : OpenXmlPart
+        public void DeleteParts<T>(IEnumerable<T> partsToBeDeleted)
+            where T : OpenXmlPart
         {
             ThrowIfObjectDisposed();
 
@@ -969,7 +977,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <typeparam name="T">The type of the annotation to retrieve.</typeparam>
         /// <returns>The first annotation object of the specified type.</returns>
-        public T Annotation<T>() where T : class
+        public T Annotation<T>()
+            where T : class
         {
             if (_annotations != null)
             {
@@ -1047,7 +1056,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <typeparam name="T">The type of the annotations to retrieve.</typeparam>
         /// <returns>An IEnumerable(T) of object that contains the annotations for this PartContainer.</returns>
-        public IEnumerable<T> Annotations<T>() where T : class
+        public IEnumerable<T> Annotations<T>()
+            where T : class
         {
             if (_annotations != null)
             {
@@ -1123,7 +1133,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Removes the annotations of the specified type from this PartContainer.
         /// </summary>
         /// <typeparam name="T">The Type of the annotations to remove.</typeparam>
-        public void RemoveAnnotations<T>() where T : class
+        public void RemoveAnnotations<T>()
+            where T : class
         {
             if (_annotations != null)
             {
@@ -1275,7 +1286,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <typeparam name="T">The class of the part.</typeparam>
         /// <returns>The added part.</returns>
-        internal T AddNewPartInternal<T>() where T : OpenXmlPart, IFixedContentTypePart
+        internal T AddNewPartInternal<T>()
+            where T : OpenXmlPart, IFixedContentTypePart
         {
             ThrowIfObjectDisposed();
 
@@ -1305,7 +1317,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="contentType">The content type of the part.</param>
         /// <param name="id">The part relationship id.</param>
         /// <returns>The added part.</returns>
-        internal T AddNewPartInternal<T>(string contentType, string id) where T : OpenXmlPart
+        internal T AddNewPartInternal<T>(string contentType, string id)
+            where T : OpenXmlPart
         {
             ThrowIfObjectDisposed();
 
@@ -1373,7 +1386,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <typeparam name="T">The type of the part, must be derived from OpenXmlPart.</typeparam>
         /// <param name="newPart">The part to be initialized.</param>
         /// <param name="contentType">The content type of the part.</param>
-        internal void InitPart<T>(T newPart, string contentType) where T : OpenXmlPart
+        internal void InitPart<T>(T newPart, string contentType)
+            where T : OpenXmlPart
         {
             InitPart(newPart, contentType, null);
         }
@@ -1385,7 +1399,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="newPart">The part to be initialized.</param>
         /// <param name="contentType">The content type of the part.</param>
         /// <param name="id">The relationship id.</param>
-        internal virtual void InitPart<T>(T newPart, string contentType, string id) where T : OpenXmlPart
+        internal virtual void InitPart<T>(T newPart, string contentType, string id)
+            where T : OpenXmlPart
         {
             ThrowIfObjectDisposed();
 
@@ -1801,7 +1816,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Deletes all the parts of the specified type.
         /// </summary>
-        internal void DeletePartsOfType<T>() where T : OpenXmlPart
+        internal void DeletePartsOfType<T>()
+            where T : OpenXmlPart
         {
             ThrowIfObjectDisposed();
 
@@ -1824,7 +1840,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Deletes all the parts which is the specified part type from package recursively.
         /// </summary>
-        internal void DeletePartsRecursivelyOfTypeBase<T>() where T : OpenXmlPart
+        internal void DeletePartsRecursivelyOfTypeBase<T>()
+            where T : OpenXmlPart
         {
             ThrowIfObjectDisposed();
 
@@ -1909,7 +1926,8 @@ namespace DocumentFormat.OpenXml.Packaging
             return null;
         }
 
-        internal T GetSubPartOfType<T>() where T : OpenXmlPart
+        internal T GetSubPartOfType<T>()
+            where T : OpenXmlPart
         {
             ThrowIfObjectDisposed();
 

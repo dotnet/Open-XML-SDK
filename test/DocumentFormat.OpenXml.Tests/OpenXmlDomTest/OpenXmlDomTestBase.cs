@@ -2747,7 +2747,8 @@ namespace DocumentFormat.OpenXml.Tests
             VerifyEqual(Xelement, ConvertToXElement(part, Oelement), null);
         }
 
-        internal void VerifyEqual<T>(IEnumerable<XElement> XElement, IEnumerable<T> OElement, OpenXmlPart part) where T : OpenXmlElement
+        internal void VerifyEqual<T>(IEnumerable<XElement> XElement, IEnumerable<T> OElement, OpenXmlPart part)
+            where T : OpenXmlElement
         {
             if (XElement == null || OElement == null)
             {

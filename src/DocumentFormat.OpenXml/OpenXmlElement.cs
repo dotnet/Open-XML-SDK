@@ -758,7 +758,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <typeparam name="T">Type of element.</typeparam>
         /// <returns></returns>
-        public T GetFirstChild<T>() where T : OpenXmlElement => ChildElements.First<T>();
+        public T GetFirstChild<T>()
+            where T : OpenXmlElement
+            => ChildElements.First<T>();
 
         /// <summary>
         /// Gets the OpenXmlElement element that immediately precedes the current OpenXmlElement element.
@@ -794,7 +796,8 @@ namespace DocumentFormat.OpenXml
         /// Returns null (Nothing in Visual Basic) if there is no preceding OpenXmlElement element.
         /// </summary>
         /// <returns>The OpenXmlElement element with the specified type that precedes the current OpenXmlElement element.</returns>
-        public T PreviousSibling<T>() where T : OpenXmlElement
+        public T PreviousSibling<T>()
+            where T : OpenXmlElement
         {
             var element = PreviousSibling();
 
@@ -832,7 +835,8 @@ namespace DocumentFormat.OpenXml
         /// Returns null (Nothing in Visual Basic) if there is no next OpenXmlElement.
         /// </summary>
         /// <returns>The OpenXmlElement element with the specified type that follows the current OpenXmlElement element.</returns>
-        public T NextSibling<T>() where T : OpenXmlElement
+        public T NextSibling<T>()
+            where T : OpenXmlElement
         {
             var element = NextSibling();
 
@@ -869,7 +873,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <typeparam name="T">The element type.</typeparam>
         /// <returns>An IEnumerable object that contains a list of the current OpenXmlElement element's ancestors.</returns>
-        public IEnumerable<T> Ancestors<T>() where T : OpenXmlElement
+        public IEnumerable<T> Ancestors<T>()
+            where T : OpenXmlElement
         {
             var ancestor = Parent;
 
@@ -889,7 +894,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <typeparam name="T">The element type.</typeparam>
         /// <returns></returns>
-        public IEnumerable<T> Elements<T>() where T : OpenXmlElement => ChildElements.OfType<T>();
+        public IEnumerable<T> Elements<T>()
+            where T : OpenXmlElement
+            => ChildElements.OfType<T>();
 
         /// <summary>
         /// Enumerates all of the current element's children.
@@ -902,7 +909,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <typeparam name="T">The element type.</typeparam>
         /// <returns></returns>
-        public IEnumerable<T> Descendants<T>() where T : OpenXmlElement
+        public IEnumerable<T> Descendants<T>()
+            where T : OpenXmlElement
         {
             T elementT = null;
 
@@ -1083,7 +1091,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="newChild">The OpenXmlElement element to append.</param>
         /// <returns>The OpenXmlElement element that was appended. </returns>
-        public virtual T AppendChild<T>(T newChild) where T : OpenXmlElement => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
+        public virtual T AppendChild<T>(T newChild)
+            where T : OpenXmlElement
+            => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
         /// <summary>
         /// Inserts the specified element immediately after the specified reference element.
@@ -1091,7 +1101,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="newChild">The OpenXmlElement element to insert.</param>
         /// <param name="refChild">The reference OpenXmlElement element. newChild is placed after refChild. </param>
         /// <returns>The OpenXmlElement element that was inserted.</returns>
-        public virtual T InsertAfter<T>(T newChild, OpenXmlElement refChild) where T : OpenXmlElement => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
+        public virtual T InsertAfter<T>(T newChild, OpenXmlElement refChild)
+            where T : OpenXmlElement
+            => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
         /// <summary>
         /// Inserts the specified element immediately before the specified reference element.
@@ -1099,7 +1111,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="newChild">The OpenXmlElement element to insert.</param>
         /// <param name="refChild">The reference OpenXmlElement element. newChild is placed before refChild.</param>
         /// <returns>The OpenXmlElement element that was inserted.</returns>
-        public virtual T InsertBefore<T>(T newChild, OpenXmlElement refChild) where T : OpenXmlElement => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
+        public virtual T InsertBefore<T>(T newChild, OpenXmlElement refChild)
+            where T : OpenXmlElement
+            => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
         /// <summary>
         /// Inserts the specified element immediately after the current element.
@@ -1108,7 +1122,8 @@ namespace DocumentFormat.OpenXml
         /// <returns>The inserted element.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the "newElement" parameter is a null reference.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the parent is a null reference.</exception>
-        public T InsertAfterSelf<T>(T newElement) where T : OpenXmlElement
+        public T InsertAfterSelf<T>(T newElement)
+            where T : OpenXmlElement
         {
             if (newElement == null)
             {
@@ -1133,7 +1148,8 @@ namespace DocumentFormat.OpenXml
         /// <returns>The inserted element.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the "newElement" parameter is a null reference.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the parent is a null reference.</exception>
-        public T InsertBeforeSelf<T>(T newElement) where T : OpenXmlElement
+        public T InsertBeforeSelf<T>(T newElement)
+            where T : OpenXmlElement
         {
             if (newElement == null)
             {
@@ -1158,21 +1174,27 @@ namespace DocumentFormat.OpenXml
         /// <param name="index">The zero-based index where the element is to be inserted.</param>
         /// <returns>The OpenXmlElement element that was inserted.</returns>
         /// <remarks>Returns null if newChild equals null.</remarks>
-        public virtual T InsertAt<T>(T newChild, int index) where T : OpenXmlElement => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
+        public virtual T InsertAt<T>(T newChild, int index)
+            where T : OpenXmlElement
+            => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
         /// <summary>
         /// Inserts the specified element at the beginning of the current element's list of child elements.
         /// </summary>
         /// <param name="newChild">The OpenXmlElement element to add.</param>
         /// <returns>The OpenXmlElement element that was added.</returns>
-        public virtual T PrependChild<T>(T newChild) where T : OpenXmlElement => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
+        public virtual T PrependChild<T>(T newChild)
+            where T : OpenXmlElement
+            => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
         /// <summary>
         /// Removes the specified child element from the current element's list of child elements.
         /// </summary>
         /// <param name="oldChild">The child element to remove. </param>
         /// <returns>The element that was removed. </returns>
-        public virtual T RemoveChild<T>(T oldChild) where T : OpenXmlElement => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
+        public virtual T RemoveChild<T>(T oldChild)
+            where T : OpenXmlElement
+            => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
         /// <summary>
         /// Replaces a child element with another child element in the current element's list of child elements.
@@ -1180,7 +1202,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="newChild">The new child element to put in the list.</param>
         /// <param name="oldChild">The child element to replace in the list.</param>
         /// <returns>The OpenXmlElement element that was replaced.</returns>
-        public virtual T ReplaceChild<T>(OpenXmlElement newChild, T oldChild) where T : OpenXmlElement => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
+        public virtual T ReplaceChild<T>(OpenXmlElement newChild, T oldChild)
+            where T : OpenXmlElement
+            => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
         /// <summary>
         /// Removes all of the current element's child elements.
@@ -1190,7 +1214,8 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Remove all of the current element's child elements that are of type T.
         /// </summary>
-        public void RemoveAllChildren<T>() where T : OpenXmlElement
+        public void RemoveAllChildren<T>()
+            where T : OpenXmlElement
         {
             var element = FirstChild;
             OpenXmlElement next;
@@ -1802,7 +1827,8 @@ namespace DocumentFormat.OpenXml
 
         internal virtual OpenXmlElement ElementFactory(byte namespaceId, string name) => ElementData.Children.Create(namespaceId, name);
 
-        internal virtual T CloneImp<T>(bool deep) where T : OpenXmlElement, new()
+        internal virtual T CloneImp<T>(bool deep)
+            where T : OpenXmlElement, new()
         {
             var element = new T();
             element.CopyAttributes(this);
@@ -1959,7 +1985,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <typeparam name="T">The type of the annotation to retrieve.</typeparam>
         /// <returns>The first annotation object of the specified type.</returns>
-        public T Annotation<T>() where T : class
+        public T Annotation<T>()
+            where T : class
         {
             if (_annotations != null)
             {
@@ -2038,7 +2065,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <typeparam name="T">The type of the annotations to retrieve.</typeparam>
         /// <returns>An IEnumerable(T) object that contains the annotations for current OpenXmlElement element.</returns>
-        public IEnumerable<T> Annotations<T>() where T : class
+        public IEnumerable<T> Annotations<T>()
+            where T : class
         {
             if (_annotations != null)
             {
@@ -2114,7 +2142,8 @@ namespace DocumentFormat.OpenXml
         /// Removes the annotations with the specified type from the current OpenXmlElement element.
         /// </summary>
         /// <typeparam name="T">The type of the annotations to remove.</typeparam>
-        public void RemoveAnnotations<T>() where T : class
+        public void RemoveAnnotations<T>()
+            where T : class
         {
             if (_annotations != null)
             {
