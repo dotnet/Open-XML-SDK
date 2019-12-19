@@ -789,7 +789,10 @@ namespace DocumentFormat.OpenXml.Tests
         private void PrepareTestFile(string testFile, byte[] source)
         {
             if (File.Exists(testFile))
+            {
                 File.Delete(testFile);
+            }
+
             using (var writer = new BinaryWriter(new FileStream(testFile, FileMode.Create, FileAccess.ReadWrite)))
             {
                 writer.Write(source, 0, source.Length);

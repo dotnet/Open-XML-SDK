@@ -73,10 +73,12 @@ namespace DocumentFormat.OpenXml.Packaging
                 using (Stream stream = part.GetStream())
                 using (StreamReader streamReader = new StreamReader(stream))
                 using (XmlReader xmlReader = XmlReader.Create(streamReader))
+                {
                     return new XElement(pkg + "part",
                         new XAttribute(pkg + "name", part.Uri),
                         new XAttribute(pkg + "contentType", part.ContentType),
                         new XElement(pkg + "xmlData", XElement.Load(xmlReader)));
+                }
             }
             else
             {
@@ -178,10 +180,12 @@ namespace DocumentFormat.OpenXml.Packaging
                     PackagePart part = package.CreatePart(uri, contentType, CompressionOption.SuperFast);
                     using (Stream stream = part.GetStream(FileMode.Create))
                     using (XmlWriter xmlWriter = XmlWriter.Create(stream))
+                    {
                         xmlPart.Element(pkg + "xmlData")
                             .Elements()
                             .First()
                             .WriteTo(xmlWriter);
+                    }
                 }
                 else
                 {
@@ -217,13 +221,17 @@ namespace DocumentFormat.OpenXml.Packaging
                             string target = (string)xmlRel.Attribute("Target");
                             string targetMode = (string)xmlRel.Attribute("TargetMode");
                             if (targetMode == "External")
+                            {
                                 package.CreateRelationship(
                                     new Uri(target, UriKind.Absolute),
                                     TargetMode.External, type, id);
+                            }
                             else
+                            {
                                 package.CreateRelationship(
                                     new Uri(target, UriKind.Relative),
                                     TargetMode.Internal, type, id);
+                            }
                         }
                     }
                     else
@@ -240,13 +248,17 @@ namespace DocumentFormat.OpenXml.Packaging
                             string target = (string)xmlRel.Attribute("Target");
                             string targetMode = (string)xmlRel.Attribute("TargetMode");
                             if (targetMode == "External")
+                            {
                                 fromPart.CreateRelationship(
                                     new Uri(target, UriKind.Absolute),
                                     TargetMode.External, type, id);
+                            }
                             else
+                            {
                                 fromPart.CreateRelationship(
                                     new Uri(target, UriKind.Relative),
                                     TargetMode.Internal, type, id);
+                            }
                         }
                     }
                 }

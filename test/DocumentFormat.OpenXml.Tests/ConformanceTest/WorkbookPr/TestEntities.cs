@@ -26,14 +26,18 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
             {
                 X15.WorkbookProperties workbookProperties = package.WorkbookPart.Workbook.Descendants<X15.WorkbookProperties>().FirstOrDefault();
                 if (workbookProperties == null)
+                {
                     throw new Exception("Unable to obtain the X15.WorkbookProperties.");
+                }
 
                 WorkbookExtension workbookExtension = (WorkbookExtension)workbookProperties.Parent;
                 workbookPrExtUri = workbookExtension.Uri;
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
                 if (absolutePath == null)
+                {
                     throw new Exception("Unable to obtain the X15ac.AbsolutePath.");
+                }
 
                 AbsolutePathUri = absolutePath.Url;
             }

@@ -8,8 +8,8 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
     /// </summary>
     public static class CommentAuthors
     {
-        public static string Author1 { get { return "Masaki Tamura (Pasona Tech)"; } }
+        public static string Author1 => "Masaki Tamura (Pasona Tech)";
 
-        public static string Author2 { get { return "Dan Ito"; } }
+        public static string Author2 => "Dan Ito";
     }
 }

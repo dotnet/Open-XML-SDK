@@ -9,7 +9,9 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
     public class EnumStringLookupTests
     {
-        private enum EmptyEnum { }
+        private enum EmptyEnum
+        {
+        }
 
         [Fact]
         public void EmptyEnumTest() => ArgumentOutOfRangeTest(default(EmptyEnum));

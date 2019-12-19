@@ -79,7 +79,9 @@ namespace DocumentFormat.OpenXml
             foreach (OpenXmlElement item in this)
             {
                 if (item is T)
+                {
                     yield return (T)item;
+                }
             }
         }
 

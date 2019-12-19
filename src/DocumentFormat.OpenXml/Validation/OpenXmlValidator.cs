@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <exception cref="ArgumentOutOfRangeException">Throw when the value set is less than zero.</exception>
         public int MaxNumberOfErrors
         {
-            get { return _settings.MaxNumberOfErrors; }
+            get => _settings.MaxNumberOfErrors;
 
             set
             {
