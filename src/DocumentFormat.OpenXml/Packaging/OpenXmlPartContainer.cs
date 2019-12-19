@@ -1480,13 +1480,12 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (!Data.PartConstraints.TryGetValue(subPart.RelationshipType, out var partConstraintRule))
             {
-                if (subPart is ExtendedPart) // || subPart is ExtensionPart)
+                if (subPart is ExtendedPart)
                 {
                     return AddSubPart(subPart, rId);
                 }
                 else
                 {
-                    //throw new ArgumentOutOfRangeException(nameof(subPart));
                     throw new InvalidOperationException(ExceptionMessages.AddedPartIsNotAllowed);
                 }
             }
@@ -1494,7 +1493,6 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (partConstraintRule.PartContentType != null && subPart.ContentType != partConstraintRule.PartContentType)
                 {
-                    //throw new ArgumentOutOfRangeException(nameof(subPart));
                     throw new InvalidOperationException(ExceptionMessages.AddedPartIsNotAllowed);
                 }
 
@@ -1986,7 +1984,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     if (relationship.TargetMode == TargetMode.Internal)
                     {
-                        if (!relationship.TargetUri.ToString().Equals("NULL", StringComparison.OrdinalIgnoreCase)) // fix bug O14#12085
+                        if (!relationship.TargetUri.ToString().Equals("NULL", StringComparison.OrdinalIgnoreCase))
                         {
                             // Resolve the Relationship Target Uri
                             //   so the Document Part can be retrieved.
