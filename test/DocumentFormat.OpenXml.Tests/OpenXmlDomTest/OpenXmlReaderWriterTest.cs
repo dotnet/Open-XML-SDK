@@ -563,8 +563,8 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     Log.VerifyTrue(element.HasAttributes == Xreader.HasAttributes, "HasAttributes test FAIL. Expected: {0} <> Actual: {1}",
                               Xreader.HasAttributes, element.HasAttributes);
-                    Log.VerifyTrue(element.GetAttributes().Count() == Xreader.AttributeCount, "Attribute Count test FAIL.  Expected: {0} <> Actual: {1}",
-                        Xreader.AttributeCount, element.GetAttributes().Count());
+                    Log.VerifyTrue(element.GetAttributes().Count == Xreader.AttributeCount, "Attribute Count test FAIL.  Expected: {0} <> Actual: {1}",
+                        Xreader.AttributeCount, element.GetAttributes().Count);
                 }
 
                 if (reader.ReadMiscNodes)

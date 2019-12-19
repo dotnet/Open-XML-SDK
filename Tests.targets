@@ -1,6 +1,9 @@
 <Project>
   <Choose>
     <When Condition="$(IsTestProject)">
+      <PropertyGroup>
+        <NoWarn>$(NoWarn);CA1303;CA1307;CA1309;CA1822;CA1062</NoWarn>
+      </PropertyGroup>
 
       <ItemGroup>
         <PackageReference Include="System.ValueTuple" Version="4.5.0" />

@@ -46,27 +46,27 @@ namespace DocumentFormat.OpenXml
         {
             if (textValue != null)
             {
-                if ("true".Equals(textValue))
+                if (string.Equals("true", textValue, StringComparison.Ordinal))
                 {
                     return true;
                 }
-                else if ("false".Equals(textValue))
+                else if (string.Equals("false", textValue, StringComparison.Ordinal))
                 {
                     return false;
                 }
-                else if ("on".Equals(textValue))
+                else if (string.Equals("on", textValue, StringComparison.Ordinal))
                 {
                     return true;
                 }
-                else if ("off".Equals(textValue))
+                else if (string.Equals("off", textValue, StringComparison.Ordinal))
                 {
                     return false;
                 }
-                else if ("1".Equals(textValue))
+                else if (string.Equals("1", textValue, StringComparison.Ordinal))
                 {
                     return true;
                 }
-                else if ("0".Equals(textValue))
+                else if (string.Equals("0", textValue, StringComparison.Ordinal))
                 {
                     return false;
                 }

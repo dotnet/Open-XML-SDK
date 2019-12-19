@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
+
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
@@ -53,7 +55,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 return false;
             }
 
-            return _id.Equals(value._id) && (_part == value._part);
+            return string.Equals(_id, value._id, StringComparison.Ordinal) && (_part == value._part);
         }
     }
 }

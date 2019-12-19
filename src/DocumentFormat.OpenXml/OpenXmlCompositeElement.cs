@@ -616,7 +616,7 @@ namespace DocumentFormat.OpenXml
                     }
                     else if (xmlReader.NodeType == XmlNodeType.EndElement)
                     {
-                        Debug.Assert(xmlReader.LocalName.Equals(LocalName));
+                        Debug.Assert(string.Equals(xmlReader.LocalName, LocalName, StringComparison.Ordinal));
                         xmlReader.Skip(); // move to next node
                         break;
                     }

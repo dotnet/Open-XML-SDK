@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml
 
                 if (xmlReader.NodeType == XmlNodeType.EndElement)
                 {
-                    Debug.Assert(xmlReader.LocalName.Equals(LocalName));
+                    Debug.Assert(string.Equals(xmlReader.LocalName, LocalName, StringComparison.Ordinal));
                 }
                 else
                 {
@@ -172,7 +172,7 @@ namespace DocumentFormat.OpenXml
                     {
                         if (xmlReader.NodeType == XmlNodeType.EndElement)
                         {
-                            Debug.Assert(xmlReader.LocalName.Equals(LocalName));
+                            Debug.Assert(string.Equals(xmlReader.LocalName, LocalName, StringComparison.Ordinal));
                             break;
                         }
                         else if (string.IsNullOrEmpty(RawInnerText) &&

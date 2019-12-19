@@ -100,19 +100,19 @@ namespace DocumentFormat.OpenXml
         {
             if (textValue != null)
             {
-                if ("true".Equals(textValue))
+                if (string.Equals("true", textValue, StringComparison.Ordinal))
                 {
                     return true;
                 }
-                else if ("false".Equals(textValue))
+                else if (string.Equals("false", textValue, StringComparison.Ordinal))
                 {
                     return false;
                 }
-                else if ("t".Equals(textValue))
+                else if (string.Equals("t", textValue, StringComparison.Ordinal))
                 {
                     return true;
                 }
-                else if ("f".Equals(textValue))
+                else if (string.Equals("f", textValue, StringComparison.Ordinal))
                 {
                     return false;
                 }
