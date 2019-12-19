@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
 
                 // xml:space is always allowed
-                else if ("http://www.w3.org/XML/1998/namespace" == extendedAttribute.NamespaceUri)
+                else if (extendedAttribute.NamespaceUri == "http://www.w3.org/XML/1998/namespace")
                 {
                 }
                 else

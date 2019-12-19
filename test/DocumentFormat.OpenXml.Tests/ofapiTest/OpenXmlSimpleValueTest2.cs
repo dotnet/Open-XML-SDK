@@ -375,22 +375,22 @@ namespace DocumentFormat.OpenXml.Tests
             target.InnerText = "true";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True(true == target);
+            Assert.True(target == true);
 
             target.InnerText = "false";
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(false == target);
+            Assert.True(target == false);
 
             target.InnerText = "t";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True(true == target);
+            Assert.True(target == true);
 
             target.InnerText = "f";
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(false == target);
+            Assert.True(target == false);
 
             target.InnerText = "invalid";
             Assert.False(target.HasValue);
@@ -431,7 +431,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(target5.Value);
 
             TrueFalseValue target6 = target5.Clone() as TrueFalseValue;
-            Assert.True(false == target6);
+            Assert.True(target6 == false);
         }
 
         /// <summary>
@@ -447,27 +447,27 @@ namespace DocumentFormat.OpenXml.Tests
             target.InnerText = "true";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True(true == target);
+            Assert.True(target == true);
 
             target.InnerText = "false";
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(false == target);
+            Assert.True(target == false);
 
             target.InnerText = "t";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True(true == target);
+            Assert.True(target == true);
 
             target.InnerText = "f";
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(false == target);
+            Assert.True(target == false);
 
             target.InnerText = string.Empty;
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(false == target);
+            Assert.True(target == false);
 
             target.InnerText = "invalid";
             Assert.False(target.HasValue);
@@ -521,32 +521,32 @@ namespace DocumentFormat.OpenXml.Tests
             target.InnerText = "true";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True(true == target);
+            Assert.True(target == true);
 
             target.InnerText = "false";
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(false == target);
+            Assert.True(target == false);
 
             target.InnerText = "on";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True(true == target);
+            Assert.True(target == true);
 
             target.InnerText = "off";
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(false == target);
+            Assert.True(target == false);
 
             target.InnerText = "1";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True(true == target);
+            Assert.True(target == true);
 
             target.InnerText = "0";
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(false == target);
+            Assert.True(target == false);
 
             target.InnerText = "invalid";
             Assert.False(target.HasValue);
@@ -628,7 +628,7 @@ namespace DocumentFormat.OpenXml.Tests
             // 1. Base64BinaryValue
             Base64BinaryValue base64 = new Base64BinaryValue();
             base64 = "AA3322";
-            Assert.True("AA3322" == base64);
+            Assert.True(base64 == "AA3322");
             Assert.Equal("AA3322", base64.Value);
             base64 = Base64BinaryValue.FromString("1234");
             Assert.Equal("1234", base64.ToString());

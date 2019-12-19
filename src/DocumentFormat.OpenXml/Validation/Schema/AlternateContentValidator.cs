@@ -179,7 +179,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>True if the attribute is "xml:space" or "xml:lang".</returns>
         internal static bool IsXmlSpaceOrXmlLangAttribue(OpenXmlAttribute attribute)
         {
-            if ("http://www.w3.org/XML/1998/namespace" == attribute.NamespaceUri)
+            if (attribute.NamespaceUri == "http://www.w3.org/XML/1998/namespace")
             {
                 if (attribute.LocalName == "space" || attribute.LocalName == "lang")
                 {

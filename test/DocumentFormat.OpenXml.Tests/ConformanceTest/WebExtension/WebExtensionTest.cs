@@ -60,11 +60,11 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
                 return iv;
             }
 
-            BooleanValue BooleanValueFixer(BooleanValue iv) => 0 == seed % 2;
+            BooleanValue BooleanValueFixer(BooleanValue iv) => seed % 2 == 0;
 
             BooleanValue BooleanValueChecker(BooleanValue iv)
             {
-                Assert.Equal(0 == seed % 2, iv.Value);
+                Assert.Equal(seed % 2 == 0, iv.Value);
 
                 return iv;
             }

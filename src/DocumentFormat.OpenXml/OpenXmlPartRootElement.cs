@@ -141,9 +141,9 @@ namespace DocumentFormat.OpenXml
                     xmlReader.MoveToContent();
                 }
 
-                if (xmlReader.EOF ||
-                    XmlNodeType.Element != xmlReader.NodeType ||
-                    !xmlReader.IsStartElement())
+                if (xmlReader.EOF
+                    || xmlReader.NodeType != XmlNodeType.Element
+                    || !xmlReader.IsStartElement())
                 {
                     //the stream does NOT contains any xml element.
                     return false;

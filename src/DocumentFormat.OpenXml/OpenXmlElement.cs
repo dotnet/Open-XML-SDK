@@ -2327,7 +2327,7 @@ namespace DocumentFormat.OpenXml
         internal static void SplitName(string name, out string prefix, out string localName)
         {
             var length = name.IndexOf(':');
-            if (((-1 == length) || (length == 0)) || ((name.Length - 1) == length))
+            if (((length == -1) || (length == 0)) || ((name.Length - 1) == length))
             {
                 prefix = string.Empty;
                 localName = name;
