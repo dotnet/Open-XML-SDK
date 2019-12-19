@@ -2001,7 +2001,10 @@ namespace DocumentFormat.OpenXml.Tests
                 OpenXmlPart hostPart = target.MainPart();
 
                 if (!hostPart.IsReflectable())
+                {
                     Log.Warning("Current hostPart is NOT reflectable.");
+                }
+
                 AnnotationType(hostPart, getBody);
                 AnnotationT(hostPart, getBody);
                 AnnotationArray(hostPart, getBody);
@@ -2020,7 +2023,10 @@ namespace DocumentFormat.OpenXml.Tests
                 OpenXmlPart hostPart = getSlidePart(target);
 
                 if (!hostPart.IsReflectable())
+                {
                     Log.Warning("Current hostPart is NOT reflectable.");
+                }
+
                 AnnotationType(hostPart, getSlideTextBody);
                 AnnotationT(hostPart, getSlideTextBody);
                 AnnotationArray(hostPart, getSlideTextBody);
@@ -2039,7 +2045,10 @@ namespace DocumentFormat.OpenXml.Tests
                 OpenXmlPart hostPart = getLastSheetPart(target);
 
                 if (!hostPart.IsReflectable())
+                {
                     Log.Warning("Current hostPart is NOT reflectable.");
+                }
+
                 AnnotationType(hostPart, getSheetData);
                 AnnotationT(hostPart, getSheetData);
                 AnnotationArray(hostPart, getSheetData);
@@ -2145,9 +2154,13 @@ namespace DocumentFormat.OpenXml.Tests
                 }
 
                 if (element is OpenXmlUnknownElement)
+                {
                     Log.Fail("Element {0} is loaded as OpenXmlUnknownElement, instead of expected LockedCanvasElement.", element.Path());
+                }
                 else
+                {
                     Log.Pass("Element {0} is loaded as strongly type {1}.", element.Path(), element.GetType().FullName);
+                }
             }
         }
 
@@ -2202,15 +2215,23 @@ namespace DocumentFormat.OpenXml.Tests
                     // check if mc:Ignorable="w14" and if there is an attribute named xmlns:w14
                     var ignorable = fonts.GetAttributes().Where(a => a.LocalName == "Ignorable" && a.Value == "w14").FirstOrDefault();
                     if (ignorable == default(OpenXmlAttribute))
+                    {
                         Log.Fail("No mc:Ignorable attribute with value {0} exists", "w14");
+                    }
                     else
+                    {
                         Log.Pass("mc:Ignorable attribute with value {0} exists", "w14");
+                    }
 
                     var w14ns = fonts.OuterXml.Contains(@"xmlns:w14=""http://schemas.microsoft.com/office/word/2010/wordml");
                     if (!w14ns)
+                    {
                         Log.Fail("No w14 namespace declaration found.");
+                    }
                     else
+                    {
                         Log.Pass("w14 namespace declaration found on fonts element.");
+                    }
                 }
 
                 using (var Package = testfile.Open(false))
@@ -2224,15 +2245,23 @@ namespace DocumentFormat.OpenXml.Tests
                     // check if mc:Ignorable="w14" and if there is an attribute named xmlns:w14
                     var ignorable = fonts.GetAttributes().Where(a => a.LocalName == "Ignorable" && a.Value == "w14").FirstOrDefault();
                     if (ignorable == default(OpenXmlAttribute))
+                    {
                         Log.Fail("No mc:Ignorable attribute with value {0} exists", "w14");
+                    }
                     else
+                    {
                         Log.Pass("mc:Ignorable attribute with value {0} exists", "w14");
+                    }
 
                     var w14ns = fonts.OuterXml.Contains(@"xmlns:w14=""http://schemas.microsoft.com/office/word/2010/wordml");
                     if (!w14ns)
+                    {
                         Log.Fail("No w14 namespace declaration found.");
+                    }
                     else
+                    {
                         Log.Pass("w14 namespace declaration found on fonts element.");
+                    }
                 }
             }
         }

@@ -76,11 +76,15 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 standalone = y.GetAttribute("standalone");
                 if (!x.ReadMiscNodes)
+                {
                     while (Read(y) && IsMisc(y))
                     {
                     }
+                }
                 else
+                {
                     Read(y);
+                }
             }
         };
 
@@ -334,9 +338,13 @@ namespace DocumentFormat.OpenXml.Tests
         private void WriteStartD(OpenXmlWriter writer, bool? standalone)
         {
             if (standalone.HasValue)
+            {
                 writer.WriteStartDocument(standalone.Value);
+            }
             else
+            {
                 writer.WriteStartDocument();
+            }
         }
 
         private void WriteStartE(OpenXmlWriter writer, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
@@ -559,7 +567,9 @@ namespace DocumentFormat.OpenXml.Tests
                 if (reader.ReadMiscNodes)
                 {
                     if (IsMisc(Xreader))
+                    {
                         Read(Xreader);
+                    }
                     else
                     {
                         if (!(Xreader.IsEmptyElement && reader.IsEndElement && skip))
@@ -629,9 +639,13 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.VerifyTrue(standalone.Equals(reader.StandaloneXml.Value ? "yes" : "no", StringComparison.OrdinalIgnoreCase), "expect: {0}  actual: {1}", standalone, reader.StandaloneXml);
             }
             else if (string.IsNullOrEmpty(standalone) && reader.StandaloneXml.HasValue == false)
+            {
                 Log.Pass(" PASS! expect: NULL == actual: NULL");
+            }
             else
+            {
                 Log.Fail("Expect: {0} <> actual: {1}", string.IsNullOrEmpty(standalone) ? "Null" : "Not Null", reader.StandaloneXml.HasValue ? "Not Null" : "Null");
+            }
         }
 
         /// <summary>
@@ -918,9 +932,14 @@ namespace DocumentFormat.OpenXml.Tests
                             break;
                         default:
                             if (Oreader.ReadMiscNodes)
+                            {
                                 IscontinueRead = false;
+                            }
                             else
+                            {
                                 IscontinueRead = true;
+                            }
+
                             break;
                     }
                 }
@@ -1025,14 +1044,20 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Read(Treader);
                 if (Treader.NodeType != XmlNodeType.EndElement)
+                {
                     foundNextSibling = true;
+                }
                 else
+                {
                     foundNextSibling = false;
+                }
             }
             else if (Treader.NodeType == XmlNodeType.EndElement)
             {
                 if (Oreader.ReadMiscNodes)
+                {
                     Read(Treader);
+                }
                 else
                 {
                     while (Read(Treader) && (IsMisc(Treader) || Treader.Depth > oldDepth))
@@ -1041,28 +1066,42 @@ namespace DocumentFormat.OpenXml.Tests
                 }
 
                 if (Treader.Depth == oldDepth && Treader.NodeType != XmlNodeType.EndElement)
+                {
                     foundNextSibling = true;
+                }
                 else
+                {
                     foundNextSibling = false;
+                }
             }
             else if (Treader.IsStartElement())
             {
                 while (!(Treader.NodeType == XmlNodeType.EndElement && Treader.Depth == oldDepth))
+                {
                     Read(Treader);
+                }
 
                 Read(Treader);
 
                 if (!Oreader.ReadMiscNodes)
                 {
                     if (IsMisc(Treader))
+                    {
                         while (IsMisc(Treader))
+                        {
                             Read(Treader);
+                        }
+                    }
                 }
 
                 if (Treader.Depth == oldDepth && (Treader.NodeType != XmlNodeType.EndElement))
+                {
                     foundNextSibling = true;
+                }
                 else if ((Treader.Depth == oldDepth + 1 && Treader.NodeType == XmlNodeType.EndElement) || Treader.EOF)
+                {
                     foundNextSibling = false;
+                }
             }
 
             Log.Comment("check if the ReadNextSibling() results matches with XmlReader");
@@ -1086,7 +1125,9 @@ namespace DocumentFormat.OpenXml.Tests
             if (!Oreader.ReadMiscNodes)
             {
                 while (IsMisc(Treader) && !Treader.EOF)
+                {
                     Read(Treader);
+                }
             }
 
             return true;
@@ -1123,10 +1164,14 @@ namespace DocumentFormat.OpenXml.Tests
                 result = reader.Read();
 
                 if (IGNORE_WHITESPACE_SETTING == false)
+                {
                     result = SkipWhitespace(reader);
+                }
 
                 if (reader != null && reader.EOF == false)
+                {
                     System.Diagnostics.Debug.WriteLine("X: [{0}] {1}", reader.NodeType, reader.LocalName);
+                }
             }
 
             return result;
@@ -1141,7 +1186,9 @@ namespace DocumentFormat.OpenXml.Tests
                 reader.Skip();
 
                 if (IGNORE_WHITESPACE_SETTING == false)
+                {
                     result = SkipWhitespace(reader);
+                }
             }
 
             return result;
@@ -1156,7 +1203,9 @@ namespace DocumentFormat.OpenXml.Tests
                 reader.Skip();
 
                 if (IGNORE_WHITESPACE_SETTING == false)
+                {
                     result = SkipWhitespace(reader);
+                }
             }
 
             return result;

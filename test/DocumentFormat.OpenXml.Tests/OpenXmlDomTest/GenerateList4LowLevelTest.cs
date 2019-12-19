@@ -318,7 +318,9 @@ namespace DocumentFormat.OpenXml.Tests
                     var ns = unknown.NamespaceDeclarations.Where(kvp => kvp.Key == prefix && kvp.Value == namespaceUri).FirstOrDefault();
 
                     if (ns.Key == null)
+                    {
                         ns = new KeyValuePair<string, string>(unknown.Prefix, unknown.NamespaceUri);
+                    }
 
                     Assert.Equal(prefix, ns.Key);
                     Assert.Equal(namespaceUri, ns.Value);

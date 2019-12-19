@@ -140,7 +140,9 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
             else
+            {
                 Log.Warning("No Children exists");
+            }
         }
 
         /// <summary>
@@ -180,7 +182,9 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Pass("All next siblings have been retrieved correctly");
             }
             else
+            {
                 Log.Fail("nextSibling doesn't return correctly");
+            }
 
             Log.Comment("****** test ElementsBefore ******");
             VerifyEqual(Xwalker.ElementsBeforeSelf(), walker.ElementsBefore(), part);
@@ -201,7 +205,9 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Pass("All Previous siblings have been retrieved correctly");
             }
             else
+            {
                 Log.Fail("PreviousSibling doesn't return correctly");
+            }
 
             Log.Comment("****** test NextSibling<OpenXmlElement> ******");
 
@@ -221,7 +227,9 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Pass("All next siblings have been retrieved correctly");
             }
             else
+            {
                 Log.Fail("nextSibling doesn't return correctly");
+            }
 
             Log.Comment("****** test PreviousSibling<OpenXmlElement>() ******");
             while (Xwalker.PreviousNode != null && walker.PreviousSibling<OpenXmlElement>() != null)
@@ -239,7 +247,9 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Pass("All Previous siblings have been retrieved correctly");
             }
             else
+            {
                 Log.Fail("PreviousSibling doesn't return correctly");
+            }
 
             Log.Comment("****** test NextSibling<{0}> ******", typeof(U).Name);
             while (Xwalker.ElementsAfterSelf().Where(x => x.Name.LocalName == UTagName).Any() && walker.NextSibling<U>() != null)

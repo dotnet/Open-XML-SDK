@@ -54,7 +54,10 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 if (value == null)
+                {
                     throw new ArgumentNullException(nameof(value));
+                }
+
                 SetDomTree(value);
             }
         }

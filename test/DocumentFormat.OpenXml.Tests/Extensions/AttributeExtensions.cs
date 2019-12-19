@@ -16,7 +16,9 @@ namespace DocumentFormat.OpenXml.Tests
         public static XName GetXName(this OpenXmlAttribute attribute)
         {
             if (null == attribute)
+            {
                 throw new ArgumentNullException(nameof(attribute));
+            }
 
             return XName.Get(attribute.LocalName, attribute.NamespaceUri);
         }

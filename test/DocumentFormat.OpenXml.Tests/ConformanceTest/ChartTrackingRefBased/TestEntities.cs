@@ -33,7 +33,9 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
                 ChartTrackingReferenceBasedExtUri = presentationPropertiesExtension.Uri;
 
                 if (string.IsNullOrEmpty(ChartTrackingReferenceBasedExtUri))
+                {
                     throw new Exception("Uri attribute value in Extension element is not set.");
+                }
             }
         }
 

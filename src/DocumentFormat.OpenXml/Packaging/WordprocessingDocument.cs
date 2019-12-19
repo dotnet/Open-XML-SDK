@@ -236,7 +236,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public static WordprocessingDocument CreateFromTemplate(string path, bool isTemplateAttached)
         {
             if (path == null)
+            {
                 throw new ArgumentNullException(nameof(path));
+            }
 
             // Check extensions as the template must have a valid Word Open XML extension.
             string extension = Path.GetExtension(path);
@@ -254,7 +256,9 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 // If the template is a document rather than a template, we are done.
                 if (extension == ".docx" || extension == ".docm")
+                {
                     return document;
+                }
 
                 // Otherwise, we'll have to do some more work.
                 // Firstly, we'll change the document type from Template to Document.
