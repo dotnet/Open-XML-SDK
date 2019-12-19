@@ -98,36 +98,19 @@ namespace DocumentFormat.OpenXml
         /// <returns>True on text value is 't', 'true'; False on text value is 'f', 'false', '' </returns>
         private protected override bool Parse(string textValue)
         {
-            if (textValue != null)
+            switch (textValue)
             {
-                if (string.Equals("true", textValue, StringComparison.Ordinal))
-                {
+                case "true":
+                case "t":
                     return true;
-                }
-                else if (string.Equals("false", textValue, StringComparison.Ordinal))
-                {
+                case "false":
+                case "f":
+                case "":
+                case null:
                     return false;
-                }
-                else if (string.Equals("t", textValue, StringComparison.Ordinal))
-                {
-                    return true;
-                }
-                else if (string.Equals("f", textValue, StringComparison.Ordinal))
-                {
-                    return false;
-                }
-                else if (textValue.Length == 0)
-                {
-                    // blank
-                    return false;
-                }
-                else
-                {
+                default:
                     throw new FormatException(ExceptionMessages.TextIsInvalidTrueFalseBlankValue);
-                }
             }
-
-            return false;
         }
 
         /// <summary>
