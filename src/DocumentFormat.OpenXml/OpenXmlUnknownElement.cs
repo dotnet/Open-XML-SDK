@@ -247,9 +247,9 @@ namespace DocumentFormat.OpenXml
             }
             else
             {
-                Debug.Assert(string.Equals(_tagName, xmlReader.LocalName));
-                Debug.Assert(string.Equals(_prefix, xmlReader.Prefix));
-                Debug.Assert(string.Equals(_namespaceUri, xmlReader.NamespaceURI));
+                Debug.Assert(string.Equals(_tagName, xmlReader.LocalName, StringComparison.Ordinal));
+                Debug.Assert(string.Equals(_prefix, xmlReader.Prefix, StringComparison.Ordinal));
+                Debug.Assert(string.Equals(_namespaceUri, xmlReader.NamespaceURI, StringComparison.Ordinal));
             }
 
             // load children elements

@@ -44,39 +44,20 @@ namespace DocumentFormat.OpenXml
         /// <returns>True for 'true', 'on', '0', or '1'.</returns>
         private protected override bool Parse(string textValue)
         {
-            if (textValue != null)
+            switch (textValue)
             {
-                if ("true".Equals(textValue))
-                {
+                case "true":
+                case "1":
+                case "on":
                     return true;
-                }
-                else if ("false".Equals(textValue))
-                {
+                case "false":
+                case "0":
+                case "off":
+                case null:
                     return false;
-                }
-                else if ("on".Equals(textValue))
-                {
-                    return true;
-                }
-                else if ("off".Equals(textValue))
-                {
-                    return false;
-                }
-                else if ("1".Equals(textValue))
-                {
-                    return true;
-                }
-                else if ("0".Equals(textValue))
-                {
-                    return false;
-                }
-                else
-                {
+                default:
                     throw new FormatException(ExceptionMessages.TextIsInvalidOnOffValue);
-                }
             }
-
-            return false;
         }
 
         private protected override bool ShouldParse(string value) => value != null;

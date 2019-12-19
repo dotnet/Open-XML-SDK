@@ -95,34 +95,21 @@ namespace DocumentFormat.OpenXml
         /// Gets the real boolean value of the text value.
         /// </summary>
         /// <param name="textValue">The text value which could be 't', 'f', 'true', 'false'.</param>
-        /// <returns>Ture on text value is 't', 'true'; False on text value is 'f', 'false'.</returns>
+        /// <returns>True on text value is 't', 'true'; False on text value is 'f', 'false'.</returns>
         private protected override bool Parse(string textValue)
         {
-            if (textValue != null)
+            switch (textValue)
             {
-                if ("true".Equals(textValue))
-                {
+                case "true":
+                case "t":
                     return true;
-                }
-                else if ("false".Equals(textValue))
-                {
+                case "false":
+                case "f":
+                case null:
                     return false;
-                }
-                else if ("t".Equals(textValue))
-                {
-                    return true;
-                }
-                else if ("f".Equals(textValue))
-                {
-                    return false;
-                }
-                else
-                {
+                default:
                     throw new FormatException(ExceptionMessages.TextIsInvalidTrueFalseValue);
-                }
             }
-
-            return false;
         }
 
         /// <summary>

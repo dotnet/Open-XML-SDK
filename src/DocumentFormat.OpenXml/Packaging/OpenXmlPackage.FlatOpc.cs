@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The corresponding <see cref="XElement"/>.</returns>
         private static XElement GetContentsAsXml(PackagePart part)
         {
-            if (part.ContentType.EndsWith("xml"))
+            if (part.ContentType.EndsWith("xml", StringComparison.Ordinal))
             {
                 using (Stream stream = part.GetStream())
                 using (StreamReader streamReader = new StreamReader(stream))
@@ -176,7 +176,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 string name = (string)xmlPart.Attribute(pkg + "name");
                 string contentType = (string)xmlPart.Attribute(pkg + "contentType");
-                if (contentType.EndsWith("xml"))
+                if (contentType.EndsWith("xml", StringComparison.Ordinal))
                 {
                     Uri uri = new Uri(name, UriKind.Relative);
                     PackagePart part = package.CreatePart(uri, contentType, CompressionOption.SuperFast);
@@ -239,9 +239,9 @@ namespace DocumentFormat.OpenXml.Packaging
                     else
                     {
                         // Add part level relationships.
-                        string directory = name.Substring(0, name.IndexOf("/_rels"));
+                        string directory = name.Substring(0, name.IndexOf("/_rels", StringComparison.Ordinal));
                         string relsFilename = name.Substring(name.LastIndexOf('/'));
-                        string filename = relsFilename.Substring(0, relsFilename.IndexOf(".rels"));
+                        string filename = relsFilename.Substring(0, relsFilename.IndexOf(".rels", StringComparison.Ordinal));
                         PackagePart fromPart = package.GetPart(new Uri(directory + filename, UriKind.Relative));
                         foreach (XElement xmlRel in xmlPart.Descendants(rel + "Relationship"))
                         {

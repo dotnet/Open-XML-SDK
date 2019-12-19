@@ -2350,7 +2350,7 @@ namespace DocumentFormat.OpenXml
                     {
                         if (xmlReader.NodeType == XmlNodeType.Element)
                         {
-                            return string.Equals(namespaceURI, xmlReader.NamespaceURI) && string.Equals(localName, xmlReader.LocalName);
+                            return string.Equals(namespaceURI, xmlReader.NamespaceURI, StringComparison.Ordinal) && string.Equals(localName, xmlReader.LocalName, StringComparison.Ordinal);
                         }
                     }
                 } while (xmlReader.NodeType == XmlNodeType.Whitespace);
@@ -2389,31 +2389,31 @@ namespace DocumentFormat.OpenXml
                 McAttributesFiled = new MarkupCompatibilityAttributes();
             }
 
-            if (localName.Equals(MCConsts.Ignorable))
+            if (string.Equals(localName, MCConsts.Ignorable, StringComparison.Ordinal))
             {
                 McAttributesFiled.Ignorable = value;
                 return true;
             }
 
-            if (localName.Equals(MCConsts.ProcessContent))
+            if (string.Equals(localName, MCConsts.ProcessContent, StringComparison.Ordinal))
             {
                 McAttributesFiled.ProcessContent = value;
                 return true;
             }
 
-            if (localName.Equals(MCConsts.PreserveElements))
+            if (string.Equals(localName, MCConsts.PreserveElements, StringComparison.Ordinal))
             {
                 McAttributesFiled.PreserveElements = value;
                 return true;
             }
 
-            if (localName.Equals(MCConsts.PreserveAttributes))
+            if (string.Equals(localName, MCConsts.PreserveAttributes, StringComparison.Ordinal))
             {
                 McAttributesFiled.PreserveAttributes = value;
                 return true;
             }
 
-            if (localName.Equals(MCConsts.MustUnderstand))
+            if (string.Equals(localName, MCConsts.MustUnderstand, StringComparison.Ordinal))
             {
                 McAttributesFiled.MustUnderstand = value;
                 return true;
@@ -2497,31 +2497,31 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            if (localName.Equals(MCConsts.Ignorable))
+            if (string.Equals(localName, MCConsts.Ignorable, StringComparison.Ordinal))
             {
                 MCAttributes.Ignorable = null;
                 return true;
             }
 
-            if (localName.Equals(MCConsts.ProcessContent))
+            if (string.Equals(localName, MCConsts.ProcessContent, StringComparison.Ordinal))
             {
                 MCAttributes.ProcessContent = null;
                 return true;
             }
 
-            if (localName.Equals(MCConsts.PreserveElements))
+            if (string.Equals(localName, MCConsts.PreserveElements, StringComparison.Ordinal))
             {
                 MCAttributes.PreserveElements = null;
                 return true;
             }
 
-            if (localName.Equals(MCConsts.PreserveAttributes))
+            if (string.Equals(localName, MCConsts.PreserveAttributes, StringComparison.Ordinal))
             {
                 MCAttributes.PreserveAttributes = null;
                 return true;
             }
 
-            if (localName.Equals(MCConsts.MustUnderstand))
+            if (string.Equals(localName, MCConsts.MustUnderstand, StringComparison.Ordinal))
             {
                 MCAttributes.MustUnderstand = null;
                 return true;
@@ -2586,27 +2586,27 @@ namespace DocumentFormat.OpenXml
                 mcPrefix = MarkupCompatibilityAttributes.MCPrefix;
             }
 
-            if (localName.Equals(MCConsts.Ignorable))
+            if (string.Equals(localName, MCConsts.Ignorable, StringComparison.Ordinal))
             {
                 return new OpenXmlAttribute(mcPrefix, localName, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.Ignorable);
             }
 
-            if (localName.Equals(MCConsts.ProcessContent))
+            if (string.Equals(localName, MCConsts.ProcessContent, StringComparison.Ordinal))
             {
                 return new OpenXmlAttribute(mcPrefix, localName, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.ProcessContent);
             }
 
-            if (localName.Equals(MCConsts.PreserveElements))
+            if (string.Equals(localName, MCConsts.PreserveElements, StringComparison.Ordinal))
             {
                 return new OpenXmlAttribute(mcPrefix, localName, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.PreserveElements);
             }
 
-            if (localName.Equals(MCConsts.PreserveAttributes))
+            if (string.Equals(localName, MCConsts.PreserveAttributes, StringComparison.Ordinal))
             {
                 return new OpenXmlAttribute(mcPrefix, localName, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.PreserveAttributes);
             }
 
-            if (localName.Equals(MCConsts.MustUnderstand))
+            if (string.Equals(localName, MCConsts.MustUnderstand, StringComparison.Ordinal))
             {
                 return new OpenXmlAttribute(mcPrefix, localName, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.MustUnderstand);
             }
