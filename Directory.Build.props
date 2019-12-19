@@ -15,7 +15,7 @@
          - DevCore31:      .NET Core 3.1
          - All: Will build for all platforms
          -->
-    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore21</ProjectLoadStyle>
+    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore31</ProjectLoadStyle>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -64,7 +64,7 @@
         <SamplesFrameworks>netcoreapp2.1</SamplesFrameworks>
       </PropertyGroup>
     </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'DevCore30' ">
+    <When Condition=" '$(ProjectLoadStyle)' == 'DevCore31' ">
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
         <TestTargetFrameworks>netcoreapp3.1</TestTargetFrameworks>
