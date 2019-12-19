@@ -136,11 +136,11 @@
     <Rule Id="SA1403" Action="Warning" />
     <Rule Id="SA1404" Action="Warning" />
     <Rule Id="SA1405" Action="None" />
-    <Rule Id="SA1406" Action="None" />
+    <Rule Id="SA1406" Action="Warning" />
     <Rule Id="SA1407" Action="None" />
     <Rule Id="SA1408" Action="None" />
     <Rule Id="SA1409" Action="None" />
-    <Rule Id="SA1410" Action="None" />
+    <Rule Id="SA1410" Action="Warning" />
     <Rule Id="SA1411" Action="Warning" />
     <Rule Id="SA1412" Action="Warning" />
     <Rule Id="SA1413" Action="Warning" />
