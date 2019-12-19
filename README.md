@@ -144,6 +144,8 @@ This project uses the csproj format and the release versions of the tooling in V
 
 The project often requires the latest release of the C# compiler as many new features come on-line that greatly aid in ease of development. As of now, the C# 7.2 compiler is required (which was released in December 2017) and comes standard in Visual Studio 2017 Update 5, with other IDEs providing updates to the compiler, as well.
 
+Since there are a number of targets for the project, and loading all at once may cause slow performance in Visual Studio, the target framework can be controlled by an environment variable. This is controlled in [Directory.Build.props](./Directory.Build.props) via the environment variable `ProjectLoadStyle`. This changes over time, but that file will contain what the available load configurations are. By default, this will try to default to the current LTS version of .NET Core, but allows development against previous targets if needed. This is helpful, for instance, if you don't have the latest .NET installed.  The continuous integration system sets `ProjectLoadStyle=All` to build for all targets.
+
 To build the Open XML SDK
 -------------------------
 
