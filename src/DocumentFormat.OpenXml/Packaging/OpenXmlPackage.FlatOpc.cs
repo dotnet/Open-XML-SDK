@@ -2,6 +2,8 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
@@ -14,10 +16,13 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Represents a base class for strong typed Open XML document classes.
     /// </summary>
-    public abstract partial class OpenXmlPackage : OpenXmlPartContainer, IDisposable
+    public abstract partial class OpenXmlPackage
     {
-        private static readonly XNamespace pkg = "http://schemas.microsoft.com/office/2006/xmlPackage";
-        private static readonly XNamespace rel = "http://schemas.openxmlformats.org/package/2006/relationships";
+        private static readonly XNamespace Pkg = "http://schemas.microsoft.com/office/2006/xmlPackage";
+        private static readonly XNamespace Rel = "http://schemas.openxmlformats.org/package/2006/relationships";
+
+        private const string AltChunkRelationshipType =
+            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk";
 
         /// <summary>
         /// Converts an OpenXml package in OPC format to string in Flat OPC format.
@@ -49,6 +54,15 @@ namespace DocumentFormat.OpenXml.Packaging
             // to call it here.
             Save();
 
+            // Identify all AlternativeFormatInputParts (AltChunk parts).
+            // This is necessary because AltChunk parts must be treated as binary
+            // parts regardless of the actual content type, which might even be
+            // XML-related such as application/xhtml+xml.
+            var altChunkPartUris = new HashSet<Uri>(
+                new InternalPackageRelationships(Package)
+                    .Where(pr => pr.RelationshipType == AltChunkRelationshipType)
+                    .Select(pr => PackUriHelper.ResolvePartUri(pr.SourceUri, pr.TargetUri)));
+
             // Create an XML document with a standalone declaration, processing
             // instruction (if not null), and a package root element with a
             // namespace declaration and one child element for each part.
@@ -56,61 +70,69 @@ namespace DocumentFormat.OpenXml.Packaging
                 new XDeclaration("1.0", "UTF-8", "yes"),
                 instruction,
                 new XElement(
-                    pkg + "package",
-                    new XAttribute(XNamespace.Xmlns + "pkg", pkg.ToString()),
-                    Package.GetParts().Select(part => GetContentsAsXml(part))));
+                    Pkg + "package",
+                    new XAttribute(XNamespace.Xmlns + "pkg", Pkg.ToString()),
+                    Package.GetParts().Select(part => GetContentsAsXml(part, altChunkPartUris))));
         }
 
         /// <summary>
-        /// Gets the <see cref="PackagePart"/>'s contents as an <see cref="XElement"/>.
+        /// Gets the <see cref="PackagePart"/>'s XML or binary contents as an <see cref="XElement"/>.
         /// </summary>
         /// <param name="part">The package part.</param>
+        /// <param name="altChunkPartUris">The collection of AlternativeFormatInputPart URIs.</param>
         /// <returns>The corresponding <see cref="XElement"/>.</returns>
-        private static XElement GetContentsAsXml(PackagePart part)
+        private static XElement GetContentsAsXml(PackagePart part, IEnumerable<Uri> altChunkPartUris)
         {
-            if (part.ContentType.EndsWith("xml", StringComparison.Ordinal))
+            if (part.ContentType.EndsWith("xml") && !altChunkPartUris.Contains(part.Uri))
             {
                 using (Stream stream = part.GetStream())
-                using (StreamReader streamReader = new StreamReader(stream))
+                using (var streamReader = new StreamReader(stream))
                 using (XmlReader xmlReader = XmlReader.Create(streamReader))
                 {
                     return new XElement(
-                        pkg + "part",
-                        new XAttribute(pkg + "name", part.Uri),
-                        new XAttribute(pkg + "contentType", part.ContentType),
-                        new XElement(pkg + "xmlData", XElement.Load(xmlReader)));
+                        Pkg + "part",
+                        new XAttribute(Pkg + "name", part.Uri),
+                        new XAttribute(Pkg + "contentType", part.ContentType),
+                        new XElement(Pkg + "xmlData", XElement.Load(xmlReader)));
                 }
             }
-            else
+
+            return GetBinaryPartContentsAsXml(part);
+        }
+
+        /// <summary>
+        /// Gets the <see cref="PackagePart"/>'s binary contents as an <see cref="XElement"/>.
+        /// </summary>
+        /// <param name="part">The package part.</param>
+        /// <returns>The corresponding <see cref="XElement"/>.</returns>
+        private static XElement GetBinaryPartContentsAsXml(PackagePart part)
+        {
+            using (Stream stream = part.GetStream())
             {
-                using (Stream stream = part.GetStream())
-                using (BinaryReader binaryReader = new BinaryReader(stream))
-                {
-                    int len = (int)binaryReader.BaseStream.Length;
-                    byte[] byteArray = binaryReader.ReadBytes(len);
+                var byteArray = new byte[stream.Length];
+                stream.Read(byteArray, 0, byteArray.Length);
 
-                    // The following expression creates the base64String, then chunks
-                    // it to lines of 76 characters long.
-                    string base64String = System.Convert.ToBase64String(byteArray)
-                        .Select((c, i) => new { Character = c, Chunk = i / 76 })
-                        .GroupBy(c => c.Chunk)
-                        .Aggregate(
-                            new StringBuilder(),
-                            (s, i) =>
-                                s.Append(
-                                    i.Aggregate(
-                                        new StringBuilder(),
-                                        (seed, it) => seed.Append(it.Character),
-                                        sb => sb.ToString())).Append(Environment.NewLine),
-                            s => s.ToString());
+                // The following expression creates the base64String, then chunks
+                // it to lines of 76 characters long.
+                string base64String = Convert.ToBase64String(byteArray)
+                    .Select((@char, index) => new { Character = @char, Chunk = index / 76 })
+                    .GroupBy(charAndChunk => charAndChunk.Chunk)
+                    .Aggregate(
+                        new StringBuilder(),
+                        (sb, grouping) => sb
+                            .Append(grouping.Aggregate(
+                                new StringBuilder(),
+                                (chunkSb, charAndChunk) => chunkSb.Append(charAndChunk.Character),
+                                chunkSb => chunkSb.ToString()))
+                            .Append(Environment.NewLine),
+                        sb => sb.ToString());
 
-                    return new XElement(
-                        pkg + "part",
-                        new XAttribute(pkg + "name", part.Uri),
-                        new XAttribute(pkg + "contentType", part.ContentType),
-                        new XAttribute(pkg + "compression", "store"),
-                        new XElement(pkg + "binaryData", base64String));
-                }
+                return new XElement(
+                    Pkg + "part",
+                    new XAttribute(Pkg + "name", part.Uri),
+                    new XAttribute(Pkg + "contentType", part.ContentType),
+                    new XAttribute(Pkg + "compression", "store"),
+                    new XElement(Pkg + "binaryData", base64String));
             }
         }
 
@@ -167,23 +189,28 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(package));
             }
 
+            if (document.Root is null)
+            {
+                throw new ArgumentException(ExceptionMessages.RootElementIsNull, nameof(document));
+            }
+
             // Add all parts (but not relationships).
-            foreach (var xmlPart in document.Root
+            foreach (XElement xmlPart in document.Root
                 .Elements()
                 .Where(p =>
-                    (string)p.Attribute(pkg + "contentType") !=
-                        "application/vnd.openxmlformats-package.relationships+xml"))
+                    (string) p.Attribute(Pkg + "contentType") !=
+                    "application/vnd.openxmlformats-package.relationships+xml"))
             {
-                string name = (string)xmlPart.Attribute(pkg + "name");
-                string contentType = (string)xmlPart.Attribute(pkg + "contentType");
-                if (contentType.EndsWith("xml", StringComparison.Ordinal))
+                var name = (string) xmlPart.Attribute(Pkg + "name");
+                var contentType = (string) xmlPart.Attribute(Pkg + "contentType");
+                if (contentType.EndsWith("xml"))
                 {
-                    Uri uri = new Uri(name, UriKind.Relative);
+                    var uri = new Uri(name, UriKind.Relative);
                     PackagePart part = package.CreatePart(uri, contentType, CompressionOption.SuperFast);
                     using (Stream stream = part.GetStream(FileMode.Create))
                     using (XmlWriter xmlWriter = XmlWriter.Create(stream))
                     {
-                        xmlPart.Element(pkg + "xmlData")
+                        xmlPart.Elements(Pkg + "xmlData")
                             .Elements()
                             .First()
                             .WriteTo(xmlWriter);
@@ -191,37 +218,34 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
                 else
                 {
-                    Uri uri = new Uri(name, UriKind.Relative);
+                    var uri = new Uri(name, UriKind.Relative);
                     PackagePart part = package.CreatePart(uri, contentType, CompressionOption.SuperFast);
                     using (Stream stream = part.GetStream(FileMode.Create))
-                    using (BinaryWriter binaryWriter = new BinaryWriter(stream))
+                    using (var binaryWriter = new BinaryWriter(stream))
                     {
-                        string base64StringInChunks = (string)xmlPart.Element(pkg + "binaryData");
-                        char[] base64CharArray = base64StringInChunks
-                            .Where(c => c != '\r' && c != '\n').ToArray();
-                        byte[] byteArray =
-                            System.Convert.FromBase64CharArray(
-                                base64CharArray, 0, base64CharArray.Length);
+                        var base64StringInChunks = (string) xmlPart.Element(Pkg + "binaryData");
+                        char[] base64CharArray = base64StringInChunks.Where(c => c != '\r' && c != '\n').ToArray();
+                        byte[] byteArray = Convert.FromBase64CharArray(base64CharArray, 0, base64CharArray.Length);
                         binaryWriter.Write(byteArray);
                     }
                 }
             }
 
-            foreach (var xmlPart in document.Root.Elements())
+            foreach (XElement xmlPart in document.Root.Elements())
             {
-                string name = (string)xmlPart.Attribute(pkg + "name");
-                string contentType = (string)xmlPart.Attribute(pkg + "contentType");
+                var name = (string) xmlPart.Attribute(Pkg + "name");
+                var contentType = (string) xmlPart.Attribute(Pkg + "contentType");
                 if (contentType == "application/vnd.openxmlformats-package.relationships+xml")
                 {
                     if (name == "/_rels/.rels")
                     {
                         // Add the package level relationships.
-                        foreach (XElement xmlRel in xmlPart.Descendants(rel + "Relationship"))
+                        foreach (XElement xmlRel in xmlPart.Descendants(Rel + "Relationship"))
                         {
-                            string id = (string)xmlRel.Attribute("Id");
-                            string type = (string)xmlRel.Attribute("Type");
-                            string target = (string)xmlRel.Attribute("Target");
-                            string targetMode = (string)xmlRel.Attribute("TargetMode");
+                            var id = (string) xmlRel.Attribute("Id");
+                            var type = (string) xmlRel.Attribute("Type");
+                            var target = (string) xmlRel.Attribute("Target");
+                            var targetMode = (string) xmlRel.Attribute("TargetMode");
                             if (targetMode == "External")
                             {
                                 package.CreateRelationship(
@@ -243,12 +267,12 @@ namespace DocumentFormat.OpenXml.Packaging
                         string relsFilename = name.Substring(name.LastIndexOf('/'));
                         string filename = relsFilename.Substring(0, relsFilename.IndexOf(".rels", StringComparison.Ordinal));
                         PackagePart fromPart = package.GetPart(new Uri(directory + filename, UriKind.Relative));
-                        foreach (XElement xmlRel in xmlPart.Descendants(rel + "Relationship"))
+                        foreach (XElement xmlRel in xmlPart.Descendants(Rel + "Relationship"))
                         {
-                            string id = (string)xmlRel.Attribute("Id");
-                            string type = (string)xmlRel.Attribute("Type");
-                            string target = (string)xmlRel.Attribute("Target");
-                            string targetMode = (string)xmlRel.Attribute("TargetMode");
+                            var id = (string) xmlRel.Attribute("Id");
+                            var type = (string) xmlRel.Attribute("Type");
+                            var target = (string) xmlRel.Attribute("Target");
+                            var targetMode = (string) xmlRel.Attribute("TargetMode");
                             if (targetMode == "External")
                             {
                                 fromPart.CreateRelationship(
@@ -269,6 +293,80 @@ namespace DocumentFormat.OpenXml.Packaging
             // Save contents of all parts and relationships contained in package.
             package.Flush();
             return package;
+        }
+
+        /// <summary>
+        /// Represents the collection of internal package relationships.
+        /// </summary>
+        private class InternalPackageRelationships : IEnumerable<PackageRelationship>
+        {
+            private readonly Package _package;
+
+            /// <summary>
+            /// Initializes a new <see cref="PackageRelationship" /> instance.
+            /// </summary>
+            /// <param name="package">The <see cref="Package" />.</param>
+            public InternalPackageRelationships(Package package)
+            {
+                _package = package ?? throw new ArgumentNullException(nameof(package));
+            }
+
+            /// <inheritdoc />
+            IEnumerator IEnumerable.GetEnumerator()
+            {
+                return GetEnumerator();
+            }
+
+            /// <inheritdoc />
+            public IEnumerator<PackageRelationship> GetEnumerator()
+            {
+                var relationships = new HashSet<PackageRelationship>(new PackageRelationshipEqualityComparer());
+
+                _package.GetRelationships()
+                    .Where(r => r.TargetMode == TargetMode.Internal)
+                    .ToList()
+                    .ForEach(r => Enumerate(r, relationships));
+
+                return relationships.GetEnumerator();
+            }
+
+#if NET35
+            private void Enumerate(PackageRelationship r, ICollection<PackageRelationship> relationships)
+            {
+                if (relationships.Contains(r))
+                {
+                    return;
+                }
+
+                relationships.Add(r);
+#else
+            private void Enumerate(PackageRelationship r, ISet<PackageRelationship> relationships)
+            {
+                if (!relationships.Add(r))
+                {
+                    return;
+                }
+#endif
+                _package.GetPart(PackUriHelper.ResolvePartUri(r.SourceUri, r.TargetUri))
+                    .GetRelationships()
+                    .Where(pr => pr.TargetMode == TargetMode.Internal)
+                    .ToList()
+                    .ForEach(pr => Enumerate(pr, relationships));
+            }
+
+            private class PackageRelationshipEqualityComparer : IEqualityComparer<PackageRelationship>
+            {
+                public bool Equals(PackageRelationship x, PackageRelationship y)
+                {
+                    return x?.SourceUri == y?.SourceUri && x?.TargetUri == y?.TargetUri;
+                }
+
+                public int GetHashCode(PackageRelationship obj)
+                {
+                    string uriString = obj.SourceUri + ":" + obj.TargetUri;
+                    return uriString.GetHashCode();
+                }
+            }
         }
     }
 }
