@@ -59,7 +59,9 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
 
                 X15.Connection x15connection = connectionsPart.Connections.Descendants<X15.Connection>().FirstOrDefault();
                 if (x15connection == null)
+                {
                     throw new Exception("Unable to obtain the X15.Connection.");
+                }
 
                 X15ConnectionId = x15connection.Id;
                 X15ConnectionAutoDelete = x15connection.AutoDelete;
@@ -155,7 +157,9 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 foreach (Connection connection in package.WorkbookPart.ConnectionsPart.Connections)
                 {
                     if (connection.Id == 1)
+                    {
                         hasConnection = true;
+                    }
                 }
 
                 log.Verify(hasConnection == false, "Connection is not delete.");
@@ -202,7 +206,9 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 foreach (X15.Connection x15connection in connectionsPart.Connections.Descendants<X15.Connection>())
                 {
                     if (x15connection.OleDbPrpoperties != null)
+                    {
                         connection = x15connection;
+                    }
                 }
 
                 log.Verify(connection.OleDbPrpoperties != null, "Missing X15.OleDbPrpoperties element.");

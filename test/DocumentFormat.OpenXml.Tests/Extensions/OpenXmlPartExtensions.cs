@@ -23,7 +23,10 @@ namespace DocumentFormat.OpenXml.Tests
         public static bool IsMainPart(this OpenXmlPartContainer part)
         {
             if (part is MainDocumentPart || part is WorkbookPart || part is PresentationPart)
+            {
                 return true;
+            }
+
             return false;
         }
 
@@ -34,10 +37,14 @@ namespace DocumentFormat.OpenXml.Tests
                 XElement PartRoot = null;
                 using (var stream = part.GetStream())
                 using (var reader = XmlReader.Create(stream))
+                {
                     PartRoot = XElement.Load(reader);
+                }
 
                 if (PartRoot.Name.LocalName == "Sources")
+                {
                     return true;
+                }
             }
 
             return false;
@@ -50,10 +57,14 @@ namespace DocumentFormat.OpenXml.Tests
                 XElement PartRoot = null;
                 using (var stream = part.GetStream())
                 using (var reader = XmlReader.Create(stream))
+                {
                     PartRoot = XElement.Load(reader);
+                }
 
                 if (PartRoot.Name.LocalName == "additionalCharacteristics")
+                {
                     return true;
+                }
             }
 
             return false;
@@ -66,10 +77,14 @@ namespace DocumentFormat.OpenXml.Tests
                 XElement PartRoot = null;
                 using (var stream = part.GetStream())
                 using (var reader = XmlReader.Create(stream))
+                {
                     PartRoot = XElement.Load(reader);
+                }
 
                 if (PartRoot.Name.LocalName == "ink")
+                {
                     return true;
+                }
             }
 
             return false;
@@ -82,8 +97,10 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>IEnumerable<OpenXmlPart> of parts in the pass-in <paramref name="root"/>.</returns>
         public static IEnumerable<OpenXmlPart> DescendantParts(this OpenXmlPartContainer root)
         {
-            if (null == root)
+            if (root == null)
+            {
                 throw new ArgumentNullException(nameof(root));
+            }
 
             var parts = new List<OpenXmlPart>();
             var uriList = new List<string>();
@@ -125,8 +142,10 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>return true if it has non-null root element, otherwise rturn false.</returns>
         public static bool IsReflectable(this OpenXmlPart part)
         {
-            if (null == part)
+            if (part == null)
+            {
                 throw new ArgumentNullException(nameof(part));
+            }
 
             if (part.IsBibliographyPart() || part.IsAdditionalCharacteristicsPart() || part.IsInkPart())
             {
@@ -137,7 +156,7 @@ namespace DocumentFormat.OpenXml.Tests
             var property = part.GetType().GetProperties(flag)
                 .Where(p => p.PropertyType.IsSubclassOf(typeof(OpenXmlPartRootElement)))
                 .FirstOrDefault();
-            return null != property;
+            return property != null;
         }
 
         /// <summary>
@@ -147,8 +166,10 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>Return Root element of the pass-in part</returns>
         public static OpenXmlPartRootElement RootElement(this OpenXmlPart part)
         {
-            if (null == part)
+            if (part == null)
+            {
                 throw new ArgumentNullException(nameof(part));
+            }
 
             if (part is CustomXmlPart)
             {
@@ -206,46 +227,64 @@ namespace DocumentFormat.OpenXml.Tests
             #region compare content of two parts
             // if two parts have the same reference, return true;
             if (sourcePart == targetPart)
+            {
                 return true;
+            }
 
             // if there is only one part is null, return false
             if ((targetPart == null && sourcePart != null) || (sourcePart == null && targetPart != null))
+            {
                 return false;
+            }
 
             //if two parts have different content type, return false
             if (sourcePart.ContentType != targetPart.ContentType)
+            {
                 return false;
+            }
 
             //if two parts have different number of external relationships, return false
             if (sourcePart.ExternalRelationships.Count() != targetPart.ExternalRelationships.Count())
+            {
                 return false;
+            }
 
             // if two parts have different number of hyperlink relationships, return false
             if (sourcePart.HyperlinkRelationships.Count() != targetPart.HyperlinkRelationships.Count())
+            {
                 return false;
+            }
 
             // if two parts have different relationship type, return false
             if (sourcePart.RelationshipType != targetPart.RelationshipType)
+            {
                 return false;
+            }
             //// if two parts have different URI, return false
             //if (sourcePart.Uri != targetPart.Uri)
             //    return false;
             // if two parts contains different number of parts, return false;
             if (sourcePart.Parts.Count() != targetPart.Parts.Count())
+            {
                 return false;
+            }
 
             //compare each external relationship
             foreach (var id in sourcePart.ExternalRelationships)
             {
                 if (targetPart.ExternalRelationships.Where(i => i.Id == id.Id && i.RelationshipType == id.RelationshipType && i.Uri == id.Uri).Count() != 1)
+                {
                     return false;
+                }
             }
 
             //compare each hyperlink relationship
             foreach (var id in sourcePart.HyperlinkRelationships)
             {
                 if (targetPart.HyperlinkRelationships.Where(i => i.Id == id.Id && i.IsExternal == id.IsExternal && i.Uri == id.Uri).Count() != 1)
+                {
                     return false;
+                }
             }
 
             if (sourcePart.RootElement == null)
@@ -263,7 +302,10 @@ namespace DocumentFormat.OpenXml.Tests
                         var xtarget = XElement.Load(targetReader);
 
                         if (xsource.Compare(xtarget) == false)
+                        {
                             return false;
+                        }
+
                         xmlCompareSuccess = true;
                     }
                     catch (XmlException)
@@ -279,15 +321,21 @@ namespace DocumentFormat.OpenXml.Tests
                     using (var targetStm = targetPart.GetStream())
                     {
                         if (sourceStm.Length != targetStm.Length)
+                        {
                             return false;
+                        }
 
-                        int i; int j;
+                        int i;
+                        int j;
 
                         do
                         {
                             i = sourceStm.ReadByte();
                             j = targetStm.ReadByte();
-                            if (i != j) return false;
+                            if (i != j)
+                            {
+                                return false;
+                            }
                         } while (i != -1 && j != -1);
                     }
                 }
@@ -296,7 +344,9 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 // if the part contains OpenXml Elements, compare their root elements
                 if (sourcePart.RootElement.ToXElement().Compare(targetPart.RootElement.ToXElement()) == false)
+                {
                     return false;
+                }
             }
             #endregion
 
@@ -307,7 +357,9 @@ namespace DocumentFormat.OpenXml.Tests
                 if (!ComparedPart.Contains(part.OpenXmlPart.Uri))
                 {
                     if (part.OpenXmlPart.CompareDescendentsAndSelf(targetPart.Parts.Single(p => p.RelationshipId == part.RelationshipId).OpenXmlPart, ComparedPart) == false)
+                    {
                         return false;
+                    }
                 }
             }
 
@@ -325,9 +377,13 @@ namespace DocumentFormat.OpenXml.Tests
             using (var xw = XmlWriter.Create(sb))
             {
                 if (part.RootElement != null)
+                {
                     part.RootElement.WriteTo(xw);
+                }
                 else
+                {
                     sb.Append(string.Empty);
+                }
             }
 
             return sb.ToString();

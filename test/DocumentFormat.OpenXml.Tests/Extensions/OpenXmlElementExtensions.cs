@@ -18,7 +18,10 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>current element with event handlers hooked</returns>
         public static OpenXmlElement SetEventHandler(this OpenXmlElement e, Func<OpenXmlElement, OpenXmlElement> attachHandlerTo)
         {
-            if (null == e) return e;
+            if (e == null)
+            {
+                return e;
+            }
 
             return attachHandlerTo(e);
         }
@@ -30,11 +33,15 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>Part root element of current element, null if root element is not of OpenXmlPartRootElement.</returns>
         public static OpenXmlPartRootElement PartRootElement(this OpenXmlElement element)
         {
-            if (null == element)
+            if (element == null)
+            {
                 throw new ArgumentNullException(nameof(element));
+            }
 
             if (element is OpenXmlPartRootElement)
+            {
                 return element as OpenXmlPartRootElement;
+            }
 
             return element.Ancestors<OpenXmlPartRootElement>().FirstOrDefault();
         }
@@ -46,11 +53,16 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>index of pass-in element, 0 for root/orphan element</returns>
         public static int Index(this OpenXmlElement element)
         {
-            if (null == element)
+            if (element == null)
+            {
                 throw new ArgumentNullException(nameof(element));
+            }
 
-            if (element.Parent == null)   // root/orphan element itself
+            // root/orphan element itself
+            if (element.Parent == null)
+            {
                 return 0;
+            }
 
             return element.Parent.ChildElements.TakeWhile(c => element != c).Count();
         }
@@ -62,8 +74,10 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>path to specified element</returns>
         public static string Path(this OpenXmlElement element)
         {
-            if (null == element)
+            if (element == null)
+            {
                 throw new ArgumentNullException(nameof(element));
+            }
 
             var path = string.Format(@"/{0}@{1}", element.LocalName, element.Index());
 
@@ -77,11 +91,16 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>name of element in <w:p> format</returns>
         public static string GetFullName(this OpenXmlElement element)
         {
-            if (null == element)
+            if (element == null)
+            {
                 throw new ArgumentNullException(nameof(element));
+            }
 
             if (string.IsNullOrEmpty(element.Prefix))
+            {
                 return element.LocalName;
+            }
+
             return string.Format("{0}:{1}", element.Prefix, element.LocalName);
         }
 
@@ -99,8 +118,10 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>XName of pass-in OpenXmlElement</returns>
         public static XName GetXName(this OpenXmlElement element)
         {
-            if (null == element)
+            if (element == null)
+            {
                 throw new ArgumentNullException(nameof(element));
+            }
 
             XNamespace xns = element.NamespaceUri;
             return xns + element.LocalName;
@@ -114,22 +135,35 @@ namespace DocumentFormat.OpenXml.Tests
         public static XElement ToXElement(this OpenXmlElement element)
         {
             if (element == null)
+            {
                 throw new ArgumentNullException(nameof(element));
+            }
+
             return XElement.Parse(element.OuterXml);
         }
 
         public static OpenXmlElement SetIgnorable(this OpenXmlElement element, string prefix)
         {
             if (element == null)
+            {
                 throw new ArgumentNullException(nameof(element));
+            }
 
             var mc = element.MCAttributes;
             if (mc == null)
+            {
                 mc = new MarkupCompatibilityAttributes();
+            }
+
             if (mc.Ignorable == null)
+            {
                 mc.Ignorable = prefix;
+            }
             else
+            {
                 mc.Ignorable = string.Join(" ", new string[] { mc.Ignorable, prefix });
+            }
+
             element.MCAttributes = mc;
             return element;
         }
@@ -137,15 +171,25 @@ namespace DocumentFormat.OpenXml.Tests
         public static OpenXmlElement SetMustUnderstand(this OpenXmlElement element, string prefix)
         {
             if (element == null)
+            {
                 throw new ArgumentNullException(nameof(element));
+            }
 
             var mc = element.MCAttributes;
             if (mc == null)
+            {
                 mc = new MarkupCompatibilityAttributes();
+            }
+
             if (mc.MustUnderstand == null)
+            {
                 mc.MustUnderstand = prefix;
+            }
             else
+            {
                 mc.MustUnderstand = string.Join(" ", new string[] { mc.MustUnderstand, prefix });
+            }
+
             element.MCAttributes = mc;
             return element;
         }
@@ -153,15 +197,25 @@ namespace DocumentFormat.OpenXml.Tests
         public static OpenXmlElement SetPreserveAttributes(this OpenXmlElement element, string qualified)
         {
             if (element == null)
+            {
                 throw new ArgumentNullException(nameof(element));
+            }
 
             var mc = element.MCAttributes;
             if (mc == null)
+            {
                 mc = new MarkupCompatibilityAttributes();
+            }
+
             if (mc.PreserveAttributes == null)
+            {
                 mc.PreserveAttributes = qualified;
+            }
             else
+            {
                 mc.PreserveAttributes = string.Join(" ", new string[] { mc.PreserveAttributes, qualified });
+            }
+
             element.MCAttributes = mc;
             return element;
         }
@@ -169,15 +223,25 @@ namespace DocumentFormat.OpenXml.Tests
         public static OpenXmlElement SetPreserveElements(this OpenXmlElement element, string qualified)
         {
             if (element == null)
+            {
                 throw new ArgumentNullException(nameof(element));
+            }
 
             var mc = element.MCAttributes;
             if (mc == null)
+            {
                 mc = new MarkupCompatibilityAttributes();
+            }
+
             if (mc.PreserveElements == null)
+            {
                 mc.PreserveElements = qualified;
+            }
             else
+            {
                 mc.PreserveElements = string.Join(" ", new string[] { mc.PreserveElements, qualified });
+            }
+
             element.MCAttributes = mc;
             return element;
         }
@@ -185,15 +249,25 @@ namespace DocumentFormat.OpenXml.Tests
         public static OpenXmlElement SetProcessContent(this OpenXmlElement element, string qualified)
         {
             if (element == null)
+            {
                 throw new ArgumentNullException(nameof(element));
+            }
 
             var mc = element.MCAttributes;
             if (mc == null)
+            {
                 mc = new MarkupCompatibilityAttributes();
+            }
+
             if (mc.ProcessContent == null)
+            {
                 mc.ProcessContent = qualified;
+            }
             else
+            {
                 mc.ProcessContent = string.Join(" ", new string[] { mc.ProcessContent, qualified });
+            }
+
             element.MCAttributes = mc;
             return element;
         }
@@ -201,12 +275,19 @@ namespace DocumentFormat.OpenXml.Tests
         public static AlternateContentChoice SetRequires(this AlternateContentChoice choice, string prefix)
         {
             if (choice == null)
+            {
                 throw new ArgumentNullException(nameof(choice));
+            }
 
             if (choice.Requires == null)
+            {
                 choice.Requires = prefix;
+            }
             else
+            {
                 choice.Requires = string.Join(" ", new string[] { choice.Requires, prefix });
+            }
+
             return choice;
         }
     }

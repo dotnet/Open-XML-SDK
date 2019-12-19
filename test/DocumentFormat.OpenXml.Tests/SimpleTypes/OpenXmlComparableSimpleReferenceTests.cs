@@ -6,7 +6,8 @@ using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
-    public abstract class OpenXmlComparableSimpleReferenceTests<T> where T : class, IComparable, IComparable<T>, IEquatable<T>
+    public abstract class OpenXmlComparableSimpleReferenceTests<T>
+        where T : class, IComparable, IComparable<T>, IEquatable<T>
     {
         protected OpenXmlComparableSimpleReference<T> SmallValue1 { get; set; }
 

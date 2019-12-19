@@ -42,7 +42,9 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
                 ThreadingInfoExtUri = commentExtension.Uri;
 
                 if (string.IsNullOrEmpty(ThreadingInfoExtUri))
+                {
                     throw new Exception("Uri attribute value in Extension element is not set.");
+                }
             }
         }
 

@@ -26,7 +26,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// <typeparam name="T">the PartRootElement</typeparam>
         /// <param name="part">the openXmlPart which the root element existed on</param>
         /// <param name="root">the loaded part root element to be traversed</param>
-        private void TestTraverseUp<U>(OpenXmlPart part, OpenXmlElement root) where U : OpenXmlElement
+        private void TestTraverseUp<U>(OpenXmlPart part, OpenXmlElement root)
+            where U : OpenXmlElement
         {
             string UTagName = (Activator.CreateInstance(typeof(U)) as OpenXmlElement).LocalName;
 
@@ -54,7 +55,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// <typeparam name="U">The specified child type need to be traversed</typeparam>
         /// <param name="part">the OpenXmlPart in which the element exists</param>
         /// <param name="root">the OpenXmlElement need to be traversed</param>
-        private void TestTraverseDown<U>(OpenXmlPart part, OpenXmlElement root) where U : OpenXmlElement
+        private void TestTraverseDown<U>(OpenXmlPart part, OpenXmlElement root)
+            where U : OpenXmlElement
         {
             string UTagName = (Activator.CreateInstance(typeof(U)) as OpenXmlElement).LocalName;
             XElement Xroot = ConvertToXElement(part, root);
@@ -140,7 +142,9 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
             else
+            {
                 Log.Warning("No Children exists");
+            }
         }
 
         /// <summary>
@@ -150,7 +154,8 @@ namespace DocumentFormat.OpenXml.Tests
         /// <typeparam name="U">Type of the sibling used by generic traversing method</typeparam>
         /// <param name="part">the OpenXmlPart in which the element exists</param>
         /// <param name="Element">the OpenXmlElement need to be traversed</param>
-        private void TestTraverseSibling<U>(OpenXmlPart part, OpenXmlElement Element) where U : OpenXmlElement
+        private void TestTraverseSibling<U>(OpenXmlPart part, OpenXmlElement Element)
+            where U : OpenXmlElement
         {
             string UTagName = (Activator.CreateInstance(typeof(U)) as OpenXmlElement).LocalName;
 
@@ -180,7 +185,9 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Pass("All next siblings have been retrieved correctly");
             }
             else
+            {
                 Log.Fail("nextSibling doesn't return correctly");
+            }
 
             Log.Comment("****** test ElementsBefore ******");
             VerifyEqual(Xwalker.ElementsBeforeSelf(), walker.ElementsBefore(), part);
@@ -201,7 +208,9 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Pass("All Previous siblings have been retrieved correctly");
             }
             else
+            {
                 Log.Fail("PreviousSibling doesn't return correctly");
+            }
 
             Log.Comment("****** test NextSibling<OpenXmlElement> ******");
 
@@ -221,7 +230,9 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Pass("All next siblings have been retrieved correctly");
             }
             else
+            {
                 Log.Fail("nextSibling doesn't return correctly");
+            }
 
             Log.Comment("****** test PreviousSibling<OpenXmlElement>() ******");
             while (Xwalker.PreviousNode != null && walker.PreviousSibling<OpenXmlElement>() != null)
@@ -239,7 +250,9 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Pass("All Previous siblings have been retrieved correctly");
             }
             else
+            {
                 Log.Fail("PreviousSibling doesn't return correctly");
+            }
 
             Log.Comment("****** test NextSibling<{0}> ******", typeof(U).Name);
             while (Xwalker.ElementsAfterSelf().Where(x => x.Name.LocalName == UTagName).Any() && walker.NextSibling<U>() != null)

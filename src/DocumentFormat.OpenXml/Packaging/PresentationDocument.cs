@@ -214,12 +214,16 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument CreateFromTemplate(string path)
         {
             if (path == null)
+            {
                 throw new ArgumentNullException(nameof(path));
+            }
 
             // Check extensions as the template must have a valid Word Open XML extension.
             string extension = Path.GetExtension(path);
             if (extension != ".pptx" && extension != ".pptm" && extension != ".potx" && extension != ".potm")
+            {
                 throw new ArgumentException("Illegal template file: " + path, nameof(path));
+            }
 
             using (PresentationDocument template = PresentationDocument.Open(path, false))
             {
@@ -229,7 +233,9 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 // If the template is a document rather than a template, we are done.
                 if (extension == ".xlsx" || extension == ".xlsm")
+                {
                     return document;
+                }
 
                 // Otherwise, we'll have to do some more work.
                 document.ChangeDocumentType(PresentationDocumentType.Presentation);

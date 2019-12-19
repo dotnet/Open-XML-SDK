@@ -232,11 +232,13 @@ namespace DocumentFormat.OpenXml.Tests
                 "ToString() result {0} does NOT equal to expected {1}.", stringValue, expectedText);
 
             Log.Verify(oxObj.HasValue, "{0} with valid value has NO value.", oxObj.GetType().Name);
-            Log.VerifyTrue(oxObj.Value.Equals(expectedValue),
+            Log.VerifyTrue(
+                oxObj.Value.Equals(expectedValue),
                 "Property Value {0} does NOT equal to expected {1}.", oxObj.Value, expectedValue);
 
             T val = oxObj;
-            Log.VerifyTrue(val.Equals(expectedValue),
+            Log.VerifyTrue(
+                val.Equals(expectedValue),
                 "{0} operator result {1} does NOT equal to expected {2}.", typeof(T).Name, val, expectedValue);
 
             Log.Comment("Leaving Non-Generic Test Method...");
@@ -354,7 +356,8 @@ namespace DocumentFormat.OpenXml.Tests
                 "ToString() result {0} does NOT equal to expected {1}.", stringValue, expectedText);
 
             Log.Verify(oxObj.HasValue, "{0} with valid value has NO value.", oxObj.GetType().Name);
-            Log.VerifyTrue(isSequenceEqual(oxObj.Items, expectedValue),
+            Log.VerifyTrue(
+                isSequenceEqual(oxObj.Items, expectedValue),
                 "Property Items {0} does NOT equal to expected {1}.", oxObj.Items, expectedValue);
 
             Log.Comment("Leaving Non-Generic Test Method...");
@@ -364,9 +367,15 @@ namespace DocumentFormat.OpenXml.Tests
             where T1 : OpenXmlSimpleType, new()
         {
             if (items == null)
+            {
                 throw new ArgumentNullException(nameof(items));
+            }
+
             if (listB == null)
+            {
                 throw new ArgumentNullException(nameof(listB));
+            }
+
             return items.Select(i => i.ToString()).SequenceEqual(listB.Select(t => t.ToString()));
         }
 
@@ -439,9 +448,13 @@ namespace DocumentFormat.OpenXml.Tests
             string val = string.Empty;
             val = objA;
             if (val == null)
+            {
                 Log.Pass("implicit string operator on null reference returned null, as expected.");
+            }
             else
+            {
                 Log.Fail("Implicit string operator on null reference return NON-null.");
+            }
         }
 
         private void InvalidOperation<T>(
@@ -484,11 +497,13 @@ namespace DocumentFormat.OpenXml.Tests
                 "ToString() result {0} does NOT equal to expected {1}.", stringValue, expectedText);
 
             Log.Verify(oxObj.HasValue, "{0} with valid value has NO value.", oxObj.GetType().Name);
-            Log.VerifyTrue(oxObj.Value.Equals(expectedValue),
+            Log.VerifyTrue(
+                oxObj.Value.Equals(expectedValue),
                 "Property Value {0} does NOT equal to expected {1}.", oxObj.Value, expectedValue);
 
             string val = oxObj as OpenXmlSimpleType;
-            Log.VerifyTrue(val.Equals(expectedValue),
+            Log.VerifyTrue(
+                val.Equals(expectedValue),
                 "{0} operator result {1} does NOT equal to expected {2}.", typeof(OpenXmlSimpleType).Name, val, expectedValue);
 
             Log.Comment("Leaving Non-Generic Test Method...");
@@ -607,11 +622,13 @@ namespace DocumentFormat.OpenXml.Tests
                 "ToString() result {0} does NOT equal to expected {1}.", stringValue, expectedText);
 
             Log.Verify(oxObj.HasValue, "{0} with valid value has NO value.", oxObj.GetType().Name);
-            Log.VerifyTrue(oxObj.Value.Equals(expectedValue),
+            Log.VerifyTrue(
+                oxObj.Value.Equals(expectedValue),
                 "Property Value {0} does NOT equal to expected {1}.", oxObj.Value, expectedValue);
 
             string val = oxObj as OpenXmlSimpleType;
-            Log.VerifyTrue(val.Equals(expectedValue),
+            Log.VerifyTrue(
+                val.Equals(expectedValue),
                 "{0} operator result {1} does NOT equal to expected {2}.", typeof(OpenXmlSimpleType).Name, val, expectedValue);
 
             Log.Comment("Leaving Non-Generic Test Method...");
@@ -730,11 +747,13 @@ namespace DocumentFormat.OpenXml.Tests
                 "ToString() result {0} does NOT equal to expected {1}.", stringValue, expectedText);
 
             Log.Verify(oxObj.HasValue, "{0} with valid value has NO value.", oxObj.GetType().Name);
-            Log.VerifyTrue(oxObj.Value.Equals(expectedValue),
+            Log.VerifyTrue(
+                oxObj.Value.Equals(expectedValue),
                 "Property Value {0} does NOT equal to expected {1}.", oxObj.Value, expectedValue);
 
             string val = oxObj as OpenXmlSimpleType;
-            Log.VerifyTrue(val.Equals(expectedValue),
+            Log.VerifyTrue(
+                val.Equals(expectedValue),
                 "{0} operator result {1} does NOT equal to expected {2}.", typeof(OpenXmlSimpleType).Name, val, expectedValue);
 
             Log.Comment("Leaving Non-Generic Test Method...");
@@ -823,9 +842,13 @@ namespace DocumentFormat.OpenXml.Tests
             OnOffValue val = validValue;
             val = objA;
             if (val == null)
+            {
                 Log.Pass("implicit string operator on null reference returned null, as expected.");
+            }
             else
+            {
                 Log.Fail("Implicit string operator on null reference return NON-null.");
+            }
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValueFalse);
             objA = new OnOffValue();
@@ -931,9 +954,13 @@ namespace DocumentFormat.OpenXml.Tests
             TrueFalseBlankValue val = validValue;
             val = objA;
             if (val == null)
+            {
                 Log.Pass("implicit string operator on null reference returned null, as expected.");
+            }
             else
+            {
                 Log.Fail("Implicit string operator on null reference return NON-null.");
+            }
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValueFalse);
             objA = new TrueFalseBlankValue();
@@ -993,10 +1020,12 @@ namespace DocumentFormat.OpenXml.Tests
                 "ToString() result {0} does NOT equal to expected {1}.", stringValue, expectedText);
 
             Log.Verify(oxObj.HasValue, "{0} with valid value has NO value.", oxObj.GetType().Name);
-            Log.VerifyTrue(val.Equals(expectedValue),
+            Log.VerifyTrue(
+                val.Equals(expectedValue),
                 "Property Value {0} does NOT equal to expected {1}.", val, expectedValue);
 
-            Log.VerifyTrue(val.Equals(expectedValue),
+            Log.VerifyTrue(
+                val.Equals(expectedValue),
                 "{0} operator result {1} does NOT equal to expected {2}.", typeof(OpenXmlSimpleType).Name, val, expectedValue);
 
             Log.Comment("Leaving Non-Generic Test Method...");
@@ -1019,11 +1048,13 @@ namespace DocumentFormat.OpenXml.Tests
                 "ToString() result {0} does NOT equal to expected {1}.", stringValue, expectedText);
 
             Log.Verify(oxObj.HasValue, "{0} with valid value has NO value.", oxObj.GetType().Name);
-            Log.VerifyTrue(oxObj.Value.Equals(expectedValue),
+            Log.VerifyTrue(
+                oxObj.Value.Equals(expectedValue),
                 "Property Value {0} does NOT equal to expected {1}.", oxObj.Value, expectedValue);
 
             bool val = oxObj.Value;
-            Log.VerifyTrue(val.Equals(expectedValue),
+            Log.VerifyTrue(
+                val.Equals(expectedValue),
                 "{0} operator result {1} does NOT equal to expected {2}.", typeof(OpenXmlSimpleType).Name, val, expectedValue);
 
             Log.Comment("Leaving Non-Generic Test Method...");

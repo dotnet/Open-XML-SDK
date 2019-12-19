@@ -6,7 +6,8 @@ using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
-    public abstract class OpenXmlComparableSimpleValueTests<T> where T : struct, IComparable, IComparable<T>, IEquatable<T>, IConvertible
+    public abstract class OpenXmlComparableSimpleValueTests<T>
+        where T : struct, IComparable, IComparable<T>, IEquatable<T>, IConvertible
     {
         protected OpenXmlComparableSimpleValue<T> SmallValue1 { get; set; }
 

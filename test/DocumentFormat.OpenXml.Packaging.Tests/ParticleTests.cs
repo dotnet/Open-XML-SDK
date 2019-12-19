@@ -71,7 +71,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             Assert.NotSame(particle, built2007);
 
-            Assert.Collection(built2007.ChildrenParticles,
+            Assert.Collection(
+                built2007.ChildrenParticles,
                 p => Assert.Same(p, particle.ChildrenParticles[0]),
                 p => Assert.Same(p, particle.ChildrenParticles[2]));
 
@@ -79,7 +80,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             Assert.NotSame(particle, built2010);
 
-            Assert.Collection(built2010.ChildrenParticles,
+            Assert.Collection(
+                built2010.ChildrenParticles,
                 p => Assert.Same(p, particle.ChildrenParticles[0]),
                 p => Assert.Same(p, particle.ChildrenParticles[1]),
                 p => Assert.Same(p, particle.ChildrenParticles[2]));
@@ -99,7 +101,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             Assert.NotSame(particle, built2007);
 
-            Assert.Collection(built2007.ChildrenParticles,
+            Assert.Collection(
+                built2007.ChildrenParticles,
                 p => Assert.Same(p, particle.ChildrenParticles[0]),
                 p => Assert.Same(p, particle.ChildrenParticles[2]));
 
@@ -107,7 +110,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             Assert.NotSame(particle, built2010);
 
-            Assert.Collection(built2010.ChildrenParticles,
+            Assert.Collection(
+                built2010.ChildrenParticles,
                 p => Assert.Same(p, particle.ChildrenParticles[1]),
                 p => Assert.Same(p, particle.ChildrenParticles[2]));
         }
@@ -127,7 +131,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             Assert.NotSame(particle, built);
 
-            Assert.Collection(built.ChildrenParticles,
+            Assert.Collection(
+                built.ChildrenParticles,
                 p => Assert.Same(p, particle.ChildrenParticles[0]),
                 p => Assert.Same(p, particle.ChildrenParticles[1]),
                 p => Assert.Same(p, particle.ChildrenParticles[2]));

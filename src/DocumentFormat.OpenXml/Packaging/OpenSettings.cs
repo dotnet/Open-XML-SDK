@@ -41,7 +41,10 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 if (_mcSettings == null)
+                {
                     _mcSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007);
+                }
+
                 return _mcSettings;
             }
 

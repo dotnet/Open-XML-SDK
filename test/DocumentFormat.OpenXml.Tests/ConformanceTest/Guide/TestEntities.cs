@@ -63,14 +63,18 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 PresentationExtension slideGuidePresentationExtension = (PresentationExtension)slideGuideList.Parent;
                 SldExtUri = slideGuidePresentationExtension.Uri;
                 if (string.IsNullOrEmpty(SldExtUri))
+                {
                     throw new Exception("Uri attribute value in Extension element is not set. It element of P15.SlideGuideList parent element.");
+                }
 
                 //Get Extension Uri value. (This element is P15.SlideGuideList parent element.)
                 P15.NotesGuideList notesGuideList = package.PresentationPart.RootElement.Descendants<P15.NotesGuideList>().Single();
                 PresentationExtension notesGuidePresentationExtension = (PresentationExtension)notesGuideList.Parent;
                 NotesExtUri = notesGuidePresentationExtension.Uri;
                 if (string.IsNullOrEmpty(NotesExtUri))
+                {
                     throw new Exception("Uri attribute value in Extension element is not set. It element of P15.SlideGuideList parent element.");
+                }
             }
         }
 

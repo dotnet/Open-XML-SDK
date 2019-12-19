@@ -222,10 +222,11 @@ namespace DocumentFormat.OpenXml.Tests
             MCContext mcContext = new MCContext();
             ParagraphProperties pPr;
             Run run1, run2;
-            Paragraph p = new Paragraph(pPr = new ParagraphProperties() { WordWrap = new WordWrap() { Val = true } },
-                                         new OpenXmlMiscNode(System.Xml.XmlNodeType.Comment, "<!-- comments -->"),
-                                         run1 = new Run(new Text("Text 1.")),
-                                         run2 = new Run(new Text("Text 2.")));
+            Paragraph p = new Paragraph(
+                pPr = new ParagraphProperties() { WordWrap = new WordWrap() { Val = true } },
+                new OpenXmlMiscNode(System.Xml.XmlNodeType.Comment, "<!-- comments -->"),
+                run1 = new Run(new Text("Text 1.")),
+                run2 = new Run(new Text("Text 2.")));
 
             var target = p.GetFirstChildMc(mcContext, FileFormatVersions.Office2007);
             Assert.Same(pPr, target);
@@ -249,8 +250,9 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(run2, target);
 
             Run runInAcb = new Run(new Text("Text in ACB."));
-            AlternateContent acb = new AlternateContent(new AlternateContentChoice() { Requires = "w14test" },
-                                                        new AlternateContentFallback(runInAcb));
+            AlternateContent acb = new AlternateContent(
+                new AlternateContentChoice() { Requires = "w14test" },
+                new AlternateContentFallback(runInAcb));
             p.InsertAfter(acb, pPr);
 
             mcContext = new MCContext();
@@ -273,10 +275,11 @@ namespace DocumentFormat.OpenXml.Tests
             MCContext mcContext = new MCContext();
             ParagraphProperties pPr;
             Run run1, run2;
-            Paragraph p = new Paragraph(pPr = new ParagraphProperties() { WordWrap = new WordWrap() { Val = true } },
-                                         new OpenXmlMiscNode(System.Xml.XmlNodeType.Comment, "<!-- comments -->"),
-                                         run1 = new Run(new Text("Text 1.")),
-                                         run2 = new Run(new Text("Text 2.")));
+            Paragraph p = new Paragraph(
+                pPr = new ParagraphProperties() { WordWrap = new WordWrap() { Val = true } },
+                new OpenXmlMiscNode(System.Xml.XmlNodeType.Comment, "<!-- comments -->"),
+                run1 = new Run(new Text("Text 1.")),
+                run2 = new Run(new Text("Text 2.")));
 
             p.AddNamespaceDeclaration("w14test", "http://w14.com");
 
@@ -286,8 +289,9 @@ namespace DocumentFormat.OpenXml.Tests
 
             Run runInAcb = new Run(new Text("Text in ACB."));
             Run run2InAcb = new Run(new Text("Text 2 in ACB."));
-            AlternateContent acb = new AlternateContent(new AlternateContentChoice() { Requires = "w14test" },
-                                                        new AlternateContentFallback(runInAcb, run2InAcb));
+            AlternateContent acb = new AlternateContent(
+                new AlternateContentChoice() { Requires = "w14test" },
+                new AlternateContentFallback(runInAcb, run2InAcb));
             p.InsertAfter(acb, pPr);
 
             var validator = new OpenXmlValidator();

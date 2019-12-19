@@ -198,11 +198,15 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
                     }
 
                     if (slicerCacheName != null)
+                    {
                         break;
+                    }
                 }
 
                 if (slicerCacheName != null)
+                {
                     break;
+                }
             }
 
             //Getting name match SlicerCachePart.

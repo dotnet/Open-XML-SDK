@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Initializes a new instance of the OpenXmlLeafTextElement class.
         /// </summary>
-        protected OpenXmlLeafTextElement() : base( )
+        protected OpenXmlLeafTextElement() : base()
         {
         }
 
@@ -123,12 +123,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public virtual string Text
         {
-            get { return InnerText; }
-
-            set
-            {
-                InnerText = value;
-            }
+            get => InnerText;
+            set => InnerText = value;
         }
 
         /// <inheritdoc/>

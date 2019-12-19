@@ -84,7 +84,9 @@ namespace DocumentFormat.OpenXml
         public static implicit operator string(EnumValue<T> value)
         {
             if (value == null)
+            {
                 return null;
+            }
 
             return value.InnerText;
         }

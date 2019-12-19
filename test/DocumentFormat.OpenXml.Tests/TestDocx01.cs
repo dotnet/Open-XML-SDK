@@ -278,11 +278,13 @@ namespace DocumentFormat.OpenXml.Tests
                 var mdp = doc.MainDocumentPart;
                 var hl = mdp.HyperlinkRelationships;
 
-                mdp.AddExternalRelationship(ResourceRelationshipType,
-                                        new Uri(@"c:/resources/image1.jpg", UriKind.Absolute),
-                                        "rId12345");
-                mdp.AddExternalRelationship(ResourceRelationshipType,
-                                        new Uri(@"c:/resources/image1.jpg", UriKind.Absolute));
+                mdp.AddExternalRelationship(
+                    ResourceRelationshipType,
+                    new Uri(@"c:/resources/image1.jpg", UriKind.Absolute),
+                    "rId12345");
+                mdp.AddExternalRelationship(
+                    ResourceRelationshipType,
+                    new Uri(@"c:/resources/image1.jpg", UriKind.Absolute));
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);
@@ -1028,11 +1030,13 @@ namespace DocumentFormat.OpenXml.Tests
                 comments.AppendChild(cmt);
                 comments.Save();
 
-                firstParagraph.InsertBefore(new W.CommentRangeStart()
-                { Id = id }, firstParagraph.GetFirstChild<W.Run>());
+                firstParagraph.InsertBefore(
+                    new W.CommentRangeStart() { Id = id },
+                    firstParagraph.GetFirstChild<W.Run>());
 
-                var cmtEnd = firstParagraph.InsertAfter(new W.CommentRangeEnd()
-                { Id = id }, firstParagraph.Elements<W.Run>().Last());
+                var cmtEnd = firstParagraph.InsertAfter(
+                    new W.CommentRangeEnd() { Id = id },
+                    firstParagraph.Elements<W.Run>().Last());
 
                 firstParagraph.InsertAfter(new W.Run(new W.CommentReference() { Id = id }), cmtEnd);
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
