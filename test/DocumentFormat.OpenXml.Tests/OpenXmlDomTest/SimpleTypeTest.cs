@@ -364,9 +364,15 @@ namespace DocumentFormat.OpenXml.Tests
             where T1 : OpenXmlSimpleType, new()
         {
             if (items == null)
+            {
                 throw new ArgumentNullException(nameof(items));
+            }
+
             if (listB == null)
+            {
                 throw new ArgumentNullException(nameof(listB));
+            }
+
             return items.Select(i => i.ToString()).SequenceEqual(listB.Select(t => t.ToString()));
         }
 
@@ -439,9 +445,13 @@ namespace DocumentFormat.OpenXml.Tests
             string val = string.Empty;
             val = objA;
             if (val == null)
+            {
                 Log.Pass("implicit string operator on null reference returned null, as expected.");
+            }
             else
+            {
                 Log.Fail("Implicit string operator on null reference return NON-null.");
+            }
         }
 
         private void InvalidOperation<T>(
@@ -823,9 +833,13 @@ namespace DocumentFormat.OpenXml.Tests
             OnOffValue val = validValue;
             val = objA;
             if (val == null)
+            {
                 Log.Pass("implicit string operator on null reference returned null, as expected.");
+            }
             else
+            {
                 Log.Fail("Implicit string operator on null reference return NON-null.");
+            }
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValueFalse);
             objA = new OnOffValue();
@@ -931,9 +945,13 @@ namespace DocumentFormat.OpenXml.Tests
             TrueFalseBlankValue val = validValue;
             val = objA;
             if (val == null)
+            {
                 Log.Pass("implicit string operator on null reference returned null, as expected.");
+            }
             else
+            {
                 Log.Fail("Implicit string operator on null reference return NON-null.");
+            }
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValueFalse);
             objA = new TrueFalseBlankValue();

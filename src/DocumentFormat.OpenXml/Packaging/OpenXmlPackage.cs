@@ -641,9 +641,13 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 if (OpenSettings.MarkupCompatibilityProcessSettings == null)
+                {
                     return new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007);
+                }
                 else
+                {
                     return OpenSettings.MarkupCompatibilityProcessSettings;
+                }
             }
         }
 
@@ -1204,7 +1208,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public OpenXmlPackage Clone(Stream stream, bool isEditable, OpenSettings openSettings)
         {
             if (stream == null)
+            {
                 throw new ArgumentNullException(nameof(stream));
+            }
 
             // Use this OpenXml package's OpenSettings if none are provided.
             // This is more in line with cloning than providing the default
@@ -1212,7 +1218,9 @@ namespace DocumentFormat.OpenXml.Packaging
             // something, we'll later open the clone with this OpenXml
             // package's OpenSettings.
             if (openSettings == null)
+            {
                 openSettings = OpenSettings;
+            }
 
             lock (_saveAndCloneLock)
             {
@@ -1235,7 +1243,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 using (OpenXmlPackage clone = CreateClone(stream))
                 {
                     foreach (var part in Parts)
+                    {
                         clone.AddPart(part.OpenXmlPart, part.RelationshipId);
+                    }
                 }
 
                 return OpenClone(stream, isEditable, openSettings);
@@ -1300,7 +1310,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public OpenXmlPackage Clone(string path, bool isEditable, OpenSettings openSettings)
         {
             if (path == null)
+            {
                 throw new ArgumentNullException(nameof(path));
+            }
 
             // Use this OpenXml package's OpenSettings if none are provided.
             // This is more in line with cloning than providing the default
@@ -1308,7 +1320,9 @@ namespace DocumentFormat.OpenXml.Packaging
             // something, we'll later open the clone with this OpenXml
             // package's OpenSettings.
             if (openSettings == null)
+            {
                 openSettings = OpenSettings;
+            }
 
             lock (_saveAndCloneLock)
             {
@@ -1323,7 +1337,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 using (OpenXmlPackage clone = CreateClone(path))
                 {
                     foreach (var part in Parts)
+                    {
                         clone.AddPart(part.OpenXmlPart, part.RelationshipId);
+                    }
                 }
 
                 return OpenClone(path, isEditable, openSettings);
@@ -1372,7 +1388,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public OpenXmlPackage Clone(Package package, OpenSettings openSettings)
         {
             if (package == null)
+            {
                 throw new ArgumentNullException(nameof(package));
+            }
 
             // Use this OpenXml package's OpenSettings if none are provided.
             // This is more in line with cloning than providing the default
@@ -1380,7 +1398,9 @@ namespace DocumentFormat.OpenXml.Packaging
             // something, we'll later open the clone with this OpenXml
             // package's OpenSettings.
             if (openSettings == null)
+            {
                 openSettings = OpenSettings;
+            }
 
             lock (_saveAndCloneLock)
             {

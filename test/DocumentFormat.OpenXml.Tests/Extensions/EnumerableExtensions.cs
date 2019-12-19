@@ -17,7 +17,10 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var chosenElement = source.Skip(1).FirstOrDefault();
             if (chosenElement != null)
+            {
                 return chosenElement;
+            }
+
             chosenElement = source.FirstOrDefault();
             return chosenElement;
 

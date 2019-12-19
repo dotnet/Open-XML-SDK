@@ -165,7 +165,9 @@ namespace DocumentFormat.OpenXml.Tests
             foreach (var item in element.Elements())
             {
                 if (TestIfHasUnknownElement(item))
+                {
                     return true;
+                }
             }
 
             return false;

@@ -30,7 +30,9 @@ namespace DocumentFormat.OpenXml
             }
 
             if (element.Parent == null)
+            {
                 return 1;
+            }
 
             int count = 1;
 

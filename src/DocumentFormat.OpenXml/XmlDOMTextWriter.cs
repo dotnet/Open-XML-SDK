@@ -65,10 +65,14 @@ namespace DocumentFormat.OpenXml
             }
 
             if (prefix == null)
+            {
                 prefix = string.Empty;
+            }
 
             if (ns == null)
+            {
                 ns = string.Empty;
+            }
 
             if ((ns.Length == 0) && (prefix.Length != 0))
             {
@@ -90,10 +94,14 @@ namespace DocumentFormat.OpenXml
             }
 
             if (prefix == null)
+            {
                 prefix = string.Empty;
+            }
 
             if (ns == null)
+            {
                 ns = string.Empty;
+            }
 
             if ((ns.Length == 0) && (prefix.Length != 0))
             {

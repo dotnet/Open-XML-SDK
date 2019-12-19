@@ -8,8 +8,8 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
     /// </summary>
     public static class CommentInitials
     {
-        public static string Initial1 { get { return "M.T"; } }
+        public static string Initial1 => "M.T";
 
-        public static string Initial2 { get { return "D.I"; } }
+        public static string Initial2 => "D.I";
     }
 }
