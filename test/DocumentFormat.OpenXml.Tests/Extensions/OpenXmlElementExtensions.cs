@@ -58,7 +58,8 @@ namespace DocumentFormat.OpenXml.Tests
                 throw new ArgumentNullException(nameof(element));
             }
 
-            if (element.Parent == null)   // root/orphan element itself
+            // root/orphan element itself
+            if (element.Parent == null)
             {
                 return 0;
             }
