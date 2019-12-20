@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var part = GetReferencedPart(context, _refPartType);
 
-            var validationContext = new ValidationContext(context.FileFormat, context.Cache)
+            var validationContext = new ValidationContext(context)
             {
                 Package = context.Package,
                 Part = part,

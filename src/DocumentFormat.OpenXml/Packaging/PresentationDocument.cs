@@ -87,6 +87,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
+        internal override ApplicationType ApplicationType => ApplicationType.PowerPoint;
+
         private void UpdateDocumentTypeFromContentType()
         {
             if (MainPartContentType == null)

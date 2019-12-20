@@ -3,11 +3,12 @@
 
 using System;
 
-namespace DocumentFormat.OpenXml.Validation.Semantic
+namespace DocumentFormat.OpenXml
 {
     [Flags]
     internal enum ApplicationType
     {
+        None = 0,
         Word = 1,
         Excel = 2,
         PowerPoint = 4,
