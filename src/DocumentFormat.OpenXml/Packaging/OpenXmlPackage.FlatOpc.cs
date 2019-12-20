@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Packaging;
@@ -20,6 +19,9 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         private static readonly XNamespace Pkg = "http://schemas.microsoft.com/office/2006/xmlPackage";
         private static readonly XNamespace Rel = "http://schemas.openxmlformats.org/package/2006/relationships";
+
+        private const string RelationshipContentType =
+            "application/vnd.openxmlformats-package.relationships+xml";
 
         private const string AltChunkRelationshipType =
             "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk";
@@ -59,8 +61,9 @@ namespace DocumentFormat.OpenXml.Packaging
             // parts regardless of the actual content type, which might even be
             // XML-related such as application/xhtml+xml.
             var altChunkPartUris = new HashSet<Uri>(
-                new InternalPackageRelationships(Package)
-                    .Where(pr => pr.RelationshipType == AltChunkRelationshipType)
+                Package.GetParts()
+                    .Where(part => part.ContentType != RelationshipContentType)
+                    .SelectMany(part => part.GetRelationshipsByType(AltChunkRelationshipType))
                     .Select(pr => PackUriHelper.ResolvePartUri(pr.SourceUri, pr.TargetUri)));
 
             // Create an XML document with a standalone declaration, processing
@@ -81,7 +84,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="part">The package part.</param>
         /// <param name="altChunkPartUris">The collection of AlternativeFormatInputPart URIs.</param>
         /// <returns>The corresponding <see cref="XElement"/>.</returns>
-        private static XElement GetContentsAsXml(PackagePart part, IEnumerable<Uri> altChunkPartUris)
+        private static XElement GetContentsAsXml(PackagePart part, HashSet<Uri> altChunkPartUris)
         {
             if (part.ContentType.EndsWith("xml") && !altChunkPartUris.Contains(part.Uri))
             {
@@ -100,40 +103,40 @@ namespace DocumentFormat.OpenXml.Packaging
             return GetBinaryPartContentsAsXml(part);
         }
 
-        /// <summary>
-        /// Gets the <see cref="PackagePart"/>'s binary contents as an <see cref="XElement"/>.
-        /// </summary>
-        /// <param name="part">The package part.</param>
-        /// <returns>The corresponding <see cref="XElement"/>.</returns>
         private static XElement GetBinaryPartContentsAsXml(PackagePart part)
+        {
+            return new XElement(
+                Pkg + "part",
+                new XAttribute(Pkg + "name", part.Uri),
+                new XAttribute(Pkg + "contentType", part.ContentType),
+                new XAttribute(Pkg + "compression", "store"),
+                new XElement(Pkg + "binaryData", ToChunkedBase64String(part)));
+        }
+
+        private static string ToChunkedBase64String(PackagePart part)
         {
             using (Stream stream = part.GetStream())
             {
                 var byteArray = new byte[stream.Length];
                 stream.Read(byteArray, 0, byteArray.Length);
-
-                // The following expression creates the base64String, then chunks
-                // it to lines of 76 characters long.
-                string base64String = Convert.ToBase64String(byteArray)
-                    .Select((@char, index) => new { Character = @char, Chunk = index / 76 })
-                    .GroupBy(charAndChunk => charAndChunk.Chunk)
-                    .Aggregate(
-                        new StringBuilder(),
-                        (sb, grouping) => sb
-                            .Append(grouping.Aggregate(
-                                new StringBuilder(),
-                                (chunkSb, charAndChunk) => chunkSb.Append(charAndChunk.Character),
-                                chunkSb => chunkSb.ToString()))
-                            .Append(Environment.NewLine),
-                        sb => sb.ToString());
-
-                return new XElement(
-                    Pkg + "part",
-                    new XAttribute(Pkg + "name", part.Uri),
-                    new XAttribute(Pkg + "contentType", part.ContentType),
-                    new XAttribute(Pkg + "compression", "store"),
-                    new XElement(Pkg + "binaryData", base64String));
+                return ToChunkedBase64String(byteArray);
             }
+        }
+
+        private static string ToChunkedBase64String(byte[] byteArray)
+        {
+            return Convert.ToBase64String(byteArray)
+                .Select((@char, index) => new { Character = @char, Chunk = index / 76 })
+                .GroupBy(charAndChunk => charAndChunk.Chunk)
+                .Aggregate(
+                    new StringBuilder(),
+                    (sb, grouping) => sb
+                        .Append(grouping.Aggregate(
+                            new StringBuilder(),
+                            (chunkSb, charAndChunk) => chunkSb.Append(charAndChunk.Character),
+                            chunkSb => chunkSb.ToString()))
+                        .Append(Environment.NewLine),
+                    sb => sb.ToString());
         }
 
         /// <summary>
@@ -293,80 +296,6 @@ namespace DocumentFormat.OpenXml.Packaging
             // Save contents of all parts and relationships contained in package.
             package.Flush();
             return package;
-        }
-
-        /// <summary>
-        /// Represents the collection of internal package relationships.
-        /// </summary>
-        private class InternalPackageRelationships : IEnumerable<PackageRelationship>
-        {
-            private readonly Package _package;
-
-            /// <summary>
-            /// Initializes a new <see cref="PackageRelationship" /> instance.
-            /// </summary>
-            /// <param name="package">The <see cref="Package" />.</param>
-            public InternalPackageRelationships(Package package)
-            {
-                _package = package ?? throw new ArgumentNullException(nameof(package));
-            }
-
-            /// <inheritdoc />
-            IEnumerator IEnumerable.GetEnumerator()
-            {
-                return GetEnumerator();
-            }
-
-            /// <inheritdoc />
-            public IEnumerator<PackageRelationship> GetEnumerator()
-            {
-                var relationships = new HashSet<PackageRelationship>(new PackageRelationshipEqualityComparer());
-
-                _package.GetRelationships()
-                    .Where(r => r.TargetMode == TargetMode.Internal)
-                    .ToList()
-                    .ForEach(r => Enumerate(r, relationships));
-
-                return relationships.GetEnumerator();
-            }
-
-#if NET35
-            private void Enumerate(PackageRelationship r, ICollection<PackageRelationship> relationships)
-            {
-                if (relationships.Contains(r))
-                {
-                    return;
-                }
-
-                relationships.Add(r);
-#else
-            private void Enumerate(PackageRelationship r, ISet<PackageRelationship> relationships)
-            {
-                if (!relationships.Add(r))
-                {
-                    return;
-                }
-#endif
-                _package.GetPart(PackUriHelper.ResolvePartUri(r.SourceUri, r.TargetUri))
-                    .GetRelationships()
-                    .Where(pr => pr.TargetMode == TargetMode.Internal)
-                    .ToList()
-                    .ForEach(pr => Enumerate(pr, relationships));
-            }
-
-            private class PackageRelationshipEqualityComparer : IEqualityComparer<PackageRelationship>
-            {
-                public bool Equals(PackageRelationship x, PackageRelationship y)
-                {
-                    return x?.SourceUri == y?.SourceUri && x?.TargetUri == y?.TargetUri;
-                }
-
-                public int GetHashCode(PackageRelationship obj)
-                {
-                    string uriString = obj.SourceUri + ":" + obj.TargetUri;
-                    return uriString.GetHashCode();
-                }
-            }
         }
     }
 }
