@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        protected OpenXmlSimpleType GetValue(in ValidationContext.CurrentElement current)
+        protected OpenXmlSimpleType GetValue(in ValidationElement current)
         {
             var input = current.Value;
 

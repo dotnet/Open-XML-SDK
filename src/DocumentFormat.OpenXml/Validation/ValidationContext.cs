@@ -1,13 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
-
-#pragma warning disable CA1001 // Types that own disposable fields should be disposable
 
 namespace DocumentFormat.OpenXml.Validation
 {
@@ -16,9 +13,6 @@ namespace DocumentFormat.OpenXml.Validation
     /// </summary>
     internal class ValidationContext
     {
-        private readonly ValidationContextDisposable _popDisposable;
-        private readonly Stack<CurrentElement> _elements;
-
         public ValidationContext(FileFormatVersions version = FileFormatVersions.Office2007)
             : this(new ValidationSettings(version), new ValidationCache(version))
         {
@@ -36,10 +30,9 @@ namespace DocumentFormat.OpenXml.Validation
             Errors = new List<ValidationErrorInfo>();
             McContext = new MCContext(false);
 
-            // Start off with a depth of 5
-            _elements = new Stack<CurrentElement>(5);
-            _elements.Push(new CurrentElement(null, default, false, Errors.Add));
-            _popDisposable = new ValidationContextDisposable(_elements);
+            Stack = new ValidationStack();
+
+            Stack.Push(Errors.Add);
         }
 
         public ValidationCache Cache { get; }
@@ -113,23 +106,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// </summary>
         public int MaxNumberOfErrors => Settings.MaxNumberOfErrors;
 
-        public CurrentElement Current => _elements.Peek();
-
-        public IDisposable Push(OpenXmlSimpleType value, ElementProperty<OpenXmlSimpleType> type, bool isAttribute)
-        {
-            _elements.Push(new CurrentElement(value, type, isAttribute, Current.AddError));
-
-            return _popDisposable;
-        }
-
-        public IDisposable Push(Action<ValidationErrorInfo> addError)
-        {
-            var current = Current;
-
-            _elements.Push(new CurrentElement(current.Value, current.Property, current.IsAttribute, addError));
-
-            return _popDisposable;
-        }
+        public ValidationStack Stack { get; }
 
         public ParticleConstraint GetParticleConstraint() => Cache.GetConstraint(Element);
 
@@ -137,7 +114,7 @@ namespace DocumentFormat.OpenXml.Validation
         {
             if (error != null && !IsCancelled)
             {
-                Current.AddError(error);
+                Stack.Current.AddError(error);
             }
         }
 
@@ -153,37 +130,6 @@ namespace DocumentFormat.OpenXml.Validation
             };
 
             AddError(error);
-        }
-
-        public readonly struct CurrentElement
-        {
-            public CurrentElement(OpenXmlSimpleType value, ElementProperty<OpenXmlSimpleType> property, bool isAttribute, Action<ValidationErrorInfo> addError)
-            {
-                Value = value;
-                Property = property;
-                IsAttribute = isAttribute;
-                AddError = addError;
-            }
-
-            public OpenXmlSimpleType Value { get; }
-
-            public ElementProperty<OpenXmlSimpleType> Property { get; }
-
-            public bool IsAttribute { get; }
-
-            public Action<ValidationErrorInfo> AddError { get; }
-        }
-
-        private sealed class ValidationContextDisposable : IDisposable
-        {
-            private readonly Stack<CurrentElement> _stack;
-
-            public ValidationContextDisposable(Stack<CurrentElement> stack)
-            {
-                _stack = stack;
-            }
-
-            public void Dispose() => _stack.Pop();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public void Validate(ValidationContext context)
         {
-            var current = context.Current;
+            var current = context.Stack.Current;
             var value = current.Value;
 
             if (value is null)
