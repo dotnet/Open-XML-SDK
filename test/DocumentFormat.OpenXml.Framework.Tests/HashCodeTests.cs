@@ -3,7 +3,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Framework.Tests
