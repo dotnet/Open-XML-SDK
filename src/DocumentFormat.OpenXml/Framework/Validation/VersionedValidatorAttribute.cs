@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Validation;
 using System;
 
 namespace DocumentFormat.OpenXml.Framework
@@ -33,9 +34,9 @@ namespace DocumentFormat.OpenXml.Framework
 
         public Type SimpleType { get; set; }
 
-        public void Validate(ValidatorContext context)
+        public void Validate(ValidationContext context)
         {
-            if (IsValid(context.Version))
+            if (IsValid(context.FileFormat))
             {
                 ValidateVersion(context);
             }
@@ -57,9 +58,9 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        protected OpenXmlSimpleType GetValue(ValidatorContext context)
+        protected OpenXmlSimpleType GetValue(in ValidationContext.CurrentElement current)
         {
-            var input = context.Value;
+            var input = current.Value;
 
             if (input is null)
             {
@@ -84,6 +85,6 @@ namespace DocumentFormat.OpenXml.Framework
             return output;
         }
 
-        protected abstract void ValidateVersion(ValidatorContext context);
+        protected abstract void ValidateVersion(ValidationContext context);
     }
 }

@@ -13,9 +13,10 @@ namespace DocumentFormat.OpenXml.Framework
         {
         }
 
-        public void Validate(ValidatorContext context)
+        public void Validate(ValidationContext context)
         {
-            var value = context.Value;
+            var current = context.Current;
+            var value = current.Value;
 
             if (value is null)
             {
@@ -24,21 +25,21 @@ namespace DocumentFormat.OpenXml.Framework
 
             if (!value.IsValid)
             {
-                var id = context.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
-                var description = context.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
+                var id = current.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
+                var description = current.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
 
                 if (string.IsNullOrEmpty(value.InnerText))
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, context.QName, context.Value.InnerText, context.IsAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue),
+                        description: SR.Format(description, current.Property.GetQName(), current.Value.InnerText, current.IsAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue),
                         errorType: ValidationErrorType.Schema);
                 }
                 else
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, context.QName, context.Value.InnerText, string.Empty),
+                        description: SR.Format(description, current.Property.GetQName(), current.Value.InnerText, string.Empty),
                         errorType: ValidationErrorType.Schema);
                 }
             }

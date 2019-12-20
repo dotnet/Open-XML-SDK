@@ -14,12 +14,14 @@ namespace DocumentFormat.OpenXml.Framework
     {
         public bool IsRequired { get; set; } = true;
 
-        protected override void ValidateVersion(ValidatorContext context)
+        protected override void ValidateVersion(ValidationContext context)
         {
-            if (IsRequired && context.Value is null)
+            var current = context.Current;
+
+            if (IsRequired && current.Value is null)
             {
                 context.CreateError(
-                    description: SR.Format(ValidationResources.Sch_MissRequiredAttribute, context.QName.Name),
+                    description: SR.Format(ValidationResources.Sch_MissRequiredAttribute, current.Property.GetQName().Name),
                     id: "Sch_MissRequiredAttribute",
                     errorType: ValidationErrorType.Schema);
             }

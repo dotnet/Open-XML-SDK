@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -82,7 +83,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
         private class CustomValidator : Attribute, IOpenXmlSimpleTypeValidator
         {
-            public void Validate(ValidatorContext context) => throw new NotImplementedException();
+            public void Validate(ValidationContext context) => throw new NotImplementedException();
         }
 
         private class BaseElement : OpenXmlElement
