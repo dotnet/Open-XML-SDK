@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         private static readonly XNamespace Pkg = "http://schemas.microsoft.com/office/2006/xmlPackage";
         private const WordprocessingDocumentType Document = WordprocessingDocumentType.Document;
 
-        // This is a sample XHTML document.
+        // Contents of the application/xhtml+xml altChunk part.
         private const string XhtmlString =
             @"<!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.0 Transitional//EN""
 ""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"">
@@ -31,9 +31,12 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 </body>
 </html>";
 
-        // This is a sample XML document.
+        // Contents of the application/xml altChunk part.
         private const string XmlString =
             @"<?xml version=""1.0"" encoding=""UTF-8"" standalone=""yes""?><root><element>Some text</element></root>";
+
+        // Contents of the WordprocessingML altChunk part.
+        private static readonly MemoryStream WordprocessingMemoryStream = CreateWordprocessingDocument();
 
         // The following are some of the content types of AlternativeFormatInputParts.
         // Note that all of those end in "xml" or even "+xml". And note that the content
@@ -44,31 +47,49 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         private const string WordprocessingMLContentType =
             "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml";
 
-        private static AltChunk CreateWordprocessingMLAltChunk(WordprocessingDocument wordDocument, string text)
-        {
-            using (Stream stream = CreateWordprocessingDocument(text))
-            {
-                string altChunkId = "DocxAltChunkId-" + Guid.NewGuid();
-                AlternativeFormatImportPart chunk = wordDocument.MainDocumentPart.AddAlternativeFormatImportPart(
-                    AlternativeFormatImportPartType.WordprocessingML, altChunkId);
-
-                chunk.FeedData(stream);
-                return new AltChunk { Id = altChunkId };
-            }
-        }
-
-        private static Stream CreateWordprocessingDocument(string text)
+        private static MemoryStream CreateWordprocessingDocument()
         {
             var stream = new MemoryStream();
 
-            using (WordprocessingDocument chunkDocument = WordprocessingDocument.Create(stream, Document))
+            using (WordprocessingDocument wordDocument = WordprocessingDocument.Create(stream, Document))
             {
-                MainDocumentPart mainDocumentPart = chunkDocument.AddMainDocumentPart();
-                mainDocumentPart.Document = new Document(new Body(new Paragraph(new Run(new Text(text)))));
+                MainDocumentPart mainDocumentPart = wordDocument.AddMainDocumentPart();
+                mainDocumentPart.Document = new Document(new Body(new Paragraph(new Run(new Text("AltChunk Document")))));
             }
 
             stream.Seek(0, SeekOrigin.Begin);
             return stream;
+        }
+
+        private static MemoryStream CreateWordprocessingDocumentWithAltChunks()
+        {
+            var stream = new MemoryStream();
+
+            using (WordprocessingDocument wordDocument = WordprocessingDocument.Create(stream, Document))
+            {
+                MainDocumentPart mainPart = wordDocument.AddMainDocumentPart();
+                mainPart.Document =
+                    new Document(
+                        new Body(
+                            CreateWordprocessingMLAltChunk(wordDocument),
+                            CreateXhtmlAltChunk(wordDocument),
+                            CreateXmlAltChunk(wordDocument)));
+            }
+
+            stream.Seek(0, SeekOrigin.Begin);
+            return stream;
+        }
+
+        private static AltChunk CreateWordprocessingMLAltChunk(WordprocessingDocument wordDocument)
+        {
+            string altChunkId = "DocxAltChunkId-" + Guid.NewGuid();
+            AlternativeFormatImportPart chunk = wordDocument.MainDocumentPart.AddAlternativeFormatImportPart(
+                AlternativeFormatImportPartType.WordprocessingML, altChunkId);
+
+            WordprocessingMemoryStream.Seek(0, SeekOrigin.Begin);
+            chunk.FeedData(WordprocessingMemoryStream);
+
+            return new AltChunk { Id = altChunkId };
         }
 
         private static AltChunk CreateXhtmlAltChunk(WordprocessingDocument wordDocument)
@@ -104,17 +125,9 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         [Fact]
         public void CanTransformWordprocessingDocumentWithAltChunksToFlatOpc()
         {
-            using (var stream = new MemoryStream())
-            using (WordprocessingDocument wordDocument = WordprocessingDocument.Create(stream, Document))
+            using (Stream stream = CreateWordprocessingDocumentWithAltChunks())
+            using (WordprocessingDocument wordDocument = WordprocessingDocument.Open(stream, false))
             {
-                MainDocumentPart mainPart = wordDocument.AddMainDocumentPart();
-                mainPart.Document =
-                    new Document(
-                        new Body(
-                            CreateWordprocessingMLAltChunk(wordDocument, Guid.NewGuid().ToString()),
-                            CreateXhtmlAltChunk(wordDocument),
-                            CreateXmlAltChunk(wordDocument)));
-
                 XDocument flatOpcDocument = wordDocument.ToFlatOpcDocument();
 
                 XElement mainDocumentPart = flatOpcDocument
@@ -138,6 +151,55 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 // We want all of our AlternativeFormatImportParts to contain binary data,
                 // even though two of them have a content type ending with "+xml".
                 Assert.All(altChunkParts, p => Assert.NotEmpty(p.Elements(Pkg + "binaryData")));
+            }
+        }
+
+        [Fact]
+        public void CanRoundTripWordprocessingDocumentWithAltChunks()
+        {
+            using (MemoryStream stream = CreateWordprocessingDocumentWithAltChunks())
+            using (WordprocessingDocument original = WordprocessingDocument.Open(stream, false))
+            {
+                XDocument flatOpcDocument = original.ToFlatOpcDocument();
+
+                using (WordprocessingDocument roundTripped = WordprocessingDocument.FromFlatOpcDocument(flatOpcDocument))
+                {
+                    List<AlternativeFormatImportPart> altChunkParts = roundTripped.MainDocumentPart
+                        .GetPartsOfType<AlternativeFormatImportPart>()
+                        .ToList();
+
+                    AssertXmlPartContentEquals(
+                        altChunkParts.First(p => p.ContentType == XhtmlContentType),
+                        XhtmlString);
+
+                    AssertXmlPartContentEquals(
+                        altChunkParts.First(p => p.ContentType == XmlContentType),
+                        XmlString);
+
+                    AssertBinaryPartContentEquals(
+                        altChunkParts.First(p => p.ContentType == WordprocessingMLContentType),
+                        WordprocessingMemoryStream.ToArray());
+                }
+            }
+        }
+
+        private static void AssertXmlPartContentEquals(OpenXmlPart part, string expected)
+        {
+            using (Stream stream = part.GetStream(FileMode.Open))
+            using (var reader = new StreamReader(stream))
+            {
+                Assert.Equal(expected, reader.ReadToEnd().Trim());
+            }
+        }
+
+        private static void AssertBinaryPartContentEquals(OpenXmlPart part, byte[] expected)
+        {
+            using (Stream stream = part.GetStream(FileMode.Open))
+            {
+                var buffer = new byte[stream.Length];
+                stream.Read(buffer, 0, buffer.Length);
+
+                Assert.Equal(expected, buffer);
             }
         }
     }
