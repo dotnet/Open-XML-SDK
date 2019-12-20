@@ -22,7 +22,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            var attribute = context.Element.Attributes[_attribute];
+            var element = context.Stack.Current.Element;
+            var attribute = element.Attributes[_attribute];
 
             if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
@@ -58,11 +59,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 Id = "Sem_IncorrectRelationshipType",
                 ErrorType = ValidationErrorType.Semantic,
-                Node = context.Element,
+                Node = element,
                 Description = SR.Format(
                     ValidationResources.Sem_IncorrectRelationshipType,
                     actualType,
-                    GetAttributeQualifiedName(context.Element, _attribute),
+                    GetAttributeQualifiedName(element, _attribute),
                     _type),
             };
         }

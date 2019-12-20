@@ -26,7 +26,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            var attribute = context.Element.Attributes[_attribute];
+            var element = context.Stack.Current.Element;
+            var attribute = element.Attributes[_attribute];
 
             if (!attribute.HasValue)
             {
@@ -41,7 +42,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 }
             }
 
-            var conditionAttribute = context.Element.Attributes[_conditionAttribute];
+            var conditionAttribute = element.Attributes[_conditionAttribute];
 
             if (!conditionAttribute.HasValue)
             {
@@ -78,12 +79,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     {
                         Id = "Sem_AttributeValueConditionToAnother",
                         ErrorType = ValidationErrorType.Semantic,
-                        Node = context.Element,
+                        Node = element,
                         Description = SR.Format(
                             ValidationResources.Sem_AttributeValueConditionToAnother,
-                            GetAttributeQualifiedName(context.Element, _attribute), attributeValueString,
-                            GetAttributeQualifiedName(context.Element, _conditionAttribute), otherAttributeValueString,
-                            GetAttributeQualifiedName(context.Element, _attribute), attribute.Value),
+                            GetAttributeQualifiedName(element, _attribute), attributeValueString,
+                            GetAttributeQualifiedName(element, _conditionAttribute), otherAttributeValueString,
+                            GetAttributeQualifiedName(element, _attribute), attribute.Value),
                     };
                 }
             }

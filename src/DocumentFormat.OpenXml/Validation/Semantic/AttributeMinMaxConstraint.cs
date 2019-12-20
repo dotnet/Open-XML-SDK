@@ -32,7 +32,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            string minAttributeValue = context.Element.GetAttributeValueEx(_minAttributeLocalName, _minAttributeNamesapce);
+            var element = context.Stack.Current.Element;
+            var minAttributeValue = element.GetAttributeValueEx(_minAttributeLocalName, _minAttributeNamesapce);
 
             // If value cannot be converted into double, that means attribute type is not correct.
             // That's the job of schema validation, semantic validation will do nothing to avoid throw duplicated error.
@@ -41,7 +42,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            string maxAttributeValue = context.Element.GetAttributeValueEx(_maxAttributeLocalName, _maxAttributeNamesapce);
+            var maxAttributeValue = element.GetAttributeValueEx(_maxAttributeLocalName, _maxAttributeNamesapce);
 
             // If value cannot be converted into double, that means attribute type is not correct.
             // That's the job of schema validation, semantic validation will do nothing to avoid throw duplicated error.
@@ -58,7 +59,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             string errorId = string.Empty; // TODO: add error id
             string errorMessage = string.Empty; // TODO: add error message
 
-            return new ValidationErrorInfo() { Id = errorId, ErrorType = ValidationErrorType.Semantic, Node = context.Element, Description = errorMessage };
+            return new ValidationErrorInfo
+            {
+                Id = errorId,
+                ErrorType = ValidationErrorType.Semantic,
+                Node = element,
+                Description = errorMessage,
+            };
         }
     }
 }

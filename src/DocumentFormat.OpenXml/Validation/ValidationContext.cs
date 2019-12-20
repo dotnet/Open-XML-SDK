@@ -57,11 +57,6 @@ namespace DocumentFormat.OpenXml.Validation
         internal IValidationContextEvents Events => State;
 
         /// <summary>
-        /// Gets or sets the target element.
-        /// </summary>
-        public OpenXmlElement Element { get; internal set; }
-
-        /// <summary>
         /// Gets used to track MC context.
         /// </summary>
         internal MCContext McContext { get; }
@@ -77,7 +72,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <returns>The first child in the MC mode.</returns>
         internal OpenXmlElement GetFirstChildMc()
         {
-            return Element.GetFirstChildMc(McContext, FileFormat);
+            return Stack.Current.Element.GetFirstChildMc(McContext, FileFormat);
         }
 
         /// <summary>
@@ -87,7 +82,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <returns>The next child after the specified child in the MC mode.</returns>
         internal OpenXmlElement GetNextChildMc(OpenXmlElement child)
         {
-            return Element.GetNextChildMc(child, McContext, FileFormat);
+            return Stack.Current.Element.GetNextChildMc(child, McContext, FileFormat);
         }
 
         /// <summary>
@@ -98,7 +93,7 @@ namespace DocumentFormat.OpenXml.Validation
 
         public ValidationStack Stack { get; }
 
-        public ParticleConstraint GetParticleConstraint() => Cache.GetConstraint(Element);
+        public ParticleConstraint GetParticleConstraint() => Cache.GetConstraint(Stack.Current.Element);
 
         public void AddError(ValidationErrorInfo error)
         {
@@ -118,7 +113,7 @@ namespace DocumentFormat.OpenXml.Validation
                 Description = description,
                 Part = current.Part,
                 ErrorType = errorType,
-                Node = Element,
+                Node = current.Element,
             };
 
             AddError(error);

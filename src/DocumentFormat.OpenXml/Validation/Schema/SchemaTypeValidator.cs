@@ -20,9 +20,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public static void Validate(ValidationContext validationContext)
         {
             Debug.Assert(validationContext != null);
-            Debug.Assert(validationContext.Element != null);
+            Debug.Assert(validationContext.Stack.Current.Element != null);
 
-            OpenXmlElement theElement = validationContext.Element;
+            OpenXmlElement theElement = validationContext.Stack.Current.Element;
 
             Debug.Assert(!(theElement is OpenXmlUnknownElement));
             Debug.Assert(!(theElement is OpenXmlMiscNode));
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The validation context.</param>
         private static void ValidateAttributes(ValidationContext validationContext)
         {
-            var element = validationContext.Element;
+            var element = validationContext.Stack.Current.Element;
 
             ValidationErrorInfo errorInfo;
 
@@ -143,7 +143,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             internal static void Validate(ValidationContext validationContext)
             {
-                OpenXmlLeafElement leafElement = (OpenXmlLeafElement)validationContext.Element;
+                OpenXmlLeafElement leafElement = (OpenXmlLeafElement)validationContext.Stack.Current.Element;
                 ValidationErrorInfo errorInfo;
 
                 if (leafElement.ShadowElement != null)
@@ -168,7 +168,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             internal static void Validate(ValidationContext validationContext)
             {
-                var element = (OpenXmlCompositeElement)validationContext.Element;
+                var element = (OpenXmlCompositeElement)validationContext.Stack.Current.Element;
                 ValidationErrorInfo errorInfo;
 
                 foreach (var child in element.ChildElements)
@@ -193,7 +193,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 // first check whether there are invalid children under this OpenXmlLeafTextElement.
                 EmptyComplexTypeValidator.Validate(validationContext);
 
-                var element = (OpenXmlLeafTextElement)validationContext.Element;
+                var element = (OpenXmlLeafTextElement)validationContext.Stack.Current.Element;
                 var value = element.InnerTextToValue(element.Text);
                 var qname = element.XmlQualifiedName.ToString();
                 var state = new ElementProperty<OpenXmlSimpleType>(element.NamespaceId, element.LocalName, 0, element.ElementData.Info.Validators, new ElementPropertyAccessor<OpenXmlSimpleType>(_ => value, (_, __) => throw new NotImplementedException(), value.GetType()));

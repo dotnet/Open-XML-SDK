@@ -12,6 +12,7 @@ namespace DocumentFormat.OpenXml.Validation
         public ValidationElement(
             OpenXmlPackage package,
             OpenXmlPart part,
+            OpenXmlElement element,
             OpenXmlSimpleType value,
             ElementProperty<OpenXmlSimpleType> property,
             bool isAttribute,
@@ -19,6 +20,7 @@ namespace DocumentFormat.OpenXml.Validation
         {
             Package = package;
             Part = part;
+            Element = element;
             Value = value;
             Property = property;
             IsAttribute = isAttribute;
@@ -28,6 +30,8 @@ namespace DocumentFormat.OpenXml.Validation
         public OpenXmlPackage Package { get; }
 
         public OpenXmlPart Part { get; }
+
+        public OpenXmlElement Element { get; }
 
         public OpenXmlSimpleType Value { get; }
 

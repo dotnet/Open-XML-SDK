@@ -24,14 +24,15 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            var attribute = context.Element.Attributes[_absentAttribute];
+            var element = context.Stack.Current.Element;
+            var attribute = element.Attributes[_absentAttribute];
 
             if (!attribute.HasValue)
             {
                 return null;
             }
 
-            var conditionAttribute = context.Element.Attributes[_conditionAttribute];
+            var conditionAttribute = element.Attributes[_conditionAttribute];
 
             if (!conditionAttribute.HasValue)
             {
@@ -61,11 +62,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 Id = "Sem_AttributeAbsentConditionToNonValue",
                 ErrorType = ValidationErrorType.Semantic,
-                Node = context.Element,
+                Node = element,
                 Description = SR.Format(
                     ValidationResources.Sem_AttributeAbsentConditionToNonValue,
-                    GetAttributeQualifiedName(context.Element, _absentAttribute),
-                    GetAttributeQualifiedName(context.Element, _conditionAttribute),
+                    GetAttributeQualifiedName(element, _absentAttribute),
+                    GetAttributeQualifiedName(element, _conditionAttribute),
                     valueString),
             };
         }

@@ -93,20 +93,21 @@ namespace DocumentFormat.OpenXml.Validation
                 // Must be called before the call to PartRootElement { get; }
                 bool partRootElementLoaded = part.IsRootElementLoaded;
 
-                using (context.Stack.Push(part: part))
+                // Schema validation
+                using (context.Stack.Push(part: part, element: part.PartRootElement))
                 {
-                    // schema validation
-                    context.Element = part.PartRootElement;
-
                     var lastErrorCount = context.Errors.Count;
 
                     if (part.PartRootElement != null)
                     {
                         _schemaValidator.Validate(context);
 
-                        context.Element = part.PartRootElement;
-                        context.Events.OnPartValidationStarted(context);
-                        _semanticValidator.Validate(context);
+                        // TODO: Is this needed? It's set 8 lines up
+                        using (context.Stack.Push(element: part.PartRootElement))
+                        {
+                            context.Events.OnPartValidationStarted(context);
+                            _semanticValidator.Validate(context);
+                        }
                     }
 
                     if (!partRootElementLoaded && context.Errors.Count == lastErrorCount)

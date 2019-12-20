@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _comparer = caseSensitive ? StringComparer.Ordinal : StringComparer.OrdinalIgnoreCase;
         }
 
-        private State GetState(ValidationContext context) => context.State.Get(context.Element.GetType(), _attribute, _parent, () => new State(_comparer));
+        private State GetState(ValidationContext context) => context.State.Get(context.Stack.Current.Element.GetType(), _attribute, _parent, () => new State(_comparer));
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
@@ -33,7 +33,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var attribute = context.Element.Attributes[_attribute];
+            var element = context.Stack.Current.Element;
+            var attribute = element.Attributes[_attribute];
 
             //if the attribute is omitted, semantic validation will do nothing
             if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
@@ -50,10 +51,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 Id = "Sem_UniqueAttributeValue",
                 ErrorType = ValidationErrorType.Semantic,
-                Node = context.Element,
+                Node = element,
                 Description = SR.Format(
                     ValidationResources.Sem_UniqueAttributeValue,
-                    GetAttributeQualifiedName(context.Element, _attribute),
+                    GetAttributeQualifiedName(element, _attribute),
                     attribute.Value.InnerText),
             };
         }

@@ -175,19 +175,17 @@ namespace DocumentFormat.OpenXml.Validation
 
             FileFormat.ThrowIfNotInVersion(openXmlElement);
 
-            var validationContext = new ValidationContext(_settings, _cache)
+            var validationContext = new ValidationContext(_settings, _cache);
+
+            using (validationContext.Stack.Push(element: openXmlElement))
             {
-                Element = openXmlElement,
-            };
+                _cache.SchemaValidator.Validate(validationContext);
 
-            _cache.SchemaValidator.Validate(validationContext);
+                var semanticValidator = _cache.GetOrCreateSemanticValidator(ApplicationType.All);
+                semanticValidator.Validate(validationContext);
 
-            validationContext.Element = openXmlElement;
-
-            var semanticValidator = _cache.GetOrCreateSemanticValidator(ApplicationType.All);
-            semanticValidator.Validate(validationContext);
-
-            return validationContext.Errors;
+                return validationContext.Errors;
+            }
         }
     }
 }

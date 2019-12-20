@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             context.Events.OnElementValidationStarted(context);
 
-            if (_semConstraintMap.TryGetValue(context.Element.GetType(), out var constraints))
+            if (_semConstraintMap.TryGetValue(context.Stack.Current.Element.GetType(), out var constraints))
             {
                 foreach (var constraint in constraints)
                 {

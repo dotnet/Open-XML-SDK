@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Tests
             var expected = categories;
             var particleConstraint = categories.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
-            validationContext.Element = categories;
+            validationContext.Stack.Push(element: categories);
 
             //<xsd:complexType name="CT_CTCategories">
             //  <xsd:sequence minOccurs="0" maxOccurs="unbounded">
@@ -131,7 +131,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             var particleConstraint = divs.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
-            validationContext.Element = divs;
+            validationContext.Stack.Push(element: divs);
             var expected = divs;
 
             //<xsd:complexType name="CT_Divs">
@@ -243,7 +243,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             var particleConstraint = ruby.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
-            validationContext.Element = ruby;
+            validationContext.Stack.Push(element: ruby);
             var expected = ruby;
 
             //<xsd:complexType name="CT_Ruby">
@@ -369,7 +369,7 @@ namespace DocumentFormat.OpenXml.Tests
             var particleConstraint = ddList.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
 
-            validationContext.Element = ddList;
+            validationContext.Stack.Push(element: ddList);
 
             // ***** good case ******
             target.Validate(validationContext);
@@ -393,7 +393,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** error case ******
             ddList = new DropDownListFormField();
-            validationContext.Element = ddList;
+            validationContext.Stack.Push(element: ddList);
             var expected = ddList;
 
             // invalid child

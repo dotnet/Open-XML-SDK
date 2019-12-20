@@ -8,9 +8,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeValueLessEqualToAnother : SemanticConstraint
     {
-        private byte _attribute;
-        private byte _otherAttribute;
-        private bool _canEqual;
+        private readonly byte _attribute;
+        private readonly byte _otherAttribute;
+        private readonly bool _canEqual;
 
         public AttributeValueLessEqualToAnother(byte attribute, byte otherAttribute, bool canEqual)
             : base(SemanticValidationLevel.Element)
@@ -22,7 +22,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            var attribute = context.Element.Attributes[_attribute];
+            var element = context.Stack.Current.Element;
+            var attribute = element.Attributes[_attribute];
 
             if (!attribute.HasValue)
             {
@@ -34,7 +35,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var other = context.Element.Attributes[_otherAttribute];
+            var other = element.Attributes[_otherAttribute];
 
             if (!other.HasValue)
             {
@@ -57,12 +58,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 Id = "Sem_AttributeValueLessEqualToAnother",
                 ErrorType = ValidationErrorType.Semantic,
-                Node = context.Element,
+                Node = element,
                 Description = SR.Format(
                     format,
-                    GetAttributeQualifiedName(context.Element, _attribute),
+                    GetAttributeQualifiedName(element, _attribute),
                     attribute.Value.InnerText,
-                    GetAttributeQualifiedName(context.Element, _otherAttribute),
+                    GetAttributeQualifiedName(element, _otherAttribute),
                     other.Value.InnerText),
             };
         }

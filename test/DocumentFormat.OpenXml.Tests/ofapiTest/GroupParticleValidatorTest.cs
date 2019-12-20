@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // the complex type contains a <xsd:group .../> as child
             var target = particleConstraint.ParticleValidator as GroupParticleValidator;
-            validationContext.Element = header;
+            validationContext.Stack.Push(element: header);
 
             //<xsd:complexType name="CT_HdrFtr">
             //  <xsd:group ref="EG_BlockLevelElts" minOccurs="1" maxOccurs="unbounded" />
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Tests
             var expected = sectPr;
             var particleConstraint = sectPr.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
-            validationContext.Element = sectPr;
+            validationContext.Stack.Push(element: sectPr);
 
             //<xsd:complexType name="CT_SectPr">
             //  <xsd:sequence>
