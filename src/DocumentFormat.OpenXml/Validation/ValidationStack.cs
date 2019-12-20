@@ -21,11 +21,17 @@ namespace DocumentFormat.OpenXml.Validation
             _popDisposable = new ValidationContextDisposable(_elements);
         }
 
-        public ValidationElement Current => _elements.Peek();
+        public ValidationElement Current => _elements.Count > 0 ? _elements.Peek() : default;
 
         public IDisposable Push(OpenXmlSimpleType value, ElementProperty<OpenXmlSimpleType> type, bool isAttribute)
         {
-            _elements.Push(new ValidationElement(value, type, isAttribute, Current.AddError));
+            var current = Current;
+
+            _elements.Push(new ValidationElement(
+                value,
+                type,
+                isAttribute,
+                current.AddError));
 
             return _popDisposable;
         }
@@ -34,7 +40,11 @@ namespace DocumentFormat.OpenXml.Validation
         {
             var current = Current;
 
-            _elements.Push(new ValidationElement(current.Value, current.Property, current.IsAttribute, addError));
+            _elements.Push(new ValidationElement(
+                current.Value,
+                current.Property,
+                current.IsAttribute,
+                addError));
 
             return _popDisposable;
         }
