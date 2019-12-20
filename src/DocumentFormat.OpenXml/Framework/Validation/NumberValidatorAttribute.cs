@@ -69,12 +69,13 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        protected override void ValidateVersion(ValidatorContext context)
+        protected override void ValidateVersion(ValidationContext context)
         {
-            var id = context.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
-            var description = context.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
+            var current = context.Current;
+            var id = current.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
+            var description = current.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
 
-            var stValue = GetValue(context);
+            var stValue = GetValue(current);
 
             if (stValue is null)
             {
@@ -87,14 +88,14 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, context.QName, context.Value.InnerText, context.IsAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue),
+                        description: SR.Format(description, current.Property.GetQName(), current.Value.InnerText, current.IsAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue),
                         errorType: ValidationErrorType.Schema);
                 }
                 else
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, context.QName, context.Value.InnerText, SR.Format(ValidationResources.Sch_StringIsNotValidValue, stValue.InnerText, context.TypeQName)),
+                        description: SR.Format(description, current.Property.GetQName(), current.Value.InnerText, SR.Format(ValidationResources.Sch_StringIsNotValidValue, stValue.InnerText, current.Property.TypeName)),
                         errorType: ValidationErrorType.Schema);
                 }
 
@@ -107,7 +108,7 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, context.QName, context.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, context.Value, _nonNegativeQname)),
+                        description: SR.Format(description, current.Property.GetQName(), current.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, current.Value, _nonNegativeQname)),
                         errorType: ValidationErrorType.Schema);
                 }
 
@@ -115,7 +116,7 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, context.QName, context.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, context.Value, _positiveQname)),
+                        description: SR.Format(description, current.Property.GetQName(), current.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, current.Value, _positiveQname)),
                         errorType: ValidationErrorType.Schema);
                 }
 

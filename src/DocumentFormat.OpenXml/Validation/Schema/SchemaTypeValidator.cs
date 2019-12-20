@@ -119,17 +119,19 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         internal static void ValidateValue(ValidationContext validationContext, ValidatorCollection validators, OpenXmlSimpleType value, string qname, ElementProperty<OpenXmlSimpleType> state, bool isAttribute)
         {
-            var element = validationContext.Element;
             var errors = validationContext.Errors.Count;
 
-            foreach (var validator in validators)
+            using (validationContext.Push(value, state, isAttribute))
             {
-                validator.Validate(validationContext.ToContext(value, state, isAttribute));
-
-                // Break early if validation has hit an error
-                if (errors != validationContext.Errors.Count)
+                foreach (var validator in validators)
                 {
-                    return;
+                    validator.Validate(validationContext);
+
+                    // Break early if validation has hit an error
+                    if (errors != validationContext.Errors.Count)
+                    {
+                        return;
+                    }
                 }
             }
         }
