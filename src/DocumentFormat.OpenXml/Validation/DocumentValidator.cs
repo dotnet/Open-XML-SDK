@@ -41,20 +41,20 @@ namespace DocumentFormat.OpenXml.Validation
         /// <returns>Return results in ValidationResult.</returns>
         public List<ValidationErrorInfo> Validate(OpenXmlPackage document, ValidationSettings settings)
         {
-            var context = new ValidationContext(settings, _cache)
-            {
-                Package = document,
-            };
+            var context = new ValidationContext(settings, _cache);
 
-            // integrate the package validation.
-            ValidatePackageStructure(document, context);
-
-            foreach (var part in PartsToBeValidated(document))
+            using (context.Stack.Push(document))
             {
-                // traverse from the part root element (by DOM or by Reader) in post-order
-                // that means validate the children first, then validate the parent
-                // the validation engine call bookkeep information
-                ValidatePart(part, context);
+                // integrate the package validation.
+                ValidatePackageStructure(document, context);
+
+                foreach (var part in PartsToBeValidated(document))
+                {
+                    // traverse from the part root element (by DOM or by Reader) in post-order
+                    // that means validate the children first, then validate the parent
+                    // the validation engine call bookkeep information
+                    ValidatePart(part, context);
+                }
             }
 
             return context.Errors;
@@ -93,25 +93,27 @@ namespace DocumentFormat.OpenXml.Validation
                 // Must be called before the call to PartRootElement { get; }
                 bool partRootElementLoaded = part.IsRootElementLoaded;
 
-                // schema validation
-                context.Part = part;
-                context.Element = part.PartRootElement;
-
-                var lastErrorCount = context.Errors.Count;
-
-                if (part.PartRootElement != null)
+                using (context.Stack.Push(part: part))
                 {
-                    _schemaValidator.Validate(context);
-
+                    // schema validation
                     context.Element = part.PartRootElement;
-                    context.Events.OnPartValidationStarted(context);
-                    _semanticValidator.Validate(context);
-                }
 
-                if (!partRootElementLoaded && context.Errors.Count == lastErrorCount)
-                {
-                    // No new errors in this part. Release the DOM to GC memory.
-                    part.SetPartRootElementToNull();
+                    var lastErrorCount = context.Errors.Count;
+
+                    if (part.PartRootElement != null)
+                    {
+                        _schemaValidator.Validate(context);
+
+                        context.Element = part.PartRootElement;
+                        context.Events.OnPartValidationStarted(context);
+                        _semanticValidator.Validate(context);
+                    }
+
+                    if (!partRootElementLoaded && context.Errors.Count == lastErrorCount)
+                    {
+                        // No new errors in this part. Release the DOM to GC memory.
+                        part.SetPartRootElementToNull();
+                    }
                 }
             }
             catch (System.Xml.XmlException e)

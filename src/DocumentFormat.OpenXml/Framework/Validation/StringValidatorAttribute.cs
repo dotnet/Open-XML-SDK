@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         protected override void ValidateVersion(ValidationContext context)
         {
-            var current = context.Current;
+            var current = context.Stack.Current;
 
             if (current.Value is StringValue str)
             {
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Framework
             {
                 ValidationErrorInfo outside = null;
 
-                using (context.Push(info => outside = info))
+                using (context.Stack.Push(info => outside = info))
                 {
                     foreach (var s in list)
                     {
@@ -135,7 +135,7 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        private void Validate(StringValue str, ValidationContext context, in ValidationContext.CurrentElement current, bool includeDetails)
+        private void Validate(StringValue str, ValidationContext context, in ValidationElement current, bool includeDetails)
         {
             var id = current.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
             var description = current.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
@@ -288,7 +288,7 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        private static void InvalidEmpty(ValidationContext context, in ValidationContext.CurrentElement current, string id, string description)
+        private static void InvalidEmpty(ValidationContext context, in ValidationElement current, string id, string description)
         {
             context.CreateError(
                 id: id,

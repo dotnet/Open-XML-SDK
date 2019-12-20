@@ -102,19 +102,20 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var validationContext = new ValidationContext(context)
             {
-                Package = context.Package,
-                Part = part,
                 Element = part.RootElement,
             };
 
-            if (_refElementParent is null)
+            using (validationContext.Stack.Push(context.Stack.Current.Package, part))
             {
-                startCollect = true;
-                ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, null);
-            }
-            else
-            {
-                ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, ElementTraverseEnd);
+                if (_refElementParent is null)
+                {
+                    startCollect = true;
+                    ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, null);
+                }
+                else
+                {
+                    ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, ElementTraverseEnd);
+                }
             }
 
             return new PartHolder<int>(count, part);

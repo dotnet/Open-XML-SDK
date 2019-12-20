@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             var errors = validationContext.Errors.Count;
 
-            using (validationContext.Push(value, state, isAttribute))
+            using (validationContext.Stack.Push(value, state, isAttribute))
             {
                 foreach (var validator in validators)
                 {

@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return new ValidationErrorInfo()
             {
                 ErrorType = errorType,
-                Part = validationContext.Part,
+                Part = validationContext.Stack.Current.Part,
                 Node = element,
                 Id = messageId,
                 RelatedNode = child,

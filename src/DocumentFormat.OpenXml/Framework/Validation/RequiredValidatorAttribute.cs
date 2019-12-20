@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         protected override void ValidateVersion(ValidationContext context)
         {
-            var current = context.Current;
+            var current = context.Stack.Current;
 
             if (IsRequired && current.Value is null)
             {
