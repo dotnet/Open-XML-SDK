@@ -20,11 +20,11 @@ namespace DocumentFormat.OpenXml.Framework
 
         public IEnumerable<IOpenXmlSimpleTypeValidator> Validators => _others;
 
-        public void Validate(ValidatorContext context)
+        public void Validate(ValidationContext context)
         {
             var errorRaised = false;
 
-            using (context.With(_ => errorRaised = true))
+            using (context.Push(_ => errorRaised = true))
             {
                 foreach (var other in _others)
                 {
@@ -39,9 +39,11 @@ namespace DocumentFormat.OpenXml.Framework
                 }
             }
 
+            var current = context.Current;
+
             context.CreateError(
                 id: "Sch_AttributeUnionFailedEx",
-                description: SR.Format(ValidationResources.Sch_AttributeUnionFailedEx, context.QName, context.Value),
+                description: SR.Format(ValidationResources.Sch_AttributeUnionFailedEx, current.Property.GetQName(), current.Value),
                 errorType: ValidationErrorType.Schema);
         }
     }

@@ -36,7 +36,8 @@ namespace DocumentFormat.OpenXml.Validation
             Errors = new List<ValidationErrorInfo>();
             McContext = new MCContext(false);
 
-            _elements = new Stack<CurrentElement>();
+            // Start off with a depth of 5
+            _elements = new Stack<CurrentElement>(5);
             _elements.Push(new CurrentElement(null, default, false, Errors.Add));
             _popDisposable = new ValidationContextDisposable(_elements);
         }
@@ -114,7 +115,7 @@ namespace DocumentFormat.OpenXml.Validation
 
         public CurrentElement Current => _elements.Peek();
 
-        public IDisposable PushElement(OpenXmlSimpleType value, ElementProperty<OpenXmlSimpleType> type, bool isAttribute)
+        public IDisposable Push(OpenXmlSimpleType value, ElementProperty<OpenXmlSimpleType> type, bool isAttribute)
         {
             _elements.Push(new CurrentElement(value, type, isAttribute, Current.AddError));
 
@@ -128,11 +129,6 @@ namespace DocumentFormat.OpenXml.Validation
             _elements.Push(new CurrentElement(current.Value, current.Property, current.IsAttribute, addError));
 
             return _popDisposable;
-        }
-
-        public ValidatorContext ToContext()
-        {
-            return new ValidatorContext(this);
         }
 
         public ParticleConstraint GetParticleConstraint() => Cache.GetConstraint(Element);

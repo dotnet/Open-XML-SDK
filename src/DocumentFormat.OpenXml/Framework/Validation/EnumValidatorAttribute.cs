@@ -9,27 +9,28 @@ namespace DocumentFormat.OpenXml.Framework
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class, AllowMultiple = true, Inherited = true)]
     internal sealed class EnumValidatorAttribute : VersionedValidatorAttribute
     {
-        protected override void ValidateVersion(ValidatorContext context)
+        protected override void ValidateVersion(ValidationContext context)
         {
-            var value = GetValue(context);
+            var current = context.Current;
+            var value = GetValue(current);
 
             if (value != null && !value.IsValid)
             {
-                var errorMessageResourceId = context.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
-                var message = context.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
+                var errorMessageResourceId = current.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
+                var message = current.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
 
                 if (!value.IsEnum && string.IsNullOrEmpty(value.InnerText))
                 {
                     context.CreateError(
                         id: errorMessageResourceId,
-                        description: SR.Format(message, context.QName, context.Value.InnerText, ValidationResources.Sch_EmptyAttributeValue),
+                        description: SR.Format(message, current.Property.GetQName(), current.Value.InnerText, ValidationResources.Sch_EmptyAttributeValue),
                         errorType: ValidationErrorType.Schema);
                 }
                 else
                 {
                     context.CreateError(
                         id: errorMessageResourceId,
-                        description: SR.Format(message, context.QName, value, ValidationResources.Sch_EnumerationConstraintFailed),
+                        description: SR.Format(message, current.Property.GetQName(), value, ValidationResources.Sch_EnumerationConstraintFailed),
                         errorType: ValidationErrorType.Schema);
                 }
             }

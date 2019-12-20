@@ -121,11 +121,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             var errors = validationContext.Errors.Count;
 
-            using (validationContext.PushElement(value, state, isAttribute))
+            using (validationContext.Push(value, state, isAttribute))
             {
                 foreach (var validator in validators)
                 {
-                    validator.Validate(validationContext.ToContext());
+                    validator.Validate(validationContext);
 
                     // Break early if validation has hit an error
                     if (errors != validationContext.Errors.Count)
