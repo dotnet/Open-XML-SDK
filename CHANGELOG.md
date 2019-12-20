@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Implemented `IComparable<T>` and `IEquatable<T>` on `OpenXmlComparableSimpleValue` to allow comparisons without boxing (#550)
 
 ### Changes
-- Updated to v4.7.0 of System.IO.Packaging which brings in a number of perf fixes (#629)
+- Updated to v4.7.0 of System.IO.Packaging which brings in a number of perf fixes (#660)
 - Consolidated data for element children/properties to reduce duplication (#540, #547, #548)
 - Replaced opaque binary data for element children constraints with declarative model (#603)
 - A number of performance fixes to minimize allocations where possible

@@ -89,9 +89,9 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 _func = func ?? throw new ArgumentNullException(nameof(func));
             }
 
-            public bool Equals([AllowNull] T x, [AllowNull] T y) => throw new NotImplementedException();
+            public bool Equals(T x, T y) => throw new NotImplementedException();
 
-            public int GetHashCode([DisallowNull] T obj) => _func(obj);
+            public int GetHashCode(T obj) => _func(obj);
         }
     }
 }
