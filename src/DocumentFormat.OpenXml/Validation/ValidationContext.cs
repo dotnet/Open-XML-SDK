@@ -57,11 +57,6 @@ namespace DocumentFormat.OpenXml.Validation
         internal IValidationContextEvents Events => State;
 
         /// <summary>
-        /// Gets or sets the target OpenXmlPart
-        /// </summary>
-        public OpenXmlPart Part { get; internal set; }
-
-        /// <summary>
         /// Gets or sets the target element.
         /// </summary>
         public OpenXmlElement Element { get; internal set; }
@@ -115,11 +110,13 @@ namespace DocumentFormat.OpenXml.Validation
 
         public void CreateError(string id, ValidationErrorType errorType, string description = null)
         {
+            var current = Stack.Current;
+
             var error = new ValidationErrorInfo
             {
                 Id = id,
                 Description = description,
-                Part = Part,
+                Part = current.Part,
                 ErrorType = errorType,
                 Node = Element,
             };

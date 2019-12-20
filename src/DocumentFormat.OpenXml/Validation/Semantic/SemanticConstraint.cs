@@ -35,22 +35,24 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         protected static OpenXmlPart GetReferencedPart(ValidationContext context, string path)
         {
+            var current = context.Stack.Current;
+
             if (path == ".")
             {
-                return context.Part;
+                return current.Part;
             }
 
             string[] parts = path.Split('/');
 
             if (string.IsNullOrEmpty(parts[0]))
             {
-                return GetPartThroughPartPath(context.Stack.Current.Package.Parts, parts.Skip(1).ToArray()); //absolute path
+                return GetPartThroughPartPath(current.Package.Parts, parts.Skip(1).ToArray()); //absolute path
             }
             else if (parts[0] == "..")
             {
-                var refParts = context.Stack.Current.Package
+                var refParts = current.Package
                     .GetAllParts()
-                    .Where(p => p.Parts.Any(r => r.OpenXmlPart.PackagePart.Uri == context.Part.PackagePart.Uri));
+                    .Where(p => p.Parts.Any(r => r.OpenXmlPart.PackagePart.Uri == current.Part.PackagePart.Uri));
 
                 Debug.Assert(refParts.Count() == 1);
 
@@ -58,7 +60,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
             else
             {
-                return GetPartThroughPartPath(context.Part.Parts, parts); //relative path
+                return GetPartThroughPartPath(current.Part.Parts, parts); //relative path
             }
         }
 

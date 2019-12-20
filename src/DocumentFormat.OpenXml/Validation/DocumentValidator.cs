@@ -93,25 +93,27 @@ namespace DocumentFormat.OpenXml.Validation
                 // Must be called before the call to PartRootElement { get; }
                 bool partRootElementLoaded = part.IsRootElementLoaded;
 
-                // schema validation
-                context.Part = part;
-                context.Element = part.PartRootElement;
-
-                var lastErrorCount = context.Errors.Count;
-
-                if (part.PartRootElement != null)
+                using (context.Stack.Push(part: part))
                 {
-                    _schemaValidator.Validate(context);
-
+                    // schema validation
                     context.Element = part.PartRootElement;
-                    context.Events.OnPartValidationStarted(context);
-                    _semanticValidator.Validate(context);
-                }
 
-                if (!partRootElementLoaded && context.Errors.Count == lastErrorCount)
-                {
-                    // No new errors in this part. Release the DOM to GC memory.
-                    part.SetPartRootElementToNull();
+                    var lastErrorCount = context.Errors.Count;
+
+                    if (part.PartRootElement != null)
+                    {
+                        _schemaValidator.Validate(context);
+
+                        context.Element = part.PartRootElement;
+                        context.Events.OnPartValidationStarted(context);
+                        _semanticValidator.Validate(context);
+                    }
+
+                    if (!partRootElementLoaded && context.Errors.Count == lastErrorCount)
+                    {
+                        // No new errors in this part. Release the DOM to GC memory.
+                        part.SetPartRootElementToNull();
+                    }
                 }
             }
             catch (System.Xml.XmlException e)

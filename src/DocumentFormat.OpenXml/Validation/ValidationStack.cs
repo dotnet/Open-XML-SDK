@@ -24,11 +24,17 @@ namespace DocumentFormat.OpenXml.Validation
 
         public ValidationElement Current => _elements.Count > 0 ? _elements.Peek() : default;
 
-        public IDisposable Push(OpenXmlPackage package)
+        public IDisposable Push(OpenXmlPackage package = null, OpenXmlPart part = null)
         {
             var current = Current;
 
-            _elements.Push(new ValidationElement(package, current.Value, current.Property, current.IsAttribute, Current.AddError));
+            _elements.Push(new ValidationElement(
+                package ?? current.Package,
+                part ?? current.Part,
+                current.Value,
+                current.Property,
+                current.IsAttribute,
+                Current.AddError));
 
             return _popDisposable;
         }
@@ -37,7 +43,13 @@ namespace DocumentFormat.OpenXml.Validation
         {
             var current = Current;
 
-            _elements.Push(new ValidationElement(current.Package, value, property, isAttribute, Current.AddError));
+            _elements.Push(new ValidationElement(
+                current.Package,
+                current.Part,
+                value,
+                property,
+                isAttribute,
+                Current.AddError));
 
             return _popDisposable;
         }
@@ -46,7 +58,13 @@ namespace DocumentFormat.OpenXml.Validation
         {
             var current = Current;
 
-            _elements.Push(new ValidationElement(current.Package, current.Value, current.Property, current.IsAttribute, addError));
+            _elements.Push(new ValidationElement(
+                current.Package,
+                current.Part,
+                current.Value,
+                current.Property,
+                current.IsAttribute,
+                addError));
 
             return _popDisposable;
         }

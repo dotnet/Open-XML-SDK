@@ -40,13 +40,14 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         public IEnumerable<ValidationErrorInfo> CheckConstraints(ValidationContext context)
         {
             var level = SemanticValidationLevel.Element;
+            var current = context.Stack.Current;
 
-            if (context.Part != null)
+            if (current.Part != null)
             {
                 level = SemanticValidationLevel.Part;
             }
 
-            if (context.Stack.Current.Package != null)
+            if (current.Package != null)
             {
                 level = SemanticValidationLevel.Package;
             }

@@ -90,11 +90,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 var partContext = new ValidationContext(context)
                 {
-                    Part = part,
                     Element = part.RootElement,
                 };
 
-                using (partContext.Stack.Push(context.Stack.Current.Package))
+                using (partContext.Stack.Push(context.Stack.Current.Package, part))
                 {
                     ValidationTraverser.ValidatingTraverse(partContext, ElementTraverse, null);
                 }

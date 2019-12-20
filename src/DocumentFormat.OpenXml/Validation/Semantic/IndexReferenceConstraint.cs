@@ -102,11 +102,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var validationContext = new ValidationContext(context)
             {
-                Part = part,
                 Element = part.RootElement,
             };
 
-            using (validationContext.Stack.Push(context.Stack.Current.Package))
+            using (validationContext.Stack.Push(context.Stack.Current.Package, part))
             {
                 if (_refElementParent is null)
                 {

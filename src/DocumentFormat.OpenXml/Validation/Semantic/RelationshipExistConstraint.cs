@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            if (context.Part.PackagePart.RelationshipExists(attribute.Value.InnerText))
+            if (context.Stack.Current.Part.PackagePart.RelationshipExists(attribute.Value.InnerText))
             {
                 return null;
             }
