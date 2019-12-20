@@ -113,17 +113,22 @@ namespace DocumentFormat.OpenXml.Framework
             {
                 ValidationErrorInfo outside = null;
 
-                var listCtx = context.With(info => outside = info);
-
-                foreach (var s in list)
+                using (context.With(info => outside = info))
                 {
-                    Validate(s, listCtx, includeDetails: false);
-
-                    if (outside != null)
+                    foreach (var s in list)
                     {
-                        context.AddError(outside);
-                        return;
+                        Validate(s, context, includeDetails: false);
+
+                        if (outside != null)
+                        {
+                            break;
+                        }
                     }
+                }
+
+                if (outside != null)
+                {
+                    context.AddError(outside);
                 }
             }
         }

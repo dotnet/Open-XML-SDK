@@ -7,6 +7,8 @@ using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
 
+#pragma warning disable CA1001 // Types that own disposable fields should be disposable
+
 namespace DocumentFormat.OpenXml.Validation
 {
     /// <summary>
@@ -14,6 +16,9 @@ namespace DocumentFormat.OpenXml.Validation
     /// </summary>
     internal class ValidationContext
     {
+        private readonly ValidationContextDisposable _popDisposable;
+        private readonly Stack<CurrentElement> _elements;
+
         public ValidationContext(FileFormatVersions version = FileFormatVersions.Office2007)
             : this(new ValidationSettings(version), new ValidationCache(version))
         {
@@ -30,6 +35,10 @@ namespace DocumentFormat.OpenXml.Validation
             Settings = settings ?? throw new ArgumentNullException(nameof(settings));
             Errors = new List<ValidationErrorInfo>();
             McContext = new MCContext(false);
+
+            _elements = new Stack<CurrentElement>();
+            _elements.Push(new CurrentElement(null, default, false, Errors.Add));
+            _popDisposable = new ValidationContextDisposable(_elements);
         }
 
         public ValidationCache Cache { get; }
@@ -56,22 +65,22 @@ namespace DocumentFormat.OpenXml.Validation
         /// <summary>
         /// Gets or sets the target OpenXmlPackage.
         /// </summary>
-        internal OpenXmlPackage Package { get; set; }
+        public OpenXmlPackage Package { get; internal set; }
 
         /// <summary>
         /// Gets or sets the target OpenXmlPart
         /// </summary>
-        internal OpenXmlPart Part { get; set; }
+        public OpenXmlPart Part { get; internal set; }
 
         /// <summary>
         /// Gets or sets the target element.
         /// </summary>
-        internal OpenXmlElement Element { get; set; }
+        public OpenXmlElement Element { get; internal set; }
 
         /// <summary>
-        /// Gets or sets used to track MC context.
+        /// Gets used to track MC context.
         /// </summary>
-        internal MCContext McContext { get; set; }
+        internal MCContext McContext { get; }
 
         /// <summary>
         /// Gets or sets a value indicating whether collect ExpectedChildren or not.
@@ -103,9 +112,27 @@ namespace DocumentFormat.OpenXml.Validation
         /// </summary>
         public int MaxNumberOfErrors => Settings.MaxNumberOfErrors;
 
-        public ValidatorContext ToContext(OpenXmlSimpleType simple, ElementProperty<OpenXmlSimpleType> state, bool isAttribute)
+        public CurrentElement Current => _elements.Peek();
+
+        public IDisposable PushElement(OpenXmlSimpleType value, ElementProperty<OpenXmlSimpleType> type, bool isAttribute)
         {
-            return new ValidatorContext(simple, FileFormat, Part, Element, state, isAttribute, McContext, AddError);
+            _elements.Push(new CurrentElement(value, type, isAttribute, Current.AddError));
+
+            return _popDisposable;
+        }
+
+        public IDisposable Push(Action<ValidationErrorInfo> addError)
+        {
+            var current = Current;
+
+            _elements.Push(new CurrentElement(current.Value, current.Property, current.IsAttribute, addError));
+
+            return _popDisposable;
+        }
+
+        public ValidatorContext ToContext()
+        {
+            return new ValidatorContext(this);
         }
 
         public ParticleConstraint GetParticleConstraint() => Cache.GetConstraint(Element);
@@ -114,8 +141,53 @@ namespace DocumentFormat.OpenXml.Validation
         {
             if (error != null && !IsCancelled)
             {
-                Errors.Add(error);
+                Current.AddError(error);
             }
+        }
+
+        public void CreateError(string id, ValidationErrorType errorType, string description = null)
+        {
+            var error = new ValidationErrorInfo
+            {
+                Id = id,
+                Description = description,
+                Part = Part,
+                ErrorType = errorType,
+                Node = Element,
+            };
+
+            AddError(error);
+        }
+
+        public readonly struct CurrentElement
+        {
+            public CurrentElement(OpenXmlSimpleType value, ElementProperty<OpenXmlSimpleType> property, bool isAttribute, Action<ValidationErrorInfo> addError)
+            {
+                Value = value;
+                Property = property;
+                IsAttribute = isAttribute;
+                AddError = addError;
+            }
+
+            public OpenXmlSimpleType Value { get; }
+
+            public ElementProperty<OpenXmlSimpleType> Property { get; }
+
+            public bool IsAttribute { get; }
+
+            public Action<ValidationErrorInfo> AddError { get; }
+        }
+
+        private sealed class ValidationContextDisposable : IDisposable
+        {
+            private readonly Stack<CurrentElement> _stack;
+
+            public ValidationContextDisposable(Stack<CurrentElement> stack)
+            {
+                _stack = stack;
+            }
+
+            public void Dispose() => _stack.Pop();
         }
     }
 }

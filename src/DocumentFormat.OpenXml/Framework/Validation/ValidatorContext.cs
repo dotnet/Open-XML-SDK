@@ -10,55 +10,35 @@ namespace DocumentFormat.OpenXml.Framework
 {
     internal readonly struct ValidatorContext
     {
-        private readonly ElementProperty<OpenXmlSimpleType> _state;
-        private readonly OpenXmlPart _part;
-        private readonly OpenXmlElement _element;
-        private readonly Action<ValidationErrorInfo> _addError;
+        private readonly ValidationContext _context;
 
-        public ValidatorContext(OpenXmlSimpleType value, FileFormatVersions version, OpenXmlPart part, OpenXmlElement element, ElementProperty<OpenXmlSimpleType> state, bool isAttribute, MCContext mcCtx, Action<ValidationErrorInfo> addError)
+        public ValidatorContext(ValidationContext context)
         {
-            Value = value;
-            Version = version;
-            IsAttribute = isAttribute;
-            McContext = mcCtx;
-
-            _state = state;
-            _part = part;
-            _element = element;
-            _addError = addError;
+            _context = context;
         }
 
-        public MCContext McContext { get; }
+        public MCContext McContext => _context.McContext;
 
-        public ValidatorContext With(Action<ValidationErrorInfo> addError)
+        public IDisposable With(Action<ValidationErrorInfo> addError)
         {
-            return new ValidatorContext(Value, Version, _part, _element, _state, IsAttribute, McContext, addError);
+            return _context.Push(addError);
         }
 
-        public bool IsAttribute { get; }
+        public bool IsAttribute => _context.Current.IsAttribute;
 
-        public XmlQualifiedName QName => _state.GetQName();
+        public XmlQualifiedName QName => _context.Current.Property.GetQName();
 
-        public XmlQualifiedName TypeQName => _state.TypeName;
+        public XmlQualifiedName TypeQName => _context.Current.Property.TypeName;
 
-        public OpenXmlSimpleType Value { get; }
+        public OpenXmlSimpleType Value => _context.Current.Value;
 
-        public FileFormatVersions Version { get; }
+        public FileFormatVersions Version => _context.Settings.FileFormat;
 
-        public void AddError(ValidationErrorInfo error) => _addError(error);
+        public void AddError(ValidationErrorInfo error) => _context.AddError(error);
 
         public void CreateError(string id, ValidationErrorType errorType, string description = null)
         {
-            var error = new ValidationErrorInfo
-            {
-                Id = id,
-                Description = description,
-                Part = _part,
-                ErrorType = errorType,
-                Node = _element,
-            };
-
-            AddError(error);
+            _context.CreateError(id, errorType, description);
         }
     }
 }

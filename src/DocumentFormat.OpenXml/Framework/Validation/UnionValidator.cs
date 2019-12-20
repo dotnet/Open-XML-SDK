@@ -23,18 +23,20 @@ namespace DocumentFormat.OpenXml.Framework
         public void Validate(ValidatorContext context)
         {
             var errorRaised = false;
-            var inner = context.With(_ => errorRaised = true);
 
-            foreach (var other in _others)
+            using (context.With(_ => errorRaised = true))
             {
-                other.Validate(inner);
-
-                if (!errorRaised)
+                foreach (var other in _others)
                 {
-                    return;
-                }
+                    other.Validate(context);
 
-                errorRaised = false;
+                    if (!errorRaised)
+                    {
+                        return;
+                    }
+
+                    errorRaised = false;
+                }
             }
 
             context.CreateError(
