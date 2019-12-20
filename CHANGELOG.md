@@ -8,15 +8,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added initial Office 2016 support, including `FileFormatVersion.Office2016`, `ExtendedChartPart` and other new schema elements (#586)
 - Added .NET Standard 2.0 target (#587)
+- Include symbols support for debugging (#650)
 - Exposed `IXmlNamespaceResolver` from `XmlPath` instead of formatted list of strings to expose namespace/prefix mapping (#536)
 - Implemented `IComparable<T>` and `IEquatable<T>` on `OpenXmlComparableSimpleValue` to allow comparisons without boxing (#550)
 
 ### Changes
-- Updated to v4.6.0 of System.IO.Packaging which brings in a number of perf fixes (#629)
+- Updated to v4.7.0 of System.IO.Packaging which brings in a number of perf fixes (#660)
 - Consolidated data for element children/properties to reduce duplication (#540, #547, #548)
 - Replaced opaque binary data for element children constraints with declarative model (#603)
 - A number of performance fixes to minimize allocations where possible
 - 20% size reduction from 5.5mb to 4.3mb
+- The validation subsystem went through a drastic redesign. This may cause changes in what errors are reported.
 
 ### Fixed
 - Fixed some documentation inconsistencies (#582)
