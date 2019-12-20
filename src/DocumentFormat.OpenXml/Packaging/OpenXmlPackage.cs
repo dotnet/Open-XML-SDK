@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -233,6 +234,8 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         internal OpenSettings OpenSettings { get; set; }
+
+        internal virtual ApplicationType ApplicationType => ApplicationType.None;
 
         internal bool StrictTranslation { get; set; } = false;
 

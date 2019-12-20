@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             if (part != null)
             {
-                var partContext = new ValidationContext(context.FileFormat, context.Cache)
+                var partContext = new ValidationContext(context)
                 {
                     Package = context.Package,
                     Part = part,

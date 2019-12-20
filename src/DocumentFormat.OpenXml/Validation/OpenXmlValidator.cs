@@ -17,16 +17,6 @@ namespace DocumentFormat.OpenXml.Validation
         private readonly ValidationSettings _settings;
         private readonly ValidationCache _cache;
 
-        private readonly SchemaValidator _schemaValidator = new SchemaValidator();
-
-        private readonly Lazy<SemanticValidator> _docSmenaticValidator;
-        private readonly Lazy<SemanticValidator> _xlsSemanticValidator;
-        private readonly Lazy<SemanticValidator> _pptSemanticValidator;
-        private readonly Lazy<SemanticValidator> _fullSemanticValidator;
-        private readonly Lazy<DocumentValidator> _spreadsheetDocumentValidator;
-        private readonly Lazy<DocumentValidator> _wordprocessingDocumentValidator;
-        private readonly Lazy<DocumentValidator> _presentationDocumentValidator;
-
         /// <summary>
         /// Initializes a new instance of the OpenXmlValidator.
         /// </summary>
@@ -49,16 +39,9 @@ namespace DocumentFormat.OpenXml.Validation
         public OpenXmlValidator(FileFormatVersions fileFormat)
         {
             fileFormat.ThrowExceptionIfFileFormatNotSupported(nameof(fileFormat));
+
             _settings = new ValidationSettings(fileFormat);
             _cache = new ValidationCache(fileFormat);
-
-            _docSmenaticValidator = new Lazy<SemanticValidator>(() => new SemanticValidator(_settings.FileFormat, ApplicationType.Word), true);
-            _presentationDocumentValidator = new Lazy<DocumentValidator>(() => new DocumentValidator(_settings, _schemaValidator, _pptSemanticValidator.Value, _cache), true);
-            _wordprocessingDocumentValidator = new Lazy<DocumentValidator>(() => new DocumentValidator(_settings, _schemaValidator, _docSmenaticValidator.Value, _cache), true);
-            _xlsSemanticValidator = new Lazy<SemanticValidator>(() => new SemanticValidator(_settings.FileFormat, ApplicationType.Excel), true);
-            _spreadsheetDocumentValidator = new Lazy<DocumentValidator>(() => new DocumentValidator(_settings, _schemaValidator, _xlsSemanticValidator.Value, _cache), true);
-            _fullSemanticValidator = new Lazy<SemanticValidator>(() => new SemanticValidator(_settings.FileFormat, ApplicationType.All), true);
-            _pptSemanticValidator = new Lazy<SemanticValidator>(() => new SemanticValidator(_settings.FileFormat, ApplicationType.PowerPoint), true);
         }
 
         /// <summary>
@@ -146,16 +129,16 @@ namespace DocumentFormat.OpenXml.Validation
 
         private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPart part)
         {
-            var validator = GetValidator(part.OpenXmlPackage);
+            var validator = _cache.GetOrCreateDocumentValidator(part.OpenXmlPackage.ApplicationType);
 
-            return validator.Validate(part);
+            return validator.Validate(part, _settings);
         }
 
         private IEnumerable<ValidationErrorInfo> ValidateCore(OpenXmlPackage package)
         {
-            var validator = GetValidator(package);
+            var validator = _cache.GetOrCreateDocumentValidator(package.ApplicationType);
 
-            return validator.Validate(package);
+            return validator.Validate(package, _settings);
         }
 
         /// <summary>
@@ -192,36 +175,19 @@ namespace DocumentFormat.OpenXml.Validation
 
             FileFormat.ThrowIfNotInVersion(openXmlElement);
 
-            var validationContext = new ValidationContext(FileFormat, _cache)
+            var validationContext = new ValidationContext(_settings, _cache)
             {
-                MaxNumberOfErrors = _settings.MaxNumberOfErrors,
                 Element = openXmlElement,
             };
 
-            _schemaValidator.Validate(validationContext);
+            _cache.SchemaValidator.Validate(validationContext);
 
             validationContext.Element = openXmlElement;
-            _fullSemanticValidator.Value.Validate(validationContext);
+
+            var semanticValidator = _cache.GetOrCreateSemanticValidator(ApplicationType.All);
+            semanticValidator.Validate(validationContext);
 
             return validationContext.Errors;
-        }
-
-        private DocumentValidator GetValidator(OpenXmlPackage package)
-        {
-            if (package is SpreadsheetDocument)
-            {
-                return _spreadsheetDocumentValidator.Value;
-            }
-            else if (package is WordprocessingDocument)
-            {
-                return _wordprocessingDocumentValidator.Value;
-            }
-            else if (package is PresentationDocument)
-            {
-                return _presentationDocumentValidator.Value;
-            }
-
-            throw new System.IO.InvalidDataException(ExceptionMessages.UnknownPackage);
         }
     }
 }

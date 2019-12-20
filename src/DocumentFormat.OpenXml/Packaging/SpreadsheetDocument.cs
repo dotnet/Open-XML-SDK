@@ -85,6 +85,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
+        internal override ApplicationType ApplicationType => ApplicationType.Excel;
+
         private void UpdateDocumentTypeFromContentType()
         {
             if (MainPartContentType == null)

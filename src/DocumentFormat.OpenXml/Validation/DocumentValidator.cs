@@ -7,7 +7,6 @@ using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Globalization;
 using System.Linq;
 
 namespace DocumentFormat.OpenXml.Validation
@@ -20,33 +19,32 @@ namespace DocumentFormat.OpenXml.Validation
         private readonly SchemaValidator _schemaValidator;
         private readonly ValidationCache _cache;
         private readonly SemanticValidator _semanticValidator;
-        private readonly ValidationSettings _validationSettings;
 
         /// <summary>
         /// Initializes a new instance of the DocumentValidator.
         /// </summary>
-        /// <param name="settings">The validation settings.</param>
         /// <param name="schemaValidator">The schema validator to be used for schema validation.</param>
         /// <param name="semanticValidator">The semantic validator to be used for semantic validation.</param>
         /// <param name="cache">The shared validation cache.</param>
-        public DocumentValidator(ValidationSettings settings, SchemaValidator schemaValidator, SemanticValidator semanticValidator, ValidationCache cache)
+        public DocumentValidator(SchemaValidator schemaValidator, SemanticValidator semanticValidator, ValidationCache cache)
         {
             _cache = cache;
             _schemaValidator = schemaValidator;
             _semanticValidator = semanticValidator;
-            _validationSettings = settings;
         }
 
         /// <summary>
         /// Validate the specified document.
         /// </summary>
         /// <param name="document">The document to be validated.</param>
+        /// <param name="settings">The settings to be used during validation.</param>
         /// <returns>Return results in ValidationResult.</returns>
-        public List<ValidationErrorInfo> Validate(OpenXmlPackage document)
+        public List<ValidationErrorInfo> Validate(OpenXmlPackage document, ValidationSettings settings)
         {
-            var context = CreateValidationContext();
-
-            context.Package = document;
+            var context = new ValidationContext(settings, _cache)
+            {
+                Package = document,
+            };
 
             // integrate the package validation.
             ValidatePackageStructure(document, context);
@@ -66,10 +64,11 @@ namespace DocumentFormat.OpenXml.Validation
         /// Validate the specified part.
         /// </summary>
         /// <param name="part">The OpenXmlPart to be validated.</param>
+        /// <param name="settings">The settings to be used during validation.</param>
         /// <returns></returns>
-        public List<ValidationErrorInfo> Validate(OpenXmlPart part)
+        public List<ValidationErrorInfo> Validate(OpenXmlPart part, ValidationSettings settings)
         {
-            var context = CreateValidationContext();
+            var context = new ValidationContext(settings, _cache);
 
             ValidatePart(part, context);
 
@@ -79,7 +78,7 @@ namespace DocumentFormat.OpenXml.Validation
         private void ValidatePart(OpenXmlPart part, ValidationContext context)
         {
             // if the part is not defined in the specified version, then do not validate the content.
-            if (!part.IsInVersion(_validationSettings.FileFormat))
+            if (!part.IsInVersion(_cache.Version))
             {
                 return;
             }
@@ -130,14 +129,6 @@ namespace DocumentFormat.OpenXml.Validation
             }
         }
 
-        private ValidationContext CreateValidationContext()
-        {
-            return new ValidationContext(_validationSettings.FileFormat, _cache)
-            {
-                MaxNumberOfErrors = _validationSettings.MaxNumberOfErrors,
-            };
-        }
-
         /// <summary>
         /// Gets all the parts needs to be validated.
         /// </summary>
@@ -153,7 +144,7 @@ namespace DocumentFormat.OpenXml.Validation
                 {
                     // Only validate the parts defined in the specified version.
                     // Example: do not validate new Office2010 parts if the FileFormat is Office2007.
-                    if (part.IsInVersion(_validationSettings.FileFormat))
+                    if (part.IsInVersion(_cache.Version))
                     {
                         yield return part;
                     }

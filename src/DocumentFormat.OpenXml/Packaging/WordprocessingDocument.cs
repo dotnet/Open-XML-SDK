@@ -84,6 +84,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
+        internal override ApplicationType ApplicationType => ApplicationType.Word;
+
         private void UpdateDocumentTypeFromContentType()
         {
             if (MainPartContentType == null)

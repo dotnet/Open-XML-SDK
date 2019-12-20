@@ -2,7 +2,7 @@
 <Project>
   <PropertyGroup>
     <IsShipped>false</IsShipped>
-    <SystemIOPackagingVersion>4.6.0</SystemIOPackagingVersion>
+    <SystemIOPackagingVersion>4.7.0</SystemIOPackagingVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 
     <!-- Because of the size of the project, to facilitate  quick development, by default only single

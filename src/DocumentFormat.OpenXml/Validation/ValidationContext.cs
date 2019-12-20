@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using System;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation
@@ -13,23 +14,34 @@ namespace DocumentFormat.OpenXml.Validation
     /// </summary>
     internal class ValidationContext
     {
-        public ValidationContext(FileFormatVersions version = FileFormatVersions.Office2007, ValidationCache cache = null)
+        public ValidationContext(FileFormatVersions version = FileFormatVersions.Office2007)
+            : this(new ValidationSettings(version), new ValidationCache(version))
         {
-            Cache = cache ?? new ValidationCache(version);
-            Errors = new List<ValidationErrorInfo>();
+        }
 
-            FileFormat = version;
+        public ValidationContext(ValidationContext other)
+            : this(other.Settings, other.Cache)
+        {
+        }
+
+        public ValidationContext(ValidationSettings settings, ValidationCache cache)
+        {
+            Cache = cache ?? throw new ArgumentNullException(nameof(cache));
+            Settings = settings ?? throw new ArgumentNullException(nameof(settings));
+            Errors = new List<ValidationErrorInfo>();
             McContext = new MCContext(false);
         }
 
         public ValidationCache Cache { get; }
+
+        public ValidationSettings Settings { get; }
 
         public List<ValidationErrorInfo> Errors { get; }
 
         /// <summary>
         /// Gets target file format.
         /// </summary>
-        public FileFormatVersions FileFormat { get; }
+        public FileFormatVersions FileFormat => Settings.FileFormat;
 
         public bool Valid => Errors.Count == 0;
 
@@ -86,10 +98,10 @@ namespace DocumentFormat.OpenXml.Validation
         }
 
         /// <summary>
-        /// Gets or sets the maximum number of errors. A zero (0) value means no limitation.
+        /// Gets the maximum number of errors. A zero (0) value means no limitation.
         /// When the errors >= MaxNumberOfErrors, errors will not be recorded, and MaxNumberOfErrorsEvent will be fired.
         /// </summary>
-        public int MaxNumberOfErrors { get; set; }
+        public int MaxNumberOfErrors => Settings.MaxNumberOfErrors;
 
         public ValidatorContext ToContext(OpenXmlSimpleType simple, ElementProperty<OpenXmlSimpleType> state, bool isAttribute)
         {
