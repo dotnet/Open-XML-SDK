@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 
@@ -23,15 +24,20 @@ namespace DocumentFormat.OpenXml.Validation
 
         public ValidationElement Current => _elements.Count > 0 ? _elements.Peek() : default;
 
-        public IDisposable Push(OpenXmlSimpleType value, ElementProperty<OpenXmlSimpleType> type, bool isAttribute)
+        public IDisposable Push(OpenXmlPackage package)
         {
             var current = Current;
 
-            _elements.Push(new ValidationElement(
-                value,
-                type,
-                isAttribute,
-                current.AddError));
+            _elements.Push(new ValidationElement(package, current.Value, current.Property, current.IsAttribute, Current.AddError));
+
+            return _popDisposable;
+        }
+
+        public IDisposable Push(OpenXmlSimpleType value, ElementProperty<OpenXmlSimpleType> property, bool isAttribute)
+        {
+            var current = Current;
+
+            _elements.Push(new ValidationElement(current.Package, value, property, isAttribute, Current.AddError));
 
             return _popDisposable;
         }
@@ -40,11 +46,7 @@ namespace DocumentFormat.OpenXml.Validation
         {
             var current = Current;
 
-            _elements.Push(new ValidationElement(
-                current.Value,
-                current.Property,
-                current.IsAttribute,
-                addError));
+            _elements.Push(new ValidationElement(current.Package, current.Value, current.Property, current.IsAttribute, addError));
 
             return _popDisposable;
         }

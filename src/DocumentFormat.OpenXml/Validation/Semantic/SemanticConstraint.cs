@@ -44,11 +44,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             if (string.IsNullOrEmpty(parts[0]))
             {
-                return GetPartThroughPartPath(context.Package.Parts, parts.Skip(1).ToArray()); //absolute path
+                return GetPartThroughPartPath(context.Stack.Current.Package.Parts, parts.Skip(1).ToArray()); //absolute path
             }
             else if (parts[0] == "..")
             {
-                var refParts = context.Package
+                var refParts = context.Stack.Current.Package
                     .GetAllParts()
                     .Where(p => p.Parts.Any(r => r.OpenXmlPart.PackagePart.Uri == context.Part.PackagePart.Uri));
 

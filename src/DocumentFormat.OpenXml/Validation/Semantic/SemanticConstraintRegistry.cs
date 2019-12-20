@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 level = SemanticValidationLevel.Part;
             }
 
-            if (context.Package != null)
+            if (context.Stack.Current.Package != null)
             {
                 level = SemanticValidationLevel.Package;
             }

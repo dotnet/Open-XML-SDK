@@ -41,20 +41,20 @@ namespace DocumentFormat.OpenXml.Validation
         /// <returns>Return results in ValidationResult.</returns>
         public List<ValidationErrorInfo> Validate(OpenXmlPackage document, ValidationSettings settings)
         {
-            var context = new ValidationContext(settings, _cache)
-            {
-                Package = document,
-            };
+            var context = new ValidationContext(settings, _cache);
 
-            // integrate the package validation.
-            ValidatePackageStructure(document, context);
-
-            foreach (var part in PartsToBeValidated(document))
+            using (context.Stack.Push(document))
             {
-                // traverse from the part root element (by DOM or by Reader) in post-order
-                // that means validate the children first, then validate the parent
-                // the validation engine call bookkeep information
-                ValidatePart(part, context);
+                // integrate the package validation.
+                ValidatePackageStructure(document, context);
+
+                foreach (var part in PartsToBeValidated(document))
+                {
+                    // traverse from the part root element (by DOM or by Reader) in post-order
+                    // that means validate the children first, then validate the parent
+                    // the validation engine call bookkeep information
+                    ValidatePart(part, context);
+                }
             }
 
             return context.Errors;

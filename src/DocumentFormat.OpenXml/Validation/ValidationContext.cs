@@ -57,11 +57,6 @@ namespace DocumentFormat.OpenXml.Validation
         internal IValidationContextEvents Events => State;
 
         /// <summary>
-        /// Gets or sets the target OpenXmlPackage.
-        /// </summary>
-        public OpenXmlPackage Package { get; internal set; }
-
-        /// <summary>
         /// Gets or sets the target OpenXmlPart
         /// </summary>
         public OpenXmlPart Part { get; internal set; }
