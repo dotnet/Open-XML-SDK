@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Collections.Generic;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Framework.Tests
@@ -77,20 +76,6 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var result = hashCode.ToHashCode();
 
             Assert.Equal(expected, result);
-        }
-
-        private class DelegateGetHashCode<T> : IEqualityComparer<T>
-        {
-            private readonly Func<T, int> _func;
-
-            public DelegateGetHashCode(Func<T, int> func)
-            {
-                _func = func ?? throw new ArgumentNullException(nameof(func));
-            }
-
-            public bool Equals(T x, T y) => throw new NotImplementedException();
-
-            public int GetHashCode(T obj) => _func(obj);
         }
     }
 }
