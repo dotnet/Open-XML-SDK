@@ -7,7 +7,6 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Transactions;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml.Framework
