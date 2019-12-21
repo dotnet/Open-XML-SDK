@@ -7,38 +7,43 @@ using System;
 
 namespace DocumentFormat.OpenXml.Validation
 {
-    internal readonly struct ValidationElement
+    internal class ValidationElement
     {
-        public ValidationElement(
-            OpenXmlPackage package,
-            OpenXmlPart part,
-            OpenXmlElement element,
-            OpenXmlSimpleType value,
-            ElementProperty<OpenXmlSimpleType> property,
-            bool isAttribute,
-            Action<ValidationErrorInfo> addError)
+        public OpenXmlPackage Package { get; internal set; }
+
+        public OpenXmlPart Part { get; internal set; }
+
+        public OpenXmlSimpleType Value { get; internal set; }
+
+        public ElementProperty<OpenXmlSimpleType> Property { get; internal set; }
+
+        public bool IsAttribute { get; internal set; }
+
+        public Action<ValidationErrorInfo> AddError { get; internal set; }
+
+        internal void Clear()
         {
-            Package = package;
-            Part = part;
-            Element = element;
-            Value = value;
-            Property = property;
-            IsAttribute = isAttribute;
-            AddError = addError;
+            Package = null;
+            Part = null;
+            Value = null;
+            Property = null;
+            IsAttribute = false;
+            AddError = null;
         }
 
-        public OpenXmlPackage Package { get; }
+        internal void CopyFrom(ValidationElement current)
+        {
+            if (current is null)
+            {
+                return;
+            }
 
-        public OpenXmlPart Part { get; }
-
-        public OpenXmlElement Element { get; }
-
-        public OpenXmlSimpleType Value { get; }
-
-        public ElementProperty<OpenXmlSimpleType> Property { get; }
-
-        public bool IsAttribute { get; }
-
-        public Action<ValidationErrorInfo> AddError { get; }
+            Package = current.Package;
+            Part = current.Part;
+            Value = current.Value;
+            Property = current.Property;
+            IsAttribute = current.IsAttribute;
+            AddError = current.AddError;
+        }
     }
 }

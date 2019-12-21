@@ -6,7 +6,7 @@ using System.Xml;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal readonly struct ElementProperty<T>
+    internal class ElementProperty<T>
     {
         private readonly ElementPropertyAccessor<T> _accessor;
 
@@ -26,8 +26,6 @@ namespace DocumentFormat.OpenXml.Framework
         }
 
         public XmlQualifiedName TypeName => Validators.GetSimpleTypeQualifiedName(Type);
-
-        public bool IsValid => Name != null;
 
         public int Order { get; }
 

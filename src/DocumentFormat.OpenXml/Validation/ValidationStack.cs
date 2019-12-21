@@ -14,12 +14,14 @@ namespace DocumentFormat.OpenXml.Validation
     {
         private readonly ValidationContextDisposable _popDisposable;
         private readonly Stack<ValidationElement> _elements;
+        private readonly Stack<ValidationElement> _available;
 
         public ValidationStack()
         {
             // Start off with a depth of 5
             _elements = new Stack<ValidationElement>(5);
-            _popDisposable = new ValidationContextDisposable(_elements);
+            _available = new Stack<ValidationElement>(5);
+            _popDisposable = new ValidationContextDisposable(this);
         }
 
         public ValidationElement Current => _elements.Count > 0 ? _elements.Peek() : default;
@@ -27,15 +29,14 @@ namespace DocumentFormat.OpenXml.Validation
         public IDisposable Push(OpenXmlPackage package = null, OpenXmlPart part = null, OpenXmlElement element = null)
         {
             var current = Current;
+            var element = GetOrCreateElement();
 
-            _elements.Push(new ValidationElement(
-                package ?? current.Package,
-                part ?? current.Part,
-                element ?? current.Element,
-                current.Value,
-                current.Property,
-                current.IsAttribute,
-                Current.AddError));
+            element.CopyFrom(current);
+
+            element.Package = package ?? current.Package;
+            element.Part = part ?? current.Part;
+
+            _elements.Push(element);
 
             return _popDisposable;
         }
@@ -43,15 +44,15 @@ namespace DocumentFormat.OpenXml.Validation
         public IDisposable Push(OpenXmlSimpleType value, ElementProperty<OpenXmlSimpleType> property, bool isAttribute)
         {
             var current = Current;
+            var element = GetOrCreateElement();
 
-            _elements.Push(new ValidationElement(
-                current.Package,
-                current.Part,
-                current.Element,
-                value,
-                property,
-                isAttribute,
-                Current.AddError));
+            element.CopyFrom(current);
+
+            element.Value = value;
+            element.Property = property;
+            element.IsAttribute = isAttribute;
+
+            _elements.Push(element);
 
             return _popDisposable;
         }
@@ -59,29 +60,44 @@ namespace DocumentFormat.OpenXml.Validation
         public IDisposable Push(Action<ValidationErrorInfo> addError)
         {
             var current = Current;
+            var element = GetOrCreateElement();
 
-            _elements.Push(new ValidationElement(
-                current.Package,
-                current.Part,
-                current.Element,
-                current.Value,
-                current.Property,
-                current.IsAttribute,
-                addError));
+            element.CopyFrom(current);
+
+            element.AddError = addError;
+
+            _elements.Push(element);
 
             return _popDisposable;
         }
 
+        private ValidationElement GetOrCreateElement()
+        {
+            if (_available.Count > 0)
+            {
+                return _available.Pop();
+            }
+
+            return new ValidationElement();
+        }
+
         private sealed class ValidationContextDisposable : IDisposable
         {
-            private readonly Stack<ValidationElement> _stack;
+            private readonly ValidationStack _stack;
 
-            public ValidationContextDisposable(Stack<ValidationElement> stack)
+            public ValidationContextDisposable(ValidationStack stack)
             {
                 _stack = stack;
             }
 
-            public void Dispose() => _stack.Pop();
+            public void Dispose()
+            {
+                var available = _stack._elements.Pop();
+
+                available.Clear();
+
+                _stack._available.Push(available);
+            }
         }
     }
 }
