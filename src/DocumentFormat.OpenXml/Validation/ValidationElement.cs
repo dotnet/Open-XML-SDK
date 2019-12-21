@@ -13,6 +13,8 @@ namespace DocumentFormat.OpenXml.Validation
 
         public OpenXmlPart Part { get; internal set; }
 
+        public OpenXmlElement Element { get; internal set; }
+
         public OpenXmlSimpleType Value { get; internal set; }
 
         public ElementProperty<OpenXmlSimpleType> Property { get; internal set; }
@@ -25,6 +27,7 @@ namespace DocumentFormat.OpenXml.Validation
         {
             Package = null;
             Part = null;
+            Element = null;
             Value = null;
             Property = null;
             IsAttribute = false;
@@ -40,6 +43,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             Package = current.Package;
             Part = current.Part;
+            Element = current.Element;
             Value = current.Value;
             Property = current.Property;
             IsAttribute = current.IsAttribute;

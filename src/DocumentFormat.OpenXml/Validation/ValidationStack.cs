@@ -29,14 +29,15 @@ namespace DocumentFormat.OpenXml.Validation
         public IDisposable Push(OpenXmlPackage package = null, OpenXmlPart part = null, OpenXmlElement element = null)
         {
             var current = Current;
-            var element = GetOrCreateElement();
+            var updated = GetOrCreateElement();
 
-            element.CopyFrom(current);
+            updated.CopyFrom(current);
 
-            element.Package = package ?? current.Package;
-            element.Part = part ?? current.Part;
+            updated.Package = package ?? current.Package;
+            updated.Part = part ?? current.Part;
+            updated.Element = element ?? current.Element;
 
-            _elements.Push(element);
+            _elements.Push(updated);
 
             return _popDisposable;
         }
