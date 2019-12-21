@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Framework
 
                     if (!schema.IsValid)
                     {
-                        return default;
+                        return null;
                     }
 
                     return new ElementProperty<T>(
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Framework
                         new ValidatorCollection(property),
                         new ElementPropertyAccessor<T>(activator, property));
                 })
-                .Where(tag => tag.IsValid)
+                .Where(tag => tag != null)
                 .OrderBy(tag => tag.Order)
                 .ToArray();
         }

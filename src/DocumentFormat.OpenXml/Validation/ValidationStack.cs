@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Validation
                 current.Value,
                 current.Property,
                 current.IsAttribute,
-                Current.AddError));
+                current.AddError));
 
             return _popDisposable;
         }
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Validation
                 value,
                 property,
                 isAttribute,
-                Current.AddError));
+                current.AddError));
 
             return _popDisposable;
         }
