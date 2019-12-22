@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext"></param>
         internal static void Validate(ValidationContext validationContext)
         {
-            AlternateContent acElement = (AlternateContent)validationContext.Element;
+            AlternateContent acElement = (AlternateContent)validationContext.Stack.Current.Element;
 
             // Validate MC attribute on AlternateContent
             ValidateMcAttributesOnAcb(validationContext, acElement);

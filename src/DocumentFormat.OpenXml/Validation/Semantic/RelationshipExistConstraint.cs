@@ -1,13 +1,11 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
-
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     internal class RelationshipExistConstraint : SemanticConstraint
     {
-        private byte _rIdAttribute;
+        private readonly byte _rIdAttribute;
 
         public RelationshipExistConstraint(byte rIdAttribute)
             : base(SemanticValidationLevel.Part)
@@ -17,7 +15,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            var attribute = context.Element.Attributes[_rIdAttribute];
+            var element = context.Stack.Current.Element;
+            var attribute = element.Attributes[_rIdAttribute];
 
             //if the attribute is omitted, semantic validation will do nothing
             if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
@@ -25,7 +24,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            if (context.Part.PackagePart.RelationshipExists(attribute.Value.InnerText))
+            if (context.Stack.Current.Part.PackagePart.RelationshipExists(attribute.Value.InnerText))
             {
                 return null;
             }
@@ -35,11 +34,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 {
                     Id = "Sem_InvalidRelationshipId",
                     ErrorType = ValidationErrorType.Semantic,
-                    Node = context.Element,
+                    Node = element,
                     Description = SR.Format(
                         ValidationResources.Sem_InvalidRelationshipId,
                         attribute.Value,
-                        GetAttributeQualifiedName(context.Element, _rIdAttribute)),
+                        GetAttributeQualifiedName(element, _rIdAttribute)),
                 };
             }
         }

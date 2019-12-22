@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Framework
         {
             var errorRaised = false;
 
-            using (context.Push(_ => errorRaised = true))
+            using (context.Stack.Push(_ => errorRaised = true))
             {
                 foreach (var other in _others)
                 {
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Framework
                 }
             }
 
-            var current = context.Current;
+            var current = context.Stack.Current;
 
             context.CreateError(
                 id: "Sch_AttributeUnionFailedEx",

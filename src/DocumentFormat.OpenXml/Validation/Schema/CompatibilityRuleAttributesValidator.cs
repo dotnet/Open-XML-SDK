@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The validation context.</param>
         internal static void ValidateMcAttributes(ValidationContext validationContext)
         {
-            var element = validationContext.Element;
+            var element = validationContext.Stack.Current.Element;
             if (element.MCAttributes == null)
             {
                 return;
@@ -175,7 +175,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
 
                 // Prefix must be already defined.
-                var attributeNamesapce = validationContext.Element.LookupNamespace(items[0]);
+                var attributeNamesapce = validationContext.Stack.Current.Element.LookupNamespace(items[0]);
                 if (string.IsNullOrEmpty(attributeNamesapce))
                 {
                     return qname;

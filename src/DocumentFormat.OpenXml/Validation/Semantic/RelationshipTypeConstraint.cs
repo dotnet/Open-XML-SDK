@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Packaging;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
@@ -24,20 +22,21 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            var attribute = context.Element.Attributes[_attribute];
+            var element = context.Stack.Current.Element;
+            var attribute = element.Attributes[_attribute];
 
             if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }
 
-            string actualType = _type;
-
-            IEnumerable<ExternalRelationship> rels = context.Part.ExternalRelationships.Where(r => r.Id == attribute.Value.InnerText);
+            var actualType = _type;
+            var current = context.Stack.Current;
+            var rels = current.Part.ExternalRelationships.Where(r => r.Id == attribute.Value.InnerText);
 
             if (!rels.Any())
             {
-                IEnumerable<IdPartPair> pairs = context.Part.Parts.Where(p => p.RelationshipId == attribute.Value.InnerText);
+                var pairs = current.Part.Parts.Where(p => p.RelationshipId == attribute.Value.InnerText);
 
                 if (pairs.Any())
                 {
@@ -60,11 +59,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 Id = "Sem_IncorrectRelationshipType",
                 ErrorType = ValidationErrorType.Semantic,
-                Node = context.Element,
+                Node = element,
                 Description = SR.Format(
                     ValidationResources.Sem_IncorrectRelationshipType,
                     actualType,
-                    GetAttributeQualifiedName(context.Element, _attribute),
+                    GetAttributeQualifiedName(element, _attribute),
                     _type),
             };
         }

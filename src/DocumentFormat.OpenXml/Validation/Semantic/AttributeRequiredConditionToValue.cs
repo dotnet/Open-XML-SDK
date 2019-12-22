@@ -10,9 +10,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeRequiredConditionToValue : SemanticConstraint
     {
-        private string[] _values;
-        private byte _requiredAttribute;
-        private byte _conditionAttribute;
+        private readonly string[] _values;
+        private readonly byte _requiredAttribute;
+        private readonly byte _conditionAttribute;
 
         public AttributeRequiredConditionToValue(byte requiredAttribute, byte conditionAttribute, params string[] values)
             : base(SemanticValidationLevel.Element)
@@ -24,14 +24,15 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            var attribute = context.Element.Attributes[_requiredAttribute];
+            var element = context.Stack.Current.Element;
+            var attribute = element.Attributes[_requiredAttribute];
 
             if (!attribute.HasValue)
             {
                 return null;
             }
 
-            var conditionAttribute = context.Element.Attributes[_conditionAttribute];
+            var conditionAttribute = element.Attributes[_conditionAttribute];
 
             if (!conditionAttribute.HasValue)
             {
@@ -58,11 +59,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     {
                         Id = "Sem_AttributeRequiredConditionToValue",
                         ErrorType = ValidationErrorType.Semantic,
-                        Node = context.Element,
+                        Node = element,
                         Description = SR.Format(
                             ValidationResources.Sem_AttributeRequiredConditionToValue,
-                            GetAttributeQualifiedName(context.Element, _requiredAttribute),
-                            GetAttributeQualifiedName(context.Element, _conditionAttribute),
+                            GetAttributeQualifiedName(element, _requiredAttribute),
+                            GetAttributeQualifiedName(element, _conditionAttribute),
                             valueString),
                     };
                 }

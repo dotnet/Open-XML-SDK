@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
-
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
@@ -10,7 +8,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeMutualExclusive : SemanticConstraint
     {
-        private byte[] _attributes;
+        private readonly byte[] _attributes;
 
         public AttributeMutualExclusive(params byte[] attributes)
             : base(SemanticValidationLevel.Element)
@@ -20,22 +18,23 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            string attributes = string.Empty;
-            string existAttribute = string.Empty;
-            string existAttribute2 = string.Empty;
+            var element = context.Stack.Current.Element;
+            var attributes = string.Empty;
+            var existAttribute = string.Empty;
+            var existAttribute2 = string.Empty;
 
             foreach (byte attribute in _attributes)
             {
-                attributes += "," + GetAttributeQualifiedName(context.Element, attribute);
+                attributes += "," + GetAttributeQualifiedName(element, attribute);
 
-                if (context.Element.Attributes[attribute].HasValue)
+                if (element.Attributes[attribute].HasValue)
                 {
                     if (!string.IsNullOrEmpty(existAttribute2))
                     {
                         existAttribute += "," + existAttribute2;
                     }
 
-                    existAttribute2 = GetAttributeQualifiedName(context.Element, attribute).ToString();
+                    existAttribute2 = GetAttributeQualifiedName(element, attribute).ToString();
                 }
             }
 
@@ -48,7 +47,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 Id = "Sem_AttributeMutualExclusive",
                 ErrorType = ValidationErrorType.Semantic,
-                Node = context.Element,
+                Node = element,
                 Description = SR.Format(
                     ValidationResources.Sem_AttributeMutualExclusive,
                     existAttribute.Substring(1),

@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml
 
         void IOpenXmlSimpleTypeValidator.Validate(ValidationContext context)
         {
-            var current = context.Current;
+            var current = context.Stack.Current;
 
             if (!context.FileFormat.AtLeast(OfficeVersion) && current.Value?.HasValue == true && !context.McContext.IsIgnorableNs(current.Property.GetQName().Namespace))
             {

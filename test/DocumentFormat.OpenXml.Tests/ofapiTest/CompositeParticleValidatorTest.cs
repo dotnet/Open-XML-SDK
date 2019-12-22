@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Tests
             ParagraphProperties pPr = new ParagraphProperties();
             var particleConstraint = pPr.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as ParticleValidator;
-            validationContext.Element = pPr;
+            validationContext.Stack.Push(element: pPr);
             var expected = pPr;
 
             //<xsd:complexType name="CT_PPr">
@@ -154,7 +154,7 @@ namespace DocumentFormat.OpenXml.Tests
             Body body = new Body();
             var particleConstraint = body.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as ParticleValidator;
-            validationContext.Element = body;
+            validationContext.Stack.Push(element: body);
             var expected = body;
 
             //<xsd:complexType name="CT_Body">
@@ -363,7 +363,7 @@ namespace DocumentFormat.OpenXml.Tests
             Drawing.Blip blip = new Drawing.Blip();
             var particleConstraint = blip.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as ParticleValidator;
-            validationContext.Element = blip;
+            validationContext.Stack.Push(element: blip);
             var expected = blip;
 
             //<xsd:complexType name="CT_Blip">

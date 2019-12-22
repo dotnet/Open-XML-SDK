@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         protected override void ValidateVersion(ValidationContext context)
         {
-            var current = context.Current;
+            var current = context.Stack.Current;
             var id = current.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
             var description = current.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
 

@@ -32,7 +32,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            var attribute = context.Element.Attributes[_attribute];
+            var element = context.Stack.Current.Element;
+            var attribute = element.Attributes[_attribute];
 
             //if the attribute is omitted, semantic validation will do nothing
             if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
@@ -56,13 +57,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 Id = "Sem_MissingIndexedElement",
                 ErrorType = ValidationErrorType.Semantic,
-                Node = context.Element,
+                Node = element,
                 RelatedPart = result.Part,
                 RelatedNode = null,
                 Description = SR.Format(
                     ValidationResources.Sem_MissingIndexedElement,
-                    _refElementName, context.Element.LocalName,
-                    GetAttributeQualifiedName(context.Element, _attribute),
+                    _refElementName, element.LocalName,
+                    GetAttributeQualifiedName(element, _attribute),
                     result.Part == null ? _refPartType : result.Part.PackagePart.Uri.ToString(),
                     index),
             };
@@ -76,13 +77,15 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             //On element traverse start.
             void ElementTraverseStart(ValidationContext ctx)
             {
+                var element = ctx.Stack.Current.Element;
+
                 if (!startCollect)
                 {
-                    startCollect = ctx.Element.GetType() == _refElementParent;
+                    startCollect = element.GetType() == _refElementParent;
                 }
                 else
                 {
-                    if (ctx.Element.GetType() == _refElement)
+                    if (element.GetType() == _refElement)
                     {
                         ++count;
                     }
@@ -92,7 +95,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             //On element traverse end.
             void ElementTraverseEnd(ValidationContext ctx)
             {
-                if (startCollect && ctx.Element.GetType() == _refElementParent)
+                if (startCollect && ctx.Stack.Current.Element.GetType() == _refElementParent)
                 {
                     startCollect = false;
                 }
@@ -100,21 +103,19 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var part = GetReferencedPart(context, _refPartType);
 
-            var validationContext = new ValidationContext(context)
-            {
-                Package = context.Package,
-                Part = part,
-                Element = part.RootElement,
-            };
+            var validationContext = new ValidationContext(context);
 
-            if (_refElementParent is null)
+            using (validationContext.Stack.Push(context.Stack.Current.Package, part, part.RootElement))
             {
-                startCollect = true;
-                ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, null);
-            }
-            else
-            {
-                ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, ElementTraverseEnd);
+                if (_refElementParent is null)
+                {
+                    startCollect = true;
+                    ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, null);
+                }
+                else
+                {
+                    ValidationTraverser.ValidatingTraverse(validationContext, ElementTraverseStart, ElementTraverseEnd);
+                }
             }
 
             return new PartHolder<int>(count, part);

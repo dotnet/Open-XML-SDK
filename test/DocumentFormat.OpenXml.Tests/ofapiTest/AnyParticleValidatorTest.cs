@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Tests
             TextBox textBox = new TextBox();
             var particleConstraint = textBox.ParticleConstraint.Build(FileFormatVersions.Office2007);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
-            validationContext.Element = textBox;
+            validationContext.Stack.Push(element: textBox);
             var expected = textBox;
 
             //<xsd:complexType name="CT_Textbox">

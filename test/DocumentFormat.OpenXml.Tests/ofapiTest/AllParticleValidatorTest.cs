@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Tests
             Properties properties = new Properties();
             var particleConstraint = properties.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as AllParticleValidator;
-            validationContext.Element = properties;
+            validationContext.Stack.Push(element: properties);
             var expected = properties;
 
             //<xsd:complexType name="CT_Properties">
@@ -138,7 +138,7 @@ namespace DocumentFormat.OpenXml.Tests
             ShapeLayout shapeLayout = new ShapeLayout();
             var particleConstraint = shapeLayout.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as AllParticleValidator;
-            validationContext.Element = shapeLayout;
+            validationContext.Stack.Push(element: shapeLayout);
             var expected = shapeLayout;
 
             //<xsd:complexType name="CT_ShapeLayout">

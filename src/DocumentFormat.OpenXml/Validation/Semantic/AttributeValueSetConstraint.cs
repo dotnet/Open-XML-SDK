@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
@@ -12,9 +11,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeValueSetConstraint : SemanticConstraint
     {
-        private byte _attribute;
-        private bool _isValidValueSet; //"true" means attribute value must in range. And the meaning of "false" is opposite.
-        private string[] _valueSet;
+        private readonly byte _attribute;
+        private readonly bool _isValidValueSet; //"true" means attribute value must in range. And the meaning of "false" is opposite.
+        private readonly string[] _valueSet;
 
         public AttributeValueSetConstraint(byte attribute, bool isValid, string[] valueSet)
             : base(SemanticValidationLevel.Element)
@@ -28,7 +27,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            var attribute = context.Element.Attributes[_attribute];
+            var element = context.Stack.Current.Element;
+            var attribute = element.Attributes[_attribute];
 
             //if the attribute is omitted, semantic validation will do nothing
             if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var errorDescription = SR.Format(
                 ValidationResources.Sem_AttributeValueDataTypeDetailed,
-                GetAttributeQualifiedName(context.Element, _attribute),
+                GetAttributeQualifiedName(element, _attribute),
                 attribute.Value,
                 ValidationResources.Sch_EnumerationConstraintFailed);
 
@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 Id = "Sem_AttributeValueDataTypeDetailed",
                 ErrorType = ValidationErrorType.Schema,
-                Node = context.Element,
+                Node = element,
                 Description = errorDescription,
             };
         }

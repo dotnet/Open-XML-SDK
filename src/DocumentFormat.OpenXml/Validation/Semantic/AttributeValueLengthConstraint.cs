@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
@@ -11,9 +10,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeValueLengthConstraint : SemanticConstraint
     {
-        private byte _attribute;
-        private int _minLength;
-        private int _maxLength;
+        private readonly byte _attribute;
+        private readonly int _minLength;
+        private readonly int _maxLength;
 
         public AttributeValueLengthConstraint(byte attribute, int minLength, int maxLength)
             : base(SemanticValidationLevel.Element)
@@ -29,7 +28,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            var attribute = context.Element.Attributes[_attribute];
+            var element = context.Stack.Current.Element;
+            var attribute = element.Attributes[_attribute];
 
             //if the attribute is omitted, semantic validation will do nothing
             if (!attribute.HasValue)
@@ -58,10 +58,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 Id = "Sem_AttributeValueDataTypeDetailed",
                 ErrorType = ValidationErrorType.Schema,
-                Node = context.Element,
+                Node = element,
                 Description = SR.Format(
                     ValidationResources.Sem_AttributeValueDataTypeDetailed,
-                    GetAttributeQualifiedName(context.Element, _attribute),
+                    GetAttributeQualifiedName(element, _attribute),
                     attributeValue,
                     subMsg),
             };
