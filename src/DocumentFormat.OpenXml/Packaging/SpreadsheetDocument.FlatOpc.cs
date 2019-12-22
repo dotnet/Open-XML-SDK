@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines SpreadsheetDocument - an OpenXmlPackage represents a Spreadsheet document.
     /// </summary>
-    public partial class SpreadsheetDocument : OpenXmlPackage
+    public partial class SpreadsheetDocument
     {
         /// <summary>
         /// Converts an OpenXml package in OPC format to an <see cref="XDocument"/>
@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(stream));
             }
 
-            return SpreadsheetDocument.Open(FromFlatOpcDocumentCore(document, stream), true);
+            return Open(FromFlatOpcDocumentCore(document, stream), true);
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(path));
             }
 
-            return SpreadsheetDocument.Open(FromFlatOpcDocumentCore(document, path), isEditable);
+            return Open(FromFlatOpcDocumentCore(document, path), isEditable);
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(package));
             }
 
-            return SpreadsheetDocument.Open(FromFlatOpcDocumentCore(document, package));
+            return Open(FromFlatOpcDocumentCore(document, package));
         }
 
         /// <summary>
