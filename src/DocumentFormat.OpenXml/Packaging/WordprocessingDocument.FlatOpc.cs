@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines WordprocessingDocument - an OpenXmlPackage represents a Word document.
     /// </summary>
-    public partial class WordprocessingDocument : OpenXmlPackage
+    public partial class WordprocessingDocument
     {
         /// <summary>
         /// Converts an OpenXml package in OPC format to an <see cref="XDocument"/>
@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(stream));
             }
 
-            return WordprocessingDocument.Open(FromFlatOpcDocumentCore(document, stream), isEditable);
+            return Open(FromFlatOpcDocumentCore(document, stream), isEditable);
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(path));
             }
 
-            return WordprocessingDocument.Open(FromFlatOpcDocumentCore(document, path), isEditable);
+            return Open(FromFlatOpcDocumentCore(document, path), isEditable);
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(package));
             }
 
-            return WordprocessingDocument.Open(FromFlatOpcDocumentCore(document, package));
+            return Open(FromFlatOpcDocumentCore(document, package));
         }
 
         /// <summary>
