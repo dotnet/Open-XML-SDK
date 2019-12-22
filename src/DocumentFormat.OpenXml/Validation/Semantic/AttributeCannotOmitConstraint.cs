@@ -1,13 +1,11 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
-
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     internal class AttributeCannotOmitConstraint : SemanticConstraint
     {
-        private byte _attribute;
+        private readonly byte _attribute;
 
         public AttributeCannotOmitConstraint(byte attribute)
             : base(SemanticValidationLevel.Element)
@@ -17,7 +15,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            if (context.Element.Attributes[_attribute].HasValue)
+            var element = context.Stack.Current.Element;
+
+            if (element.Attributes[_attribute].HasValue)
             {
                 return null;
             }
@@ -26,8 +26,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 Id = "Sem_MissRequiredAttribute",
                 ErrorType = ValidationErrorType.Schema,
-                Node = context.Element,
-                Description = SR.Format(ValidationResources.Sch_MissRequiredAttribute, GetAttributeQualifiedName(context.Element, _attribute)),
+                Node = element,
+                Description = SR.Format(ValidationResources.Sch_MissRequiredAttribute, GetAttributeQualifiedName(element, _attribute)),
             };
         }
     }

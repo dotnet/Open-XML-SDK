@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             Debug.Assert(validationContext != null);
 
-            var element = validationContext.Element as OpenXmlCompositeElement;
+            var element = validationContext.Stack.Current.Element as OpenXmlCompositeElement;
             Debug.Assert(element != null);
 
             var child = validationContext.GetFirstChildMc();
@@ -263,7 +263,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 #endif
             }
 
-            var element = validationContext.Element;
+            var element = validationContext.Stack.Current.Element;
             if (particleMatchInfo.LastMatchedElement == null)
             {
                 child = validationContext.GetFirstChildMc();
@@ -279,7 +279,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             switch (particleMatchInfo.Match)
             {
                 case ParticleMatch.Nomatch:
-                    expectedChildren = GetExpectedChildrenMessage(validationContext.Element, GetExpectedElements());
+                    expectedChildren = GetExpectedChildrenMessage(validationContext.Stack.Current.Element, GetExpectedElements());
                     break;
 
                 case ParticleMatch.Partial:
@@ -294,7 +294,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                     else
                     {
-                        expectedChildren = GetExpectedChildrenMessage(validationContext.Element, particleMatchInfo.ExpectedChildren);
+                        expectedChildren = GetExpectedChildrenMessage(validationContext.Stack.Current.Element, particleMatchInfo.ExpectedChildren);
                     }
 
                     break;
@@ -302,17 +302,17 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 case ParticleMatch.Matched:
                     if (ParticleConstraint.CanOccursMoreThanOne)
                     {
-                        expectedChildren = GetExpectedChildrenMessage(validationContext.Element, GetExpectedElements());
+                        expectedChildren = GetExpectedChildrenMessage(validationContext.Stack.Current.Element, GetExpectedElements());
                     }
                     else
                     {
-                        expectedChildren = GetExpectedChildrenMessage(validationContext.Element, particleMatchInfo.ExpectedChildren);
+                        expectedChildren = GetExpectedChildrenMessage(validationContext.Stack.Current.Element, particleMatchInfo.ExpectedChildren);
                     }
 
                     break;
             }
 
-            if (validationContext.Element.CanContainChild(child))
+            if (validationContext.Stack.Current.Element.CanContainChild(child))
             {
                 // The child can be contained in the parent, but not follow the schema.
                 errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_UnexpectedElementContentExpectingComplex", child.XmlQualifiedName.ToString(), expectedChildren);

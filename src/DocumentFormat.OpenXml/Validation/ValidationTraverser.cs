@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Validation
                 return;
             }
 
-            OpenXmlElement element = validationContext.Element;
+            OpenXmlElement element = validationContext.Stack.Current.Element;
 
             //specify whether ValidationAction is called
             bool validatingActed = false;
@@ -57,8 +57,10 @@ namespace DocumentFormat.OpenXml.Validation
 
                 foreach (OpenXmlElement child in element.ChildElements)
                 {
-                    validationContext.Element = child;
-                    ValidatingTraverse(validationContext, validateAction, finishAction);
+                    using (validationContext.Stack.Push(element: child))
+                    {
+                        ValidatingTraverse(validationContext, validateAction, finishAction);
+                    }
                 }
             }
             else if (element.IsUnknown())
@@ -69,8 +71,10 @@ namespace DocumentFormat.OpenXml.Validation
                     // do validating on children elements.
                     foreach (OpenXmlElement child in element.ChildElements)
                     {
-                        validationContext.Element = child;
-                        ValidatingTraverse(validationContext, validateAction, finishAction);
+                        using (validationContext.Stack.Push(element: child))
+                        {
+                            ValidatingTraverse(validationContext, validateAction, finishAction);
+                        }
                     }
                 }
             }
@@ -87,8 +91,10 @@ namespace DocumentFormat.OpenXml.Validation
                 {
                     foreach (var child in selectedContent.ChildElements)
                     {
-                        validationContext.Element = child;
-                        ValidatingTraverse(validationContext, validateAction, finishAction);
+                        using (validationContext.Stack.Push(element: child))
+                        {
+                            ValidatingTraverse(validationContext, validateAction, finishAction);
+                        }
                     }
                 }
             }
@@ -109,8 +115,10 @@ namespace DocumentFormat.OpenXml.Validation
 
             if (validatingActed && finishAction != null)
             {
-                validationContext.Element = element;
-                finishAction(validationContext);
+                using (validationContext.Stack.Push(element: element))
+                {
+                    finishAction(validationContext);
+                }
             }
         }
     }

@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Validation
                 return;
             }
 
-            var type = context.Element.GetType();
+            var type = context.Stack.Current.Element.GetType();
 
             foreach (var state in _state)
             {
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Validation
                 return;
             }
 
-            var type = context.Element.GetType();
+            var type = context.Stack.Current.Element.GetType();
 
             foreach (var state in _state)
             {

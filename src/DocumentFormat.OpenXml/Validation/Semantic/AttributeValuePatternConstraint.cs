@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
@@ -9,7 +8,7 @@ using System.Text.RegularExpressions;
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
-    /// 1.2 Attribute value should follow specified regex
+    /// 1.2 Attribute value should follow specified regular expression
     /// </summary>
     internal class AttributeValuePatternConstraint : SemanticConstraint
     {
@@ -33,7 +32,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            var attribute = context.Element.Attributes[_attribute];
+            var element = context.Stack.Current.Element;
+            var attribute = element.Attributes[_attribute];
 
             //if the attribute is omitted, semantic validation will do nothing
             if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
@@ -50,10 +50,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 Id = "Sem_AttributeValueDataTypeDetailed",
                 ErrorType = ValidationErrorType.Schema,
-                Node = context.Element,
+                Node = element,
                 Description = SR.Format(
                     ValidationResources.Sem_AttributeValueDataTypeDetailed,
-                    GetAttributeQualifiedName(context.Element, _attribute),
+                    GetAttributeQualifiedName(element, _attribute),
                     attribute.Value.InnerText,
                     SR.Format(ValidationResources.Sch_PatternConstraintFailed, _pattern)),
             };

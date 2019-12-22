@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Tests
             RevisionRowColumn rRowColumn = new RevisionRowColumn();
             var particleConstraint = rRowColumn.ParticleConstraint.Build(FileFormatVersions.Office2007);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
-            validationContext.Element = rRowColumn;
+            validationContext.Stack.Push(element: rRowColumn);
             var expected = rRowColumn;
 
             //<xsd:complexType name="CT_RevisionRowColumn">
@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Tests
             FormFieldData ffData = new FormFieldData();
             var particleConstraint = ffData.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
-            validationContext.Element = ffData;
+            validationContext.Stack.Push(element: ffData);
             var expected = ffData;
 
             //<xs:complexType name="CT_FFData">
@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml.Tests
             BuildSubElement bldSub = new BuildSubElement();
             var particleConstraint = bldSub.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
-            validationContext.Element = bldSub;
+            validationContext.Stack.Push(element: bldSub);
             var expected = bldSub;
 
             //<xsd:complexType name="CT_AnimationGraphicalObjectBuildProperties">
@@ -310,7 +310,7 @@ namespace DocumentFormat.OpenXml.Tests
             FieldChar fldChar = new FieldChar();
             var particleConstraint = fldChar.ParticleConstraint.Build(Version);
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
-            validationContext.Element = fldChar;
+            validationContext.Stack.Push(element: fldChar);
             var expected = fldChar;
 
             //<xsd:complexType name="CT_FldChar">

@@ -10,10 +10,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributePairConstraint : SemanticConstraint
     {
-        public string _attribute1LocalName;
-        public string _attribute1Namespace;
-        public string _attribute2LocalName;
-        public string _attribute2Namespace;
+        private readonly string _attribute1LocalName;
+        private readonly string _attribute1Namespace;
+        private readonly string _attribute2LocalName;
+        private readonly string _attribute2Namespace;
 
         public AttributePairConstraint(string attribute1Namespace, string attribute1LocalName, string attribute2Namespace, string attribute2LocalName)
             : base(SemanticValidationLevel.Element)
@@ -31,15 +31,22 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            bool attribute1Exist = context.Element.GetAttributeValueEx(_attribute1LocalName, _attribute1Namespace) != null;
-            bool attribute2Exist = context.Element.GetAttributeValueEx(_attribute2LocalName, _attribute2Namespace) != null;
+            var element = context.Stack.Current.Element;
+            var attribute1Exist = element.GetAttributeValueEx(_attribute1LocalName, _attribute1Namespace) != null;
+            var attribute2Exist = element.GetAttributeValueEx(_attribute2LocalName, _attribute2Namespace) != null;
 
             if (!(attribute1Exist ^ attribute2Exist))
             {
                 return null;
             }
 
-            return new ValidationErrorInfo() { Id = string.Empty, ErrorType = ValidationErrorType.Semantic, Node = context.Element, Description = string.Empty };
+            return new ValidationErrorInfo
+            {
+                Id = string.Empty,
+                ErrorType = ValidationErrorType.Semantic,
+                Node = element,
+                Description = string.Empty,
+            };
         }
     }
 }

@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         public void Validate(ValidationContext validationContext)
         {
             Debug.Assert(validationContext != null);
-            Debug.Assert(validationContext.Element != null);
+            Debug.Assert(validationContext.Stack.Current.Element != null);
 
             ValidationTraverser.ValidatingTraverse(validationContext, ValidateElement, validationContext.Events.OnElementValidationFinished);
         }

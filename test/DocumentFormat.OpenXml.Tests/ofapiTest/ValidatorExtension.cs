@@ -14,24 +14,23 @@ namespace DocumentFormat.OpenXml.Tests
         /// Validate the DOM tree under the specified OpenXmlElement.
         /// </summary>
         /// <param name="schemaValidator">The schemaValidator.</param>
-        /// <param name="openxmlElement">The root of the sub tree.</param>
+        /// <param name="openXmlElement">The root of the sub tree.</param>
         /// <returns>Returns the validation result in ValidationResult.</returns>
         /// <remarks>
         /// Only schema validating.
         /// </remarks>
-        public static List<ValidationErrorInfo> Validate(this SchemaValidator schemaValidator, OpenXmlElement openxmlElement)
+        public static List<ValidationErrorInfo> Validate(this SchemaValidator schemaValidator, OpenXmlElement openXmlElement)
         {
-            Debug.Assert(openxmlElement != null);
+            Debug.Assert(openXmlElement != null);
 
-            Debug.Assert(!(openxmlElement is OpenXmlUnknownElement || openxmlElement is OpenXmlMiscNode));
+            Debug.Assert(!(openXmlElement is OpenXmlUnknownElement || openXmlElement is OpenXmlMiscNode));
 
             // Can not just validate AlternateContent / Choice / Fallback
-            Debug.Assert(!(openxmlElement is AlternateContentChoice || openxmlElement is AlternateContentFallback));
+            Debug.Assert(!(openXmlElement is AlternateContentChoice || openXmlElement is AlternateContentFallback));
 
-            var validationContext = new ValidationContext
-            {
-                Element = openxmlElement,
-            };
+            var validationContext = new ValidationContext();
+
+            validationContext.Stack.Push(element: openXmlElement);
 
             schemaValidator.Validate(validationContext);
 

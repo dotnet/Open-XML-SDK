@@ -16,7 +16,8 @@ namespace DocumentFormat.OpenXml.Tests
         public void AttributeMinMaxConstraintTest()
         {
             Excel.Column column = new Excel.Column();
-            ValidationContext context = new ValidationContext() { Element = column };
+            ValidationContext context = new ValidationContext();
+            context.Stack.Push(element: column);
 
             AttributeMinMaxConstraint constraint = new AttributeMinMaxConstraint(string.Empty, "min", string.Empty, "max") ;
 
@@ -37,7 +38,8 @@ namespace DocumentFormat.OpenXml.Tests
         public void AttributePairConstraintTest()
         {
             Word.MoveFromRangeStart moveFromRangeStart = new Word.MoveFromRangeStart();
-            ValidationContext context = new ValidationContext() { Element = moveFromRangeStart };
+            ValidationContext context = new ValidationContext();
+            context.Stack.Push(element: moveFromRangeStart);
 
             AttributePairConstraint constraint = new AttributePairConstraint("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "colFirst", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "colLast");
 

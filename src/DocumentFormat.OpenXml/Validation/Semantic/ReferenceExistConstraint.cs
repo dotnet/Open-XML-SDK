@@ -34,7 +34,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            var attribute = context.Element.Attributes[_refAttribute];
+            var element = context.Stack.Current.Element;
+            var attribute = element.Attributes[_refAttribute];
 
             if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
@@ -52,14 +53,14 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 Id = "Sem_MissingReferenceElement",
                 ErrorType = ValidationErrorType.Semantic,
-                Node = context.Element,
+                Node = element,
                 RelatedPart = result.Part,
                 RelatedNode = null,
                 Description = SR.Format(
                     ValidationResources.Sem_MissingReferenceElement,
                     _elementName,
-                    context.Element.LocalName,
-                    GetAttributeQualifiedName(context.Element, _refAttribute),
+                    element.LocalName,
+                    GetAttributeQualifiedName(element, _refAttribute),
                     result.Part == null ? _partPath : result.Part.PackagePart.Uri.ToString(),
                     attribute.Value.InnerText),
             };
@@ -72,11 +73,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             void ElementTraverse(ValidationContext ctx)
             {
-                Debug.Assert(ctx.Element != null);
+                var element = ctx.Stack.Current.Element;
 
-                if (ctx.Element.GetType() == _element)
+                Debug.Assert(element != null);
+
+                if (element.GetType() == _element)
                 {
-                    var attribute = ctx.Element.Attributes[_attribute];
+                    var attribute = element.Attributes[_attribute];
 
                     //Attributes whose value is empty string or null don't need to be cached.
                     if (attribute.HasValue && !string.IsNullOrEmpty(attribute.Value.InnerText))
@@ -88,12 +91,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             if (part != null)
             {
-                var partContext = new ValidationContext(context)
-                {
-                    Element = part.RootElement,
-                };
+                var partContext = new ValidationContext(context);
 
-                using (partContext.Stack.Push(context.Stack.Current.Package, part))
+                using (partContext.Stack.Push(context.Stack.Current.Package, part, part.RootElement))
                 {
                     ValidationTraverser.ValidatingTraverse(partContext, ElementTraverse, null);
                 }
