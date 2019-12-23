@@ -124,7 +124,6 @@ namespace DocumentFormat.OpenXml.Validation
                     ErrorType = ValidationErrorType.Schema,
                     Id = "ExceptionError",
                     Part = part,
-                    Path = new XmlPath(part),
                     Description = SR.Format(ValidationResources.ExceptionError, e.Message),
                 };
 
@@ -236,7 +235,6 @@ namespace DocumentFormat.OpenXml.Validation
                     if (e.Part != null)
                     {
                         errorInfo.Part = e.Part;
-                        errorInfo.Path = new XmlPath(e.Part);
                     }
 
                     errorInfo.RelatedPart = e.SubPart;
