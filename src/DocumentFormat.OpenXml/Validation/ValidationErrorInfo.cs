@@ -12,17 +12,21 @@ namespace DocumentFormat.OpenXml.Validation
     [DebuggerDisplay("Description={Description}")]
     public class ValidationErrorInfo
     {
+        private XmlPath _xmlPath;
+        private OpenXmlElement _element;
+        private OpenXmlPart _part;
+
 #if DEBUG
         /// <summary>
         /// Gets the XML qualified name for the attribute.
         /// Returns null if the error is not for attribute.
         /// </summary>
-        public string AttributeQualifiedName { get; internal set; }
+        public string AttributeQualifiedName { get; private set; }
 
         /// <summary>
         /// Gets schema validation error category.
         /// </summary>
-        public string ValidationErrorCategory { get; internal set; }
+        public string ValidationErrorCategory { get; private set; }
 #endif
 
         /// <summary>
@@ -59,10 +63,25 @@ namespace DocumentFormat.OpenXml.Validation
         /// <summary>
         /// Gets the XmlPath information of this error.
         /// </summary>
-        public XmlPath Path { get; internal set; }
+        public XmlPath Path
+        {
+            get
+            {
+                if (_xmlPath is null)
+                {
+                    if (_element != null)
+                    {
+                        _xmlPath = XmlPath.GetXPath(_element);
+                    }
+                    else if (Part != null)
+                    {
+                        _xmlPath = XmlPath.GetXPath(Part);
+                    }
+                }
 
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private OpenXmlElement _element;
+                return _xmlPath;
+            }
+        }
 
         /// <summary>
         /// Gets the OpenXmlElement of the invalid node.
@@ -76,23 +95,25 @@ namespace DocumentFormat.OpenXml.Validation
 
             internal set
             {
+                Part = value.GetPart();
                 _element = value;
-                Path = XmlPath.GetXPath(value);
-                if (Part == null)
-                {
-                    Part = _element.GetPart();
-                }
-                else
-                {
-                    Debug.Assert(Part == _element.GetPart());
-                }
             }
         }
 
         /// <summary>
         /// Gets the part which the invalid element is in.
         /// </summary>
-        public OpenXmlPart Part { get; internal set; }
+        public OpenXmlPart Part
+        {
+            get => _part;
+
+            internal set
+            {
+                _part = value;
+                _element = null;
+                _xmlPath = null;
+            }
+        }
 
         /// <summary>
         /// Gets elements related with the invalid node.
