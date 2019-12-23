@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     internal class OpenXmlChildElements : OpenXmlElementList
     {
-        private OpenXmlElement _container;
+        private readonly OpenXmlElement _container;
 
         public OpenXmlChildElements(OpenXmlElement container)
         {

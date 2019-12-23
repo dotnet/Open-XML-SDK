@@ -17,8 +17,9 @@ namespace DocumentFormat.OpenXml
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private static ReadOnlyCollection<OpenXmlAttribute> _emptyReadOnlyList;
 
+        private readonly Stack<OpenXmlElement> _elementStack;
+
         private OpenXmlElement _rootElement;
-        private Stack<OpenXmlElement> _elementStack;
         private ElementState _elementState;
 
         private OpenXmlDomReader()

@@ -10,9 +10,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeAbsentConditionToNonValue : SemanticConstraint
     {
-        private byte _absentAttribute;
-        private byte _conditionAttribute;
-        private string[] _values;
+        private readonly byte _absentAttribute;
+        private readonly byte _conditionAttribute;
+        private readonly string[] _values;
 
         public AttributeAbsentConditionToNonValue(byte absentAttribute, byte conditionAttribute, params string[] values)
             : base(SemanticValidationLevel.Element)

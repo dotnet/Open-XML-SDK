@@ -11,8 +11,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class ParentTypeConstraint : SemanticConstraint
     {
-        private Type _parentType;
-        private bool _isValid;
+        private readonly Type _parentType;
+        private readonly bool _isValid;
 
         public ParentTypeConstraint(Type parent, bool valid)
             : base(SemanticValidationLevel.Element)

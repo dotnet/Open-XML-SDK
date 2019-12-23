@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class AnyParticleValidator : IParticleValidator
     {
-        private AnyParticle _particleConstraint;
+        private readonly AnyParticle _particleConstraint;
 
         internal virtual ParticleConstraint ParticleConstraint
         {

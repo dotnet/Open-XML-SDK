@@ -8,8 +8,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     internal class RelationshipTypeConstraint : SemanticConstraint
     {
-        private byte _attribute;
-        private string _type;
+        private readonly byte _attribute;
+        private readonly string _type;
 
         public RelationshipTypeConstraint(byte attribute, string type)
             : base(SemanticValidationLevel.Part)

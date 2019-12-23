@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// - The TryMatchOnce() method will NOT be called more than once with same ChoiceParticleValidator instance on the stack when validating one element.
         /// - That means this data field will not be overridden in recursive calling when validating one element.
         /// </summary>
-        private ParticleMatchInfo _childMatchInfo = new ParticleMatchInfo();
+        private readonly ParticleMatchInfo _childMatchInfo = new ParticleMatchInfo();
 
         /// <summary>
         /// Initializes a new instance of the SequenceParticleValidator.
