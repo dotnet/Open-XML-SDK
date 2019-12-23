@@ -5,7 +5,6 @@ using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.IO;
 
 namespace DocumentFormat.OpenXml
@@ -15,10 +14,9 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public abstract class OpenXmlReader : IDisposable
     {
-        private bool _disposed;
+        private readonly bool _readMiscNodes;
 
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private bool _readMiscNodes;
+        private bool _disposed;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlReader class.

@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class AllParticleValidator : CompositeParticleValidator
     {
-        private Dictionary<Type, bool> _childrenParticles;
+        private readonly Dictionary<Type, bool> _childrenParticles;
 
         /// <summary>
         /// Initializes a new instance of the AllParticleValidator.

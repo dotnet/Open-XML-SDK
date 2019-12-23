@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private string _message;
 
         [NonSerialized]
-        private object _sender;
+        private readonly object _sender;
 
         [NonSerialized]
         private OpenXmlPart _subPart;

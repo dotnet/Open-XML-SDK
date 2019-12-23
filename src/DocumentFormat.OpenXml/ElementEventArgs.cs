@@ -10,8 +10,8 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class ElementEventArgs : EventArgs
     {
-        private OpenXmlElement _element;
-        private OpenXmlElement _parentElement;
+        private readonly OpenXmlElement _element;
+        private readonly OpenXmlElement _parentElement;
 
         /// <summary>
         /// Initializes a new instance of the ElementEventArgs class using the
