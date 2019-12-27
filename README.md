@@ -1,13 +1,3 @@
----
-page_type: sample
-products:
-- office-365
-languages:
-- csharp
-extensions:
-  contentType: sdks
-  createdDate: 6/5/2014 9:11:17 AM
----
 Open XML SDK
 ============
 
