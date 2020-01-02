@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Include symbols support for debugging (#650)
 - Exposed `IXmlNamespaceResolver` from `XmlPath` instead of formatted list of strings to expose namespace/prefix mapping (#536)
 - Implemented `IComparable<T>` and `IEquatable<T>` on `OpenXmlComparableSimpleValue` to allow comparisons without boxing (#550)
+- Added `OpenXmlPackage.RootPart` to easily access the root part on any package (#661)
 
 ### Changes
 - Updated to v4.7.0 of System.IO.Packaging which brings in a number of perf fixes (#660)
