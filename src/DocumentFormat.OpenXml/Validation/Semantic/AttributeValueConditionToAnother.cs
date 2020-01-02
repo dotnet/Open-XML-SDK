@@ -10,10 +10,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeValueConditionToAnother : SemanticConstraint
     {
-        private byte _attribute;
-        private byte _conditionAttribute;
-        private string[] _values;
-        private string[] _otherValues;
+        private readonly byte _attribute;
+        private readonly byte _conditionAttribute;
+        private readonly string[] _values;
+        private readonly string[] _otherValues;
 
         public AttributeValueConditionToAnother(byte attribute, byte conditionAttribute, string[] values, string[] otherValues)
             : base(SemanticValidationLevel.Element)
