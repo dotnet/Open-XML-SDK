@@ -651,6 +651,9 @@ namespace DocumentFormat.OpenXml.Packaging
             return childPart;
         }
 
+        /// <inheritdoc />
+        public override OpenXmlPart RootPart => WorkbookPart;
+
         /// <summary>
         /// Gets the WorkbookPart of the SpreadsheetDocument.
         /// </summary>

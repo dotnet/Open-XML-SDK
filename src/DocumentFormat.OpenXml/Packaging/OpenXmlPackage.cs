@@ -35,6 +35,11 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
+        /// Gets the root part for the package.
+        /// </summary>
+        public virtual OpenXmlPart RootPart => throw new InvalidDataException(ExceptionMessages.UnknownPackage);
+
+        /// <summary>
         /// Initializes a new instance of the OpenXmlPackage class using the supplied Open XML package.
         /// </summary>
         /// <param name="package">The target package for the OpenXmlPackage class.</param>

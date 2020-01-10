@@ -131,37 +131,12 @@ namespace DocumentFormat.OpenXml.Validation
             }
         }
 
-        private static OpenXmlPart GetMainPart(OpenXmlPackage package)
-        {
-            if (package is null)
-            {
-                throw new ArgumentNullException(nameof(package));
-            }
-
-            if (package is WordprocessingDocument word)
-            {
-                return word.MainDocumentPart;
-            }
-            else if (package is SpreadsheetDocument spreadsheet)
-            {
-                return spreadsheet.WorkbookPart;
-            }
-            else if (package is PresentationDocument presentation)
-            {
-                return presentation.PresentationPart;
-            }
-            else
-            {
-                throw new System.IO.InvalidDataException(ExceptionMessages.UnknownPackage);
-            }
-        }
-
         /// <summary>
         /// Gets all the parts needs to be validated.
         /// </summary>
         private IEnumerable<OpenXmlPart> PartsToBeValidated(OpenXmlPackage package)
         {
-            var mainPart = GetMainPart(package);
+            var mainPart = package.RootPart;
             if (mainPart != null)
             {
                 var parts = new Dictionary<OpenXmlPart, bool>();
