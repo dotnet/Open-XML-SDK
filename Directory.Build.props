@@ -26,6 +26,16 @@
   </PropertyGroup>
 
   <Choose>
+    <When Condition=" '$(ProjectLoadStyle)' == 'DevFramework35' ">
+      <PropertyGroup>
+        <ProductTargetFrameworks>net35</ProductTargetFrameworks>
+        <TestTargetFrameworks>net452</TestTargetFrameworks>
+        <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
+        <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
+        <BenchmarkTargetFrameworks>net461</BenchmarkTargetFrameworks>
+        <SamplesFrameworks>net46</SamplesFrameworks>
+      </PropertyGroup>
+    </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'DevFramework40' ">
       <PropertyGroup>
         <ProductTargetFrameworks>net40</ProductTargetFrameworks>

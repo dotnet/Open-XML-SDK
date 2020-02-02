@@ -6,7 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0B53C729-D408-450D-B755-7A57184CDE93}"
 	ProjectSection(SolutionItems) = preProject
 		.vsconfig = .vsconfig
-		appveyor.yml = appveyor.yml
 		CHANGELOG.md = CHANGELOG.md
 		compat.yml = compat.yml
 		Directory.Build.props = Directory.Build.props
