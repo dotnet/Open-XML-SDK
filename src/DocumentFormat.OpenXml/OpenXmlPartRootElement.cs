@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the OpenXmlEementContext.
+        /// Gets the OpenXmlElementContext.
         /// </summary>
         internal override OpenXmlElementContext RootElementContext { get; }
 
