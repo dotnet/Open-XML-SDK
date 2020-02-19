@@ -1006,5 +1006,14 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
         }
+
+        [Fact]
+        public void AttributesAvaialbleWhenInitializedWithOuterXml()
+        {
+            var style1 = new Style { StyleId = new StringValue("1") };
+            var style2 = new Style(style1.OuterXml);
+
+            Assert.Equal(style1.StyleId, style2.StyleId);
+        }
     }
 }
