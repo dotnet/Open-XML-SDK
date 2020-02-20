@@ -112,7 +112,6 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the OpenXmlElement class.
         /// </summary>
         protected OpenXmlElement()
-            : base()
         {
             ElementData = PackageCache.Cache.ParseElementData(this);
         }
@@ -132,6 +131,7 @@ namespace DocumentFormat.OpenXml
                 }
 
                 RawOuterXml = outerXml;
+                MakeSureParsed();
             }
         }
 

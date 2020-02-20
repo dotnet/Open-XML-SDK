@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void GetAttributeTest()
         {
-            FooterReference paragraph = new FooterReference();
+            var paragraph = new FooterReference();
 
             //OpenXmlAttribute target = paragraph.GetAttribute("type", null);
             //Assert.Null(target);
@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Tests
             paragraph.Id = "1";
 
             // 1 extended attribute
-            OpenXmlAttribute openXmlAttribute = new OpenXmlAttribute("test", "attribute", "http://test", "true");
+            var openXmlAttribute = new OpenXmlAttribute("test", "attribute", "http://test", "true");
             paragraph.SetAttribute(openXmlAttribute);
 
             target = paragraph.GetAttribute(openXmlAttribute.LocalName, openXmlAttribute.NamespaceUri);
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void RemoveAttributeTest()
         {
             // create an element to hold 3 attributes
-            FooterReference target = new FooterReference();
+            var target = new FooterReference();
 
             Assert.False(target.HasAttributes);
             Assert.Equal(0, target.GetAttributes().Count);
@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Tests
             target.Id = "1";
 
             // 1 extended attribute
-            OpenXmlAttribute openXmlAttribute = new OpenXmlAttribute("test", "attribute", "http://test", "true");
+            var openXmlAttribute = new OpenXmlAttribute("test", "attribute", "http://test", "true");
             target.SetAttribute(openXmlAttribute);
 
             Assert.True(target.HasAttributes);
@@ -143,15 +143,15 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OpenXmlElementTraversingMethodsTest()
         {
-            Paragraph para = new Paragraph();
-            Run r1 = para.AppendChild(new Run());
-            Bold b1 = r1.AppendChild(new RunProperties()).AppendChild(new Bold());
-            Text t1 = r1.AppendChild(new Text());
+            var para = new Paragraph();
+            var r1 = para.AppendChild(new Run());
+            var b1 = r1.AppendChild(new RunProperties()).AppendChild(new Bold());
+            var t1 = r1.AppendChild(new Text());
 
-            Run r2 = para.AppendChild(new Run());
+            var r2 = para.AppendChild(new Run());
             r2.AppendChild(new Text());
 
-            Run r3 = para.AppendChild(new Run());
+            var r3 = para.AppendChild(new Run());
 
             Assert.Equal(7, para.Descendants().Count());
             Assert.Equal(3, r1.Descendants().Count());
@@ -218,8 +218,8 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(b1.IsAfter(r1));
             Assert.False(b1.IsBefore(r1));
 
-            Paragraph p2 = new Paragraph();
-            Run p2r1 = p2.AppendChild(new Run());
+            var p2 = new Paragraph();
+            var p2r1 = p2.AppendChild(new Run());
 
             Assert.False(p2.IsBefore(para));
             Assert.False(p2.IsAfter(para));
@@ -249,19 +249,19 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void InnerXmlTest()
         {
-            string paragraphOuterXml = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:r><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r></w:p>";
-            string paragraphInnerXml = "<w:r xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r>";
-            string run1Text = "Run Text.";
-            string run2Text = "Run 2.";
+            var paragraphOuterXml = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:r><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r></w:p>";
+            var paragraphInnerXml = "<w:r xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r>";
+            var run1Text = "Run Text.";
+            var run2Text = "Run 2.";
 
-            Paragraph p = new Paragraph(new Run(new Text(run1Text), new Text(run2Text)));
+            var p = new Paragraph(new Run(new Text(run1Text), new Text(run2Text)));
             p.RsidParagraphProperties = "001";
 
             Assert.Equal(paragraphOuterXml, p.OuterXml);
             Assert.Equal(paragraphInnerXml, p.InnerXml);
             Assert.Equal(run1Text + run2Text, p.InnerText);
 
-            FontSize fontSize = new FontSize();
+            var fontSize = new FontSize();
             fontSize.Val = "12"; // change from UInt64 to UInt32 according to deviation bug $14199
 
             Assert.Equal(string.Empty, fontSize.InnerXml);
@@ -284,11 +284,14 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(run1Text + run2Text, p.InnerText);
 
             p = new Paragraph(paragraphOuterXml);
-            Assert.Equal(paragraphOuterXml, p.OuterXml);
+
+            // Since the element is initialized with outer xml, namespaces will already be tracked, and thus will be listed first
+            var paragraphOuterXml2 = "<w:p xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:rsidP=\"001\"><w:r><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r></w:p>";
+            Assert.Equal(paragraphOuterXml2, p.OuterXml);
             Assert.Equal(paragraphInnerXml, p.InnerXml);
             Assert.Equal(run1Text + run2Text, p.InnerText);
 
-            OpenXmlUnknownElement unknownElement = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(paragraphOuterXml);
+            var unknownElement = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(paragraphOuterXml);
             Assert.Equal(paragraphOuterXml, unknownElement.OuterXml);
             Assert.Equal(paragraphInnerXml, unknownElement.InnerXml);
         }
@@ -299,19 +302,19 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void RemoveElementTest()
         {
-            Paragraph para = new Paragraph();
-            Run r1 = para.AppendChild(new Run());
-            Bold b1 = r1.AppendChild(new RunProperties()).AppendChild(new Bold());
-            Text t1 = r1.AppendChild(new Text());
+            var para = new Paragraph();
+            var r1 = para.AppendChild(new Run());
+            var b1 = r1.AppendChild(new RunProperties()).AppendChild(new Bold());
+            var t1 = r1.AppendChild(new Text());
 
-            BookmarkStart bkStart = para.AppendChild(new BookmarkStart());
+            var bkStart = para.AppendChild(new BookmarkStart());
 
-            Run r2 = para.AppendChild(new Run());
+            var r2 = para.AppendChild(new Run());
             r2.AppendChild(new Text());
 
-            BookmarkEnd bkEnd = para.AppendChild(new BookmarkEnd());
+            var bkEnd = para.AppendChild(new BookmarkEnd());
 
-            Run r3 = para.AppendChild(new Run());
+            var r3 = para.AppendChild(new Run());
 
             t1.Remove();
             Assert.Equal(1, r1.ChildElements.Count);
@@ -345,10 +348,10 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void InsertElementTest()
         {
-            Paragraph para = new Paragraph();
-            Run r1 = new Run();
-            Run r2 = new Run();
-            Run r3 = new Run();
+            var para = new Paragraph();
+            var r1 = new Run();
+            var r2 = new Run();
+            var r3 = new Run();
 
             para.InsertAt(r1, 0);
             para.InsertAt(r3, 1);
@@ -358,13 +361,13 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(r2, r1.NextSibling());
             Assert.Same(r3, para.LastChild);
 
-            ParagraphProperties pPr = new ParagraphProperties();
+            var pPr = new ParagraphProperties();
             r1.InsertBeforeSelf(pPr);
             Assert.Same(pPr, para.FirstChild);
             Assert.Same(r1, pPr.NextSibling());
             Assert.Same(pPr, r1.PreviousSibling());
 
-            BookmarkStart bkStart = new BookmarkStart();
+            var bkStart = new BookmarkStart();
 
             r1.InsertAfterSelf(bkStart);
             Assert.Same(bkStart, r1.NextSibling());
@@ -377,19 +380,19 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SiblingTest()
         {
-            Paragraph para = new Paragraph();
-            Run r1 = para.AppendChild(new Run());
-            Bold b1 = r1.AppendChild(new RunProperties()).AppendChild(new Bold());
-            Text t1 = r1.AppendChild(new Text());
+            var para = new Paragraph();
+            var r1 = para.AppendChild(new Run());
+            var b1 = r1.AppendChild(new RunProperties()).AppendChild(new Bold());
+            var t1 = r1.AppendChild(new Text());
 
-            BookmarkStart bkStart = para.AppendChild(new BookmarkStart());
+            var bkStart = para.AppendChild(new BookmarkStart());
 
-            Run r2 = para.AppendChild(new Run());
+            var r2 = para.AppendChild(new Run());
             r2.AppendChild(new Text());
 
-            BookmarkEnd bkEnd = para.AppendChild(new BookmarkEnd());
+            var bkEnd = para.AppendChild(new BookmarkEnd());
 
-            Run r3 = para.AppendChild(new Run());
+            var r3 = para.AppendChild(new Run());
 
             Assert.Null(para.PreviousSibling<Paragraph>());
             Assert.Null(r1.PreviousSibling<BookmarkStart>());
@@ -425,8 +428,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact(Skip = "Currently failing")]
         public void OpenXmlAttributeTest()
         {
-            OpenXmlAttribute target = new OpenXmlAttribute();
-            OpenXmlAttribute other = new OpenXmlAttribute();
+            var target = new OpenXmlAttribute();
+            var other = new OpenXmlAttribute();
 
             Assert.NotEqual(target, other);
             Assert.True(target == other);
@@ -484,12 +487,12 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LeafElementInnerXmlTest()
         {
-            string paragraphOuterXml = "<w:p xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:rsidP=\"001\"><w:pPr><w:wordWrap w:val=\"off\"><invalidElement /></w:wordWrap><w:jc w:val=\"right\" /></w:pPr><w:r><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r></w:p>";
-            string paragraphInnerXml = "<w:pPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:wordWrap w:val=\"off\"><invalidElement /></w:wordWrap><w:jc w:val=\"right\" /></w:pPr><w:r xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r>";
-            string wordWrapInnerText = "<invalidElement />";
+            var paragraphOuterXml = "<w:p xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:rsidP=\"001\"><w:pPr><w:wordWrap w:val=\"off\"><invalidElement /></w:wordWrap><w:jc w:val=\"right\" /></w:pPr><w:r><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r></w:p>";
+            var paragraphInnerXml = "<w:pPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:wordWrap w:val=\"off\"><invalidElement /></w:wordWrap><w:jc w:val=\"right\" /></w:pPr><w:r xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r>";
+            var wordWrapInnerText = "<invalidElement />";
 
-            Paragraph p = new Paragraph(paragraphOuterXml);
-            ParagraphProperties pPr = (ParagraphProperties)p.FirstChild;
+            var p = new Paragraph(paragraphOuterXml);
+            var pPr = (ParagraphProperties)p.FirstChild;
 
             Assert.Equal(paragraphOuterXml, p.OuterXml);
             Assert.Equal(paragraphInnerXml, p.InnerXml);
@@ -509,15 +512,15 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LeafTextElementInnerXmlTest()
         {
-            string paragraphOuterXml = "<w:p xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:rsidP=\"001\"><w:r><w:t>Run Text.</w:t><w:t>Text 2.<invalidElement /></w:t></w:r></w:p>";
-            string paragraphInnerXml = "<w:r xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:t>Run Text.</w:t><w:t>Text 2.<invalidElement /></w:t></w:r>";
-            string text1Text = "Run Text.";
-            string text2Text = "Text 2.";
-            string text2InnerXml = "Text 2.<invalidElement />";
+            var paragraphOuterXml = "<w:p xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:rsidP=\"001\"><w:r><w:t>Run Text.</w:t><w:t>Text 2.<invalidElement /></w:t></w:r></w:p>";
+            var paragraphInnerXml = "<w:r xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:t>Run Text.</w:t><w:t>Text 2.<invalidElement /></w:t></w:r>";
+            var text1Text = "Run Text.";
+            var text2Text = "Text 2.";
+            var text2InnerXml = "Text 2.<invalidElement />";
 
-            Paragraph p = new Paragraph(paragraphOuterXml);
-            Text text1 = (Text)p.FirstChild.FirstChild;
-            Text text2 = (Text)p.FirstChild.LastChild;
+            var p = new Paragraph(paragraphOuterXml);
+            var text1 = (Text)p.FirstChild.FirstChild;
+            var text2 = (Text)p.FirstChild.LastChild;
 
             Assert.Equal(text1Text, text1.InnerXml);
             Assert.Equal(text1Text, text1.Text);
@@ -575,7 +578,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(curElem.ExtendedAttributes.Count(), elem.ExtendedAttributes.Count());
                     var a1 = curElem.ExtendedAttributes.ToArray();
                     var a2 = elem.ExtendedAttributes.ToArray();
-                    for (int i = 0; i < a1.Length; i++)
+                    for (var i = 0; i < a1.Length; i++)
                     {
                         Assert.Equal(a1[i].NamespaceUri, a2[i].NamespaceUri);
                         Assert.Equal(a1[i].LocalName, a2[i].LocalName);
@@ -626,31 +629,25 @@ namespace DocumentFormat.OpenXml.Tests
         public void OpenXmlElementConstructorOuterXmlTest()
         {
             // Check bug #484153.
-            string outerXmlWithXmlDecl = "<?xml version=\"1.0\" encoding=\"utf-8\"?><customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
-            try
-            {
-                DocumentFormat.OpenXml.Office.CustomUI.CustomUI cUi = new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(outerXmlWithXmlDecl);
-                Assert.True(false); // Assert.Fail("Expected InvalidOperationException is not thrown");
-            }
-            catch (ArgumentException ex1)
-            {
-                Assert.StartsWith(ExceptionMessages.InvalidOuterXml, ex1.Message);
-            }
+            var outerXmlWithXmlDecl = "<?xml version=\"1.0\" encoding=\"utf-8\"?><customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
+            var ex1 = Assert.Throws<ArgumentException>(() => new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(outerXmlWithXmlDecl));
+            Assert.StartsWith(ExceptionMessages.InvalidOuterXml, ex1.Message);
 
             // Valid outer xml
-            string validOuterXml = "<customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
-            DocumentFormat.OpenXml.Office.CustomUI.CustomUI cUi2 = new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(validOuterXml);
-            Assert.Equal(validOuterXml, cUi2.OuterXml);
+            var validOuterXmlWithPrefix = "<mso:customUI xmlns:mso=\"http://schemas.microsoft.com/office/2006/01/customui\" />";
+            var validOuterXml = "<customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
+            var cUi2 = new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(validOuterXml);
+            Assert.Equal(validOuterXmlWithPrefix, cUi2.OuterXml);
 
             // Valid outer xml but starting with whitespace.
-            string validOuterXmlWithWhitespaces = "     <customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
-            DocumentFormat.OpenXml.Office.CustomUI.CustomUI cUi3 = new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(validOuterXmlWithWhitespaces);
+            var validOuterXmlWithWhitespaces = "     <customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
+            var cUi3 = new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(validOuterXmlWithWhitespaces);
 
             // The whitespace should be trimmed when getting OuterXml.
-            Assert.Equal(validOuterXml, cUi2.OuterXml);
+            Assert.Equal(validOuterXmlWithPrefix, cUi2.OuterXml);
 
             // verify bug #671248
-            string paragraphXml = "<w:p xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" mc:Ignorable=\"w14\" " +
+            var paragraphXml = "<w:p xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" mc:Ignorable=\"w14\" " +
                         "xmlns:w14=\"http://schemas.microsoft.com/office/word/2007/5/30/wordml\" " +
                         "xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w14:paraId=\"017B6C57\" w14:editId=\"32F17AD3\" w:rsidR=\"00A35C47\"  />";
             var p = new Paragraph(paragraphXml);
@@ -666,26 +663,19 @@ namespace DocumentFormat.OpenXml.Tests
         public void CreateOpenXmlUnknownElmenentTest()
         {
             // Valid outer xml
-            string validOuterXml = "<myElement  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></myElement>";
+            var validOuterXml = "<myElement  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></myElement>";
             var unknown1 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(validOuterXml);
             Assert.Equal(validOuterXml, unknown1.OuterXml);
 
             // Valid outer xml but starting with whitespace.
-            string validOuterXmlWithWhitespaces = "   <myElement  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></myElement>";
+            var validOuterXmlWithWhitespaces = "   <myElement  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></myElement>";
             var unknown2 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(validOuterXmlWithWhitespaces);
             Assert.Equal(validOuterXmlWithWhitespaces, unknown2.OuterXml);
 
             // Check bug #484153.
-            string outerXmlWithXmlDecl = "<?xml version=\"1.0\" encoding=\"utf-8\"?><customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
-            try
-            {
-                var unknown3 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(outerXmlWithXmlDecl);
-                Assert.True(false); // Assert.Fail("Expected InvalidOperationException is not thrown");
-            }
-            catch (ArgumentException ex1)
-            {
-                Assert.StartsWith(ExceptionMessages.InvalidOuterXml, ex1.Message);
-            }
+            var outerXmlWithXmlDecl = "<?xml version=\"1.0\" encoding=\"utf-8\"?><customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
+            var ex1 = Assert.Throws<ArgumentException>(() => OpenXmlUnknownElement.CreateOpenXmlUnknownElement(outerXmlWithXmlDecl));
+            Assert.StartsWith(ExceptionMessages.InvalidOuterXml, ex1.Message);
         }
 
         /// <summary>
@@ -694,7 +684,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ChildElementsTest()
         {
-            Paragraph p = new Paragraph();
+            var p = new Paragraph();
             var pPr = p.AppendChild(new ParagraphProperties());
             var r = p.AppendChild(new Run());
             var rPr = r.AppendChild(new RunProperties());
@@ -842,7 +832,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             using (var memStream = new MemoryStream())
             {
-                using (OpenXmlPartWriter target = new OpenXmlPartWriter(memStream))
+                using (var target = new OpenXmlPartWriter(memStream))
                 {
                     target.WriteStartDocument();
                     target.WriteStartElement(new Document());
@@ -852,8 +842,8 @@ namespace DocumentFormat.OpenXml.Tests
                     target.WriteStartElement(new Paragraph(), null, null);
                     target.WriteEndElement();
 
-                    List<KeyValuePair<string, string>> ns = new List<KeyValuePair<string, string>>();
-                    KeyValuePair<string, string> item = new KeyValuePair<string, string>("b", "http://aaa");
+                    var ns = new List<KeyValuePair<string, string>>();
+                    var item = new KeyValuePair<string, string>("b", "http://aaa");
                     ns.Add(item);
                     target.WriteStartElement(new Table(), null, ns);
                     target.WriteEndElement();
@@ -911,7 +901,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LeafAndLeafTextElementLoadTest()
         {
-            string runOuterXml = "<w:r xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">" +
+            var runOuterXml = "<w:r xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">" +
             "<w:rPr><w:strike /><w:vanish><!-- comments is ok --></w:vanish><w:webHidden><w:invalidChild /></w:webHidden></w:rPr>" +
             "<w:t>Run Text.</w:t><w:t><!-- comments is ok -->Text 2</w:t><w:t>Text 3.<invalidElement /></w:t></w:r>";
 
@@ -967,7 +957,7 @@ namespace DocumentFormat.OpenXml.Tests
                 // Well, if CommentEx is not integrated in the SDK, we can't even compile this unit test project...
 
                 // Check if CommentEx is available.
-                DocumentFormat.OpenXml.Office2013.Word.CommentEx commentEx = new DocumentFormat.OpenXml.Office2013.Word.CommentEx();
+                var commentEx = new DocumentFormat.OpenXml.Office2013.Word.CommentEx();
                 Assert.NotNull(commentEx);
             }
             catch
@@ -1005,6 +995,15 @@ namespace DocumentFormat.OpenXml.Tests
                     }
                 }
             }
+        }
+
+        [Fact]
+        public void AttributesAvaialbleWhenInitializedWithOuterXml()
+        {
+            var style1 = new Style { StyleId = new StringValue("1") };
+            var style2 = new Style(style1.OuterXml);
+
+            Assert.Equal(style1.StyleId, style2.StyleId);
         }
     }
 }
