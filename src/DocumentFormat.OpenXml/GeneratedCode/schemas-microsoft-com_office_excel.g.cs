@@ -607,7 +607,7 @@ public partial class LockText : OpenXmlLeafTextElement
 
 }
 /// <summary>
-/// <para>Far East Alignment Toggle.</para>
+/// <para>East Asia Alignment Toggle.</para>
 /// <para>This class is available in Office 2007 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is xvml:JustLastX.</para>
 /// </summary>
