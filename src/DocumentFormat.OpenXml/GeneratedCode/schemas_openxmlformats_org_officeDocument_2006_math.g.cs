@@ -200,7 +200,7 @@ public partial class Run : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.RunProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 1)
@@ -252,8 +252,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         },
         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Text), 0, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -263,11 +263,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public RunProperties MathRunProperties
 	{
-        get => GetElement<RunProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<RunProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Run Properties.</para>
@@ -276,11 +275,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Wordprocessing.RunProperties RunProperties
 	{
-        get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -339,12 +337,12 @@ public partial class Accent : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.AccentProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -354,11 +352,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public AccentProperties AccentProperties
 	{
-        get => GetElement<AccentProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<AccentProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base.</para>
@@ -367,11 +364,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public Base Base
 	{
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
 
 
@@ -430,12 +426,12 @@ public partial class Bar : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BarProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -445,11 +441,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public BarProperties BarProperties
 	{
-        get => GetElement<BarProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<BarProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base.</para>
@@ -458,11 +453,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public Base Base
 	{
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
 
 
@@ -521,12 +515,12 @@ public partial class Box : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BoxProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -536,11 +530,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public BoxProperties BoxProperties
 	{
-        get => GetElement<BoxProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<BoxProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base.</para>
@@ -549,11 +542,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public Base Base
 	{
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
 
 
@@ -612,12 +604,12 @@ public partial class BorderBox : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBoxProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -627,11 +619,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public BorderBoxProperties BorderBoxProperties
 	{
-        get => GetElement<BorderBoxProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<BorderBoxProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base.</para>
@@ -640,11 +631,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public Base Base
 	{
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
 
 
@@ -703,12 +693,12 @@ public partial class Delimiter : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.DelimiterProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 64)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -718,11 +708,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public DelimiterProperties DelimiterProperties
 	{
-        get => GetElement<DelimiterProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<DelimiterProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -781,12 +770,12 @@ public partial class EquationArray : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArrayProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 64)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -796,11 +785,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public EquationArrayProperties EquationArrayProperties
 	{
-        get => GetElement<EquationArrayProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<EquationArrayProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -861,13 +849,13 @@ public partial class Fraction : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.FractionProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Numerator), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Denominator), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -877,11 +865,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public FractionProperties FractionProperties
 	{
-        get => GetElement<FractionProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<FractionProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Numerator.</para>
@@ -890,11 +877,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public Numerator Numerator
 	{
-        get => GetElement<Numerator>(1);
-        set => SetElement(1, value);
+        get => GetElement<Numerator>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Denominator.</para>
@@ -903,11 +889,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public Denominator Denominator
 	{
-        get => GetElement<Denominator>(2);
-        set => SetElement(2, value);
+        get => GetElement<Denominator>();
+        set => SetElement(value);
 	}
 
 
@@ -968,13 +953,13 @@ public partial class MathFunction : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.FunctionProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.FunctionName), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -984,11 +969,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public FunctionProperties FunctionProperties
 	{
-        get => GetElement<FunctionProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<FunctionProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Function Name.</para>
@@ -997,11 +981,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public FunctionName FunctionName
 	{
-        get => GetElement<FunctionName>(1);
-        set => SetElement(1, value);
+        get => GetElement<FunctionName>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base (Argument).</para>
@@ -1010,11 +993,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public Base Base
 	{
-        get => GetElement<Base>(2);
-        set => SetElement(2, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
 
 
@@ -1073,12 +1055,12 @@ public partial class GroupChar : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupCharProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1088,11 +1070,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public GroupCharProperties GroupCharProperties
 	{
-        get => GetElement<GroupCharProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<GroupCharProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base.</para>
@@ -1101,11 +1082,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public Base Base
 	{
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
 
 
@@ -1166,13 +1146,13 @@ public partial class LimitLower : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLowerProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Limit), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1182,11 +1162,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public LimitLowerProperties LimitLowerProperties
 	{
-        get => GetElement<LimitLowerProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<LimitLowerProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base.</para>
@@ -1195,11 +1174,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public Base Base
 	{
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Limit (Lower).</para>
@@ -1208,11 +1186,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public Limit Limit
 	{
-        get => GetElement<Limit>(2);
-        set => SetElement(2, value);
+        get => GetElement<Limit>();
+        set => SetElement(value);
 	}
 
 
@@ -1273,13 +1250,13 @@ public partial class LimitUpper : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpperProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Limit), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1289,11 +1266,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public LimitUpperProperties LimitUpperProperties
 	{
-        get => GetElement<LimitUpperProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<LimitUpperProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base.</para>
@@ -1302,11 +1278,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public Base Base
 	{
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Limit (Upper).</para>
@@ -1315,11 +1290,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public Limit Limit
 	{
-        get => GetElement<Limit>(2);
-        set => SetElement(2, value);
+        get => GetElement<Limit>();
+        set => SetElement(value);
 	}
 
 
@@ -1378,12 +1352,12 @@ public partial class Matrix : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MatrixProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MatrixRow), 1, 256)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1393,11 +1367,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public MatrixProperties MatrixProperties
 	{
-        get => GetElement<MatrixProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<MatrixProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -1460,14 +1433,14 @@ public partial class Nary : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.NaryProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubArgument), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SuperArgument), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1477,11 +1450,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public NaryProperties NaryProperties
 	{
-        get => GetElement<NaryProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<NaryProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Lower limit (n-ary) .</para>
@@ -1490,11 +1462,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public SubArgument SubArgument
 	{
-        get => GetElement<SubArgument>(1);
-        set => SetElement(1, value);
+        get => GetElement<SubArgument>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Upper limit (n-ary).</para>
@@ -1503,11 +1474,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public SuperArgument SuperArgument
 	{
-        get => GetElement<SuperArgument>(2);
-        set => SetElement(2, value);
+        get => GetElement<SuperArgument>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base (Argument).</para>
@@ -1516,11 +1486,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(3)]
     public Base Base
 	{
-        get => GetElement<Base>(3);
-        set => SetElement(3, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
 
 
@@ -1579,12 +1548,12 @@ public partial class Phantom : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PhantomProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1594,11 +1563,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public PhantomProperties PhantomProperties
 	{
-        get => GetElement<PhantomProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<PhantomProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base.</para>
@@ -1607,11 +1575,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public Base Base
 	{
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
 
 
@@ -1672,13 +1639,13 @@ public partial class Radical : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.RadicalProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Degree), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1688,11 +1655,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public RadicalProperties RadicalProperties
 	{
-        get => GetElement<RadicalProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<RadicalProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Degree.</para>
@@ -1701,11 +1667,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public Degree Degree
 	{
-        get => GetElement<Degree>(1);
-        set => SetElement(1, value);
+        get => GetElement<Degree>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base.</para>
@@ -1714,11 +1679,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public Base Base
 	{
-        get => GetElement<Base>(2);
-        set => SetElement(2, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
 
 
@@ -1781,14 +1745,14 @@ public partial class PreSubSuper : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuperProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubArgument), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SuperArgument), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1798,11 +1762,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public PreSubSuperProperties PreSubSuperProperties
 	{
-        get => GetElement<PreSubSuperProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<PreSubSuperProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Subscript (Pre-Sub-Superscript).</para>
@@ -1811,11 +1774,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public SubArgument SubArgument
 	{
-        get => GetElement<SubArgument>(1);
-        set => SetElement(1, value);
+        get => GetElement<SubArgument>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Superscript(Pre-Sub-Superscript function).</para>
@@ -1824,11 +1786,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public SuperArgument SuperArgument
 	{
-        get => GetElement<SuperArgument>(2);
-        set => SetElement(2, value);
+        get => GetElement<SuperArgument>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base.</para>
@@ -1837,11 +1798,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(3)]
     public Base Base
 	{
-        get => GetElement<Base>(3);
-        set => SetElement(3, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
 
 
@@ -1902,13 +1862,13 @@ public partial class Subscript : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubscriptProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubArgument), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1918,11 +1878,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public SubscriptProperties SubscriptProperties
 	{
-        get => GetElement<SubscriptProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<SubscriptProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base.</para>
@@ -1931,11 +1890,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public Base Base
 	{
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Subscript (Subscript function).</para>
@@ -1944,11 +1902,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public SubArgument SubArgument
 	{
-        get => GetElement<SubArgument>(2);
-        set => SetElement(2, value);
+        get => GetElement<SubArgument>();
+        set => SetElement(value);
 	}
 
 
@@ -2011,14 +1968,14 @@ public partial class SubSuperscript : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscriptProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubArgument), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SuperArgument), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2028,11 +1985,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public SubSuperscriptProperties SubSuperscriptProperties
 	{
-        get => GetElement<SubSuperscriptProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<SubSuperscriptProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base.</para>
@@ -2041,11 +1997,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public Base Base
 	{
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Subscript (Sub-Superscript).</para>
@@ -2054,11 +2009,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public SubArgument SubArgument
 	{
-        get => GetElement<SubArgument>(2);
-        set => SetElement(2, value);
+        get => GetElement<SubArgument>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Superscript (Sub-Superscript function).</para>
@@ -2067,11 +2021,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(3)]
     public SuperArgument SuperArgument
 	{
-        get => GetElement<SuperArgument>(3);
-        set => SetElement(3, value);
+        get => GetElement<SuperArgument>();
+        set => SetElement(value);
 	}
 
 
@@ -2132,13 +2085,13 @@ public partial class Superscript : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SuperscriptProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SuperArgument), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2148,11 +2101,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public SuperscriptProperties SuperscriptProperties
 	{
-        get => GetElement<SuperscriptProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<SuperscriptProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Base.</para>
@@ -2161,11 +2113,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public Base Base
 	{
-        get => GetElement<Base>(1);
-        set => SetElement(1, value);
+        get => GetElement<Base>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Superscript (Superscript function).</para>
@@ -2174,11 +2125,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public SuperArgument SuperArgument
 	{
-        get => GetElement<SuperArgument>(2);
-        set => SetElement(2, value);
+        get => GetElement<SuperArgument>();
+        set => SetElement(value);
 	}
 
 
@@ -2301,7 +2251,7 @@ public partial class Paragraph : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ParagraphProperties), 0, 1),
     new CompositeParticle(ParticleType.Choice, 1, 0)
@@ -2394,8 +2344,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2405,11 +2355,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public ParagraphProperties ParagraphProperties
 	{
-        get => GetElement<ParagraphProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<ParagraphProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -2576,7 +2525,7 @@ public partial class OfficeMath : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 0)
     {
@@ -2750,8 +2699,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             }
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -2837,7 +2786,7 @@ public partial class MathProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFont), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BreakBinary), 0, 1),
@@ -2858,8 +2807,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.IntegralLimitLocation), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.NaryLimitLocation), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2869,11 +2818,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public MathFont MathFont
 	{
-        get => GetElement<MathFont>(0);
-        set => SetElement(0, value);
+        get => GetElement<MathFont>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Break on Binary Operators.</para>
@@ -2882,11 +2830,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public BreakBinary BreakBinary
 	{
-        get => GetElement<BreakBinary>(1);
-        set => SetElement(1, value);
+        get => GetElement<BreakBinary>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Break on Binary Subtraction.</para>
@@ -2895,11 +2842,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public BreakBinarySubtraction BreakBinarySubtraction
 	{
-        get => GetElement<BreakBinarySubtraction>(2);
-        set => SetElement(2, value);
+        get => GetElement<BreakBinarySubtraction>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Small Fraction.</para>
@@ -2908,11 +2854,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(3)]
     public SmallFraction SmallFraction
 	{
-        get => GetElement<SmallFraction>(3);
-        set => SetElement(3, value);
+        get => GetElement<SmallFraction>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Use Display Math Defaults.</para>
@@ -2921,11 +2866,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(4)]
     public DisplayDefaults DisplayDefaults
 	{
-        get => GetElement<DisplayDefaults>(4);
-        set => SetElement(4, value);
+        get => GetElement<DisplayDefaults>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Left Margin.</para>
@@ -2934,11 +2878,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(5)]
     public LeftMargin LeftMargin
 	{
-        get => GetElement<LeftMargin>(5);
-        set => SetElement(5, value);
+        get => GetElement<LeftMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Right Margin.</para>
@@ -2947,11 +2890,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(6)]
     public RightMargin RightMargin
 	{
-        get => GetElement<RightMargin>(6);
-        set => SetElement(6, value);
+        get => GetElement<RightMargin>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Default Justification.</para>
@@ -2960,11 +2902,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(7)]
     public DefaultJustification DefaultJustification
 	{
-        get => GetElement<DefaultJustification>(7);
-        set => SetElement(7, value);
+        get => GetElement<DefaultJustification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Pre-Equation Spacing.</para>
@@ -2973,11 +2914,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(8)]
     public PreSpacing PreSpacing
 	{
-        get => GetElement<PreSpacing>(8);
-        set => SetElement(8, value);
+        get => GetElement<PreSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Post-Equation Spacing.</para>
@@ -2986,11 +2926,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(9)]
     public PostSpacing PostSpacing
 	{
-        get => GetElement<PostSpacing>(9);
-        set => SetElement(9, value);
+        get => GetElement<PostSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Inter-Equation Spacing.</para>
@@ -2999,11 +2938,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(10)]
     public InterSpacing InterSpacing
 	{
-        get => GetElement<InterSpacing>(10);
-        set => SetElement(10, value);
+        get => GetElement<InterSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Intra-Equation Spacing.</para>
@@ -3012,11 +2950,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(11)]
     public IntraSpacing IntraSpacing
 	{
-        get => GetElement<IntraSpacing>(11);
-        set => SetElement(11, value);
+        get => GetElement<IntraSpacing>();
+        set => SetElement(value);
 	}
 
 
@@ -3786,7 +3723,7 @@ public partial class RunProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Literal), 0, 1),
     new CompositeParticle(ParticleType.Choice, 1, 1)
@@ -3806,8 +3743,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Break), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Alignment), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -3817,11 +3754,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public Literal Literal
 	{
-        get => GetElement<Literal>(0);
-        set => SetElement(0, value);
+        get => GetElement<Literal>();
+        set => SetElement(value);
 	}
 
 
@@ -4045,7 +3981,7 @@ public partial class ControlProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 0, 1)
     {
@@ -4076,8 +4012,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToMathControl), 1, 1)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -4135,12 +4071,12 @@ public partial class AccentProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.AccentChar), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -4150,11 +4086,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public AccentChar AccentChar
 	{
-        get => GetElement<AccentChar>(0);
-        set => SetElement(0, value);
+        get => GetElement<AccentChar>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Control Properties.</para>
@@ -4163,11 +4098,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -4280,7 +4214,7 @@ public partial class Base : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Base>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -4456,8 +4390,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Numerator.</para>
@@ -4564,7 +4498,7 @@ public partial class Numerator : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Numerator>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -4740,8 +4674,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Denominator.</para>
@@ -4848,7 +4782,7 @@ public partial class Denominator : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Denominator>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -5024,8 +4958,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Function Name.</para>
@@ -5132,7 +5066,7 @@ public partial class FunctionName : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FunctionName>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -5308,8 +5242,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Limit (Lower).</para>
@@ -5416,7 +5350,7 @@ public partial class Limit : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Limit>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -5592,8 +5526,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Lower limit (n-ary) .</para>
@@ -5700,7 +5634,7 @@ public partial class SubArgument : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubArgument>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -5876,8 +5810,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Upper limit (n-ary).</para>
@@ -5984,7 +5918,7 @@ public partial class SuperArgument : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuperArgument>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -6160,8 +6094,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Degree.</para>
@@ -6268,7 +6202,7 @@ public partial class Degree : OfficeMathArgumentType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Degree>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 0)
@@ -6444,8 +6378,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         }
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// Defines the OfficeMathArgumentType class.
@@ -6586,11 +6520,10 @@ public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public ArgumentProperties ArgumentProperties
 	{
-        get => GetElement<ArgumentProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<ArgumentProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -6745,12 +6678,12 @@ public partial class BarProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Position), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -6760,11 +6693,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public Position Position
 	{
-        get => GetElement<Position>(0);
-        set => SetElement(0, value);
+        get => GetElement<Position>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -6773,11 +6705,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -6844,7 +6775,7 @@ public partial class BoxProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OperatorEmulator), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.NoBreak), 0, 1),
@@ -6852,8 +6783,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Break), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Alignment), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -6863,11 +6794,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public OperatorEmulator OperatorEmulator
 	{
-        get => GetElement<OperatorEmulator>(0);
-        set => SetElement(0, value);
+        get => GetElement<OperatorEmulator>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> No Break.</para>
@@ -6876,11 +6806,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public NoBreak NoBreak
 	{
-        get => GetElement<NoBreak>(1);
-        set => SetElement(1, value);
+        get => GetElement<NoBreak>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Differential.</para>
@@ -6889,11 +6818,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public Differential Differential
 	{
-        get => GetElement<Differential>(2);
-        set => SetElement(2, value);
+        get => GetElement<Differential>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Break.</para>
@@ -6902,11 +6830,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(3)]
     public Break Break
 	{
-        get => GetElement<Break>(3);
-        set => SetElement(3, value);
+        get => GetElement<Break>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Alignment.</para>
@@ -6915,11 +6842,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(4)]
     public Alignment Alignment
 	{
-        get => GetElement<Alignment>(4);
-        set => SetElement(4, value);
+        get => GetElement<Alignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -6928,11 +6854,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(5)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(5);
-        set => SetElement(5, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -7005,7 +6930,7 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.HideTop), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.HideBottom), 0, 1),
@@ -7016,8 +6941,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.StrikeBottomLeftToTopRight), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -7027,11 +6952,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public HideTop HideTop
 	{
-        get => GetElement<HideTop>(0);
-        set => SetElement(0, value);
+        get => GetElement<HideTop>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Hide Bottom Edge.</para>
@@ -7040,11 +6964,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public HideBottom HideBottom
 	{
-        get => GetElement<HideBottom>(1);
-        set => SetElement(1, value);
+        get => GetElement<HideBottom>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Hide Left Edge.</para>
@@ -7053,11 +6976,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public HideLeft HideLeft
 	{
-        get => GetElement<HideLeft>(2);
-        set => SetElement(2, value);
+        get => GetElement<HideLeft>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Hide Right Edge.</para>
@@ -7066,11 +6988,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(3)]
     public HideRight HideRight
 	{
-        get => GetElement<HideRight>(3);
-        set => SetElement(3, value);
+        get => GetElement<HideRight>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Border Box Strikethrough Horizontal.</para>
@@ -7079,11 +7000,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(4)]
     public StrikeHorizontal StrikeHorizontal
 	{
-        get => GetElement<StrikeHorizontal>(4);
-        set => SetElement(4, value);
+        get => GetElement<StrikeHorizontal>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Border Box Strikethrough Vertical.</para>
@@ -7092,11 +7012,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(5)]
     public StrikeVertical StrikeVertical
 	{
-        get => GetElement<StrikeVertical>(5);
-        set => SetElement(5, value);
+        get => GetElement<StrikeVertical>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Border Box Strikethrough Bottom-Left to Top-Right.</para>
@@ -7105,11 +7024,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(6)]
     public StrikeBottomLeftToTopRight StrikeBottomLeftToTopRight
 	{
-        get => GetElement<StrikeBottomLeftToTopRight>(6);
-        set => SetElement(6, value);
+        get => GetElement<StrikeBottomLeftToTopRight>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Border Box Strikethrough Top-Left to Bottom-Right.</para>
@@ -7118,11 +7036,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(7)]
     public StrikeTopLeftToBottomRight StrikeTopLeftToBottomRight
 	{
-        get => GetElement<StrikeTopLeftToBottomRight>(7);
-        set => SetElement(7, value);
+        get => GetElement<StrikeTopLeftToBottomRight>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -7131,11 +7048,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(8)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(8);
-        set => SetElement(8, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -7238,7 +7154,7 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BeginChar), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SeparatorChar), 0, 1),
@@ -7246,8 +7162,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GrowOperators), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Shape), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -7257,11 +7173,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public BeginChar BeginChar
 	{
-        get => GetElement<BeginChar>(0);
-        set => SetElement(0, value);
+        get => GetElement<BeginChar>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Delimiter Separator Character.</para>
@@ -7270,11 +7185,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public SeparatorChar SeparatorChar
 	{
-        get => GetElement<SeparatorChar>(1);
-        set => SetElement(1, value);
+        get => GetElement<SeparatorChar>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Delimiter Ending Character.</para>
@@ -7283,11 +7197,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public EndChar EndChar
 	{
-        get => GetElement<EndChar>(2);
-        set => SetElement(2, value);
+        get => GetElement<EndChar>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Delimiter Grow.</para>
@@ -7296,11 +7209,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(3)]
     public GrowOperators GrowOperators
 	{
-        get => GetElement<GrowOperators>(3);
-        set => SetElement(3, value);
+        get => GetElement<GrowOperators>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Shape (Delimiters).</para>
@@ -7309,11 +7221,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(4)]
     public Shape Shape
 	{
-        get => GetElement<Shape>(4);
-        set => SetElement(4, value);
+        get => GetElement<Shape>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -7322,11 +7233,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(5)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(5);
-        set => SetElement(5, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -7570,7 +7480,7 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BaseJustification), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MaxDistribution), 0, 1),
@@ -7578,8 +7488,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.RowSpacingRule), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.RowSpacing), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -7589,11 +7499,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public BaseJustification BaseJustification
 	{
-        get => GetElement<BaseJustification>(0);
-        set => SetElement(0, value);
+        get => GetElement<BaseJustification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Maximum Distribution.</para>
@@ -7602,11 +7511,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public MaxDistribution MaxDistribution
 	{
-        get => GetElement<MaxDistribution>(1);
-        set => SetElement(1, value);
+        get => GetElement<MaxDistribution>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Object Distribution.</para>
@@ -7615,11 +7523,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public ObjectDistribution ObjectDistribution
 	{
-        get => GetElement<ObjectDistribution>(2);
-        set => SetElement(2, value);
+        get => GetElement<ObjectDistribution>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Row Spacing Rule.</para>
@@ -7628,11 +7535,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(3)]
     public RowSpacingRule RowSpacingRule
 	{
-        get => GetElement<RowSpacingRule>(3);
-        set => SetElement(3, value);
+        get => GetElement<RowSpacingRule>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Row Spacing (Equation Array).</para>
@@ -7641,11 +7547,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(4)]
     public RowSpacing RowSpacing
 	{
-        get => GetElement<RowSpacing>(4);
-        set => SetElement(4, value);
+        get => GetElement<RowSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -7654,11 +7559,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(5)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(5);
-        set => SetElement(5, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -7753,12 +7657,12 @@ public partial class FractionProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.FractionType), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -7768,11 +7672,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public FractionType FractionType
 	{
-        get => GetElement<FractionType>(0);
-        set => SetElement(0, value);
+        get => GetElement<FractionType>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -7781,11 +7684,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -7842,11 +7744,11 @@ public partial class FunctionProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -7856,11 +7758,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -7923,14 +7824,14 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.AccentChar), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Position), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.VerticalJustification), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -7940,11 +7841,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public AccentChar AccentChar
 	{
-        get => GetElement<AccentChar>(0);
-        set => SetElement(0, value);
+        get => GetElement<AccentChar>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Position (Group Character).</para>
@@ -7953,11 +7853,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public Position Position
 	{
-        get => GetElement<Position>(1);
-        set => SetElement(1, value);
+        get => GetElement<Position>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Vertical Justification.</para>
@@ -7966,11 +7865,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public VerticalJustification VerticalJustification
 	{
-        get => GetElement<VerticalJustification>(2);
-        set => SetElement(2, value);
+        get => GetElement<VerticalJustification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -7979,11 +7877,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(3)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(3);
-        set => SetElement(3, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -8040,11 +7937,11 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -8054,11 +7951,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -8115,11 +8011,11 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -8129,11 +8025,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -8265,12 +8160,12 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MatrixColumnCount), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MatrixColumnJustification), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -8280,11 +8175,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public MatrixColumnCount MatrixColumnCount
 	{
-        get => GetElement<MatrixColumnCount>(0);
-        set => SetElement(0, value);
+        get => GetElement<MatrixColumnCount>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Matrix Column Justification.</para>
@@ -8293,11 +8187,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public MatrixColumnJustification MatrixColumnJustification
 	{
-        get => GetElement<MatrixColumnJustification>(1);
-        set => SetElement(1, value);
+        get => GetElement<MatrixColumnJustification>();
+        set => SetElement(value);
 	}
 
 
@@ -8354,11 +8247,11 @@ public partial class MatrixColumn : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MatrixColumnProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -8368,11 +8261,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public MatrixColumnProperties MatrixColumnProperties
 	{
-        get => GetElement<MatrixColumnProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<MatrixColumnProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -8626,11 +8518,11 @@ public partial class MatrixColumns : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MatrixColumn), 1, 64)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -8702,7 +8594,7 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BaseJustification), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.HidePlaceholder), 0, 1),
@@ -8713,8 +8605,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ColumnGap), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MatrixColumns), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -8724,11 +8616,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public BaseJustification BaseJustification
 	{
-        get => GetElement<BaseJustification>(0);
-        set => SetElement(0, value);
+        get => GetElement<BaseJustification>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Hide Placeholders (Matrix).</para>
@@ -8737,11 +8628,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public HidePlaceholder HidePlaceholder
 	{
-        get => GetElement<HidePlaceholder>(1);
-        set => SetElement(1, value);
+        get => GetElement<HidePlaceholder>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Row Spacing Rule.</para>
@@ -8750,11 +8640,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public RowSpacingRule RowSpacingRule
 	{
-        get => GetElement<RowSpacingRule>(2);
-        set => SetElement(2, value);
+        get => GetElement<RowSpacingRule>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Matrix Column Gap Rule.</para>
@@ -8763,11 +8652,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(3)]
     public ColumnGapRule ColumnGapRule
 	{
-        get => GetElement<ColumnGapRule>(3);
-        set => SetElement(3, value);
+        get => GetElement<ColumnGapRule>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Row Spacing (Matrix).</para>
@@ -8776,11 +8664,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(4)]
     public RowSpacing RowSpacing
 	{
-        get => GetElement<RowSpacing>(4);
-        set => SetElement(4, value);
+        get => GetElement<RowSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Matrix Column Spacing.</para>
@@ -8789,11 +8676,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(5)]
     public ColumnSpacing ColumnSpacing
 	{
-        get => GetElement<ColumnSpacing>(5);
-        set => SetElement(5, value);
+        get => GetElement<ColumnSpacing>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Matrix Column Gap.</para>
@@ -8802,11 +8688,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(6)]
     public ColumnGap ColumnGap
 	{
-        get => GetElement<ColumnGap>(6);
-        set => SetElement(6, value);
+        get => GetElement<ColumnGap>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Matrix Columns.</para>
@@ -8815,11 +8700,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(7)]
     public MatrixColumns MatrixColumns
 	{
-        get => GetElement<MatrixColumns>(7);
-        set => SetElement(7, value);
+        get => GetElement<MatrixColumns>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -8828,11 +8712,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(8)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(8);
-        set => SetElement(8, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -8889,11 +8772,11 @@ public partial class MatrixRow : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 64)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -9050,7 +8933,7 @@ public partial class NaryProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.AccentChar), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLocation), 0, 1),
@@ -9058,8 +8941,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.HideSubArgument), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.HideSuperArgument), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -9069,11 +8952,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public AccentChar AccentChar
 	{
-        get => GetElement<AccentChar>(0);
-        set => SetElement(0, value);
+        get => GetElement<AccentChar>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> n-ary Limit Location.</para>
@@ -9082,11 +8964,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public LimitLocation LimitLocation
 	{
-        get => GetElement<LimitLocation>(1);
-        set => SetElement(1, value);
+        get => GetElement<LimitLocation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> n-ary Grow.</para>
@@ -9095,11 +8976,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public GrowOperators GrowOperators
 	{
-        get => GetElement<GrowOperators>(2);
-        set => SetElement(2, value);
+        get => GetElement<GrowOperators>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Hide Subscript (n-ary).</para>
@@ -9108,11 +8988,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(3)]
     public HideSubArgument HideSubArgument
 	{
-        get => GetElement<HideSubArgument>(3);
-        set => SetElement(3, value);
+        get => GetElement<HideSubArgument>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Hide Superscript (n-ary).</para>
@@ -9121,11 +9000,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(4)]
     public HideSuperArgument HideSuperArgument
 	{
-        get => GetElement<HideSuperArgument>(4);
-        set => SetElement(4, value);
+        get => GetElement<HideSuperArgument>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -9134,11 +9012,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(5)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(5);
-        set => SetElement(5, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -9205,7 +9082,7 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ShowPhantom), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ZeroWidth), 0, 1),
@@ -9213,8 +9090,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ZeroDescent), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Transparent), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -9224,11 +9101,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public ShowPhantom ShowPhantom
 	{
-        get => GetElement<ShowPhantom>(0);
-        set => SetElement(0, value);
+        get => GetElement<ShowPhantom>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Phantom Zero Width.</para>
@@ -9237,11 +9113,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public ZeroWidth ZeroWidth
 	{
-        get => GetElement<ZeroWidth>(1);
-        set => SetElement(1, value);
+        get => GetElement<ZeroWidth>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Phantom Zero Ascent.</para>
@@ -9250,11 +9125,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(2)]
     public ZeroAscent ZeroAscent
 	{
-        get => GetElement<ZeroAscent>(2);
-        set => SetElement(2, value);
+        get => GetElement<ZeroAscent>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Phantom Zero Descent.</para>
@@ -9263,11 +9137,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(3)]
     public ZeroDescent ZeroDescent
 	{
-        get => GetElement<ZeroDescent>(3);
-        set => SetElement(3, value);
+        get => GetElement<ZeroDescent>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Transparent (Phantom).</para>
@@ -9276,11 +9149,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(4)]
     public Transparent Transparent
 	{
-        get => GetElement<Transparent>(4);
-        set => SetElement(4, value);
+        get => GetElement<Transparent>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -9289,11 +9161,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(5)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(5);
-        set => SetElement(5, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -9352,12 +9223,12 @@ public partial class RadicalProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.HideDegree), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -9367,11 +9238,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public HideDegree HideDegree
 	{
-        get => GetElement<HideDegree>(0);
-        set => SetElement(0, value);
+        get => GetElement<HideDegree>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -9380,11 +9250,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -9441,11 +9310,11 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -9455,11 +9324,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -9516,11 +9384,11 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -9530,11 +9398,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -9593,12 +9460,12 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.AlignScripts), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -9608,11 +9475,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public AlignScripts AlignScripts
 	{
-        get => GetElement<AlignScripts>(0);
-        set => SetElement(0, value);
+        get => GetElement<AlignScripts>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ControlProperties.</para>
@@ -9621,11 +9487,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(1)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -9682,11 +9547,11 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -9696,11 +9561,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public ControlProperties ControlProperties
 	{
-        get => GetElement<ControlProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<ControlProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -9794,11 +9658,11 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentSize), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -9808,11 +9672,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public ArgumentSize ArgumentSize
 	{
-        get => GetElement<ArgumentSize>(0);
-        set => SetElement(0, value);
+        get => GetElement<ArgumentSize>();
+        set => SetElement(value);
 	}
 
 
@@ -10048,11 +9911,11 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Justification), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -10062,11 +9925,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
     /// </remark>
-	[Index(0)]
     public Justification Justification
 	{
-        get => GetElement<Justification>(0);
-        set => SetElement(0, value);
+        get => GetElement<Justification>();
+        set => SetElement(value);
 	}
 
 

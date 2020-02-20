@@ -118,11 +118,10 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-	[Index(0)]
     public WebExtensionStoreReference WebExtensionStoreReference
 	{
-        get => GetElement<WebExtensionStoreReference>(0);
-        set => SetElement(0, value);
+        get => GetElement<WebExtensionStoreReference>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WebExtensionReferenceList.</para>
@@ -131,11 +130,10 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-	[Index(1)]
     public WebExtensionReferenceList WebExtensionReferenceList
 	{
-        get => GetElement<WebExtensionReferenceList>(1);
-        set => SetElement(1, value);
+        get => GetElement<WebExtensionReferenceList>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WebExtensionPropertyBag.</para>
@@ -144,11 +142,10 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-	[Index(2)]
     public WebExtensionPropertyBag WebExtensionPropertyBag
 	{
-        get => GetElement<WebExtensionPropertyBag>(2);
-        set => SetElement(2, value);
+        get => GetElement<WebExtensionPropertyBag>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WebExtensionBindingList.</para>
@@ -157,11 +154,10 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-	[Index(3)]
     public WebExtensionBindingList WebExtensionBindingList
 	{
-        get => GetElement<WebExtensionBindingList>(3);
-        set => SetElement(3, value);
+        get => GetElement<WebExtensionBindingList>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Snapshot.</para>
@@ -170,11 +166,10 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-	[Index(4)]
     public Snapshot Snapshot
 	{
-        get => GetElement<Snapshot>(4);
-        set => SetElement(4, value);
+        get => GetElement<Snapshot>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
@@ -183,18 +178,17 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-	[Index(5)]
     public OfficeArtExtensionList OfficeArtExtensionList
 	{
-        get => GetElement<OfficeArtExtensionList>(5);
-        set => SetElement(5, value);
+        get => GetElement<OfficeArtExtensionList>();
+        set => SetElement(value);
 	}
 
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtension>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference), 1, 1, version: FileFormatVersions.Office2013),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList), 0, 1, version: FileFormatVersions.Office2013),
@@ -202,8 +196,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBindingList), 1, 1, version: FileFormatVersions.Office2013),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.Snapshot), 0, 1, version: FileFormatVersions.Office2013),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Defines the WebExtensionReference Class.</para>
@@ -332,7 +326,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 1, 1)
     {
@@ -341,8 +335,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -422,11 +416,11 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -436,11 +430,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-	[Index(0)]
     public OfficeArtExtensionList OfficeArtExtensionList
 	{
-        get => GetElement<OfficeArtExtensionList>(0);
-        set => SetElement(0, value);
+        get => GetElement<OfficeArtExtensionList>();
+        set => SetElement(value);
 	}
 
 
@@ -527,11 +520,11 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -541,11 +534,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
     /// </remark>
-	[Index(0)]
     public OfficeArtExtensionList OfficeArtExtensionList
 	{
-        get => GetElement<OfficeArtExtensionList>(0);
-        set => SetElement(0, value);
+        get => GetElement<OfficeArtExtensionList>();
+        set => SetElement(value);
 	}
 
 
@@ -602,11 +594,11 @@ public partial class WebExtensionReferenceList : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference), 0, 0, version: FileFormatVersions.Office2013)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -662,11 +654,11 @@ public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty), 0, 0, version: FileFormatVersions.Office2013)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -722,11 +714,11 @@ public partial class WebExtensionBindingList : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding), 0, 0, version: FileFormatVersions.Office2013)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -842,7 +834,7 @@ public partial class Snapshot : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 0, 0)
     {
@@ -865,8 +857,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TintEffect), 1, 1)
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>

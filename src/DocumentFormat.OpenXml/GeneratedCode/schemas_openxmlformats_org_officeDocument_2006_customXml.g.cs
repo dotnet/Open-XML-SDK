@@ -103,22 +103,21 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:ds = http://schemas.openxmlformats.org/officeDocument/2006/customXml
     /// </remark>
-	[Index(0)]
     public SchemaReferences SchemaReferences
 	{
-        get => GetElement<SchemaReferences>(0);
-        set => SetElement(0, value);
+        get => GetElement<SchemaReferences>();
+        set => SetElement(value);
 	}
 
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataStoreItem>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Associated XML Schema.</para>
@@ -205,11 +204,11 @@ public partial class SchemaReferences : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>

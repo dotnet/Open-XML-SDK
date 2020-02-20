@@ -199,7 +199,7 @@ public partial class ClientData : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MoveWithCells), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ResizeWithCells), 1, 1),
@@ -268,8 +268,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLanguage), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>

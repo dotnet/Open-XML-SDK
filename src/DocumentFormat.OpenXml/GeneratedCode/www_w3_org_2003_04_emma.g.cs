@@ -103,11 +103,11 @@ public partial class Info : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new AnyParticle(XsdAny.Other, 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -200,12 +200,12 @@ public partial class Lattice : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Arc), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Node), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -542,7 +542,7 @@ public partial class Interpretation : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -552,8 +552,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Literal), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNode), 0, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -844,7 +844,7 @@ public partial class OneOf : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -855,8 +855,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1142,7 +1142,7 @@ public partial class Group : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -1154,8 +1154,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1439,7 +1439,7 @@ public partial class Sequence : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -1450,8 +1450,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1508,11 +1508,11 @@ public partial class GroupInfo : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new AnyParticle(XsdAny.Other, 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1574,14 +1574,14 @@ public partial class Derivation : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1691,11 +1691,11 @@ public partial class Model : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new AnyParticle(XsdAny.Other, 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1760,11 +1760,11 @@ public partial class EndPointInfo : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPoint), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1912,11 +1912,11 @@ public partial class EndPoint : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new AnyParticle(XsdAny.Other, 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -2001,11 +2001,11 @@ public partial class Node : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -2171,11 +2171,11 @@ public partial class Arc : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -2255,7 +2255,7 @@ public partial class Emma : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Group, 0, 0)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -2269,8 +2269,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>

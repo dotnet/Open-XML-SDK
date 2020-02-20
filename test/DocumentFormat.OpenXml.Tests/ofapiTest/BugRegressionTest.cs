@@ -612,7 +612,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(tablecellmar.LastChild, tablecellmar.BottomMargin);
 
             // the wrong child should still be there.
-            Assert.Same(wrongChild, tablecellmar.FirstChild);
+            Assert.Contains(wrongChild, tablecellmar);
 
             // **** Top, wrong, correctLeft, Bottom
             tablecellmar.TopMargin = new TopMargin();
@@ -621,7 +621,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(tablecellmar.FirstChild, tablecellmar.TopMargin);
 
             // the wrong child should still be there.
-            Assert.Same(wrongChild, tablecellmar.FirstChild.NextSibling());
+            Assert.Contains(wrongChild, tablecellmar);
 
             // **** Top, wrong, Bottom
             tablecellmar.RemoveChild(correctChild);
@@ -641,7 +641,7 @@ namespace DocumentFormat.OpenXml.Tests
             // **** set a correct one.
             var correctBg = shapeTaget.BackgroundAnimation = new DocumentFormat.OpenXml.Presentation.BackgroundAnimation();
 
-            Assert.Equal(1, shapeTaget.ChildElements.Count);
+            Assert.Equal(2, shapeTaget.ChildElements.Count);
             Assert.Same(correctBg, shapeTaget.BackgroundAnimation);
         }
 

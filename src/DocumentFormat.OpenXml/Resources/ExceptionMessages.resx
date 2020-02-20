@@ -396,4 +396,7 @@
   <data name="RootElementIsNull" xml:space="preserve">
     <value>Root element is null.</value>
   </data>
+  <data name="AnyParticleTypeNotSupported" xml:space="preserve">
+    <value>Schemas with ParticleType.Any is not supported</value>
+  </data>
 </root>

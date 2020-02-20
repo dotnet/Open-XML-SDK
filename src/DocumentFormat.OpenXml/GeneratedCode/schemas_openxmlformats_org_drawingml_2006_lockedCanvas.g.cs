@@ -78,7 +78,7 @@ public partial class LockedCanvas : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties), 1, 1),
@@ -93,8 +93,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShape), 1, 1)
     },
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -104,11 +104,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties NonVisualGroupShapeProperties
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Visual Group Shape Properties.</para>
@@ -117,11 +116,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties VisualGroupShapeProperties
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>();
+        set => SetElement(value);
 	}
 
 

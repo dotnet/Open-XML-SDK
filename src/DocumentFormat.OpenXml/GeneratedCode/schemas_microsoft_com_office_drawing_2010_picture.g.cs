@@ -66,14 +66,14 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillReference), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectReference), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FontReference), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -83,11 +83,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.LineReference LineReference
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> FillReference.</para>
@@ -96,11 +95,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.FillReference FillReference
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EffectReference.</para>
@@ -109,11 +107,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Font Reference.</para>
@@ -122,11 +119,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(3)]
     public DocumentFormat.OpenXml.Drawing.FontReference FontReference
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(3);
-        set => SetElement(3, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
+        set => SetElement(value);
 	}
 
 
@@ -183,7 +179,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Group, 1, 1)
     {
@@ -192,8 +188,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
         }
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
