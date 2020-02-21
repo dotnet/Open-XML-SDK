@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Ensures attributes are available when `OpenXmlElement` is initialized with outer XML (#684)
 - Some documentation errors (#681)
+- Removed state that made it non-threadsafe to validate elements under certain conditions (#686)
 
 ## Version 2.10.0 - 2020-01-10
 ### Added
