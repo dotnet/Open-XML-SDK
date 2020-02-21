@@ -207,6 +207,42 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
 internal override ParticleConstraint ParticleConstraint => _constraint;
 }
 /// <summary>
+/// <para>Defines the RelId Class.</para>
+/// <para>This class is available in Office 2016 or above.</para>
+/// <para> When the object is serialized out as xml, its qualified name is cx:chart.</para>
+/// </summary>
+
+
+[OfficeAvailability(FileFormatVersions.Office2016)]
+[SchemaAttr(80, "chart")]
+public partial class RelId : OpenXmlLeafElement
+{
+    
+        /// <summary>
+    /// <para> id, this property is only available in Office2016.</para>
+    /// <para>Represents the following attribute in the schema: r:id </para>
+    /// </summary>
+///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
+///</remark>
+[RequiredValidator]
+    [SchemaAttr(19, "id")]
+    [Index(0)]
+    public StringValue Id { get; set; }
+
+    /// <summary>
+    /// Initializes a new instance of the RelId class.
+    /// </summary>
+    public RelId():base(){}
+    
+    
+
+    
+    
+    /// <inheritdoc/>
+    public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelId>(deep);
+
+}
+/// <summary>
 /// <para>Defines the Extension2 Class.</para>
 /// <para>This class is available in Office 2016 or above.</para>
 /// <para> When the object is serialized out as xml, its qualified name is cx:ext.</para>
