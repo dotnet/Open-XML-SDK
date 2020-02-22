@@ -4,11 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Version 2.11.0
+## Version 2.11.0 - Unreleased
 ### Added
 - Added `OpenXmlElementFunctionalExtensions.With` extension methods, which offer flexible means for constructing `OpenXmlElement` instances in the context of pure functional transformations.
 
-## Version 2.10.0
+### Fixed
+- Ensures attributes are available when `OpenXmlElement` is initialized with outer XML (#684)
+- Some documentation errors (#681)
+
+## Version 2.10.0 - 2020-01-10
 ### Added
 - Added initial Office 2016 support, including `FileFormatVersion.Office2016`, `ExtendedChartPart` and other new schema elements (#586)
 - Added .NET Standard 2.0 target (#587)

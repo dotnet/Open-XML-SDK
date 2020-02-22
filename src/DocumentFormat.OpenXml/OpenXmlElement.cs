@@ -112,7 +112,6 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the OpenXmlElement class.
         /// </summary>
         protected OpenXmlElement()
-            : base()
         {
             ElementData = PackageCache.Cache.ParseElementData(this);
         }
@@ -132,6 +131,7 @@ namespace DocumentFormat.OpenXml
                 }
 
                 RawOuterXml = outerXml;
+                MakeSureParsed();
             }
         }
 
@@ -198,12 +198,12 @@ namespace DocumentFormat.OpenXml
         #region public properties
 
         /// <summary>
-        /// Gets the OpenXmlEementContext of the current element.
+        /// Gets the OpenXmlElementContext of the current element.
         /// </summary>
         public OpenXmlElementContext OpenXmlElementContext => RootElementContext;
 
         /// <summary>
-        /// Gets the OpenXmlEementContext from the root element.
+        /// Gets the OpenXmlElementContext from the root element.
         /// </summary>
         internal virtual OpenXmlElementContext RootElementContext => Parent?.RootElementContext;
 
