@@ -45460,6 +45460,45 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace",
+  "Value": [
+   {
+    "Key": "Office2016",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Chart"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle",
   "Value": [
    {
