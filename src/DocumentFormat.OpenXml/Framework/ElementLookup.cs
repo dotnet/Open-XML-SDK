@@ -28,6 +28,19 @@ namespace DocumentFormat.OpenXml.Framework
 
         public IEnumerable<ElementChild> Elements => _lookup ?? Enumerable.Empty<ElementChild>();
 
+        public bool Contains(byte id, string name)
+        {
+            foreach (var child in _lookup)
+            {
+                if (child.NamespaceId == id && object.Equals(child.Name, name))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         public OpenXmlElement Create(byte id, string name)
         {
             if (_lookup == null)

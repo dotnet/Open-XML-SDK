@@ -766,7 +766,10 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            return -1;
+            // Check if known element without strongly-typed properties
+            var known = ElementData.Children.Contains(child.NamespaceId, child.LocalName);
+
+            return known ? int.MaxValue : -1;
         }
 
         /// <summary>
