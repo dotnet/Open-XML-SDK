@@ -12,14 +12,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     internal class ChoiceParticleValidator : CompositeParticleValidator
     {
         /// <summary>
-        /// This data field is moved from TryMatchOnce.
-        /// Base on the following point.
-        /// - The TryMatchOnce() method will NOT be called more than once with same ChoiceParticleValidator instance on the stack when validating one element.
-        /// - That means this data field will not be overridden in recursive calling when validating one element.
-        /// </summary>
-        private readonly ParticleMatchInfo _childMatchInfo = new ParticleMatchInfo();
-
-        /// <summary>
         /// Initializes a new instance of the ChoiceParticleValidator.
         /// </summary>
         /// <param name="particleConstraint"></param>
@@ -48,19 +40,21 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             int constraintIndex = 0;
             int constraintTotal = ParticleConstraint.ChildrenParticles.Length;
 
+            var childMatchInfo = new ParticleMatchInfo();
+
             while (constraintIndex < constraintTotal && next != null)
             {
                 childConstraint = ParticleConstraint.ChildrenParticles[constraintIndex];
 
                 // Use Reset() instead of new() to avoid heavy memory allocation and GC.
-                _childMatchInfo.Reset(next);
+                childMatchInfo.Reset(next);
 
-                childConstraint.ParticleValidator.TryMatch(_childMatchInfo, validationContext);
+                childConstraint.ParticleValidator.TryMatch(childMatchInfo, validationContext);
 
                 // if the _childMatchInfo.StartElement is changed, it means this method of this object is called more than once on the stack.
-                Debug.Assert(_childMatchInfo.StartElement == next);
+                Debug.Assert(childMatchInfo.StartElement == next);
 
-                switch (_childMatchInfo.Match)
+                switch (childMatchInfo.Match)
                 {
                     case ParticleMatch.Nomatch:
                         // continue trying match next child constraint.
@@ -69,16 +63,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                     case ParticleMatch.Matched:
                         particleMatchInfo.Match = ParticleMatch.Matched;
-                        particleMatchInfo.LastMatchedElement = _childMatchInfo.LastMatchedElement;
+                        particleMatchInfo.LastMatchedElement = childMatchInfo.LastMatchedElement;
                         return;
 
                     case ParticleMatch.Partial:
                         // partial match, incomplete children.
                         particleMatchInfo.Match = ParticleMatch.Partial;
-                        particleMatchInfo.LastMatchedElement = _childMatchInfo.LastMatchedElement;
+                        particleMatchInfo.LastMatchedElement = childMatchInfo.LastMatchedElement;
                         if (validationContext.CollectExpectedChildren)
                         {
-                            particleMatchInfo.SetExpectedChildren(_childMatchInfo.ExpectedChildren);
+                            particleMatchInfo.SetExpectedChildren(childMatchInfo.ExpectedChildren);
                         }
 
                         return;

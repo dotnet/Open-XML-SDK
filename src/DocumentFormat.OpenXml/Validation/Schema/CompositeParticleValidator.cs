@@ -10,16 +10,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal abstract class CompositeParticleValidator : ParticleValidator
     {
-        private ParticleMatchInfo _particleMatchInfo;
-
-        /// <summary>
-        /// This data field is moved from TryMatchOnce.
-        /// Base on the following point.
-        /// - The TryMatchOnce() method will NOT be called more than once with same ChoiceParticleValidator instance on the stack when validating one element.
-        /// - That means this data field will not be overridden in recursive calling when validating one element.
-        /// </summary>
-        private readonly ParticleMatchInfo _childMatchInfo = new ParticleMatchInfo();
-
         /// <summary>
         /// Gets the constraint to be validated.
         /// </summary>
@@ -61,7 +51,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     var requiredElements = GetRequiredElements();
 
-                    if ( requiredElements.Count > 0 )
+                    if (requiredElements.Count > 0)
                     {
                         errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_IncompleteContentExpectingComplex", GetExpectedChildrenMessage(element, requiredElements));
                         validationContext.AddError(errorInfo);
@@ -71,31 +61,24 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
             }
 
-            if (_particleMatchInfo == null)
-            {
-                _particleMatchInfo = new ParticleMatchInfo(child);
-            }
-            else
-            {
-                _particleMatchInfo.Reset(child);
-            }
+            var particleMatchInfo = new ParticleMatchInfo(child);
 
-            TryMatch(_particleMatchInfo, validationContext);
+            TryMatch(particleMatchInfo, validationContext);
 
-            switch (_particleMatchInfo.Match)
+            switch (particleMatchInfo.Match)
             {
                 case ParticleMatch.Nomatch:
                     // error: can not be matched, it is invalid
-                    EmitInvalidElementError(validationContext, _particleMatchInfo);
+                    EmitInvalidElementError(validationContext, particleMatchInfo);
                     return;
 
                 case ParticleMatch.Partial:
-                    EmitInvalidElementError(validationContext, _particleMatchInfo);
+                    EmitInvalidElementError(validationContext, particleMatchInfo);
                     return;
 
                 case ParticleMatch.Matched:
-                    Debug.Assert(_particleMatchInfo.LastMatchedElement != null);
-                    child = validationContext.GetNextChildMc(_particleMatchInfo.LastMatchedElement);
+                    Debug.Assert(particleMatchInfo.LastMatchedElement != null);
+                    child = validationContext.GetNextChildMc(particleMatchInfo.LastMatchedElement);
                     {
                         // Two cases now.
                         // 1. All children be matched.
@@ -103,7 +86,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         if (child != null)
                         {
                             // invalid child
-                            EmitInvalidElementError(validationContext, _particleMatchInfo);
+                            EmitInvalidElementError(validationContext, particleMatchInfo);
 
                             // TODO: how can we tell the user what is the required child? Use reflection in OpenXmlElement.
                         }
@@ -135,33 +118,35 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 int matchCount = 0;
                 var next = particleMatchInfo.StartElement;
 
+                var childMatchInfo = new ParticleMatchInfo();
+
                 while (next != null && ParticleConstraint.MaxOccursGreaterThan(matchCount))
                 {
                     // Use Reset() instead of new() to avoid heavy memory allocation and GC.
-                    _childMatchInfo.Reset(next);
-                    TryMatchOnce(_childMatchInfo, validationContext);
+                    childMatchInfo.Reset(next);
+                    TryMatchOnce(childMatchInfo, validationContext);
 
                     // if the _childMatchInfo.StartElement is changed, it means this method of this object is called more than once on the stack.
-                    Debug.Assert(_childMatchInfo.StartElement == next);
+                    Debug.Assert(childMatchInfo.StartElement == next);
 
-                    if (_childMatchInfo.Match == ParticleMatch.Nomatch)
+                    if (childMatchInfo.Match == ParticleMatch.Nomatch)
                     {
                         break;
                     }
-                    else if (_childMatchInfo.Match == ParticleMatch.Matched)
+                    else if (childMatchInfo.Match == ParticleMatch.Matched)
                     {
                         matchCount++;
-                        particleMatchInfo.LastMatchedElement = _childMatchInfo.LastMatchedElement;
+                        particleMatchInfo.LastMatchedElement = childMatchInfo.LastMatchedElement;
                         next = validationContext.GetNextChildMc(particleMatchInfo.LastMatchedElement);
                     }
                     else
                     {
                         // return error
                         particleMatchInfo.Match = ParticleMatch.Partial;
-                        particleMatchInfo.LastMatchedElement = _childMatchInfo.LastMatchedElement;
+                        particleMatchInfo.LastMatchedElement = childMatchInfo.LastMatchedElement;
                         if (validationContext.CollectExpectedChildren)
                         {
-                            particleMatchInfo.SetExpectedChildren(_childMatchInfo.ExpectedChildren);
+                            particleMatchInfo.SetExpectedChildren(childMatchInfo.ExpectedChildren);
                         }
 
                         return;
