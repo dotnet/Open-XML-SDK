@@ -98,6 +98,12 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
             var node = GetNode();
 
+            // This is for backwards compatability. Not sure how important the behavior is, but some tests verify it
+            while (node is OpenXmlMiscNode)
+            {
+                node = node.PreviousSibling();
+            }
+
             if (node is null)
             {
                 _element.PrependChild(value);
