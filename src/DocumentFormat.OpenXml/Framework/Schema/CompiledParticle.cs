@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Framework
         public CompiledParticle(ParticleConstraint particle)
         {
             Particle = particle;
-            _lookup = new Lazy<LookupItem[]>(() => ParticleCompiler.Compile(Particle));
+            _lookup = new Lazy<LookupItem[]>(() => ParticleCompiler.Compile(Particle), true);
         }
 
         public ReadOnlyArray<LookupItem> Lookup => _lookup.Value;
