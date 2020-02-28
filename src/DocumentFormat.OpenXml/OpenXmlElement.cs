@@ -433,6 +433,7 @@ namespace DocumentFormat.OpenXml
                 if (!string.IsNullOrEmpty(value))
                 {
                     RawOuterXml = value;
+                    MakeSureParsed();
                 }
                 else
                 {
@@ -1722,6 +1723,13 @@ namespace DocumentFormat.OpenXml
             {
                 // move the reader to the start of the element.
                 xmlReader.Read();
+
+                // Skip any whitespace
+                while (xmlReader.NodeType == XmlNodeType.Whitespace)
+                {
+                    xmlReader.Skip();
+                }
+
                 Populate(xmlReader, OpenXmlElementContext?.LoadMode ?? OpenXmlLoadMode.Full);
             }
         }
