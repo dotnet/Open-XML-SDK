@@ -79,7 +79,7 @@ public partial class Ink : OpenXmlPartRootElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
@@ -88,8 +88,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -335,7 +335,7 @@ public partial class Mapping : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Sequence, 1, 1)
     {
@@ -350,8 +350,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     {
         new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -489,11 +489,11 @@ public partial class Channel : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -549,11 +549,11 @@ public partial class IntermittentChannels : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -692,12 +692,12 @@ public partial class TraceFormat : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.IntermittentChannels), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -953,11 +953,11 @@ public partial class ChannelProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperty), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1086,11 +1086,11 @@ public partial class AnnotationXml : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Emma), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1100,11 +1100,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:emma = http://www.w3.org/2003/04/emma
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.EMMA.Emma Emma
 	{
-        get => GetElement<DocumentFormat.OpenXml.EMMA.Emma>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.EMMA.Emma>();
+        set => SetElement(value);
 	}
 
 
@@ -1204,12 +1203,12 @@ public partial class BrushProperty : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1282,11 +1281,11 @@ public partial class Canvas : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1296,11 +1295,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-	[Index(0)]
     public TraceFormat TraceFormat
 	{
-        get => GetElement<TraceFormat>(0);
-        set => SetElement(0, value);
+        get => GetElement<TraceFormat>();
+        set => SetElement(value);
 	}
 
 
@@ -1373,11 +1371,11 @@ public partial class CanvasTransform : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 1, 2)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1489,7 +1487,7 @@ public partial class InkSource : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SampleRate), 0, 1),
@@ -1497,8 +1495,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ActiveArea), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SourceProperty), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperties), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1508,11 +1506,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-	[Index(0)]
     public TraceFormat TraceFormat
 	{
-        get => GetElement<TraceFormat>(0);
-        set => SetElement(0, value);
+        get => GetElement<TraceFormat>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> SampleRate.</para>
@@ -1521,11 +1518,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-	[Index(1)]
     public SampleRate SampleRate
 	{
-        get => GetElement<SampleRate>(1);
-        set => SetElement(1, value);
+        get => GetElement<SampleRate>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Latency.</para>
@@ -1534,11 +1530,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-	[Index(2)]
     public Latency Latency
 	{
-        get => GetElement<Latency>(2);
-        set => SetElement(2, value);
+        get => GetElement<Latency>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ActiveArea.</para>
@@ -1547,11 +1542,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-	[Index(3)]
     public ActiveArea ActiveArea
 	{
-        get => GetElement<ActiveArea>(3);
-        set => SetElement(3, value);
+        get => GetElement<ActiveArea>();
+        set => SetElement(value);
 	}
 
 
@@ -1629,13 +1623,13 @@ public partial class Brush : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.BrushProperty), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1885,14 +1879,14 @@ public partial class TraceGroup : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1991,13 +1985,13 @@ public partial class TraceView : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -2128,7 +2122,7 @@ public partial class Context : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.CanvasTransform), 0, 1),
@@ -2136,8 +2130,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.InkSource), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Timestamp), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2147,11 +2141,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-	[Index(0)]
     public Canvas Canvas
 	{
-        get => GetElement<Canvas>(0);
-        set => SetElement(0, value);
+        get => GetElement<Canvas>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> CanvasTransform.</para>
@@ -2160,11 +2153,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-	[Index(1)]
     public CanvasTransform CanvasTransform
 	{
-        get => GetElement<CanvasTransform>(1);
-        set => SetElement(1, value);
+        get => GetElement<CanvasTransform>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> TraceFormat.</para>
@@ -2173,11 +2165,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-	[Index(2)]
     public TraceFormat TraceFormat
 	{
-        get => GetElement<TraceFormat>(2);
-        set => SetElement(2, value);
+        get => GetElement<TraceFormat>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> InkSource.</para>
@@ -2186,11 +2177,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-	[Index(3)]
     public InkSource InkSource
 	{
-        get => GetElement<InkSource>(3);
-        set => SetElement(3, value);
+        get => GetElement<InkSource>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Brush.</para>
@@ -2199,11 +2189,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-	[Index(4)]
     public Brush Brush
 	{
-        get => GetElement<Brush>(4);
-        set => SetElement(4, value);
+        get => GetElement<Brush>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Timestamp.</para>
@@ -2212,11 +2201,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:inkml = http://www.w3.org/2003/InkML
     /// </remark>
-	[Index(5)]
     public Timestamp Timestamp
 	{
-        get => GetElement<Timestamp>(5);
-        set => SetElement(5, value);
+        get => GetElement<Timestamp>();
+        set => SetElement(value);
 	}
 
 
@@ -2293,7 +2281,7 @@ public partial class Definitions : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 0)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
@@ -2306,8 +2294,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>

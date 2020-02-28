@@ -988,7 +988,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 foreach (var property in type.GetTypeInfo().GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly))
                 {
-                    if (typeof(OpenXmlElement).IsAssignableFrom(property.PropertyType) || typeof(OpenXmlSimpleType).IsAssignableFrom(property.PropertyType))
+                    if (typeof(OpenXmlSimpleType).IsAssignableFrom(property.PropertyType))
                     {
                         // Skip any obsolete properties as those redirect to other properties
                         if (property.GetCustomAttribute<ObsoleteAttribute>() == null)

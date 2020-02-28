@@ -70,15 +70,15 @@ public partial class PivotOptions : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible), 0, 1, version: FileFormatVersions.Office2010)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -88,11 +88,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[Index(0)]
     public DropZoneFilter DropZoneFilter
 	{
-        get => GetElement<DropZoneFilter>(0);
-        set => SetElement(0, value);
+        get => GetElement<DropZoneFilter>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DropZoneCategories.</para>
@@ -101,11 +100,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[Index(1)]
     public DropZoneCategories DropZoneCategories
 	{
-        get => GetElement<DropZoneCategories>(1);
-        set => SetElement(1, value);
+        get => GetElement<DropZoneCategories>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DropZoneData.</para>
@@ -114,11 +112,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[Index(2)]
     public DropZoneData DropZoneData
 	{
-        get => GetElement<DropZoneData>(2);
-        set => SetElement(2, value);
+        get => GetElement<DropZoneData>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DropZoneSeries.</para>
@@ -127,11 +124,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[Index(3)]
     public DropZoneSeries DropZoneSeries
 	{
-        get => GetElement<DropZoneSeries>(3);
-        set => SetElement(3, value);
+        get => GetElement<DropZoneSeries>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DropZonesVisible.</para>
@@ -140,11 +136,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[Index(4)]
     public DropZonesVisible DropZonesVisible
 	{
-        get => GetElement<DropZonesVisible>(4);
-        set => SetElement(4, value);
+        get => GetElement<DropZonesVisible>();
+        set => SetElement(value);
 	}
 
 
@@ -203,12 +198,12 @@ public partial class SketchOptions : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton), 0, 1, version: FileFormatVersions.Office2010)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -218,11 +213,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[Index(0)]
     public InSketchMode InSketchMode
 	{
-        get => GetElement<InSketchMode>(0);
-        set => SetElement(0, value);
+        get => GetElement<InSketchMode>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ShowSketchButton.</para>
@@ -231,11 +225,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[Index(1)]
     public ShowSketchButton ShowSketchButton
 	{
-        get => GetElement<ShowSketchButton>(1);
-        set => SetElement(1, value);
+        get => GetElement<ShowSketchButton>();
+        set => SetElement(value);
 	}
 
 
@@ -292,11 +285,11 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties), 1, 1, version: FileFormatVersions.Office2010)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -306,11 +299,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
     /// </remark>
-	[Index(0)]
     public ShapeProperties ShapeProperties
 	{
-        get => GetElement<ShapeProperties>(0);
-        set => SetElement(0, value);
+        get => GetElement<ShapeProperties>();
+        set => SetElement(value);
 	}
 
 
@@ -438,7 +430,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
     new CompositeParticle(ParticleType.Group, 0, 1)
@@ -473,8 +465,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -484,11 +476,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
+        set => SetElement(value);
 	}
 
 

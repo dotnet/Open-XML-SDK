@@ -94,14 +94,14 @@ public partial class TemplateCommandGroup : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TemplateCommandGroup>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Toolbars), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommands), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Defines the Mcds Class.</para>
@@ -152,11 +152,11 @@ public partial class Mcds : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Mcd), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -247,11 +247,10 @@ public partial class VbaSuppData : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(0)]
     public DocEvents DocEvents
 	{
-        get => GetElement<DocEvents>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocEvents>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Mcds.</para>
@@ -260,23 +259,22 @@ public partial class VbaSuppData : OpenXmlPartRootElement
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(1)]
     public Mcds Mcds
 	{
-        get => GetElement<Mcds>(1);
-        set => SetElement(1, value);
+        get => GetElement<Mcds>();
+        set => SetElement(value);
 	}
 
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VbaSuppData>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.DocEvents), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Mcds), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Defines the MailMergeRecipients Class.</para>
@@ -327,11 +325,11 @@ public partial class MailMergeRecipients : OpenXmlPartRootElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord), 1, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -674,15 +672,15 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 0, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.CharacterInsertion), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -692,11 +690,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(0)]
     public FixedCommandKeyboardCustomization FixedCommandKeyboardCustomization
 	{
-        get => GetElement<FixedCommandKeyboardCustomization>(0);
-        set => SetElement(0, value);
+        get => GetElement<FixedCommandKeyboardCustomization>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> MacroKeyboardCustomization.</para>
@@ -705,11 +702,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(1)]
     public MacroKeyboardCustomization MacroKeyboardCustomization
 	{
-        get => GetElement<MacroKeyboardCustomization>(1);
-        set => SetElement(1, value);
+        get => GetElement<MacroKeyboardCustomization>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> AllocatedCommandKeyboardCustomization.</para>
@@ -718,11 +714,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(2)]
     public AllocatedCommandKeyboardCustomization AllocatedCommandKeyboardCustomization
 	{
-        get => GetElement<AllocatedCommandKeyboardCustomization>(2);
-        set => SetElement(2, value);
+        get => GetElement<AllocatedCommandKeyboardCustomization>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> WllMacroKeyboardCustomization.</para>
@@ -731,11 +726,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(3)]
     public WllMacroKeyboardCustomization WllMacroKeyboardCustomization
 	{
-        get => GetElement<WllMacroKeyboardCustomization>(3);
-        set => SetElement(3, value);
+        get => GetElement<WllMacroKeyboardCustomization>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> CharacterInsertion.</para>
@@ -744,11 +738,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(4)]
     public CharacterInsertion CharacterInsertion
 	{
-        get => GetElement<CharacterInsertion>(4);
-        set => SetElement(4, value);
+        get => GetElement<CharacterInsertion>();
+        set => SetElement(value);
 	}
 
 
@@ -1381,7 +1374,7 @@ public partial class DocEvents : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString), 0, 1),
@@ -1396,8 +1389,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1407,11 +1400,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(0)]
     public EventDocNewXsdString EventDocNewXsdString
 	{
-        get => GetElement<EventDocNewXsdString>(0);
-        set => SetElement(0, value);
+        get => GetElement<EventDocNewXsdString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EventDocOpenXsdString.</para>
@@ -1420,11 +1412,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(1)]
     public EventDocOpenXsdString EventDocOpenXsdString
 	{
-        get => GetElement<EventDocOpenXsdString>(1);
-        set => SetElement(1, value);
+        get => GetElement<EventDocOpenXsdString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EventDocCloseXsdString.</para>
@@ -1433,11 +1424,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(2)]
     public EventDocCloseXsdString EventDocCloseXsdString
 	{
-        get => GetElement<EventDocCloseXsdString>(2);
-        set => SetElement(2, value);
+        get => GetElement<EventDocCloseXsdString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EventDocSyncXsdString.</para>
@@ -1446,11 +1436,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(3)]
     public EventDocSyncXsdString EventDocSyncXsdString
 	{
-        get => GetElement<EventDocSyncXsdString>(3);
-        set => SetElement(3, value);
+        get => GetElement<EventDocSyncXsdString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EventDocXmlAfterInsertXsdString.</para>
@@ -1459,11 +1448,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(4)]
     public EventDocXmlAfterInsertXsdString EventDocXmlAfterInsertXsdString
 	{
-        get => GetElement<EventDocXmlAfterInsertXsdString>(4);
-        set => SetElement(4, value);
+        get => GetElement<EventDocXmlAfterInsertXsdString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EventDocXmlBeforeDeleteXsdString.</para>
@@ -1472,11 +1460,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(5)]
     public EventDocXmlBeforeDeleteXsdString EventDocXmlBeforeDeleteXsdString
 	{
-        get => GetElement<EventDocXmlBeforeDeleteXsdString>(5);
-        set => SetElement(5, value);
+        get => GetElement<EventDocXmlBeforeDeleteXsdString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EventDocContentControlAfterInsertXsdString.</para>
@@ -1485,11 +1472,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(6)]
     public EventDocContentControlAfterInsertXsdString EventDocContentControlAfterInsertXsdString
 	{
-        get => GetElement<EventDocContentControlAfterInsertXsdString>(6);
-        set => SetElement(6, value);
+        get => GetElement<EventDocContentControlAfterInsertXsdString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EventDocContentControlBeforeDeleteXsdString.</para>
@@ -1498,11 +1484,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(7)]
     public EventDocContentControlBeforeDeleteXsdString EventDocContentControlBeforeDeleteXsdString
 	{
-        get => GetElement<EventDocContentControlBeforeDeleteXsdString>(7);
-        set => SetElement(7, value);
+        get => GetElement<EventDocContentControlBeforeDeleteXsdString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EventDocContentControlOnExistXsdString.</para>
@@ -1511,11 +1496,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(8)]
     public EventDocContentControlOnExistXsdString EventDocContentControlOnExistXsdString
 	{
-        get => GetElement<EventDocContentControlOnExistXsdString>(8);
-        set => SetElement(8, value);
+        get => GetElement<EventDocContentControlOnExistXsdString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EventDocContentControlOnEnterXsdString.</para>
@@ -1524,11 +1508,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(9)]
     public EventDocContentControlOnEnterXsdString EventDocContentControlOnEnterXsdString
 	{
-        get => GetElement<EventDocContentControlOnEnterXsdString>(9);
-        set => SetElement(9, value);
+        get => GetElement<EventDocContentControlOnEnterXsdString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EventDocStoreUpdateXsdString.</para>
@@ -1537,11 +1520,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(10)]
     public EventDocStoreUpdateXsdString EventDocStoreUpdateXsdString
 	{
-        get => GetElement<EventDocStoreUpdateXsdString>(10);
-        set => SetElement(10, value);
+        get => GetElement<EventDocStoreUpdateXsdString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EventDocContentControlUpdateXsdString.</para>
@@ -1550,11 +1532,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(11)]
     public EventDocContentControlUpdateXsdString EventDocContentControlUpdateXsdString
 	{
-        get => GetElement<EventDocContentControlUpdateXsdString>(11);
-        set => SetElement(11, value);
+        get => GetElement<EventDocContentControlUpdateXsdString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EventDocBuildingBlockAfterInsertXsdString.</para>
@@ -1563,11 +1544,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(12)]
     public EventDocBuildingBlockAfterInsertXsdString EventDocBuildingBlockAfterInsertXsdString
 	{
-        get => GetElement<EventDocBuildingBlockAfterInsertXsdString>(12);
-        set => SetElement(12, value);
+        get => GetElement<EventDocBuildingBlockAfterInsertXsdString>();
+        set => SetElement(value);
 	}
 
 
@@ -1624,11 +1604,11 @@ public partial class AllocatedCommandManifest : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1719,11 +1699,11 @@ public partial class KeyMapCustomizations : KeymapsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<KeyMapCustomizations>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Defines the MismatchedKeyMapCustomization Class.</para>
@@ -1773,11 +1753,11 @@ public partial class MismatchedKeyMapCustomization : KeymapsType
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MismatchedKeyMapCustomization>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// Defines the KeymapsType class.
@@ -1878,12 +1858,12 @@ public partial class Toolbars : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest), 0, 0),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.ToolbarData), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -1939,11 +1919,11 @@ public partial class AllocatedCommands : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommand), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
     
     /// <inheritdoc/>
@@ -2072,12 +2052,12 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.RecordIncluded), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.RecordHashCode), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -2087,11 +2067,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(0)]
     public RecordIncluded RecordIncluded
 	{
-        get => GetElement<RecordIncluded>(0);
-        set => SetElement(0, value);
+        get => GetElement<RecordIncluded>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> RecordHashCode.</para>
@@ -2100,11 +2079,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
     /// </remark>
-	[Index(1)]
     public RecordHashCode RecordHashCode
 	{
-        get => GetElement<RecordHashCode>(1);
-        set => SetElement(1, value);
+        get => GetElement<RecordHashCode>();
+        set => SetElement(value);
 	}
 
 
