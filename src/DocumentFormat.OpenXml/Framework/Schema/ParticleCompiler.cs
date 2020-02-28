@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             }
         }
 
-        private void Visit(ElementParticle result)
+        private void Visit(ElementParticle element)
         {
             var newValues = new ParticlePathItem[_values.Count];
             _values.CopyTo(newValues, 0);
@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
             var particlePath = ParticlePath.Create(newValues);
 
-            _path.Add(new LookupItem(result.ElementType, particlePath));
+            _path.Add(new LookupItem(element.ElementType, particlePath));
         }
 
         private void VisitComposite(CompositeParticle seq)

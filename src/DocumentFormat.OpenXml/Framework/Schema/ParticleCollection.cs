@@ -8,6 +8,10 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Framework.Schema
 {
+    /// <summary>
+    /// This struct represents a way to access elements in a structured way based on its compiled particle.
+    /// </summary>
+    /// <typeparam name="TElement">The <see cref="OpenXmlElement"/> it is wrapping</typeparam>
     internal readonly struct ParticleCollection<TElement> : IEnumerable<TElement>
         where TElement : OpenXmlElement
     {
@@ -25,6 +29,9 @@ namespace DocumentFormat.OpenXml.Framework.Schema
         public void Clear()
         {
             var enumerator = new OpenXmlCompositeElementEnumerator(this);
+
+            // We track an item to remove and do it after the enumerator is advanced to we don't try to remove
+            // the current element which would break the enumeration.
             var remove = default(OpenXmlElement);
 
             while (enumerator.MoveNext())

@@ -18,20 +18,32 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             _values = values;
         }
 
-        public ParticleType Type => _values[_values.Length - 1].Type;
+        public ParticleType Type
+        {
+            get
+            {
+                if (_values.Length == 0)
+                {
+                    return ParticleType.Invalid;
+                }
+                else
+                {
+                    return _values[_values.Length - 1].Type;
+                }
+            }
+        }
 
         public int CompareTo(ParticlePath other)
             => CompareTo(other, true);
 
-#if DEBUG
         public string Path => string.Join(", ", (object[])_values);
-#endif
 
         private int CompareTo(ParticlePath other, bool isCompare)
         {
             if (other is null)
             {
-                return -1;
+                // See https://docs.microsoft.com/en-us/dotnet/api/system.string.compareto
+                return 1;
             }
 
             var en = new Enumerator(this);
@@ -57,6 +69,8 @@ namespace DocumentFormat.OpenXml.Framework.Schema
                 }
                 else if (currentParticleType == ParticleType.Choice && otherParticleType == ParticleType.Choice)
                 {
+                    // If the two elements are at the same index within a choice, we want to continue down the path. If they are
+                    // different, we can end and say that we're at an equivalent point.
                     if (currentIndex != otherIndex)
                     {
                         return 0;
@@ -68,6 +82,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
                     if (compared != 0)
                     {
+                        // When checking for compare, anything within an All is equivalent. For equality, it needs to be the same
                         return isCompare ? 0 : -1;
                     }
                 }
@@ -84,7 +99,14 @@ namespace DocumentFormat.OpenXml.Framework.Schema
           => Equals(other, _values.Length - 1);
 
         public override bool Equals(object obj)
-            => Equals(obj as ParticlePath);
+        {
+            if (obj is ParticlePath path)
+            {
+                return Equals(path);
+            }
+
+            return false;
+        }
 
         public bool Equals(ParticlePath other)
             => CompareTo(other, false) == 0;

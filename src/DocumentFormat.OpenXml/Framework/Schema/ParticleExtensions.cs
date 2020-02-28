@@ -6,6 +6,9 @@ using DocumentFormat.OpenXml.Validation.Schema;
 
 namespace DocumentFormat.OpenXml.Framework
 {
+    /// <summary>
+    /// These extensions are set up so that it is easier to test a <see cref="CompiledParticle"/> against an <see cref="OpenXmlCompositeElement"/>.
+    /// </summary>
     internal static class ParticleExtensions
     {
         public static ParticleCollection<TElement> GetCollection<TElement>(this CompiledParticle compiled, OpenXmlCompositeElement element)
@@ -20,7 +23,7 @@ namespace DocumentFormat.OpenXml.Framework
                 return null;
             }
 
-            OpenXmlElement child = element.FirstChild;
+            var child = element.FirstChild;
 
             if (child is null)
             {

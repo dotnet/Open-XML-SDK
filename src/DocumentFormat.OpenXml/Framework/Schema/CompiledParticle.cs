@@ -5,31 +5,20 @@ using DocumentFormat.OpenXml.Framework.Schema;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
-using System.Threading;
 
 namespace DocumentFormat.OpenXml.Framework
 {
     internal class CompiledParticle : IComparer<OpenXmlElement>
     {
-        private LookupItem[] _lookup;
+        private Lazy<LookupItem[]> _lookup;
 
         public CompiledParticle(ParticleConstraint particle)
         {
             Particle = particle;
+            _lookup = new Lazy<LookupItem[]>(() => ParticleCompiler.Compile(Particle));
         }
 
-        public ReadOnlyArray<LookupItem> Lookup
-        {
-            get
-            {
-                if (_lookup is null)
-                {
-                    Interlocked.Exchange(ref _lookup, ParticleCompiler.Compile(Particle));
-                }
-
-                return _lookup;
-            }
-        }
+        public ReadOnlyArray<LookupItem> Lookup => _lookup.Value;
 
         public ParticleConstraint Particle { get; }
 
@@ -62,6 +51,11 @@ namespace DocumentFormat.OpenXml.Framework
         {
             var xPath = GetPath(x?.GetType());
             var yPath = GetPath(y?.GetType());
+
+            if (xPath is null && yPath is null)
+            {
+                return 0;
+            }
 
             if (xPath is null)
             {
