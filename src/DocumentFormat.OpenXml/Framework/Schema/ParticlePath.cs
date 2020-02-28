@@ -36,7 +36,9 @@ namespace DocumentFormat.OpenXml.Framework.Schema
         public int CompareTo(ParticlePath other)
             => CompareTo(other, true);
 
+#if DEBUG
         public string Path => string.Join(", ", (object[])_values);
+#endif
 
         private int CompareTo(ParticlePath other, bool isCompare)
         {
@@ -108,6 +110,11 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             return false;
         }
 
+        /// <summary>
+        /// Checks if two <see cref="ParticlePath"/> instances are the same. They may not have the exact same sequence, but if they are replaceable, then they are equal.
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
         public bool Equals(ParticlePath other)
             => CompareTo(other, false) == 0;
 

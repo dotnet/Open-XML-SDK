@@ -26,6 +26,10 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             _elementPath = compiled.Find<TElement>();
         }
 
+        /// <summary>
+        /// Clears any elements that compare as equal based on the schema particles. For example, equivalent choice
+        /// items will be removed.
+        /// </summary>
         public void Clear()
         {
             var enumerator = new OpenXmlCompositeElementEnumerator(this);
@@ -57,8 +61,14 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             }
         }
 
+        /// <summary>
+        /// Gets a value indicating whether the collection has value or not.
+        /// </summary>
         public bool IsNil => _compiled is null || _elementPath is null;
 
+        /// <summary>
+        /// Gets the count of <typeparamref name="TElement"/> instances there are in the collection.
+        /// </summary>
         public int Count
         {
             get
@@ -74,6 +84,11 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             }
         }
 
+        /// <summary>
+        /// Adds an element into the collection at the appropriate location.
+        /// </summary>
+        /// <param name="value">Element to add.</param>
+        /// <returns><c>true</c> if the element was added, and <c>false</c> if not.</returns>
         public bool Add(TElement value)
         {
             if (IsNil)
@@ -95,6 +110,11 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             return true;
         }
 
+        /// <summary>
+        /// Gets whether the <paramref name="item"/> exists in the collection.
+        /// </summary>
+        /// <param name="item">The item to search for.</param>
+        /// <returns><c>true</c> if the element was found, and <c>false</c> if not.</returns>
         public bool Contains(TElement item)
         {
             foreach (var child in this)

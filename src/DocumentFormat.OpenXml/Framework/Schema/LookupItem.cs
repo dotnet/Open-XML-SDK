@@ -24,6 +24,8 @@ namespace DocumentFormat.OpenXml.Framework
             path = Path;
         }
 
+#if DEBUG
         public override string ToString() => $"[{Type}] - {Path.Path}";
+#endif
     }
 }
