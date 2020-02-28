@@ -4,10 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Version 2.10.1 - 2020-02-28
+## Version 2.11.0 - Unreleased
+### Added
+- Added `FileFormatVersions.2019` enum (#695)
+- Added `OpenXmlElementFunctionalExtensions.With(...)` extension methods, which offer flexible means for constructing `OpenXmlElement` instances in the context of pure functional transformations (#679)
 
+## Version 2.10.1 - 2020-02-28
 ### Fixed
-- Ensures attributes are available when `OpenXmlElement` is initialized with outer XML (#684, #692)
+- Ensured attributes are available when `OpenXmlElement` is initialized with outer XML (#684, #692)
 - Some documentation errors (#681)
 - Removed state that made it non-thread safe to validate elements under certain conditions (#686)
 - Correctly inserts strongly-typed elements before known elements that are not strongly-typed (#690)
@@ -16,7 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added initial Office 2016 support, including `FileFormatVersion.Office2016`, `ExtendedChartPart` and other new schema elements (#586)
 - Added .NET Standard 2.0 target (#587)
-- Include symbols support for debugging (#650)
+- Included symbols support for debugging (#650)
 - Exposed `IXmlNamespaceResolver` from `XmlPath` instead of formatted list of strings to expose namespace/prefix mapping (#536)
 - Implemented `IComparable<T>` and `IEquatable<T>` on `OpenXmlComparableSimpleValue` to allow comparisons without boxing (#550)
 - Added `OpenXmlPackage.RootPart` to easily access the root part on any package (#661)
