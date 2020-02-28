@@ -124,11 +124,11 @@ public partial class WrapSquare : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -138,11 +138,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(0)]
     public EffectExtent EffectExtent
 	{
-        get => GetElement<EffectExtent>(0);
-        set => SetElement(0, value);
+        get => GetElement<EffectExtent>();
+        set => SetElement(value);
 	}
 
 
@@ -222,11 +221,11 @@ public partial class WrapTight : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -236,11 +235,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(0)]
     public WrapPolygon WrapPolygon
 	{
-        get => GetElement<WrapPolygon>(0);
-        set => SetElement(0, value);
+        get => GetElement<WrapPolygon>();
+        set => SetElement(value);
 	}
 
 
@@ -320,11 +318,11 @@ public partial class WrapThrough : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -334,11 +332,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(0)]
     public WrapPolygon WrapPolygon
 	{
-        get => GetElement<WrapPolygon>(0);
-        set => SetElement(0, value);
+        get => GetElement<WrapPolygon>();
+        set => SetElement(value);
 	}
 
 
@@ -409,11 +406,11 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -423,11 +420,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(0)]
     public EffectExtent EffectExtent
 	{
-        get => GetElement<EffectExtent>(0);
-        set => SetElement(0, value);
+        get => GetElement<EffectExtent>();
+        set => SetElement(value);
 	}
 
 
@@ -542,15 +538,15 @@ public partial class Inline : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -560,11 +556,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(0)]
     public Extent Extent
 	{
-        get => GetElement<Extent>(0);
-        set => SetElement(0, value);
+        get => GetElement<Extent>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Inline Wrapping Extent.</para>
@@ -573,11 +568,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(1)]
     public EffectExtent EffectExtent
 	{
-        get => GetElement<EffectExtent>(1);
-        set => SetElement(1, value);
+        get => GetElement<EffectExtent>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Drawing Object Non-Visual Properties.</para>
@@ -586,11 +580,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(2)]
     public DocProperties DocProperties
 	{
-        get => GetElement<DocProperties>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Common DrawingML Non-Visual Properties.</para>
@@ -599,11 +592,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(3)]
     public NonVisualGraphicFrameDrawingProperties NonVisualGraphicFrameDrawingProperties
 	{
-        get => GetElement<NonVisualGraphicFrameDrawingProperties>(3);
-        set => SetElement(3, value);
+        get => GetElement<NonVisualGraphicFrameDrawingProperties>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Graphic.</para>
@@ -612,11 +604,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(4)]
     public DocumentFormat.OpenXml.Drawing.Graphic Graphic
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(4);
-        set => SetElement(4, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>();
+        set => SetElement(value);
 	}
 
 
@@ -805,7 +796,7 @@ public partial class Anchor : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition), 1, 1),
@@ -831,8 +822,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth), 0, 1, version: FileFormatVersions.Office2010),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight), 0, 1, version: FileFormatVersions.Office2010)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -842,11 +833,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(0)]
     public SimplePosition SimplePosition
 	{
-        get => GetElement<SimplePosition>(0);
-        set => SetElement(0, value);
+        get => GetElement<SimplePosition>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Horizontal Positioning.</para>
@@ -855,11 +845,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(1)]
     public HorizontalPosition HorizontalPosition
 	{
-        get => GetElement<HorizontalPosition>(1);
-        set => SetElement(1, value);
+        get => GetElement<HorizontalPosition>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Vertical Positioning.</para>
@@ -868,11 +857,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(2)]
     public VerticalPosition VerticalPosition
 	{
-        get => GetElement<VerticalPosition>(2);
-        set => SetElement(2, value);
+        get => GetElement<VerticalPosition>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Inline Drawing Object Extents.</para>
@@ -881,11 +869,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(3)]
     public Extent Extent
 	{
-        get => GetElement<Extent>(3);
-        set => SetElement(3, value);
+        get => GetElement<Extent>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> EffectExtent.</para>
@@ -894,11 +881,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(4)]
     public EffectExtent EffectExtent
 	{
-        get => GetElement<EffectExtent>(4);
-        set => SetElement(4, value);
+        get => GetElement<EffectExtent>();
+        set => SetElement(value);
 	}
 
 
@@ -1125,12 +1111,12 @@ public partial class WrapPolygon : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.LineTo), 2, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1140,11 +1126,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(0)]
     public StartPoint StartPoint
 	{
-        get => GetElement<StartPoint>(0);
-        set => SetElement(0, value);
+        get => GetElement<StartPoint>();
+        set => SetElement(value);
 	}
 
 
@@ -1214,7 +1199,7 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -1222,8 +1207,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset), 0, 1, version: FileFormatVersions.Office2010)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -1233,11 +1218,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(0)]
     public HorizontalAlignment HorizontalAlignment
 	{
-        get => GetElement<HorizontalAlignment>(0);
-        set => SetElement(0, value);
+        get => GetElement<HorizontalAlignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Absolute Position Offset.</para>
@@ -1246,11 +1230,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(1)]
     public PositionOffset PositionOffset
 	{
-        get => GetElement<PositionOffset>(1);
-        set => SetElement(1, value);
+        get => GetElement<PositionOffset>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PercentagePositionHeightOffset.</para>
@@ -1259,11 +1242,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset PercentagePositionHeightOffset
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>();
+        set => SetElement(value);
 	}
 
 
@@ -1333,7 +1315,7 @@ public partial class VerticalPosition : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new CompositeParticle(ParticleType.Choice, 1, 1)
     {
@@ -1341,8 +1323,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1, 1),
         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset), 0, 1, version: FileFormatVersions.Office2010)
     }
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -1352,11 +1334,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(0)]
     public VerticalAlignment VerticalAlignment
 	{
-        get => GetElement<VerticalAlignment>(0);
-        set => SetElement(0, value);
+        get => GetElement<VerticalAlignment>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PositionOffset.</para>
@@ -1365,11 +1346,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
     /// </remark>
-	[Index(1)]
     public PositionOffset PositionOffset
 	{
-        get => GetElement<PositionOffset>(1);
-        set => SetElement(1, value);
+        get => GetElement<PositionOffset>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> PercentagePositionVerticalOffset.</para>
@@ -1378,11 +1358,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset PercentagePositionVerticalOffset
 	{
-        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>();
+        set => SetElement(value);
 	}
 
 
@@ -1524,13 +1503,13 @@ public partial class DocProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1540,11 +1519,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
@@ -1553,11 +1531,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
@@ -1566,11 +1543,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+        set => SetElement(value);
 	}
 
 
@@ -1629,12 +1605,12 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -1644,11 +1620,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks GraphicFrameLocks
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> ExtensionList.</para>
@@ -1657,11 +1632,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
 	{
-        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+        set => SetElement(value);
 	}
 
 

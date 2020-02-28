@@ -69,7 +69,7 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract), 1, 1),
@@ -77,8 +77,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -88,11 +88,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-	[Index(0)]
     public PublishDate PublishDate
 	{
-        get => GetElement<PublishDate>(0);
-        set => SetElement(0, value);
+        get => GetElement<PublishDate>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> DocumentAbstract.</para>
@@ -101,11 +100,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-	[Index(1)]
     public DocumentAbstract DocumentAbstract
 	{
-        get => GetElement<DocumentAbstract>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentAbstract>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> CompanyAddress.</para>
@@ -114,11 +112,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-	[Index(2)]
     public CompanyAddress CompanyAddress
 	{
-        get => GetElement<CompanyAddress>(2);
-        set => SetElement(2, value);
+        get => GetElement<CompanyAddress>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> CompanyPhoneNumber.</para>
@@ -127,11 +124,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-	[Index(3)]
     public CompanyPhoneNumber CompanyPhoneNumber
 	{
-        get => GetElement<CompanyPhoneNumber>(3);
-        set => SetElement(3, value);
+        get => GetElement<CompanyPhoneNumber>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> CompanyFaxNumber.</para>
@@ -140,11 +136,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-	[Index(4)]
     public CompanyFaxNumber CompanyFaxNumber
 	{
-        get => GetElement<CompanyFaxNumber>(4);
-        set => SetElement(4, value);
+        get => GetElement<CompanyFaxNumber>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> CompanyEmailAddress.</para>
@@ -153,11 +148,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
     /// </remark>
-	[Index(5)]
     public CompanyEmailAddress CompanyEmailAddress
 	{
-        get => GetElement<CompanyEmailAddress>(5);
-        set => SetElement(5, value);
+        get => GetElement<CompanyEmailAddress>();
+        set => SetElement(value);
 	}
 
 

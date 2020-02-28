@@ -65,14 +65,14 @@ public partial class CustomXsn : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.CachedView), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.Scope), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
         /// <summary>
@@ -82,11 +82,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
     /// </remark>
-	[Index(0)]
     public XsnLocation XsnLocation
 	{
-        get => GetElement<XsnLocation>(0);
-        set => SetElement(0, value);
+        get => GetElement<XsnLocation>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> CachedView.</para>
@@ -95,11 +94,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
     /// </remark>
-	[Index(1)]
     public CachedView CachedView
 	{
-        get => GetElement<CachedView>(1);
-        set => SetElement(1, value);
+        get => GetElement<CachedView>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> OpenByDefault.</para>
@@ -108,11 +106,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
     /// </remark>
-	[Index(2)]
     public OpenByDefault OpenByDefault
 	{
-        get => GetElement<OpenByDefault>(2);
-        set => SetElement(2, value);
+        get => GetElement<OpenByDefault>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Scope.</para>
@@ -121,11 +118,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
     /// </remark>
-	[Index(3)]
     public Scope Scope
 	{
-        get => GetElement<Scope>(3);
-        set => SetElement(3, value);
+        get => GetElement<Scope>();
+        set => SetElement(value);
 	}
 
 

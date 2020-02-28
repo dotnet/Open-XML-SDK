@@ -89,11 +89,11 @@ public partial class Properties : OpenXmlPartRootElement
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Properties>(deep);
 
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Sequence, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.CustomProperties.CustomDocumentProperty), 0, 0)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
 }
 /// <summary>
 /// <para>Custom File Property.</para>
@@ -241,7 +241,7 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     }
 
     
-private static readonly ParticleConstraint _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
+private static readonly CompiledParticle _constraint = new CompositeParticle(ParticleType.Choice, 1, 1)
 {
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTArray), 1, 1),
@@ -277,8 +277,8 @@ private static readonly ParticleConstraint _constraint = new CompositeParticle(P
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVStreamData), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClassId), 1, 1),
     new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTClipboardData), 1, 1)
-};
-internal override ParticleConstraint ParticleConstraint => _constraint;
+}.Compile();
+internal override CompiledParticle CompiledParticle => _constraint;
     
         internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
         /// <summary>
@@ -288,11 +288,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(0)]
     public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
-        set => SetElement(0, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Array.</para>
@@ -301,11 +300,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(1)]
     public DocumentFormat.OpenXml.VariantTypes.VTArray VTArray
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTArray>(1);
-        set => SetElement(1, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTArray>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Binary Blob.</para>
@@ -314,11 +312,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(2)]
     public DocumentFormat.OpenXml.VariantTypes.VTBlob VTBlob
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>(2);
-        set => SetElement(2, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Binary Blob Object.</para>
@@ -327,11 +324,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(3)]
     public DocumentFormat.OpenXml.VariantTypes.VTOBlob VTOBlob
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOBlob>(3);
-        set => SetElement(3, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOBlob>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Empty.</para>
@@ -340,11 +336,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(4)]
     public DocumentFormat.OpenXml.VariantTypes.VTEmpty VTEmpty
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTEmpty>(4);
-        set => SetElement(4, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTEmpty>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Null.</para>
@@ -353,11 +348,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(5)]
     public DocumentFormat.OpenXml.VariantTypes.VTNull VTNull
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTNull>(5);
-        set => SetElement(5, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTNull>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 1-Byte Signed Integer.</para>
@@ -366,11 +360,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(6)]
     public DocumentFormat.OpenXml.VariantTypes.VTByte VTByte
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTByte>(6);
-        set => SetElement(6, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTByte>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 2-Byte Signed Integer.</para>
@@ -379,11 +372,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(7)]
     public DocumentFormat.OpenXml.VariantTypes.VTShort VTShort
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTShort>(7);
-        set => SetElement(7, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTShort>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 4-Byte Signed Integer.</para>
@@ -392,11 +384,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(8)]
     public DocumentFormat.OpenXml.VariantTypes.VTInt32 VTInt32
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt32>(8);
-        set => SetElement(8, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt32>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 8-Byte Signed Integer.</para>
@@ -405,11 +396,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(9)]
     public DocumentFormat.OpenXml.VariantTypes.VTInt64 VTInt64
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt64>(9);
-        set => SetElement(9, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt64>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Integer.</para>
@@ -418,11 +408,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(10)]
     public DocumentFormat.OpenXml.VariantTypes.VTInteger VTInteger
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInteger>(10);
-        set => SetElement(10, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInteger>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 1-Byte Unsigned Integer.</para>
@@ -431,11 +420,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(11)]
     public DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte VTUnsignedByte
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>(11);
-        set => SetElement(11, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 2-Byte Unsigned Integer.</para>
@@ -444,11 +432,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(12)]
     public DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort VTUnsignedShort
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>(12);
-        set => SetElement(12, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 4-Byte Unsigned Integer.</para>
@@ -457,11 +444,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(13)]
     public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32 VTUnsignedInt32
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>(13);
-        set => SetElement(13, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 8-Byte Unsigned Integer.</para>
@@ -470,11 +456,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(14)]
     public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64 VTUnsignedInt64
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>(14);
-        set => SetElement(14, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Unsigned Integer.</para>
@@ -483,11 +468,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(15)]
     public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger VTUnsignedInteger
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>(15);
-        set => SetElement(15, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 4-Byte Real Number.</para>
@@ -496,11 +480,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(16)]
     public DocumentFormat.OpenXml.VariantTypes.VTFloat VTFloat
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFloat>(16);
-        set => SetElement(16, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFloat>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> 8-Byte Real Number.</para>
@@ -509,11 +492,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(17)]
     public DocumentFormat.OpenXml.VariantTypes.VTDouble VTDouble
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDouble>(17);
-        set => SetElement(17, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDouble>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Decimal.</para>
@@ -522,11 +504,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(18)]
     public DocumentFormat.OpenXml.VariantTypes.VTDecimal VTDecimal
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDecimal>(18);
-        set => SetElement(18, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDecimal>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> LPSTR.</para>
@@ -535,11 +516,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(19)]
     public DocumentFormat.OpenXml.VariantTypes.VTLPSTR VTLPSTR
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>(19);
-        set => SetElement(19, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> LPWSTR.</para>
@@ -548,11 +528,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(20)]
     public DocumentFormat.OpenXml.VariantTypes.VTLPWSTR VTLPWSTR
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>(20);
-        set => SetElement(20, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Basic String.</para>
@@ -561,11 +540,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(21)]
     public DocumentFormat.OpenXml.VariantTypes.VTBString VTBString
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBString>(21);
-        set => SetElement(21, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBString>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Date and Time.</para>
@@ -574,11 +552,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(22)]
     public DocumentFormat.OpenXml.VariantTypes.VTDate VTDate
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDate>(22);
-        set => SetElement(22, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDate>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> File Time.</para>
@@ -587,11 +564,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(23)]
     public DocumentFormat.OpenXml.VariantTypes.VTFileTime VTFileTime
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFileTime>(23);
-        set => SetElement(23, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFileTime>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Boolean.</para>
@@ -600,11 +576,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(24)]
     public DocumentFormat.OpenXml.VariantTypes.VTBool VTBool
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBool>(24);
-        set => SetElement(24, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBool>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Currency.</para>
@@ -613,11 +588,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(25)]
     public DocumentFormat.OpenXml.VariantTypes.VTCurrency VTCurrency
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTCurrency>(25);
-        set => SetElement(25, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTCurrency>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Error Status Code.</para>
@@ -626,11 +600,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(26)]
     public DocumentFormat.OpenXml.VariantTypes.VTError VTError
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTError>(26);
-        set => SetElement(26, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTError>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Binary Stream.</para>
@@ -639,11 +612,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(27)]
     public DocumentFormat.OpenXml.VariantTypes.VTStreamData VTStreamData
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStreamData>(27);
-        set => SetElement(27, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStreamData>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Binary Stream Object.</para>
@@ -652,11 +624,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(28)]
     public DocumentFormat.OpenXml.VariantTypes.VTOStreamData VTOStreamData
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStreamData>(28);
-        set => SetElement(28, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStreamData>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Binary Storage.</para>
@@ -665,11 +636,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(29)]
     public DocumentFormat.OpenXml.VariantTypes.VTStorage VTStorage
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStorage>(29);
-        set => SetElement(29, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStorage>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Binary Storage Object.</para>
@@ -678,11 +648,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(30)]
     public DocumentFormat.OpenXml.VariantTypes.VTOStorage VTOStorage
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStorage>(30);
-        set => SetElement(30, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStorage>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Binary Versioned Stream.</para>
@@ -691,11 +660,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(31)]
     public DocumentFormat.OpenXml.VariantTypes.VTVStreamData VTVStreamData
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVStreamData>(31);
-        set => SetElement(31, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVStreamData>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Class ID.</para>
@@ -704,11 +672,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(32)]
     public DocumentFormat.OpenXml.VariantTypes.VTClassId VTClassId
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClassId>(32);
-        set => SetElement(32, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClassId>();
+        set => SetElement(value);
 	}
     /// <summary>
     /// <para> Clipboard Data.</para>
@@ -717,11 +684,10 @@ internal override ParticleConstraint ParticleConstraint => _constraint;
     /// <remark>
     /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
     /// </remark>
-	[Index(33)]
     public DocumentFormat.OpenXml.VariantTypes.VTClipboardData VTClipboardData
 	{
-        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>(33);
-        set => SetElement(33, value);
+        get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
+        set => SetElement(value);
 	}
 
 
