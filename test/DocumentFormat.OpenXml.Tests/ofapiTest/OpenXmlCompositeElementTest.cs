@@ -77,8 +77,8 @@ namespace DocumentFormat.OpenXml.Tests
 
             NumberingChange numChange = new NumberingChange();
             fieldChar.NumberingChange = numChange;
-            Assert.Same(miscNod, fieldChar.LastChild);
-            Assert.Same(numChange, fieldChar.FirstChild);
+            Assert.Same(miscNod, fieldChar.FirstChild);
+            Assert.Same(numChange, fieldChar.LastChild);
             Assert.Same(numChange, fieldChar.NumberingChange);
             Assert.Null(fieldChar.FieldData);
         }
